@@ -167,7 +167,7 @@ input, textarea {
 
 		for (var i = 0; i < cmp1_count; i++) {
 			// 新しいHTML要素を作成
-			var input_idx = i;
+			var input_idx = i+1;
 
 			var row = document.createElement("tr");
 			var cell = document.createElement("th");
@@ -195,7 +195,7 @@ input, textarea {
 
 		for (var i = 0; i < cmp2_count; i++) {
 			// 新しいHTML要素を作成
-			var input_idx = i;
+			var input_idx = i+1;
 			var row = document.createElement("tr");
 			var cell = document.createElement("th");
 			var cellText = document.createTextNode(paraValue["cmp_r"+input_idx]);
@@ -240,13 +240,15 @@ input, textarea {
 		result = 'id:'+test_id+'\n';
 		// コピー対象をJavaScript上で変数として定義する
 		for (var i = 0; i < cmp1_count; i++) {
-			if (document.getElementById('checkbox1_' + i).checked){
-				result += 'ev1_' + i+':'+document.getElementById('checkbox1_' + i).value+'\n';
+			var input_idx = i+1;
+			if (document.getElementById('checkbox1_' + input_idx).checked){
+				result += 'ev1_' + input_idx+':'+document.getElementById('checkbox1_' + input_idx).value+'\n';
 			}
 		}
 		for (var i = 0; i < cmp2_count; i++) {
-			if (document.getElementById('checkbox2_' + i).checked){
-				result += 'ev2_' + i+':'+document.getElementById('checkbox2_' + i).value+'\n';
+			var input_idx = i+1;
+			if (document.getElementById('checkbox2_' + input_idx).checked){
+				result += 'ev2_' + input_idx+':'+document.getElementById('checkbox2_' + input_idx).value+'\n';
 			}
 		}
 		
