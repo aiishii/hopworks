@@ -106,6 +106,9 @@ input, textarea {
 		var elms = x.document.querySelectorAll("[id='"+ link_id +"']");
 		for(var i = 0; i < elms.length; i++) elms[i].style.backgroundColor = '#ffcccc';
 	};
+	var cmp1_count = 0;
+	var cmp2_count = 0
+	var test_id = ''
     function init() {
         var paraPair  = new Array();
         var paraName;
@@ -116,9 +119,7 @@ input, textarea {
         var para_num = para.length;
 		// link_num = (para_num - 5) /4;
 		// console.log(link_num)
-
-		cmp1_count = 0
-		cmp2_count = 0
+		
 		start_idx = 0
         for (var i = 0; i < para_num; i++) {
             paraPair = para[i].split("=");
@@ -134,7 +135,7 @@ input, textarea {
 				cmp2_count += 1
 			}
         }
-		var test_id = paraValue["id"]
+		test_id = paraValue["id"]
 		var title = paraValue["title"]
 		var cmp_title = paraValue["cmp_title"]
 		// var cmp_wid = paraValue["cmp_wid"]
@@ -166,7 +167,7 @@ input, textarea {
 
 		for (var i = 0; i < cmp1_count; i++) {
 			// 新しいHTML要素を作成
-			var input_idx = i + start_idx
+			var input_idx = i;
 
 			var row = document.createElement("tr");
 			var cell = document.createElement("th");
@@ -181,10 +182,10 @@ input, textarea {
 
 			var cell = document.createElement("td");
 			var input_check_box = document.createElement('input');
-			input_check_box.setAttribute("id", 'checkbox_' + input_idx);	
-			input_check_box.setAttribute("name", 'is_ev_' + input_idx);	
+			input_check_box.setAttribute("id", 'checkbox1_' + input_idx);	
+			input_check_box.setAttribute("name", 'ev1_' + input_idx);	
 			input_check_box.setAttribute("type", 'checkbox');	
-			input_check_box.setAttribute("value", "is_ev");
+			input_check_box.setAttribute("value", title+"-"+paraValue["r"+input_idx]+"-"+paraValue["e"+input_idx]);
 			cell.appendChild(input_check_box);
 			row.appendChild(cell);
 
@@ -194,7 +195,7 @@ input, textarea {
 
 		for (var i = 0; i < cmp2_count; i++) {
 			// 新しいHTML要素を作成
-			var input_idx = i + start_idx
+			var input_idx = i;
 			var row = document.createElement("tr");
 			var cell = document.createElement("th");
 			var cellText = document.createTextNode(paraValue["cmp_r"+input_idx]);
@@ -209,9 +210,9 @@ input, textarea {
 			var cell = document.createElement("td");
 			var input_check_box = document.createElement('input');
 			input_check_box.setAttribute("id", 'checkbox2_' + input_idx);	
-			input_check_box.setAttribute("name", 'is_ev2_' + input_idx);	
+			input_check_box.setAttribute("name", 'ev2_' + input_idx);	
 			input_check_box.setAttribute("type", 'checkbox');	
-			input_check_box.setAttribute("value", "is_ev2");
+			input_check_box.setAttribute("value", cmp_title+"-"+paraValue["cmp_r"+input_idx]+"-"+paraValue["cmp_e"+input_idx]);
 			cell.appendChild(input_check_box);
 			row.appendChild(cell);
 
@@ -225,88 +226,6 @@ input, textarea {
 
 		tbl2.appendChild(tblBody2);
 		input_element2.appendChild(tbl2);
-
-		// 	for (var j = 0; j < 2; j++) {
-		// 		// <td> 要素とテキストノードを作成し、テキストノードを
-		// 		// <td> の内容として、その <td> を表の行の末尾に追加
-		// 		var cell = document.createElement("td");
-		// 		var cellText = document.createTextNode(i+" 行目、 "+j+" 列目のセル");
-		// 		cell.appendChild(cellText);
-		// 		row.appendChild(cell);
-		// 	}
-
-		// 	// 表の本体の末尾に行を追加
-		// 	tblBody.appendChild(row);
-		// 	}
-
-		// 	// <tbody> を <table> の中に追加
-		// 	tbl.appendChild(tblBody);
-		// 	// <table> を <body> の中に追加
-		// 	body.appendChild(tbl);
-		// 	// tbl の border 属性を 2 に設定
-		// 	tbl.setAttribute("border", "2")
-
-			
-		// 	var new_p = document.createElement('p');
-		// 	var id_text = document.createElement('text');
-		// 	id_text.textContent = input_idx + ': '
-			
-		// 	var div_sbj = document.createElement('text');
-		// 	div_sbj.setAttribute("id", "start_"+input_idx);
-		// 	div_sbj.setAttribute("class", "box_sbj");
-		// 	div_sbj.textContent = title
-			
-		// 	var div_obj = document.createElement('text');
-		// 	div_obj.setAttribute("class", "box_obj");
-		// 	div_obj.textContent = paraValue["e"+input_idx]
-		// 	div_obj.setAttribute("id", 'value_'+ input_idx);
-		// 	// <textarea rows="10" cols="60">ここに記入してください</textarea>
-		// 	var input_txt_box = document.createElement('textarea');
-		// 	// style="text-align: right"
-		// 	input_txt_box.setAttribute("style", 'text-align: left');
-		// 	input_txt_box.setAttribute("id", 'input_' + input_idx);	
-		// 	input_txt_box.setAttribute("name", 'res_' + input_idx);	
-		// 	input_txt_box.setAttribute("maxlength", "50");
-		// 	input_txt_box.setAttribute("cols", "20");
-		// 	input_txt_box.setAttribute("rows", "1");
-		// 	input_txt_box.onblur = function(){incheck(this);} 
-		// 	input_txt_box.onfocus = function(){bgchange(this);} 
-		// 	// var input_txt_box = document.createElement('input');
-		// 	// input_txt_box.setAttribute("id", 'input_' + input_idx);	
-		// 	// input_txt_box.setAttribute("name", 'res_' + input_idx);	
-		// 	// input_txt_box.setAttribute("type", 'text');	
-		// 	// input_txt_box.setAttribute("maxlength", "50");
-		// 	// input_txt_box.setAttribute("size", "20");	
-		// 	// input_txt_box.onblur = function(){incheck(this);} 
-		// 	// input_txt_box.onfocus = function(){bgchange(this);} 
-		// 	var ruby_span =  document.createElement('span')
-		// 	ruby_span.setAttribute("class", "rubyposition_under");
-		// 	var ruby = document.createElement('ruby')
-		// 	var rt_area = document.createElement('rt')
-		// 	var input_check_box = document.createElement('input');
-		// 	input_check_box.setAttribute("id", 'checkbox_' + input_idx);	
-		// 	input_check_box.setAttribute("name", 'norelation_' + input_idx);	
-		// 	input_check_box.setAttribute("type", 'checkbox');	
-		// 	input_check_box.setAttribute("value", "no_relation");
-		// 	var input_check_box_label = document.createElement('text');
-		// 	input_check_box_label.textContent = "直接の関係なし"
-		// 	new_p.appendChild(id_text)
-		// 	new_p.appendChild(div_sbj)
-		// 	new_p.appendChild(document.createTextNode("\u00a0\u00a0の\u00a0\u00a0"))
-		// 	ruby.appendChild(input_txt_box)
-		// 	rt_area.appendChild(input_check_box)
-		// 	rt_area.appendChild(input_check_box_label)
-		// 	ruby.appendChild(rt_area)
-		// 	ruby_span.appendChild(ruby)
-		// 	new_p.appendChild(ruby_span)
-		// 	// new_p.appendChild(input_txt_box)
-		// 	new_p.appendChild(document.createTextNode("\u00a0\u00a0は\u00a0\u00a0"))
-		// 	new_p.appendChild(div_obj);
-		// 	new_p.appendChild(document.createTextNode("\u00a0\u00a0です。"))
-		// 	input_element.appendChild(new_p);
-		// 	// var br = document.createElement( "br" ); // 改行要素を作って
-		// 	// input_element.appendChild( br );
-		// }
     }
 	function copyTextToClipboard(textVal){
 		var copyFrom = document.createElement("textarea");  
@@ -318,22 +237,19 @@ input, textarea {
 		return retVal; 
 	}
 	function copy() {
-		var result = '';
-		// コピー対象をJavaScript上で変数として定義する
-		var test_id = document.getElementById("no").textContent;
-		var title = document.getElementById("title").textContent;
-		var wid = document.getElementById("wid").textContent;
 		result = 'id:'+test_id+'\n';
-		result += 'title:'+title+'\n';
-		result += 'wid:'+wid+'\n';
-
-		for (var i = 1; i <= link_num; i++) {
-			var value_str = document.getElementById('value_'+ i).textContent;
-			var input_str = document.getElementById('input_' + i).value;
-			var check_box_value = document.getElementById('checkbox_' + i).checked;
-			result += '【'+i+'】'+value_str+':'+input_str+':'+check_box_value+'\n';
+		// コピー対象をJavaScript上で変数として定義する
+		for (var i = 0; i < cmp1_count; i++) {
+			if (document.getElementById('checkbox1_' + i).checked){
+				result += 'ev1_' + i+':'+document.getElementById('checkbox1_' + i).value+'\n';
+			}
 		}
-
+		for (var i = 0; i < cmp2_count; i++) {
+			if (document.getElementById('checkbox2_' + i).checked){
+				result += 'ev2_' + i+':'+document.getElementById('checkbox2_' + i).value+'\n';
+			}
+		}
+		
 		copyTextToClipboard(result);
 		// コピーをお知らせする
 		alert("クリップボードにコピーできましたので作業ページにペーストしてください。\n" + result);
