@@ -194,6 +194,7 @@ input, textarea {
 
 		for (var i = 0; i < cmp2_count; i++) {
 			// 新しいHTML要素を作成
+			var input_idx = i + start_idx
 			var row = document.createElement("tr");
 			var cell = document.createElement("th");
 			var cellText = document.createTextNode(paraValue["cmp_r"+input_idx]);
@@ -207,7 +208,7 @@ input, textarea {
 
 			var cell = document.createElement("td");
 			var input_check_box = document.createElement('input');
-			input_check_box.setAttribute("id", 'checkbox_' + input_idx);	
+			input_check_box.setAttribute("id", 'checkbox2_' + input_idx);	
 			input_check_box.setAttribute("name", 'is_ev2_' + input_idx);	
 			input_check_box.setAttribute("type", 'checkbox');	
 			input_check_box.setAttribute("value", "is_ev2");
