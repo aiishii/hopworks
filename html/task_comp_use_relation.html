@@ -52,7 +52,7 @@
 	text-align-last: start;
 }
 .infobox { 
-    border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: center; clear: right; 
+    border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: center; clear: right; width: 30vw;
 } 
 .infobox tr { vertical-align: top; } 
 .infobox caption { margin-left: inherit; } 
@@ -125,7 +125,7 @@ input, textarea {
             paraPair = para[i].split("=");
             paraName = decodeURIComponent(paraPair[0]); 
             paraValue[paraName] = decodeURIComponent(paraPair[1]);
-            if (i == 3) {
+            if (i == 4) {
 				start_idx = Number(paraName.slice(1))
 			}
 			if (paraName.startsWith('e')){
@@ -137,6 +137,7 @@ input, textarea {
         }
 		test_id = paraValue["id"]
 		var title = paraValue["title"]
+		var category = paraValue["category"]
 		var cmp_title = paraValue["cmp_title"]
 		// var cmp_wid = paraValue["cmp_wid"]
 		document.getElementById('no').textContent = test_id
@@ -153,7 +154,7 @@ input, textarea {
 		var tbl = document.createElement("table");
 		tbl.setAttribute("class", 'infobox');
 		caption = tbl.createCaption();
-		caption.textContent = title;
+		caption.textContent = title + ' （'+category+ '）';
 		// tbl.setAttribute("border", "1")
 		var tblBody = document.createElement("tbody");
 
@@ -161,7 +162,7 @@ input, textarea {
 		var tbl2 = document.createElement("table");
 		tbl2.setAttribute("class", 'infobox');
 		caption2 = tbl2.createCaption();
-		caption2.textContent = cmp_title;
+		caption2.textContent = cmp_title + ' （'+category+ '）';
 		// tbl.setAttribute("border", "1")
 		var tblBody2 = document.createElement("tbody");
 
