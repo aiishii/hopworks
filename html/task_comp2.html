@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>比較問題</title>
+<style type="text/css">
+h1.firstHeading{line-height:1.2} 
+#frame1 {
+	width: 48%;
+	height: 500px;
+	font-size: 80%;
+}
+#frame2 {
+	width: 48%;
+	height: 500px;
+	font-size: 80%;
+	float: right;
+}
+</style>
+<script type="text/javascript">
+    function init() {
+        var paraPair  = new Array();
+        var paraName;
+        var paraValue = new Array();
+
+        var para_str = location.search.split("?")[1];
+        var para = para_str.split("&");
+        var para_num = para.length;
+
+        for (var i = 0; i < para_num; i++) {
+            paraPair = para[i].split("=");
+            paraName = decodeURIComponent(paraPair[0]); 
+            paraValue[paraName] = decodeURIComponent(paraPair[1]);
+        }
+        var url1 = '../wiki_html_no_infobox/' + paraValue["wid1"] + '.html'
+        var url2 = '../wiki_html_no_infobox/' + paraValue["wid2"] + '.html'
+        document.getElementById('frame1').setAttribute('src', url1);
+        document.getElementById('frame2').setAttribute('src', url2);
+    }
+</script>
+</head>
+<body onLoad="init()">
+<h1>比較問題作成タスク</h1>
+<p>
+２つのページの情報を使って比較問題を作成してください。
+</p>
+<iframe id="frame1" src=""></iframe>
+<iframe id="frame2" src=""></iframe>
+</body></html>
