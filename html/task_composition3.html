@@ -131,6 +131,8 @@ input, textarea {
 	var cmp1_count = 0;
 	var cmp2_count = 0
 	var test_id = ''
+	var title = ''
+	var title2 = ''
     function init() {
         var paraPair  = new Array();
         var paraName;
@@ -155,10 +157,10 @@ input, textarea {
 			}
         }
 		test_id = paraValue["id"]
-		var title = paraValue["title1"]
+		title = paraValue["title1"]
 		var link_id = paraValue["link_id"]
 		var ans_id = paraValue["ans_id"]
-		var title2 = paraValue["title2"]
+		title2 = paraValue["title2"]
 		var wid1 = paraValue["wid1"]
 		var wid2 = paraValue["wid2"]
 		var org_page_url1 = "https://hopworks-pgoe.vercel.app/wiki_html_no_infobox2/" + wid1 + ".html"
@@ -342,13 +344,16 @@ input, textarea {
 		for (var i = 0; i < cmp1_count; i++) {
 			var input_idx = i+1;
 			if (document.getElementById('checkbox1_' + input_idx).checked){
-				result += 'ev1_' + input_idx+':'+document.getElementById('checkbox1_' + input_idx).value+'\n';
+				// result += 'ev1_' + input_idx+':'+document.getElementById('checkbox1_' + input_idx).value+'\n';
+				result += 'ev1_' + input_idx+':'+title+"-"+document.getElementById("r1_"+input_idx).value+"-"+document.getElementById("e1_"+input_idx).innerText+'\n';
+				
 			}
 		}
 		for (var i = 0; i < cmp2_count; i++) {
 			var input_idx = i+1;
 			if (document.getElementById('checkbox2_' + input_idx).checked){
-				result += 'ev2_' + input_idx+':'+document.getElementById('checkbox2_' + input_idx).value+'\n';
+				result += 'ev2_' + input_idx+':'+title2+"-"+document.getElementById("r2_"+input_idx).value+"-"+document.getElementById("e2_"+input_idx).innerText+'\n';
+				
 			}
 		}
 		
