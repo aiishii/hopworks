@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>リンクされた２つのWikipediaページの情報から質問を作成するタスク</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<style type="text/css">
+/* #frame1 {
+	width: 90%; height: 50vh;
+} */
+#link_input_area2 {
+	width: 50vw; 
+	height: 90vh;
+	float: right; clear: right; 
+}
+.box_sbj {
+    border: solid 2px #9ee7ea;
+	background-color: #9ee7ea;
+    padding: 3px;
+	width: 100px;
+    /* width: 60%; */
+    /* border-radius: 3px; 角を丸くする */
+	text-align: center;
+}
+.box_obj {
+    border: solid 2px lightpink;
+	background-color: lightpink;
+    padding: 3px;
+    width: 100px;
+    /* border-radius: 10px; 角を丸くする */
+	text-align: center;
+}
+.anchor, .anchor-text, .anchor100-line, .anchor80-line, .anchor60, .anchor40 {
+	position: absolute;
+	background-color: #9ee7ea;
+	box-sizing: border-box;
+	padding: 3px;
+	font-size: 24px;
+	line-height: 1;
+	text-align: center;
+}
+.instruction { 
+    border: 0px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; 
+}
+.rubyposition_under{
+	display: inline-block;
+}
+.rubyposition_under ruby{
+	display: flex;
+	flex-direction: column;
+	text-align: start;  /* この指定は text-align-last を IE に対応させるために必要 */
+	text-align-last: start;
+}
+.infobox { 
+    border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: center; clear: right; width: 30vw;
+} 
+.infobox tr { vertical-align: top; } 
+.infobox caption { margin-left: inherit; } 
+.infobox.bordered { border-collapse: collapse; } 
+.infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } 
+.infobox.sisterproject { width: 20em; font-size: 70%; } 
+#link_input_area caption {
+    text-align: center;
+    /* margin-bottom: 5px; */
+    font-size: 130%;
+    padding: 5px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+#link_input_area2 caption {
+    text-align: center;
+    /* margin-bottom: 5px; */
+    font-size: 130%;
+    padding: 5px;
+    letter-spacing: 2px;
+    font-weight: bold;
+	color: #1e90ff;
+	/* background: linear-gradient(transparent 100%, #1e90ff 60%)"; */
+	/* border-bottom: dotted 2px #1e90ff; */
+	/* background: linear-gradient(transparent 50%, #a8eaff 50%); */
+	/* style:"border: 3px dotted #1e90ff" */
+}
+.input_area {
+    width: 100%; /*親要素いっぱい広げる*/
+    /*padding: 10px 15px; ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+/* * {
+	margin: 0;
+}
+input, textarea {
+	display: block;
+} */
+.task_area {
+	float: left;
+	width: 45vw;
+	/* height: 90%; */
+	height: 90vh;
+	/* height: 450px; */
+	overflow: scroll;
+	/* overflow-y: auto; */
+}
+.colum:nth-of-type(1) {
+	float: right; clear: right; 
+	width: 45vw;
+	/* height: 50vw; */
+} 
+</style>
+<script src="https://kit.fontawesome.com/b3c144f48f.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var link_num = 0;
+	function incheck(obj){
+		console.log("incheck obj id ="+obj.id);
+		var link_id=obj.id.replace('input_', 'link_');
+		console.log(link_id)
+		var x = document.getElementsByTagName("iframe")[0].contentWindow;
+		var elms = x.document.querySelectorAll("[id='"+ link_id +"']");
+		for(var i = 0; i < elms.length; i++) elms[i].style.backgroundColor = '#ffffff';
+
+	};
+	function bgchange(obj){
+		console.log("bgchange obj id ="+obj.id);
+		var link_id=obj.id.replace('input_', 'link_');
+		var x = document.getElementsByTagName("iframe")[0].contentWindow;
+		var elms = x.document.querySelectorAll("[id='"+ link_id +"']");
+		for(var i = 0; i < elms.length; i++) elms[i].style.backgroundColor = '#ffcccc';
+	};
+	var cmp1_count = 0;
+	var cmp2_count = 0
+	var test_id = ''
+    function init() {
+        var paraPair  = new Array();
+        var paraName;
+        var paraValue = new Array();
+
+        var para_str = location.search.split("?")[1];
+        var para = para_str.split("&");
+        var para_num = para.length;
+		// link_num = (para_num - 5) /4;
+		// console.log(link_num)
+		
+        for (var i = 0; i < para_num; i++) {
+            paraPair = para[i].split("=");
+            paraName = decodeURIComponent(paraPair[0]); 
+            paraValue[paraName] = decodeURIComponent(paraPair[1]);
+
+			if (paraName.startsWith('e1_')){
+				cmp1_count += 1
+			}
+			if (paraName.startsWith('e2_')){
+				cmp2_count += 1
+			}
+        }
+		test_id = paraValue["id"]
+		var title = paraValue["title1"]
+		var link_id = paraValue["link_id"]
+		var ans_id = paraValue["ans_id"]
+		var title2 = paraValue["title2"]
+		var wid1 = paraValue["wid1"]
+		var wid2 = paraValue["wid2"]
+		var org_page_url1 = "https://hopworks-pgoe.vercel.app/wiki_html_no_infobox2/" + wid1 + ".html"
+		var org_page_url2 = "https://hopworks-pgoe.vercel.app/wiki_html_no_infobox2/" + wid2 + ".html"
+		// var cmp_wid = paraValue["cmp_wid"]
+		document.getElementById('no').textContent = test_id
+		document.getElementById('title').textContent = title
+		// document.getElementById('wid').textContent = paraValue["wid"]
+        // // var url1 = 'https://tasks4makingmultihopqadataset.on.drv.tw/wiki_html/' + paraValue["wid"] + '.html'
+		// var url1 = '../wiki_html_w_ib/' + paraValue["wid"] + '.html'
+        // document.getElementById('frame1').setAttribute('src', url1);
+		// id属性で要素を取得
+		var input_element = document.getElementById('link_input_area');
+		var input_element2 = document.getElementById('link_input_area2');
+		
+		// <table> 要素と <tbody> 要素を作成
+		var tbl = document.createElement("table");
+		tbl.setAttribute("class", 'infobox');
+		caption = tbl.createCaption();
+		
+		// caption.textContent = title;
+		caption.innerHTML = title + '<a href="'+org_page_url1+'" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>';
+		// tbl.setAttribute("border", "1")
+		var tblBody = document.createElement("tbody");
+
+		// <table> 要素と <tbody> 要素を作成
+		var tbl2 = document.createElement("table");
+		tbl2.setAttribute("class", 'infobox');
+		caption2 = tbl2.createCaption();
+		caption2.innerHTML = '<i class="fa-solid fa-link"></i>' + title2 + '<a href="'+org_page_url2+'" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>';
+		// var link_mark = document.createElement("i");
+		// link_mark.setAttribute("class", "fa-solid fa-link");	
+		// caption2.textContent = "🚫 " + title2;
+		// tbl.setAttribute("border", "1")
+		var tblBody2 = document.createElement("tbody");
+		var row = document.createElement("tr");
+		var cell = document.createElement("th");
+		var textNode = document.createElement("span");
+		textNode.innerText = "属性名";
+		cell.appendChild(textNode);
+		row.appendChild(cell);
+		var cell = document.createElement("th");
+		cell.setAttribute("colspan", 2);	
+		var textNode = document.createElement("span");
+		textNode.innerText = "属性値";
+		cell.appendChild(textNode);
+		row.appendChild(cell);
+		var row2 = row.cloneNode(true);
+		tblBody.appendChild(row2);
+		tblBody2.appendChild(row);
+
+		for (var i = 0; i < cmp1_count; i++) {
+			// 新しいHTML要素を作成
+			var input_idx = i+1;
+
+			var row = document.createElement("tr");
+			var cell = document.createElement("th");
+			// var textNode = document.createElement("span");
+			// textNode.setAttribute("id", 'r1_' + input_idx);	
+			// textNode.innerText = paraValue["r1_"+input_idx];
+			var input_text_box = document.createElement('input');
+			input_text_box.setAttribute("class", "input_area");	
+			input_text_box.setAttribute("id", 'r1_' + input_idx);	
+			input_text_box.setAttribute("type", 'text');
+			input_text_box.setAttribute("value", paraValue["r1_"+input_idx]);
+			// <input type="text" value="表示させたいテキストを記述" >
+			// textNode.setAttribute('id', 'sampleId2');
+			// var cellText = document.createTextNode(paraValue["r1_"+input_idx]);
+			// cell.appendChild(textNode);
+			cell.appendChild(input_text_box);
+			row.appendChild(cell);
+
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode(paraValue["e1_"+input_idx]);
+			var textNode = document.createElement("span");
+			textNode.setAttribute("id", 'e1_' + input_idx);	
+			// textNode.innerText = paraValue["e1_"+input_idx];
+			textNode.innerHTML = paraValue["e1_"+input_idx];
+			// 
+			// var cellText = document.createTextNode(paraValue["r1_"+input_idx]);
+			
+			if(link_id == i){
+				textNode.setAttribute('style', "color:#1e90ff;font-weight:bold;");
+				// textNode.setAttribute('style', "background: linear-gradient(transparent 100%, #1e90ff 60%);");
+				// <span style="background: linear-gradient(transparent 100%, #ffff66 60%)">
+				// textNode.innerText = "🚫 " + textNode.innerText
+				textNode.innerHTML = '<i class="fa-solid fa-link">' + title2 + '</i>';
+			}
+			cell.appendChild(textNode);
+			// cell.appendChild(cellText);
+			row.appendChild(cell);
+
+			var cell = document.createElement("td");
+			var input_check_box = document.createElement('input');
+			input_check_box.setAttribute("class", "input_area");	
+			input_check_box.setAttribute("id", 'checkbox1_' + input_idx);	
+			input_check_box.setAttribute("name", 'ev1_' + input_idx);	
+			input_check_box.setAttribute("type", 'checkbox');	
+			input_check_box.setAttribute("value", title+"-"+paraValue["r1_"+input_idx]+"-"+paraValue["e1_"+input_idx]);
+			if(link_id == i){
+				input_check_box.checked = true;
+			}
+			cell.appendChild(input_check_box);
+			row.appendChild(cell);
+
+			// 表の本体の末尾に行を追加
+			tblBody.appendChild(row);
+		}
+
+		for (var i = 0; i < cmp2_count; i++) {
+			// 新しいHTML要素を作成
+			var input_idx = i+1;
+			var row = document.createElement("tr");
+			var cell = document.createElement("th");
+			var input_text_box = document.createElement('input');
+			input_text_box.setAttribute("class", "input_area");	
+			input_text_box.setAttribute("id", 'r2_' + input_idx);	
+			input_text_box.setAttribute("type", 'text');
+			input_text_box.setAttribute("value", paraValue["r2_"+input_idx]);
+
+			// var cellText = document.createTextNode(paraValue["r2_"+input_idx]);
+			// cellText.setAttribute("id", 'r2_' + input_idx);	
+			cell.appendChild(input_text_box);
+			row.appendChild(cell);
+
+			// var cell = document.createElement("td");
+			// var cellText = document.createTextNode(paraValue["e2_"+input_idx]);
+			// cell.appendChild(cellText);
+			// row.appendChild(cell);
+
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode(paraValue["e2_"+input_idx]);
+			var textNode = document.createElement("span");
+			textNode.setAttribute("id", 'e2_' + input_idx);	
+			textNode.innerText = paraValue["e2_"+input_idx];
+			// 
+			// var cellText = document.createTextNode(paraValue["r1_"+input_idx]);
+			
+			// if(ans_id == i){
+			// 	textNode.setAttribute('style', "color:red;font-weight:bold;");
+			// 	textNode.innerText += "〇"
+			// }
+			cell.appendChild(textNode);
+			row.appendChild(cell);
+
+			var cell = document.createElement("td");
+			var input_check_box = document.createElement('input');
+			input_check_box.setAttribute("class", "input_area");	
+			input_check_box.setAttribute("id", 'checkbox2_' + input_idx);	
+			input_check_box.setAttribute("name", 'ev2_' + input_idx);	
+			input_check_box.setAttribute("type", 'checkbox');	
+			input_check_box.setAttribute("value", title2+"-"+paraValue["r2_"+input_idx]+"-"+paraValue["e2_"+input_idx]);
+			
+			cell.appendChild(input_check_box);
+			
+			row.appendChild(cell);
+
+			// 表の本体の末尾に行を追加
+			tblBody2.appendChild(row);
+		}
+
+		// <tbody> を <table> の中に追加
+		tbl.appendChild(tblBody);
+		input_element.appendChild(tbl);
+
+		tbl2.appendChild(tblBody2);
+		input_element2.appendChild(tbl2);
+    }
+	function copyTextToClipboard(textVal){
+		var copyFrom = document.createElement("textarea");  
+		copyFrom.textContent = textVal;  
+		var bodyElm = document.getElementsByTagName("body")[0];  
+		bodyElm.appendChild(copyFrom);  copyFrom.select();  
+		var retVal = document.execCommand('copy');  
+		bodyElm.removeChild(copyFrom);  
+		return retVal; 
+	}
+	function copy() {
+		result = 'id:'+test_id+'\n';
+		// コピー対象をJavaScript上で変数として定義する
+		for (var i = 0; i < cmp1_count; i++) {
+			var input_idx = i+1;
+			if (document.getElementById('checkbox1_' + input_idx).checked){
+				result += 'ev1_' + input_idx+':'+document.getElementById('checkbox1_' + input_idx).value+'\n';
+			}
+		}
+		for (var i = 0; i < cmp2_count; i++) {
+			var input_idx = i+1;
+			if (document.getElementById('checkbox2_' + input_idx).checked){
+				result += 'ev2_' + input_idx+':'+document.getElementById('checkbox2_' + input_idx).value+'\n';
+			}
+		}
+		
+		copyTextToClipboard(result);
+		// コピーをお知らせする
+		alert("クリップボードにコピーできましたので作業ページにペーストしてください。\n" + result);
+	}
+	
+</script>
+
+<!--  -->
+<body onLoad="init()">
+<p>
+	<big><label class="newTaskFormQuestion">リンクされた２つのWikipediaページの情報から質問を作成するタスク</label></big></p>
+<p>
+	<span>
+		<ol>
+			<li>以下の２つの表は<span style="color:#1e90ff;font-weight:bold;">青字部分(<i class="fa-solid fa-link"></i>マーク)</span>の単語でつながりがあります。
+				<strong>青字の単語は質問に使わないようにしてください。</strong>青字の単語を回答とするか、もしくは右表のいずれかの属性値が回答となる質問を作成し、<strong>Lancersの作業ページの質問欄</strong>に記入してください。青字の単語を使わないことで、回答するには両方の表の情報を使う必要がある質問を作ることを意図しています。</li>
+				<li>質問の回答を<strong>Lancersの作業ページの回答欄</strong>に記入してください。</li>
+				<li>質問の回答の根拠となる表の情報にすべてチェックをつけ<strong>「回答の根拠をコピーする」ボタン</strong>を押し、<strong>Lancersの作業ページの回答の根拠欄</strong>に貼り付けてください。</li>
+			<li>表の属性名はクラウドソーシングにて付与しているため、誤りがある可能性があります。根拠に使用する情報の属性名に誤りがある場合は、修正をお願いします。</li>
+			
+			</ol>
+			
+		<br />
+		<button onclick="copy()">回答の根拠をコピーする</button>
+	<br />
+	
+	<p>
+		<strong>id.<span id="no"></span></strong>
+		<input id="wid" type="hidden"/>
+		<input id="title" type="hidden"/>
+	</p>
+	
+	<!-- <iframe id="frame1" src="https://tasks4makingmultihopqadataset.on.drv.tw/wiki_html/2630393_simple.html"></iframe> -->
+	<!-- <iframe id="frame1"></iframe> -->
+	<div id="link_input_area2" class="task_area"></div>
+	<!-- <div class="task_area"> -->
+	
+
+<div id="link_input_area" class="task_area">
+</div>
+
+</div>
+
+</body></html>
