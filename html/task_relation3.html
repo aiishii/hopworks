@@ -105,8 +105,8 @@ input, textarea {
 		start_idx = 0
         for (var i = 0; i < para_num; i++) {
             paraPair = para[i].split("=");
-            paraName = decodeURIComponent(paraPair[0]); 
-            paraValue[paraName] = decodeURIComponent(paraPair[1]);
+            paraName = decodeURIComponent(paraPair[0]).replace(/\+/ig," "); 
+            paraValue[paraName] = decodeURIComponent(paraPair[1]).replace(/\+/ig," ");
             if (i == 3) {
 				start_idx = Number(paraName.slice(1))
 			}
