@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>PID制御 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-PID制御 rootpage-PID制御 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">PID制御</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">ナビゲーションに移動</a>
+<a class="mw-jump-link" href="#searchInput">検索に移動</a>
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>PID制御</b>（ピーアイディーせいぎょ、Proportional-Integral-Differential Controller、PID Controller）は、<a href="." id="link_a_1" title="制御工学">制御工学</a>における<a href="." id="link_a_2" title="フィードバック">フィードバック</a>制御の一種であり、入力値の制御を出力値と目標値との偏差、その<a href="." id="link_a_3" title="積分">積分</a>、および<a href="." id="link_a_4" title="微分">微分</a>の3つの要素によって行う方法のことである<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001177_1-0"><a href="#cite_note-FOOTNOTE森泰親2001177-1">[1]</a></sup>。<a href="." id="link_a_5" title="制御理論">制御理論</a>の一分野をなす<a href="." id="link_a_6" title="古典制御論">古典制御論</a>の枠組みで体系化されたもので長い歴史を持っている。フィードバック制御の基礎ともなっており、様々な制御手法が開発・提案され続けている今に至っても、過去の実績や技術者の経験則の蓄積により調整を行いやすいため、産業界では主力の制御手法であると言われている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#P制御"><span class="tocnumber">1</span> <span class="toctext">P制御</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#問題点"><span class="tocnumber">1.1</span> <span class="toctext">問題点</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#PI制御"><span class="tocnumber">2</span> <span class="toctext">PI制御</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#問題点_2"><span class="tocnumber">2.1</span> <span class="toctext">問題点</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#PID制御"><span class="tocnumber">3</span> <span class="toctext">PID制御</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#パラメータ調整"><span class="tocnumber">4</span> <span class="toctext">パラメータ調整</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#ジーグラ・ニコルス法"><span class="tocnumber">4.1</span> <span class="toctext">ジーグラ・ニコルス法</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#CHR法"><span class="tocnumber">4.2</span> <span class="toctext">CHR法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#歴史"><span class="tocnumber">5</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id="P.E5.88.B6.E5.BE.A1"></span><span class="mw-headline" id="P制御">P制御</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=1" title="節を編集: P制御">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>基本的なフィードバック制御として<b>比例制御</b>（<b>P制御</b>）がある<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014113_2-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014113-2">[2]</a></sup>。これは操作量を制御量と目標値の偏差の一次関数として制御するものである。
+</p><p>ここで、ある制御対象の制御する量を<b>制御量</b>、<b>出力</b>などと呼び<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか20148_3-0"><a href="#cite_note-FOOTNOTE佐藤ほか20148-3">[3]</a></sup>、制御量に追従させたい希望の値を<b>目標値</b><sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか201496_4-0"><a href="#cite_note-FOOTNOTE佐藤ほか201496-4">[4]</a></sup>と呼び、目標値を得るため制御対象を操作する量あるいは制御対象に入力する量を<b>操作量</b>、<b>入力</b>などと呼ぶ<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか20148_3-1"><a href="#cite_note-FOOTNOTE佐藤ほか20148-3">[3]</a></sup>。なお、ある時刻<i>t</i>での操作量を<i>u</i>(<i>t</i>)、出力値を<i>y</i>(<i>t</i>)、目標値を<i>r</i>(<i>t</i>)とする。このとき、目標値と現状の制御量との差を、<b>制御偏差</b>、<b>偏差</b>などと呼び<i>e</i>(<i>t</i>)で表し<sup class="reference" id="cite_ref-岡田2007_5-0"><a href="#cite_note-岡田2007-5">[5]</a></sup><sup class="reference" id="cite_ref-豊橋・高専_6-0"><a href="#cite_note-豊橋・高専-6">[6]</a></sup>、<i>r</i>(<i>t</i>) - <i>y</i>(<i>t</i>)である<sup class="reference" id="cite_ref-岡田2007_5-1"><a href="#cite_note-岡田2007-5">[5]</a></sup>。ここで<a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a>にもとづく<a class="mw-redirect" href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0" title="伝達関数">伝達関数</a>で上記の式を表現すると、
+</p>
+<dl><dd>&lt;math&gt;E(s) = R(s) - Y(s)&lt;/math&gt;</dd></dl>
+<p>となる。ただし、<i>s</i>は<a href="/wiki/%E8%A4%87%E7%B4%A0%E6%95%B0" title="複素数">複素数</a>である<sup class="reference" id="cite_ref-岡田2007_5-2"><a href="#cite_note-岡田2007-5">[5]</a></sup><sup class="reference" id="cite_ref-豊橋・高専_6-1"><a href="#cite_note-豊橋・高専-6">[6]</a></sup>。
+</p><p>この時、P制御による制御入力は
+</p>
+<dl><dd>&lt;math&gt;u(t) = K_p e(t) = K_p (r(t) - y(t))&lt;/math&gt;</dd></dl>
+<p>および
+</p>
+<dl><dd>&lt;math&gt;U(s) = K_p E(s) = K_p (R(s) - Y(s))&lt;/math&gt;</dd></dl>
+<p>と表される<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014114_7-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014114-7">[7]</a></sup><sup class="reference" id="cite_ref-岡田2007_5-3"><a href="#cite_note-岡田2007-5">[5]</a></sup><sup class="reference" id="cite_ref-豊橋・高専_6-2"><a href="#cite_note-豊橋・高専-6">[6]</a></sup>。よって、P制御を行う調節器の伝達関数を<i>C</i>(s)とすれば、
+</p>
+<dl><dd>&lt;math&gt;C(s) = K_p &lt;/math&gt;</dd></dl>
+<p>となる<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001178_8-0"><a href="#cite_note-FOOTNOTE森泰親2001178-8">[8]</a></sup>。
+</p><p>PID制御では、この偏差に比例して操作量を変化させる動作を、<b>比例動作</b>あるいは<b>P動作</b>（PはProportionalの略）という。定数<i>K</i><sub>p</sub>は<b>比例ゲイン</b>、<b>Pゲイン</b>と呼ばれる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014114_7-1"><a href="#cite_note-FOOTNOTE佐藤ほか2014114-7">[7]</a></sup>。
+</p>
+<h3><span id=".E5.95.8F.E9.A1.8C.E7.82.B9"></span><span class="mw-headline" id="問題点">問題点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=2" title="節を編集: 問題点">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>比例制御においては<i>K</i><sub>p</sub>を変えない限り、入力値に対して出力値は常に決まっている。
+しかし、実際に制御を行う場合には同じ入力値に対しても周囲の環境などによって出力値を変えなければならないことがある。
+例えばある装置の温度を60℃に保ちたいときにその外気温が10℃のときと30℃のときでは加熱に必要な熱量を変えなければならない。
+このような状況下で外気温が10℃の時に、外気温が30℃の時に60℃に到達するK<sub>p</sub>の値を使用して比例制御を行うと、熱量が足りず目標値に到達することができない。
+このようにして生じる制御結果と目標値との偏差を<b>定常偏差</b>または<b>オフセット</b>という<sup class="reference" id="cite_ref-FOOTNOTE須田信英1995770_9-0"><a href="#cite_note-FOOTNOTE須田信英1995770-9">[9]</a></sup>。
+</p>
+<h2><span id="PI.E5.88.B6.E5.BE.A1"></span><span class="mw-headline" id="PI制御">PI制御</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=3" title="節を編集: PI制御">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>残留偏差をなくすために周囲の環境が変わるたびに最適の<i>K</i><sub>p</sub>を決定しなおすのは難しい。
+そこで
+</p>
+<dl><dd>&lt;math&gt;u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau&lt;/math&gt;</dd></dl>
+<p>と2つ目の項を付け加える。
+この項は残留偏差が存在する場合、その偏差の時間積分に比例して入力値を変化させる動作をする<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014115_10-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014115-10">[10]</a></sup>。
+つまり偏差のある状態が長い時間続けばそれだけ入力値の変化を大きくして目標値に近づけようとする役目を果たす。定数<i>K</i><sub>i</sub>は<b>積分ゲイン</b>、<b>Iゲイン</b>と呼ばれる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014115_10-1"><a href="#cite_note-FOOTNOTE佐藤ほか2014115-10">[10]</a></sup>。
+</p><p>また、積分ゲインを<i>K</i><sub>i</sub> = <i>K</i><sub>p</sub> / <i>T</i><sub>i</sub>で表し、上式に代入すると、
+</p>
+<dl><dd>&lt;math&gt;u(t) = K_p \left( e(t) + {1 \over T_i} \int_{0}^{t} e(\tau)\, d\tau \right)&lt;/math&gt;</dd></dl>
+<p>この<i>T</i><sub>i</sub>は<b>積分時間</b>と呼ばれる。
+積分時間の物理的意味は、ある一定の大きさのオフセットが継続した（つまり<i>e</i>(<i>t</i>)が一定）のときにP動作とI動作の項が同じになるのに要する時間である。
+</p><p>P制御と同じく、PI制御を伝達関数で表現すれば、
+</p>
+<dl><dd>&lt;math&gt;U(s) = \left( K_p + \frac{K_i}{s} \right) E(s) = K_p \left( 1 + \frac{1}{T_i s} \right) E(s)&lt;/math&gt;</dd></dl>
+<p>となる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014114_7-2"><a href="#cite_note-FOOTNOTE佐藤ほか2014114-7">[7]</a></sup>。PI制御の伝達関数<i>C</i>(s)は以下のようになる<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001178_8-1"><a href="#cite_note-FOOTNOTE森泰親2001178-8">[8]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;C(s) = K_p + \frac{K_i}{s} = K_p \left( 1 + \frac{1}{T_I s} \right) &lt;/math&gt;</dd></dl>
+<p>この偏差の積分に比例して入力値を変化させる動作を<b>積分動作</b>あるいは<b>I動作</b>（IはIntegralの略）という。上記のように比例動作と積分動作を組み合わせた制御方法は<b>PI制御</b>という<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014114_7-3"><a href="#cite_note-FOOTNOTE佐藤ほか2014114-7">[7]</a></sup>。
+</p>
+<h3><span id=".E5.95.8F.E9.A1.8C.E7.82.B9_2"></span><span class="mw-headline" id="問題点_2">問題点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=4" title="節を編集: 問題点">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>積分時間が小さいほどI動作の寄与が大きくなり残留偏差の矯正が迅速に行われるが、小さすぎると目標値を行き過ぎたり（<b>オーバーシュート</b>）、目標値の前後を出力値が振動したり（<b>ハンチング</b>）する現象を起こすことがある。積分動作は制御系の位相を遅らせる効果を持つので系を不安定にしやすい<sup class="reference" id="cite_ref-FOOTNOTE山本・加藤199764_11-0"><a href="#cite_note-FOOTNOTE山本・加藤199764-11">[11]</a></sup>。
+</p><p>一方、周囲の環境が変化したり制御対象に撹乱が加わったりすることで出力値が急に変動することがある。
+このような場合にもPI制御は出力値を目標値に常に近づけようとする。
+しかし、I動作はある程度時間が経過しないと働かないため、どうしても出力値を目標値に戻すために時間がかかる。
+</p>
+<h2><span id="PID.E5.88.B6.E5.BE.A1"></span><span class="mw-headline" id="PID制御">PID制御</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=5" title="節を編集: PID制御">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>上記のようなPI制御の問題点を解決するために、
+</p>
+<dl><dd>&lt;math&gt;u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau)\, d\tau + K_d {{d} e(t) \over dt}&lt;/math&gt;</dd></dl>
+<p>と3つ目の項を付け加える。
+この項は急激な出力値の変化が起こった場合、その変化の大きさに比例した入力を行うことで、その変化に抗しようとする役目を果たす。定数<i>K</i><sub>d</sub>は<b>微分ゲイン</b>、<b>Dゲイン</b>と呼ばれる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014118_12-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014118-12">[12]</a></sup>。
+</p><p>また、微分ゲインを<i>K</i><sub>d</sub> = <i>K</i><sub>p</sub>・<i>T</i><sub>d</sub>で表し、上式に代入すると、
+</p>
+<dl><dd>&lt;math&gt;\Delta x(t) = K_p (\Delta y(t) + {1 \over T_i} \int_{0}^{t} \Delta y(\tau)\, d\tau + T_d {{d \Delta y(t)} \over dt})&lt;/math&gt;</dd></dl>
+<p>この<i>T</i><sub>d</sub>は<b>微分時間</b>と呼ばれる。
+微分時間の物理的意味は、ある一定の変化率の出力値の変動が継続した（つまりd<i>e</i>(<i>t</i>)/d<i>t</i>が一定）のときにP動作とD動作の項が同じになるのに要する時間である。
+微分時間が大きいほどD動作の寄与が大きくなり変動へ対処が迅速に行われるが、大きすぎると今度は逆方向へ変動したりすることになり制御が不安定になる。
+</p><p>PID制御を伝達関数で表現すれば、
+</p>
+<dl><dd>&lt;math&gt;U(s) = \left( K_p + \frac{K_i}{s} + K_D s \right) E(s) = K_p \left( 1 + \frac{1}{T_i s} + T_d s \right) E(s)&lt;/math&gt;</dd></dl>
+<p>となる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014118_12-1"><a href="#cite_note-FOOTNOTE佐藤ほか2014118-12">[12]</a></sup>。PID制御の伝達関数<i>C</i>(s)は以下のようになる<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014179_13-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014179-13">[13]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;C(s) = K_p + \frac{K_i}{s} + K_D s = K_p \left( 1 + \frac{1}{T_i s} + T_d s \right) &lt;/math&gt;</dd></dl>
+<p>この偏差の微分に比例して入力値を変化させる動作を<b>微分動作</b>あるいは<b>D動作</b>（DはDerivativeまたはDifferentialの略）という。
+上記のように比例動作、積分動作、微分動作を組み合わせた制御方法を<b>PID制御</b>という<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014118_12-2"><a href="#cite_note-FOOTNOTE佐藤ほか2014118-12">[12]</a></sup>。操作量<i>U</i>が比例項、積分項、微分項の3つの和となることから、<b>3項制御</b>とも呼ぶ<sup class="reference" id="cite_ref-FOOTNOTE須田信英1995769_14-0"><a href="#cite_note-FOOTNOTE須田信英1995769-14">[14]</a></sup>。
+</p><p>PID制御において適切な比例ゲイン、積分ゲイン（または積分時間）、微分ゲイン（または微分時間）を決定するには制御対象の入力に対する応答を調べておく必要がある。
+このためには入力値を階段状に変動させた時に出力値が応答しはじめるまでに要する時間（<b>無駄時間</b>）、応答しはじめてからの変化の速度（<b>時定数</b>）、入力値の変化量と出力値の変化量の比（<b>プロセスゲイン</b>）などを測定し、その値から設定する方法がある。
+無駄時間が長く時定数が小さい（応答開始に時間がかかるが、応答がはじまると急激に変化する）制御対象にはPID制御は不向きである。
+</p>
+<h2><span id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E8.AA.BF.E6.95.B4"></span><span class="mw-headline" id="パラメータ調整">パラメータ調整</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=6" title="節を編集: パラメータ調整">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>PID制御の各パラメータの値（<i>K</i><sub>p</sub>、<i>K</i><sub>i</sub>、<i>K</i><sub>d</sub>）あるいは（<i>K</i><sub>p</sub>、<i>T</i><sub>i</sub>、<i>T</i><sub>d</sub>）は設計値なので、制御対象とは独立に自由に与えることができ、要求を満たす最適な値を決定する必要がある。しかし、一般的な制御対象に対して、最適なゲイン値を与える代数的な方法は存在せず、実際の調整は、数値シミュレーションを行ったり、実際の対象物に調整器を繋いで試行錯誤的に最適値を得ている<sup class="reference" id="cite_ref-FOOTNOTE佐藤ほか2014120_15-0"><a href="#cite_note-FOOTNOTE佐藤ほか2014120-15">[15]</a></sup>。
+</p>
+<h3><span id=".E3.82.B8.E3.83.BC.E3.82.B0.E3.83.A9.E3.83.BB.E3.83.8B.E3.82.B3.E3.83.AB.E3.82.B9.E6.B3.95"></span><span class="mw-headline" id="ジーグラ・ニコルス法">ジーグラ・ニコルス法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=7" title="節を編集: ジーグラ・ニコルス法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>パラメータ調整の経験則として、1942年にジョン・ジーグラ(John G. Ziegler)とナサニエル・ニコルス(Nathaniel B. Nichols)らによりに提案された
+<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+2つの調整法が知られている。彼らの調整法には<b>ジーグラ・ニコルスの限界感度法</b>(Ziegler-Nichols' Ultimate Gain method, Ziegler-Nichols’Closed-Loop Method)と<b>ジーグラ・ニコルスのステップ応答法（過渡応答法）</b>(Ziegler-Nichols' Process Reaction Curve method, Ziegler-Nichols’Open-Loop Method)がある<sup class="reference" id="cite_ref-FOOTNOTE近藤正示200432-33_17-0"><a href="#cite_note-FOOTNOTE近藤正示200432-33-17">[17]</a></sup><sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。
+</p><p>ジーグラ・ニコルスの限界感度法では以下のような手順でゲイン値を決定する<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001180_19-0"><a href="#cite_note-FOOTNOTE森泰親2001180-19">[19]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE近藤正示200432-33_17-1"><a href="#cite_note-FOOTNOTE近藤正示200432-33-17">[17]</a></sup>。
+まず、<i>T</i><sub>i</sub>→∞（あるいは最大）、T<sub>d</sub>→0として、調節器がP動作だけを行うようにする。次に、比例ゲイン<i>K</i><sub>P</sub>を0から徐々に大きくしていき、制御量が安定限界に達して一定振幅振動を持続するようになったところで<i>K</i><sub>P</sub>の増加を止める。このときの比例ゲインを<i>K</i><sub>u</sub>（限界感度）、振動周期を<i>P</i><sub>u</sub> として、これらの値から調節器の各パラメータを下の表のように決める。限界感度法は最初のオーバーシュート量と次のオーバーシュート量の比を1/4程度にすることを目安とした方法で、このような調整を1/4減衰の制御などと呼ぶ<sup class="reference" id="cite_ref-FOOTNOTE須田信英200441_20-0"><a href="#cite_note-FOOTNOTE須田信英200441-20">[20]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE須田信英200442_21-0"><a href="#cite_note-FOOTNOTE須田信英200442-21">[21]</a></sup>。
+</p>
+<table class="wikitable">
+<caption>ジーグラ・ニコルスの限界感度法<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001180_19-1"><a href="#cite_note-FOOTNOTE森泰親2001180-19">[19]</a></sup>
+</caption>
+<tbody><tr>
+<th>制御の種類</th>
+<th>&lt;math&gt;K_p&lt;/math&gt;</th>
+<th>&lt;math&gt;T_i&lt;/math&gt;</th>
+<th>&lt;math&gt;T_d&lt;/math&gt;
+</th></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;0.50{K_u}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.45{K_u}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.83P_u&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;0.60{K_u}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.50P_u&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.125P_u&lt;/math&gt;
+</td></tr></tbody></table>
+<p>ジーグラ・ニコルスのステップ応答法では以下のような手順でゲイン値を決定する<sup class="reference" id="cite_ref-FOOTNOTE近藤正示200432-33_17-2"><a href="#cite_note-FOOTNOTE近藤正示200432-33-17">[17]</a></sup>。
+まず、調整器を介さずに制御対象単体にステップ入力を加える。これにより得られたステップ応答曲線から、曲線の勾配が最も急なところに接線を引き、その勾配を<i>R=K/T</i>（ここで<i>K</i>は定常ゲイン、<i>T</i>は時定数）とする。この接線が横軸（時間軸）と交わる時刻と入力を加えた時刻との差を取り、この時間を<i>L</i>とする。これらの値から調節器の各パラメータを下の表のように決める。
+</p>
+<table class="wikitable">
+<caption>ジーグラ・ニコルスのステップ応答法<sup class="reference" id="cite_ref-FOOTNOTE森泰親2001180_19-2"><a href="#cite_note-FOOTNOTE森泰親2001180-19">[19]</a></sup>
+</caption>
+<tbody><tr>
+<th>制御の種類</th>
+<th>&lt;math&gt;K_p&lt;/math&gt;</th>
+<th>&lt;math&gt;T_i&lt;/math&gt;</th>
+<th>&lt;math&gt;T_d&lt;/math&gt;
+</th></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;1/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.9/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;3.3L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;1.2/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.5L&lt;/math&gt;
+</td></tr></tbody></table>
+<h3><span id="CHR.E6.B3.95"></span><span class="mw-headline" id="CHR法">CHR法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=8" title="節を編集: CHR法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ジーグラ・ニコルス法以外にも多くの調整則が提案されており、それらの中の一つとして1952年に発表された<b>CHR法</b>が知られている。ステップ応答法の1種で、提案者のチェン(Chien)、フローネス(Hrones)、レスウィック(Reswick)の3名の頭文字からCHR法と呼ばれる<sup class="reference" id="cite_ref-FOOTNOTE山本・加藤199789_22-0"><a href="#cite_note-FOOTNOTE山本・加藤199789-22">[22]</a></sup>。CHR法には、目標値追従を目的にする場合と外乱効果抑制を目的にする場合、さらにオーバーシュート量0の場合と20%の場合があり<sup class="reference" id="cite_ref-FOOTNOTE須田信英200440_23-0"><a href="#cite_note-FOOTNOTE須田信英200440-23">[23]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE須田信英200442_21-1"><a href="#cite_note-FOOTNOTE須田信英200442-21">[21]</a></sup>、各パラメータを下の表のように決める。
+</p>
+<table class="wikitable">
+<caption>CHR法（目標値追従）<sup class="reference" id="cite_ref-FOOTNOTE山本・加藤199789_22-1"><a href="#cite_note-FOOTNOTE山本・加藤199789-22">[22]</a></sup>
+</caption>
+<tbody><tr>
+<th>制御の種類</th>
+<th>&lt;math&gt;K_p&lt;/math&gt;</th>
+<th>&lt;math&gt;T_i&lt;/math&gt;</th>
+<th>&lt;math&gt;T_d&lt;/math&gt;</th>
+<th>オーバーシュート量
+</th></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;0.3/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td rowspan="3">0%
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.35/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;1.2T&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;0.6/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;T&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.5L&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;0.7/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td rowspan="3">20%
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.6/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;T&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;0.95/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;1.35T&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.47L&lt;/math&gt;
+</td></tr></tbody></table>
+<table class="wikitable">
+<caption>CHR法（外乱効果抑制）<sup class="reference" id="cite_ref-FOOTNOTE山本・加藤199789_22-2"><a href="#cite_note-FOOTNOTE山本・加藤199789-22">[22]</a></sup>
+</caption>
+<tbody><tr>
+<th>制御の種類</th>
+<th>&lt;math&gt;K_p&lt;/math&gt;</th>
+<th>&lt;math&gt;T_i&lt;/math&gt;</th>
+<th>&lt;math&gt;T_d&lt;/math&gt;</th>
+<th>オーバーシュート量
+</th></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;0.3/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td rowspan="3">0%
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.6/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;4L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;0.95/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2.4L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.4L&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>P
+</td>
+<td>&lt;math&gt;0.7/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td>
+<td rowspan="3">20%
+</td></tr>
+<tr style="text-align:center;">
+<td>PI
+</td>
+<td>&lt;math&gt;0.7/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2.3L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-&lt;/math&gt;
+</td></tr>
+<tr style="text-align:center;">
+<td>PID
+</td>
+<td>&lt;math&gt;1.2/RL&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2L&lt;/math&gt;
+</td>
+<td>&lt;math&gt;0.42L&lt;/math&gt;
+</td></tr></tbody></table>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=9" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>制御技術と理論の起源は、蒸気機関の<a href="/wiki/%E8%AA%BF%E9%80%9F%E6%A9%9F" title="調速機">調速機</a>から始まった<sup class="reference" id="cite_ref-FOOTNOTE広井和男20042_24-0"><a href="#cite_note-FOOTNOTE広井和男20042-24">[24]</a></sup>。PID制御は、その後、特に船の自動操舵の開発の中で発達していった。1911年、エルマー・アンブローズ・スペリー(<a class="new" href="/w/index.php?title=En:Elmer_Ambrose_Sperry&amp;action=edit&amp;redlink=1" title="En:Elmer Ambrose Sperry (存在しないページ)">en:Elmer Ambrose Sperry</a>)が、PID制御器の構成を成した船の自動操舵機構を開発した<sup class="reference" id="cite_ref-FOOTNOTEBennett199618_25-0"><a href="#cite_note-FOOTNOTEBennett199618-25">[25]</a></sup>。<a href="/wiki/1922%E5%B9%B4" title="1922年">1922年</a>には、ニコラス・マイノースキー(Nicolas Minorsky)が船の自動操舵に関して数式化された制御理論の発表を行い<sup class="reference" id="cite_ref-FOOTNOTEBennett199619_26-0"><a href="#cite_note-FOOTNOTEBennett199619-26">[26]</a></sup>、これがPID制御の最初の着想とされている<sup class="reference" id="cite_ref-FOOTNOTE須田信英1995769_14-1"><a href="#cite_note-FOOTNOTE須田信英1995769-14">[14]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE広井和男20042_24-1"><a href="#cite_note-FOOTNOTE広井和男20042-24">[24]</a></sup>。
+</p><p>その後<a href="/wiki/1936%E5%B9%B4" title="1936年">1936年</a>、テイラー社(Taylor Instruments)のカレンダー(Callender)らにより、空気式PID調整器の原型が製作された<sup class="reference" id="cite_ref-FOOTNOTE広井和男20043_27-0"><a href="#cite_note-FOOTNOTE広井和男20043-27">[27]</a></sup>。しかしPIDパラメータの調整の仕方が不明であったため、この調整器の売れ行きは不調に終わった<sup class="reference" id="cite_ref-FOOTNOTE広井和男20043_27-1"><a href="#cite_note-FOOTNOTE広井和男20043-27">[27]</a></sup>。これを受けて、1942年に同テイラー社のジョン・ジーグラ(John G. Ziegler)とナサニエル・ニコルス(Nathaniel B. Nichols)らにより、実用的なPIDパラメータの調整則が考案された<sup class="reference" id="cite_ref-FOOTNOTE広井和男20043_27-2"><a href="#cite_note-FOOTNOTE広井和男20043-27">[27]</a></sup>。さらに、この調整則は同テイラー社のジェラルディン・クーン(Geraldine Coon)により広められ、良く知られるようになった<sup class="reference" id="cite_ref-FOOTNOTEBennett199620_28-0"><a href="#cite_note-FOOTNOTEBennett199620-28">[28]</a></sup>。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-FOOTNOTE森泰親2001177-1"><b><a href="#cite_ref-FOOTNOTE森泰親2001177_1-0">^</a></b> <span class="reference-text"><a href="#CITEREF森泰親2001">森泰親 2001</a>, p. 177.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014113-2"><b><a href="#cite_ref-FOOTNOTE佐藤ほか2014113_2-0">^</a></b> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 113.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか20148-3">^ <a href="#cite_ref-FOOTNOTE佐藤ほか20148_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか20148_3-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 8.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか201496-4"><b><a href="#cite_ref-FOOTNOTE佐藤ほか201496_4-0">^</a></b> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 96.</span>
+</li>
+<li id="cite_note-岡田2007-5">^ <a href="#cite_ref-岡田2007_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-岡田2007_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-岡田2007_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-岡田2007_5-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text">岡田昌史『システム制御の基礎と応用―メカトロニクス系制御のために』、<a class="mw-redirect" href="/wiki/%E6%95%B0%E7%90%86%E5%B7%A5%E5%AD%A6%E7%A4%BE" title="数理工学社">数理工学社</a>、2008年1月、ISBN 978-4901683524。</span>
+</li>
+<li id="cite_note-豊橋・高専-6">^ <a href="#cite_ref-豊橋・高専_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-豊橋・高専_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-豊橋・高専_6-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text">豊橋技術科学大学・高等専門学校 制御工学教育連携プロジェクト 編著『専門基礎ライブラリー 制御工学 ―技術者のための、理論・設計から実装まで―』、2012年3月、ISBN 978-4-407-32575-1。</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014114-7">^ <a href="#cite_ref-FOOTNOTE佐藤ほか2014114_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014114_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014114_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014114_7-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 114.</span>
+</li>
+<li id="cite_note-FOOTNOTE森泰親2001178-8">^ <a href="#cite_ref-FOOTNOTE森泰親2001178_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE森泰親2001178_8-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF森泰親2001">森泰親 2001</a>, p. 178.</span>
+</li>
+<li id="cite_note-FOOTNOTE須田信英1995770-9"><b><a href="#cite_ref-FOOTNOTE須田信英1995770_9-0">^</a></b> <span class="reference-text"><a href="#CITEREF須田信英1995">須田信英 1995</a>, p. 770.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014115-10">^ <a href="#cite_ref-FOOTNOTE佐藤ほか2014115_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014115_10-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 115.</span>
+</li>
+<li id="cite_note-FOOTNOTE山本・加藤199764-11"><b><a href="#cite_ref-FOOTNOTE山本・加藤199764_11-0">^</a></b> <span class="reference-text"><a href="#CITEREF山本・加藤1997">山本・加藤 1997</a>, p. 64.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014118-12">^ <a href="#cite_ref-FOOTNOTE佐藤ほか2014118_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014118_12-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE佐藤ほか2014118_12-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 118.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014179-13"><b><a href="#cite_ref-FOOTNOTE佐藤ほか2014179_13-0">^</a></b> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 179.</span>
+</li>
+<li id="cite_note-FOOTNOTE須田信英1995769-14">^ <a href="#cite_ref-FOOTNOTE須田信英1995769_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE須田信英1995769_14-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF須田信英1995">須田信英 1995</a>, p. 769.</span>
+</li>
+<li id="cite_note-FOOTNOTE佐藤ほか2014120-15"><b><a href="#cite_ref-FOOTNOTE佐藤ほか2014120_15-0">^</a></b> <span class="reference-text"><a href="#CITEREF佐藤ほか2014">佐藤ほか 2014</a>, p. 120.</span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">J. G. Ziegler; N. B. Nichols (1942). “Optimum Settings for Automatic Controllers”. <i>Trans. ASME</i> <b>64</b>:  759-768.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Optimum+Settings+for+Automatic+Controllers&amp;rft.jtitle=Trans.+ASME&amp;rft.aulast=J.+G.+Ziegler&amp;rft.au=J.+G.+Ziegler&amp;rft.au=N.+B.+Nichols&amp;rft.date=1942&amp;rft.volume=64&amp;rft.pages=759-768&amp;rfr_id=info:sid/ja.wikipedia.org:PID%E5%88%B6%E5%BE%A1"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-FOOTNOTE近藤正示200432-33-17">^ <a href="#cite_ref-FOOTNOTE近藤正示200432-33_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE近藤正示200432-33_17-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE近藤正示200432-33_17-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF近藤正示2004">近藤正示 2004</a>, p. 32-33.</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Finn Haugen (2010). <a class="external text" href="http://www.mic-journal.no/ABS/MIC-2010-3-1.asp" rel="nofollow">“Comparing PI Tuning Methods in a Real Benchmark Temperature Control System”</a>. <i>Modeling, Identification and Control</i> (Norwegian Society of Automatic Control) <b>31</b> (3):  81<span style="display:none;">. <a class="external free" href="http://www.mic-journal.no/ABS/MIC-2010-3-1.asp" rel="nofollow">http://www.mic-journal.no/ABS/MIC-2010-3-1.asp</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Comparing+PI+Tuning+Methods+in+a+Real+Benchmark+Temperature+Control+System&amp;rft.jtitle=Modeling%2C+Identification+and+Control&amp;rft.aulast=Finn+Haugen&amp;rft.au=Finn+Haugen&amp;rft.date=2010&amp;rft.volume=31&amp;rft.issue=3&amp;rft.pages=81&amp;rft.pub=Norwegian+Society+of+Automatic+Control&amp;rft_id=http%3A%2F%2Fwww.mic-journal.no%2FABS%2FMIC-2010-3-1.asp&amp;rfr_id=info:sid/ja.wikipedia.org:PID%E5%88%B6%E5%BE%A1"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-FOOTNOTE森泰親2001180-19">^ <a href="#cite_ref-FOOTNOTE森泰親2001180_19-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE森泰親2001180_19-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE森泰親2001180_19-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF森泰親2001">森泰親 2001</a>, p. 180.</span>
+</li>
+<li id="cite_note-FOOTNOTE須田信英200441-20"><b><a href="#cite_ref-FOOTNOTE須田信英200441_20-0">^</a></b> <span class="reference-text"><a href="#CITEREF須田信英2004">須田信英 2004</a>, p. 41.</span>
+</li>
+<li id="cite_note-FOOTNOTE須田信英200442-21">^ <a href="#cite_ref-FOOTNOTE須田信英200442_21-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE須田信英200442_21-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF須田信英2004">須田信英 2004</a>, p. 42.</span>
+</li>
+<li id="cite_note-FOOTNOTE山本・加藤199789-22">^ <a href="#cite_ref-FOOTNOTE山本・加藤199789_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE山本・加藤199789_22-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE山本・加藤199789_22-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF山本・加藤1997">山本・加藤 1997</a>, p. 89.</span>
+</li>
+<li id="cite_note-FOOTNOTE須田信英200440-23"><b><a href="#cite_ref-FOOTNOTE須田信英200440_23-0">^</a></b> <span class="reference-text"><a href="#CITEREF須田信英2004">須田信英 2004</a>, p. 40.</span>
+</li>
+<li id="cite_note-FOOTNOTE広井和男20042-24">^ <a href="#cite_ref-FOOTNOTE広井和男20042_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE広井和男20042_24-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF広井和男2004">広井和男 2004</a>, p. 2.</span>
+</li>
+<li id="cite_note-FOOTNOTEBennett199618-25"><b><a href="#cite_ref-FOOTNOTEBennett199618_25-0">^</a></b> <span class="reference-text"><a href="#CITEREFBennett1996">Bennett 1996</a>, p. 18.</span>
+</li>
+<li id="cite_note-FOOTNOTEBennett199619-26"><b><a href="#cite_ref-FOOTNOTEBennett199619_26-0">^</a></b> <span class="reference-text"><a href="#CITEREFBennett1996">Bennett 1996</a>, p. 19.</span>
+</li>
+<li id="cite_note-FOOTNOTE広井和男20043-27">^ <a href="#cite_ref-FOOTNOTE広井和男20043_27-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE広井和男20043_27-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE広井和男20043_27-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF広井和男2004">広井和男 2004</a>, p. 3.</span>
+</li>
+<li id="cite_note-FOOTNOTEBennett199620-28"><b><a href="#cite_ref-FOOTNOTEBennett199620_28-0">^</a></b> <span class="reference-text"><a href="#CITEREFBennett1996">Bennett 1996</a>, p. 20.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web" id="CITEREF近藤正示2004" style="font-style:normal">近藤正示 (2004年4月16日). “<span class="PDFlink"><a class="external text" href="http://power.nagaokaut.ac.jp/convenience/pdffiles/0Control-Kandoko.pdf" rel="nofollow">制御の勘所</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”.   <a href="/wiki/%E9%95%B7%E5%B2%A1%E6%8A%80%E8%A1%93%E7%A7%91%E5%AD%A6%E5%A4%A7%E5%AD%A6" title="長岡技術科学大学">長岡技術科学大学</a> 電力制御研究室. <span title="">2015年2月12日</span>閲覧。</cite></li>
+<li><cite class="citation book" id="CITEREF佐藤ほか2014" style="font-style:normal">佐藤和也・平元和彦・平田研二『<a class="external text" href="http://bookclub.kodansha.co.jp/product?isbn=9784061557918" rel="nofollow">はじめての制御工学</a>』講談社、2014年2月10日、初版。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-06-155791-8" title="特別:文献資料/978-4-06-155791-8">978-4-06-155791-8</a>。</cite></li>
+<li><cite class="citation journal" id="CITEREF須田信英1995" style="font-style:normal">須田信英「<a class="external text" href="https://doi.org/10.3156/jfuzzy.7.4_768" rel="nofollow">PID制御</a>」『日本ファジィ学会誌』第7巻第4号、日本ファジィ学会、1995年、 768-771頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.3156%2Fjfuzzy.7.4_768" rel="nofollow">10.3156/jfuzzy.7.4_768</a>。</cite></li>
+<li><cite class="citation journal" id="CITEREF須田信英2004" style="font-style:normal">須田信英「<span class="PDFlink"><a class="external text" href="http://eica.jp/search/paper_read.php?id=43" rel="nofollow">第2回 PID制御：PIDの基本，チューニング則，PIDベースの高度制御</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span> 」 『EICA』第8巻第4号、環境システム計測制御学会、2004年、 39-45頁。</cite></li>
+<li><cite class="citation web" id="CITEREF広井和男2004" style="font-style:normal">広井和男 (2004年). “<span class="PDFlink"><a class="external text" href="http://www.m-system.co.jp/rensai/rensai_top.htm#pid" rel="nofollow">PID制御のお話 第2回 PID制御の過去、現在そして将来</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”. <i>エムエスツデー 2004年3月号</i>.   エム・システム技研. pp. 2-3. <span title="">2014年6月23日</span>閲覧。</cite></li>
+<li><cite class="citation book" id="CITEREF森泰親2001" style="font-style:normal">森泰親『<a class="external text" href="http://www.coronasha.co.jp/np/isbn/9784339001433/" rel="nofollow">制御工学</a>』コロナ社、2001年12月20日、初版。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-339-00143-3" title="特別:文献資料/978-4-339-00143-3">978-4-339-00143-3</a>。</cite></li>
+<li><cite class="citation book" id="CITEREF山本・加藤1997" style="font-style:normal">山本重彦・加藤尚武『PID制御の基礎と応用』朝倉書店、1997年4月1日、初版。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-254-23091-5" title="特別:文献資料/4-254-23091-5">4-254-23091-5</a>。</cite>／<a class="external text" href="http://www.asakura.co.jp/books/isbn/4-254-23110-5/" rel="nofollow">第2版</a>、2005年、<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-254-23110-6" title="特別:文献資料/978-4-254-23110-6">978-4-254-23110-6</a>。</li>
+<li><cite class="citation journal" id="CITEREFBennett1996" style="font-style:normal">Stuart Bennett (June 1996). <a class="external text" href="http://ieeecss.org/CSM/library/1996/june96.html" rel="nofollow">“A Brief History of Automatic Control”</a> (PDF). <i>IEEE Control Systems Magazine</i> (IEEE Control Systems Society) <b>16</b> (3):  17-25<span style="display:none;">. <a class="external free" href="http://ieeecss.org/CSM/library/1996/june96.html" rel="nofollow">http://ieeecss.org/CSM/library/1996/june96.html</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+Brief+History+of+Automatic+Control&amp;rft.jtitle=IEEE+Control+Systems+Magazine&amp;rft.aulast=Stuart+Bennett&amp;rft.au=Stuart+Bennett&amp;rft.date=June+1996&amp;rft.volume=16&amp;rft.issue=3&amp;rft.pages=17-25&amp;rft.pub=IEEE+Control+Systems+Society&amp;rft_id=http%3A%2F%2Fieeecss.org%2FCSM%2Flibrary%2F1996%2Fjune96.html&amp;rfr_id=info:sid/ja.wikipedia.org:PID%E5%88%B6%E5%BE%A1"><span style="display: none;"> </span></span></li>
+<li>志水清孝：「PID制御 現代制御論の視点から」、オーム社、ISBN 978-4-274-22630-4（2020年11月）。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=12" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E5%88%B6%E5%BE%A1%E5%B7%A5%E5%AD%A6" title="制御工学">制御工学</a></li>
+<li><a href="/wiki/%E5%8F%A4%E5%85%B8%E5%88%B6%E5%BE%A1%E8%AB%96" title="古典制御論">古典制御論</a></li>
+<li><a href="/wiki/%E8%88%AA%E7%A9%BA%E9%AD%9A%E9%9B%B7" title="航空魚雷">航空魚雷</a> - <a href="/wiki/%E4%B9%9D%E4%B8%80%E5%BC%8F%E9%AD%9A%E9%9B%B7" title="九一式魚雷">九一式魚雷</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;section=13" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://note.com/masayamori/n/n6cc0c95ff066" rel="nofollow">ロボットや機械を制御する PID Controller を数式を使わずに概観</a>”. <i>PID制御をわかりやすく解説したページ</i>.   <a href="/wiki/%E6%A3%AE%E6%AD%A3%E5%BC%A5" title="森正弥">森正弥</a>. <span title="">2020年11月3日</span>閲覧。</cite></li>
+<li><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.compoclub.com/products/knowledge/jidou_seigyo/jidou_seigyo4.html" rel="nofollow">やさしい自動制御のお話 第四章 PID制御について</a>”. <i>Compo Club</i>.   <a href="/wiki/%E3%82%A2%E3%82%BA%E3%83%93%E3%83%AB" title="アズビル">アズビル</a>株式会社. <span title="">2015年2月12日</span>閲覧。</cite></li>
+<li><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.rkcinst.co.jp/techno/22/techno_22.htm" rel="nofollow">PID制御ってなに？</a>”. <i>技術解説ホームページ</i>.   <a href="/wiki/%E7%90%86%E5%8C%96%E5%B7%A5%E6%A5%AD" title="理化工業">理化工業</a>株式会社. <span title="">2015年2月12日</span>閲覧。</cite></li>
+<li><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://jp.mathworks.com/discovery/pid-control.html" rel="nofollow">PID制御の設計と実装</a>”. <i>PID制御を体系的にわかりやすく解説したページ</i>.   <a class="mw-redirect" href="/wiki/MathWorks" title="MathWorks">MathWorks</a>. <span title="">2016年3月1日</span>閲覧。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">北森俊行「<a class="external text" href="https://doi.org/10.11499/sicejl1962.19.382" rel="nofollow">PID制御システムの設計論</a>」『計測と制御』第19巻第4号、計測自動制御学会、1980年、 382-391頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.11499%2Fsicejl1962.19.382" rel="nofollow">10.11499/sicejl1962.19.382</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">松井義弘「<a class="external text" href="https://doi.org/10.1541/ieejias.116.441" rel="nofollow">PID制御による2慣性系の速度制御</a>」『電気学会論文誌. D, 産業応用部門誌』第116巻第4号、電気学会、1996年、 441-447頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1541%2Fieejias.116.441" rel="nofollow">10.1541/ieejias.116.441</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">山本透, 大松繁, 石原弘一「<a class="external text" href="https://doi.org/10.9746/sicetr1965.25.1069" rel="nofollow">セルフチューニングPID制御系の一設計</a>」『計測自動制御学会論文集』第25巻第10号、計測自動制御学会、1989年、 1069-1075頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.9746%2Fsicetr1965.25.1069" rel="nofollow">10.9746/sicetr1965.25.1069</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">小河守正「プロセス制御におけるPID制御 : 基礎と応用(第1回)プロセス制御概論」『化学工学』第84巻第4号、化学工学会、2020年4月、 199-201頁、 <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0375-9253" rel="nofollow">0375-9253</a>、 <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/%E5%9B%BD%E7%AB%8B%E6%83%85%E5%A0%B1%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80" title="国立情報学研究所">NAID</a> <a class="external text" href="https://ci.nii.ac.jp/naid/40022224602/" rel="nofollow">40022224602</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">萬田康博「アドバンストPID制御のIoT制御ソリューションへの適用に向けた考察 (制御 産業計測制御合同研究会 IoT制御ソリューションにおける機能分散)」『電気学会研究会資料. CT』第2020巻第41号、電気学会、2020年2月、 1-3頁、 <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/%E5%9B%BD%E7%AB%8B%E6%83%85%E5%A0%B1%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80" title="国立情報学研究所">NAID</a> <a class="external text" href="https://ci.nii.ac.jp/naid/40022178256/" rel="nofollow">40022178256</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">永坂茂之, 綾目久雄, 廣島雅則 ほか「41672 学習機能による自動設定可能なPID制御を用いた空調システムに関する研究開発 第1報 研究開発方針とシミュレーション事例」『環境工学II』第2019号、日本建築学会、2019年7月、 1395-1396頁、 <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/%E5%9B%BD%E7%AB%8B%E6%83%85%E5%A0%B1%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80" title="国立情報学研究所">NAID</a> <a class="external text" href="https://ci.nii.ac.jp/naid/200000443258/" rel="nofollow">200000443258</a>。</cite></li></ul>
+<div aria-labelledby="制御理論" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:制御理論 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="制御理論" style="font-size:110%;margin:0 6em"><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御理論</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">分野</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%A9%E5%BF%9C%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="適応制御 (存在しないページ)">適応制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adaptive_control&amp;action=edit&amp;redlink=1" title="En:Adaptive control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御理論</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%88%B6%E5%BE%A1" title="デジタル制御">デジタル制御</a></li>
+<li><a class="new" href="/w/index.php?title=En:Energy-shaping_control&amp;action=edit&amp;redlink=1" title="En:Energy-shaping control (存在しないページ)">en:Energy-shaping control</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E5%88%B6%E5%BE%A1" title="ファジィ制御">ファジィ制御</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハイブリッドコンピュータ">ハイブリッド</a>制御</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%83%BD%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="知能制御 (存在しないページ)">知能制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intelligent_control&amp;action=edit&amp;redlink=1" title="En:Intelligent control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E4%BA%88%E6%B8%AC%E5%88%B6%E5%BE%A1" title="モデル予測制御">モデル予測制御</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%A4%9A%E5%A4%89%E9%87%8F&amp;action=edit&amp;redlink=1" title="多変量 (存在しないページ)">多変量</a>制御</li>
+<li><a href="/wiki/%E7%A5%9E%E7%B5%8C%E7%B3%BB" title="神経系">ニューラル</a>制御</li>
+<li><a href="/wiki/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E5%88%B6%E5%BE%A1" title="非線形制御">非線形制御</a></li>
+<li><a href="/wiki/%E6%9C%80%E9%81%A9%E5%88%B6%E5%BE%A1" title="最適制御">最適制御</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム制御</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%82%B9%E3%83%88%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="ロバスト制御 (存在しないページ)">ロバスト制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robust_control&amp;action=edit&amp;redlink=1" title="En:Robust control (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="確率制御 (存在しないページ)">確率制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stochastic_control&amp;action=edit&amp;redlink=1" title="En:Stochastic control (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">系特性</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3" title="ボード線図">ボード線図</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3" title="ブロック図">ブロック図</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" title="閉ループ伝達関数 (存在しないページ)">閉ループ伝達関数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E5%88%B6%E5%BE%A1%E6%80%A7&amp;action=edit&amp;redlink=1" title="可制御性 (存在しないページ)">可制御性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Controllability&amp;action=edit&amp;redlink=1" title="En:Controllability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ変換</a></li>
+<li><a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E7%89%B9%E6%80%A7" title="周波数特性">周波数特性</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a></li>
+<li><a href="/wiki/%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E6%A9%9F%E6%A7%8B" title="ネガティブフィードバック機構">ネガティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E8%A6%B3%E6%B8%AC%E6%80%A7&amp;action=edit&amp;redlink=1" title="可観測性 (存在しないページ)">可観測性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Observability&amp;action=edit&amp;redlink=1" title="En:Observability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9D%E3%82%B8%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF" title="ポジティブフィードバック">ポジティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A0%B9%E8%BB%8C%E8%B7%A1&amp;action=edit&amp;redlink=1" title="根軌跡 (存在しないページ)">根軌跡法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Root_Locus&amp;action=edit&amp;redlink=1" title="En:Root Locus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%9C%E6%A9%9F%E6%A7%8B" title="サーボ機構">サーボ機構</a></li>
+<li><a class="new" href="/w/index.php?title=En:Signal-flow_graph&amp;action=edit&amp;redlink=1" title="En:Signal-flow graph (存在しないページ)">en:Signal-flow graph</a></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E7%A9%BA%E9%96%93_(%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96)" title="状態空間 (制御理論)">状態空間表現</a></li>
+<li><a href="/wiki/%E5%AE%89%E5%AE%9A%E6%80%A7%E7%90%86%E8%AB%96" title="安定性理論">安定性理論</a></li>
+<li><a href="/wiki/%E5%AE%9A%E5%B8%B8%E7%8A%B6%E6%85%8B" title="定常状態">定常状態</a>解析・設計</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%82%AF%E3%82%B9" title="システムダイナミクス">システムダイナミクス</a></li>
+<li><a href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0%E6%B3%95" title="伝達関数法">伝達関数法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">デジタル制御</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E4%BF%A1%E5%8F%B7" title="離散時間信号">離散時間信号</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="デジタル信号処理">デジタル信号処理</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E5%8C%96_(%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86)&amp;action=edit&amp;redlink=1" title="量子化 (信号処理) (存在しないページ)">量子化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quantization_(signal_processing)&amp;action=edit&amp;redlink=1" title="En:Quantization (signal processing) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム</a>ソフトウェア</li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC_(%E7%B5%B1%E8%A8%88%E5%AD%A6)" title="標本 (統計学)">標本化</a>データ</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%90%8C%E5%AE%9A" title="システム同定">システム同定</a></li>
+<li><a href="/wiki/Z%E5%A4%89%E6%8F%9B" title="Z変換">Z変換</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">先進技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BF%82%E6%95%B0%E5%9B%B3%E6%B3%95&amp;action=edit&amp;redlink=1" title="係数図法 (存在しないページ)">係数図法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coefficient_diagram_method&amp;action=edit&amp;redlink=1" title="En:Coefficient diagram method (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%B6%E5%BE%A1%E5%86%8D%E6%A7%8B%E6%88%90&amp;action=edit&amp;redlink=1" title="制御再構成 (存在しないページ)">制御再構成</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Control_reconfiguration&amp;action=edit&amp;redlink=1" title="En:Control reconfiguration (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E5%B8%83%E5%AE%9A%E6%95%B0%E7%B3%BB&amp;action=edit&amp;redlink=1" title="分布定数系 (存在しないページ)">分布定数系</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distributed_parameter_systems&amp;action=edit&amp;redlink=1" title="En:Distributed parameter systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E6%95%B0%E6%AC%A1%E6%95%B0%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="分数次数制御 (存在しないページ)">分数次数制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fractional-order_control&amp;action=edit&amp;redlink=1" title="En:Fractional-order control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E8%AB%96%E7%90%86" title="ファジィ論理">ファジィ論理</a></li>
+<li><a class="new" href="/w/index.php?title=En:H-infinity_loop-shaping&amp;action=edit&amp;redlink=1" title="En:H-infinity loop-shaping (存在しないページ)">en:H-infinity loop-shaping</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%B3%E3%82%B1%E3%83%AB%E7%89%B9%E7%95%B0%E5%80%A4&amp;action=edit&amp;redlink=1" title="ハンケル特異値 (存在しないページ)">ハンケル特異値</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hankel_singular_value&amp;action=edit&amp;redlink=1" title="En:Hankel singular value (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="カルマンフィルター">カルマンフィルター</a></li>
+<li><a class="new" href="/w/index.php?title=En:Krener%27s_theorem&amp;action=edit&amp;redlink=1" title="En:Krener's theorem (存在しないページ)">en:Krener's theorem</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95" title="最小二乗法">最小二乗法</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%97%E3%83%8E%E3%83%95%E5%AE%89%E5%AE%9A" title="リアプノフ安定">リアプノフ安定</a></li>
+<li><a class="new" href="/w/index.php?title=En:Minor_loop_feedback&amp;action=edit&amp;redlink=1" title="En:Minor loop feedback (存在しないページ)">en:Minor loop feedback</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%A6%9A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="知覚制御理論 (存在しないページ)">知覚制御理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Perceptual_control_theory&amp;action=edit&amp;redlink=1" title="En:Perceptual control theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E8%A6%B3%E6%B8%AC%E5%99%A8" title="状態観測器">状態観測器</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%88%B6%E5%BE%A1" title="ベクトル制御">ベクトル制御</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御器</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込み制御器</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E5%88%B6%E5%BE%A1%E5%99%A8&amp;action=edit&amp;redlink=1" title="閉ループ制御器 (存在しないページ)">閉ループ制御器</a></li>
+<li><a class="new" href="/w/index.php?title=En:Lead-lag_compensator&amp;action=edit&amp;redlink=1" title="En:Lead-lag compensator (存在しないページ)">en:Lead-lag compensator</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%95%B0%E5%80%A4%E5%88%B6%E5%BE%A1" title="コンピュータ数値制御">数値制御</a></li>
+<li><a class="mw-selflink selflink">PID制御</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御応用</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Automation_and_Remote_Control&amp;action=edit&amp;redlink=1" title="En:Automation and Remote Control (存在しないページ)">en:Automation and Remote Control</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%8B%95%E6%A9%9F" title="電動機">電動機</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B7%A5%E6%A5%AD%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit&amp;redlink=1" title="工業制御システム (存在しないページ)">工業制御システム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Industrial_Control_Systems&amp;action=edit&amp;redlink=1" title="En:Industrial Control Systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AB%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="メカトロニクス">メカトロニクス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%8B%E5%8B%95%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="運動制御 (存在しないページ)">運動制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Motion_control&amp;action=edit&amp;redlink=1" title="En:Motion control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" title="プロセス制御">プロセス制御</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6" title="ロボット工学">ロボット工学</a></li>
+<li><a href="/wiki/SCADA" title="SCADA">SCADA</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331134344
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.657 seconds
+Real time usage: 1.227 seconds
+Preprocessor visited node count: 13463/1000000
+Post‐expand include size: 104374/2097152 bytes
+Template argument size: 22097/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 18/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 34717/5000000 bytes
+Lua time usage: 0.410/7 seconds
+Lua virtual size: 7008256/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1083.968      1 -total
+ 32.94%  357.028     43 テンプレート:Sfn
+ 19.39%  210.229     11 テンプレート:Cite_journal
+ 15.20%  164.729      3 テンプレート:Cite_book
+ 14.39%  155.932      3 テンプレート:Cite_book/和書
+ 13.52%  146.572      8 テンプレート:Cite_journal/和書
+ 12.87%  139.522      4 テンプレート:ISBN2
+ 12.34%  133.716      8 テンプレート:Catalog_lookup_link
+ 11.24%  121.825      1 テンプレート:制御理論
+ 10.87%  117.812      1 テンプレート:Navbox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:250122-0!canonical and timestamp 20220331134342 and revision id 166784. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=PID制御&amp;oldid=166784">http://localhost:8080/w/index.php?title=PID制御&amp;oldid=166784</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="カテゴリ:制御理論">制御理論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%B6%E5%BE%A1%E5%B7%A5%E5%AD%A6" title="カテゴリ:制御工学">制御工学</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=PID%E5%88%B6%E5%BE%A1&amp;returntoquery=curid%3D250122%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=PID%E5%88%B6%E5%BE%A1&amp;returntoquery=curid%3D250122%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/PID%E5%88%B6%E5%BE%A1" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:PID%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/PID%E5%88%B6%E5%BE%A1">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/PID%E5%88%B6%E5%BE%A1" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/PID%E5%88%B6%E5%BE%A1" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;oldid=166784" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=PID%E5%88%B6%E5%BE%A1&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月19日 (金) 10:58 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.657","walltime":"1.227","ppvisitednodes":{"value":13463,"limit":1000000},"postexpandincludesize":{"value":104374,"limit":2097152},"templateargumentsize":{"value":22097,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":18,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":34717,"limit":5000000},"timingprofile":["100.00% 1083.968      1 -total"," 32.94%  357.028     43 テンプレート:Sfn"," 19.39%  210.229     11 テンプレート:Cite_journal"," 15.20%  164.729      3 テンプレート:Cite_book"," 14.39%  155.932      3 テンプレート:Cite_book/和書"," 13.52%  146.572      8 テンプレート:Cite_journal/和書"," 12.87%  139.522      4 テンプレート:ISBN2"," 12.34%  133.716      8 テンプレート:Catalog_lookup_link"," 11.24%  121.825      1 テンプレート:制御理論"," 10.87%  117.812      1 テンプレート:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.410","limit":"7"},"limitreport-virtmemusage":{"value":7008256,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331134344","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1375});});</script>
+</body></html>

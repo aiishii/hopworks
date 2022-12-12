@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>フィボナッチ数 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-フィボナッチ数 rootpage-フィボナッチ数 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">フィボナッチ数</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">ナビゲーションに移動</a>
+<a class="mw-jump-link" href="#searchInput">検索に移動</a>
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>フィボナッチ数</b>（フィボナッチすう、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Fibonacci number</span>）は、<a href="." id="link_a_2" title="イタリア">イタリア</a>の数学者<a href="." id="link_a_3" title="レオナルド・フィボナッチ">レオナルド・フィボナッチ</a>（ピサのレオナルド）に因んで名付けられた<a href="." id="link_a_4" title="数">数</a>である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#兎の問題"><span class="tocnumber">2</span> <span class="toctext">兎の問題</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#一般項"><span class="tocnumber">3</span> <span class="toctext">一般項</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#性質"><span class="tocnumber">4</span> <span class="toctext">性質</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#プログラミング言語での実装"><span class="tocnumber">5</span> <span class="toctext">プログラミング言語での実装</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#例1（再帰的処理による実装例）"><span class="tocnumber">5.1</span> <span class="toctext">例1（再帰的処理による実装例）</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#例2（ループ処理による実装例）"><span class="tocnumber">5.2</span> <span class="toctext">例2（ループ処理による実装例）</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#例3（一般項による実装例）"><span class="tocnumber">5.3</span> <span class="toctext">例3（一般項による実装例）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#その他の話題"><span class="tocnumber">6</span> <span class="toctext">その他の話題</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#負数番への拡張"><span class="tocnumber">7</span> <span class="toctext">負数番への拡張</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#類似の数列"><span class="tocnumber">8</span> <span class="toctext">類似の数列</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#項数の変更"><span class="tocnumber">8.1</span> <span class="toctext">項数の変更</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#トリボナッチ数"><span class="tocnumber">8.1.1</span> <span class="toctext">トリボナッチ数</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#テトラナッチ数"><span class="tocnumber">8.1.2</span> <span class="toctext">テトラナッチ数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#初期値の変更"><span class="tocnumber">8.2</span> <span class="toctext">初期値の変更</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#リュカ数"><span class="tocnumber">8.2.1</span> <span class="toctext">リュカ数</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#注釈"><span class="tocnumber">9.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#出典"><span class="tocnumber">9.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><ruby style="ruby-position:inline; display:inline"><rb style="display:inline; white-space:normal; font-variant-east-asian:normal"><b>フィボナッチ<a href="/wiki/%E6%95%B0%E5%88%97" title="数列">数列</a></b></rb><span class="rp">（</span><rt style="display:inline; white-space:normal; font-size:inherit; font-variant-east-asian:normal">フィボナッチすうれつ</rt>、<rt style="font-size:0px">（</rt></ruby><a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英</a>: <span lang="en"><span lang="it">Fibonacci</span> sequence</span>） <span class="texhtml" lang="en">(<i>F<sub>n</sub></i>)</span> は、次の<a href="/wiki/%E6%BC%B8%E5%8C%96%E5%BC%8F" title="漸化式">漸化式</a>で定義される：
+</p>
+<dl><dd><span class="texhtml" lang="en"><i>F</i><sub>0</sub> = 0,</span></dd>
+<dd><span class="texhtml" lang="en"><i>F</i><sub>1</sub> = 1,</span></dd>
+<dd><span class="texhtml" lang="en"><i>F</i><sub><i>n</i>+2</sub> = <i>F<sub>n</sub></i> + <i>F</i><sub><i>n</i>+1</sub> (<i>n</i> ≥ 0)</span></dd></dl>
+<p>第0～21項の値は次の通りである：
+</p>
+<dl><dd><a href="/wiki/0" title="0">0</a>, <a href="/wiki/1" title="1">1</a>, 1, <a href="/wiki/2" title="2">2</a>, <a href="/wiki/3" title="3">3</a>, <a href="/wiki/5" title="5">5</a>, <a href="/wiki/8" title="8">8</a>, <a href="/wiki/13" title="13">13</a>, <a href="/wiki/21" title="21">21</a>, <a href="/wiki/34" title="34">34</a>, <a href="/wiki/55" title="55">55</a>, <a href="/wiki/89" title="89">89</a>, <a href="/wiki/144" title="144">144</a>, <a href="/wiki/233" title="233">233</a>, <a href="/wiki/377" title="377">377</a>, <a href="/wiki/610" title="610">610</a>, <a href="/wiki/987" title="987">987</a>, 1597, 2584, 4181, <a href="/wiki/6765" title="6765">6765</a>, 10946, …（<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A000045" rel="nofollow">A000045</a>）</dd></dl>
+<p><a href="/wiki/1202%E5%B9%B4" title="1202年">1202年</a>にフィボナッチが発行した『<a href="/wiki/%E7%AE%97%E7%9B%A4%E3%81%AE%E6%9B%B8" title="算盤の書">算盤の書</a>』(Liber Abaci) に記載されたことで「フィボナッチ数」と呼ばれているが、それ以前にも<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%89" title="インド">インド</a>の学者である<a href="/wiki/%E3%83%98%E3%83%BC%E3%83%9E%E3%83%81%E3%83%A3%E3%83%B3%E3%83%89%E3%83%A9" title="ヘーマチャンドラ">ヘーマチャンドラ</a> (Hemachandra) が<a href="/wiki/%E9%9F%BB%E5%BE%8B_(%E9%9F%BB%E6%96%87)" title="韻律 (韻文)">韻律</a>の研究により発見し、書物に記したことが判明している<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[1]</a></sup><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[2]</a></sup>。
+</p>
+<h2><span id=".E5.85.8E.E3.81.AE.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="兎の問題">兎の問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=2" title="節を編集: 兎の問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81" title="レオナルド・フィボナッチ">レオナルド・フィボナッチ</a>は次の問題を考案した<sup class="reference" id="cite_ref-algo_4-0"><a href="#cite_note-algo-4">[3]</a></sup>。
+</p>
+<ul><li>1つがいの兎は、産まれて2か月後から毎月1つがいずつの兎を産む。</li>
+<li>兎が死ぬことはない。</li>
+<li>この条件の下で、産まれたばかりの1つがいの兎は1年の間に何つがいの兎になるか？</li></ul>
+<p>つがいの数は次の表のようになる。どの月のつがいの合計も、その前の2つの月での合計の和となり、フィボナッチ数が現れていることが分かる。
+</p>
+<table class="wikitable" style="text-align:right">
+<tbody><tr>
+<th></th>
+<th>産まれたばかりのつがい</th>
+<th>生後1か月のつがい</th>
+<th>生後2か月以降のつがい</th>
+<th>つがいの数（合計）
+</th></tr>
+<tr>
+<th style="white-space:nowrap">0か月後
+</th>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1
+</td></tr>
+<tr>
+<th style="white-space:nowrap">1か月後
+</th>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1
+</td></tr>
+<tr>
+<th style="white-space:nowrap">2か月後
+</th>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>2
+</td></tr>
+<tr>
+<th style="white-space:nowrap">3か月後
+</th>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>3
+</td></tr>
+<tr>
+<th style="white-space:nowrap">4か月後
+</th>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>5
+</td></tr>
+<tr>
+<th style="white-space:nowrap">5か月後
+</th>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>8
+</td></tr>
+<tr>
+<th style="white-space:nowrap">6か月後
+</th>
+<td>5</td>
+<td>3</td>
+<td>5</td>
+<td>13
+</td></tr>
+<tr>
+<th style="white-space:nowrap">7か月後
+</th>
+<td>8</td>
+<td>5</td>
+<td>8</td>
+<td>21
+</td></tr>
+<tr>
+<th style="white-space:nowrap">8か月後
+</th>
+<td>13</td>
+<td>8</td>
+<td>13</td>
+<td>34
+</td></tr>
+<tr>
+<th style="white-space:nowrap">9か月後
+</th>
+<td>21</td>
+<td>13</td>
+<td>21</td>
+<td>55
+</td></tr>
+<tr>
+<th style="white-space:nowrap">10か月後
+</th>
+<td>34</td>
+<td>21</td>
+<td>34</td>
+<td>89
+</td></tr>
+<tr>
+<th style="white-space:nowrap">11か月後
+</th>
+<td>55</td>
+<td>34</td>
+<td>55</td>
+<td>144
+</td></tr>
+<tr>
+<th style="white-space:nowrap">12か月後
+</th>
+<td>89</td>
+<td>55</td>
+<td>89</td>
+<td>233
+</td></tr></tbody></table>
+<h2><span id=".E4.B8.80.E8.88.AC.E9.A0.85"></span><span class="mw-headline" id="一般項">一般項</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=3" title="節を編集: 一般項">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フィボナッチ数列の一般項は次の式で表される<sup class="reference" id="cite_ref-algo_4-1"><a href="#cite_note-algo-4">[3]</a></sup>：
+</p>
+<dl><dd>&lt;math&gt;F_n</dd></dl>
+<p>= \frac{1}{\sqrt{5}} \left\{ \left( \frac{1+\sqrt{5}}{2} \right)^n - \left( \frac{1-\sqrt{5}}{2} \right)^n \right\}
+= \frac{\phi^n - (1-\phi)^n}{\sqrt{5}}
+= \frac{\phi^n - (-\phi)^{-n}}{\sqrt{5}}&lt;/math&gt;
+この式は<a href="/wiki/1843%E5%B9%B4" title="1843年">1843年</a>に<a class="new" href="/w/index.php?title=%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%83%BB%E3%83%9E%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%93%E3%83%8D&amp;action=edit&amp;redlink=1" title="ジャック・フィリップ・マリー・ビネ (存在しないページ)">ビネ</a> (<a class="new" href="/w/index.php?title=En:Jacques_Philippe_Marie_Binet&amp;action=edit&amp;redlink=1" title="En:Jacques Philippe Marie Binet (存在しないページ)"><span lang="en">Jacques Philippe Marie Binet</span></a>) が発表したことからビネの公式と呼ばれるが、それ以前の<a href="/wiki/1730%E5%B9%B4" title="1730年">1730年</a>（<a href="/wiki/%E3%82%A2%E3%83%96%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%89%E3%83%BB%E3%83%A2%E3%82%A2%E3%83%96%E3%83%AB" title="アブラーム・ド・モアブル">ド・モアブル</a>）・<a href="/wiki/1765%E5%B9%B4" title="1765年">1765年</a>（<a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%B3%E3%83%8F%E3%83%AB%E3%83%88%E3%83%BB%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC" title="レオンハルト・オイラー">オイラー</a>）にも発表されており、ビネは最初の発見者ではない。
+</p><p>なお、この式に現れる
+</p>
+<dl><dd>&lt;math&gt;\phi = \frac{1+\sqrt{5}}{2} = 1.618 033 988 749 894\cdots&lt;/math&gt;</dd></dl>
+<p>は<b><a href="/wiki/%E9%BB%84%E9%87%91%E6%AF%94" title="黄金比">黄金数</a></b>で、いくつかの数学的特徴がある。黄金数を作る<a href="/wiki/%E4%BA%8C%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F" title="二次方程式">二次方程式</a> <span class="texhtml" lang="en"><span style="white-space: normal;"><i>x</i><sup>2</sup> − <i>x</i> − 1 = 0</span></span> の解を <span class="texhtml" lang="en"><span style="white-space: normal;"><i>α</i>, <i>β</i> (<i>α</i> &gt; <i>β</i>)</span></span> とすると、上記の一般項は
+</p>
+<dl><dd>&lt;math&gt;F_n=\frac{\alpha^n-\beta^n}{\alpha-\beta}&lt;/math&gt;</dd></dl>
+<p>と表せる。
+</p><p>また、一般項の第2項 &lt;math&gt;-\frac{1}{\sqrt{5}} \left( \frac{1-\sqrt{5}}{2} \right)^n&lt;/math&gt; の絶対値は減少列で、<span class="texhtml" lang="en"><i>n</i> = 0</span> のとき &lt;math&gt;\frac{1}{\sqrt{5}} = 0.447\cdots &lt; \frac{1}{2}&lt;/math&gt; より、第2項を切り捨てた式は <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span> の値を 0.447 以下（<span class="texhtml" lang="en"><i>n</i> &gt; 4</span> のとき1%以下）の誤差で与える<a class="mw-redirect" href="/wiki/%E8%BF%91%E4%BC%BC%E5%BC%8F" title="近似式">近似式</a>である。
+</p>
+<dl><dd>&lt;math&gt;F_n \fallingdotseq \frac{\phi^n}{\sqrt{5}}&lt;/math&gt;</dd></dl>
+<p>この誤差の絶対値は0.5未満なので、<span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span> の正確な整数値は以下の式で得られる<sup class="reference" id="cite_ref-algo_4-2"><a href="#cite_note-algo-4">[3]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;F_n</dd></dl>
+<p>= \left\lfloor \frac{\phi^n}{\sqrt{5}} + \frac{1}{2} \right\rfloor
+= \left\lfloor \frac{1}{\sqrt{5}}\left( \frac{1+\sqrt{5}}{2} \right)^n + \frac{1}{2} \right\rfloor&lt;/math&gt;
+ただし、&lt;math&gt;\lfloor x\rfloor&lt;/math&gt; は<a href="/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0" title="床関数と天井関数">床関数</a>である。
+</p><p>なお、後述の<a href="#負数番への拡張">負数番への拡張</a>を考慮した場合、<span class="texhtml" lang="en"><i>n</i> &lt; 0</span> では逆に一般項の第1項の絶対値が0.5未満となるため、<span class="texhtml" lang="en"><i>n</i> &lt; 0</span> における <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span> の正確な整数値は以下の式で得られる。
+</p>
+<dl><dd>&lt;math&gt;F_n</dd></dl>
+<p>= - \left\lfloor \frac{(-\phi)^{-n}}{\sqrt{5}} + \frac{1}{2} \right\rfloor
+= - \left\lfloor \frac{1}{\sqrt{5}}\left( \frac{1-\sqrt{5}}{2} \right)^n + \frac{1}{2} \right\rfloor&lt;/math&gt;
+これらのことから、任意の整数 <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> における <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span> の正確な整数値は以下の式で得られる。
+</p>
+<dl><dd>&lt;math&gt;F_n</dd></dl>
+<p>= (\sgn n) \left\lfloor \frac{\{(\sgn n)\phi\}^{|n|}}{\sqrt{5}} + \frac{1}{2} \right\rfloor
+= (\sgn n) \left\lfloor \frac{1}{\sqrt{5}}\left\{ \frac{1+(\sgn n)\sqrt{5}}{2} \right\}^n + \frac{1}{2} \right\rfloor&lt;/math&gt;
+ただし、<span class="texhtml" lang="en">sgn <i>x</i></span> は<a href="/wiki/%E7%AC%A6%E5%8F%B7%E9%96%A2%E6%95%B0" title="符号関数">符号関数</a>である。
+</p><p>また、フィボナッチ数列の漸化式は次のように<a href="/wiki/%E8%A1%8C%E5%88%97" title="行列">行列</a>表現できる<sup class="reference" id="cite_ref-algo_4-3"><a href="#cite_note-algo-4">[3]</a></sup>：
+</p>
+<dl><dd>&lt;math&gt;{F_{n+2} \choose F_{n+1}} = \begin{pmatrix}</dd></dl>
+<p>1 &amp;1 \\
+1 &amp;0
+\end{pmatrix} {F_{n+1} \choose F_n}&lt;/math&gt;
+</p>
+<dl><dd>&lt;math&gt;\therefore \begin{pmatrix}</dd></dl>
+<p>F_{n+1} &amp;F_n \\
+F_n &amp;F_{n-1}
+\end{pmatrix} = \begin{pmatrix}
+1 &amp;1 \\
+1 &amp;0
+\end{pmatrix}^n&lt;/math&gt;
+</p><p><a href="/wiki/%E6%AF%8D%E9%96%A2%E6%95%B0" title="母関数">母関数</a>は
+</p>
+<dl><dd>&lt;math&gt;g(x) = \textstyle\sum\limits_{n=0}^{\infty} F_n x^n = \dfrac{x}{1-x-x^2}&lt;/math&gt;</dd></dl>
+<p>である。
+</p>
+<h2><span id=".E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="性質">性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=4" title="節を編集: 性質">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フィボナッチ数列の隣接2項の商は<a href="/wiki/%E9%BB%84%E9%87%91%E6%AF%94" title="黄金比">黄金数</a> <span class="texhtml mvar" lang="en" style="font-style:italic;">φ</span> に収束する。この性質は初期値 (<span class="texhtml" lang="en"><span style="white-space: normal;"><i>F</i><sub>0</sub> = 0, <i>F</i><sub>1</sub> = 1</span></span>) に依らない。
+</p>
+<dl><dd>&lt;math&gt;\lim_{n \to \infty} \frac{F_n}{F_{n-1}} = \phi&lt;/math&gt;</dd></dl>
+<p>これは次のように導出される：
+</p>
+<dl><dd>&lt;math&gt;x = \lim_{n \to \infty} \frac{F_n}{F_{n-1}}&lt;/math&gt; が収束するとすれば、</dd>
+<dd>&lt;math&gt;x = \lim_{n \to \infty} \frac{F_{n-1} + F_{n-2}}{F_{n-1}} = \lim_{n \to \infty} \left( 1 + \frac{1}{F_{n-1} / F_{n-2}} \right) = 1 + \frac{1}{x}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;x^2-x-1=0&lt;/math&gt;</dd></dl>
+<ul><li>自然数 <span class="texhtml" lang="en"><i>p</i>, <i>q</i></span> の<a href="/wiki/%E6%9C%80%E5%A4%A7%E5%85%AC%E7%B4%84%E6%95%B0" title="最大公約数">最大公約数</a>を <span class="texhtml mvar" lang="en" style="font-style:italic;">r</span> とすると、<span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>p</sub></span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>q</sub></span> の最大公約数は <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>r</sub></span> である。</li></ul>
+<p>これより以下を導くことができる。
+</p>
+<dl><dd><ul><li><span class="texhtml mvar" lang="en" style="font-style:italic;">m</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> で割り切れるならば、<span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>m</sub></span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span> で割り切れる。</li>
+<li>連続する2数は<a href="/wiki/%E4%BA%92%E3%81%84%E3%81%AB%E7%B4%A0" title="互いに素">互いに素</a>であることより、隣り合うフィボナッチ数も互いに素である。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>m</sub></span> が<a href="/wiki/%E5%81%B6%E6%95%B0" title="偶数">偶数</a>となるのは <span class="texhtml mvar" lang="en" style="font-style:italic;">m</span> が 3 の倍数となるときと一致する。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>m</sub></span> が 5 の<a href="/wiki/%E5%80%8D%E6%95%B0" title="倍数">倍数</a>となるのは <span class="texhtml mvar" lang="en" style="font-style:italic;">m</span> が 5 の倍数となるときと一致する。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> が 2 でも 5 でもない<a href="/wiki/%E7%B4%A0%E6%95%B0" title="素数">素数</a>のとき、<span class="texhtml" lang="en"><i>m</i> = <i>p</i> − (5/<i>p</i>)</span> とおくと <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>m</sub></span> を割り切る。ここで <span class="texhtml" lang="en">( / )</span> は<a href="/wiki/%E5%B9%B3%E6%96%B9%E5%89%B0%E4%BD%99%E3%81%AE%E7%9B%B8%E4%BA%92%E6%B3%95%E5%89%87" title="平方剰余の相互法則">ルジャンドル記号</a>である。</li></ul></dd></dl>
+<p>フィボナッチ数の累和や累積について以下の式が成り立つ。
+</p>
+<ul><li><span class="texhtml" lang="en"><i>F</i><sub>1</sub> + <i>F</i><sub>2</sub> + <i>F</i><sub>3</sub> + … + <i>F<sub>n</sub></i> = <i>F</i><sub><i>n</i>+2</sub> − 1</span></li>
+<li><span class="texhtml" lang="en"><i>F</i><sub>1</sub> + <i>F</i><sub>3</sub> + <i>F</i><sub>5</sub> + … + <i>F</i><sub>2<i>n</i>−1</sub> = <i>F</i><sub>2<i>n</i></sub></span></li>
+<li><span class="texhtml" lang="en"><i>F</i><sub>2</sub> + <i>F</i><sub>4</sub> + <i>F</i><sub>6</sub> + … + <i>F</i><sub>2<i>n</i></sub> = <i>F</i><sub>2<i>n</i>+1</sub> − 1</span></li>
+<li><span class="texhtml" lang="en"><i>F</i><sub>1</sub><sup>2</sup> + <i>F</i><sub>2</sub><sup>2</sup> + <i>F</i><sub>3</sub><sup>2</sup> + … + <i>F<sub>n</sub></i><sup>2</sup> = <i>F<sub>n</sub></i> <i>F</i><sub><i>n</i>+1</sub></span></li>
+<li><span class="texhtml" lang="en"><i>F</i><sub><i>n</i>−1</sub> <i>F</i><sub><i>n</i>+1</sub> − <i>F<sub>n</sub></i><sup>2</sup> = (−1)<sup><i>n</i></sup></span></li></ul>
+<p>また、次の関係式が知られている。
+</p>
+<dl><dd>&lt;math&gt;\sum_{n=1}^\infty \frac{F_n}{10^{n+1}} = \frac{1}{89}&lt;/math&gt;</dd></dl>
+<p>フィボナッチ数のうち<a href="/wiki/%E5%B9%B3%E6%96%B9%E6%95%B0" title="平方数">平方数</a>であるのは <span class="texhtml" lang="en"><i>F</i><sub>1</sub> = <i>F</i><sub>2</sub> = 1</span>, <span class="texhtml" lang="en"><i>F</i><sub>12</sub> = 144</span> のみ (Cohn 1964)<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[4]</a></sup>、<a href="/wiki/%E7%AB%8B%E6%96%B9%E6%95%B0" title="立方数">立方数</a>であるのは <span class="texhtml" lang="en"><i>F</i><sub>1</sub> = <i>F</i><sub>2</sub> = 1</span>, <span class="texhtml" lang="en"><i>F</i><sub>6</sub> = 8</span> のみ (London and Finkelstein 1969)<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[5]</a></sup>である。フィボナッチ数のうち<a href="/wiki/%E7%B4%AF%E4%B9%97%E6%95%B0" title="累乗数">累乗数</a>であるのはこれしかない (Bugeaud, Mignotte, Siksek 2006)<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[6]</a></sup>。（<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A227875" rel="nofollow">A227875</a>）
+</p><p>フィボナッチ数で<a href="/wiki/%E7%B4%A0%E6%95%B0" title="素数">素数</a>であるのは <a href="/wiki/2" title="2">2</a>, <a href="/wiki/3" title="3">3</a>, <a href="/wiki/5" title="5">5</a>, <a href="/wiki/13" title="13">13</a>, <a href="/wiki/89" title="89">89</a>, <a href="/wiki/233" title="233">233</a>, 1597, 28657, … である（<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A005478" rel="nofollow">A005478</a>）。また、これらは<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E7%B4%A0%E6%95%B0" title="フィボナッチ素数">フィボナッチ素数</a>と呼ばれる。
+</p><p>フィボナッチ数で<a href="/wiki/%E4%B8%89%E8%A7%92%E6%95%B0" title="三角数">三角数</a>であるのは <a href="/wiki/1" title="1">1</a>, <a href="/wiki/3" title="3">3</a>, <a href="/wiki/21" title="21">21</a>, <a href="/wiki/55" title="55">55</a>（<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A039595" rel="nofollow">A039595</a>）のみであることは Vern Hoggatt によって予想されていたが、のちに Luo Ming によって証明された<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[7]</a></sup>。
+</p><p>フィボナッチ数で<a href="/wiki/%E3%83%8F%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%83%E3%83%89%E6%95%B0" title="ハーシャッド数">ハーシャッド数</a>であるのは <a href="/wiki/1" title="1">1</a>, <a href="/wiki/2" title="2">2</a>, <a href="/wiki/3" title="3">3</a>, <a href="/wiki/5" title="5">5</a>, <a href="/wiki/8" title="8">8</a>, <a href="/wiki/21" title="21">21</a>, <a href="/wiki/144" title="144">144</a>, 2584, …（<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A117774" rel="nofollow">A117774</a>）。
+</p><p>フィボナッチ数は<a href="/wiki/%E5%AE%8C%E5%85%A8%E6%95%B0" title="完全数">完全数</a>にはならない<sup class="reference" id="cite_ref-Luca2000_9-0"><a href="#cite_note-Luca2000-9">[8]</a></sup>。より一般に、フィボナッチ数は<a href="/wiki/%E5%80%8D%E7%A9%8D%E5%AE%8C%E5%85%A8%E6%95%B0" title="倍積完全数">倍積完全数</a>にもならず<sup class="reference" id="cite_ref-BGLLHT2011_10-0"><a href="#cite_note-BGLLHT2011-10">[9]</a></sup>、2つのフィボナッチ数の商も完全数にはならない<sup class="reference" id="cite_ref-LucaMH2010_11-0"><a href="#cite_note-LucaMH2010-11">[10]</a></sup>。
+</p><p><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97%E3%81%AE%E9%80%86%E6%95%B0%E5%92%8C" title="フィボナッチ数列の逆数和">フィボナッチ数列の逆数和</a>は収束し、記号 <span class="texhtml mvar" lang="en" style="font-style:italic;">ψ</span> で表される。
+</p>
+<dl><dd>&lt;math&gt;\psi = \sum_{n = 1}^\infty \frac{1}{F_n} = \frac{1}{1} + \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots = 3.35988566 \cdots&lt;/math&gt;<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[11]</a></sup></dd></dl>
+<p>この <span class="texhtml mvar" lang="en" style="font-style:italic;">ψ</span> が無理数であることは証明されているが (André-Jeannin 1989)、<a href="/wiki/%E8%B6%85%E8%B6%8A%E6%95%B0" title="超越数">超越数</a>であるかどうかは分かっていない。
+</p><p>任意の正の整数は、1つ以上の連続しない相異なるフィボナッチ数の和として一意に表すことができる（<a href="/wiki/%E3%82%BC%E3%83%83%E3%82%B1%E3%83%B3%E3%83%89%E3%83%AB%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86" title="ゼッケンドルフの定理">ゼッケンドルフの定理</a>）。
+</p>
+<h2><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E8.A8.80.E8.AA.9E.E3.81.A7.E3.81.AE.E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="プログラミング言語での実装">プログラミング言語での実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=5" title="節を編集: プログラミング言語での実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E5%86%8D%E5%B8%B0" title="再帰">再帰</a>的処理の例としてよく紹介される。以下は<a href="/wiki/Python" title="Python">Python</a>での例。
+</p>
+<h3><span id=".E4.BE.8B1.EF.BC.88.E5.86.8D.E5.B8.B0.E7.9A.84.E5.87.A6.E7.90.86.E3.81.AB.E3.82.88.E3.82.8B.E5.AE.9F.E8.A3.85.E4.BE.8B.EF.BC.89"></span><span class="mw-headline" id="例1（再帰的処理による実装例）">例1（再帰的処理による実装例）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=6" title="節を編集: 例1（再帰的処理による実装例）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>&lt;syntaxhighlight lang="python"&gt;
+def fibonacci(n):
+</p>
+<pre>   if n == 0 or n == 1:
+       return n
+   else:
+       return fibonacci(n - 2) + fibonacci(n - 1)
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E4.BE.8B2.EF.BC.88.E3.83.AB.E3.83.BC.E3.83.97.E5.87.A6.E7.90.86.E3.81.AB.E3.82.88.E3.82.8B.E5.AE.9F.E8.A3.85.E4.BE.8B.EF.BC.89"></span><span class="mw-headline" id="例2（ループ処理による実装例）">例2（ループ処理による実装例）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=7" title="節を編集: 例2（ループ処理による実装例）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>&lt;syntaxhighlight lang="python"&gt;
+def fibonacci(n):
+</p>
+<pre>   a, b = 1, 0
+   for _ in range(n):
+       a, b = b, a + b
+   return b
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E4.BE.8B3.EF.BC.88.E4.B8.80.E8.88.AC.E9.A0.85.E3.81.AB.E3.82.88.E3.82.8B.E5.AE.9F.E8.A3.85.E4.BE.8B.EF.BC.89"></span><span class="mw-headline" id="例3（一般項による実装例）">例3（一般項による実装例）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=8" title="節を編集: 例3（一般項による実装例）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>&lt;syntaxhighlight lang="python"&gt;
+def fibonacci(n):
+</p>
+<pre>   return round((((1 + 5 ** 0.5) / 2) ** n - ((1 - 5 ** 0.5) / 2) ** n) / 5 ** 0.5)
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+しかし、上記例1のプログラムでは <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> が与えられてから <span class="texhtml" lang="en"><i>F<sub>n</sub></i></span> が求まるまでに &lt;math&gt;F_n \propto \phi^n&lt;/math&gt; 回の関数呼び出しが発生する（すなわち<a href="/wiki/%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0%E6%99%82%E9%96%93" title="指数関数時間">指数時間</a>の計算となる）ため、実用的ではない。したがって通常は、<a href="/wiki/%E7%B7%9A%E5%BD%A2%E6%99%82%E9%96%93" title="線形時間">線形時間</a>で計算するために<a href="/wiki/%E3%83%A1%E3%83%A2%E5%8C%96" title="メモ化">メモ化</a>などの手法を用いる。さらに、<span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> が大きい場合には一般項の公式（上記例3）や行列表現<sup class="reference" id="cite_ref-algo_4-4"><a href="#cite_note-algo-4">[3]</a></sup>を利用して<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AF%BE%E6%95%B0%E6%99%82%E9%96%93&amp;action=edit&amp;redlink=1" title="対数時間 (存在しないページ)">対数時間</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Time_complexity&amp;action=edit&amp;redlink=1" title="En:Time complexity (存在しないページ)">英語版</a>）</span></span>での計算を行う。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A9.B1.E9.A1.8C"></span><span class="mw-headline" id="その他の話題">その他の話題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=9" title="節を編集: その他の話題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li>フィボナッチ数は<a href="/wiki/%E8%87%AA%E7%84%B6" title="自然">自然</a>界の現象に数多く出現する。</li>
+<li>また、フィボナッチ数列が生み出す螺旋は、世界で最も美しい螺旋だと言われている。</li></ul>
+<p>　<a href="/wiki/%E3%83%A8%E3%83%8F%E3%83%8D%E3%82%B9%E3%83%BB%E3%82%B1%E3%83%97%E3%83%A9%E3%83%BC" title="ヨハネス・ケプラー">ヨハネス・ケプラー</a>は1611年に発表した小論文「深淵の贈り物あるいは六角形の雪について」において、フィボナッチ数を自己を増殖する比例と呼び、植物の種子の能力の現れであると論じた<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[13]</a></sup>。
+</p>
+<ul><li><a href="/wiki/%E8%8A%B1%E5%86%A0" title="花冠">花びら</a>の数はフィボナッチ数であることが多い。
+<ul><li>3枚：<a href="/wiki/%E3%83%A6%E3%83%AA" title="ユリ">ユリ</a>、<a href="/wiki/%E3%82%A2%E3%83%A4%E3%83%A1" title="アヤメ">アヤメ</a>、<a href="/wiki/%E3%82%A8%E3%83%B3%E3%83%AC%E3%82%A4%E3%82%BD%E3%82%A6" title="エンレイソウ">エンレイソウ</a></li>
+<li>5枚：<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%80%E3%83%9E%E3%82%AD" title="オダマキ">オダマキ</a>、<a href="/wiki/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%BD%E3%82%A6" title="サクラソウ">サクラソウ</a>、キンボウゲ、<a href="/wiki/%E3%83%8E%E3%82%A4%E3%83%90%E3%83%A9" title="ノイバラ">ノイバラ</a>、ヒエンソウ</li>
+<li>8枚：<a href="/wiki/%E3%83%87%E3%83%AB%E3%83%95%E3%82%A3%E3%83%8B%E3%82%A6%E3%83%A0%E5%B1%9E" title="デルフィニウム属">デルフィニウム属</a>、サンギナリア、<a href="/wiki/%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%B9" title="コスモス">コスモス</a></li>
+<li>13枚：<a href="/wiki/%E3%82%B7%E3%83%8D%E3%83%A9%E3%83%AA%E3%82%A2" title="シネラリア">シネラリア</a>、コーンマリゴールド</li>
+<li>21枚：<a href="/wiki/%E3%83%81%E3%82%B3%E3%83%AA%E3%83%BC" title="チコリー">チコリー</a>、<a href="/wiki/%E3%82%AA%E3%82%AA%E3%83%8F%E3%83%B3%E3%82%B4%E3%83%B3%E3%82%BD%E3%82%A6" title="オオハンゴンソウ">オオハンゴンソウ</a></li>
+<li>34枚：<a href="/wiki/%E3%82%AA%E3%82%AA%E3%83%90%E3%82%B3" title="オオバコ">オオバコ</a>、<a href="/wiki/%E3%82%B7%E3%83%AD%E3%83%90%E3%83%8A%E3%83%A0%E3%82%B7%E3%83%A8%E3%82%B1%E3%82%AE%E3%82%AF" title="シロバナムシヨケギク">シロバナムシヨケギク</a></li>
+<li>55枚：<a href="/wiki/%E3%83%A6%E3%82%A6%E3%82%BC%E3%83%B3%E3%82%AE%E3%82%AF" title="ユウゼンギク">ユウゼンギク</a></li>
+<li>89枚：ミケルマス・デイジー
+<ul><li>花弁の数が144に達することはない。この数は、他の自然界に見られるフィボナッチ数の例でも限界になっていることが多い<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[14]</a></sup>。</li></ul></li></ul></li>
+<li><a href="/wiki/%E6%A4%8D%E7%89%A9" title="植物">植物</a>の<a href="/wiki/%E8%8A%B1" title="花">花</a>や<a href="/wiki/%E6%9E%9C%E5%AE%9F" title="果実">実</a>に現れる<a href="/wiki/%E8%9E%BA%E6%97%8B" title="螺旋">螺旋</a>の数もフィボナッチ数であることが多い。
+<ul><li><a href="/wiki/%E3%83%92%E3%83%9E%E3%83%AF%E3%83%AA" title="ヒマワリ">ヒマワリ</a>の螺旋の数はフィボナッチ数とされることもあるが、螺旋の数が多い場合、中心から離れると螺旋の隙間にも種ができてしまうため、途中から枝分かれしてフィボナッチ数にならないこともある<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[15]</a></sup>。</li></ul></li>
+<li><a href="/wiki/%E3%83%91%E3%82%A4%E3%83%8A%E3%83%83%E3%83%97%E3%83%AB" title="パイナップル">パイナップル</a>の螺旋の数は時計回りは13、反時計回りは8になっている。</li>
+<li><a href="/wiki/%E8%91%89#葉序" title="葉">葉序</a>（植物の葉の付き方）はフィボナッチ数と関連している。</li>
+<li><a href="/wiki/%E3%83%8F%E3%83%81" title="ハチ">ハチ</a>や<a href="/wiki/%E3%82%A2%E3%83%AA" title="アリ">アリ</a>など、オスに父親がない家系を辿っていくとフィボナッチ数列が現れる（父母2匹、祖父母3匹、曽祖父母5匹、高祖父母8匹…）。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> 段の階段を1段または2段ずつ登るときに、登る場合の数は <span class="texhtml" lang="en"><i>F</i><sub><i>n</i>+1</sub></span> 通りある。</li>
+<li>●と○を合わせて <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> 個並べる。●が2個以上続かないように一列に並べる方法は <span class="texhtml" lang="en"><i>F</i><sub><i>n</i>+2</sub></span> 通りある。</li>
+<li><a href="/wiki/%E7%82%BA%E6%9B%BF" title="為替">為替</a>などの<a href="/wiki/%E3%83%86%E3%82%AF%E3%83%8B%E3%82%AB%E3%83%AB%E5%88%86%E6%9E%90" title="テクニカル分析">テクニカル分析</a>で、<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E3%83%BB%E3%83%AA%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%83%A1%E3%83%B3%E3%83%88" title="フィボナッチ・リトレースメント">フィボナッチ・リトレースメント</a>という手法がよく使われている。</li></ul>
+<h2><span id=".E8.B2.A0.E6.95.B0.E7.95.AA.E3.81.B8.E3.81.AE.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="負数番への拡張">負数番への拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=10" title="節を編集: 負数番への拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フィボナッチ数列は、<a href="/wiki/%E6%BC%B8%E5%8C%96%E5%BC%8F" title="漸化式">漸化式</a> <span class="texhtml" lang="en"><i>F<sub>n</sub></i> = <i>F</i><sub><i>n</i>−1</sub> + <i>F</i><sub><i>n</i>−2</sub></span> を全ての整数 <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> に対して適用することにより、<span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> が負の整数の場合に拡張できる。そして <span class="texhtml" lang="en"><i>F</i><sub>−<i>n</i></sub> = (−1)<sup><i>n</i>+1</sup><i>F<sub>n</sub></i></span> が成り立つ。この式より、負の番号の項は次のようになる。
+</p>
+<table class="wikitable" style="text-align:right">
+<tbody><tr>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">n</span>
+</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20
+</td></tr>
+<tr>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>n</sub></span>
+</th>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>21</td>
+<td>34</td>
+<td>55</td>
+<td>89</td>
+<td>144</td>
+<td>233</td>
+<td>377</td>
+<td>610</td>
+<td>987</td>
+<td>1597</td>
+<td>2584</td>
+<td>4181</td>
+<td>6765
+</td></tr>
+<tr>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">F<sub>−n</sub></span>
+</th>
+<td>0</td>
+<td>1</td>
+<td>−1</td>
+<td>2</td>
+<td>−3</td>
+<td>5</td>
+<td>−8</td>
+<td>13</td>
+<td>−21</td>
+<td>34</td>
+<td>−55</td>
+<td>89</td>
+<td>−144</td>
+<td>233</td>
+<td>−377</td>
+<td>610</td>
+<td>−987</td>
+<td>1597</td>
+<td>−2584</td>
+<td>4181</td>
+<td>−6765
+</td></tr></tbody></table>
+<h2><span id=".E9.A1.9E.E4.BC.BC.E3.81.AE.E6.95.B0.E5.88.97"></span><span class="mw-headline" id="類似の数列">類似の数列</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=11" title="節を編集: 類似の数列">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フィボナッチ数列の定義である初期値や漸化式をやや変更して、類似の数列が作れる。
+</p>
+<h3><span id=".E9.A0.85.E6.95.B0.E3.81.AE.E5.A4.89.E6.9B.B4"></span><span class="mw-headline" id="項数の変更">項数の変更</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=12" title="節を編集: 項数の変更">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フィボナッチ数列は各項が先行する二項の和であるものであったが、それを「先行する <span class="texhtml mvar" lang="en" style="font-style:italic;">k</span> 項の和」と置き換えた一般化
+</p>
+<dl><dd>&lt;math&gt;F_{n+k}^{(k)} := F_{n+k-1}^{(k)} + F_{n+k-2}^{(k)} + \dotsb + F_n^{(k)}\quad (n\ge 0)&lt;/math&gt;</dd></dl>
+<p>を考えることができる。ただし、初期値は 1 で埋める（1-fil型）
+</p>
+<dl><dd>&lt;math&gt;F_0^{(k)} = F_1^{(k)}=\dotsb=F_{k-1}^{(k)}=1&lt;/math&gt;</dd></dl>
+<p>あるいは 0 で埋める（0-fil型）
+</p>
+<dl><dd>&lt;math&gt;F_0^{(k)} = F_1^{(k)}=\dotsb=F_{k-2}^{(k)}=0,\quad F_{k-1}^{(k)}=1&lt;/math&gt;</dd></dl>
+<p>などを取るのが一般的である。これらフィボナッチ数列の類似物を、項数 <span class="texhtml mvar" lang="en" style="font-style:italic;">k</span> に対応するラテン語またはギリシャ語に由来する<a href="/wiki/%E5%80%8D%E6%95%B0%E6%8E%A5%E9%A0%AD%E8%BE%9E" title="倍数接頭辞">倍数接頭辞</a>を「フィボナッチ」と組み合わせた名称で呼ぶ<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[注釈 2]</a></sup>。
+</p>
+<table class="wikitable" style="text-align:right;margin:1ex 1em 1ex 1em;float:right">
+<caption>和の項数や初期値の変更
+</caption>
+<tbody><tr>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">k</span></th>
+<th>接頭辞<sup class="reference" id="cite_ref-18">[16]</sup></th>
+<th>名称</th>
+<th>整数列大辞典
+</th></tr>
+<tr>
+<td>3</td>
+<td>tri-
+</td>
+<th>トリボナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A000073" rel="nofollow">A000073</a><br/>1 fil: <a class="external text" href="https://oeis.org/A000213" rel="nofollow">A000213</a>
+</td></tr>
+<tr>
+<td>4</td>
+<td>tetra-
+</td>
+<th>テトラナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A000078" rel="nofollow">A000078</a><br/>1 fil: <a class="external text" href="https://oeis.org/A000288" rel="nofollow">A000288</a>
+</td></tr>
+<tr>
+<td>5</td>
+<td>penta-
+</td>
+<th>ペンタナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A001591" rel="nofollow">A001591</a><br/>1 fil: <a class="external text" href="https://oeis.org/A000322" rel="nofollow">A000322</a>
+</td></tr>
+<tr>
+<td>6</td>
+<td>hexa-
+</td>
+<th>ヘキサナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A001592" rel="nofollow">A001592</a><br/>1 fil: <a class="external text" href="https://oeis.org/A000383" rel="nofollow">A000383</a>
+</td></tr>
+<tr>
+<td>7</td>
+<td>hepta-
+</td>
+<th>ヘプタナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A122189" rel="nofollow">A122189</a><br/>1 fil: <a class="external text" href="https://oeis.org/A060455" rel="nofollow">A060455</a>
+</td></tr>
+<tr>
+<td>8</td>
+<td>octa-
+</td>
+<th>オクタナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A079262" rel="nofollow">A079262</a><br/>1 fil: <a class="external text" href="https://oeis.org/A123526" rel="nofollow">A123526</a>
+</td></tr>
+<tr>
+<td>9</td>
+<td>nona-
+</td>
+<th>ノナ（ボ）ナッチ数
+</th>
+<td>0 fil: <a class="external text" href="https://oeis.org/A163551" rel="nofollow">A163551</a><br/>1 fil: <a class="external text" href="https://oeis.org/A127193" rel="nofollow">A127193</a>
+</td></tr>
+<tr>
+<td>10</td>
+<td>deca-
+</td>
+<th>デカ（ボ）ナッチ数
+</th>
+<td>1 fil: <a class="external text" href="https://oeis.org/A127194" rel="nofollow">A127194</a>
+</td></tr>
+<tr>
+<td>11</td>
+<td>undeca-
+</td>
+<th>ウンデカ（ボ）ナッチ数
+</th>
+<td>1 fil: <a class="external text" href="https://oeis.org/A127624" rel="nofollow">A127624</a>
+</td></tr>
+<tr>
+<td>12</td>
+<td>dodeca-
+</td>
+<th>ドデカ（ボ）ナッチ数
+</th>
+<td>1 fil: <a class="external text" href="https://oeis.org/A207539" rel="nofollow">A207539</a>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<td>20</td>
+<td>icosa-
+</td>
+<td>イコサナッチ数
+</td>
+<td>⋮
+</td></tr></tbody></table>
+<h4><span id=".E3.83.88.E3.83.AA.E3.83.9C.E3.83.8A.E3.83.83.E3.83.81.E6.95.B0"></span><span class="mw-headline" id="トリボナッチ数">トリボナッチ数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=13" title="節を編集: トリボナッチ数">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>特に直前の三項の和として各項が定まるトリボナッチ数列は、フィボナッチ数列に次いでよく調べられている。0-fil型でオフセットが0番目からのものは
+</p>
+<dl><dd><span class="texhtml" lang="en"><span style="white-space: normal;"><i>T</i><sub>0</sub> = <i>T</i><sub>1</sub> = 0, <i>T</i><sub>2</sub> = 1,</span></span></dd>
+<dd><span class="texhtml" lang="en"><span style="white-space: normal;"><i>T</i><sub><i>n</i>+3</sub> = <i>T<sub>n</sub></i> + <i>T</i><sub><i>n</i>+1</sub> + <i>T</i><sub><i>n</i>+2</sub> (<i>n</i> ≥ 0)</span></span></dd></dl>
+<p>と表される。第0～21項の値は次の通りである：
+</p>
+<dl><dd><span class="texhtml" lang="en"><span style="white-space: normal;">0, 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768, 10609, 19513, 35890, 66012, …</span></span> (<a class="mw-redirect" href="/wiki/OEIS" title="OEIS">OEIS</a> <a class="external text" href="https://oeis.org/A000073" rel="nofollow">A000073</a>)</dd></dl>
+<p>トリボナッチ数列の一般項は次で表される。
+</p>
+<dl><dd>&lt;math&gt;T_n = \frac{\alpha^n}{(\alpha - \beta)(\alpha - \gamma)}+ \frac{\beta^n}{(\beta - \gamma)(\beta - \alpha)}+ \frac{\gamma^n}{(\gamma - \alpha)(\gamma - \beta)}&lt;/math&gt;</dd></dl>
+<p>ただし、<span class="texhtml" lang="en"><span style="white-space: normal;"><i>α</i>, <i>β</i>, <i>γ</i></span></span> は<a href="/wiki/%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F" title="三次方程式">三次方程式</a> <span class="texhtml" lang="en"><i>x</i><sup>3</sup> − <i>x</i><sup>2</sup> − <i>x</i> − 1 = 0</span> の3解
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\alpha &amp;= \frac{1}{3} \left(1 + \sqrt[3]{19-3\sqrt{33}} + \sqrt[3]{19+3\sqrt{33}}\right) \\
+\beta  &amp;= \frac{1}{3} \left(1 + \omega \sqrt[3]{19-3\sqrt{33}} + \bar{\omega} \sqrt[3]{19+3\sqrt{33}}\right) \\
+\gamma &amp;= \frac{1}{3} \left(1 + \bar{\omega} \sqrt[3]{19-3\sqrt{33}} + \omega \sqrt[3]{19+3\sqrt{33}}\right)
+\end{align}&lt;/math&gt;
+であり、ここで
+</p>
+<dl><dd>&lt;math&gt;\omega = \frac{-1 + \sqrt{3} i}{2}&lt;/math&gt;（<a href="/wiki/1%E3%81%AE%E5%86%AA%E6%A0%B9" title="1の冪根"><span class="texhtml" lang="en">1</span> の虚立方根</a>）</dd></dl>
+<p>である。
+</p><p>また、上記の <span class="texhtml mvar" lang="en" style="font-style:italic;">α</span> を<b>トリボナッチ定数</b>という。これはフィボナッチ数列における黄金数に当たる定数で、トリボナッチ数列の隣接2項間の商はトリボナッチ定数に収束する：
+</p>
+<dl><dd>&lt;math&gt;\lim_{n \to \infty} \frac{T_n}{T_{n-1}} = \alpha = 1.839286755214161\cdots&lt;/math&gt;</dd></dl>
+<h4><span id=".E3.83.86.E3.83.88.E3.83.A9.E3.83.8A.E3.83.83.E3.83.81.E6.95.B0"></span><span class="mw-headline" id="テトラナッチ数">テトラナッチ数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=14" title="節を編集: テトラナッチ数">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>直前の四項の和に変更したテトラナッチ数列も同様に様々なことが知られている。同様にオフセット0番の 0-fil型は
+</p>
+<dl><dd><span class="texhtml" lang="en"><i>T</i><sub>0</sub> = <i>T</i><sub>1</sub> = <i>T</i><sub>2</sub> = 0, <i>T</i><sub>3</sub> = 1,</span></dd>
+<dd><span class="texhtml" lang="en"><i>T</i><sub><i>n</i>+4</sub> = <i>T<sub>n</sub></i> + <i>T</i><sub><i>n</i>+1</sub> + <i>T</i><sub><i>n</i>+2</sub> + <i>T</i><sub><i>n</i>+3</sub> (<i>n</i> ≥ 0)</span></dd></dl>
+<p>と書けて、第0～21項の値は次の通りである：
+</p>
+<dl><dd><span class="texhtml" lang="en"><span style="white-space: normal;">0, 0, 0, 1, 1, 2, 4, 8, 15, 29, 56, 108, 208, 401, 773, 1490, 2872, 5536, 10671, 20569, 39648, 76424, …</span></span> (<a class="mw-redirect" href="/wiki/OEIS" title="OEIS">OEIS</a> <a class="external text" href="https://oeis.org/A000078" rel="nofollow">A000078</a>)</dd></dl>
+<p>一般項は、<a href="/wiki/%E5%9B%9B%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F" title="四次方程式">四次方程式</a> <span class="texhtml" lang="en"><i>x</i><sup>4</sup> − <i>x</i><sup>3</sup> − <i>x</i><sup>2</sup> − <i>x</i> − 1 = 0</span> の4解を <span class="texhtml" lang="en"><span style="white-space: normal;"><i>α</i>, <i>β</i>, <i>γ</i>, <i>δ</i></span></span> として、
+</p>
+<dl><dd>&lt;math&gt;T_n = \frac{\alpha^n}{(\alpha- \beta)(\alpha - \gamma)(\alpha - \delta)}+ \frac{\beta^n}{(\beta - \gamma)(\beta - \delta)(\beta - \alpha)}+ \frac{\gamma^n}{(\gamma - \delta)(\gamma - \alpha)(\gamma - \beta)}+ \frac{\delta^n}{(\delta - \alpha)(\delta - \beta)(\delta - \gamma)}&lt;/math&gt;</dd></dl>
+<p>となる。
+</p>
+<h3><span id=".E5.88.9D.E6.9C.9F.E5.80.A4.E3.81.AE.E5.A4.89.E6.9B.B4"></span><span class="mw-headline" id="初期値の変更">初期値の変更</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=15" title="節を編集: 初期値の変更">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".E3.83.AA.E3.83.A5.E3.82.AB.E6.95.B0"></span><span class="mw-headline" id="リュカ数">リュカ数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=16" title="節を編集: リュカ数">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>フィボナッチ数列の最初の2項を 2, 1 に置き換えた数列の項を<a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0" title="リュカ数">リュカ数</a>という。
+</p>
+<dl><dd>2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843, 1364, 2207, 3571, 5778, …  (<a class="mw-redirect" href="/wiki/OECS" title="OECS">OECS</a> <a class="external text" href="https://oeis.org/A000032" rel="nofollow">A000032</a>)</dd></dl>
+<p>この数列の一般項は
+</p>
+<dl><dd>&lt;math&gt;L_n = \left( \frac{1+\sqrt{5}}{2} \right)^n + \left( \frac{1-\sqrt{5}}{2} \right)^n= \phi^n + (1-\phi)^n = {\phi^n + (-\phi)^{-n}}&lt;/math&gt;</dd></dl>
+<p>と表される。
+</p><p>フィボナッチ数列やリュカ数の列を一般化したものが<a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0%E5%88%97" title="リュカ数列">リュカ数列</a>であり、1878年に<a href="/wiki/%E3%82%A8%E3%83%89%E3%82%A5%E3%82%A2%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%AA%E3%83%A5%E3%82%AB" title="エドゥアール・リュカ">エドゥアール・リュカ</a>が体系的な研究を行い、1913年に<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%83%BC%E3%83%88%E3%83%BB%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB&amp;action=edit&amp;redlink=1" title="ロバート・ダニエル・カーマイケル (存在しないページ)">ロバート・ダニエル・カーマイケル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robert_Daniel_Carmichael&amp;action=edit&amp;redlink=1" title="En:Robert Daniel Carmichael (存在しないページ)">英語版</a>）</span></span>がその結果を整理、拡張した<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[17]</a></sup>。これらの研究が現代のフィボナッチ数の理論の基礎となった。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=17" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=18" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">フィボナッチ数列を利用したこの<a href="/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88" title="ウィキペディア日本語版">ウィキペディア日本語版</a>のメインページの画像は、<a class="new" href="/w/index.php?title=%E5%88%A9%E7%94%A8%E8%80%85:Co.kyoto/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="利用者:Co.kyoto/メインページ (存在しないページ)">利用者:Co.kyoto/メインページ</a>案中の「ウィキペディアにようこそ！」欄の左側に掲載されていた。なお、現在ウィキペディア日本語版の<a class="new" href="/w/index.php?title=W:ja:%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="W:ja:メインページ (存在しないページ)">メインページ</a>で利用されている、「<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8/%E3%82%88%E3%81%86%E3%81%93%E3%81%9D" title="テンプレート:メインページ/ようこそ">Template:メインページ/ようこそ</a>」とは異なり、各テンプレートの集合で構成されているため、履歴にはない。</span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text">当然のことだが "Fibonacci" は人名であって、"fibo-" + "-nacci" や "fi-" + "-bonacci" という構成の合成語でもないし、もちろん "fi-" や "fibo-" が "<span class="texhtml" lang="en">2</span>" の意味を持つわけでもない（ただし、摩擦音 <i>f</i> と破裂音 <i>b</i> が音韻的に近い関係にあることから <span class="texhtml" lang="en">2</span> を表す "bi-" を "fi-" に結び付けての類推ではあるかもしれない）が、「フィボナッチ」の語を頭から適当な音節分だけ倍数を表す接頭辞で置き換えるという、<a href="/wiki/%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%AF" title="数学的なジョーク">冗談のような名付け</a>になっている。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=19" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">Parmanand Singh. "Acharya Hemachandra and the (so called) Fibonacci Numbers". <i>Math. Ed. Siwan,</i> <b>20(1)</b>: pp. 28–30, 1986. ISSN 0047-6269.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">Parmanand Singh, "The So-called Fibonacci numbers in ancient and medieval India." <i>Historia Mathematica</i> <b>12(3)</b>, pp. 229–244, 1985.</span>
+</li>
+<li id="cite_note-algo-4">^ <a href="#cite_ref-algo_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-algo_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-algo_4-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-algo_4-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-algo_4-4"><sup><i><b>e</b></i></sup></a> <span class="reference-text"><cite class="citation book" id="Reference-[[奥村晴彦]]-1991" style="font-style:normal"><a href="/wiki/%E5%A5%A5%E6%9D%91%E6%99%B4%E5%BD%A6" title="奥村晴彦">奥村晴彦</a>『C言語による最新アルゴリズム事典』<a href="/wiki/%E6%8A%80%E8%A1%93%E8%A9%95%E8%AB%96%E7%A4%BE" title="技術評論社">技術評論社</a>、1991年、305頁。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-87408-414-1" title="特別:文献資料/4-87408-414-1">4-87408-414-1</a>。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">J. H. E. Cohn, On square Fibonacci numbers, <i>J. London Math. Soc.</i> <b>39</b> (1964), pp. 537–540.</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFLondonFinkelstein1969" style="font-style:normal">London, Hymie; Finkelstein, Raphael (1969), “On Fibonacci and Lucas numbers which are perfect powers”, <i>Fibonacci Quart.</i> <b>7</b> (5):  476-481, <a class="external text" href="https://www.fq.math.ca/Scanned/7-5/london-a.pdf" rel="nofollow">Part1</a>, <a class="external text" href="https://www.fq.math.ca/Scanned/7-5/london-b.pdf" rel="nofollow">Part2</a>, <a class="external text" href="https://www.fq.math.ca/Scanned/8-3/corrections.pdf" rel="nofollow">Correction</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+Fibonacci+and+Lucas+numbers+which+are+perfect+powers&amp;rft.jtitle=Fibonacci+Quart.&amp;rft.aulast=London&amp;rft.aufirst=Hymie&amp;rft.au=London%2C%26%2332%3BHymie&amp;rft.au=Finkelstein%2C%26%2332%3BRaphael&amp;rft.date=1969&amp;rft.volume=7&amp;rft.issue=5&amp;rft.pages=476-481&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">Yann Bugeaud, Maurice Mignotte, Samir Siksek, Classical and modular approaches to exponential Diophantine equations. I. Fibonacci and Lucas perfect powers. <i>Ann. of Math.</i> <b>163</b>(2006), pp. 969–1018. <a class="external text" href="http://www-irma.u-strasbg.fr/~bugeaud/publi.html" rel="nofollow">Yann Bugeaud, Publications, 2006.</a></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFMing1989" style="font-style:normal">Ming, Luo (1989), <a class="external text" href="https://www.fq.math.ca/Scanned/27-2/ming.pdf" rel="nofollow">“On triangular Fibonacci numbers”</a>, <i>Fibonacci Quart.</i> <b>27</b> (2):  98-108<span style="display:none;">, <a class="external free" href="https://www.fq.math.ca/Scanned/27-2/ming.pdf" rel="nofollow">https://www.fq.math.ca/Scanned/27-2/ming.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+triangular+Fibonacci+numbers&amp;rft.jtitle=Fibonacci+Quart.&amp;rft.aulast=Ming&amp;rft.aufirst=Luo&amp;rft.au=Ming%2C%26%2332%3BLuo&amp;rft.date=1989&amp;rft.volume=27&amp;rft.issue=2&amp;rft.pages=98-108&amp;rft_id=https%3A%2F%2Fwww.fq.math.ca%2FScanned%2F27-2%2Fming.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Luca2000-9"><b><a href="#cite_ref-Luca2000_9-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Luca, Florian (2000). “Perfect Fibonacci and Lucas numbers”. <i>Rendiconti del Circolo Matematico di Palermo</i> <b>49</b> (2):  313-318. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2FBF02904236" rel="nofollow">10.1007/BF02904236</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:1973-4409" rel="nofollow">1973-4409</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1765401" rel="nofollow">1765401</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Perfect+Fibonacci+and+Lucas+numbers&amp;rft.jtitle=Rendiconti+del+Circolo+Matematico+di+Palermo&amp;rft.aulast=Luca&amp;rft.aufirst=Florian&amp;rft.au=Luca%2C%26%2332%3BFlorian&amp;rft.date=2000&amp;rft.volume=49&amp;rft.issue=2&amp;rft.pages=313-318&amp;rft_id=info:doi/10.1007%2FBF02904236&amp;rft.issn=1973-4409&amp;rft.mr=1765401&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-BGLLHT2011-10"><b><a href="#cite_ref-BGLLHT2011_10-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Broughan, Kevin A.; González, Marcos J.; Lewis, Ryan H.; Luca, Florian; Mejía Huguet, V. Janitzio; Togbé, Alain (2011). <a class="external text" href="http://math.colgate.edu/~integers/vol11a.html" rel="nofollow">“There are no multiply-perfect Fibonacci numbers”</a>. <i>Integers</i> <b>11a</b>:  A7. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=2988067" rel="nofollow">2988067</a><span style="display:none;">. <a class="external free" href="http://math.colgate.edu/~integers/vol11a.html" rel="nofollow">http://math.colgate.edu/~integers/vol11a.html</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=There+are+no+multiply-perfect+Fibonacci+numbers&amp;rft.jtitle=Integers&amp;rft.aulast=Broughan&amp;rft.aufirst=Kevin+A.&amp;rft.au=Broughan%2C%26%2332%3BKevin+A.&amp;rft.au=Gonz%C3%A1lez%2C%26%2332%3BMarcos+J.&amp;rft.au=Lewis%2C%26%2332%3BRyan+H.&amp;rft.au=Luca%2C%26%2332%3BFlorian&amp;rft.au=Mej%C3%ADa+Huguet%2C%26%2332%3BV.+Janitzio&amp;rft.au=Togb%C3%A9%2C%26%2332%3BAlain&amp;rft.date=2011&amp;rft.volume=11a&amp;rft.pages=A7&amp;rft.mr=2988067&amp;rft_id=http%3A%2F%2Fmath.colgate.edu%2F%7Eintegers%2Fvol11a.html&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-LucaMH2010-11"><b><a href="#cite_ref-LucaMH2010_11-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Luca, Florian; Mejía Huguet, V. Janitzio (2010). <a class="external text" href="https://ami.uni-eszterhazy.hu/index.php?vol=37" rel="nofollow">“On Perfect numbers which are ratios of two Fibonacci numbers”</a>. <i>Annales Mathematicae at Informaticae</i> <b>37</b>:  107-124. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:1787-6117" rel="nofollow">1787-6117</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=2753031" rel="nofollow">2753031</a><span style="display:none;">. <a class="external free" href="https://ami.uni-eszterhazy.hu/index.php?vol=37" rel="nofollow">https://ami.uni-eszterhazy.hu/index.php?vol=37</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+Perfect+numbers+which+are+ratios+of+two+Fibonacci+numbers&amp;rft.jtitle=Annales+Mathematicae+at+Informaticae&amp;rft.aulast=Luca&amp;rft.aufirst=Florian&amp;rft.au=Luca%2C%26%2332%3BFlorian&amp;rft.au=Mej%C3%ADa+Huguet%2C%26%2332%3BV.+Janitzio&amp;rft.date=2010&amp;rft.volume=37&amp;rft.pages=107-124&amp;rft.issn=1787-6117&amp;rft.mr=2753031&amp;rft_id=https%3A%2F%2Fami.uni-eszterhazy.hu%2Findex.php%3Fvol%3D37&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="https://mathworld.wolfram.com/ReciprocalFibonacciConstant.html" rel="nofollow">Reciprocal Fibonacci Constant -- from Wolfram MathWorld</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><span class="PDFlink"><a class="external text" href="http://tambara-h.esnet.ed.jp/cms/uploads/%E6%95%B0%E5%AD%A6%E5%BA%83%E5%A0%B4%E3%81%AE%E5%88%A5%E5%90%8D%E3%80%8C%E3%81%B2%E3%81%BE%E3%81%8C%E3%82%8A%E5%BA%83%E5%A0%B4%E3%80%8D%E3%81%AE%E7%94%B1%E6%9D%A5.pdf" rel="nofollow">数学広場の別名「ひまがり広場」の由来：数学と 黄金花『ひまわり』</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span> （<a href="/wiki/%E6%84%9B%E5%AA%9B%E7%9C%8C%E7%AB%8B%E4%B8%B9%E5%8E%9F%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1" title="愛媛県立丹原高等学校">愛媛県立丹原高等学校</a>）</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">榎本恵美子 (1977). “翻訳・新年の贈り物あるいは六角形の雪について”. <i>知の考古学</i> <b>第11号</b>:  286ページ.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=%E7%BF%BB%E8%A8%B3%E3%83%BB%E6%96%B0%E5%B9%B4%E3%81%AE%E8%B4%88%E3%82%8A%E7%89%A9%E3%81%82%E3%82%8B%E3%81%84%E3%81%AF%E5%85%AD%E8%A7%92%E5%BD%A2%E3%81%AE%E9%9B%AA%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&amp;rft.jtitle=%E7%9F%A5%E3%81%AE%E8%80%83%E5%8F%A4%E5%AD%A6&amp;rft.aulast=%E6%A6%8E%E6%9C%AC%E6%81%B5%E7%BE%8E%E5%AD%90&amp;rft.au=%E6%A6%8E%E6%9C%AC%E6%81%B5%E7%BE%8E%E5%AD%90&amp;rft.date=1977&amp;rft.volume=%E7%AC%AC11%E5%8F%B7&amp;rft.pages=286%E3%83%9A%E3%83%BC%E3%82%B8&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text">聖なる幾何学 スティーヴン・スキナー著 p.63「植物成長の幾何学」より抜粋</span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external text" href="http://www.fbs.osaka-u.ac.jp/labs/skondo/saibokogaku/fibonacchi.html" rel="nofollow">第14回：全ての植物をフィボナッチの呪いから救い出す</a>（こんどうしげるの生命科学の明日はどっちだ!?）</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text">より多くは、例えば <a class="external autonumber" href="http://nomenclator.la.coocan.jp/chem/text/numeric.htm" rel="nofollow">[1]</a> などを見よ</span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text">R. D. Carmichael, On the numerical factors of the arithmetic forms <span class="texhtml" lang="en"><i>α<sup> n</sup></i> ± <i>β<sup> n</sup></i></span>, <i>Ann. of Math.</i> <b>15</b> (1913), pp.30–70, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1967797" rel="nofollow">10.2307/1967797</a>.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=20" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" id="CITEREF佐藤1998" style="font-style:normal"><a href="/wiki/%E4%BD%90%E8%97%A4%E4%BF%AE%E4%B8%80_(%E6%95%B0%E5%AD%A6%E8%80%85)" title="佐藤修一 (数学者)">佐藤修一</a>『自然にひそむ数学―自然と数学の不思議な関係』<a href="/wiki/%E8%AC%9B%E8%AB%87%E7%A4%BE" title="講談社">講談社</a>〈ブルーバックス B-1201〉、1998年1月20日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-06-257201-X" title="特別:文献資料/4-06-257201-X">4-06-257201-X</a>。</cite></li>
+<li><cite class="citation book" id="CITEREF中村2002" style="font-style:normal"><a href="/wiki/%E4%B8%AD%E6%9D%91%E6%BB%8B_(%E6%95%B0%E5%AD%A6%E8%80%85)" title="中村滋 (数学者)">中村滋</a>『フィボナッチ数の小宇宙(ミクロコスモス)―フィボナッチ数、リュカ数、黄金分割』<a href="/wiki/%E6%97%A5%E6%9C%AC%E8%A9%95%E8%AB%96%E7%A4%BE" title="日本評論社">日本評論社</a>、2002年9月。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-535-78281-4" title="特別:文献資料/4-535-78281-4">4-535-78281-4</a>。</cite>
+<ul><li><cite class="citation book" id="CITEREF中村2008" style="font-style:normal">中村滋『フィボナッチ数の小宇宙(ミクロコスモス)―フィボナッチ数、リュカ数、黄金分割』日本評論社、2008年1月、改訂版。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-535-78492-5" title="特別:文献資料/978-4-535-78492-5">978-4-535-78492-5</a>。</cite></li></ul></li>
+<li><cite class="citation journal" id="CITEREF中村2018" style="font-style:normal">中村滋「日本フィボナッチ協会の20年」『数学セミナー』第57巻第8号、日本評論社、2018年8月、 48-53頁。</cite></li>
+<li><cite class="citation" id="CITEREFArakelian2014" style="font-style:normal">Arakelian, Hrant (2014) (ロシア語), <i>Mathematics and History of the Golden Section</i>, Logos, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-5-98704-663-0" title="特別:文献資料/978-5-98704-663-0">978-5-98704-663-0</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Mathematics+and+History+of+the+Golden+Section&amp;rft.aulast=Arakelian&amp;rft.aufirst=Hrant&amp;rft.au=Arakelian%2C%26%2332%3BHrant&amp;rft.date=2014&amp;rft.pub=Logos&amp;rft.isbn=978-5-98704-663-0&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFDunlap1997" style="font-style:normal">Dunlap, Richard A. (1997-12-17), <i>The Golden Ratio and Fibonacci Numbers</i>, World Scientific Pub. Co. Inc., <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-981-02-3264-1" title="特別:文献資料/978-981-02-3264-1">978-981-02-3264-1</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Golden+Ratio+and+Fibonacci+Numbers&amp;rft.aulast=Dunlap&amp;rft.aufirst=Richard+A.&amp;rft.au=Dunlap%2C%26%2332%3BRichard+A.&amp;rft.date=1997-12-17&amp;rft.pub=World+Scientific+Pub.+Co.+Inc.&amp;rft.isbn=978-981-02-3264-1&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span>
+<ul><li><cite class="citation book" id="CITEREFダンラップ2003" style="font-style:normal">ダンラップ, R.A.『黄金比とフィボナッチ数』<a class="new" href="/w/index.php?title=%E5%B2%A9%E6%B0%B8%E6%81%AD%E9%9B%84&amp;action=edit&amp;redlink=1" title="岩永恭雄 (存在しないページ)">岩永恭雄</a>・<a class="new" href="/w/index.php?title=%E6%9D%BE%E4%BA%95%E8%AC%9B%E4%BB%8B&amp;action=edit&amp;redlink=1" title="松井講介 (存在しないページ)">松井講介</a>訳、日本評論社、2003年6月。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-535-78370-5" title="特別:文献資料/4-535-78370-5">4-535-78370-5</a>。</cite></li></ul></li>
+<li><cite class="citation" id="CITEREFKoshy2017" style="font-style:normal">Koshy, Thomas (2017-12-04), <i>Fibonacci and Lucas Numbers with Applications</i>, Pure and Applied Mathematics: A Wiley Series of Texts, Monographs and Tracts, <b>Volume 1</b> (2nd ed.), Wiley, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-1-118-74212-9" title="特別:文献資料/978-1-118-74212-9">978-1-118-74212-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fibonacci+and+Lucas+Numbers+with+Applications&amp;rft.aulast=Koshy&amp;rft.aufirst=Thomas&amp;rft.au=Koshy%2C%26%2332%3BThomas&amp;rft.date=2017-12-04&amp;rft.series=Pure+and+Applied+Mathematics%3A+A+Wiley+Series+of+Texts%2C+Monographs+and+Tracts&amp;rft.volume=Volume+1&amp;rft.edition=2nd&amp;rft.pub=Wiley&amp;rft.isbn=978-1-118-74212-9&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFKoshy2019" style="font-style:normal">Koshy, Thomas (2019-01-07), <i>Fibonacci and Lucas Numbers with Applications</i>, Pure and Applied Mathematics: A Wiley Series of Texts, Monographs and Tracts, <b>Volume 2</b> (2nd ed.), Wiley, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-1-118-74208-2" title="特別:文献資料/978-1-118-74208-2">978-1-118-74208-2</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fibonacci+and+Lucas+Numbers+with+Applications&amp;rft.aulast=Koshy&amp;rft.aufirst=Thomas&amp;rft.au=Koshy%2C%26%2332%3BThomas&amp;rft.date=2019-01-07&amp;rft.series=Pure+and+Applied+Mathematics%3A+A+Wiley+Series+of+Texts%2C+Monographs+and+Tracts&amp;rft.volume=Volume+2&amp;rft.edition=2nd&amp;rft.pub=Wiley&amp;rft.isbn=978-1-118-74208-2&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFFibonacci1987" style="font-style:normal"><a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81" title="レオナルド・フィボナッチ">Leonardo Pisano Fibonacci</a> L. E. Sigler訳 (1987-02-11), <i>The Book of Squares</i>, Academic Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-12-643130-8" title="特別:文献資料/978-0-12-643130-8">978-0-12-643130-8</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Book+of+Squares&amp;rft.aulast=%5B%5B%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%7CLeonardo+Pisano+Fibonacci%5D%5D&amp;rft.au=%5B%5B%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%7CLeonardo+Pisano+Fibonacci%5D%5D&amp;rft.date=1987-02-11&amp;rft.pub=Academic+Press&amp;rft.isbn=978-0-12-643130-8&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span> - 『<a class="new" href="/w/index.php?title=%E5%B9%B3%E6%96%B9%E3%81%AE%E6%9B%B8&amp;action=edit&amp;redlink=1" title="平方の書 (存在しないページ)">平方の書</a>』の英訳。</li>
+<li><cite class="citation" id="CITEREFSigler2003" style="font-style:normal">Sigler, Laurence (2003-11-11), <i>Fibonacci's Liber Abaci: A Translation into Modern English of Leonardo Pisano's Book of Calculation</i>, Sources and Studies in the History of Mathematics and Physical Sciences, Springer-Verlag, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-387-40737-1" title="特別:文献資料/978-0-387-40737-1">978-0-387-40737-1</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fibonacci%27s+Liber+Abaci%3A+A+Translation+into+Modern+English+of+Leonardo+Pisano%27s+Book+of+Calculation&amp;rft.aulast=Sigler&amp;rft.aufirst=Laurence&amp;rft.au=Sigler%2C%26%2332%3BLaurence&amp;rft.date=2003-11-11&amp;rft.series=Sources+and+Studies+in+the+History+of+Mathematics+and+Physical+Sciences&amp;rft.pub=Springer-Verlag&amp;rft.isbn=978-0-387-40737-1&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"><span style="display: none;"> </span></span> - 『<a href="/wiki/%E7%AE%97%E7%9B%A4%E3%81%AE%E6%9B%B8" title="算盤の書">算盤の書</a>』の英訳。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=21" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="mbox-small plainlinks sistersitebox noprint" style="border:1px solid #aaa;background-color:#f9f9f9;width:22em;">
+<tbody><tr>
+<td class="mbox-image"><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Commons-logo.svg" title="ファイル:Commons-logo.svg">ファイル:Commons-logo.svg</a></td>
+<td class="mbox-text plainlist" style="font-size:100%;">ウィキメディア・コモンズには、<b><span class="plainlinks">[{{fullurl:commons:Category:{{#Property:P373}}|uselang=ja}} フィボナッチ数]</span></b>に関連するカテゴリがあります。</td></tr></tbody></table>
+<div class="div-col columns column-count column-count-" style="-moz-column-count:; -webkit-column-count:; column-count:; -moz-column-width: 18em; -webkit-column-width: 18em; column-width: 18em;">
+<ul><li><a href="/wiki/%E9%BB%84%E9%87%91%E6%AF%94" title="黄金比">黄金比</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%AE%9A%E6%95%B0" title="数学定数">数学定数</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%88%97" title="数列">数列</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97%E3%81%AE%E9%80%86%E6%95%B0%E5%92%8C" title="フィボナッチ数列の逆数和">フィボナッチ数列の逆数和</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0" title="リュカ数">リュカ数</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0%E5%88%97" title="リュカ数列">リュカ数列</a></li></ul>
+</div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;section=22" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="citation kotobank" id="Reference-Kotobank-フィボナッチ数列"><a class="new" href="/w/index.php?title=%E7%AB%B9%E4%B9%8B%E5%86%85%E8%84%A9&amp;action=edit&amp;redlink=1" title="竹之内脩 (存在しないページ)">竹之内脩</a>『<a class="external text" href="//kotobank.jp/word/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97" rel="nofollow">フィボナッチ数列</a>』 - <a href="/wiki/%E3%82%B3%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF" title="コトバンク">コトバンク</a></span></li>
+<li><span class="citation mathtrain" id="Reference-Mathtrain-fibonacci">『<a class="external text" href="https://mathtrain.jp/fibonacci" rel="nofollow">フィボナッチ数列の一般項と数学的帰納法</a>』 - <a href="/wiki/%E9%AB%98%E6%A0%A1%E6%95%B0%E5%AD%A6%E3%81%AE%E7%BE%8E%E3%81%97%E3%81%84%E7%89%A9%E8%AA%9E" title="高校数学の美しい物語">高校数学の美しい物語</a></span></li>
+<li><a class="external text" href="https://ameblo.jp/titchmarsh/entry-12220956942.html" rel="nofollow">フィボナッチ数、トリボナッチ数、テトラナッチ数、ペンタナッチ数、ヘキサナッチ数 の考察</a></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Fibonacci_Number"><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><cite class="citation web cs1" id="CITEREFWeisstein,_Eric_W"><span style="font-style:normal;"><a class="new" href="/w/index.php?title=En:Eric_W._Weisstein&amp;action=edit&amp;redlink=1" title="En:Eric W. Weisstein (存在しないページ)">Weisstein, Eric W</a></span>. <a class="external text" href="https://mathworld.wolfram.com/FibonacciNumber.html" rel="nofollow">"<span style="font-style:normal;">Fibonacci Number</span>"</a>. <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i> (English).</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MathWorld&amp;rft.atitle=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EFibonacci+Number%3C%2Fspan%3E&amp;rft.au=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EWeisstein%2C+Eric+W%3C%2Fspan%3E&amp;rft_id=https%3A%2F%2Fmathworld.wolfram.com%2FFibonacciNumber.html&amp;rfr_id=info%3Asid%2Flocalhost%3A8080%3A%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0"></span></span></li>
+<li><a class="external text" href="https://www.mathstat.dal.ca/fibonacci/" rel="nofollow">The Fibonacci Association（フィボナッチ協会）</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://www.fq.math.ca/" rel="nofollow">Fibonacci Quarterly Home Page（フィボナッチ・クォータリー）</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="http://www.zg.em-net.ne.jp/~aurues/Fibonacci/14thJFAWorkshop.pdf" rel="nofollow">日本フィボナッチ協会 第14回研究集会報告書2016年8月日本フィボナッチ協会</a></li>
+<li><a class="external text" href="http://jfa.mathsalon.com/15thJFAWorkshop.pdf" rel="nofollow">日本フィボナッチ協会 第15回研究集会報告書2017年8月日本フィボナッチ協会</a></li>
+<li><a class="external text" href="http://jfa.mathsalon.com/16thJFAWorkshop.pdf" rel="nofollow">日本フィボナッチ協会 第16回研究集会報告書2018年8月日本フィボナッチ協会</a></li>
+<li><a class="external text" href="http://jfa.mathsalon.com/17thJFAWorkshop.pdf" rel="nofollow">日本フィボナッチ協会 第17回研究集会報告書2019年8月日本フィボナッチ協会</a></li>
+<li><a class="external text" href="http://jfa.mathsalon.com/18thJFAWorkshop.pdf" rel="nofollow">日本フィボナッチ協会 第18回研究集会報告書2020年10月日本フィボナッチ協会</a></li></ul>
+<div aria-labelledby="級数・数列" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="3" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E7%B4%9A%E6%95%B0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:級数 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B4%9A%E6%95%B0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B4%9A%E6%95%B0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="級数・数列" style="font-size:110%;margin:0 6em"><a href="/wiki/%E7%B4%9A%E6%95%B0" title="級数">級数</a>・<a href="/wiki/%E6%95%B0%E5%88%97" title="数列">数列</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">等差数列</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;text-align:left">発散級数</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1%2B1%2B1%2B1%2B%E2%80%A6" title="1+1+1+1+…">1 + 1 + 1 + 1 + ⋯</a></li>
+<li><a href="/wiki/1%2B2%2B3%2B4%2B%E2%80%A6" title="1+2+3+4+…">1 + 2 + 3 + 4 + ⋯</a></li>
+<li><a href="/wiki/%E7%84%A1%E9%99%90%E7%AE%97%E8%A1%93%E7%B4%9A%E6%95%B0" title="無限算術級数">無限算術級数</a></li></ul>
+</div></td></tr></tbody></table>
+</td><td class="navbox-image" rowspan="5" style="width:1px;padding:0px 0px 0px 2px"><div><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Image_from_Gutza_Wikipedia.jpg" title="ファイル:Image from Gutza Wikipedia.jpg">ファイル:Image from Gutza Wikipedia.jpg</a></div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">等比数列</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;text-align:left">収束級数</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1/2_%E2%88%92_1/4_%2B_1/8_%E2%88%92_1/16_%2B_%E2%8B%AF" title="1/2 − 1/4 + 1/8 − 1/16 + ⋯"><style data-mw-deduplicate="TemplateStyles:r2600424">'"`UNIQ--templatestyles-00000060-QINU`"'</style><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">2</span></span> − <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">4</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">8</span></span> − <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">16</span></span> + ⋯</a></li>
+<li><a href="/wiki/1/2_%2B_1/4_%2B_1/8_%2B_1/16_%2B_%E2%8B%AF" title="1/2 + 1/4 + 1/8 + 1/16 + ⋯"><link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">2</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">4</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">8</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">16</span></span> + ⋯</a></li>
+<li><a href="/wiki/1/4_%2B_1/16_%2B_1/64_%2B_1/256_%2B_%E2%8B%AF" title="1/4 + 1/16 + 1/64 + 1/256 + ⋯"><link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">4</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">16</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">64</span></span> + <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">256</span></span> + ⋯</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;text-align:left">発散級数</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1%2B1%2B1%2B1%2B%E2%80%A6" title="1+1+1+1+…">1 + 1 + 1 + 1 + ⋯</a></li>
+<li><a href="/wiki/1%2B2%2B4%2B8%2B%E2%80%A6" title="1+2+4+8+…">1 + 2 + 4 + 8 + ⋯</a></li>
+<li><a href="/wiki/1%E2%88%922%2B4%E2%88%928%2B%E2%80%A6" title="1−2+4−8+…">1 − 2 + 4 − 8 + ⋯</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%87%E3%82%A3%E7%B4%9A%E6%95%B0" title="グランディ級数">グランディ級数</a></li>
+<li><a href="/wiki/2%E3%81%AE%E5%86%AA" title="2の冪">2の冪</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">整数列</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88" title="オンライン整数列大辞典のリスト">オンライン整数列大辞典のリスト</a></li>
+<li><a href="/wiki/%E9%9A%8E%E4%B9%97" title="階乗">階乗</a></li>
+<li><a class="mw-selflink selflink">フィボナッチ数</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0" title="リュカ数">リュカ数</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%AB%E6%95%B0" title="ペル数">ペル数</a></li>
+<li><a href="/wiki/%E4%B8%89%E8%A7%92%E6%95%B0" title="三角数">三角数</a></li>
+<li><a href="/wiki/%E4%BA%94%E8%A7%92%E6%95%B0" title="五角数">五角数</a></li>
+<li><a href="/wiki/%E5%85%AD%E8%A7%92%E6%95%B0" title="六角数">六角数</a></li>
+<li><a href="/wiki/%E4%B8%83%E8%A7%92%E6%95%B0" title="七角数">七角数</a></li>
+<li><a href="/wiki/%E5%85%AB%E8%A7%92%E6%95%B0" title="八角数">八角数</a></li>
+<li><a href="/wiki/%E4%B9%9D%E8%A7%92%E6%95%B0" title="九角数">九角数</a></li>
+<li><a href="/wiki/%E5%8D%81%E8%A7%92%E6%95%B0" title="十角数">十角数</a></li>
+<li><a href="/wiki/%E5%A4%9A%E8%A7%92%E6%95%B0" title="多角数">多角数</a></li>
+<li><a href="/wiki/%E5%B9%B3%E6%96%B9%E6%95%B0" title="平方数">平方数</a></li>
+<li><a href="/wiki/%E7%AB%8B%E6%96%B9%E6%95%B0" title="立方数">立方数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他の数列</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;text-align:left">発散級数</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1%E2%88%922%2B3%E2%88%924%2B%E2%80%A6" title="1−2+3−4+…">1 − 2 + 3 − 4 + ⋯</a></li>
+<li><a href="/wiki/1%E2%88%921%2B2%E2%88%926%2B24%E2%88%92120%2B%E2%80%A6" title="1−1+2−6+24−120+…">1 − 1 + 2 − 6 + 24 − 120 + ⋯</a></li>
+<li><a href="/wiki/%E8%AA%BF%E5%92%8C%E7%B4%9A%E6%95%B0" title="調和級数">調和級数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;text-align:left">収束級数</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BA%A4%E9%A0%85%E7%B4%9A%E6%95%B0" title="交項級数">交項級数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="幾何級数">幾何級数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E8%B6%85%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="超幾何級数">超幾何級数</a></li>
+<li><a href="/wiki/Q%E8%B6%85%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="Q超幾何級数">q超幾何級数</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F" title="ライプニッツの公式">ライプニッツの公式</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">数列の加速法</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A8%E3%82%A4%E3%83%88%E3%82%B1%E3%83%B3%E3%81%AE%CE%942%E4%B9%97%E5%8A%A0%E9%80%9F%E6%B3%95" title="エイトケンのΔ2乗加速法">エイトケンのΔ2乗加速法</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331081743
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.749 seconds
+Real time usage: 1.262 seconds
+Preprocessor visited node count: 18879/1000000
+Post‐expand include size: 156855/2097152 bytes
+Template argument size: 33373/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 54163/5000000 bytes
+Lua time usage: 0.340/7 seconds
+Lua virtual size: 8835072/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1073.887      1 -total
+ 31.80%  341.485      2 テンプレート:Reflist
+ 30.36%  326.025     12 テンプレート:Citation/core
+ 23.68%  254.274     11 テンプレート:ISBN2
+ 23.05%  247.539      5 テンプレート:Cite_book
+ 21.94%  235.558     16 テンプレート:Catalog_lookup_link
+ 20.74%  222.743      5 テンプレート:Cite_book/和書
+ 19.34%  207.663      8 テンプレート:Citation
+ 19.18%  205.919     12 テンプレート:Citation/identifier
+ 14.40%  154.614      5 テンプレート:Cite_journal
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:14627-0!canonical and timestamp 20220331081742 and revision id 11165. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=フィボナッチ数&amp;oldid=11165">http://localhost:8080/w/index.php?title=フィボナッチ数&amp;oldid=11165</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%88%97" title="カテゴリ:数列">数列</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B4%E6%95%B0%E3%81%AE%E9%A1%9E" title="カテゴリ:整数の類">整数の類</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AF%94" title="カテゴリ:比">比</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81" title="カテゴリ:レオナルド・フィボナッチ">レオナルド・フィボナッチ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A8%E3%83%9D%E3%83%8B%E3%83%A0" title="カテゴリ:エポニム">エポニム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;returntoquery=curid%3D14627%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;returntoquery=curid%3D14627%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;oldid=11165" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月2日 (金) 08:21 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.749","walltime":"1.262","ppvisitednodes":{"value":18879,"limit":1000000},"postexpandincludesize":{"value":156855,"limit":2097152},"templateargumentsize":{"value":33373,"limit":2097152},"expansiondepth":{"value":25,"limit":40},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":54163,"limit":5000000},"timingprofile":["100.00% 1073.887      1 -total"," 31.80%  341.485      2 テンプレート:Reflist"," 30.36%  326.025     12 テンプレート:Citation/core"," 23.68%  254.274     11 テンプレート:ISBN2"," 23.05%  247.539      5 テンプレート:Cite_book"," 21.94%  235.558     16 テンプレート:Catalog_lookup_link"," 20.74%  222.743      5 テンプレート:Cite_book/和書"," 19.34%  207.663      8 テンプレート:Citation"," 19.18%  205.919     12 テンプレート:Citation/identifier"," 14.40%  154.614      5 テンプレート:Cite_journal"]},"scribunto":{"limitreport-timeusage":{"value":"0.340","limit":"7"},"limitreport-virtmemusage":{"value":8835072,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331081743","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":286});});</script>
+</body></html>

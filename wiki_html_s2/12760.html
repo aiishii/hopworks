@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>フーリエ変換 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-フーリエ変換 rootpage-フーリエ変換 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">フーリエ変換</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">ナビゲーションに移動</a>
+<a class="mw-jump-link" href="#searchInput">検索に移動</a>
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><a href="." id="link_a_1" title="数学">数学</a>において<b>フーリエ変換</b>（フーリエへんかん、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">Fourier transform; FT</span>）は、<a href="." id="link_a_3" title="実数変数 (数学)">実変数</a>の<a href="." id="link_a_4" title="複素数">複素</a>または<a href="." id="link_a_5" title="実数">実</a>数値<a href="." id="link_a_6" title="関数 (数学)">関数</a>&lt;math&gt;f&lt;/math&gt;を、別の同種の関数<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span>に写す<a href="." id="link_a_7" title="変換 (数学)">変換</a>である。
+</p><p>工学においては、変換後の関数<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span>はもとの関数&lt;math&gt;f&lt;/math&gt;に含まれる周波数を記述していると考え、しばしばもとの関数&lt;math&gt;f&lt;/math&gt;の<a href="." id="link_a_8" title="周波数領域">周波数領域</a>表現 (<i><span lang="en">frequency domain representation</span></i>) と呼ばれる。言い換えれば、フーリエ変換は関数&lt;math&gt;f&lt;/math&gt;を<a href="." id="link_a_9" title="正弦波">正弦波・余弦波</a>に分解するとも言える。
+</p><p>フーリエ変換 (FT) は他の多くの数学的な演算と同様に<a href="." id="link_a_10" title="フーリエ解析">フーリエ解析</a>の主題を成す。特別の場合として、もとの関数とその周波領域表現が<a href="." id="link_a_11" title="連続関数">連続</a>かつ<a href="." id="link_a_12" title="非有界関数">非有界</a>である場合を考えることができる。「フーリエ変換」という言葉は関数の周波数領域表現のことを指すこともあるし、関数を周波数領域表現へ写す変換の過程・公式を言うこともある。なおこの呼称は、19世紀フランスの数学者・物理学者で<a href="." id="link_a_13" title="次元解析">次元解析</a>の創始者とされる<a href="." id="link_a_14" title="ジョゼフ・フーリエ">ジョゼフ・フーリエ</a>に由来する。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#可積分関数に対する定義"><span class="tocnumber">1.1</span> <span class="toctext">可積分関数に対する定義</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#超関数としての定義"><span class="tocnumber">1.2</span> <span class="toctext">超関数としての定義</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#導入"><span class="tocnumber">2</span> <span class="toctext">導入</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#フーリエ変換の性質"><span class="tocnumber">3</span> <span class="toctext">フーリエ変換の性質</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#基本性質"><span class="tocnumber">3.1</span> <span class="toctext">基本性質</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#一様連続性とリーマン・ルベーグの補題"><span class="tocnumber">3.2</span> <span class="toctext">一様連続性とリーマン・ルベーグの補題</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#プランシュレルの定理とパーセバルの定理"><span class="tocnumber">3.3</span> <span class="toctext">プランシュレルの定理とパーセバルの定理</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#不確定性関係"><span class="tocnumber">3.4</span> <span class="toctext">不確定性関係</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#ポアソン和公式"><span class="tocnumber">3.5</span> <span class="toctext">ポアソン和公式</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#畳み込み定理"><span class="tocnumber">3.6</span> <span class="toctext">畳み込み定理</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#相互相関定理"><span class="tocnumber">3.7</span> <span class="toctext">相互相関定理</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#固有関数"><span class="tocnumber">3.8</span> <span class="toctext">固有関数</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#球面調和関数"><span class="tocnumber">3.9</span> <span class="toctext">球面調和関数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#一般化"><span class="tocnumber">4</span> <span class="toctext">一般化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#他の函数空間上のフーリエ変換"><span class="tocnumber">4.1</span> <span class="toctext">他の函数空間上のフーリエ変換</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#多次元版"><span class="tocnumber">4.2</span> <span class="toctext">多次元版</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#フーリエ・スティルチェス変換"><span class="tocnumber">4.3</span> <span class="toctext">フーリエ・スティルチェス変換</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#緩増加超函数"><span class="tocnumber">4.4</span> <span class="toctext">緩増加超函数</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#局所コンパクトアーベル群"><span class="tocnumber">4.5</span> <span class="toctext">局所コンパクトアーベル群</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#応用"><span class="tocnumber">5</span> <span class="toctext">応用</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#微分方程式の解析学"><span class="tocnumber">5.1</span> <span class="toctext">微分方程式の解析学</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#フーリエ変換の定義域と値域"><span class="tocnumber">6</span> <span class="toctext">フーリエ変換の定義域と値域</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#その他の記法"><span class="tocnumber">7</span> <span class="toctext">その他の記法</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#その他の定義"><span class="tocnumber">8</span> <span class="toctext">その他の定義</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#主なフーリエ変換の一覧"><span class="tocnumber">9</span> <span class="toctext">主なフーリエ変換の一覧</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="#函数の関係式"><span class="tocnumber">9.1</span> <span class="toctext">函数の関係式</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#自乗可積分函数"><span class="tocnumber">9.2</span> <span class="toctext">自乗可積分函数</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#超函数"><span class="tocnumber">9.3</span> <span class="toctext">超函数</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#二変数函数"><span class="tocnumber">9.4</span> <span class="toctext">二変数函数</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#一般の_n-変数函数"><span class="tocnumber">9.5</span> <span class="toctext">一般の <i>n</i>-変数函数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#出典"><span class="tocnumber">11</span> <span class="toctext">出典</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#参考文献"><span class="tocnumber">12</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#外部リンク"><span class="tocnumber">13</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.8F.AF.E7.A9.8D.E5.88.86.E9.96.A2.E6.95.B0.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8B.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="可積分関数に対する定義">可積分関数に対する定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=2" title="節を編集: 可積分関数に対する定義">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%8D%E5%88%86" title="ルベーグ積分">可積分</a>関数 <span class="texhtml" lang="en"><i>f</i>: <b>R</b> → <b>C</b></span> のフーリエ変換の定義として、よく用いられるものにもいくつか異なる流儀がある<sup class="reference" id="cite_ref-FOOTNOTEKaiser1994_1-0"><a href="#cite_note-FOOTNOTEKaiser1994-1">[1]</a></sup>。本項では
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>を定義として用いる。ここでギリシャ文字小文字の <a href="/wiki/%CE%9E" title="Ξ"><span class="texhtml" lang="en"><i>ξ</i></span></a> は任意の実数である。
+</p><p>対象の関数における独立変数が<a href="/wiki/%E7%89%A9%E7%90%86%E9%87%8F" title="物理量">物理量</a>の場合、フーリエ変換は独立変数の<a href="/wiki/%E9%87%8F%E3%81%AE%E6%AC%A1%E5%85%83" title="量の次元">次元</a>をもとの<a href="/wiki/%E9%80%86%E6%95%B0" title="逆数">逆数</a>に移す。例えば、変換前の関数における独立変数 <span class="texhtml" lang="en"><i>x</i></span> が<a href="/wiki/%E6%99%82%E9%96%93" title="時間">時間</a>の次元をもつとき、変換後の独立変数 <span class="texhtml" lang="en"><i>ξ</i></span> は<a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0" title="周波数">周波数</a>の次元を持つ。あるいは、変換前の独立変数 <span class="texhtml" lang="en"><i>x</i></span> が<a href="/wiki/%E9%95%B7%E3%81%95" title="長さ">長さ</a>の次元をもつとき、変換後の独立変数 <span class="texhtml" lang="en"><i>ξ</i></span> は<a href="/wiki/%E6%B3%A2%E6%95%B0" title="波数">波数</a>の次元を持つ。この性質は定義より <span class="texhtml" lang="en"><i>x ξ</i></span> が<a href="/wiki/%E7%84%A1%E6%AC%A1%E5%85%83%E9%87%8F" title="無次元量">無次元量</a>であることから従う。
+</p><p>適当な条件のもと、<span class="texhtml" lang="en"><i>f</i></span> はその変換 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span> から<b>フーリエ逆変換</b> <span lang="en">(<i>inverse transform</i>)</span>
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>によって復元することができる（<span class="texhtml" lang="en"><i>x</i></span> は任意の実数）。
+</p><p>他の定義や記法については後述する。
+</p>
+<h3><span id=".E8.B6.85.E9.96.A2.E6.95.B0.E3.81.A8.E3.81.97.E3.81.A6.E3.81.AE.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="超関数としての定義">超関数としての定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=3" title="節を編集: 超関数としての定義">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>上記の可積分関数の定義では、次のような関数は&lt;math&gt;\int_{-\infty}^{\infty} |f(x)|dx=\infty&lt;/math&gt;のため可積分ではなく、フーリエ変換が定義できない。
+</p>
+<dl><dd>・&lt;math&gt;f(x)=c&lt;/math&gt;（&lt;math&gt;c&lt;/math&gt;はゼロ以外の定数）</dd>
+<dd>・&lt;math&gt;f(x)=x^n&lt;/math&gt;（&lt;math&gt;n&lt;/math&gt;は自然数）</dd>
+<dd>・周期関数（&lt;math&gt;f(x)=0&lt;/math&gt;を除く）</dd></dl>
+<p>このように、周期関数のようなフーリエ級数展開が可能な関数が、可積分関数の意味でフーリエ変換できないことは非常に不便であり、またフーリエ変換の理解を難しくしている。
+</p><p>そこで、フーリエ変換の定義を超関数に拡張することが行われる。
+</p><p>超関数とは、急減少関数（<a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E7%A9%BA%E9%96%93" title="シュワルツ空間">シュワルツ空間</a>の元である関数）の列&lt;math&gt;\{f_n(x)\}_{n=1}^\infty&lt;/math&gt;であって、任意の急減少関数&lt;math&gt;\phi(x)&lt;/math&gt;について&lt;math&gt;\lim_{n\to\infty}\int_{-\infty}^{\infty}f_n(x)\phi(x)dx&lt;/math&gt;が存在するものを言い、
+２つの急減少関数の列&lt;math&gt;\{f_n(x)\}_{n=1}^\infty&lt;/math&gt;、&lt;math&gt;\{g_n(x)\}_{n=1}^\infty&lt;/math&gt;が、任意の急減少関数&lt;math&gt;\phi(x)&lt;/math&gt;について&lt;math&gt;\lim_{n\to\infty}\int_{-\infty}^{\infty}f_n(x)\phi(x)dx=\lim_{n\to\infty}\int_{-\infty}^{\infty}g_n(x)\phi(x)dx&lt;/math&gt;が成り立つとき、&lt;math&gt;\{f_n(x)\}&lt;/math&gt;と&lt;math&gt;\{g_n(x)\}&lt;/math&gt;は同一の超関数を表すものとする。
+</p><p>イメージとしては、超関数は関数列の極限であるが、関数列自体が超関数であり、&lt;math&gt;\lim_{n\to\infty}f_n(x)&lt;/math&gt;が収束値を持つ必要はない。
+</p><p>急減少関数は可積分関数であるため、可積分関数としてのフーリエ変換が定義されるが、急減少関数のフーリエ変換は急減少関数になるという性質がある。この性質を利用し、次のように超関数のフーリエ変換が定義される。
+</p><p>定義: 急減少関数の列である超関数&lt;math&gt;\{f_n(x)\}_{n=1}^\infty&lt;/math&gt;のフーリエ変換は、急減少関数の列&lt;math&gt;\{\int_{-\infty}^{\infty} f_n(x)e^{- 2\pi i x \xi}dx\}_{n=1}^\infty&lt;/math&gt;からなる超関数と定義される。
+</p>
+<dl><dd>・&lt;math&gt;f(x)=c&lt;/math&gt;（&lt;math&gt;c&lt;/math&gt;はゼロ以外の定数）については、急減少関数の列である超関数&lt;math&gt;\{c\exp(-x^2/n)\}&lt;/math&gt;を考え（&lt;math&gt;\lim_{n\to\infty}c\exp(-x^2/n)=c&lt;/math&gt;のため、任意の急減少関数&lt;math&gt;\phi(x)&lt;/math&gt;について&lt;math&gt;\lim_{n\to\infty}\int_{-\infty}^{\infty}c\exp(-x^2/n)\phi(x)dx=\int_{-\infty}^{\infty}c\phi(x)dx&lt;/math&gt;となり広い意味で同一視可能）、そのフーリエ変換は急減少関数の列である超関数&lt;math&gt;\{\int_{-\infty}^{\infty} c\exp(-x^2/n- 2\pi i x \xi)dx\}=\{c\exp(-n\pi^2\xi^2)\int_{-\infty}^{\infty} \exp(-(x+n\pi i\xi)^2/n)dx\}=\{c\sqrt{n\pi}\exp(-n\pi^2\xi^2)\}&lt;/math&gt;となる。</dd>
+<dd>ここで、&lt;math&gt;\xi\ne 0&lt;/math&gt;のときは&lt;math&gt;\lim_{n\to\infty}\sqrt{n\pi}\exp(-n\pi^2\xi^2)=0&lt;/math&gt;、&lt;math&gt;\xi=0&lt;/math&gt;のときは&lt;math&gt;\lim_{n\to\infty}\sqrt{n\pi}\exp(-n\pi^2\xi^2)=\infty&lt;/math&gt;であり、&lt;math&gt;\int_{-\infty}^\infty\sqrt{n\pi}\exp(-n\pi^2\xi^2)d\xi=1&lt;/math&gt;である。これはデルタ関数と言われ、&lt;math&gt;f(x)=c&lt;/math&gt;のフーリエ変換は、&lt;math&gt;c\delta(\xi)&lt;/math&gt;となる。</dd></dl>
+<h2><span id=".E5.B0.8E.E5.85.A5"></span><span class="mw-headline" id="導入">導入</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=4" title="節を編集: 導入">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0" title="フーリエ級数">フーリエ級数</a>」も参照</div>
+<p>この節の記載は、フーリエ変換の「動機」についてのものであるが、フーリエ変換の理解に必須のものではなく、むしろ理解を妨げる要因（数学的に不正確な内容を含む）もあるため、注意が必要である。フーリエ変換についてのイメージを掴むには有用であるが、この節の理解に拘泥するとむしろ本質的な理解が阻害されることになる。
+</p><p>フーリエ変換を考える動機は<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0" title="フーリエ級数">フーリエ級数</a>の研究に始まる。フーリエ級数の研究において、複雑な周期関数は単純な波動の数学的な表現である<a class="mw-redirect" href="/wiki/%E6%AD%A3%E5%BC%A6%E9%96%A2%E6%95%B0" title="正弦関数">正弦関数</a>や<a class="mw-redirect" href="/wiki/%E4%BD%99%E5%BC%A6%E9%96%A2%E6%95%B0" title="余弦関数">余弦関数</a>の和として表される。正弦や余弦の性質のおかげで、この和に現れる各波の量、フーリエ係数を積分によって計算することができる。多くの場合に、&lt;math display="inline"&gt;e^{2\pi i\theta}=\cos{2\pi\theta}+i\sin{2\pi\theta}&lt;/math&gt;（<a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%85%AC%E5%BC%8F" title="オイラーの公式">オイラーの公式</a>）を用いて、正弦関数および余弦関数の代りに基本波動 &lt;math display="inline"&gt;e^{2\pi i\theta}&lt;/math&gt; を用いた方が便利である。この場合には多くの公式が簡単化され、本項で後述するフーリエ変換のほかの類似の定式化をあたえるという点に優位性がある。この正弦・余弦から<a href="/wiki/%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0#複素変数への拡張" title="指数関数">複素指数関数</a>への移行にはフーリエ係数が複素数値であることを要する。この複素数は、関数に含まれる波動の<a href="/wiki/%E6%8C%AF%E5%B9%85" title="振幅">振幅</a>（あるいは大きさ）と、<a href="/wiki/%E4%BD%8D%E7%9B%B8" title="位相">位相</a>（あるいは初期角）の両方を与えているものと通常は解釈される。また、この移行に際して「負の周波数」も導入される。例えば、波動 &lt;math display="inline"&gt;e^{2\pi i\theta}&lt;/math&gt; および &lt;math display="inline"&gt;e^{-2\pi i\theta}&lt;/math&gt; はともに周期1を持つが、複素フーリエ級数においては別々の成分として取り扱われる。したがって、周波数を単純に周期の<a href="/wiki/%E9%80%86%E6%95%B0" title="逆数">逆数</a>と考えることはできなくなる。
+</p><p>フーリエ級数を以下のようにしてフーリエ変換の動機付けに用いることができる。関数 <i>ƒ</i> をある区間 [−<i>L</i>/2, <i>L</i>/2] の外側で 0 となるようなものとすると、任意の <i>T</i> ≥ <i>L</i> に対して <i>ƒ</i> を区間 [−<i>T</i> /2, <i>T</i> /2] 上のフーリエ級数に拡張できる。ここで <i>f</i> のフーリエ級数に現れる波動 &lt;math display="inline"&gt;e^{2\pi inx/T}&lt;/math&gt; の係数となる &lt;math display="inline"&gt;c_n&lt;/math&gt; で表される「量」は
+</p>
+<dl><dd>&lt;math&gt;\hat{f}\Big(\dfrac{n}{T}\Big)=c_n:=\int_{-T/2}^{T/2} e^{-2\pi i nx/T}f(x)\,dx&lt;/math&gt;</dd></dl>
+<p>で与えられ、<i>ƒ</i> は公式
+</p>
+<dl><dd>&lt;math&gt;f(x)=\frac{1}{T}\sum_{n=-\infty}^\infty \hat{f}\Big(\dfrac{n}{T}\Big) e^{2\pi i nx/T}&lt;/math&gt;</dd></dl>
+<p>で与えられなければならない。ξ<sub><i>n</i></sub> = <i>n</i>/<i>T</i> とおき、Δξ = (<i>n</i> + 1)/<i>T</i> − <i>n</i>/<i>T</i> = 1/<i>T</i> とおくと、最後の和を<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E5%92%8C" title="リーマン和">リーマン和</a>
+</p>
+<dl><dd>&lt;math&gt;f(x)=\sum_{n=-\infty}^\infty \hat{f}\Big(\dfrac{n}{T}\Big) e^{2\pi i x\xi_n}\Delta\xi&lt;/math&gt;</dd></dl>
+<p>として考えることができる。<i>T</i> → ∞ とすることにより、このリーマン和は定義節で与えられるフーリエ逆変換に収束する。適当な条件の下では、この議論をもっと明確化することができる<sup class="reference" id="cite_ref-FOOTNOTESteinShakarchi2003_2-0"><a href="#cite_note-FOOTNOTESteinShakarchi2003-2">[2]</a></sup>。したがって、この場合はフーリエ級数だが、フーリエ変換は関数に含まれる個々の特定の周波数がどの程度あるかを測るものと考えることができ、それらの波動を積分（あるいは「連続和」）によって再結合して元の関数を復元することができる。
+</p><p>以下の画像はフーリエ変換が特定の関数に含まれる周波数を測る方法を視覚的に現したものである。関数として、（<i>t</i> が秒で測られる場合には）3 ヘルツで振動し、急速に 0 になる
+</p>
+<dl><dd>&lt;math&gt;f(t):=\cos(6\pi t)e^{-\pi t^2}&lt;/math&gt;</dd></dl>
+<p>を描く。この関数は特に描画しやすい実フーリエ変換をもつものとして選ばれたものであり、最初の画像はそのグラフである。<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(3)</span> を計算するために、<i>e</i><sup>−2π<i>i</i>(3<i>t</i>)</sup><i>ƒ</i>(<i>t</i>) を積分する。二枚目の画像はこの被積分関数の実部および虚部である。被積分関数の実部は殆ど常に正となる。これは <i>ƒ</i>(<i>t</i>) が負であるときには <i>e</i><sup>−2π<i>i</i>(3<i>t</i>)</sup> の実部が同様に負となることによる。それらは同じ比率で振動するから、<i>ƒ</i>(<i>t</i>) が正であるときも同様に <i>e</i><sup>−2π<i>i</i>(3<i>t</i>)</sup> の実部も正になる。この結果、被積分関数の実部のを積分すれば、比較的大きな数値（ここでの場合 0.5）を得ることになる。いっぽう、（<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(5)</span> を見る場合のように）含まれない周波数を測れば、被積分関数は十分に振動し、それゆえにその積分はとても小さい値となる。一般の設定ではこれよりは少し複雑になるが、それでもフーリエ変換は関数 <i>ƒ</i>(<i>t</i>) に含まれる個々の周波数がどれくらいあるかを測るものという考え方に変わりはない。
+</p>
+<ul class="gallery mw-gallery-traditional">
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Function ocsillating at 3 hertz.svg</div>
+<div class="gallerytext">
+<p>3ヘルツの振動を示すもとの関数
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Onfreq.svg</div>
+<div class="gallerytext">
+<p>3ヘルツにおけるフーリエ変換の被積分関数の実部および虚部
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Offfreq.svg</div>
+<div class="gallerytext">
+<p>5ヘルツにおけるフーリエ変換の被積分関数の実部および虚部
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Fourier transform of oscillating function.svg</div>
+<div class="gallerytext">
+<p>3ヘルツおよび5ヘルツでラベル付けされたフーリエ変換
+</p>
+</div>
+</div></li>
+</ul>
+<h2><span id=".E3.83.95.E3.83.BC.E3.83.AA.E3.82.A8.E5.A4.89.E6.8F.9B.E3.81.AE.E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="フーリエ変換の性質">フーリエ変換の性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=5" title="節を編集: フーリエ変換の性質">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>実数直線上で定義される関数 <i>f</i> が<b>可積分</b>であるとは、
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^\infty |f(x)| \, dx &lt; \infty&lt;/math&gt;</dd></dl>
+<p>を満たす<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">ルベーグ可測関数</a>であることをいう。
+</p>
+<h3><span id=".E5.9F.BA.E6.9C.AC.E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="基本性質">基本性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=6" title="節を編集: 基本性質">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>可積分関数 <span class="texhtml" lang="en"><i>f</i>(<i>x</i>), <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>)</span> が与えられたとき、これらのフーリエ変換をそれぞれ <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(<i>ξ</i>)</span>, <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span>(<i>ξ</i>)</span>, <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>h</i></span></span></span>(<i>ξ</i>)</span>で表す。フーリエ変換は以下の基本性質を満たす<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-0"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。
+</p>
+<dl><dt>線型性</dt>
+<dd>任意の<a href="/wiki/%E8%A4%87%E7%B4%A0%E6%95%B0" title="複素数">複素数</a> <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span>, <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> について <span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = <i>aƒ</i>(<i>x</i>) + <i>bg</i>(<i>x</i>)</span> であるならば
+<dl><dd>&lt;math&gt;\hat{h}(\xi)=a\cdot \hat{f}(\xi) + b\cdot\hat{g}(\xi)&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。</dd>
+<dt>平行移動</dt>
+<dd>任意の<a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数</a> <span class="texhtml" lang="en"><i>x</i><sub>0</sub></span> に対して <span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = <i>ƒ</i>(<i>x</i> − <i>x</i><sub>0</sub>)</span> であるならば
+<dl><dd>&lt;math&gt;\hat{h}(\xi)= e^{-2\pi i x_0\xi }\hat{f}(\xi)&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。</dd>
+<dt>変調</dt>
+<dd>任意の<a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数</a> <span class="texhtml" lang="en"><i>ξ</i><sub>0</sub></span> に対して <span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = <i>e</i><sup>2π<i>ixξ</i><sub>0</sub></sup><i>ƒ</i>(<i>x</i>)</span> ならば
+<dl><dd>&lt;math&gt;\hat{h}(\xi) = \hat{f}(\xi-\xi_{0})&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。</dd>
+<dt>定数倍</dt>
+<dd>非零実数 <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> に対し、<span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = <i>ƒ</i>(<i>ax</i>)</span> ならば
+<dl><dd>&lt;math&gt;\hat{h}(\xi)=\frac{1}{|a|}\hat{f}\Big(\frac{\xi}{a}\Big)&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。<span class="texhtml" lang="en"><i>a</i> = −1</span> つまり <span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = <i>ƒ</i>(−<i>x</i>)</span> の場合には、<b>時間反転性</b> (<span lang="en"><i>time-reversal</i> property</span>)
+<dl><dd>&lt;math&gt;\hat{h}(\xi)=\hat{f}(-\xi)&lt;/math&gt;</dd></dl></dd>
+<dd>が導かれる。</dd>
+<dt>複素共役</dt>
+<dd><span class="texhtml" lang="en"><i>f</i>(<i>x</i>)</span> の<a href="/wiki/%E8%A4%87%E7%B4%A0%E5%85%B1%E5%BD%B9" title="複素共役">複素共役</a> <span class="texhtml" lang="en"><span style="text-decoration:overline"><i>f</i>(<i>x</i>)</span></span> について
+<dl><dd>&lt;math&gt;\hat{\overline{f}}(\xi) = \overline{\hat{f}(-\xi)}&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。</dd>
+<dt>畳み込み</dt>
+<dd><span class="texhtml" lang="en"><i>h</i>(<i>x</i>) = (<i>f</i> ∗ <i>g</i>)(<i>x</i>)</span> ならば
+<dl><dd>&lt;math&gt; \hat{h}(\xi)=\hat{f}(\xi)\cdot \hat{g}(\xi)&lt;/math&gt;</dd></dl></dd>
+<dd>が成り立つ。</dd></dl>
+<h3><span id=".E4.B8.80.E6.A7.98.E9.80.A3.E7.B6.9A.E6.80.A7.E3.81.A8.E3.83.AA.E3.83.BC.E3.83.9E.E3.83.B3.E3.83.BB.E3.83.AB.E3.83.99.E3.83.BC.E3.82.B0.E3.81.AE.E8.A3.9C.E9.A1.8C"></span><span class="mw-headline" id="一様連続性とリーマン・ルベーグの補題">一様連続性とリーマン・ルベーグの補題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=7" title="節を編集: 一様連続性とリーマン・ルベーグの補題">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>可積分関数のフーリエ変換は、常に成り立つというわけではない性質も持っている。可積分関数 <i>ƒ</i> のフーリエ変換は一様連続で
+</p>
+<dl><dd>&lt;math&gt;\|\hat{f}\|_{\infty}\leq \|f\|_1&lt;/math&gt;</dd></dl>
+<p>を満たす<sup class="reference" id="cite_ref-FOOTNOTEKatznelson1976_4-0"><a href="#cite_note-FOOTNOTEKatznelson1976-4">[4]</a></sup>。可積分関数のフーリエ変換は
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)\to 0\text{ as }|\xi|\to \infty&lt;/math&gt;</dd></dl>
+<p>であることを述べた<b><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E3%81%AE%E8%A3%9C%E9%A1%8C" title="リーマン・ルベーグの補題">リーマン・ルベーグの補題</a></b>をも満足する<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-0"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。可積分函数 <i>f</i> のフーリエ変換 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span> は有界連続だが可積分であるとは限らず、その<b>逆変換</b>をルベーグ積分として書くことは一般にはできない。しかしながら、<i>ƒ</i> および <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span> がともに可積分ならば、反転公式
+</p>
+<dl><dd>&lt;math&gt;f(x) = \int_{-\infty}^\infty \hat f(\xi) e^{2 i \pi x \xi} \, d\xi&lt;/math&gt;</dd></dl>
+<p>が殆ど全ての <i>x</i> において成り立つ。つまり、<i>ƒ</i> は右辺で定義される連続関数と殆ど至る所等しい。特に <i>ƒ</i> が実数直線上の連続関数として与えられたならば全ての <i>x</i> において等式が成り立つ。
+</p><p>前述の結果としてわかることは、フーリエ変換が <i>L</i><sup>1</sup>(<b>R</b>) 上単射であることである。
+</p>
+<h3><span id=".E3.83.97.E3.83.A9.E3.83.B3.E3.82.B7.E3.83.A5.E3.83.AC.E3.83.AB.E3.81.AE.E5.AE.9A.E7.90.86.E3.81.A8.E3.83.91.E3.83.BC.E3.82.BB.E3.83.90.E3.83.AB.E3.81.AE.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="プランシュレルの定理とパーセバルの定理">プランシュレルの定理とパーセバルの定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=8" title="節を編集: プランシュレルの定理とパーセバルの定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>f</i>(<i>x</i>) および <i>g</i>(<i>x</i>) は可積分であるとし、そのフーリエ変換をそれぞれ <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> および <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span>(ξ)</span> と表す。<i>f</i>(<i>x</i>) および <i>g</i>(<i>x</i>) がともに自乗可積分であるならば<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BB%E3%83%90%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="パーセバルの定理">パーセバルの定理</a>
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^{\infty} f(x) \overline{g(x)} \, dx = \int_{-\infty}^\infty \hat{f}(\xi) \overline{{\hat{g}}(\xi)} \, d\xi&lt;/math&gt;</dd></dl>
+<p>が成立する<sup class="reference" id="cite_ref-FOOTNOTERudin1987p._187_6-0"><a href="#cite_note-FOOTNOTERudin1987p._187-6">[6]</a></sup>。ここで上付きバーは<a href="/wiki/%E8%A4%87%E7%B4%A0%E5%85%B1%E5%BD%B9" title="複素共役">複素共役</a>を表す。
+</p><p>パーセバルの定理と同値な<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="プランシュレルの定理">プランシュレルの定理</a>によれば
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^\infty | f(x) |^2\, dx = \int_{-\infty}^\infty | \hat{f}(\xi) |^2\, d\xi&lt;/math&gt;</dd></dl>
+<p>が成立する<sup class="reference" id="cite_ref-FOOTNOTERudin1987p._186_7-0"><a href="#cite_note-FOOTNOTERudin1987p._186-7">[7]</a></sup>。プランシュレルの定理により、<i>L</i><sup>2</sup>(<b>R</b>) に属する関数の<a href="#一般化">後述</a>する意味でのフーリエ変換を定義することが可能になる。プランシュレルの定理は、フーリエ変換はもとの量のエネルギーを保存するという自然科学における解釈を持つ。著者によってはこれらの定理のどちらともをプランシュレルの定理あるいはパーセバルの定理と呼んでいる場合があるので注意を要する。
+</p><p>局所コンパクトアーベル群に関する文脈におけるフーリエ変換の概念の一般の定式化については<a href="/wiki/%E3%83%9D%E3%83%B3%E3%83%88%E3%83%AA%E3%83%A3%E3%83%BC%E3%82%AE%E3%83%B3%E5%8F%8C%E5%AF%BE" title="ポントリャーギン双対">ポントリャーギン双対</a>の項を参照されたい。
+</p>
+<h3><span id=".E4.B8.8D.E7.A2.BA.E5.AE.9A.E6.80.A7.E9.96.A2.E4.BF.82"></span><span class="mw-headline" id="不確定性関係">不確定性関係</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=9" title="節を編集: 不確定性関係">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E4%B8%8D%E7%A2%BA%E5%AE%9A%E6%80%A7%E5%8E%9F%E7%90%86" title="不確定性原理">不確定性原理</a>」および「<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Hirschman%E3%81%AE%E4%B8%8D%E7%A2%BA%E5%AE%9A%E6%80%A7%E5%8E%9F%E7%90%86&amp;action=edit&amp;redlink=1" title="Hirschmanの不確定性原理 (存在しないページ)">Hirschmanの不確定性原理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hirschman_uncertainty&amp;action=edit&amp;redlink=1" title="En:Hirschman uncertainty (存在しないページ)">英語版</a>）</span></span>」を参照</div>
+<p>一般的に言って、<i>f</i>(<i>x</i>) が凝縮されればされるほどそのフーリエ変換 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span> はより拡散される。特に、フーリエ変換のスケール性からわかることとして、関数を <i>x</i> において「圧搾」するならば、そのフーリエ変換は ξ において「伸展」される。したがって、関数とそのフーリエ変換の両方ともを勝手に凝縮させることはできない。
+</p><p>関数とそのフーリエ変換のコンパクト化のあいだの得失評価は<b>不確定性関係</b>の形で定式化することができる。<i>ƒ</i>(<i>x</i>) は可積分かつ<a class="mw-redirect" href="/wiki/%E8%87%AA%E4%B9%97%E5%8F%AF%E7%A9%8D%E5%88%86" title="自乗可積分">自乗可積分</a>であると仮定する。一般性を失うことなく関数 <i>ƒ</i>(<i>x</i>) は
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^\infty |f(x)|^2 \,dx=1&lt;/math&gt;</dd></dl>
+<p>に正規化されているものと仮定してよい。このとき、プランシュレルの定理により <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> も同様に正規化される。
+</p><p><i>x</i> = 0 の周りでの拡散を
+</p>
+<dl><dd>&lt;math&gt;D_0(f):=\int_{-\infty}^\infty x^2|f(x)|^2\,dx&lt;/math&gt;</dd></dl>
+<p>で定義される「0 の周りでの分散」<span lang="en">(<i>dispersion about zero</i>)</span> によって測ることにする<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-1"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。確率の言葉で言えば、これは |<i>f</i>(<i>x</i>)|<sup>2</sup> の 0 の周りでの二次の<a href="/wiki/%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88_(%E6%95%B0%E5%AD%A6)" title="モーメント (数学)">モーメント</a>である。
+</p><p>このとき不確定性原理は、関数 <i>ƒ</i>(<i>x</i>) が絶対連続で、関数 <i>x</i>·<i>ƒ</i>(<i>x</i>) および <i>ƒ</i>′(<i>x</i>) が自乗可積分であるならば
+</p>
+<dl><dd>&lt;math&gt;D_0(f)D_0(\hat{f}) \geq \frac{1}{16\pi^2}&lt;/math&gt;</dd></dl>
+<p>が成り立つことを述べる<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-2"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。等式が成立するのは
+</p>
+<dl><dd>&lt;math&gt;f(x)=C_1 \, e^{{- \pi x^2}/{\sigma^2}}&lt;/math&gt;</dd></dl>
+<p>したがって、
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)= \sigma C_1 \, e^{-\pi\sigma^2\xi^2}&lt;/math&gt;</dd></dl>
+<p>である場合に限る。ただし、定数 σ &gt; 0 は任意であり、係数 <i>C</i><sub>1</sub> は <i>ƒ</i> を <i>L</i><sup>2</sup>-正規化する定数である<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-3"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。言い換えれば、 <i>ƒ</i> は 0 を中心に持つ（正規化）<a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E9%96%A2%E6%95%B0" title="ガウス関数">ガウス関数</a>のとき等号が成り立つ。
+</p><p>事実として、この不等式は任意の <i>x</i><sub>0</sub>, ξ<sub>0</sub> ∈ <b>R</b> について
+</p>
+<dl><dd>&lt;math&gt;\Big[\int_{-\infty}^\infty (x-x_0)^2|f(x)|^2\,dx\Big]\Big[\int_{-\infty}^\infty(\xi-\xi_0)^2|\hat{f}(\xi)|^2\,d\xi\Big]\geq \frac{1}{16\pi^2}&lt;/math&gt;</dd></dl>
+<p>が成立することをも含む<sup class="reference" id="cite_ref-FOOTNOTESteinShakarchi2003_2-1"><a href="#cite_note-FOOTNOTESteinShakarchi2003-2">[2]</a></sup>。
+</p><p><a href="/wiki/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6" title="量子力学">量子力学</a>において、<a href="/wiki/%E9%81%8B%E5%8B%95%E9%87%8F" title="運動量">運動量</a>と<a href="/wiki/%E4%BD%8D%E7%BD%AE" title="位置">位置</a>の<a href="/wiki/%E6%B3%A2%E5%8B%95%E9%96%A2%E6%95%B0" title="波動関数">波動関数</a>は（<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%B3%E3%82%AF%E5%AE%9A%E6%95%B0" title="プランク定数">プランク定数</a>を因子に持つ）フーリエ変換対である。プランク定数でスケールしなおせば、上述の不等式はロバートソンの不確定性関係を記述する。これは、<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%B3%E3%83%99%E3%83%AB%E3%82%B0" title="ハイゼンベルグ">ハイゼンベルグ</a>が構想した不確定性原理そのものではないが、深い関係がある。
+</p>
+<h3><span id=".E3.83.9D.E3.82.A2.E3.82.BD.E3.83.B3.E5.92.8C.E5.85.AC.E5.BC.8F"></span><span class="mw-headline" id="ポアソン和公式">ポアソン和公式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=10" title="節を編集: ポアソン和公式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%9D%E3%82%A2%E3%82%BD%E3%83%B3%E5%92%8C%E5%85%AC%E5%BC%8F" title="ポアソン和公式">ポアソン和公式</a>」を参照</div>
+<p>ポアソン和公式はフーリエ変換とフーリエ級数の間の関連性を提供する。可積分関数 <i>ƒ</i> ∈ <i>L</i><sup>1</sup>(<b>R</b><sup><i>n</i></sup>) が与えられたとき、<i>ƒ</i> の<b>周期化</b>が
+</p>
+<dl><dd>&lt;math&gt;\bar f(x)=\sum_{k\in\mathbb{Z}^n} f(x+k)&lt;/math&gt;</dd></dl>
+<p>によって与えられる。このとき、ポアソン和公式は <span style="text-decoration:overline;"><i>f</i></span> のフーリエ級数を <i>ƒ</i> のフーリエ変換に結びつけるもので、特に <span style="text-decoration:overline;"><i>f</i></span> のフーリエ級数は
+</p>
+<dl><dd>&lt;math&gt;\bar f(x) \sim \sum_{k\in\mathbb{Z}^n} \hat{f}(k)e^{2\pi i k\cdot x}&lt;/math&gt;</dd></dl>
+<p>で与えられることを述べるものである。ポアソン和公式を用いて、大きな次元のユークリッド球面における格子点の数に対するランダウの漸近公式を導出することができる。また、可積分函数 <i>f</i> と <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span> がともにコンパクト台を持つならば <i>ƒ</i> = 0 を示すこともできる<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-4"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。
+</p>
+<h3><span id=".E7.95.B3.E3.81.BF.E8.BE.BC.E3.81.BF.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="畳み込み定理">畳み込み定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=11" title="節を編集: 畳み込み定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF%E5%AE%9A%E7%90%86" title="畳み込み定理">畳み込み定理</a>」を参照</div>
+<p>フーリエ変換は、関数の<a href="/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF" title="畳み込み">畳み込み</a>と関数の（点毎の）積とを相互に変換する。<i>ƒ</i>(<i>x</i>) および <i>g</i>(<i>x</i>) が可積分関数であるとし、そのフーリエ変換をそれぞれ <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> および <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span>(ξ)</span> で表す。さらに <i>ƒ</i> と <i>g</i> との畳み込みが存在して絶対可積分であるならば、この畳み込みのフーリエ変換はフーリエ変換 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> と <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span>(ξ)</span> との積で与えられる（ただし、フーリエ変換の定義の仕方によっては定数因子が現れる場合もある）。
+</p><p>これを式で表せば、∗ を畳み込みとして
+</p>
+<dl><dd>&lt;math&gt;h(x) := (f*g)(x) := \int_{-\infty}^\infty f(y)g(x - y)\,dy&lt;/math&gt;</dd></dl>
+<p>と表されるとき、
+</p>
+<dl><dd>&lt;math&gt;\hat{h}(\xi) = \hat{f}(\xi)\cdot \hat{g}(\xi)&lt;/math&gt;</dd></dl>
+<p>が成立することを意味する。<a href="/wiki/LTI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E7%90%86%E8%AB%96" title="LTIシステム理論">線型時不変 (LTI) 系理論</a>において、<i>f</i>(<i>x</i>) を<a href="/wiki/%E3%83%87%E3%82%A3%E3%83%A9%E3%83%83%E3%82%AF%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF%E9%96%A2%E6%95%B0" title="ディラックのデルタ関数">単位インパルス</a>で置き換えたものが <i>h</i>(<i>x</i>) = <i>g</i>(<i>x</i>) を与えることから、通例 <i>g</i>(<i>x</i>) は、入力 <i>ƒ</i>(<i>x</i>) と出力 <i>h</i>(<i>x</i>) に関する LTI 系の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%91%E3%83%AB%E3%82%B9%E5%BF%9C%E7%AD%94" title="インパルス応答">インパルス応答</a>として解釈される。この場合、<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span>(ξ)</span> はこの系の<a class="mw-redirect" href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E5%BF%9C%E7%AD%94" title="周波数応答">周波数応答</a>を表す。
+</p><p>逆に、<i>ƒ</i>(<i>x</i>) がふたつの自乗可積分函数 <i>p</i>(<i>x</i>) および <i>q</i>(<i>x</i>) の積に分解されるならば、 <i>ƒ</i>(<i>x</i>) のフーリエ変換は、各因子のフーリエ変換 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>p</i></span></span></span>(ξ)</span> および <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>q</i></span></span></span>(ξ)</span> の畳み込みで与えられる。
+</p>
+<h3><span id=".E7.9B.B8.E4.BA.92.E7.9B.B8.E9.96.A2.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="相互相関定理">相互相関定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=12" title="節を編集: 相互相関定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E7%9B%B8%E4%BA%92%E7%9B%B8%E9%96%A2" title="相互相関">相互相関</a>」を参照</div>
+<p>同様の方法で、<i>h</i>(<i>x</i>) が <i>ƒ(</i>x<i>) と </i>g<i>(</i>x<i>) との相互相関</i>
+</p>
+<dl><dd>&lt;math&gt;h(x):=(f\star g)(x) := \int_{-\infty}^\infty \overline{f(y)}\,g(x+y)\,dy&lt;/math&gt;</dd></dl>
+<p>であるならば <i>h</i>(<i>x</i>) のフーリエ変換が
+</p>
+<dl><dd>&lt;math&gt;\hat{h}(\xi) = \overline{\hat{f}(\xi)}\,\hat{g}(\xi)&lt;/math&gt;</dd></dl>
+<p>で与えられることが示される。
+</p>
+<h3><span id=".E5.9B.BA.E6.9C.89.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="固有関数">固有関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=13" title="節を編集: 固有関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>L</i><sup>2</sup>(<b>R</b>) の正規直交基底の重要な一つはエルミート函数系
+</p>
+<dl><dd>&lt;math&gt;{\psi}_n(x) := \frac{\sqrt[4]{2}}{\sqrt{n!}} \, e^{-\pi x^2}H_n(2x\sqrt{\pi})&lt;/math&gt;</dd></dl>
+<p>で与えられる。ここで <i>H</i><sub><i>n</i></sub>(<i>x</i>) は「確率論者の」<a href="/wiki/%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E5%A4%9A%E9%A0%85%E5%BC%8F" title="エルミート多項式">エルミート多項式</a>と呼ばれる、&lt;math&gt;H_n(x):=(-1)^ne^{x^2/2}D^ne^{-x^2/2}&lt;/math&gt; で定義される関数である。この規約の下、フーリエ変換は
+</p>
+<dl><dd>&lt;math&gt; \hat\psi_n(\xi) = (-i)^n {\psi}_n(\xi)&lt;/math&gt;</dd></dl>
+<p>で与えられる。言い換えれば、エルミート関数系は <i>L</i><sup>2</sup>(<b>R</b>) 上のフーリエ変換の<a href="/wiki/%E5%9B%BA%E6%9C%89%E9%96%A2%E6%95%B0" title="固有関数">固有関数</a>からなる<a href="/wiki/%E6%AD%A3%E8%A6%8F%E7%9B%B4%E4%BA%A4%E7%B3%BB" title="正規直交系">完全正規直交系</a>を成す<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-5"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。しかしながら、この固有関数系の選び方は一意ではなく、フーリエ変換の相異なる<a href="/wiki/%E5%9B%BA%E6%9C%89%E5%80%A4" title="固有値">固有値</a>は {±1, ±<i>i</i>} の 4 つしかなく、同じ固有値に属する固有関数の任意の線型結合はふたたび固有関数になる。この結果として <i>L</i><sup>2</sup>(<b>R</b>) を 4 つの空間 <i>H</i><sub>0</sub>, <i>H</i><sub>1</sub>, <i>H</i><sub>2</sub>, <i>H</i><sub>3</sub> で、フーリエ変換が <i>H</i><sub><i>k</i></sub> 上で単に <i>i</i><sup><i>k</i></sup>-倍として作用するものの直和に分解することができる。この方法によるフーリエ変換の定義は<a href="/wiki/%E3%83%8E%E3%83%BC%E3%83%90%E3%83%BC%E3%83%88%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%8A%E3%83%BC" title="ノーバート・ウィーナー">ウィーナー</a>による<sup class="reference" id="cite_ref-FOOTNOTEDuoandikoetxea2001_8-0"><a href="#cite_note-FOOTNOTEDuoandikoetxea2001-8">[8]</a></sup>。エルミート関数を選ぶのが便利なのは、それらが周波数域と時間域の両方で指数関数的に局在することと、それゆえに時間周波数解析において用いられる<a class="new" href="/w/index.php?title=%E9%9D%9E%E6%95%B4%E6%95%B0%E6%AC%A1%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="非整数次フーリエ変換 (存在しないページ)">非整数次フーリエ変換</a>が得られることにある <sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2008年10月）">要出典</span></a></i>]</sup>。
+</p>
+<h3><span id=".E7.90.83.E9.9D.A2.E8.AA.BF.E5.92.8C.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="球面調和関数">球面調和関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=14" title="節を編集: 球面調和関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%90%83%E9%9D%A2%E8%AA%BF%E5%92%8C%E9%96%A2%E6%95%B0%E7%B3%BB&amp;action=edit&amp;redlink=1" title="球面調和関数系 (存在しないページ)">球面調和関数系</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Solid_harmonics&amp;action=edit&amp;redlink=1" title="En:Solid harmonics (存在しないページ)">英語版</a>）</span></span>」を参照</div>
+<p>&lt;math&gt;{\mathcal A}_k&lt;/math&gt; で次数 <i>k</i> の<a href="/wiki/%E6%96%89%E6%AC%A1%E5%A4%9A%E9%A0%85%E5%BC%8F" title="斉次多項式">斉次</a><a href="/wiki/%E8%AA%BF%E5%92%8C%E9%96%A2%E6%95%B0" title="調和関数">調和</a><a href="/wiki/%E5%A4%9A%E9%A0%85%E5%BC%8F" title="多項式">多項式</a>全体の成す集合を表す。集合 &lt;math&gt;{\mathcal A}_k&lt;/math&gt; は<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BD%93%E7%90%83%E9%9D%A2%E8%AA%BF%E5%92%8C%E9%96%A2%E6%95%B0%E7%B3%BB&amp;action=edit&amp;redlink=1" title="体球面調和関数系 (存在しないページ)">体球面調和関数系</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:solid_spherical_harmonics&amp;action=edit&amp;redlink=1" title="En:solid spherical harmonics (存在しないページ)">英語版</a>）</span></span>として知られる。高次元において体球面調和関数系はエルミート多項式と同様の役割を演じる。具体的には、&lt;math&gt;{\mathcal A}_k&lt;/math&gt; の適当な <i>P</i>(<i>x</i>) に対し、<i>f</i>(<i>x</i>) = <i>e</i><sup>−π|<i>x</i>|<sup>2</sup></sup><i>P</i>(<i>x</i>) のフーリエ変換は
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)=i^{-k}f(\xi)&lt;/math&gt;</dd></dl>
+<p>で与えられる。集合 &lt;math&gt;{\mathcal H}_k&lt;/math&gt; を <i>f</i>(|<i>x</i>|)<i>P</i>(<i>x</i>) (<i>P</i>(<i>x</i>) ∈ &lt;math&gt;{\mathcal A}_k&lt;/math&gt;) の形の関数から作られる線型結合全体の成す集合の <i>L</i><sup>2</sup>(<b>R</b><sup><i>n</i></sup>) における閉包とする。このとき、空間 <i>L</i><sup>2</sup>(<b>R</b><sup><i>n</i></sup>) は空間 &lt;math&gt;{\mathcal H}_k&lt;/math&gt; の直和に分解され、フーリエ変換は各空間 &lt;math&gt;{\mathcal H}_k&lt;/math&gt; をそれ自身に移す。また、各空間 &lt;math&gt;{\mathcal H}_k&lt;/math&gt; へのフーリエ変換の作用を特徴付けることができる<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-1"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。<i>ƒ</i>(<i>x</i>) = <i>ƒ</i><sub>0</sub>(|<i>x</i>|)<i>P</i>(<i>x</i>) (<i>P</i>(<i>x</i>) ∈ &lt;math&gt;{\mathcal A}_k&lt;/math&gt;) と表される関数のフーリエ変換は
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)=F_0(|\xi|)P(\xi)&lt;/math&gt;</dd></dl>
+<p>となる。ただし、
+</p>
+<dl><dd>&lt;math&gt;F_0(r)=2\pi i^{-k}r^{-(n+2k-2)/2}\int_0^\infty f_0(s)J_{(n+2k-2)/2}(2\pi rs)s^{(n+2k)/2}\,ds&lt;/math&gt;</dd></dl>
+<p>であり、<i>J</i><sub>(<i>n</i> + 2<i>k</i> − 2)/2</sub> は次数 (<i>n</i> + 2<i>k</i> − 2)/2 の第一種<a href="/wiki/%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E9%96%A2%E6%95%B0" title="ベッセル関数">ベッセル関数</a>である。<i>k</i> = 0 のとき、これは動径関数のフーリエ変換に対する有用な公式を与える<sup class="reference" id="cite_ref-FOOTNOTEGrafakos2004_9-0"><a href="#cite_note-FOOTNOTEGrafakos2004-9">[9]</a></sup>。
+</p>
+<h2><span id=".E4.B8.80.E8.88.AC.E5.8C.96"></span><span class="mw-headline" id="一般化">一般化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=15" title="節を編集: 一般化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E4.BB.96.E3.81.AE.E5.87.BD.E6.95.B0.E7.A9.BA.E9.96.93.E4.B8.8A.E3.81.AE.E3.83.95.E3.83.BC.E3.83.AA.E3.82.A8.E5.A4.89.E6.8F.9B"></span><span class="mw-headline" id="他の函数空間上のフーリエ変換">他の函数空間上のフーリエ変換</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=16" title="節を編集: 他の函数空間上のフーリエ変換">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フーリエ変換の定義を他の函数空間に対するものへ拡張することができる。<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88" title="コンパクト">コンパクト</a>台を持つ滑らかな函数は可積分で、その全体は <i>L</i><sup>2</sup>(<b>R</b>) において<a href="/wiki/%E7%A8%A0%E5%AF%86%E9%9B%86%E5%90%88" title="稠密集合">稠密</a>であるから、<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="プランシュレルの定理">プランシュレルの定理</a>を用いて、<i>L</i><sup>2</sup>(<b>R</b>) の一般の函数にまで（コンパクト台をもつ滑らかな函数によって近似して）フーリエ変換の定義を拡張することができる。さらに
+</p>
+<dl><dd>&lt;math&gt; \mathcal{F}\colon L^2(\mathbb{R}) \to L^2(\mathbb{R})&lt;/math&gt;</dd></dl>
+<p>は<a href="/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ユニタリ作用素">ユニタリ作用素</a>である<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971Thm._2.3_10-0"><a href="#cite_note-FOOTNOTESteinWeiss1971Thm._2.3-10">[10]</a></sup>。フーリエ変換の多くの性質はこの場合にもそのまま成立する。<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%89%E3%83%AB%E3%83%95%E3%83%BB%E3%83%A4%E3%83%B3%E3%82%B0%E4%B8%8D%E7%AD%89%E5%BC%8F" title="ハウスドルフ・ヤング不等式">ハウスドルフ・ヤング不等式</a>を用いて 1 ≤ <i>p</i> ≤ 2 に対する <i>L</i><sup><i>p</i></sup>(<b>R</b>) の函数を含むようにフーリエ変換の定義を拡張することができる。
+</p><p>だが、さらなる拡張はもっと技巧的である。2 &lt; <i>p</i> &lt; ∞ の範囲での<i>L</i><sup><i>p</i></sup> に属する函数のフーリエ変換には超函数の研究が必要である<sup class="reference" id="cite_ref-FOOTNOTEKatznelson1976_4-1"><a href="#cite_note-FOOTNOTEKatznelson1976-4">[4]</a></sup>。事実として、<i>p</i> &gt; 2 に関する <i>L</i><sup><i>p</i></sup> に属する函数のフーリエ変換は函数としては定義できないことを示すことができる <sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-2"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。
+</p>
+<h3><span id=".E5.A4.9A.E6.AC.A1.E5.85.83.E7.89.88"></span><span class="mw-headline" id="多次元版">多次元版</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=17" title="節を編集: 多次元版">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フーリエ変換は勝手な次元 <i>n</i> において考えることができる。1-次元の場合と同様にさまざまな流儀があるが、本項では可積分函数 <i>ƒ</i>(<i>x</i>) に対して、
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi) = \mathcal{F}(f)(\xi) = \int_{\R^n} f(x) e^{-2\pi i x\cdot\xi} \, dx&lt;/math&gt;</dd></dl>
+<p>をフーリエ変換の定義とする。ここで、<i>x</i> および <i>ξ</i> は <i>n</i>-次元<a class="mw-redirect" href="/wiki/%E6%95%B0%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="数ベクトル">ベクトル</a>であり、<i>x</i> · <i>ξ</i> はベクトルの<a class="mw-redirect" href="/wiki/%E7%82%B9%E4%B9%97%E7%A9%8D" title="点乗積">点乗積</a>である。点乗積はしばしば &lt;<i>x</i>, ξ&gt; とも書き表される。
+</p><p>プランシュレルの定理やパーセバルの定理がそうであるように、上述の基本性質は <i>n</i>-次元フーリエ変換においても成立する。函数が可積分であるとき、フーリエ変換はやはり一様連続であり、リーマン・ルベーグの補題が成立する<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-3"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。
+</p><p>より高い次元ではフーリエ変換の制限問題の研究が興味深いものになる。可積分函数のフーリエ変換は連続で、この函数の任意の集合への制限が定義される。しかし自乗可積分函数のフーリエ変換は自乗可積分函数の一般の類を成す。そのような <i>L</i><sup>2</sup>(<b>R</b><sup><i>n</i></sup>)-函数のフーリエ変換の制限は測度 0 の集合上では定義することができない。1 ≤ <i>p</i> ≤ 2 に対する <i>L</i><sup><i>p</i></sup> における制限問題の理解はいまだ活発な研究の行われる領域である。驚くべきことに、集合 <i>S</i> の曲率が非零であるようないくつかの場合には、フーリエ変換の <i>S</i> への制限を定義することができる。<i>S</i> が <b>R</b><sup><i>n</i></sup> における単位球面であるときが特に興味深い。この場合に、トマス-<a class="new" href="/w/index.php?title=%E3%82%A8%E3%83%AA%E3%82%A2%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%86%E3%82%A4%E3%83%B3&amp;action=edit&amp;redlink=1" title="エリアス・ステイン (存在しないページ)">ステイン</a>の制限定理によれば、フーリエ変換の <b>R</b><sup><i>n</i></sup> における単位球面への制限は 1 ≤ <i>p</i> ≤ (2<i>n</i> + 2)/(<i>n</i> + 3) に対する <i>L</i><sup><i>p</i></sup> 上で有界作用素である。
+</p><p>1-次元の場合と多次元の場合とで、フーリエ変換の大きな違いは部分和作用素に関係する。与えられた可積分函数 <i>ƒ</i> に対し
+</p>
+<dl><dd>&lt;math&gt;f_R(x) = \int_{S_R}\hat{f}(\xi) e^{2\pi ix\cdot\xi}\, d\xi, \quad x \in \mathbb{R}^n&lt;/math&gt;</dd></dl>
+<p>で定義される函数 <i>ƒ</i><sub><i>R</i></sub> を考える。さらに <i>ƒ</i> が <i>L</i><sup><i>p</i></sup>(<b>R</b><sup><i>n</i></sup>) に属すると仮定する。<i>n</i> = 1 で 1 &lt; <i>p</i> &lt; ∞ とし、<i>S</i><sub><i>R</i></sub> = (−<i>R</i>, <i>R</i>) と置くと、<a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E5%A4%89%E6%8F%9B" title="ヒルベルト変換">ヒルベルト変換</a>の有界性から <i>ƒ</i><sub><i>R</i></sub> は <i>R</i> を無限大に飛ばす極限で <i>ƒ</i> に <i>L</i><sup><i>p</i></sup> 内で収束する。素朴に <i>n</i> &gt; 1 の場合にも同様であることを期待するかもしれない。<i>S</i><sub><i>R</i></sub> を一辺の長さが <i>R</i> の立方体とするならば、確かに部分和作用素はもとの函数に収束する。別の自然な候補としてユークリッド球体 <i>S</i><sub><i>R</i></sub> = {ξ : |ξ| &lt; <i>R</i>} をとると、部分和作用素が収束するためには単位球体に対するマルチプライヤーが <i>L<sup>p</sup></i>(<b>R</b><sup><i>n</i></sup>) において有界である必要がある。<i>n</i> ≥ 2 に対しては、単位球体に対するマルチプライヤーは <i>p</i> = 2 でない限り有界にはならないというよく知られた<a href="/wiki/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%BB%E3%83%95%E3%82%A7%E3%83%95%E3%82%A1%E3%83%BC%E3%83%9E%E3%83%B3" title="チャールズ・フェファーマン">チャールズ・フェファーマン</a>の定理がある<sup class="reference" id="cite_ref-FOOTNOTEDuoandikoetxea2001_8-1"><a href="#cite_note-FOOTNOTEDuoandikoetxea2001-8">[8]</a></sup>。事実として、<i>p</i> ≠ 2 のときには <i>ƒ</i><sub><i>R</i></sub> が <i>ƒ</i> に <i>L</i><sup><i>p</i></sup> 内で収束しないだけではなく、函数 <i>ƒ</i> ∈ <i>L</i><sup><i>p</i></sup>(<b>R</b><sup><i>n</i></sup>) であっても <i>ƒ</i><sub><i>R</i></sub> が <i>L</i><sup><i>p</i></sup> の元でさえないようなものまでが存在する。
+</p>
+<h3><span id=".E3.83.95.E3.83.BC.E3.83.AA.E3.82.A8.E3.83.BB.E3.82.B9.E3.83.86.E3.82.A3.E3.83.AB.E3.83.81.E3.82.A7.E3.82.B9.E5.A4.89.E6.8F.9B"></span><span class="mw-headline" id="フーリエ・スティルチェス変換">フーリエ・スティルチェス変換</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=18" title="節を編集: フーリエ・スティルチェス変換">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>R</b><sup><i>n</i></sup> 上の有限ボレル測度 μ のフーリエ変換は
+</p>
+<dl><dd>&lt;math&gt;\hat\mu(\xi)=\int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi}\,d\mu&lt;/math&gt;</dd></dl>
+<p>によって与えられる<sup class="reference" id="cite_ref-FOOTNOTEPinsky2002_3-6"><a href="#cite_note-FOOTNOTEPinsky2002-3">[3]</a></sup>。この変換は可積分函数のフーリエ変換がもつ多くの性質を引き続き満足する。大きな違いの一つに、測度に関してリーマン・ルベーグの補題が成り立たないことが挙げられる<sup class="reference" id="cite_ref-FOOTNOTEKatznelson1976_4-2"><a href="#cite_note-FOOTNOTEKatznelson1976-4">[4]</a></sup>。<i>d</i>μ = <i>ƒ</i>(<i>x</i>)<i>dx</i> の場合には上述の定義式を <i>f</i> の通常のフーリエ変換の定義に簡約化することができる。
+</p><p>このフーリエ変換を用いて連続測度の特徴づけを与えることができる。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9C%E3%83%9B%E3%83%8A%E3%83%BC%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="ボホナーの定理 (存在しないページ)">ボホナーの定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bochner%27s_theorem&amp;action=edit&amp;redlink=1" title="En:Bochner's theorem (存在しないページ)">英語版</a>）</span></span>はそのような函数を測度のフーリエ・スティルチェス変換として得られるものとして特徴付ける<sup class="reference" id="cite_ref-FOOTNOTEKatznelson1976_4-3"><a href="#cite_note-FOOTNOTEKatznelson1976-4">[4]</a></sup>。
+</p><p>さらに言えば、<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%A3%E3%83%A9%E3%83%83%E3%82%AF%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF%E5%87%BD%E6%95%B0" title="ディラックのデルタ函数">ディラックのデルタ函数</a>は函数ではないが有限ボレル測度であり、そのフーリエ変換は定数函数となる（特殊値は用いるフーリエ変換の形に依存する）。
+</p>
+<h3><span id=".E7.B7.A9.E5.A2.97.E5.8A.A0.E8.B6.85.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="緩増加超函数">緩増加超函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=19" title="節を編集: 緩増加超函数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フーリエ変換は<a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="シュワルツ函数 (存在しないページ)">シュワルツ函数</a>全体の成す空間（<a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E7%A9%BA%E9%96%93" title="シュワルツ空間">シュワルツ空間</a>）をそれ自身に移す<a class="mw-redirect" href="/wiki/%E5%90%8C%E7%9B%B8%E5%86%99%E5%83%8F" title="同相写像">同相写像</a>を与える<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-4"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。これにより、<a class="mw-redirect" href="/wiki/%E7%B7%A9%E5%A2%97%E5%8A%A0%E8%B6%85%E5%87%BD%E6%95%B0" title="緩増加超函数">緩増加超函数</a>のフーリエ変換を定義することができる。これには上述の可積分函数が全て含まれ、それに加えて緩増加超函数のフーリエ変換がふたたび緩増加超函数となるという利点がある。
+</p><p>超函数のフーリエ変換を定義するいくつかの動機は、以下のふたつの事実に由来する。ひとつめは、<i>ƒ</i> と <i>g</i> が可積分函数でそのフーリエ変換をそれぞれ <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span>, <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span></span> とするとき、フーリエ変換は乗法公式
+</p>
+<dl><dd>&lt;math&gt;\int_{\mathbb{R}^n}\hat{f}(x)g(x)\,dx=\int_{\mathbb{R}^n}f(x)\hat{g}(x)\,dx&lt;/math&gt;</dd></dl>
+<p>に従うこと<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-5"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。ふたつめは、任意の可積分函数 <i>ƒ</i> は、任意のシュワルツ函数 φ に対して
+</p>
+<dl><dd>&lt;math&gt;T_f(\varphi)=\int_{\mathbb{R}^n}f(x)\varphi(x)\,dx&lt;/math&gt;</dd></dl>
+<p>を満たすという条件によって超函数 <i>T</i><sub><i>ƒ</i></sub> を定めることである。これらの事実により、与えられた超函数 <i>T</i> に対してそのフーリエ変換を、任意のシュワルツ函数 φ に対して
+</p>
+<dl><dd>&lt;math&gt;\hat{T}(\varphi)=T(\hat{\varphi})&lt;/math&gt;</dd></dl>
+<p>なる関係式によって定義する。これは <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>T</i></span></span></span></span><sub><i>f</i></sub> = <i>T</i><sub><i>f</i>^</sub> から従う。
+</p><p>超函数は微分可能であり、緩増加超函数のフーリエ変換と微分および畳み込みとはやはり上述の意味で両立する。
+</p>
+<h3><span id=".E5.B1.80.E6.89.80.E3.82.B3.E3.83.B3.E3.83.91.E3.82.AF.E3.83.88.E3.82.A2.E3.83.BC.E3.83.99.E3.83.AB.E7.BE.A4"></span><span class="mw-headline" id="局所コンパクトアーベル群">局所コンパクトアーベル群</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=20" title="節を編集: 局所コンパクトアーベル群">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フーリエ変換を任意の<a class="new" href="/w/index.php?title=%E5%B1%80%E6%89%80%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88%E3%82%A2%E3%83%BC%E3%83%99%E3%83%AB%E7%BE%A4&amp;action=edit&amp;redlink=1" title="局所コンパクトアーベル群 (存在しないページ)">局所コンパクトアーベル群</a>に対して一般化することができる。局所コンパクトアーベル群とは、抽象<a href="/wiki/%E3%82%A2%E3%83%BC%E3%83%99%E3%83%AB%E7%BE%A4" title="アーベル群">アーベル群</a>であると同時に<a class="mw-redirect" href="/wiki/%E5%B1%80%E6%89%80%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88" title="局所コンパクト">局所コンパクト</a>な<a href="/wiki/%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%89%E3%83%AB%E3%83%95%E7%A9%BA%E9%96%93" title="ハウスドルフ空間">ハウスドルフ空間</a>であって、なおかつその位相に関して群演算が連続となるものである。<i>G</i> が局所コンパクトアーベル群ならば、<i>G</i> は<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%AB%E6%B8%AC%E5%BA%A6" title="ハール測度">ハール測度</a>と呼ばれる平行移動不変な測度 μ を持つ。また、局所コンパクトアーベル群 <i>G</i> に対して、その位相を<a href="/wiki/%E6%8C%87%E6%A8%99%E7%BE%A4" title="指標群">指標全体の成す集合</a> <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>G</i></span></span></span></span> へ移行することができて、<span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>G</i></span></span></span></span> 自身も局所コンパクトアーベル群の構造を持つ。<i>L</i><sup>1</sup>(<i>G</i>) に属する函数 <i>f</i> に対して、そのフーリエ変換を
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)=\int_G \xi(x)f(x)\,d\mu\qquad\text{for any }\xi\in\hat G&lt;/math&gt;</dd></dl>
+<p>によって定義することができる<sup class="reference" id="cite_ref-FOOTNOTEKatznelson1976_4-4"><a href="#cite_note-FOOTNOTEKatznelson1976-4">[4]</a></sup>。
+</p><p>この一般化を<a href="/wiki/%E6%A6%82%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0" title="概周期函数">概周期函数</a>に適用した<a href="/wiki/%E6%A6%82%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0#局所コンパクトアーベル群上の概周期函数" title="概周期函数">理論</a>や、<a href="/wiki/%E6%BA%96%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0" title="準周期函数">準周期函数</a>に適用した<a href="/wiki/%E6%A6%82%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0#音響および音楽合成における準周期信号" title="概周期函数">理論</a>が知られている。
+</p>
+<h2><span id=".E5.BF.9C.E7.94.A8"></span><span class="mw-headline" id="応用">応用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=21" title="節を編集: 応用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B%E3%81%AE%E5%BF%9C%E7%94%A8" title="フーリエ変換の応用">フーリエ変換の応用</a>」を参照</div>
+<h3><span id=".E5.BE.AE.E5.88.86.E6.96.B9.E7.A8.8B.E5.BC.8F.E3.81.AE.E8.A7.A3.E6.9E.90.E5.AD.A6"></span><span class="mw-headline" id="微分方程式の解析学">微分方程式の解析学</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=22" title="節を編集: 微分方程式の解析学">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フーリエ変換および近い関係にある<a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a>は<a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="微分方程式">微分方程式</a>の解法において広く用いられる。<span class="texhtml" lang="en"><i>f</i>(<i>x</i>)</span> を可微分函数で、そのフーリエ変換を <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> とすると、導函数のフーリエ変換が <span class="texhtml" lang="en">2π<i>i</i>ξ<span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> で与えられるという意味でフーリエ変換と<a href="/wiki/%E5%BE%AE%E5%88%86%E4%BD%9C%E7%94%A8%E7%B4%A0" title="微分作用素">微分作用素</a>は両立する。このことを用いて微分方程式を代数方程式に変換することができる。ただし、この手法は定義域が実数全体である場合にしか適用できないことに注意が必要である。これを拡張して、定義域が <span class="texhtml" lang="en"><b>R</b><sup><i>n</i></sup></span> であるような多変数函数に関する<a href="/wiki/%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="偏微分方程式">偏微分方程式</a>を代数方程式に書き換えることもできる。
+</p>
+<h2><span id=".E3.83.95.E3.83.BC.E3.83.AA.E3.82.A8.E5.A4.89.E6.8F.9B.E3.81.AE.E5.AE.9A.E7.BE.A9.E5.9F.9F.E3.81.A8.E5.80.A4.E5.9F.9F"></span><span class="mw-headline" id="フーリエ変換の定義域と値域">フーリエ変換の定義域と値域</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=23" title="節を編集: フーリエ変換の定義域と値域">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フーリエ変換を可能な限り最も一般な定義域上で考えることが望ましいことも多々ある。フーリエ変換を積分として定義すれば、定義域は可積分函数全体の成す空間に自然に制限されてしまうが、不幸にして可積分函数のフーリエ変換として得られる函数の簡単な特徴づけは知られていない<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971_5-6"><a href="#cite_note-FOOTNOTESteinWeiss1971-5">[5]</a></sup>。フーリエ変換の定義域の拡張は上述のようにいくつかの方法を用いて行うことができる。以下いくつか、フーリエ変換の定義されるより広範な定義域と領域について詳細を述べる。
+</p>
+<ul><li><a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="シュワルツ函数 (存在しないページ)">シュワルツ函数</a>全体の成す空間（<a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E7%A9%BA%E9%96%93" title="シュワルツ空間">シュワルツ空間</a>）はフーリエ変換の下で閉じている。シュワルツ函数は急減少函数であって、フーリエ変換の関連する函数すべてを含んでいるわけではない。より詳細は (<a href="#CITEREFSteinWeiss1971">Stein &amp; Weiss 1971</a>) を参照せよ。</li>
+<li>ルベーグ可積分函数全体の成す空間 <i>L</i><sup>1</sup> はフーリエ変換によって、無限遠で 0 に収束する連続函数全体の成す空間 <i>C</i><sub>0</sub> へ写される。</li>
+<li>自乗可積分函数全体の成す空間 <i>L</i><sup>2</sup> はフーリエ変換のもとで閉じている。しかしここでのフーリエ変換はもはや積分によって定義されるものではない。</li>
+<li>空間 <i>L</i><sup><i>p</i></sup> は空間 <i>L</i><sup><i>q</i></sup> へ写る。ここに、 1/<i>p</i> + 1/<i>q</i> = 1 であり、 1 ≤ <i>p</i> ≤ 2 とする（ハウスドルフ・ヤング不等式）。</li>
+<li><a class="mw-redirect" href="/wiki/%E7%B7%A9%E5%A2%97%E5%8A%A0%E8%B6%85%E5%87%BD%E6%95%B0" title="緩増加超函数">緩増加超函数</a>全体の成す集合はフーリエ変換の下で閉じている。緩増加超函数は函数の一般化ともなっている。この一般化では<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%A3%E3%83%A9%E3%83%83%E3%82%AF%E3%81%AE%E6%AB%9B%E5%9E%8B%E5%87%BD%E6%95%B0" title="ディラックの櫛型函数">ディラックの櫛型函数</a>のようなもののフーリエ変換も定義することができる。</li></ul>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A8.98.E6.B3.95"></span><span class="mw-headline" id="その他の記法">その他の記法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=24" title="節を編集: その他の記法">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フーリエ変換の記法として <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> 以外によく用いられるものに
+</p>
+<dl><dd>&lt;math&gt;F(\xi),\quad \mathcal{F}(f)(\xi),\quad (\mathcal{F}f)(\xi),\quad \mathcal{F}(f(t))&lt;/math&gt;</dd></dl>
+<p>などがある。あるいはもっと他の記号を使うことも在りうる。たとえば、（<i>f</i>(<i>x</i>) と <i>F</i>(ξ) のように）もとの函数を表している文字の対応する大文字を用いてそのフーリエ変換を表すことは自然科学や工学においてとくによく用いられる記法である。
+</p><p>複素函数 <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span>(ξ)</span> は、<a class="mw-redirect" href="/wiki/%E6%A5%B5%E5%BA%A7%E6%A8%99" title="極座標">極座標</a>に関してこれを表示することにより、<a href="/wiki/%E6%8C%AF%E5%B9%85" title="振幅">振幅</a>
+</p>
+<dl><dd>&lt;math&gt;A(\xi) = |\hat{f}(\xi)|,&lt;/math&gt;</dd></dl>
+<p>および<a href="/wiki/%E4%BD%8D%E7%9B%B8" title="位相">位相</a>
+</p>
+<dl><dd>&lt;math&gt;\varphi (\xi) = \arg(\hat{f}(\xi))&lt;/math&gt;</dd></dl>
+<p>と呼ばれるふたつの実函数 <i>A</i>(ξ) および φ(ξ) を用いて
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\xi)=A(\xi)e^{i\varphi(\xi)}&lt;/math&gt;</dd></dl>
+<p>なる形に解釈することができる。
+</p><p>このとき逆変換は <i>ƒ</i>(<i>x</i>) の<b>周波数成分</b>すべての再結合として
+</p>
+<dl><dd>&lt;math&gt;f(x) = \int_{-\infty}^{\infty} A(\xi)\, e^{ i(2\pi \xi x +\varphi (\xi))}\,d\nu&lt;/math&gt;</dd></dl>
+<p>と書くことができる。各成分は<a href="/wiki/%E6%8C%AF%E5%B9%85" title="振幅">振幅</a>が <i>A</i>(ξ) で（<i>x</i> = 0 における）初期<a class="mw-redirect" href="/wiki/%E4%BD%8D%E7%9B%B8%E8%A7%92" title="位相角">位相角</a>が φ(ξ) であるような <i>e</i><sup>2π<i>ix</i>ξ</sup> のかたちの複素<a class="mw-redirect" href="/wiki/%E6%AD%A3%E5%BC%A6%E6%9B%B2%E7%B7%9A" title="正弦曲線">正弦曲線</a>である。
+</p><p>フーリエ変換は函数空間の間の写像として考えることもできる。この写像はここでは &lt;math&gt;\mathcal{F}&lt;/math&gt; で表し、函数 <i>f</i> のフーリエ変換には &lt;math&gt;\mathcal{F}(f)&lt;/math&gt; が用いられる。この写像 &lt;math&gt;\mathcal{F}&lt;/math&gt; は函数空間上の線型変換とみることができ、それによって &lt;math&gt;\mathcal{F}(f)&lt;/math&gt; と書く代わりに、ベクトル（ここでは函数 <i>f</i>）の線型変換を表す線型代数学の標準的な記法で &lt;math&gt;\mathcal{F}f&lt;/math&gt; と書くこともできる。函数にフーリエ変換を施した結果は再び函数となるから、この新たな函数の ξ における値というものには意味があり、それを &lt;math&gt;\mathcal{F}(f)(\xi)&lt;/math&gt; あるいは &lt;math&gt;(\mathcal{F} f)(\xi)&lt;/math&gt; などと表す。前者の場合には &lt;math&gt;\mathcal{F}&lt;/math&gt; はまず <i>f</i> に施されて、その後に得られた函数の ξ における値が評価されるものと暗黙に理解されているということに注意しなければならない。
+</p><p>数学や多くの応用科学において、函数 <i>f</i> それ自身と函数 <i>f</i> の変数 <i>x</i> における値 <i>f</i>(<i>x</i>) とを峻別しなければならないことがしばしばある。このことが意味するのは、たとえば&lt;math&gt;\mathcal{F}(f(x))&lt;/math&gt; のような記法は、形式的には <i>f</i> の <i>x</i> における「値」のフーリエ変換と解釈できてしまうということである。このような不具合にもかかわらず、特定の函数あるいは特定の変数の函数を頻繁に変換しなければならないような場合には、このような記法はよく用いられる。たとえば
+</p>
+<dl><dd>&lt;math&gt;\mathcal{F}( \mathrm{rect}(x) ) = \mathrm{sinc}(\xi)&lt;/math&gt;</dd></dl>
+<p>は矩形函数のフーリエ変換が sinc-函数であることを表すために用いられることがあり、またたとえば
+</p>
+<dl><dd>&lt;math&gt;\mathcal{F}(f(x+x_{0})) = \mathcal{F}(f(x)) e^{2\pi i \xi x_{0}}&lt;/math&gt;</dd></dl>
+<p>はフーリエ変換のシフト性を表すのに用いられることがある。最後の例は、変換される函数 <i>f</i> を<i>x</i><sub>0</sub> のではなく <i>x</i> の函数であるという前提のもとでのみ正しいということに注意を要する。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="その他の定義">その他の定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=25" title="節を編集: その他の定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フーリエ変換の定義として慣習的によく用いられるものが3個ある。しばしば、フーリエ変換を毎秒ラジアンを単位とする<a href="/wiki/%E8%A7%92%E5%91%A8%E6%B3%A2%E6%95%B0" title="角周波数">角周波数</a> ω = 2πξ を用いて表す。ξ = ω/(2π) と置き換えれば、上述の定義式はこの規約の下
+</p>
+<dl><dd>&lt;math&gt;\hat{f}(\omega) = \int_{\mathbb{R}^n} f(x) e^{- i\omega\cdot x}\,dx &lt;/math&gt;</dd></dl>
+<p>と書くことができ、また同じくこの規約の下で逆変換は
+</p>
+<dl><dd>&lt;math&gt;f(x) = \frac{1}{(2\pi)^n} \int_{\mathbb{R}^n} \hat{f}(\omega)e^{ i\omega \cdot x}\,d\omega&lt;/math&gt;</dd></dl>
+<p>となる。本項における定義とは異なり、この規約によって定義されるフーリエ変換はもはや <i>L</i><sup>2</sup>(<b>R</b><sup><i>n</i></sup>) 上の変換として<a href="/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA" title="ユニタリ">ユニタリ</a>ではなく、フーリエ変換と逆変換との間の対称性も失われている。
+</p><p>他によく用いられる流儀は (2π)<sup><i>n</i></sup> の因子をフーリエ変換とその逆変換の間で均等に分割するもので、
+</p>
+<dl><dd>&lt;math&gt; \hat{f}(\omega) = \frac{1}{(2\pi)^{n/2}} \int_{\mathbb{R}^n} f(x) e^{- i\omega\cdot x}\,dx,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;f(x) = \frac{1}{(2\pi)^{n/2}} \int_{\mathbb{R}^n} \hat{f}(\omega) e^{ i\omega \cdot x}\,d\omega&lt;/math&gt;</dd></dl>
+<p>という定義が導かれる。この規約のもとでは、フーリエ変換はふたたび <i>L</i><sup>2</sup>(<b>R</b><sup><i>n</i></sup>) 上の<a href="/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ユニタリ作用素">ユニタリ変換</a>となり、また フーリエ変換と逆変換の間の対称性も回復することができる。
+</p><p>これら三種類の定義はどれも、順変換逆変換ともに複素指数函数的な<a class="mw-redirect" href="/wiki/%E7%A9%8D%E5%88%86%E6%A0%B8" title="積分核">積分核</a>を結びつけることによって形成されている。順変換と逆変換で肩に付く符合は反対でなければならないが、どちらがどちらの符号を持つべきであるかという選択は、やはり定義の仕方によるということになる。
+</p>
+<table class="wikitable">
+<caption>よく用いられる定義のまとめ
+</caption>
+<tbody><tr>
+<th>周波数 ξ（ヘルツ）
+</th>
+<th>ユニタリ
+</th>
+<td>&lt;math&gt; \hat{f}_1(\xi)\ \stackrel{\mathrm{def}}{=}\ \int_{\mathbb{R}^n} f(x) e^{-2 \pi i x\cdot\xi}\, dx = \hat{f}_2(2 \pi \xi)=(2 \pi)^{n/2}\hat{f}_3(2 \pi \xi) &lt;/math&gt;<br/>
+<p>&lt;math&gt; f(x) = \int_{\mathbb{R}^n} \hat{f}_1(\xi) e^{2 \pi i  x\cdot \xi}\, d\xi \ &lt;/math&gt;
+</p>
+</td></tr>
+<tr>
+<th rowspan="2">角周波数 ω（ラジアン毎秒）
+</th>
+<th>非ユニタリ
+</th>
+<td>&lt;math&gt; \hat{f}_2(\omega) \ \stackrel{\mathrm{def}}{=}\int_{\mathbb{R}^n} f(x) e^{-i\omega\cdot x} \, dx \ = \hat{f}_1 \left ( \frac{\omega}{2 \pi} \right ) = (2 \pi)^{n/2}\ \hat{f}_3(\omega) &lt;/math&gt;<br/>
+<p>&lt;math&gt; f(x) = \frac{1}{(2 \pi)^n} \int_{\mathbb{R}^n} \hat{f}_2(\omega) e^{i \omega\cdot x} \, d \omega \ &lt;/math&gt;
+</p>
+</td></tr>
+<tr>
+<th>ユニタリ
+</th>
+<td>&lt;math&gt; \hat{f}_3(\omega) \ \stackrel{\mathrm{def}}{=}\  \frac{1}{(2 \pi)^{n/2}} \int_{\mathbb{R}^n} f(x) \ e^{-i \omega\cdot x}\, dx = \frac{1}{(2 \pi)^{n/2}} \hat{f}_1\left(\frac{\omega}{2 \pi} \right) = \frac{1}{(2 \pi)^{n/2}} \hat{f}_2(\omega) &lt;/math&gt;<br/>
+<p>&lt;math&gt; f(x) = \frac{1}{(2 \pi)^{n/2}} \int_{\mathbb{R}^n} \hat{f}_3(\omega)e^{i \omega\cdot x}\, d \omega \ &lt;/math&gt;
+</p>
+</td></tr></tbody></table>
+<h2><span id=".E4.B8.BB.E3.81.AA.E3.83.95.E3.83.BC.E3.83.AA.E3.82.A8.E5.A4.89.E6.8F.9B.E3.81.AE.E4.B8.80.E8.A6.A7"></span><span class="mw-headline" id="主なフーリエ変換の一覧">主なフーリエ変換の一覧</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=26" title="節を編集: 主なフーリエ変換の一覧">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下にフーリエ変換の閉じた表示に関する表を掲げる（フーリエ変換はよく用いられる三種類を挙げてある）。函数 <i>ƒ</i>(<i>x</i>) , <i>g</i>(<i>x</i>), <i>h</i>(<i>x</i>) に対して、それらのフーリエ変換をそれぞれ <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>f</i></span></span></span></span>, <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:0.5em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>g</i></span></span></span></span>, <span class="texhtml" lang="en"><span class="sfrac nowrap;"><span style="display:none; display:inline-block; text-align:center;"><span style="display:block; line-height:1.0em; font-size:70%; padding:0 0.1em; margin:-0.5em;">^</span><span style="display:block; line-height:1em; padding:0 0.1em;"><i>h</i></span></span></span></span> で表す。
+</p>
+<h3><span id=".E5.87.BD.E6.95.B0.E3.81.AE.E9.96.A2.E4.BF.82.E5.BC.8F"></span><span class="mw-headline" id="函数の関係式">函数の関係式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=27" title="節を編集: 函数の関係式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>以下の表におけるフーリエ変換は (<a href="#CITEREFErdélyi1954">Erdélyi 1954</a>) あるいは (<a href="#CITEREFKammler2000">Kammler 2000</a>) の付録に見つけることができる。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>もとの函数</th>
+<th>ユニタリ・周波に関するフーリエ変換</th>
+<th>ユニタリ・角周波に関するフーリエ変換</th>
+<th>非ユニタリ・角周波に関するフーリエ変換</th>
+<th>備考
+</th></tr>
+<tr>
+<td>
+</td>
+<td align="center">&lt;math&gt; f(x)\,&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\xi)=&lt;/math&gt;
+<p>&lt;math&gt;\int\limits_{-\infty}^{\infty}f(x) e^{-2\pi i x\xi}dx &lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\omega)=&lt;/math&gt;&lt;math&gt;\frac{1}{\sqrt{2 \pi}} \int\limits_{-\infty}^{\infty} f(x) e^{-i \omega x}dx &lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\nu)=&lt;/math&gt;
+<p>&lt;math&gt;\int\limits_{-\infty}^{\infty}f(x) e^{-i \nu x}dx &lt;/math&gt;
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>101
+</td>
+<td>&lt;math&gt;af(x) + bg(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;a\hat{f}(\xi) + b\hat{g}(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;a\hat{f}(\omega) + b\hat{g}(\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;a\hat{f}(\nu) + b\hat{g}(\nu)\,&lt;/math&gt;
+</td>
+<td><a href="/wiki/%E7%B7%9A%E5%9E%8B%E6%80%A7" title="線型性">線型性</a>
+</td></tr>
+<tr>
+<td>102
+</td>
+<td>&lt;math&gt;f(x - a)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;e^{-2\pi i a \xi} \hat{f}(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;e^{- i a \omega} \hat{f}(\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;e^{- i a \nu} \hat{f}(\nu)\,&lt;/math&gt;
+</td>
+<td>時間領域シフト
+</td></tr>
+<tr>
+<td>103
+</td>
+<td>&lt;math&gt;e^{ 2\pi iax} f(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\hat{f} \left(\xi - a\right)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\hat{f}(\omega - 2\pi a)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\hat{f}(\nu - 2\pi a)\,&lt;/math&gt;
+</td>
+<td>周波数領域シフト<br/>102の<a href="/wiki/%E5%8F%8C%E5%AF%BE" title="双対">双対</a>
+</td></tr>
+<tr>
+<td>104
+</td>
+<td>&lt;math&gt;f(a x)\,&lt;/math&gt;
+</td>
+<td>a|} \hat{f}\left( \frac{\xi}{a} \right)\,&lt;/math&gt;
+</td>
+<td>a|} \hat{f}\left( \frac{\omega}{a} \right)\,&lt;/math&gt;
+</td>
+<td>a|} \hat{f}\left( \frac{\nu}{a} \right)\,&lt;/math&gt;
+</td>
+<td>a|}\hat{f} \left( \frac{\omega}{a} \right)\,&lt;/math&gt; は平らに広がる
+</td></tr>
+<tr>
+<td>105
+</td>
+<td>&lt;math&gt;\hat{f}(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;f(-\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;f(-\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2\pi f(-\nu)\,&lt;/math&gt;
+</td>
+<td>ここで、&lt;math&gt;\hat{f}&lt;/math&gt; は、それぞれの列で考えているフーリエ変換を施した結果の、変数を <i>x</i> に取替えたものである。
+</td></tr>
+<tr>
+<td>106
+</td>
+<td>&lt;math&gt;\frac{d^n f(x)}{dx^n}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; (2\pi i\xi)^n  \hat{f}(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; (i\omega)^n  \hat{f}(\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; (i\nu)^n  \hat{f}(\nu)\,&lt;/math&gt;
+</td>
+<td>
+</td></tr>
+<tr>
+<td>107
+</td>
+<td>&lt;math&gt;x^n f(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\left (\frac{i}{2\pi}\right)^n \frac{d^n \hat{f}(\xi)}{d\xi^n}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i^n \frac{d^n \hat{f}(\omega)}{d\omega^n}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i^n \frac{d^n \hat{f}(\nu)}{d\nu^n}&lt;/math&gt;
+</td>
+<td>106の<a href="/wiki/%E5%8F%8C%E5%AF%BE" title="双対">双対</a>
+</td></tr>
+<tr>
+<td>108
+</td>
+<td>&lt;math&gt;(f * g)(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\hat{f}(\xi) \hat{g}(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{2\pi} \hat{f}(\omega) \hat{g}(\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\hat{f}(\nu) \hat{g}(\nu)\,&lt;/math&gt;
+</td>
+<td><i>f</i> ∗ <i>g</i> は <i>f</i> と <i>g</i> との畳み込みである。この公式は畳み込み定理と呼ばれる。
+</td></tr>
+<tr>
+<td>109
+</td>
+<td>&lt;math&gt;f(x) g(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;(\hat{f} * \hat{g})(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;(\hat{f} * \hat{g})(\omega) \over \sqrt{2\pi}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{2\pi}(\hat{f} * \hat{g})(\nu)\,&lt;/math&gt;
+</td>
+<td>108の<a href="/wiki/%E5%8F%8C%E5%AF%BE" title="双対">双対</a>
+</td></tr>
+<tr>
+<td>110
+</td>
+<td>純実<a class="mw-redirect" href="/wiki/%E5%81%B6%E9%96%A2%E6%95%B0" title="偶関数">偶関数</a>&lt;math&gt;f(x)&lt;/math&gt;
+</td>
+<td align="center" colspan="3">&lt;math&gt;\hat{f}(\omega),\,\hat{f}(\xi),\,\hat{f}(\nu)\,&lt;/math&gt; はいずれも純実<a class="mw-redirect" href="/wiki/%E5%81%B6%E9%96%A2%E6%95%B0" title="偶関数">偶関数</a>
+</td>
+<td><a href="/wiki/%E6%AD%A3%E5%BC%A6%E3%83%BB%E4%BD%99%E5%BC%A6%E5%A4%89%E6%8F%9B" title="正弦・余弦変換">正弦・余弦変換</a>も参照
+</td></tr>
+<tr>
+<td>111
+</td>
+<td>純実<a class="mw-redirect" href="/wiki/%E5%A5%87%E9%96%A2%E6%95%B0" title="奇関数">奇関数</a>&lt;math&gt;f(x)&lt;/math&gt;
+</td>
+<td align="center" colspan="3">&lt;math&gt;\hat{f}(\omega),\, \hat{f}(\xi),\, \hat{f}(\nu)&lt;/math&gt; はいずれも純虚<a class="mw-redirect" href="/wiki/%E5%A5%87%E9%96%A2%E6%95%B0" title="奇関数">奇関数</a>
+</td>
+<td>
+</td></tr></tbody></table>
+<h3><span id=".E8.87.AA.E4.B9.97.E5.8F.AF.E7.A9.8D.E5.88.86.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="自乗可積分函数">自乗可積分函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=28" title="節を編集: 自乗可積分函数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>以下の表におけるフーリエ変換は (<a href="#CITEREFCampbellFoster1948">Campbell &amp; Foster 1948</a>), (<a href="#CITEREFErdélyi1954">Erdélyi 1954</a>) あるいは (<a href="#CITEREFKammler2000">Kammler 2000</a>) の付録に見つけることができる。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>もとの函数</th>
+<th>ユニタリ・周波に関するフーリエ変換</th>
+<th>ユニタリ・角周波に関するフーリエ変換</th>
+<th>非ユニタリ・角周波に関するフーリエ変換</th>
+<th>備考
+</th></tr>
+<tr>
+<td>
+</td>
+<td align="center">&lt;math&gt; f(x)&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\xi)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{-\infty}^{\infty}f(x) e^{-2\pi ix\xi}\,dx&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\omega)=&lt;/math&gt;
+<p>&lt;math&gt;\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} f(x) e^{-i \omega x}\, dx&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\nu)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{-\infty}^{\infty} f(x) e^{-i\nu x}\, dx&lt;/math&gt;
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>201
+</td>
+<td>&lt;math&gt;\operatorname{rect}(a x) \,&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{sinc}\left(\frac{\xi}{a}\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2 \pi a^2}}\cdot \operatorname{sinc}\left(\frac{\omega}{2\pi a}\right)&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{sinc}\left(\frac{\nu}{2\pi a}\right)&lt;/math&gt;
+</td>
+<td><a href="/wiki/%E7%9F%A9%E5%BD%A2%E6%B3%A2" title="矩形波">矩形波</a>と標準化された<a href="/wiki/Sinc%E9%96%A2%E6%95%B0" title="Sinc関数">sinc関数</a>で<a href="/wiki/Sinc%E9%96%A2%E6%95%B0" title="Sinc関数">sinc関数</a>はsinc(<i>x</i>) = sin(<i>πx</i>)/(<i>πx</i>)で表される
+</td></tr>
+<tr>
+<td>202
+</td>
+<td>&lt;math&gt; \operatorname{sinc}(a x)\,&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{rect}\left(\frac{\xi}{a} \right)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2\pi a^2}}\cdot \operatorname{rect}\left(\frac{\omega}{2 \pi a}\right)&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{rect}\left(\frac{\nu}{2 \pi a}\right)&lt;/math&gt;
+</td>
+<td>201の<a href="/wiki/%E5%8F%8C%E5%AF%BE" title="双対">双対</a>で矩形波は理想的な<a class="mw-redirect" href="/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="ローパスフィルター">ローパスフィルター</a>である。<a href="/wiki/Sinc%E9%96%A2%E6%95%B0" title="Sinc関数">sinc関数</a>はそのようなフィルターの非因果波応答である。
+</td></tr>
+<tr>
+<td>203
+</td>
+<td>&lt;math&gt; \operatorname{sinc}^2 (a x)&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{tri} \left( \frac{\xi}{a} \right) &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{1}{\sqrt{2\pi a^2}}\cdot \operatorname{tri} \left( \frac{\omega}{2\pi a} \right) &lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{tri} \left( \frac{\nu}{2\pi a} \right) &lt;/math&gt;
+</td>
+<td>tri(<i>x</i>)は<a href="/wiki/%E4%B8%89%E8%A7%92%E6%B3%A2_(%E6%B3%A2%E5%BD%A2)" title="三角波 (波形)">三角波</a>である。
+</td></tr>
+<tr>
+<td>204
+</td>
+<td>&lt;math&gt; \operatorname{tri} (a x)&lt;/math&gt;
+</td>
+<td>a|}\cdot \operatorname{sinc}^2 \left( \frac{\xi}{a} \right) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2\pi a^2}} \cdot \operatorname{sinc}^2 \left( \frac{\omega}{2\pi a} \right) &lt;/math&gt;
+</td>
+<td>a|} \cdot \operatorname{sinc}^2 \left( \frac{\nu}{2\pi a} \right) &lt;/math&gt;
+</td>
+<td>203の双対
+</td></tr>
+<tr>
+<td>205
+</td>
+<td>&lt;math&gt; e^{- a x} u(x) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{a + 2 \pi i \xi}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2 \pi} (a + i \omega)}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{a + i \nu}&lt;/math&gt;
+</td>
+<td><i>u</i>(<i>x</i>)はヘビサイドの単位ステップ関数であり、<i>a</i>&gt;0
+</td></tr>
+<tr>
+<td>206
+</td>
+<td>&lt;math&gt;e^{-\alpha x^2}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{\frac{\pi}{\alpha}}\cdot e^{-\frac{(\pi \xi)^2}{\alpha}}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2 \alpha}}\cdot e^{-\frac{\omega^2}{4 \alpha}}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{\frac{\pi}{\alpha}}\cdot e^{-\frac{\nu^2}{4 \alpha}}&lt;/math&gt;
+</td>
+<td>これが示すものは、ガウス関数exp(−<i>αx</i><sup>2</sup>)で<i>α</i>を選んだ場合はユニタリフーリエ変換である。. Re(<i>α</i>)&gt;0で積分可能である
+</td></tr>
+<tr>
+<td>207
+</td>
+<td>x|} \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2 a}{a^2 + 4 \pi^2 \xi^2} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \sqrt{\frac{2}{\pi}} \cdot \frac{a}{a^2 + \omega^2} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2a}{a^2 + \nu^2} &lt;/math&gt;
+</td>
+<td><i>a&gt;0</i>である
+</td></tr>
+<tr>
+<td>208
+</td>
+<td>&lt;math&gt; \frac{J_n (x)}{x} \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2 i}{n} (-i)^n \cdot U_{n-1} (2 \pi \xi)\,&lt;/math&gt;<br/>
+<p>  &lt;math&gt;\cdot \ \sqrt{1 - 4 \pi^2 \xi^2}  \operatorname{rect}( \pi \xi ) &lt;/math&gt;
+</p>
+</td>
+<td>&lt;math&gt; \sqrt{\frac{2}{\pi}} \frac{i}{n} (-i)^n \cdot U_{n-1} (\omega)\,&lt;/math&gt;<br/>
+<p>  &lt;math&gt;\cdot \ \sqrt{1 - \omega^2} \operatorname{rect} \left( \frac{\omega}{2} \right) &lt;/math&gt;
+</p>
+</td>
+<td>&lt;math&gt; \frac{2 i}{n} (-i)^n \cdot U_{n-1} (\nu)\,&lt;/math&gt;<br/>
+<p>  &lt;math&gt;\cdot \ \sqrt{1 - \nu^2} \operatorname{rect} \left( \frac{\nu}{2} \right) &lt;/math&gt;
+</p>
+</td>
+<td>関数<i>J<sub>n</sub></i> (<i>x</i>)は、<i>n</i>次の第1種ベッセル関数である。関数<i>U<sub>n</sub></i> (<i>x</i>)は第2種チェビシェフ多項式である。下記315と316を参照
+</td></tr>
+<tr>
+<td>209
+</td>
+<td>&lt;math&gt;\operatorname{sech}(a x) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{\pi}{a} \operatorname{sech} \left( \frac{\pi^2}{ a} \xi \right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{a}\sqrt{\frac{\pi}{2}}\operatorname{sech}\left( \frac{\pi}{2 a} \omega \right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{\pi}{a}\operatorname{sech}\left( \frac{\pi}{2 a} \nu \right)&lt;/math&gt;
+</td>
+<td>双曲線正割は自分自身をフーリエ変換したものである
+</td></tr></tbody></table>
+<h3><span id=".E8.B6.85.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="超函数">超函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=29" title="節を編集: 超函数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>以下の表におけるフーリエ変換は (<a href="#CITEREFErdélyi1954">Erdélyi 1954</a>) あるいは (<a href="#CITEREFKammler2000">Kammler 2000</a>) の付録に見つけることができる。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>もとの函数</th>
+<th>ユニタリ・周波に関するフーリエ変換</th>
+<th>ユニタリ・角周波に関するフーリエ変換</th>
+<th>非ユニタリ・角周波に関するフーリエ変換</th>
+<th>備考
+</th></tr>
+<tr>
+<td>
+</td>
+<td align="center">&lt;math&gt; f(x)\,&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\xi)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{-\infty}^{\infty}f(x) e^{-2\pi ix\xi}\,dx&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\omega)=&lt;/math&gt;
+<p>&lt;math&gt;\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} f(x) e^{-i \omega x}\, dx&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\nu)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{-\infty}^{\infty} f(x) e^{-i\nu x}\, dx&lt;/math&gt;
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>301
+</td>
+<td>&lt;math&gt;1&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\delta(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{2\pi}\cdot \delta(\omega)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2\pi\delta(\nu)\,&lt;/math&gt;
+</td>
+<td>δ(ξ) は<a href="/wiki/%E3%83%87%E3%82%A3%E3%83%A9%E3%83%83%E3%82%AF%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF%E9%96%A2%E6%95%B0" title="ディラックのデルタ関数">ディラックのデルタ関数</a>
+</td></tr>
+<tr>
+<td>302
+</td>
+<td>&lt;math&gt;\delta(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;1&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{\sqrt{2\pi}}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;1&lt;/math&gt;
+</td>
+<td>301の双対
+</td></tr>
+<tr>
+<td>303
+</td>
+<td>&lt;math&gt;e^{i a x}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\delta\left(\xi - \frac{a}{2\pi}\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{2 \pi}\cdot \delta(\omega - a)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2 \pi\delta(\nu - a)\,&lt;/math&gt;
+</td>
+<td>103と301より導かれる。
+</td></tr>
+<tr>
+<td>304
+</td>
+<td>&lt;math&gt;\cos (a x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{\displaystyle \delta\left(\xi - \frac{a}{2\pi}\right)+\delta\left(\xi+\frac{a}{2\pi}\right)}{2}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{2 \pi}\cdot\frac{\delta(\omega-a)+\delta(\omega+a)}{2}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\pi\left(\delta(\nu-a)+\delta(\nu+a)\right)&lt;/math&gt;
+</td>
+<td>101、303と<a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%85%AC%E5%BC%8F" title="オイラーの公式">オイラーの公式</a>：&lt;math&gt;\displaystyle\cos(a x) = (e^{i a x} + e^{-i a x})/2.&lt;/math&gt;より導かれる。
+</td></tr>
+<tr>
+<td>305
+</td>
+<td>&lt;math&gt;\sin( ax)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i\cdot\frac{\displaystyle\delta\left(\xi+\frac{a}{2\pi}\right)-\delta\left(\xi-\frac{a}{2\pi}\right)}{2}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i\sqrt{2 \pi}\cdot\frac{\delta(\omega+a)-\delta(\omega-a)}{2}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i\pi\left(\delta(\nu+a)-\delta(\nu-a)\right)&lt;/math&gt;
+</td>
+<td>101、303と &lt;math&gt;\displaystyle\sin(a x) = (e^{i a x} - e^{-i a x})/(2i).&lt;/math&gt; より導かれる。
+</td></tr>
+<tr>
+<td>306
+</td>
+<td>&lt;math&gt;\cos ( a x^2 ) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; \sqrt{\frac{\pi}{a}} \cos \left( \frac{\pi^2 \xi^2}{a} - \frac{\pi}{4} \right)  &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{1}{\sqrt{2 a}} \cos \left( \frac{\omega^2}{4 a} - \frac{\pi}{4} \right) &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \sqrt{\frac{\pi}{a}} \cos \left( \frac{\nu^2}{4 a} - \frac{\pi}{4} \right) &lt;/math&gt;
+</td>
+<td>
+</td></tr>
+<tr>
+<td>307
+</td>
+<td>&lt;math&gt;\sin ( a x^2 ) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; - \sqrt{\frac{\pi}{a}}  \sin \left( \frac{\pi^2 \xi^2}{a} - \frac{\pi}{4} \right)  &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{-1}{\sqrt{2 a}} \sin \left( \frac{\omega^2}{4 a} - \frac{\pi}{4} \right) &lt;/math&gt;
+</td>
+<td>&lt;math&gt;-\sqrt{\frac{\pi}{a}}\sin \left( \frac{\nu^2}{4 a} - \frac{\pi}{4} \right)&lt;/math&gt;
+</td>
+<td>
+</td></tr>
+<tr>
+<td>308
+</td>
+<td>&lt;math&gt;x^n\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\left(\frac{i}{2\pi}\right)^n \delta^{(n)} (\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;i^n \sqrt{2\pi} \delta^{(n)} (\omega)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;2\pi i^n\delta^{(n)} (\nu)\,&lt;/math&gt;
+</td>
+<td><i>n</i> は<a href="/wiki/%E8%87%AA%E7%84%B6%E6%95%B0" title="自然数">自然数</a>、 δ<sup>(<i>n</i> )</sup>(ξ) はディラックのデルタ関数の<i>n</i> 階微分。107と301より導かれる。さらに101と組み合わせることで、任意の<a href="/wiki/%E5%A4%9A%E9%A0%85%E5%BC%8F" title="多項式">多項式</a>を変換できる。
+</td></tr>
+<tr>
+<td>309
+</td>
+<td>&lt;math&gt;\frac{1}{x}\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\pi\sgn(\xi)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\sqrt{\frac{\pi}{2}}\sgn(\omega)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\pi\sgn(\nu)\,&lt;/math&gt;
+</td>
+<td>sgn(ξ) は<a href="/wiki/%E7%AC%A6%E5%8F%B7%E9%96%A2%E6%95%B0" title="符号関数">符号関数</a>。1/<i>x</i> は超関数ではないことに注意。シュワルツ関数に対してテストするときに<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%BB%E5%80%A4" title="コーシーの主値">コーシーの主値</a>を使用する必要がある。この規則は<a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E5%A4%89%E6%8F%9B" title="ヒルベルト変換">ヒルベルト変換</a>を研究するとき有用である。
+</td></tr>
+<tr>
+<td>310
+</td>
+<td>&lt;math&gt;\frac{1}{x^n}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\pi \frac{(-2\pi i\xi)^{n-1}}{(n-1)!} \sgn(\xi)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\sqrt{\frac{\pi}{2}}\cdot \frac{(-i\omega)^{n-1}}{(n-1)!}\sgn(\omega)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;-i\pi \frac{(-i\nu)^{n-1}}{(n-1)!}\sgn(\nu)&lt;/math&gt;
+</td>
+<td>309の一般化
+</td></tr>
+<tr>
+<td>311
+</td>
+<td>x|}} \,&lt;/math&gt;
+</td>
+<td>\xi|}} &lt;/math&gt;
+</td>
+<td>\omega|}}&lt;/math&gt;
+</td>
+<td>\nu|}} &lt;/math&gt;
+</td>
+<td>
+</td></tr>
+<tr>
+<td>312
+</td>
+<td>&lt;math&gt;\sgn(x) \,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{i\pi \xi}&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{\frac{2}{\pi}}\cdot \frac{1}{i\omega }\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{2}{i\nu }&lt;/math&gt;
+</td>
+<td>309の双対。積分は<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%BB%E5%80%A4" title="コーシーの主値">コーシーの主値</a>を考える。
+</td></tr>
+<tr>
+<td>313
+</td>
+<td>&lt;math&gt;u(x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{2}\left(\frac{1}{i \pi \xi} + \delta(\xi)\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\sqrt{\frac{\pi}{2}} \left( \frac{1}{i \pi \omega} + \delta(\omega)\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\pi\left( \frac{1}{i \pi \nu} + \delta(\nu)\right)&lt;/math&gt;
+</td>
+<td><i>u</i> (<i>x</i> ) は<a href="/wiki/%E3%83%98%E3%83%B4%E3%82%A3%E3%82%B5%E3%82%A4%E3%83%89%E3%81%AE%E9%9A%8E%E6%AE%B5%E9%96%A2%E6%95%B0" title="ヘヴィサイドの階段関数">ヘヴィサイドの階段関数</a>。101、301および312より導かれる。
+</td></tr>
+<tr>
+<td>314
+</td>
+<td>&lt;math&gt;\sum_{n=-\infty}^{\infty} \delta (x - n T)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{1}{T} \sum_{k=-\infty}^{\infty} \delta \left( \xi -\frac{k }{T}\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{\sqrt{2\pi }}{T}\sum_{k=-\infty}^{\infty} \delta \left( \omega -\frac{2\pi k}{T}\right)&lt;/math&gt;
+</td>
+<td>&lt;math&gt;\frac{2\pi}{T}\sum_{k=-\infty}^{\infty} \delta \left( \nu -\frac{2\pi k}{T}\right)&lt;/math&gt;
+</td>
+<td>この関数は<a href="/wiki/%E3%81%8F%E3%81%97%E5%9E%8B%E9%96%A2%E6%95%B0" title="くし型関数">くし型関数</a>といわれる。302、102および、超関数として &lt;math&gt;\sum_{n=-\infty}^{\infty} e^{inx}=\sum_{k=-\infty}^{\infty} \delta(x+2\pi k)&lt;/math&gt; であることから導かれる。
+</td></tr>
+<tr>
+<td>315
+</td>
+<td>&lt;math&gt; J_0 (x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2\, \operatorname{rect}(\pi\xi)}{\sqrt{1 - 4 \pi^2 \xi^2}} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \sqrt{\frac{2}{\pi}} \cdot \frac{\operatorname{rect}\left( \displaystyle \frac{\omega}{2} \right)}{\sqrt{1 - \omega^2}} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2\,\operatorname{rect}\left(\displaystyle\frac{\nu}{2} \right)}{\sqrt{1 - \nu^2}}&lt;/math&gt;
+</td>
+<td><i>J</i><sub>0</sub> (<i>x</i> ) は0次の第1種<a href="/wiki/%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E9%96%A2%E6%95%B0" title="ベッセル関数">ベッセル関数</a>
+</td></tr>
+<tr>
+<td>316
+</td>
+<td>&lt;math&gt;J_n (x)\,&lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2 (-i)^n T_n (2 \pi \xi) \operatorname{rect}(\pi \xi)}{\sqrt{1 - 4 \pi^2 \xi^2}} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \sqrt{\frac{2}{\pi}} \frac{ (-i)^n T_n (\omega) \operatorname{rect} \left( \displaystyle\frac{\omega}{2} \right)}{\sqrt{1 - \omega^2}} &lt;/math&gt;
+</td>
+<td>&lt;math&gt; \frac{2(-i)^n T_n (\nu) \operatorname{rect} \left(\displaystyle \frac{\nu}{2} \right)}{\sqrt{1 - \nu^2}} &lt;/math&gt;
+</td>
+<td>315の一般化。<i>J<sub>n</sub></i> (<i>x</i> ) は<i>n</i> 次の第1種<a href="/wiki/%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E9%96%A2%E6%95%B0" title="ベッセル関数">ベッセル関数</a>、<i>T<sub>n</sub></i> (<i>x</i> ) は第1種<a href="/wiki/%E3%83%81%E3%82%A7%E3%83%93%E3%82%B7%E3%82%A7%E3%83%95%E5%A4%9A%E9%A0%85%E5%BC%8F" title="チェビシェフ多項式">チェビシェフ多項式</a>。
+</td></tr></tbody></table>
+<h3><span id=".E4.BA.8C.E5.A4.89.E6.95.B0.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="二変数函数">二変数函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=30" title="節を編集: 二変数函数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>もとの函数</th>
+<th>ユニタリ・周波に関するフーリエ変換</th>
+<th>ユニタリ・角周波に関するフーリエ変換</th>
+<th>非ユニタリ・角周波に関するフーリエ変換</th>
+<th>備考
+</th></tr>
+<tr>
+<td>
+</td>
+<td align="center">&lt;math&gt; f(x,y)&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\xi_x, \xi_y)=&lt;/math&gt;
+<p>&lt;math&gt;\iint f(x,y) e^{-2\pi i(\xi_x x+\xi_y y)}\,dxdy&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\omega_x,\omega_y)=&lt;/math&gt;
+<p>&lt;math&gt;\frac{1}{2 \pi} \iint f(x,y) e^{-i (\omega_x x +\omega_y y)}\, dxdy&lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\nu_x,\nu_y)=&lt;/math&gt;
+<p>&lt;math&gt;\iint f(x,y) e^{-i(\nu_x x+\nu_y y)}\, dxdy&lt;/math&gt;
+</p>
+</td>
+<td>ξ<i><sub>x</sub></i> , ξ<i><sub>y</sub></i> , ω<i><sub>x</sub></i> , ω<i><sub>y</sub></i> , ν<i><sub>x</sub></i> , ν<i><sub>y</sub></i> は実変数。積分領域は全平面である。
+</td></tr>
+<tr>
+<td>401
+</td>
+<td align="center">&lt;math&gt;e^{-\pi\left(a^2x^2+b^2y^2\right)}&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt;\frac{1}{|ab|} e^{-\pi\left(\xi_x^2/a^2 + \xi_y^2/b^2\right)}&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt;\frac{1}{2\pi\cdot|ab|} e^{\frac{-\left(\omega_x^2/a^2 + \omega_y^2/b^2\right)}{4\pi}}&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt;\frac{1}{|ab|} e^{\frac{-\left(\nu_x^2/a^2 + \nu_y^2/b^2\right)}{4\pi}}&lt;/math&gt;
+</td>
+<td>両方のガウス関数は規格化されている必要はない。
+</td></tr>
+<tr>
+<td>402
+</td>
+<td>&lt;math&gt;\mathrm{circ}(\sqrt{x^2+y^2})&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \frac{J_1\left(2 \pi \sqrt{\xi_x^2+\xi_y^2}\right)}{\sqrt{\xi_x^2+\xi_y^2}}&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \frac{J_1\left(\sqrt{\omega_x^2+\omega_y^2}\right)}{\sqrt{\omega_x^2+\omega_y^2}}&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \frac{2\pi J_1\left(\sqrt{\nu_x^2+\nu_y^2}\right)}{\sqrt{\nu_x^2+\nu_y^2}}&lt;/math&gt;
+</td>
+<td>元の函数は circ(<i>r</i> ) = 1 (0≤<i>r</i> ≤1), and 0 (otherwise) で定義される。これはエアリー分布であり、1次の第1種ベッセル函数 <i>J</i><sub>1</sub> で表される<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971Thm._IV.3.3_11-0"><a href="#cite_note-FOOTNOTESteinWeiss1971Thm._IV.3.3-11">[11]</a></sup>。
+</td></tr></tbody></table>
+<h3><span id=".E4.B8.80.E8.88.AC.E3.81.AE_n-.E5.A4.89.E6.95.B0.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="一般の_n-変数函数">一般の <i>n</i>-変数函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=31" title="節を編集: 一般の n-変数函数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th>もとの函数</th>
+<th>ユニタリ・周波に関するフーリエ変換</th>
+<th>ユニタリ・角周波に関するフーリエ変換</th>
+<th>非ユニタリ・角周波に関するフーリエ変換</th>
+<th>備考
+</th></tr>
+<tr>
+<td>
+</td>
+<td align="center">&lt;math&gt; f(x)\,&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\xi)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{\mathbb{R}^n}f(x) e^{-2\pi i x\cdot\xi }\, dx &lt;/math&gt;
+</p>
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\omega)=&lt;/math&gt;&lt;math&gt;\frac{1}{{(2 \pi)}^{(n/2)}} \int_{\mathbb{R}^n} f(x) e^{-i \omega\cdot x}\, dx &lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \hat{f}(\nu)=&lt;/math&gt;
+<p>&lt;math&gt;\int_{\mathbb{R}^n}f(x) e^{-i x\cdot\nu }\, dx &lt;/math&gt;
+</p>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>501
+</td>
+<td>x|)(1-|x|^2)^\delta\,&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt;\pi^{-\delta}\Gamma(\delta+1)|\xi|^{-(n/2)-\delta}\,&lt;/math&gt;<br/>&lt;math&gt;\cdot J_{n/2+\delta}(2\pi|\xi|)&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; 2^{-\delta}\Gamma(\delta+1)\left|\omega\right|^{-(n/2)-\delta}&lt;/math&gt;<br/>&lt;math&gt;\cdot J_{n/2+\delta}(|\omega|)&lt;/math&gt;
+</td>
+<td align="center">&lt;math&gt; \pi^{-\delta}\Gamma(\delta+1)\left|\frac{\nu}{2\pi}\right|^{-(n/2)-\delta}&lt;/math&gt;<br/>&lt;math&gt;\cdot J_{n/2+\delta}(|\nu|)&lt;/math&gt;
+</td>
+<td>χ<sub>[0,1]</sub> は区間 [0, 1] の<a href="/wiki/%E6%8C%87%E7%A4%BA%E9%96%A2%E6%95%B0" title="指示関数">指示関数</a>、Γ(<i>x</i> ) はガンマ関数、<i>J</i><sub><i>n</i> /2+δ</sub> は<i>n</i> /2 + δ次の第1種ベッセル関数である。<i>n</i> = 2 およびδ = 0とすると402を得る<sup class="reference" id="cite_ref-FOOTNOTESteinWeiss1971Thm._4.13_12-0"><a href="#cite_note-FOOTNOTESteinWeiss1971Thm._4.13-12">[12]</a></sup>。
+</td></tr></tbody></table>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=32" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="div-col columns column-width" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul><li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0" title="フーリエ級数">フーリエ級数</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0%E3%81%AE%E5%8F%8E%E6%9D%9F" title="フーリエ級数の収束">フーリエ級数の収束</a></li>
+<li><a href="/wiki/%E9%AB%98%E9%80%9F%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="高速フーリエ変換">高速フーリエ変換</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a></li>
+<li><a href="/wiki/%E9%9B%A2%E6%95%A3%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="離散フーリエ変換">離散フーリエ変換</a>
+<ul><li><a class="new" href="/w/index.php?title=DFT%E8%A1%8C%E5%88%97&amp;action=edit&amp;redlink=1" title="DFT行列 (存在しないページ)">DFT行列</a></li></ul></li>
+<li><a href="/wiki/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="離散時間フーリエ変換">離散時間フーリエ変換</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%B0%E9%9A%8E%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="分数階フーリエ変換">分数階フーリエ変換</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E6%AD%A3%E6%BA%96%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="線型正準変換 (存在しないページ)">線型正準変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Linear_canonical_transformation&amp;action=edit&amp;redlink=1" title="En:Linear canonical transformation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E6%AD%A3%E5%BC%A6%E5%A4%89%E6%8F%9B" title="フーリエ正弦変換">フーリエ正弦変換</a></li>
+<li><a href="/wiki/%E7%9F%AD%E6%99%82%E9%96%93%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="短時間フーリエ変換">短時間フーリエ変換</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="量子フーリエ変換 (存在しないページ)">量子フーリエ変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quantum_Fourier_transform&amp;action=edit&amp;redlink=1" title="En:Quantum Fourier transform (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="アナログ信号処理">アナログ信号処理</a></li>
+<li><a href="/wiki/%E5%A4%89%E6%8F%9B_(%E6%95%B0%E5%AD%A6)" title="変換 (数学)">変換 (数学)</a></li>
+<li><a href="/wiki/%E6%93%AC%E5%BE%AE%E5%88%86%E4%BD%9C%E7%94%A8%E7%B4%A0" title="擬微分作用素">擬微分作用素</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E2%80%93%E3%83%89%E3%83%AA%E3%83%BC%E3%83%8B%E3%83%A5%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="フーリエ–ドリーニュ変換 (存在しないページ)">フーリエ–ドリーニュ変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fourier%E2%80%93Deligne_transform&amp;action=edit&amp;redlink=1" title="En:Fourier–Deligne transform (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E2%80%93%E5%90%91%E4%BA%95%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="フーリエ–向井変換 (存在しないページ)">フーリエ–向井変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fourier%E2%80%93Mukai_transform&amp;action=edit&amp;redlink=1" title="En:Fourier–Mukai transform (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E2%80%93%E4%BD%90%E8%97%A4%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="フーリエ–佐藤変換 (存在しないページ)">フーリエ–佐藤変換</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B_(%E9%87%8F%E5%AD%90%E7%BE%A4)&amp;action=edit&amp;redlink=1" title="量子フーリエ変換 (量子群) (存在しないページ)">量子フーリエ変換 (量子群)</a></li></ul>
+</div>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=33" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 25em; -webkit-column-width: 25em; column-width: 25em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-FOOTNOTEKaiser1994-1"><b><a href="#cite_ref-FOOTNOTEKaiser1994_1-0">^</a></b> <span class="reference-text"><a href="#CITEREFKaiser1994">Kaiser 1994</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTESteinShakarchi2003-2">^ <a href="#cite_ref-FOOTNOTESteinShakarchi2003_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinShakarchi2003_2-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFSteinShakarchi2003">Stein &amp; Shakarchi 2003</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTEPinsky2002-3">^ <a href="#cite_ref-FOOTNOTEPinsky2002_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-FOOTNOTEPinsky2002_3-6"><sup><i><b>g</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPinsky2002">Pinsky 2002</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTEKatznelson1976-4">^ <a href="#cite_ref-FOOTNOTEKatznelson1976_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEKatznelson1976_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTEKatznelson1976_4-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTEKatznelson1976_4-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTEKatznelson1976_4-4"><sup><i><b>e</b></i></sup></a> <span class="reference-text"><a href="#CITEREFKatznelson1976">Katznelson 1976</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTESteinWeiss1971-5">^ <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-FOOTNOTESteinWeiss1971_5-6"><sup><i><b>g</b></i></sup></a> <span class="reference-text"><a href="#CITEREFSteinWeiss1971">Stein &amp; Weiss 1971</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTERudin1987p._187-6"><b><a href="#cite_ref-FOOTNOTERudin1987p._187_6-0">^</a></b> <span class="reference-text"><a href="#CITEREFRudin1987">Rudin 1987</a>, p. 187.</span>
+</li>
+<li id="cite_note-FOOTNOTERudin1987p._186-7"><b><a href="#cite_ref-FOOTNOTERudin1987p._186_7-0">^</a></b> <span class="reference-text"><a href="#CITEREFRudin1987">Rudin 1987</a>, p. 186.</span>
+</li>
+<li id="cite_note-FOOTNOTEDuoandikoetxea2001-8">^ <a href="#cite_ref-FOOTNOTEDuoandikoetxea2001_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEDuoandikoetxea2001_8-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFDuoandikoetxea2001">Duoandikoetxea 2001</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTEGrafakos2004-9"><b><a href="#cite_ref-FOOTNOTEGrafakos2004_9-0">^</a></b> <span class="reference-text"><a href="#CITEREFGrafakos2004">Grafakos 2004</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTESteinWeiss1971Thm._2.3-10"><b><a href="#cite_ref-FOOTNOTESteinWeiss1971Thm._2.3_10-0">^</a></b> <span class="reference-text"><a href="#CITEREFSteinWeiss1971">Stein &amp; Weiss 1971</a>, Thm. 2.3.</span>
+</li>
+<li id="cite_note-FOOTNOTESteinWeiss1971Thm._IV.3.3-11"><b><a href="#cite_ref-FOOTNOTESteinWeiss1971Thm._IV.3.3_11-0">^</a></b> <span class="reference-text"><a href="#CITEREFSteinWeiss1971">Stein &amp; Weiss 1971</a>, Thm. IV.3.3.</span>
+</li>
+<li id="cite_note-FOOTNOTESteinWeiss1971Thm._4.13-12"><b><a href="#cite_ref-FOOTNOTESteinWeiss1971Thm._4.13_12-0">^</a></b> <span class="reference-text"><a href="#CITEREFSteinWeiss1971">Stein &amp; Weiss 1971</a>, Thm. 4.13.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=34" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li><cite class="citation book" id="CITEREFBochnerChandrasekharan1949" style="font-style:normal"><a href="/wiki/%E3%82%B5%E3%83%AD%E3%83%A2%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%9B%E3%83%8A%E3%83%BC" title="サロモン・ボホナー">Bochner, S.</a>; <a class="new" href="/w/index.php?title=En:K._S._Chandrasekharan&amp;action=edit&amp;redlink=1" title="En:K. S. Chandrasekharan (存在しないページ)">Chandrasekharan, K.</a> (1949). <i>Fourier Transforms</i>. <a class="new" href="/w/index.php?title=En:Princeton_University_Press&amp;action=edit&amp;redlink=1" title="En:Princeton University Press (存在しないページ)">Princeton University Press</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Transforms&amp;rft.aulast=Bochner&amp;rft.aufirst=S.&amp;rft.au=Bochner%2C%26%2332%3BS.&amp;rft.au=Chandrasekharan%2C%26%2332%3BK.&amp;rft.date=1949&amp;rft.pub=%5B%5B%3Aen%3APrinceton+University+Press%7CPrinceton+University+Press%5D%5D&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFBracewell2000" style="font-style:normal">Bracewell, R. N. (2000), <i>The Fourier Transform and Its Applications</i> (3rd ed.), Boston: <a class="new" href="/w/index.php?title=En:McGraw-Hill&amp;action=edit&amp;redlink=1" title="En:McGraw-Hill (存在しないページ)">McGraw-Hill</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Fourier+Transform+and+Its+Applications&amp;rft.aulast=Bracewell&amp;rft.aufirst=R.+N.&amp;rft.au=Bracewell%2C%26%2332%3BR.+N.&amp;rft.date=2000&amp;rft.edition=3rd&amp;rft.place=Boston&amp;rft.pub=%5B%5B%3Aen%3AMcGraw-Hill%7CMcGraw-Hill%5D%5D&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFCampbellFoster1948" style="font-style:normal">Campbell, George; Foster, Ronald (1948), <i>Fourier Integrals for Practical Applications</i>, New York: D. Van Nostrand Company, Inc.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Integrals+for+Practical+Applications&amp;rft.aulast=Campbell&amp;rft.aufirst=George&amp;rft.au=Campbell%2C%26%2332%3BGeorge&amp;rft.au=Foster%2C%26%2332%3BRonald&amp;rft.date=1948&amp;rft.place=New+York&amp;rft.pub=D.+Van+Nostrand+Company%2C+Inc.&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFDuoandikoetxea2001" style="font-style:normal">Duoandikoetxea, Javier (2001), <i>Fourier Analysis</i>, American Mathematical Society, <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-8218-2172-5" title="特別:文献資料/0-8218-2172-5">0-8218-2172-5</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Analysis&amp;rft.aulast=Duoandikoetxea&amp;rft.aufirst=Javier&amp;rft.au=Duoandikoetxea%2C%26%2332%3BJavier&amp;rft.date=2001&amp;rft.pub=American+Mathematical+Society&amp;rft.isbn=0-8218-2172-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFDymMcKean1985" style="font-style:normal"><a class="new" href="/w/index.php?title=Harry_Dym&amp;action=edit&amp;redlink=1" title="Harry Dym (存在しないページ)">Dym, H</a>; McKean, H (1985), <i>Fourier Series and Integrals</i>, Academic Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0122264511" title="特別:文献資料/978-0122264511">978-0122264511</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Series+and+Integrals&amp;rft.aulast=Dym&amp;rft.aufirst=H&amp;rft.au=Dym%2C%26%2332%3BH&amp;rft.au=McKean%2C%26%2332%3BH&amp;rft.date=1985&amp;rft.pub=Academic+Press&amp;rft.isbn=978-0122264511&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFErdélyi1954" style="font-style:normal">Erdélyi, Arthur, ed. (1954), <i>Tables of Integral Transforms</i>, <b>1</b>, New Your: McGraw-Hill</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Tables+of+Integral+Transforms&amp;rft.date=1954&amp;rft.volume=1&amp;rft.place=New+Your&amp;rft.pub=McGraw-Hill&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFGrafakos2004" style="font-style:normal">Grafakos, Loukas (2004), <i>Classical and Modern Fourier Analysis</i>, Prentice-Hall, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-13-035399-X" title="特別:文献資料/0-13-035399-X">0-13-035399-X</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Classical+and+Modern+Fourier+Analysis&amp;rft.aulast=Grafakos&amp;rft.aufirst=Loukas&amp;rft.au=Grafakos%2C%26%2332%3BLoukas&amp;rft.date=2004&amp;rft.pub=Prentice-Hall&amp;rft.isbn=0-13-035399-X&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFHörmander1976" style="font-style:normal"><a class="new" href="/w/index.php?title=Jp:%E3%83%A9%E3%83%BC%E3%82%B9%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%80%E3%83%BC&amp;action=edit&amp;redlink=1" title="Jp:ラース・ヘルマンダー (存在しないページ)">Hörmander, L.</a> (1976), <i>Linear Partial Differential Operators, Volume 1</i>, <a class="new" href="/w/index.php?title=De:Springer-Verlag&amp;action=edit&amp;redlink=1" title="De:Springer-Verlag (存在しないページ)">Springer-Verlag</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-3540006626" title="特別:文献資料/978-3540006626">978-3540006626</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Linear+Partial+Differential+Operators%2C+Volume+1&amp;rft.aulast=H%C3%B6rmander&amp;rft.aufirst=L.&amp;rft.au=H%C3%B6rmander%2C%26%2332%3BL.&amp;rft.date=1976&amp;rft.pub=%5B%5B%3Ade%3ASpringer-Verlag%7CSpringer-Verlag%5D%5D&amp;rft.isbn=978-3540006626&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFJames2002" style="font-style:normal">James, J.F. (2002), <i>A Student's Guide to Fourier Transforms</i> (2nd ed.), New York: Cambridge University Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-521-00428-4" title="特別:文献資料/0-521-00428-4">0-521-00428-4</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Student%27s+Guide+to+Fourier+Transforms&amp;rft.aulast=James&amp;rft.aufirst=J.F.&amp;rft.au=James%2C%26%2332%3BJ.F.&amp;rft.date=2002&amp;rft.edition=2nd&amp;rft.place=New+York&amp;rft.pub=Cambridge+University+Press&amp;rft.isbn=0-521-00428-4&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFKaiser1994" style="font-style:normal">Kaiser, Gerald (1994), <i>A Friendly Guide to Wavelets</i>, Birkhäuser, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-8176-3711-7" title="特別:文献資料/0-8176-3711-7">0-8176-3711-7</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Friendly+Guide+to+Wavelets&amp;rft.aulast=Kaiser&amp;rft.aufirst=Gerald&amp;rft.au=Kaiser%2C%26%2332%3BGerald&amp;rft.date=1994&amp;rft.pub=Birkh%C3%A4user&amp;rft.isbn=0-8176-3711-7&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFKammler2000" style="font-style:normal">Kammler, David (2000), <i>A First Course in Fourier Analysis</i>, Prentice Hall, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-13-578782-3" title="特別:文献資料/0-13-578782-3">0-13-578782-3</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+First+Course+in+Fourier+Analysis&amp;rft.aulast=Kammler&amp;rft.aufirst=David&amp;rft.au=Kammler%2C%26%2332%3BDavid&amp;rft.date=2000&amp;rft.pub=Prentice+Hall&amp;rft.isbn=0-13-578782-3&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFKatznelson1976" style="font-style:normal">Katznelson, Yitzhak (1976), <i>An introduction to Harmonic Analysis</i>, Dover, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-486-63331-4" title="特別:文献資料/0-486-63331-4">0-486-63331-4</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+introduction+to+Harmonic+Analysis&amp;rft.aulast=Katznelson&amp;rft.aufirst=Yitzhak&amp;rft.au=Katznelson%2C%26%2332%3BYitzhak&amp;rft.date=1976&amp;rft.pub=Dover&amp;rft.isbn=0-486-63331-4&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFPinsky2002" style="font-style:normal">Pinsky, Mark (2002), <i>Introduction to Fourier Analysis and Wavelets</i>, Brooks/Cole, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-534-37660-6" title="特別:文献資料/0-534-37660-6">0-534-37660-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Fourier+Analysis+and+Wavelets&amp;rft.aulast=Pinsky&amp;rft.aufirst=Mark&amp;rft.au=Pinsky%2C%26%2332%3BMark&amp;rft.date=2002&amp;rft.pub=Brooks%2FCole&amp;rft.isbn=0-534-37660-6&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFPolyaninManzhirov1998" style="font-style:normal">Polyanin, A. D.; Manzhirov, A. V. (1998), <i>Handbook of Integral Equations</i>, Boca Raton: CRC Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-8493-2876-4" title="特別:文献資料/0-8493-2876-4">0-8493-2876-4</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Handbook+of+Integral+Equations&amp;rft.aulast=Polyanin&amp;rft.aufirst=A.+D.&amp;rft.au=Polyanin%2C%26%2332%3BA.+D.&amp;rft.au=Manzhirov%2C%26%2332%3BA.+V.&amp;rft.date=1998&amp;rft.place=Boca+Raton&amp;rft.pub=CRC+Press&amp;rft.isbn=0-8493-2876-4&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFRudin1987" style="font-style:normal">Rudin, Walter (1987), <i>Real and Complex Analysis</i> (Third ed.), Singapore: McGraw-Hill, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-07-100276-6" title="特別:文献資料/0-07-100276-6">0-07-100276-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Real+and+Complex+Analysis&amp;rft.aulast=Rudin&amp;rft.aufirst=Walter&amp;rft.au=Rudin%2C%26%2332%3BWalter&amp;rft.date=1987&amp;rft.edition=Third&amp;rft.place=Singapore&amp;rft.pub=McGraw-Hill&amp;rft.isbn=0-07-100276-6&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFSteinShakarchi2003" style="font-style:normal">Stein, Elias; Shakarchi, Rami (2003), <i>Fourier Analysis: An introduction</i>, Princeton University Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-691-11384-X" title="特別:文献資料/0-691-11384-X">0-691-11384-X</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Analysis%3A+An+introduction&amp;rft.aulast=Stein&amp;rft.aufirst=Elias&amp;rft.au=Stein%2C%26%2332%3BElias&amp;rft.au=Shakarchi%2C%26%2332%3BRami&amp;rft.date=2003&amp;rft.pub=Princeton+University+Press&amp;rft.isbn=0-691-11384-X&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFSteinWeiss1971" style="font-style:normal">Stein, Elias; Weiss, Guido (1971), <i>Introduction to Fourier Analysis on Euclidean Spaces</i>, Princeton, N.J.: Princeton University Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-691-08078-9" title="特別:文献資料/978-0-691-08078-9">978-0-691-08078-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Fourier+Analysis+on+Euclidean+Spaces&amp;rft.aulast=Stein&amp;rft.aufirst=Elias&amp;rft.au=Stein%2C%26%2332%3BElias&amp;rft.au=Weiss%2C%26%2332%3BGuido&amp;rft.date=1971&amp;rft.place=Princeton%2C+N.J.&amp;rft.pub=Princeton+University+Press&amp;rft.isbn=978-0-691-08078-9&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFWilson1995" style="font-style:normal">Wilson, R. G. (1995), <i>Fourier Series and Optical Transform Techniques in Contemporary Optics</i>, New York: Wiley, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0471303577" title="特別:文献資料/0471303577">0471303577</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fourier+Series+and+Optical+Transform+Techniques+in+Contemporary+Optics&amp;rft.aulast=Wilson&amp;rft.aufirst=R.+G.&amp;rft.au=Wilson%2C%26%2332%3BR.+G.&amp;rft.date=1995&amp;rft.place=New+York&amp;rft.pub=Wiley&amp;rft.isbn=0471303577&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFYosida1968" style="font-style:normal"><a href="/wiki/%E5%90%89%E7%94%B0%E8%80%95%E4%BD%9C" title="吉田耕作">Yosida, K.</a> (1968), <i>Functional Analysis</i>, Springer-Verlag, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/3-540-58654-7" title="特別:文献資料/3-540-58654-7">3-540-58654-7</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Functional+Analysis&amp;rft.aulast=Yosida&amp;rft.aufirst=K.&amp;rft.au=Yosida%2C%26%2332%3BK.&amp;rft.date=1968&amp;rft.pub=Springer-Verlag&amp;rft.isbn=3-540-58654-7&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=35" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.westga.edu/~jhasbun/osp/Fourier.htm" rel="nofollow">Fourier Series Applet</a> (Tip: drag magnitude or phase dots up or down to change the wave form).</li>
+<li><a class="external text" href="http://eqworld.ipmnet.ru/en/auxiliary/aux-inttrans.htm" rel="nofollow">Tables of Integral Transforms</a> at EqWorld: The World of Mathematical Equations.</li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Fourier_Transform"><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><cite class="citation web cs1" id="CITEREFWeisstein,_Eric_W"><span style="font-style:normal;"><a class="new" href="/w/index.php?title=En:Eric_W._Weisstein&amp;action=edit&amp;redlink=1" title="En:Eric W. Weisstein (存在しないページ)">Weisstein, Eric W</a></span>. <a class="external text" href="https://mathworld.wolfram.com/FourierTransform.html" rel="nofollow">"<span style="font-style:normal;">Fourier Transform</span>"</a>. <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i> (English).</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MathWorld&amp;rft.atitle=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EFourier+Transform%3C%2Fspan%3E&amp;rft.au=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EWeisstein%2C+Eric+W%3C%2Fspan%3E&amp;rft_id=https%3A%2F%2Fmathworld.wolfram.com%2FFourierTransform.html&amp;rfr_id=info%3Asid%2Flocalhost%3A8080%3A%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B"></span></span></li>
+<li><a class="external text" href="http://math.fullerton.edu/mathews/c2003/FourierTransformMod.html" rel="nofollow">Fourier Transform Module by John H. Mathews</a></li>
+<li><a class="external text" href="http://www.dspdimension.com/admin/dft-a-pied/" rel="nofollow">The DFT “à Pied”: Mastering The Fourier Transform in One Day</a> at The DSP Dimension</li>
+<li><a class="external text" href="http://talkera.org.cp-in-1.webhostbox.net/wp/?p=89" rel="nofollow">FFT in Python</a></li>
+<li><a class="external text" href="https://www.britannica.com/topic/Fourier-transform" rel="nofollow">Fourier-transform (mathematics)</a> - <i><a href="/wiki/%E3%83%96%E3%83%AA%E3%82%BF%E3%83%8B%E3%82%AB%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8" title="ブリタニカ百科事典">ブリタニカ百科事典</a></i></li>
+<li><span class="citation kotobank" id="Reference-Kotobank-フーリエ変換">日本大百科全書(ニッポニカ)『<a class="external text" href="//kotobank.jp/word/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" rel="nofollow">フーリエ変換</a>』 - <a href="/wiki/%E3%82%B3%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF" title="コトバンク">コトバンク</a></span></li></ul>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<div aria-labelledby="制御理論" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:制御理論 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="制御理論" style="font-size:110%;margin:0 6em"><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御理論</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">分野</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%A9%E5%BF%9C%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="適応制御 (存在しないページ)">適応制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adaptive_control&amp;action=edit&amp;redlink=1" title="En:Adaptive control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御理論</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%88%B6%E5%BE%A1" title="デジタル制御">デジタル制御</a></li>
+<li><a class="new" href="/w/index.php?title=En:Energy-shaping_control&amp;action=edit&amp;redlink=1" title="En:Energy-shaping control (存在しないページ)">en:Energy-shaping control</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E5%88%B6%E5%BE%A1" title="ファジィ制御">ファジィ制御</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハイブリッドコンピュータ">ハイブリッド</a>制御</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%83%BD%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="知能制御 (存在しないページ)">知能制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intelligent_control&amp;action=edit&amp;redlink=1" title="En:Intelligent control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E4%BA%88%E6%B8%AC%E5%88%B6%E5%BE%A1" title="モデル予測制御">モデル予測制御</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%A4%9A%E5%A4%89%E9%87%8F&amp;action=edit&amp;redlink=1" title="多変量 (存在しないページ)">多変量</a>制御</li>
+<li><a href="/wiki/%E7%A5%9E%E7%B5%8C%E7%B3%BB" title="神経系">ニューラル</a>制御</li>
+<li><a href="/wiki/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E5%88%B6%E5%BE%A1" title="非線形制御">非線形制御</a></li>
+<li><a href="/wiki/%E6%9C%80%E9%81%A9%E5%88%B6%E5%BE%A1" title="最適制御">最適制御</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム制御</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%82%B9%E3%83%88%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="ロバスト制御 (存在しないページ)">ロバスト制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robust_control&amp;action=edit&amp;redlink=1" title="En:Robust control (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="確率制御 (存在しないページ)">確率制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stochastic_control&amp;action=edit&amp;redlink=1" title="En:Stochastic control (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">系特性</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3" title="ボード線図">ボード線図</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3" title="ブロック図">ブロック図</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" title="閉ループ伝達関数 (存在しないページ)">閉ループ伝達関数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E5%88%B6%E5%BE%A1%E6%80%A7&amp;action=edit&amp;redlink=1" title="可制御性 (存在しないページ)">可制御性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Controllability&amp;action=edit&amp;redlink=1" title="En:Controllability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">フーリエ変換</a></li>
+<li><a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E7%89%B9%E6%80%A7" title="周波数特性">周波数特性</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a></li>
+<li><a href="/wiki/%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E6%A9%9F%E6%A7%8B" title="ネガティブフィードバック機構">ネガティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E8%A6%B3%E6%B8%AC%E6%80%A7&amp;action=edit&amp;redlink=1" title="可観測性 (存在しないページ)">可観測性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Observability&amp;action=edit&amp;redlink=1" title="En:Observability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9D%E3%82%B8%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF" title="ポジティブフィードバック">ポジティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A0%B9%E8%BB%8C%E8%B7%A1&amp;action=edit&amp;redlink=1" title="根軌跡 (存在しないページ)">根軌跡法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Root_Locus&amp;action=edit&amp;redlink=1" title="En:Root Locus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%9C%E6%A9%9F%E6%A7%8B" title="サーボ機構">サーボ機構</a></li>
+<li><a class="new" href="/w/index.php?title=En:Signal-flow_graph&amp;action=edit&amp;redlink=1" title="En:Signal-flow graph (存在しないページ)">en:Signal-flow graph</a></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E7%A9%BA%E9%96%93_(%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96)" title="状態空間 (制御理論)">状態空間表現</a></li>
+<li><a href="/wiki/%E5%AE%89%E5%AE%9A%E6%80%A7%E7%90%86%E8%AB%96" title="安定性理論">安定性理論</a></li>
+<li><a href="/wiki/%E5%AE%9A%E5%B8%B8%E7%8A%B6%E6%85%8B" title="定常状態">定常状態</a>解析・設計</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%82%AF%E3%82%B9" title="システムダイナミクス">システムダイナミクス</a></li>
+<li><a href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0%E6%B3%95" title="伝達関数法">伝達関数法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">デジタル制御</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E4%BF%A1%E5%8F%B7" title="離散時間信号">離散時間信号</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="デジタル信号処理">デジタル信号処理</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E5%8C%96_(%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86)&amp;action=edit&amp;redlink=1" title="量子化 (信号処理) (存在しないページ)">量子化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quantization_(signal_processing)&amp;action=edit&amp;redlink=1" title="En:Quantization (signal processing) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム</a>ソフトウェア</li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC_(%E7%B5%B1%E8%A8%88%E5%AD%A6)" title="標本 (統計学)">標本化</a>データ</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%90%8C%E5%AE%9A" title="システム同定">システム同定</a></li>
+<li><a href="/wiki/Z%E5%A4%89%E6%8F%9B" title="Z変換">Z変換</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">先進技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BF%82%E6%95%B0%E5%9B%B3%E6%B3%95&amp;action=edit&amp;redlink=1" title="係数図法 (存在しないページ)">係数図法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coefficient_diagram_method&amp;action=edit&amp;redlink=1" title="En:Coefficient diagram method (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%B6%E5%BE%A1%E5%86%8D%E6%A7%8B%E6%88%90&amp;action=edit&amp;redlink=1" title="制御再構成 (存在しないページ)">制御再構成</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Control_reconfiguration&amp;action=edit&amp;redlink=1" title="En:Control reconfiguration (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E5%B8%83%E5%AE%9A%E6%95%B0%E7%B3%BB&amp;action=edit&amp;redlink=1" title="分布定数系 (存在しないページ)">分布定数系</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distributed_parameter_systems&amp;action=edit&amp;redlink=1" title="En:Distributed parameter systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E6%95%B0%E6%AC%A1%E6%95%B0%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="分数次数制御 (存在しないページ)">分数次数制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fractional-order_control&amp;action=edit&amp;redlink=1" title="En:Fractional-order control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E8%AB%96%E7%90%86" title="ファジィ論理">ファジィ論理</a></li>
+<li><a class="new" href="/w/index.php?title=En:H-infinity_loop-shaping&amp;action=edit&amp;redlink=1" title="En:H-infinity loop-shaping (存在しないページ)">en:H-infinity loop-shaping</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%B3%E3%82%B1%E3%83%AB%E7%89%B9%E7%95%B0%E5%80%A4&amp;action=edit&amp;redlink=1" title="ハンケル特異値 (存在しないページ)">ハンケル特異値</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hankel_singular_value&amp;action=edit&amp;redlink=1" title="En:Hankel singular value (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="カルマンフィルター">カルマンフィルター</a></li>
+<li><a class="new" href="/w/index.php?title=En:Krener%27s_theorem&amp;action=edit&amp;redlink=1" title="En:Krener's theorem (存在しないページ)">en:Krener's theorem</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95" title="最小二乗法">最小二乗法</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%97%E3%83%8E%E3%83%95%E5%AE%89%E5%AE%9A" title="リアプノフ安定">リアプノフ安定</a></li>
+<li><a class="new" href="/w/index.php?title=En:Minor_loop_feedback&amp;action=edit&amp;redlink=1" title="En:Minor loop feedback (存在しないページ)">en:Minor loop feedback</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%A6%9A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="知覚制御理論 (存在しないページ)">知覚制御理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Perceptual_control_theory&amp;action=edit&amp;redlink=1" title="En:Perceptual control theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E8%A6%B3%E6%B8%AC%E5%99%A8" title="状態観測器">状態観測器</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%88%B6%E5%BE%A1" title="ベクトル制御">ベクトル制御</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御器</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込み制御器</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E5%88%B6%E5%BE%A1%E5%99%A8&amp;action=edit&amp;redlink=1" title="閉ループ制御器 (存在しないページ)">閉ループ制御器</a></li>
+<li><a class="new" href="/w/index.php?title=En:Lead-lag_compensator&amp;action=edit&amp;redlink=1" title="En:Lead-lag compensator (存在しないページ)">en:Lead-lag compensator</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%95%B0%E5%80%A4%E5%88%B6%E5%BE%A1" title="コンピュータ数値制御">数値制御</a></li>
+<li><a href="/wiki/PID%E5%88%B6%E5%BE%A1" title="PID制御">PID制御</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御応用</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Automation_and_Remote_Control&amp;action=edit&amp;redlink=1" title="En:Automation and Remote Control (存在しないページ)">en:Automation and Remote Control</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%8B%95%E6%A9%9F" title="電動機">電動機</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B7%A5%E6%A5%AD%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit&amp;redlink=1" title="工業制御システム (存在しないページ)">工業制御システム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Industrial_Control_Systems&amp;action=edit&amp;redlink=1" title="En:Industrial Control Systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AB%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="メカトロニクス">メカトロニクス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%8B%E5%8B%95%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="運動制御 (存在しないページ)">運動制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Motion_control&amp;action=edit&amp;redlink=1" title="En:Motion control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" title="プロセス制御">プロセス制御</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6" title="ロボット工学">ロボット工学</a></li>
+<li><a href="/wiki/SCADA" title="SCADA">SCADA</a></li></ul>
+</div></td></tr></tbody></table></div><div aria-labelledby="データ圧縮方式" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:データ圧縮 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="データ圧縮方式" style="font-size:110%;margin:0 6em"><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE" title="データ圧縮">データ圧縮</a>方式</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">可逆</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">エントロピー符号</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E7%AC%A6%E5%8F%B7" title="アルファ符号">一進法</a></li>
+<li><a href="/wiki/%E7%AE%97%E8%A1%93%E7%AC%A6%E5%8F%B7" title="算術符号">算術</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Asymmetric_numeral_systems&amp;action=edit&amp;redlink=1" title="Asymmetric numeral systems (存在しないページ)">Asymmetric numeral systems</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Asymmetric_numeral_systems&amp;action=edit&amp;redlink=1" title="En:Asymmetric numeral systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B4%E3%83%AD%E3%83%A0%E7%AC%A6%E5%8F%B7" title="ゴロム符号">ゴロム</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%95%E3%83%9E%E3%83%B3%E7%AC%A6%E5%8F%B7" title="ハフマン符号">ハフマン</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%A9%E5%BF%9C%E5%9E%8B%E3%83%8F%E3%83%95%E3%83%9E%E3%83%B3%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="適応型ハフマン符号 (存在しないページ)">適応型</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adaptive_Huffman_coding&amp;action=edit&amp;redlink=1" title="En:Adaptive Huffman coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AD%A3%E6%BA%96%E3%83%8F%E3%83%95%E3%83%9E%E3%83%B3%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="正準ハフマン符号 (存在しないページ)">正準</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Canonical_Huffman_code&amp;action=edit&amp;redlink=1" title="En:Canonical Huffman code (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/MH%E7%AC%A6%E5%8F%B7" title="MH符号">MH</a></li></ul></li>
+<li><a href="/wiki/%E3%83%AC%E3%83%B3%E3%82%B8%E7%AC%A6%E5%8F%B7" title="レンジ符号">レンジ</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%8E%E3%83%B3%E7%AC%A6%E5%8F%B7%E5%8C%96" title="シャノン符号化">シャノン</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%8E%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%8E%E7%AC%A6%E5%8F%B7%E5%8C%96" title="シャノン・ファノ符号化">シャノン・ファノ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A3%E3%83%8E%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%8E%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%A4%E3%82%A2%E3%82%B9%E7%AC%A6%E5%8F%B7%E5%8C%96&amp;action=edit&amp;redlink=1" title="シャノン・ファノ・イライアス符号化 (存在しないページ)">シャノン・ファノ・イライアス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Shannon%E2%80%93Fano%E2%80%93Elias_coding&amp;action=edit&amp;redlink=1" title="En:Shannon–Fano–Elias coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BF%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E7%AC%A6%E5%8F%B7%E5%8C%96&amp;action=edit&amp;redlink=1" title="タンストール符号化 (存在しないページ)">タンストール</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Tunstall_coding&amp;action=edit&amp;redlink=1" title="En:Tunstall coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="ユニバーサル符号 (存在しないページ)">ユニバーサル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Universal_code_(data_compression)&amp;action=edit&amp;redlink=1" title="En:Universal code (data compression) (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%8C%87%E6%95%B0%E3%82%B4%E3%83%AD%E3%83%A0%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="指数ゴロム符号 (存在しないページ)">指数ゴロム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Exponential-Golomb_coding&amp;action=edit&amp;redlink=1" title="En:Exponential-Golomb coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="フィボナッチ符号 (存在しないページ)">フィボナッチ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fibonacci_coding&amp;action=edit&amp;redlink=1" title="En:Fibonacci coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AC%E3%83%B3%E3%83%9E%E7%AC%A6%E5%8F%B7" title="ガンマ符号">ガンマ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AC%E3%83%BC%E3%83%99%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="レーベンシュタイン符号 (存在しないページ)">レーベンシュタイン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Levenshtein_coding&amp;action=edit&amp;redlink=1" title="En:Levenshtein coding (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%BE%9E%E6%9B%B8%E5%BC%8F%E5%9C%A7%E7%B8%AE&amp;action=edit&amp;redlink=1" title="辞書式圧縮 (存在しないページ)">辞書式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dictionary_coder&amp;action=edit&amp;redlink=1" title="En:Dictionary coder (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E5%AF%BE%E7%AC%A6%E5%8F%B7%E5%8C%96" title="バイト対符号化">BPE</a></li>
+<li><a href="/wiki/Deflate" title="Deflate">Deflate</a></li>
+<li><a class="mw-redirect" href="/wiki/Lempel-Ziv" title="Lempel-Ziv">Lempel-Ziv</a>
+<ul><li><a href="/wiki/LZ77" title="LZ77">LZ77</a></li>
+<li><a href="/wiki/LZ78" title="LZ78">LZ78</a></li>
+<li><a href="/wiki/LZFSE" title="LZFSE">LZFSE</a></li>
+<li><a href="/wiki/LHA" title="LHA">LZH</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LZJB&amp;action=edit&amp;redlink=1" title="LZJB (存在しないページ)">LZJB</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:LZJB&amp;action=edit&amp;redlink=1" title="En:LZJB (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Lempel-Ziv-Markov_chain-Algorithm" title="Lempel-Ziv-Markov chain-Algorithm">LZMA</a></li>
+<li><a href="/wiki/Lempel-Ziv-Oberhumer" title="Lempel-Ziv-Oberhumer">LZO</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LZRW&amp;action=edit&amp;redlink=1" title="LZRW (存在しないページ)">LZRW</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:LZRW&amp;action=edit&amp;redlink=1" title="En:LZRW (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LZS&amp;action=edit&amp;redlink=1" title="LZS (存在しないページ)">LZS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lempel%E2%80%93Ziv%E2%80%93Stac&amp;action=edit&amp;redlink=1" title="En:Lempel–Ziv–Stac (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski" title="Lempel–Ziv–Storer–Szymanski">LZSS</a></li>
+<li><a href="/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch" title="Lempel–Ziv–Welch">LZW</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LZWL&amp;action=edit&amp;redlink=1" title="LZWL (存在しないページ)">LZWL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:LZWL&amp;action=edit&amp;redlink=1" title="En:LZWL (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/LZX" title="LZX">LZX</a></li>
+<li><a href="/wiki/LZ4" title="LZ4">LZ4</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ROLZ&amp;action=edit&amp;redlink=1" title="ROLZ (存在しないページ)">ROLZ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Reduced_Offset_Lempel_Ziv&amp;action=edit&amp;redlink=1" title="En:Reduced Offset Lempel Ziv (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%9E%8BLempel%E2%80%93Ziv&amp;action=edit&amp;redlink=1" title="統計型Lempel–Ziv (存在しないページ)">統計型</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Statistical_Lempel%E2%80%93Ziv&amp;action=edit&amp;redlink=1" title="En:Statistical Lempel–Ziv (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Brotli" title="Brotli">Brotli</a></li>
+<li><a href="/wiki/Zstandard" title="Zstandard">Zstandard</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%82%BD%E3%83%BC%E3%83%88" title="ブロックソート">BWT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%96%87%E8%84%88%E6%9C%A8%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%91%E6%B3%95&amp;action=edit&amp;redlink=1" title="文脈木重み付け法 (存在しないページ)">CTW</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Context_tree_weighting&amp;action=edit&amp;redlink=1" title="En:Context tree weighting (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%B7%AE%E5%88%86%E7%AC%A6%E5%8F%B7%E5%8C%96" title="差分符号化">Delta</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E5%9C%A7%E7%B8%AE&amp;action=edit&amp;redlink=1" title="動的マルコフ圧縮 (存在しないページ)">DMC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dynamic_Markov_compression&amp;action=edit&amp;redlink=1" title="En:Dynamic Markov compression (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Move_To_Front" title="Move To Front">MTF</a></li>
+<li><a href="/wiki/PAQ" title="PAQ">PAQ</a></li>
+<li><a href="/wiki/Prediction_by_Partial_Matching" title="Prediction by Partial Matching">PPM</a></li>
+<li><a href="/wiki/%E9%80%A3%E9%95%B7%E5%9C%A7%E7%B8%AE" title="連長圧縮">RLE</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">音声</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="ビットレート">ビットレート</a>
+<ul><li><a class="mw-redirect" href="/wiki/%E5%B9%B3%E5%9D%87%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="平均ビットレート">平均(ABR)</a></li>
+<li><a href="/wiki/%E5%9B%BA%E5%AE%9A%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="固定ビットレート">固定(CBR)</a></li>
+<li><a href="/wiki/%E5%8F%AF%E5%A4%89%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="可変ビットレート">可変(VBR)</a></li></ul></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="コンパンディング">コンパンディング</a></li>
+<li><a href="/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF" title="畳み込み">畳み込み</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%AC%E3%83%B3%E3%82%B8" title="ダイナミックレンジ">ダイナミックレンジ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AC%E3%82%A4%E3%83%86%E3%83%B3%E3%82%B7&amp;action=edit&amp;redlink=1" title="オーディオレイテンシ (存在しないページ)">レイテンシ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Latency_(audio)&amp;action=edit&amp;redlink=1" title="En:Latency (audio) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96%E5%AE%9A%E7%90%86" title="標本化定理">標本化定理</a></li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96" title="標本化">標本化</a></li>
+<li><a href="/wiki/%E9%9F%B3%E8%B3%AA" title="音質">音質</a></li>
+<li><a href="/wiki/%E9%9F%B3%E5%A3%B0%E7%AC%A6%E5%8F%B7%E5%8C%96" title="音声符号化">音声符号化</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B5%E3%83%96%E3%83%90%E3%83%B3%E3%83%89%E7%AC%A6%E5%8F%B7%E5%8C%96" title="サブバンド符号化">サブバンド符号化</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%A4%89%E6%8F%9B%E7%AC%A6%E5%8F%B7%E5%8C%96" title="変換符号化">変換符号化</a></li>
+<li><a href="/wiki/%E7%9F%A5%E8%A6%9A%E7%AC%A6%E5%8F%B7%E5%8C%96" title="知覚符号化">知覚符号化</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;"><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E9%9F%B3%E5%A3%B0%E3%82%B3%E3%83%BC%E3%83%87%E3%83%83%E3%82%AF" title="音声コーデック">コーデック</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Audio_codec&amp;action=edit&amp;redlink=1" title="En:Audio codec (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/A-law%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="A-lawアルゴリズム">A-law</a></li>
+<li><a href="/wiki/%CE%9C-law%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Μ-lawアルゴリズム">μ-law</a></li>
+<li><a href="/wiki/Algebraic_Code_Excited_Linear_Prediction" title="Algebraic Code Excited Linear Prediction">ACELP</a></li>
+<li><a href="/wiki/%E9%81%A9%E5%BF%9C%E7%9A%84%E5%B7%AE%E5%88%86%E3%83%91%E3%83%AB%E3%82%B9%E7%AC%A6%E5%8F%B7%E5%A4%89%E8%AA%BF" title="適応的差分パルス符号変調">ADPCM</a></li>
+<li><a href="/wiki/Code_Excited_Linear_Prediction" title="Code Excited Linear Prediction">CELP</a></li>
+<li><a href="/wiki/%E5%B7%AE%E5%88%86%E3%83%91%E3%83%AB%E3%82%B9%E7%AC%A6%E5%8F%B7%E5%A4%89%E8%AA%BF" title="差分パルス符号変調">DPCM</a></li>
+<li><a class="mw-selflink selflink">フーリエ変換</a></li>
+<li><a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">LPC</a>
+<ul><li><a href="/wiki/Log_Area_Ratio" title="Log Area Ratio">LAR</a></li>
+<li><a href="/wiki/%E7%B7%9A%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%AF%BE" title="線スペクトル対">LSP</a></li></ul></li>
+<li><a href="/wiki/%E4%BF%AE%E6%AD%A3%E9%9B%A2%E6%95%A3%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E5%A4%89%E6%8F%9B" title="修正離散コサイン変換">MDCT</a></li>
+<li><a href="/wiki/%E9%9F%B3%E9%9F%BF%E5%BF%83%E7%90%86%E5%AD%A6" title="音響心理学">音響心理学</a></li>
+<li><a href="/wiki/Warped_Linear_Predictive_Coding" title="Warped Linear Predictive Coding">WLPC</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">画像</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%83%9E%E3%82%B5%E3%83%96%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="クロマサブサンプリング (存在しないページ)">クロマサブサンプリング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Chroma_subsampling&amp;action=edit&amp;redlink=1" title="En:Chroma subsampling (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%AC%A6%E5%8F%B7%E5%8C%96%E3%83%84%E3%83%AA%E3%83%BC%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="符号化ツリーユニット (存在しないページ)">符号化ツリーユニット</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coding_tree_unit&amp;action=edit&amp;redlink=1" title="En:Coding tree unit (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E8%89%B2%E7%A9%BA%E9%96%93" title="色空間">色空間</a></li>
+<li><a href="/wiki/%E5%9C%A7%E7%B8%AE%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88" title="圧縮アーティファクト">圧縮アーティファクト</a></li>
+<li><a href="/wiki/%E8%A7%A3%E5%83%8F%E5%BA%A6" title="解像度">解像度</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9E%E3%82%AF%E3%83%AD%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="マクロブロック (存在しないページ)">マクロブロック</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Macroblock&amp;action=edit&amp;redlink=1" title="En:Macroblock (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%94%E3%82%AF%E3%82%BB%E3%83%AB" title="ピクセル">ピクセル</a></li>
+<li><a href="/wiki/%E3%83%94%E3%83%BC%E3%82%AF%E4%BF%A1%E5%8F%B7%E5%AF%BE%E9%9B%91%E9%9F%B3%E6%AF%94" title="ピーク信号対雑音比">PSNR</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E5%8C%96_(%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86)&amp;action=edit&amp;redlink=1" title="量子化 (画像処理) (存在しないページ)">量子化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quantization_(image_processing)&amp;action=edit&amp;redlink=1" title="En:Quantization (image processing) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A8%99%E6%BA%96%E3%83%86%E3%82%B9%E3%83%88%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="標準テストイメージ (存在しないページ)">標準テストイメージ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Standard_test_image&amp;action=edit&amp;redlink=1" title="En:Standard test image (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">手法</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%81%E3%82%A7%E3%82%A4%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="チェインコード (存在しないページ)">チェインコード</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Chain_code&amp;action=edit&amp;redlink=1" title="En:Chain code (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E5%A4%89%E6%8F%9B" title="離散コサイン変換">DCT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=EZW&amp;action=edit&amp;redlink=1" title="EZW (存在しないページ)">EZW</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Embedded_Zerotrees_of_Wavelet_transforms&amp;action=edit&amp;redlink=1" title="En:Embedded Zerotrees of Wavelet transforms (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB%E5%9C%A7%E7%B8%AE" title="フラクタル圧縮">フラクタル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%AB%E3%83%BC%E3%83%8D%E3%83%B3%EF%BC%9D%E3%83%AC%E3%83%BC%E3%83%96%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="カルーネン＝レーブの定理 (存在しないページ)">KLT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Karhunen%E2%80%93Lo%C3%A8ve_theorem&amp;action=edit&amp;redlink=1" title="En:Karhunen–Loève theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89_(%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86)&amp;action=edit&amp;redlink=1" title="ピラミッド (画像処理) (存在しないページ)">ピラミッド</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Pyramid_(image_processing)&amp;action=edit&amp;redlink=1" title="En:Pyramid (image processing) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%80%A3%E9%95%B7%E5%9C%A7%E7%B8%AE" title="連長圧縮">RLE</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SPIHT&amp;action=edit&amp;redlink=1" title="SPIHT (存在しないページ)">SPIHT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Set_partitioning_in_hierarchical_trees&amp;action=edit&amp;redlink=1" title="En:Set partitioning in hierarchical trees (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E5%A4%89%E6%8F%9B" title="ウェーブレット変換">ウェーブレット</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/%E6%98%A0%E5%83%8F%E5%9C%A7%E7%B8%AE" title="映像圧縮">映像</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="ビットレート">ビットレート</a>
+<ul><li><a class="mw-redirect" href="/wiki/%E5%B9%B3%E5%9D%87%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="平均ビットレート">平均(ABR)</a></li>
+<li><a href="/wiki/%E5%9B%BA%E5%AE%9A%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="固定ビットレート">固定(CBR)</a></li>
+<li><a href="/wiki/%E5%8F%AF%E5%A4%89%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="可変ビットレート">可変(VBR)</a></li></ul></li>
+<li><a href="/wiki/%E7%94%BB%E9%9D%A2%E8%A7%A3%E5%83%8F%E5%BA%A6" title="画面解像度">画面解像度</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%9E_(%E6%98%A0%E7%94%BB%E3%83%BB%E6%BC%AB%E7%94%BB)" title="コマ (映画・漫画)">フレーム</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AC%E3%83%BC%E3%83%88" title="フレームレート">フレームレート</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%AC%E3%83%BC%E3%82%B9" title="インターレース">インターレース</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%98%A0%E5%83%8F%E5%93%81%E8%B3%AA&amp;action=edit&amp;redlink=1" title="映像品質 (存在しないページ)">映像品質</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Video_quality&amp;action=edit&amp;redlink=1" title="En:Video quality (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:9.5em;font-weight:normal;"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%98%A0%E5%83%8F%E3%82%B3%E3%83%BC%E3%83%87%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="映像コーデック (存在しないページ)">コーデック</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Video_codec&amp;action=edit&amp;redlink=1" title="En:Video codec (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8D%E8%A4%87%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="重複変換 (存在しないページ)">重複変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lapped_transform&amp;action=edit&amp;redlink=1" title="En:Lapped transform (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E5%A4%89%E6%8F%9B" title="離散コサイン変換">DCT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%87%E3%83%96%E3%83%AD%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;redlink=1" title="デブロッキングフィルタ (存在しないページ)">デブロッキングフィルタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Deblocking_filter&amp;action=edit&amp;redlink=1" title="En:Deblocking filter (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E9%96%93%E4%BA%88%E6%B8%AC" title="フレーム間予測">フレーム間予測</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">理論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%83%85%E5%A0%B1%E9%87%8F" title="情報量">情報量</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E8%A4%87%E9%9B%91%E6%80%A7" title="コルモゴロフ複雑性">複雑性</a></li>
+<li><a href="/wiki/%E9%9D%9E%E5%8F%AF%E9%80%86%E5%9C%A7%E7%B8%AE" title="非可逆圧縮">非可逆</a></li>
+<li><a href="/wiki/%E9%87%8F%E5%AD%90%E5%8C%96" title="量子化">量子化</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AC%E3%83%BC%E3%83%88%E6%AD%AA%E3%81%BF%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="レート歪み理論 (存在しないページ)">レート歪み</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Rate%E2%80%93distortion_theory&amp;action=edit&amp;redlink=1" title="En:Rate–distortion theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%86%97%E9%95%B7%E6%80%A7_(%E6%83%85%E5%A0%B1%E7%90%86%E8%AB%96)" title="冗長性 (情報理論)">冗長性</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%83%85%E5%A0%B1%E7%90%86%E8%AB%96%E3%81%AE%E5%B9%B4%E8%A1%A8&amp;action=edit&amp;redlink=1" title="情報理論の年表 (存在しないページ)">情報理論の年表</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Timeline_of_information_theory&amp;action=edit&amp;redlink=1" title="En:Timeline of information theory (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331081233
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.697 seconds
+Real time usage: 1.132 seconds
+Preprocessor visited node count: 26093/1000000
+Post‐expand include size: 309963/2097152 bytes
+Template argument size: 48735/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 64/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 43218/5000000 bytes
+Lua time usage: 0.450/7 seconds
+Lua virtual size: 11661312/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  989.434      1 -total
+ 30.97%  306.432     19 テンプレート:Citation/core
+ 30.32%  300.026     18 テンプレート:Citation
+ 26.07%  257.973      6 テンプレート:Navbox
+ 19.27%  190.663     15 テンプレート:Citation/identifier
+ 18.91%  187.149     15 テンプレート:ISBN2
+ 18.14%  179.469     62 テンプレート:仮リンク
+ 14.33%  141.771     30 テンプレート:Sfn
+ 12.15%  120.188     15 テンプレート:Catalog_lookup_link
+ 10.91%  107.912      1 テンプレート:データ圧縮
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:12760-0!canonical and timestamp 20220331081231 and revision id 9702. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=フーリエ変換&amp;oldid=9702">http://localhost:8080/w/index.php?title=フーリエ変換&amp;oldid=9702</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2013%E5%B9%B42%E6%9C%88" title="カテゴリ:出典を必要とする記事/2013年2月">出典を必要とする記事/2013年2月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2008%E5%B9%B49%E6%9C%88-10%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2008年9月-10月">出典を必要とする記述のある記事/2008年9月-10月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E8%A7%A3%E6%9E%90" title="カテゴリ:フーリエ解析">フーリエ解析</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%A9%8D%E5%88%86%E5%A4%89%E6%8F%9B" title="カテゴリ:積分変換">積分変換</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E4%BD%9C%E7%94%A8%E7%B4%A0" title="カテゴリ:ユニタリ作用素">ユニタリ作用素</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%99%82%E7%B3%BB%E5%88%97%E5%88%86%E6%9E%90" title="カテゴリ:時系列分析">時系列分析</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6" title="カテゴリ:数理物理学">数理物理学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B8%E3%83%A7%E3%82%BC%E3%83%95%E3%83%BB%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8" title="カテゴリ:ジョゼフ・フーリエ">ジョゼフ・フーリエ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A8%E3%83%9D%E3%83%8B%E3%83%A0" title="カテゴリ:エポニム">エポニム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D12760%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D12760%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;oldid=9702" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月17日 (木) 10:06 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.697","walltime":"1.132","ppvisitednodes":{"value":26093,"limit":1000000},"postexpandincludesize":{"value":309963,"limit":2097152},"templateargumentsize":{"value":48735,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":64,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":43218,"limit":5000000},"timingprofile":["100.00%  989.434      1 -total"," 30.97%  306.432     19 テンプレート:Citation/core"," 30.32%  300.026     18 テンプレート:Citation"," 26.07%  257.973      6 テンプレート:Navbox"," 19.27%  190.663     15 テンプレート:Citation/identifier"," 18.91%  187.149     15 テンプレート:ISBN2"," 18.14%  179.469     62 テンプレート:仮リンク"," 14.33%  141.771     30 テンプレート:Sfn"," 12.15%  120.188     15 テンプレート:Catalog_lookup_link"," 10.91%  107.912      1 テンプレート:データ圧縮"]},"scribunto":{"limitreport-timeusage":{"value":"0.450","limit":"7"},"limitreport-virtmemusage":{"value":11661312,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331081233","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":260});});</script>
+</body></html>

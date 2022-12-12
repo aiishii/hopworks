@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ARMアーキテクチャ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ARMアーキテクチャ rootpage-ARMアーキテクチャ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ARMアーキテクチャ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">ナビゲーションに移動</a>
+<a class="mw-jump-link" href="#searchInput">検索に移動</a>
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<table class="infobox" style="width:22em;"><caption class="" itemprop="name" style="">ARMアーキテクチャ</caption><tbody><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">開発者</th><td class="" itemprop="" style="">
+<a href="." id="link_i_1" title="ARMホールディングス">ARMホールディングス</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ビット数</th><td class="" itemprop="" style="">
+<a href="." id="link_i_2" title="32ビット">32ビット</a>、<a href="." id="link_i_3" title="64ビット">64ビット</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">発表</th><td class="" itemprop="" style="">
+<a href="." id="link_i_4" title="1983年">1983年</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">バージョン</th><td class="" itemprop="" style="">
+ARMv9<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">デザイン</th><td class="" itemprop="" style="">
+<a href="." id="link_i_5" title="RISC">RISC</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">タイプ</th><td class="" itemprop="" style="">
+Register-Register</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">エンコード</th><td class="" itemprop="" style="">
+Fixed</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ブランチ</th><td class="" itemprop="" style="">
+Condition code</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">エンディアン</th><td class="" itemprop="" style="">
+<a class="new" href="/w/index.php?title=En:Endianness&amp;action=edit&amp;redlink=1" title="En:Endianness (存在しないページ)">Bi</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">拡張</th><td class="" itemprop="" style="">
+NEON, Thumb, <a class="new" href="/w/index.php?title=En:Jazelle&amp;action=edit&amp;redlink=1" title="En:Jazelle (存在しないページ)">Jazelle</a>, VFP</td></tr><tr style=""><th class="" colspan="2" scope="col" style="text-align:center; background:#ccf;">レジスタ</th></tr><tr class="" itemprop="" style=""><td class="" colspan="2" itemprop="" style="text-align:center;">
+16（32ビット）、31（64ビット）</td></tr></tbody></table>
+<p><b>ARMアーキテクチャ</b> とは、<a href="." id="link_a_1" title="ARMホールディングス">ARMホールディングス</a>の事業部門であるARM Ltdにより設計・ライセンスされている<a href="." id="link_a_6" title="コンピュータ・アーキテクチャ">アーキテクチャ</a>である。<a href="." id="link_a_7" title="組み込みシステム">組み込み機器</a>や低電力アプリケーションからスーパーコンピューターまで様々な機器で用いられている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#歴史"><span class="tocnumber">2</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#主な採用製品"><span class="tocnumber">3</span> <span class="toctext">主な採用製品</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#ARM6"><span class="tocnumber">3.1</span> <span class="toctext">ARM6</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#ARM7/7E"><span class="tocnumber">3.2</span> <span class="toctext">ARM7/7E</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#ARM9/9E"><span class="tocnumber">3.3</span> <span class="toctext">ARM9/9E</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#ARM11/11E"><span class="tocnumber">3.4</span> <span class="toctext">ARM11/11E</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Cortex-M3"><span class="tocnumber">3.5</span> <span class="toctext">Cortex-M3</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Cortex-A8"><span class="tocnumber">3.6</span> <span class="toctext">Cortex-A8</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Cortex-A9"><span class="tocnumber">3.7</span> <span class="toctext">Cortex-A9</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Cortex-A15"><span class="tocnumber">3.8</span> <span class="toctext">Cortex-A15</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Cortex-A57"><span class="tocnumber">3.9</span> <span class="toctext">Cortex-A57</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Cortex-A72"><span class="tocnumber">3.10</span> <span class="toctext">Cortex-A72</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Cortex-A73"><span class="tocnumber">3.11</span> <span class="toctext">Cortex-A73</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Cortex-A75"><span class="tocnumber">3.12</span> <span class="toctext">Cortex-A75</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Cortex-A76"><span class="tocnumber">3.13</span> <span class="toctext">Cortex-A76</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Cortex-A77"><span class="tocnumber">3.14</span> <span class="toctext">Cortex-A77</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Cortex-A78"><span class="tocnumber">3.15</span> <span class="toctext">Cortex-A78</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Cortex-X1"><span class="tocnumber">3.16</span> <span class="toctext">Cortex-X1</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#コアの性能と採用実績"><span class="tocnumber">4</span> <span class="toctext">コアの性能と採用実績</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#ARM社製"><span class="tocnumber">4.1</span> <span class="toctext">ARM社製</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#サードパーティー"><span class="tocnumber">4.2</span> <span class="toctext">サードパーティー</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#ARMアーキテクチャを採用しているCPU/メーカ"><span class="tocnumber">5</span> <span class="toctext">ARMアーキテクチャを採用しているCPU/メーカ</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#32ビットARM"><span class="tocnumber">6</span> <span class="toctext">32ビットARM</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#命令セット"><span class="tocnumber">6.1</span> <span class="toctext">命令セット</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#CPUモード"><span class="tocnumber">6.2</span> <span class="toctext">CPUモード</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#レジスタ"><span class="tocnumber">6.3</span> <span class="toctext">レジスタ</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#条件実行"><span class="tocnumber">6.4</span> <span class="toctext">条件実行</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Thumb"><span class="tocnumber">6.5</span> <span class="toctext">Thumb</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Thumb-2"><span class="tocnumber">6.6</span> <span class="toctext">Thumb-2</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Jazelle"><span class="tocnumber">6.7</span> <span class="toctext">Jazelle</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Thumb_Execution_Environment_(ThumbEE)"><span class="tocnumber">6.8</span> <span class="toctext">Thumb Execution Environment (ThumbEE)</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#DSP_拡張命令"><span class="tocnumber">6.9</span> <span class="toctext">DSP 拡張命令</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#SIMD"><span class="tocnumber">6.10</span> <span class="toctext">SIMD</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Advanced_SIMD_(NEON)"><span class="tocnumber">6.11</span> <span class="toctext">Advanced SIMD (NEON)</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Wireless_MMX"><span class="tocnumber">6.12</span> <span class="toctext">Wireless MMX</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#VFP"><span class="tocnumber">6.13</span> <span class="toctext">VFP</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#64ビットARM"><span class="tocnumber">7</span> <span class="toctext">64ビットARM</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="#命令セットの特徴"><span class="tocnumber">7.1</span> <span class="toctext">命令セットの特徴</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#SIMD_and_Floating-point_(NEON)_命令"><span class="tocnumber">7.2</span> <span class="toctext">SIMD and Floating-point (NEON) 命令</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-42"><a href="#注釈"><span class="tocnumber">8.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#出典"><span class="tocnumber">8.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-44"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="#外部リンク"><span class="tocnumber">10</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ARMアーキテクチャは消費電力を抑える特徴を持ち、低消費電力を目標に設計される<a href="/wiki/%E6%90%BA%E5%B8%AF%E6%A9%9F%E5%99%A8" title="携帯機器">モバイル機器</a>において支配的となっている。本アーキテクチャの<a href="/wiki/%E5%91%BD%E4%BB%A4_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="命令 (コンピュータ)">命令セット</a>は「（基本的に）固定長の命令」「簡素な命令セット」という<a href="/wiki/RISC" title="RISC">RISC</a>風の特徴を有しつつ、「条件実行、定数シフト/ローテート付きオペランド、比較的豊富なアドレッシングモード」といった<a href="/wiki/CISC" title="CISC">CISC</a>風の特徴を併せ持つのが特徴的だが、これは初期のARMがパソコン向けに設計された際、当時の同程度の性能のチップとしてはかなり少ないゲート数（約25,000トランジスタ）で実装されたチップの多くの部分を常に活用する設計として工夫されたもので、回路の複雑さを増さないという方向性だというように見れば、CISC風の特徴というよりむしろRISC風の特徴とも言える。このような設計が、初期の世代の実装において、（性能の割に）低消費電力、小さなコア、（RISCとしては）高いコード密度といった優れた特性に結びつき、広く普及する原動力となった。
+</p><p>2005年の時点で、ARMファミリーは<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組込み</a><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a>（乃至、特にマイクロコントローラ）のおよそ75%を占め<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>、全世界で最も使用されている32ビットCPUアーキテクチャである<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。--2014年3月7日 (金) 08:26 (UTC)">要出典</span></a></i>]</sup>。ARMアーキテクチャに基づくCPUコアは、<a href="/wiki/%E6%90%BA%E5%B8%AF%E6%83%85%E5%A0%B1%E7%AB%AF%E6%9C%AB" title="携帯情報端末">PDA</a>・<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>・<a href="/wiki/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%97%E3%83%AC%E3%83%BC%E3%83%A4%E3%83%BC" title="メディアプレーヤー">メディアプレーヤー</a>・<a href="/wiki/%E6%90%BA%E5%B8%AF%E5%9E%8B%E3%82%B2%E3%83%BC%E3%83%A0" title="携帯型ゲーム">携帯型ゲーム</a>・<a href="/wiki/%E9%9B%BB%E5%8D%93" title="電卓">電卓</a>などの携帯機器から、<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF" title="ハードディスク">ハードディスク</a>・<a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%BC%E3%82%BF" title="ルータ">ルータ</a>などの<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">PC</a>周辺機器まで、あらゆる電子機器に使用される。2015年現在、携帯電話では9割超のシェアがある<a class="external autonumber" href="https://president.jp/articles/-/21581スマホ向け「CPUコア」で世界シェア9割超のARMを買収" rel="nofollow">[2]</a>。
+</p><p>携帯機器や電子機器の高性能化に伴いARMコアの出荷数は加速度的に伸びており、2008年1月の時点で100億個以上<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>、2010年9月の時点で200億個以上<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>が出荷されている。ARMアーキテクチャを使用したプロセッサの例としては、<a href="/wiki/%E3%83%86%E3%82%AD%E3%82%B5%E3%82%B9%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%84%E3%83%AB%E3%83%A1%E3%83%B3%E3%83%84" title="テキサス・インスツルメンツ">テキサス・インスツルメンツ</a>の<a class="mw-redirect" href="/wiki/OMAP" title="OMAP">OMAP</a>シリーズや<a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">マーベル・テクノロジー・グループ</a>の<a href="/wiki/XScale" title="XScale">XScale</a>、<a href="/wiki/NVIDIA" title="NVIDIA">NVIDIA</a>の<a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">Tegra</a>、<a href="/wiki/%E3%82%AF%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%A0" title="クアルコム">クアルコム</a>の<a href="/wiki/Snapdragon" title="Snapdragon">Snapdragon</a>、<a href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF" title="フリースケール・セミコンダクタ">フリースケール</a>のi.MXシリーズ、<a href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサスエレクトロニクス">ルネサス エレクトロニクス</a>のRZファミリ、Synergyなどがある。
+</p><p>既存のARMプロセッサは組み込みとクライアントシステムに特化していたため全て<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>であるが、顧客からは電力効率に優れるARMアーキテクチャの<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90" title="サーバ">サーバ</a>への応用を望む声が高まり<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。--2014年3月7日 (金) 08:26 (UTC)">要出典</span></a></i>]</sup>、ARM社は2011年10月27日、ARMの<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a>拡張であるARMv8アーキテクチャを発表した<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=2" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ARMの設計は、<a href="/wiki/1983%E5%B9%B4" title="1983年">1983年</a>に<a href="/wiki/%E3%82%A8%E3%82%A4%E3%82%B3%E3%83%BC%E3%83%B3%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="エイコーン・コンピュータ">エイコーン・コンピュータ</a>（イギリス）によって開始された。当時エイコーンは<a href="/wiki/%E3%83%A2%E3%82%B9%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="モステクノロジー">モステクノロジー</a>の<a href="/wiki/MOS_6502" title="MOS 6502">MOS 6502</a>を搭載したコンピューターを製造・販売しており、小さなハードウェア規模でシンプルな命令セットを持つ、より高速なプロセッサを開発することによって、6502を置き換えることが目的であった。
+</p><p>ただし、しばしば誤ったことが書かれているが、ARMは6502を参考にしながら設計されたわけではなく、命令セットアーキテクチャにも内部アーキテクチャにもとりたてて類似している点は無い。命令セットを設計した<a href="/wiki/%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3" title="ソフィー・ウィルソン">ソフィー・ウィルソン</a>も、6502とARMにはほとんど共通点は無いと述べている<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p><p>開発チームは<a href="/wiki/1985%E5%B9%B4" title="1985年">1985年</a>までに<b>ARM1</b>と呼ばれる開発サンプルを完成させ、最初の製品となる<b>ARM2</b>は次の年に完成した。ARM2は32ビットのデータバス、26ビットの<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E7%A9%BA%E9%96%93" title="アドレス空間">アドレス空間</a>と16個の32ビット<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>を備えていた。レジスタの1つは、上位6ビットが状態フラグを保持するプログラムカウンタである。ARM2の<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B8%E3%82%B9%E3%82%BF" title="トランジスタ">トランジスタ</a>数は30000個しかなく、おそらく世界で最もシンプルな実用32ビットマイクロプロセッサであった。これは、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%96%B9%E5%BC%8F" title="マイクロプログラム方式">マイクロコード</a>を持たないこと（<a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a>の<a href="/wiki/MC68000" title="MC68000">MC68000</a>の場合は1/4から1/3がマイクロコードであった）と、現在のほとんどのCPUと違って<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="キャッシュ (コンピュータシステム)">キャッシュ</a>を含まないことによるものである。このシンプルさのために消費電力は極めて低いが、それにもかかわらず<a href="/wiki/Intel_80286" title="Intel 80286">80286</a>よりも性能は高かった<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。--2016年1月5日 (火) 20:56 (UTC)">要出典</span></a></i>]</sup>。後継となる<b>ARM3</b>は、4KBのキャッシュを含みさらに性能を高めた。
+</p><p>1980年代後半、Apple Computer（現:<a href="/wiki/Apple" title="Apple">Apple</a>）はエイコーンと共同で新しいARMコアの開発に取り組んだ。この作業は非常に重要視されていたため、エイコーンは<a href="/wiki/1990%E5%B9%B4" title="1990年">1990年</a>に開発チームをスピンオフしてAdvanced RISC Machinesという新会社を設立した。このため、ARMは本来のAcorn RISC Machineではなく<b>Advanced RISC Machine</b>の略であるという説明をよく見かけることになる。Advanced RISC Machinesは、<a href="/wiki/1998%E5%B9%B4" title="1998年">1998年</a>に<a href="/wiki/%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E8%A8%BC%E5%88%B8%E5%8F%96%E5%BC%95%E6%89%80" title="ロンドン証券取引所">ロンドン証券取引所</a>と<a href="/wiki/NASDAQ" title="NASDAQ">NASDAQ</a>に上場した際、ARM Limitedとなった。
+</p><p>この作業の結果、<b>ARM6</b>が開発された。<a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>に最初のモデルがリリースされ、AppleはARM6ベースのARM610を<a href="/wiki/Apple_Newton" title="Apple Newton">Apple Newton</a>に採用した。
+</p><p>これらの変化を経てもコアは大体同じサイズに収まっている。ARM2は30000個のトランジスタを使用していたが、ARM6は35000個にしか増えていない。そこにあるアイデアは、エンドユーザーがARMコアと多くのオプションのパーツを組み合わせて完全なCPUとし、それによって古い設備でも製造でき、かつ安価に高性能を得られる、というものである。
+</p><p>このARM6の改良版である<b>ARM7</b>も、ARM6を採用した製品群に引き続き採用されたほか、普及期に入りつつあった<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>にも広く採用されたことから、今日のARMの礎ともなった。
+</p><p>さらに、新世代のARMv4アーキテクチャに基いてARM7を再設計したものが<b><a class="new" href="/w/index.php?title=En:ARM7TDMI&amp;action=edit&amp;redlink=1" title="En:ARM7TDMI (存在しないページ)">ARM7TDMI</a></b>である。ARM7TDMIはThumb命令（後述）を実装し、低消費電力と高いコード効率を両立する利点を備えていたことから、ライセンスを受けた多くの企業によって製品化され、特に<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>や<a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9" title="ゲームボーイアドバンス">ゲームボーイアドバンス</a>といった民生機器に採用されたことから、莫大な数の製品に搭載された。なお、TDMIとはThumb命令、<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="デバッグ">デバッグ</a> (Debug) 回路、<a href="/wiki/%E4%B9%97%E7%AE%97%E5%99%A8" title="乗算器">乗算器</a> (Multiplier)、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="インサーキット・エミュレータ">ICE</a>機能を搭載していることを意味している。しかし、これより後のコアには全てこれらの機能が標準的に搭載されるようになったため、この名称は省かれている。
+</p><p><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>はARMv4アーキテクチャの設計のライセンスを得て<a href="/wiki/StrongARM" title="StrongARM">StrongARM</a>を製造した。233MHzでStrongARMはほんの1<a href="/wiki/%E3%83%AF%E3%83%83%E3%83%88" title="ワット">W</a>の電力しか消費しない（最近のバージョンはさらに少ない）。この業績は後に訴訟の解決の一環として<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>に移管され、インテルはこの機会を利用して古くなりつつあった<a class="mw-redirect" href="/wiki/Intel_960" title="Intel 960">i960</a>をStrongARMで補強することにし、それ以降<a href="/wiki/XScale" title="XScale">XScale</a>という名で知られる高性能の実装を開発した。
+</p><p>以後も、StrongARMの技術のフィードバックを受けた<b>ARM9</b>や<b>ARM10</b>を経て、NECとの提携などによって携帯電話向けプロセッサとしての地位を確固たるものにした<b>ARM11</b>をリリースする。
+</p><p>2005年には製品ラインナップを一新し、高機能携帯電話などのアプリケーションプロセッサ向けである<b>Cortex-A</b>、リアルタイム制御向けである<b>Cortex-R</b>、<a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a>向けである<b>Cortex-M</b>と、ターゲットごとにシリーズを分類した。なお、Cortexの末尾に付く文字は、社名であるARMの一文字ずつをそれぞれ割り当てたものである<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。また、2012年11月にはARM初となる64ビットアーキテクチャによるプロセッサコアである<b>Cortex-A50</b>シリーズを発表した<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+</p><p>ARMから<a href="/wiki/IP%E3%82%B3%E3%82%A2" title="IPコア">IPコア</a>のライセンス供与を受けている主な企業には、<a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a>、<a href="/wiki/IBM" title="IBM">IBM</a>、<a href="/wiki/%E3%83%86%E3%82%AD%E3%82%B5%E3%82%B9%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%84%E3%83%AB%E3%83%A1%E3%83%B3%E3%83%84" title="テキサス・インスツルメンツ">テキサス・インスツルメンツ</a>、<a href="/wiki/%E4%BB%BB%E5%A4%A9%E5%A0%82" title="任天堂">任天堂</a>、<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%82%B9" title="フィリップス">フィリップス</a>、<a href="/wiki/Atmel" title="Atmel">Atmel</a>、<a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%97" title="シャープ">シャープ</a>、<a href="/wiki/%E3%82%B5%E3%83%A0%E3%82%B9%E3%83%B3%E9%9B%BB%E5%AD%90" title="サムスン電子">サムスン電子</a>、<a href="/wiki/ST%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="STマイクロエレクトロニクス">STマイクロエレクトロニクス</a>、<a href="/wiki/%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アナログ・デバイセズ">アナログ・デバイセズ</a>、<a href="/wiki/%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF" title="パナソニック">パナソニック</a>、<a href="/wiki/%E3%82%AF%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%A0" title="クアルコム">クアルコム</a>、<a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">マーベル・テクノロジー・グループ</a>などがある。ARMチップは世界で最もよく使われているCPUデザインの一つとなっており、<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96" title="ハードディスクドライブ">ハードディスク</a>、<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>、<a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%BC%E3%82%BF" title="ルータ">ルータ</a>、<a href="/wiki/%E9%9B%BB%E5%8D%93" title="電卓">電卓</a>から<a href="/wiki/%E7%8E%A9%E5%85%B7" title="玩具">玩具</a>に至るまであらゆる製品の中に見ることができる。32ビット組み込みCPUで圧倒的なシェアを占め、<a href="/wiki/2004%E5%B9%B4" title="2004年">2004年</a>の世界シェアは61%であった<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p>
+<h2><span id=".E4.B8.BB.E3.81.AA.E6.8E.A1.E7.94.A8.E8.A3.BD.E5.93.81"></span><span class="mw-headline" id="主な採用製品">主な採用製品</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=3" title="節を編集: 主な採用製品">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="ARM6">ARM6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=4" title="節を編集: ARM6">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>ARM60 <a href="/wiki/3DO" title="3DO">3DOインタラクティブ マルチプレーヤー</a></li></ul>
+<ul class="gallery mw-gallery-traditional">
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">VY86C06020FC-2 02.jpg</div>
+<div class="gallerytext">
+<p><br/>ARM60 CPU (VY86C06020FC-2)
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">P60ARM GC 01.jpg</div>
+<div class="gallerytext">
+<p><br/>ARM60 CPU (P60ARM)
+</p>
+</div>
+</div></li>
+</ul>
+<ul><li>ARM610 <a href="/wiki/Apple" title="Apple">Apple</a> <a href="/wiki/Apple_Newton" title="Apple Newton">ニュートン・メッセージパッド</a>、メッセージパッド100、メッセージパッド110、メッセージパッド120</li></ul>
+<h3><span id="ARM7.2F7E"></span><span class="mw-headline" id="ARM7/7E">ARM7/7E</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=5" title="節を編集: ARM7/7E">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>携帯情報端末
+<ul><li><a href="/wiki/EMate_300" title="EMate 300">eMate 300</a></li></ul></li>
+<li>携帯電話
+<ul><li>一般的な<a href="/wiki/GSM" title="GSM">GSM</a>携帯電話</li>
+<li><a href="/wiki/CdmaOne" title="CdmaOne">cdmaOne</a>携帯電話</li>
+<li>初期の<a class="mw-redirect" href="/wiki/3G" title="3G">3G</a>携帯電話（例：au <a href="/wiki/CDMA_1X" title="CDMA 1X">CDMA 1X</a> A1400番台の一部を除くA1000番台・A3000番台・A5500番台を除くA5000番台。一部例外除く）</li></ul></li>
+<li>携帯ゲーム機
+<ul><li><a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9" title="ゲームボーイアドバンス">ゲームボーイアドバンス</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS" title="ニンテンドーDS">ニンテンドーDS</a>/<a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS_Lite" title="ニンテンドーDS Lite">ニンテンドーDS Lite</a>（サブCPU、<a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9" title="ゲームボーイアドバンス">GBA</a>ソフトの動作にも使われる）</li>
+<li><a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDSi" title="ニンテンドーDSi">ニンテンドーDSi</a>（サブCPU）</li></ul></li>
+<li>携帯音楽プレーヤー
+<ul><li><a href="/wiki/IPod" title="IPod">iPod</a>シリーズ（<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">デュアルコア</a>実装）</li></ul></li>
+<li>電卓
+<ul><li>HP 20b / HP 30b</li></ul></li>
+<li>その他
+<ul><li><a href="/wiki/MINDSTORMS#レゴマインドストーム_NXT" title="MINDSTORMS">レゴマインドストーム NXT</a>（知能ブロックの一部）</li>
+<li><a href="/wiki/%E3%83%AB%E3%83%B3%E3%83%90_(%E6%8E%83%E9%99%A4%E6%A9%9F)" title="ルンバ (掃除機)">ルンバ</a>（一部の機種）</li></ul></li></ul>
+<h3><span id="ARM9.2F9E"></span><span class="mw-headline" id="ARM9/9E">ARM9/9E</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=6" title="節を編集: ARM9/9E">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>携帯ゲーム機
+<ul><li><a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS" title="ニンテンドーDS">ニンテンドーDS</a>/<a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS_Lite" title="ニンテンドーDS Lite">DS Lite</a>/<a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDSi" title="ニンテンドーDSi">ニンテンドーDSi</a>（メインCPU、ARM7とのダブル実装）</li>
+<li><a class="new" href="/w/index.php?title=En:Tapwave_Zodiac&amp;action=edit&amp;redlink=1" title="En:Tapwave Zodiac (存在しないページ)">Tapwave Zodiac</a></li></ul></li>
+<li>携帯電話
+<ul><li><a href="/wiki/Sun_SPOT" title="Sun SPOT">Sun SPOT</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%A0" title="クアルコム">Qualcomm</a> MSM6550（<a href="/wiki/CDMA2000_1x#Rel.0" title="CDMA2000 1x">CDMA2000 1xEV-DO Rel.0</a>対応携帯電話用チップセット）</li>
+<li>Qualcomm MSM6800（<a href="/wiki/CDMA2000_1x#Rev.A" title="CDMA2000 1x">CDMA2000 1xEV-DO Rev.A</a>対応携帯電話用チップセット）</li>
+<li><a class="mw-redirect" href="/wiki/%E7%AC%AC%E4%B8%89%E4%B8%96%E4%BB%A3%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="第三世代携帯電話">3G</a>および<a class="mw-redirect" href="/wiki/%E7%AC%AC%E4%B8%89%E3%83%BB%E4%BA%94%E4%B8%96%E4%BB%A3%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="第三・五世代携帯電話">3.5G</a>携帯電話（例：NTTドコモ <a href="/wiki/FOMA" title="FOMA">FOMA</a> 900i・901iシリーズ、<a href="/wiki/Au_(%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1)" title="Au (携帯電話)">au</a>(<a href="/wiki/KDDI" title="KDDI">KDDI</a>、<a href="/wiki/%E6%B2%96%E7%B8%84%E3%82%BB%E3%83%AB%E3%83%A9%E3%83%BC%E9%9B%BB%E8%A9%B1" title="沖縄セルラー電話">沖縄セルラー電話</a>)の<a href="/wiki/CDMA_1X" title="CDMA 1X">CDMA 1X</a>シリーズおよび<a href="/wiki/CDMA_1X_WIN" title="CDMA 1X WIN">CDMA 1X WIN</a>シリーズ、<a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%83%90%E3%83%B3%E3%82%AF%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB" title="ソフトバンクモバイル">ソフトバンクモバイル</a>の<a href="/wiki/SoftBank_3G" title="SoftBank 3G">SoftBank 3G</a>シリーズ等。一部例外除く）</li>
+<li><a href="/wiki/H11T" title="H11T">H11T</a>（<a href="/wiki/%E3%82%A4%E3%83%BC%E3%83%BB%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB" title="イー・モバイル">イー・モバイル</a>の音声通話用3.5G端末）</li>
+<li><a href="/wiki/WS009KE" title="WS009KE">WS009KE</a> "9 (nine)"（<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B3%E3%83%A0" title="ウィルコム">WILLCOM</a>（ウィルコム）の<a href="/wiki/PHS" title="PHS">PHS</a>端末）</li>
+<li>Nokia <a href="/wiki/N-Gage" title="N-Gage">N-Gage</a></li></ul></li>
+<li>携帯情報端末
+<ul><li>Handheld Engine CXD2230GA （SONY <a href="/wiki/CLIE" title="CLIE">CLIE</a>に搭載）<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li></ul></li>
+<li>その他
+<ul><li><a href="/wiki/Brain_(%E9%9B%BB%E5%AD%90%E8%BE%9E%E6%9B%B8)" title="Brain (電子辞書)">Sharp Brain</a></li>
+<li><a href="/wiki/MINDSTORMS" title="MINDSTORMS">レゴマインドストーム EV3</a></li></ul></li></ul>
+<h3><span id="ARM11.2F11E"></span><span class="mw-headline" id="ARM11/11E">ARM11/11E</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=7" title="節を編集: ARM11/11E">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2007%E5%B9%B4" title="2007年">2007年</a>頃から採用されるようになる。発表は<a href="/wiki/2002%E5%B9%B4" title="2002年">2002年</a><a href="/wiki/4%E6%9C%8829%E6%97%A5" title="4月29日">4月29日</a><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+<ul><li>2007年7月17日、<a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a>がARM1176JZF-S搭載の携帯電話用プロセッサ、TC35711XBGを発表。2008年第2四半期より量産開始予定。</li></ul></li>
+<li><a href="/wiki/NVIDIA" title="NVIDIA">NVIDIA</a> <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">Tegra</a>
+<ul><li><a href="/wiki/Zune" title="Zune">Zune HD</a></li></ul></li>
+<li>携帯音楽プレーヤー
+<ul><li><a href="/wiki/IPod_touch" title="IPod touch">iPod touch</a></li>
+<li><a href="/wiki/Zune" title="Zune">Zune</a></li></ul></li>
+<li>携帯電話
+<ul><li><a class="mw-redirect" href="/wiki/T-Mobile_G1" title="T-Mobile G1">T-Mobile G1</a></li>
+<li>Qualcomm　MSM7500（EV-DO Rev.A対応携帯電話用チップセット。ARM9Eとのダブル実装）
+<ul><li><a href="/wiki/KDDI" title="KDDI">KDDI</a>／<a href="/wiki/%E6%B2%96%E7%B8%84%E3%82%BB%E3%83%AB%E3%83%A9%E3%83%BC%E9%9B%BB%E8%A9%B1" title="沖縄セルラー電話">沖縄セルラー電話</a>（各auブランド）の「<a href="/wiki/KCP%2B" title="KCP+">KCP+</a>」対応CDMA 1X WINシリーズの携帯電話（例・<a href="/wiki/W56T" title="W56T">W56T</a>、<a href="/wiki/W54SA" title="W54SA">W54SA</a>、<a href="/wiki/W61S" title="W61S">W61S</a>、<a href="/wiki/W62T" title="W62T">W62T</a>等）。ARM9Eとのダブル実装</li>
+<li>KDDI／沖縄セルラー電話（各auブランド）のCDMA 1X WINシリーズのスマートフォン（例・<a href="/wiki/E30HT" title="E30HT">E30HT</a>等）</li></ul></li>
+<li>Qualcomm　MSM7600（EV-DO Rev.A対応携帯電話用チップセット。ARM9Eとのダブル実装）
+<ul><li><a href="/wiki/%E4%BA%AC%E3%82%BB%E3%83%A9" title="京セラ">KYOCERA</a> Zio M6000</li>
+<li>HTC Hero</li></ul></li>
+<li><a href="/wiki/NTT%E3%83%89%E3%82%B3%E3%83%A2" title="NTTドコモ">NTTドコモ</a>の<a href="/wiki/FOMA" title="FOMA">FOMA</a>902iシリーズ以降の携帯電話。905i以降のSymbian採用機はSH-4Aとダブル実装。</li>
+<li><a href="/wiki/WS018KE" title="WS018KE">WS018KE</a> (WILLCOM 9)　（<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B3%E3%83%A0" title="ウィルコム">WILLCOM</a>（ウィルコム）の<a href="/wiki/PHS" title="PHS">PHS</a>端末）</li>
+<li>Samsung S3C6400（ARM 1176JZ(F)-S v1.0）
+<ul><li><a href="/wiki/IPhone" title="IPhone">iPhone</a> 3G（412 MHzで駆動）</li></ul></li></ul></li>
+<li>タブレット・PDA
+<ul><li>ノキア Internet Tablet N800</li>
+<li><a href="/wiki/Mylo" title="Mylo">mylo</a> COM-2</li></ul></li>
+<li>ゲーム機
+<ul><li><a href="/wiki/Zeebo" title="Zeebo">Zeebo</a> (新興国向けDL専用3Dゲーム機)</li></ul></li>
+<li>シングルボードコンピュータ
+<ul><li><a href="/wiki/Raspberry_Pi" title="Raspberry Pi">Raspberry Pi</a> model 1A</li></ul></li></ul>
+<h3><span class="mw-headline" id="Cortex-M3">Cortex-M3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=8" title="節を編集: Cortex-M3">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2004%E5%B9%B4" title="2004年">2004年</a>に発表された<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a>。</li>
+<li>同じARMv7-M/v7E-MシリーズのCortex-M3,M4,M7共に<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ハーバード・アーキテクチャ">ハーバード・アーキテクチャ</a>であることが最大の特徴である。</li>
+<li>自動車・工場・家電などの機器制御などに使われている。自動車では、モーター制御、<a href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0" title="パワーステアリング">パワーステアリング</a>、<a href="/wiki/%E6%A8%AA%E6%BB%91%E3%82%8A%E9%98%B2%E6%AD%A2%E8%A3%85%E7%BD%AE" title="横滑り防止装置">横滑り防止装置</a>などいろいろな場所で使われている。</li>
+<li>ワンボードマイコン
+<ul><li><a href="/wiki/Mbed" title="Mbed">mbed</a> - NXPのLPC1768の評価ボード。ホビー用途としても広く流通している。</li></ul></li></ul>
+<h3><span class="mw-headline" id="Cortex-A8">Cortex-A8</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=9" title="節を編集: Cortex-A8">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2009%E5%B9%B4" title="2009年">2009年</a>頃から採用されるようになる。2010年発売のAndroidスマートフォンは大多数が採用。</li>
+<li><a href="/wiki/NetWalker" title="NetWalker">NetWalker</a></li>
+<li>Samsung S5PC100
+<ul><li><a href="/wiki/IPhone" title="IPhone">iPhone</a> 3GS（600 MHzで駆動）</li>
+<li><a href="/wiki/IPod_touch" title="IPod touch">iPod touch</a> (第3世代)</li></ul></li>
+<li><a href="/wiki/Apple_A4" title="Apple A4">Apple A4</a>（Cortex-A8をもとにAppleと<a href="/wiki/%E3%82%B5%E3%83%A0%E3%82%B9%E3%83%B3%E9%9B%BB%E5%AD%90" title="サムスン電子">サムスン</a>が携帯機器向けに開発）
+<ul><li><a href="/wiki/IPhone_4" title="IPhone 4">iPhone 4</a>（800MHz）</li>
+<li><a href="/wiki/IPad" title="IPad">iPad</a>（1GHz）</li>
+<li><a href="/wiki/IPod_touch" title="IPod touch">iPod touch</a>（第4世代）</li>
+<li><a href="/wiki/Apple_TV" title="Apple TV">Apple TV</a>（2010年モデル）</li></ul></li>
+<li>シングルボードコンピュータ
+<ul><li><a href="/wiki/BeagleBoard" title="BeagleBoard">BeagleBoard</a>、BeagleBoard-xM、BeableBone、BeagleBone Black
+<ul><li>テキサス・インスツルメンツが技術支援をして<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="オープンソースハードウェア">オープンソースハードウェア</a>によって開発されたボード。</li></ul></li>
+<li>Cubieboard</li></ul></li></ul>
+<h3><span class="mw-headline" id="Cortex-A9">Cortex-A9</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=10" title="節を編集: Cortex-A9">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>タブレットは2010年頃から、スマートフォンは2011年から採用された。初期は2コアだったが、4コアのものがタブレットは2011年から、スマートフォンは2012年から登場した。</li>
+<li><a href="/wiki/NVIDIA" title="NVIDIA">NVIDIA</a> <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">Tegra 2</a>
+<ul><li><a href="/wiki/Microsoft_Surface#Surface" title="Microsoft Surface">Surface RT</a></li></ul></li>
+<li>携帯ゲーム機
+<ul><li><a href="/wiki/PlayStation_Vita" title="PlayStation Vita">PlayStation Vita</a></li></ul></li>
+<li><a href="/wiki/Apple_A5" title="Apple A5">Apple A5</a>
+<ul><li><a href="/wiki/Apple_TV" title="Apple TV">Apple TV (第3世代)</a></li>
+<li><a href="/wiki/IPod_touch" title="IPod touch">iPod touch (第5世代)</a></li>
+<li><a href="/wiki/IPad_2" title="IPad 2">iPad 2</a>, <a href="/wiki/IPad_mini" title="IPad mini">iPad mini</a></li>
+<li><a href="/wiki/IPhone_4S" title="IPhone 4S">iPhone 4S</a></li></ul></li>
+<li>Apple A5X
+<ul><li><a href="/wiki/IPad_(%E7%AC%AC3%E4%B8%96%E4%BB%A3)" title="IPad (第3世代)">iPad (第3世代)</a></li></ul></li>
+<li>シングルボードコンピュータ
+<ul><li><a href="/wiki/PandaBoard" title="PandaBoard">PandaBoard</a>
+<ul><li>BeagleBoard同様、テキサス・インスツルメンツの技術支援によって開発されたボード。</li></ul></li>
+<li>Wandboard</li></ul></li></ul>
+<h3><span class="mw-headline" id="Cortex-A15">Cortex-A15</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=11" title="節を編集: Cortex-A15">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>タブレットは2012年から、スマートフォンは2013年から採用された。</li>
+<li><a href="/wiki/%E3%82%B5%E3%83%A0%E3%82%B9%E3%83%B3%E9%9B%BB%E5%AD%90" title="サムスン電子">サムスン電子</a>は1.7GHzのデュアルコア Exynos 5250 を2012年10月<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>から搭載商品を販売開始。メモリ帯域12.8GB/s<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。</li>
+<li>テキサス・インスルメンツは2GHzのデュアルコアで2012年第3四半期から商品を出荷予定<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。</li>
+<li>NVIDIA は Tegra 4 を2013年第1四半期から出荷予定。</li>
+<li>シングルボードコンピュータ
+<ul><li><a href="/wiki/ODROID" title="ODROID">ODROID</a>-XU</li></ul></li></ul>
+<h3><span class="mw-headline" id="Cortex-A57">Cortex-A57</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=12" title="節を編集: Cortex-A57">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>2012年10月に<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a> ARMのCortex-A57, A53（コードネーム「Atlas」と「Apollo」）が発表され<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>、2014年に搭載商品（Samsung Galaxy Note 4 など）が販売開始された。</li>
+<li>AMD は2015年下半期にサーバー向け Opteron A1100 (Seattle) をリリース予定<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup><sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。</li>
+<li>A57やA53では、8コアや全てのコア同時稼働できる4+4コア（A57が4コア、A53が4コア）などが登場した。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A72">Cortex-A72</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=13" title="節を編集: Cortex-A72">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2015%E5%B9%B4" title="2015年">2015年</a><a href="/wiki/2%E6%9C%883%E6%97%A5" title="2月3日">2月3日</a>に発表され<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>、2015年に搭載商品が販売される予定<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>。Cortex-A57の後継製品。</li></ul>
+<ul><li>Raspberry Pi 4　Model B に採用された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A73">Cortex-A73</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=14" title="節を編集: Cortex-A73">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2016%E5%B9%B4" title="2016年">2016年</a> <a href="/wiki/5%E6%9C%8830%E6%97%A5" title="5月30日">5月30日</a> に発表された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A75">Cortex-A75</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=15" title="節を編集: Cortex-A75">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2017%E5%B9%B4" title="2017年">2017年</a> <a href="/wiki/5%E6%9C%8829%E6%97%A5" title="5月29日">5月29日</a> に発表された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A76">Cortex-A76</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=16" title="節を編集: Cortex-A76">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2018%E5%B9%B4" title="2018年">2018年</a> <a href="/wiki/5%E6%9C%8831%E6%97%A5" title="5月31日">5月31日</a> に発表された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A77">Cortex-A77</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=17" title="節を編集: Cortex-A77">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2019%E5%B9%B4" title="2019年">2019年</a> <a href="/wiki/5%E6%9C%8827%E6%97%A5" title="5月27日">5月27日</a> に発表された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-A78">Cortex-A78</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=18" title="節を編集: Cortex-A78">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2020%E5%B9%B4" title="2020年">2020年</a> <a href="/wiki/5%E6%9C%8826%E6%97%A5" title="5月26日">5月26日</a> に発表された。</li></ul>
+<h3><span class="mw-headline" id="Cortex-X1">Cortex-X1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=19" title="節を編集: Cortex-X1">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/2020%E5%B9%B4" title="2020年">2020年</a> <a href="/wiki/5%E6%9C%8826%E6%97%A5" title="5月26日">5月26日</a> にCortex-A78と共に発表された。</li>
+<li>Cortex-X Custom Programに基づき、Cortex-A78をベースに拡張されている。</li></ul>
+<p><br/>
+</p>
+<h2><span id=".E3.82.B3.E3.82.A2.E3.81.AE.E6.80.A7.E8.83.BD.E3.81.A8.E6.8E.A1.E7.94.A8.E5.AE.9F.E7.B8.BE"></span><span class="mw-headline" id="コアの性能と採用実績">コアの性能と採用実績</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=20" title="節を編集: コアの性能と採用実績">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="ARM.E7.A4.BE.E8.A3.BD"></span><span class="mw-headline" id="ARM社製">ARM社製</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=21" title="節を編集: ARM社製">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%; font-size: 80%;">
+<tbody><tr>
+<th>ファミリー
+</th>
+<th>アーキテクチャ
+</th>
+<th>コア
+</th>
+<th>特徴
+</th>
+<th>キャッシュ (I/D)/MMU
+</th>
+<th>性能 MIPS @ MHz
+</th>
+<th>採用製品
+</th></tr>
+<tr>
+<th>ARM1
+</th>
+<td>ARMv1
+</td>
+<td>ARM1
+</td>
+<td>
+</td>
+<td>なし
+</td>
+<td>
+</td>
+<td><a class="new" href="/w/index.php?title=BBC_Cheese_Wedge&amp;action=edit&amp;redlink=1" title="BBC Cheese Wedge (存在しないページ)">ARM Evaluation System</a> second processor for <a href="/wiki/BBC_Micro" title="BBC Micro">BBC Micro</a>
+</td></tr>
+<tr>
+<th rowspan="2">ARM2
+</th>
+<td>ARMv2
+</td>
+<td>ARM2
+</td>
+<td>MUL（乗算）命令を追加
+</td>
+<td>なし
+</td>
+<td><div class="plainlist"><ul><li>4 MIPS @ 8 MHz</li><li>0.33 <a class="mw-redirect" href="/wiki/DMIPS" title="DMIPS">DMIPS</a>/MHz</li></ul></div>
+</td>
+<td><a href="/wiki/Acorn_Archimedes" title="Acorn Archimedes">Acorn Archimedes</a>, <a class="new" href="/w/index.php?title=Chessmachine&amp;action=edit&amp;redlink=1" title="Chessmachine (存在しないページ)">Chessmachine</a>
+</td></tr>
+<tr>
+<td>ARMv2a
+</td>
+<td>ARM250
+</td>
+<td>統合メモリコントローラ (MMU), Graphics and IO processor. SWAP命令を追加
+</td>
+<td>なし, MEMC1a
+</td>
+<td>7 MIPS @ 12 MHz
+</td>
+<td>Acorn Archimedes
+</td></tr>
+<tr>
+<th>ARM3
+</th>
+<td>ARMv2a
+</td>
+<td>ARM2a
+</td>
+<td>ARMとしてはじめてのキャッシュの採用
+</td>
+<td>4 KB 統合
+</td>
+<td><div class="plainlist"><ul><li>12 MIPS @ 25 MHz</li><li>0.50 <a class="mw-redirect" href="/wiki/DMIPS" title="DMIPS">DMIPS</a>/MHz</li></ul></div>
+</td>
+<td>Acorn Archimedes
+</td></tr>
+<tr>
+<th rowspan="3">ARM6
+</th>
+<td rowspan="3">ARMv3
+</td>
+<td>ARM60
+</td>
+<td>32ビットアドレス空間をサポート（それまでは26ビット）
+</td>
+<td>なし
+</td>
+<td>10 MIPS @ 12 MHz
+</td>
+<td><a href="/wiki/3DO" title="3DO">3DO</a>, Zarlink GPS Receiver
+</td></tr>
+<tr>
+<td>ARM600
+</td>
+<td>キャッシュ、コプロセッサバス（FPA10浮動小数点演算ユニット用）
+</td>
+<td>4 KB 統合
+</td>
+<td>28 MIPS @ 33 MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>ARM610
+</td>
+<td>キャッシュ、コプロセッサバスは無し
+</td>
+<td>4 KB 統合
+</td>
+<td><div class="plainlist"><ul><li>17 MIPS @ 20 MHz</li><li>0.65 <a class="mw-redirect" href="/wiki/DMIPS" title="DMIPS">DMIPS</a>/MHz</li></ul></div>
+</td>
+<td><a href="/wiki/Risc_PC" title="Risc PC">Acorn Risc PC 600</a>, <a href="/wiki/Apple_Newton" title="Apple Newton">Apple Newton</a> 100シリーズ
+</td></tr>
+<tr>
+<th rowspan="6">ARM7
+</th>
+<td rowspan="6">ARMv3
+</td>
+<td>ARM700
+</td>
+<td>
+</td>
+<td>8 KB 統合
+</td>
+<td>40 MHz
+</td>
+<td>Acorn Risc PC 試作CPUカード
+</td></tr>
+<tr>
+<td>ARM710
+</td>
+<td>
+</td>
+<td>8 KB 統合
+</td>
+<td>40 MHz
+</td>
+<td>Acorn Risc PC 700
+</td></tr>
+<tr>
+<td>ARM710a
+</td>
+<td>
+</td>
+<td>8 KB 統合
+</td>
+<td><div class="plainlist"><ul><li>40 MHz</li><li>0.68 <a class="mw-redirect" href="/wiki/DMIPS" title="DMIPS">DMIPS</a>/MHz</li></ul></div>
+</td>
+<td><a href="/wiki/Risc_PC" title="Risc PC">Acorn Risc PC 700</a>, <a href="/wiki/Apple_Newton" title="Apple Newton">Apple Newton</a> eMate 300
+</td></tr>
+<tr>
+<td>ARM7100
+</td>
+<td>Integrated SoC.
+</td>
+<td>8 KB 統合
+</td>
+<td>18 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=Psion_5&amp;action=edit&amp;redlink=1" title="Psion 5 (存在しないページ)">Psion Series 5</a>
+</td></tr>
+<tr>
+<td>ARM7500
+</td>
+<td>Integrated SoC.
+</td>
+<td>4 KB 統合
+</td>
+<td>40 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=Acorn_A7000&amp;action=edit&amp;redlink=1" title="Acorn A7000 (存在しないページ)">Acorn A7000</a>
+</td></tr>
+<tr>
+<td>ARM7500FE
+</td>
+<td>Integrated SoC. "FE"、FPA・EDOメモリコントローラを追加
+</td>
+<td>4 KB 統合
+</td>
+<td><div class="plainlist"><ul><li>56 MHz</li><li>0.73 <a class="mw-redirect" href="/wiki/DMIPS" title="DMIPS">DMIPS</a>/MHz</li></ul></div>
+</td>
+<td><a class="new" href="/w/index.php?title=RiscStation&amp;action=edit&amp;redlink=1" title="RiscStation (存在しないページ)">Acorn A7000+</a>
+</td></tr>
+<tr>
+<th rowspan="5">ARM7TDMI
+</th>
+<td rowspan="4">v4T
+</td>
+<td>ARM7TDMI(-S)
+</td>
+<td>3ステージ パイプライン
+</td>
+<td>無し
+</td>
+<td>15 MIPS @ 16.8 MHz
+</td>
+<td><a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9" title="ゲームボーイアドバンス">ゲームボーイアドバンス</a>, <a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS" title="ニンテンドーDS">ニンテンドーDS</a>, <a href="/wiki/IPod" title="IPod">iPod</a>
+</td></tr>
+<tr>
+<td>ARM710T
+</td>
+<td>
+</td>
+<td>MMU
+</td>
+<td>36 MIPS @ 40 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=En:Psion_5&amp;action=edit&amp;redlink=1" title="En:Psion 5 (存在しないページ)">Psion 5 series</a>, <a href="/wiki/Apple_Newton" title="Apple Newton">Apple Newton</a>
+</td></tr>
+<tr>
+<td>ARM720T
+</td>
+<td>
+</td>
+<td>8 KB 統合キャッシュ, MMU
+</td>
+<td>60 MIPS @ 59.8 MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>ARM740T
+</td>
+<td>
+</td>
+<td>MPU
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v5TEJ
+</td>
+<td>ARM7EJ-S
+</td>
+<td>Jazelle DBX
+</td>
+<td>なし
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="4">ARM9TDMI
+</th>
+<td rowspan="4">v4T
+</td>
+<td>ARM9TDMI
+</td>
+<td>5ステージ パイプライン
+</td>
+<td>なし
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>ARM920T
+</td>
+<td>
+</td>
+<td>16 KB/16 KB, MMU
+</td>
+<td>200 MIPS @ 180 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=En:Armadillo_CPU_Boards&amp;action=edit&amp;redlink=1" title="En:Armadillo CPU Boards (存在しないページ)">Armadillo</a>, <a href="/wiki/GP32" title="GP32">GP32</a>,<a href="/wiki/GP2X" title="GP2X">GP2X</a>（マスタ）, <a class="new" href="/w/index.php?title=En:Tapwave_Zodiac&amp;action=edit&amp;redlink=1" title="En:Tapwave Zodiac (存在しないページ)">en:Tapwave Zodiac</a> (<a class="mw-redirect" href="/wiki/Motorola" title="Motorola">Motorola</a> i. MX1)
+</td></tr>
+<tr>
+<td>ARM922T
+</td>
+<td>
+</td>
+<td>8 KB/8 KB, MMU
+</td>
+<td>200/250 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=CNS2132&amp;action=edit&amp;redlink=1" title="CNS2132 (存在しないページ)">Cavium CNS2132 (Econa product lines)</a>, <a class="new" href="/w/index.php?title=STR8132&amp;action=edit&amp;redlink=1" title="STR8132 (存在しないページ)">Cavium STR8132 (Econa evaluation board)</a>, <a class="new" href="/w/index.php?title=LN-86BT&amp;action=edit&amp;redlink=1" title="LN-86BT (存在しないページ)">Ritmo Torrent Box/Mini Lan Server/BT-Downloader (ZAP-LN-86BT)</a>
+</td></tr>
+<tr>
+<td>ARM940T
+</td>
+<td>
+</td>
+<td>4 KB/4 KB, MPU
+</td>
+<td>
+</td>
+<td><a href="/wiki/GP2X" title="GP2X">GP2X</a>（スレーブ）
+</td></tr>
+<tr>
+<th rowspan="5">ARM9E
+</th>
+<td rowspan="3">v5TE
+</td>
+<td>ARM946E-S
+</td>
+<td>
+</td>
+<td>variable, tightly coupled memories (TCM), MPU
+</td>
+<td><div class="plainlist"><ul><li>231 MIPS @ 210 MHz</li><li>74.47 MIPS @ 67.024 MHz</li></ul></div>
+</td>
+<td><a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS" title="ニンテンドーDS">ニンテンドーDS</a>, <a href="/wiki/%E3%83%8E%E3%82%AD%E3%82%A2" title="ノキア">ノキア</a> <a href="/wiki/N-Gage" title="N-Gage">N-Gage</a>, Conexant 802.11 chips
+</td></tr>
+<tr>
+<td>ARM966E-S
+</td>
+<td>
+</td>
+<td>キャッシュレス, TCMs
+</td>
+<td>
+</td>
+<td>
+<p>ST Micro STR91xF, Ethernet内蔵
+</p>
+</td></tr>
+<tr>
+<td>ARM968E-S
+</td>
+<td>
+</td>
+<td>キャッシュレス, TCMs
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v5TEJ
+</td>
+<td>ARM926EJ-S
+</td>
+<td>Jazelle DBX
+</td>
+<td>variable, TCMs, MMU
+</td>
+<td>220 MIPS @ 200 MHz
+</td>
+<td>Mobile phones: <a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%A8%E3%83%AA%E3%82%AF%E3%82%BD%E3%83%B3%E3%83%BB%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA" title="ソニー・エリクソン・モバイルコミュニケーションズ">ソニー・エリクソン・モバイルコミュニケーションズ</a>（K, W シリーズ）, <a href="/wiki/%E3%82%B7%E3%83%BC%E3%83%A1%E3%83%B3%E3%82%B9" title="シーメンス">シーメンス</a> and <a class="new" href="/w/index.php?title=Benq&amp;action=edit&amp;redlink=1" title="Benq (存在しないページ)">Benq</a>（x65 シリーズ以降）, <a href="/wiki/Texas_Instruments_OMAP" title="Texas Instruments OMAP">テキサスインスツルメンツ OMAP1710</a>
+</td></tr>
+<tr>
+<td>v5TE
+</td>
+<td>ARM996HS
+</td>
+<td>Clockless processor
+</td>
+<td>キャッシュレス, TCMs, MPU
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="3">ARM10E
+</th>
+<td rowspan="2">v5TE
+</td>
+<td>ARM1020E
+</td>
+<td>(VFP)
+</td>
+<td>32 KB/32 KB, MMU
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>ARM1022E
+</td>
+<td>(VFP)
+</td>
+<td>16 KB/16 KB, MMU
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v5TEJ
+</td>
+<td>ARM1026EJ-S
+</td>
+<td>Jazelle DBX
+</td>
+<td>variable, MMU or MPU
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="4">ARM11
+</th>
+<td>v6
+</td>
+<td>ARM1136J(F)-S
+</td>
+<td>SIMD, Jazelle DBX, (VFP)
+</td>
+<td>variable, MMU
+</td>
+<td>1.25 DMIPS/MHz
+</td>
+<td><a href="/wiki/Texas_Instruments_OMAP" title="Texas Instruments OMAP">TI OMAP 2</a>, Freescale <a href="/wiki/I.MX" title="I.MX">i.MX</a>3
+</td></tr>
+<tr>
+<td>v6T2
+</td>
+<td>ARM1156T2(F)-S
+</td>
+<td>SIMD, Thumb-2, (VFP)
+</td>
+<td>variable, MPU
+</td>
+<td>1.54 DMIPS/MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v6KZ
+</td>
+<td>ARM1176JZ(F)-S
+</td>
+<td>SIMD, Jazelle DBX, (VFP)
+</td>
+<td>variable, MMU+TrustZone
+</td>
+<td>1.25 DMIPS/MHz
+</td>
+<td><a href="/wiki/IPhone" title="IPhone">iPhone</a>, iPhone 3G, Broadcom BCM2835
+</td></tr>
+<tr>
+<td>v6K
+</td>
+<td>ARM11 MPCore
+</td>
+<td>1 – 4 core SMP, SIMD, Jazelle DBX, (VFP)
+</td>
+<td>variable, MMU
+</td>
+<td>1.25 DMIPS/MHz（最大608 MHz）
+</td>
+<td><a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a>
+</td></tr>
+<tr>
+<th rowspan="3">SecurCore
+</th>
+<td>v6-M
+</td>
+<td>SC000
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>0.9 DMIPS/MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v4T
+</td>
+<td>SC100
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>v7-M
+</td>
+<td>SC300
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1.25 DMIPS/MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="8">Cortex-M
+</th>
+<td rowspan="3">v6-M
+</td>
+<td>Cortex-M0
+</td>
+<td rowspan="3">マイクロコントローラ向け。M1はFPGA上で動作。命令はM3のサブセット。Thumb-2 (BL, MRS, MSR, ISB, DSB, and DMB)対応。
+</td>
+<td>
+</td>
+<td>0.9 DMIPS/MHz
+</td>
+<td>NXP LPC11xx, Triad Semiconductor, Melfas, 忠北テクノパーク, Nuvoton, オーストリアマイクロシステムズ, ローム, SwissMicros GmbH (<a href="/wiki/HP-10C%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA#DM1x_(DM-1xCC)" title="HP-10Cシリーズ">DM15</a>, <a href="/wiki/HP-41#DM41" title="HP-41">DM41</a>等)
+</td></tr>
+<tr>
+<td>Cortex-M0+
+</td>
+<td>
+</td>
+<td>0.93 DMIPS/MHz
+</td>
+<td>NXP LPC81x, LPC82x
+<p><a href="/wiki/Renesas_RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="Renesas RAファミリ">Renesas RAファミリ</a>,
+</p><p>Renesas Synergy S1シリーズ
+</p>
+</td></tr>
+<tr>
+<td>Cortex-M1
+</td>
+<td>なし, tightly coupled memory optional.
+</td>
+<td><div class="plainlist"><ul><li>0.8 DMIPS/MHz<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup></li><li>最大 136 DMIPS @ 170 MHz<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>（クロックはFPGA依存）</li></ul></div>
+</td>
+<td><a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%86%E3%83%A9" title="アルテラ">Altera</a> Cyclone III<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>, Actel FPGA<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
+</td></tr>
+<tr>
+<td>v7-M
+</td>
+<td>Cortex-M3
+</td>
+<td>マイクロコントローラ向け（ハーバード・アーキテクチャ）
+</td>
+<td>キャッシュなし, (MPU)
+</td>
+<td rowspan="2">1.25 DMIPS/MHz
+</td>
+<td>Texas Instruments Stellaris MCU, STMicroelectronics STM32, NXP LPC1000, NXP <a href="/wiki/Mbed" title="Mbed">mbed</a>, 東芝 TX03, <a class="new" href="/w/index.php?title=En:Luminary_Micro&amp;action=edit&amp;redlink=1" title="En:Luminary Micro (存在しないページ)">Luminary Micro</a>, Ember EM3xx, Atmel AT91SAM3, Europe Technologies EasyBCU, Energy Micro EFM32, Actel SmartFusion, <a href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサスエレクトロニクス">Renesas</a> R-IN32
+</td></tr>
+<tr>
+<td>v7E-M
+</td>
+<td>Cortex-M4
+</td>
+<td>マイクロコントローラ向け（ハーバード・アーキテクチャ）。M3にDSP追加。モーター制御、FA/電力制御、オーディオ/ビデオ処理など。
+</td>
+<td>
+</td>
+<td>Freescale Kinetis, NXP LPC43xx, STMicroelectronics,
+<p><a href="/wiki/Renesas_RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="Renesas RAファミリ">Renesas RAファミリ</a>,
+<a href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサスエレクトロニクス">Renesas</a> Synergy MCU (S3/S5/S7)
+</p>
+</td></tr>
+<tr>
+<td>v7-M
+</td>
+<td>Cortex-M7
+</td>
+<td>マイクロコントローラ向け（ハーバード・アーキテクチャ）。M4までの3段パイプラインから、スーパースカラ（デュアル）6段パイプラインとなり、命令/データ1次キャッシュ、倍精度浮動小数点演算を追加するなど大幅に強化された。クロック周波数は最大800 MHz程度までをターゲットとしており、2017年現在600 MHzで動作する製品がある（NXP i.MX RT1050シリーズ）。
+<p>反面、M3,M4にあったBitBand機能が削除されているなどの変更点もある。
+</p>
+</td>
+<td>L1 命令/データ 各0 – 64 KB, (MPU)
+</td>
+<td>2.14 DMIPS/MHz<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup><sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>
+</td>
+<td>STMicroelectronics STM32 F7, Atmel SAM x7x, NXP i.MX RT1050
+</td></tr>
+<tr>
+<td rowspan="2">v8-M
+</td>
+<td>Cortex-M23
+</td>
+<td>マイクロコントローラ向け（ノイマン・アーキテクチャ）
+</td>
+<td>
+</td>
+<td>0.98 DMIPS/MHz<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>
+</td>
+<td>Renesas Synergy S1JA, <a href="/wiki/Renesas_RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="Renesas RAファミリ">Renesas RA2A1</a>, Renesas RA2L1, Microchip SAML10
+</td></tr>
+<tr>
+<td>Cortex-M33
+</td>
+<td>マイクロコントローラ向け（ハーバード・アーキテクチャ）
+</td>
+<td>
+</td>
+<td>1.50 DMIPS/MHz<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>
+</td>
+<td><a href="/wiki/Renesas_RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="Renesas RAファミリ">Renesas RA6M4</a>, <a href="/wiki/Renesas_RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="Renesas RAファミリ">Renesas RA4M3</a>, STM32L5, NXP5500
+</td></tr>
+<tr>
+<th rowspan="3">Cortex-R
+</th>
+<td rowspan="3">v7-R
+</td>
+<td>Cortex-R4
+</td>
+<td rowspan="3">組み込み向け
+</td>
+<td>可変キャッシュ, MMUはオプション
+</td>
+<td>1.66 DMIPS/MHz
+</td>
+<td>Texas Instruments TMS570, <a class="mw-redirect" href="/wiki/Broadcom" title="Broadcom">Broadcom</a>,
+<p><a href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサスエレクトロニクス">Renesas</a> RZ/T
+</p>
+</td></tr>
+<tr>
+<td>Cortex-R5
+</td>
+<td>
+</td>
+<td>1.66 DMIPS/MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cortex-R7
+</td>
+<td>
+</td>
+<td>2.53 DMIPS/MHz
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="15">Cortex-A
+</th>
+<td rowspan="6">v7-A
+</td>
+<td>Cortex-A5
+</td>
+<td>低コスト、低消費電力
+</td>
+<td>L1: 4 KB – 64 KB可変, L2: オプション, メモリ管理ユニット, TrustZone
+</td>
+<td>1.57 DMIPS/MHz (400 MHz – 800 MHz)
+</td>
+<td><a href="/wiki/Atmel" title="Atmel">Atmel</a> SAMA5, PS-T328, <a href="/wiki/Snapdragon" title="Snapdragon">Snapdragon</a> S4 Play, Snapdragon 200
+</td></tr>
+<tr>
+<td>Cortex-A7
+</td>
+<td>1 – 4マルチプロセッシング 浮動小数点演算器 L2キャッシュメモリ4 MB（最高）
+</td>
+<td>メモリ管理ユニット, TrustZone, ラージ<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5" title="物理アドレス拡張">物理アドレス拡張</a>
+</td>
+<td>1.9 DMIPS/MHz ( – 1.5Ghz)
+</td>
+<td>Snapdragon S4 Play, Snapdragon 200, 208, 210, 212, 400, <a href="/wiki/Allwinner" title="Allwinner">Allwinner</a> A20, <a href="/wiki/Allwinner" title="Allwinner">Allwinner</a> A31, <a href="/wiki/MediaTek" title="MediaTek">MediaTek</a> MT6589, Broadcom BCM2836
+</td></tr>
+<tr>
+<td>Cortex-A8
+</td>
+<td>アプリケーション向け, NEON, Jazelle RCT, Thumb-2
+</td>
+<td>可変 (L1+L2), <a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">メモリ管理ユニット</a>, TrustZone
+</td>
+<td>2.0 DMIPS/MHz (600 MHz – 1 GHz)
+</td>
+<td><a href="/wiki/Texas_Instruments_OMAP#OMAP_3.E3.82.B7.E3.83.AA.E3.83.BC.E3.82.BA" title="Texas Instruments OMAP">TI OMAP 3</a>, Freescale <a href="/wiki/I.MX" title="I.MX">i.MX</a> 5, <a href="/wiki/Apple_A4" title="Apple A4">Apple A4</a>, Samsung <a href="/wiki/Exynos" title="Exynos">Exynos</a> 3, <a href="/wiki/Allwinner" title="Allwinner">Allwinner</a> A1x, <a href="/wiki/Rockchip" title="Rockchip">Rockchip</a> RK29xx
+</td></tr>
+<tr>
+<td>Cortex-A9
+</td>
+<td>アプリケーション向け, 1 – 4コア<a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型マルチプロセッシング</a>, (VFP), (NEON), Jazelle RCT and DBX, Thumb-2, <a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">アウト・オブ・オーダー実行</a>, <a href="/wiki/%E6%8A%95%E6%A9%9F%E7%9A%84%E5%AE%9F%E8%A1%8C" title="投機的実行">投機的実行</a>, <a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9" title="スーパースケーラ">スーパースケーラ</a>
+</td>
+<td>メモリ管理ユニット, TrustZone
+</td>
+<td>2.5 DMIPS/MHz (800 MHz – 2 GHz)
+</td>
+<td><a href="/wiki/Texas_Instruments_OMAP#OMAP_4.E3.82.B7.E3.83.AA.E3.83.BC.E3.82.BA" title="Texas Instruments OMAP">TI OMAP 4</a>,  Freescale <a href="/wiki/I.MX" title="I.MX">i.MX</a> 6, ST-Ericsson NovaThor U8500, <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 2, <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 3, <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 4i, STMicroelectronics <a class="external text" href="http://www.st.com/stonline/products/families/embedded_mpu/spear_mpus/spear_with_1300k.htm" rel="nofollow">SPEAr1300</a>, <a href="/wiki/%E3%82%B6%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B9" title="ザイリンクス">ザイリンクス</a> Zynq-7000, <a href="/wiki/Apple_A5" title="Apple A5">Apple A5</a>, <a href="/wiki/Rockchip" title="Rockchip">Rockchip</a> RK3xxx, Samsung <a href="/wiki/Exynos" title="Exynos">Exynos</a> 4, <a href="/wiki/HiSilicon" title="HiSilicon">HiSilicon</a> K3V2, Kirin 910, <a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>, <a href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサスエレクトロニクス">Renesas</a> RZ/A
+</td></tr>
+<tr>
+<td>Cortex-A15
+</td>
+<td>1 – 4コア対称型マルチプロセッシング
+</td>
+<td>メモリ管理ユニット, TrustZone, ラージ<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5" title="物理アドレス拡張">物理アドレス拡張</a>
+</td>
+<td>3.5 DMIPS/MHz (1 GHz – 2.5 GHz)
+</td>
+<td><a href="/wiki/Texas_Instruments_OMAP#OMAP_5.E3.82.B7.E3.83.AA.E3.83.BC.E3.82.BA" title="Texas Instruments OMAP">TI OMAP 5</a>, Samsung <a href="/wiki/Exynos" title="Exynos">Exynos</a> 5, <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 4, <a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> K1, <a href="/wiki/HiSilicon" title="HiSilicon">HiSilicon</a> Kirin 920, <a class="mw-redirect" href="/wiki/Renesas" title="Renesas">Renesas</a> APE6, <a class="mw-redirect" href="/wiki/Renesas" title="Renesas">Renesas</a> R-Car H2, <a class="mw-redirect" href="/wiki/Renesas" title="Renesas">Renesas</a> MP6530
+</td></tr>
+<tr>
+<td>Cortex-A17
+</td>
+<td>1 – 4コア対称型マルチプロセッシング
+</td>
+<td>メモリ管理ユニット, TrustZone, ラージ<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5" title="物理アドレス拡張">物理アドレス拡張</a>
+</td>
+<td>
+</td>
+<td><a href="/wiki/Rockchip" title="Rockchip">Rockchip</a> RK3288
+</td></tr>
+<tr>
+<td rowspan="6">v8-A
+</td>
+<td>Cortex-A32
+</td>
+<td>超小型、低消費電力、電力効率重視。<a href="/wiki/%E3%83%A2%E3%83%8E%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="モノのインターネット">IoT</a>機器向け。32ビット命令セット。
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cortex-A35
+</td>
+<td>低コスト、低消費電力、電力効率重視。64ビット命令セット。
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a> Helio X30
+</td></tr>
+<tr>
+<td>Cortex-A53
+</td>
+<td>64ビット命令セット。<a class="mw-redirect" href="/wiki/%E6%9A%97%E5%8F%B7%E5%8C%96" title="暗号化">暗号化</a>命令
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>2.3 DMIPS/MHz
+</td>
+<td>Snapdragon 410, 412, 415, 425, 610, 615, 617, 625, 808, 810, <a href="/wiki/HiSilicon" title="HiSilicon">HiSilicon</a> Kirin 620, 930, 935, <a href="/wiki/Rockchip" title="Rockchip">Rockchip</a> RK3368, <a href="/wiki/MediaTek" title="MediaTek">MediaTek</a> MT6732, 6735, 6737, 6737T, 6738, 6750, 6752, 6753, Helio P10, P20, P25, X10, X30
+</td></tr>
+<tr>
+<td>Cortex-A57
+</td>
+<td>
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>4.1 DMIPS/MHz
+</td>
+<td>Snapdragon 808, 810, Nvidia <a class="mw-redirect" href="/wiki/Tegra" title="Tegra">Tegra</a> X1, Samsung <a href="/wiki/Exynos" title="Exynos">Exynos</a> 7
+</td></tr>
+<tr>
+<td>Cortex-A72
+</td>
+<td>
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td>Snapdragon 618, 620, 650, 652, HiSilicon Kirin 950, 955
+</td></tr>
+<tr>
+<td>Cortex-A73
+</td>
+<td>
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td>HiSilicon Kirin 960, MediaTek Helio X30
+</td></tr>
+<tr>
+<td rowspan="3">v8.2-A
+</td>
+<td>Cortex-A55
+</td>
+<td>
+</td>
+<td>メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cortex-A75
+</td>
+<td>
+</td>
+<td>L1D: 64 KB, メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Cortex-A76
+</td>
+<td>4命令decode
+</td>
+<td>L1D: 64 KB, メモリ管理ユニット, TrustZone, 64bit仮想アドレス
+</td>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<h3><span id=".E3.82.B5.E3.83.BC.E3.83.89.E3.83.91.E3.83.BC.E3.83.86.E3.82.A3.E3.83.BC"></span><span class="mw-headline" id="サードパーティー">サードパーティー</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=22" title="節を編集: サードパーティー">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%; font-size: 80%;">
+<tbody><tr>
+<th>ファミリー
+</th>
+<th>アーキテクチャ
+</th>
+<th>名称
+</th>
+<th>特徴
+</th>
+<th>キャッシュ (I/D)/MMU
+</th>
+<th>性能 MIPS @ MHz
+</th>
+<th>採用製品
+</th></tr>
+<tr>
+<th>StrongARM
+</th>
+<td>v4
+</td>
+<td>SA-1
+</td>
+<td>
+</td>
+<td>16 KB/8 – 16 KB, MMU
+</td>
+<td>1.0 DMIPS/MHz (203 – 206 MHz)
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="17">XScale
+</th>
+<td rowspan="17">v5TE
+</td>
+<td>80200/IOP310/IOP315
+</td>
+<td>I/O Processor
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>80219
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IOP321
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a class="new" href="/w/index.php?title=En:Iyonix&amp;action=edit&amp;redlink=1" title="En:Iyonix (存在しないページ)">en:Iyonix</a>
+</td></tr>
+<tr>
+<td>IOP33x
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>PXA210/PXA250
+</td>
+<td>Applications processor
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a href="/wiki/%E3%82%B6%E3%82%A6%E3%83%AB%E3%82%B9" title="ザウルス">ザウルス</a> SL-5600, SL-A300
+</td></tr>
+<tr>
+<td>PXA255
+</td>
+<td>
+</td>
+<td>32 KB/32 KB, MMU
+</td>
+<td>400 <a href="/wiki/BogoMips" title="BogoMips">BogoMips</a> @ 400 MHz
+</td>
+<td><a class="new" href="/w/index.php?title=En:Gumstix&amp;action=edit&amp;redlink=1" title="En:Gumstix (存在しないページ)">en:Gumstix</a>
+</td></tr>
+<tr>
+<td>PXA26x
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>PXA27x
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>800 MIPS @ 624 MHz
+</td>
+<td><a href="/wiki/HTC_(%E4%BC%81%E6%A5%AD)" title="HTC (企業)">HTC</a> Universal, <a href="/wiki/%E3%82%B6%E3%82%A6%E3%83%AB%E3%82%B9" title="ザウルス">ザウルス</a> SL-C1000,3000,3100,3200,<a class="mw-redirect" href="/wiki/Willcom" title="Willcom">Willcom</a> <a href="/wiki/W-ZERO3" title="W-ZERO3">W-ZERO3シリーズ</a> WS003SH,WS004SH,WS007SH,WS011SH,WS020SH
+</td></tr>
+<tr>
+<td>PXA800(E)F
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>Monahans
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1000 MIPS @ 1.25 GHz
+</td>
+<td>
+</td></tr>
+<tr>
+<td>PXA900
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>Blackberry 8700, Blackberry Pearl (8100)
+</td></tr>
+<tr>
+<td>IXC1100
+</td>
+<td>Control Plane Processor
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IXP2400/IXP2800
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IXP2850
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IXP2325/IXP2350
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<td>IXP42x
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td><a class="new" href="/w/index.php?title=En:NSLU2&amp;action=edit&amp;redlink=1" title="En:NSLU2 (存在しないページ)">en:NSLU2</a>
+</td></tr>
+<tr>
+<td>IXP460/IXP465
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td></tr>
+<tr>
+<th rowspan="3">Snapdragon
+</th>
+<td rowspan="2">v7-A
+</td>
+<td>Scorpion
+</td>
+<td>アプリケーション向け, 1 – 2コア対称型マルチプロセッシング, VFPv3, NEON, Thumb-2, Jazelle RCT, <a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">アウト・オブ・オーダー実行</a>, <a href="/wiki/%E6%8A%95%E6%A9%9F%E7%9A%84%E5%AE%9F%E8%A1%8C" title="投機的実行">投機的実行</a>
+</td>
+<td>可変(L1+L2), <a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a>, TrustZone
+</td>
+<td>2.1 DMIPS/MHz (800 MHz – 1.5 GHz)
+</td>
+<td><a href="/wiki/%E3%82%AF%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%A0" title="クアルコム">Qualcomm</a> Snapdragon S1, S2, S3 (第1 – 3世代)
+</td></tr>
+<tr>
+<td>Krait
+</td>
+<td>アプリケーション向け, 1 – 4コア対称型マルチプロセッシング, VFPv4
+</td>
+<td><a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a>, TrustZone
+</td>
+<td>3.3 DMIPS/MHz ( – 2.5 GHz)
+</td>
+<td>Qualcomm Snapdragon S4 (第4世代・S4 Playは除く), 400/600/800 (第5世代)
+</td></tr>
+<tr>
+<td>v8-A
+</td>
+<td>Kryo
+</td>
+<td>
+</td>
+<td>64 KB/512 KB – 1 MB
+</td>
+<td>6.3 DMIPS/MHz ( – 2.6 GHz)
+</td>
+<td>Qualcomm Snapdragon 820
+</td></tr>
+<tr>
+<th>Centriq
+</th>
+<td>v8-A
+</td>
+<td>Folker
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>Centriq 2400
+</td></tr>
+<tr>
+<th rowspan="2">ARMADA
+</th>
+<td rowspan="2">v7-A
+</td>
+<td>Sheeva PJ4
+</td>
+<td>アプリケーション向け, 1 – 4コア対称型マルチプロセッシング, VFPv3, Wireless MMX2, Thumb-2
+</td>
+<td>可変(L1+L2), <a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a>, TrustZone
+</td>
+<td>2.42 DMIPS/MHz ( – 1.5 GHz)
+</td>
+<td><a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">Marvell</a> ARMADA 500/600シリーズ
+</td></tr>
+<tr>
+<td>Sheeva PJ4B
+</td>
+<td>組み込み向け, 1 – 4コア対称型マルチプロセッシング, VFPv3, NEON, Wireless MMX2, Thumb-2
+</td>
+<td>可変(L1+L2), <a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a>, TrustZone
+</td>
+<td>2.61 DMIPS/MHz ( – 1.6 GHz)
+</td>
+<td>Marvell ARMADA XP/370/1500
+</td></tr>
+<tr>
+<th rowspan="12">Apple Ax
+</th>
+<td>v7-A
+</td>
+<td>Swift
+</td>
+<td>アプリケーション向け, 2コア対称型マルチプロセッシング, VFPv4
+</td>
+<td>32 KB/32 KB
+</td>
+<td>1.1 GHz, 1.4 GHz
+</td>
+<td><a href="/wiki/Apple_A6" title="Apple A6">Apple A6</a>, <a class="mw-redirect" href="/wiki/Apple_A6X" title="Apple A6X">Apple A6X</a>
+</td></tr>
+<tr>
+<td rowspan="9">v8-A
+</td>
+<td>Cyclone
+</td>
+<td>アプリケーション向け, 2コア, AArch64
+</td>
+<td>64 KB/64 KB
+</td>
+<td>1.3 GHz
+</td>
+<td><a href="/wiki/Apple_A7" title="Apple A7">Apple A7</a>
+</td></tr>
+<tr>
+<td>Cyclone gen 2
+</td>
+<td>アプリケーション向け, 2コア, AArch64
+</td>
+<td>64 KB/64 KB
+</td>
+<td>1.1 GHz, 1.4 GHz
+</td>
+<td><a href="/wiki/Apple_A8" title="Apple A8">Apple A8</a>
+</td></tr>
+<tr>
+<td>Typhoon
+</td>
+<td>アプリケーション向け, 3コア, AArch64
+</td>
+<td>64 KB/64 KB
+</td>
+<td>1.5 GHz
+</td>
+<td><a href="/wiki/Apple_A8X" title="Apple A8X">Apple A8X</a>
+</td></tr>
+<tr>
+<td>Twister
+</td>
+<td>アプリケーション向け, 2コア, AArch64
+</td>
+<td>64 KB/64 KB
+</td>
+<td>1.8 GHz, 2.25 GHz
+</td>
+<td><a href="/wiki/Apple_A9" title="Apple A9">Apple A9</a>, <a href="/wiki/Apple_A9X" title="Apple A9X">Apple A9X</a>
+</td></tr>
+<tr>
+<td rowspan="2">Hurricane, Zephyr
+</td>
+<td>アプリケーション向け, 2+2コア, AArch64
+</td>
+<td rowspan="2">64 KB/64 KB
+</td>
+<td>2.33 GHz
+</td>
+<td><a href="/wiki/Apple_A10" title="Apple A10">Apple A10 Fusion</a>
+</td></tr>
+<tr>
+<td>アプリケーション向け, 3+3コア, AArch64
+</td>
+<td>2.38Ghz
+</td>
+<td><a href="/wiki/Apple_A10X" title="Apple A10X">Apple A10X Fusion</a>
+</td></tr>
+<tr>
+<td>Monsoon, Mistral
+</td>
+<td>アプリケーション向け, 2+4コア, AArch64
+</td>
+<td>L1: 64 KB/64 KB, L2: 8 MB
+</td>
+<td>2.39 GHz
+</td>
+<td><a href="/wiki/Apple_A11" title="Apple A11">Apple A11 Bionic</a>
+</td></tr>
+<tr>
+<td rowspan="2">Vortex, Tempest
+</td>
+<td>アプリケーション向け, 2+4コア, AArch64
+</td>
+<td rowspan="2">L1: 128 KB/128 KB, L2: 8 MB
+</td>
+<td>2.49 GHz
+</td>
+<td><a href="/wiki/Apple_A12" title="Apple A12">Apple A12 Bionic</a>
+</td></tr>
+<tr>
+<td>アプリケーション向け, 4+4コア, AArch64
+</td>
+<td>2.5GHZ
+</td>
+<td><a href="/wiki/Apple_A12X" title="Apple A12X">Apple A12X Bionic, Apple A12Z Bionic</a>
+</td></tr>
+<tr>
+<td>v8.3-A
+</td>
+<td>Lightning, Thunder
+</td>
+<td>アプリケーション向け, 2+4コア, AArch64
+</td>
+<td>L1: 48 KB/48 KB, L2: 4 MB
+</td>
+<td>2.65 GHz
+</td>
+<td><a href="/wiki/Apple_A13" title="Apple A13">Apple A13 Bionic</a>
+</td></tr>
+<tr>
+<td rowspan="2">v8.6-A
+</td>
+<td rowspan="2">Firestorm, Icestorm
+</td>
+<td>アプリケーション向け, 2+4コア, AArch64
+</td>
+<td>L1: 192 KB/64 KB, L2: 12 MB/4 MB
+</td>
+<td>2.99 GHz
+</td>
+<td><a href="/wiki/Apple_A14" title="Apple A14">Apple A14 Bionic</a>
+</td></tr>
+<tr>
+<th>Apple M1
+</th>
+<td>アプリケーション向け, 4+4コア, AArch64
+</td>
+<td>L1: 192 KB/64 KB, L2: 12 MB/4 MB
+</td>
+<td>3.2 GHz
+</td>
+<td><a href="/wiki/Apple_M1" title="Apple M1">Apple M1</a>
+</td></tr>
+<tr>
+<th>Tegra K1
+</th>
+<td rowspan="3">v8-A
+</td>
+<td>Denver
+</td>
+<td>
+</td>
+<td>128 KB/64 KB
+</td>
+<td>
+</td>
+<td>Google <a href="/wiki/Nexus_9" title="Nexus 9">Nexus 9</a>, <a href="/wiki/%E5%B0%8F%E7%B1%B3%E7%A7%91%E6%8A%80" title="小米科技">Xiaomi</a> Mi Pad
+</td></tr>
+<tr>
+<th>Parker
+</th>
+<td>Denver 2.0
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>DRIVE PX2
+</td></tr>
+<tr>
+<th>Xavier
+</th>
+<td>Carmel
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>DRIVE Xavier, Jetson AGX Xavier
+</td></tr>
+<tr>
+<th rowspan="3">Exynos
+</th>
+<td rowspan="3">v8-A
+</td>
+<td>Exynos M1
+</td>
+<td>
+</td>
+<td>64 KB/2 MB（4コアシェア）
+</td>
+<td>
+</td>
+<td>Exynos 8890 (Exynos 8 Octa)
+</td></tr>
+<tr>
+<td>Exynos M2
+</td>
+<td>
+</td>
+<td>64 KB/2 MB（4コアシェア）
+</td>
+<td>
+</td>
+<td>Exynos 8895
+</td></tr>
+<tr>
+<td>Exynos M3
+</td>
+<td>
+</td>
+<td>64 KB/2 MB（4コアシェア）
+</td>
+<td>
+</td>
+<td>Exynos 9810
+</td></tr></tbody></table>
+<p>ARMv7-A, v8-A は以下の SoC で実装されている。
+</p>
+<ul><li><a href="/wiki/Allwinner" title="Allwinner">Allwinner</a> (全志科技)</li>
+<li>Amlogic (晶晨半导体)</li>
+<li><a href="/wiki/Apple_A4" title="Apple A4">Apple A4</a>, <a href="/wiki/Apple_A5" title="Apple A5">Apple A5</a>, <a href="/wiki/Apple_A5" title="Apple A5">Apple A5X</a>, <a href="/wiki/Apple_A6" title="Apple A6">Apple A6</a>, <a class="mw-redirect" href="/wiki/Apple_A6X" title="Apple A6X">Apple A6X</a>, <a href="/wiki/Apple_A7" title="Apple A7">Apple A7</a>, <a href="/wiki/Apple_A8" title="Apple A8">Apple A8</a>, <a href="/wiki/Apple_A8X" title="Apple A8X">Apple A8X</a>, <a href="/wiki/Apple_A9" title="Apple A9">Apple A9</a>, <a href="/wiki/Apple_A9X" title="Apple A9X">Apple A9X</a>, <a href="/wiki/Apple_A10" title="Apple A10">Apple A10</a>, <a href="/wiki/Apple_A10X" title="Apple A10X">Apple A10X</a>, <a href="/wiki/Apple_A11" title="Apple A11">Apple A11</a>, <a href="/wiki/Apple_A12" title="Apple A12">Apple A12</a>, <a href="/wiki/Apple_A12X" title="Apple A12X">Apple A12X</a></li>
+<li>Freescale <a href="/wiki/I.MX" title="I.MX">i.MX</a></li>
+<li>Fujitsu ARM based SoC Platform (FASP)</li>
+<li><a href="/wiki/HiSilicon" title="HiSilicon">HiSilicon</a> (海思半导体)</li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">Marvell</a> ARMADA</li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a></li>
+<li><a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%A0" title="クアルコム">Qualcomm</a> <a href="/wiki/Snapdragon" title="Snapdragon">Snapdragon</a></li>
+<li><a class="mw-redirect" href="/wiki/Renesas" title="Renesas">Renesas</a> EV2, APE6</li>
+<li><a href="/wiki/Rockchip" title="Rockchip">Rockchip</a> (瑞芯微电子)</li>
+<li><a class="mw-redirect" href="/wiki/Samsung" title="Samsung">Samsung</a> Hummingbird, <a class="mw-redirect" href="/wiki/Samsung" title="Samsung">Samsung</a> <a href="/wiki/Exynos" title="Exynos">Exynos</a></li>
+<li>ST-Ericsson NovaThor</li>
+<li>STMicroelectronics SPEAr</li>
+<li><a href="/wiki/Texas_Instruments_OMAP" title="Texas Instruments OMAP">Texas Instruments OMAP</a></li>
+<li>Trident PNX</li>
+<li>ZiiLABS ZMS</li></ul>
+<h2><span id="ARM.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.E3.82.92.E6.8E.A1.E7.94.A8.E3.81.97.E3.81.A6.E3.81.84.E3.82.8BCPU.2F.E3.83.A1.E3.83.BC.E3.82.AB"></span><span class="mw-headline" id="ARMアーキテクチャを採用しているCPU/メーカ">ARMアーキテクチャを採用しているCPU/メーカ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=23" title="節を編集: ARMアーキテクチャを採用しているCPU/メーカ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/ARM%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9#概要" title="ARMホールディングス">ARMホールディングスの概要</a>にあるように、ARMホールディングスはARMアーキテクチャの設計のみをしており、製造は行ってはいない。ARMは<a href="/wiki/IP%E3%82%B3%E3%82%A2" title="IPコア">IPコア</a>として各社にライセンスされ、それぞれの会社において機能を追加するなどして<a href="/wiki/CPU" title="CPU">CPU</a>として製造される。製造されたCPUはそのまま、あるいはボード上に実装、もしくは製品に組み込まれた形で販売などされる。
+</p><p>以下に『CPUそのもの』『ボード上に実装したもの』などCPUやボードのシリーズ名やブランド名などが明確な主なメーカ名/CPU名/シリーズ名等を記する。
+</p>
+<ul><li><a href="/wiki/NXP%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA" title="NXPセミコンダクターズ">NXPセミコンダクターズ</a>
+<ul><li>LPC</li>
+<li>LPCXpresso</li>
+<li>mbed</li></ul></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF" title="フリースケール・セミコンダクタ">フリースケール・セミコンダクタ</a>
+<ul><li>i.MX</li>
+<li>Kinetis</li></ul></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>-<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>
+<ul><li><a href="/wiki/StrongARM" title="StrongARM">StrongARM</a></li></ul></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a> - <a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">マーベル・テクノロジー・グループ</a>
+<ul><li><a href="/wiki/XScale" title="XScale">XScale</a></li></ul></li>
+<li><a href="/wiki/ST%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="STマイクロエレクトロニクス">STマイクロエレクトロニクス</a>
+<ul><li>STM32</li></ul></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B5%E3%82%A4%E3%83%97%E3%83%AC%E3%82%B9%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA&amp;action=edit&amp;redlink=1" title="サイプレス・マイクロシステムズ (存在しないページ)">サイプレス・マイクロシステムズ</a>
+<ul><li><a href="/wiki/PSoC" title="PSoC">PSoC 5</a></li></ul></li>
+<li><a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a>
+<ul><li><a class="new" href="/w/index.php?title=TX03&amp;action=edit&amp;redlink=1" title="TX03 (存在しないページ)">TX03</a>,<a class="new" href="/w/index.php?title=TX09&amp;action=edit&amp;redlink=1" title="TX09 (存在しないページ)">TX09</a>シリーズ</li></ul></li>
+<li><a class="mw-redirect" href="/wiki/Panasonic" title="Panasonic">Panasonic</a>
+<ul><li><a class="new" href="/w/index.php?title=MN2WS0220&amp;action=edit&amp;redlink=1" title="MN2WS0220 (存在しないページ)">MN2WS0220</a>シリーズ(スマートテレビ用UniPhier)</li></ul></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9_%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサス エレクトロニクス">ルネサス エレクトロニクス</a>
+<ul><li><a class="mw-redirect" href="/wiki/RA%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA" title="RAファミリ">RAファミリ</a></li>
+<li>RZファミリ</li>
+<li>REファミリ</li>
+<li>EMMA Mobile</li>
+<li>R-Mobile</li>
+<li>R-Car</li>
+<li>R-IN</li>
+<li>Renesas Synergy</li></ul></li>
+<li><a href="/wiki/%E5%AF%8C%E5%A3%AB%E9%80%9A" title="富士通">富士通</a>
+<ul><li>A64FX</li></ul></li></ul>
+<h2><span id="32.E3.83.93.E3.83.83.E3.83.88ARM"></span><span class="mw-headline" id="32ビットARM">32ビットARM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=24" title="節を編集: 32ビットARM">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88"></span><span class="mw-headline" id="命令セット">命令セット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=25" title="節を編集: 命令セット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ARM は RISC プロセッサであり、Thumb 命令ではなく ARM 命令の場合、その命令セットは
+</p>
+<ul><li>32ビット固定長命令</li>
+<li>ロード/ストアアーキテクチャ</li>
+<li>3オペランドのレジスタ間演算</li>
+<li>多くの命令が1サイクルで実行可能</li></ul>
+<p>といった、多くの32ビットRISCプロセッサに共通する特徴が見られる。
+</p><p>ARMプロセッサは、<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)#プログラムカウンタ" title="レジスタ (コンピュータ)">PC</a>相対アドレッシングやプレ-/ポスト-インクリメント・アドレッシングモードなど、RISCとみなされる他のアーキテクチャと比べ、豊富な<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%BC%E3%83%89" title="アドレッシングモード">アドレッシングモード</a>を持っている。
+</p><p>もう一つ留意すべきことは、ARMの命令セットが時間とともに増加しているということである。例えば、初期のARMプロセッサ（ARM7TDMIより以前のもの）は2バイトの値をロードする命令がなかった。
+</p>
+<h3><span id="CPU.E3.83.A2.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="CPUモード">CPUモード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=26" title="節を編集: CPUモード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>32ビット ARM アーキテクチャはいくつかのCPUモードを持つ。同時には1つのモードにしかなれない。命令や外部からの割込みなどでモードが切り替わる<sup class="reference" id="cite_ref-Chdddhea_28-0"><a href="#cite_note-Chdddhea-28">[28]</a></sup>。
+</p>
+<dl><dt>ユーザーモード</dt>
+<dd>唯一の非特権モード。</dd>
+<dt>高速割込みモード</dt>
+<dd>FIQ 割込みが発生したときに切り替わる特権モード。</dd>
+<dt>割込みモード</dt>
+<dd>IRQ 割込みが発生したときに切り替わる特権モード。</dd>
+<dt>スーパーバイザーモード</dt>
+<dd>CPU がリセットされたときか SWI 命令が実行されたときに切り替わる特権モード。</dd>
+<dt>アボートモード</dt>
+<dd>プリフェッチアボートかデータアボート例外が発生したときに切り替わる特権モード。</dd>
+<dt>未定義モード</dt>
+<dd>未定義命令が実行されたときに切り替わる特権モード。</dd>
+<dt>システムモード (ARMv4以降)</dt>
+<dd>これが唯一例外が原因で切り替わるモードではない。CPSRレジスタにこのモードを書くことによりこのモードに切り替えることが出来る。</dd>
+<dt>MONモード (要セキュリティ拡張)</dt>
+<dd>TrustZone 拡張をサポートするために作られたモニターモード。</dd>
+<dt>HYP 別名 PL2 モード (ARMv7以降)</dt>
+<dd>仮想化拡張、ハイパーバイザーモード。<sup class="reference" id="cite_ref-2012-lpc-arm-zyngier_29-0"><a href="#cite_note-2012-lpc-arm-zyngier-29">[29]</a></sup></dd></dl>
+<h3><span id=".E3.83.AC.E3.82.B8.E3.82.B9.E3.82.BF"></span><span class="mw-headline" id="レジスタ">レジスタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=27" title="節を編集: レジスタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>レジスタ R0 から R7 は全ての CPU モードで同一。これらは決してバンクされない。
+</p><p>R13 と R14 はシステムモード以外の全ての特権 CPU モードでバンクされる。独自の R13 と R14 を持つことにより例外からそれぞれのモードに切り替えられる。R13 はスタックポインタ、R14 は関数からの戻りアドレスを持つ。
+</p>
+<table class="wikitable">
+<caption>CPU モードごとのレジスタ
+</caption>
+<tbody><tr>
+<th>usr</th>
+<th>sys</th>
+<th>svc</th>
+<th>abt</th>
+<th>und</th>
+<th>irq</th>
+<th>fiq
+</th></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R0
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R1
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R2
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R3
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R4
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R5
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R6
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R7
+</td></tr>
+<tr align="center">
+<td colspan="6">R8</td>
+<td>R8_fiq
+</td></tr>
+<tr align="center">
+<td colspan="6">R9</td>
+<td>R9_fiq
+</td></tr>
+<tr align="center">
+<td colspan="6">R10</td>
+<td>R10_fiq
+</td></tr>
+<tr align="center">
+<td colspan="6">R11</td>
+<td>R11_fiq
+</td></tr>
+<tr align="center">
+<td colspan="6">R12</td>
+<td>R12_fiq
+</td></tr>
+<tr align="center">
+<td colspan="2">R13</td>
+<td>R13_svc</td>
+<td>R13_abt</td>
+<td>R13_und</td>
+<td>R13_irq</td>
+<td>R13_fiq
+</td></tr>
+<tr align="center">
+<td colspan="2">R14</td>
+<td>R14_svc</td>
+<td>R14_abt</td>
+<td>R14_und</td>
+<td>R14_irq</td>
+<td>R14_fiq
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">R15
+</td></tr>
+<tr>
+<td colspan="7" style="text-align:center;">CPSR
+</td></tr>
+<tr align="center">
+<td colspan="2"></td>
+<td>SPSR_svc</td>
+<td>SPSR_abt</td>
+<td>SPSR_und</td>
+<td>SPSR_irq</td>
+<td>SPSR_fiq
+</td></tr></tbody></table>
+<p>別名：
+</p>
+<ul><li>R13 は SP とも呼ばれ、スタックポインタ</li>
+<li>R14 は LR とも呼ばれ、リンクレジスタ</li>
+<li>R15 は PC とも呼ばれ、プログラムカウンタ</li></ul>
+<p>CPSR は下記32ビットを持つ<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>。
+</p>
+<ul><li>M (ビット 0 - 4) はプロセッサモードビット</li>
+<li>T (ビット 5) は Thumb ステートビット</li>
+<li>F (ビット 6) は FIQ 無効ビット</li>
+<li>I (ビット 7) は IRQ 無効ビット</li>
+<li>A (ビット 8) は不正データアボート無効ビット</li>
+<li>E (ビット 9) はデータエンディアンビット</li>
+<li>IT (ビット 10 - 15 と 25 - 26) は if-then ステートビット</li>
+<li>GE (ビット 16 - 19) は greater-than-or-equal-to ビット</li>
+<li>DNM (ビット 20 - 23) は書き換え禁止ビット</li>
+<li>J (ビット 24) は Java ステートビット</li>
+<li>Q (ビット 27) は sticky overflow ビット</li>
+<li>V (ビット 28) はオーバーフロービット</li>
+<li>C (ビット 29) は carry/borrow/extend ビット</li>
+<li>Z (ビット 30) は零ビット</li>
+<li>N (ビット 31) は negative/less ビット</li></ul>
+<p>VFP/NEON用として、これらとは別に32ビット用はs0〜s31のレジスタがある。これらは、64ビットレジスタとしてd0〜d15として使える。s0〜s31とd0〜d15はオーバーラップしている。大半の ARMv7-A SoC はさらに、d16〜d31も使える。
+</p><p>VFP/NEON用のシステムレジスタとして、以下の3つがある。
+</p>
+<ul><li>FPSCR - Floating-point status and control register (浮動小数点状態制御レジスタ)</li>
+<li>FPEXC - Floating-point exception register (浮動小数点例外レジスタ)</li>
+<li>FPSID - Floating-point system ID register (浮動小数点システムIDレジスタ)</li></ul>
+<h3><span id=".E6.9D.A1.E4.BB.B6.E5.AE.9F.E8.A1.8C"></span><span class="mw-headline" id="条件実行">条件実行</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=28" title="節を編集: 条件実行">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ARMの命令セットにおいてユニークなのは、マシン語の最上位4ビットを占める<i>条件コード</i>を使用した条件実行命令であり、これによってほぼ全ての命令を分岐命令無しに条件付きで実行することができる。
+</p><p>これにより、マシン語中の即値フィールドに割けるビット数が減ってしまう等の欠点もあるものの、小さなif文に対応するコードの生成時に分岐命令を避けることが可能になる。例として、<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E3%81%AE%E4%BA%92%E9%99%A4%E6%B3%95" title="ユークリッドの互除法">ユークリッドの互除法</a>を挙げる。
+</p><p>（この例は<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>による）
+&lt;syntaxhighlight lang="c"&gt;
+int gcd(int i, int j)
+{
+</p>
+<pre>   while (i != j) {
+       if (i &gt; j)
+           i -= j;
+       else
+           j -= i;
+   }
+   return i;
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>ARMの<a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a>では、whileループの部分は以下のようになる。
+&lt;syntaxhighlight lang="nasm"&gt; 
+</p>
+<pre>loop
+       CMP    Ri, Rj       ; i と j を比較
+       SUBGT  Ri, Ri, Rj   ; もし "GT" ならば i = i - j;  
+       SUBLT  Rj, Rj, Ri   ; もし "LT" ならば j = j - i; 
+       BNE    loop         ; もし "NE" ならば loop に戻る
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p><p>通常分岐命令を使用しなければならないthenやelse節のところで分岐が省かれていることが分かる。
+</p><p>命令セットのもう一つのユニークな機能が、<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97#ビットシフト" title="ビット演算">シフト演算</a>を「データ処理」（算術演算、論理演算、レジスタ間の代入）命令の中に織り込むことができることである。例えば、C言語の
+&lt;syntaxhighlight lang="c"&gt;
+a += (j &lt;&lt; 2);
+&lt;/syntaxhighlight&gt;
+</p><p>のような文を1つのARM命令
+&lt;syntaxhighlight lang="nasm"&gt;
+</p>
+<pre>       ADD     Ra, Ra, Rj, LSL #2
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+として表すことができる。（なお、<a href="/wiki/Intel_80386" title="Intel 80386">Intel 80386</a>などでも1個の命令でできる。&lt;syntaxhighlight lang="asm" inline&gt;LEA EAX,[EAX+EBX*4]&lt;/syntaxhighlight&gt; とすればよい。）
+</p><p>これにより、多くのARMプログラムは通常RISCプロセッサに期待されるようなプログラムよりも密度の高いものになる。このため、命令フェッチに伴うメモリへのアクセス頻度が少なくなり、分岐に伴うストールも回避しやすく、パイプライン処理を効率的に使うことができる。このことが、ARMがARMより複雑なCPUデザインと競合することを可能にした特徴的な一因のひとつである。
+</p>
+<h3><span class="mw-headline" id="Thumb">Thumb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=29" title="節を編集: Thumb">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ARMプロセッサは<b>Thumb</b>と呼ばれるコード効率の向上を意図した<a href="/wiki/16%E3%83%93%E3%83%83%E3%83%88" title="16ビット">16ビット</a>長の命令モードを持っている(<a href="/wiki/SuperH" title="SuperH">SuperH</a>の命令16ビット/データ32ビットに倣い追加された)。条件実行のための4ビットプレディケートが削除されている。メモリポートやバスが32ビットよりも狭い状況において32ビットコードよりも性能が向上する。多くの場合、組み込みアプリケーションでは32ビットのデータパスを持っているのは一部のアドレス範囲のみであり（例: <a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%9C%E3%83%BC%E3%82%A4%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9" title="ゲームボーイアドバンス">ゲームボーイアドバンス</a>）、残りは16ビットかそれよりも狭くなっている。このような状況では、Thumbコードをコンパイルし、CPUに最も負荷のかかる部分だけを32ビット長の命令セットを使用して手作業で最適化するのが、通常は理にかなっている。Thumb命令とARM命令は単一の実行ファイル内で混在が可能であるが、Thumb命令を実行できるモードとARM命令を実行できるモードは独立しており、両者を使うにはその都度プロセッサの状態を切り替える必要がある。状態の切り替えは分岐命令 (BX, BLX) で行うことができるため、通常は関数単位でThumb命令とARM命令を使い分け、関数呼び出しの際に切り替えを行うのが一般的である。
+</p><p>Thumbテクノロジを搭載した最初のプロセッサはARM7TDMIである。ARM9とそれ以降のファミリは、<a href="/wiki/XScale" title="XScale">XScale</a>も含めて全てThumbテクノロジを搭載している。
+</p>
+<h3><span class="mw-headline" id="Thumb-2">Thumb-2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=30" title="節を編集: Thumb-2">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>Thumb-2</b>テクノロジは2003年に発表された<b>ARM1156コア</b>で登場した。Thumb-2はThumbの制限された16ビット長の命令セットを追加の32ビット長命令で拡張し、命令セットの幅を広げるものである。公称されているThumb-2の目的は、Thumbと同様のコード密度と32ビットメモリ上でのARM命令セットと同様の性能を得ることであり、Thumb-2はビットフィールド操作、テーブル分岐や条件付き実行などを含んでいる。従来はThumbモードにおいて使用可能な汎用レジスタは8本のみであり自由度が低かったが、Thumb-2で導入された32ビット長命令では16本全てのレジスタが使用可能である。16ビット長命令と32ビット長命令はモードの切り替えなしで混在可能であるため、ThumbモードにおいてもARMモードに近い自由度が得られるようになった。
+</p>
+<h3><span class="mw-headline" id="Jazelle">Jazelle</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=31" title="節を編集: Jazelle">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ARMは、<a href="/wiki/Java%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="Javaバイトコード">Javaバイトコード</a>をハードウェアでネイティブに実行できる技術を実装した。これはARMやThumbモードと並ぶもう一つの実行モードであり、ARM/Thumbの切り替えと同様にしてアクセスすることができる。後述のJazelle RCTに対して<b>Jazelle DBX</b> (Direct Bytecode eXecution) とも言う。
+</p><p>Jazelleテクノロジを搭載した最初のプロセッサは<b>ARM926EJ-S</b>である。CPU名の'J'がJazelleを表している。
+</p>
+<h3><span id="Thumb_Execution_Environment_.28ThumbEE.29"></span><span class="mw-headline" id="Thumb_Execution_Environment_(ThumbEE)">Thumb Execution Environment (ThumbEE)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=32" title="節を編集: Thumb Execution Environment (ThumbEE)">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>ThumbEE</b>は<b>Jazelle RCT</b> (Runtime Compilation Target)とも呼ばれる第4のモードである。2005年にアナウンスされ、<b>Cortex-A8</b>プロセッサで最初に実装された。Thumb-2命令セットに小規模な変更を加えたもので、<a class="mw-redirect" href="/wiki/JIT%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="JITコンパイラ">JITコンパイラ</a>のように実行時にコードを生成する場合に向いている。主な対象は<a href="/wiki/Java" title="Java">Java</a>、<a href="/wiki/.NET_Framework" title=".NET Framework">.NET</a> <a href="/wiki/%E5%85%B1%E9%80%9A%E4%B8%AD%E9%96%93%E8%A8%80%E8%AA%9E" title="共通中間言語">MSIL</a>（<a href="/wiki/C_Sharp" title="C Sharp">C#</a>など）、<a href="/wiki/Python" title="Python">Python</a>、<a href="/wiki/Perl" title="Perl">Perl</a>などの言語である。
+</p>
+<h3><span id="DSP_.E6.8B.A1.E5.BC.B5.E5.91.BD.E4.BB.A4"></span><span class="mw-headline" id="DSP_拡張命令">DSP 拡張命令</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=33" title="節を編集: DSP 拡張命令">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="デジタル信号処理">デジタル信号処理</a>とマルチメディアアプリケーション向けに ARMアーキテクチャを拡張するため、いくつかの命令が追加された<a class="external autonumber" href="http://www.arm.com/products/CPUs/cpu-arch-DSP.html" rel="nofollow">[3]</a>。<b>ARMv5TE</b> と <b>ARMv5TEJ</b> というアーキテクチャ名の "E" がこれを表していると思われる。
+</p><p>追加された命令は、<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="デジタルシグナルプロセッサ">デジタルシグナルプロセッサ</a>アーキテクチャで一般的なものである。例えば、符号付積和演算、飽和加算と飽和減算、「先行する0のカウント」のバリエーションである。
+</p>
+<h3><span class="mw-headline" id="SIMD">SIMD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=34" title="節を編集: SIMD">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ARMv6で導入された<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup>。32ビット幅。
+</p>
+<h3><span id="Advanced_SIMD_.28NEON.29"></span><span class="mw-headline" id="Advanced_SIMD_(NEON)">Advanced SIMD (NEON)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=35" title="節を編集: Advanced SIMD (NEON)">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>Advanced SIMD</b>拡張は<b>NEON</b>とも呼ばれ、メディアおよびデジタル信号の処理に向いた64ビットと<a href="/wiki/128%E3%83%93%E3%83%83%E3%83%88" title="128ビット">128ビット</a>の<a href="/wiki/SIMD" title="SIMD">SIMD</a>命令セットである。8/16/32/64ビットの整数演算と、32ビット (単精度) 浮動小数点演算のためのSIMD命令が定義されており、ARMv7から利用可能。32ビットCPUでは倍精度浮動小数点数は利用不可で、倍精度にはVFPを使用。
+</p><p>ほとんどの ARMv7 SoC で NEON に対応しているが、<a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 2 シリーズ、SPEAr1310、SPEAr1340 などで対応していない。
+</p><p>レジスタはVFPレジスタとして用意されている32本の64ビットレジスタを用いて、32本の64ビットSIMDレジスタ (D0-D31) 、もしくは16本の128ビットSIMDレジスタ (Q0-Q15) としてアクセスできる。例えば128ビットレジスタQ0はD0とD1の2つの64ビットレジスタの領域にマッピングされている。
+</p><p>Cortex-A15 などより、NEONv2 (version 2) が搭載され、Fused Multiply-Add ができる。これにより、単精度浮動小数点数で 8 FLOPS/cycle となった。
+</p>
+<h3><span class="mw-headline" id="Wireless_MMX">Wireless MMX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=36" title="節を編集: Wireless MMX">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>Wireless MMX</b> (WMMX) はインテルが<a href="/wiki/XScale" title="XScale">XScale</a>プロセッサ向けに開発したSIMD命令セットである。64ビット幅のレジスタが16本用意されており、8/16/32/64ビットのSIMD整数演算が可能。XScaleとその売却先であるマーベル・テクノロジー・グループ製のARM SoCに採用されている。命令セット自体はx86プロセッサのMMXとは全く異なるものの、<a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">GCC</a>や<a class="mw-redirect" href="/wiki/Visual_C%2B%2B" title="Visual C++">Visual C++</a>等のコンパイラで利用できる組み込み関数はMMXとの互換性がある程度確保されており、これを利用すればMMX向けに記述されたコードを比較的容易に移植することができる。
+</p>
+<h3><span class="mw-headline" id="VFP">VFP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=37" title="節を編集: VFP">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>VFP</b> (Vector Floating Point) はARMアーキテクチャのコプロセッサ拡張である。半精度（v3以降）・単精度・倍精度の<a class="mw-redirect" href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="浮動小数点">浮動小数点</a>演算機能を提供する。
+</p>
+<ul><li>VFPv1 - 廃止</li>
+<li>VFPv2 - ARMv5TE、ARMv5TEJ、ARMv6 で利用可能</li>
+<li>VFPv3 - ARMv7 で利用可能。通常はレジスタ数32個であるが、<a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> 2 シリーズなどはレジスタ数が半分のVFPv3-D16を採用。Cortex-A8の実装はパイプライン化されておらず非常に低速 (VFP Lite)。</li>
+<li>VFPv4 - Cortex-A5, A7, A15, <a href="/wiki/Apple_A6" title="Apple A6">Apple A6</a>, <a href="/wiki/Snapdragon" title="Snapdragon">Snapdragon</a> Krait などで利用可能。<a href="/wiki/IEEE_754" title="IEEE 754">IEEE754</a>準拠の（乗算結果の丸めを行わない）Fused multiply add 対応。VFPv4-D16 もあり。</li></ul>
+<p>"Vector" の名を冠する通り、いくつかの命令においてはベクタモードと呼ばれる1命令で複数のレジスタに対して演算を行うモードが用意されている。このモードを使えば<a href="/wiki/SIMD" title="SIMD">SIMD</a>演算が可能であるが、プログラミングモデルがやや煩雑<sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[注釈 1]</a></sup>であったことや、当時のARM11プロセッサにおける実装はスカラ命令を要素数分だけシーケンシャルに実行するというSIMD演算のメリットを享受できないものであったため、あまり積極的には使われなかった。VFPv3を実装するARMv7世代以降ではモダンなSIMD命令セットであるAdvanced SIMD拡張命令 (NEON) が導入されたため、現在ではベクタモードの利用は推奨されていない。Cortex-A9やA15ではベクタモードに対応していない<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[注釈 2]</a></sup>ことから分かるように、現在のARMアーキテクチャにおけるVFPの位置づけはスカラ専用の浮動小数点演算コプロセッサであり、SIMD演算用途についてはNEONに道を譲っている。
+</p><p>単精度の浮動小数点演算はNEONでも実行可能であるが、倍精度の浮動小数点演算やIEEE754準拠の4つの丸めモード、非正規化数のサポート等はNEONには存在しないため、これらを利用したい場合はVFP命令を使う必要がある。
+</p>
+<h2><span id="64.E3.83.93.E3.83.83.E3.83.88ARM"></span><span class="mw-headline" id="64ビットARM">64ビットARM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=38" title="節を編集: 64ビットARM">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>ARMv8-Aから採用。ARMの64ビットモードアーキテクチャAArch64では、汎用レジスタはすべて64ビットとなり、数も16個から31個に増やされる。サーバ用途も意識して<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%8C%96" title="仮想化">仮想化</a>支援命令および<a href="/wiki/%E6%9A%97%E5%8F%B7" title="暗号">暗号</a>支援命令が追加され、<a href="/wiki/SIMD" title="SIMD">SIMD</a>拡張命令であるNEONも大幅に強化される。
+</p>
+<h3><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88.E3.81.AE.E7.89.B9.E5.BE.B4"></span><span class="mw-headline" id="命令セットの特徴">命令セットの特徴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=39" title="節を編集: 命令セットの特徴">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>汎用レジスタの増加と64ビット化に伴い、命令セットは完全に再定義されている。コード効率を重視して命令長は32ビットのままで、32ビットARMの特徴であった条件付き実行命令の大半が削除される。これによって一般的なRISC命令セットに近くなったが、依然としてコードサイズを小さくするための工夫が随所に織り込まれている。
+</p><p>AArch64モードにおける命令セットはA64と呼ばれ、以下にA64命令セットの特徴を示す。
+</p>
+<dl><dt>即値シフト付きオペランド</dt>
+<dd>これは従来の32ビットARM命令セットにおいて<i>フレキシブル第2オペランド (Flexible second operand)</i> と呼ばれていたものに相当する。多くの基本的な演算命令においては、入力オペランドのうち1つに対する操作を即値左シフト、即値論理右シフト、即値算術右シフト、シフトなし、の4つから選択することができ、演算命令と即値シフト命令を一体化することができる。なお、従来とは異なりローテートは不可能となった。</dd>
+<dt>条件付き実行命令</dt>
+<dd>汎用レジスタ数が倍増したのに伴い、基本命令の多くからは条件付き実行機能が削除されたが、それでも比較的豊富な条件付き実行命令が定義されている。代表的なものを挙げるとCCMP（条件付き比較）、CINC（条件付きインクリメント）、CSEL（条件付き選択; いわゆるCMOV）等が存在する。</dd>
+<dt>Compare-and-Branch命令</dt>
+<dd>PC相対分岐においては、ゼロフラグを参照する場合のみであるが比較と条件分岐を1命令で行うことが可能になっている (CBZ/CBNZ)。これは従来Thumb-2命令セットでのみ定義されていたものであるが、A64モードでは基本命令として定義されている。</dd>
+<dt>符号拡張/ゼロ拡張付き命令</dt>
+<dd>算術演算/比較命令については、入力オペランドのうち1つを8,16,32ビットから32もしくは64ビットに符号/ゼロ拡張するバージョンが用意されている。</dd></dl>
+<p>汎用レジスタは64ビット幅であるが、多くの演算命令にはレジスタの下位32ビットのみを参照する32ビット命令が用意されている。この場合、レジスタの部分書き換えが発生しないように、演算結果の32ビットの値は暗黙のゼロ拡張が行われた上で64ビットレジスタに格納される。
+</p>
+<h3><span id="SIMD_and_Floating-point_.28NEON.29_.E5.91.BD.E4.BB.A4"></span><span class="mw-headline" id="SIMD_and_Floating-point_(NEON)_命令">SIMD and Floating-point (NEON) 命令</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=40" title="節を編集: SIMD and Floating-point (NEON) 命令">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A64命令セットにおいては従来のVFPとAdvanced SIMD (NEON) は統合され、一つの命令体系となった。これに伴い、名称については単にSIMD and Floating-point命令と呼ばれるようになった。
+</p><p>主な変更点は倍精度浮動小数点演算への対応、IEEE754への準拠、レジスタ本数の増加の3点である。レジスタについては128ビットのレジスタが32本に増加している。依然として64ビットレジスタとしてアクセスすることも可能であるが、32ビットモードとは異なり、64ビットレジスタは128ビットレジスタの下位64ビットにマッピングされている。
+</p><p>VFPとAdvanced SIMDの統合に伴い、従来はVFPが担っていたスカラの浮動小数点演算命令は、SIMDレジスタのうち下位の32/64ビットにのみ作用する命令として再定義されている。例えば浮動小数点加算命令については
+</p><p>&lt;syntaxhighlight lang="nasm"&gt; fadd  s2, s1, s0             ; s2 &lt;= s0 + s1（単精度スカラ）
+</p>
+<pre>fadd  d2, d1, d0             ; d2 &lt;= d0 + d1（倍精度スカラ）
+fadd  v2.4s, v1.4s, v0.4s    ; [v2] &lt;= [v0] + [v1]（単精度x4 SIMD）
+fadd  v2.2d, v1.2d, v0.2d    ; [v2] &lt;= [v0] + [v1]（倍精度x2 SIMD）
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p><p>のようなバリエーションが命令のニーモニックを保ちつつ、オペランドのプレフィックス (s, d, v) とサフィックスを変更することによって記述可能になっている（サフィックスについては、一部の環境向けのアセンブラではニーモニック側に付加する省略記法も許されるようである）。これはx86プロセッサのSSE命令セットがスカラ命令とSIMD命令の双方を備えているのとよく似ている。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=41" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=42" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text">ベクトルレジスタが明示的に用意されておらず、複数のスカラレジスタに対して演算を行う。ベクタ長は固定されておらず、FPSCRという特殊なレジスタで最大8要素までのベクタ長を指定可能。また、レジスタがスカラモードのみで使えるバンクとベクタモードで使えるバンクに分けられており、レジスタの組み合わせに制約がある。</span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text">ARMプロセッサのベクタモードへの対応はMVFR0レジスタの24-27ビット目を参照することで確認できる。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=43" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external autonumber" href="https://www.arm.com/company/news/2021/03/arms-answer-to-the-future-of-ai-armv9-architecture" rel="nofollow">[1]</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external free" href="http://www.arm.com/miscPDFs/3823.pdf" rel="nofollow">http://www.arm.com/miscPDFs/3823.pdf</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external free" href="http://www.jp.arm.com/pressroom/08/080125.html" rel="nofollow">http://www.jp.arm.com/pressroom/08/080125.html</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external free" href="https://news.mynavi.jp/articles/2010/09/10/cortex-a15/index.html" rel="nofollow">https://news.mynavi.jp/articles/2010/09/10/cortex-a15/index.html</a></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external free" href="http://ascii.jp/elem/000/000/645/645995/" rel="nofollow">http://ascii.jp/elem/000/000/645/645995/</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Smotherman, Mark. “<a class="external text" href="http://www.cs.clemson.edu/~mark/admired_designs.html#wilson" rel="nofollow">Which Machines Do Computer Architects Admire?</a>”. <span title="">2011年9月19日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://ascii.jp/elem/000/000/577/577932/index-2.html" rel="nofollow">スマートフォンを席巻するARMプロセッサーの歴史</a>”.   ASCII.jp (2010年12月20日). <span title="">2013年7月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://itpro.nikkeibp.co.jp/article/NEWS/20121101/434442/" rel="nofollow">ARMが初の64ビットCPU「Cortex-A50シリーズ」発表、サーバー向けに16コア以上に対応</a>”.   ITpro (2012年11月1日). <span title="">2014年11月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a href="/wiki/2005%E5%B9%B4" title="2005年">2005年</a>、ARM社のセミナー資料による。</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.sony.co.jp/SonyInfo/News/Press_Archive/200307/03-0717/" rel="nofollow">Sony Japan | プレスリリース| クリエ用新アプリケーションCPU「Handheld EngineTM」の開発について</a>”. <i>www.sony.co.jp</i>. <span title="">2019年4月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external text" href="http://www.itmedia.co.jp/news/0204/30/b_0429_01.html" rel="nofollow">News：米速報：次世代マイクロアーキテクチャ「ARM11」発表</a></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://internet.watch.impress.co.jp/docs/news/20121019_567253.html" rel="nofollow">Googleが新型「Chromebook」を発表、Samsung製で249ドル</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/news/20111202_495443.html" rel="nofollow">【PC Watch】 Samsung、初のARM Cortex-A15プロセッサ「Exynos 5250」</a></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><a class="external text" href="http://newscenter.ti.com/jp/Blogs/newsroom/archive/2011/02/10/ti-omap-5.aspx" rel="nofollow">日本TI、モバイルの概念を一変させる高性能、高機能のOMAP™5プラットフォームを発表</a></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20120214_511793.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】 ARMが次世代CPU「Atlas」と「Apollo」の計画を発表</a></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external text" href="http://www.anandtech.com/show/9232/amds-k12-arm-cpu-now-in-2017" rel="nofollow">AMD’s K12 ARM CPU Now In 2017</a></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external text" href="http://cloud.watch.impress.co.jp/docs/column/virtual/20130702_605540.html" rel="nofollow">苦難の2013年を越え、輝かしい2014年に賭けるAMD (大きな期待が寄せられているサーバー向け64ビットARMプロセッサ)</a></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="http://www.arm.com/about/newsroom/arm-sets-new-standard-for-the-premium-mobile-experience.php" rel="nofollow">ARM Sets New Standard for the Premium Mobile Experience - ARM</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><a class="external text" href="https://www.qualcomm.com/news/releases/2015/02/18/qualcomm-introduces-next-generation-snapdragon-600-and-400-tier-processors" rel="nofollow">Qualcomm Introduces Next Generation Snapdragon 600 and 400 Tier Processors for High Performance, High-Volume Smartphones with Advanced LTE | Qualcomm</a></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><a class="external text" href="http://www.arm.com/products/CPUs/ARM_Cortex-M1.html" rel="nofollow">"ARM Cortex-M1"</a>, ARM product website. Accessed April 11, 2007.</span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><a class="external text" href="http://www.arm.com/news/17017.html" rel="nofollow">"ARM Extends Cortex Family with First Processor Optimized for FPGA"</a>, ARM press release, March 19 2007. Accessed April 11, 2007.</span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><a class="external text" href="http://www.altera.co.jp/products/ip/processors/32_16bit/m-arm-cortex-m1.html" rel="nofollow">ARM Cortex-M1</a></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><a class="external text" href="http://www.actel.com/intl/japan/products/mpu/cortexm1/" rel="nofollow">Actel: 製品とサービス: プロセッサ: ARM: Cortex-M1</a></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><a class="external text" href="http://www.anandtech.com/show/8542/cortexm7-launches-embedded-iot-and-wearables/2" rel="nofollow">AnandTech | Cortex-M7 Launches: Embedded, IoT and Wearables</a></span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.arm.com/products/processors/cortex-m/cortex-m7" rel="nofollow">Cortex-M7 Overview - ARM</a></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.arm.com/products/processors/cortex-m/cortex-m23" rel="nofollow">Cortex-M23 Overview - ARM</a></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.arm.com/products/processors/cortex-m/cortex-m33" rel="nofollow">Cortex-M33 Overview - ARM</a></span>
+</li>
+<li id="cite_note-Chdddhea-28"><b><a href="#cite_ref-Chdddhea_28-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0204j/Chdddhea.html" rel="nofollow">Processor mode</a>”.   <a href="/wiki/ARM%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9" title="ARMホールディングス">ARMホールディングス</a>. <span title="March 26, 2013">2013年3月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2012-lpc-arm-zyngier-29"><b><a href="#cite_ref-2012-lpc-arm-zyngier_29-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.linuxplumbersconf.org/2012/wp-content/uploads/2012/09/2012-lpc-arm-zyngier.pdf" rel="nofollow">KVM/ARM</a>”. <span title="April 3, 2013">2013年4月3日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><a class="external text" href="http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.ddi0290g/I27695.html" rel="nofollow">2.14. The program status registers - Cortex-A8 Technical Reference Manual</a></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><a class="external text" href="http://www.arm.com/ja/products/processors/technologies/dsp-simd.php" rel="nofollow">DSP &amp; SIMD - ARM</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=44" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3" title="ソフィー・ウィルソン">ソフィー・ウィルソン</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=45" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://www.arm.com/" rel="nofollow">ARM Ltd.</a></li>
+<li><a class="external text" href="https://www.mztn.org/slasm/arm_idx.html" rel="nofollow">Linux Zaurusでアセンブリプログラミング</a></li></ul>
+<div aria-labelledby="プロセッサアーキテクチャ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Processor_architectures&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Processor architectures (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="プロセッサアーキテクチャ" style="font-size:110%;margin:0 6em"><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="プロセッサ">プロセッサ</a><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">アーキテクチャ</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">CISC</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MC6800" title="MC6800">MC6800</a></li>
+<li><a href="/wiki/MC68000" title="MC68000">MC68000</a></li>
+<li><a href="/wiki/TRONCHIP" title="TRONCHIP">TRONCHIP</a></li>
+<li><a href="/wiki/PDP%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="PDPシリーズ">PDP</a></li>
+<li><a href="/wiki/VAX" title="VAX">VAX</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/X86" title="X86">x86</a>
+<ul><li><a href="/wiki/IA-32" title="IA-32">IA-32</a></li>
+<li><a href="/wiki/X64" title="X64">x64</a>
+<ul><li><a href="/wiki/X64#AMD64" title="X64">AMD64</a></li>
+<li><a href="/wiki/X64#Intel_64" title="X64">Intel 64</a></li></ul></li></ul></li>
+<li><a href="/wiki/IA-64" title="IA-64">IA-64</a></li>
+<li><a href="/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">RISC</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a></li>
+<li><a href="/wiki/AMD_Am29000" title="AMD Am29000">AMD Am29000</a></li>
+<li><a class="new" href="/w/index.php?title=En:Apollo_PRISM&amp;action=edit&amp;redlink=1" title="En:Apollo PRISM (存在しないページ)">Apollo PRISM</a></li>
+<li><a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a></li>
+<li><a href="/wiki/Intel_i960" title="Intel i960">Intel i960</a></li>
+<li><a href="/wiki/MC88000" title="MC88000">MC88000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">ARM</a></li>
+<li><a href="/wiki/Atmel_AVR" title="Atmel AVR">Atmel AVR</a></li>
+<li><a class="new" href="/w/index.php?title=En:AVR32&amp;action=edit&amp;redlink=1" title="En:AVR32 (存在しないページ)">Atmel AVR32</a></li>
+<li><a href="/wiki/Blackfin" title="Blackfin">Analog Devices Blackfin</a></li>
+<li><a href="/wiki/DLX" title="DLX">DLX</a></li>
+<li><a class="new" href="/w/index.php?title=En:LatticeMico8&amp;action=edit&amp;redlink=1" title="En:LatticeMico8 (存在しないページ)">LatticeMico8</a></li>
+<li><a href="/wiki/LatticeMico32" title="LatticeMico32">LatticeMico32</a></li>
+<li><a href="/wiki/M32R" title="M32R">M32R</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a></li>
+<li><a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPS</a></li>
+<li><a href="/wiki/Nios_II" title="Nios II">Altera Nios II</a></li>
+<li><a href="/wiki/OpenRISC" title="OpenRISC">OpenRISC</a></li>
+<li><a href="/wiki/PicoBlaze" title="PicoBlaze">PicoBlaze</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><a href="/wiki/Power_Architecture" title="Power Architecture">Power</a></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="/wiki/SuperH" title="SuperH">SuperH</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="ARMベースのチップ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:ARM-based_chips&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:ARM-based chips (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AARM-based_chips&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AARM-based_chips&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="ARMベースのチップ" style="font-size:110%;margin:0 6em">ARMベースのチップ</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a class="mw-selflink selflink">ARMアーキテクチャ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ARM%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5%E3%83%BC%E3%83%BB%E3%82%B3%E3%82%A2%E3%81%AE%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="ARMマイクロプロセッサー・コアの一覧 (存在しないページ)">ARMマイクロプロセッサー・コアの一覧</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:List_of_ARM_microprocessor_cores&amp;action=edit&amp;redlink=1" title="En:List of ARM microprocessor cores (存在しないページ)">英語版</a>）</span></span></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span class="nowrap">アプリケーション</span><span class="nowrap">プロセッサー</span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A5</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Actions ATM7025/7029</li>
+<li>Qualcomm <a href="/wiki/Snapdragon#Snapdragon_S4" title="Snapdragon">Snapdragon S4 Play</a>/<a href="/wiki/Snapdragon#Snapdragon_200" title="Snapdragon">200</a></li>
+<li>InfoTMIC iMAPx820/iMAPx15</li>
+<li>Telechips TCC892x</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A7</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Allwinner <a class="new" href="/w/index.php?title=Allwinner_A20&amp;action=edit&amp;redlink=1" title="Allwinner A20 (存在しないページ)">A20</a>/A31s/<a class="new" href="/w/index.php?title=Allwinner_A31&amp;action=edit&amp;redlink=1" title="Allwinner A31 (存在しないページ)">A31</a></li>
+<li>HiSilicon <a href="/wiki/HiSilicon#K3V3" title="HiSilicon">K3V3</a></li>
+<li>Leadcore LC1813</li>
+<li>MediaTek MT6572/6589/6589T/6589M/8125/6599</li>
+<li>Qualcomm <a href="/wiki/Snapdragon#Snapdragon_200" title="Snapdragon">Snapdragon 200</a>/<a href="/wiki/Snapdragon#Snapdragon_400" title="Snapdragon">400</a></li>
+<li>Samsung <a href="/wiki/Exynos" title="Exynos">Exynos 5410</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A8</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Allwinner <a class="mw-redirect" href="/wiki/AllWinner_A1X" title="AllWinner A1X">A10/A13/A10s</a></li>
+<li>Apple <a href="/wiki/Apple_A4" title="Apple A4">A4</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF" title="フリースケール・セミコンダクタ">フリースケール</a> <a href="/wiki/I.MX#i.MX5x_ファミリ" title="I.MX">i.MX5x</a></li>
+<li>Rockchip <a href="/wiki/Rockchip#Rockchip_291xxシリーズ" title="Rockchip">RK290x/RK291x</a></li>
+<li>Samsung <a href="/wiki/Exynos" title="Exynos">Exynos 3110</a>/S5PC110/S5PV210</li>
+<li>テキサス・インスツルメンツ <a class="mw-redirect" href="/wiki/OMAP#OMAP_3" title="OMAP">OMAP 3</a></li>
+<li>ZiiLABS <a href="/wiki/ZiiLABS" title="ZiiLABS">ZMS-08</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A9</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Amlogic AML8726</li>
+<li>Apple <a href="/wiki/Apple_A5" title="Apple A5">A5</a>/<a class="mw-redirect" href="/wiki/Apple_A5X" title="Apple A5X">A5X</a></li>
+<li>フリースケール <a href="/wiki/I.MX#i.MX6x_ファミリ" title="I.MX">i.MX6x</a></li>
+<li>HiSilicon <a href="/wiki/HiSilicon#K3V2" title="HiSilicon">K3V2/K3V2T/K3V2E</a></li>
+<li>MediaTek <a href="/wiki/MediaTek" title="MediaTek">MT6575/6577</a></li>
+<li>Nvidia <a class="mw-redirect" href="/wiki/Tegra" title="Tegra">Tegra 2/3/4i</a></li>
+<li>Nufront NuSmart 2816M/NS115/NS115M</li>
+<li>Renesas EMMA EV2</li>
+<li>Rockchip <a href="/wiki/Rockchip#Rockchip_292xxシリーズ" title="Rockchip">RK292x/RK30xx/RK31xx</a></li>
+<li>Samsung <a href="/wiki/Exynos" title="Exynos">Exynos 4</a></li>
+<li>ST-Ericsson <a class="new" href="/w/index.php?title=NovaThor&amp;action=edit&amp;redlink=1" title="NovaThor (存在しないページ)">NovaThor</a></li>
+<li>Telechips TCC8803</li>
+<li>テキサス・インスツルメンツ <a class="mw-redirect" href="/wiki/OMAP#OMAP_4" title="OMAP">OMAP 4</a></li>
+<li>VIA WonderMedia <a class="new" href="/w/index.php?title=WonderMedia&amp;action=edit&amp;redlink=1" title="WonderMedia (存在しないページ)">WM88x0/89x0</a></li>
+<li>ZiiLABS <a href="/wiki/ZiiLABS" title="ZiiLABS">ZMS-20, ZMS-40</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A15</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>HiSilicon <a href="/wiki/HiSilicon#K3V3" title="HiSilicon">K3V3</a></li>
+<li>MediaTek MT6599</li>
+<li>Nvidia <a class="mw-redirect" href="/wiki/Tegra#Upcoming_releases" title="Tegra">Tegra 4</a></li>
+<li>Samsung <a href="/wiki/Exynos" title="Exynos">Exynos 5</a></li>
+<li>テキサス・インスツルメンツ <a class="mw-redirect" href="/wiki/OMAP#OMAP_5" title="OMAP">OMAP 5</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A57</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Nvidia <a class="mw-redirect" href="/wiki/Tegra" title="Tegra">Tegra X1</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Cortex-A76</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/HiSilicon" title="HiSilicon">HiSilicon</a> <a href="/wiki/Kirin_980" title="Kirin 980">kirin 980</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARMv7-A互換</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Apple <a href="/wiki/Apple_A6" title="Apple A6">A6</a>/<a class="mw-redirect" href="/wiki/Apple_A6X" title="Apple A6X">A6X</a> (Swift)</li>
+<li>Broadcom Brahma-B15</li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="マーベル・テクノロジー・グループ">Marvell</a> P4J</li>
+<li>Qualcomm <a href="/wiki/Snapdragon#Snapdragon_S1" title="Snapdragon">Snapdragon S1/S2/S3</a> (<a class="new" href="/w/index.php?title=Scorpion_(CPU)&amp;action=edit&amp;redlink=1" title="Scorpion (CPU) (存在しないページ)">Scorpion</a>)</li>
+<li>Qualcomm <a href="/wiki/Snapdragon#Snapdragon_S4" title="Snapdragon">Snapdragon S4 Plus/S4 Pro</a> (<a href="/wiki/Krait_(CPU)" title="Krait (CPU)">Krait</a>)</li>
+<li>Qualcomm <a href="/wiki/Snapdragon#Snapdragon_600/800" title="Snapdragon">Snapdragon 600/800</a> (<a href="/wiki/Krait_(CPU)" title="Krait (CPU)">Krait 300/Krait 400</a>)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARMv8互換</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Apple <a href="/wiki/Apple_A7" title="Apple A7">A7</a> (Cyclone)</li>
+<li>Apple <a href="/wiki/Apple_A8" title="Apple A8">A8</a>/<a href="/wiki/Apple_A8X" title="Apple A8X">A8X</a>  (Typhoon)</li>
+<li>Apple <a href="/wiki/Apple_A9" title="Apple A9">A9</a>/<a href="/wiki/Apple_A9X" title="Apple A9X">A9X</a>  (Twister)</li>
+<li>Apple <a href="/wiki/Apple_A10" title="Apple A10">A10</a>/<a href="/wiki/Apple_A10X" title="Apple A10X">A10X</a>  Fusion (Hurricane / Zephyr)</li>
+<li>Apple <a href="/wiki/Apple_A11" title="Apple A11">A11</a> Bionic (Monsoon / Mistral)</li>
+<li>Apple <a href="/wiki/Apple_A12" title="Apple A12">A12</a>/<a href="/wiki/Apple_A12X" title="Apple A12X">A12X</a> Bionic (Vortex / Tempest)</li>
+<li>Apple <a href="/wiki/Apple_A13" title="Apple A13">A13</a> Bionic (Lightning / Thunder)</li>
+<li>Apple <a href="/wiki/Apple_A14" title="Apple A14">A14</a> Bionic</li>
+<li>Samsung <a href="/wiki/Exynos_9820" title="Exynos 9820">Exynos 9820</a>  (Exynos M4)</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span class="nowrap">組込み用</span><span class="nowrap">マイクロコントローラ</span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M0" title="ARM Cortex-M">Cortex-M0</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Cypress <a href="/wiki/PSoC" title="PSoC">PSoC 4</a></li>
+<li>Energy Micro <a class="new" href="/w/index.php?title=EFM32&amp;action=edit&amp;redlink=1" title="EFM32 (存在しないページ)">EFM32 Zero</a></li>
+<li>NXP <a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC1100, LPC1200</a></li>
+<li>STマイクロエレクトロニクス <a class="mw-redirect" href="/wiki/STM32#STM32_F0" title="STM32">STM32 F0</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M0+" title="ARM Cortex-M">Cortex-M0+</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>フリースケール Kinetis L</li>
+<li>NXP <a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC800</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M1" title="ARM Cortex-M">Cortex-M1</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Actel FPGA</li>
+<li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%86%E3%83%A9" title="アルテラ">Altera</a> FPGA</li>
+<li><a href="/wiki/%E3%82%B6%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B9" title="ザイリンクス">Xilinx</a> FPGA</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M3" title="ARM Cortex-M">Cortex-M3</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Actel <a class="new" href="/w/index.php?title=Actel_SmartFusion&amp;action=edit&amp;redlink=1" title="Actel SmartFusion (存在しないページ)">SmartFusion, SmartFusion 2</a></li>
+<li>Atmel <a class="new" href="/w/index.php?title=AT91SAM3&amp;action=edit&amp;redlink=1" title="AT91SAM3 (存在しないページ)">AT91SAM3</a></li>
+<li>Cypress <a href="/wiki/PSoC" title="PSoC">PSoC 5</a></li>
+<li>Energy Micro <a class="new" href="/w/index.php?title=EFM32&amp;action=edit&amp;redlink=1" title="EFM32 (存在しないページ)">EFM32 Tiny, Gecko, Leopard, Giant</a></li>
+<li>Fujitsu FM3</li>
+<li>NXP <a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC1300, LPC1700, LPC1800</a></li>
+<li>Silicon Labs Precision32</li>
+<li>STマイクロエレクトロニクス <a class="mw-redirect" href="/wiki/STM32" title="STM32">STM32 F1, F2, L1, W</a></li>
+<li>テキサス・インスツルメンツ F28, LM3, TMS470, <a class="mw-redirect" href="/wiki/OMAP#OMAP_4" title="OMAP">OMAP 4</a></li>
+<li>Toshiba TX03</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M4" title="ARM Cortex-M">Cortex-M4</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Atmel <a class="new" href="/w/index.php?title=AT91SAM4&amp;action=edit&amp;redlink=1" title="AT91SAM4 (存在しないページ)">AT91SAM4</a></li>
+<li>フリースケール Kinetis K</li>
+<li>テキサス・インスツルメンツ <a class="mw-redirect" href="/wiki/OMAP#OMAP_5" title="OMAP">OMAP 5</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM_Cortex-M#Cortex-M4" title="ARM Cortex-M">Cortex-M4F</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Energy Micro <a class="new" href="/w/index.php?title=EFM32&amp;action=edit&amp;redlink=1" title="EFM32 (存在しないページ)">EFM32 Wonder</a></li>
+<li>フリースケール Kinetis K</li>
+<li>Infineon <a class="new" href="/w/index.php?title=Infineon_XMC4000&amp;action=edit&amp;redlink=1" title="Infineon XMC4000 (存在しないページ)">XMC4000</a></li>
+<li>NXP <a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC4000, LPC4300</a></li>
+<li>STマイクロエレクトロニクス <a class="mw-redirect" href="/wiki/STM32" title="STM32">STM32 F3, F4</a></li>
+<li>テキサス・インスツルメンツ LM4F</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span class="nowrap">リアルタイム処理</span><span class="nowrap">マイクロコントローラ</span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="new" href="/w/index.php?title=ARM_Cortex-R&amp;action=edit&amp;redlink=1" title="ARM Cortex-R (存在しないページ)">Cortex-R4F</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>テキサス・インスツルメンツ RM4, TMS570</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="new" href="/w/index.php?title=ARM_Cortex-R&amp;action=edit&amp;redlink=1" title="ARM Cortex-R (存在しないページ)">Cortex-R5F</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Scaleo OLEA</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span class="nowrap">クラシック</span><span class="nowrap">プロセッサー</span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARM7</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Atmel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=AT91SAM7&amp;action=edit&amp;redlink=1" title="AT91SAM7 (存在しないページ)">AT91SAM7</a>, <a class="new" href="/w/index.php?title=AT91CAP7&amp;action=edit&amp;redlink=1" title="AT91CAP7 (存在しないページ)">AT91CAP7</a>, AT91M, AT91R</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">NXP</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC2100, LPC2200, LPC2300, LPC2400</a>, LH7</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">STマイクロエレクトロニクス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<p>STR7
+</p>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARMv4互換</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ディジタル・イクイップメント・コーポレーション</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/StrongARM" title="StrongARM">StrongARM</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/ARM9" title="ARM9">ARM9</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Atmel <a class="new" href="/w/index.php?title=AT91SAM9&amp;action=edit&amp;redlink=1" title="AT91SAM9 (存在しないページ)">AT91SAM9</a>, <a class="new" href="/w/index.php?title=AT91CAP9&amp;action=edit&amp;redlink=1" title="AT91CAP9 (存在しないページ)">AT91CAP9</a></li>
+<li>フリースケール <a href="/wiki/I.MX#i.MX1x_ファミリ" title="I.MX">i.MX1x, i.MX2x</a></li>
+<li>Rockchip <a href="/wiki/Rockchip" title="Rockchip">RK27xx/RK28xx</a></li>
+<li>NXP <a class="mw-redirect" href="/wiki/NXP_LPC" title="NXP LPC">LPC2900, LPC3100, LPC3200</a>, LH7A</li>
+<li>ST-Ericsson <a class="new" href="/w/index.php?title=Nomadik&amp;action=edit&amp;redlink=1" title="Nomadik (存在しないページ)">Nomadik STn881x</a></li>
+<li>STマイクロエレクトロニクス STR9</li>
+<li>テキサス・インスツルメンツ <a class="mw-redirect" href="/wiki/OMAP#OMAP_1" title="OMAP">OMAP 1</a>, AM1x</li>
+<li>VIA WonderMedia <a class="new" href="/w/index.php?title=WonderMedia&amp;action=edit&amp;redlink=1" title="WonderMedia (存在しないページ)">WM8505/8650</a></li>
+<li>ZiiLABS <a href="/wiki/ZiiLABS" title="ZiiLABS">ZMS-05</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARMv5互換</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ディジタル・イクイップメント・コーポレーション</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/XScale" title="XScale">XScale</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">マーベル・テクノロジー・グループ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Sheeva</li>
+<li>Feroceon</li>
+<li>Jolteon</li>
+<li>Mohawk</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARM11</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Broadcom BCM2835 (<a href="/wiki/Raspberry_Pi" title="Raspberry Pi">Raspberry Pi</a>)</li>
+<li>フリースケール <a href="/wiki/I.MX#i.MX3x_ファミリ" title="I.MX">i.MX3x</a></li>
+<li>Infotmic IMAPX210/220</li>
+<li>Nvidia <a class="mw-redirect" href="/wiki/Tegra" title="Tegra">Tegra APX, 6xx</a></li>
+<li>Qualcomm <a class="new" href="/w/index.php?title=MSM7000&amp;action=edit&amp;redlink=1" title="MSM7000 (存在しないページ)">MSM7000</a>, <a href="/wiki/Snapdragon#Snapdragon_S1" title="Snapdragon">Snapdragon S1</a></li>
+<li>ST-Ericsson <a class="new" href="/w/index.php?title=Nomadik&amp;action=edit&amp;redlink=1" title="Nomadik (存在しないページ)">Nomadik STn882x</a></li>
+<li>Telechips TCC8902</li>
+<li>TI <a class="mw-redirect" href="/wiki/OMAP#OMAP_2" title="OMAP">OMAP 2</a></li>
+<li>VIA WonderMedia <a class="new" href="/w/index.php?title=WonderMedia&amp;action=edit&amp;redlink=1" title="WonderMedia (存在しないページ)">WM87x0</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ARMv6互換</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Mindspeed_Technologies,_Inc.&amp;action=edit&amp;redlink=1" title="Mindspeed Technologies, Inc. (存在しないページ)">Mindspeed</a> Comcerto 1000</li></ul>
+</div></td></tr></tbody></table>
+</td></tr></tbody></table></div>
+<div aria-labelledby="マイクロコントローラ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:マイクロコントローラ (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="マイクロコントローラ" style="font-size:110%;margin:0 6em"><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">メイン</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AF%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%89%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3" title="ワンボードマイコン">ワンボードマイコン</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アーキテクチャ</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Intel_8051" title="Intel 8051">8051</a></li>
+<li><a class="mw-selflink selflink">ARM</a></li>
+<li><a href="/wiki/Atmel_AVR" title="Atmel AVR">AVR</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C166&amp;action=edit&amp;redlink=1" title="C166 (存在しないページ)">C166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C166_family&amp;action=edit&amp;redlink=1" title="En:C166 family (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Infineon_TriCore&amp;action=edit&amp;redlink=1" title="Infineon TriCore (存在しないページ)">Infineon TriCore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infineon_TriCore&amp;action=edit&amp;redlink=1" title="En:Infineon TriCore (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/FR-V" title="FR-V">FR-V</a></li>
+<li><a href="/wiki/MC6800" title="MC6800">MC6800</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ファミリー</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">4ビット</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="Toshiba TLCS (存在しないページ)">Toshiba TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">8ビット</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Atmel_AVR" title="Atmel AVR">AVR</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="/wiki/COP8" title="COP8">COP8</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:COP8&amp;action=edit&amp;redlink=1" title="En:COP8 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_8048" title="Intel 8048">MCS-48</a></li>
+<li><a href="/wiki/Intel_8051" title="Intel 8051">MCS-51</a></li>
+<li><a href="/wiki/Z8_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="Z8 (コントローラ)">Z8</a></li>
+<li><a href="/wiki/EZ80" title="EZ80">eZ80</a></li>
+<li><a href="/wiki/Freescale_68HC08" title="Freescale 68HC08">HC08</a></li>
+<li><a href="/wiki/Freescale_68HC11" title="Freescale 68HC11">HC11</a></li>
+<li><a href="/wiki/H8" title="H8">H8</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XC800&amp;action=edit&amp;redlink=1" title="XC800 (存在しないページ)">XC800</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XC800_family&amp;action=edit&amp;redlink=1" title="En:XC800 family (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">16ビット</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C166&amp;action=edit&amp;redlink=1" title="C166 (存在しないページ)">C166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C166&amp;action=edit&amp;redlink=1" title="En:C166 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CR16/CR16C&amp;action=edit&amp;redlink=1" title="CR16/CR16C (存在しないページ)">CR16/CR16C</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CR16/CR16C&amp;action=edit&amp;redlink=1" title="En:CR16/CR16C (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/H8" title="H8">H8S</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TI_MSP430&amp;action=edit&amp;redlink=1" title="TI MSP430 (存在しないページ)">TI MSP430</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TI_MSP430&amp;action=edit&amp;redlink=1" title="En:TI MSP430 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/R8C/Tiny" title="R8C/Tiny">R8C/Tiny</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XC_2000&amp;action=edit&amp;redlink=1" title="XC 2000 (存在しないページ)">XC 2000</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XC_2000_family&amp;action=edit&amp;redlink=1" title="En:XC 2000 family (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XE166&amp;action=edit&amp;redlink=1" title="XE166 (存在しないページ)">XE166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XE166_family&amp;action=edit&amp;redlink=1" title="En:XE166 family (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">32ビット</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><i><a href="/wiki/AMD_Am29000" title="AMD Am29000">Am29000</a></i></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AVR32&amp;action=edit&amp;redlink=1" title="AVR32 (存在しないページ)">AVR32</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AVR32&amp;action=edit&amp;redlink=1" title="En:AVR32 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/ColdFire" title="ColdFire">ColdFire</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CompactRISC&amp;action=edit&amp;redlink=1" title="CompactRISC (存在しないページ)">CompactRISC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CompactRISC&amp;action=edit&amp;redlink=1" title="En:CompactRISC (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%AF%8C%E5%A3%AB%E9%80%9A_FR" title="富士通 FR">FR</a></li>
+<li><a href="/wiki/FR-V" title="FR-V">FR-V</a></li>
+<li><a href="/wiki/H8" title="H8">H8SX</a></li>
+<li><a href="/wiki/MPC5xx" title="MPC5xx">MPC5xx</a></li>
+<li><a href="/wiki/PowerPC" title="PowerPC">PowerPC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Infineon_TriCore&amp;action=edit&amp;redlink=1" title="Infineon TriCore (存在しないページ)">Infineon TriCore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infineon_TriCore&amp;action=edit&amp;redlink=1" title="En:Infineon TriCore (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/V850" title="V850">V850</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">インタフェース</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=In-circuit_serial_programming&amp;action=edit&amp;redlink=1" title="In-circuit serial programming (存在しないページ)">In-circuit serial programming</a> (ICSP)</li>
+<li><a href="/wiki/In-System_Programming" title="In-System Programming">In-System Programming</a> (ISP)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">デバッグ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DebugWIRE&amp;action=edit&amp;redlink=1" title="DebugWIRE (存在しないページ)">debugWIRE</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:debugWIRE&amp;action=edit&amp;redlink=1" title="En:debugWIRE (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/JTAG" title="JTAG">JTAG</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="インサーキット・エミュレータ">インサーキット・エミュレータ</a> (ICE)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=In-target_probe&amp;action=edit&amp;redlink=1" title="In-target probe (存在しないページ)">In-target probe</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:In-target_probe&amp;action=edit&amp;redlink=1" title="En:In-target probe (存在しないページ)">英語版</a>）</span></span> (ITP)</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">シミュレータ</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Gpsim&amp;action=edit&amp;redlink=1" title="Gpsim (存在しないページ)">Gpsim</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Gpsim&amp;action=edit&amp;redlink=1" title="En:Gpsim (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331141327
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.432 seconds
+Real time usage: 0.597 seconds
+Preprocessor visited node count: 5950/1000000
+Post‐expand include size: 199383/2097152 bytes
+Template argument size: 14476/2097152 bytes
+Highest expansion depth: 35/40
+Expensive parser function count: 19/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13880/5000000 bytes
+Lua time usage: 0.160/7 seconds
+Lua virtual size: 8384512/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  404.313      1 -total
+ 32.90%  133.028      5 テンプレート:Navbox
+ 22.52%   91.051      1 テンプレート:出典の明記
+ 22.24%   89.920      9 テンプレート:Navbox_subgroup
+ 20.85%   84.311      2 テンプレート:Ambox
+ 20.24%   81.839      1 テンプレート:マイクロコントローラ
+ 19.19%   77.586      2 テンプレート:Reflist
+ 18.90%   76.417     20 テンプレート:仮リンク
+ 14.32%   57.895      6 テンプレート:Cite_web
+ 10.55%   42.653      1 テンプレート:ARM-based_chips
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:288737-0!canonical and timestamp 20220331141326 and revision id 191025. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ARMアーキテクチャ&amp;oldid=191025">http://localhost:8080/w/index.php?title=ARMアーキテクチャ&amp;oldid=191025</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2014%E5%B9%B43%E6%9C%88" title="カテゴリ:出典を必要とする記事/2014年3月">出典を必要とする記事/2014年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2014%E5%B9%B43%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2014年3月">出典を必要とする記述のある記事/2014年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2016%E5%B9%B41%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2016年1月">出典を必要とする記述のある記事/2016年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9B%B8%E3%81%8D%E3%81%8B%E3%81%91%E3%81%AE%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E9%A0%85%E7%9B%AE" title="カテゴリ:書きかけの節のある項目">書きかけの節のある項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:ARMアーキテクチャ">ARMアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:マイクロプロセッサ">マイクロプロセッサ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:命令セットアーキテクチャ">命令セットアーキテクチャ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D288737%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D288737%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;oldid=191025" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月2日 (月) 22:36 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.432","walltime":"0.597","ppvisitednodes":{"value":5950,"limit":1000000},"postexpandincludesize":{"value":199383,"limit":2097152},"templateargumentsize":{"value":14476,"limit":2097152},"expansiondepth":{"value":35,"limit":40},"expensivefunctioncount":{"value":19,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13880,"limit":5000000},"timingprofile":["100.00%  404.313      1 -total"," 32.90%  133.028      5 テンプレート:Navbox"," 22.52%   91.051      1 テンプレート:出典の明記"," 22.24%   89.920      9 テンプレート:Navbox_subgroup"," 20.85%   84.311      2 テンプレート:Ambox"," 20.24%   81.839      1 テンプレート:マイクロコントローラ"," 19.19%   77.586      2 テンプレート:Reflist"," 18.90%   76.417     20 テンプレート:仮リンク"," 14.32%   57.895      6 テンプレート:Cite_web"," 10.55%   42.653      1 テンプレート:ARM-based_chips"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"7"},"limitreport-virtmemusage":{"value":8384512,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331141327","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1387});});</script>
+</body></html>
