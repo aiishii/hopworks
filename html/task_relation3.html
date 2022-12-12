@@ -139,11 +139,11 @@ input, textarea {
 			var div_sbj = document.createElement('text');
 			div_sbj.setAttribute("id", "start_"+input_idx);
 			div_sbj.setAttribute("class", "box_sbj");
-			div_sbj.textContent = title
+			div_sbj.innerText = title
 			
 			var div_obj = document.createElement('text');
 			div_obj.setAttribute("class", "box_obj");
-			div_obj.textContent = paraValue[linkNames[i]]
+			div_obj.innerText = paraValue[linkNames[i]]
 			div_obj.setAttribute("id", 'value_'+ input_idx);
 			// <textarea rows="10" cols="60">ここに記入してください</textarea>
 			var input_txt_box = document.createElement('textarea');
