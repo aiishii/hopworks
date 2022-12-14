@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>同時マルチスレッディング - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-同時マルチスレッディング rootpage-同時マルチスレッディング skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">同時マルチスレッディング</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>同時マルチスレッディング</b>（どうじマルチスレッディング、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Simultaneous Multi-Threading</span>、<b>SMT</b>）とは、単一<a href="." id="link_a_2" title="CPU">CPU</a>により複数の実行<a href="." id="link_a_3" title="スレッド (コンピュータ)">スレッド</a>を同時に実行する<a href="." id="link_a_4" title="プロセッサ">プロセッサ</a>の機能。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#商用の実装"><span class="tocnumber">2</span> <span class="toctext">商用の実装</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#DEC_Alphaファミリ"><span class="tocnumber">2.1</span> <span class="toctext">DEC Alphaファミリ</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#IBM_POWERファミリ"><span class="tocnumber">2.2</span> <span class="toctext">IBM POWERファミリ</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Sun_UltraSPARCファミリ"><span class="tocnumber">2.3</span> <span class="toctext">Sun UltraSPARCファミリ</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#x86/x64"><span class="tocnumber">2.4</span> <span class="toctext">x86/x64</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Intel_Pentiumファミリ"><span class="tocnumber">2.4.1</span> <span class="toctext">Intel Pentiumファミリ</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Intel_Atomファミリ"><span class="tocnumber">2.4.2</span> <span class="toctext">Intel Atomファミリ</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Intel_Core_iファミリ"><span class="tocnumber">2.4.3</span> <span class="toctext">Intel Core iファミリ</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#AMD_Ryzen/EPYC"><span class="tocnumber">2.4.4</span> <span class="toctext">AMD Ryzen/EPYC</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#ARM"><span class="tocnumber">2.5</span> <span class="toctext">ARM</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#ARM_Cortex"><span class="tocnumber">2.5.1</span> <span class="toctext">ARM Cortex</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#出典"><span class="tocnumber">3</span> <span class="toctext">出典</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">4</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#外部リンク"><span class="tocnumber">5</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>単一CPUで複数スレッドを同時実行することで、擬似的な<a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型マルチプロセッシング</a> (SMP) 環境を提供することができる。これは主に<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>の観点からの見方だが、<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>の視点からこの技術を見た場合は複数の実行スレッドが単一のプロセッサを共有していると言える。SMTを有効にすることで、見かけのプロセッサ数（論理プロセッサ数、論理コア数）が増加する。<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>がSMTに対応することで、<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="アプリケーションソフトウェア">アプリケーションソフトウェア</a>からは透過的に複数のプロセッサとして利用することができるようになる。SMTにより同時駆動されるスレッドは、タイムスライスで切り替えて疑似的に同時実行するスレッドと対比して、ハードウェアスレッドと呼ばれることがある。
+</p><p>上に「擬似的なSMP環境を提供する」と書いたが、これはSMTの結果であって目的ではない。SMTの本来の目的は、プロセッサ内部の各実行ユニットの使用率を上げることにある。高度に<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">パイプライン</a>化された現代の<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a>プロセッサの実行の様子をつぶさに調べると、プロセッサ内部の実行ユニットすべてが動作しているわけではない場合が多いことがわかった。つまり、せっかくプロセッサ内部を高度に並列化しているにも拘らず並列性が最大限に活かされていない。単一スレッドでは完全には使われないプロセッサ内部資源を複数のスレッドに分配することで、プロセッサが本来持つ並列性を最大限に引き出してシステム全体のパフォーマンスを向上させようというのがSMTの本来の目的である。また、<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0#ブロック型マルチスレッディング" title="ハードウェアマルチスレッディング">CGMT</a>や<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0#インターリーブ型マルチスレッディング" title="ハードウェアマルチスレッディング">FGMT</a>といった同時にマルチスレッドを実行しないマルチスレッディング技術同様に、メモリレイテンシを隠蔽する効果もある。
+</p><p>例えて言うと、整数演算ばかり行うスレッドAと<a href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="浮動小数点数">浮動小数点</a>演算ばかり行うスレッドBを同時に実行すると、スレッドAは整数演算ユニットばかり使いスレッドBは浮動小数点演算ユニットを使うのでお互いにプロセッサ内部資源の競合が極めて少なく、効率的に両者を実行できると考えられる。特に、浮動小数点命令は複数段のパイプラインで実行されることが多く、実行パイプラインを効率良く埋めるのに有用な技術と言える。
+</p><p>ただし、どれほどうまく資源配分を行ったとしても若干の競合が起きてどちらかのスレッドが待ち状態となることは完全には避けられないため、2スレッドを同時実行したとしても2倍のシステム性能が得られることは絶対にない。つまりスレッド当たりの性能はマルチスレッディングを使用しない場合と比較すると必ず低下する。<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2020-10）">現実的には2スレッド同時実行の場合で全体性能は5%から良くて20%程度の増加が得られることが多いようである。</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2020-10）">要出典</span></a></i>]</sup>
+</p><p>しかし、一般的なPCユーザーの使用状況では、マルチスレッド対応アプリケーションは少なく、単純なマルチコア化は、トランジスタ数あたりの性能でいえば効率の良い手段とは言えない部分もある。例えば、マルチコアの場合、シングルスレッド時において1コア分しか使われないとき、デュアルコアCPUであれば50％の使われないトランジスタの無駄が生じるが（トランジスタの無駄が生じると、製造コストに見合うパフォーマンスが得られないということである）、SMTの場合、僅かなアーキテクチャの拡張により実現しているため、シングルスレッド時であっても、生じる無駄も僅かであるといえる。
+<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述には「独自研究」が含まれているおそれがあります。（2019-05）">したがってSMTにより20％でも性能が向上すれば御の字であろう（0％でも問題はないだろう）。</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AF%E8%BC%89%E3%81%9B%E3%81%AA%E3%81%84" title="Wikipedia:独自研究は載せない"><span title="この記述には「独自研究」が含まれているおそれがあります。（2019-05）">独自研究?</span></a></i>]</sup>
+</p><p>消費電力面では、SMTによって電力効率が悪化するケースもある。PCやモバイルではSMTが積極的に用いられることは少ないが、大量のデータを処理するサーバー向けの分野ではレイテンシ隠蔽を目的にSMTが採用されることもある<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p><p>SMTは同時に、つまり同じクロックサイクルで複数のスレッドを動かす技術である。従来のマルチスレッディングではハザードや命令ごと、あるいはクロックごとに実行するスレッドを切り替えており、複数のスレッドを実行できるプロセッサでも、あるクロックサイクルに実行されているスレッドはひとつであった。
+</p><p>単一CPU（単一パッケージ）で同時に複数のスレッドを処理できるものとして、デュアルコア（2コア）、クアッドコア（4コア）、……といった<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a>技術があるが、これは1つのCPUパッケージの中に2つ以上の物理コアが実装されているものであり、1つのコアの中で2つに分けられている同時マルチスレッディングとは似て非なるものである。同時マルチスレッディングはマルチコア技術と併用することも可能である。Intelはシングルコア設計の<a href="/wiki/NetBurst%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="NetBurstマイクロアーキテクチャ">NetBurstマイクロアーキテクチャ</a>において実装した<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング・テクノロジー</a>を、マルチコア設計の<a href="/wiki/Core%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="Coreマイクロアーキテクチャ">Coreマイクロアーキテクチャ</a>でいったん捨てたが、<a href="/wiki/Nehalem%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="Nehalemマイクロアーキテクチャ">Nehalemマイクロアーキテクチャ</a>以降で再び採用したことにより、SMTとマルチコアを併用できるようになった。
+</p><p>PCやワークステーション向けのプロセッサでは、通例<a class="mw-redirect" href="/wiki/BIOS" title="BIOS">BIOS</a>/<a class="mw-redirect" href="/wiki/UEFI" title="UEFI">UEFI</a>設定によってSMTの有効／無効を切り替えることができる。プロセッサの内部ハードウェア的にはSMT機能を実装しているものの、ブランドやグレードに応じてサポートするかどうか（有効化できるかどうか）を制限している製品もある。
+</p><p>SMTはプロセッサコアあたり2スレッド (2-way) とは限らない。4スレッド (4-way) 以上を同時に実行できるプロセッサも存在する。
+</p>
+<h2><span id=".E5.95.86.E7.94.A8.E3.81.AE.E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="商用の実装">商用の実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=2" title="節を編集: 商用の実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="DEC_Alpha.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="DEC_Alphaファミリ">DEC Alphaファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=3" title="節を編集: DEC Alphaファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a> <a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a> EV8はさらにパワフルな4スレッドSMTエンジンを搭載する予定であった<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>が、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%83%83%E3%82%AF" title="コンパック">コンパック</a>はプロジェクトを商用化前に打ち切った。
+</p>
+<h3><span id="IBM_POWER.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="IBM_POWERファミリ">IBM POWERファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=4" title="節を編集: IBM POWERファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2004年5月に発表された<a href="/wiki/IBM" title="IBM">IBM</a>の<a href="/wiki/POWER5" title="POWER5">POWER5</a>は<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">デュアルコア</a>プロセッサで、それぞれのコアに2スレッドのSMTエンジンが組み込まれている。IBMの実装はそれ以前の実装と比較してより洗練されており、異なるスレッドに優先度を与えることや、SMTが性能向上をもたらさないタイプのワークロードをより効率的に処理するため動的にSMTエンジンをオン・オフすることが可能となっている。
+</p><p>2005年に発売された<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>のゲーム機<a href="/wiki/Xbox_360" title="Xbox 360">Xbox 360</a>のCPUには、PowerPCベースの対称型3コアプロセッサ<a href="/wiki/Xenon_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5)" title="Xenon (マイクロプロセッサ)">Xenon</a>が採用されており、2-way SMTにより最大6つのハードウェアスレッドをサポートする。
+</p><p>2006年に発売された<a href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC" title="ソニー">ソニー</a>のゲーム機<a href="/wiki/PlayStation_3" title="PlayStation 3">PlayStation 3</a>のCPUには、<a href="/wiki/PowerPC_970" title="PowerPC 970">PowerPC 970</a>互換のプロセッサが採用されており、2-way SMTをサポートする<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p><p>2010年2月に発表された<a href="/wiki/IBM" title="IBM">IBM</a>の<a href="/wiki/POWER7" title="POWER7">POWER7</a>では、それぞれのコアで同時実行可能なスレッド数が4へと倍増されている。
+また2013年8月には同時8スレッドが実行可能な<a href="/wiki/POWER8" title="POWER8">POWER8</a>を発表している。
+</p>
+<h3><span id="Sun_UltraSPARC.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="Sun_UltraSPARCファミリ">Sun UltraSPARCファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=5" title="節を編集: Sun UltraSPARCファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a>と<a href="/wiki/%E5%AF%8C%E5%A3%AB%E9%80%9A" title="富士通">富士通</a>が開発中の次世代プロセッサ、コードネーム「Rock」は2009年～2010年に登場が予定されている。現行の「UltraSPARC IV+」を置き換える予定のRockはマルチコアでコア内でも複数スレッドを同時実行する。Rockは16コアｘ16スレッドが同時平行的に実行され、1つのプロセッサで256スレッドになる。これらサンの新プロセッサは「Solaris OS」が備える「Solarisコンテナ」機能によってマルチスレッディングに対応する。<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p>
+<h3><span id="x86.2Fx64"></span><span class="mw-headline" id="x86/x64">x86/x64</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=6" title="節を編集: x86/x64">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="Intel_Pentium.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="Intel_Pentiumファミリ">Intel Pentiumファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=7" title="節を編集: Intel Pentiumファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/NetBurst%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="NetBurstマイクロアーキテクチャ">NetBurstマイクロアーキテクチャ</a>の<a href="/wiki/Xeon" title="Xeon">Xeon</a>と<a href="/wiki/Pentium_4" title="Pentium 4">Pentium 4</a>がSMTを採用した最初の商用プロセッサで、以降さまざまなモデルに同機能が搭載されている。インテルはこの機能を「<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング・テクノロジー</a> (Hyper-Threading Technology)」と呼び、その内容は基本的な2スレッドのSMTエンジンである。
+</p>
+<h4><span id="Intel_Atom.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="Intel_Atomファミリ">Intel Atomファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=8" title="節を編集: Intel Atomファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>の低消費電力プロセッサである<a href="/wiki/Intel_Atom" title="Intel Atom">Atom</a>にはSMTが採用された。Atomは<a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">インオーダー実行</a>のプロセッサであり、NetBurstマイクロアーキテクチャとは異なるマイクロアーキテクチャである。
+</p>
+<h4><span id="Intel_Core_i.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="Intel_Core_iファミリ">Intel Core iファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=9" title="節を編集: Intel Core iファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Nehalem%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="Nehalemマイクロアーキテクチャ">Nehalemマイクロアーキテクチャ</a>以降の<a href="/wiki/Intel_Core#Intel_Core_i" title="Intel Core">Core i</a>/<a href="/wiki/Xeon" title="Xeon">Xeon</a>においてもSMTが採用されている。インテルのメインストリーム向けプロセッサとしてはNetBurst系以来の採用である。
+</p>
+<h4><span id="AMD_Ryzen.2FEPYC"></span><span class="mw-headline" id="AMD_Ryzen/EPYC">AMD Ryzen/EPYC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=10" title="節を編集: AMD Ryzen/EPYC">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>の<a href="/wiki/Zen_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Zen (マイクロアーキテクチャ)">Zenマイクロアーキテクチャ</a>では、同社史上初のSMTが実装された<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p>
+<h3><span class="mw-headline" id="ARM">ARM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=11" title="節を編集: ARM">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="ARM_Cortex">ARM Cortex</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=12" title="節を編集: ARM Cortex">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>ARMは2018年に自動車ソリューション向けのSMT対応プロセッサCortex-A65AEを発表した<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=13" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="https://ascii.jp/elem/000/000/560/560386/4/" rel="nofollow">ASCII.jp：Core iシリーズにも使われる「SMT」の利点と欠点 (4/4)</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">Design of an 8-wide superscalar RISC microprocessor with simultaneous multithreading
+Preston, R.P.; Badeau, R.W.; Bailey, D.W.; Bell, S.L.; Biro, L.L.; Bowhill, W.J.; Dever, D.E.; Felix, S.; Gammack, R.; Germini, V.; Gowan, M.K.; Gronowski, P.; Jackson, D.B.; Mehta, S.; Morton, S.V.; Pickholtz, J.D.; Reilly, M.H.; Smith, M.J.
+Solid-State Circuits Conference, 2002. Digest of Technical Papers. ISSCC. 2002 IEEE International
+Volume 1, Issue , 2002 Page(s):334 - 472 vol.1</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="https://game.watch.impress.co.jp/docs/20060329/3dps3.htm" rel="nofollow">西川善司の3DゲームファンのためのPS3アーキテクチャ講座</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">日経コンピュータ2007年10月1日号p181</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external text" href="https://www.4gamer.net/games/300/G030061/20170425122/" rel="nofollow">Ryzenはなぜ「ゲーム性能だけあと一歩」なのか？ テストとAMD担当者インタビューからその特性と将来性を本気で考える</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a class="external text" href="https://news.mynavi.jp/article/20181219-743307/" rel="nofollow">Arm、自動車向けアプリケーションプロセッサIP「Cortex-A65AE」を発表 | マイナビニュース</a></span>
+</li>
+</ol></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">ハードウェアマルチスレッディング</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=15" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.cs.washington.edu/research/smt/" rel="nofollow">SMT research at the University of Washington</a></li></ul>
+<div aria-labelledby="CPUテクノロジー" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:CPU_technologies&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:CPU technologies (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACPU_technologies&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACPU_technologies&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="CPUテクノロジー" style="font-size:110%;margin:0 6em">CPUテクノロジー</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">アーキテクチャ</th><td class="navbox-list navbox-odd hlist hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">ISA</a>: <a href="/wiki/CISC" title="CISC">CISC</a></li>
+<li><a href="/wiki/Explicit_Data_Graph_Execution" title="Explicit Data Graph Execution">EDGE</a></li>
+<li><a href="/wiki/EPIC%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="EPICアーキテクチャ">EPIC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Minimal_instruction_set_computer&amp;action=edit&amp;redlink=1" title="Minimal instruction set computer (存在しないページ)">MISC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Minimal_instruction_set_computer&amp;action=edit&amp;redlink=1" title="En:Minimal instruction set computer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OISC" title="OISC">OISC</a></li>
+<li><a href="/wiki/RISC" title="RISC">RISC</a></li>
+<li><a href="/wiki/VLIW" title="VLIW">VLIW</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Zero_Instruction_Set_Computer&amp;action=edit&amp;redlink=1" title="Zero Instruction Set Computer (存在しないページ)">ZISC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Zero_Instruction_Set_Computer&amp;action=edit&amp;redlink=1" title="En:Zero Instruction Set Computer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ハーバード・アーキテクチャ">ハーバード・アーキテクチャ</a></li>
+<li><a href="/wiki/%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3%E5%9E%8B" title="ノイマン型">ノイマン型</a></li>
+<li><a href="/wiki/4%E3%83%93%E3%83%83%E3%83%88" title="4ビット">4ビット</a></li>
+<li><a href="/wiki/8%E3%83%93%E3%83%83%E3%83%88" title="8ビット">8ビット</a></li>
+<li><a href="/wiki/12%E3%83%93%E3%83%83%E3%83%88" title="12ビット">12ビット</a></li>
+<li><a href="/wiki/16%E3%83%93%E3%83%83%E3%83%88" title="16ビット">16ビット</a></li>
+<li><a href="/wiki/18%E3%83%93%E3%83%83%E3%83%88" title="18ビット">18ビット</a></li>
+<li><a href="/wiki/24%E3%83%93%E3%83%83%E3%83%88" title="24ビット">24ビット</a></li>
+<li><a href="/wiki/31%E3%83%93%E3%83%83%E3%83%88" title="31ビット">31ビット</a></li>
+<li><a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a></li>
+<li><a href="/wiki/36%E3%83%93%E3%83%83%E3%83%88" title="36ビット">36ビット</a></li>
+<li><a href="/wiki/48%E3%83%93%E3%83%83%E3%83%88" title="48ビット">48ビット</a></li>
+<li><a href="/wiki/60%E3%83%93%E3%83%83%E3%83%88" title="60ビット">60ビット</a></li>
+<li><a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a></li>
+<li><a href="/wiki/128%E3%83%93%E3%83%83%E3%83%88" title="128ビット">128ビット</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並列処理</th><td class="navbox-list navbox-even hlist hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">パイプライン</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">命令パイプライン</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">イン・オーダー&amp;アウト・オブ・オーダー</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%BB%E3%83%AA%E3%83%8D%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0" title="レジスタ・リネーミング">レジスタ・リネーミング</a></li>
+<li><a href="/wiki/%E6%8A%95%E6%A9%9F%E7%9A%84%E5%AE%9F%E8%A1%8C" title="投機的実行">投機的実行</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">レベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Bit-level_parallelism&amp;action=edit&amp;redlink=1" title="En:Bit-level parallelism (存在しないページ)">ビット</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E4%B8%A6%E5%88%97%E6%80%A7" title="タスク並列性">タスク</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">スレッド</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a class="mw-selflink selflink">同時マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スーパースレッディング (存在しないページ)">スーパースレッディング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Super-threading&amp;action=edit&amp;redlink=1" title="En:Super-threading (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">フリンの分類</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">タイプ</th><td class="navbox-list navbox-odd hlist hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="デジタルシグナルプロセッサ">DSP</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a></li>
+<li><a href="/wiki/System-on-a-chip" title="System-on-a-chip">System-on-a-chip</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトルプロセッサ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンポーネント</th><td class="navbox-list navbox-even hlist hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%BC%94%E7%AE%97%E8%A3%85%E7%BD%AE" title="演算装置">演算装置</a></li>
+<li><a class="new" href="/w/index.php?title=En:Back-side_bus&amp;action=edit&amp;redlink=1" title="En:Back-side bus (存在しないページ)">Back-side bus</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AC%E3%82%AF%E3%82%B5" title="マルチプレクサ">マルチプレクサ</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AC%E3%82%AF%E3%82%B5" title="マルチプレクサ">デマルチプレクサ</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="トランスレーション・ルックアサイド・バッファ">TLB</a></li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュ</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="レジスタファイル">レジスタファイル</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%BC%E3%83%89" title="マイクロコード">マイクロコード</a></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E8%A3%85%E7%BD%AE" title="制御装置">制御装置</a></li>
+<li><a class="new" href="/w/index.php?title=En:Clock_rate&amp;action=edit&amp;redlink=1" title="En:Clock rate (存在しないページ)">CPUクロック</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="new" href="/w/index.php?title=En:Power_management&amp;action=edit&amp;redlink=1" title="En:Power management (存在しないページ)">電源管理</a></th><td class="navbox-list navbox-odd hlist hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Power_Management" title="Advanced Power Management">APM</a></li>
+<li><a href="/wiki/Advanced_Configuration_and_Power_Interface" title="Advanced Configuration and Power Interface">ACPI</a></li>
+<li><a class="new" href="/w/index.php?title=En:Dynamic_frequency_scaling&amp;action=edit&amp;redlink=1" title="En:Dynamic frequency scaling (存在しないページ)">Dynamic frequency scaling(英語版)</a></li>
+<li><a class="new" href="/w/index.php?title=En:Dynamic_voltage_scaling&amp;action=edit&amp;redlink=1" title="En:Dynamic voltage scaling (存在しないページ)">Dynamic voltage scaling(英語版)</a></li>
+<li><a class="new" href="/w/index.php?title=En:Clock_gating&amp;action=edit&amp;redlink=1" title="En:Clock gating (存在しないページ)">Clock gating(英語版)</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="並列計算" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:並列コンピューティング (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="並列計算" style="font-size:110%;margin:0 6em">並列計算</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">総論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウドコンピューティング</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a></li>
+<li><a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">高性能計算</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="分散コンピューティング">分散コンピューティング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並列レベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E4%B8%A6%E5%88%97%E6%80%A7" title="タスク並列性">タスク</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E8%A8%88%E7%AE%97#ビットレベルの並列性" title="並列計算">ビット</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スレッド</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スーパースレッディング (存在しないページ)">スーパースレッディング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Super-threading&amp;action=edit&amp;redlink=1" title="En:Super-threading (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%A0%E3%83%80%E3%83%BC%E3%83%AB%E3%81%AE%E6%B3%95%E5%89%87" title="アムダールの法則">アムダールの法則</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%82%B9%E3%82%BF%E3%83%95%E3%82%BD%E3%83%B3%E3%81%AE%E6%B3%95%E5%89%87" title="グスタフソンの法則">グスタフソンの法則</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%82%B9%E3%83%88%E5%8A%B9%E7%8E%87%E6%80%A7&amp;action=edit&amp;redlink=1" title="コスト効率性 (存在しないページ)">コスト効率性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cost_efficiency&amp;action=edit&amp;redlink=1" title="En:Cost efficiency (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="Karp-Flatt metric (存在しないページ)">Karp-Flatt metric</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="En:Karp-Flatt metric (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_slowdown&amp;action=edit&amp;redlink=1" title="Parallel slowdown (存在しないページ)">Parallel slowdown</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_slowdown&amp;action=edit&amp;redlink=1" title="En:Parallel slowdown (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Speedup&amp;action=edit&amp;redlink=1" title="Speedup (存在しないページ)">Speedup</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Speedup&amp;action=edit&amp;redlink=1" title="En:Speedup (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">要素</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ファイバー (コンピュータ)">ファイバー</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A9%9F%E6%A2%B0" title="並列ランダムアクセス機械">PRAM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Instruction_window&amp;action=edit&amp;redlink=1" title="Instruction window (存在しないページ)">Instruction window</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Instruction_window&amp;action=edit&amp;redlink=1" title="En:Instruction window (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">調整</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ">キャッシュコヒーレンシ</a></li>
+<li><a href="/wiki/%E5%90%8C%E6%9C%9F_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="同期 (計算機科学)">同期</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AA%E3%82%A2_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="バリア (計算機科学)">バリア</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9" title="メモリコヒーレンス">メモリコヒーレンス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cache_invalidation&amp;action=edit&amp;redlink=1" title="Cache invalidation (存在しないページ)">Cache invalidation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cache_invalidation&amp;action=edit&amp;redlink=1" title="En:Cache invalidation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Application_checkpointing&amp;action=edit&amp;redlink=1" title="Application checkpointing (存在しないページ)">Application checkpointing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Application_checkpointing&amp;action=edit&amp;redlink=1" title="En:Application checkpointing (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド (コンピュータ)</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E5%8C%96" title="並列化">並列プログラミングモデル</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Implicit_parallelism&amp;action=edit&amp;redlink=1" title="Implicit parallelism (存在しないページ)">Implicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Implicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Implicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Explicit_parallelism&amp;action=edit&amp;redlink=1" title="Explicit parallelism (存在しないページ)">Explicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Explicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Explicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E6%80%A7" title="並行性">並行性</a></li></ul></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="フリンの分類">フリンの分類</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SPMD&amp;action=edit&amp;redlink=1" title="SPMD (存在しないページ)">SPMD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SPMD&amp;action=edit&amp;redlink=1" title="En:SPMD (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul></li>
+<li><a href="/wiki/Lock-free%E3%81%A8Wait-free%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Lock-freeとWait-freeアルゴリズム">Lock-freeとWait-freeアルゴリズム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ハードウェア</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a></li>
+<li>マルチプロセッシング
+<ul><li><a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型</a></li>
+<li><a class="new" href="/w/index.php?title=En:Asymmetric_multiprocessing&amp;action=edit&amp;redlink=1" title="En:Asymmetric multiprocessing (存在しないページ)">非対称型</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li></ul></li>
+<li>メモリ
+<ul><li><a href="/wiki/NUMA" title="NUMA">NUMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Cache_only_memory_architecture&amp;action=edit&amp;redlink=1" title="En:Cache only memory architecture (存在しないページ)">en:COMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Distributed_memory&amp;action=edit&amp;redlink=1" title="En:Distributed memory (存在しないページ)">en:分散型</a></li>
+<li><a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有型</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="分散共有メモリ">分散共有型</a></li></ul></li>
+<li><a class="mw-selflink selflink">SMT</a></li>
+<li><a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">MPP</a></li>
+<li><a href="/wiki/Beowulf" title="Beowulf">Beowulf</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">API</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ateji_PX&amp;action=edit&amp;redlink=1" title="Ateji PX (存在しないページ)">Ateji PX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ateji_PX&amp;action=edit&amp;redlink=1" title="En:Ateji PX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Boost_C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA#マルチスレッド" title="Boost C++ライブラリ">Boostスレッド</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Charm%2B%2B&amp;action=edit&amp;redlink=1" title="Charm++ (存在しないページ)">Charm++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Charm%2B%2B&amp;action=edit&amp;redlink=1" title="En:Charm++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cilk&amp;action=edit&amp;redlink=1" title="Cilk (存在しないページ)">Cilk</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cilk&amp;action=edit&amp;redlink=1" title="En:Cilk (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Coarray_Fortran&amp;action=edit&amp;redlink=1" title="Coarray Fortran (存在しないページ)">Coarray Fortran</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coarray_Fortran&amp;action=edit&amp;redlink=1" title="En:Coarray Fortran (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dryad&amp;action=edit&amp;redlink=1" title="Dryad (存在しないページ)">Dryad</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dryad_(programming)&amp;action=edit&amp;redlink=1" title="En:Dryad (programming) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Global_Arrays&amp;action=edit&amp;redlink=1" title="Global Arrays (存在しないページ)">Global Arrays</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Global_Arrays&amp;action=edit&amp;redlink=1" title="En:Global Arrays (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="Intel Cilk Plus (存在しないページ)">Intel Cilk Plus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="En:Intel Cilk Plus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_Threading_Building_Blocks" title="Intel Threading Building Blocks">Intel Threading Building Blocks</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenHMPP&amp;action=edit&amp;redlink=1" title="OpenHMPP (存在しないページ)">OpenHMPP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenHMPP&amp;action=edit&amp;redlink=1" title="En:OpenHMPP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" title="POSIXスレッド">POSIXスレッド</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">問題</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Embarrassingly_parallel&amp;action=edit&amp;redlink=1" title="En:Embarrassingly parallel (存在しないページ)">en:Embarrassingly parallel</a></li>
+<li><a class="new" href="/w/index.php?title=En:Grand_Challenge_problem&amp;action=edit&amp;redlink=1" title="En:Grand Challenge problem (存在しないページ)">en:Grand Challenge</a></li>
+<li><a class="new" href="/w/index.php?title=En:Software_lockout&amp;action=edit&amp;redlink=1" title="En:Software lockout (存在しないページ)">en:Software lockout</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="並行計算">並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="カテゴリ:並行計算">カテゴリ:並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">カテゴリ:並列コンピューティング</a></li></ul></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331142612
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.215 seconds
+Real time usage: 0.308 seconds
+Preprocessor visited node count: 3552/1000000
+Post‐expand include size: 110862/2097152 bytes
+Template argument size: 8514/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 26/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2863/5000000 bytes
+Lua time usage: 0.090/7 seconds
+Lua virtual size: 7921664/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  249.192      1 -total
+ 33.84%   84.323      1 テンプレート:複数の問題
+ 32.74%   81.595      2 テンプレート:Navbox
+ 32.04%   79.842      1 テンプレート:Ambox
+ 26.07%   64.953     22 テンプレート:仮リンク
+ 23.35%   58.177      1 テンプレート:並列コンピューティング
+ 11.76%   29.312      1 テンプレート:Find_sources_mainspace
+ 11.28%   28.104      1 テンプレート:CPU_technologies
+  9.95%   24.788      6 テンプレート:DMC/core
+  8.34%   20.784      2 テンプレート:Fix
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:304731-0!canonical and timestamp 20220331142612 and revision id 200564. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=同時マルチスレッディング&amp;oldid=200564">http://localhost:8080/w/index.php?title=同時マルチスレッディング&amp;oldid=200564</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2020%E5%B9%B44%E6%9C%88" title="カテゴリ:出典を必要とする記事/2020年4月">出典を必要とする記事/2020年4月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E8%A8%98%E4%BA%8B/2020%E5%B9%B44%E6%9C%88" title="カテゴリ:独自研究の除去が必要な記事/2020年4月">独自研究の除去が必要な記事/2020年4月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2020%E5%B9%B410%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2020年10月">出典を必要とする記述のある記事/2020年10月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B41%E6%9C%88-6%E6%9C%88" title="カテゴリ:独自研究の除去が必要な記述のある記事/2019年1月-6月">独自研究の除去が必要な記述のある記事/2019年1月-6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%83%85%E5%A0%B1%E3%81%AE%E6%9B%B4%E6%96%B0%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E9%A0%85%E7%9B%AE/2020%E5%B9%B47%E6%9C%88-12%E6%9C%88" title="カテゴリ:情報の更新が必要とされている項目/2020年7月-12月">情報の更新が必要とされている項目/2020年7月-12月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:CPU" title="カテゴリ:CPU">CPU</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:スーパースカラー・マイクロプロセッサ">スーパースカラー・マイクロプロセッサ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="カテゴリ:スレッド (コンピュータ)">スレッド (コンピュータ)</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="カテゴリ:フリンの分類">フリンの分類</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D304731%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D304731%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;oldid=200564" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月18日 (木) 21:12 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.215","walltime":"0.308","ppvisitednodes":{"value":3552,"limit":1000000},"postexpandincludesize":{"value":110862,"limit":2097152},"templateargumentsize":{"value":8514,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":26,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2863,"limit":5000000},"timingprofile":["100.00%  249.192      1 -total"," 33.84%   84.323      1 テンプレート:複数の問題"," 32.74%   81.595      2 テンプレート:Navbox"," 32.04%   79.842      1 テンプレート:Ambox"," 26.07%   64.953     22 テンプレート:仮リンク"," 23.35%   58.177      1 テンプレート:並列コンピューティング"," 11.76%   29.312      1 テンプレート:Find_sources_mainspace"," 11.28%   28.104      1 テンプレート:CPU_technologies","  9.95%   24.788      6 テンプレート:DMC/core","  8.34%   20.784      2 テンプレート:Fix"]},"scribunto":{"limitreport-timeusage":{"value":"0.090","limit":"7"},"limitreport-virtmemusage":{"value":7921664,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331142612","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":675});});</script>
+</body></html>

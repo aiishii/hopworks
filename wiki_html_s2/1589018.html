@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>GPGPU - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-GPGPU rootpage-GPGPU skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">GPGPU</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>GPGPU</b>（General-purpose computing on graphics processing units; GPUによる汎用計算）とは、<a href="." id="link_a_1" title="Graphics Processing Unit">GPU</a>の演算資源を画像処理以外の目的に応用する技術のことである<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> <sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p><p>元来GPUはリアルタイム画像処理向けの<a href="." id="link_a_2" title="データ並列性">データ並列</a>計算と<a href="." id="link_a_3" title="パイプライン処理">パイプライン処理</a>に特化した命令発行形態を持ち、またGPUと<a href="." id="link_a_4" title="メインメモリ">メインメモリ</a>間の<a href="." id="link_a_5" title="帯域幅">帯域幅</a>は通例狭いことが多いものの、GPUと直結される<a href="." id="link_a_6" title="VRAM">VRAM</a>間には十分広い帯域幅を備えていることから、補助的な<a href="." id="link_a_7" title="ベクトル計算機">ベクトル計算機</a>の一種とも言える。GPGPUは、GPUが持つこの特性を活かした汎用的な<a href="." id="link_a_8" title="ストリーム・プロセッシング">ストリーム・プロセッシング</a>の一形態である。GPUを主体として計算機システムを構成した場合、専用設計の<a href="." id="link_a_9" title="スーパーコンピュータ">スーパーコンピュータ</a>と比較して導入・運用のコストが圧倒的に安くなることから、<a href="." id="link_a_10" title="高性能計算">HPC</a>の分野で特に多くの注目を集めている応用技術でもある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#特徴と課題"><span class="tocnumber">2</span> <span class="toctext">特徴と課題</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#条件分岐"><span class="tocnumber">2.1</span> <span class="toctext">条件分岐</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#浮動小数点演算"><span class="tocnumber">2.2</span> <span class="toctext">浮動小数点演算</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#IEEE_754サポートおよびFMA命令"><span class="tocnumber">2.2.1</span> <span class="toctext">IEEE 754サポートおよびFMA命令</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#メモリ"><span class="tocnumber">2.3</span> <span class="toctext">メモリ</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#共有メモリ"><span class="tocnumber">2.3.1</span> <span class="toctext">共有メモリ</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#接続バスの速度"><span class="tocnumber">2.3.2</span> <span class="toctext">接続バスの速度</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#開発およびチューニングの難しさと移植性"><span class="tocnumber">2.4</span> <span class="toctext">開発およびチューニングの難しさと移植性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#適合分野"><span class="tocnumber">3</span> <span class="toctext">適合分野</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#実用ソフトウェアの登場"><span class="tocnumber">4</span> <span class="toctext">実用ソフトウェアの登場</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#脚注"><span class="tocnumber">5</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>GPUは一般的に<a href="/wiki/%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86" title="画像処理">画像処理</a>を専門とする演算装置であり、多くの場合、<a href="/wiki/CPU" title="CPU">CPU</a>と呼ばれる主演算装置の制御の下で用いられる動画信号生成専用の補助演算用<a href="/wiki/%E9%9B%86%E7%A9%8D%E5%9B%9E%E8%B7%AF" title="集積回路">IC</a>である。動画像の実時間内での生成は高負荷な演算能力が要求されるが、その多くが定式化された単純な演算の繰り返しであるため<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>化に向いており、GPUを設計している数社からは、高速な<a href="/wiki/%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE" title="記憶装置">メモリ</a>・<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>機能と高い画像演算能力を備えたIC製品のシリーズがいくつもリリースされている。
+</p><p>特に1990年代中盤以降は3D描画性能が劇的に向上し、それに伴い<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="ベクトル">ベクトル</a>・<a href="/wiki/%E8%A1%8C%E5%88%97" title="行列">行列</a>演算を中心とした<a href="/wiki/SIMD" title="SIMD">SIMD</a>演算機の色彩が強くなってきた。2000年代に入ると、表現力の向上を求めて固定機能シェーダーから<a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC" title="プログラマブルシェーダー">プログラマブルシェーダー</a>への移行が進み、演算の自由度・柔軟性（プログラマビリティ）が飛躍的に増した。そこでこれをグラフィックス・<a href="/wiki/%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レンダリング (コンピュータ)">レンダリング</a>のみならず、他の数値演算にも利用しようというのがGPGPUのコンセプトである。
+</p>
+<table class="wikitable">
+<caption>最高のシングル理論演算性能を持つGPU・<a href="/wiki/Xeon_Phi" title="Xeon Phi">MIC</a>・CPU<br/>(2015年8月現在)
+</caption>
+<tbody><tr>
+<th rowspan="2">種別
+</th>
+<th colspan="1">単精度
+</th>
+<th colspan="1">倍精度
+</th></tr>
+<tr>
+<th>TFLOPS
+</th>
+<th>TFLOPS
+</th></tr>
+<tr>
+<th>GPU
+</th>
+<td>8.6<br/>(<a href="/wiki/AMD_Radeon" title="AMD Radeon">AMD Radeon</a> R9 Fury X)<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup></td>
+<td>2.62<br/>(<a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a> S9170)<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</td></tr>
+<tr>
+<th>MIC
+</th>
+<td>2.416<br/>(<a href="/wiki/Xeon_Phi" title="Xeon Phi">Xeon Phi</a> 7120P)<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup></td>
+<td>1.208<br/>(Xeon Phi 7120P)<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup>
+</td></tr>
+<tr>
+<th>CPU
+</th>
+<td>1.325<br/>(<a href="/wiki/Xeon" title="Xeon">Xeon</a> E5-2699 v3)<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup></td>
+<td>0.662<br/>(Xeon E5-2699 v3)<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup>
+</td></tr></tbody></table>
+<p>上記の表は 1CPU, 1MIC, 1GPU に限定した表である。なお<a href="/wiki/AMD_Radeon" title="AMD Radeon">AMD Radeon</a> R9 295X2や<a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a> S10000、<a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">NVIDIA GeForce</a> GTX TITAN Zや<a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a> K80のようなデュアルGPUソリューションは除外されている。
+</p><p>2015年現在、GPUの<a href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="浮動小数点数">浮動小数点</a>演算能力は単精度で8T<a href="/wiki/FLOPS" title="FLOPS">FLOPS</a>をオーバーした一方で、CPUは<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90" title="サーバ">サーバー</a>向けでも単精度は1TFLOPS台に留まっている。GPUは構成が単純であるためにCPUよりも集積化の点で有利であることから浮動小数点演算での効率がよく、またGPU専用にローカル接続されたメモリIC (<a href="/wiki/VRAM" title="VRAM">VRAM</a>) とのバンド幅を広く備えるために、CPUと比べて性能比で安価かつ成長の伸び率が高い<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。さらにCPUよりも電力あたりの理論演算性能（ワットパフォーマンス、<a class="new" href="/w/index.php?title=En:Performance_per_watt&amp;action=edit&amp;redlink=1" title="En:Performance per watt (存在しないページ)">Performance per Watt</a>）が高いのもGPUの特徴である。またGPUの主な使途がゲーム（<a class="mw-redirect" href="/wiki/PC%E3%82%B2%E3%83%BC%E3%83%A0" title="PCゲーム">PCゲーム</a>）と<a href="/wiki/%E5%8B%95%E7%94%BB" title="動画">動画</a>再生で、ゲームをしないユーザーにとって余り気味の資源ということもあって注目されている。
+</p><p>2015年現在におけるGPGPU対応の<a class="mw-redirect" href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%89" title="グラフィックスカード">グラフィックスカード</a>（グラフィックスチップ）単体製品すなわちディスクリートGPU (discrete GPU, dGPU) としては、<a href="/wiki/NVIDIA" title="NVIDIA">NVIDIA</a>の<a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">NVIDIA GeForce</a>および<a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">NVIDIA Quadro</a>シリーズや、<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>の<a href="/wiki/AMD_Radeon" title="AMD Radeon">AMD Radeon</a>および<a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a>シリーズなどが代表として挙げられる（ただし後述するGPGPU対応<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="アプリケーションプログラミングインタフェース">API</a>をサポートするのは<a href="/wiki/Microsoft_DirectX" title="Microsoft DirectX">DirectX</a> 10世代以降の製品となる）。CPU統合型GPU (integrated GPU, iGPU) に関しては、NVIDIAの<a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a>シリーズ、AMDの<a href="/wiki/AMD_Accelerated_Processing_Unit" title="AMD Accelerated Processing Unit">AMD APU</a>シリーズ、そして<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>の<a href="/wiki/Intel_HD_Graphics" title="Intel HD Graphics">Intel HD Graphics</a>シリーズなどがGPGPUに対応している。一方、GPGPU専用製品としては、NVIDIAの<a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a>シリーズ、そしてAMDの<a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a> Sシリーズ（旧<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a>シリーズ）が挙げられ、こちらは科学技術分野の<a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">HPC</a>市場向けにも投入されるなど、従来の<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a>からの置き換えを視野に置いた製品展開が行なわれている。
+</p><p>GPGPU<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="アプリケーションソフトウェア">アプリケーション</a>開発の環境およびAPIとしては、ハードウェア内部構造自体が汎用性を増した<a href="/wiki/Microsoft_DirectX" title="Microsoft DirectX">DirectX</a> 10世代の統合型シェーダーアーキテクチャGPUの登場以降、NVIDIAによるGPGPU専用の統合開発環境「<a href="/wiki/CUDA" title="CUDA">CUDA</a>」や、AMDによるGPGPU基盤「<a class="mw-redirect" href="/wiki/AMD_Stream" title="AMD Stream">AMD Stream</a>」（旧称<a class="mw-redirect" href="/wiki/ATI_Stream" title="ATI Stream">ATI Stream</a>）、そして<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%B9%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97" title="クロノス・グループ">クロノス・グループ</a>による標準規格「<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>」が現われ、GPGPU活用の幅が広がりつつある。
+</p><p>なお、DirectX (<a href="/wiki/Direct3D" title="Direct3D">Direct3D</a>/<a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a>) はバージョン11でGPUによる汎用演算用のステージであるコンピュートシェーダー（<a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a>）を、また<a href="/wiki/OpenGL" title="OpenGL">OpenGL</a>/<a href="/wiki/GLSL" title="GLSL">GLSL</a>はバージョン4.3で同様のコンピュートシェーダーを導入する<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>など、グラフィックスAPIのほうにも従来の<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="グラフィックスパイプライン">グラフィックスパイプライン</a>に加えてGPGPU機能を活用するための変化が現れつつある。<a href="/wiki/Metal_(API)" title="Metal (API)">Metal</a>や<a href="/wiki/Vulkan_(API)" title="Vulkan (API)">Vulkan</a>といった後発のローレベルグラフィックスAPIにも、コンピュートシェーダーが搭載されている。
+</p><p>その他、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>の「<a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a>」や、<a href="/wiki/The_Portland_Group" title="The Portland Group">PGI</a>の「<a href="/wiki/OpenACC" title="OpenACC">OpenACC</a>」<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>など、DirectCompute/OpenCL/CUDAといったローレベルAPIをバックエンドとしながら、従来の<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C</a>/<a href="/wiki/C%2B%2B" title="C++">C++</a>や<a class="mw-redirect" href="/wiki/Fortran" title="Fortran">Fortran</a>における<a href="/wiki/OpenMP" title="OpenMP">OpenMP</a>に近い高レベル並列プログラミング環境を提供するアクセラレータ系<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>・言語拡張も出現している。
+</p>
+<h2><span id=".E7.89.B9.E5.BE.B4.E3.81.A8.E8.AA.B2.E9.A1.8C"></span><span class="mw-headline" id="特徴と課題">特徴と課題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=2" title="節を編集: 特徴と課題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GPUはメモリにシーケンシャルにアクセスし、かつ条件分岐の無い計算（演算密度の高い処理）に強い。そのような例に<a href="/wiki/%E8%A1%8C%E5%88%97" title="行列">行列</a>計算がある。苦手な物の代表として<a href="/wiki/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2" title="二分探索">二分探索</a>がある。二分探索は条件分岐だらけなうえ、メモリにランダムアクセスする。<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>をたどる操作もメモリにランダムアクセスするため、<a href="/wiki/%E9%80%A3%E7%B5%90%E3%83%AA%E3%82%B9%E3%83%88" title="連結リスト">連結リスト</a>や<a href="/wiki/%E6%9C%A8%E6%A7%8B%E9%80%A0_(%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0)" title="木構造 (データ構造)">木構造</a>なども苦手である。密行列は得意だが、<a href="/wiki/%E7%96%8E%E8%A1%8C%E5%88%97" title="疎行列">疎行列</a>は苦手で、<a href="/wiki/%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6%E6%83%85%E5%A0%B1%E5%9F%BA%E7%9B%A4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC" title="東京大学情報基盤センター">東京大学情報基盤センター</a>によると100倍遅い<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。グラフ計算においては、例えば<a href="/wiki/%E6%9C%80%E7%9F%AD%E7%B5%8C%E8%B7%AF%E5%95%8F%E9%A1%8C" title="最短経路問題">最短経路問題</a>では、<a href="/wiki/%E5%AE%8C%E5%85%A8%E3%82%B0%E3%83%A9%E3%83%95" title="完全グラフ">完全グラフ</a>のような密グラフに対しては高速に計算できるが、頂点から数本しか辺が出ていないような疎グラフに対しては遅い<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p>
+<h3><span id=".E6.9D.A1.E4.BB.B6.E5.88.86.E5.B2.90"></span><span class="mw-headline" id="条件分岐">条件分岐</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=3" title="節を編集: 条件分岐">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GPUはシェーダープロセッサ（ストリームプロセッサ<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>、ストリーミングプロセッサ<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>とも）と呼ばれる演算ユニットを多数持ち、複数のシェーダープロセッサをまとめて<a class="mw-redirect" href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF" title="クラスタ">クラスタ</a>としている。これらの演算器に命令を与えるインストラクション・ユニットはクラスタごとに1台しか無く、クラスタを構成するシェーダープロセッサはそれぞれ異なるデータを与えられ、そのデータに対して同じ命令内容を一度に実行する。このようなSIMD型データ処理は3次元演算や<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2" title="マルチメディア">マルチメディア</a>処理に効果を発揮する一方で、命令中に条件分岐による<a href="/wiki/%E5%88%86%E5%B2%90%E5%91%BD%E4%BB%A4" title="分岐命令">分岐</a>が入ると<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%98%E3%83%83%E3%83%89" title="オーバーヘッド">オーバーヘッド</a>がかさみ、途端に効率を落としてしまう。今日の<a href="/wiki/CPU" title="CPU">CPU</a>では、このようなペナルティを最小限にするためにプリフェッチ／プリデコードや<a class="mw-redirect" href="/wiki/%E6%8A%95%E6%A9%9F%E5%AE%9F%E8%A1%8C" title="投機実行">投機実行</a>／レジスタ・リネーミングといった機能を備えているが、GPUでは備えていない（限定的な条件付きで投機的実行を行なえるものもある。GPUでの動的分岐はDirectX 9.0c世代以降でようやく現実的になった<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup><sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>）。またPC向けのGPUではシェーダープロセッサごとに分岐するためのプログラムカウンターを持たないため、条件分岐の際は個別に異なる命令を発行するのではなく、実際に命令を実行するか否かを分けるためのマスクレジスタを使って分岐する手法が採用されている<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup> <sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。
+</p><p>また、シェーダープロセッサ間でデータをやりとりする場合、遠くの<a class="mw-redirect" href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%90%E3%82%B9" title="データバス">データバス</a>を経由することになり、それがボトルネックとなってしまう。この点に関しては、DirectX 10世代の<a class="mw-redirect" href="/wiki/%E7%B5%B1%E5%90%88%E5%9E%8B%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="統合型シェーダーアーキテクチャ">統合型シェーダーアーキテクチャ</a>以降のハードウェアに搭載されている、小容量だがプロセッサグループ内で共有することのできる高速な<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュメモリ</a>（共有メモリ）を介することで、プロセッサグループ内でのデータ交換やメモリI/Oの効率を高めることができる<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup> <sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。
+</p><p>一般のアプリケーションで条件分岐が存在しないものは珍しく、こういった制約によってGPUは<a href="/wiki/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%88" title="オフィススイート">オフィススイート</a>のようなアプリケーションの実行には不向きである。GPGPUの発展にはいかに効率を落とさず条件分岐を行なうかというのが1つの課題となっている。原理的にはシンプルなアルゴリズム構造を持ったプログラムによって、並列データ処理に最適化することがGPGPUの特長を最大限引き出すことにつながるといえる。
+</p>
+<h3><span id=".E6.B5.AE.E5.8B.95.E5.B0.8F.E6.95.B0.E7.82.B9.E6.BC.94.E7.AE.97"></span><span class="mw-headline" id="浮動小数点演算">浮動小数点演算</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=4" title="節を編集: 浮動小数点演算">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="単精度浮動小数点">単精度浮動小数点</a>演算に関してはCPUをはるかに上回る理論演算性能と<a href="/wiki/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="スケーラビリティ">スケーラビリティ</a>を持つGPUだが、<a href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="倍精度浮動小数点数">倍精度浮動小数点</a>演算に関しては様相が異なる。もともとGPUが扱う多くの画像演算（特にリアルタイム3Dグラフィックス）では、整数演算や単精度の浮動小数点演算で足りてしまうために浮動小数点演算器は仮数部が<a href="/wiki/24%E3%83%93%E3%83%83%E3%83%88" title="24ビット">24ビット</a>程度とそれほど広くなく、単精度の演算器で倍精度の浮動小数点演算を行なうには、分割して幾度も演算器を使う必要があり、性能を大きく落とす要因となる。なお倍精度対応が必須とされる科学技術計算分野を含めたHPC向けに設計された製品では、倍精度専用の演算器を搭載・有効化しているものもある<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。
+</p><p>AMDは<a href="/wiki/2006%E5%B9%B4" title="2006年">2006年</a>に自社のGPU「<a href="/wiki/AMD_Radeon" title="AMD Radeon">R580</a>」をベースとした、<a class="mw-redirect" href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="単精度浮動小数点">単精度浮動小数点</a>演算対応のストリームプロセッシング向け製品「AMD Stream Processor」（第1世代<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a>）を発表<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>、続いて<a href="/wiki/2007%E5%B9%B4" title="2007年">2007年</a>に<a class="mw-redirect" href="/wiki/RADEON" title="RADEON">R6xx</a>コアを使用した業界初の<a class="mw-redirect" href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="倍精度浮動小数点">倍精度浮動小数点</a>演算対応HPC向けGPUである「<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a> 9170」（第2世代<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a>）を発売<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>した（ただし倍精度の理論演算性能は単精度の場合の1/5となる<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>）。また<a href="/wiki/2008%E5%B9%B4" title="2008年">2008年</a>に発売された<a class="mw-redirect" href="/wiki/RADEON" title="RADEON">RADEON</a> HD 4850は1チップでは世界初の1TFLOPS（単精度）を達成し、このRADEON HD 4850にも使用された<a class="mw-redirect" href="/wiki/RADEON" title="RADEON">R7xx</a>コアを使用して低価格かつ高性能を売りに、HPC分野向けに第3世代<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a>を発売<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>することになった。<a href="/wiki/2010%E5%B9%B4" title="2010年">2010年</a>には、さらに高性能化した第4世代<a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a>を発売している。2014年に発売された<a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a> S9100/S9150では倍精度演算性能が強化され、倍精度の理論演算性能は単精度の場合の1/2になっている<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>。
+</p><p>NVIDIAも、自社のGPU「<a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">G80</a>」をベースとした、<a href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="単精度浮動小数点数">単精度浮動小数点</a>演算対応のHPC向け製品「<a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">Tesla</a> C870」を<a href="/wiki/2007%E5%B9%B4" title="2007年">2007年</a>に投入、さらに<a href="/wiki/2008%E5%B9%B4" title="2008年">2008年</a>に発売された <a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a> C1060 で倍精度に対応したが、単精度933GFLOPSに比べて倍精度は1/12の78GFLOPSとなっており<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>、倍精度演算性能が極端に低かった。<a href="/wiki/2010%E5%B9%B4" title="2010年">2010年</a>に発売された Fermi 世代の Tesla 20 シリーズ<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup> <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>では倍精度演算性能が強化され、倍精度の理論演算性能は単精度の場合の1/2になったが、<a href="/wiki/2012%E5%B9%B4" title="2012年">2012年</a>に発売されたKepler世代のTesla K20シリーズ<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup> <sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>、2013年に発表されたK40<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>、2014年に発表されたK80<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup> <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>では倍精度の理論演算性能は単精度の場合の1/3となっている。
+</p><p>2015年現在でも、GPUにおける倍精度演算に関してはHPC向けを除き、省電力性能やゲーミング性能を重視・維持するために必要最低限の性能しか用意されないことが多い。また倍精度専用の演算ユニットでは単精度の演算を行なうことはできないため、単精度を優先するか、それとも倍精度を優先するかはチップ設計段階におけるトレードオフとなる。実際、NVIDIAのMaxwellアーキテクチャのGPUでは前世代に存在した倍精度演算器が省略され、単精度演算器を使って倍精度演算を行なうため、倍精度演算のピーク性能は単精度演算の1/32となる<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup>。総合的には、依然としてGPUは倍精度の浮動小数点演算が不得意であると言える。
+</p>
+<h4><span id="IEEE_754.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88.E3.81.8A.E3.82.88.E3.81.B3FMA.E5.91.BD.E4.BB.A4"></span><span class="mw-headline" id="IEEE_754サポートおよびFMA命令">IEEE 754サポートおよびFMA命令</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=5" title="節を編集: IEEE 754サポートおよびFMA命令">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>DirectX 11対応となるEvergreen世代以降のAMD GPU、およびFermi世代以降のNVIDIA GPUでは、浮動小数点の演算精度は<a href="/wiki/IEEE_754" title="IEEE 754">IEEE 754</a>規格に準拠したものとなっている。なおNVIDIA GPUおよびAMD GPUでは<a class="mw-redirect" href="/wiki/%E8%9E%8D%E5%90%88%E7%A9%8D%E5%92%8C%E6%BC%94%E7%AE%97" title="融合積和演算">融合積和演算</a>命令 (FMA) をサポートしているため、CPUで同じ内容の処理をFMAを使わず実行した場合と比べて、GPUによる演算結果が異なることもある<sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup> <sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup> <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup> <sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> <sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>。
+</p>
+<h3><span id=".E3.83.A1.E3.83.A2.E3.83.AA"></span><span class="mw-headline" id="メモリ">メモリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=6" title="節を編集: メモリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+
+
+<p>メモリ環境についても、演算入力は<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">少数の格子点データと幾分大きなテクスチャ・データだけであり</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GPGPU&amp;action=edit&amp;redlink=1" title="トーク:GPGPU (存在しないページ)">トーク</a></span></i>]</sup>、演算出力は画像1枚程度の大きさのピクセルごとに<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年2月）">3色</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年2月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GPGPU&amp;action=edit&amp;redlink=1" title="トーク:GPGPU (存在しないページ)">トーク</a></span></i>]</sup>のデータを保持しながら順次それらを送り出すだけで済むため、<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">相応に大きな</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GPGPU&amp;action=edit&amp;redlink=1" title="トーク:GPGPU (存在しないページ)">トーク</a></span></i>]</sup>外部の<a href="/wiki/%E5%8D%8A%E5%B0%8E%E4%BD%93%E3%83%A1%E3%83%A2%E3%83%AA" title="半導体メモリ">半導体メモリ</a>（グラフィックスメモリ／ビデオメモリ／デバイスメモリ／<a href="/wiki/VRAM" title="VRAM">VRAM</a>）と<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">かなり広い</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="この記述の正確性に疑問が呈されています。議論はトークを参照してください。（2015年3月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GPGPU&amp;action=edit&amp;redlink=1" title="トーク:GPGPU (存在しないページ)">トーク</a></span></i>]</sup>メモリバンド幅による接続で十分に対応しており、演算対象データの局所性が高いのでグラフィックスメモリと内部キャッシュによってデータの読み書き性能が向上すると同時に演算も途切れずに順次行える傾向が強い。
+</p><p>基本的にGPUは、配列構造の単純なデータを半精度／単精度程度の浮動小数点演算によって順番に処理することで2次元の動画像データを実時間内に生成することに特化しているため、それ以外の用途ではあまり高い性能は期待できない。リアルタイム画像処理専用ICの流用では、科学技術計算でも倍精度以上の浮動小数点演算（拡張倍精度・四倍精度など）を必要とするものや、演算の局所性が低いものではそれほど高い性能は得られない。リアルタイム画像処理専用ではなく、GPUから派生して新たに開発されたGPGPU用のICでは、倍精度浮動小数点演算やより広いメモリ空間に対応したものがあり、これらは広範な科学技術計算への利用が期待される。なお、コンシューマー向けの画像処理分野ではほとんど必要とされないメモリの冗長機構である<a href="/wiki/%E8%AA%A4%E3%82%8A%E6%A4%9C%E5%87%BA%E8%A8%82%E6%AD%A3" title="誤り検出訂正">ECC</a>が<a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">HPC</a>分野では必須とされるため、ICを共用する場合に制約となる<sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup>。
+</p>
+<h4><span id=".E5.85.B1.E6.9C.89.E3.83.A1.E3.83.A2.E3.83.AA"></span><span class="mw-headline" id="共有メモリ">共有メモリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=7" title="節を編集: 共有メモリ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>GPUによるVRAMへのアクセスは、複数のプロセッサ群によって並列的に発生するため、連続したメモリ領域に対するコアレスアクセス（coalesce access、≒シーケンシャルアクセス）を行なうことで効率化・高速化できる<sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>。NVIDIA GPUでは32のハードウェアスレッドを束ねるバッチ単位を<i>Warp</i><sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup>と呼び、AMD GPUでは64のハードウェアスレッドを束ねるバッチ単位を<i>Wavefront</i><sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>と呼んでいるが、これらのユニット内ではプロセッサが完全に同期して動作するため、バッチ単位ごとにまとめて連続領域にアクセス（コアレスアクセス）することで効率が良くなる。逆に言えば、バッチ単位内のスレッドがそれぞれ遠く離れたばらばらのアドレスにアクセスするような非コアレスアクセス（≒ランダムアクセス）は効率が悪くなる。
+</p><p>GPGPUの本質は、大量の演算器によって実現されるハードウェアマルチスレッド集合を用いたデータ並列演算により性能を稼ぐ点にある。例えば<a href="/wiki/NVIDIA" title="NVIDIA">NVIDIA</a> GPUのFermi/Keplerマイクロアーキテクチャでは、演算器の最小単位をCUDAコア (SP, streaming processor) と呼び、また複数のCUDAコアを束ねる単位をSMX (SM, streaming multiprocessor) と呼んでいるが、GPUでの演算は、複数のSMXに対して同一の命令を発行していき、各々のハードウェアスレッドに割り当てられたデータに対して並列的に演算を行なうスタイルとなる<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup>。またWarp単位内における各スレッドはすべて同一の命令を実行する（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Single_instruction,_multiple_threads&amp;action=edit&amp;redlink=1" title="Single instruction, multiple threads (存在しないページ)">SIMT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Single_instruction,_multiple_threads&amp;action=edit&amp;redlink=1" title="En:Single instruction, multiple threads (存在しないページ)">英語版</a>）</span></span>）<sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup>。基本概念としては<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>の<a href="/wiki/VLIW" title="VLIW">VLIW</a>や<a href="/wiki/Graphics_Core_Next" title="Graphics Core Next">Graphics Core Next</a>といったGPUアーキテクチャにおいても同様である。
+</p><p>しかし、このGPGPUプログラミングが特に従来型のCPUプログラミングと異なる点は、共有メモリ（shared memory、シェアードメモリ）の存在である。共有メモリは小容量だが高速で、ユーザープログラマーが明示的に管理できるキャッシュメモリ（≒L1キャッシュ）の仕組みを果たし、複数のコアでデータを共有・交換する目的に使用できる。なお各APIにおいては、CUDAは共有メモリ、OpenCLはローカルメモリ、DirectComputeはグループ共有メモリ<sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>、そしてC++ AMPはタイル静的メモリ<sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup>という名称で、それぞれ同等機能を備えている。
+</p><p>例えばFermi/Keplerマイクロアーキテクチャでは、1SMXあたり最大48KBの共有メモリを使用できるが<sup class="reference" id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup>、外部にあるDRAMにキャッシュなしでアクセスする場合と比べて、共有メモリの<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%86%E3%83%B3%E3%82%B7" title="レイテンシ">レイテンシ</a>は（スレッド間のバンクコンフリクトがないかぎり）100倍小さくなる。そのため、複数のスレッドから参照されるデータの一時書き込み場所として共有メモリを活用することにより、高速な並列アルゴリズム（たとえば高速に総和を求める並列リダクションなど）や、GPUプログラミングにおける高速化に必要なコアレスアクセス（≒シーケンシャルアクセス）を実現することができるとNVIDIAは説明している<sup class="reference" id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup>。しかしながら、最大でも48KBしかない共有メモリというハードウェア制約がアルゴリズムの幅に制限をかけるため、共有メモリの存在はGPUプログラミングの難しさにもつながってしまう。また、共有メモリに読み書きする際、スレッド間の同期をとるための処理もプログラマーが明示的に記述する必要がある。
+</p><p>なお、インテルCPUのL2キャッシュメモリはL1キャッシュメモリに比べて容量が大きく、またプロセッサコア側に直結されているが、NVIDIA GPUのL2キャッシュメモリはL1キャッシュメモリに比べて容量がほとんど変わらず、またメモリ側に直結されているなど、データアクセス傾向の違いがハードウェア設計思想の違いにも反映されており、単純にキャッシュメモリの容量だけを比較して性能の優劣を決めることはできない<sup class="reference" id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup> <sup class="reference" id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup> <sup class="reference" id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup>。
+</p>
+<h4><span id=".E6.8E.A5.E7.B6.9A.E3.83.90.E3.82.B9.E3.81.AE.E9.80.9F.E5.BA.A6"></span><span class="mw-headline" id="接続バスの速度">接続バスの速度</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=8" title="節を編集: 接続バスの速度">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>コンピュータの<a href="/wiki/%E3%83%9E%E3%82%B6%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89" title="マザーボード">マザーボード</a>とdGPUを接続する<a href="/wiki/PCI_Express" title="PCI Express">PCI Express</a>規格は、CPU-システムメモリ間やGPU-ビデオメモリ間と比べてはるかに帯域幅が狭く、安易にGPGPUを導入しようとするとデータ転送がボトルネックとなって逆に性能の低下を招いてしまう可能性もありうる<sup class="reference" id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup>。この点に関しては、NVIDIAが開発した独自のインターコネクト技術である<a href="/wiki/NVLink" title="NVLink">NVLink</a><sup class="reference" id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup> <sup class="reference" id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup>などの解決策が模索されている。
+</p>
+<h3><span id=".E9.96.8B.E7.99.BA.E3.81.8A.E3.82.88.E3.81.B3.E3.83.81.E3.83.A5.E3.83.BC.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.AE.E9.9B.A3.E3.81.97.E3.81.95.E3.81.A8.E7.A7.BB.E6.A4.8D.E6.80.A7"></span><span class="mw-headline" id="開発およびチューニングの難しさと移植性">開発およびチューニングの難しさと移植性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=9" title="節を編集: 開発およびチューニングの難しさと移植性">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2015年現在、GPGPU対応プログラムの開発環境・<a class="mw-redirect" href="/wiki/Application_Programming_Interface" title="Application Programming Interface">API</a>として代表的なものは<a href="/wiki/CUDA" title="CUDA">CUDA</a>、<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>、および<a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a>であり、GPGPU黎明期の開発環境に比べればはるかに開発しやすくなっている<sup class="reference" id="cite_ref-55"><a href="#cite_note-55">[55]</a></sup>ものの、依然としてアクセラレーターとなるハードウェアを意識したGPGPU特有のプログラミング知識が不可欠である。また、規格によってある程度標準化・抽象化されているとはいえ、いずれもデバイスとの通信を行なうローレベルのAPIを使いこなさなければならないなど、通常の <a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C</a>/<a href="/wiki/C%2B%2B" title="C++">C++</a> や <a class="mw-redirect" href="/wiki/Fortran" title="Fortran">Fortran</a> を用いたソフトウェア開発とは次元の異なる難しさがあり、導入のハードルが高い。特に OpenCL と DirectCompute はハードウェアに共通にアクセスできる API を規定しているだけであり、CUDAよりもさらにローレベルの抽象度である。この点に関しては、アクセラレーターの存在を抽象化し、従来のCPUベース並列プログラミング用の共通規格 <a href="/wiki/OpenMP" title="OpenMP">OpenMP</a> に近い高レベルプログラミング環境を提供する <a href="/wiki/OpenACC" title="OpenACC">OpenACC</a> や <a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a> といった規格も徐々に整備されつつある<sup class="reference" id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup>。
+</p><p>CPU上で動作するプログラムは組み込み環境を除き、ライブラリも含めて高レベルに洗練された開発環境が整っていることが多い。例えば<a href="/wiki/C%2B%2B" title="C++">C++</a>、<a href="/wiki/Java" title="Java">Java</a>、<a href="/wiki/C_Sharp" title="C Sharp">C#</a>言語などの代表的な<a class="mw-redirect" href="/wiki/%E9%AB%98%E7%B4%9A%E8%A8%80%E8%AA%9E" title="高級言語">高級言語</a>では、単純な連続メモリの配列構造だけでなく、<a href="/wiki/%E9%80%A3%E7%B5%90%E3%83%AA%E3%82%B9%E3%83%88" title="連結リスト">リンクリスト</a>・<a href="/wiki/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8" title="二分探索木">二分探索木</a>・<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ハッシュテーブル">ハッシュテーブル</a>といった基本的なデータ構造はプログラミング言語標準ライブラリで提供されていることがほとんどだが、GPUプログラミングの場合は<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">高速に処理できないという理由から</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup>基本的には配列構造しか用意されていない。<a href="/wiki/%E3%83%95%E3%82%A9%E3%83%88%E3%83%B3%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0" title="フォトンマッピング">フォトンマッピング</a>手法の開発者であるWann Jensen博士によると、複雑なデータ構造をGPU上で扱おうとするとCPUよりもはるかに困難となる場合が多いと評されている<sup class="reference" id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup>。他にも、GPUプログラミング言語である<a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a>、<a href="/wiki/GLSL" title="GLSL">GLSL</a>、およびOpenCL CではC++テンプレートのような<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">ジェネリックプログラミング</a>機能がサポートされないため、生産性が低い。なお<a href="/wiki/Basic_Linear_Algebra_Subprograms" title="Basic Linear Algebra Subprograms">BLAS</a>や<a href="/wiki/%E9%AB%98%E9%80%9F%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="高速フーリエ変換">FFT</a>に関しては、NVIDIAによるCUDA実装のcuBLAS<sup class="reference" id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup>やcuFFT<sup class="reference" id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup>、およびAMDによるOpenCL実装のclMath (clBLAS, clFFT) <sup class="reference" id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup>が存在する。そのほか、<a href="/wiki/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2" title="二分探索">二分探索</a>、<a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%88" title="ソート">ソート</a>、リダクション、スキャンといったよく使われるアルゴリズムに関しては、NVIDIAによる<a href="/wiki/CUDA" title="CUDA">CUDA</a>実装のC++テンプレートベース並列アルゴリズムライブラリThrust<sup class="reference" id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup>や、AMDによる<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>/<a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a>実装の同等ライブラリBolt<sup class="reference" id="cite_ref-62"><a href="#cite_note-62">[62]</a></sup>が存在するが、両者に互換性はない。
+</p><p>また、GPUで演算した結果をCPUで読み出して利用する場合、従来アーキテクチャではGPUメモリからCPUメモリへのデータ転送が必要となる。その逆もまた然りである。こうしたCPU-GPU間のメモリ転送にかかる処理時間およびプログラミング上の手間が、性能のボトルネックやソフトウェア開発の難しさにつながるという問題も抱えている。これは物理的にメモリが分離されているdGPUとCPUによる構成だけでなく、従来型のオンボードグラフィックスやCPU内蔵GPUといった、物理メモリを共有する構成においても同様である。CUDA<sup class="reference" id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup>やOpenCL<sup class="reference" id="cite_ref-64"><a href="#cite_note-64">[64]</a></sup>にはソフトウェア（ドライバー）レベルでこの転送の手間を解決する仕組みとして統合メモリ (unified memory) 機能や共有仮想メモリ (shared virtual memory) 機能が用意されてはいるが、あくまでメモリ空間のアドレッシングを仮想化して転送処理を自動化するだけの仕組みであり、アプリケーションプログラマーが明示的に転送処理を記述してチューニング・最適化する場合と比べてパフォーマンス上の問題もある<sup class="reference" id="cite_ref-65"><a href="#cite_note-65">[65]</a></sup>。この点に関しては、AMDが推進しているHSA (<a href="/wiki/Heterogeneous_System_Architecture" title="Heterogeneous System Architecture">Heterogeneous System Architecture</a>)<sup class="reference" id="cite_ref-66"><a href="#cite_note-66">[66]</a></sup> における<a class="mw-redirect" href="/wiki/HUMA" title="HUMA">hUMA</a> (heterogeneous Uniform Memory Access) といった解決策が模索されている。
+</p><p>GPGPUプログラムの移植性に関しては、CUDAはNVIDIAハードウェア専用であり、また DirectCompute (DirectX) はMicrosoftプラットフォーム（<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>、<a href="/wiki/Xbox_One" title="Xbox One">Xbox One</a>など）専用という制約がある。一方でOpenCLは、GPUだけでなく対応するあらゆるハードウェア・あらゆるプラットフォームへ展開できる高い移植性を持っているが、性能に関するポータビリティは必ずしも確保・保証されず、場合によってはデバイスやチップごとにコードをチューニングする必要がある<sup class="reference" id="cite_ref-67"><a href="#cite_note-67">[67]</a></sup><sup class="reference" id="cite_ref-68"><a href="#cite_note-68">[68]</a></sup><sup class="reference" id="cite_ref-69"><a href="#cite_note-69">[69]</a></sup>。
+</p>
+<h2><span id=".E9.81.A9.E5.90.88.E5.88.86.E9.87.8E"></span><span class="mw-headline" id="適合分野">適合分野</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=10" title="節を編集: 適合分野">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GPGPUで性能が向上するアプリケーションの例として、下記が挙げられる。
+</p>
+<ul><li><a class="mw-redirect" href="/wiki/%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97" title="数値計算">数値計算</a>
+<ul><li><a href="/wiki/%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="シミュレーション">シミュレーション</a>
+<ul><li><a href="/wiki/%E5%88%86%E5%AD%90%E5%8B%95%E5%8A%9B%E5%AD%A6%E6%B3%95" title="分子動力学法">分子動力学法</a>、<a href="/wiki/%E6%A0%BC%E5%AD%90%E3%83%9C%E3%83%AB%E3%83%84%E3%83%9E%E3%83%B3%E6%B3%95" title="格子ボルツマン法">格子ボルツマン法</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E7%89%A9%E7%90%86%E5%AD%A6" title="計算物理学">物理シミュレーション</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%80%A4%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6" title="数値流体力学">流体計算</a>・<a href="/wiki/%E6%B0%97%E5%80%99%E3%83%A2%E3%83%87%E3%83%AB" title="気候モデル">気候シミュレーション</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%A4%A9%E6%96%87%E5%AD%A6" title="シミュレーション天文学">天体シミュレーション</a></li></ul></li>
+<li><a href="/wiki/%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD" title="暗号解読">暗号解読</a>
+<ul><li><a href="/wiki/%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8" title="暗号通貨">暗号通貨</a>の採掘</li></ul></li>
+<li><a href="/wiki/%E9%9F%B3%E5%A3%B0%E5%87%A6%E7%90%86" title="音声処理">音声処理</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%96%AD%E5%B1%A4%E6%92%AE%E5%BD%B1" title="コンピュータ断層撮影">CT</a>再構築</li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%87%A6%E7%90%86" title="トランザクション処理">データベース処理</a></li>
+<li><a href="/wiki/%E9%87%91%E8%9E%8D%E5%B7%A5%E5%AD%A6" title="金融工学">市況分析</a></li>
+<li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92" title="機械学習">機械学習</a>（<a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a>など行列計算によるもの）
+<ul><li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0" title="ディープラーニング">ディープラーニング</a></li></ul></li>
+<li><a href="/wiki/%E6%9C%80%E9%81%A9%E5%8C%96%E5%95%8F%E9%A1%8C" title="最適化問題">最適化問題</a>（DRAMにコアレスアクセスするもの）</li></ul></li></ul>
+<p>実際の演算内容としては、行列演算、配列のリダクション、および<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ変換</a>などが挙げられる。
+</p><p>変わった例では<a class="mw-redirect" href="/wiki/%E3%82%AB%E3%82%B9%E3%83%9A%E3%83%AB%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%BB%E3%83%A9%E3%83%9C" title="カスペルスキー・ラボ">カスペルスキー・ラボ</a>が<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2015年3月）">現在</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2015年3月）">いつ?</span></a></i>]</sup>Radeon HD 2900で行っている実証試験として、GPUのパワーを使って<a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%81%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="アンチウイルスソフトウェア">セキュリティソフト</a>による大まかなセキュリティチェックを行う機能を開発している。これによりCPUへの負担を減らすことができるとしている<a class="external autonumber" href="http://internet.watch.impress.co.jp/cda/special/2008/11/12/21473.html" rel="nofollow">[5]</a>。
+</p><p>一方で、大量の条件分岐が伴う創薬研究や遺伝子解析のような用途には<a href="/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E8%A8%88%E7%AE%97%E6%A9%9F" title="スカラー計算機">スカラー計算機</a>が適しており、<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a>やGPGPUベースの計算機には向かないとされている<sup class="reference" id="cite_ref-70"><a href="#cite_note-70">[70]</a></sup>。
+</p>
+<h2><span id=".E5.AE.9F.E7.94.A8.E3.82.BD.E3.83.95.E3.83.88.E3.82.A6.E3.82.A7.E3.82.A2.E3.81.AE.E7.99.BB.E5.A0.B4"></span><span class="mw-headline" id="実用ソフトウェアの登場">実用ソフトウェアの登場</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=11" title="節を編集: 実用ソフトウェアの登場">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GPGPU技術の話題は、コンピュータ（特に資源やスペースの制約が強いパーソナルコンピュータ）の進化において<a href="/wiki/2000%E5%B9%B4%E4%BB%A3" title="2000年代">2000年代</a>中盤までのトレンドであり課題であった。しかし、デモンストレーションばかりが先行し、実際に活用できるソフトウェアが発売されることはなかった。そもそも、CUDAやOpenCLなどの汎用APIや、それらに対応するDirectX 10世代の統合型シェーダーアーキテクチャGPUが出現するまでは、GPGPU開発環境は制約の強いリアルタイムグラフィックス向けのAPIや<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="シェーディング言語">シェーディング言語</a>を直接利用したものか、もしくは研究機関が独自開発した固有のプログラミング言語基盤であり、ハードルも高く、決して開発効率や再利用性が良いとは言えなかった<sup class="reference" id="cite_ref-71"><a href="#cite_note-71">[71]</a></sup> <sup class="reference" id="cite_ref-72"><a href="#cite_note-72">[72]</a></sup>。
+</p><p><a href="/wiki/2008%E5%B9%B4" title="2008年">2008年</a>秋から、<a href="/wiki/S3_Graphics" title="S3 Graphics">S3</a>がGPUを利用したGPGPU用<a class="mw-redirect" href="/wiki/%E5%86%99%E7%9C%9F%E4%BF%AE%E6%AD%A3" title="写真修正">写真修正</a><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>「S3FotoPro」を発表<sup class="reference" id="cite_ref-73"><a href="#cite_note-73">[73]</a></sup>、また動画編集加工ソフトでは動画エンコードソフトの代表格である<a href="/wiki/TMPGEnc" title="TMPGEnc">TMPGEnc</a>がCUDAに対応した<sup class="reference" id="cite_ref-74"><a href="#cite_note-74">[74]</a></sup>ことを皮切りに、<a class="mw-redirect" href="/wiki/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF" title="サイバーリンク">サイバーリンク</a>の<a href="/wiki/PowerDirector" title="PowerDirector">PowerDirector</a> 7がCUDAとATI Streamに対応した<sup class="reference" id="cite_ref-75"><a href="#cite_note-75">[75]</a></sup>。さらに、<a href="/wiki/2009%E5%B9%B4" title="2009年">2009年</a>にはSuper LoiLoScope (Pixel Shader 2.0を活用) が発売<sup class="reference" id="cite_ref-76"><a href="#cite_note-76">[76]</a></sup>、<a class="mw-redirect" href="/wiki/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF" title="サイバーリンク">サイバーリンク</a>が<a href="/wiki/MediaEspresso" title="MediaEspresso">MediaShow Espresso</a> (CUDAとATI Streamに対応) を発売している。GPGPUを利用した無料で利用可能な動画エンコードソフトとして、AMDのATI AVIVO (完全無料) やNvidiaのBadaboom (30日間無料体験版) 、MediacoderのCUDAエンコーダが挙げられる。
+</p><p>米<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%93" title="アドビ">アドビ</a>は<a href="/wiki/Adobe_Creative_Suite#CS4" title="Adobe Creative Suite">Creative Suite 4</a> (CS4) の一部製品においてCUDAベースのGPUアクセラレーションをサポートしていたが<sup class="reference" id="cite_ref-77"><a href="#cite_note-77">[77]</a></sup>、2010年5月28日に発売<sup class="reference" id="cite_ref-78"><a href="#cite_note-78">[78]</a></sup>した<a href="/wiki/Adobe_Creative_Suite#CS5" title="Adobe Creative Suite">Creative Suite 5</a> (CS5) において<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">GPGPUを正式にサポートした</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年3月）">要出典</span></a></i>]</sup>。CS5は<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>ベースで開発されており、<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2015年2月）">ほとんどすべての機能において</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年2月）">要出典</span></a></i>]</sup>GPGPUによる演算を行うことができる。本来GPUは画像処理を得意とするため、画像処理を主体とする同社のアプリケーションへの適性は高い。また、<a class="mw-redirect" href="/wiki/After_Effects" title="After Effects">After Effects</a> CCでは、<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0" title="レイトレーシング">レイトレーシング</a>エンジンに<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_OptiX&amp;action=edit&amp;redlink=1" title="NVIDIA OptiX (存在しないページ)">NVIDIA OptiX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OptiX&amp;action=edit&amp;redlink=1" title="En:OptiX (存在しないページ)">英語版</a>）</span></span>を採用している<sup class="reference" id="cite_ref-79"><a href="#cite_note-79">[79]</a></sup>。その他にも、<a href="/wiki/V-Ray" title="V-Ray">V-Ray</a>など、レイトレーシングのアクセラレータとしてGPUを活用しているレンダラーが存在する<sup class="reference" id="cite_ref-80"><a href="#cite_note-80">[80]</a></sup>。AMDもOpenCLベースのレイトレーシングエンジンとして、<a class="new" href="/w/index.php?title=Radeon_ProRender&amp;action=edit&amp;redlink=1" title="Radeon ProRender (存在しないページ)">Radeon ProRender</a> (旧称<a class="new" href="/w/index.php?title=AMD_FireRender&amp;action=edit&amp;redlink=1" title="AMD FireRender (存在しないページ)">AMD FireRender</a>) を開発・公開している<sup class="reference" id="cite_ref-81"><a href="#cite_note-81">[81]</a></sup> <sup class="reference" id="cite_ref-82"><a href="#cite_note-82">[82]</a></sup> <sup class="reference" id="cite_ref-83"><a href="#cite_note-83">[83]</a></sup>。
+</p><p><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9" title="オープンソース">オープンソース</a>の統合型3DCG作成ソフトウェア<a href="/wiki/Blender" title="Blender">Blender</a>では、<a href="/wiki/%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%83%BB%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="グローバル・イルミネーション">GI</a>レンダリングエンジンであるCyclesにおいてNVIDIA CUDAによるGPUレンダリングが可能となっている。なお、バージョン2.6時点ではOpenCLによるGPUレンダリングも試験的に実装が進められている<sup class="reference" id="cite_ref-84"><a href="#cite_note-84">[84]</a></sup>。また、<a class="mw-redirect" href="/wiki/Autodesk" title="Autodesk">Autodesk</a> <a href="/wiki/3ds_Max" title="3ds Max">3ds Max</a>サブスクリプションなどに搭載されている物理ベースのGIレンダリングエンジンであるNVIDIA Irayでは、CUDAベースのGPUアクセラレーションが行なわれる<sup class="reference" id="cite_ref-85"><a href="#cite_note-85">[85]</a></sup> <sup class="reference" id="cite_ref-86"><a href="#cite_note-86">[86]</a></sup> <sup class="reference" id="cite_ref-87"><a href="#cite_note-87">[87]</a></sup>。
+</p><p>その他、<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3" title="ビットコイン">ビットコイン</a>をはじめとした<a href="/wiki/%E6%9A%97%E5%8F%B7%E9%80%9A%E8%B2%A8" title="暗号通貨">暗号通貨</a>の採掘処理にもGPUが使われている<sup class="reference" id="cite_ref-88"><a href="#cite_note-88">[88]</a></sup>。
+</p><p>倍精度浮動小数点数への対応も進みつつあり、中堅クラスのスーパーコンピュータの演算装置としても普及しつつある。
+</p><p>このように、学術・研究目的や産業用途以外にも、一般的なプロダクション向け・コンシューマー向けに関してもGPGPU技術を利用したソフトウェアが続々と登場しており、ようやくGPGPUを本格的に活用できる環境が整ってきたといえる。しかし、万能に処理をこなすCPUと比較して、GPUはピーキーな特性を持ち、ソフトウェア開発においてはパイプライン処理や並列計算等の知識だけでなく、ハードウェア仕様およびAPIの知識も必要になるため、未だにGPGPU活用のノウハウが一般化したとは言い難い。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=12" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="http://www.toshiba-dme.co.jp/dme/partner/gpgpu.htm" rel="nofollow">GPGPU | ビジネスパートナー | 東芝デジタルメディアエンジニアリング株式会社</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external text" href="http://www.hpc.co.jp/gpu_solution.html" rel="nofollow">GPGPUソリューション | HPCシステムズはすべての研究開発者に計算力を提供します。</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="http://www.amd.com/ja-jp/products/graphics/desktop/r9#" rel="nofollow">AMD Radeon™ R9シリーズ・グラフィックス・カード</a>, 2 ops/cycle × 1050 MHz × 4096 cores.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="http://www.amd.com/ja-jp/products/graphics/server/s9170#" rel="nofollow">AMD FirePro™ S9170サーバーGPU</a></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external text" href="http://www.atmarkit.co.jp/news/200803/06/cuda.html" rel="nofollow">GPGPUのキラーアプリケーションは「グラフィックス」 － ＠IT</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/107/G010729/20121015050/" rel="nofollow">4Gamer.net ― OpenGLはDirectX 11を超え，OpenGL ESは据え置き型ゲーム機と同等以上に。Khronosの最新動向レポート</a></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a class="external text" href="http://www.softek.co.jp/SPG/Pgi/Accel/" rel="nofollow">PGI GPU用アクセラレータコンパイラ 情報サイト　－　GPU / GPGPU / CUDA 対応、CUDA Fortran</a></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a class="external text" href="http://www.cc.u-tokyo.ac.jp/support/press/news/VOL12/No5/201009_gpgpu.pdf" rel="nofollow">これからの並列計算のためのGPGPU連載講座(V) 疎行列ベクトル積を題材としたCUDA最適化プログラミング</a></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Harish, Pawan; Narayanan, P. J. (2007). <a class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.102.4206" rel="nofollow">“Accelerating large graph algorithms on the GPU using CUDA”</a>. <i>Lecture Notes in Computer Science</i> (Springer Berlin Heidelberg) <b>4873</b>:  197-208. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2F978-3-540-77220-0_21" rel="nofollow">10.1007/978-3-540-77220-0_21</a><span style="display:none;">. <a class="external free" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.102.4206" rel="nofollow">http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.102.4206</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Accelerating+large+graph+algorithms+on+the+GPU+using+CUDA&amp;rft.jtitle=Lecture+Notes+in+Computer+Science&amp;rft.aulast=Harish&amp;rft.aufirst=Pawan&amp;rft.au=Harish%2C%26%2332%3BPawan&amp;rft.au=Narayanan%2C%26%2332%3BP.+J.&amp;rft.date=2007&amp;rft.volume=4873&amp;rft.pages=197-208&amp;rft.pub=Springer+Berlin+Heidelberg&amp;rft_id=info:doi/10.1007%2F978-3-540-77220-0_21&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.102.4206&amp;rfr_id=info:sid/ja.wikipedia.org:GPGPU"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/topic/review/20131024_620741.html" rel="nofollow">【レビュー】549ドルのGeForce GTX TITAN対抗馬「Radeon R9 290X」をベンチマーク - PC Watch</a></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/specials/3de/geforce_8800/geforce_8800_002.shtml" rel="nofollow">【4Gamer.net】［特集］「GeForce 8800」のポイントをブロックダイアグラムから探る</a></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/specials/3de/051005_radeon_x1000/051005_radeon_x1000_1.shtml" rel="nofollow">【4Gamer.net】 － 西川善司の3Dゲームエクスタシー － ATI, Radeon X1000シリーズ発表でSM3.0世代に突入</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20130319_592202.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】GTCの目玉の1つ「Tegra 4/4i」のCPUアーキテクチャ</a></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/series/kepler_gpu/002/" rel="nofollow">Kepler GPUアーキテクチャとプログラム最適化 (2) GPUはどうやって命令を処理しているのか | マイナビニュース</a></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20130318_592131.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】PlayStation 4で採用されたAMDのGCNアーキテクチャ</a></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/column/architecture/322/" rel="nofollow">コンピュータアーキテクチャの話 (322) GPUが用いるメモリのアクセス時間の短縮方法 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external text" href="http://www.gdep.jp/page/view/252" rel="nofollow">第５回　GPUの構造 | G-DEP</a></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/204/G020420/20130217001/" rel="nofollow">4Gamer.net ― 「GeForce GTX TITAN」登場。500円玉より大きなモンスターGPUの“性能以外”を徹底解説</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/news/2006/11/15/102.html" rel="nofollow">AMD、R580コアをベースにしたHPC専用プロセッサ「Stream Processor」 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2008/11/27/stream/" rel="nofollow">AMDのGPGPU戦略は新章へ - ATI Streamの展望、DirectX Compute Shaderの衝撃 (1) Radeon HD 4000シリーズでネイティブGPGPU | マイナビニュース</a></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><a class="external text" href="http://www.tgdaily.com/technology/35894-amds-rv670-does-double-precision-at-half-the-speed" rel="nofollow">AMD's RV670 does double-precision at half the speed | TG Daily</a></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><a class="external text" href="http://www.acube-corp.com/products/firepro-server/amd-firestream-9250.html" rel="nofollow">AMD FireStream™9250 - FirePro Server - 製品情報 - 株式会社エーキューブ</a></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><a class="external text" href="http://www.acube-corp.com/products/firepro-server/firepros9100.html" rel="nofollow">AMD FirePro S9100 - FirePro Server - 製品情報 - 株式会社エーキューブ</a></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><a class="external text" href="http://www.acube-corp.com/products/firepro-server/firepros9150.html" rel="nofollow">AMD FirePro S9150 - FirePro Server - 製品情報 - 株式会社エーキューブ</a></span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text"><a class="external text" href="http://www.jcsn.co.jp/products/hpc_gpgpu_glph_gp1060.html" rel="nofollow">NVIDIA Tesla C1060 - 株式会社 日本コンピューティングシステム</a></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/product_tesla_C2050_C2070_jp.html" rel="nofollow">Tesla C2050 / C2070 GPUコンピューティングプロセッサ</a></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><a class="external text" href="http://www.elsa-jp.co.jp/html/products/hpc/tesla_c2050/index.html" rel="nofollow">NVIDIA TESLA C2050 - 株式会社 エルザ ジャパン</a></span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/121/G012181/20120514037/" rel="nofollow">4Gamer.net ― NVIDIA，Keplerベースの新世代Teslaを発表。「GK110」コア採用の「Tesla K20」が年内に登場予定</a></span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text"><a class="external text" href="http://www.elsa-jp.co.jp/products/products-top/gpu_computing/tesla_ws/tesla_ws_list/tesla_k20/" rel="nofollow">NVIDIA Tesla K20 | 株式会社 エルザ ジャパン</a></span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2013/11/19/tesla_k40/" rel="nofollow">NVIDIA、最上位GPUアクセラレータ「Tesla K40」を発表 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2014/11/18/sc14_teslak80/" rel="nofollow">SC14 - NVIDIAが最上位の科学技術計算用GPU「Tesla K80」を発表 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.nvidia.co.jp/object/tesla-servers-jp.html" rel="nofollow">サーバー用のGPUアクセラレーター、Tesla K40 と Tesla K80</a>”.   NVIDIA Corporation. <span title="">2015年10月28日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">大原雄介 (2015年3月18日). “<a class="external text" href="http://news.mynavi.jp/articles/2015/03/18/titanx/012.html" rel="nofollow">【レビュー】NVIDIA GeForce GTX TITAN Xを試す - Maxwell世代の新フラグシップGPUの実力を探る (13) ベンチマーク結果「Basemark CL v1.1」</a>”.   マイナビニュース. <span title="">2015年11月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/2008/0620/kaigai449.htm" rel="nofollow">後藤弘茂のWeekly海外ニュース: GeForce GTX 280の倍精度浮動小数点演算</a></span>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/085/G008506/20090921001/" rel="nofollow">4Gamer.net ― AMD，世界初のDX11 GPU「ATI Radeon HD 5800」を発表。HD 4800の大幅な進化形</a></span>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/085/G008506/20091021037/" rel="nofollow">4Gamer.net ― 「ATI Radeon HD 5800」徹底分析（3）～3Dグラフィックスに特化したAMD</a></span>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2009/10/07/nvidia_fermi/001.html" rel="nofollow">科学技術計算向け演算能力が引き上げられたGPUアーキテクチャ「Fermi」 (2) 科学技術計算向けのさまざまな工夫 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2014/04/14/gtc2014_floatingpoint_01/" rel="nofollow">GTC 2014 - GPUの浮動小数点演算の精度:理論と実践(前編) | マイナビニュース</a></span>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20120416_526830.html" rel="nofollow">ハイブリッドアーキテクチャでスパコン市場に挑むNVIDIA</a> - 後藤弘茂のWeekly海外ニュース（PC Watch, Impress社、2012年4月16日配信、2012年4月16日閲覧）</span>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <span class="reference-text"><a class="external text" href="http://devblogs.nvidia.com/parallelforall/how-access-global-memory-efficiently-cuda-c-kernels/" rel="nofollow">How to Access Global Memory Efficiently in CUDA C/C++ Kernels | Parallel Forall</a></span>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20140307_638557.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】NVIDIA新世代GPU「Maxwell」のSMアーキテクチャ - PC Watch</a></span>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20120130_507882.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】 AMDの新GPUアーキテクチャ「Graphics Core Next」の秘密</a></span>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <span class="reference-text"><a class="external text" href="http://www.gdep.jp/page/view/252" rel="nofollow">第５回　GPUの構造 | G-DEP</a></span>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <span class="reference-text"><a class="external text" href="http://www.softek.co.jp/SPG/Pgi/TIPS/public/accel/gpu-accel2.html" rel="nofollow">NVIDIA GPUの構造とCUDAスレッディングモデル</a></span>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <span class="reference-text"><a class="external text" href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb509706.aspx" rel="nofollow">Variable Syntax (Windows)</a></span>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <span class="reference-text"><a class="external text" href="https://msdn.microsoft.com/en-us/library/hh388954.aspx" rel="nofollow">tile_static Keyword</a></span>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <span class="reference-text"><a class="external text" href="http://www.gdep.jp/column/view/33" rel="nofollow">高速演算記 第25回 「Kepler解説その2 〜Kepler世代の新機能〜」 | G-DEP</a></span>
+</li>
+<li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <span class="reference-text"><a class="external text" href="http://devblogs.nvidia.com/parallelforall/using-shared-memory-cuda-cc/" rel="nofollow">Using Shared Memory in CUDA C/C++ | Parallel Forall</a></span>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/column/architecture/336/" rel="nofollow">コンピュータアーキテクチャの話 (336) CPUと異なるGPUにおけるコアと2次キャッシュの関係性 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/column/architecture/337/" rel="nofollow">コンピュータアーキテクチャの話 (337) 実はそれほど速くはないGPUのメモリアクセス時間 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/303/G030363/20150803029/" rel="nofollow">「Skylake-K」とはいかなるCPUなのか。「Core i7-6700K」ベンチマークで新世代マイクロアーキテクチャの実態を探る - 4Gamer.net</a></span>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/1month-kouza/20140425_646073.html" rel="nofollow">【1カ月集中講座】骨まで理解するPCアーキテクチャ(GPU編) 第4回 ～GPGPU性能引き上げのカギとなるCPUとGPUの連携 - PC Watch</a></span>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20140327_641498.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】NVIDIAの次期GPU「Pascal」の概要 - PC Watch</a></span>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/251/G025177/20160407104/" rel="nofollow">［GTC 2016］西川善司の3DGE：Teslaとして登場した新世代GPU「Pascal」，その詳細に迫る - 4Gamer.net</a></span>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <span class="reference-text"><a class="external text" href="http://www.hpcwire.jp/archives/3336" rel="nofollow">» アクセラレータプログラミングの未来</a></span>
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/135/G013536/20110711007/" rel="nofollow">4Gamer.net ― 見えてきたAMDの次世代GPUアーキテクチャ。なぜAMDはVLIWを捨てるのか</a></span>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <span class="reference-text"><a class="external text" href="http://keyshot.info/2011/03/28/640.html" rel="nofollow">レンダリング手法について-CPU or GPU? | KeyShot™総合サイト</a></span>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuBLAS" rel="nofollow">cuBLAS - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cufft" rel="nofollow">cuFFT - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <span class="reference-text"><a class="external text" href="http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-math-libraries/" rel="nofollow">clMath - AMD</a></span>
+</li>
+<li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/Thrust" rel="nofollow">Thrust - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-62"><b><a href="#cite_ref-62">^</a></b> <span class="reference-text"><a class="external text" href="http://developer.amd.com/tools-and-sdks/opencl-zone/bolt-c-template-library/" rel="nofollow">Bolt C++ Template Library - AMD</a></span>
+</li>
+<li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/column/sc13/005/" rel="nofollow">スパコン最大の学会「SC13」に見る先端技術 (5) SC13 - CPU-GPU統一メモリを実現したCUDA 6(後編) | マイナビニュース</a></span>
+</li>
+<li id="cite_note-64"><b><a href="#cite_ref-64">^</a></b> <span class="reference-text"><a class="external text" href="http://www.isus.jp/article/visual-computing/opencl-12-how-to-increase-performance-by-minimizing-buffer-copies/" rel="nofollow">OpenCL* 1.2 の活用: インテル® プロセッサー・グラフィックスでバッファーコピーを最小限に抑えてパフォーマンスを向上する方法 | iSUS</a></span>
+</li>
+<li id="cite_note-65"><b><a href="#cite_ref-65">^</a></b> <span class="reference-text"><a class="external text" href="http://www.acceleware.com/blog/nvidia-cuda-60-unified-memory-performance" rel="nofollow">NVIDIA CUDA 6.0 Unified Memory Performance | Acceleware Ltd.</a></span>
+</li>
+<li id="cite_note-66"><b><a href="#cite_ref-66">^</a></b> <span class="reference-text"><a class="external text" href="http://pc.watch.impress.co.jp/docs/column/kaigai/20140926_668620.html" rel="nofollow">【後藤弘茂のWeekly海外ニュース】AMD、新GPU「Tonga」がHSAの最終形であることを明らかに - PC Watch</a></span>
+</li>
+<li id="cite_note-67"><b><a href="#cite_ref-67">^</a></b> <span class="reference-text"><a class="external text" href="http://www.hpcwire.jp/archives/3214" rel="nofollow">» コンパイラ、そしてもっと：アクセラレーター・プログラミング</a></span>
+</li>
+<li id="cite_note-68"><b><a href="#cite_ref-68">^</a></b> <span class="reference-text"><a class="external text" href="https://kaken.nii.ac.jp/d/p/22680002/2011/3/ja.ja.html" rel="nofollow">KAKEN - GPUによるFFT計算の自動チューニング手法の研究(22680002) - 2011年度研究実績報告書</a></span>
+</li>
+<li id="cite_note-69"><b><a href="#cite_ref-69">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2014/12/16/gpu_mic/003.html" rel="nofollow">GPUとXeon Phi、どちらが計算処理アクセラレータに最適か? - 実際の実行性能を比較するワークショップを首都大学東京が開催 (4) アクセラレータの課題と問題点が語られたパネルディスカッション | マイナビニュース</a></span>
+</li>
+<li id="cite_note-70"><b><a href="#cite_ref-70">^</a></b> <span class="reference-text"><a class="external text" href="http://www.itmedia.co.jp/enterprise/articles/1103/02/news005.html" rel="nofollow">ベクトル型スパコンの存在意義――地球シミュレータのいま (1/2) - ITmedia エンタープライズ</a></span>
+</li>
+<li id="cite_note-71"><b><a href="#cite_ref-71">^</a></b> <span class="reference-text"><a class="external text" href="http://www.cc.u-tokyo.ac.jp/support/press/news/VOL12/No1/201001gpgpu.pdf" rel="nofollow">"これからの並列計算のためのGPGPU連載講座(I) GPUとGPGPUの歴史と特徴", 東京大学情報基盤センター, 大島聡史</a></span>
+</li>
+<li id="cite_note-72"><b><a href="#cite_ref-72">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2005/09/06/siggraph2/004.html" rel="nofollow">SIGGRAPH 2005 - GPUをCPU的に活用するGPGPUの可能性 (5) GPGPU向けプログラミング言語の登場が始まる | マイナビニュース</a></span>
+</li>
+<li id="cite_note-73"><b><a href="#cite_ref-73">^</a></b> <span class="reference-text"><a class="external autonumber" href="http://pc.watch.impress.co.jp/docs/2008/1020/s3.htm" rel="nofollow">[1]</a></span>
+</li>
+<li id="cite_note-74"><b><a href="#cite_ref-74">^</a></b> <span class="reference-text"><a class="external autonumber" href="http://www.forest.impress.co.jp/article/2008/10/30/tmpgenc4cuda.html" rel="nofollow">[2]</a></span>
+</li>
+<li id="cite_note-75"><b><a href="#cite_ref-75">^</a></b> <span class="reference-text"><a class="external autonumber" href="http://pc.watch.impress.co.jp/docs/2008/1110/cyberlink.htm" rel="nofollow">[3]</a></span>
+</li>
+<li id="cite_note-76"><b><a href="#cite_ref-76">^</a></b> <span class="reference-text"><a class="external autonumber" href="http://pc.watch.impress.co.jp/docs/2008/1017/loilo.htm" rel="nofollow">[4]</a></span>
+</li>
+<li id="cite_note-77"><b><a href="#cite_ref-77">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/032/G003263/20080925009/" rel="nofollow">4Gamer.net ― NVIDIA製GPUが「Photoshop」「After Effects」「Premiere Pro」の最新版「CS4」アクセラレーションをサポート。ムービーでその効果をチェック</a></span>
+</li>
+<li id="cite_note-78"><b><a href="#cite_ref-78">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">ZDNet Japan Staff (2010年4月12日). “<a class="external text" href="http://japan.cnet.com/news/ent/story/0,2000056022,20411963,00.htm" rel="nofollow">アドビ、クリエイティブ製品の最新版「CS5」を5月28日に一斉発売</a>”.   CNET Japan. <span title="">2010年8月18日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-79"><b><a href="#cite_ref-79">^</a></b> <span class="reference-text"><a class="external text" href="http://blogs.adobe.com/aftereffects/2013/09/gpu-changes-for-cuda-and-opengl-in-after-effects-cc-12-1.html" rel="nofollow">GPU changes (for CUDA and OpenGL) in After Effects CC (12.1)  |  After Effects region of interest</a></span>
+</li>
+<li id="cite_note-80"><b><a href="#cite_ref-80">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/gpu-ray-tracing-jp.html" rel="nofollow">GPUレイトレーシング | NVIDIA</a></span>
+</li>
+<li id="cite_note-81"><b><a href="#cite_ref-81">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/032/G003263/20140823008/" rel="nofollow">［SIGGRAPH 2014］NVIDIAがゲーム向けのリアルタイム大局照明，IntelはHaswell用DX12ドライバのデモを一般展示セクションで披露 - 4Gamer.net</a></span>
+</li>
+<li id="cite_note-82"><b><a href="#cite_ref-82">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/999/G999902/20160802045/" rel="nofollow">AMDは新GPU「Radeon Pro」を，NVIDIAは360度ビデオ用SDKをアピール。プロセッサメーカーによる「SIGGRAPH 2016」の展示をレポート - 4Gamer.net</a></span>
+</li>
+<li id="cite_note-83"><b><a href="#cite_ref-83">^</a></b> <span class="reference-text"><a class="external text" href="http://developer.amd.com/tools-and-sdks/graphics-development/radeonpro/radeon-prorender-technology/" rel="nofollow">Radeon ProRender Technology - AMD</a></span>
+</li>
+<li id="cite_note-84"><b><a href="#cite_ref-84">^</a></b> <span class="reference-text"><a class="external text" href="http://wiki.blender.org/index.php/Doc:JA/2.6/Manual/Render/Cycles/GPU_Rendering" rel="nofollow">Doc:JA/2.6/Manual/Render/Cycles/GPU Rendering - BlenderWiki</a></span>
+</li>
+<li id="cite_note-85"><b><a href="#cite_ref-85">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/nvidia-iray-jp.html" rel="nofollow">NVIDIA iray | NVIDIA</a></span>
+</li>
+<li id="cite_note-86"><b><a href="#cite_ref-86">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.com/object/nvidia-iray.html" rel="nofollow">NVIDIA iray - Design Rendering with CUDA Parallel Processing | NVIDIA</a></span>
+</li>
+<li id="cite_note-87"><b><a href="#cite_ref-87">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia-arc.com/Iray" rel="nofollow">NVIDIA Advanced Rendering: NVIDIA Iray</a></span>
+</li>
+<li id="cite_note-88"><b><a href="#cite_ref-88">^</a></b> <span class="reference-text"><a class="external text" href="http://gigazine.net/news/20131021-bitcoin-mining-as-arms-race/" rel="nofollow">Bitcoinマイニングはまさに軍拡競争、素人お断りの現状とは？ - GIGAZINE</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GPGPU&amp;action=edit&amp;section=13" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>代表的なGPGPU対応ハードウェア
+<ul><li><a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">NVIDIA GeForce</a></li>
+<li><a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">NVIDIA Quadro</a></li>
+<li><a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a></li>
+<li><a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a></li>
+<li><a href="/wiki/AMD_Radeon" title="AMD Radeon">AMD Radeon</a></li>
+<li><a href="/wiki/AMD_FirePro" title="AMD FirePro">AMD FirePro</a></li>
+<li><a class="mw-redirect" href="/wiki/AMD_FireStream" title="AMD FireStream">AMD FireStream</a></li>
+<li><a href="/wiki/AMD_Accelerated_Processing_Unit" title="AMD Accelerated Processing Unit">AMD APU</a></li>
+<li><a href="/wiki/Intel_HD_Graphics" title="Intel HD Graphics">Intel HD Graphics</a></li></ul></li>
+<li>GPGPU基盤・プログラミング言語・APIなど
+<ul><li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><a class="mw-redirect" href="/wiki/AMD_Stream" title="AMD Stream">AMD Stream</a> (<a class="mw-redirect" href="/wiki/ATI_Stream" title="ATI Stream">ATI Stream</a>)</li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a></li>
+<li><a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a></li>
+<li><a href="/wiki/GLSL" title="GLSL">GLSL</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li></ul></li>
+<li>採用事例
+<ul><li><a href="/wiki/Folding@home" title="Folding@home">Folding@home</a> - GPGPUを利用した分散コンピューティングプロジェクト</li>
+<li><a class="mw-redirect" href="/wiki/BOINC" title="BOINC">BOINC</a> - <a href="/wiki/%E5%9C%B0%E7%90%83%E5%A4%96%E7%9F%A5%E7%9A%84%E7%94%9F%E5%91%BD%E4%BD%93%E6%8E%A2%E6%9F%BB" title="地球外知的生命体探査">地球外知的生命体探査</a> (<a href="/wiki/SETI@home" title="SETI@home">SETI@home</a>) やGPUGRIDなどのプロジェクトがGPU (CUDA) に対応</li></ul></li>
+<li>その他
+<ul><li><a href="/wiki/%E6%BF%B1%E7%94%B0%E5%89%9B" title="濱田剛">濱田剛</a></li></ul></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331060036
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.457 seconds
+Real time usage: 0.664 seconds
+Preprocessor visited node count: 7836/1000000
+Post‐expand include size: 83468/2097152 bytes
+Template argument size: 26164/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 7/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 38048/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 7176192/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  450.424      1 -total
+ 32.86%  148.010      2 テンプレート:出典の明記
+ 32.01%  144.175      4 テンプレート:Ambox
+ 31.70%  142.769      1 テンプレート:Reflist
+ 15.53%   69.944      1 テンプレート:Cite_journal
+ 13.36%   60.199      1 テンプレート:Citation/core
+ 11.58%   52.177     12 テンプレート:Fix
+ 11.04%   49.724      2 テンプレート:Find_sources_mainspace
+ 10.72%   48.268      3 テンプレート:Cite_web
+  8.78%   39.563     16 テンプレート:DMC/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1589018-0!canonical and timestamp 20220331060036 and revision id 958380. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=GPGPU&amp;oldid=958380">http://localhost:8080/w/index.php?title=GPGPU&amp;oldid=958380</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B43%E6%9C%88-4%E6%9C%88" title="カテゴリ:出典を必要とする節のある記事/2015年3月-4月">出典を必要とする節のある記事/2015年3月-4月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B43%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2015年3月">出典を必要とする記述のある記事/2015年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A4%A7%E8%A8%80%E5%A3%AE%E8%AA%9E%E7%9A%84%E3%81%AA%E8%A8%98%E8%BF%B0%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E9%A0%85%E7%9B%AE" title="カテゴリ:大言壮語的な記述になっている項目">大言壮語的な記述になっている項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B4" title="カテゴリ:言葉を濁した記述のある記事/2015年">言葉を濁した記述のある記事/2015年</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E3%81%84%E3%81%A4)/2015%E5%B9%B41%E6%9C%88-3%E6%9C%88" title="カテゴリ:言葉を濁した記述のある記事 (いつ)/2015年1月-3月">言葉を濁した記述のある記事 (いつ)/2015年1月-3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B42%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2015年2月">出典を必要とする記述のある記事/2015年2月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:GPGPU" title="カテゴリ:GPGPU">GPGPU</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:CPU" title="カテゴリ:CPU">CPU</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89" title="カテゴリ:グラフィックカード">グラフィックカード</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">並列コンピューティング</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=GPGPU&amp;returntoquery=curid%3D1589018%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=GPGPU&amp;returntoquery=curid%3D1589018%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/GPGPU" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GPGPU&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/GPGPU">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=GPGPU&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=GPGPU&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/GPGPU" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/GPGPU" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=GPGPU&amp;oldid=958380" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=GPGPU&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年5月29日 (土) 23:47 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.457","walltime":"0.664","ppvisitednodes":{"value":7836,"limit":1000000},"postexpandincludesize":{"value":83468,"limit":2097152},"templateargumentsize":{"value":26164,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":7,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":38048,"limit":5000000},"timingprofile":["100.00%  450.424      1 -total"," 32.86%  148.010      2 テンプレート:出典の明記"," 32.01%  144.175      4 テンプレート:Ambox"," 31.70%  142.769      1 テンプレート:Reflist"," 15.53%   69.944      1 テンプレート:Cite_journal"," 13.36%   60.199      1 テンプレート:Citation/core"," 11.58%   52.177     12 テンプレート:Fix"," 11.04%   49.724      2 テンプレート:Find_sources_mainspace"," 10.72%   48.268      3 テンプレート:Cite_web","  8.78%   39.563     16 テンプレート:DMC/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":7176192,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331060036","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":309});});</script>
+</body></html>

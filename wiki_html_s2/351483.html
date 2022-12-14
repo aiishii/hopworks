@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>R3000 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-R3000 rootpage-R3000 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">R3000</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>R3000</b>は<a href="." id="link_a_1" title="MIPSアーキテクチャ命令セット">MIPS I命令セットアーキテクチャ</a> (ISA) の<a href="." id="link_a_2" title="マイクロプロセッサ">マイクロプロセッサ</a>で、<a href="." id="link_a_3" title="ミップス・テクノロジーズ">ミップス</a>社が開発し、1988年6月にリリースした。<a href="." id="link_a_4" title="MIPSアーキテクチャ">MIPSアーキテクチャ</a>としては2つ目の実装であり、<a href="." id="link_a_5" title="R2000">R2000</a>の後継である。
+</p><p>オリジナルのR3000 は<a href="." id="link_a_6" title="CPU">CPU</a>と、<a href="." id="link_a_7" title="メモリ管理ユニット">メモリ管理</a>および<a href="." id="link_a_8" title="例外処理">例外処理</a>を担当するCP0と呼ばれる部分から構成される。また<a href="." id="link_a_9" title="FPU">FPU</a>は<b>R3010</b>という別チップであり、R3000と密に結合して使用される。<a href="." id="link_a_10" title="キャッシュメモリ">キャッシュメモリ</a>は内蔵していないが、命令キャッシュとデータキャッシュのコントローラを内蔵し、それぞれ256KBまでの1次キャッシュを接続することができた。動作周波数は20MHzから最大で40MHzだが、主に30MHz、33MHzで使用されることが多い。1.2μmの<a href="." id="link_a_11" title="CMOS">CMOS</a>プロセスで製造され、56 mm<sup>2</sup> のチップサイズに11万5千個のトランジスタを集積している。
+</p><p><a href="." id="link_a_12" title="ミップス">ミップス</a>社は設計のみを行い、製造はメーカーに任せていた。R3000 を製造したメーカーとしては、<a href="." id="link_a_13" title="IDT">IDT</a>、<a href="." id="link_a_14" title="LSIロジック">LSIロジック</a>、<a href="." id="link_a_15" title="NEC">NEC</a>、<a href="." id="link_a_16" title="シーメンス">シーメンス</a>、<a href="." id="link_a_17" title="東芝">東芝</a>などがある。<a href="." id="link_a_18" title="Silicon Graphics">SGI</a>などのワークステーションやサーバに使用された。また、派生品が<a href="." id="link_a_19" title="PlayStation (ゲーム機)">PlayStation</a>のプロセッサとしても使用され、<a href="." id="link_a_20" title="組み込みシステム">組み込みシステム</a>にも多く使われた。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#アーキテクチャ"><span class="tocnumber">1</span> <span class="toctext">アーキテクチャ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#命令セットの概要"><span class="tocnumber">2</span> <span class="toctext">命令セットの概要</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#コンパイラによるレジスタ使用法"><span class="tocnumber">3</span> <span class="toctext">コンパイラによるレジスタ使用法</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#採用例"><span class="tocnumber">4</span> <span class="toctext">採用例</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#派生品"><span class="tocnumber">5</span> <span class="toctext">派生品</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#外部リンク"><span class="tocnumber">8</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3"></span><span class="mw-headline" id="アーキテクチャ">アーキテクチャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=1" title="節を編集: アーキテクチャ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>R3000 は、4つのコプロセッサをサポート可能なアーキテクチャとなっているが、実際に使っているのはふたつであり、CP0 としてメモリ管理ユニットと例外処理ユニットを内蔵し、CP1 として接続された FPU を制御する。後継アーキテクチャでは FPU の拡張命令を CP1X として従来 CP3用とされていた<a href="/wiki/%E3%82%AA%E3%83%9A%E3%82%B3%E3%83%BC%E3%83%89" title="オペコード">オペコード</a>表に割り当てている。<a href="/wiki/RISC#特徴" title="RISC">命令長</a>は32ビット固定となっていて命令フェッチとデコードを単純化している。CPUのパイプラインは5段になっていて、<a href="/wiki/%E5%AE%9F%E8%A1%8C%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="実行ユニット">実行ユニット</a>として<a href="/wiki/%E6%BC%94%E7%AE%97%E8%A3%85%E7%BD%AE#ALU" title="演算装置">ALU</a>以外に、乗除算ユニットなどを持っている。CPUの汎用レジスタは32ビット×32本で、他に乗除算の結果を格納する専用レジスタ（32ビット×2本）とプログラムカウンタがある。
+</p>
+
+<p>CP0 は、以下のような機能を持つ。
+</p>
+<ul><li>ユーザモード、カーネルモードの設定</li>
+<li>例外発生時の原因情報を保持</li>
+<li>メモリ管理機能。MIPSアーキテクチャでは仮想物理アドレス変換のための<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="トランスレーション・ルックアサイド・バッファ">TLB</a>を直接ソフトウェアで制御するようになっており、そのための機能を実装している。TLBは64エントリのCAM（<a href="/wiki/%E9%80%A3%E6%83%B3%E3%83%A1%E3%83%A2%E3%83%AA" title="連想メモリ">連想メモリ</a>）であり、各エントリが4Kバイトのページをマップする。そのうち 8エントリは固定エントリと呼ばれ、<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">OS</a>が固定的に使用し、それ以外はランダムエントリとして無作為に入れ替えて使用する。OSのカーネルはTLBを操作する際に、TLBを使用しない空間（下記）で動作するか、固定TLBエントリでマップされた空間内で動作しなければならない。
+<ul><li>TLB を使用しないメモリアクセスも可能になっていて、右図のようになっている。<i>kseg1</i> を<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%9E%E3%83%83%E3%83%97%E3%83%89I/O" title="メモリマップドI/O">メモリマップドI/O</a>に使用するため、I/Oをその位置に配置すると、TLBを使わずにアクセスできるメモリは512Mバイト以下となる。</li>
+<li>TLBミスが発生した場合、カーネルが処理を行う。これは他のアーキテクチャではハードウェアで実現している機能であり、ここを如何に最適化するかが性能に重要な影響を与える。OSが用意した<a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ページテーブル">ページテーブル</a>を仮想空間上で連続に配置しておくと高速にTLBのリフィル（置き換え）ができるよう設計されているが、そのためにはページテーブルがTLB上でマップされている必要があり、固定TLBエントリがこの用途のために使われることが多い。</li></ul></li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュメモリ</a>はTLBの外側にあり、物理アドレスタグになっている。ダイレクトマップ方式であるため、物理アドレスがちょうど64Kバイトの倍数分だけ離れたところにある配列のコピーなどを行うと<a href="/wiki/%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="スラッシング">スラッシング</a>が発生して劇的に性能が低下する。これは、ロード命令によってキャッシュ上に置かれたメモリ内容を直後のストア命令で置き換えてしまうため、次のロード命令でも再度メモリから読み込む必要が生じるために起こる。</li></ul>
+<p>FPU（R3010）は、以下のような特徴を持つ。
+</p>
+<ul><li><a href="/wiki/IEEE_754" title="IEEE 754">IEEE 754</a>に準拠。</li>
+<li>32ビット×32本のレジスタ。倍精度演算では 64ビット×16本のレジスタとして使用。</li>
+<li>6段のパイプライン。実行ユニットは、加減算ユニット、乗算ユニット、除算ユニットの3つ。</li>
+<li>CPUとは異なり、<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%83%BB%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF" title="ステータス・レジスタ">ステータス・レジスタ</a>を持っている。</li></ul>
+<h2><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88.E3.81.AE.E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="命令セットの概要">命令セットの概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=2" title="節を編集: 命令セットの概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>命令は三種類のフォーマットに分類される（R, I, J）。Rフォーマットは三つのレジスタとオペコードから構成される。Iフォーマットは二つのレジスタと16ビットのイミディエート値（とオペコード）から構成される。Jフォーマットは6ビットのオペコードと26ビットのイミディエート値から構成される。
+</p><p>算術演算（加減算）は以下のような形式である。
+</p>
+<pre>add   $1,  $2,  $3 ; $1 = $2 + $3 (符号付)
+addu  $1,  $2,  $3 ; $1 = $2 + $3 (符号無)
+sub   $1,  $2,  $3 ; $1 = $2 - $3 (符号付)
+subu  $1,  $2,  $3 ; $1 = $2 - $3 (符号無)
+addi  $1,  $2, 100 ; $1 = $2 + 100 (符号無・<a href="/wiki/%E7%AC%A6%E5%8F%B7%E6%8B%A1%E5%BC%B5" title="符号拡張">符号拡張</a>されたイミディエート値)
+addiu $1,  $2, 100 ; $1 = $2 + 100 (符号付・<a href="/wiki/%E7%AC%A6%E5%8F%B7%E6%8B%A1%E5%BC%B5" title="符号拡張">符号拡張</a>されたイミディエート値)
+</pre>
+<p>符号付き演算であるadd, sub, addiでは、オーバーフロー時に例外処理が発生する。一方、符号無し演算であるaddu, subu, addiuでは、オーバーフロー時に例外処理が発生しない。C言語ではオーバーフロー時に例外処理を行わないことや、負の数は<a href="/wiki/2%E3%81%AE%E8%A3%9C%E6%95%B0" title="2の補数">2の補数</a>で表現可能であることから、ほとんどの場合、符号無し演算が用いられる。
+</p><p>MIPSは、ロード・ストア型のアーキテクチャなので、メモリへのアクセスは基本的に以下のふたつの命令で実現される。
+</p>
+<pre>lw  $1, 100($2) ; $2 + 100 で示されるアドレスのメモリワード（32ビット）を $1 レジスタにロードする。
+sw  $1, 100($2) ; $1 レジスタの内容（32ビット）を $2 + 100 で示されるアドレスのメモリにストアする。
+</pre>
+<p>分岐とジャンプ命令には、以下のようなものがある。これらは必ず次の命令を実行してからジャンプするため（<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%A3%E3%83%AC%E3%82%A4%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88" title="ディレイスロット">ディレイスロット</a>）、注意が必要である。
+</p>
+<pre>beq $1,  $2, 100 ; もし ($1 == $2) ならば、PC+4+100 へ飛ぶ。
+slt $1,  $2,  $3 ; もし ($2 &lt; $3) ならば $1 = 1、そうでなければ $1 = 0 。（これは正確には比較命令）
+j       10000    ; 10000番地へ飛ぶ。
+jal     10000    ; $31 = PC + 4 とした上で、10000番地へ飛ぶ。サブルーチンコールで使用する。
+</pre>
+<p>他に重要な命令として、以下のものがある。
+</p>
+<pre>lui $1, 100      ; イミディエート値 100 を $1 レジスタの上位16ビットに格納する。
+</pre>
+<p>MIPSでは、命令サイズが32ビットであるため、32ビットの定数やアドレスを一命令ではレジスタに格納できない。そこで、lui 命令と addiu 命令などを組み合わせて使用する。<a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a>には32ビット定数をレジスタに格納するマクロ命令があり、マクロ命令のために汎用レジスタのうちのひとつをアセンブリ言語に固定的に割り当てている。
+</p>
+<h2><span id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AB.E3.82.88.E3.82.8B.E3.83.AC.E3.82.B8.E3.82.B9.E3.82.BF.E4.BD.BF.E7.94.A8.E6.B3.95"></span><span class="mw-headline" id="コンパイラによるレジスタ使用法">コンパイラによるレジスタ使用法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=3" title="節を編集: コンパイラによるレジスタ使用法">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ハードウェアアーキテクチャ上、汎用レジスタの使用に次のような制約がある。
+</p>
+<ul><li>汎用レジスタ $0 は常に内容が 0 であり、何を書き込んでも 0 のままである。</li>
+<li>汎用レジスタ $31 はサブルーチンコール時の jump and link 命令でリンクレジスタ（戻りアドレスを格納するレジスタ）として使われる。</li>
+<li>HI レジスタと LO レジスタは整数の乗除算の結果を格納する。</li></ul>
+<p>これら以外に制約はない。
+</p><p>MIPSの用意した<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>などのツール群は<a href="/wiki/%E5%91%BC%E5%87%BA%E8%A6%8F%E7%B4%84" title="呼出規約">呼出規約</a>の一環としてレジスタの使用法を規定している。これらの規定はハードウェアの制約ではないが、ツール群がこれに従っている関係で、MIPSアーキテクチャを採用したシステムではほぼ間違いなくこの規定に従ってレジスタを使用している。
+</p>
+<table class="wikitable">
+<caption><b>レジスタ</b>
+</caption>
+<tbody><tr>
+<th>名称</th>
+<th>番号</th>
+<th>用途</th>
+<th>Callee must preserve?
+</th></tr>
+<tr>
+<th>$zero
+</th>
+<td>$0</td>
+<td>常に 0</td>
+<td>N/A
+</td></tr>
+<tr>
+<th>$at
+</th>
+<td>$1</td>
+<td>アセンブラが一時的に使用</td>
+<td>no
+</td></tr>
+<tr>
+<th>$v0–$v1
+</th>
+<td>$2–$3</td>
+<td>関数のリターン値または式評価の結果を格納</td>
+<td>no
+</td></tr>
+<tr>
+<th>$a0–$a3
+</th>
+<td>$4–$7</td>
+<td>関数の引数</td>
+<td>no
+</td></tr>
+<tr>
+<th>$t0–$t7
+</th>
+<td>$8–$15</td>
+<td>一時変数用</td>
+<td>no
+</td></tr>
+<tr>
+<th>$s0–$s7
+</th>
+<td>$16–$23</td>
+<td>セーブされる一時変数用</td>
+<td><b>yes</b>
+</td></tr>
+<tr>
+<th>$t8–$t9
+</th>
+<td>$24–$25</td>
+<td>一時変数用</td>
+<td>no
+</td></tr>
+<tr>
+<th>$k0–$k1
+</th>
+<td>$26–$27</td>
+<td>OSカーネル専用</td>
+<td>no
+</td></tr>
+<tr>
+<th>$gp
+</th>
+<td>$28</td>
+<td>グローバルポインタ（広域変数領域のベース）</td>
+<td><b>yes</b>
+</td></tr>
+<tr>
+<th>$sp
+</th>
+<td>$29</td>
+<td>スタックポインタ</td>
+<td><b>yes</b>
+</td></tr>
+<tr>
+<th>$fp
+</th>
+<td>$30</td>
+<td><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="コールスタック">フレームポインタ</a></td>
+<td><b>yes</b>
+</td></tr>
+<tr>
+<th>$ra
+</th>
+<td>$31</td>
+<td>リターンアドレス</td>
+<td>N/A
+</td></tr></tbody></table>
+<p>なお、"Callee must preserve?" とは、あるルーチンの中でそのルーチンに入ってきたときの値を保持した状態で呼び出した側に戻る必要があることを意味する。例えば、$s-レジスタをルーチン内で使うときは、その内容をスタックに一時的に退避させなければならない。$sp と $fp はルーチンに入ってきたときにセーブされ、それぞれルーチン固有の固定値でインクリメントされる。そして、そのルーチンから戻るときに元の値に戻す。一方 $ra は jal 命令でルーチンに飛び込むときに自動的に変更される。$t-レジスタはサブルーチンを呼び出すと内容が破壊されるので、必要なら呼び出す側がセーブしておかなければならない。$at はアセンブラの仮想命令（マクロ命令）で一時変数として使われる。$t-レジスタだけを使って、サブルーチンを呼び出すことがないルーチンは、スタックにレジスタをセーブする必要がないため、$sp や $fp もセーブする必要がない。
+</p>
+<h2><span id=".E6.8E.A1.E7.94.A8.E4.BE.8B"></span><span class="mw-headline" id="採用例">採用例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=4" title="節を編集: 採用例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>R3000は大いに成功したマイクロプロセッサで、ワークステーションやサーバに各社が採用した。次のような例がある。
+</p>
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%BC%E3%83%87%E3%83%B3%E3%83%88%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="アーデントコンピュータ">アーデントコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">シリコングラフィックス</a> - Professional IRIS、Personal IRIS、Indigo 他</li>
+<li><a href="/wiki/%E3%82%BB%E3%82%A4%E3%82%B3%E3%83%BC%E3%82%A8%E3%83%97%E3%82%BD%E3%83%B3" title="セイコーエプソン">セイコーエプソン</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC" title="ソニー">ソニー</a> - <a href="/wiki/NEWS_(%E3%82%BD%E3%83%8B%E3%83%BC)" title="NEWS (ソニー)">NEWS</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%86%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88" title="ソニー・コンピュータエンタテインメント">ソニー・コンピュータエンタテインメント</a> - <a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">PlayStation</a>、<a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a>（PlayStationとの互換性のため）、</li>
+<li><a href="/wiki/%E3%82%BF%E3%83%B3%E3%83%87%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BA" title="タンデムコンピューターズ">タンデムコンピューターズ</a> - Cyclone/R、CLX/R</li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a> - <a href="/wiki/DECstation" title="DECstation">DECstation</a>、<a class="new" href="/w/index.php?title=En:DECsystem&amp;action=edit&amp;redlink=1" title="En:DECsystem (存在しないページ)">DECsystem</a>（<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッサ</a>）</li>
+<li><a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">日本電気</a> - <a href="/wiki/EWS4800" title="EWS4800">EWS4800</a>、<a href="/wiki/UP4800" title="UP4800">UP4800</a></li>
+<li><a href="/wiki/%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ピラミッド・テクノロジー">ピラミッド・テクノロジー</a></li>
+<li><a class="new" href="/w/index.php?title=En:Prime_Computer&amp;action=edit&amp;redlink=1" title="En:Prime Computer (存在しないページ)">Prime Computer</a></li>
+<li><a class="new" href="/w/index.php?title=En:Whitechapel_Workstations&amp;action=edit&amp;redlink=1" title="En:Whitechapel Workstations (存在しないページ)">Whitechapel Workstations</a> - Hitech-20</li></ul>
+<p><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a>用にも採用され、当初はハイエンドとして、後には低コストの組み込みシステム用として長く使われた。<a href="/wiki/LSI%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="LSIコーポレーション">LSI Logic</a> などは組み込み用途に特化したR3000派生品を開発している。
+</p>
+<h2><span id=".E6.B4.BE.E7.94.9F.E5.93.81"></span><span class="mw-headline" id="派生品">派生品</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=5" title="節を編集: 派生品">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>組み込み用途に特化していない派生品として次がある。
+</p>
+<ul><li>R3000A - 1989年に登場した改良版。20MHz、25MHz、33.33MHz、40MHz で動作。</li>
+<li>PR3400 - Performance Semiconductor が1991年5月に開発。25MHz、33MHz、40MHzで動作。同社のPR3000AとPR3010Aを単一のダイに集積したもの。</li>
+<li>他にR3000 と R3010 をワンチップ化したマイクロプロセッサとしては、<b>R3500</b>（<a href="/wiki/IDT" title="IDT">IDT</a>）、<b>VR3600</b>（<a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">NEC</a>）がある。</li></ul>
+<p>組み込み向けの派生品として次がある。
+</p>
+<ul><li>TX3900 - <a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a>が開発した R3000 コアを使用した<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a>で、<a class="mw-redirect" href="/wiki/Windows_CE" title="Windows CE">Windows CE</a> を搭載した初期の<a href="/wiki/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%98%E3%83%AB%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハンドヘルドコンピュータ">ハンドヘルドPC</a>向けに開発された。</li>
+<li>PR31700 - <a href="/wiki/NXP%E3%82%BB%E3%83%9F%E3%82%B3%E3%83%B3%E3%83%80%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%BA" title="NXPセミコンダクターズ">フィリップス・セミコンダクターズ</a>の75MHzの<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a>。0.35μmプロセスで製造され、パッケージは208ピンLQFPである。電源電圧は3.3Vで、消費電力は0.35W。</li>
+<li>RISController - IDTのローエンド<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a>シリーズ。R3041、R3051、R3052、R3081 がある。</li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=6" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.cbronline.com/news/mips_partners_flex_their_muscles_in_battle_with_sparc" rel="nofollow">"MIPS, Partners Flex Their Muscles In Battle With SPARC"</a>. (30 March 1988). <i>Computer Business Review</i>.</li>
+<li>Chris Rowen, Mark Johnson, Paul Ries, "The MIPS R3010 Floating-Point Coprocessor," <i><a class="new" href="/w/index.php?title=En:IEEE_Micro&amp;action=edit&amp;redlink=1" title="En:IEEE Micro (存在しないページ)">IEEE Micro</a></i>, vol. 8, no. 3, pp. 53–62, May/June 1988.</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=7" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPSアーキテクチャ</a></li>
+<li><a href="/wiki/R2000" title="R2000">R2000</a> - <a href="/wiki/1985%E5%B9%B4" title="1985年">1985年</a>リリースされた最初の32ビット<a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPSアーキテクチャ</a>の<a href="/wiki/RISC" title="RISC">RISC</a><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a></li>
+<li><a href="/wiki/R4000" title="R4000">R4000</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=R3000&amp;action=edit&amp;section=8" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.cs.wisc.edu/~larus/spim.html" rel="nofollow">SPIM MIPSシミュレータ（英語）</a> WindowsやLinux上で動作するシミュレータ。シミュレータだけでなく各種マニュアルへのリンクも豊富。</li>
+<li><a class="external text" href="http://www.dgate.org/vmips/" rel="nofollow">The vmips Project（英語）</a> もうひとつのMIPS R3000シミュレータ</li></ul>
+<div aria-labelledby="MIPSマイクロプロセッサ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:MIPS_microprocessors&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:MIPS microprocessors (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMIPS_microprocessors&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMIPS_microprocessors&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="MIPSマイクロプロセッサ" style="font-size:110%;margin:0 6em">MIPSマイクロプロセッサ</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPSアーキテクチャ</a></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">全般<br/>プロセッサー</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯3号系列</a></li></ul>
+<ul><li><ul><li>デスクトップ/産業機器
+<ul><li>LS3A1000/LS3A1000-I(LS3A1000-i)</li>
+<li>LS3A2000/LS3A1500-I</li>
+<li>LS3A3000/LS3A3000-I(LS3A3000-i)</li>
+<li>LS3A4000/LS3A4000-I(LS3A4000-i)</li></ul></li></ul></li></ul>
+<ul><li><ul><li>サーバ
+<ul><li>LS3B1000</li>
+<li>LS3B1500</li>
+<li>LS3B2000</li>
+<li>LS3B3000</li>
+<li>LS3B4000</li></ul></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用<br/>プロセッサー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Ingenic_Semiconductor&amp;action=edit&amp;redlink=1" title="Ingenic Semiconductor (存在しないページ)">Ingenic XBurst</a>
+<ul><li>JZ4720
+<ul><li><a class="new" href="/w/index.php?title=Ben_NanoNote&amp;action=edit&amp;redlink=1" title="Ben NanoNote (存在しないページ)">Ben NanoNote</a></li></ul></li>
+<li>JZ4730 (<a class="new" href="/w/index.php?title=Skytone_Alpha-400&amp;action=edit&amp;redlink=1" title="Skytone Alpha-400 (存在しないページ)">Skytone Alpha-400</a>)</li>
+<li>JZ4740 (<a class="new" href="/w/index.php?title=Dingoo_A320&amp;action=edit&amp;redlink=1" title="Dingoo A320 (存在しないページ)">Dingoo A320</a>)</li>
+<li>JZ4750 (<a class="new" href="/w/index.php?title=Game_Gadget&amp;action=edit&amp;redlink=1" title="Game Gadget (存在しないページ)">Game Gadget</a>)</li>
+<li>JZ4760
+<ul><li>Velocity Micro T103 Cruz</li>
+<li>Velocity Micro T301 Cruz</li></ul></li>
+<li>JZ4770
+<ul><li><a class="new" href="/w/index.php?title=NOVO7&amp;action=edit&amp;redlink=1" title="NOVO7 (存在しないページ)">Ainol Novo7 Paladin</a></li>
+<li>NEOGEO-X</li>
+<li>GCW-Zero</li></ul></li>
+<li>JZ4780</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯2号系列</a>
+<ul><li>LS2H</li>
+<li>LS2K1000/LS2K2000</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マイクロコントローラ<br/>(組み込み機器)</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">M4K</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Microchip_Technology&amp;action=edit&amp;redlink=1" title="Microchip Technology (存在しないページ)">Microchip Technology</a> <a class="new" href="/w/index.php?title=PIC_microcontroller&amp;action=edit&amp;redlink=1" title="PIC microcontroller (存在しないページ)">PIC32MX</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>ATI/AMD/Broadcom <a class="new" href="/w/index.php?title=Xilleon&amp;action=edit&amp;redlink=1" title="Xilleon (存在しないページ)">Xilleon</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1A0300</li>
+<li>LS1B</li>
+<li>LS1C300</li>
+<li>LS1C101</li>
+<li>LS1D</li>
+<li>LS1G</li>
+<li>LS1H</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ネットワーキング</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR2313</li>
+<li>AR2318</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT2880</li></ul></li>
+<li><a class="mw-redirect" href="/wiki/Texas_Instruments" title="Texas Instruments">Texas Instruments</a>/Infineon/Lantiq
+<ul><li>AR7</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>AMAZON</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">5Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/Marvell_Technology_Group" title="Marvell Technology Group">Marvell</a>
+<ul><li>88E6318 "Link Street"</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">24Kc/24KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR7240</li>
+<li>AR7161</li>
+<li>AR9132</li>
+<li>AR9331</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3050</li>
+<li>RT3052</li>
+<li>RT3350</li>
+<li>RT5350</li>
+<li>RT6856</li>
+<li>MT7620</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>DANUBE</li>
+<li>VINAX</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">34Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>AR188</li>
+<li>VRX288</li>
+<li>GRX388</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Ikanos_Communications&amp;action=edit&amp;redlink=1" title="Ikanos Communications (存在しないページ)">Ikanos</a>
+<ul><li>Fusiv Vx175/173</li>
+<li>Fusiv Vx180</li>
+<li>Fusiv Vx185/183</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">74Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR9344</li>
+<li>QCA9558</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3662</li>
+<li>RT3883</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>BCM4706</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1004Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>MT7621</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1074Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Realtek" title="Realtek">Realtek</a>
+<ul><li>RTL8198C</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Cavium&amp;action=edit&amp;redlink=1" title="Cavium (存在しないページ)">Cavium</a>
+<ul><li>various</li></ul></li>
+<li>Alchemy Semiconductor
+<ul><li><a class="new" href="/w/index.php?title=Alchemy_(processor)&amp;action=edit&amp;redlink=1" title="Alchemy (processor) (存在しないページ)">Alchemy</a></li></ul></li>
+<li><a class="new" href="/w/index.php?title=RMI_Corporation&amp;action=edit&amp;redlink=1" title="RMI Corporation (存在しないページ)">RMI Corporation</a>
+<ul><li>XLR</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Cavium&amp;action=edit&amp;redlink=1" title="Cavium (存在しないページ)">Cavium</a>
+<ul><li>Octeon</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ゲーミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">various</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=PlayStation_(console)&amp;action=edit&amp;redlink=1" title="PlayStation (console) (存在しないページ)">PlayStation 1</a> MIPS R3000A-compatible</li>
+<li><a href="/wiki/NINTENDO64" title="NINTENDO64">Nintendo 64</a> NEC VR4300</li>
+<li><a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a> R4000-based</li>
+<li><a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a> <a href="/wiki/Emotion_Engine" title="Emotion Engine">Emotion Engine</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スーパーコンピュータ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龍芯</a>
+<ul><li>LS2F/LS2F1000</li>
+<li>LS3A1000</li>
+<li>LS3B1000</li></ul></li>
+<li><a href="/wiki/SiCortex" title="SiCortex">SiCortex</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">航空宇宙</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1E0300/LS1E1000</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1E04</li>
+<li>LS1F04/LS1F0300</li>
+<li>LS1J</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">クラシック<br/>プロセッサー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS I</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R2000" title="R2000">R2000</a></li>
+<li><a class="mw-selflink selflink">R3000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS II</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R6000" title="R6000">R6000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS III</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R4000" title="R4000">R4000</a>
+<ul><li><a href="/wiki/R4000#R4400" title="R4000">R4400</a></li></ul></li>
+<li><a href="/wiki/R4200" title="R4200">R4200</a>
+<ul><li><a href="/wiki/R4200#R4300i" title="R4200">R4300i</a></li></ul></li>
+<li><a href="/wiki/R4600" title="R4600">R4600</a>
+<ul><li><a href="/wiki/R4600#R4700" title="R4600">R4700</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS IV</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R5000" title="R5000">R5000</a></li>
+<li><a href="/wiki/R8000" title="R8000">R8000</a></li>
+<li><a href="/wiki/R10000" title="R10000">R10000</a>
+<ul><li><a href="/wiki/R10000#R12000" title="R10000">R12000</a></li>
+<li><a href="/wiki/R10000#R12000A" title="R10000">R12000A</a></li>
+<li><a href="/wiki/R10000#R14000" title="R10000">R14000</a></li>
+<li><a href="/wiki/R10000#R14000A" title="R10000">R14000A</a></li>
+<li><a href="/wiki/R10000#R16000" title="R10000">R16000</a></li>
+<li><a href="/wiki/R10000#R16000A" title="R10000">R16000A</a></li>
+<li><a href="/wiki/R10000#R18000" title="R10000">R18000</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS V</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li class="mw-empty-elt"></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIPS%E3%81%AE%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:MIPSのマイクロプロセッサ">カテゴリ</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331150247
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.092 seconds
+Real time usage: 0.181 seconds
+Preprocessor visited node count: 409/1000000
+Post‐expand include size: 59802/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5505024/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+138.67%  159.844      9 テンプレート:Navbox
+100.00%  115.270      1 テンプレート:MIPS_microprocessors
+100.00%  115.270      1 -total
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:351483-0!canonical and timestamp 20220331150247 and revision id 229221. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=R3000&amp;oldid=229221">http://localhost:8080/w/index.php?title=R3000&amp;oldid=229221</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIPS%E3%81%AE%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:MIPSのマイクロプロセッサ">MIPSのマイクロプロセッサ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=R3000&amp;returntoquery=curid%3D351483%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=R3000&amp;returntoquery=curid%3D351483%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/R3000" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:R3000&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/R3000">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=R3000&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=R3000&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/R3000" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/R3000" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=R3000&amp;oldid=229221" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=R3000&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月29日 (木) 04:37 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.092","walltime":"0.181","ppvisitednodes":{"value":409,"limit":1000000},"postexpandincludesize":{"value":59802,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["138.67%  159.844      9 テンプレート:Navbox","100.00%  115.270      1 テンプレート:MIPS_microprocessors","100.00%  115.270      1 -total"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5505024,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331150247","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":299});});</script>
+</body></html>

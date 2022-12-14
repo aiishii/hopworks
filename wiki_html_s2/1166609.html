@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>動的プログラミング言語 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-動的プログラミング言語 rootpage-動的プログラミング言語 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">動的プログラミング言語</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>動的プログラミング言語</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">dynamic programming language</span>）は、コンピュータ・<a href="." id="link_a_2" title="プログラミング言語">プログラミング言語</a>において、一般に<a href="." id="link_a_3" title="コンパイラ">コンパイル</a>などの準備段階に済まされることが多いことを、準備時ではなく実行時に行うプログラミング言語処理系（の言語）である。本来は実装（処理系）のことを指すべきであるが、一般にその言語を指して議論されることが多い。もっぱら<a href="." id="link_a_4" title="高水準言語">高水準言語</a>が多い。<b>動的言語</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">dynamic language</span>）とも。例えば、<a href="." id="link_a_5" title="型システム">型システム</a>による型チェックや、値の<a href="." id="link_a_6" title="型変換">型変換</a>、<a href="." id="link_a_7" title="束縛 (情報工学)">名前束縛</a>などを、コンパイルなどの実行準備時ではなく実行時に行う。そういった「動的さ」により、<a href="." id="link_a_8" title="ソースコード">コード</a>の追加や<a href="." id="link_a_9" title="オブジェクト (プログラミング)">オブジェクト</a>や定義の拡張や<a href="." id="link_a_5" title="型システム">型システム</a>の変更によるプログラムの拡張、といったことが行いやすい、ということが利点とされる。これらの動作は静的な処理系でも手間はかかるがエミュレート可能である（例えばJavaのJDK/JREでも、<a href="." id="link_a_10" title="Javaクラスローダー">クラスローダー</a>を活用すれば可能である）。一方、動的言語ではそういったことが、直接的にサポートされる。
+</p><p>動的言語と<a href="." id="link_a_11" title="動的型付け">動的型付け</a>は同じ概念ではないし、全ての動的言語が必ずしも動的型付き言語というわけではない。たとえば<a href="." id="link_a_12" title="Smalltalk">Smalltalk</a>環境の一つである<a class="new" href="/w/index.php?title=En_:Strongtalk&amp;action=edit&amp;redlink=1" title="En :Strongtalk (存在しないページ)">Strongtalk</a>やGradualtalkは動的な言語にも拘わらず静的型検査が可能となっている。しかし多くの動的言語は動的型付き言語である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義の限界と曖昧さ"><span class="tocnumber">1</span> <span class="toctext">定義の限界と曖昧さ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#実装"><span class="tocnumber">2</span> <span class="toctext">実装</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#eval"><span class="tocnumber">2.1</span> <span class="toctext"><span>eval</span></span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#高階関数"><span class="tocnumber">2.1.1</span> <span class="toctext">高階関数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#オブジェクトシステムや型システムの実行時変更"><span class="tocnumber">2.2</span> <span class="toctext">オブジェクトシステムや型システムの実行時変更</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#制御構文"><span class="tocnumber">2.2.1</span> <span class="toctext">制御構文</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#メッセージ送信"><span class="tocnumber">2.3</span> <span class="toctext">メッセージ送信</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#関数型プログラミング"><span class="tocnumber">2.4</span> <span class="toctext">関数型プログラミング</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#継続"><span class="tocnumber">2.4.1</span> <span class="toctext">継続</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#イントロスペクション"><span class="tocnumber">2.5</span> <span class="toctext">イントロスペクション</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#マクロ"><span class="tocnumber">2.6</span> <span class="toctext">マクロ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#言語"><span class="tocnumber">3</span> <span class="toctext">言語</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#外部リンク"><span class="tocnumber">5</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9.E3.81.AE.E9.99.90.E7.95.8C.E3.81.A8.E6.9B.96.E6.98.A7.E3.81.95"></span><span class="mw-headline" id="定義の限界と曖昧さ">定義の限界と曖昧さ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=1" title="節を編集: 定義の限界と曖昧さ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>動的言語の定義は、「コンパイル」と「実行時」の区別だけでなく、「コード」と「データ」の区別も関わってくるため、非常にあいまいである。<a href="/wiki/%E4%BB%AE%E6%83%B3%E6%A9%9F%E6%A2%B0" title="仮想機械">仮想機械</a>や<a href="/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="実行時コンパイラ">実行時コンパイラ</a>など、<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>に何らかの抽象化を施し、機械語を実行時に生成する言語処理系は多い。一般に、ある言語が動的であるとは、その言語の能力を明確に表しているというよりも、動的な機能の使い易さを指しているといえる。
+</p>
+<h2><span id=".E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="実装">実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=2" title="節を編集: 実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>動的プログラミングの概念を密接な関連のある機構がいくつか存在する。それらは必ずしも動的言語として必須とは言えないが、動的言語と呼ばれるものに広く採用されているのも確かである。
+</p>
+<h3><span class="mw-headline" id="eval"><span lang="en">eval</span></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=3" title="節を編集: eval">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><ruby style="ruby-position:inline; display:inline"><rb style="display:inline; white-space:normal; font-variant-east-asian:normal"><span lang="en"><a href="/wiki/Eval" title="Eval">eval</a></span></rb><span class="rp">（</span><rt style="display:inline; white-space:normal; font-size:inherit; font-variant-east-asian:normal">イーバル</rt><span class="rp">）</span></ruby>とは、<span lang="en"><a href="/wiki/LISP" title="LISP">LISP</a></span>で導入された用語であり、<a href="/wiki/S%E5%BC%8F" title="S式">S式</a>と呼ばれるデータ構造で表現される命令列を実行するプロセスを指している。今日では、<span lang="en">eval</span> と言えばテキストなど機械語以外のデータで表されたプログラムを実行する何らかの機構やプロセスを指す。多くの言語では（<span lang="en">LISP</span>とは異なり）プログラムテキストを読むこととそれを内部表現に変換すること、さらには内部表現から実際の動作に変換することを区別しないため、新たなプログラムテキストの評価はそういった言語の一般的性質である。それらの言語で、プログラムの実行プロセスが <span lang="en">eval</span> に他ならない場合、これを<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a>言語と呼ぶ。
+</p>
+<h4><span id=".E9.AB.98.E9.9A.8E.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="高階関数">高階関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=4" title="節を編集: 高階関数">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A8%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9E%E3%82%A4%E3%83%A4%E3%83%BC&amp;action=edit&amp;redlink=1" title="エリック・マイヤー (存在しないページ)">エリック・マイヤー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Erik_Meijer_(computer_scientist)&amp;action=edit&amp;redlink=1" title="En:Erik Meijer (computer scientist) (存在しないページ)">英語版</a>）</span></span>とピーター・ドレイトンは、実行時に実行コードをロード可能な任意の言語は（たとえ、そのコードがDLLの機械語コードだとしても）、一種の <span lang="en">eval</span> 機能を備えていると言えるとした。彼らは<a href="/wiki/%E9%AB%98%E9%9A%8E%E9%96%A2%E6%95%B0" title="高階関数">高階関数</a>が動的プログラミングの本質であるとし、「<span lang="en">eval</span> は高階関数の代用品にすぎない」とした<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<h3><span id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.82.84.E5.9E.8B.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE.E5.AE.9F.E8.A1.8C.E6.99.82.E5.A4.89.E6.9B.B4"></span><span class="mw-headline" id="オブジェクトシステムや型システムの実行時変更">オブジェクトシステムや型システムの実行時変更</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=5" title="節を編集: オブジェクトシステムや型システムの実行時変更">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>動的言語では、オブジェクトシステムや型システムを実行時に変更できるのが一般的である。これはすなわち、実行時定義に従って新たなオブジェクトを生成したり、既存の型やオブジェクトの合成に基づいて新たなオブジェクトを生成することを意味する。また、<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a>関係や型の木構造の変更も指していて、既存の型の振る舞いも（特に<a href="/wiki/%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="メソッド (計算機科学)">メソッド</a>呼び出しの観点で）それによって変化する。<a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>のクラス登録などが顕著な例である。&lt;syntaxhighlight lang="smalltalk"&gt;
+Object
+	subclass:		        #Some
+	instanceVariableNames:	<i></i>
+	classVariableNames:	    <i></i>
+	poolDictionaries:	    <i></i>
+	category:		        'Example'.
+&lt;/syntaxhighlight&gt;上記はクラス定義用の専用構文ではなく、Objectというクラスオブジェクトにクラス登録用のメッセージを送っているだけである。実行中に登録しているが削除も実行中に可能である。
+</p>
+<h4><span id=".E5.88.B6.E5.BE.A1.E6.A7.8B.E6.96.87"></span><span class="mw-headline" id="制御構文">制御構文</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=6" title="節を編集: 制御構文">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>LispやSmalltalkをはじめ幾つかの言語は分岐や反復の専用の制御構文を持たない。無名関数と高階関数の組み合わせによって全てを代用している。&lt;syntaxhighlight lang="smalltalk"&gt;
+[
+	Error signal: '処理失敗'. 
+]
+	on: Exception
+	do:
+	[ :exception |
+		"例外を捕捉"
+	].
+&lt;/syntaxhighlight&gt;上記はSmalltallkによる例外処理の例である。クラス登録と同じく言語機能による専用構文ではない。
+</p>
+<h3><span id=".E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8.E9.80.81.E4.BF.A1"></span><span class="mw-headline" id="メッセージ送信">メッセージ送信</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=7" title="節を編集: メッセージ送信">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Smalltalk系統のオブジェクト指向言語にみられる。一つのメソッドに複数セレクターと紐づけたり、全てのメッセージを受け取るメソッドを定義することで、メッセージを受信するオブジェクトがメッセージと同じセレクターを持つメソッドを備えていなくてもメッセージを受信できる。&lt;syntaxhighlight lang="smalltalk"&gt;
+"#onClick:を使ったメッセージをopen:メソッドに転送させる。"
+FileEventHandler
+	addSelector:	#onClick:
+	withMethod:     FileEventHandler &gt;&gt; #open:.
+&lt;/syntaxhighlight&gt;上記はSmalltalkで既に#open:というセレクターを持っているメソッドに#onClick:というセレクターを追加している。
+</p><p>「<a href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%BB%A2%E9%80%81" title="メッセージ転送">メッセージ転送</a>」も参照のこと。
+</p>
+<h3><span id=".E9.96.A2.E6.95.B0.E5.9E.8B.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="関数型プログラミング">関数型プログラミング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=8" title="節を編集: 関数型プログラミング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型プログラミング</a>の概念は多くの動的言語に備わっている。これも LISP を起源としている。
+</p>
+<h4><span id=".E7.B6.99.E7.B6.9A"></span><span class="mw-headline" id="継続">継続</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=9" title="節を編集: 継続">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>動的言語における別の機能として<a href="/wiki/%E7%B6%99%E7%B6%9A" title="継続">継続</a>がある。継続は、再呼び出し可能な実行状態を表している。例えば、<a href="/wiki/%E6%A7%8B%E6%96%87%E8%A7%A3%E6%9E%90%E5%99%A8" title="構文解析器">構文解析器</a>が中間結果と継続を返し、後で再呼び出しされると、入力の構文解析を再開する。継続はクロージャなどのスコープと複雑に関連している。このため、継続を提供している動的言語は多くはない。
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.83.88.E3.83.AD.E3.82.B9.E3.83.9A.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="イントロスペクション">イントロスペクション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=10" title="節を編集: イントロスペクション">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AD%E3%82%B9%E3%83%9A%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="イントロスペクション">イントロスペクション</a>は多くの動的言語で見られ、自分自身の構造・コード・型・データなどを解析するプログラムによく使われる。これは<a class="mw-redirect" href="/wiki/%E7%B7%8F%E7%A7%B0%E5%9E%8B" title="総称型">総称型</a>や<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>の値について型を決定するのと似たようなものである。プログラムのコードをデータとして完全に解析可能な場合もあり、例えば LISP ではプログラムをS式として解析可能である。
+</p>
+<h3><span id=".E3.83.9E.E3.82.AF.E3.83.AD"></span><span class="mw-headline" id="マクロ">マクロ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=11" title="節を編集: マクロ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>動的プログラミング言語の中には、コードのイントロスペクションと eval 機能を組み合わせて<a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ</a>と呼ばれる機能を提供するものもある。<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>や<a href="/wiki/C%2B%2B" title="C++">C++</a>におけるマクロは、プログラム内の文字列を置換するサブセット的かつ静的な機能でしかない。これに対し動的言語では、マクロはコンパイラ内部へのアクセスを提供し、実行時にも完全なアクセスを提供する。従って、コードの最適化にも関わり、言語の文法や構文を変化させる能力を持っている。
+</p>
+<h2><span id=".E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="言語">言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=12" title="節を編集: 言語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div style="float: left; vertical-align: top; white-space: nowrap; margin-right: 1em;">
+<ul><li><a href="/wiki/APL" title="APL">APL</a></li>
+<li><a href="/wiki/Befunge" title="Befunge">Befunge</a></li>
+<li><a class="new" href="/w/index.php?title=ChucK&amp;action=edit&amp;redlink=1" title="ChucK (存在しないページ)">ChucK</a></li>
+<li><a href="/wiki/Curl_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Curl (プログラミング言語)">Curl</a></li>
+<li><a href="/wiki/Dylan" title="Dylan">Dylan</a></li>
+<li><a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a>
+<ul><li><a href="/wiki/ActionScript" title="ActionScript">ActionScript</a></li>
+<li><a href="/wiki/DMDScript" title="DMDScript">DMDScript</a></li>
+<li><a class="mw-redirect" href="/wiki/E4X" title="E4X">E4X</a></li>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wiki/JScript" title="JScript">JScript</a></li></ul></li>
+<li><a href="/wiki/Eiffel" title="Eiffel">Eiffel</a></li>
+<li><a href="/wiki/Erlang" title="Erlang">Erlang</a></li>
+<li><a href="/wiki/Forth" title="Forth">Forth</a></li>
+<li><a href="/wiki/Groovy" title="Groovy">Groovy</a></li></ul>
+</div><div style="float: left; vertical-align: top; white-space: nowrap; margin-right: 1em;">
+<ul><li><a href="/wiki/HyperTalk" title="HyperTalk">HyperTalk</a></li>
+<li><a href="/wiki/Io_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Io (プログラミング言語)">Io</a></li>
+<li><a href="/wiki/LISP" title="LISP">LISP</a>
+<ul><li><a href="/wiki/Scheme" title="Scheme">Scheme</a></li></ul></li>
+<li><a href="/wiki/LOGO" title="LOGO">LOGO</a></li>
+<li><a href="/wiki/Lua" title="Lua">Lua</a></li>
+<li><a href="/wiki/Mathematica" title="Mathematica">Mathematica</a></li>
+<li><a href="/wiki/Oberon" title="Oberon">Oberon</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Perl" title="Perl">Perl</a></li>
+<li><a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a></li>
+<li><a href="/wiki/Pike" title="Pike">Pike</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="/wiki/Python" title="Python">Python</a></li>
+<li><a href="/wiki/REBOL" title="REBOL">REBOL</a></li>
+<li><a href="/wiki/Ruby" title="Ruby">Ruby</a></li></ul>
+</div><div style="float: left; vertical-align: top; white-space: nowrap; margin-right: 1em;">
+<ul><li><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>
+<ul><li><a class="new" href="/w/index.php?title=Bistro&amp;action=edit&amp;redlink=1" title="Bistro (存在しないページ)">Bistro</a></li>
+<li><a href="/wiki/Self" title="Self">Self</a></li>
+<li><a class="new" href="/w/index.php?title=Slate&amp;action=edit&amp;redlink=1" title="Slate (存在しないページ)">Slate</a></li>
+<li><a href="/wiki/Squeak" title="Squeak">Squeak</a></li></ul></li>
+<li><a href="/wiki/SNOBOL" title="SNOBOL">SNOBOL</a></li>
+<li><a href="/wiki/SuperCard" title="SuperCard">SuperCard</a></li>
+<li><a href="/wiki/SuperCollider" title="SuperCollider">SuperCollider</a></li>
+<li><a href="/wiki/Tcl/Tk" title="Tcl/Tk">Tcl</a>
+<ul><li><a class="new" href="/w/index.php?title=XOTcl&amp;action=edit&amp;redlink=1" title="XOTcl (存在しないページ)">XOTcl</a></li></ul></li>
+<li><a href="/wiki/TeX" title="TeX">TeXマクロ言語</a></li>
+<li><a href="/wiki/VBScript" title="VBScript">VBScript</a></li>
+<li><a class="mw-redirect" href="/wiki/Visual_FoxPro" title="Visual FoxPro">Visual FoxPro</a></li>
+<li><a class="mw-redirect" href="/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a></li>
+<li><a class="new" href="/w/index.php?title=XHarbour&amp;action=edit&amp;redlink=1" title="XHarbour (存在しないページ)">xHarbour</a></li></ul>
+</div><div style="clear:left;"></div>
+<p><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a>、<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>、<a href="/wiki/C%2B%2B" title="C++">C++</a>、初期の <a href="/wiki/Java" title="Java">Java</a>、<a href="/wiki/FORTRAN" title="FORTRAN">FORTRAN</a> などは動的プログラミング言語ではない。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=13" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Meijer, Erik and Peter Drayton (2005年). “<a class="external text" href="http://pico.vub.ac.be/~wdmeuter/RDL04/papers/Meijer.pdf" rel="nofollow">Static Typing Where Possible, Dynamic Typing When Needed: The End of the Cold War Between Programming Languages</a>”.   <a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">Microsoft</a> Corporation. <span title="">2008年1月18日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=14" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://activestate.com/Company/NewsRoom/whitepapers_ADL.plex" rel="nofollow">Dynamic Languages</a> by David Ascher.</li></ul>
+<div aria-labelledby="コンピュータ・プログラミング言語の関連項目" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:プログラミング言語の関連項目 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ・プログラミング言語の関連項目" style="font-size:110%;margin:0 6em">コンピュータ・プログラミング言語の関連項目</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語水準</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>(1G)</li>
+<li><a href="/wiki/%E4%BD%8E%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="低水準言語">低水準言語</a>(2G)</li>
+<li><a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>(3G)</li>
+<li><a href="/wiki/4GL" title="4GL">第四世代言語</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%BA%94%E4%B8%96%E4%BB%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="第五世代コンピュータ">第五世代言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語処理系</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブラ</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></li>
+<li><a class="new" href="/w/index.php?title=En:Translator_(computing)&amp;action=edit&amp;redlink=1" title="En:Translator (computing) (存在しないページ)">トランスレータ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語分類</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="マルチパラダイムプログラミング言語">マルチパラダイム言語</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="命令型プログラミング">命令型言語</a></li>
+<li><a href="/wiki/%E5%AE%A3%E8%A8%80%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="宣言型プログラミング">宣言型言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="非構造化プログラミング">非構造化言語</a></li>
+<li><a href="/wiki/%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="構造化プログラミング">構造化言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E8%A8%80%E8%AA%9E" title="非手続き型言語">非手続き型言語</a></li>
+<li><a href="/wiki/%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="手続き型プログラミング">手続き型言語</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向言語</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型言語</a></li>
+<li><a href="/wiki/%E8%AB%96%E7%90%86%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="論理プログラミング">論理型言語</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="データフロープログラミング">データフロー言語</a></li>
+<li><a class="mw-selflink selflink">ダイナミック言語</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E" title="スクリプト言語">スクリプト言語</a></li>
+<li><a href="/wiki/%E8%BB%BD%E9%87%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="軽量プログラミング言語">軽量プログラミング言語</a></li>
+<li><a href="/wiki/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="ビジュアルプログラミング言語">ビジュアルプログラミング言語</a></li>
+<li><a href="/wiki/%E9%9B%A3%E8%A7%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="難解プログラミング言語">難解プログラミング言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">ドメイン固有言語</a></li>
+<li><a href="/wiki/Job_Control_Language" title="Job Control Language">ジョブ制御言語</a></li>
+<li><a href="/wiki/%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E" title="問い合わせ言語">問い合わせ言語</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E" title="マークアップ言語">マークアップ言語</a></li>
+<li><a href="/wiki/%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="形式言語">形式言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E8%A8%80%E8%AA%9E" title="コンピュータ言語">コンピュータ言語</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7" title="プログラミング言語一覧">プログラミング言語一覧</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">プログラミング言語年表</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">プログラミングパラダイム</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331235252
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.140 seconds
+Real time usage: 0.225 seconds
+Preprocessor visited node count: 1086/1000000
+Post‐expand include size: 18013/2097152 bytes
+Template argument size: 1982/2097152 bytes
+Highest expansion depth: 33/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 673/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5222400/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  148.526      1 -total
+ 45.03%   66.884      1 テンプレート:仮リンク
+ 32.13%   47.727      1 テンプレート:Reflist
+ 29.66%   44.059      1 テンプレート:Cite_web
+ 10.29%   15.282      1 テンプレート:Accessdate
+ 10.23%   15.200      1 テンプレート:プログラミング言語の関連項目
+  9.58%   14.234      2 テンプレート:ISO_dateJA
+  9.02%   13.393      1 テンプレート:Accessdate/core
+  8.16%   12.123      1 テンプレート:Navbox
+  7.26%   10.779      1 テンプレート:Citation/showdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1166609-0!canonical and timestamp 20220331235252 and revision id 718254. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=動的プログラミング言語&amp;oldid=718254">http://localhost:8080/w/index.php?title=動的プログラミング言語&amp;oldid=718254</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="カテゴリ:プログラミングパラダイム">プログラミングパラダイム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A9%95%E4%BE%A1%E6%88%A6%E7%95%A5" title="カテゴリ:評価戦略">評価戦略</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;returntoquery=curid%3D1166609%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;returntoquery=curid%3D1166609%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;oldid=718254" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2018年2月17日 (土) 02:54 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.140","walltime":"0.225","ppvisitednodes":{"value":1086,"limit":1000000},"postexpandincludesize":{"value":18013,"limit":2097152},"templateargumentsize":{"value":1982,"limit":2097152},"expansiondepth":{"value":33,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":673,"limit":5000000},"timingprofile":["100.00%  148.526      1 -total"," 45.03%   66.884      1 テンプレート:仮リンク"," 32.13%   47.727      1 テンプレート:Reflist"," 29.66%   44.059      1 テンプレート:Cite_web"," 10.29%   15.282      1 テンプレート:Accessdate"," 10.23%   15.200      1 テンプレート:プログラミング言語の関連項目","  9.58%   14.234      2 テンプレート:ISO_dateJA","  9.02%   13.393      1 テンプレート:Accessdate/core","  8.16%   12.123      1 テンプレート:Navbox","  7.26%   10.779      1 テンプレート:Citation/showdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5222400,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331235252","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":378});});</script>
+</body></html>

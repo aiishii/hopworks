@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>アセンブリ言語 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-アセンブリ言語 rootpage-アセンブリ言語 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">アセンブリ言語</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<div class="noprint" style="clear:right; float:right; position:relative;">
+<div class="navbox" style="background:#f0fff0; border:1px solid #4682b4; padding: 4px; font-size: 12px; line-height: 14px; width: 280px; height: 52px">
+<div style="float:left; margin: 0px; margin-right:8px; border:1px solid #4682b4;">ファイル:Computer n screen.svg</div><br/><big style="font-size: 18px; line-height: 20px;"><b><a href="." id="link_a_1" title="プログラミング言語">プログラミング言語</a></b></big><div style="text-align: right; font-size: 12px; line-height: 14px; margin:0; padding:0;">&gt;&gt;<a href="." id="link_a_2" title="プログラミング言語一覧">他のプログラミング言語</a></div></div>
+<p style="text-align:right; font-size:xx-small; margin:0; bottom-margin: 4px;"><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="カテゴリ:プログラミング言語">■</a>カテゴリ / ■テンプレート</p></div>
+
+<p><b>アセンブリ言語</b>（アセンブリげんご、<a href="." id="link_a_3" title="英語">英</a>: <span lang="en">assembly language</span>）とは、<a href="." id="link_a_4" title="コンピュータ">コンピュータ</a>などの<a href="." id="link_a_1" title="プログラミング言語">プログラミング言語</a>の1種で、原則として<a href="." id="link_a_5" title="機械語">機械語</a>の<a href="." id="link_a_6" title="命令 (コンピュータ)">命令</a>に1対1で対応した、人間に理解しやすい文字列や記号で記述される。いわゆる<a href="." id="link_a_7" title="高水準言語">高水準言語</a>に対して<a href="." id="link_a_8" title="低水準言語">低水準言語</a>と分類される<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#用語"><span class="tocnumber">1</span> <span class="toctext">用語</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#概要"><span class="tocnumber">2</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#歴史"><span class="tocnumber">3</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#主要概念"><span class="tocnumber">4</span> <span class="toctext">主要概念</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#アセンブラ"><span class="tocnumber">4.1</span> <span class="toctext">アセンブラ</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#パス回数"><span class="tocnumber">4.1.1</span> <span class="toctext">パス回数</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#高水準アセンブラ"><span class="tocnumber">4.1.2</span> <span class="toctext">高水準アセンブラ</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#クロスアセンブラとメタアセンブラ"><span class="tocnumber">4.1.3</span> <span class="toctext">クロスアセンブラとメタアセンブラ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#アセンブリ言語"><span class="tocnumber">4.2</span> <span class="toctext">アセンブリ言語</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#言語設計"><span class="tocnumber">5</span> <span class="toctext">言語設計</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#基本要素"><span class="tocnumber">5.1</span> <span class="toctext">基本要素</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#オペコードのニーモニックと拡張ニーモニック"><span class="tocnumber">5.1.1</span> <span class="toctext">オペコードのニーモニックと拡張ニーモニック</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#データセクション"><span class="tocnumber">5.1.2</span> <span class="toctext">データセクション</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#アセンブリディレクティブ"><span class="tocnumber">5.1.3</span> <span class="toctext">アセンブリディレクティブ</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#ラベル/シンボル"><span class="tocnumber">5.1.4</span> <span class="toctext">ラベル/シンボル</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#コメント"><span class="tocnumber">5.1.5</span> <span class="toctext">コメント</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#マクロ"><span class="tocnumber">5.2</span> <span class="toctext">マクロ</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#構造化プログラミングサポート"><span class="tocnumber">5.3</span> <span class="toctext">構造化プログラミングサポート</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#利用"><span class="tocnumber">6</span> <span class="toctext">利用</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#歴史的観点"><span class="tocnumber">6.1</span> <span class="toctext">歴史的観点</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#現代における使用"><span class="tocnumber">6.2</span> <span class="toctext">現代における使用</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#高水準言語との連携"><span class="tocnumber">6.3</span> <span class="toctext">高水準言語との連携</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#主なアセンブラ"><span class="tocnumber">7</span> <span class="toctext">主なアセンブラ</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#注釈"><span class="tocnumber">8.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#出典"><span class="tocnumber">8.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E7.94.A8.E8.AA.9E"></span><span class="mw-headline" id="用語">用語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=1" title="節を編集: 用語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>英語のアセンブリ (<span lang="en">assembly</span>) とは「組立」という意味で、アセンブリ言語とは直訳すれば組立（用）言語の意味を持つ。
+</p><p>アセンブリ言語で書いたプログラムを機械語プログラムに変換することを<b>アセンブル</b> (<span lang="en">assemble</span>) と言う。また、それを行うプログラムのことを、<b>アセンブラ</b> (<span lang="en">assembler</span>) と言う。なお不正確な用法だが、アセンブリ言語の意味で<b>「アセンブラ」</b>または<b>「アセンブラ言語」</b> (<b>Assembler Language</b>) と呼ぶ場合がある<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[注 1]</a></sup><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[2]</a></sup>。また、初期のコンピュータでは、「アセンブラ」を「アセンブリプログラム」と呼ぶ例もあった<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[3]</a></sup>。
+</p>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=2" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="プロセッサ">プロセッサ</a>が直接実行できる言語は、機械語である。しかし機械語は2進数の羅列なので、人間には極めて理解しにくい。そこで機械語を直接書くのではなく、ニーモニックと呼ぶ命令語で<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>を記述することで、人間により分かりやすくしたものがアセンブリ言語である。ただしアセンブリ言語の<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%84%8F%E5%91%B3%E8%AB%96" title="プログラム意味論">意味</a>は 後述のように個々のプロセッサに依存し、プロセッサを介したハードウェア制御も含むため多くの場合は同一プロセッサを用いていてもソフトウェアの互換性は限定的である。
+</p><p>アセンブリ言語の命令には、機械語に対応したものと、アセンブラに対する命令（疑似命令）や<a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ</a>がある<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[注 2]</a></sup>。これらが機械語と1対1で対応するため、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E" title="プログラマ">プログラマ</a>がCPUの動作を把握しながらプログラムを記述することができる。
+</p><p>アセンブリ言語では、機械語に相当する低水準な操作または<b><a href="/wiki/%E3%82%AA%E3%83%9A%E3%82%B3%E3%83%BC%E3%83%89" title="オペコード">オペコード</a></b>を<b>ニーモニック</b>で表す。オペコードによっては、機械語命令の一部として1つまたは複数の<b>オペランド</b>が必要である。また、多くのアセンブリ言語は、オペランドとしてラベルやシンボルを使ってアドレスや定数を表すことができ、それらの値をプログラム内にそのまま書くこと（<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードコーディング">ハードコーディング</a>）を防ぐことができる。<b>マクロアセンブラ</b>は<a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ命令</a>機能を備えており、アセンブリ言語のテキストに名前を事前に割り当て、その名前を使うことで他のコードにそのテキストを挿入できる。多くのアセンブラは、プログラム開発を支援したり、アセンブリ過程を制御したり、<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="デバッグ">デバッグ</a>を支援したりといった付加機構を備えている。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=3" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>機械語は、実行したい計算の内容をCPUの内部構造に依存した非常に単純な操作に分割・変換したものであるため、人間には理解しづらい。したがって、機械語を並べながらプログラミングするのは、人間のプログラマにとっては負担が大きかった。
+</p><p>そこで、機械語そのものを書く代わりに、機械語の「意味」に相当する短い記号や単語を対応させ、それを記述してプログラミングをすることが考えられた。
+</p><p>世界で最初に実用的に稼働した<a href="/wiki/%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3%E5%9E%8B" title="ノイマン型">ノイマン型</a>電子計算機とされる<a href="/wiki/EDSAC" title="EDSAC">EDSAC</a>のローダ（外部記憶装置からプログラムやデータを読み出して主記憶装置に書き込むプログラム）でも、原始的なアセンブラの機能がすでに実装されている。EDSACは、ワード指向アーキテクチャで命令長が1ワードの固定長命令のマシンであり、<a href="/wiki/%E5%85%A5%E5%8A%9B%E6%A9%9F%E5%99%A8" title="入力機器">入力機器</a>は紙テープでありキャラクタ指向である。紙テープ上のA100Fという文字列から十進法を数値に変換するなどの処理をおこない、「100番地の値を<a href="/wiki/%E3%82%A2%E3%82%AD%E3%83%A5%E3%83%A0%E3%83%AC%E3%83%BC%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="アキュムレータ (コンピュータ)">アキュムレータ</a>に加算する」という1ワードの命令を生成するといった機能が、EDSACのローダには実装されていた。
+</p><p>機械語への変換は、人間が手で行うこともある。これを<b>ハンド・アセンブル</b>と呼ぶ。単に定められた規則に従って記号や単語から機械語を生成するだけなので、自動的に機械語を出力するプログラムが作られるようになった。このプログラムを<b>アセンブラ</b>という。
+</p><p>コンピュータの歴史の初期には、このような、プログラムによって機械語プログラムを生成することを<a href="/wiki/%E8%87%AA%E5%8B%95%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="自動プログラミング">自動プログラミング</a>と呼んだ。
+</p><p><a href="/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AE%E3%83%AA%E3%83%BC%E3%82%B9" title="ドナルド・ギリース">ドナルド・ギリース</a>は、まだ発明されていなかったアセンブラを開発中に、<a class="mw-redirect" href="/wiki/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%BB%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3" title="フォン・ノイマン">フォン・ノイマン</a>から開発を即座に止めるように言われた、という1950年代初期ならではの逸話がある。当時は、人間が手作業でもできるような瑣末な仕事をコンピュータにさせるような時代が来るとは考えられておらず、単に時間の無駄だとノイマンは考えたのである。
+</p>
+<h2><span id=".E4.B8.BB.E8.A6.81.E6.A6.82.E5.BF.B5"></span><span class="mw-headline" id="主要概念">主要概念</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=4" title="節を編集: 主要概念">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.A9"></span><span class="mw-headline" id="アセンブラ">アセンブラ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=5" title="節を編集: アセンブラ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>アセンブラ</b>は、アセンブリ命令ニーモニックを<a href="/wiki/%E3%82%AA%E3%83%9A%E3%82%B3%E3%83%BC%E3%83%89" title="オペコード">オペコード</a>に変換し、<a href="/wiki/%E8%AD%98%E5%88%A5%E5%AD%90" title="識別子">シンボル名</a>をメモリ位置や他の実体に変換することで<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="オブジェクトコード">オブジェクトコード</a>を生成する<sup class="reference" id="cite_ref-Salomon_6-0"><a href="#cite_note-Salomon-6">[4]</a></sup>。シンボル名による参照の利用はアセンブラの重要な機能であり、面倒な計算やプログラム修正に伴うアドレスの更新の手間を省くことができる。多くのアセンブラは<a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ</a>機能を備えており、よく使用する命令列を<a href="/wiki/%E3%82%B5%E3%83%96%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3" title="サブルーチン">サブルーチン</a>呼び出しではなく<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E5%B1%95%E9%96%8B" title="インライン展開">インライン展開</a>することができる<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[5]</a></sup>。また、オブジェクトコードを生成する際、ローダ用情報も併せて生成するアセンブラもある<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[6]</a></sup>。
+</p>
+<h4><span id=".E3.83.91.E3.82.B9.E5.9B.9E.E6.95.B0"></span><span class="mw-headline" id="パス回数">パス回数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=6" title="節を編集: パス回数">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>実行ファイルを生成するのにソースファイルを何回パス（走査）するかでアセンブラを分類できる。
+</p>
+<dl><dt>ワンパスアセンブラ</dt>
+<dd>ソースコードを1回だけパスするアセンブラ。定義される前にシンボルが使われているとオブジェクトコードの最後に "errata" を置く必要があり、<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="リンケージエディタ">リンカ</a>または<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%80" title="ローダ">ローダ</a>が未定義シンボルが使われていた位置にあるプレースホルダーを書き換える。あるいは、未定義なシンボルを使用するとエラーになる。</dd>
+<dt>マルチパスアセンブラ</dt>
+<dd>最初のパスで全シンボルとその値の表を作成し、その表を使ってその後のパスでコードを生成する。</dd></dl>
+<p>どちらの場合も、アセンブラは最初のパスで各命令のサイズを確定させる必要があり、それによって後に出現するシンボルのアドレスを計算する。命令のサイズは後から定義されるオペランドの型や距離に依存することがあるため、アセンブラは最初のパスでは悲観的な見積もりをし、必要に応じてその後のパスまたは errata にて1つ以上の<a href="/wiki/NOP" title="NOP">NOP</a>命令（何もしない命令）を挿入してすき間を埋める必要がある。最適化を行うアセンブラでは、最初の悲観的コードをその後のパスで稠密なコードに書き換えてアドレスの再計算を行うことがある。
+</p><p>もともとワンパスアセンブラは高速であるためよく使われていた。マルチパス動作をするには、<a href="/wiki/%E7%A3%81%E6%B0%97%E3%83%86%E3%83%BC%E3%83%97" title="磁気テープ">磁気テープ</a>を巻き戻したり<a href="/wiki/%E3%83%91%E3%83%B3%E3%83%81%E3%82%AB%E3%83%BC%E3%83%89" title="パンチカード">パンチカード</a>のデッキをセットし直して読み込む必要があったためである。現代のコンピュータではマルチパスであってもそのような遅延は生じない。マルチパスアセンブラは errata がないため、<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="リンケージエディタ">リンク処理</a>（アセンブラが直接実行コードを生成する場合は<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%80" title="ローダ">ローダ</a>の処理）が高速化される<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[7]</a></sup>。
+</p>
+<h4><span id=".E9.AB.98.E6.B0.B4.E6.BA.96.E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.A9"></span><span class="mw-headline" id="高水準アセンブラ">高水準アセンブラ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=7" title="節を編集: 高水準アセンブラ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>より洗練された<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%AB%98%E6%B0%B4%E6%BA%96%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9&amp;action=edit&amp;redlink=1" title="高水準アセンブラ (存在しないページ)">高水準アセンブラ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:high-level_assembler&amp;action=edit&amp;redlink=1" title="En:high-level assembler (存在しないページ)">英語版</a>）</span></span>は言語として次のような抽象化を提供する。
+</p>
+<ul><li>高度な<a href="/wiki/%E5%88%B6%E5%BE%A1%E6%A7%8B%E9%80%A0" title="制御構造">制御構造</a></li>
+<li>高水準なプロシージャ/関数の宣言と呼び出し</li>
+<li>構造体/レコード、共用体、クラス、集合といった高水準な抽象<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="データ型">データ型</a></li>
+<li>洗練されたマクロ処理（なお、マクロ機能は1950年代末の <a href="/wiki/IBM_700/7000_series" title="IBM 700/7000 series">IBM 700 シリーズ</a>や1960年代の<a href="/wiki/System/360" title="System/360">System/360</a>などで普通に使われていた）</li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラス (コンピュータ)">クラス</a>、<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="オブジェクト (プログラミング)">オブジェクト</a>、<a href="/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="抽象化 (計算機科学)">抽象化</a>、<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>、<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a><sup class="reference" id="cite_ref-intel-1999-MOV_10-0"><a href="#cite_note-intel-1999-MOV-10">[8]</a></sup>といった<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91" title="オブジェクト指向">オブジェクト指向</a>の特徴を備えたアセンブラ<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[9]</a></sup></li></ul>
+<h4><span id=".E3.82.AF.E3.83.AD.E3.82.B9.E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.A9.E3.81.A8.E3.83.A1.E3.82.BF.E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.A9"></span><span class="mw-headline" id="クロスアセンブラとメタアセンブラ">クロスアセンブラとメタアセンブラ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=8" title="節を編集: クロスアセンブラとメタアセンブラ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><b>クロスアセンブラ</b>は<a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="クロスコンパイラ">クロスコンパイラ</a>と似ており、あるプラットフォームで動作するが、そのプラットフォームではなく別のプラットフォーム向けのオブジェクトコードを生成するアセンブラを指す。小型の組み込みシステムなど、対象システムでアセンブラを動作させられない場合に使用することが多い。その場合、生成した<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>コードを対象システムに転送する何らかの手段が必要である。単に機械語コードをバイト単位に転送することもできるが、<a href="/wiki/ASCII" title="ASCII">ASCII</a>表現の転送用フォーマットがメーカーから提供されている（モトローラの<a href="/wiki/S-record" title="S-record">SREC</a>、インテルの<a href="/wiki/Intel_HEX" title="Intel HEX">HEX</a>など）。
+</p><p><b>メタアセンブラ</b>は、アセンブリ言語の文法や意味論を記述したものを入力とし、その言語のためのアセンブラを出力するプログラムである<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[10]</a></sup>。
+</p>
+<h3><span id=".E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.AA.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="アセンブリ言語">アセンブリ言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=9" title="節を編集: アセンブリ言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>アセンブリ言語で書かれたプログラムは、プロセッサの命令に対応したニーモニックの列、ディレクティブや擬似命令と呼ばれるメタな文、コメント、データで構成されている。ニーモニックとは、プロセッサが機械語の命令に応じて実行する動作を表現する英単語またはその省略形（例えばLoadまたはその省略形LDなど）で表現したものである。通常の文はオペコードのニーモニックで始まり、パラメータ（データ、引数）のリストがそれに続く<sup class="reference" id="cite_ref-intel-1999_13-0"><a href="#cite_note-intel-1999-13">[11]</a></sup>。
+</p><p>なかには、<a href="/wiki/%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3%E5%87%A6%E7%90%86" title="パイプライン処理">パイプライン処理</a>などを最適化するために命令順序を入れ替えたり、ラベルの位置関係によってアドレッシングモードを最適化するアセンブラもあり、必ずしもソーステキストの記述とアセンブルの結果が直接対応するとは限らない。
+</p><p>オペランドにはソースとデスティネーションの二種類があり、データとして読み取られるのがソースで、オペコードで示された命令の実行結果が格納されるのがデスティネーションである。ソースには定数・レジスタ・メモリのいずれか、デスティネーションにはレジスタ・メモリのいずれかを指定する。
+</p><p>なお、オペランドの記述順序は、上の例では「デスティネーション, ソース」だが、「ソース, デスティネーション」の順に書くアセンブリ言語もある。また、オペランドの個数は命令によって異なり、典型的なオペランドは0以上の<b>ソース</b>と1つの<b>デスティネーション</b>からなるが、プロセッサにより、暗黙のソースやデスティネーションを持つためにそれらを記述しない命令や、オペランドを持たない命令を持つ場合もある。
+</p><p>例えば、次の命令は<a href="/wiki/X86" title="X86">x86</a>/<a href="/wiki/IA-32" title="IA-32">IA-32</a>プロセッサのもので、<a href="/wiki/%E5%AE%9A%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="定数 (プログラミング)">8ビット即値</a>を<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>に入れる命令である。この命令のバイナリコードは 10110 で、その後に3ビットのレジスタを指定する識別子が続く。<i>AL</i> レジスタの識別子は 000 なので、次に示す<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>は <i>AL</i> レジスタに 01100001 というデータをロードする<sup class="reference" id="cite_ref-intel-1999-MOV_10-1"><a href="#cite_note-intel-1999-MOV-10">[8]</a></sup>。
+</p>
+<pre>10110000 01100001
+</pre>
+<p>このバイナリコードを人間が読みやすいように<a href="/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95" title="十六進法">十六進法</a>で表現すると次のようになる。
+</p>
+<pre>B0 61
+</pre>
+<p>ここで、<code>B0</code>は「<i>AL</i>に後続の値をコピーする」ことを意味し、<code>61</code>は01100001を十六進法で表したもの（<a href="/wiki/%E5%8D%81%E9%80%B2%E6%B3%95" title="十進法">十進法</a>では97）である。インテルのアセンブリ言語では、この種の命令に MOV というニーモニックを割り当てており、セミコロン以下に説明的コメントを添えたアセンブリ言語での表現は次のようになる。
+&lt;syntaxhighlight lang="asm"&gt;MOV AL, 61h       ; Load AL with 97 decimal (61 hex)&lt;/syntaxhighlight&gt;
+この場合、定数61Hがソース、レジスタALがデスティネーションに該当し、命令が実行されると、定数61Hが、レジスタALに単純に格納される。これが人間にとってはさらに読みやすく覚えやすい。
+</p><p>ニーモニックとオペコードの対応は、命令セットアーキテクチャ、あるいは個々のアセンブラの実装により異なることもある。設計者の美意識であったり、メーカーの商戦略（売れている既存製品に「似ているように見える」と思わせれば、実際には大違いでも売ってしまえばとりあえずは勝ちである）のせいによることもある。違うオペコードの命令でも同一のニーモニックの場合もあれば、同じオペコードの命令でもオペランド違いなどで違うニーモニックを当てている場合もある。例えば、Intelのi8080と、ZilogのZ80では一部の挙動の違いはあれど、共通する機能のバイナリはほぼ同一だが、割り当てられているニーモニックの分類や表記はまるで違うものとなっている。
+</p><p>前述のインテルの MOV のようにデータの転送の多くを同一の命令あるいはニーモニックとする場合もあれば、データのコピー/移動の方向などによって別々の命令あるいはニーモニックとする場合もある（「メモリからレジスタへの移動」を L、「レジスタからメモリへの移動」を ST、「レジスタからレジスタへの移動」を LR、「即値をメモリへ移動」を MVI など）。（この段落では命令セットの設計の話とアセンブリ言語の話を一緒にしている）
+</p><p>インテルのオペコード 10110000(<code>B0</code>)は8ビットの値を <i>AL</i> レジスタにコピーするが、10110001(<code>B1</code>)は<i>CL</i>レジスタにコピーし、10110010(<code>B2</code>)は <i>DL</i> レジスタにコピーする。これらをアセンブリ言語で表現すると次のようになる<sup class="reference" id="cite_ref-intel-1999-MOV_10-2"><a href="#cite_note-intel-1999-MOV-10">[8]</a></sup>。
+&lt;syntaxhighlight lang="asm"&gt;
+MOV AL, 1h        ; Load AL with immediate value 1
+MOV CL, 2h        ; Load CL with immediate value 2
+MOV DL, 3h        ; Load DL with immediate value 3
+&lt;/syntaxhighlight&gt;
+MOVの構文には次の例のようにさらに複雑なものもある<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[12]</a></sup>。
+&lt;syntaxhighlight lang="asm"&gt;
+MOV EAX, [EBX]	  ; Move the 4 bytes in memory at the address contained in EBX into EAX
+MOV [ESI+EAX], CL ; Move the contents of CL into the byte at address ESI+EAX
+&lt;/syntaxhighlight&gt;
+MOVというニーモニックを使った文は、その内容によってアセンブラが88-8E、A0-A3、B0-B8、C6、C7のいずれかのオペコードに変換するので、プログラマはオペコードを知る必要がないし、オペコードを覚える必要もない<sup class="reference" id="cite_ref-intel-1999-MOV_10-3"><a href="#cite_note-intel-1999-MOV-10">[8]</a></sup>。
+</p><p>アセンブリ言語から機械語への変換はアセンブラが行うが、逆方向の変換の一部は<a href="/wiki/%E9%80%86%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="逆アセンブラ">逆アセンブラ</a>が行う。<a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>とは異なり、単純なアセンブリ構文と機械語命令には<a href="/wiki/%E5%85%A8%E5%8D%98%E5%B0%84" title="全単射">1対1の関係</a>がある。しかしアセンブラは擬似命令（マクロの一種）を提供していることがあり、1つの擬似命令をよく使われる機械語命令列に展開する。例えば、大小比較による条件分岐命令を持たないマシンの場合、アセンブラで大小比較命令とゼロなら分岐する条件分岐命令（比較命令の結果を使用）に展開される擬似命令を用意したりする。多くの高機能アセンブラは豊富な<a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ</a>言語機能を備えており、複雑なコード列やデータシーケンスを生成できる。
+</p><p><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">コンピュータ・アーキテクチャ</a>はそれぞれ独自の機械語を持つ。アーキテクチャが異なれば、サポートする命令の数や種類が異なり、レジスタの大きさや個数が異なり、データの格納形式が異なる。汎用コンピュータの多くは機能的にほぼ同等だが、実装は異なるので、アセンブリ言語にはその差異が反映されている。
+</p><p>機械語の<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a>は、プロセッサによって異なる。<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a>が同じでも様々なニーモニックやアセンブリ言語の文法が存在しうる。一般にプロセッサの設計者あるいは製造者によって定義されたニーモニックが標準とされるが、アセンブラによってはこれと異なるニーモニックを用いる場合もある（<a href="/wiki/GNU" title="GNU">GNU</a>アセンブラのgasの<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>プロセッサ用など）。
+</p>
+<h2><span id=".E8.A8.80.E8.AA.9E.E8.A8.AD.E8.A8.88"></span><span class="mw-headline" id="言語設計">言語設計</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=10" title="節を編集: 言語設計">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.9F.BA.E6.9C.AC.E8.A6.81.E7.B4.A0"></span><span class="mw-headline" id="基本要素">基本要素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=11" title="節を編集: 基本要素">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>アセンブラの開発者によって用語の使い方に大きな差異があり、文の分類などが異なる。例えば、マシンのニーモニックや拡張ニーモニック以外は全て擬似命令と呼ぶ場合もある。典型的なアセンブリ言語は、プログラムの操作の定義に使われる命令文を以下の3種類に分類する。
+</p>
+<ul><li>オペコードのニーモニック</li>
+<li>データセクション</li>
+<li>アセンブリディレクティブ</li></ul>
+<h4><span id=".E3.82.AA.E3.83.9A.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AE.E3.83.8B.E3.83.BC.E3.83.A2.E3.83.8B.E3.83.83.E3.82.AF.E3.81.A8.E6.8B.A1.E5.BC.B5.E3.83.8B.E3.83.BC.E3.83.A2.E3.83.8B.E3.83.83.E3.82.AF"></span><span class="mw-headline" id="オペコードのニーモニックと拡張ニーモニック">オペコードのニーモニックと拡張ニーモニック</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=12" title="節を編集: オペコードのニーモニックと拡張ニーモニック">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>アセンブリ言語の命令文は一般に非常に単純で、<a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>のそれとは異なる。一般にニーモニックは1つの機械語命令（オペコード）のシンボル名であり、個々の機械語命令には少なくとも1つのオペコード・ニーモニックが対応している。命令は一般に「オペコード」と0以上の「オペランド」で構成される。多くの命令は1つまたは2つの値を参照する。オペランドには即値（命令内に置かれる値）、レジスタ（暗黙のうちに使用される場合もある）、記憶装置内のデータの位置を示すアドレスなどがある。「拡張ニーモニック」はオペコードと特定オペランドの組合せを表すのに使われることが多い。例えば、System/360では、BC命令にマスク15を組み合わせたものが<b>B</b>、BC命令にマスク0を組み合わせたものが<b>NOP</b>という拡張ニーモニックで表される。
+</p><p>「拡張ニーモニック」は命令の特殊な用途をサポートするのに使われることが多く、本来の命令の名称からはその用途が連想できないときに使うことが多い。例えば、多くのCPUは明示的に<a href="/wiki/NOP" title="NOP">NOP</a>命令を用意していないが、その用途に使える命令は存在する。8086では<i>xchg ax,ax</i>という命令が<i>nop</i>として使えるので、アセンブリ言語で<i>nop</i>を記述すると <i>xchg ax,ax</i> という命令に変換される。逆アセンブラにもこのあたりを認識し、<i>xchg ax,ax</i>を<i>nop</i>に変換するものがある。同様にIBMの<a href="/wiki/System/360" title="System/360">System/360</a>と<a href="/wiki/System/370" title="System/370">System/370</a>のアセンブラでは、拡張ニーモニック<i>NOP</i>と<i>NOPR</i>を使用し、それぞれ<i>BC</i>と<i>BCR</i>のマスク0の命令に変換する。<a href="/wiki/SPARC" title="SPARC">SPARC</a>アーキテクチャでは、拡張ニーモニックを<i>synthetic instructions</i>と呼んでいる<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[13]</a></sup>。
+</p><p>アセンブラによっては単純な組み込みマクロ命令を備えており、数個の機械語命令に展開される。例えば、一部の<a href="/wiki/Z80" title="Z80">Z80</a>用アセンブラでは、<i>ld hl,bc</i> というマクロ命令を <i>ld l,c</i> と <i>ld h,b</i> という2命令に展開する<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[14]</a></sup>。
+</p>
+<h4><span id=".E3.83.87.E3.83.BC.E3.82.BF.E3.82.BB.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="データセクション">データセクション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=13" title="節を編集: データセクション">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>データと変数を保持するデータ要素を定義するのに使われる命令文がある。データの型、長さ、境界（アライメント）を定義する。また、そのデータがプログラム外部（別ファイルでアセンブルされたプログラム）からも利用可能なのか、それともデータセクションを定義したプログラム内でのみ使用可能なのかも定義できる。一部のアセンブラはこれを擬似命令に分類している。
+</p>
+<h4><span id=".E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.AA.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.86.E3.82.A3.E3.83.96"></span><span class="mw-headline" id="アセンブリディレクティブ">アセンブリディレクティブ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=14" title="節を編集: アセンブリディレクティブ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>アセンブリディレクティブは、擬似命令とも呼ばれ、アセンブラがアセンブリ実施中に実行すべき命令となっている<sup class="reference" id="cite_ref-Salomon_6-1"><a href="#cite_note-Salomon-6">[4]</a></sup>。プログラマが入力するパラメータによって、異なった形でアセンブルが行われるよう指示することができる。また、プログラムの見た目を操作して、<a href="/wiki/%E5%8F%AF%E8%AA%AD%E6%80%A7" title="可読性">可読性</a>と保守性を向上させるのにも使われる。例えば、記憶装置の領域を予約し、その初期内容を指定するディレクティブなどがある。ディレクティブの名称はドットで始まることが多く、それによって通常のニーモニックと区別している。
+</p><p>擬似オペコード(pseudo-opcode)と言った場合、オブジェクトコードを実際に生成するディレクティブのみを指すこともある<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[15]</a></sup>。
+</p>
+<h4><span id=".E3.83.A9.E3.83.99.E3.83.AB.2F.E3.82.B7.E3.83.B3.E3.83.9C.E3.83.AB"></span><span class="mw-headline" id="ラベル/シンボル">ラベル/シンボル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=15" title="節を編集: ラベル/シンボル">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>シンボリックアセンブラでは、任意の名前（<a href="/wiki/%E3%83%A9%E3%83%99%E3%83%AB_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ラベル (プログラミング)">ラベル</a>またはシンボル）とメモリ位置を対応付けることができる。通常、定数や変数に名前をつけることができ、命令文ではそれらの位置を名前で参照できる。実行コードではサブルーチンのエントリポイントと名前を関連付け、サブルーチンを名前で呼び出すことができる。サブルーチン内では、分岐命令の分岐先をラベルで示すことができる。一部のアセンブラは「ローカルシンボル」をサポートしており、通常のシンボルとは語彙的に区別する（例えば、"10$"を分岐先に使用する、など）。
+</p><p>一部のアセンブラは柔軟なシンボル管理を提供しており、複数の<a href="/wiki/%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93" title="名前空間">名前空間</a>を管理したり、<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0" title="データ構造">データ構造</a>内のオフセットを自動的に計算したり、リテラル値やアセンブラが実施した単純な計算結果を参照するラベルを割り当てたりすることができる。ラベルは定数や変数を<a href="/wiki/%E3%83%AA%E3%83%AD%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB" title="リロケータブル">リロケータブル</a>なアドレスで初期化するのにも使える。
+</p>
+<h4><span id=".E3.82.B3.E3.83.A1.E3.83.B3.E3.83.88"></span><span class="mw-headline" id="コメント">コメント</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=16" title="節を編集: コメント">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>他の言語と同様アセンブリ言語でも<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>にコメントを付与でき、アセンブラはそれらを無視できる。高水準言語に比べて可読性が低いため、コメントの重要性は高い。
+</p><p>これらの機能を多用することで低水準のコードのコーディングや保守の問題を大幅に単純化することができる。コンパイラや逆アセンブラが生成するアセンブリソースはコメントがなく、自動生成されるシンボルが意味不明で、データ定義もないため、非常に可読性が低い。
+</p>
+<h3><span id=".E3.83.9E.E3.82.AF.E3.83.AD"></span><span class="mw-headline" id="マクロ">マクロ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=17" title="節を編集: マクロ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>マクロの使用はアセンブリ言語に限らず（さらには、プログラミングに限らず）一般的な技法だが、アセンブリ言語でのプログラミングでは特に有用である。<a href="/wiki/M4_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="M4 (プログラミング言語)">m4</a>のような汎用のマクロプロセッサが使われることもあれば、アセンブラに組み込まれたマクロもある。以下ではアセンブラに組み込まれたマクロについて述べる。
+</p><p>多くのアセンブラは事前定義されたマクロをサポートしており、中にはユーザーが定義可能なマクロをサポートしているものもある。マクロは命令列と変数や定数の定義を埋め込むことができ、その中にオペコードやディレクティブの列が含まれる。マクロが定義されると、その名前をニーモニックとして使用できる。アセンブラはソース内にマクロを発見すると、対応するコード列に置き換え、元からソースにそのコード列が存在したかのように処理をする（アセンブラによっては、マクロを展開した中にマクロがあれば、それも展開することができる）。
+</p><p>マクロは短い名前だが、数行からかなり長い行数のコードに展開されるので、アセンブリ言語のプログラムの見た目を短くすることができる。また、マクロによってアセンブリ言語プログラムに高水準の構造を追加でき、パラメータ付きのデバッグ用コードを埋め込むなどの利用法がある。
+</p><p><a href="/wiki/%E5%BC%95%E6%95%B0" title="引数">引数</a>が使えるマクロを持つものもある。中には洗練されたマクロ言語を備えたアセンブラもあり、オプションパラメータ、記号変数、条件文、文字列操作、算術演算などの高水準言語要素を持ち、マクロ実行中にそれらを使用でき、またマクロがコンテキストをセーブしたり情報を交換したりすることも可能である。そういったアセンブラでは、マクロの引数に基づいて大量のアセンブリ言語命令またはデータ定義を生成できる。例えば、レコード風のデータ構造や展開されたループを生成するのに使え、複雑なパラメータに基づいてアルゴリズム全体を生成することもできる。そのようなマクロで大いに拡張されたアセンブリ言語を使用すると、あたかも一種の高水準言語であるかのようにプログラムを書くことができることもある。
+</p><p>メインフレームの時代には、マクロは特定顧客の大規模ソフトウェアシステムのカスタマイズや、メーカーのオペレーティングシステムを顧客の要望に合わせた特注版にするのに使われていた。例えば、<a href="/wiki/IBM" title="IBM">IBM</a>の <a class="new" href="/w/index.php?title=En:VM_(operating_system)&amp;action=edit&amp;redlink=1" title="En:VM (operating system) (存在しないページ)">VM/CMS</a>、リアルタイムトランザクション処理用アドオン、<a href="/wiki/CICS" title="CICS">CICS</a>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IBM_Airline_Control_Program&amp;action=edit&amp;redlink=1" title="IBM Airline Control Program (存在しないページ)">ACP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IBM_Airline_Control_Program&amp;action=edit&amp;redlink=1" title="En:IBM Airline Control Program (存在しないページ)">英語版</a>）</span></span>/<a href="/wiki/Transaction_Processing_Facility" title="Transaction Processing Facility">TPF</a>（<a href="/wiki/CRS_(%E8%88%AA%E7%A9%BA)" title="CRS (航空)">コンピュータ予約システム</a> (CRS) やクレジットカード会社で使われているトランザクションOS）などで使われてきた。
+</p><p>一方で、（やはりアセンブリ言語に限られないが）マクロには「落とし穴」も多い。最も単純なものとしては、式としての意味に従って変換されるのではなく、文字列から対応する文字列に変換されるためによるバグがある。例えば、次のようなマクロがあるとする。
+</p><p>&lt;syntaxhighlight lang="asm"&gt;
+foo: macro a
+load a*b
+&lt;/syntaxhighlight&gt;
+</p><p>このマクロは <code>foo</code> という名前で仮引数 <code>a</code> をとる（関数形式マクロ）。呼出・展開時に<code>a</code>に渡された実引数と、（グローバル変数または定数である）<code>b</code>とを掛け、<code>load</code>する。しかし実引数が、<code>a-c</code>というような式であった場合、マクロとしては、<code>load a-c*b</code>と展開され、（おそらく）意図されていない結果を招く。これを防ぐにはマクロ定義内で仮引数は常に括弧で囲むようにするか、呼び出し時に実引数が問題を起こしそうな式の場合は括弧で囲むようにする<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[16]</a></sup>。
+</p><p>このような問題は括弧の記述で解決することが多いが、マクロにおいて発生する問題として、一般に容易に解決できないことが知られている「名前の捕捉」という問題がある。たとえば直前の例のマクロの場合、実引数がbという名前であったとすると<code>load b*b</code>となって、実引数の自乗を計算する、という、（おそらく）前述の例よりももっと意図されていない結果を招く。このようなマクロの性質を一般にこの分野の専門用語で「不健全」と言う。詳細は「<a href="/wiki/%E5%81%A5%E5%85%A8%E3%81%AA%E3%83%9E%E3%82%AF%E3%83%AD" title="健全なマクロ">健全なマクロ</a>」の記事を参照のこと。
+</p>
+<h3><span id=".E6.A7.8B.E9.80.A0.E5.8C.96.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="構造化プログラミングサポート">構造化プログラミングサポート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=18" title="節を編集: 構造化プログラミングサポート">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="構造化プログラミング">構造化プログラミング</a>の要素を取り入れたアセンブラもある。最初期の例として"Concept-14 macro set"がある。Dr. H.D. Mills(March, 1970)が提案し、IBMの連邦政府システム部門のMarvin Kesslerが実装したもので、System/360のマクロアセンブラにIF/ELSE/ENDIFなどの制御構造を導入した<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[17]</a></sup>。これは<a href="/wiki/Ratfor" title="Ratfor">Ratfor</a>などと同様の発想で、コードの表面上からGOTOを消し、制御構造風な読みやすいマクロでコードを書けるというものだった。1980年代にはこの手法が広まった。
+</p><p>独特の設計として、<a class="new" href="/w/index.php?title=En:Whitesmiths&amp;action=edit&amp;redlink=1" title="En:Whitesmiths (存在しないページ)">Whitesmiths Ltd.</a>（<a href="/wiki/Unix%E7%B3%BB" title="Unix系">Unix系</a>OS <a class="new" href="/w/index.php?title=En:Idris_(operating_system)&amp;action=edit&amp;redlink=1" title="En:Idris (operating system) (存在しないページ)">Idris</a> や<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C</a><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>で有名）が開発した8080/<a href="/wiki/Z80" title="Z80">Z80</a>プロセッサ用「ストリーム指向」アセンブラ A-natural がある。この言語はオペコードや<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>、メモリ参照といった要素をそのまま扱えるためアセンブラと呼ばれているが、実行順序を示す構文を取り入れていた。括弧やその他の記号でプログラムのブロック構造を指定したり、生成した命令列の実行順序を制御できる。A-naturalは同社のCコンパイラが中間コードとしており、人間が直接使うものではなかったが、その構文にはファンも存在した。
+</p><p>また構造化プログラミングとは若干異なるが、<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%9C" title="キャリーラボ">キャリーラボ</a>は<a href="/wiki/BASIC" title="BASIC">BASIC</a>風の文法のアセンブリ言語 BASE を開発した。<a href="/wiki/Z80" title="Z80">Z80</a>用のBASE-80と<a href="/wiki/MC6809" title="MC6809">MC6809</a>用のBASE-09がある。BASEの表記例は下記の通り（BASE-09）。
+</p><p>&lt;syntaxhighlight lang="basic"&gt;
+S[A,B,X,U
+A=$80
+A=A+$C0
+S]A,B,X,U,PC
+&lt;/syntaxhighlight&gt;
+</p><p>上記の記述は下記のアセンブラ表記に対応する。
+</p><p>&lt;syntaxhighlight lang="asm"&gt;
+PSHS A,B,X,U
+LDA #$80
+ADDA #$C0
+PULS A,B,X,U,PC
+&lt;/syntaxhighlight&gt;
+</p><p>その後、アセンブリ言語で大規模システムを開発することが少なくなり、アセンブリ言語の高機能化の需要が減っていった<sup class="reference" id="cite_ref-assembly-language?cat=technology_20-0"><a href="#cite_note-assembly-language?cat=technology-20">[18]</a></sup>。それでも、資源の制約が強い場合やターゲットシステムのアーキテクチャが高水準言語の効率的使用を妨げている場合、アセンブラは有用であり、高機能なアセンブラの開発も行われている<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[19]</a></sup>。
+</p>
+<h2><span id=".E5.88.A9.E7.94.A8"></span><span class="mw-headline" id="利用">利用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=19" title="節を編集: 利用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E6.AD.B4.E5.8F.B2.E7.9A.84.E8.A6.B3.E7.82.B9"></span><span class="mw-headline" id="歴史的観点">歴史的観点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=20" title="節を編集: 歴史的観点">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>アセンブリ言語は、ごく単純なものまで含めれば、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%86%85%E8%94%B5%E6%96%B9%E5%BC%8F" title="プログラム内蔵方式">プログラム内蔵方式</a>のコンピュータの最初期の1940年代から存在している。<a href="/wiki/EDSAC" title="EDSAC">EDSAC</a> (1949) の <i>initial orders</i>（現代の用語では<a href="/wiki/%E3%83%96%E3%83%BC%E3%83%88" title="ブート">ブート</a>ローダーに相当するもの）は、テープにパンチされた十進によるアドレスを、内部表現の二進に変換するなどの機能を持っていた（命令については、「1文字のニーモニック」に見えるかもしれないが、それは実際には同機の機械語そのものである）<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[20]</a></sup>。<a href="/wiki/%E3%83%8A%E3%82%B5%E3%83%8B%E3%82%A8%E3%83%AB%E3%83%BB%E3%83%AD%E3%83%81%E3%82%A7%E3%82%B9%E3%82%BF%E3%83%BC" title="ナサニエル・ロチェスター">ナサニエル・ロチェスター</a>は1954年に <a href="/wiki/IBM_701" title="IBM 701">IBM 701</a> 用アセンブラを書いている。1955年、Stan Poley が <a href="/wiki/IBM_650" title="IBM 650">IBM 650</a> 用言語アセンブリSOAP (Symbolic Optimal Assembly Program) を開発した<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[21]</a></sup>。
+</p><p>アセンブリ言語は、初期のコンピュータでのプログラミングでの入力ミス削減や時間短縮に貢献し、機械語コード参照やアドレス計算といった退屈な作業からプログラマを解放した。その後<a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>へと移行していったが、ハードウェアの直接操作、特殊命令の使用、性能向上といった目的で今もアセンブリ言語が使われている。特に<a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="デバイスドライバ">デバイスドライバ</a>、<a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a>、<a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイムシステム</a>でよく使われている。
+</p><p>歴史的には多数のプログラムがアセンブリ言語だけで書かれてきた。<a href="/wiki/ALGOL" title="ALGOL">ALGOL</a>の方言である<a class="new" href="/w/index.php?title=En:Executive_Systems_Problem_Oriented_Language&amp;action=edit&amp;redlink=1" title="En:Executive Systems Problem Oriented Language (存在しないページ)">ESPOL</a>で書かれた <a class="new" href="/w/index.php?title=En:Burroughs_MCP&amp;action=edit&amp;redlink=1" title="En:Burroughs MCP (存在しないページ)">Burroughs MCP</a> (1961) が登場するまで、オペレーティングシステムはアセンブリ言語で書くのが普通だった。商用アプリケーションもアセンブリ言語で書かれている。例えば、<a href="/wiki/IBM" title="IBM">IBM</a>の<a href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" title="メインフレーム">メインフレーム</a>用ソフトウェアの多くはアセンブリ言語で書かれていた。<a href="/wiki/COBOL" title="COBOL">COBOL</a>、<a href="/wiki/FORTRAN" title="FORTRAN">FORTRAN</a>、<a href="/wiki/PL/I" title="PL/I">PL/I</a> などが取って代わっていったが、1990年代になってもアセンブリ言語のコードベースを保守し続けていた大企業も少なくない。
+</p><p>初期の<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="マイクロコンピュータ">マイクロコンピュータ</a>では、アセンブリ言語がよく使われており、OSやアプリケーションもアセンブリ言語で書かれた。これは、リソースの制約が厳しく、メモリやディスプレイのアーキテクチャが特殊だったからである。また、マイクロコンピュータ向けの高水準言語のコンパイラがなかったという面も重要である。また、初期のマイクロコンピュータのユーザはホビーストが主であり、何でも自前で作るという精神もそれに影響していたと見られる。
+</p><p>1980年代から1990年代にかけて、<a class="mw-redirect" href="/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ホームコンピュータ">ホームコンピュータ</a>（<a href="/wiki/ZX_Spectrum" title="ZX Spectrum">ZX Spectrum</a>、<a href="/wiki/%E3%82%B3%E3%83%A2%E3%83%89%E3%83%BC%E3%83%AB64" title="コモドール64">コモドール64</a>、<a href="/wiki/Amiga" title="Amiga">Amiga</a>、<a href="/wiki/Atari_ST" title="Atari ST">Atari ST</a> など）でもアセンブリ言語がよく使われていた。というのもそれらのBASICは性能が低く、ハードウェアの全機能を利用できないことが多かったためである。例えば、Amigaには<a href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A6%E3%82%A7%E3%82%A2" title="フリーウェア">フリーウェア</a>のアセンブリ言語<a href="/wiki/%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83" title="統合開発環境">統合開発環境</a> <a class="external text" href="http://www.theflamearrows.info/homepage.html" rel="nofollow">ASM-One assembler</a> があり、<a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> に匹敵する機能を備えていた。
+</p><p>Don French が開発した <a href="/wiki/VIC-1001" title="VIC-1001">VIC-20</a> 用アセンブラは 1,639 バイトという小ささで、世界一小さいアセンブラと言われている。アドレスをシンボルで表現でき、各種アドレス計算（四則演算、AND、OR、冪乗など）が可能だった<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[22]</a></sup>。
+</p><p>商用製品でアセンブリ言語を使う最大の理由は、使用メモリ量を最小にし、オーバーヘッドを最小にし、性能と信頼性を向上させるためである。1980年代のビジネスソフトでは、例えば<a href="/wiki/%E8%A1%A8%E8%A8%88%E7%AE%97%E3%82%BD%E3%83%95%E3%83%88" title="表計算ソフト">表計算ソフト</a> <a href="/wiki/Lotus_1-2-3" title="Lotus 1-2-3">Lotus 1-2-3</a> などはアセンブリ言語で書かれていた。日本では<a href="/wiki/%E6%9D%BE_(%E3%83%AF%E3%83%BC%E3%83%97%E3%83%AD)" title="松 (ワープロ)">松</a>などが該当<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[23]</a></sup>する。
+</p><p>1990年代に入っても、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0" title="コンシューマーゲーム">コンシューマーゲーム</a>の多くはアセンブリ言語でプログラムが書かれていた。しかしゲーム内容が複雑化し、プログラムの規模が増大するにつれて、アセンブラでは開発が困難となり、高水準言語による開発が主流となっていった。例えば<a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">プレイステーション</a>では<a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">GCC</a>が公式のSDKに含まれていて、標準の開発言語は<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>であった<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[24]</a></sup><sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[25]</a></sup>。この時代のゲーム機は<a href="/wiki/3%E6%AC%A1%E5%85%83%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="3次元コンピュータグラフィックス">3次元コンピュータグラフィックス</a>の積極的な導入が始まっており、ハードウェア性能も向上したことから、C言語による開発も十分可能となったが、コンパイラの最適化能力が未成熟だったこともあいまって、ハードウェア性能を最大限引き出すにはアセンブリ言語を駆使した手動最適化や細かなチューニングが必要となることも多かった。<a href="/wiki/%E3%82%BB%E3%82%AC%E3%82%B5%E3%82%BF%E3%83%BC%E3%83%B3" title="セガサターン">セガサターン</a>の最高性能を引き出して<a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">プレイステーション</a>に対抗するには、アセンブリ言語を使うしかなかったと述べていた業界関係者もいた<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[26]</a></sup>。ただし一方で、<a href="/wiki/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ファミリーコンピュータ">ファミコン</a>時代すでに<a href="/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%82%B9%E3%83%AC%E3%82%A4%E3%83%80%E3%83%BC%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%BC" title="メタルスレイダーグローリー">メタルスレイダーグローリー</a>や<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%95%E3%82%A1%E3%83%9F%E3%82%B3%E3%83%B3" title="スーパーファミコン">スーパーファミコン</a>の<a href="/wiki/MOTHER%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="MOTHERシリーズ">MOTHER 2</a>・<a href="/wiki/%E3%82%B7%E3%83%A0%E3%82%B7%E3%83%86%E3%82%A3#スーパーファミコン版" title="シムシティ">シムシティ</a><sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[27]</a></sup>、プレイステーションの<a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%BB%E3%83%90%E3%83%B3%E3%83%87%E3%82%A3%E3%82%AF%E3%83%BC_(%E3%82%B2%E3%83%BC%E3%83%A0)" title="クラッシュ・バンディクー (ゲーム)">クラッシュ・バンディクー</a>で<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[28]</a></sup>、開発の一部に<a href="/wiki/LISP" title="LISP">LISP</a>が使われていたという話もあり、当時のコンシューマーゲームの分野ではアセンブリ言語やC言語が全てだったというわけではない。
+</p><p>2000年代初頭、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>は原始的な<a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC" title="プログラマブルシェーダー">プログラマブルシェーダー</a>に対応した<a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> (<a href="/wiki/Direct3D" title="Direct3D">Direct3D</a>) 8.0をリリースした。このDirect3D 8.0におけるシェーダープログラムは、グラフィックスハードウェアに依存しない中間言語（バイトコード）を出力することのできるアセンブリ言語（シェーダーアセンブラ）を使用して記述するものだった。2001年には世界で初めてプログラマブルシェーダーに対応したコンシューマーゲーム機として<a href="/wiki/Xbox_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="Xbox (ゲーム機)">初代Xbox</a>が登場したが、このXboxに搭載されていたグラフィックスAPIもDirect3D 8.x相当のカスタマイズ版<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[29]</a></sup>であり、CPU上で実行するホストプログラム（ゲームアプリケーション本体のコード）は<a href="/wiki/C%2B%2B" title="C++">C++</a>を使って記述する一方、<a href="/wiki/Graphics_Processing_Unit" title="Graphics Processing Unit">GPU</a>上で実行するシェーダープログラムの記述にはアセンブラを使用していた。のちに<a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a>や<a href="/wiki/Cg_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Cg (プログラミング言語)">Cg</a> (C for Graphics) といった高水準シェーディング言語が開発され、HLSLに対応したDirect3D 9.0以降はシェーダープログラムも高水準言語を利用して記述するようになった。Direct3D 10のシェーダーモデル4.0以降は、シェーダーアセンブラではなくHLSLの使用が必須となっている<sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[30]</a></sup>。
+</p><p>ゲーム開発の分野に限った話ではないが、<a href="/wiki/C%2B%2B" title="C++">C++</a>や<a href="/wiki/C_Sharp" title="C Sharp">C#</a>のような、Cよりもさらに高水準の言語が主流になってからも、コンパイラが出力したアセンブリコードを解析して最適化やチューニングの余地を探るといった手法は一般的に行なわれている<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[31]</a></sup>。
+</p>
+<h3><span id=".E7.8F.BE.E4.BB.A3.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E4.BD.BF.E7.94.A8"></span><span class="mw-headline" id="現代における使用">現代における使用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=21" title="節を編集: 現代における使用">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>アセンブリ言語と高水準言語を比較した有用性と性能についての議論は、これまでよく行われてきた。アセンブリ言語は、後述するように特定の用途で重要な役割を演じている。しかし、一般的には、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E6%9C%80%E9%81%A9%E5%8C%96" title="コンパイラ最適化">最適化コンパイラ</a>は人手で書かれたアセンブリ言語のコードと同等の性能を発揮すると言われている<sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[32]</a></sup>（例外もある<sup class="reference" id="cite_ref-goto_35-0"><a href="#cite_note-goto-35">[33]</a></sup><sup class="reference" id="cite_ref-bit-fild_36-0"><a href="#cite_note-bit-fild-36">[34]</a></sup><sup class="reference" id="cite_ref-gcc-mess_37-0"><a href="#cite_note-gcc-mess-37">[35]</a></sup>）。<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2020-11）">最近</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2020-11）">いつ?</span></a></i>]</sup>のプロセッサやメモリサブシステムは複雑化してきたため、コンパイラでもアセンブリ言語でも効果的な最適化がますます困難になってきている<sup class="reference" id="cite_ref-GreatDebate1_38-0"><a href="#cite_note-GreatDebate1-38">[36]</a></sup><sup class="reference" id="cite_ref-compiler-fails1_39-0"><a href="#cite_note-compiler-fails1-39">[37]</a></sup>。さらに言えば、プロセッサが高性能化するにしたがって<a href="/wiki/%E5%85%A5%E5%87%BA%E5%8A%9B" title="入出力">入出力</a>や<a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E6%96%B9%E5%BC%8F" title="ページング方式">ページング</a>による遅延が無視できないレベルとなったため、コーディングによる性能追求は多くのプログラマにとって大きな問題ではなくなってきている。
+</p><p>開発者がアセンブリ言語を選択する状況として、次のようなものがある。
+</p>
+<ul><li>限られた資源で単独で動作する小さな実行ファイルが必要とされ、高水準言語のランタイム環境や<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>が使えない場合。アセンブリ言語を使う状況としては最も一般的である。例えば、電話機のファームウェア、自動車の燃料・点火システム、空調システム、セキュリティシステム、センサーなどがある。</li>
+<li><a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="デバイスドライバ">デバイスドライバ</a>や<a href="/wiki/%E5%89%B2%E3%82%8A%E8%BE%BC%E3%81%BF%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A9" title="割り込みハンドラ">割り込みハンドラ</a>、<a href="/wiki/%E3%83%96%E3%83%BC%E3%83%88#ブートローダ" title="ブート">ブートコード</a>、<a href="/wiki/Basic_Input/Output_System" title="Basic Input/Output System">BIOS</a>、<a href="/wiki/Power_On_Self_Test" title="Power On Self Test">POST</a>など、ハードウェアと直接やりとりするコード。</li>
+<li>コンパイラでは実装されていないプロセッサ固有の命令を使わなければならないプログラム。例えば、<a href="/wiki/%E6%9A%97%E5%8F%B7" title="暗号">暗号</a>のencryptionとdecryptionに使われる<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97#(キャリーなし)ローテート" title="ビット演算">ビット単位ローテート</a>命令などといった演算を使うためにアセンブリ言語を使用する。</li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E6%9C%80%E9%81%A9%E5%8C%96" title="コンパイラ最適化">コンパイラの最適化</a>では不可能な、<a href="/wiki/SIMD" title="SIMD">SIMD</a>命令を駆使した<a href="/wiki/%E6%9C%80%E9%81%A9%E5%8C%96_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="最適化 (情報工学)">最適化</a>などを手作業で行いたい場合。</li>
+<li>極端な最適化を必要とするプログラム（例えば、プロセッサ集約型アルゴリズム内の内側の<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%97_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ループ (プログラミング)">ループ</a>など）。例えば、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%A0" title="コンピュータゲーム">コンピュータゲーム</a>開発においては、システムのハードウェア機能を最大限に発揮するようアセンブリ言語を使うことがある。また大規模な科学シミュレーションでも高度に最適化されたアルゴリズムを必要とする。例えば、<a href="/wiki/%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0%E5%AD%A6" title="線型代数学">線型代数学</a>の<a href="/wiki/Basic_Linear_Algebra_Subprograms" title="Basic Linear Algebra Subprograms">BLAS</a><sup class="reference" id="cite_ref-goto_35-1"><a href="#cite_note-goto-35">[33]</a></sup><sup class="reference" id="cite_ref-bench_40-0"><a href="#cite_note-bench-40">[38]</a></sup>や<a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%B3%E3%82%B5%E3%82%A4%E3%83%B3%E5%A4%89%E6%8F%9B" title="離散コサイン変換">離散コサイン変換</a>（例えば<a href="/wiki/X264" title="X264">x264</a>のSIMDアセンブリ版<sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[39]</a></sup>）がアセンブリ言語で書かれている。</li>
+<li>新たなプロセッサや特殊なプロセッサなど、高水準言語が存在しない場合。</li>
+<li>次のような正確なタイミングを必要とするプログラム。
+<ul><li>シミュレーション、航空航法システム、医療装置などの<a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム</a>プログラム。例えば<a href="/wiki/%E3%83%95%E3%83%A9%E3%82%A4%E3%83%BB%E3%83%90%E3%82%A4%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%A4" title="フライ・バイ・ワイヤ">フライ・バイ・ワイヤ</a>システムでは、<a href="/wiki/%E9%81%A0%E9%9A%94%E6%B8%AC%E5%AE%9A%E6%B3%95" title="遠隔測定法">テレメトリ</a>を厳密な制限時間内に解釈して対応する必要がある。そのようなシステムでは予測不能な遅延の原因を排除する必要があり、自動<a href="/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="ガベージコレクション">ガベージコレクション</a>を伴う<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a>や<a class="mw-redirect" href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88" title="ページフォルト">ページフォルト</a>を伴う<a href="/wiki/%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6" title="仮想記憶">仮想記憶</a>や<a href="/wiki/%E3%83%97%E3%83%AA%E3%82%A8%E3%83%B3%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3" title="プリエンプション">プリエンプティブ・マルチタスク</a>を避けなければならない。高水準言語の中には、ランタイム環境やOSインタフェースによってそのような遅延を生じるものがある。アセンブリ言語や低水準言語を選択することで、処理の詳細な部分まで目が行き届く。</li>
+<li>暗号アルゴリズムは常に厳密に同じ時間で実行することで、<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83" title="タイミング攻撃">タイミング攻撃</a>を防ぐ。</li></ul></li>
+<li>高度なセキュリティが要求され、環境を完全に制御する必要がある場合。</li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9" title="コンピュータウイルス">コンピュータウイルス</a>、<a href="/wiki/%E3%83%96%E3%83%BC%E3%83%88#ブートローダ" title="ブート">ブートローダ</a>、一部の<a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="デバイスドライバ">デバイスドライバ</a>など、ハードウェアと密接に連携するソフトウェア。</li>
+<li>監視・トレース・<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="デバッグ">デバッグ</a>のための<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="命令セットシミュレータ">命令セットシミュレータ</a>で、追加のオーバーヘッドを最小に保ちたい場合。</li>
+<li>次のような<a href="/wiki/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0" title="リバースエンジニアリング">リバースエンジニアリング</a>またはプログラムファイルの改造。この場合<a href="/wiki/%E9%80%86%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="逆アセンブラ">逆アセンブラ</a>が併用される。ただしリバースエンジニアリングが許可されていないものを解析・改造することは法律に抵触する場合がある。
+<ul><li><a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>が失われた（または入手できない）<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA" title="バイナリ">バイナリ</a>ファイルがあるとき、それを改造する場合。あるいはソフトウェアの<a class="mw-redirect" href="/wiki/%E3%82%B3%E3%83%94%E3%83%BC%E3%83%97%E3%83%AD%E3%83%86%E3%82%AF%E3%83%88" title="コピープロテクト">コピープロテクト</a>を（不正に）解除する場合。
+<ul><li>特にソースコードが公開されていないことが多い商用<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%A0" title="コンピュータゲーム">コンピュータゲーム</a>の改造。アセンブリ言語レベルでの改造がよく行われている。</li></ul></li></ul></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%B3%E3%83%BC%E3%83%89" title="自己書き換えコード">自己書き換えコード</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E9%9B%BB%E5%8D%93" title="グラフ電卓">グラフ電卓</a>向けのソフトウェア開発<sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[40]</a></sup></li></ul>
+<p>なお一方で、<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2020-11）">最近</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2020-11）">いつ?</span></a></i>]</sup>のコンピュータの命令セットはその多くはどれも似ている。したがって、どれか1つのアセンブリ言語を学ぶだけで、基本概念、どんなときにアセンブリ言語を使用するのが適しているか、高水準言語から効率的な実行コードを生成する方法をある程度は学習できる<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[41]</a></sup>。
+</p><p>より実践的には、コンパイラが生成したコードを確認したい場合といったようなものがある。コンパイラ最適化によって命令の置き換えや省略がされることもあり、高水準言語で書かれたソースコードをデバッグするだけでは原因がつかめない不具合が発生することもある。普段プログラムを記述するときは生産性や移植性を重視して高水準言語を使っていたとしても、プロセッサごとの命令セット仕様や低水準言語の知識も併せて持っているとデバッグの際に役立つ。普段は意識しないような場所であっても、何か理由があっていざという時には腑分けできるということは重要である。これは、たとえ日常の計算には<a href="/wiki/%E9%9B%BB%E5%8D%93" title="電卓">電卓</a>を使っていたとしても、<a href="/wiki/%E7%AD%86%E7%AE%97" title="筆算">筆算</a>や暗算などを通じて四則演算の基本原則といった算数を学ぶ必要があることに似ている。また、生産性や移植性は劣るものの、高水準言語では不可能な機械語レベルの操作を直接記述することもできるため、「最適化の最後の手段」でもある。
+</p>
+<h3><span id=".E9.AB.98.E6.B0.B4.E6.BA.96.E8.A8.80.E8.AA.9E.E3.81.A8.E3.81.AE.E9.80.A3.E6.90.BA"></span><span class="mw-headline" id="高水準言語との連携">高水準言語との連携</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=22" title="節を編集: 高水準言語との連携">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>高水準言語の処理系の<a href="/wiki/%E5%91%BC%E5%87%BA%E8%A6%8F%E7%B4%84" title="呼出規約">呼出規約</a>（言語処理系ではなくOSやハードウェアベンダ側で共通化している場合もある）に従うことで、高水準言語と相互にコードを呼び出すことができる。後述の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="インラインアセンブラ">インラインアセンブラ</a>などにより同一のモジュールに埋め込むこともできれば、別モジュールとして<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="リンケージエディタ">リンケージエディタ</a>でリンクすることもある。</li>
+<li>多くのコンパイラは、機械語を直接生成するのではなく、アセンブリ言語のコードを生成し、それをアセンブラに通している。人間による<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="デバッグ">デバッグ</a>や最適化などに便利である（機械による最適化には、内部表現を使ったほうが便利なので、あまり意味がない）。その意味ではアセンブリ言語は、目に見えない形ではあるが最も利用頻度の高いプログラミング言語といえるという主張もあるが、その意味では機械語が絶対的に最も利用頻度の高いプログラミング言語である。</li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="インラインアセンブラ">インラインアセンブラ</a>のある言語ないし処理系では、ソース中にアセンブリ言語による記述を含めることができる。例えば<a href="/wiki/Linux%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="Linuxカーネル">Linuxカーネル</a>ではその利用が多い。アセンブリ言語と同様の利点が得られるかわりに、やはりアセンブリ言語と同様にプログラミング言語を使う利点（移植性など）が失われる。</li></ul>
+<h2><span id=".E4.B8.BB.E3.81.AA.E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.A9"></span><span class="mw-headline" id="主なアセンブラ">主なアセンブラ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=23" title="節を編集: 主なアセンブラ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/IBM_High_Level_Assembler" title="IBM High Level Assembler">IBM High Level Assembler (HLASM)</a> - <a href="/wiki/IBM" title="IBM">IBM</a>系<a href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" title="メインフレーム">メインフレーム</a>用のアセンブラ。</li>
+<li><a href="/wiki/PDP-8#プログラム例" title="PDP-8">PDP-8のアセンブリ言語</a> - PAL-III (Program Assembly Language III)</li>
+<li><a href="/wiki/CAP-X" title="CAP-X">CAP-X</a> - CASL 以前に情報処理技術者試験で使われていたアセンブリ言語</li>
+<li><a href="/wiki/CASL" title="CASL">CASL</a> - <a href="/wiki/%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E6%8A%80%E8%A1%93%E8%80%85%E8%A9%A6%E9%A8%93" title="情報処理技術者試験">情報処理技術者試験</a>（<a href="/wiki/%E5%9F%BA%E6%9C%AC%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93%E8%80%85%E8%A9%A6%E9%A8%93" title="基本情報技術者試験">基本情報技術者試験</a>）用に作られたアセンブリ言語。同時に定義されているペーパーマシンCOMET用</li>
+<li><a class="new" href="/w/index.php?title=En:As_(Unix)&amp;action=edit&amp;redlink=1" title="En:As (Unix) (存在しないページ)">as</a> - <a href="/wiki/UNIX" title="UNIX">UNIX</a>用のアセンブラ</li>
+<li><a href="/wiki/GNU%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="GNUアセンブラ">GNUアセンブラ (gas)</a> - <a href="/wiki/GNU%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="GNUプロジェクト">GNUプロジェクト</a>が開発する、<a href="/wiki/X86" title="X86">x86</a>、<a href="/wiki/MC68000" title="MC68000">680x0</a>、<a href="/wiki/SPARC" title="SPARC">SPARC</a>、<a href="/wiki/VAX" title="VAX">VAX</a>などの各種CPU用のアセンブラ</li>
+<li><a href="/wiki/Microsoft_Macro_Assembler" title="Microsoft Macro Assembler">Microsoft Macro Assembler (MASM)</a> - <a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>のx86 CPU用に<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>が開発したアセンブラ</li>
+<li><a href="/wiki/Netwide_Assembler" title="Netwide Assembler">Netwide Assembler (nasm)</a> - MASMと互換性の高いx86 CPU用アセンブラ</li>
+<li><a href="/wiki/Turbo_Assembler" title="Turbo Assembler">Turbo Assembler (TASM)</a> - <a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89" title="ボーランド">ボーランド</a>が開発していた、MASMと互換性の高いx86 CPU用アセンブラ</li>
+<li><a href="/wiki/MIX_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="MIX (プログラミング)">MIXAL</a> - <a href="/wiki/%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9" title="ドナルド・クヌース">ドナルド・クヌース</a>が考案したペーパーマシンMIX用。また後継ペーパーマシンMMIX用の<a href="/wiki/MMIX" title="MMIX">MMIXAL</a>も存在する</li></ul>
+<p><a href="/wiki/Unix%E7%B3%BB" title="Unix系">Unix系</a>システムでは、アセンブラを as と呼ぶのが一般的だが、実体はそれぞれのOSで異なる。<a href="/wiki/GNU%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="GNUアセンブラ">GNUアセンブラ</a>を使っているものが多い。
+</p><p>同じ系統のプロセッサであっても、複数のアセンブリ言語の方言が存在する。アセンブラによっては他の方言のアセンブリ言語も使用可能な場合がある。例えば、<a href="/wiki/Turbo_Assembler" title="Turbo Assembler">TASM</a>は<a href="/wiki/Microsoft_Macro_Assembler" title="Microsoft Macro Assembler">MASM</a>用コードを入力として受け付け可能だが、逆は不可能である。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FASM&amp;action=edit&amp;redlink=1" title="FASM (存在しないページ)">FASM</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FASM&amp;action=edit&amp;redlink=1" title="En:FASM (存在しないページ)">英語版</a>）</span></span>と<a href="/wiki/Netwide_Assembler" title="Netwide Assembler">NASM</a>は文法がほぼ同じだが、サポートしているマクロが異なるため、相互の翻訳は困難である。いずれも基本機能は同じだが、追加機能に差異がある<sup class="reference" id="cite_ref-Hyde_44-0"><a href="#cite_note-Hyde-44">[42]</a></sup>。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=24" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=25" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">IBMは<a href="/wiki/System/360" title="System/360">System/360</a>から2011年現在まで一貫してアセンブラ言語 (Assembler Language)と 呼んでいる。例：<a class="external text" href="http://www-01.ibm.com/software/awdtools/hlasm/" rel="nofollow">IBM High Level Assembler</a></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">MIPSのアセンブラの一部など、（分岐命令のターゲットアドレスの先頭にある機械語命令を対象として）その分岐命令の遅延スロットへの移動を（副作用がない場合に）アセンブラ疑似命令 (.set bopt) の指示に応じて行うものもある。OPTASM（SLR社）という最適化アセンブラもあった。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=26" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="https://kotobank.jp/word/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E-380" rel="nofollow">アセンブリ言語 - コトバンク</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">Stroustrup, Bjarne, <i>The C++ Programming Language</i>, Addison-Wesley, 1986, ISBN 0-201-12078-X: <i>"C++ was primarily designed so that the author and his friends would not have to program in assembler, C, or various modern high-level languages."</i> - <i>assembler</i> を <i>assembly language</i> の意味で使っている例</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">Saxon, James, and Plette, William, <i>Programming the IBM 1401</i>, Prentice-Hall, 1962, LoC 62-20615. - <i>assembly program</i> という用語を使っている例</span>
+</li>
+<li id="cite_note-Salomon-6">^ <a href="#cite_ref-Salomon_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Salomon_6-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">David Salomon (1993). <i><a class="external text" href="http://www.davidsalomon.name/assem.advertis/asl.pdf" rel="nofollow">Assemblers and Loaders</a></i></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation book" id="Reference-bit_編集部-1990" style="font-style:normal">bit 編集部『bit 単語帳』<a href="/wiki/%E5%85%B1%E7%AB%8B%E5%87%BA%E7%89%88" title="共立出版">共立出版</a>、1990年8月15日、8頁。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-320-02526-1" title="特別:文献資料/4-320-02526-1">4-320-02526-1</a>。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">J.DONOVAN, JOHN (1972). <i>systems programming</i>. pp. 59. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-07-085175-1" title="特別:文献資料/0-07-085175-1">0-07-085175-1</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=systems+programming&amp;rft.aulast=J.DONOVAN&amp;rft.aufirst=JOHN&amp;rft.au=J.DONOVAN%2C%26%2332%3BJOHN&amp;rft.date=1972&amp;rft.pages=pp.%26nbsp%3B59&amp;rft.isbn=0-07-085175-1&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Beck, Leland L. (1996). “2”. <i>System Software: An Introduction to Systems Programming</i>. Addison Wesley</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=2&amp;rft.atitle=System+Software%3A+An+Introduction+to+Systems+Programming&amp;rft.aulast=Beck&amp;rft.aufirst=Leland+L.&amp;rft.au=Beck%2C%26%2332%3BLeland+L.&amp;rft.date=1996&amp;rft.pub=Addison+Wesley&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-intel-1999-MOV-10">^ <a href="#cite_ref-intel-1999-MOV_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-intel-1999-MOV_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-intel-1999-MOV_10-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-intel-1999-MOV_10-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><cite class="citation book" style="font-style:normal"> <a class="external text" href="http://download.intel.com/design/PentiumII/manuals/24319102.PDF" rel="nofollow"><i>Intel Architecture Software Developer’s Manual, Volume 2: Instruction Set Reference</i></a>. INTEL CORPORATION. (1999). pp. 442 and 35<span style="display:none;">. <a class="external free" href="http://download.intel.com/design/PentiumII/manuals/24319102.PDF" rel="nofollow">http://download.intel.com/design/PentiumII/manuals/24319102.PDF</a></span> <span class="reference-accessdate"><span title="">2010年11月18日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Intel+Architecture+Software+Developer%E2%80%99s+Manual%2C+Volume+2%3A+Instruction+Set+Reference&amp;rft.date=1999&amp;rft.pages=pp.%26nbsp%3B442+and+35&amp;rft.pub=INTEL+CORPORATION&amp;rft_id=http%3A%2F%2Fdownload.intel.com%2Fdesign%2FPentiumII%2Fmanuals%2F24319102.PDF&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">Hyde, Randall. "Chapter 12 – Classes and Objects". The Art of Assembly Language, 2nd Edition. No Starch Press. © 2010.</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://www.encyclopedia.com/doc/1O11-metaassembler.html" rel="nofollow">(John Daintith, ed.) A Dictionary of Computing: "meta-assembler"</a></span>
+</li>
+<li id="cite_note-intel-1999-13"><b><a href="#cite_ref-intel-1999_13-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"> <a class="external text" href="http://download.intel.com/design/PentiumII/manuals/24319102.PDF" rel="nofollow"><i>Intel Architecture Software Developer’s Manual, Volume 2: Instruction Set Reference</i></a>. INTEL CORPORATION. (1999)<span style="display:none;">. <a class="external free" href="http://download.intel.com/design/PentiumII/manuals/24319102.PDF" rel="nofollow">http://download.intel.com/design/PentiumII/manuals/24319102.PDF</a></span> <span class="reference-accessdate"><span title="">2010年11月18日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Intel+Architecture+Software+Developer%E2%80%99s+Manual%2C+Volume+2%3A+Instruction+Set+Reference&amp;rft.date=1999&amp;rft.pub=INTEL+CORPORATION&amp;rft_id=http%3A%2F%2Fdownload.intel.com%2Fdesign%2FPentiumII%2Fmanuals%2F24319102.PDF&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Evans, David (2006年). “<a class="external text" href="http://www.cs.virginia.edu/~evans/cs216/guides/x86.html" rel="nofollow">x86 Assembly Guide</a>”.   University of Virginia. <span title="">2010年11月18日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20111210201410/http://www.sparc.com/standards/V8.pdf" rel="nofollow">The SPARC Architecture Manual, Version 8</a>”.   SPARC, International (1992年). 2011年12月10日時点の<a class="external text" href="http://www.sparc.com/standards/V8.pdf" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2012年10月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external free" href="http://www.z80.de/z80/z80code.htm" rel="nofollow">http://www.z80.de/z80/z80code.htm</a></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Microsoft Corporation. “<a class="external text" href="http://flint.cs.yale.edu/cs422/doc/art-of-asm/pdf/CH08.PDF" rel="nofollow">MASM: Directives &amp; Pseudo-Opcodes</a>”. <span title="">2011年3月19日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="https://docs.microsoft.com/en-us/cpp/preprocessor/macros-c-cpp" rel="nofollow">Macros (C/C++) | Microsoft Docs</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://skycoast.us/pscott/software/mvs/concept14.html" rel="nofollow">Concept 14 Macros</a>”.   MVS Software. <span title="">2009年5月25日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-assembly-language?cat=technology-20"><b><a href="#cite_ref-assembly-language?cat=technology_20-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Answers.com. “<a class="external text" href="http://www.answers.com/topic/assembly-language?cat=technology" rel="nofollow">assembly language: Definition and Much More from Answers.com</a>”. <span title="">2008年6月19日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><a class="external text" href="http://neshla.sourceforge.net/" rel="nofollow">NESHLA: The High Level, Open Source, 6502 Assembler for the Nintendo Entertainment System</a></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Salomon. <a class="external text" href="http://www.davidsalomon.name/assem.advertis/asl.pdf" rel="nofollow"><i>Assemblers and Loaders</i></a>. p. 7<span style="display:none;">. <a class="external free" href="http://www.davidsalomon.name/assem.advertis/asl.pdf" rel="nofollow">http://www.davidsalomon.name/assem.advertis/asl.pdf</a></span> <span class="reference-accessdate"><span title="">2012年1月17日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Assemblers+and+Loaders&amp;rft.aulast=Salomon&amp;rft.au=Salomon&amp;rft.pages=p.%26nbsp%3B7&amp;rft_id=http%3A%2F%2Fwww.davidsalomon.name%2Fassem.advertis%2Fasl.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.columbia.edu/cu/computinghistory/650.html" rel="nofollow">The IBM 650 Magnetic Drum Calculator</a>”. <span title="">2012年1月17日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Jim Lawless (2004年5月21日). “<a class="external text" href="https://web.archive.org/web/20080821105848/http://www.radiks.net/~jimbo/art/int7.htm" rel="nofollow">Speaking with Don French : The Man Behind the French Silk Assembler Tools</a>”. 2008年8月21日時点の<a class="external text" href="http://www.radiks.net/~jimbo/art/int7.htm" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2008年7月25日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text"><a class="external text" href="https://xtech.nikkei.com/it/article/COLUMN/20060609/240537/" rel="nofollow">松 --- 事実上最初のパソコン用日本語ワープロソフト</a></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><a class="external text" href="http://www.psxdev.net/forum/viewtopic.php?t=1245" rel="nofollow">Toolchain, libraries and headers relationship - PlayStation Development Network</a></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><a class="external text" href="https://www.reddit.com/r/gamedev/comments/8wf7e0/what_were_ps1_and_n64_games_written_in/" rel="nofollow">What were PS1 and N64 games written in? : gamedev</a></span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20140702151706/http://www.eidolons-inn.net/tiki-index.php?page=SegaBase+Saturn" rel="nofollow">SegaBase Volume 6 - Saturn</a>”. <i>Eidolon's Inn</i> (2008年1月10日). 2014年7月2日時点の<a class="external text" href="http://www.eidolons-inn.net/tiki-index.php?page=SegaBase+Saturn" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2021-04-09）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2013年6月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text"><a class="external text" href="http://jp.franz.com/base/seminar/2005-11-18/SeminarNov2005-Abe.pdf" rel="nofollow">Lispによるリターゲッタブルコードジェネレータの実装 (PDF)</a> <a class="external text" href="https://web.archive.org/web/20080820015317/http://jp.franz.com/base/seminar/2005-11-18/SeminarNov2005-Abe.pdf" rel="nofollow">Archived</a> 2008年8月20日, at the <a href="/wiki/%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%90%E3%83%83%E3%82%AF%E3%83%9E%E3%82%B7%E3%83%B3" title="ウェイバックマシン">Wayback Machine</a>.</span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><a class="external text" href="https://www.ogis-ri.co.jp/otc/hiroba/others/OORing/interview21.html" rel="nofollow">OOエンジニアの輪！ ～ 第 21 回 川合史朗 さんの巻 ～ | オブジェクトの広場</a></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><a class="external text" href="https://www.techpowerup.com/gpu-specs/xbox-gpu.c1866" rel="nofollow">NVIDIA Xbox GPU Specs | TechPowerUp GPU Database</a></span>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text"><a class="external text" href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-using-shaders-10" rel="nofollow">Using Shaders in Direct3D 10 - Win32 apps | Microsoft Docs</a></span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text"><a class="external text" href="https://jp.gamesindustry.biz/article/1609/16090501/" rel="nofollow">［CEDEC］「FINAL FANTASY XV」の最適化はこうして行われた - GamesIndustry.biz Japan Edition</a></span>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Rusling, David A.. “<a class="external text" href="http://tldp.org/LDP/tlk/basics/sw.html" rel="nofollow">The Linux Kernel</a>”. <span title="">2012年3月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-goto-35">^ <a href="#cite_ref-goto_35-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-goto_35-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.nytimes.com/2005/11/28/technology/28super.html?_r=1" rel="nofollow">Writing the Fastest Code, by Hand, for Fun: A Human Computer Keeps Speeding Up Chips</a>”.   New York Times, John Markoff (2005年11月28日). <span title="">2010年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-bit-fild-36"><b><a href="#cite_ref-bit-fild_36-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20100205120952/http://hardwarebug.org/2010/01/30/bit-field-badness/" rel="nofollow">Bit-field-badness</a>”.   hardwarebug.org (2010年1月30日). 2010年2月5日時点の<a class="external text" href="http://hardwarebug.org/2010/01/30/bit-field-badness/" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2010年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-gcc-mess-37"><b><a href="#cite_ref-gcc-mess_37-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20100316212040/http://hardwarebug.org/2009/05/13/gcc-makes-a-mess/" rel="nofollow">GCC makes a mess</a>”.   hardwarebug.org (2009年5月13日). 2010年3月16日時点の<a class="external text" href="http://hardwarebug.org/2009/05/13/gcc-makes-a-mess/" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2010年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-GreatDebate1-38"><b><a href="#cite_ref-GreatDebate1_38-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Randall Hyde. “<a class="external text" href="https://web.archive.org/web/20080616110102/http://webster.cs.ucr.edu/Page_TechDocs/GreatDebate/debate1.html" rel="nofollow">The Great Debate</a>”. 2008年6月16日時点の<a class="external text" href="http://webster.cs.ucr.edu/Page_TechDocs/GreatDebate/debate1.html" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2008年7月3日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-compiler-fails1-39"><b><a href="#cite_ref-compiler-fails1_39-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20100402221204/http://hardwarebug.org/2008/11/28/codesourcery-fails-again/" rel="nofollow">Code sourcery fails again</a>”.   hardwarebug.org (2010年1月30日). 2010年4月2日時点の<a class="external text" href="http://hardwarebug.org/2008/11/28/codesourcery-fails-again/" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2010年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-bench-40"><b><a href="#cite_ref-bench_40-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://eigen.tuxfamily.org/index.php?title=Benchmark-August2008" rel="nofollow">BLAS Benchmark-August2008</a>”.   eigen.tuxfamily.org (2008年8月1日). <span title="">2010年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20120304083653/http://git.videolan.org/?p=x264.git%3Ba%3Dtree%3Bf%3Dcommon%2Fx86%3Bhb%3DHEAD" rel="nofollow">x264.git/common/x86/dct-32.asm</a>”.   git.videolan.org (2010年9月29日). 2012年3月4日時点の<a class="external text" href="http://git.videolan.org/?p=x264.git;a=tree;f=common/x86;hb=HEAD" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2010年9月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20080702181616/http://tifreakware.net/tutorials/89/a/calc/fargoii.htm" rel="nofollow">68K Programming in Fargo II</a>”. 2008年7月2日時点の<a class="external text" href="http://tifreakware.net/tutorials/89/a/calc/fargoii.htm" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2008年7月3日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Hyde, Randall (1996年9月30日). “<a class="external text" href="https://web.archive.org/web/20100325155048/http://www.arl.wustl.edu/~lockwood/class/cs306/books/artofasm/fwd.html" rel="nofollow">Foreword ("Why would anyone learn this stuff?"), <i>op. cit.</i></a>”. 2010年3月25日時点の<a class="external text" href="http://www.arl.wustl.edu/~lockwood/class/cs306/books/artofasm/fwd.html" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2010年3月5日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Hyde-44"><b><a href="#cite_ref-Hyde_44-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Randall Hyde. “<a class="external text" href="https://web.archive.org/web/20071018014019/http://webster.cs.ucr.edu/AsmTools/WhichAsm.html" rel="nofollow">Which Assembler is the Best?</a>”. 2007年10月18日時点の<a class="external text" href="http://webster.cs.ucr.edu/AsmTools/WhichAsm.html" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2007年10月19日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=27" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Jonathan Bartlett: <i><a class="external text" href="https://programminggroundup.blogspot.com/" rel="nofollow">Programming from the Ground Up</a></i>. Bartlett Publishing, 2004. ISBN 0-9752838-4-7<br/>Also available online <a class="external text" href="http://download.savannah.gnu.org/releases-noredirect/pgubook/ProgrammingGroundUp-1-0-booksize.pdf" rel="nofollow">as PDF</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018年3月）">リンク切れ</span></a></i>]</sup></li>
+<li>Robert Britton: <i>MIPS Assembly Language Programming</i>. Prentice Hall, 2003. ISBN 0-13-142044-5</li>
+<li>Paul Carter: <i>PC Assembly Language</i>. Free ebook, 2001.<br/><a class="external text" href="http://drpaulcarter.com/pcasm/" rel="nofollow">Website</a></li>
+<li>Jeff Duntemann: <i>Assembly Language Step-by-Step</i>. Wiley, 2000. ISBN 0-471-37523-3</li>
+<li>Randall Hyde: <i>The Art of Assembly Language</i>. No Starch Press, 2003. ISBN 1-886411-97-2</li>
+<li>Peter Norton, John Socha, <i>Peter Norton's Assembly Language Book for the IBM PC</i>, Brady Books, NY: 1986.</li>
+<li>Michael Singer, <i>PDP-11. Assembler Language Programming and Machine Organization</i>, John Wiley &amp; Sons, NY: 1980.</li>
+<li>Dominic Sweetman: <i>See MIPS Run</i>. Morgan Kaufmann Publishers, 1999. ISBN 1-55860-410-3</li>
+<li>John Waldron: <i>Introduction to RISC Assembly Language Programming</i>. Addison Wesley, 1998. ISBN 0-201-39828-1</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=28" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E9%80%86%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="逆アセンブラ">逆アセンブラ</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイル</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%94%A8%E8%AA%9E)" title="マクロ (コンピュータ用語)">マクロ(コンピュータ用語)</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;section=29" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.atariarchives.org/mlb/introduction.php" rel="nofollow">Machine language for beginners</a></li>
+<li><a class="external text" href="http://www.int80h.org/" rel="nofollow">Unix Assembly Language Programming</a></li>
+<li><a class="external text" href="http://www-03.ibm.com/systems/z/os/zos/bkserv/r8pdf/index.html#hlasm" rel="nofollow">IBM High Level Assembler</a> IBMのメインフレーム用アセンブリ言語のマニュアル</li>
+<li><a class="external text" href="http://c2.com/cgi/wiki?LearningAssemblyLanguage" rel="nofollow">PPR: Learning Assembly Language</a></li>
+<li><a class="external text" href="http://www.azillionmonkeys.com/qed/asmexample.html" rel="nofollow">Assembly Language Programming Examples</a></li>
+<li><a class="external text" href="http://www.grc.com/smgassembly.htm" rel="nofollow">Authoring Windows Applications In Assembly Language</a></li>
+<li><a class="external text" href="http://mark.masmcode.com/" rel="nofollow">Assembly Optimization Tips</a> by Mark Larson</li>
+<li><a class="external text" href="http://nasm.sourceforge.net/doc/nasmdoc0.html" rel="nofollow">NASM Manual</a></li>
+<li><a class="external text" href="http://www.softools.com/sasmzilog.htm" rel="nofollow">Z80/Z180/8085 Assembler</a></li></ul>
+<div aria-labelledby="コンピュータ・プログラミング言語" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:プログラミング言語一覧 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ・プログラミング言語" style="font-size:110%;margin:0 6em">コンピュータ・プログラミング言語</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">低水準言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a></li>
+<li><a class="mw-selflink selflink">アセンブリ言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">高水準言語</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">1950年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/FORTRAN" title="FORTRAN">FORTRAN</a></span></li>
+<li><span lang="en"><a href="/wiki/LISP" title="LISP">LISP</a></span></li>
+<li><span lang="en"><a href="/wiki/ALGOL" title="ALGOL">ALGOL</a></span></li>
+<li><span lang="en"><a href="/wiki/RPG_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E8%A8%80%E8%AA%9E)" title="RPG (プログラム言語)">RPG</a></span></li>
+<li><span lang="en"><a href="/wiki/COBOL" title="COBOL">COBOL</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1960年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CPL_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="CPL (プログラミング言語)"><span lang="en">CPL</span></a></li>
+<li><span lang="en"><a href="/wiki/BASIC" title="BASIC">BASIC</a></span></li>
+<li><span lang="en"><a href="/wiki/PL/I" title="PL/I">PL/I</a></span></li>
+<li><span lang="en"><a href="/wiki/APL" title="APL">APL</a></span></li>
+<li><span lang="en"><a href="/wiki/BCPL" title="BCPL">BCPL</a></span></li>
+<li><span lang="en"><a href="/wiki/Simula" title="Simula">Simula</a></span></li>
+<li><span lang="en"><a href="/wiki/LOGO" title="LOGO">LOGO</a></span></li>
+<li><span lang="en"><a href="/wiki/B%E8%A8%80%E8%AA%9E" title="B言語">B</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1970年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Forth" title="Forth">Forth</a></span></li>
+<li><span lang="fr"><a href="/wiki/Pascal" title="Pascal">Pascal</a></span></li>
+<li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語"><span lang="en">C</span></a></li>
+<li><span lang="fr"><a href="/wiki/Prolog" title="Prolog">Prolog</a></span></li>
+<li><span lang="en"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></span></li>
+<li><span lang="en"><a href="/wiki/Scheme" title="Scheme">Scheme</a></span></li>
+<li><a href="/wiki/ML_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="ML (プログラミング言語)"><span lang="en">ML</span></a></li>
+<li><span lang="en"><a href="/wiki/AWK" title="AWK">AWK</a></span></li>
+<li><span lang="en"><a href="/wiki/Ada" title="Ada">Ada</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1980年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/C%2B%2B" title="C++">C++</a></span></li>
+<li><span lang="en"><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></span></li>
+<li><span lang="en"><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></span></li>
+<li><span lang="fr"><a href="/wiki/Eiffel" title="Eiffel">Eiffel</a></span></li>
+<li><span lang="en"><a href="/wiki/Erlang" title="Erlang">Erlang</a></span></li>
+<li><span lang="en"><a href="/wiki/Perl" title="Perl">Perl</a></span></li>
+<li><span lang="en"><a href="/wiki/Mathematica" title="Mathematica">Mathematica</a></span></li>
+<li><span lang="en"><a href="/wiki/J_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="J (プログラミング言語)">J</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1990年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Python" title="Python">Python</a></span></li>
+<li><span lang="en"><a href="/wiki/Tcl/Tk" title="Tcl/Tk">Tcl</a></span></li>
+<li><span lang="en"><a href="/wiki/Haskell" title="Haskell">Haskell</a></span></li>
+<li><span lang="en"><a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a></span></li>
+<li><span lang="en"><a href="/wiki/Ruby" title="Ruby">Ruby</a></span></li>
+<li><span lang="pt"><a href="/wiki/Lua" title="Lua">Lua</a></span></li>
+<li><span lang="en"><a href="/wiki/Delphi" title="Delphi">Delphi</a></span></li>
+<li><span lang="en"><a href="/wiki/Java" title="Java">Java</a></span></li>
+<li><span lang="en"><a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a></span> (<span lang="en"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span>)</li>
+<li><span lang="en"><a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a></span></li>
+<li><span lang="en"><a href="/wiki/OCaml" title="OCaml">OCaml</a></span></li>
+<li><span lang="en"><a href="/wiki/SuperCollider" title="SuperCollider">SuperCollider</a></span></li>
+<li><span lang="en"><a href="/wiki/R%E8%A8%80%E8%AA%9E" title="R言語">R</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">2000年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/C_Sharp" title="C Sharp">C#</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/VB.NET" title="VB.NET">VB.NET</a></span></li>
+<li><span lang="en"><a href="/wiki/Scala" title="Scala">Scala</a></span></li>
+<li><span lang="en"><a href="/wiki/Clojure" title="Clojure">Clojure</a></span></li>
+<li><span lang="en"><a href="/wiki/D%E8%A8%80%E8%AA%9E" title="D言語">D</a></span></li>
+<li><span lang="en"><a href="/wiki/F_Sharp" title="F Sharp">F#</a></span></li>
+<li><span lang="en"><a href="/wiki/Go_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Go (プログラミング言語)">Go</a></span></li>
+<li><span lang="en"><a href="/wiki/Nim" title="Nim">Nim</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">2010年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Dart" title="Dart">Dart</a></span></li>
+<li><span lang="en"><a href="/wiki/Ceylon" title="Ceylon">Ceylon</a></span></li>
+<li><span lang="en"><a href="/wiki/Elixir_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Elixir (プログラミング言語)">Elixir</a></span></li>
+<li><span lang="en"><a href="/wiki/Crystal_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Crystal (プログラミング言語)">Crystal</a></span></li>
+<li><span lang="en"><a href="/wiki/Hack_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Hack (プログラミング言語)">Hack</a></span></li>
+<li><span lang="en"><a href="/wiki/Swift_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Swift (プログラミング言語)">Swift</a></span></li>
+<li><span lang="en"><a href="/wiki/Rust_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Rust (プログラミング言語)">Rust</a></span></li>
+<li><span lang="en"><a href="/wiki/Raku" title="Raku">Raku</a></span></li>
+<li><span lang="en"><a href="/wiki/Elm_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Elm (プログラミング言語)">Elm</a></span></li>
+<li><span lang="en"><a href="/wiki/Julia_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Julia (プログラミング言語)">Julia</a></span></li>
+<li><span lang="en"><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></span></li>
+<li><span lang="en"><a href="/wiki/Zig_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Zig (プログラミング言語)">Zig</a></span></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">架空の言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%93%AC%E4%BC%BC%E8%A8%80%E8%AA%9E" title="擬似言語">擬似言語</a></li>
+<li><a href="/wiki/CASL" title="CASL">CASL</a></li>
+<li><a href="/wiki/CAP-X" title="CAP-X">CAP-X</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">年表</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">パラダイム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7" title="プログラミング言語一覧">一覧</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="コンピュータ・プログラミング言語の関連項目" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:プログラミング言語の関連項目 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ・プログラミング言語の関連項目" style="font-size:110%;margin:0 6em">コンピュータ・プログラミング言語の関連項目</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語水準</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>(1G)</li>
+<li><a href="/wiki/%E4%BD%8E%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="低水準言語">低水準言語</a>(2G)</li>
+<li><a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>(3G)</li>
+<li><a href="/wiki/4GL" title="4GL">第四世代言語</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%BA%94%E4%B8%96%E4%BB%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="第五世代コンピュータ">第五世代言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語処理系</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">アセンブラ</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></li>
+<li><a class="new" href="/w/index.php?title=En:Translator_(computing)&amp;action=edit&amp;redlink=1" title="En:Translator (computing) (存在しないページ)">トランスレータ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語分類</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="マルチパラダイムプログラミング言語">マルチパラダイム言語</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="命令型プログラミング">命令型言語</a></li>
+<li><a href="/wiki/%E5%AE%A3%E8%A8%80%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="宣言型プログラミング">宣言型言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="非構造化プログラミング">非構造化言語</a></li>
+<li><a href="/wiki/%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="構造化プログラミング">構造化言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E8%A8%80%E8%AA%9E" title="非手続き型言語">非手続き型言語</a></li>
+<li><a href="/wiki/%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="手続き型プログラミング">手続き型言語</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向言語</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型言語</a></li>
+<li><a href="/wiki/%E8%AB%96%E7%90%86%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="論理プログラミング">論理型言語</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="データフロープログラミング">データフロー言語</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="動的プログラミング言語">ダイナミック言語</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E" title="スクリプト言語">スクリプト言語</a></li>
+<li><a href="/wiki/%E8%BB%BD%E9%87%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="軽量プログラミング言語">軽量プログラミング言語</a></li>
+<li><a href="/wiki/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="ビジュアルプログラミング言語">ビジュアルプログラミング言語</a></li>
+<li><a href="/wiki/%E9%9B%A3%E8%A7%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="難解プログラミング言語">難解プログラミング言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">ドメイン固有言語</a></li>
+<li><a href="/wiki/Job_Control_Language" title="Job Control Language">ジョブ制御言語</a></li>
+<li><a href="/wiki/%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E" title="問い合わせ言語">問い合わせ言語</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E" title="マークアップ言語">マークアップ言語</a></li>
+<li><a href="/wiki/%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="形式言語">形式言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E8%A8%80%E8%AA%9E" title="コンピュータ言語">コンピュータ言語</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7" title="プログラミング言語一覧">プログラミング言語一覧</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">プログラミング言語年表</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">プログラミングパラダイム</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p><p><a class="new" href="/w/index.php?title=Pl:Asembler&amp;action=edit&amp;redlink=1" title="Pl:Asembler (存在しないページ)">pl:Asembler#Język asemblera</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331065424
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.476 seconds
+Real time usage: 0.580 seconds
+Preprocessor visited node count: 23233/1000000
+Post‐expand include size: 188964/2097152 bytes
+Template argument size: 54555/2097152 bytes
+Highest expansion depth: 34/40
+Expensive parser function count: 7/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 33176/5000000 bytes
+Lua time usage: 0.100/7 seconds
+Lua virtual size: 8744960/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  476.217      1 -total
+ 57.48%  273.752      2 テンプレート:Reflist
+ 27.02%  128.656     19 テンプレート:Cite_web
+ 24.16%  115.036      6 テンプレート:Cite_book
+ 17.11%   81.468      1 テンプレート:複数の問題
+ 16.29%   77.564      1 テンプレート:Ambox
+ 13.02%   61.992      1 テンプレート:Cite_book/和書
+ 10.62%   50.576      2 テンプレート:ISBN2
+ 10.52%   50.085     23 テンプレート:Ifempty
+  9.81%   46.717      5 テンプレート:Citation/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3130-0!canonical and timestamp 20220331065424 and revision id 2396. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=アセンブリ言語&amp;oldid=2396">http://localhost:8080/w/index.php?title=アセンブリ言語&amp;oldid=2396</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Webarchive%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%90%E3%83%83%E3%82%AF%E3%83%AA%E3%83%B3%E3%82%AF" title="カテゴリ:Webarchiveテンプレートのウェイバックリンク">Webarchiveテンプレートのウェイバックリンク</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2020%E5%B9%B42%E6%9C%88" title="カテゴリ:出典を必要とする記事/2020年2月">出典を必要とする記事/2020年2月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E8%A8%98%E4%BA%8B/2020%E5%B9%B42%E6%9C%88" title="カテゴリ:独自研究の除去が必要な記事/2020年2月">独自研究の除去が必要な記事/2020年2月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E7%9A%84%E3%81%A7%E3%81%AA%E3%81%84%E5%86%85%E5%AE%B9%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:百科事典的でない内容を含む記事">百科事典的でない内容を含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%86%85%E5%AE%B9%E3%81%8C%E9%81%8E%E5%89%B0%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:内容が過剰となっている記事">内容が過剰となっている記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="カテゴリ:プログラミング言語">プログラミング言語</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E3%81%84%E3%81%A4)/2020%E5%B9%B411%E6%9C%88-12%E6%9C%88" title="カテゴリ:言葉を濁した記述のある記事 (いつ)/2020年11月-12月">言葉を濁した記述のある記事 (いつ)/2020年11月-12月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A4%96%E9%83%A8%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E4%BA%8B/2018%E5%B9%B43%E6%9C%88" title="カテゴリ:外部リンクがリンク切れになっている記事/2018年3月">外部リンクがリンク切れになっている記事/2018年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E5%AE%9F%E8%A3%85" title="カテゴリ:プログラミング言語の実装">プログラミング言語の実装</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="カテゴリ:アセンブリ言語">アセンブリ言語</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="カテゴリ:アセンブラ">アセンブラ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;returntoquery=curid%3D3130%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;returntoquery=curid%3D3130%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;oldid=2396" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月28日 (水) 07:23 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.476","walltime":"0.580","ppvisitednodes":{"value":23233,"limit":1000000},"postexpandincludesize":{"value":188964,"limit":2097152},"templateargumentsize":{"value":54555,"limit":2097152},"expansiondepth":{"value":34,"limit":40},"expensivefunctioncount":{"value":7,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":33176,"limit":5000000},"timingprofile":["100.00%  476.217      1 -total"," 57.48%  273.752      2 テンプレート:Reflist"," 27.02%  128.656     19 テンプレート:Cite_web"," 24.16%  115.036      6 テンプレート:Cite_book"," 17.11%   81.468      1 テンプレート:複数の問題"," 16.29%   77.564      1 テンプレート:Ambox"," 13.02%   61.992      1 テンプレート:Cite_book/和書"," 10.62%   50.576      2 テンプレート:ISBN2"," 10.52%   50.085     23 テンプレート:Ifempty","  9.81%   46.717      5 テンプレート:Citation/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.100","limit":"7"},"limitreport-virtmemusage":{"value":8744960,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331065424","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":120});});</script>
+</body></html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>x64 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-X64 rootpage-X64 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">x64</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>x64</b>または<b>x86-64</b>とは、<a href="." id="link_a_1" title="X86">x86</a>アーキテクチャを<a href="." id="link_a_2" title="64ビット">64ビット</a>に拡張した<a href="." id="link_a_3" title="命令セット">命令セットアーキテクチャ</a>。
+</p><p>実際には、<a href="." id="link_a_4" title="アドバンスト・マイクロ・デバイセズ">AMD</a>が発表した<b>AMD64</b>命令セット、続けて<a href="." id="link_a_5" title="インテル">インテル</a>が採用した<b>Intel 64</b>命令セット（かつて<b>IA-32e</b>または<b>EM64T</b>と呼ばれていた）などを含む、各社のAMD64互換命令セットの総称である。x86命令セットと互換性を持っていることから、広義にはx86にx64を含む場合がある。
+</p><p>なお、インテルはIntel 64の他に<a href="." id="link_a_6" title="IA-64">IA-64</a>の名前で64ビット命令セットアーキテクチャを開発・展開しているが、これはx64命令セット、x86命令セットのいずれとも互換性がない。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#AMD64"><span class="tocnumber">2</span> <span class="toctext">AMD64</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#開発経緯"><span class="tocnumber">2.1</span> <span class="toctext">開発経緯</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#仕様"><span class="tocnumber">2.2</span> <span class="toctext">仕様</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#アーキテクチャの特徴"><span class="tocnumber">2.3</span> <span class="toctext">アーキテクチャの特徴</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#動作モード"><span class="tocnumber">2.4</span> <span class="toctext">動作モード</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Longモード"><span class="tocnumber">2.4.1</span> <span class="toctext">Longモード</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Legacyモード"><span class="tocnumber">2.4.2</span> <span class="toctext">Legacyモード</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#AMD64を採用するCPU"><span class="tocnumber">2.5</span> <span class="toctext">AMD64を採用するCPU</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Intel_64"><span class="tocnumber">3</span> <span class="toctext">Intel 64</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#開発経緯_2"><span class="tocnumber">3.1</span> <span class="toctext">開発経緯</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Intel_64を採用するCPU"><span class="tocnumber">3.2</span> <span class="toctext">Intel 64を採用するCPU</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#AMD64とIntel_64の差異"><span class="tocnumber">4</span> <span class="toctext">AMD64とIntel 64の差異</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#差異"><span class="tocnumber">4.1</span> <span class="toctext">差異</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#以前あった差異"><span class="tocnumber">4.2</span> <span class="toctext">以前あった差異</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#その他"><span class="tocnumber">4.3</span> <span class="toctext">その他</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#命令セット"><span class="tocnumber">5</span> <span class="toctext">命令セット</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#メモリ管理"><span class="tocnumber">6</span> <span class="toctext">メモリ管理</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#特権レベル"><span class="tocnumber">7</span> <span class="toctext">特権レベル</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#オペレーティングシステムの互換性と扱い"><span class="tocnumber">8</span> <span class="toctext">オペレーティングシステムの互換性と扱い</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#BSD"><span class="tocnumber">8.1</span> <span class="toctext">BSD</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#FreeBSD"><span class="tocnumber">8.1.1</span> <span class="toctext">FreeBSD</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#NetBSD"><span class="tocnumber">8.1.2</span> <span class="toctext">NetBSD</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#OpenBSD"><span class="tocnumber">8.1.3</span> <span class="toctext">OpenBSD</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-25"><a href="#Linux"><span class="tocnumber">8.2</span> <span class="toctext">Linux</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Mac_OS_X"><span class="tocnumber">8.3</span> <span class="toctext">Mac OS X</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Windows"><span class="tocnumber">8.4</span> <span class="toctext">Windows</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>この命令セットアーキテクチャは、AMDがx86-64の名前で仕様を発表したものが元になっている。AMDは2003年にAMD64と名前を改めて実装しており<sup class="reference" id="cite_ref-inq-amd64_1-0"><a href="#cite_note-inq-amd64-1">[1]</a></sup>、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>もAMD64互換命令セットをEM64T（後にIntel 64と改称）として実装した。のちに<a href="/wiki/VIA_Technologies" title="VIA Technologies">VIA</a>がこれに続いた。
+</p><p>このような経緯もあり、ソフトウェアの対応命令セットの表記には、採用時期またはマイクロプロセッサベンダーとの立場などから、x86-64, x86_64, x64, AMD64, IA-32e, EM64T, Intel 64など複数の名称が用いられている。実際には、これらは全てAMD64(x86-64)を源流とする互換命令セットを指している。
+</p><p>特に「x64」の名称はマイクロプロセッサベンダーに対して中立的な用語として用いられる傾向がある。著名な例では<a href="/wiki/%E3%82%AA%E3%83%A9%E3%82%AF%E3%83%AB_(%E4%BC%81%E6%A5%AD)" title="オラクル (企業)">オラクル</a>に買収された<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a><sup class="reference" id="cite_ref-solaris-x64_2-0"><a href="#cite_note-solaris-x64-2">[2]</a></sup>や、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a><sup class="reference" id="cite_ref-ms-x64_3-0"><a href="#cite_note-ms-x64-3">[3]</a></sup>なども「x64」の用語を使用している。
+</p>
+<h2><span class="mw-headline" id="AMD64">AMD64</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=2" title="節を編集: AMD64">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>AMD64は、AMDの<a href="/wiki/Opteron" title="Opteron">Opteron</a>、<a href="/wiki/Athlon_64" title="Athlon 64">Athlon 64</a>、<a href="/wiki/Turion_64" title="Turion 64">Turion 64</a>など最初に実装されたK8マイクロアーキテクチャとその後継製品に実装されている。
+</p>
+<h3><span id=".E9.96.8B.E7.99.BA.E7.B5.8C.E7.B7.AF"></span><span class="mw-headline" id="開発経緯">開発経緯</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=3" title="節を編集: 開発経緯">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PC用アーキテクチャとして広く普及したx86は、<a href="/wiki/%E5%8D%8A%E5%B0%8E%E4%BD%93" title="半導体">半導体</a>の製造技術と<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="マイクロアーキテクチャ">マイクロアーキテクチャ</a>の革新とともに性能の向上を続け、サーバやワークステーションといったエントリークラスのエンタープライズ市場でも広く受け入れられるに至った。しかし、<a href="/wiki/IA-32" title="IA-32">IA-32</a>の性能向上によって自社開発の64ビットアーキテクチャである<a href="/wiki/IA-64" title="IA-64">IA-64</a>との競合を懸念したインテルは、x86の拡張を32ビットアーキテクチャの範囲に留めてIA-64との棲み分けを図った。これに対し、市場からは広く普及したIA-32アーキテクチャと互換性を保ちつつ64ビットに拡張した、よりコストパフォーマンスに優れたエンタープライズ製品の登場が待ち望まれていた。高収益を望めるエンタープライズ市場への進出を図っていたAMDはそうした需要に応えて、x86の64ビット拡張アーキテクチャとして、従来のIA-32のソフトウェアも利用が可能な命令セットとしてx86-64を発表した。その後の実際の製品発表でAMD64と改称された。この計画は、2000年8月に発表され、最初のプロセッサは2003年4月に出荷された。
+</p>
+<h3><span id=".E4.BB.95.E6.A7.98"></span><span class="mw-headline" id="仕様">仕様</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=4" title="節を編集: 仕様">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>64ビットの<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">汎用レジスタ</a>を持ち、<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>のx86より広い物理および仮想の<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E7%A9%BA%E9%96%93" title="アドレス空間">アドレス空間</a>をサポートするため、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>が大きい<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF" title="データ">データ</a>をより容易に操作する事が可能である。またx64は<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>のプログラムコードと完全な<a class="mw-redirect" href="/wiki/%E5%BE%8C%E6%96%B9%E4%BA%92%E6%8F%9B" title="後方互換">後方互換</a>性を持つ<sup class="reference" id="cite_ref-amd-24593_4-0"><a href="#cite_note-amd-24593-4">[4]</a></sup>。全ての32ビットの命令セットが、<a href="/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="エミュレータ">エミュレーション</a>を介在せずに<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>上に実装されているため、32ビットのx86<a href="/wiki/%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="実行ファイル">実行ファイル</a>は、互換性上あるいは性能上の損失なしに稼動できる<sup class="reference" id="cite_ref-x86-compat-perf_5-0"><a href="#cite_note-x86-compat-perf-5">[5]</a></sup>。ただし、既存<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="アプリケーションソフトウェア">アプリケーションソフトウェア</a>がx64の真の性能を活かすには、x64対応のコンパイラで再コンパイルが必要である。
+</p>
+<h3><span id=".E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.E3.81.AE.E7.89.B9.E5.BE.B4"></span><span class="mw-headline" id="アーキテクチャの特徴">アーキテクチャの特徴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=5" title="節を編集: アーキテクチャの特徴">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>AMDがx86命令セットを64ビット化する際に使ったのは、x86命令の先頭にプリフィックスをつけるという手法である（<a href="#命令セット">REXプリフィックス</a>と呼ばれる）。プリフィックスを使うのは、インテルが16ビットCPU <a href="/wiki/Intel_80286" title="Intel 80286">80286</a>を32ビット化(<a href="/wiki/Intel_80386" title="Intel 80386">80386</a>)するときに使った手法でもある。
+<a href="/wiki/DEC_Alpha" title="DEC Alpha">DEC Alpha</a> の設計者の一人 <a href="/wiki/%E3%83%80%E3%83%BC%E3%82%AF%E3%83%BB%E3%83%A1%E3%82%A4%E3%83%A4%E3%83%BC" title="ダーク・メイヤー">ダーク・メイヤー</a> が AMD64仕様の作成に関わり、彼をはじめとする<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>出身者の経験がこのプロジェクトに活かされた。特筆すべき点は以下のようなものである。
+</p>
+<dl><dt>レジスタの追加と拡張</dt>
+<dd>汎用レジスタ (GPR) 数はIA-32の8本 (EAX,EBX,ECX,EDX,ESI,EDI,EBP,ESP) に更にR8〜R15の8本を追加して16本に増やされ、各レジスタのビット幅も32ビットから64ビットに拡張された。IA-32は汎用レジスタが少ないことから<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>による最適化に限界があり、これが最も大きな欠点とされた。AMD64に最適化されたアプリケーションでは、レジスタ本数の増加によって性能向上が見込まれ、特に深いループを持った演算主体のソフトウェアでその傾向が強いと見込まれる。さらに128ビットのXMMレジスタの本数も8本から16本に増やされた（<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0SIMD%E6%8B%A1%E5%BC%B5%E5%91%BD%E4%BB%A4" title="ストリーミングSIMD拡張命令">Streaming SIMD</a>命令で使われる）。</dd>
+<dt>アドレス空間の拡張</dt>
+<dd>AMD64アーキテクチャでは、現状の実装で48ビットのアドレス空間を持ち、256テラバイトまでのメモリを扱うことが出来る。IA-32アーキテクチャにおいて初期のプロセッサでは、アドレス空間は32ビットで表現できる4GiBに制約され、<a href="/wiki/Pentium_Pro" title="Pentium Pro">Pentium Pro</a>以降の実装で追加された<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5" title="物理アドレス拡張">物理アドレス拡張</a>機能を使用することで64GiBのメモリを接続できるが、1プロセスで利用可能なメモリ空間はやはり4GiBに制約された。32bit版Windowsシリーズにおいては、OSの仕様でアプリケーションが利用可能なメモリはおよそ3GiBに制約される<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。これに対しAMD64のLongモードでは、IA-32の物理アドレス拡張をベースに、論理アドレス空間を48ビットへ拡張し(現状物理アドレス空間は52ビット)、将来の拡張で4エクサバイトまでの仮想空間をサポートできるようになっている。</dd>
+<dd>関連：<a href="/wiki/2%E9%80%B2%E6%8E%A5%E9%A0%AD%E8%BE%9E" title="2進接頭辞">2進接頭辞</a></dd>
+<dt>RIP相対データアクセス</dt>
+<dd>プログラムカウンタ (RIP) 相対でデータにアクセスすることができ、<a href="/wiki/%E3%83%AA%E3%83%AD%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB" title="リロケータブル">リロケータブル</a>な共有ライブラリのコードを作成できる。また、共有ライブラリを仮想アドレス空間のどこにでも配置することができる（<a href="/wiki/%E4%BD%8D%E7%BD%AE%E7%8B%AC%E7%AB%8B%E3%82%B3%E3%83%BC%E3%83%89" title="位置独立コード">位置独立コード</a>）。</dd>
+<dt>SSE 命令</dt>
+<dd>AMD64アーキテクチャでは明確にインテルの<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0SIMD%E6%8B%A1%E5%BC%B5%E5%91%BD%E4%BB%A4#SSE" title="ストリーミングSIMD拡張命令">SSE</a>と<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0SIMD%E6%8B%A1%E5%BC%B5%E5%91%BD%E4%BB%A4#SSE2" title="ストリーミングSIMD拡張命令">SSE2</a>を基本命令セットに組み込んでいる。SSE2はx87の80ビット浮動小数点数から 32ビット/64ビットの浮動小数点数に置き換えたものである。SSE/SSE2命令セットは追加の8本のXMMレジスタを扱えるように拡張された。SSEとSSE2がAMD64命令セットに組み込まれており、それが従来のx87 <a href="/wiki/FPU" title="FPU">FPU</a>や<a href="/wiki/MMX" title="MMX">MMX</a>や<a href="/wiki/3DNow!" title="3DNow!">3DNow!</a>の機能をカバーする。x64版Windowsでの64ビットプログラムでは、FPU/MMXレジスタを<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81" title="コンテキストスイッチ">コンテキストスイッチ</a>の際に保存しないようにすると噂されたが、実際には保存されるようになっている<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。</dd>
+<dt>No-Executeビット</dt>
+<dd>NXビット(ページテーブルエントリのビット63)は仮想アドレス空間のどのページが実行可能か、実行不可かを指定することができる。NXビットがセットされたページにあるコードを実行しようとするとメモリアクセス違反となり、実行できない。これは、リードオンリーページへの書き込みを実行しようとしてもできないことと似ている。No-Execute機能は、ウイルスなどがバッファーオーバランなどを使用して、オペレーティングシステムを乗っ取ろうとすることを難しくする。</dd>
+<dd>類似の機能は、セグメントの属性として80286以降のプロセッサーに存在している。しかし、近代的なオペレーティングシステムではセグメント機能は古いものと見なされ、セグメントのベースを0、リミットを4Gバイト(32ビットOSの場合)に設定することにより、実質的にセグメントを使用していない。</dd>
+<dd>AMDはリニアアドレッシングモードでNo-Execute機能を実装した最初のx86ベンダーである。No-Execute機能は、PAEを有効にすれば、32ビットOSでも使用可能である。</dd>
+<dt>古い機能の削除</dt>
+<dd>x86アーキテクチャーにある多くのシステムプログラミング機能は近代的なオペレーティングシステムでは使用されておらず、それら古い機能は、AMD64のLongモードにはない。それらは、セグメントアドレッシング、<a href="/wiki/Task_state_segment" title="Task state segment">タスクステートセグメント</a>を使用したタスクスイッチ、<a href="/wiki/%E4%BB%AE%E6%83%B386%E3%83%A2%E3%83%BC%E3%83%89" title="仮想86モード">仮想86モード</a>などである（ただし、FS, GSセグメントは、オペレーティングシステム構造体へのエクストラベースポインタとして残されている）。これらの古い機能は、Legacyモードでは依然として、完全に実装されているので、これまでの32ビット、16ビットオペレーティングシステムは、修正なしにx64プロセッサー上で動作する。</dd></dl>
+<h3><span id=".E5.8B.95.E4.BD.9C.E3.83.A2.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="動作モード">動作モード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=6" title="節を編集: 動作モード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tbody><tr bgcolor="#cccccc">
+<th colspan="2">動作モード
+</th>
+<th>必要なOS
+</th>
+<th>再コンパイルの必要性
+</th>
+<th>アドレスサイズの既定値
+</th>
+<th>オペランドサイズの既定値
+</th>
+<th>レジスタの拡張
+</th>
+<th>典型的な汎用レジスタの幅
+</th></tr>
+<tr align="center">
+<td rowspan="3">Longモード
+</td>
+<td>64ビット モード
+</td>
+<td rowspan="3">新しい 64ビットOS
+</td>
+<td>必要
+</td>
+<td>64
+</td>
+<td>32
+</td>
+<td>有り
+</td>
+<td>64
+</td></tr>
+<tr align="center">
+<td rowspan="2">互換モード
+</td>
+<td rowspan="2">不要
+</td>
+<td>32
+</td>
+<td>32
+</td>
+<td rowspan="2">なし
+</td>
+<td>32
+</td></tr>
+<tr align="center">
+<td>16
+</td>
+<td>16
+</td>
+<td>16
+</td></tr>
+<tr align="center">
+<td rowspan="4">Legacyモード
+</td>
+<td rowspan="2">プロテクト モード
+</td>
+<td rowspan="3">従来の 16/32ビットOS
+</td>
+<td rowspan="4">不要
+</td>
+<td>32
+</td>
+<td>32
+</td>
+<td rowspan="4">なし
+</td>
+<td rowspan="2">32
+</td></tr>
+<tr align="center">
+<td>16
+</td>
+<td>16
+</td></tr>
+<tr align="center">
+<td>仮想8086 モード
+</td>
+<td rowspan="2">16
+</td>
+<td rowspan="2">16
+</td>
+<td rowspan="2">16
+</td></tr>
+<tr align="center">
+<td>リアル モード
+</td>
+<td>従来の 16ビットOS
+</td></tr></tbody></table>
+<p>このアーキテクチャは、LongモードとLegacyモードという二つの動作モードを持つ。
+</p>
+<h4><span id="Long.E3.83.A2.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="Longモード">Longモード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=7" title="節を編集: Longモード">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>AMD64で拡張された部分に対応する動作モードである。これにはネイティブの64ビットモードと互換のための32ビットモードが含まれる。<a href="/wiki/IA-32" title="IA-32">IA-32</a>でのマイナーな動作モードはサポートされない。このモードは64ビットのOSで使用される。
+</p><p>基本的な命令セットは同じなので、x86コードを実行しても性能が低下することはない。インテルの<a href="/wiki/IA-64" title="IA-64">IA-64</a>では32ビットコードの性能低下が問題となったが、これは命令セットが全く違うためにエミュレート実行していたためである。
+</p><p>Longモードを使うと、64ビットOSは 32ビットアプリケーションと64ビットアプリケーションを並行して実行できる。また、AMD64は 16ビットのアプリケーションも実行することができる。しかし、Windowsの16ビットアプリケーション (Win16) のサポートに欠かせない仮想86モードは使用できないため、マイクロソフトは <a href="/wiki/WOW64" title="WOW64">WOW64</a>サブシステムでの16ビットアプリケーションの実行機能の実装を断念し、<a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a> Professional x64 Edition でのWin16アプリケーション実行をサポートしていない。これは<a href="/wiki/Microsoft_Windows_Vista" title="Microsoft Windows Vista">Windows Vista</a>以降のx64版にも引き継がれる制限となっている。
+</p>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/Windows_NT%E7%B3%BB#Win16サブシステム" title="Windows NT系">Windows_NT系#Win16サブシステム</a>」および「<a href="/wiki/%E4%BB%AE%E6%83%B3DOS%E3%83%9E%E3%82%B7%E3%83%B3#NT系での仮想DOSマシン" title="仮想DOSマシン">仮想DOSマシン#NT系での仮想DOSマシン</a>」を参照</div>
+<h4><span id="Legacy.E3.83.A2.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="Legacyモード">Legacyモード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=8" title="節を編集: Legacyモード">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>このモードは、16ビットOS（<a href="/wiki/MS-DOS" title="MS-DOS">MS-DOS</a> - <a href="/wiki/Microsoft_Windows_3.x" title="Microsoft Windows 3.x">Windows 3.1</a>等）や32ビットOS（<a href="/wiki/Microsoft_Windows_95" title="Microsoft Windows 95">Windows 95</a> - Windows XP等）で使用される。このモードにおいて、プロセッサは基本的にx86の32ビットプロセッサとして振る舞い、16ビットと32ビットのコードのみが実行可能である。Legacyモードは、仮想アドレス空間の4GB制限のような32ビットの仮想アドレッシング上の上限がある<sup class="reference" id="cite_ref-amd-24593_4-1"><a href="#cite_note-amd-24593-4">[4]</a></sup>。64ビットのプログラムは、Legacyモードで起動することができない。
+</p>
+<h3><span id="AMD64.E3.82.92.E6.8E.A1.E7.94.A8.E3.81.99.E3.82.8BCPU"></span><span class="mw-headline" id="AMD64を採用するCPU">AMD64を採用するCPU</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=9" title="節を編集: AMD64を採用するCPU">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>次のプロセッサは、AMD64を実装する:
+</p>
+<ul><li>AMD <a href="/wiki/Athlon_64" title="Athlon 64">Athlon 64</a></li>
+<li>AMD <a href="/wiki/Athlon_64_X2" title="Athlon 64 X2">Athlon 64 X2</a></li>
+<li>AMD <a href="/wiki/Athlon_64_FX" title="Athlon 64 FX">Athlon 64 FX</a></li>
+<li>AMD <a href="/wiki/Athlon_II" title="Athlon II">Athlon II</a> （搭載コア数などから、'X2', 'X3', 'X4', XLTモデルに分かれる）</li>
+<li>AMD <a href="/wiki/Opteron" title="Opteron">Opteron</a></li>
+<li>AMD <a href="/wiki/Turion_64" title="Turion 64">Turion 64</a></li>
+<li>AMD <a href="/wiki/Turion_64_X2" title="Turion 64 X2">Turion 64 X2</a></li>
+<li>AMD <a href="/wiki/Sempron" title="Sempron">Sempron</a> （"Palermo" E6 ステッピングと、"Manila"以降の全モデル）</li>
+<li>AMD <a class="mw-redirect" href="/wiki/Phenom" title="Phenom">Phenom</a> （搭載コア数から、'X3', 'X4'に分かれる）</li>
+<li>AMD <a class="mw-redirect" href="/wiki/Phenom_II" title="Phenom II">Phenom II</a> （搭載コア数から、'X2', 'X3', 'X4' 'X6'に分かれる）</li>
+<li>AMD <a href="/wiki/Bulldozer_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Bulldozer (マイクロアーキテクチャ)">Bulldozer (マイクロアーキテクチャ)</a> FX</li>
+<li>AMD <a href="/wiki/AMD_Accelerated_Processing_Unit" title="AMD Accelerated Processing Unit">APU</a></li>
+<li>AMD <a href="/wiki/Ryzen" title="Ryzen">Ryzen</a></li>
+<li>AMD <a href="/wiki/EPYC" title="EPYC">EPYC</a></li></ul>
+<h2><span class="mw-headline" id="Intel_64">Intel 64</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=10" title="節を編集: Intel 64">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Intel 64</b>は、<a href="/wiki/IA-32" title="IA-32">IA-32</a>アーキテクチャの<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a>拡張であり、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>によるAMD64の実装である。
+</p>
+<h3><span id=".E9.96.8B.E7.99.BA.E7.B5.8C.E7.B7.AF_2"></span><span class="mw-headline" id="開発経緯_2">開発経緯</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=11" title="節を編集: 開発経緯">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>従来、AMDはインテルがオリジナルであるx86の互換プロセッサを開発・生産していた。しかし、x64では立場が逆転し、インテルはAMDが開発したAMD64アーキテクチャ（x86プロセッサの64ビット拡張アーキテクチャ）を採用した。
+</p><p>当初プロジェクトは、<b>Yamhill</b><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>という開発<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%8D%E3%83%BC%E3%83%A0" title="コードネーム">コードネーム</a>で始まった。このプロジェクトの存在を否定し続けて数年が経ち、2004年2月の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB%E3%83%BB%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0" title="インテル・デベロッパー・フォーラム">IDF</a>で、インテルはプロジェクトが進行中であることを発表した。インテルの当時の会長クレイグ・バレットは、これが重要な機密の一つであったことを認めた<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p><p>インテルは、AMD64互換命令セットの名称を数回 変更した。<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB%E3%83%BB%E3%83%87%E3%83%99%E3%83%AD%E3%83%83%E3%83%91%E3%83%BC%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0" title="インテル・デベロッパー・フォーラム">IDF</a>で用いられた名前は<b>CT</b>(Clackamas Technology<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>)、その数週間後に<b>IA-32e</b>(IA-32 extensions)と呼称を変更し、2004年4月にはこれを <b>EM64T</b>(Extended Memory 64 Technology)という名前で公式に発表した。製品リリース後の2006年7月27日には、インテルはEM64Tを<b>Intel 64</b>と改称している<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。
+</p>
+<h3><span id="Intel_64.E3.82.92.E6.8E.A1.E7.94.A8.E3.81.99.E3.82.8BCPU"></span><span class="mw-headline" id="Intel_64を採用するCPU">Intel 64を採用するCPU</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=12" title="節を編集: Intel 64を採用するCPU">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>インテルで最初にIntel 64を実装したのは、<i>Nocona</i>というコード名で2004年6月に発表されたマルチソケットの<a href="/wiki/Xeon" title="Xeon">Xeon</a>プロセッサである。Xeonはデスクトップ向け <a href="/wiki/Pentium_4" title="Pentium 4">Pentium 4</a> をベースにしているため、同時期のPentium 4もIntel 64を実装しているはずだが、<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング・テクノロジー</a>のときと同様、この機能は<i>Prescott</i>では最初は動かないようになっていた。これはおそらく初期の実装が完全ではなかったためで、インテルはその後Intel 64を使用可能にしたPrescottのE0バージョンをmodel Fとして販売し始めた。このバージョンではAMD64の<a href="/wiki/NX%E3%83%93%E3%83%83%E3%83%88" title="NXビット">NXビット</a>に相当する機能がIntel 64でサポートされた。インテルではこれをeXecute Disable(XD)ビットと呼んでいる。この機能はすぐにNocona（<a href="/wiki/Xeon" title="Xeon">Xeon</a>系列）にも実装された。8xx/6xx/5x6/5x1/3x6/3x1シリーズのCPUは全てIntel 64が使用可能になった。また、<a href="/wiki/Intel_Core_2" title="Intel Core 2">Intel Core 2</a>・<a href="/wiki/Intel_Atom" title="Intel Atom">Intel Atom</a>でもIntel 64が採用された。
+</p><p>Intel 64を実装しているCPUは以下のものがある。
+</p>
+<ul><li><a href="/wiki/Xeon" title="Xeon">Xeon</a> (Nocona以降、Sossaman除、Xeon MPについてはCranford/Potomac以降）</li>
+<li><a href="/wiki/Intel_Core_2" title="Intel Core 2">Intel Core 2</a></li>
+<li><a href="/wiki/Intel_Core_i9" title="Intel Core i9">Intel Core i9</a></li>
+<li><a href="/wiki/Intel_Core_i7" title="Intel Core i7">Intel Core i7</a></li>
+<li><a href="/wiki/Intel_Core_i5" title="Intel Core i5">Intel Core i5</a></li>
+<li><a href="/wiki/Intel_Core_i3" title="Intel Core i3">Intel Core i3</a></li>
+<li><a href="/wiki/Intel_Core_M" title="Intel Core M">Intel Core M</a></li>
+<li><a href="/wiki/Pentium_Dual-Core" title="Pentium Dual-Core">Pentium Dual-Core</a></li>
+<li><a href="/wiki/Intel_Atom" title="Intel Atom">Intel Atom</a>(model 230/330,N450/D510/D410)</li>
+<li><a href="/wiki/Pentium_D" title="Pentium D">Pentium D</a></li>
+<li><a href="/wiki/Pentium_4" title="Pentium 4">Pentium 4</a>(Prescottはmodel F以降、model 521/531/541/551/561/571)</li>
+<li><a href="/wiki/Pentium_Extreme_Edition" title="Pentium Extreme Edition">Pentium Extreme Edition</a></li>
+<li><a class="mw-redirect" href="/wiki/Celeron_D" title="Celeron D">Celeron D</a>(model 326/331/336/341/346/351/355/356)</li>
+<li><a class="mw-redirect" href="/wiki/Celeron#Celeron_Dual-Core" title="Celeron">Celeron Dual-Core</a></li>
+<li><a class="mw-redirect" href="/wiki/Celeron#Merom-1M_.2F_2M_.2F_L" title="Celeron">Celeron M</a> (model 520/530)</li>
+<li><a class="mw-redirect" href="/wiki/Celeron#Conroe-L" title="Celeron">Celeron 200シリーズ</a>(model 220)</li>
+<li><a class="mw-redirect" href="/wiki/Celeron#Conroe-L" title="Celeron">Celeron 400シリーズ</a></li>
+<li><a class="mw-redirect" href="/wiki/Celeron#Merom-1M_.2F_2M_.2F_L" title="Celeron">Celeron 500シリーズ</a></li></ul>
+<h2><span id="AMD64.E3.81.A8Intel_64.E3.81.AE.E5.B7.AE.E7.95.B0"></span><span class="mw-headline" id="AMD64とIntel_64の差異">AMD64とIntel 64の差異</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=13" title="節を編集: AMD64とIntel 64の差異">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>AMD64とIntel 64は、ほとんど同じであるが、僅かながら違いはある。これらの違いはオペレーティングシステム、コンパイラなどの開発者のみが意識しなければならない。アプリケーションプログラムの開発者がこれらの違いを意識する必要は、ほぼない。
+</p>
+<h3><span id=".E5.B7.AE.E7.95.B0"></span><span class="mw-headline" id="差異">差異</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=14" title="節を編集: 差異">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Intel 64では、SYSCALL, SYSRET命令は64ビットモードにしかない。SYSENTER, SYSEXIT命令は32ビット、64ビットの両方にある。</li>
+<li>AMD64では、SYSCALL, SYSRET命令は32ビット、64ビットの両方にあるが、SYSENTER, SYSEXIT命令は32ビットモードにしかない。</li>
+<li>Intel 64には、AMD64で定義されたSYSCFG, TOP_MEM, TOP_MEM2がMSR(model-specific registers)にない。</li>
+<li>Intel 64では、64ビットモードでニア分岐命令に66h（オペランドサイズ プリフィックス）を付けた場合サポート外となる。AMD64では、仕様書通り16ビットオペランドとして実行される。</li>
+<li>BSF, BSR命令はソースが0の場合、Intel 64では元々のx86と同様にデスティネーションは不定(undefined)であるが、AMD64はデスティネーションを変更しない。</li>
+<li>Intel 64には、AMDのFast FXSAVE/FXRSTOR機能はない。</li>
+<li>初期以外のAMD64は、<a href="/wiki/VMware" title="VMware">VMware</a>での64ビットゲストOSの仮想化を容易にするために、セグメントリミットを一部に再導入した。ロングモードセグメントリミットと呼ばれる。ただし、AMD-Vがあればロングモードセグメントリミットは必須ではない。</li>
+<li>ハードウェア仮想化支援機能のIntel VT-xとAMD-Vは互換性がない。仮想化ソフトウェアはそれぞれに対応する必要がある。</li>
+<li><a href="/wiki/X86%E4%BB%AE%E6%83%B3%E5%8C%96#SLAT" title="X86仮想化">Second Level Address Translation</a>機能のIntel EPTとAMD RVIは互換性がない。仮想化ソフトウェアはそれぞれに対応する必要がある。</li></ul>
+<h3><span id=".E4.BB.A5.E5.89.8D.E3.81.82.E3.81.A3.E3.81.9F.E5.B7.AE.E7.95.B0"></span><span class="mw-headline" id="以前あった差異">以前あった差異</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=15" title="節を編集: 以前あった差異">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>AMD64には、元々はCMPXCHG16B命令はなかった。この命令は16バイト(128ビット)のメモリ領域を複数のCPUコアで<a href="/wiki/%E4%B8%8D%E5%8F%AF%E5%88%86%E6%93%8D%E4%BD%9C" title="不可分操作">排他的に共有</a>することに使用される。この命令はWindowsで16TB以上の仮想メモリを使うために必要である。Socket AM2以降のAMD64で対応<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。</li>
+<li>初期のAMD64, Intel 64は、64ビットモードでLAHF, SAHF命令をサポートしていない。この2つの命令はAHレジスタとフラグ間の転送命令で、元々は8ビットCPUである<a href="/wiki/Intel_8080" title="Intel 8080">8080</a>のプログラムを<a href="/wiki/Intel_8086" title="Intel 8086">8086</a>へ移植するのを容易にするために提供されていた<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。64ビットモードでは、使い道があまりない命令のように見える。しかし、PUSH/POP命令の組み合わせと比較して、メモリにアクセスせず高速にフラグをコピーできるため、VMwareなどの仮想化ソフトウェアがこの2つの命令に依存している<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。また、<a href="/wiki/X87" title="X87">x87</a>のステータスワードをフラグにコピーすることにも使用される。</li>
+<li>初期のIntel 64には、PREFETCHW命令はなかった<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>。この命令は、元々はAMDの<a href="/wiki/3DNow!" title="3DNow!">3DNow!</a>で導入されたキャッシュの最適化命令である。Pentium 4の<a href="/wiki/Pentium_4#CedarMill（シダーミル）" title="Pentium 4">CedarMill</a>コアからIntel 64はこの命令を単にNOP(No Operation)として処理するようになった<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。NOPとして処理するIntel 64でもMicrosoft社のCoreinfoツール<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>は、PREFETCHWに対応と表示する。2013年の<a href="/wiki/Intel_Atom#Silvermont_マイクロアーキテクチャ" title="Intel Atom">Silvermont</a>、2014年の<a href="/wiki/Broadwell%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="Broadwellマイクロアーキテクチャ">Broadwell</a>よりPREFETCHW命令に正式に対応している。<br/>（上記3つは、<a href="/wiki/Microsoft_Windows_8#Windows_8.1" title="Microsoft Windows 8">Windows 8.1</a>、<a href="/wiki/Microsoft_Windows_10" title="Microsoft Windows 10">Windows 10</a>の64ビット版が初期のAMD64、Intel 64CPUにインストールできない制約事項となる<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup><sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>）</li>
+<li>初期のIntel 64は、XDビット（AMD64におけるNXビット）をサポートしていない。したがってWindows 8（32ビット版、64ビット版とも）がインストールできない制約事項となる。</li></ul>
+<h3><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=16" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>POPFQ命令には、REXプリフィックスは必要ない。Intel社のドキュメントにはこのことが正しく記載されていなかった。</li>
+<li>同じオペコードに対するMOVDとMOVQの割り当てがIntel 64のドキュメントとAMD64のドキュメントで異なる。一方のドキュメント通りのアセンブリソースがアセンブルできない<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>、逆アセンブル結果が想定と異なる<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>といったことが起こり得る。</li></ul>
+<h2><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88"></span><span class="mw-headline" id="命令セット">命令セット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=17" title="節を編集: 命令セット">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl><dt>REXプリフィックス</dt>
+<dd>次のような命令にはREXプリフィックスを使用する。
+<ul><li>64ビットのオペランドサイズの指定</li>
+<li>新しいR8〜R15レジスタ、追加されたXMMレジスタなどへのアクセス</li>
+<li>64ビットレジスタであるRSP, RBP, RDI, RSIのビット0から7を、8ビットレジスタSPL, BPL, DIL, SILとしてアクセス。一方でREXプリフィックスを付けると8ビットレジスタとして AH, BH, CH, DHにアクセスできない。これにより直交性が高まった。</li></ul></dd>
+<dd>また、以下の命令は、デフォルトで64ビットのオペランドサイズであり、REXプリフィックスを必要としない。
+<ul><li>ニア分岐命令</li>
+<li>PUSH, POP命令</li>
+<li>ENTER, LEAVE命令</li></ul></dd></dl>
+<dl><dt>暗黙のゼロ拡張</dt>
+<dd>32ビットレジスタにデータを書き込むとその汎用レジスタの上位32ビット(ビット32から63)はゼロになる。</dd>
+<dd>これは、コードサイズの最適化に使用できる。</dd>
+<dd>一方、16ビットレジスタや8ビットレジスタにデータを書き込んでも、このゼロ拡張は起きない。</dd></dl>
+<dl><dd><b>NOP</b>(No Operation:<a href="/wiki/%E3%82%AA%E3%83%9A%E3%82%B3%E3%83%BC%E3%83%89" title="オペコード">オペコード</a> 90h)命令は、かつてはXCHG EAX, EAXと等価であったが<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>64ビットモードではこの命令を特別に扱い、暗黙のゼロ拡張を適用せずRAXレジスタは変化しない。</dd>
+<dd><b>CMOV</b>(Conditional Move)命令では、64ビットモードでオペランドが32ビットの場合、条件が偽でもデスティネーションレジスタの上位32ビットはゼロになる。</dd>
+<dt>即値</dt>
+<dd>64ビットモードであっても、即値(Immediate value)は、32ビットのままであり、64ビットに符号拡張されて使用される。ただし、MOV命令のみ64ビットの即値が使用できる。</dd>
+<dt>変位</dt>
+<dd>64ビットモードであっても、変位(displacement)は、32ビットのままであり、64ビットに符号拡張されて使用される。ただし、RAXレジスタに対してのMOV命令のみ64ビットの変位が使用できる。</dd>
+<dt>64ビットモードで廃止されたx86命令</dt>
+<dd>以下のx86命令は64ビットモードでは廃止されたため、64ビットモードで実行すると不正命令例外が発生する。
+<ul><li>AAA, AAD, AAM, AAS (ASCII Adjust Addtion/Division/Multiply/Subtraction)</li>
+<li>BOUND (Check Array Bounds)</li>
+<li>CALL far, JMP far (Call far absolute, JMP far absolute)</li>
+<li>DAA, DAS (Decimal Adjust Addition/Subtraction)</li>
+<li>INTO (Interrupt to Overflow Vector)</li>
+<li>LDS, LES (Load Segment Register)</li>
+<li>POP DS, POP ES, POP SS, POPA</li>
+<li>PUSH CS, PUSH DS, PUSH, ES, PUSH SS, PUSHA</li>
+<li>オペコード 82h (Redundant encoding of opcode 80h: undocumented)</li>
+<li>SALC (Set AL According to CF: undocumented)</li></ul></dd>
+<dd>LAHF, SAHF命令は、初期のAMD64, Intel 64では64ビットモードで廃止されたx86命令であった。</dd>
+<dt>64ビットモードで再割り当てされたx86命令</dt>
+<dd>
+<ul><li>ARPL (Adjust Requestor Privilege Level)命令は、64ビットモードでは、新しいMOVSXD命令になった。</li>
+<li>1バイトのINC, DEC命令は、64ビットモードでは、REXプリフィックスになった。一方、2バイトのINC, DEC命令は、64ビットモードでも使用可能である。</li>
+<li>64ビットモードで廃止されたLDS, LES命令は、のちにインテルによって<a href="/wiki/AVX" title="AVX">AVX</a>命令のVEXプリフィックスとして割り当てられた。VEXプリフィックスに続く2バイト目を32ビットモードでは不正であった<i>11xxxxxx</i>という形式にすることにより、AVX命令は32ビットモードでも使用可能である。Windows NTの仮想DOSマシンでは、C4h C4h(LES AX, SPとデコードされる不正命令)を仮想86モードから32ビットプロテクトモードの呼び出しに使用していた<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>。AVXは仮想86モード、リアルモードには対応していない。</li>
+<li>64ビットモードで廃止されたBOUND命令は、のちにインテルによって<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0SIMD%E6%8B%A1%E5%BC%B5%E5%91%BD%E4%BB%A4#Intel_AVX-512" title="ストリーミングSIMD拡張命令">AVX-512</a>命令のEVEXプリフィックスとして割り当てられた。EVEXプリフィックスに続く2バイト目を32ビットモードでは不正であった<i>11xxxxxx</i>という形式にすることにより、AVX-512命令は32ビットモードでも使用可能である。</li></ul></dd></dl>
+<h2><span id=".E3.83.A1.E3.83.A2.E3.83.AA.E7.AE.A1.E7.90.86"></span><span class="mw-headline" id="メモリ管理">メモリ管理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=18" title="節を編集: メモリ管理">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl><dt>コードセグメントディスクリプタ</dt>
+<dd>64ビットモードでは、コードセグメントディスクリプタのP(Present)ビット、D(Default)ビット、DPL（Descriptor Privilege Level)フィールド、C(Conforming)ビット、および、新しく定義されたL(Long)ビットのみが有効である。L=1の場合、64ビットモードでプロセッサーが動作することを意味する。それ以外のベースアドレス、リミットなどは無視される。</dd></dl>
+<p>　コードセグメントディスクリプタのフォーマット
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8" style="text-align:center">ベースアドレス[31:24]
+</td>
+<td colspan="1" style="text-align:center">G
+</td>
+<td colspan="1" style="text-align:center">D
+</td>
+<td colspan="1" style="text-align:center">L
+</td>
+<td colspan="1" style="text-align:center">AVL
+</td>
+<td colspan="4" style="text-align:center">リミット[19:16]
+</td></tr>
+<tr>
+<td colspan="1" style="text-align:center">P
+</td>
+<td colspan="2" style="text-align:center">DPL
+</td>
+<td colspan="1" style="text-align:center">S=1
+</td>
+<td colspan="1" style="text-align:center">E=1
+</td>
+<td colspan="1" style="text-align:center">C
+</td>
+<td colspan="1" style="text-align:center">R
+</td>
+<td colspan="1" style="text-align:center">A
+</td>
+<td colspan="8" style="text-align:center">ベースアドレス[23:16]
+</td></tr>
+<tr>
+<td colspan="16" style="text-align:center">ベースアドレス[15:0]
+</td></tr>
+<tr>
+<td colspan="16" style="text-align:center">リミット[15:0]
+</td></tr></tbody></table>
+<dl><dt>データセグメントディスクリプタ</dt>
+<dd>64ビットモードでは、データセグメントディスクリプタは、P(Present)ビットのみが有効である。それ以外のベースアドレス、リミットなどは無視される。ただし、FS,GSセグメントレジスタのみベースアドレスは有効で、MSRを使用して64ビットのベースアドレスを指定することもできる。</dd>
+<dd>のちにインテルは、特権レベル0以外でもFS,GSのベースアドレスを操作可能にするRDFSBASE, RDGSBASE, WRFSBASE, WRGSBASE命令を追加した。</dd></dl>
+<p>　データセグメントディスクリプタのフォーマット
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0
+</th></tr>
+<tr>
+<td colspan="8" style="text-align:center">ベースアドレス[31:24]
+</td>
+<td colspan="1" style="text-align:center">G
+</td>
+<td colspan="1" style="text-align:center">D
+</td>
+<td colspan="1" style="text-align:center">0
+</td>
+<td colspan="1" style="text-align:center">AVL
+</td>
+<td colspan="4" style="text-align:center">リミット[19:16]
+</td></tr>
+<tr>
+<td colspan="1" style="text-align:center">P
+</td>
+<td colspan="2" style="text-align:center">DPL
+</td>
+<td colspan="1" style="text-align:center">S=1
+</td>
+<td colspan="1" style="text-align:center">E=0
+</td>
+<td colspan="1" style="text-align:center">ED
+</td>
+<td colspan="1" style="text-align:center">W
+</td>
+<td colspan="1" style="text-align:center">A
+</td>
+<td colspan="8" style="text-align:center">ベースアドレス[23:16]
+</td></tr>
+<tr>
+<td colspan="16" style="text-align:center">ベースアドレス[15:0]
+</td></tr>
+<tr>
+<td colspan="16" style="text-align:center">リミット[15:0]
+</td></tr></tbody></table>
+<dl><dt>正規形(canonical form)</dt>
+<dd>64ビットモードでは、仮想アドレスは64ビットであるものの、実際の実装では、2<sup>64</sup>バイト(16EB)のすべてを使用できるようにはなっていない。ほとんどのオペレーティングシステム、アプリケーションは、近い将来も含めて、そのような大きなアドレス空間を使用しない。フル64ビットという大きなアドレス空間のサポートは、複雑さとアドレス変換のコストを増やすだけでメリットはない。そのため、AMDは最初のAMD64の実装では、48ビットの仮想アドレス空間のみを使用することにした。さらに仮想アドレスのビット48から63は、ビット47の値がコピーされなければならないことにした。そうでない仮想アドレスを使用した場合は、プロセッサーは例外エラーを発生する。このルールに従ったアドレスは、正規形(canonical form)と呼ばれる。正規形のアドレスは、0から00007FFF'FFFFFFFFとFFFF8000'00000000からFFFFFFFF'FFFFFFFFの範囲であり、合計で256TBの仮想アドレス空間が使用可能である。</dd>
+<dd>この仕様は、実際に64ビット仮想アドレスが使用可能になったときに重要な意味を持つ。正規形ではないアドレスを使用した場合、例外エラーが発生するので、アプリケーションやOSが、未使用の上位16ビットを別の用途に使用できない。そのため、将来、仮想アドレス空間が48ビットから拡張されたときに問題が起こらない<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup><sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>。</dd>
+<dt>Longモードでのページ変換(page translation)</dt>
+<dd>Longモードでのページ変換には<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5" title="物理アドレス拡張">物理アドレス拡張</a>(PAE)が必須である。Longモードに入る前にCR4のPAEビットを1にセットする必要がある。AMD64では、PDPE(page-directory-pointer entry), PDE(page-directory entry), PTE(page-table entry)を拡張し、新たにPML4(page-map level-4)を追加した。PAEが有効になっているため、CR4のPSE(page-size extensions)ビットは無視される。CPUIDのファンクション8000_0001hで、EDXのビット26がセットされていると、そのCPUは、1Gbyteページ変換に対応している。</dd></dl>
+<dl><dd>4Kbyteページ変換：  PML4, PDPE, PDE, PTEによって変換される。ページのサイズは4Kbyteである。</dd>
+<dd>2Mbyteページ変換：  PML4, PDPE, PDEによって変換される。ページのサイズは2Mbyteである。</dd>
+<dd>1Gbyteページ変換：  PML4, PDPEによって変換される。ページのサイズは1Gbyteである。</dd></dl>
+<h2><span id=".E7.89.B9.E6.A8.A9.E3.83.AC.E3.83.99.E3.83.AB"></span><span class="mw-headline" id="特権レベル">特権レベル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=19" title="節を編集: 特権レベル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>特権レベルは80286のプロテクトモードでx86に導入され、レベル0,レベル1,レベル2,レベル3の4階層がある。<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%86%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="リングプロテクション">リングプロテクション</a>とも呼ばれる。x64の64ビットモードでも特権レベルは4階層あるが、通常は特権レベル0（カーネルモード）と特権レベル3（ユーザーモード）の2種類しか使用されない。
+</p>
+<dl><dt>コールゲートによるシステムコール(CALL far, RET)</dt>
+<dd><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B2%E3%83%BC%E3%83%88" title="コールゲート">コールゲート</a>は80286で特権レベル(0,1,2,3)を切り替える仕組みとして導入された。64ビットモードでは、コールゲートは64bitのオフセットが使用できるように拡張された。</dd>
+<dd>コールゲートの仕組みは<a href="/wiki/RISC" title="RISC">RISC</a>には無い。RISCにも対応していた<a href="/wiki/Microsoft_Windows_NT" title="Microsoft Windows NT">WindowsNT</a>ではシステムコールにコールゲートを使用せず、INT命令や<a href="/wiki/Pentium_II" title="Pentium II">Pentium II</a>で追加されたSYSENTER, SYSEXIT命令を使用していた。</dd></dl>
+<dl><dt>高速システムコール(SYSCALL, SYSRET)</dt>
+<dd>特権レベル3（ユーザーモード）と特権レベル0（カーネルモード）を高速に切り換える命令として、AMDは64ビットモードではx86にあるSYSENTER, SYSEXIT命令は実装せず、AMD独自のSYSCALL, SYSRET命令のみを実装した。SYSCALL命令は、CS(コードセグメント), SS(スタックセグメント), RIP(インストラクションポインタ)をあらかじめセットされたMSRから特権レベルのチェック無しにロードする。このときRSP(スタックポインタ)はロードされない。オペレーティングシステムは新しい<b>SWAPGS</b>命令を使用して、ユーザーモードのGSセグメントと、カーネルモードのGSセグメントを切り替え、GSセグメント経由でカーネルモードのRSPをロードする。</dd>
+<dd>なお、SYSCALLのオペコードは0Fh 05h、SYSRETのオペコードは0Fh 07hであり、これらはかつてx86に存在していた非公開命令<a href="/wiki/LOADALL" title="LOADALL">LOADALL</a>のオペコードを再割り当てしている。</dd></dl>
+<h2><span id=".E3.82.AA.E3.83.9A.E3.83.AC.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE.E4.BA.92.E6.8F.9B.E6.80.A7.E3.81.A8.E6.89.B1.E3.81.84"></span><span class="mw-headline" id="オペレーティングシステムの互換性と扱い">オペレーティングシステムの互換性と扱い</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=20" title="節を編集: オペレーティングシステムの互換性と扱い">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>次のオペレーティングシステムは、x64アーキテクチャのLongモードをサポートする。
+</p>
+<h3><span class="mw-headline" id="BSD">BSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=21" title="節を編集: BSD">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="FreeBSD">FreeBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=22" title="節を編集: FreeBSD">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>FreeBSDは、2003年6月の5.1-RELEASEで実験的なアーキテクチャーとして、amd64という名前でx64をサポートした。2004年1月の5.2-RELEASEでは公式なアーキテクチャーとして対応した。それ以来、FreeBSDでは、amd64をTier 1プラットフォームとしている。
+</p>
+<h4><span class="mw-headline" id="NetBSD">NetBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=23" title="節を編集: NetBSD">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>x64アーキテクチャーのサポートは2001年6月19日にNetBSDのソースツリーに初めてコミットされた。2004年12月9日にリリースされたNetBSD 2.0では、NetBSD/amd64としてソースツリーに完全に統合され、公式なポートになった。32ビットのシステムコールのためのnetbsd-32カーネル互換レイヤーを通して、64ビットモードでの32ビットコードの実行がサポートされている。
+NXビットは、実行不可のスタックとヒープを提供するために、使用されている。
+</p>
+<h4><span class="mw-headline" id="OpenBSD">OpenBSD</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=24" title="節を編集: OpenBSD">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>OpenBSDは2004年5月1日にリリースされたOpenBSD 3.5でAMD64をサポートした。ソースツリー内でのAMD64サポートの完全な実装は、実際のAMD64のハードウェアのリリースより前に行われていた。これは<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3" title="ハッカソン">hackathon</a>プロジェクトのためにAMDがいくつかのハードウェアを貸し出したためである。OpenBSDの開発者は、W^X (Write XOR Execute)<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup> 機能が容易に実装できる<a href="/wiki/NX%E3%83%93%E3%83%83%E3%83%88" title="NXビット">NXビット</a>があるため、AMD64プラットフォームを気に入った。
+OpenBSDのAMD64ポートは、Intel 64でも走る。しかし、初期のIntel 64にはNXビットがないため、これらのIntelのCPUではW^X機能は使えない。後にIntelはXDビットの名前で、NXビットを追加している。
+</p>
+<h3><span class="mw-headline" id="Linux">Linux</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=25" title="節を編集: Linux">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Linux" title="Linux">Linux</a>はLongモードでx64アーキテクチャを動作させる初めてのオペレーティングシステム・カーネルとなった。これは、実際のAMD64のハードウェアのリリースより前の2001年、kernel 2.4にて始められた。Linuxは32ビット実行可能ファイルの実行に関して後方互換を保っている。これにより、32ビットプログラムの使用を継続しながらLongモード用にプログラムを再コンパイルすることが可能になった。
+</p><p>64ビット版Linuxでは、個々のプロセスで128TBの仮想アドレス空間と64TBの物理メモリが使用できる。（ただし、これは、CPUやPCシステムにより制限される）
+</p><p>RedHat Enterprise Linux Version7以降では、x64版はサポートされるが、x86版はサポートされなくなった。
+</p>
+<h3><span class="mw-headline" id="Mac_OS_X">Mac OS X</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=26" title="節を編集: Mac OS X">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Mac_OS_X_v10.4" title="Mac OS X v10.4">Mac OS X v10.4</a>のうちv10.4.7及びそれ以降のバージョンは、64ビットのインテルベースマシン上でPOSIX及び数学ライブラリを用いて64ビットコマンドラインツールが起動する。Mac OS X v10.4において、これ以外のライブラリ、フレームワークは、64ビットアプリケーションをサポートしない。このカーネル、およびカーネル拡張は32ビットのみである。
+</p><p><a href="/wiki/Mac_OS_X_v10.5" title="Mac OS X v10.5">Mac OS X v10.5</a>は、64ビットのPowerPCマシン同様に、64ビットのインテルベース・マシンにおいてCocoa, Quartz, OpenGL, そしてX11を用いた64ビットのGUIアプリケーションをサポートした。全ての非GUIライブラリとフレームワークは、このプラットフォームで64ビットアプリケーションをサポートしている。このカーネル、そして全てのカーネル拡張は、32ビットのみである。
+</p><p><a href="/wiki/Mac_OS_X_v10.6" title="Mac OS X v10.6">Mac OS X v10.6</a>は、64ビットカーネルをサポートしたMac OS Xの最初のバージョンである。しかし、最初のリリース(v10.6.0)では、全ての64ビットコンピュータがサポートされたわけではなかった。64ビットカーネルは、32ビットカーネル同様に32ビットアプリケーションをサポートし、それぞれのカーネルも同様に64ビットアプリケーションをサポートした。32ビットアプリケーションは、いずれのカーネルにおいても仮想アドレス空間が4GBであるという制限があった。
+64ビットカーネルは32ビットカーネル拡張をサポートせず、同様に32ビットカーネルは64ビットカーネル拡張をサポートしない。
+</p><p><a href="/wiki/OS_X_Mountain_Lion" title="OS X Mountain Lion">OS X Mountain Lion</a>は、64ビットカーネルのみサポートするが、32ビット、64ビットの両方のアプリケーションをサポートする。
+</p><p>Macは、x86/x64の32ビット・64ビットだけでなく、PowerPCとインテル・アーキテクチャのサポートなど、アーキテクチャの互換性問題が複雑に入り組んでいた為、ユーザが混乱しない為にOSレベルで<a class="mw-redirect" href="/wiki/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA" title="ユニバーサルバイナリ">ユニバーサルバイナリ</a>などの仕組みが整えられた。これは、一つのアプリケーションファイル、またはライブラリファイルに対して複数のコードをパッケージし、実行時に最適なバージョンが選択されるというものである。
+</p>
+<h3><span class="mw-headline" id="Windows">Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=27" title="節を編集: Windows">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>は、2005年4月（日本においては6月）に<a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP Professional x64 Edition</a>(クライアント版)、<a href="/wiki/Microsoft_Windows_Server_2003" title="Microsoft Windows Server 2003">Windows Server 2003 x64 Edition</a>をリリースし、x64に対応した。元来のx86版において、Windows XP の内部バージョンは 5.1.2600、Windows Server は 5.2.3790 であったが、x64 版においてはビルド番号が同一であり（5.2.3790.1830 SP1）、システムアップデートも統一された。
+</p><p><a href="/wiki/Microsoft_Windows_Vista" title="Microsoft Windows Vista">Windows Vista</a>は2007年1月に、<a href="/wiki/Microsoft_Windows_7" title="Microsoft Windows 7">Windows 7</a>は2009年7月に、<a href="/wiki/Microsoft_Windows_8" title="Microsoft Windows 8">Windows 8</a>は2012年10月にリリースされた。いずれのOSも、x86 に加えて、64ビット(x64) 版としてx64をサポートするが、Itanium をサポートしない。
+</p><p><a href="/wiki/Microsoft_Windows_Server_2008" title="Microsoft Windows Server 2008">Windows Server 2008</a>は2008年2月にリリースされ、x86 版、x64 版に加えて、<a href="/wiki/IA-64" title="IA-64">IA-64</a>も<a href="/wiki/Itanium" title="Itanium">Itanium</a>版としてサポートした。<a href="/wiki/Microsoft_Windows_Server_2008_R2" title="Microsoft Windows Server 2008 R2">Windows Server 2008 R2</a>では x86 版のリリースが打ち切られ、x64 版と Itanium 版のみリリースした。Itanium 版はこの版が最終リリースとなり、<a class="mw-redirect" href="/wiki/Windows_Server_2012" title="Windows Server 2012">Windows Server 2012</a> では x64 版だけがリリースされた。
+</p><p>x64版Windowsには以下のような機能がある。
+</p>
+<ul><li>1プロセスあたり8TB（Windows 8まで）又は128TB（Windows 8.1以降）のユーザーモード仮想アドレス空間。x64のプログラムは、"large address aware"オプションを付けてリンクされていれば、これらのすべてを使用できる。ただし、補助記憶装置（すなわち、ハードディスク）の容量により使用できる最大値は、制限される。一方、32ビット版Windowsで提供されているユーザーモード仮想アドレス空間は2GBである。</li>
+<li>オペレーティングシステム用の8TB（Windows 8まで）又は128TB（Windows 8.1以降）のカーネルモード仮想アドレス空間。一方、32ビット版Windowsで提供されているカーネルモードアドレス空間は2GBである。この増加した空間のメリットは、ファイルシステムのキャッシュやカーネルモードヒープに使用できる。Windows 8までのWindowsはプロセッサーで実装されている256TBのアドレス空間のうち合計16TBしか使用できない。これは、初期のAMD64がCMPXCHG16B命令をサポートしていないためである<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>。</li>
+<li>WOW64を使用して、既存の32ビットアプリケーション(.exeプログラム)とダイナミックリンクライブラリ(.dll)を実行する機能。さらに、32ビットアプリケーションが"large address aware"オプションを付けてリンクされていれば、そのアプリケーションは64ビットWindows上で、4GBの仮想アドレス空間を使用できる。一方、32ビットWindowsでは、デフォルトの仮想アドレス空間は2GBで、/3GBのブートオプションを付けてWindowsを起動し、"large address aware"オプションを付けてリンクされたアプリケーションであれば3GBである。/3GBのブートオプションを付けて起動した32ビットのWindowsとは異なり、64ビットWindowsではカーネルモード仮想アドレス空間が減らない。そのため、32ビットアプリケーションは、x64用に再コンパイルしなくても、64ビットWindows上で動作させることにメリットがある。</li>
+<li>32ビット、および、64ビットのアプリケーションは、"large address aware"オプションを付けてリンクされていなければ、仮想アドレス空間は2GBに制限される。</li>
+<li>WindowsXP/Vistaでは128GB, Windows 7では192GB、Windows 8では512GB、Windows Server2003では1TB、Windows Server 2008では2TB、Windows Server 2012では4TBまでのRAMを使用可能。</li>
+<li>LLP64データモデルを採用。intとlongは32ビット、long longは64ビット、ポインタとポインタから派生したデータ型は64ビットである。</li>
+<li>カーネルモードデバイスドライバは64ビットでなければならない。32ビットのカーネルモードデバイスドライバは 64ビット版Windowsでは動作しない。ユーザーモードデバイスドライバは、32ビット、64ビットのどちらも64ビット版Windowsで動作する。</li>
+<li>16ビットWindows(Win16)アプリケーションとDOSアプリケーションは64ビット版Windowsでは動作しない。これは、64ビットモードに仮想86モードがないため、64ビット版Windowsから仮想DOSマシンサブシステム(NTVDM)を削除したためである。</li>
+<li>NX(No Execute)ページ保護機能の完全な実装。この機能は32ビット版WindowsでもPAEモードで起動すれば使用できる。</li>
+<li>x86版のWindows NTファミリーでFSセグメントが使われている代わりに、x64ではGSセグメントがオペレーティングシステムが定義する2つの構造体を指している。ユーザーモードでのスレッドインフォメーションブロック(NT_TIB)とカーネルモードでのプロセスコントロールリージョン(KPCR)である。たとえば、ユーザーモードでは、GS:0はスレッドインフォメーションブロックの最初のメンバーのアドレスである。この規則を維持することによりx64版Windowsの開発が容易になった。しかし、AMDに対して、LongモードでFS, GSセグメントの機能を保持することを要求することになった。（ただし、セグメントアドレッシング自体は、近代的なオペレーティングシステムで使われるものではない）</li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> 2005以降では、64ビット版Windowsのみで動作する64ビットアプリケーション、32ビット版Windowsと64ビット版WindowsのWOW64上の両方で動作する32ビットアプリケーションの開発が可能である。</li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=28" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-inq-amd64-1"><b><a href="#cite_ref-inq-amd64_1-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Rust, Adamson (2003年4月24日). “<a class="external text" href="http://www.theinquirer.net/inquirer/news/1043982/amd-bans-use-of-hammer-word-x86-64" rel="nofollow">AMD bans use of Hammer word, X86-64</a>”. <i>The Inquirer</i>. <span title="">2010年10月30日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-solaris-x64-2"><b><a href="#cite_ref-solaris-x64_2-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.oracle.com/technetwork/server-storage/solaris/overview/solaris10amdopteron-jsp-140575.html" rel="nofollow">Solaris 10 on AMD Opteron</a>”.   Oracle. <span title="">2010年12月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-ms-x64-3"><b><a href="#cite_ref-ms-x64_3-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.microsoft.com/windowsserver2008/en/us/64bit-computing.aspx" rel="nofollow">Microsoft 64-Bit Computing</a>”.   Microsoft. <span title="">2010年12月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-amd-24593-4">^ <a href="#cite_ref-amd-24593_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-amd-24593_4-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">AMD Corporation (2011年5月). “<a class="external text" href="http://support.amd.com/us/Embedded_TechDocs/24593.pdf" rel="nofollow">Volume 2: System Programming</a> (pdf)”. <i>AMD64 Architecture Programmer's Manual</i>.   AMD Corporation. <span title="">2011年10月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-x86-compat-perf-5"><b><a href="#cite_ref-x86-compat-perf_5-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">IBM Corporation (2007年9月6日). “<a class="external text" href="ftp://ftp.software.ibm.com/software/webserver/appserv/was/64bitPerf.pdf" rel="nofollow">IBM WebSphere Application Server 64-bit Performance Demystified</a>”. p. 14. <span title="">2010年4月9日</span>閲覧。 “"Figures 5, 6 and 7 also show the 32-bit version of WAS runs applications at full native hardware performance on the POWER and x86-64 platforms. Unlike some 64-bit processor architectures, the POWER and x86-64 hardware does not emulate 32-bit mode. Therefore applications that do not benefit from 64-bit features can run with full performance on the 32-bit version of WebSphere running on the above mentioned 64-bit platforms."”</cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">詳細については<a href="/wiki/Windows_NT%E7%B3%BB" title="Windows NT系">Windows NT系</a>の<a href="/wiki/Windows_NT%E7%B3%BB#32ビットと64ビット" title="Windows NT系">表</a>を参照のこと。</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://msdn.microsoft.com/ja-jp/library/a32tsf7t.aspx" rel="nofollow">旧形式のコードのための浮動小数点サポート (Visual C++)</a>”. <i>MSDNライブラリ</i>.   マイクロソフト. <span title="">2016年1月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a href="/wiki/%E3%82%AA%E3%83%AC%E3%82%B4%E3%83%B3%E5%B7%9E" title="オレゴン州">オレゴン州</a>の <a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%A9%E3%83%A1%E3%83%83%E3%83%88%E3%83%90%E3%83%AC%E3%83%BC" title="ウィラメットバレー">ウィラメットバレー</a>(Willamette Valley)を流れるYamhill川から来た名前である。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a class="external text" href="http://www.theinquirer.net/default.aspx?article=14189" rel="nofollow">"Craig Barrett confirms 64 bit address extensions for Xeon. And Prescott", from The Inquirer</a></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external text" href="http://www.internetnews.com/ent-news/article.php/3518781" rel="nofollow">"A Roundup of 64-Bit Computing", from internetnews.com</a></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">オレゴン州を流れるクラッカマス川(Clackamas River)の名前に由来し、<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%A9%E3%83%A1%E3%83%83%E3%83%88%E5%B7%9D" title="ウィラメット川">ウィラメット川</a>(Willamette River)の支流である。</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://www.intel.com/content/www/us/en/architecture-and-technology/microarchitecture/intel-64-architecture-embedded.html" rel="nofollow">"Intel® 64 Architecture"</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><a class="external text" href="https://web.archive.org/web/20060807192848/http://www.amd.com/us-en/assets/content_type/white_papers_and_tech_docs/32559.pdf" rel="nofollow">「BIOS and Kernel Developer’s Guide for AMD NPT Family 0Fh Processors」May 2006版</a> にRevision F（DDR2対応のSocket AM2版CPU）の変更点として「CPUID Fn[0000_0001]_ECX CMPXCHG16B (bit 13) added.」と記載されている。</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text">8080のPUSH PSW命令をLAHF / XCHG AL, AH / PUSH AXとエミュレートできる。</span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><a class="external text" href="https://www.vmware.com/jp/support/support-resources/pubs/player_pubs/releasenotes_player50#Installation_Requirements" rel="nofollow">VMware Player 5.0 インストール要件</a></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text">PREFETCHW命令はメモリからデータをキャッシュラインにプリフェッチし、そのデータがあとで書き換えられることを想定してあらかじめキャッシュラインの状態を<a href="/wiki/MESI%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="MESIプロトコル">Modified</a>（書き換えあり）にする命令である。データが書き込まれた時点でModifiedに変更するよりも速く動作することが期待できる。</span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external text" href="http://developer.amd.com/wordpress/media/2012/10/CrossVendorMigration.pdf" rel="nofollow">AMDのドキュメント「Cross-Vendor Migration」のPrefetch Instructionsにfamily 15/model 6/stepping 1以降のCPU、すなわちCedarMillコアからこの命令をNOPとして処理するようになったと説明がある。</a></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="http://technet.microsoft.com/ja-jp/sysinternals/cc835722.aspx" rel="nofollow">Microsoft社のCoreinfoツールでこれらの命令のサポート状況を確認できる。</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text">MS公式サイトの<a class="external text" href="http://windows.microsoft.com/ja-jp/windows-8/system-requirements" rel="nofollow">Windows 8 のシステム要件</a>ページにあるWindows 8.1節に「64 ビット PC に 64 ビット版 OS をインストールする場合、プロセッサが CMPXCHG16b、PrefetchW、LAHF/SAHF をサポートしている必要があります」と記載されている。</span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><a class="external text" href="http://www.microsoft.com/ja-jp/windows/windows-10-specifications" rel="nofollow">Windows 10 システム要件</a></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://sourceforge.net/p/jwasm/feature-requests/10/" rel="nofollow">JWasm / Feature Requests / #10 MOVD/MOVQ in 64-bit (was: Another MMX code problem)</a>”. <span title="">2020年6月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=43215" rel="nofollow">43215 – x86-64: Nonstandard instruction "movd %xmm0, %rax"</a>”. <span title="">2020年6月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text">AMD64 Architecture Programmer's Manual</span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text">Schulman, Andrew; Brown, Ralf D.; Maxey, David; Michels, Raymond J.; Kyle, Jim (1994). Undocumented DOS - A programmer's guide to reserved MS-DOS functions and data structures - expanded to include MS-DOS 6, Novell DOS and Windows 3.1 (2 ed.). Addison Wesley. ISBN 0-201-63287-X.</span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text">AMD・インテル系アーキテクチャではないが、<a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a><a href="/wiki/MC68000" title="MC68000">MC68000</a>ではアドレス空間が24ビットだったがアドレスレジスタは32ビットだった。そのためアプリケーションなどが上位8ビットを勝手に使用していたケースがあり、のちに<a href="/wiki/MC68020" title="MC68020">MC68020</a>でアドレス空間が32ビット化された際に問題になったことがあった。</span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text">しかし実際のところ、OS開発者はそのような事情を知っていてもアプリケーション開発者は知らないのが現実である。<cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.kernel.org/doc/Documentation/x86/x86_64/5level-paging.txt" rel="nofollow">5level-paging.txt</a>”. <span title="">2020年4月5日</span>閲覧。 “It's known that at least some JIT compilers use higher bits in pointers to encode their information. It collides with valid pointers with 5-level paging and leads to crashes.”</cite></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text">ある場所のメモリを書き込み可能かつ実行可能の状態に置かず、書き込みのみか実行のみかどちらか一方だけにに制限すること。</span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text">Windows Internals FIFTH EDITION p.750, Mark E. Runssinovich, David A. Solomon, Microsoft Press ISBN 978-0-7356-2530-3</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=29" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://software.intel.com/en-us/articles/intel-sdm" rel="nofollow">Intel 64 and IA-32 Architectures Software Developer Manuals</a></li>
+<li><a class="external text" href="https://developer.amd.com/resources/developer-guides-manuals/" rel="nofollow">AMD64 Architecture Programmer's Manual</a></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=30" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="プロセッサ">プロセッサ</a> - <a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a> - <a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ (コンピュータ)</a> - <a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%BC%E3%83%89" title="アドレッシングモード">アドレッシングモード</a></li>
+<li><a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a> - <a href="/wiki/X86" title="X86">x86</a> - <a href="/wiki/IA-32" title="IA-32">IA-32</a></li>
+<li><a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a> - <b>x64</b> / <a href="/wiki/IA-64" title="IA-64">IA-64</a></li>
+<li><a href="/wiki/Windows_NT%E7%B3%BB#32ビットと64ビット" title="Windows NT系">Windows NT系#32ビットと64ビット</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X64&amp;action=edit&amp;section=31" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.amd.com/jp-ja/Processors/ProductInformation/0,,30_118_9331,00.html" rel="nofollow">AMD64 プラットフォーム</a></li>
+<li><a class="external text" href="http://www.amd.com/jp-ja/Processors/TechnicalResources/0,,30_182_739_7044,00.html" rel="nofollow">アーキテクチャ技術資料</a></li>
+<li><a class="external text" href="http://www.intel.co.jp/jp/technology/intel64/index.htm" rel="nofollow">インテル 64 アーキテクチャー</a></li></ul>
+<div aria-labelledby="プロセッサアーキテクチャ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Processor_architectures&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Processor architectures (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="プロセッサアーキテクチャ" style="font-size:110%;margin:0 6em">プロセッサ<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">アーキテクチャ</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">CISC</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MC6800" title="MC6800">MC6800</a></li>
+<li><a href="/wiki/MC68000" title="MC68000">MC68000</a></li>
+<li><a href="/wiki/TRONCHIP" title="TRONCHIP">TRONCHIP</a></li>
+<li><a href="/wiki/PDP%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="PDPシリーズ">PDP</a></li>
+<li><a href="/wiki/VAX" title="VAX">VAX</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/X86" title="X86">x86</a>
+<ul><li><a href="/wiki/IA-32" title="IA-32">IA-32</a></li>
+<li><a class="mw-selflink selflink">x64</a>
+<ul><li><a href="/wiki/X64#AMD64" title="X64">AMD64</a></li>
+<li><a href="/wiki/X64#Intel_64" title="X64">Intel 64</a></li></ul></li></ul></li>
+<li><a href="/wiki/IA-64" title="IA-64">IA-64</a></li>
+<li><a href="/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">RISC</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a></li>
+<li><a href="/wiki/AMD_Am29000" title="AMD Am29000">AMD Am29000</a></li>
+<li><a class="new" href="/w/index.php?title=En:Apollo_PRISM&amp;action=edit&amp;redlink=1" title="En:Apollo PRISM (存在しないページ)">Apollo PRISM</a></li>
+<li><a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a></li>
+<li><a href="/wiki/Intel_i960" title="Intel i960">Intel i960</a></li>
+<li><a href="/wiki/MC88000" title="MC88000">MC88000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a></li>
+<li><a href="/wiki/Atmel_AVR" title="Atmel AVR">Atmel AVR</a></li>
+<li><a class="new" href="/w/index.php?title=En:AVR32&amp;action=edit&amp;redlink=1" title="En:AVR32 (存在しないページ)">Atmel AVR32</a></li>
+<li><a href="/wiki/Blackfin" title="Blackfin">Analog Devices Blackfin</a></li>
+<li><a href="/wiki/DLX" title="DLX">DLX</a></li>
+<li><a class="new" href="/w/index.php?title=En:LatticeMico8&amp;action=edit&amp;redlink=1" title="En:LatticeMico8 (存在しないページ)">LatticeMico8</a></li>
+<li><a href="/wiki/LatticeMico32" title="LatticeMico32">LatticeMico32</a></li>
+<li><a href="/wiki/M32R" title="M32R">M32R</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a></li>
+<li><a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPS</a></li>
+<li><a href="/wiki/Nios_II" title="Nios II">Altera Nios II</a></li>
+<li><a href="/wiki/OpenRISC" title="OpenRISC">OpenRISC</a></li>
+<li><a href="/wiki/PicoBlaze" title="PicoBlaze">PicoBlaze</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><a href="/wiki/Power_Architecture" title="Power Architecture">Power</a></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="/wiki/SuperH" title="SuperH">SuperH</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331154014
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.246 seconds
+Real time usage: 0.392 seconds
+Preprocessor visited node count: 3836/1000000
+Post‐expand include size: 31178/2097152 bytes
+Template argument size: 8272/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13541/5000000 bytes
+Lua time usage: 0.060/7 seconds
+Lua virtual size: 5357568/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  275.636      1 -total
+ 59.30%  163.462      1 テンプレート:Reflist
+ 54.48%  150.165      9 テンプレート:Cite_web
+ 19.79%   54.547      9 テンプレート:Ifempty
+ 16.46%   45.383      1 テンプレート:Main
+ 15.61%   43.039      3 テンプレート:Citation/showdate
+ 15.11%   41.646      1 テンプレート:Rellink
+ 14.10%   38.866     12 テンプレート:ISO_dateJA
+ 13.95%   38.438      2 テンプレート:See/core
+ 13.54%   37.331      3 テンプレート:Citation/showdateCore
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:401031-0!canonical and timestamp 20220331154014 and revision id 260197. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=X64&amp;oldid=260197">http://localhost:8080/w/index.php?title=X64&amp;oldid=260197</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:X86%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:X86アーキテクチャ">X86アーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:コンピュータアーキテクチャ">コンピュータアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:マイクロプロセッサ">マイクロプロセッサ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=X64&amp;returntoquery=curid%3D401031%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=X64&amp;returntoquery=curid%3D401031%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/X64" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:X64&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/X64">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=X64&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=X64&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/X64" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/X64" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=X64&amp;oldid=260197" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=X64&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月2日 (土) 23:20 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.246","walltime":"0.392","ppvisitednodes":{"value":3836,"limit":1000000},"postexpandincludesize":{"value":31178,"limit":2097152},"templateargumentsize":{"value":8272,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13541,"limit":5000000},"timingprofile":["100.00%  275.636      1 -total"," 59.30%  163.462      1 テンプレート:Reflist"," 54.48%  150.165      9 テンプレート:Cite_web"," 19.79%   54.547      9 テンプレート:Ifempty"," 16.46%   45.383      1 テンプレート:Main"," 15.61%   43.039      3 テンプレート:Citation/showdate"," 15.11%   41.646      1 テンプレート:Rellink"," 14.10%   38.866     12 テンプレート:ISO_dateJA"," 13.95%   38.438      2 テンプレート:See/core"," 13.54%   37.331      3 テンプレート:Citation/showdateCore"]},"scribunto":{"limitreport-timeusage":{"value":"0.060","limit":"7"},"limitreport-virtmemusage":{"value":5357568,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331154014","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":558});});</script>
+</body></html>

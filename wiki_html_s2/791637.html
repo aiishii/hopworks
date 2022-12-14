@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>CUDA - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-CUDA rootpage-CUDA skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">CUDA</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><style data-mw-deduplicate="TemplateStyles:r2633220">.mw-parser-output .hatnote{margin:0.5em 0;padding:3px 2em;background-color:transparent;border-bottom:1px solid #a2a9b1;font-size:90%}</style>
+<table class="infobox vevent" style="width:22em;"><caption class="summary" itemprop="name" style="">CUDA</caption><tbody><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;">開発元</th><td class="" itemprop="" style="">
+<a href="." id="link_i_1" title="NVIDIA">NVIDIA</a></td></tr><tr class="" itemprop="" style="display: none;"><td class="" colspan="2" itemprop="" style="text-align:center;">
+</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;"><a class="new" href="/w/index.php?title=En:Software_release_life_cycle&amp;action=edit&amp;redlink=1" title="En:Software release life cycle (存在しないページ)">最新版</a></th><td class="" itemprop="" style="">
+<div style="margin:0px;">11.3.1
+   / <span style="white-space:nowrap;">2021年5月20日</span><span class="noprint"> <span style="white-space:nowrap;"><wbr/>(10か月前)</span></span><span style="display:none"> (<span class="bday dtstart published updated">2021-05-20</span>)</span><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></div></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;"><a class="new" href="/w/index.php?title=En:Software_release_life_cycle&amp;action=edit&amp;redlink=1" title="En:Software release life cycle (存在しないページ)">最新評価版</a></th><td class="" itemprop="" style="">
+<div style="margin:0px;">11.0.171
+   / <span style="white-space:nowrap;">2020年6月5日</span><span class="noprint"> <span style="white-space:nowrap;"><wbr/>(21か月前)</span></span><span style="display:none"> (<span class="bday dtstart published updated">2020-06-05</span>)</span></div></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;">リポジトリ</th><td class="" itemprop="" style="">
+<div class="plainlist" style=""><ul><li><code>{{URL|<i>1=example.com</i>|<i>2=リンクの表示名（省略可）</i>}}</code></li></ul>
+</div><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;"><a class="new" href="/w/index.php?title=En:Software_engine&amp;action=edit&amp;redlink=1" title="En:Software engine (存在しないページ)">使用エンジン</a></th><td class="" itemprop="" style="">
+<div class="plainlist" style=""><ul></ul>
+</div><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-1"></span></strong></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;">対応OS</th><td class="" itemprop="" style="">
+<a href="." id="link_i_2" title="Microsoft Windows">Microsoft Windows</a>, <a href="." id="link_i_3" title="Linux">Linux</a>, <a href="." id="link_i_4" title="MacOS">macOS</a><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>, <a href="." id="link_i_5" title="Android (オペレーティングシステム)">Android</a><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;">種別</th><td class="" itemprop="" style="">
+<a href="." id="link_i_6" title="GPGPU">GPGPU</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap; white-space: nowrap;">公式サイト</th><td class="" itemprop="" style="">
+<a class="external text" href="https://developer.nvidia.com/cuda-zone" rel="nofollow">CUDA Zone</a></td></tr><tr class="noprint"><td colspan="2" style="text-align:right; font-size:85%;">テンプレートを表示</td></tr></tbody></table>
+<p><b>CUDA</b>（<span lang="en">Compute Unified Device Architecture</span>：クーダ）とは、<a href="." id="link_a_1" title="NVIDIA">NVIDIA</a>が開発・提供している、<a href="." id="link_a_7" title="Graphics Processing Unit">GPU</a>向けの汎用<a href="." id="link_a_8" title="並列コンピューティング">並列コンピューティング</a>プラットフォーム（並列コンピューティングアーキテクチャ）およびプログラミングモデルである<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。専用の<a href="." id="link_a_9" title="C言語">C</a>/<a href="." id="link_a_10" title="C++コンパイラ">C++コンパイラ</a> (nvcc) や<a href="." id="link_a_11" title="ライブラリ">ライブラリ</a> (<a href="." id="link_a_12" title="アプリケーションプログラミングインタフェース">API</a>) などが提供されている。なおNVIDIA製GPUにおいては、<a href="." id="link_a_13" title="OpenCL">OpenCL</a>/<a href="." id="link_a_14" title="DirectCompute">DirectCompute</a>などの類似APIコールは、すべて共通の<a href="." id="link_a_6" title="GPGPU">GPGPU</a>プラットフォームであるCUDAを経由することになる<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#対応言語"><span class="tocnumber">2</span> <span class="toctext">対応言語</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#言語バインディング"><span class="tocnumber">2.1</span> <span class="toctext">言語バインディング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#OpenGL/Direct3D相互運用"><span class="tocnumber">3</span> <span class="toctext">OpenGL/Direct3D相互運用</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#開発ツール"><span class="tocnumber">4</span> <span class="toctext">開発ツール</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#メリット・デメリット"><span class="tocnumber">5</span> <span class="toctext">メリット・デメリット</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#メリット"><span class="tocnumber">5.1</span> <span class="toctext">メリット</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#デメリット"><span class="tocnumber">5.2</span> <span class="toctext">デメリット</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#対応環境"><span class="tocnumber">6</span> <span class="toctext">対応環境</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#ハードウェア"><span class="tocnumber">6.1</span> <span class="toctext">ハードウェア</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#PTX_(Parallel_Thread_Execution)"><span class="tocnumber">6.1.1</span> <span class="toctext">PTX (Parallel Thread Execution)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#OS"><span class="tocnumber">6.2</span> <span class="toctext">OS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#NVIDIA_OptiX"><span class="tocnumber">7</span> <span class="toctext">NVIDIA OptiX</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#対応ソフトウェア"><span class="tocnumber">8</span> <span class="toctext">対応ソフトウェア</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#分散コンピューティング"><span class="tocnumber">8.1</span> <span class="toctext">分散コンピューティング</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#MATLAB"><span class="tocnumber">8.2</span> <span class="toctext">MATLAB</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#OpenCV"><span class="tocnumber">8.3</span> <span class="toctext">OpenCV</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#関連書籍"><span class="tocnumber">11</span> <span class="toctext">関連書籍</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>もともとリアルタイムグラフィックス表示用途、特にゲームグラフィックス用途に特化したGPUを開発していたのがNVIDIAや<a href="/wiki/ATI_Technologies" title="ATI Technologies">ATI</a> (現<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>) であるが、<a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%80%E3%83%BC" title="プログラマブルシェーダー">プログラマブルシェーダー</a>の発展によるプログラマビリティの向上を受け、その高い処理性能をグラフィックス以外にも活用できるようにするためにNVIDIAが開発した技術がCUDAである。このような汎用コンピューティング向けのGPU活用技術を<a href="/wiki/GPGPU" title="GPGPU">GPGPU</a> (General-Purpose computing on Graphics Processing Units) と呼ぶ。
+</p><p>GPU向けのプログラミング環境としては<a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a>や<a href="/wiki/GLSL" title="GLSL">GLSL</a>、<a href="/wiki/Cg_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Cg (プログラミング言語)">NVIDIA Cg</a>を用いたものもあるが、こちらは<a href="/wiki/Direct3D" title="Direct3D">Direct3D</a>もしくは<a href="/wiki/OpenGL" title="OpenGL">OpenGL</a>をバックエンドとするリアルタイム<a class="mw-redirect" href="/wiki/CG" title="CG">CG</a>描画専用のプログラミング環境となっており、<a href="/wiki/%E5%A4%89%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="変数 (プログラミング)">変数</a>の<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="データ型">型</a>にGPU特有の型しか使えない（特に出力として用いるテクスチャメモリのフォーマットに制約が大きい）など汎用的なプログラムの記述は困難である。CUDAでは、HLSLやGLSLと異なり、よりC言語に近い構文および言語機能（ポインタなどを含む）を採用しており、またDirect3D/OpenGLといったバックエンドを使うことなくプログラムロジックを記述できるため、汎用コンピューティングに適している。
+</p><p>GPUはシンプルな演算ユニットを多数搭載しており、ピーク理論演算性能 (<a href="/wiki/FLOPS" title="FLOPS">FLOPS</a>) は同一価格帯の<a href="/wiki/CPU" title="CPU">CPU</a>をしのぐものもある。そのため、<a class="mw-redirect" href="/wiki/%E4%B8%A6%E5%88%97%E6%80%A7" title="並列性">並列性</a>や演算密度の高い処理を行なう場合、少数で複雑な構成を備えた同規模の<a href="/wiki/CPU" title="CPU">CPU</a>と比べて高い処理性能が出せる。
+その逆に複雑な分岐処理（演算密度の低い処理）はCPUと比較して苦手であり、またGPUへ入力データを供給する、あるいはGPUによる演算結果をCPU側へリードバックするには接続バス (<a class="mw-redirect" href="/wiki/PCI-Express" title="PCI-Express">PCI-Express</a>) を通してデータを転送する必要があり、これがボトルネックとなりうる可能性もあるため、適用分野や問題を解くアルゴリズムを慎重に選ぶ必要がある<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+</p><p>また、CUDAで作成したプログラムを最大限最適化するためには、Warpや共有メモリなどのNVIDIA GPUデバイスアーキテクチャに関する深い知識も必要となる<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。
+</p><p>なお、CUDAの発表は2006年11月<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>、CUDA 1.0の提供開始は2007年7月<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>であり、後発の<a href="/wiki/GPGPU" title="GPGPU">GPGPU</a>関連技術には<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a> (1.0仕様公開は2008年<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>) や<a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a> (<a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a>コンピュートシェーダー。<a class="mw-redirect" href="/wiki/Windows_7" title="Windows 7">Windows 7</a>/<a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> 11.0と同時に2009年に一般提供開始<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>) などが存在するが、それぞれ技術用語は異なるものの全体としてはCUDAに非常に似通った特徴を持つ。先発技術であるCUDAは、2014年時点で教育・研究機関での採用事例が多い<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>ほか、機械学習などの分野で産業界でも採用への取り組みが進んでいる<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。
+</p>
+<h2><span id=".E5.AF.BE.E5.BF.9C.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="対応言語">対応言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=2" title="節を編集: 対応言語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CUDA C は<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>と<a href="/wiki/C%2B%2B" title="C++">C++</a>の一部の構文のみ対応。C言語を拡張している。CUDA C/C++のソースコードの拡張子には通例.cuが使われ、ヘッダーの拡張子には.cuhが使われる<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>。<a class="mw-redirect" href="/wiki/BLAS" title="BLAS">BLAS</a><a class="mw-redirect" href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9" title="インターフェイス">インターフェイス</a>経由で<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="ベクトル">ベクトル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%9B%96%E6%98%A7%E3%81%95%E5%9B%9E%E9%81%BF#曖昧さ回避ページへのリンクは極力避ける" title="Wikipedia:曖昧さ回避"><span title="このリンクには曖昧さ回避が必要です。（2021年7月）">要曖昧さ回避</span></a></i>]</sup>・<a href="/wiki/%E8%A1%8C%E5%88%97" title="行列">行列</a>演算が可能（cuBLAS<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>）。<a href="/wiki/%E9%AB%98%E9%80%9F%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="高速フーリエ変換">FFT</a>ライブラリ（cuFFT<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>）も付属する。SDKとなるCUDA Toolkitには、CUDA実装によるC++向けのテンプレートベース並列アルゴリズムライブラリ「Thrust」も付属する<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>。
+</p><p>なおCUDAバージョン7では、<a href="/wiki/C%2B%2B11" title="C++11">C++11</a>規格のサポートが強化され、デバイスコードにおける<a class="mw-redirect" href="/wiki/%E3%83%A9%E3%83%A0%E3%83%80%E5%BC%8F" title="ラムダ式">ラムダ式</a>の利用などが可能となっている<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup> <sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>。
+CUDAバージョン8では、<a href="/wiki/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92" title="機械学習">機械学習</a>向けのライブラリが強化され、Pascalアーキテクチャの固有機能を利用した拡張が多数追加された<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup><sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>。
+</p><p>CUDA <a class="mw-redirect" href="/wiki/Fortran" title="Fortran">Fortran</a> は <a href="/wiki/The_Portland_Group" title="The Portland Group">The Portland Group</a> (PGI) から提供されている<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>。<a href="/wiki/FORTRAN#Fortran_2003" title="FORTRAN">Fortran 2003</a> を拡張している<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup>。
+</p><p>NVIDIAのCUDAコンパイラ<i>nvcc</i>自体は<a href="/wiki/LLVM" title="LLVM">LLVM</a>ベースであり、新しいプログラミング言語や新しいプロセッサのサポートを追加するコンパイラSDKも提供されている<sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>。
+</p>
+<h3><span id=".E8.A8.80.E8.AA.9E.E3.83.90.E3.82.A4.E3.83.B3.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="言語バインディング">言語バインディング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=3" title="節を編集: 言語バインディング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C言語以外からCUDAを呼べるようにしたバインディングがある。
+</p>
+<ul><li><a href="/wiki/Python" title="Python">Python</a> - <a class="external text" href="https://mathema.tician.de/software/pycuda/" rel="nofollow">PyCUDA</a></li>
+<li><a href="/wiki/Perl" title="Perl">Perl</a> - <a class="external text" href="http://psilambda.com/download/kappa-for-perl" rel="nofollow">KappaCUDA</a>、<a class="external text" href="https://github.com/run4flat/perl-CUDA-Minimal" rel="nofollow">CUDA::Minimal</a></li>
+<li><a href="/wiki/Java" title="Java">Java</a> - <a class="external text" href="http://www.hoopoe-cloud.com/Solutions/jCUDA/Default.aspx" rel="nofollow">Hoopoe jCUDA</a>、<a class="external text" href="http://www.jcuda.org/jcuda/JCuda.html" rel="nofollow">JCuda.org</a>、<a class="external text" href="http://www.jcuda.org/jcuda/jcublas/JCublas.html" rel="nofollow">JCublas</a>、<a class="external text" href="http://www.jcuda.org/jcuda/jcufft/JCufft.html" rel="nofollow">JCufft</a></li>
+<li><a class="mw-redirect" href="/wiki/.NET" title=".NET">.NET</a> - <a class="external text" href="http://www.hoopoe-cloud.com/Solutions/CUDA.NET/Default.aspx" rel="nofollow">Hoopoe CUDA.NET</a></li></ul>
+<p>他にも、<a href="/wiki/Ruby" title="Ruby">Ruby</a>, <a href="/wiki/Lua" title="Lua">Lua</a>, <a href="/wiki/MATLAB" title="MATLAB">MATLAB</a>, <a href="/wiki/Interactive_Data_Language" title="Interactive Data Language">IDL</a>, <a href="/wiki/Mathematica" title="Mathematica">Mathematica</a> などもある。
+</p>
+<h2><span id="OpenGL.2FDirect3D.E7.9B.B8.E4.BA.92.E9.81.8B.E7.94.A8"></span><span class="mw-headline" id="OpenGL/Direct3D相互運用">OpenGL/Direct3D相互運用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=4" title="節を編集: OpenGL/Direct3D相互運用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CUDAにはOpenGLおよびDirect3D 9/10/11との連携を可能にする相互運用APIが用意されている。詳しくは
+<a class="external text" href="http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__OPENGL.html#group__CUDART__OPENGL" rel="nofollow">CUDA Runtime API :: CUDA Toolkit Documentation - 3.10. OpenGL Interoperability</a>,
+<a class="external text" href="http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__D3D11.html#group__CUDART__D3D11" rel="nofollow">CUDA Runtime API :: CUDA Toolkit Documentation - 3.16. Direct3D 11 Interoperability</a>
+などを参照のこと。
+</p>
+<h2><span id=".E9.96.8B.E7.99.BA.E3.83.84.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="開発ツール">開発ツール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=5" title="節を編集: 開発ツール">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CUDA Toolkitには<i>Visual Profiler</i>と呼ばれるパフォーマンス計測ツールが付属し、アプリケーションにおけるGPUの処理時間などの情報を収集して、性能改善に役立てることができる<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>。CUDA Toolkit 7.5では命令レベルでのプロファイリングがサポートされた<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup>。<i>Nsight</i> (旧称Parallel Nsight) と呼ばれる統合開発環境向けのアドインも提供されている。
+</p>
+<h2><span id=".E3.83.A1.E3.83.AA.E3.83.83.E3.83.88.E3.83.BB.E3.83.87.E3.83.A1.E3.83.AA.E3.83.83.E3.83.88"></span><span class="mw-headline" id="メリット・デメリット">メリット・デメリット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=6" title="節を編集: メリット・デメリット">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ここでは従来のCPUベースのプログラミングとの比較ではなく、類似の<a href="/wiki/GPGPU" title="GPGPU">GPGPU</a>関連技術とCUDAとの比較を行なう。
+</p>
+<h3><span id=".E3.83.A1.E3.83.AA.E3.83.83.E3.83.88"></span><span class="mw-headline" id="メリット">メリット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=7" title="節を編集: メリット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>CUDAはNVIDIAが独自に開発を進めている<a href="/wiki/GPGPU" title="GPGPU">GPGPU</a>技術であり、NVIDIA製のハードウェア性能を最大限引き出せるように設計されている<sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>。CUDAを利用することで、NVIDIA製GPUに新しく実装されたハードウェア機能をいち早く活用することができる。例えばKepler世代以降のGPUで使用可能なWarpシャッフル命令を使用することで、共有メモリを介するよりもさらに高速な並列リダクションを実行することができる<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup> <sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>。CUDA同様の類似GPGPU技術として代表的なものは<a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>や<a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a>が挙げられるが、いずれもハードウェアアーキテクチャを標準化しベンダーの違いを吸収する<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="アプリケーションプログラミングインタフェース">API</a>層であるため、CUDAと比較すると抽象化の度合いは低いローレベルAPIではあるものの、ハードウェア特有の先進的機能を使った細やかなチューニングによりそのハードウェアの限界性能を引き出すのは難しい<sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>。
+</p><p>また、OpenCLやDirectComputeでは、カーネルと呼ばれるデバイス用並列処理プログラムコード片（並列実行の最小単位）を専用のOpenCL-Cや<a class="mw-redirect" href="/wiki/HLSL" title="HLSL">HLSL</a>といった言語で記述した上で、OpenCL APIや<a href="/wiki/Direct3D" title="Direct3D">Direct3D</a> APIを使用してカーネルを発行する必要があるため、準備のための手間が必要となるが、CUDAの場合はより抽象化されており、カーネルコードの発行をC/C++における通常の関数呼び出しに近い形で記述できるなど、より本質的なアプリケーションコードやアルゴリズムの実装のみに注力できるようになっている。
+</p>
+<h3><span id=".E3.83.87.E3.83.A1.E3.83.AA.E3.83.83.E3.83.88"></span><span class="mw-headline" id="デメリット">デメリット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=8" title="節を編集: デメリット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ハードウェアベンダーに依存しないOpenCLやDirectComputeと比較すると、CUDAはNVIDIA製のGPUでしか使えないという制約がある。このため、CUDAの機能に過度に依存したプログラムを書くと、アプリケーションの<a href="/wiki/%E7%A7%BB%E6%A4%8D_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="移植 (ソフトウェア)">ポーティング・移植</a>が困難になる可能性がある（<a href="/wiki/%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC%E3%83%AD%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3" title="ベンダーロックイン">ベンダーロックイン</a>）<sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>。AMDはCUDAアプリケーションをAMDおよび他のGPUプラットフォーム向けにソースコードレベルで移植しやすくするためのC++用APIとして、HIP (Heterogeneous-Compute Interface for Portability) の提供を開始した<sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup><sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>が、CUDAと完全な互換性を持っているわけではない。
+</p><p>また、最初からグラフィックス連携用途を想定して設計されたDirectComputeと比較すると、（相互運用APIが用意されているとはいえ）GPU演算結果をグラフィックス用途に直接利用する場合はオーバーヘッドが大きくなる<sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup>。
+</p>
+<h2><span id=".E5.AF.BE.E5.BF.9C.E7.92.B0.E5.A2.83"></span><span class="mw-headline" id="対応環境">対応環境</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=9" title="節を編集: 対応環境">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.8F.E3.83.BC.E3.83.89.E3.82.A6.E3.82.A7.E3.82.A2"></span><span class="mw-headline" id="ハードウェア">ハードウェア</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=10" title="節を編集: ハードウェア">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> 10世代の統合型シェーダーアーキテクチャを採用した<a class="mw-redirect" href="/wiki/GeForce" title="GeForce">GeForce</a> 8シリーズ以上 (ネットブック/トップ用の<a href="/wiki/NVIDIA_ION" title="NVIDIA ION">NVIDIA ION</a>を含む) もしくは <a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a> や <a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">NVIDIA Quadro</a> (Teslaはハイパフォーマンスコンピューティング用、Quadroはワークステーション用) 。モバイル向けの統合型プロセッサでは、Keplerアーキテクチャを採用している<a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">NVIDIA Tegra</a> K1以降となる。実行には専用の<a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="デバイスドライバ">デバイスドライバ</a>を必要とする。詳細は、
+<a class="external text" href="https://developer.nvidia.com/cuda-gpus" rel="nofollow">CUDA GPUs | NVIDIA Developer Zone</a> を参照。なお、ハードウェアの世代／アーキテクチャ（Compute Capability, CC）によって利用可能なGPU命令やリソースサイズ上限、<a class="mw-redirect" href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="倍精度浮動小数点">倍精度浮動小数点</a>対応可否などの制約が異なる。また、上位のCCを持つハードウェアでは、下位のCC向けにコンパイルされたCUDAコードを実行できるが、その逆は不可能となっている。
+</p>
+<h4><span id="PTX_.28Parallel_Thread_Execution.29"></span><span class="mw-headline" id="PTX_(Parallel_Thread_Execution)">PTX (Parallel Thread Execution)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=11" title="節を編集: PTX (Parallel Thread Execution)">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>CUDAは実行環境デバイスの世代（Compute Capability）に応じた専用バイナリコードを生成できるほかに、PTX (<a href="/wiki/Parallel_Thread_Execution" title="Parallel Thread Execution">Parallel Thread Execution</a>) と呼ばれるNVIDIA独自のGPU中間命令（<a href="/wiki/%E4%B8%AD%E9%96%93%E8%A8%80%E8%AA%9E" title="中間言語">中間言語</a>）を生成することができる。PTXを利用することで、実行時にCUDAドライバーによって実行環境に合わせた最適なコードを生成することができるようになる<sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup>。
+</p>
+<h3><span class="mw-headline" id="OS">OS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=12" title="節を編集: OS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>CUDA Toolkit 6.5の対応<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">OS</a>は、<a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a> (32bit版のみ)、<a class="mw-redirect" href="/wiki/Windows_7" title="Windows 7">Windows 7</a>、<a class="mw-redirect" href="/wiki/Windows_8.1" title="Windows 8.1">Windows 8.1</a>、<a class="mw-redirect" href="/wiki/Windows_Server_2008_R2" title="Windows Server 2008 R2">Windows Server 2008 R2</a>、<a class="mw-redirect" href="/wiki/Windows_Server_2012_R2" title="Windows Server 2012 R2">Windows Server 2012 R2</a>、<a href="/wiki/Fedora" title="Fedora">Fedora</a> 20、<a href="/wiki/OpenSUSE" title="OpenSUSE">OpenSUSE</a> 13.1、RHEL (<a href="/wiki/Red_Hat_Enterprise_Linux" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a>) 5/6、<a href="/wiki/CentOS" title="CentOS">CentOS</a> 5/6、SLES (<a class="mw-redirect" href="/wiki/SUSE_Linux" title="SUSE Linux">SUSE Linux</a> Enterprise Server) 11-SP3、<a href="/wiki/Ubuntu" title="Ubuntu">Ubuntu</a> 12.04/14.04、<a href="/wiki/MacOS" title="MacOS">Mac OS X</a> 10.8/10.9/10.10である<sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup>。
+</p><p>CUDA Toolkit 7.0の対応OSは、Windows 7、Windows 8.1、Windows Server 2008 R2、Windows Server 2012 R2、Fedora 21、OpenSUSE 13.1/13.2、RHEL 6/7、CentOS 6/7、SLES 11/12、Ubuntu 12.04/14.04/14.10、<a href="/wiki/MacOS" title="MacOS">OS X</a> 10.9/10.10である<sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>。
+</p><p>CUDA Toolkit 7.5の対応OSは、Windows 7、Windows 8.1、<a class="mw-redirect" href="/wiki/Windows_10" title="Windows 10">Windows 10</a>、Windows Server 2008 R2、Windows Server 2012 R2、Fedora 21、OpenSUSE 13.2、RHEL 6/7、CentOS 6/7、SLES 11/12、<a href="/wiki/SteamOS" title="SteamOS">SteamOS</a> 1.0-beta、Ubuntu 14.04/15.04、OS X 10.9/10.10/10.11である<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup>。
+</p><p>CUDA Toolkit 8.0 GA2の対応OSは、Windows 7、Windows 8.1、Windows 10、Windows Server 2008 R2、Windows Server 2012 R2、<a class="mw-redirect" href="/wiki/Windows_Server_2016" title="Windows Server 2016">Windows Server 2016</a>、Fedora 23、OpenSUSE 13.2、RHEL 6/7、CentOS 6/7、SLES 11/12、Ubuntu 14.04/16.04、OS X 10.11/10.12である<sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup>。
+</p><p>CUDA Toolkit 9.2の対応OSは、Windows 7、Windows 8.1、Windows 10、Windows Server 2012 R2、Windows Server 2016、Fedora 27、OpenSUSE Leap 42.3、RHEL 6/7、CentOS 6/7、SLES 12、Ubuntu 16.04/17.10、OS X 10.13である<sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup>。
+</p><p>CUDA Toolkit 10.2の対応OSは、Windows 7、Windows 8.1、Windows 10、Windows Server 2012 R2、Windows Server 2016、<a class="mw-redirect" href="/wiki/Windows_Server_2019" title="Windows Server 2019">Windows Server 2019</a>、Fedora 29、OpenSUSE 15、RHEL 6/7/8、CentOS 6/7/8、SLES 1512 SP4、Ubuntu 16.04/18.04、OS X 10.13である<sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup>。
+</p><p>CUDA Toolkit 11.3の対応OSは、Windows 10、Windows Server 2016、<a class="mw-redirect" href="/wiki/Windows_Server_2019" title="Windows Server 2019">Windows Server 2019</a>、Fedora 33、OpenSUSE 15、RHEL 7/8、CentOS 7/8、SLES 15、Ubuntu 16.04/18.04/20.04、<a href="/wiki/Windows_Subsystem_for_Linux" title="Windows Subsystem for Linux">WSL</a>-Ubuntu 2.0である<sup class="reference" id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup>。macOSはサポート対象外となった<sup class="reference" id="cite_ref-48"><a href="#cite_note-48">[48]</a></sup>。ただしリモートデバッグ用のツールだけはmacOS上でもサポートされている<sup class="reference" id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup><sup class="reference" id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup>。
+</p>
+<h2><span class="mw-headline" id="NVIDIA_OptiX">NVIDIA OptiX</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=13" title="節を編集: NVIDIA OptiX">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CUDA基盤上に実装されたプログラマブルGPU<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0" title="レイトレーシング">レイトレーシング</a>エンジンとして、NVIDIAは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_OptiX&amp;action=edit&amp;redlink=1" title="NVIDIA OptiX (存在しないページ)">OptiX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OptiX&amp;action=edit&amp;redlink=1" title="En:OptiX (存在しないページ)">英語版</a>）</span></span>を公開している<sup class="reference" id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup>。OptiXはFermi世代以降のNVIDIA GPU上で利用可能。なお、<a class="mw-redirect" href="/wiki/After_Effects" title="After Effects">After Effects</a> CCではレイトレーシングエンジンにOptiXを採用している<sup class="reference" id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup>。
+</p>
+<h2><span id=".E5.AF.BE.E5.BF.9C.E3.82.BD.E3.83.95.E3.83.88.E3.82.A6.E3.82.A7.E3.82.A2"></span><span class="mw-headline" id="対応ソフトウェア">対応ソフトウェア</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=14" title="節を編集: 対応ソフトウェア">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CUDAの演算処理技術を利用するには、上述のハードウェア・OSのサポートに加えて、アプリケーションが対応していることが必要。一部アプリケーションベンダーより対応ソフトが出ている。
+</p>
+<ul><li><a href="/wiki/Freemake_Video_Converter" title="Freemake Video Converter">Freemake Video Converter</a> (<a class="new" href="/w/index.php?title=Free_Make&amp;action=edit&amp;redlink=1" title="Free Make (存在しないページ)">Free Make</a>)（<a class="mw-redirect" href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="フリーソフトウェア">フリーソフトウェア</a>）</li>
+<li><a href="/wiki/MediaCoder" title="MediaCoder">MediaCoder</a> (<a href="/wiki/MediaCoder" title="MediaCoder">MediaCoder</a>)（フリーソフトウェア）</li>
+<li><a class="new" href="/w/index.php?title=LoiLoTouch&amp;action=edit&amp;redlink=1" title="LoiLoTouch (存在しないページ)">LoiLoTouch</a> (<a href="/wiki/LoiLo" title="LoiLo">LoiLo</a>)</li>
+<li><a class="new" href="/w/index.php?title=Super_LoiLoScope&amp;action=edit&amp;redlink=1" title="Super LoiLoScope (存在しないページ)">Super LoiLoScope</a> (<a href="/wiki/LoiLo" title="LoiLo">LoiLo</a>)</li>
+<li><a href="/wiki/PowerDirector" title="PowerDirector">PowerDirector</a> (<a href="/wiki/CyberLink" title="CyberLink">CyberLink</a>)<sup class="reference" id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup> - 同社の<a href="/wiki/SVRT" title="SVRT">SVRT</a>とは排他利用である<sup class="reference" id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup>。</li>
+<li><a href="/wiki/PowerDVD" title="PowerDVD">PowerDVD</a> (<a href="/wiki/CyberLink" title="CyberLink">CyberLink</a>)</li>
+<li><a class="new" href="/w/index.php?title=VideoStudio_Pro_X3&amp;action=edit&amp;redlink=1" title="VideoStudio Pro X3 (存在しないページ)">VideoStudio Pro X3</a> (<a class="new" href="/w/index.php?title=COREL&amp;action=edit&amp;redlink=1" title="COREL (存在しないページ)">COREL</a>)</li>
+<li><a class="new" href="/w/index.php?title=VideoStudio_Ultimate_X3&amp;action=edit&amp;redlink=1" title="VideoStudio Ultimate X3 (存在しないページ)">VideoStudio Ultimate X3</a> (<a class="new" href="/w/index.php?title=COREL&amp;action=edit&amp;redlink=1" title="COREL (存在しないページ)">COREL</a>)</li>
+<li><a href="/wiki/TMPGEnc" title="TMPGEnc">TMPGEnc</a> (ペガシス)</li>
+<li><a href="/wiki/Adobe_Photoshop" title="Adobe Photoshop">Adobe Photoshop</a> CS4（<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%93" title="アドビ">アドビ</a>）<sup class="reference" id="cite_ref-55"><a href="#cite_note-55">[55]</a></sup></li>
+<li><a href="/wiki/Adobe_After_Effects" title="Adobe After Effects">Adobe After Effects</a> CS4（アドビ）</li>
+<li><a href="/wiki/Adobe_Premiere" title="Adobe Premiere">Adobe Premiere</a> Pro CS4（アドビ）<sup class="reference" id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup><sup class="reference" id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup></li>
+<li><a href="/wiki/Blender" title="Blender">Blender</a> (<a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GPL</a>のフリーソフトウェア) <sup class="reference" id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup></li>
+<li><a href="/wiki/Vegas_Pro" title="Vegas Pro">Vegas Pro</a> 10 (<a href="/wiki/Sony_Creative_Software" title="Sony Creative Software">Sony Creative Software</a>)</li>
+<li><a href="/wiki/%E3%83%91%E3%82%B9%E3%82%B2%E3%83%83%E3%82%BF%E3%83%BC" title="パスゲッター">パスゲッター</a>（<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%83%AB" title="インターナル">インターナル</a>）</li>
+<li><a href="/wiki/Any_Video_Converter" title="Any Video Converter">Any Video Converter</a>（フリーソフトウェア・シェアソフトウェア）</li></ul>
+<h3><span id=".E5.88.86.E6.95.A3.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="分散コンピューティング">分散コンピューティング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=15" title="節を編集: 分散コンピューティング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>これらは<a href="/wiki/Berkeley_Open_Infrastructure_for_Network_Computing" title="Berkeley Open Infrastructure for Network Computing">BOINC</a>クライアント上でCUDAを利用する。
+</p>
+<ul><li><a class="mw-redirect" href="/wiki/SETI@Home" title="SETI@Home">SETI@Home</a></li>
+<li><a href="/wiki/MilkyWay@home" title="MilkyWay@home">MilkyWay@home</a></li>
+<li><a href="/wiki/GPUGRID" title="GPUGRID">GPUGRID</a> (PS3GRID)</li>
+<li><a href="/wiki/AQUA@home" title="AQUA@home">AQUA@home</a></li>
+<li><a class="mw-redirect" href="/wiki/Folding@Home" title="Folding@Home">Folding@Home</a>（このプロジェクトのみ、オリジナルのクライアントで動作）</li></ul>
+<h3><span class="mw-headline" id="MATLAB">MATLAB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=16" title="節を編集: MATLAB">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a>とのコラボレーションもサポートされている。MATLABではParallel Computing Toolboxを介してGPUを使用できる<sup class="reference" id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup>。重いプログラムスクリプト実行の高速化に寄与する。ただしCUDAの初期化およびメインメモリ-<a href="/wiki/VRAM" title="VRAM">VRAM</a>間のデータ転送に時間がかかるため、短いスクリプトの場合は逆にトータル処理時間でみるとCPUだけ使用するときよりも遅くなる場合もある。<a class="mw-redirect" href="/wiki/Intel_Xeon" title="Intel Xeon">Intel Xeon</a> X5650を使った場合と比べて、<a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a> C2050を使うことで<a href="/wiki/%E9%AB%98%E9%80%9F%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="高速フーリエ変換">FFT</a>が最大3.5倍高速化されたとの説明がある<sup class="reference" id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup>。
+</p>
+<h3><span class="mw-headline" id="OpenCV">OpenCV</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=17" title="節を編集: OpenCV">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/OpenCV" title="OpenCV">OpenCV</a> 2.2<sup class="reference" id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup>でCUDAを使ったアクセラレータであるgpuモジュールが追加された。OpenCV 3.0ではcudaモジュールに改称された。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=18" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/" rel="nofollow">Release Notes :: CUDA Toolkit Documentation</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">CUDA 10.2でmacOS 10.13までをサポートし、以降はサポートされない。macOS 10.14ではCUDAドライバーがインストールできなくなっている。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/codeworks-android" rel="nofollow">NVIDIA CodeWorks for Android | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="https://docs.nvidia.com/gameworks/index.html#technologies/mobile/cuda_android_main.htm" rel="nofollow">NVIDIA GameWorks Documentation - NVIDIA CUDA for Android</a></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external text" href="https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/" rel="nofollow">What Is CUDA | NVIDIA Official Blog</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/hpc" rel="nofollow">Accelerated Computing | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/cuda-parallel-computing-platform-jp.html" rel="nofollow">開発者向けのCUDA並列コンピューティングプラットフォーム | NVIDIA</a></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a class="external text" href="https://thinkit.co.jp/story/2010/07/30/1678" rel="nofollow">第3回 CUDAとGPUコンピューティングの広がり | Think IT</a></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">日経エレクトロニクス 2007/10/8 「プロセサはマルチ×マルチへ」</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external text" href="http://www.gdep.jp/page/view/254" rel="nofollow">第７回　CUDAプログラミングモデル② | G-DEP:</a></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2011/02/22/hpcsympo2011_tsubame2/" rel="nofollow">HPCシンポジウムで見えたTSUBAME2.0の設計思想 (1) ポストペタスケールへ向けGPUをどう活用していくのか</a></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://www.gdep.jp/page/view/253" rel="nofollow">第６回　CUDAプログラミングモデル① | G-DEP</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.com/object/IO_37226.html" rel="nofollow">Press Release | NVIDIA</a></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/IO_44226.html" rel="nofollow">NVIDIA CUDA 1.0、GPUコンピューティング向けに機能を強化 | NVIDIA</a></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><a class="external text" href="http://www.atmarkit.co.jp/news/200812/10/opencl.html" rel="nofollow">並列プログラミング規格「OpenCL 1.0」が標準として批准 － ＠IT</a></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external text" href="http://game.watch.impress.co.jp/docs/series/3dcg/20110301_430375.html" rel="nofollow">西川善司の3Dゲームファンのためのグラフィックス講座。台頭するDirectCompute技術 - GAME Watch</a></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nec.co.jp/seminar/110929hpc/images/NVIDIA.pdf" rel="nofollow">NVIDIA GPUコンピューティング応用事例のご紹介</a></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="http://car.watch.impress.co.jp/docs/news/20140326_641290.html" rel="nofollow">【GTC2014】NVIDIA、基調講演でCUDAを自動車にもたらす開発キット「JETSON TK1」の提供開始など発表 / NVLink、3Dメモリで、帯域幅問題を解消する新GPU「Pascal（パスカル）」も計画 - Car Watch</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><a class="external text" href="https://pleiades.io/help/clion/cuda-projects.html" rel="nofollow">CUDA プロジェクト | CLion</a></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuBLAS" rel="nofollow">cuBLAS - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cufft" rel="nofollow">cuFFT - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/Thrust" rel="nofollow">Thrust - NVIDIA CUDA ZONE</a></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><a class="external text" href="http://www.phoronix.com/scan.php?page=news_item&amp;px=NVIDIA-CUDA-7-Features" rel="nofollow">NVIDIA Pushes CUDA 7 RC With C++11 Features, Runtime Compilation - Phoronix</a></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><a class="external text" href="http://devblogs.nvidia.com/parallelforall/power-cpp11-cuda-7/" rel="nofollow">The Power of C++11 Programming in CUDA 7 | Parallel Forall</a></span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text"><a class="external text" href="http://developer.download.nvidia.com/compute/cuda/compute-docs/cuda-performance-report.pdf" rel="nofollow">CUDA 8 PERFORMANCE OVERVIEW - November 2016, NVIDIA</a></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><a class="external text" href="https://www.gputechconf.jp/assets/files/1010.pdf" rel="nofollow">CUDA 8.0 新機能のご紹介 - GTC Japan 2016</a></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/fortran_jp.html" rel="nofollow">NVIDIAのCUDAアーキテクチャGPUにおけるFortranサポート</a></span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><a class="external text" href="http://www.softek.co.jp/SPG/Pgi/TIPS/opt_cudaF.html" rel="nofollow">PGI CUDA Fortran のコンパイル・オプション</a></span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-llvm-compiler" rel="nofollow">CUDA LLVM Compiler | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><a class="external text" href="http://thinkit.co.jp/story/2010/07/30/1678/page/0/1" rel="nofollow">第3回 CUDAとGPUコンピューティングの広がり | Think IT（シンクイット）</a></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><a class="external text" href="http://devblogs.nvidia.com/parallelforall/cuda-7-5-pinpoint-performance-problems-instruction-level-profiling/" rel="nofollow">CUDA 7.5: Pinpoint Performance Problems with Instruction-Level Profiling | Parallel Forall</a></span>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text"><a class="external text" href="http://www.hpcwire.jp/archives/3214" rel="nofollow">コンパイラ、そしてもっと：アクセラレーター・プログラミング</a></span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text"><a class="external text" href="http://devblogs.nvidia.com/parallelforall/faster-parallel-reductions-kepler/" rel="nofollow">Faster Parallel Reductions on Kepler | Parallel Forall</a></span>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/series/kepler_gpu/010/" rel="nofollow">Kepler GPUアーキテクチャとプログラム最適化 (10) Keplerから搭載されたレジスタ内のデータの入れ替え命令 | マイナビニュース</a></span>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <span class="reference-text"><a class="external text" href="http://thinkit.co.jp/story/2010/07/30/1678/page/0/1" rel="nofollow">第3回 CUDAとGPUコンピューティングの広がり | Think IT</a></span>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <span class="reference-text"><a class="external text" href="http://ascii.jp/elem/000/000/197/197866/" rel="nofollow">ASCII.jp：OpenCLでCUDAを追撃!?　AMD「ATI Stream」が狙うものは</a></span>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <span class="reference-text"><a class="external text" href="http://acube-corp.com/whats-new/press-release/boltzmanninitiative" rel="nofollow">AMDがSC15にて、「Boltzmann Initiative」を発表 – AMD GPU用C++とCUDAコンパイラー - 株式会社エーキューブ</a></span>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <span class="reference-text"><a class="external text" href="http://gpuopen.com/compute-product/hip-convert-cuda-to-portable-c-code/" rel="nofollow">HIP : C++ Heterogeneous-Compute Interface for Portability - GPUOpen</a></span>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2009/12/25/siggraph02/005.html" rel="nofollow">SIGGRAPH ASIA 2009 - 非プラットフォーム依存パラレルの本命、「OpenCL」最新事情 (6) OpenCLはCUDAやDirectComputeと競合するのか | マイナビニュース</a></span>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <span class="reference-text"><a class="external text" href="http://news.mynavi.jp/articles/2007/09/13/nvidia/003.html" rel="nofollow">"GeForceの父" David Kirk博士、東大で並列コンピューティングについて講演 (4) CUDAの動作の仕組み | マイナビニュース</a></span>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-toolkit-65" rel="nofollow">CUDA Toolkit 6.5</a></span>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-toolkit-70" rel="nofollow">CUDA 7.0 Downloads | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-75-downloads-archive" rel="nofollow">CUDA 7.5 Downloads Archive | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-80-ga2-download-archive" rel="nofollow">CUDA Toolkit 8.0 - Feb 2017 | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-92-download-archive" rel="nofollow">CUDA Toolkit 9.2 Download | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-10.2-download-archive" rel="nofollow">CUDA Toolkit 10.2 Download | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/cuda-downloads" rel="nofollow">CUDA Toolkit 11.3 Download | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html" rel="nofollow">NVIDIA CUDA Toolkit Release Notes</a>”. <i>CUDA Toolkit Documentation</i>. <span title="">2020年7月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <span class="reference-text"><a class="external text" href="https://docs.nvidia.com/cuda/cuda-installation-guide-mac-os-x/index.html#system-requirements" rel="nofollow">Installation Guide Mac OS X :: CUDA Toolkit Documentation</a></span>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/nvidia-cuda-toolkit-developer-tools-mac-hosts" rel="nofollow">NVIDIA CUDA Toolkit - Developer Tools for macOS | NVIDIA Developer</a></span>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <span class="reference-text"><a class="external text" href="https://developer.nvidia.com/optix" rel="nofollow">NVIDIA® OptiX™ Ray Tracing Engine</a></span>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <span class="reference-text"><a class="external text" href="http://blogs.adobe.com/aftereffects/2013/09/gpu-changes-for-cuda-and-opengl-in-after-effects-cc-12-1.html" rel="nofollow">GPU changes (for CUDA and OpenGL) in After Effects CC (12.1) | After Effects region of interest</a></span>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nvidia.co.jp/object/applications_powerdirector7_jp.html" rel="nofollow">PowerDirector 7|NVIDIA</a></span>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <span class="reference-text"><a class="external text" href="http://support.jp.cyberlink.com/showdoc.asp?f=/common/pdr.7/faq/0001" rel="nofollow">CyberLink カスタマーサポート</a></span>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <span class="reference-text"><a class="external text" href="http://www.4gamer.net/games/032/G003263/20080925009/" rel="nofollow">4Gamer.net ― NVIDIA製GPUが「Photoshop」「After Effects」「Premiere Pro」の最新版「CS4」アクセラレーションをサポート。ムービーでその効果をチェック</a></span>
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <span class="reference-text">Premiere Pro CCでは、2基の<a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">NVIDIA Quadro</a> M6000上でCUDAを活用することで、1基の<a class="mw-redirect" href="/wiki/Intel_Xeon" title="Intel Xeon">Intel Xeon</a> E5-2697 v3を用いる場合と比較して、最大で24倍の速度性能向上を提供できるとしている。<a class="external text" href="http://www.nvidia.co.jp/object/adobe-premiere-pro-cc-jp.html" rel="nofollow">Adobe Premiere Pro CC – さらにスピーディーなビデオ編集 | NVIDIA</a></span>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <span class="reference-text">ただし、CUDAによって必ずしも処理が高速化するわけではない。<a class="external text" href="https://helpx.adobe.com/jp/premiere-pro/kb/cpsid_89467.html" rel="nofollow">CUDA/OpenCL/Mercury Playback Engine について（Adobe Premiere Pro）</a></span>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <span class="reference-text"><a class="external text" href="http://wiki.blender.org/index.php/Doc:JA/2.6/Manual/Render/Cycles/GPU_Rendering" rel="nofollow">Doc:JA/2.6/Manual/Render/Cycles/GPU Rendering - BlenderWiki</a></span>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <span class="reference-text"><a class="external text" href="https://jp.mathworks.com/discovery/matlab-gpu.html" rel="nofollow">NVIDIA CUDA に対応した GPU に対する MATLAB GPU 演算のサポート - MATLAB &amp; Simulink</a></span>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <span class="reference-text"><a class="external text" href="https://blogs.mathworks.com/loren/2012/02/06/using-gpus-in-matlab/" rel="nofollow">Using GPUs in MATLAB » Loren on the Art of MATLAB</a></span>
+</li>
+<li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <span class="reference-text"><a class="external text" href="http://www.ros.org/news/2010/12/opencv-22-released.html" rel="nofollow">OpenCV 2.2 Released - ROS robotics news</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=19" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">NVIDIA Tesla</a></li>
+<li><a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">NVIDIA Quadro</a></li>
+<li><a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">NVIDIA GeForce</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ハイパフォーマンスコンピューティング">ハイパフォーマンスコンピューティング</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></li>
+<li><a href="/wiki/GPGPU" title="GPGPU">GPGPU</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="/wiki/DirectCompute" title="DirectCompute">DirectCompute</a></li>
+<li><a href="/wiki/Metal_(API)" title="Metal (API)">Metal (API)</a></li>
+<li><a href="/wiki/Vulkan_(API)" title="Vulkan (API)">Vulkan (API)</a></li>
+<li><a class="mw-redirect" href="/wiki/AMD_Stream" title="AMD Stream">AMD Stream</a> (旧<a class="mw-redirect" href="/wiki/ATI_Stream" title="ATI Stream">ATI Stream</a>) - <a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a> (旧<a href="/wiki/ATI_Technologies" title="ATI Technologies">ATI</a>社) の<a class="mw-redirect" href="/wiki/Radeon" title="Radeon">Radeon</a>、<a class="mw-redirect" href="/wiki/FirePro" title="FirePro">FirePro</a>、<a class="mw-redirect" href="/wiki/FireStream" title="FireStream">FireStream</a>を使用したGPGPUの競合テクノロジー</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E6.9B.B8.E7.B1.8D"></span><span class="mw-headline" id="関連書籍">関連書籍</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=20" title="節を編集: 関連書籍">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r2399935">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-100{font-size:100%}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}</style><div class="refbegin" style="">
+<ul><li><cite class="citation book" id="CITEREF青木尊之2009" style="font-style:normal">青木尊之、額田彰『はじめてのCUDAプログラミング』工学社〈I/O books〉、2009年11月。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4777514779" title="特別:文献資料/978-4777514779">978-4777514779</a>。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/CiNii" title="CiNii">NCID</a> <a class="external text" href="https://ci.nii.ac.jp/ncid/BB00109838/" rel="nofollow">BB00109838</a>。</cite></li>
+<li><cite class="citation book" id="CITEREF岡田賢治2010" style="font-style:normal">岡田賢治『CUDA高速GPUプログラミング入門』小山田耕二・監修、秀和システム、2010年3月。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-7980-2578-0" title="特別:文献資料/978-4-7980-2578-0">978-4-7980-2578-0</a>。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/CiNii" title="CiNii">NCID</a> <a class="external text" href="https://ci.nii.ac.jp/ncid/BB01650115/" rel="nofollow">BB01650115</a>。</cite></li>
+<li><cite class="citation book" id="CITEREFJason_Sanders2011" style="font-style:normal">Jason Sanders; Edward Kandrot (2011). <i>CUDA by example : an introduction to general-purpose GPU programming</i>. Addison-Wesley. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0131387685" title="特別:文献資料/0131387685">0131387685</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/Online_Computer_Library_Center" title="Online Computer Library Center">OCLC</a> <a class="external text" href="https://www.worldcat.org/oclc/535495666" rel="nofollow">535495666</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CUDA+by+example+%3A+an+introduction+to+general-purpose+GPU+programming&amp;rft.aulast=Jason+Sanders&amp;rft.au=Jason+Sanders&amp;rft.date=2011&amp;rft.pub=Addison-Wesley&amp;rft.isbn=0131387685&amp;rft_id=info:oclcnum/535495666&amp;rfr_id=info:sid/ja.wikipedia.org:CUDA"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" id="CITEREF伊藤智義・編2013" style="font-style:normal">『GPUプログラミング入門 = Introduction to GPU Programming : CUDA5による実装』伊藤智義・編、講談社、2013年5月。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-06-153820-7" title="特別:文献資料/978-4-06-153820-7">978-4-06-153820-7</a>。</cite></li></ul>
+</div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=CUDA&amp;action=edit&amp;section=21" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="mbox-small plainlinks sistersitebox noprint" style="border:1px solid #aaa;background-color:#f9f9f9;width:22em;">
+<tbody><tr>
+<td class="mbox-image">ファイル:Commons-logo.svg</td>
+<td class="mbox-text plainlist" style="font-size:100%;">ウィキメディア・コモンズには、<b><span class="plainlinks">[{{fullurl:commons:Category:{{#Property:P373}}|uselang=ja}} CUDA]</span></b>に関連するカテゴリがあります。</td></tr></tbody></table>
+<ul><li><a class="external text" href="https://developer.nvidia.com/cuda-zone" rel="nofollow">CUDA Zone | NVIDIA Developer</a></li></ul>
+<div aria-labelledby="NVIDIA" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="3" scope="col" style="background: #badb80;;background: #77b801;"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;background: #badb80;;background: #77b801;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;background: #badb80;;background: #77b801;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:NVIDIA&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:NVIDIA (存在しないページ)"><span style="font-size:125%;color:#002bb8;;background: #badb80;;background: #77b801;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ANVIDIA&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background: #badb80;;background: #77b801;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ANVIDIA&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background: #badb80;;background: #77b801;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="NVIDIA" style="font-size:110%;margin:0 6em">NVIDIA</div></th></tr><tr><th class="navbox-group" scope="row" style="background: #badb80;;width:1%">企業</th><td class="navbox-list navbox-odd hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">人物</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%BB%E3%82%B9%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%B3" title="ジェン・スン・ファン">ジェン・スン・ファン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%9E%E3%83%A9%E3%82%B3%E3%82%A6%E3%82%B9%E3%82%AD%E3%83%BC&amp;action=edit&amp;redlink=1" title="クリス・マラコウスキー (存在しないページ)">クリス・マラコウスキー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Chris_Malachowsky&amp;action=edit&amp;redlink=1" title="En:Chris Malachowsky (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%BB%E3%83%97%E3%83%AA%E3%82%A8%E3%83%A0&amp;action=edit&amp;redlink=1" title="カーティス・プリエム (存在しないページ)">カーティス・プリエム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Curtis_Priem&amp;action=edit&amp;redlink=1" title="En:Curtis Priem (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%87%E3%82%A4%E3%83%93%E3%83%83%E3%83%89%E3%83%BB%E3%82%AB%E3%83%BC%E3%82%AF&amp;action=edit&amp;redlink=1" title="デイビッド・カーク (存在しないページ)">デイビッド・カーク</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:David_Kirk_(scientist)&amp;action=edit&amp;redlink=1" title="En:David Kirk (scientist) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%93%E3%83%AB%E3%83%BB%E3%83%80%E3%83%AA%E3%83%BC&amp;action=edit&amp;redlink=1" title="ビル・ダリー (存在しないページ)">ビル・ダリー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bill_Dally&amp;action=edit&amp;redlink=1" title="En:Bill Dally (存在しないページ)">英語版</a>）</span></span></li>
+<li>デボラ・ショキスト</li>
+<li>ランガ・ジャヤラマン</li>
+<li>ジョナ・アルベン</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">買収企業</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/3dfx" title="3dfx">3dfx Interactive</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AGEIA_Technologies&amp;action=edit&amp;redlink=1" title="AGEIA Technologies (存在しないページ)">AGEIA Technologies</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ageia&amp;action=edit&amp;redlink=1" title="En:Ageia (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/ALi_(%E4%BC%81%E6%A5%AD)" title="ALi (企業)">ULi</a></li>
+<li><a href="/wiki/ARM%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9" title="ARMホールディングス">ARMホールディングス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Icera&amp;action=edit&amp;redlink=1" title="Icera (存在しないページ)">Icera</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Icera&amp;action=edit&amp;redlink=1" title="En:Icera (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mellanox_Technologies&amp;action=edit&amp;redlink=1" title="Mellanox Technologies (存在しないページ)">Mellanox Technologies</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mellanox_Technologies&amp;action=edit&amp;redlink=1" title="En:Mellanox Technologies (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mental_Images&amp;action=edit&amp;redlink=1" title="Mental Images (存在しないページ)">Mental Images</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mental_Images&amp;action=edit&amp;redlink=1" title="En:Mental Images (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=PortalPlayer&amp;action=edit&amp;redlink=1" title="PortalPlayer (存在しないページ)">PortalPlayer</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:PortalPlayer&amp;action=edit&amp;redlink=1" title="En:PortalPlayer (存在しないページ)">英語版</a>）</span></span></li>
+<li>Exluna</li>
+<li>MediaQ</li>
+<li>Stexar</li></ul>
+</div></td></tr></tbody></table>
+</td><td class="navbox-image" rowspan="2" style="width:1px;padding:0px 0px 0px 2px"><div>ファイル:Nvidia logo.svg</div></td></tr><tr><th class="navbox-group" scope="row" style="background: #badb80;;width:1%">製品・サービス</th><td class="navbox-list navbox-even hlist-hyphen" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">GPU</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/NV1" title="NV1">NV1</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NV2&amp;action=edit&amp;redlink=1" title="NV2 (存在しないページ)">NV2</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:NV2&amp;action=edit&amp;redlink=1" title="En:NV2 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NVIDIA_RIVA" title="NVIDIA RIVA">RIVA</a></li>
+<li><a href="/wiki/NVIDIA_GeForce" title="NVIDIA GeForce">GeForce</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">WS・<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">HPC</a>向け</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/NVIDIA_Quadro" title="NVIDIA Quadro">Quadro</a>
+<ul><li><a href="/wiki/NVIDIA_Quadro#Quadro_Plex" title="NVIDIA Quadro">Quadro Plex</a></li></ul></li>
+<li><a href="/wiki/NVIDIA_Tesla" title="NVIDIA Tesla">Tesla</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">ゲーム機向け</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>NV2A <small>(<a href="/wiki/Xbox_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="Xbox (ゲーム機)">Xbox</a>)</small></li>
+<li><a href="/wiki/RSX_Reality_Synthesizer" title="RSX Reality Synthesizer">RSX Reality Synthesizer</a> <small>(<a href="/wiki/PlayStation_3" title="PlayStation 3">PlayStation 3</a>)</small></li>
+<li>Tegra NX-SoC <small>(<a href="/wiki/Nintendo_Switch" title="Nintendo Switch">Nintendo Switch</a>)</small></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">SoC・組み込み機器</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_GoForce&amp;action=edit&amp;redlink=1" title="NVIDIA GoForce (存在しないページ)">GoForce</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:GoForce&amp;action=edit&amp;redlink=1" title="En:GoForce (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_DRIVE&amp;action=edit&amp;redlink=1" title="NVIDIA DRIVE (存在しないページ)">DRIVE</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_Drive&amp;action=edit&amp;redlink=1" title="En:Nvidia Drive (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NVIDIA_Jetson" title="NVIDIA Jetson">Jetson</a></li>
+<li><a href="/wiki/NVIDIA_Tegra" title="NVIDIA Tegra">Tegra</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">NVIDIA SHIELD</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/NVIDIA_SHIELD_Portable" title="NVIDIA SHIELD Portable">SHIELD Portable</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_SHIELD_%E3%82%BF%E3%83%96%E3%83%AC%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="NVIDIA SHIELD タブレット (存在しないページ)">SHIELD タブレット</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Shield_Tablet&amp;action=edit&amp;redlink=1" title="En:Shield Tablet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_SHIELD_TV&amp;action=edit&amp;redlink=1" title="NVIDIA SHIELD TV (存在しないページ)">SHIELD TV</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_Shield_TV&amp;action=edit&amp;redlink=1" title="En:Nvidia Shield TV (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=GeForce_Now&amp;action=edit&amp;redlink=1" title="GeForce Now (存在しないページ)">GeForce Now</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:GeForce_Now&amp;action=edit&amp;redlink=1" title="En:GeForce Now (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/NVIDIA_ION" title="NVIDIA ION">ION</a></li>
+<li>nForce</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_DGX&amp;action=edit&amp;redlink=1" title="NVIDIA DGX (存在しないページ)">DGX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_DGX&amp;action=edit&amp;redlink=1" title="En:Nvidia DGX (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #badb80;">ソフトウェア・技術</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">マルチメディア・<br/>アクセラレーション</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_NVENC&amp;action=edit&amp;redlink=1" title="NVIDIA NVENC (存在しないページ)">NVENC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_NVENC&amp;action=edit&amp;redlink=1" title="En:Nvidia NVENC (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_PureVideo&amp;action=edit&amp;redlink=1" title="NVIDIA PureVideo (存在しないページ)">PureVideo</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_PureVideo&amp;action=edit&amp;redlink=1" title="En:Nvidia PureVideo (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">ソフトウェア</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cg_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Cg (プログラミング言語)">Cg</a></li>
+<li><a class="mw-selflink selflink">CUDA</a></li>
+<li><a href="/wiki/Gelato_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Gelato (ソフトウェア)">Gelato</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_GameWorks&amp;action=edit&amp;redlink=1" title="NVIDIA GameWorks (存在しないページ)">GameWorks</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_GameWorks&amp;action=edit&amp;redlink=1" title="En:Nvidia GameWorks (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OptiX&amp;action=edit&amp;redlink=1" title="OptiX (存在しないページ)">OptiX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OptiX&amp;action=edit&amp;redlink=1" title="En:OptiX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PhysX" title="PhysX">PhysX</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_RTX&amp;action=edit&amp;redlink=1" title="NVIDIA RTX (存在しないページ)">RTX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_RTX&amp;action=edit&amp;redlink=1" title="En:Nvidia RTX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NVIDIA_Share" title="NVIDIA Share">Share</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_System_Tools&amp;action=edit&amp;redlink=1" title="NVIDIA System Tools (存在しないページ)">System Tools</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_System_Tools&amp;action=edit&amp;redlink=1" title="En:Nvidia System Tools (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=VDPAU&amp;action=edit&amp;redlink=1" title="VDPAU (存在しないページ)">VDPAU</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:VDPAU&amp;action=edit&amp;redlink=1" title="En:VDPAU (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">技術</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_3D_Vision&amp;action=edit&amp;redlink=1" title="NVIDIA 3D Vision (存在しないページ)">3D Vision</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_3D_Vision&amp;action=edit&amp;redlink=1" title="En:Nvidia 3D Vision (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NVIDIA_GeForce_GRID" title="NVIDIA GeForce GRID">GeForce GRID</a></li>
+<li><a href="/wiki/Nvidia_G-Sync" title="Nvidia G-Sync">Nvidia G-Sync</a></li>
+<li><a href="/wiki/NVLink" title="NVLink">NVLink</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NVIDIA_Optimus_Technology&amp;action=edit&amp;redlink=1" title="NVIDIA Optimus Technology (存在しないページ)">Optimus Technology</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nvidia_Optimus&amp;action=edit&amp;redlink=1" title="En:Nvidia Optimus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Scalable_Link_Interface" title="Scalable Link Interface">Scalable Link Interface</a> (SLI)</li>
+<li>Surround</li>
+<li><a href="/wiki/TurboCache" title="TurboCache">TurboCache</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;background: #d6e9b2;">GPUマイクロアーキテクチャ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Tesla_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Tesla (マイクロアーキテクチャ) (存在しないページ)">Tesla</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Tesla_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Tesla (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Fermi_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Fermi (マイクロアーキテクチャ) (存在しないページ)">Fermi</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fermi_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Fermi (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Kepler_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Kepler (マイクロアーキテクチャ) (存在しないページ)">Kepler</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kepler_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Kepler (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Maxwell_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Maxwell (マイクロアーキテクチャ) (存在しないページ)">Maxwell</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Maxwell_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Maxwell (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Pascal_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Pascal (マイクロアーキテクチャ)">Pascal</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Volta_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Volta (マイクロアーキテクチャ) (存在しないページ)">Volta</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Volta_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Volta (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Turing_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Turing (マイクロアーキテクチャ) (存在しないページ)">Turing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Turing_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Turing (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ampere_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Ampere (マイクロアーキテクチャ) (存在しないページ)">Ampere</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ampere_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Ampere (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Hopper_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Hopper (マイクロアーキテクチャ) (存在しないページ)">Hopper</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hopper_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Hopper (microarchitecture) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><td class="navbox-abovebelow" colspan="3" style="background: #badb80;">
+<ul><li>カテゴリ <a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:NVIDIA" title="カテゴリ:NVIDIA">カテゴリ</a></li>
+<li>コモンズ <a class="extiw" href="https://commons.wikimedia.org/wiki/Category:Nvidia" title="commons:Category:Nvidia">コモンズ</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="並列計算" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:並列コンピューティング (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="並列計算" style="font-size:110%;margin:0 6em">並列計算</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">総論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウドコンピューティング</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a></li>
+<li><a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">高性能計算</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="分散コンピューティング">分散コンピューティング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並列レベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E4%B8%A6%E5%88%97%E6%80%A7" title="タスク並列性">タスク</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E8%A8%88%E7%AE%97#ビットレベルの並列性" title="並列計算">ビット</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スレッド</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スーパースレッディング (存在しないページ)">スーパースレッディング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Super-threading&amp;action=edit&amp;redlink=1" title="En:Super-threading (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%A0%E3%83%80%E3%83%BC%E3%83%AB%E3%81%AE%E6%B3%95%E5%89%87" title="アムダールの法則">アムダールの法則</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%82%B9%E3%82%BF%E3%83%95%E3%82%BD%E3%83%B3%E3%81%AE%E6%B3%95%E5%89%87" title="グスタフソンの法則">グスタフソンの法則</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%82%B9%E3%83%88%E5%8A%B9%E7%8E%87%E6%80%A7&amp;action=edit&amp;redlink=1" title="コスト効率性 (存在しないページ)">コスト効率性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cost_efficiency&amp;action=edit&amp;redlink=1" title="En:Cost efficiency (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="Karp-Flatt metric (存在しないページ)">Karp-Flatt metric</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="En:Karp-Flatt metric (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_slowdown&amp;action=edit&amp;redlink=1" title="Parallel slowdown (存在しないページ)">Parallel slowdown</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_slowdown&amp;action=edit&amp;redlink=1" title="En:Parallel slowdown (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Speedup&amp;action=edit&amp;redlink=1" title="Speedup (存在しないページ)">Speedup</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Speedup&amp;action=edit&amp;redlink=1" title="En:Speedup (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">要素</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ファイバー (コンピュータ)">ファイバー</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A9%9F%E6%A2%B0" title="並列ランダムアクセス機械">PRAM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Instruction_window&amp;action=edit&amp;redlink=1" title="Instruction window (存在しないページ)">Instruction window</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Instruction_window&amp;action=edit&amp;redlink=1" title="En:Instruction window (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">調整</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ">キャッシュコヒーレンシ</a></li>
+<li><a href="/wiki/%E5%90%8C%E6%9C%9F_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="同期 (計算機科学)">同期</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AA%E3%82%A2_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="バリア (計算機科学)">バリア</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9" title="メモリコヒーレンス">メモリコヒーレンス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cache_invalidation&amp;action=edit&amp;redlink=1" title="Cache invalidation (存在しないページ)">Cache invalidation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cache_invalidation&amp;action=edit&amp;redlink=1" title="En:Cache invalidation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Application_checkpointing&amp;action=edit&amp;redlink=1" title="Application checkpointing (存在しないページ)">Application checkpointing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Application_checkpointing&amp;action=edit&amp;redlink=1" title="En:Application checkpointing (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド (コンピュータ)</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E5%8C%96" title="並列化">並列プログラミングモデル</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Implicit_parallelism&amp;action=edit&amp;redlink=1" title="Implicit parallelism (存在しないページ)">Implicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Implicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Implicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Explicit_parallelism&amp;action=edit&amp;redlink=1" title="Explicit parallelism (存在しないページ)">Explicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Explicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Explicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E6%80%A7" title="並行性">並行性</a></li></ul></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="フリンの分類">フリンの分類</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SPMD&amp;action=edit&amp;redlink=1" title="SPMD (存在しないページ)">SPMD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SPMD&amp;action=edit&amp;redlink=1" title="En:SPMD (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul></li>
+<li><a href="/wiki/Lock-free%E3%81%A8Wait-free%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Lock-freeとWait-freeアルゴリズム">Lock-freeとWait-freeアルゴリズム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ハードウェア</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a></li>
+<li>マルチプロセッシング
+<ul><li><a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型</a></li>
+<li><a class="new" href="/w/index.php?title=En:Asymmetric_multiprocessing&amp;action=edit&amp;redlink=1" title="En:Asymmetric multiprocessing (存在しないページ)">非対称型</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li></ul></li>
+<li>メモリ
+<ul><li><a href="/wiki/NUMA" title="NUMA">NUMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Cache_only_memory_architecture&amp;action=edit&amp;redlink=1" title="En:Cache only memory architecture (存在しないページ)">en:COMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Distributed_memory&amp;action=edit&amp;redlink=1" title="En:Distributed memory (存在しないページ)">en:分散型</a></li>
+<li><a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有型</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="分散共有メモリ">分散共有型</a></li></ul></li>
+<li><a href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="同時マルチスレッディング">SMT</a></li>
+<li><a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">MPP</a></li>
+<li><a href="/wiki/Beowulf" title="Beowulf">Beowulf</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">API</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ateji_PX&amp;action=edit&amp;redlink=1" title="Ateji PX (存在しないページ)">Ateji PX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ateji_PX&amp;action=edit&amp;redlink=1" title="En:Ateji PX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Boost_C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA#マルチスレッド" title="Boost C++ライブラリ">Boostスレッド</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Charm%2B%2B&amp;action=edit&amp;redlink=1" title="Charm++ (存在しないページ)">Charm++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Charm%2B%2B&amp;action=edit&amp;redlink=1" title="En:Charm++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cilk&amp;action=edit&amp;redlink=1" title="Cilk (存在しないページ)">Cilk</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cilk&amp;action=edit&amp;redlink=1" title="En:Cilk (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Coarray_Fortran&amp;action=edit&amp;redlink=1" title="Coarray Fortran (存在しないページ)">Coarray Fortran</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coarray_Fortran&amp;action=edit&amp;redlink=1" title="En:Coarray Fortran (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">CUDA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dryad&amp;action=edit&amp;redlink=1" title="Dryad (存在しないページ)">Dryad</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dryad_(programming)&amp;action=edit&amp;redlink=1" title="En:Dryad (programming) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Global_Arrays&amp;action=edit&amp;redlink=1" title="Global Arrays (存在しないページ)">Global Arrays</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Global_Arrays&amp;action=edit&amp;redlink=1" title="En:Global Arrays (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="Intel Cilk Plus (存在しないページ)">Intel Cilk Plus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="En:Intel Cilk Plus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_Threading_Building_Blocks" title="Intel Threading Building Blocks">Intel Threading Building Blocks</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenHMPP&amp;action=edit&amp;redlink=1" title="OpenHMPP (存在しないページ)">OpenHMPP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenHMPP&amp;action=edit&amp;redlink=1" title="En:OpenHMPP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" title="POSIXスレッド">POSIXスレッド</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">問題</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Embarrassingly_parallel&amp;action=edit&amp;redlink=1" title="En:Embarrassingly parallel (存在しないページ)">en:Embarrassingly parallel</a></li>
+<li><a class="new" href="/w/index.php?title=En:Grand_Challenge_problem&amp;action=edit&amp;redlink=1" title="En:Grand Challenge problem (存在しないページ)">en:Grand Challenge</a></li>
+<li><a class="new" href="/w/index.php?title=En:Software_lockout&amp;action=edit&amp;redlink=1" title="En:Software lockout (存在しないページ)">en:Software lockout</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="並行計算">並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="カテゴリ:並行計算">カテゴリ:並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">カテゴリ:並列コンピューティング</a></li></ul></td></tr></tbody></table></div>
+
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-2"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331200155
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.752 seconds
+Real time usage: 1.328 seconds
+Preprocessor visited node count: 6587/1000000
+Post‐expand include size: 216286/2097152 bytes
+Template argument size: 10343/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 55/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 38628/5000000 bytes
+Lua time usage: 0.400/7 seconds
+Lua virtual size: 8839168/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1169.926      1 -total
+ 33.63%  393.502      2 テンプレート:Navbox
+ 31.58%  369.421      4 テンプレート:Navbox_subgroup
+ 28.36%  331.775     53 テンプレート:仮リンク
+ 24.70%  288.958      4 テンプレート:Cite_book
+ 24.17%  282.825      1 テンプレート:NVIDIA
+ 20.27%  237.136      2 テンプレート:Infobox
+ 16.93%  198.125      3 テンプレート:Cite_book/和書
+ 16.29%  190.579      1 テンプレート:Infobox_Software
+ 12.35%  144.500      4 テンプレート:ISBN2
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:791637-0!canonical and timestamp 20220331200153 and revision id 494543. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=CUDA&amp;oldid=494543">http://localhost:8080/w/index.php?title=CUDA&amp;oldid=494543</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9B%96%E6%98%A7%E3%81%95%E5%9B%9E%E9%81%BF%E3%81%AE%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:曖昧さ回避の必要なリンクのあるページ">曖昧さ回避の必要なリンクのあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:GPGPU" title="カテゴリ:GPGPU">GPGPU</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:GPGPU%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC" title="カテゴリ:GPGPUライブラリー">GPGPUライブラリー</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89" title="カテゴリ:グラフィックカード">グラフィックカード</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">並列コンピューティング</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83" title="カテゴリ:統合開発環境">統合開発環境</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:NVIDIA" title="カテゴリ:NVIDIA">NVIDIA</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=CUDA&amp;returntoquery=curid%3D791637%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=CUDA&amp;returntoquery=curid%3D791637%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/CUDA" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:CUDA&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/CUDA">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=CUDA&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=CUDA&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/CUDA" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/CUDA" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=CUDA&amp;oldid=494543" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=CUDA&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月17日 (火) 21:10 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.752","walltime":"1.328","ppvisitednodes":{"value":6587,"limit":1000000},"postexpandincludesize":{"value":216286,"limit":2097152},"templateargumentsize":{"value":10343,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":55,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":38628,"limit":5000000},"timingprofile":["100.00% 1169.926      1 -total"," 33.63%  393.502      2 テンプレート:Navbox"," 31.58%  369.421      4 テンプレート:Navbox_subgroup"," 28.36%  331.775     53 テンプレート:仮リンク"," 24.70%  288.958      4 テンプレート:Cite_book"," 24.17%  282.825      1 テンプレート:NVIDIA"," 20.27%  237.136      2 テンプレート:Infobox"," 16.93%  198.125      3 テンプレート:Cite_book/和書"," 16.29%  190.579      1 テンプレート:Infobox_Software"," 12.35%  144.500      4 テンプレート:ISBN2"]},"scribunto":{"limitreport-timeusage":{"value":"0.400","limit":"7"},"limitreport-virtmemusage":{"value":8839168,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331200155","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1908});});</script>
+</body></html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>MIDI - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-MIDI rootpage-MIDI skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">MIDI</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><style data-mw-deduplicate="TemplateStyles:r2633220">.mw-parser-output .hatnote{margin:0.5em 0;padding:3px 2em;background-color:transparent;border-bottom:1px solid #a2a9b1;font-size:90%}</style>
+<p><b>MIDI</b>（ミディ、<b>M</b>usical <b>I</b>nstrument <b>D</b>igital <b>I</b>nterface）は、<a href="." id="link_a_1" title="電子楽器">電子楽器</a>の演奏データを機器間で転送・共有するための共通規格である<sup class="reference" id="cite_ref-:0_1-0"><a href="#cite_note-:0-1">[1]</a></sup>。日本のMIDI規格協議会（JMSC、現在の社団法人<a href="." id="link_a_2" title="音楽電子事業協会">音楽電子事業協会</a>）と国際団体の<a href="." id="link_a_3" title="MIDI Manufacturers Association">MIDI Manufacturers Association</a> (MMA) により策定され1981年に公開された。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ハードウェア規格"><span class="tocnumber">2</span> <span class="toctext">ハードウェア規格</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#送信"><span class="tocnumber">2.1</span> <span class="toctext">送信</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#接続"><span class="tocnumber">2.2</span> <span class="toctext">接続</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#チャンネル"><span class="tocnumber">2.3</span> <span class="toctext">チャンネル</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#データフォーマット"><span class="tocnumber">3</span> <span class="toctext">データフォーマット</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#MIDIメッセージ"><span class="tocnumber">3.1</span> <span class="toctext">MIDIメッセージ</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#チャンネルメッセージ"><span class="tocnumber">3.1.1</span> <span class="toctext">チャンネルメッセージ</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="#チャンネルボイスメッセージ"><span class="tocnumber">3.1.1.1</span> <span class="toctext">チャンネルボイスメッセージ</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#チャンネルモードメッセージ"><span class="tocnumber">3.1.1.2</span> <span class="toctext">チャンネルモードメッセージ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-11"><a href="#システムメッセージ"><span class="tocnumber">3.1.2</span> <span class="toctext">システムメッセージ</span></a>
+<ul>
+<li class="toclevel-4 tocsection-12"><a href="#システムエクスクルーシブメッセージ"><span class="tocnumber">3.1.2.1</span> <span class="toctext">システムエクスクルーシブメッセージ</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#システムコモンメッセージ"><span class="tocnumber">3.1.2.2</span> <span class="toctext">システムコモンメッセージ</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#システムリアルタイムメッセージ"><span class="tocnumber">3.1.2.3</span> <span class="toctext">システムリアルタイムメッセージ</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#サンプルダンプ"><span class="tocnumber">3.2</span> <span class="toctext">サンプルダンプ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#RP"><span class="tocnumber">4</span> <span class="toctext">RP</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#スタンダードMIDIファイル"><span class="tocnumber">4.1</span> <span class="toctext">スタンダードMIDIファイル</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#GM"><span class="tocnumber">4.2</span> <span class="toctext">GM</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#DLS"><span class="tocnumber">4.3</span> <span class="toctext">DLS</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#XMF"><span class="tocnumber">4.4</span> <span class="toctext">XMF</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#MIDIショーコントロール"><span class="tocnumber">4.5</span> <span class="toctext">MIDIショーコントロール</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#MIDIタイムコード"><span class="tocnumber">4.6</span> <span class="toctext">MIDIタイムコード</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#記譜情報"><span class="tocnumber">4.7</span> <span class="toctext">記譜情報</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#ファイルダンプ"><span class="tocnumber">4.8</span> <span class="toctext">ファイルダンプ</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#MIDIマシンコントロール"><span class="tocnumber">4.9</span> <span class="toctext">MIDIマシンコントロール</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#SMF_with_Lyrics"><span class="tocnumber">4.10</span> <span class="toctext">SMF with Lyrics</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#MIDI_Media_Adaptation_Layer_for_IEEE-1394"><span class="tocnumber">4.11</span> <span class="toctext">MIDI Media Adaptation Layer for IEEE-1394</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#SP-MIDI"><span class="tocnumber">4.12</span> <span class="toctext">SP-MIDI</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#MIDI_XML"><span class="tocnumber">4.13</span> <span class="toctext">MIDI XML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#その他の規格"><span class="tocnumber">5</span> <span class="toctext">その他の規格</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#GSフォーマット"><span class="tocnumber">5.1</span> <span class="toctext">GSフォーマット</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#XGフォーマット"><span class="tocnumber">5.2</span> <span class="toctext">XGフォーマット</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="#用途と機器"><span class="tocnumber">6</span> <span class="toctext">用途と機器</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="#音楽制作"><span class="tocnumber">6.1</span> <span class="toctext">音楽制作</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#録音・MA"><span class="tocnumber">6.2</span> <span class="toctext">録音・MA</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#カラオケ"><span class="tocnumber">6.3</span> <span class="toctext">カラオケ</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#モバイル機器・着信メロディ"><span class="tocnumber">6.4</span> <span class="toctext">モバイル機器・着信メロディ</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#舞台照明・演出"><span class="tocnumber">6.5</span> <span class="toctext">舞台照明・演出</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#音声合成"><span class="tocnumber">6.6</span> <span class="toctext">音声合成</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#その他"><span class="tocnumber">6.7</span> <span class="toctext">その他</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-41"><a href="#MIDI検定"><span class="tocnumber">7</span> <span class="toctext">MIDI検定</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="#年表"><span class="tocnumber">8</span> <span class="toctext">年表</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="#出典"><span class="tocnumber">9</span> <span class="toctext">出典</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MIDIは音楽制作の現場で幅広く利用されている。MIDI規格に則って作成されたデータは、<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタルオーディオワークステーション">DAW</a>をはじめとした<a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">シーケンサー</a>などで再生・編集することができる。
+</p><p>物理的な送受信回路・<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>、通信<a href="/wiki/%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="プロトコル">プロトコル</a>、<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="ファイルフォーマット">ファイルフォーマット</a>など複数の規定からなる。MIDI 1.0の策定完了から38年後の<a href="/wiki/2019%E5%B9%B4" title="2019年">2019年</a>に、Ver.2.0となるMIDI 2.0の策定開始が発表された<sup class="reference" id="cite_ref-:0_1-1"><a href="#cite_note-:0-1">[1]</a></sup>。
+</p><p>MIDIデータは、音声データ（マイクなどで録音した音の波形を<a href="/wiki/%E6%A8%99%E6%9C%AC%E5%8C%96" title="標本化">サンプリング</a>したもの）ではなく演奏情報（発音せよ、音の高さは - 、音の大きさは - 、といった楽器や音源への<a href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="メッセージ (コンピュータ)">メッセージ</a>）であり、データサイズが小さく、また音楽の細部を容易に変更することができる。
+</p><p>電子楽器以外では<a href="/wiki/%E5%8A%87%E5%A0%B4" title="劇場">劇場</a>の<a href="/wiki/%E8%88%9E%E5%8F%B0%E7%85%A7%E6%98%8E" title="舞台照明">舞台照明</a>のコントロールなどにも応用されている。また、MIDI規格と<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">パソコン</a>の普及は、ホビーとしての音楽制作（<a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF" title="デスクトップミュージック">DTM</a>）を一般化した。
+</p><p>当初、MIDI規格は、ハードウェアとソフトウェアの両分野にまたがり策定された。ハードウェアの規格は、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>や送受信回路・端子に関することであり、ソフトウェアの規格は、データフォーマット（機器同士が<a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0" title="リアルタイム">リアルタイム</a>通信する際の規格であって、MIDIデータを保存流通させる<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="ファイルフォーマット">ファイルフォーマット</a>とは異なる）に関することである。
+</p><p>その後、MIDIの普及に伴いRP（Recommended Practice、推奨実施例）という拡張規格が策定された。音色配列などを厳密に定めた<a href="/wiki/General_MIDI" title="General MIDI">GMシステムレベル1</a>や、MIDIデータを保存流通させるファイルフォーマット、劇場の舞台照明をコントロールする規格（<a class="new" href="/w/index.php?title=MIDI%E3%82%B7%E3%83%A7%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="MIDIショーコントロール (存在しないページ)">MIDIショーコントロール</a>）が、このRPに含まれる。
+</p><p>MIDIはJIS（<a href="/wiki/%E6%97%A5%E6%9C%AC%E7%94%A3%E6%A5%AD%E8%A6%8F%E6%A0%BC" title="日本産業規格">日本産業規格</a>）によって以下のように<a href="/wiki/%E8%A6%8F%E6%A0%BC%E5%8C%96" title="規格化">規格化</a>されている。
+</p>
+<ol><li>X 6054-1 電子楽器デジタルインタフェース（MIDI）- 第1部：総則</li>
+<li>X 6054-2 電子楽器デジタルインタフェース（MIDI）- 第2部：プロトコル仕様</li></ol>
+<h2><span id=".E3.83.8F.E3.83.BC.E3.83.89.E3.82.A6.E3.82.A7.E3.82.A2.E8.A6.8F.E6.A0.BC"></span><span class="mw-headline" id="ハードウェア規格">ハードウェア規格</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=2" title="節を編集: ハードウェア規格">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+
+<h3><span id=".E9.80.81.E4.BF.A1"></span><span class="mw-headline" id="送信">送信</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=3" title="節を編集: 送信">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>31.25Kbps (±1%) の非同期方式<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E9%80%9A%E4%BF%A1" title="シリアル通信">シリアル転送</a>を用いる。
+</p>
+<h3><span id=".E6.8E.A5.E7.B6.9A"></span><span class="mw-headline" id="接続">接続</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=4" title="節を編集: 接続">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIDI機器（ハードウェア）は5ピンの<a href="/wiki/DIN%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%BF" title="DINコネクタ">DINコネクタ</a>で接続するのが一般的である。両端に位置する1番ピンと3番ピンは現在の仕様上では使用されず、中央2番ピンはケーブルの<a href="/wiki/%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%89" title="シールド">シールド</a>用に、4番、5番ピンがデジタル信号の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%AB%E3%83%BC%E3%83%97&amp;action=edit&amp;redlink=1" title="カレントループ (存在しないページ)">カレントループ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Digital_current_loop_interface&amp;action=edit&amp;redlink=1" title="En:Digital current loop interface (存在しないページ)">英語版</a>）</span></span>伝送に使用される。MIDIケーブルの両端はどちらもオス端子で、シールドされた<a href="/wiki/%E3%83%84%E3%82%A4%E3%82%B9%E3%83%88%E3%83%9A%E3%82%A2%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB" title="ツイストペアケーブル">ツイストペアケーブル</a>として設計される。
+</p><p>コネクタには、MIDI信号を受け取るMIDI IN、MIDI信号を送信するMIDI OUT、受信したMIDI信号をそのまま送信するMIDI THRUの3種類がある。機器パネル側は常にメス端子となる。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B0%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%83%97&amp;action=edit&amp;redlink=1" title="グラウンドループ (存在しないページ)">グラウンドループ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ground_loop_(electricity)&amp;action=edit&amp;redlink=1" title="En:Ground loop (electricity) (存在しないページ)">英語版</a>）</span></span>や障害の連鎖防止のため、MIDI機器同士には電気的<a href="/wiki/%E7%B5%B6%E7%B8%81_(%E9%9B%BB%E6%B0%97)" title="絶縁 (電気)">絶縁</a>が規定されており、受信側内部では<a href="/wiki/%E6%8E%A5%E5%9C%B0" title="接地">接地</a>線の2番ピンは接続されず、信号は<a href="/wiki/%E3%83%95%E3%82%A9%E3%83%88%E3%82%AB%E3%83%97%E3%83%A9" title="フォトカプラ">フォトカプラ</a>で受信される基本仕様となっている。フォトカプラを経由するたびに信号波形の再現性が下がるため、MIDI THRUを多段直列すると通信エラーが発生することもある。並列に複数のMIDI機器を接続する場合や、信号系統を簡単に切り替えたい時はMIDI<a class="mw-redirect" href="/wiki/%E3%83%91%E3%83%83%E3%83%81%E3%83%99%E3%82%A4" title="パッチベイ">パッチベイ</a>を用いるが、これを使うことにより多段時の通信エラーも回避できる。
+</p><p>MIDIは<a href="/wiki/%E3%83%90%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="バス (コンピュータ)">バス</a>ではない。MIDI IN端子とMIDI OUT端子が別々で用意されていることから判るように、MIDIケーブル間のデータは一方向に送信される。
+</p><p>後述するアクティブセンシング機能で、接続状態が良好か、断線していないかを常に判定しており、アクティブセンシングが途絶えたとき、お互いのMIDI機器はケーブルが抜けたと判定するように作られている。
+</p><p>現代には、MIDI IN、MIDI OUTを使わず<a href="/wiki/RS-232" title="RS-232">RS-232C</a>、<a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%90%E3%82%B9" title="ユニバーサル・シリアル・バス">USB</a>、<a href="/wiki/IEEE_1394" title="IEEE 1394">IEEE 1394</a>などの規格を使った接続を行う機器も存在している。この場合、MIDIケーブルではなくこれらの規格のケーブル内をMIDI信号が通るため、転送に関して上記の通りではない。
+</p>
+<h3><span id=".E3.83.81.E3.83.A3.E3.83.B3.E3.83.8D.E3.83.AB"></span><span class="mw-headline" id="チャンネル">チャンネル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=5" title="節を編集: チャンネル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2本のMIDIケーブルを用い、お互いの機器のMIDI IN、MIDI OUTをそれぞれつないだ状態を1つの「システム」と捉える。このシステム毎に16の<a href="/wiki/%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB" title="チャンネル">チャンネル</a>が用意される。基本的にひとつのチャンネルにひとつの楽器（1パート）が割り当てられる。
+</p><p>これにより、1本のMIDIケーブルで16チャンネル分のデータを送信もしくは受信させることができる。例えば「1チャンネルのピアノと3チャンネルのギターを鳴らす」といったことである。16チャンネル分のデータは、後述する「チャンネルメッセージ」にて正確に分類され、相手機器の各チャンネルに届く。
+</p><p>それ以上のチャンネルを制御するためにはMIDIケーブルが複数本必要となり、MIDIデータのパート数（=チャンネル数）によっては、複数のMIDI音源を用意する必要もでてくる。
+</p>
+<h2><span id=".E3.83.87.E3.83.BC.E3.82.BF.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.83.E3.83.88"></span><span class="mw-headline" id="データフォーマット">データフォーマット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=6" title="節を編集: データフォーマット">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="MIDI.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="MIDIメッセージ">MIDIメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=7" title="節を編集: MIDIメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIDI規格上のデータの送受信は、すべて<b>MIDIメッセージ</b>で行われる。MIDIメッセージは、複数の<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88_(%E6%83%85%E5%A0%B1)" title="バイト (情報)">バイト</a>（<a href="/wiki/8%E3%83%93%E3%83%83%E3%83%88" title="8ビット">8ビット</a>）で構成されている。「電子楽器の鍵盤を弾いたことで音が出る」という一連の流れもMIDIメッセージで制御されている。バイト単位で処理していくため、文言上では<a href="/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95" title="十六進法">16進数</a>を用い、数の後にHを付ける。
+</p><p>MIDIメッセージを効率よく送信するために、MIDIメッセージに使用されるバイトは「ステータスバイト」か「データバイト」の大きく2種類に分けられる。ステータスバイトとは<a href="/wiki/%E6%9C%80%E4%B8%8A%E4%BD%8D%E3%83%93%E3%83%83%E3%83%88" title="最上位ビット">MSB</a> (Most Significant Bit)が「1」、すなわち80H - FFHまでの128個のバイトを指し、データバイトとはMSBが「0」、すなわち00H - 7FHまでの128個のバイトを指す。
+</p><p>MIDIメッセージは複数のバイトで構成されていると前述したが、これらの先頭は常にステータスバイトで始まり、ステータスバイトの後に任意の個数のデータバイトが続く。ステータスバイトでは、ノートオンやコントロールチェンジ、システムエクスクルーシブなどを定義する。データバイトは、ステータスバイトで定義したものについて、その内容や数値を指定するのに使用する。
+</p><p>ステータスバイトが80H - FFHのうち何であるかによって、「チャンネルメッセージ」、「システムメッセージ」に分かれる。
+</p>
+<h4><span id=".E3.83.81.E3.83.A3.E3.83.B3.E3.83.8D.E3.83.AB.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="チャンネルメッセージ">チャンネルメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=8" title="節を編集: チャンネルメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>チャンネルメッセージとは、特にチャンネルを指定して送信するMIDIメッセージのことである。チャンネルメッセージのステータスバイトは80H - EFHである。ここからさらに「チャンネルボイスメッセージ」、「チャンネルモードメッセージ」と分類される。
+</p>
+<h5><span id=".E3.83.81.E3.83.A3.E3.83.B3.E3.83.8D.E3.83.AB.E3.83.9C.E3.82.A4.E3.82.B9.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="チャンネルボイスメッセージ">チャンネルボイスメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=9" title="節を編集: チャンネルボイスメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+
+<p>チャンネルボイスメッセージとは、音を鳴らす、止める、<a href="/wiki/%E9%9F%B3%E8%89%B2" title="音色">音色</a>を変える、<a href="/wiki/%E9%9F%B3%E9%AB%98" title="音高">ピッチ</a>を変えるといった、音源の演奏に必要な情報に関する定義のことである。最大2つのデータバイトが続くことで、その内容・数値を決定する。
+</p><p>ステータスバイトの下位4ビットがMIDIチャンネル番号-1（0(0H)Hはチャンネル1、15（FH)はチャンネル16）を表している。
+</p><p>データバイトにて指定する<b><a href="/wiki/%E3%83%8E%E3%83%BC%E3%83%88%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC" title="ノートナンバー">ノートナンバー</a></b>とは、最も低い音を0、最も高い音を127と割り当てた音の高さのことであり、半音刻みとなっている。<a href="/wiki/%E4%B8%AD%E5%A4%AE%E3%83%8F" title="中央ハ">中央ハ</a>にはノートナンバー60が割り当てられ、88鍵盤の<a href="/wiki/%E3%83%94%E3%82%A2%E3%83%8E" title="ピアノ">ピアノ</a>で出せる音域（A0 - C8の7オクターブと短3度）はノートナンバー21 - 108と割り当てられるので、MIDIでは<a href="/wiki/88%E9%8D%B5%E3%81%AE%E3%83%94%E3%82%A2%E3%83%8E%E3%81%AE%E9%9F%B3%E5%9F%9F%E5%A4%96%E3%81%AE%E9%9F%B3" title="88鍵のピアノの音域外の音">それよりさらに広い音域</a>（C-1 - G9の10オクターブと完全5度）をカバーできる。また、<b>ベロシティ</b>とは音の強さ(楽器で例えれば各弦や各鍵を弾く速さによって変化する音の強弱(<a href="/wiki/%E5%BC%B7%E5%BC%B1%E6%B3%95" title="強弱法">強弱法</a>))のことである。1 - 127まであり<a href="/wiki/%E5%BC%B7%E5%BC%B1%E6%B3%95" title="強弱法">mp（メゾピアノ）</a>が64となり、127が最も強く、1が最も弱く、数値が0の場合は発音の終了（楽器で例えれば離鍵など）を表す<sup class="reference" id="cite_ref-FOOTNOTE音楽電子事業協会20162-10_2-0"><a href="#cite_note-FOOTNOTE音楽電子事業協会20162-10-2">[2]</a></sup>。
+</p><p>なお、以下の説明では、これら0 - 127までの数字を、<a href="/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95" title="十六進法">16進数</a>で表記する。また、nはチャンネル番号を表わす。
+</p>
+<dl><dt>8nH ノートオフ</dt>
+<dd>音を止める命令。鍵盤楽器ではキーを離した時に送信される。ノートオフによって鳴っている音を止める。</dd>
+<dd>第1データバイト - ノートナンバーを指定</dd>
+<dd>第2データバイト - オフベロシティ値</dd>
+<dt>9nH ノートオン</dt>
+<dd>音を鳴らす命令。鍵盤楽器ではキーを押した時に送信される。この後ノートオフが送信されないままだと、音が鳴りっぱなしとなる。</dd>
+<dd>第1データバイト - ノートナンバーを指定</dd>
+<dd>第2データバイト - ベロシティ値</dd>
+<dd>なお「ノートオン・ベロシティ0」もノートオフと同じメッセージとみなされる。</dd>
+<dt>AnH ポリフォニック キープレッシャー</dt>
+<dd>鍵盤楽器で、キーを押した状態でさらにその圧力を変化させた場合に（いわゆるアフタータッチ）、その圧力に応じて送信される。</dd>
+<dd>第1データバイト - ノートナンバーを指定</dd>
+<dd>第2データバイト - プレッシャー値</dd>
+<dt>BnH コントロールチェンジ</dt>
+<dd>音量、音質など様々な要素を制御するための命令。</dd>
+<dd>第1データバイト - コントロールナンバー（00H - 77H）を指定 - どのパラメータをコントロールするのか指定</dd>
+<dd>第2データバイト - コントロール値 - コントロール番号にて指定した要素の大小や強弱を設定</dd>
+<dd>ただし第1データバイトが78H - 7FH（120 - 127）の場合はコントロールチェンジではなく、チャンネルモードメッセージとなる。</dd>
+<dt>CnH プログラムチェンジ</dt>
+<dd>音色を変える命令。00H - 7FHで、最大128種類から音色を選択できる。</dd>
+<dd>第1データバイト - プログラムナンバーを指定</dd>
+<dd>第2データバイトは使用しない。</dd>
+<dt>DnH チャンネルプレッシャー</dt>
+<dd>鍵盤楽器で、キーを押した状態でさらにその圧力を変化させた場合に、その圧力に応じて送信される。ポリフォニック キープレッシャーと違い、そのチャンネルの全ノートナンバーに対して適用される。</dd>
+<dd>第1データバイト - プレッシャー値</dd>
+<dd>第2データバイトは使用しない。</dd>
+<dt>EnH ピッチベンド</dt>
+<dd>鳴っている音の<a href="/wiki/%E9%9F%B3%E9%AB%98" title="音高">ピッチ</a>を変える命令。MSB (Most Significant Byte) 128段階の1段階ずつをさらに<a href="/wiki/%E6%9C%80%E4%B8%8B%E4%BD%8D%E3%83%93%E3%83%83%E3%83%88" title="最下位ビット">LSB</a> (Least Significant Byte) で128分割しているので、計16384段階の細かい指定ができる。<a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">シーケンサー</a>上では、-8192 - 0 - 8191といった数値で表示することが多い。</dd>
+<dd>第1データバイト - ピッチベンド値MSB</dd>
+<dd>第2データバイト - ピッチベンド値LSB</dd></dl>
+<p>ステータスバイト部のnには0H - FHが代入され、これは1チャンネル - 16チャンネルを表す。「90H 3CH 40H」というMIDIメッセージがあったとすると、これは「ノートオン、1チャンネル。3CH=60なので<a href="/wiki/%E4%B8%AD%E5%A4%AE%E3%83%8F" title="中央ハ">中央ハ</a>を鳴らす。40H=64なので<a href="/wiki/%E5%BC%B7%E5%BC%B1%E6%B3%95" title="強弱法">mp</a>で鳴らす」という命令である。
+</p>
+<h5><span id=".E3.83.81.E3.83.A3.E3.83.B3.E3.83.8D.E3.83.AB.E3.83.A2.E3.83.BC.E3.83.89.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="チャンネルモードメッセージ">チャンネルモードメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=10" title="節を編集: チャンネルモードメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>チャンネルモードメッセージとは、ある楽器は和音が出せるのか、16チャンネルは区別するのかしないのか、といったことを設定するための定義のことである。BnHで始まるがコントロールチェンジには含まれず、BnHのあとに78H - 7FHが続くと、チャンネルモードメッセージのいずれかと判断される。多くの場合、第2データバイトには00Hが<a href="/wiki/%E3%83%80%E3%83%9F%E3%83%BC" title="ダミー">ダミー</a>として送信され、受信側も無視する。ステータスバイト部のnには0H - FHが代入され、これは1チャンネル - 16チャンネルを表す。
+</p>
+<dl><dt>BnH 78H オールサウンドオフ</dt>
+<dd>該当するチャンネルの発音中の音を直ちに消音する。後述のオールノートオフより強制力が強い。</dd>
+<dt>BnH 79H リセットオールコントローラ</dt>
+<dd>該当するチャンネルの全種類のコントロール値を初期化する。初期化されるコントロールや初期値は、受信するMIDI機器側に依存する。</dd>
+<dt>BnH 7AH ローカルコントロール</dt>
+<dd>鍵盤と音源を兼ねそろえたシンセサイザーの、鍵盤部と音源部の内部的な接続に関する設定。第2データバイトを指定することでオンオフを行う。</dd>
+<dd>00H - ローカルオフ - 鍵盤と音源が接続されていない状態。鍵盤を弾くと、MIDI OUTからMIDIメッセージは送信されるが、音源は動かない。</dd>
+<dd>7FH - ローカルオン - 鍵盤と音源が接続されている状態。鍵盤を弾くと、音源から音が出る。</dd>
+<dt>BnH 7BH オールノートオフ</dt>
+<dd>該当するチャンネルの発音中の音すべてに対してノートオフ命令を出す。ただし、音の余韻の長いものや、<a href="/wiki/%E3%83%94%E3%82%A2%E3%83%8E#ペダル" title="ピアノ">サスティンペダル</a>がオンの状態では音は止まらないので、オールサウンドオフを使用する。</dd>
+<dt>BnH 7CH - 7FH MIDIモード設定</dt>
+<dd>7CH、7DH、7EH、7FHの4つのチャンネルモードメッセージを使いオムニモード、発音数のオンオフを組み合わせることで、4種のMIDIモードを設定できる。</dd>
+<dd>オムニモード - 7CH オムニオン、7DH オムニオフで設定。MIDIチャンネルを区別するかしないか。オフの場合、チャンネルに関係なく全ての情報を受信し処理、発音する。</dd>
+<dd>発音数 - 7EH モノモードオン、7FH ポリモードオンで設定。どちらかを設定すると片方のモードは自動的にオフになる。単音しか出せないのか、和音が出せるのかを設定する。
+<dl><dt>モード1 = 7DH オムニオン + 7FH ポリモード</dt>
+<dd>MIDIチャンネルを意識せず和音演奏ができるモード。</dd>
+<dt>モード2 = 7DH オムニオン + 7EH モノモード</dt>
+<dd>MIDIチャンネルに関わらず、常に1音のみ鳴らすモード。</dd>
+<dt>モード3 = 7CH オムニオフ + 7FH ポリモード</dt>
+<dd>一般的な送受信モード。MIDIチャンネルを区別し、各チャンネル毎に和音を用いた演奏が可能なモード。</dd>
+<dt>モード4 = 7CH オムニオフ + 7EH モノモード</dt>
+<dd>チャンネルは区別するが、各チャンネル毎に1音しか出せないモード。たとえば6弦ある<a href="/wiki/%E3%82%AE%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ギターシンセサイザー">ギターシンセサイザー</a>の各弦を各チャンネルに割り当てる場合に使用する。この場合、単音で発声するチャンネルは6つとなるので、第2データバイトでは06Hを送信する。</dd></dl></dd></dl>
+<h4><span id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="システムメッセージ">システムメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=11" title="節を編集: システムメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>システムメッセージとは、チャンネルに関係なくMIDIシステム全体に対する命令を行うMIDIメッセージである。システムメッセージのステータスバイトはF0H - FFHである。機能ごとに「システムエクスクルーシブメッセージ」、「システムコモンメッセージ」、「システムリアルタイムメッセージ」の分類される。
+</p>
+<h5><span id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.82.A8.E3.82.AF.E3.82.B9.E3.82.AF.E3.83.AB.E3.83.BC.E3.82.B7.E3.83.96.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="システムエクスクルーシブメッセージ">システムエクスクルーシブメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=12" title="節を編集: システムエクスクルーシブメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="new" href="/w/index.php?title=%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="システムエクスクルーシブメッセージ (存在しないページ)">システムエクスクルーシブメッセージ</a>」を参照</div>
+<p><a class="new" href="/w/index.php?title=%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="システムエクスクルーシブメッセージ (存在しないページ)">システムエクスクルーシブメッセージ</a>（Sys-Ex、またはSysExと略記し、シスイーエックスと読む場合もある）は、MIDI機器のより細かい設定を行ったり、音色データや<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="サンプリング">サンプリング</a>データを送受信するなど、各メーカーのMIDI機器の固有のデータのやりとりに使用できるシステムメッセージである。ステータスバイトF0Hで始まる。
+</p><p>MIDIメッセージは大抵2バイト程度のデータバイトで成り立つが、SysExはMIDIメッセージ中、唯一データバイト長が指定されていない。可変長のため、最後にシステムコモンメッセージとして定義されているF7H エンドオブエクスクルーシブ (EOX) を送信することでSysExの終了を表現する。
+</p>
+<h5><span id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.82.B3.E3.83.A2.E3.83.B3.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="システムコモンメッセージ">システムコモンメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=13" title="節を編集: システムコモンメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>システムコモンメッセージは、主にシステムリアルタイムメッセージと併用され、MIDIシーケンサーなどの<a href="/wiki/%E5%90%8C%E6%9C%9F" title="同期">同期</a>に使用される。ステータスバイト以下にデータバイトが続くものが多い。
+</p>
+<dl><dt>F1H <a class="new" href="/w/index.php?title=MIDI%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="MIDIタイムコード (存在しないページ)">MTC</a>クォーターフレームメッセージ</dt>
+<dd><a class="new" href="/w/index.php?title=MIDI%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="MIDIタイムコード (存在しないページ)">MIDIタイムコード</a> (MTC) の絶対時間情報を扱う。全2バイトで構成され、2バイト目で時刻、分、秒、フレームのカウントを処理する。</dd>
+<dt>F2H ソングポジションポインタ</dt>
+<dd>同期時にマスター側で操作したロケータ位置をスレーブ側に送信する際に使用。<a href="/wiki/%E9%9F%B3%E7%AC%A6" title="音符">16分音符</a>単位で指定できる。第1データバイトでソングポジションポインタLSB、第2データバイトでソングポジションポインタMSBを扱う。</dd>
+<dt>F3H ソングセレクト</dt>
+<dd>受信側のMIDI機器が複数のソング・シーケンスを扱える場合、第1データバイトでソングナンバーを選択する。</dd>
+<dt>F4H 未定義</dt>
+<dt>F5H 未定義</dt>
+<dd>定義されず、使われていない。</dd>
+<dt>F6H チューンリクエスト</dt>
+<dd><a href="/wiki/%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="アナログシンセサイザー">アナログシンセサイザー</a>（デジタルのそれに比べ自身の発熱や周囲の温度変化、舞台上で浴びる照明などで経時により<a href="/wiki/%E8%AA%BF%E5%BE%8B" title="調律">調律</a>が狂いやすい）などで、<a href="/wiki/%E9%9B%BB%E5%9C%A7%E5%88%B6%E5%BE%A1%E7%99%BA%E6%8C%AF%E5%99%A8" title="電圧制御発振器">オシレータ</a>を再調律させるための命令。現在はアナログシンセサイザーとともにほとんど使われない。</dd>
+<dt>F7H エンドオブエクスクルーシブ (EOX)</dt>
+<dd>F0Hから始まるSysExの終了を示すステータスバイト。単独で機能し、データバイトを持たない。</dd></dl>
+<h5><span id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.83.AA.E3.82.A2.E3.83.AB.E3.82.BF.E3.82.A4.E3.83.A0.E3.83.A1.E3.83.83.E3.82.BB.E3.83.BC.E3.82.B8"></span><span class="mw-headline" id="システムリアルタイムメッセージ">システムリアルタイムメッセージ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=14" title="節を編集: システムリアルタイムメッセージ">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>システムリアルタイムメッセージは、MIDIシーケンサーなどの<a href="/wiki/%E5%90%8C%E6%9C%9F" title="同期">同期</a>、<b><a class="new" href="/w/index.php?title=MIDI%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="MIDIタイミングクロック (存在しないページ)">MIDIタイミングクロック</a></b>に使用される。ステータスバイト以下にデータバイトが続かず、単独の1バイトのみで機能する。<a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0" title="リアルタイム">リアルタイム</a>に送信される必要があるため、最優先で送信される。
+</p>
+<dl><dt>F8H タイミングクロック</dt>
+<dd>絶対時間を持たない<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF" title="クロック">クロック</a>情報。<a href="/wiki/%E9%9F%B3%E7%AC%A6" title="音符">4分音符</a>ごとに24カウントされる。</dd>
+<dt>F9H 未定義</dt>
+<dd>定義されず、使われていない。</dd>
+<dt>FAH スタート</dt>
+<dt>FBH コンティニュー</dt>
+<dt>FCH ストップ</dt>
+<dd>マスター側機器のコントロールパネルを操作したときに送信。それぞれスレーブ側機器の先頭から再生、停止中からの再生、停止を行う。</dd>
+<dt>FDH 未定義</dt>
+<dd>定義されず、使われていない。</dd>
+<dt>FEH アクティブセンシング</dt>
+<dd>突然のMIDIケーブルの断線や接触不良や出力側機器の故障などで、音が鳴りっぱなしになったりしないようにするための<a href="/wiki/%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%BB%E3%83%BC%E3%83%95" title="フェイルセーフ">フェイルセーフ</a>の仕組みである。MIDI機器間ではこのアクティブセンシングが常に送信されている。<a href="/wiki/%E3%82%A6%E3%82%A9%E3%83%83%E3%83%81%E3%83%89%E3%83%83%E3%82%B0%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC" title="ウォッチドッグタイマー">ウォッチドッグタイマー</a>の一種である。受信側は、一度もアクティブセンシングを受けていない状態では通常通り動作するが、一度送信側からこれを受信すると、300ms（<a href="/wiki/%E3%83%9F%E3%83%AA%E7%A7%92" title="ミリ秒">ミリ秒</a>）以内に次のMIDIメッセージが送られてくることを期待するようになる。この状態で、アクティブセンシングや、その他MIDIメッセージを受信しなかった場合、断線したと判定する。</dd>
+<dd>ただし、実際は誤差やMIDI THRU処理の遅れを考慮し270ms - 330msの間で処理するよう余裕を持たせてある。このことから、送信側は270ms間隔でアクティブセンシングを送信し続ける。</dd>
+<dt>FFH システムリセット</dt>
+<dd>これを受信した全てのMIDI機器はリセット（電源投入時の状態に戻）される。通常は使用しない。</dd></dl>
+<h3><span id=".E3.82.B5.E3.83.B3.E3.83.97.E3.83.AB.E3.83.80.E3.83.B3.E3.83.97"></span><span class="mw-headline" id="サンプルダンプ">サンプルダンプ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=15" title="節を編集: サンプルダンプ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96&amp;action=edit&amp;redlink=1" title="システムエクスクルーシブ (存在しないページ)">サンプルダンプ</a>とは、システムエクスクルーシブメッセージを使用して<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%A9%E3%83%BC" title="サンプラー">サンプラー</a>とMIDI機器間で<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="サンプリング">サンプリング</a>データを通信する規格である。サンプルダンプに関するフォーマットをサンプルダンプスタンダード (SDS) という。<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>が1987年に提案した規格で、MMA-0003として定義されている。
+</p><p>ただし、前述の通りMIDIの通信速度は31.25Kbpsと、データ転送用途としては非常に遅い上、現代には<a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%90%E3%82%B9" title="ユニバーサル・シリアル・バス">USB</a>や<a href="/wiki/IEEE_1394" title="IEEE 1394">IEEE 1394</a>などの高速<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E9%80%9A%E4%BF%A1" title="シリアル通信">シリアルバス</a>も普及しているため、一部の学習・研究用途を除き使われることは無くなった。
+</p>
+<h2><span class="mw-headline" id="RP">RP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=16" title="節を編集: RP">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>RP (Recommended Practice) とは、MIDI規格策定後、利便性を高めるための<b>推奨実施例</b>として拡張された規格である。現在すでに複数の拡張規格が<a href="/wiki/%E9%9F%B3%E6%A5%BD%E9%9B%BB%E5%AD%90%E4%BA%8B%E6%A5%AD%E5%8D%94%E4%BC%9A" title="音楽電子事業協会">AMEI</a>と<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>により承認されており、いずれも共通規格としてMIDI規格に組み込まれている。
+</p>
+<h3><span id=".E3.82.B9.E3.82.BF.E3.83.B3.E3.83.80.E3.83.BC.E3.83.89MIDI.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB"></span><span class="mw-headline" id="スタンダードMIDIファイル">スタンダードMIDIファイル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=17" title="節を編集: スタンダードMIDIファイル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89MIDI%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="スタンダードMIDIファイル">スタンダードMIDIファイル</a>」を参照</div>
+<p>スタンダードMIDIファイル(SMF)とは、MIDI機器やMIDIメッセージを用いる演奏に関するデータの<b>保存形式</b>であり、メーカー毎のソフトやハードに関係なく使用できる共通の<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="ファイルフォーマット">ファイルフォーマット</a>である。拡張子は.mid。いわゆる「MIDIデータ」は<b>演奏形式</b>である<a href="#MIDIデータフォーマット">前述</a>した「MIDIデータフォーマット」の略称であるが、このスタンダードMIDIファイルを指すべく拡大使用される場合がある。
+</p><p><a href="/wiki/Opcode" title="Opcode">Opcode</a>社により独自規格として提案されたが、<a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a><a href="/wiki/7%E6%9C%88" title="7月">7月</a>に<a href="/wiki/%E9%9F%B3%E6%A5%BD%E9%9B%BB%E5%AD%90%E4%BA%8B%E6%A5%AD%E5%8D%94%E4%BC%9A" title="音楽電子事業協会">AMEI</a>と<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>によりRPの第1号(RP-001)に追認された。
+</p>
+<h3><span class="mw-headline" id="GM">GM</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=18" title="節を編集: GM">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GMシステムレベル1、通称<a href="/wiki/General_MIDI" title="General MIDI">GM</a> (General MIDI) とは、それまで各メーカー毎に異なっていた音色配列を統一することを目的として策定されたRPである。<a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>に、RP-003にて定義されている。音色配列の他、最低同時発音数や音色数、コントロールチェンジの効き具合といったことも指定されている。
+</p><p>さらに、従来のGMでは時代の進化に伴い補いきれなくなってきた部分を補完するため、GMシステムレベル2 (GM2) が上位規格として拡張された。GMとは完全な<a class="mw-redirect" href="/wiki/%E4%B8%8A%E4%BD%8D%E4%BA%92%E6%8F%9B" title="上位互換">上位互換性</a>をもつ。
+</p><p>のちに、主に<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>の<a href="/wiki/%E7%9D%80%E4%BF%A1%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3" title="着信メロディ">着信メロディ</a>の制作用途として、General MIDI Lite (GML) も上位規格として拡張された。
+</p>
+<ul><li><a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a> - GMシステムレベル1 - RP-003</li>
+<li><a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a> - GMシステムレベル2 - RP-024</li>
+<li><a href="/wiki/2001%E5%B9%B4" title="2001年">2001年</a> - General MIDI Lite - RP-033</li></ul>
+<h3><span class="mw-headline" id="DLS">DLS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=19" title="節を編集: DLS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=Downloadable_Sounds&amp;action=edit&amp;redlink=1" title="Downloadable Sounds (存在しないページ)">DLS</a> (Downloadable Sounds) は、SMFデータを<a href="/wiki/%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89" title="サウンドカード">サウンドカード</a>などの音源機器に転送して再生するために策定されたRPである。<a href="/wiki/1997%E5%B9%B4" title="1997年">1997年</a>に、RP-016にて定義されている。再生する音源が異なると、作者の意図しない音色で再生されてしまうSMFとは異なり、DLS対応機器ならほとんど同じ音での再生を行なうことが可能となる。拡張子は.dls。
+</p><p>のちに、上位規格であるDLSレベル2.1や、携帯電話向けのMobile DLSが拡張された。
+</p>
+<ul><li><a href="/wiki/1997%E5%B9%B4" title="1997年">1997年</a> - DLSレベル1.0 - RP-016</li>
+<li><a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a> - DLSレベル1.1 - RP-016</li>
+<li><a href="/wiki/2000%E5%B9%B4" title="2000年">2000年</a> - DLSレベル2.0 - RP-025</li>
+<li>2000年 - DLSレベル2.1 - RP-025</li>
+<li><a href="/wiki/2003%E5%B9%B4" title="2003年">2003年</a> - Mobile DLS - RP-041</li></ul>
+<h3><span class="mw-headline" id="XMF">XMF</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=20" title="節を編集: XMF">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=Extensible_Music_Format&amp;action=edit&amp;redlink=1" title="Extensible Music Format (存在しないページ)">XMF</a> (eXtensible Music Format) は、<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>によって提案された新しい音楽<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="ファイルフォーマット">ファイルフォーマット</a>である。SMFや、<a href="/wiki/%E9%9F%B3%E5%A3%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="音声ファイルフォーマット">音声ファイル</a>であるWAVなどが一つのファイルとして格納できるようになっている。
+</p><p>複数回改稿されており、それぞれのバージョン毎にRPとして承認されている。
+</p>
+<ul><li><a href="/wiki/2001%E5%B9%B4" title="2001年">2001年</a> - XMFメタファイルフォーマット1.00 - RP-030</li>
+<li><a href="/wiki/2003%E5%B9%B4" title="2003年">2003年</a> - XMFメタファイルフォーマット1.01 - RP-039</li>
+<li><a href="/wiki/2004%E5%B9%B4" title="2004年">2004年</a> - XMFメタファイルフォーマット2.00 - RP-043</li></ul>
+<p>また、複数の用途に向けて、複数のタイプが定義、検討されている。
+</p>
+<ul><li><a href="/wiki/2001%E5%B9%B4" title="2001年">2001年</a> - XMFタイプ0 アンド XMFタイプ1ファイル - RP-031</li>
+<li><a href="/wiki/2004%E5%B9%B4" title="2004年">2004年</a> - XMFタイプ2/Mobile XMFファイル - RP-042</li>
+<li><a href="/wiki/2007%E5%B9%B4" title="2007年">2007年</a> - XMFタイプ3/Mobile オーディオクリップ for Mobile XMFファイル - RP-045</li>
+<li>20XX年 - XMFタイプ4/Interactive XMF (iXMF)</li></ul>
+<p>XMFに関する拡張規格も用意されている。
+</p>
+<ul><li><a href="/wiki/2003%E5%B9%B4" title="2003年">2003年</a> - UnPackerID for ZLIB - RP-040</li>
+<li><a href="/wiki/2006%E5%B9%B4" title="2006年">2006年</a> - ID3 Meta-data Tags for XMF - RP-047</li></ul>
+<h3><span id="MIDI.E3.82.B7.E3.83.A7.E3.83.BC.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="MIDIショーコントロール">MIDIショーコントロール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=21" title="節を編集: MIDIショーコントロール">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=MIDI%E3%82%B7%E3%83%A7%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="MIDIショーコントロール (存在しないページ)">MIDIショーコントロール</a> (MIDI Show Control, MSC) とは、照明や映像機器など、<a href="/wiki/%E3%82%B7%E3%83%A7%E3%83%BC" title="ショー">ショー</a>の演出をコントロールする目的で策定されたRPである。<a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>にRP-002、のちにRP-014にて定義されている。
+</p>
+<h3><span id="MIDI.E3.82.BF.E3.82.A4.E3.83.A0.E3.82.B3.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="MIDIタイムコード">MIDIタイムコード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=22" title="節を編集: MIDIタイムコード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=MIDI%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="MIDIタイムコード (存在しないページ)">MIDIタイムコード</a> (MIDI Time Code, MTC) は、<a href="/wiki/%E5%90%8C%E6%9C%9F" title="同期">同期</a>システムを組むことを目的として策定されたRPである。<a href="/wiki/1987%E5%B9%B4" title="1987年">1987年</a>に、RP-004にて定義されている。
+</p><p>MIDI規格策定時に、同時に策定された<a class="new" href="/w/index.php?title=MIDI%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="MIDIタイミングクロック (存在しないページ)">MIDIタイミングクロック</a>は絶対時間を持たなかったが、<a href="/wiki/SMPTE" title="SMPTE">SMPTE</a>の普及につれMIDI上でも絶対時間を持った<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF" title="クロック">クロック</a>が必要となってきたことが、MTC策定の背景である。
+</p><p>MIDI策定団体である<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>が中心に提案したため、RPのほかにMMA-0001としても定義されている。
+</p>
+<h3><span id=".E8.A8.98.E8.AD.9C.E6.83.85.E5.A0.B1"></span><span class="mw-headline" id="記譜情報">記譜情報</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=23" title="節を編集: 記譜情報">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>記譜情報はMIDIデータ（MIDIメッセージの集合）を<a href="/wiki/%E6%A5%BD%E8%AD%9C" title="楽譜">楽譜</a>上に<a href="/wiki/%E9%9F%B3%E7%AC%A6" title="音符">音符</a>として表示するために策定されたRPである。RP-005、RP-006にて定義されている。
+</p>
+<h3><span id=".E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.80.E3.83.B3.E3.83.97"></span><span class="mw-headline" id="ファイルダンプ">ファイルダンプ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=24" title="節を編集: ファイルダンプ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ファイルダンプとは、MIDIケーブルを使ってSMFデータを転送するために策定されたRPである。RP-009にて定義されている。
+</p>
+<h3><span id="MIDI.E3.83.9E.E3.82.B7.E3.83.B3.E3.82.B3.E3.83.B3.E3.83.88.E3.83.AD.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="MIDIマシンコントロール">MIDIマシンコントロール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=25" title="節を編集: MIDIマシンコントロール">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A8%E3%82%AF%E3%82%B9%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%96%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="システムエクスクルーシブメッセージ (存在しないページ)">MIDIマシンコントロール</a>とは、システムエクスクルーシブメッセージを用いて<a class="mw-redirect" href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="マルチトラックレコーダー">MTR</a>や<a href="/wiki/%E3%83%93%E3%83%87%E3%82%AA%E3%83%86%E3%83%BC%E3%83%97%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80" title="ビデオテープレコーダ">VTR</a>を制御するために策定されたRPである。<a href="/wiki/1992%E5%B9%B4" title="1992年">1992年</a>に、RP-013にて定義されている。
+</p>
+<h3><span class="mw-headline" id="SMF_with_Lyrics">SMF with Lyrics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=26" title="節を編集: SMF with Lyrics">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SMF with Lyrics (SMF Language and Display extensions) とは、SMFのメタイベントとして用意されている歌詞格納機能を拡張したRPである。<a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a>に、RP-026にて定義されている。
+</p><p>メタイベントと違い、表示を目的としており、曲タイトル、作曲者名、作詞者名、歌詞やふりがなを格納できる。カラオケの歌詞表示や楽譜上の歌詞表記などの用途を想定されている。また、日本語 (<a href="/wiki/Shift_JIS" title="Shift JIS">Shift JIS</a>) も使用できる。
+</p>
+<h3><span class="mw-headline" id="MIDI_Media_Adaptation_Layer_for_IEEE-1394">MIDI Media Adaptation Layer for IEEE-1394</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=27" title="節を編集: MIDI Media Adaptation Layer for IEEE-1394">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIDI Media Adaptation Layer for IEEE-1394は、MIDI<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>などのMIDI機器を<a href="/wiki/IEEE_1394" title="IEEE 1394">IEEE 1394</a>を用いて接続することに関するRPである。<a href="/wiki/2000%E5%B9%B4" title="2000年">2000年</a>に、RP-027にて定義されている。
+</p>
+<h3><span class="mw-headline" id="SP-MIDI">SP-MIDI</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=28" title="節を編集: SP-MIDI">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SP-MIDI (Scalable Polyphony MIDI) は、あらゆる音源で最適なデータを再生するために策定されたRPである。<a href="/wiki/2002%E5%B9%B4" title="2002年">2002年</a>に、RP-034、RP-035にて定義されている。
+</p><p>例えば、通常だと24ボイス（パート数）を持つ音源用に作られたデータを16ボイスの音源で再生すると、8ボイス分は無視されてしまう。このままではデータ制作者の意図した再生ができないため、従来なら24ボイス用、16ボイス用と複数のデータを用意する必要が有った。このSP-MIDIの規格に従うと、ひとつのデータに前もって複数環境分の情報を収録できるので、少ない工数で、あらゆる音源で問題なく再生が出来るようになる。この技術は主に<a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1" title="携帯電話">携帯電話</a>向けに使用される。
+</p>
+<h3><span class="mw-headline" id="MIDI_XML">MIDI XML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=29" title="節を編集: MIDI XML">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIDI XML ("MIDI Names, Device Types, &amp; Events in XML") は、SMFを<a href="/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>で記述することを目的として策定されたRPである。<a href="/wiki/2003%E5%B9%B4" title="2003年">2003年</a>に、RP-038にて定義されている。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A6.8F.E6.A0.BC"></span><span class="mw-headline" id="その他の規格">その他の規格</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=30" title="節を編集: その他の規格">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>RPとして承認されていないが、各メーカーが独自に打ち出した規格も存在する。中には、比較的一般的となった規格も存在する。ただしメーカーに左右されるため、メーカーを越えた互換性は無い場合が多い。
+</p><p>なお、現在はこれ以上の音色配列などに関する規格の複雑化を防ぐため、<a href="/wiki/%E9%9F%B3%E6%A5%BD%E9%9B%BB%E5%AD%90%E4%BA%8B%E6%A5%AD%E5%8D%94%E4%BC%9A" title="音楽電子事業協会">AMEI</a>、<a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MMA</a>共にGM2に一本化することを求めており、また、GS・XGはお互い規格をオープンにして相互にサポートすべきとしている<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。しかし、実際にはローランド製、ヤマハ製の製品であってもGS・XG自体をサポートしない製品が増えてきたことも事実である。
+</p><p>同じ楽譜で演奏をしても、演奏者や楽器が異なると音が違って聴こえるように、使用する音源を変えれば出音は違ってくる。そのため、例えば<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>上で配布されているMIDIデータをデータ制作者の意図した通りに演奏するためには、制作者が使ったものと同じ、音色設定を完全に一致させた音源が必要になる。たとえGS対応と謳っていてもGS対応音源なら何でもいいというわけではなく、どの音源モジュールを使うかによって音は異なる。
+</p>
+<h3><span id="GS.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.83.E3.83.88"></span><span class="mw-headline" id="GSフォーマット">GSフォーマット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=31" title="節を編集: GSフォーマット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/GS%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="GSフォーマット">GSフォーマット</a>は、<a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>に<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89" title="ローランド">ローランド</a>が提唱、策定した音色配列などに関する独自規格。RP-003であるGMを拡張して作られたと思われがちだが、こちらが先行している。GMは、GSから他社と共有できる部分を抜粋し標準化したものである。
+</p><p>GSに対応した音源には、SC-55やSC-88Proなどの<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BBSC%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="ローランド・SCシリーズ">ローランド・SCシリーズ</a>が有名。
+</p>
+<h3><span id="XG.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.83.E3.83.88"></span><span class="mw-headline" id="XGフォーマット">XGフォーマット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=32" title="節を編集: XGフォーマット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/XG%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="XGフォーマット">XGフォーマット</a>は、<a href="/wiki/1994%E5%B9%B4" title="1994年">1994年</a>に<a href="/wiki/%E3%83%A4%E3%83%9E%E3%83%8F" title="ヤマハ">ヤマハ</a>が提唱、策定した音色配列などに関する独自規格。ヤマハ製の<a href="/wiki/%E9%9F%B3%E6%BA%90%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB" title="音源モジュール">音源モジュール</a>や<a href="/wiki/%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="シンセサイザー">シンセサイザー</a>の互換性を持たせるためにGMを拡張する形で作られた。
+</p><p>XGに対応した音源には、MU80やMU500などの<a href="/wiki/%E3%83%A4%E3%83%9E%E3%83%8F%E3%83%BBMU%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="ヤマハ・MUシリーズ">ヤマハ・MUシリーズ</a>が有名。
+</p>
+<h2><span id=".E7.94.A8.E9.80.94.E3.81.A8.E6.A9.9F.E5.99.A8"></span><span class="mw-headline" id="用途と機器">用途と機器</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=33" title="節を編集: 用途と機器">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>本項ではMIDI規格が使われる用途と、MIDI規格を使用するハードウェア（機器）、ソフトウェアについて解説する。なお、箇条書きにしているハードウェアやソフトウェアは一例である。
+</p>
+<h3><span id=".E9.9F.B3.E6.A5.BD.E5.88.B6.E4.BD.9C"></span><span class="mw-headline" id="音楽制作">音楽制作</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=34" title="節を編集: 音楽制作">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>総合的な音楽制作用途は、MIDIの代表的な使用例である。<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">パソコン</a>と<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ソフトウェア・シンセサイザー">ソフトウェア音源</a>さえあれば、大がかりな設備投資をする必要無く<a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF" title="デスクトップミュージック">DTM</a>を楽しめるといったことで、90年代から一般の趣味としても普及し出した。
+</p><p>現代は、オーディオ編集とMIDIデータ編集を同時に行える統合環境<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタルオーディオワークステーション">DAW</a>が業務向けを中心に普及している。
+</p>
+<dl><dt>ハードウェア</dt>
+<dd>
+<dl><dt>送信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a>（ハードシーケンサー）</li>
+<li><a href="/wiki/MIDI%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC" title="MIDIコントローラー">MIDIコントローラー</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="シンセサイザー">シンセサイザー</a>（MIDI OUT端子が有るのならば、他のMIDI機器を制御可能）</li>
+<li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ミュージックワークステーション">ミュージックワークステーション</a>（同上）</li></ul>
+<dl><dt>受信側</dt></dl>
+<ul><li><a href="/wiki/%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="シンセサイザー">シンセサイザー</a></li>
+<li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ミュージックワークステーション">ミュージックワークステーション</a></li>
+<li><a href="/wiki/%E9%9F%B3%E6%BA%90%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB" title="音源モジュール">音源モジュール</a></li></ul></dd></dl>
+<dl><dt>ソフトウェア</dt>
+<dd>
+<dl><dt>送信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a>（ソフトシーケンサー）</li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタルオーディオワークステーション">デジタルオーディオワークステーション</a> (DAW)</li></ul>
+<dl><dt>受信側</dt></dl>
+<ul><li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ソフトウェア・シンセサイザー">ソフトウェア・シンセサイザー</a>（ソフトウェア音源）
+<ul><li><a href="/wiki/Microsoft_GS_Wavetable_SW_Synth" title="Microsoft GS Wavetable SW Synth">Microsoft GS Wavetable SW Synth</a> - <a href="/wiki/Microsoft_Windows_2000" title="Microsoft Windows 2000">Microsoft Windows 2000</a>以降の<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>に搭載されており最も普及しているソフトウェア音源</li>
+<li><a href="/wiki/QuickTime" title="QuickTime">QuickTime</a>ミュージックシンセ - <a href="/wiki/Mac_OS" title="Mac OS">Mac OS</a>に標準で付属するソフトウェア音源</li></ul></li></ul></dd></dl>
+<p>かつては、ハードウェア音源の代わりに、<a href="/wiki/PCM%E9%9F%B3%E6%BA%90" title="PCM音源">PCM音源</a>等の音源データをソフトウェア向けに加工し、パソコン上の<a class="mw-redirect" href="/wiki/%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%83%9C%E3%83%BC%E3%83%89" title="サウンドボード">サウンドボード</a>でMIDIファイルの再生を可能にしたソフトウェアMIDI音源も開発された。しかしながら、同時発音数や音質がCPUの性能に依存するなど、ソフトウェアMIDI音源発売当初はリアルタイム演奏には不向きであった。
+</p><p>現在は、一般のパソコンが<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ソフトウェア・シンセサイザー">ソフトウェア音源</a>を処理するのに十分な性能を持ったことや、再生時に音源が不要な<a href="/wiki/MP3" title="MP3">MP3</a>等の<a href="/wiki/%E9%9F%B3%E5%A3%B0%E5%9C%A7%E7%B8%AE" title="音声圧縮">圧縮</a><a href="/wiki/%E9%9F%B3%E5%A3%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="音声ファイルフォーマット">音声ファイルフォーマット</a>の普及により、一般ユーザーではDTM愛好家以外のハードウェアベースのMIDI音源の使用は著しく減少している。
+</p>
+<h3><span id=".E9.8C.B2.E9.9F.B3.E3.83.BBMA"></span><span class="mw-headline" id="録音・MA">録音・MA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=35" title="節を編集: 録音・MA">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E9%8C%B2%E9%9F%B3" title="録音">録音</a>や<a href="/wiki/%E6%98%A0%E5%83%8F%E7%B7%A8%E9%9B%86" title="映像編集">MA</a> (Multi Audio) でもMIDIは使用される。演奏情報の送受信ではなく、システムメッセージを中心とした同期処理が行われている。
+</p>
+<dl><dt>ハードウェア</dt>
+<dd>
+<dl><dt>送信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a>（ハードシーケンサー）</li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%83%A0%E3%83%9E%E3%82%B7%E3%83%B3" title="ドラムマシン">ドラムマシン</a>、リズムマシン</li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%95%E3%82%A7%E3%82%B9" title="コントロールサーフェス">コントロールサーフェス</a></li></ul>
+<dl><dt>受信側</dt></dl>
+<ul><li><a class="mw-redirect" href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="マルチトラックレコーダー">マルチトラックレコーダー</a> (MTR)</li>
+<li><a href="/wiki/%E3%83%93%E3%83%87%E3%82%AA%E3%83%86%E3%83%BC%E3%83%97%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80" title="ビデオテープレコーダ">ビデオテープレコーダー</a> (VTR)</li></ul></dd></dl>
+<dl><dt>ソフトウェア</dt>
+<dd>
+<dl><dt>送信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a>（ソフトシーケンサー）</li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタルオーディオワークステーション">デジタルオーディオワークステーション</a> (DAW)</li></ul>
+<dl><dt>受信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a>（ソフトシーケンサー）</li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタルオーディオワークステーション">デジタルオーディオワークステーション</a> (DAW)</li></ul>
+<dl><dd>（別々のコンピュータ上のソフトウェアに関する同期）</dd></dl></dd></dl>
+<h3><span id=".E3.82.AB.E3.83.A9.E3.82.AA.E3.82.B1"></span><span class="mw-headline" id="カラオケ">カラオケ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=36" title="節を編集: カラオケ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>カラオケ機器は、MIDIデータを再生する機能が備わっている。各カラオケ店舗では、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>回線を通じて最新曲のMIDIデータを受信する仕組みになっており、<a href="/wiki/%E9%80%9A%E4%BF%A1%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1" title="通信カラオケ">通信カラオケ</a>と呼ばれるのはこのためである。<a href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%90%E3%83%B3%E3%83%89%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E6%8E%A5%E7%B6%9A" title="ブロードバンドインターネット接続">ブロードバンドインターネット接続</a>が普及する以前は、現在のように大量の音声データをインターネットで送受信するのは困難であったが、MIDIデータであれば、当時の低速な回線でも十分に送受信可能であった。
+</p><p>なお、カラオケ用MIDIデータはカラオケデータ制作専門の<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E" title="プログラマ">プログラマ</a>などが、<a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ソフトシーケンサー</a>などを用いて制作し、通信カラオケ配信会社に卸す仕組みとなっている。
+</p>
+<h3><span id=".E3.83.A2.E3.83.90.E3.82.A4.E3.83.AB.E6.A9.9F.E5.99.A8.E3.83.BB.E7.9D.80.E4.BF.A1.E3.83.A1.E3.83.AD.E3.83.87.E3.82.A3"></span><span class="mw-headline" id="モバイル機器・着信メロディ">モバイル機器・着信メロディ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=37" title="節を編集: モバイル機器・着信メロディ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>スマートフォンの登場以前、携帯電話の<a href="/wiki/%E7%9D%80%E4%BF%A1%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3" title="着信メロディ">着信メロディ</a>においてMIDI規格が利用されていた。携帯電話内のデータを、携帯電話内に搭載された音源が処理し音を鳴らしている。携帯電話向けのRPも複数拡張された。
+</p>
+<h3><span id=".E8.88.9E.E5.8F.B0.E7.85.A7.E6.98.8E.E3.83.BB.E6.BC.94.E5.87.BA"></span><span class="mw-headline" id="舞台照明・演出">舞台照明・演出</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=38" title="節を編集: 舞台照明・演出">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>にRP-002として<a class="new" href="/w/index.php?title=MIDI%E3%82%B7%E3%83%A7%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="MIDIショーコントロール (存在しないページ)">MIDIショーコントロール</a>が定義された。これにより、MIDIで舞台装置、照明、演出効果などが制御できるようになった。
+</p>
+<dl><dt>ハードウェア</dt>
+<dd>
+<dl><dt>送信側</dt></dl>
+<ul><li><a href="/wiki/%E3%83%9B%E3%82%B9%E3%83%88" title="ホスト">ホスト</a>コントローラー</li></ul>
+<dl><dt>受信側</dt></dl>
+<ul><li>各舞台用機材（照明など）</li></ul></dd></dl>
+<h3><span id=".E9.9F.B3.E5.A3.B0.E5.90.88.E6.88.90"></span><span class="mw-headline" id="音声合成">音声合成</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=39" title="節を編集: 音声合成">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/2009%E5%B9%B4" title="2009年">2009</a>年頃、音声を<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ解析</a>し周波数ごとに分離して<a href="/wiki/%E6%AD%A3%E5%BC%A6%E6%B3%A2" title="正弦波">正弦波</a>にし、それをMIDIで再生することで音声を擬似的に再現する技術が発明された。
+</p>
+<h3><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=40" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E9%89%84%E9%81%93" title="鉄道">鉄道</a>の<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%9B%E3%83%BC%E3%83%A0" title="プラットホーム">プラットホーム</a>で流れる<a href="/wiki/%E7%99%BA%E8%BB%8A%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3" title="発車メロディ">発車メロディ</a>や、<a href="/wiki/%E5%AD%A6%E6%A0%A1" title="学校">学校</a>・<a href="/wiki/%E4%BC%9A%E7%A4%BE" title="会社">会社</a>で流れる<a href="/wiki/%E3%83%81%E3%83%A3%E3%82%A4%E3%83%A0" title="チャイム">チャイム</a>を再生する<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC" title="タイマー">タイマー</a>などでもMIDI規格が応用されることがある。
+</p>
+<h2><span id="MIDI.E6.A4.9C.E5.AE.9A"></span><span class="mw-headline" id="MIDI検定">MIDI検定</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=41" title="節を編集: MIDI検定">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MIDIの基礎知識や、業務レベルの細かい知識などを問う<a href="/wiki/MIDI%E6%A4%9C%E5%AE%9A" title="MIDI検定">MIDI検定</a>が<a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a>より実施された。現在4,3,2,1級の4階級が用意されており、2級には2級筆記試験と2級実技試験の2段階が用意されている。
+</p><p>3,2級検定試験は年1回の実施、MIDI4級検定試験は各公認講師・指定校による随時開催となっている。
+</p><p>MIDI検定開始から11年間、1級試験は実施されず2級実技試験が最高級とされていたが、2010年1月15日より、1級試験が新設された。
+</p>
+<h2><span id=".E5.B9.B4.E8.A1.A8"></span><span class="mw-headline" id="年表">年表</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=42" title="節を編集: 年表">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/1981%E5%B9%B4" title="1981年">1981年</a> - <a href="/wiki/%E3%83%A4%E3%83%9E%E3%83%8F" title="ヤマハ">日本楽器製造（現・ヤマハ）</a>、<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89" title="ローランド">ローランド</a>、<a href="/wiki/%E3%82%B3%E3%83%AB%E3%82%B0" title="コルグ">コルグ</a>、<a href="/wiki/%E6%B2%B3%E5%90%88%E6%A5%BD%E5%99%A8%E8%A3%BD%E4%BD%9C%E6%89%80" title="河合楽器製作所">河合楽器（カワイ）</a>、<a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88" title="シーケンシャル・サーキット">シーケンシャル・サーキット</a>、<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8F%E3%82%A4%E3%83%A0" title="オーバーハイム">オーバーハイム</a>の国内外楽器メーカー6社が『MIDI 1.0 Specification』をまとめる。</li>
+<li><a href="/wiki/1982%E5%B9%B4" title="1982年">1982年</a>10月 - ローランドを中心に規格化が進められ、米国音楽雑誌「KEYBOARD」誌上で Ver.1.0 が公開される。</li>
+<li><a href="/wiki/1983%E5%B9%B4" title="1983年">1983年</a>1月 - <a href="/wiki/%E6%A5%BD%E5%99%A8%E3%82%B7%E3%83%A7%E3%83%BC#NAMM_ショー" title="楽器ショー">NAMMショー</a>にて<a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88" title="シーケンシャル・サーキット">シーケンシャル・サーキット</a>製Prophet600と<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89" title="ローランド">ローランド</a>製JX-3Pとの接続デモが行われる。</li>
+<li>1983年8月 - 日本語版 MIDI 1.0 規格を発表。</li>
+<li><a href="/wiki/1984%E5%B9%B4" title="1984年">1984年</a> - MIDI Manufacturers Association (MMA) が発足。</li>
+<li><a href="/wiki/1989%E5%B9%B4" title="1989年">1989年</a>1月 - MIDI 1.0（Ver.4.1日本語版）発表。</li>
+<li><a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a> - <a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89MIDI%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="スタンダードMIDIファイル">スタンダードMIDIファイル</a>(RP-001) がMIDI規格の「推奨実施例」(Recommended Practice) として承認。</li>
+<li><a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a>9月 - <a href="/wiki/General_MIDI" title="General MIDI">GMシステムレベル1</a>(RP-003) がMMA,JMSCによって策定。</li>
+<li><a href="/wiki/1991%E5%B9%B4" title="1991年">1991年</a> - <a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89" title="ローランド">ローランド</a>初の<a href="/wiki/GS%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="GSフォーマット">GSフォーマット</a>対応音源、<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BBSC%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="ローランド・SCシリーズ">SC-55</a>が発売。</li>
+<li><a href="/wiki/1994%E5%B9%B4" title="1994年">1994年</a> - <a href="/wiki/%E3%83%A4%E3%83%9E%E3%83%8F" title="ヤマハ">ヤマハ</a>初の<a href="/wiki/XG%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="XGフォーマット">XGフォーマット</a>対応音源、<a href="/wiki/%E3%83%A4%E3%83%9E%E3%83%8F%E3%83%BBMU%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="ヤマハ・MUシリーズ">MU80</a>が発売。</li>
+<li><a href="/wiki/1996%E5%B9%B4" title="1996年">1996年</a>5月 - 社団法人<a href="/wiki/%E9%9F%B3%E6%A5%BD%E9%9B%BB%E5%AD%90%E4%BA%8B%E6%A5%AD%E5%8D%94%E4%BC%9A" title="音楽電子事業協会">音楽電子事業協会</a> (AMEI) が発足。</li>
+<li><a href="/wiki/1997%E5%B9%B4" title="1997年">1997年</a> - <a class="new" href="/w/index.php?title=Downloadable_Sounds&amp;action=edit&amp;redlink=1" title="Downloadable Sounds (存在しないページ)">Downloadable Sounds</a> (RP-016) を策定。</li>
+<li><a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a><a href="/wiki/1%E6%9C%8817%E6%97%A5" title="1月17日">1月17日</a> - 第1回3級MIDI検定試験を実施。</li>
+<li>1999年<a href="/wiki/1%E6%9C%8820%E6%97%A5" title="1月20日">1月20日</a> - MIDIがJIS規格として策定される。</li>
+<li>1999年7月 - GMシステムレベル2 (RP-024) を策定。</li>
+<li><a href="/wiki/2001%E5%B9%B4" title="2001年">2001年</a> - <a class="new" href="/w/index.php?title=Extensible_Music_Format&amp;action=edit&amp;redlink=1" title="Extensible Music Format (存在しないページ)">Extensible Music Format</a> (RP-030) を策定。</li>
+<li><a href="/wiki/2001%E5%B9%B4" title="2001年">2001年</a>5月 - 携帯電話着信メロディ用の規格<a href="/wiki/General_MIDI" title="General MIDI">General MIDI Lite</a> (RP-033) を策定。</li>
+<li><a href="/wiki/2003%E5%B9%B4" title="2003年">2003年</a><a href="/wiki/7%E6%9C%883%E6%97%A5" title="7月3日">7月3日</a> - 社団法人音楽電子事業協会がMIDI規格誕生20周年記念事業を開催。</li>
+<li><a href="/wiki/2013%E5%B9%B4" title="2013年">2013年</a><a href="/wiki/2%E6%9C%88" title="2月">2月</a> - ローランド社（浜松市）の創業者である<a href="/wiki/%E6%A2%AF%E9%83%81%E5%A4%AA%E9%83%8E" title="梯郁太郎">梯郁太郎</a>がMIDI規格の制定に対する貢献によりテクニカル・グラミー・アワードを受賞<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。</li>
+<li>2016年7月 - MIDI 1.0規格書、RP、CAが無償公開される<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。</li>
+<li><a href="/wiki/2019%E5%B9%B4" title="2019年">2019年</a>1月18日 - MIDI 1.0の策定完了から38年目となる<a href="/wiki/2019%E5%B9%B4" title="2019年">2019年</a>に、次世代となるMIDI 2.0の策定開始を発表した<sup class="reference" id="cite_ref-:0_1-2"><a href="#cite_note-:0-1">[1]</a></sup>。</li></ul>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=43" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-:0-1">^ <a href="#cite_ref-:0_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:0_1-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">藤本健 (2019年1月19日). “<a class="external text" href="https://www.dtmstation.com/archives/23425.html" rel="nofollow">MIDIが38年ぶりのバージョンアップでMIDI 2.0に。従来のMIDI 1.0との互換性を保ちつつ機能強化｜藤本健の “DTMステーション”</a>” (日本語). <i>藤本健の “DTMステーション”</i>. <span title="">2019年4月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE音楽電子事業協会20162-10-2"><b><a href="#cite_ref-FOOTNOTE音楽電子事業協会20162-10_2-0">^</a></b> <span class="reference-text"><a href="#CITEREF音楽電子事業協会2016">音楽電子事業協会 2016</a>, p. 2-10.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="http://www.watch.impress.co.jp/pc/docs/article/20010116/midi.htm" rel="nofollow">ローランドとヤマハがMIDI規格の互換性向上で協力</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.sponichi.co.jp/entertainment/news/2013/02/10/kiji/K20130210005166530.html" rel="nofollow">ローランド創業者・梯郁太郎さんが受賞 米グラミー技術賞</a>”. <i>スポニチアネックス</i>.   スポニチアネックス (2013年2月10日). <span title="">2013年2月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">劉尭 (2017年6月7日). “<a class="external text" href="http://pc.watch.impress.co.jp/docs/news/1012947.html" rel="nofollow">音楽電子事業協会、MIDI 1.0規格書を無償ダウンロード提供</a>”. <i>PC Watch</i>.   インプレス. <span title="">2017年6月7日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=44" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" id="CITEREF音楽電子事業協会2016" style="font-style:normal">『<a class="external text" href="http://amei.or.jp/midistandardcommittee/MIDIspcj.html" rel="nofollow">MIDI 1.0 規格書</a>』(PDF)音楽電子事業協会、2016年7月27日、PDF版。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-8456-0348-9" title="特別:文献資料/4-8456-0348-9">4-8456-0348-9</a>。</cite></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=45" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E9%9F%B3%E6%A5%BD%E9%9B%BB%E5%AD%90%E4%BA%8B%E6%A5%AD%E5%8D%94%E4%BC%9A" title="音楽電子事業協会">音楽電子事業協会</a></li>
+<li><a href="/wiki/MIDI_Manufacturers_Association" title="MIDI Manufacturers Association">MIDI Manufacturers Association</a></li>
+<li><a href="/wiki/MIDI%E6%A4%9C%E5%AE%9A" title="MIDI検定">MIDI検定</a></li>
+<li><a href="/wiki/OpenSound_Control" title="OpenSound Control">OpenSound Control</a></li>
+<li><a href="/wiki/Virtual_Studio_Technology" title="Virtual Studio Technology">Virtual Studio Technology</a></li>
+<li><a href="/wiki/%E6%A2%AF%E9%83%81%E5%A4%AA%E9%83%8E" title="梯郁太郎">梯郁太郎</a> - 規格策定の貢献者</li>
+<li><a href="/wiki/%E4%BD%90%E8%97%A4%E5%8D%9A_(%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%B7%E3%83%A3%E3%83%B3)" title="佐藤博 (ミュージシャン)">佐藤博</a> (ミュージシャン) - MID規格に関してプレイヤー、エンジニアとして、その導入からアドバイザー的立場として関わっていた。</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIDI&amp;action=edit&amp;section=46" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.amei.or.jp" rel="nofollow">社団法人音楽電子事業協会</a>
+<ul><li><a class="external text" href="http://amei.or.jp/midistandardcommittee/MIDIspcj.html" rel="nofollow">MIDI1.0規格書</a></li>
+<li><a class="external text" href="http://amei.or.jp/midistandardcommittee/RP&amp;CAj.html" rel="nofollow">RP/CA</a></li></ul></li>
+<li><a class="external text" href="https://www.midi.org" rel="nofollow">MIDI Manufacturers Association</a></li></ul>
+<div aria-labelledby="バス" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%90%E3%82%B9&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:コンピュータバス (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%90%E3%82%B9&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%90%E3%82%B9&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="バス" style="font-size:110%;margin:0 6em">バス</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">主要項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%90%E3%82%B9" title="システムバス">システムバス</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%82%B9" title="フロントサイドバス">フロントサイドバス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%83%83%E3%82%AF%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%82%B9&amp;action=edit&amp;redlink=1" title="バックサイドバス (存在しないページ)">バックサイドバス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Back-side_bus&amp;action=edit&amp;redlink=1" title="En:Back-side bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A4%E3%82%B8%E3%83%BC%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3" title="デイジーチェーン">デイジーチェーン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%82%B9&amp;action=edit&amp;redlink=1" title="コントロールバス (存在しないページ)">コントロールバス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Control_bus&amp;action=edit&amp;redlink=1" title="En:Control bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E3%83%90%E3%82%B9" title="アドレスバス">アドレスバス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3&amp;action=edit&amp;redlink=1" title="バスコンテンション (存在しないページ)">バスコンテンション</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bus_contention&amp;action=edit&amp;redlink=1" title="En:Bus contention (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%90%E3%82%B9%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0" title="バスマスタリング">バスマスタリング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%AA%E3%83%B3%E3%83%81%E3%83%83%E3%83%97&amp;action=edit&amp;redlink=1" title="ネットワークオンチップ (存在しないページ)">ネットワークオンチップ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_on_a_chip&amp;action=edit&amp;redlink=1" title="En:Network on a chip (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A2%E3%83%B3%E3%83%89%E3%83%97%E3%83%AC%E3%82%A4" title="プラグアンドプレイ">プラグアンドプレイ</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E5%B8%AF%E5%9F%9F%E5%B9%85%E3%81%AE%E4%B8%80%E8%A6%A7#コンピューターバス規格" title="デバイス帯域幅の一覧">バス帯域幅の一覧</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンピュータバス規格 （デスクトップ）</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/S-100%E3%83%90%E3%82%B9" title="S-100バス">S-100バス</a></li>
+<li><a href="/wiki/Unibus" title="Unibus">Unibus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=VAXBI_Bus&amp;action=edit&amp;redlink=1" title="VAXBI Bus (存在しないページ)">VAXBI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:VAXBI_Bus&amp;action=edit&amp;redlink=1" title="En:VAXBI Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/MBus" title="MBus">MBus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=STD_Bus&amp;action=edit&amp;redlink=1" title="STD Bus (存在しないページ)">STD Bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:STD_Bus&amp;action=edit&amp;redlink=1" title="En:STD Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=System_Management_Bus&amp;action=edit&amp;redlink=1" title="System Management Bus (存在しないページ)">SMBus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:System_Management_Bus&amp;action=edit&amp;redlink=1" title="En:System Management Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Q-bus" title="Q-bus">Q-bus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Europe_Card_Bus&amp;action=edit&amp;redlink=1" title="Europe Card Bus (存在しないページ)">Europe Card Bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Europe_Card_Bus&amp;action=edit&amp;redlink=1" title="En:Europe Card Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Industry_Standard_Architecture" title="Industry Standard Architecture">ISA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=STEbus&amp;action=edit&amp;redlink=1" title="STEbus (存在しないページ)">STEbus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:STEbus&amp;action=edit&amp;redlink=1" title="En:STEbus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Amiga_Zorro_II&amp;action=edit&amp;redlink=1" title="Amiga Zorro II (存在しないページ)">Zorro II</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Amiga_Zorro_II&amp;action=edit&amp;redlink=1" title="En:Amiga Zorro II (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Amiga_Zorro_III&amp;action=edit&amp;redlink=1" title="Amiga Zorro III (存在しないページ)">Zorro III</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Amiga_Zorro_III&amp;action=edit&amp;redlink=1" title="En:Amiga Zorro III (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Computer_Automated_Measurement_and_Control&amp;action=edit&amp;redlink=1" title="Computer Automated Measurement and Control (存在しないページ)">CAMAC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Computer_Automated_Measurement_and_Control&amp;action=edit&amp;redlink=1" title="En:Computer Automated Measurement and Control (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FASTBUS&amp;action=edit&amp;redlink=1" title="FASTBUS (存在しないページ)">FASTBUS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FASTBUS&amp;action=edit&amp;redlink=1" title="En:FASTBUS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Low_Pin_Count" title="Low Pin Count">LPC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HP_Precision_Bus&amp;action=edit&amp;redlink=1" title="HP Precision Bus (存在しないページ)">HP Precision Bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HP_Precision_Bus&amp;action=edit&amp;redlink=1" title="En:HP Precision Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Extended_Industry_Standard_Architecture" title="Extended Industry Standard Architecture">EISA</a></li>
+<li><a href="/wiki/VME%E3%83%90%E3%82%B9" title="VMEバス">VME</a></li>
+<li><a href="/wiki/VXI%E3%83%90%E3%82%B9" title="VXIバス">VXIバス</a></li>
+<li><a href="/wiki/NuBus" title="NuBus">NuBus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TURBOchannel&amp;action=edit&amp;redlink=1" title="TURBOchannel (存在しないページ)">TURBOchannel</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TURBOchannel&amp;action=edit&amp;redlink=1" title="En:TURBOchannel (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/Micro_Channel_Architecture" title="Micro Channel Architecture">MCA</a></li>
+<li><a href="/wiki/SBus" title="SBus">SBus</a></li>
+<li><a href="/wiki/C%E3%83%90%E3%82%B9" title="Cバス">Cバス</a></li>
+<li><a href="/wiki/New_Extend_Standard_Architecture" title="New Extend Standard Architecture">NESA（Eバス）</a></li>
+<li><a href="/wiki/98%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%90%E3%82%B9" title="98ローカルバス">98ローカルバス</a></li>
+<li><a href="/wiki/VESA_%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%90%E3%82%B9" title="VESA ローカルバス">VLB</a></li>
+<li><a href="/wiki/Peripheral_Component_Interconnect" title="Peripheral Component Interconnect">PCI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=PCI_eXtensions_for_Instrumentation&amp;action=edit&amp;redlink=1" title="PCI eXtensions for Instrumentation (存在しないページ)">PXI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:PCI_eXtensions_for_Instrumentation&amp;action=edit&amp;redlink=1" title="En:PCI eXtensions for Instrumentation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=GSC_bus&amp;action=edit&amp;redlink=1" title="GSC bus (存在しないページ)">HP GSC bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:GSC_bus&amp;action=edit&amp;redlink=1" title="En:GSC bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CoreConnect&amp;action=edit&amp;redlink=1" title="CoreConnect (存在しないページ)">CoreConnect</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CoreConnect&amp;action=edit&amp;redlink=1" title="En:CoreConnect (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/InfiniBand" title="InfiniBand">InfiniBand</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ultra_Port_Architecture&amp;action=edit&amp;redlink=1" title="Ultra Port Architecture (存在しないページ)">UPA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ultra_Port_Architecture&amp;action=edit&amp;redlink=1" title="En:Ultra Port Architecture (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PCI-X" title="PCI-X">PCI-X</a></li>
+<li><a href="/wiki/Accelerated_Graphics_Port" title="Accelerated Graphics Port">AGP</a></li>
+<li><a href="/wiki/PCI_Express" title="PCI Express">PCI Express</a></li>
+<li><a href="/wiki/Direct_Media_Interface" title="Direct Media Interface">Direct Media Interface (DMI)</a></li>
+<li><a href="/wiki/RapidIO" title="RapidIO">RapidIO</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB_QuickPath_%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%88" title="インテル QuickPath インターコネクト">インテル QuickPath インターコネクト</a></li>
+<li><a href="/wiki/HyperTransport" title="HyperTransport">HyperTransport</a></li>
+<li><a href="/wiki/NVLink" title="NVLink">NVLink</a></li>
+<li><a href="/wiki/AP%E3%83%90%E3%82%B9" title="APバス">APバス</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ストレージバス規格</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ST-506" title="ST-506">ST-506</a></li>
+<li><a href="/wiki/Enhanced_Small_Disk_Interface" title="Enhanced Small Disk Interface">ESDI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Storage_Module_Device&amp;action=edit&amp;redlink=1" title="Storage Module Device (存在しないページ)">SMD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Storage_Module_Device&amp;action=edit&amp;redlink=1" title="En:Storage Module Device (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Advanced_Technology_Attachment" title="Advanced Technology Attachment">Parallel ATA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Serial_Storage_Architecture&amp;action=edit&amp;redlink=1" title="Serial Storage Architecture (存在しないページ)">SSA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Serial_Storage_Architecture&amp;action=edit&amp;redlink=1" title="En:Serial Storage Architecture (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Digital_Storage_Systems_Interconnect&amp;action=edit&amp;redlink=1" title="Digital Storage Systems Interconnect (存在しないページ)">DSSI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Digital_Storage_Systems_Interconnect&amp;action=edit&amp;redlink=1" title="En:Digital Storage Systems Interconnect (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/HIPPI" title="HIPPI">HIPPI</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%ABATA" title="シリアルATA">シリアルATA</a></li>
+<li><a class="mw-redirect" href="/wiki/ESATA" title="ESATA">eSATA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ESATAp&amp;action=edit&amp;redlink=1" title="ESATAp (存在しないページ)">eSATAp</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:eSATAp&amp;action=edit&amp;redlink=1" title="En:eSATAp (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MSATA&amp;action=edit&amp;redlink=1" title="MSATA (存在しないページ)">mSATA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:mSATA&amp;action=edit&amp;redlink=1" title="En:mSATA (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Small_Computer_System_Interface" title="Small Computer System Interface">SCSI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_SCSI&amp;action=edit&amp;redlink=1" title="Parallel SCSI (存在しないページ)">Parallel SCSI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_SCSI&amp;action=edit&amp;redlink=1" title="En:Parallel SCSI (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Serial_Attached_SCSI" title="Serial Attached SCSI">Serial Attached SCSI</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB" title="ファイバーチャネル">ファイバーチャネル</a></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/SATA_Express" title="SATA Express">SATA Express</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SATA_Express&amp;action=edit&amp;redlink=1" title="En:SATA Express (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/U.2" title="U.2">U.2 (SFF-8639)</a></li>
+<li><a href="/wiki/M.2" title="M.2">M.2</a></li>
+<li><a href="/wiki/NVM_Express" title="NVM Express">NVM Express</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ペリフェラルバス規格</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_Desktop_Bus" title="Apple Desktop Bus">Apple Desktop Bus</a></li>
+<li><a href="/wiki/HP-IL" title="HP-IL">HP-IL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HIL_bus&amp;action=edit&amp;redlink=1" title="HIL bus (存在しないページ)">HIL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HIL_bus&amp;action=edit&amp;redlink=1" title="En:HIL bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">MIDI</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%91%E3%82%B9" title="マルチパス">マルチパス</a></li>
+<li><a href="/wiki/RS-232" title="RS-232">RS-232</a> (<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%9D%E3%83%BC%E3%83%88" title="シリアルポート">シリアルポート</a>)</li>
+<li><a href="/wiki/EIA-422" title="EIA-422">EIA/RS-422</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=RS-423&amp;action=edit&amp;redlink=1" title="RS-423 (存在しないページ)">RS-423</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:RS-423&amp;action=edit&amp;redlink=1" title="En:RS-423 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/RS-485" title="RS-485">RS-485</a></li>
+<li><a href="/wiki/DMX512-A" title="DMX512-A">DMX512-A</a></li>
+<li><a href="/wiki/IEEE_488" title="IEEE 488">IEEE-488 (GPIB)</a></li>
+<li><a href="/wiki/IEEE_1284" title="IEEE 1284">IEEE 1284</a> (<a href="/wiki/%E3%83%91%E3%83%A9%E3%83%AC%E3%83%AB%E3%83%9D%E3%83%BC%E3%83%88" title="パラレルポート">パラレルポート</a>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=UNI/O&amp;action=edit&amp;redlink=1" title="UNI/O (存在しないページ)">UNI/O</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:UNI/O&amp;action=edit&amp;redlink=1" title="En:UNI/O (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ACCESS.bus&amp;action=edit&amp;redlink=1" title="ACCESS.bus (存在しないページ)">ACCESS.bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ACCESS.bus&amp;action=edit&amp;redlink=1" title="En:ACCESS.bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/1-Wire" title="1-Wire">1-Wire</a></li>
+<li><a class="mw-redirect" href="/wiki/I%C2%B2C" title="I²C">I²C</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%9A%E3%83%AA%E3%83%95%E3%82%A7%E3%83%A9%E3%83%AB%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="シリアル・ペリフェラル・インタフェース">SPI</a></li>
+<li><a href="/wiki/EIA-485" title="EIA-485">EIA/RS-485</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_SCSI&amp;action=edit&amp;redlink=1" title="Parallel SCSI (存在しないページ)">Parallel SCSI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_SCSI&amp;action=edit&amp;redlink=1" title="En:Parallel SCSI (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Profibus" title="Profibus">Profibus</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E3%83%BB%E3%83%90%E3%82%B9" title="ユニバーサル・シリアル・バス">USB</a> (<a href="/wiki/USB_Type-C" title="USB Type-C">USB Type-C</a>)</li>
+<li><a href="/wiki/IEEE_1394" title="IEEE 1394">FireWire (1394)</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Camera_Link&amp;action=edit&amp;redlink=1" title="Camera Link (存在しないページ)">Camera Link</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Camera_Link&amp;action=edit&amp;redlink=1" title="En:Camera Link (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PCI_Express#PCI_Express_External_Cabling" title="PCI Express">External PCI Express x16</a></li>
+<li><a href="/wiki/Thunderbolt" title="Thunderbolt">Thunderbolt</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">オーディオ規格</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ADAT_Lightpipe&amp;action=edit&amp;redlink=1" title="ADAT Lightpipe (存在しないページ)">ADAT Lightpipe</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ADAT_Lightpipe&amp;action=edit&amp;redlink=1" title="En:ADAT Lightpipe (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AES3&amp;action=edit&amp;redlink=1" title="AES3 (存在しないページ)">AES3</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AES3&amp;action=edit&amp;redlink=1" title="En:AES3 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_High_Definition_Audio&amp;action=edit&amp;redlink=1" title="Intel High Definition Audio (存在しないページ)">Intel HD Audio</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_High_Definition_Audio&amp;action=edit&amp;redlink=1" title="En:Intel High Definition Audio (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Inter-IC_Sound" title="Inter-IC Sound">Inter-IC Sound</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MADI&amp;action=edit&amp;redlink=1" title="MADI (存在しないページ)">MADI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MADI&amp;action=edit&amp;redlink=1" title="En:MADI (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=McASP&amp;action=edit&amp;redlink=1" title="McASP (存在しないページ)">McASP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:McASP&amp;action=edit&amp;redlink=1" title="En:McASP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/S/PDIF" title="S/PDIF">S/PDIF</a></li>
+<li><a href="/wiki/%E3%83%88%E3%82%B9%E3%83%AA%E3%83%B3%E3%82%AF" title="トスリンク">トスリンク</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンピュータバス規格 （ポータブル）</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/PC%E3%82%AB%E3%83%BC%E3%83%89" title="PCカード">PCカード</a></li>
+<li><a href="/wiki/ExpressCard" title="ExpressCard">ExpressCard</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンピュータバス規格 （組み込み）</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Multidrop_bus&amp;action=edit&amp;redlink=1" title="Multidrop bus (存在しないページ)">Multidrop bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Multidrop_bus&amp;action=edit&amp;redlink=1" title="En:Multidrop bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Advanced_Microcontroller_Bus_Architecture&amp;action=edit&amp;redlink=1" title="Advanced Microcontroller Bus Architecture (存在しないページ)">AMBA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Advanced_Microcontroller_Bus_Architecture&amp;action=edit&amp;redlink=1" title="En:Advanced Microcontroller Bus Architecture (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Wishbone_(computer_bus)&amp;action=edit&amp;redlink=1" title="Wishbone (computer bus) (存在しないページ)">Wishbone</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wishbone_(computer_bus)&amp;action=edit&amp;redlink=1" title="En:Wishbone (computer bus) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ビークルバス</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Local_Interconnect_Network&amp;action=edit&amp;redlink=1" title="Local Interconnect Network (存在しないページ)">LIN</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Local_Interconnect_Network&amp;action=edit&amp;redlink=1" title="En:Local Interconnect Network (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1708&amp;action=edit&amp;redlink=1" title="SAE J1708 (存在しないページ)">J1708</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1708&amp;action=edit&amp;redlink=1" title="En:SAE J1708 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1587&amp;action=edit&amp;redlink=1" title="SAE J1587 (存在しないページ)">J1587</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1587&amp;action=edit&amp;redlink=1" title="En:SAE J1587 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Fleet_Management_System&amp;action=edit&amp;redlink=1" title="Fleet Management System (存在しないページ)">FMS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fleet_Management_System&amp;action=edit&amp;redlink=1" title="En:Fleet Management System (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1939&amp;action=edit&amp;redlink=1" title="SAE J1939 (存在しないページ)">J1939</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1939&amp;action=edit&amp;redlink=1" title="En:SAE J1939 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Controller_Area_Network" title="Controller Area Network">CAN</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vehicle_Area_Network&amp;action=edit&amp;redlink=1" title="Vehicle Area Network (存在しないページ)">VAN</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vehicle_Area_Network&amp;action=edit&amp;redlink=1" title="En:Vehicle Area Network (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/FlexRay" title="FlexRay">FlexRay</a></li>
+<li><a href="/wiki/IDB-1394" title="IDB-1394">IDB-1394</a></li>
+<li><a href="/wiki/Media_Oriented_Systems_Transport" title="Media Oriented Systems Transport">MOST</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<small><i>補足:<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>のリストは通信速度がおおよそ速い順。セクションの最後に挙げているインタフェースが最も速い。</i></small><br/>カテゴリ <a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%90%E3%82%B9" title="カテゴリ:コンピュータバス">カテゴリ</a></td></tr></tbody></table></div>
+<div aria-labelledby="デスクトップミュージック" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible 1 navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:デスクトップミュージック (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="デスクトップミュージック" style="font-size:110%;margin:0 6em">デスクトップミュージック</div></th></tr><tr><td class="navbox-list navbox-odd hlist" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF" title="デスクトップミュージック">デスクトップミュージック</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BB%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デジタル・オーディオ・ワークステーション">デジタル・オーディオ・ワークステーション</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" title="デジタルオーディオ">デジタルオーディオ</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%AC%E3%82%BE%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" title="ハイレゾリューションオーディオ">ハイレゾリューションオーディオ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9F%B3%E6%A5%BD%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="音楽ソフトウェアの一覧 (存在しないページ)">音楽ソフトウェアの一覧</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:List_of_music_software&amp;action=edit&amp;redlink=1" title="En:List of music software (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%A5%BD%E8%AD%9C%E4%BD%9C%E6%88%90%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="楽譜作成ソフトウェア">楽譜作成ソフトウェア</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">収録</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="レコーダー">レコーダー</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードディスクレコーディング">ハードディスクレコーディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%BB%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="マルチトラック・レコーダー">マルチトラック・レコーダー</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">波形編集</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%B3%A2%E5%BD%A2%E7%B7%A8%E9%9B%86%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="波形編集ソフトウェア">波形編集ソフトウェア</a></li>
+<li>ループ素材制作ソフトウェア
+<ul><li><a href="/wiki/ReCycle!" title="ReCycle!">ReCycle!</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Apple_Loops_Utility&amp;action=edit&amp;redlink=1" title="Apple Loops Utility (存在しないページ)">Apple Loops Utility</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Apple_Loops_Utility&amp;action=edit&amp;redlink=1" title="En:Apple Loops Utility (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%B3" title="オートチューン">オートチューン</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Celemony_Software&amp;action=edit&amp;redlink=1" title="Celemony Software (存在しないページ)">Melodyne</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Celemony_Software&amp;action=edit&amp;redlink=1" title="En:Celemony Software (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li>スペクトル編集
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SpectraLayers&amp;action=edit&amp;redlink=1" title="SpectraLayers (存在しないページ)">SpectraLayers</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SpectraLayers&amp;action=edit&amp;redlink=1" title="En:SpectraLayers (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=WaveLab&amp;action=edit&amp;redlink=1" title="WaveLab (存在しないページ)">WaveLab</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:WaveLab&amp;action=edit&amp;redlink=1" title="En:WaveLab (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">音源・合成</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%9F%B3%E6%BA%90%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB" title="音源モジュール">音源モジュール</a></li>
+<li><a href="/wiki/FM%E9%9F%B3%E6%BA%90" title="FM音源">FM音源</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%B5%E3%83%B3%E3%83%97%E3%83%A9%E3%83%BC&amp;action=edit&amp;redlink=1" title="ソフトウェア・サンプラー (存在しないページ)">ソフトウェア・サンプラー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Software_sampler&amp;action=edit&amp;redlink=1" title="En:Software sampler (存在しないページ)">英語版</a>）</span></span>
+<ul><li><a href="/wiki/Kontakt" title="Kontakt">Kontakt</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HALion&amp;action=edit&amp;redlink=1" title="HALion (存在しないページ)">HALion</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HALion&amp;action=edit&amp;redlink=1" title="En:HALion (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li>サンプリング音源
+<ul><li><a href="/wiki/SoundFont" title="SoundFont">SoundFont</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Downloadable_Sounds&amp;action=edit&amp;redlink=1" title="Downloadable Sounds (存在しないページ)">Downloadable Sounds</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DLS_format&amp;action=edit&amp;redlink=1" title="En:DLS format (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SFZ%E5%BD%A2%E5%BC%8F&amp;action=edit&amp;redlink=1" title="SFZ形式 (存在しないページ)">SFZ形式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SFZ_(file_format)&amp;action=edit&amp;redlink=1" title="En:SFZ (file format) (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ソフトウェア・シンセサイザー">ソフトウェア・シンセサイザー</a>
+<ul><li><a href="/wiki/Microsoft_Synthesizer" title="Microsoft Synthesizer">Microsoft Synthesizer</a></li>
+<li><a href="/wiki/Microsoft_GS_Wavetable_SW_Synth" title="Microsoft GS Wavetable SW Synth">Microsoft GS</a></li>
+<li><a href="/wiki/TiMidity%2B%2B" title="TiMidity++">TiMidity++</a></li>
+<li><a href="/wiki/FluidSynth" title="FluidSynth">FluidSynth</a></li></ul></li>
+<li><a href="/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E9%9F%B3%E6%BA%90" title="バーチャルアナログ音源">バーチャルアナログ音源</a></li>
+<li><a href="/wiki/%E7%89%A9%E7%90%86%E3%83%A2%E3%83%87%E3%83%AB%E9%9F%B3%E6%BA%90" title="物理モデル音源">物理モデル音源</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Pianoteq&amp;action=edit&amp;redlink=1" title="Pianoteq (存在しないページ)">Pianoteq</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Pianoteq&amp;action=edit&amp;redlink=1" title="En:Pianoteq (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AB%E3%82%B7%E3%83%B3%E3%82%BB%E3%82%B5%E3%82%A4%E3%82%B6%E3%83%BC" title="ボーカルシンセサイザー">ボーカルシンセサイザー</a>
+<ul><li><a href="/wiki/%E6%B3%A2%E5%BD%A2%E6%8E%A5%E7%B6%9A%E5%9E%8B%E9%9F%B3%E5%A3%B0%E5%90%88%E6%88%90" title="波形接続型音声合成">波形接続型音声合成</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%9C%E3%83%BC%E3%82%AB%E3%83%AD%E3%82%A4%E3%83%89" title="ボーカロイド">ボーカロイド</a></li>
+<li><a href="/wiki/CeVIO" title="CeVIO">CeVIO</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">エフェクト</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%82%BF%E3%83%BC" title="エフェクター">エフェクター</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%82%B3%E3%83%A9%E3%82%A4%E3%82%B6%E3%83%BC_(%E9%9F%B3%E9%9F%BF%E6%A9%9F%E5%99%A8)" title="イコライザー (音響機器)">イコライザー</a></li>
+<li><a href="/wiki/%E3%83%8E%E3%82%A4%E3%82%BA%E3%83%AA%E3%83%80%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3#音声信号" title="ノイズリダクション">ノイズリダクション</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%93%E3%83%83%E3%83%88%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC&amp;action=edit&amp;redlink=1" title="ビットクラッシャー (存在しないページ)">ビットクラッシャー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bitcrusher&amp;action=edit&amp;redlink=1" title="En:Bitcrusher (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">シーケンサー</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%89%93%E3%81%A1%E8%BE%BC%E3%81%BF" title="打ち込み">打ち込み</a></li>
+<li><a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="ミュージックシーケンサー">ミュージックシーケンサー</a></li>
+<li><a href="/wiki/%E3%83%94%E3%82%A2%E3%83%8E%E3%83%AD%E3%83%BC%E3%83%AB" title="ピアノロール">ピアノロール</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E4%BD%9C%E6%9B%B2" title="自動作曲">自動作曲</a> (<a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E4%BD%9C%E6%9B%B2%E6%B3%95" title="アルゴリズム作曲法">アルゴリズム作曲法</a>)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">I/O及びAPI</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89" title="サウンドカード">サウンドカード</a></li>
+<li><a class="mw-selflink selflink">MIDI</a></li>
+<li><a href="/wiki/IEEE_1394" title="IEEE 1394">Firewire</a></li>
+<li><a href="/wiki/ASIO" title="ASIO">ASIO</a></li>
+<li><a href="/wiki/Core_Audio_(Apple)" title="Core Audio (Apple)">Core Audio (アップル)</a></li>
+<li><a href="/wiki/JACK_Audio_Connection_Kit" title="JACK Audio Connection Kit">JACK Audio Connection Kit</a></li>
+<li>プラグインAPI
+<ul><li><a href="/wiki/Virtual_Studio_Technology" title="Virtual Studio Technology">VST</a></li>
+<li><a href="/wiki/Audio_Units" title="Audio Units">AU</a></li>
+<li><a href="/wiki/LADSPA" title="LADSPA">LADSPA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LV2&amp;action=edit&amp;redlink=1" title="LV2 (存在しないページ)">LV2</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:LV2&amp;action=edit&amp;redlink=1" title="En:LV2 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DirectX%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3&amp;action=edit&amp;redlink=1" title="DirectXプラグイン (存在しないページ)">DirectXプラグイン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DirectX_plugin&amp;action=edit&amp;redlink=1" title="En:DirectX plugin (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Audio_Random_Access&amp;action=edit&amp;redlink=1" title="Audio Random Access (存在しないページ)">ARA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Audio_Random_Access&amp;action=edit&amp;redlink=1" title="En:Audio Random Access (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">DAW</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">オープンソース</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ardour" title="Ardour">Ardour</a></li>
+<li><a href="/wiki/LMMS" title="LMMS">LMMS</a></li>
+<li><a href="/wiki/MusE" title="MusE">MusE</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Qtractor&amp;action=edit&amp;redlink=1" title="Qtractor (存在しないページ)">Qtractor</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Qtractor&amp;action=edit&amp;redlink=1" title="En:Qtractor (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Renoise" title="Renoise">Renoise</a></li>
+<li><a href="/wiki/Rosegarden" title="Rosegarden">Rosegarden</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Traverso_DAW&amp;action=edit&amp;redlink=1" title="Traverso DAW (存在しないページ)">Traverso DAW</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Traverso_DAW&amp;action=edit&amp;redlink=1" title="En:Traverso DAW (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プロプライエタリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ableton_Live" title="Ableton Live">Ableton Live</a></li>
+<li><a href="/wiki/ACID_(DTM%E3%82%BD%E3%83%95%E3%83%88)" title="ACID (DTMソフト)">ACID</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Bitwig_Studio&amp;action=edit&amp;redlink=1" title="Bitwig Studio (存在しないページ)">Bitwig Studio</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bitwig_Studio&amp;action=edit&amp;redlink=1" title="En:Bitwig Studio (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Cakewalk_by_BandLab" title="Cakewalk by BandLab">Cakewalk</a> (SONAR)</li>
+<li><a href="/wiki/Cubase" title="Cubase">Cubase</a>/<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Nuendo&amp;action=edit&amp;redlink=1" title="Nuendo (存在しないページ)">Nuendo</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Steinberg_Nuendo&amp;action=edit&amp;redlink=1" title="En:Steinberg Nuendo (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Digital_Performer" title="Digital Performer">Digital Performer</a></li>
+<li><a href="/wiki/FL_Studio" title="FL Studio">FL Studio</a></li>
+<li><a href="/wiki/GarageBand" title="GarageBand">GarageBand</a>/<a href="/wiki/Logic_Pro" title="Logic Pro">Logic Pro</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mixcraft&amp;action=edit&amp;redlink=1" title="Mixcraft (存在しないページ)">Mixcraft</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mixcraft&amp;action=edit&amp;redlink=1" title="En:Mixcraft (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Pro_Tools" title="Pro Tools">Pro Tools</a></li>
+<li><a href="/wiki/REAPER" title="REAPER">REAPER</a></li>
+<li><a href="/wiki/Reason_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Reason (ソフトウェア)">Reason</a></li>
+<li><a href="/wiki/Music_Maker" title="Music Maker">Music Maker</a>/<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Samplitude&amp;action=edit&amp;redlink=1" title="Samplitude (存在しないページ)">Samplitude</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MAGIX_Samplitude&amp;action=edit&amp;redlink=1" title="En:MAGIX Samplitude (存在しないページ)">英語版</a>）</span></span>/<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Sequoia&amp;action=edit&amp;redlink=1" title="Sequoia (存在しないページ)">Sequoia</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MAGIX_Sequoia&amp;action=edit&amp;redlink=1" title="En:MAGIX Sequoia (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Singer_Song_Writer" title="Singer Song Writer">ABILITY/Singer Song Writer Lite</a></li>
+<li><a href="/wiki/Studio_One_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Studio One (ソフトウェア)">Studio One</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Podium&amp;action=edit&amp;redlink=1" title="Podium (存在しないページ)">Podium</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Zynewave_Podium&amp;action=edit&amp;redlink=1" title="En:Zynewave Podium (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Tracktion_Waveform&amp;action=edit&amp;redlink=1" title="Tracktion Waveform (存在しないページ)">Tracktion Waveform</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Tracktion_Waveform&amp;action=edit&amp;redlink=1" title="En:Tracktion Waveform (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Music_Studio" title="Music Studio">Music Studio</a></li>
+<li><a href="/wiki/Record_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Record (ソフトウェア)">Record</a></li>
+<li><a href="/wiki/XGworks" title="XGworks">XGworks/SOL</a></li>
+<li><a href="/wiki/Vision_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Vision (ソフトウェア)">Studio Vision</a></li>
+<li><a href="/wiki/ORION_(DAW)" title="ORION (DAW)">ORION</a></li>
+<li><a href="/wiki/MIXTURE" title="MIXTURE">MIXTURE</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Sequel&amp;action=edit&amp;redlink=1" title="Sequel (存在しないページ)">Sequel</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=Nl:Steinberg_sequel&amp;action=edit&amp;redlink=1" title="Nl:Steinberg sequel (存在しないページ)">オランダ語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331071815
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.334 seconds
+Real time usage: 0.539 seconds
+Preprocessor visited node count: 3710/1000000
+Post‐expand include size: 157945/2097152 bytes
+Template argument size: 5213/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 71/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5415/5000000 bytes
+Lua time usage: 0.200/7 seconds
+Lua virtual size: 7692288/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  426.723      1 -total
+ 59.88%  255.520      3 テンプレート:Navbox
+ 49.49%  211.166     72 テンプレート:仮リンク
+ 36.03%  153.767      1 テンプレート:コンピュータバス
+ 18.10%   77.240      1 テンプレート:デスクトップミュージック
+ 13.92%   59.408      1 テンプレート:Cite_book
+ 12.89%   54.992      1 テンプレート:Cite_book/和書
+ 10.84%   46.256      1 テンプレート:ISBN2
+ 10.39%   44.329      1 テンプレート:Reflist
+  9.40%   40.115      3 テンプレート:Cite_web
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:5772-0!canonical and timestamp 20220331071815 and revision id 4487. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=MIDI&amp;oldid=4487">http://localhost:8080/w/index.php?title=MIDI&amp;oldid=4487</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIDI" title="カテゴリ:MIDI">MIDI</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:JIS" title="カテゴリ:JIS">JIS</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E3%81%AE%E7%99%BA%E6%98%8E" title="カテゴリ:日本の発明">日本の発明</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=MIDI&amp;returntoquery=curid%3D5772%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=MIDI&amp;returntoquery=curid%3D5772%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/MIDI" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:MIDI&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/MIDI">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=MIDI&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=MIDI&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/MIDI" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/MIDI" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=MIDI&amp;oldid=4487" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=MIDI&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月19日 (金) 10:54 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.334","walltime":"0.539","ppvisitednodes":{"value":3710,"limit":1000000},"postexpandincludesize":{"value":157945,"limit":2097152},"templateargumentsize":{"value":5213,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":71,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5415,"limit":5000000},"timingprofile":["100.00%  426.723      1 -total"," 59.88%  255.520      3 テンプレート:Navbox"," 49.49%  211.166     72 テンプレート:仮リンク"," 36.03%  153.767      1 テンプレート:コンピュータバス"," 18.10%   77.240      1 テンプレート:デスクトップミュージック"," 13.92%   59.408      1 テンプレート:Cite_book"," 12.89%   54.992      1 テンプレート:Cite_book/和書"," 10.84%   46.256      1 テンプレート:ISBN2"," 10.39%   44.329      1 テンプレート:Reflist","  9.40%   40.115      3 テンプレート:Cite_web"]},"scribunto":{"limitreport-timeusage":{"value":"0.200","limit":"7"},"limitreport-virtmemusage":{"value":7692288,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331071815","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":122});});</script>
+</body></html>

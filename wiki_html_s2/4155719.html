@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>C++20 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-C_20 rootpage-C_20 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">C++20</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><div class="pathnavbox"><a href="." id="link_a_1" title="C++">C++</a> &gt; <b>C++20</b></div>
+<p><b>C++20</b>は、 <a href="." id="link_a_2" title="C++17">C++17</a>の次期バージョンとされるプログラミング言語<a href="." id="link_a_1" title="C++">C++</a>の<a href="." id="link_a_3" title="国際標準化機構">ISO</a>/IEC標準の改訂の非公式な名称である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。この規格は、2020年2月にプラハで開催された会議でWG21によって技術的に最終決定<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>された<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。この規格は、2020年5月のDIS投票終了後に正式に公開される予定である。 [要更新] 
+</p><p>C++20は、<a href="." id="link_a_4" title="C++14">C++14</a>やC++17と比べ新たな主要機能が追加されている<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。以下は、C++20に受け入れられるか、C++20に含めることが検討されている変更の一部のリストである。<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#新機能"><span class="tocnumber">1</span> <span class="toctext">新機能</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#言語"><span class="tocnumber">1.1</span> <span class="toctext">言語</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#ライブラリ"><span class="tocnumber">1.2</span> <span class="toctext">ライブラリ</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#非推奨の機能"><span class="tocnumber">1.3</span> <span class="toctext">非推奨の機能</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#新しい（および変更された）キーワード"><span class="tocnumber">1.4</span> <span class="toctext">新しい（および変更された）キーワード</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#変更の歴史"><span class="tocnumber">2</span> <span class="toctext">変更の歴史</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#技術仕様として公開されている機能"><span class="tocnumber">3</span> <span class="toctext">技術仕様として公開されている機能</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#今後の標準に延期された機能"><span class="tocnumber">4</span> <span class="toctext">今後の標準に延期された機能</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.96.B0.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="新機能">新機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=1" title="節を編集: 新機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++20では多くの新機能が導入された。次のリストは完全ではない可能性がある。 
+</p>
+<h3><span id=".E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="言語">言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=2" title="節を編集: 言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88_(C%2B%2B)" title="コンセプト (C++)">コンセプト</a><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>（簡潔な構文による）<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。</li>
+<li>モジュール<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup></li>
+<li>指示付き初期化子<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup> （<a href="/wiki/C99" title="C99">C99</a>の機能、および一般的な<a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">G++</a>拡張に基づく）</li>
+<li>ラムダのキャプチャとしての<code>[=, this]</code><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup></li>
+<li>ラムダのテンプレートパラメータリスト<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup></li>
+<li>「<a href="/wiki/%E5%AE%87%E5%AE%99%E8%88%B9%E6%BC%94%E7%AE%97%E5%AD%90" title="宇宙船演算子">宇宙船演算子</a>」<code>operator &lt;=&gt;</code>による三方比較</li>
+<li>範囲ベース<code>for</code>文内における追加変数の初期化<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li>
+<li>未評価コンテキストにおけるラムダ<sup class="reference" id="cite_ref-:0_13-0"><a href="#cite_note-:0-13">[13]</a></sup> <sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li>
+<li>デフォルトの構築可能で割り当て可能なステートレスラムダ<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup></li>
+<li>ラムダ<i>init-capture</i>でパック拡張を許可<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup></li>
+<li>テンプレートパラメータとしての文字列リテラル<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup></li>
+<li>特定の状況で<code>typename</code>の必要性が除去される<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup></li>
+<li>新しい標準属性<code>[[no_unique_address]]</code> <sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup> 、<code>[[likely]]</code>および<code>[[unlikely]]</code> <sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup></li>
+<li>条件付き<code>explicit</code>、明示的修飾子がブール式に依存できるようにする<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup></li>
+<li>拡張された<code>constexpr</code>：仮想関数<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>、共用体<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>、try および catch<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>、dynamic_cast および typeid<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>、std::pointer_traits<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup></li>
+<li>新しい<code>consteval</code>キーワードを使用した即時関数<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup></li>
+<li><a href="/wiki/%E6%95%B4%E6%95%B0%E5%9E%8B" title="整数型">符号付き整数</a>は、 <a href="/wiki/2%E3%81%AE%E8%A3%9C%E6%95%B0" title="2の補数">2の補数</a>を使用して表されるように定義された（符号付き整数オーバーフローは未定義の動作のままである） <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup></li>
+<li>改訂された記憶モデル<sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup></li>
+<li>構造化バインディングのさまざまな改善（ラムダキャプチャとの相互作用、静的およびthread_localストレージ期間） <sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup> <sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3" title="コルーチン">コルーチン</a> <sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup></li>
+<li>スコープ付き列挙型における<code>using</code><sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup></li>
+<li><code>constinit</code>キーワード<sup class="reference" id="cite_ref-constinit_34-0"><a href="#cite_note-constinit-34">[34]</a></sup></li></ul>
+<h3><span id=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA"></span><span class="mw-headline" id="ライブラリ">ライブラリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=3" title="節を編集: ライブラリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>範囲（1つの範囲の提案）<sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup></li>
+<li>配列の<code>std::make_shared</code>および<code>std::allocate_shared</code><sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup></li>
+<li>アトミックスマートポインター（ <code>std::atomic&lt;shared_ptr&lt;T&gt;&gt;</code>や<code>std::atomic&lt;weak_ptr&lt;T&gt;&gt;</code> ）<sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup></li>
+<li>ポインタを生ポインタに変換する<code>std::to_address</code><sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup></li>
+<li><code>&lt;chrono&gt;</code>へのカレンダーとタイムゾーンの追加<sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup></li>
+<li>連続した配列へのビューを提供する<code>std::span</code>（<code>std::string_view</code>に類似するが、<code>span</code>は参照シーケンスを変更可能である） <sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[40]</a></sup></li>
+<li><code>&lt;version&gt;</code>ヘッダー<sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[41]</a></sup></li>
+<li>オブジェクト表現の型キャストに使用される<code>std::bit_cast&lt;&gt;</code>。<code>memcpy()</code>よりも冗長度が低く、コンパイラの内部を利用しやすくなっている<sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[42]</a></sup>。</li>
+<li>機能テストマクロ<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[43]</a></sup></li>
+<li>さまざまなconstexprライブラリビット<sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[44]</a></sup></li>
+<li>デフォルトの初期化によるスマートポインタの作成<sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[45]</a></sup></li>
+<li><code>std::map::contains</code>メソッド<sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[46]</a></sup></li></ul>
+<h3><span id=".E9.9D.9E.E6.8E.A8.E5.A5.A8.E3.81.AE.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="非推奨の機能">非推奨の機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=4" title="節を編集: 非推奨の機能">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>添え字式でのカンマ演算子の使用は廃止予定である<sup class="reference" id="cite_ref-47"><a href="#cite_note-47">[47]</a></sup></li>
+<li>（ほとんどの）<code><a class="new" href="/w/index.php?title=%E6%8F%AE%E7%99%BA%E6%80%A7%EF%BC%88%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%EF%BC%89&amp;action=edit&amp;redlink=1" title="揮発性（コンピュータープログラミング） (存在しないページ)">volatile</a></code>は廃止予定である<sup class="reference" id="cite_ref-volatile_48-0"><a href="#cite_note-volatile-48">[48]</a></sup></li></ul>
+<h3><span id=".E6.96.B0.E3.81.97.E3.81.84.EF.BC.88.E3.81.8A.E3.82.88.E3.81.B3.E5.A4.89.E6.9B.B4.E3.81.95.E3.82.8C.E3.81.9F.EF.BC.89.E3.82.AD.E3.83.BC.E3.83.AF.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="新しい（および変更された）キーワード">新しい（および変更された）キーワード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=5" title="節を編集: 新しい（および変更された）キーワード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>concept</code>、<code>constinit</code><sup class="reference" id="cite_ref-constinit_34-1"><a href="#cite_note-constinit-34">[34]</a></sup>、<code>consteval</code>、<code>co_await</code>、<code>co_return</code>、<code>co_yield</code>、<code>requires</code>（加えて<code>export</code>の意味の変更）、および<code>char8_t</code>といった多くの新しいキーワード（および新規の「宇宙船演算子」<code>operator &lt;=&gt;</code>）が追加された<sup class="reference" id="cite_ref-49"><a href="#cite_note-49">[49]</a></sup>。また、C++20以降、<code>explicit</code>は式を取ることができるようになった<sup class="reference" id="cite_ref-50"><a href="#cite_note-50">[50]</a></sup>。<code>volatile</code>キーワードのほとんどの用法は廃止予定となった<sup class="reference" id="cite_ref-volatile_48-1"><a href="#cite_note-volatile-48">[48]</a></sup>。 
+</p><p>キーワードに加えて、<code>import</code>や<code>module</code>など<i>、特別な意味を持つ識別子</i>が新しく加わった。 
+</p><p>C++20で新しく追加された属性：<code>[[likely]]</code>、<code>[[unlikely]]</code>、および<code>[[no_unique_address]]</code><sup class="reference" id="cite_ref-51"><a href="#cite_note-51">[51]</a></sup>。 
+</p>
+<h2><span id=".E5.A4.89.E6.9B.B4.E3.81.AE.E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="変更の歴史">変更の歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=6" title="節を編集: 変更の歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2017年7月（トロント）にC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-52"><a href="#cite_note-52">[52]</a></sup>
+</p>
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88_(C%2B%2B)" title="コンセプト (C++)">コンセプト</a></li>
+<li>指示付き初期化子</li>
+<li>ラムダのキャプチャとしての<code>[=, this]</code></li>
+<li>ラムダのテンプレートパラメータリスト</li>
+<li>配列の<code>std::make_shared</code>および<code>std::allocate_shared</code></li></ul>
+<p>2017年11月の秋の会議（アルバカーキ）でC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-53"><a href="#cite_note-53">[53]</a></sup> <sup class="reference" id="cite_ref-54"><a href="#cite_note-54">[54]</a></sup>
+</p>
+<ul><li>「<a href="/wiki/%E5%AE%87%E5%AE%99%E8%88%B9%E6%BC%94%E7%AE%97%E5%AD%90" title="宇宙船演算子">宇宙船演算子</a>」<code>operator &lt;=&gt;</code>を使用した三方比較</li>
+<li>範囲ベースの<code>for</code>ステートメント内の追加変数の初期化</li>
+<li>未評価コンテキストにおけるラムダ</li>
+<li>デフォルトの構築可能で割り当て可能なステートレスラムダ</li>
+<li>ラムダ<i>init-capture</i>でパック拡張を許可する</li>
+<li>テンプレートパラメータとしての文字列リテラル</li>
+<li>アトミックスマートポインター（ <code>std::atomic&lt;shared_ptr&lt;T&gt;&gt;</code>や<code>std::atomic&lt;weak_ptr&lt;T&gt;&gt;</code> ）</li>
+<li>ポインタを生ポインタに変換する<code>std::to_address</code></li></ul>
+<p>2018年3月（ジャクソンビル）のC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-55"><a href="#cite_note-55">[55]</a></sup>
+</p>
+<ul><li>特定の状況における<code>typename</code>の必要性の除去<sup class="reference" id="cite_ref-56"><a href="#cite_note-56">[56]</a></sup></li>
+<li>新しい標準属性<code>[[no_unique_address]]</code> <sup class="reference" id="cite_ref-57"><a href="#cite_note-57">[57]</a></sup>、<code>[[likely]]</code>および<code>[[unlikely]]</code><sup class="reference" id="cite_ref-58"><a href="#cite_note-58">[58]</a></sup></li>
+<li><code>&lt;chrono&gt;</code>へのカレンダーとタイムゾーンの追加<sup class="reference" id="cite_ref-59"><a href="#cite_note-59">[59]</a></sup></li>
+<li>連続した配列へのビューを提供する<code>std::span</code>（<code>std::string_view</code>と類似するが、<code>span</code>は参照されたシーケンスを変更可能である）<sup class="reference" id="cite_ref-60"><a href="#cite_note-60">[60]</a></sup></li>
+<li><code>&lt;version&gt;</code>ヘッダ<sup class="reference" id="cite_ref-61"><a href="#cite_note-61">[61]</a></sup></li></ul>
+<p>2018年6月の夏の会議（Rapperswil）でC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-62"><a href="#cite_note-62">[62]</a></sup>
+</p>
+<ul><li><a href="/wiki/%E5%A5%91%E7%B4%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="契約プログラミング">契約</a>を<a href="/wiki/C%2B%2B20#今後の標準に延期された機能" title="C++20">今後の標準に延期</a><sup class="reference" id="cite_ref-63"><a href="#cite_note-63">[63]</a></sup></li>
+<li>機能テストマクロ<sup class="reference" id="cite_ref-64"><a href="#cite_note-64">[64]</a></sup></li>
+<li><code>memcpy()</code>より冗長性が低く、コンパイラの内部を利用する能力が高いオブジェクト表現のビットキャスト<sup class="reference" id="cite_ref-65"><a href="#cite_note-65">[65]</a></sup></li>
+<li>明示的修飾子がブール式に依存することを可能にする条件付き<code>explicit</code><sup class="reference" id="cite_ref-66"><a href="#cite_note-66">[66]</a></sup></li>
+<li>constexpr仮想関数<sup class="reference" id="cite_ref-67"><a href="#cite_note-67">[67]</a></sup></li></ul>
+<p><a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/n4715.pdf" rel="nofollow">2018年11月の秋の会議</a>（サンディエゴ）でC++20ワーキングドラフトに適用された変更は次のとおりである： 
+</p>
+<ul><li>範囲（1つの範囲の提案）</li>
+<li>コンセプトの簡潔な構文</li>
+<li>constexpr union、try および catch、dynamic_cast、typeid、std::pointer_traits。</li>
+<li>さまざまなconstexprライブラリビット<sup class="reference" id="cite_ref-68"><a href="#cite_note-68">[68]</a></sup></li>
+<li>新しい<code>consteval</code>キーワードを使用した即時関数<sup class="reference" id="cite_ref-69"><a href="#cite_note-69">[69]</a></sup></li>
+<li><a href="/wiki/%E6%95%B4%E6%95%B0%E5%9E%8B" title="整数型">符号付き整数</a>は、<a href="/wiki/2%E3%81%AE%E8%A3%9C%E6%95%B0" title="2の補数">2の補数</a>を使用して表されるように定義された（符号付き整数オーバーフローは未定義の動作のままである）<sup class="reference" id="cite_ref-70"><a href="#cite_note-70">[70]</a></sup></li>
+<li><s>契約機能の改善（契約条件でのアクセス制御）</s><sup class="reference" id="cite_ref-71"><a href="#cite_note-71">[71]</a></sup> （<a href="/wiki/C%2B%2B20#今後の標準に延期された機能" title="C++20">今後の標準に延期された機能</a>のリストを参照）</li>
+<li>改訂された記憶モデル<sup class="reference" id="cite_ref-72"><a href="#cite_note-72">[72]</a></sup></li>
+<li>デフォルト初期化によるスマートポインタの作成<sup class="reference" id="cite_ref-73"><a href="#cite_note-73">[73]</a></sup></li></ul>
+<p><a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/n4765.pdf" rel="nofollow">2019年2月の冬の会議</a>（コナ）でC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-74"><a href="#cite_note-74">[74]</a></sup> <sup class="reference" id="cite_ref-75"><a href="#cite_note-75">[75]</a></sup>
+</p>
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3" title="コルーチン">コルーチン</a><sup class="reference" id="cite_ref-76"><a href="#cite_note-76">[76]</a></sup> – Clang 5ですでに実験的にサポートされていた<sup class="reference" id="cite_ref-77"><a href="#cite_note-77">[77]</a></sup></li>
+<li>モジュール<sup class="reference" id="cite_ref-78"><a href="#cite_note-78">[78]</a></sup> – Clang 5<sup class="reference" id="cite_ref-79"><a href="#cite_note-79">[79]</a></sup>、Visual Studio 2015 Update 1<sup class="reference" id="cite_ref-80"><a href="#cite_note-80">[80]</a></sup>、GCC<sup class="reference" id="cite_ref-81"><a href="#cite_note-81">[81]</a></sup>で試験的にサポートされていた<sup class="reference" id="cite_ref-82"><a href="#cite_note-82">[82]</a></sup></li>
+<li>構造化バインディングのさまざまな改善（ラムダキャプチャ、静的およびthread_localストレージ寿命との相互作用）<sup class="reference" id="cite_ref-83"><a href="#cite_note-83">[83]</a></sup> <sup class="reference" id="cite_ref-84"><a href="#cite_note-84">[84]</a></sup></li></ul>
+<p><a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/n4783.pdf" rel="nofollow">2019年7月の夏の会議</a>（ケルン）でC++20ワーキングドラフトに適用された変更は次のとおりである：<sup class="reference" id="cite_ref-85"><a href="#cite_note-85">[85]</a></sup> <sup class="reference" id="cite_ref-86"><a href="#cite_note-86">[86]</a></sup> <sup class="reference" id="cite_ref-87"><a href="#cite_note-87">[87]</a></sup>
+</p>
+<ul><li>契約が削除された（<a href="/wiki/C%2B%2B20#今後の標準に延期された機能" title="C++20">今後の標準に延期された機能</a>のリストを参照） <sup class="reference" id="cite_ref-88"><a href="#cite_note-88">[88]</a></sup></li>
+<li>添え字式でのカンマ演算子の使用は非推奨となった<sup class="reference" id="cite_ref-89"><a href="#cite_note-89">[89]</a></sup></li>
+<li>constexprへの追加（自明なデフォルト初期化<sup class="reference" id="cite_ref-90"><a href="#cite_note-90">[90]</a></sup>、未評価のインラインアセンブリ<sup class="reference" id="cite_ref-91"><a href="#cite_note-91">[91]</a></sup>）</li>
+<li>スコープ付き列挙型のusing<sup class="reference" id="cite_ref-92"><a href="#cite_note-92">[92]</a></sup></li>
+<li>宇宙船演算子へのさまざまな変更<sup class="reference" id="cite_ref-93"><a href="#cite_note-93">[93]</a></sup><sup class="reference" id="cite_ref-94"><a href="#cite_note-94">[94]</a></sup></li>
+<li>DR：モジュールへの軽微な変更<sup class="reference" id="cite_ref-95"><a href="#cite_note-95">[95]</a></sup></li>
+<li><code>constinit</code>キーワード</li>
+<li>コンセプトに対する変更（ <code>-&gt; Type</code> return-type-requirements の削除<sup class="reference" id="cite_ref-96"><a href="#cite_note-96">[96]</a></sup>）</li>
+<li>（ほとんどの）<code>volatile</code>を非推奨とした<sup class="reference" id="cite_ref-volatile_48-2"><a href="#cite_note-volatile-48">[48]</a></sup></li>
+<li>DR：コンストラクタに対する<code>[[nodiscard]]</code>の効果<sup class="reference" id="cite_ref-97"><a href="#cite_note-97">[97]</a></sup></li>
+<li>新しい標準ライブラリのコンセプトは<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%A1%E3%83%AB%E3%82%B1%E3%83%BC%E3%82%B9" title="キャメルケース">PascalCase</a>を使用しないこととなった（ほかの標準ライブラリと同様、standard_caseを使用する）<sup class="reference" id="cite_ref-98"><a href="#cite_note-98">[98]</a></sup></li>
+<li>テキストのフォーマット<sup class="reference" id="cite_ref-99"><a href="#cite_note-99">[99]</a></sup><sup class="reference" id="cite_ref-100"><a href="#cite_note-100">[100]</a></sup>（chronoの統合<sup class="reference" id="cite_ref-101"><a href="#cite_note-101">[101]</a></sup>、特殊なケースにおける修正<sup class="reference" id="cite_ref-102"><a href="#cite_note-102">[102]</a></sup>）</li>
+<li>ビット操作<sup class="reference" id="cite_ref-103"><a href="#cite_note-103">[103]</a></sup></li>
+<li><code>constexpr INVOKE</code><sup class="reference" id="cite_ref-104"><a href="#cite_note-104">[104]</a></sup></li>
+<li>数学定数<sup class="reference" id="cite_ref-105"><a href="#cite_note-105">[105]</a></sup></li>
+<li>アトミックへの一貫性の追加（ <code>std::atomic_ref&lt;T&gt;</code><sup class="reference" id="cite_ref-106"><a href="#cite_note-106">[106]</a></sup>、<code>std::atomic&lt;std::shared_ptr&lt;T&gt;&gt;</code><sup class="reference" id="cite_ref-107"><a href="#cite_note-107">[107]</a></sup>）</li>
+<li><code>&lt;=&gt;</code>演算子を標準ライブラリに追加<sup class="reference" id="cite_ref-108"><a href="#cite_note-108">[108]</a></sup></li>
+<li>標準ライブラリのヘッダーユニット<sup class="reference" id="cite_ref-109"><a href="#cite_note-109">[109]</a></sup></li>
+<li>同期機能<sup class="reference" id="cite_ref-110"><a href="#cite_note-110">[110]</a></sup>（マージ元：効率的なアトミック待機とセマフォ<sup class="reference" id="cite_ref-111"><a href="#cite_note-111">[111]</a></sup>、ラッチとバリア<sup class="reference" id="cite_ref-112"><a href="#cite_note-112">[112]</a></sup>、atomic_flagの改善<sup class="reference" id="cite_ref-113"><a href="#cite_note-113">[113]</a></sup>、C++を小さいCPUで実装できないようにしない<sup class="reference" id="cite_ref-114"><a href="#cite_note-114">[114]</a></sup> ）</li>
+<li><code>std::source_location</code><sup class="reference" id="cite_ref-115"><a href="#cite_note-115">[115]</a></sup></li>
+<li>constexprコンテナ（<code>std::string</code><sup class="reference" id="cite_ref-116"><a href="#cite_note-116">[116]</a></sup>、<code>std::vector</code><sup class="reference" id="cite_ref-117"><a href="#cite_note-117">[117]</a></sup>）</li>
+<li><code>std::stop_token</code>およびjoinされるスレッド（<code>std::jthread</code>）<sup class="reference" id="cite_ref-118"><a href="#cite_note-118">[118]</a></sup></li></ul>
+<p><a class="external text" href="https://wg21.link/n4814" rel="nofollow">2019年11月の秋の会議</a>（ベルファスト）でのNBコメントの解決中に適用された変更には以下を含む：<sup class="reference" id="cite_ref-119"><a href="#cite_note-119">[119]</a></sup><sup class="reference" id="cite_ref-120"><a href="#cite_note-120">[120]</a></sup><sup class="reference" id="cite_ref-121"><a href="#cite_note-121">[121]</a></sup>
+</p>
+<ul><li>非タイプテンプレートパラメータ（NTTP）のクラスタイプ：テンプレート引数の等価性の意味が<code>operator==</code>から分離されたため、ユーザー定義の<code>operator==</code>許可しないという制限がなくなった<sup class="reference" id="cite_ref-122"><a href="#cite_note-122">[122]</a></sup>。これにより、クラスタイプのNTTPの配列メンバーも許可される。</li>
+<li>浮動小数点型<sup class="reference" id="cite_ref-123"><a href="#cite_note-123">[123]</a></sup>、ポインターと参照、および共用体とunionライクなクラス（無名共用体を含むクラス型）がNTTPとして許可されるようになった。</li>
+<li>関数IDに末尾のrequire句も含まれるようになった（P1971）</li>
+<li>制約された非テンプレート関数が削除された</li>
+<li><code>&lt;compare&gt;</code>がフリースタンディング実装で利用可能になった<sup class="reference" id="cite_ref-124"><a href="#cite_note-124">[124]</a></sup></li>
+<li><code>std::span</code>のtypedefは、標準ライブラリの他の部分と一致するように<code>size_type</code>から<code>index_type</code>に変更された<sup class="reference" id="cite_ref-125"><a href="#cite_note-125">[125]</a></sup></li>
+<li>コンセプトの名前が、ケルンでの会議の結果に従って変更された。</li>
+<li>範囲に対するいくつかの修正と追加（P1456R1：移動のみのビュー<sup class="reference" id="cite_ref-126"><a href="#cite_note-126">[126]</a></sup>、P1391R4：<code>std::string_view</code>に対する範囲コンストラクタ（文字のイテレーターペアからのコンストラクタ）<sup class="reference" id="cite_ref-127"><a href="#cite_note-127">[127]</a></sup>、P1394R4：<code>std::span&lt;ref&gt;</code>に対する範囲コンストラクタ<sup class="reference" id="cite_ref-128"><a href="#cite_note-128">[128]</a></sup>、P1870R1：<code>forwarding-range&lt;T&gt;</code>が微妙すぎる<sup class="reference" id="cite_ref-129"><a href="#cite_note-129">[129]</a></sup>）</li>
+<li><code>std::atomic&lt;T&gt;</code>の初期化が変更され、デフォルトおよびリスト初期化で動作するようになった<sup class="reference" id="cite_ref-130"><a href="#cite_note-130">[130]</a></sup>。<code>std::latch</code>および<code>std::barrier</code>は、新しいメンバ関数<code>max()</code>を通じて実装がサポートするスレッドの最大数を報告できるようになった。</li>
+<li><code>std::weak_equality</code>と<code>std::strong_equality</code>は使用されなくなったため削除された</li>
+<li><code>&lt;numeric&gt;</code>内のアルゴリズムが<code>constexpr</code>となった。</li>
+<li>C++20の新機能または変更された機能の不足している機能テストマクロが追加されました<sup class="reference" id="cite_ref-131"><a href="#cite_note-131">[131]</a></sup></li></ul>
+<h2><span id=".E6.8A.80.E8.A1.93.E4.BB.95.E6.A7.98.E3.81.A8.E3.81.97.E3.81.A6.E5.85.AC.E9.96.8B.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.82.8B.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="技術仕様として公開されている機能">技術仕様として公開されている機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=7" title="節を編集: 技術仕様として公開されている機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>並列処理TS v2 <sup class="reference" id="cite_ref-132"><a href="#cite_note-132">[132]</a></sup>（タスクブロックを含む<sup class="reference" id="cite_ref-133"><a href="#cite_note-133">[133]</a></sup>）</li>
+<li>ネットワーキングTS v1<sup class="reference" id="cite_ref-134"><a href="#cite_note-134">[134]</a></sup></li>
+<li>リフレクションTS v1<sup class="reference" id="cite_ref-135"><a href="#cite_note-135">[135]</a></sup></li></ul>
+<h2><span id=".E4.BB.8A.E5.BE.8C.E3.81.AE.E6.A8.99.E6.BA.96.E3.81.AB.E5.BB.B6.E6.9C.9F.E3.81.95.E3.82.8C.E3.81.9F.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="今後の標準に延期された機能">今後の標準に延期された機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=8" title="節を編集: 今後の標準に延期された機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>契約 – 新しい提案に取り組むために新しい研究グループ（SG21）が形成された<sup class="reference" id="cite_ref-136"><a href="#cite_note-136">[136]</a></sup></li>
+<li>リフレクション<sup class="reference" id="cite_ref-137"><a href="#cite_note-137">[137]</a></sup> <sup class="reference" id="cite_ref-138"><a href="#cite_note-138">[138]</a></sup></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%BF%E3%82%AF%E3%83%A9%E3%82%B9" title="メタクラス">メタクラス</a> <sup class="reference" id="cite_ref-139"><a href="#cite_note-139">[139]</a></sup></li>
+<li>Executors<sup class="reference" id="cite_ref-140"><a href="#cite_note-140">[140]</a></sup></li>
+<li>非同期、基本的なI/Oサービス、タイマー、バッファ、バッファ指向ストリーム、ソケット、インターネットプロトコル（executorによってブロックされる）を含むネットワーク拡張<sup class="reference" id="cite_ref-141"><a href="#cite_note-141">[141]</a></sup><sup class="reference" id="cite_ref-142"><a href="#cite_note-142">[142]</a></sup></li>
+<li>プロパティ<sup class="reference" id="cite_ref-143"><a href="#cite_note-143">[143]</a></sup></li>
+<li>拡張された<a href="/wiki/Future_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Future パターン">future</a><sup class="reference" id="cite_ref-144"><a href="#cite_note-144">[144]</a></sup></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=9" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C%2B%2B" title="C++">C++98</a></li>
+<li><a class="new" href="/w/index.php?title=C_%2B%2B_03&amp;action=edit&amp;redlink=1" title="C ++ 03 (存在しないページ)">C++03</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a class="new" href="/w/index.php?title=C_%2B%2B_23&amp;action=edit&amp;redlink=1" title="C ++ 23 (存在しないページ)">C++23</a></li>
+<li><a href="/wiki/C11_(C%E8%A8%80%E8%AA%9E)" title="C11 (C言語)">C11（C言語）</a></li>
+<li><a class="new" href="/w/index.php?title=C18%EF%BC%88C%E6%A8%99%E6%BA%96%E3%83%AA%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3%EF%BC%89&amp;action=edit&amp;redlink=1" title="C18（C標準リビジョン） (存在しないページ)">C18（C言語）</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=10" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://herbsutter.com/2016/06/30/trip-report-summer-iso-c-standards-meeting-oulu/" rel="nofollow">The next standard after C++17 will be C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Sutter (2019年10月1日). “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1000r3.pdf" rel="nofollow">P1000R3: C++ IS schedule</a>”. <span title="">2020年2月13日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Dusíková (2019年11月6日). “<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/n4817.pdf" rel="nofollow">N4817: 2020 Prague Meeting Invitation and Information</a>”. <span title="">2020年2月13日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://herbsutter.com/2019/07/13/draft-faq-why-does-the-c-standard-ship-every-three-years/" rel="nofollow">Why does the C++ standard ship every three years?</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0592r0.html" rel="nofollow">P0592R0: To boldly suggest an overall plan for C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0606r0.pdf" rel="nofollow">P0606R0: Concepts Are Ready</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p1141r1.html" rel="nofollow">P1141R1 - Yet another approach for constrained declarations</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://isocpp.org/files/papers/n4720.pdf" rel="nofollow">N4720: Working Draft, Extensions to C++ for Modules</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Tim Shen. “<a class="external text" href="https://wg21.link/p0329" rel="nofollow">Designated Initialization Wording</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Thomas Köppe. “<a class="external text" href="https://wg21.link/p0409" rel="nofollow">Allow lambda capture [=, this</a>]”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/p0428" rel="nofollow">Familiar template syntax for generic lambdas</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0614r0.html" rel="nofollow">Range-based for statements with initializer</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-:0-13"><b><a href="#cite_ref-:0_13-0">^</a></b> <span class="reference-text"><cite class="citation news" style="font-style:normal"><a class="external text" href="https://botondballo.wordpress.com/2017/11/20/trip-report-c-standards-meeting-in-albuquerque-november-2017/" rel="nofollow">“Trip Report: C++ Standards Meeting in Albuquerque, November 2017”</a> (英語). <i>There's Waldo!</i>. (2017年11月20日)<span style="display:none;">. <a class="external free" href="https://botondballo.wordpress.com/2017/11/20/trip-report-c-standards-meeting-in-albuquerque-november-2017/" rel="nofollow">https://botondballo.wordpress.com/2017/11/20/trip-report-c-standards-meeting-in-albuquerque-november-2017/</a></span> <span class="reference-accessdate"><span title="">2017年12月11日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Trip+Report%3A+C%2B%2B+Standards+Meeting+in+Albuquerque%2C+November+2017&amp;rft.jtitle=There%27s+Waldo%21&amp;rft.date=2017%E5%B9%B411%E6%9C%8820%E6%97%A5&amp;rft_id=https%3A%2F%2Fbotondballo.wordpress.com%2F2017%2F11%2F20%2Ftrip-report-c-standards-meeting-in-albuquerque-november-2017%2F&amp;rfr_id=info:sid/ja.wikipedia.org:C%2B%2B20"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0315r4.pdf" rel="nofollow">Wording for lambdas in unevaluated contexts</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0624r2.pdf" rel="nofollow">Default constructible and assignable stateless lambdas</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0780r0.html" rel="nofollow">Pack expansion in lambda init-capture</a>”. <i>www.open-std.org</i>. <span title="">2017年12月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0424r2.pdf" rel="nofollow">String literals as non-type template parameters</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Nina Ranns. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0634r3.html" rel="nofollow">Down with typename!</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0840r2.html" rel="nofollow">Language support for empty objects</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0479r5.html" rel="nofollow">Proposed wording for likely and unlikely attributes (Revision 5)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0892r2.html" rel="nofollow">explicit(bool)</a>”. <i>www.open-std.org</i>. <span title="">2018年11月13日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1064r0.html" rel="nofollow">Allowing Virtual Function Calls in Constant Expressions</a>”. <i>www.open-std.org</i>. <span title="">2019年3月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/p1330" rel="nofollow">P1330R0 - Changing the active member of a union inside constexpr</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1002r0.pdf" rel="nofollow">P1002R0 - Try-catch blocks in constexpr functions</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/p1327" rel="nofollow">P1327R0 - Allowing dynamic_cast, polymorphic typeid in Constant Expressions</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1006r1.pdf" rel="nofollow">P1006R1 - Constexpr in std::pointer_traits</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html" rel="nofollow">P1073R2 - Immediate functions</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1236r0.html" rel="nofollow">P1236R0: Alternative Wording for P0907R4 Signed Integers are Two's Complement</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0668r4.html" rel="nofollow">P0668R4: Revising the C++ memory model</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1091r1.html" rel="nofollow">P1091R1: Extending structured bindings to be more like variable declarations</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1091r2.html" rel="nofollow">P1091R2: Extending structured bindings to be more like variable declarations</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4649.pdf" rel="nofollow">N4649: Working Draft, Technical Specification on C++ Extensions for Coroutines</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1099r5.html" rel="nofollow">P1099R5: Using Enum</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-constinit-34">^ <a href="#cite_ref-constinit_34-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-constinit_34-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1143r2.html" rel="nofollow">P1143R2: Adding the constinit keyword</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0896r3.pdf" rel="nofollow">P0896R3</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html" rel="nofollow">Extending make_shared to Support Arrays</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Meredith. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html" rel="nofollow">Revising atomic_shared_ptr for C++20</a>”. <i>JTC1/SC22/WG21 - The C++ Standards Committee - ISOCPP</i>.   <a class="mw-redirect" href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a>. <span title="27 December 2018">2018年12月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html" rel="nofollow">Utility to convert a pointer to a raw pointer</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Howard E. Hinnant. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html" rel="nofollow">Extending &lt;chrono&gt; to Calendars and Time Zones</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Neil MacIntosh. “<a class="external text" href="http://wg21.link/p0122" rel="nofollow">span: bounds-safe views for sequences of objects</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Alan Talbot. “<a class="external text" href="http://wg21.link/p0754" rel="nofollow">&lt;version&gt;</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0476r2.html" rel="nofollow">Bit-casting object representations</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html" rel="nofollow">Integrating feature-test macros into the C++ WD</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1032r1.html" rel="nofollow">P1032R1 - Misc constexpr bits</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1020r1.html" rel="nofollow">Smart pointer creation with default initialization</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://en.cppreference.com/w/cpp/container/map/contains" rel="nofollow">std::map::contains - cppreference.com</a>”. <i>en.cppreference.com</i>. <span title="">2020年5月12日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1161r2.html" rel="nofollow">P1161R2: Deprecate uses of the comma operator in subscripting expressions</a>”. <i>www.open-std.org</i>. <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-volatile-48">^ <a href="#cite_ref-volatile_48-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-volatile_48-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-volatile_48-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1152r3.html" rel="nofollow">P1152R4: Deprecating volatile</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://en.cppreference.com/w/cpp/keyword" rel="nofollow">C++ keywords - cppreference.com</a>”. <i>en.cppreference.com</i>. <span title="">2019年8月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://en.cppreference.com/w/cpp/language/explicit" rel="nofollow">explicit specifier - cppreference.com</a>”. <i>en.cppreference.com</i>. <span title="">2019年8月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://en.cppreference.com/w/cpp/language/attributes" rel="nofollow">attribute specifier sequence(since C++11) - cppreference.com</a>”. <i>en.cppreference.com</i>. <span title="">2019年8月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-52"><b><a href="#cite_ref-52">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal"><a class="new" href="/w/index.php?title=Herb_Sutter&amp;action=edit&amp;redlink=1" title="Herb Sutter (存在しないページ)">Herb Sutter</a>. “<a class="external text" href="https://herbsutter.com/2017/07/15/trip-report-summer-iso-c-standards-meeting-toronto/" rel="nofollow">Trip report: Summer ISO C++ standards meeting (Toronto)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal"><a class="new" href="/w/index.php?title=Herb_Sutter&amp;action=edit&amp;redlink=1" title="Herb Sutter (存在しないページ)">Herb Sutter</a>. “<a class="external text" href="https://herbsutter.com/2017/11/11/trip-report-fall-iso-c-standards-meeting-albuquerque/" rel="nofollow">Trip report: Fall ISO C++ standards meeting (Albuquerque)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Smith. “<a class="external text" href="https://github.com/cplusplus/draft/blob/master/papers/n4714.md" rel="nofollow">N4714 Editors' Report -- Programming Languages -- C++</a>”. <i>C++ standards drafts</i>.   <a href="/wiki/GitHub" title="GitHub">GitHub</a>. <span title="27 December 2018">2018年12月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal">Botond Ballo. “<a class="external text" href="https://botondballo.wordpress.com/2018/03/28/trip-report-c-standards-meeting-in-jacksonville-march-2018/" rel="nofollow">Trip Report: C++ Standards Meeting in Jacksonville, March 2018</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Nina Ranns. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0634r3.html" rel="nofollow">Down with typename!</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0840r2.html" rel="nofollow">Language support for empty objects</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0479r5.html" rel="nofollow">Proposed wording for likely and unlikely attributes (Revision 5)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-59"><b><a href="#cite_ref-59">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Howard E. Hinnant. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html" rel="nofollow">Extending &lt;chrono&gt; to Calendars and Time Zones</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-60"><b><a href="#cite_ref-60">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Neil MacIntosh. “<a class="external text" href="http://wg21.link/p0122" rel="nofollow">span: bounds-safe views for sequences of objects</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-61"><b><a href="#cite_ref-61">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Alan Talbot. “<a class="external text" href="http://wg21.link/p0754" rel="nofollow">&lt;version&gt;</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-62"><b><a href="#cite_ref-62">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal"><a class="new" href="/w/index.php?title=Herb_Sutter&amp;action=edit&amp;redlink=1" title="Herb Sutter (存在しないページ)">Herb Sutter</a>. “<a class="external text" href="https://herbsutter.com/2018/07/02/trip-report-summer-iso-c-standards-meeting-rapperswil/" rel="nofollow">Trip report: Summer ISO C++ standards meeting (Rapperswil)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-63"><b><a href="#cite_ref-63">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0542r5.html" rel="nofollow">Support for contract based programming in C++</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-64"><b><a href="#cite_ref-64">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html" rel="nofollow">Integrating feature-test macros into the C++ WD</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-65"><b><a href="#cite_ref-65">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0476r2.html" rel="nofollow">Bit-casting object representations</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-66"><b><a href="#cite_ref-66">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0892r2.html" rel="nofollow">explicit(bool)</a>”. <i>www.open-std.org</i>. <span title="">2018年11月13日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-67"><b><a href="#cite_ref-67">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1064r0.html" rel="nofollow">Allowing Virtual Function Calls in Constant Expressions</a>”. <i>www.open-std.org</i>. <span title="">2019年3月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-68"><b><a href="#cite_ref-68">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1032r1.html" rel="nofollow">P1032R1 - Misc constexpr bits</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-69"><b><a href="#cite_ref-69">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html" rel="nofollow">P1073R2 - Immediate functions</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-70"><b><a href="#cite_ref-70">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1236r0.html" rel="nofollow">P1236R0: Alternative Wording for P0907R4 Signed Integers are Two's Complement</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-71"><b><a href="#cite_ref-71">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1289r0.pdf" rel="nofollow">P1289R0 - Access control in contract conditions</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-72"><b><a href="#cite_ref-72">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0668r4.html" rel="nofollow">P0668R4: Revising the C++ memory model</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-73"><b><a href="#cite_ref-73">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1020r1.html" rel="nofollow">Smart pointer creation with default initialization</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-74"><b><a href="#cite_ref-74">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.reddit.com/r/cpp/comments/au0c4x/201902_kona_iso_c_committee_trip_report_c20/" rel="nofollow">r/cpp - 2019-02 Kona ISO C++ Committee Trip Report (C++20 design is complete; Modules in C++20; Coroutines in C++20; Reflection TS v1 published; work begins on a C++ Ecosystem Technical Report)</a>” (英語). <i>reddit</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-75"><b><a href="#cite_ref-75">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://herbsutter.com/2019/02/23/trip-report-winter-iso-c-standards-meeting-kona/" rel="nofollow">Trip report: Winter ISO C++ standards meeting (Kona)</a>” (英語). <i>Sutter’s Mill</i> (2019年2月23日). <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-76"><b><a href="#cite_ref-76">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4649.pdf" rel="nofollow">N4649: Working Draft, Technical Specification on C++ Extensions for Coroutines</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-77"><b><a href="#cite_ref-77">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://releases.llvm.org/5.0.2/tools/clang/docs/ReleaseNotes.html#c-coroutines" rel="nofollow">Clang 5 Release Notes on coroutines</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-78"><b><a href="#cite_ref-78">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://isocpp.org/files/papers/n4720.pdf" rel="nofollow">N4720: Working Draft, Extensions to C++ for Modules</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-79"><b><a href="#cite_ref-79">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://clang.llvm.org/docs/Modules.html" rel="nofollow">Clang 5 documentation on Modules</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-80"><b><a href="#cite_ref-80">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://blogs.msdn.microsoft.com/vcblog/2015/12/03/c-modules-in-vs-2015-update-1/" rel="nofollow">C++ Modules in VS 2015 Update 1</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-81"><b><a href="#cite_ref-81">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://gcc.gnu.org/wiki/cxx-modules" rel="nofollow">cxx-modules - GCC Wiki</a>”. <i>gcc.gnu.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-82"><b><a href="#cite_ref-82">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://gcc.gnu.org/wiki/cxx-modules" rel="nofollow">cxx-modules - GCC Wiki</a>”. <i>gcc.gnu.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-83"><b><a href="#cite_ref-83">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1091r1.html" rel="nofollow">P1091R1: Extending structured bindings to be more like variable declarations</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-84"><b><a href="#cite_ref-84">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1091r2.html" rel="nofollow">P1091R2: Extending structured bindings to be more like variable declarations</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-85"><b><a href="#cite_ref-85">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/" rel="nofollow">r/cpp - 2019-07 Cologne ISO C++ Committee Trip Report — 🚀 The C++20 Eagle has Landed 🚀 (C++20 Committee Draft shipped; Contracts Moved From C++20 to a Study Group; `std::format` in C++20; C++20 Synchronization Library)</a>” (英語). <i>reddit</i>. <span title="">2019年9月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-86"><b><a href="#cite_ref-86">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Botond Ballo. “<a class="external text" href="https://botondballo.wordpress.com/2019/07/26/trip-report-c-standards-meeting-in-cologne-july-2019/" rel="nofollow">Trip Report: C++ Standards Meeting in Cologne, July 2019</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-87"><b><a href="#cite_ref-87">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Sutter. “<a class="external text" href="https://herbsutter.com/2019/07/20/trip-report-summer-iso-c-standards-meeting-cologne/" rel="nofollow">Trip report: Summer ISO C++ standards meeting (Cologne)</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-88"><b><a href="#cite_ref-88">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Josuttis. “<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1823r0.pdf" rel="nofollow">P1823R0: Remove Contracts from C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-89"><b><a href="#cite_ref-89">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1161r2.html" rel="nofollow">P1161R2: Deprecate uses of the comma operator in subscripting expressions</a>”. <i>www.open-std.org</i>. <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-90"><b><a href="#cite_ref-90">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1331r1.pdf" rel="nofollow">Permitting trivial default initialization in constexpr contexts</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-91"><b><a href="#cite_ref-91">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1668r1.html" rel="nofollow">P1668R1: Enabling Constexpr Intrinsics By Permitting Unevaluated inline-asm in Constexpr Functions</a>”. <i>www.open-std.org</i>. <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-92"><b><a href="#cite_ref-92">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1099r5.html" rel="nofollow">P1099R5: Using Enum</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-93"><b><a href="#cite_ref-93">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1186r3.html" rel="nofollow">P1186R3: When do you actually use &lt;=&gt;?</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-94"><b><a href="#cite_ref-94">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1630r1.html" rel="nofollow">P1630R1: Spaceship needs a tune-up</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-95"><b><a href="#cite_ref-95">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1766r1.html" rel="nofollow">P1766R1: Mitigating minor modules maladies</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-96"><b><a href="#cite_ref-96">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1452r2.html" rel="nofollow">P1452R2: On the non-uniform semantics of return-type-requirements</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-97"><b><a href="#cite_ref-97">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1771r1.pdf" rel="nofollow">P1771R1: nodiscard for constructors</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-98"><b><a href="#cite_ref-98">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1754r1.pdf" rel="nofollow">P1754R1: Rename concepts to standard_case for C++20, while we still can</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-99"><b><a href="#cite_ref-99">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0645r10.html" rel="nofollow">P0645R10: Text Formatting</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-100"><b><a href="#cite_ref-100">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.zverovich.net/2019/07/23/std-format-cpp20.html" rel="nofollow">std::format in C++20</a>”. <i>www.zverovich.net</i> (2019年7月23日). <span title="">2019年9月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-101"><b><a href="#cite_ref-101">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1361r2.pdf" rel="nofollow">P1361R2: Integration of chrono with text formatting</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-102"><b><a href="#cite_ref-102">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1652r1.html" rel="nofollow">P1652R1: Printf corner cases in std::format</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-103"><b><a href="#cite_ref-103">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0553r4.html" rel="nofollow">P0553R4: Bit operations</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-104"><b><a href="#cite_ref-104">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1065r2.html" rel="nofollow">P1965R2: constexpr INVOKE</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-105"><b><a href="#cite_ref-105">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0631r8.pdf" rel="nofollow">P0631R8: Math Constants</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-106"><b><a href="#cite_ref-106">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1643r1.html" rel="nofollow">P1643R1: Add wait/notify to atomic_ref&lt;T&gt;</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-107"><b><a href="#cite_ref-107">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1644r0.html" rel="nofollow">P1664R0: Add wait/notify to atomic&lt;shared_ptr&lt;T&gt;&gt;</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-108"><b><a href="#cite_ref-108">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1614r2.html" rel="nofollow">P1614R2: The Mothership has Landed - Adding &lt;=&gt; to the Library</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-109"><b><a href="#cite_ref-109">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1502r1.html" rel="nofollow">P1502R1: Standard library header units for C++20</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-110"><b><a href="#cite_ref-110">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1135r6.html" rel="nofollow">P1135R6: The C++20 Synchronization Library</a>”. <i>www.open-std.org</i> (2019年7月20日). <span title="">2019年7月20日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-111"><b><a href="#cite_ref-111">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0514r4.pdf" rel="nofollow">P0514R4: Efficient concurrent waiting for C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-112"><b><a href="#cite_ref-112">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0666r2.pdf" rel="nofollow">P0666R2: Revised Latches and Barriers for C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-113"><b><a href="#cite_ref-113">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0995r1.html" rel="nofollow">P0995R1: Improving atomic_flag</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-114"><b><a href="#cite_ref-114">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1258r0.html" rel="nofollow">P1285R0: Don't Make C++ Unimplementable On Small CPUs</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-115"><b><a href="#cite_ref-115">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://open-std.org/JTC1/SC22/WG21/docs/papers/2019/p1208r6.pdf" rel="nofollow">P1208R6: Adopt source_location from Library Fundamentals V3 for C++20</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-116"><b><a href="#cite_ref-116">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0980r1.pdf" rel="nofollow">P0980R1: Making std::string constexpr</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-117"><b><a href="#cite_ref-117">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1004r2.pdf" rel="nofollow">P1004R2: Making std::vector constexpr</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-118"><b><a href="#cite_ref-118">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0660r10.pdf" rel="nofollow">P0660R10: Stop Token and Joining Thread</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-119"><b><a href="#cite_ref-119">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.reddit.com/r/cpp/comments/dtuov8/201911_belfast_iso_c_committee_trip_report/" rel="nofollow">r/cpp - 2019-11 Belfast ISO C++ Committee Trip Report — Started Processing Feedback on the C++20 Committee Draft; ABI Review Group Formed</a>” (英語). <i>reddit</i>. <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-120"><b><a href="#cite_ref-120">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Sutter (2019年11月9日). “<a class="external text" href="https://herbsutter.com/2019/11/09/trip-report-autumn-iso-c-standards-meeting-belfast/" rel="nofollow">Trip report: Autumn ISO C++ standards meeting (Belfast)</a>” (英語). <i>Sutter’s Mill</i>. <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-121"><b><a href="#cite_ref-121">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">botondballo (2019年11月15日). “<a class="external text" href="https://botondballo.wordpress.com/2019/11/15/trip-report-c-standards-meeting-in-belfast-november-2019/" rel="nofollow">Trip Report: C++ Standards Meeting in Belfast, November 2019</a>” (英語). <i>There's Waldo!</i>. <span title="">2019年11月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-122"><b><a href="#cite_ref-122">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1907r0.html" rel="nofollow">P1907R0: Inconsistencies with non-type template parameters</a>”. <i>www.open-std.org</i> (2019年10月7日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-123"><b><a href="#cite_ref-123">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1714r1.html" rel="nofollow">P1714: NTTP are incomplete without float, double, and long double! (Revision 1)</a>”. <i>www.open-std.org</i> (2019年7月19日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-124"><b><a href="#cite_ref-124">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1855r0.html" rel="nofollow">P1855R=: Make &lt;compare&gt; freestanding</a>”. <i>www.open-std.org</i> (2019年10月5日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-125"><b><a href="#cite_ref-125">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1872r0.pdf" rel="nofollow">P1872R0: span should have size_type not index_type</a>”. <i>www.open-std.org</i> (2019年9月16日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-126"><b><a href="#cite_ref-126">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1456r0.pdf" rel="nofollow">P1456: Move-only views</a>”. <i>www.open-std.org</i> (2019年1月25日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-127"><b><a href="#cite_ref-127">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“[P1391R4 P1391: Range constructor for std::string_view]”. <i>www.open-std.org</i>. <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-128"><b><a href="#cite_ref-128">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1394r3.pdf" rel="nofollow">P1394: Range constructor for std::span</a>”. <i>www.open-std.org</i> (2019年8月2日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-129"><b><a href="#cite_ref-129">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1870r0.html" rel="nofollow">P1870R1: forwarding-range&lt;T&gt; is too subtle</a>”. <i>www.open-std.org</i>. <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-130"><b><a href="#cite_ref-130">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf" rel="nofollow">P0883: Fixing Atomic Initialization</a>”. <i>www.open-std.org</i> (2018年6月5日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-131"><b><a href="#cite_ref-131">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1902r0.html" rel="nofollow">Missing feature-test macros 2018-2019</a>”. <i>www.open-std.org</i> (2019年10月6日). <span title="">2019年11月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-132"><b><a href="#cite_ref-132">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/N4793" rel="nofollow">C++ Extensions for Parallelism Version 2</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-133"><b><a href="#cite_ref-133">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.modernescpp.com/index.php/task-blocks" rel="nofollow">Task Blocks</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-134"><b><a href="#cite_ref-134">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/N4711" rel="nofollow">C++ Extensions for Networking</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-135"><b><a href="#cite_ref-135">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/N4818" rel="nofollow">C++ Extensions for Reflection</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-136"><b><a href="#cite_ref-136">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Sutter (2019年7月20日). “<a class="external text" href="https://herbsutter.com/2019/07/20/trip-report-summer-iso-c-standards-meeting-cologne/" rel="nofollow">Trip report: Summer ISO C++ standards meeting (Cologne)</a>” (英語). <i>Sutter’s Mill</i>. <span title="">2019年7月21日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-137"><b><a href="#cite_ref-137">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://meetingcpp.com/index.php/br/items/reflections-on-the-reflection-proposals.html" rel="nofollow">Reflections on the reflection proposals - Meeting C++</a>” (英語). <i>meetingcpp.com</i>. <span title="">2017年6月30日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-138"><b><a href="#cite_ref-138">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0194r6.html" rel="nofollow">Static reflection</a>”. <i>www.open-std.org</i>. <span title="">2018年11月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-139"><b><a href="#cite_ref-139">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal"><a class="new" href="/w/index.php?title=Herb_Sutter&amp;action=edit&amp;redlink=1" title="Herb Sutter (存在しないページ)">Herb Sutter</a>. “<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0707r0.pdf" rel="nofollow">Metaclasses</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-140"><b><a href="#cite_ref-140">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0443r10.html" rel="nofollow">A Unified Executors Proposal for C++</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-141"><b><a href="#cite_ref-141">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/n4771.pdf" rel="nofollow">N4771: Working Draft, C++ Extensions for Networking</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-142"><b><a href="#cite_ref-142">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.iso.org/standard/64030.html" rel="nofollow">ISO/IEC TS 19216:2018 Programming Languages -- C++ Extensions for Networking</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+<li id="cite_note-143"><b><a href="#cite_ref-143">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1393r0.html" rel="nofollow">A General Property Customization Mechanism</a>”. <i>www.open-std.org</i>. <span title="">2019年2月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-144"><b><a href="#cite_ref-144">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://wg21.link/P1054" rel="nofollow">A Unified Futures Proposal for C++</a>”. <strong class="error">Template:Cite webの呼び出しエラー：引数 <b>accessdate</b> は必須です。</strong></cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B20&amp;action=edit&amp;section=11" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/" rel="nofollow">JTC1/SC22/WG21</a> – ISO/IEC C++標準作業グループ（別名C++標準委員会）</li>
+<li>Ranges（<a class="external text" href="https://github.com/ericniebler/range-v3" rel="nofollow">range-v3</a>）githubリポジトリ、Eric Niebler作</li></ul>
+<div aria-labelledby="C++" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:C%2B%2B&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:C++ (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="C++" style="font-size:110%;margin:0 6em">C++</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li>C++98</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B03&amp;action=edit&amp;redlink=1" title="C++03 (存在しないページ)">C++03</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B03&amp;action=edit&amp;redlink=1" title="En:C++03 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Technical_Report_1" title="C++ Technical Report 1">C++TR1</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a class="mw-selflink selflink">C++20</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B23&amp;action=edit&amp;redlink=1" title="C++23 (存在しないページ)">C++23</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B23&amp;action=edit&amp;redlink=1" title="En:C++23 (存在しないページ)">英語版</a>）</span></span></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">C++の機能</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1" title="C++のクラス (存在しないページ)">クラス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B_classes&amp;action=edit&amp;redlink=1" title="En:C++ classes (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BE%8B%E5%A4%96%E5%87%A6%E7%90%86" title="例外処理">例外処理</a></li>
+<li><a href="/wiki/%E5%A4%9A%E9%87%8D%E5%AE%9A%E7%BE%A9" title="多重定義">多重定義</a></li>
+<li><a href="/wiki/New%E6%BC%94%E7%AE%97%E5%AD%90" title="New演算子">new演算子</a></li>
+<li><a href="/wiki/C%E3%81%A8C%2B%2B%E3%81%AE%E6%BC%94%E7%AE%97%E5%AD%90" title="CとC++の演算子">演算子</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a></li>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">標準C++ライブラリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Iostream&amp;action=edit&amp;redlink=1" title="Iostream (存在しないページ)">iostream</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Input/output_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:Input/output (C++) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="スマートポインタ">スマートポインタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smart_pointer&amp;action=edit&amp;redlink=1" title="En:Smart pointer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Standard_Template_Library" title="Standard Template Library">STL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="String (C++) (存在しないページ)">string</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:String (C++) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンパイラ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="Borland C++ (存在しないページ)">Borland C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="En:Borland C++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Builder" title="C++ Builder">C++ Builder</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">gcc</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a></li>
+<li><a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Visual C++</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="Watcom C/C++ compiler (存在しないページ)">Watcom C/C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="En:Watcom C/C++ compiler (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">統合開発環境</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)" title="Eclipse (統合開発環境)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Embedded_C%2B%2B" title="Embedded C++">Embedded C++</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li>カテゴリ <b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">カテゴリ</a></b></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402054206
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.589 seconds
+Real time usage: 0.894 seconds
+Preprocessor visited node count: 36838/1000000
+Post‐expand include size: 246271/2097152 bytes
+Template argument size: 72314/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 9/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 78322/5000000 bytes
+Lua time usage: 0.310/7 seconds
+Lua virtual size: 6201344/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  827.669      1 -total
+ 86.37%  714.866      1 テンプレート:Reflist
+ 76.64%  634.360    143 テンプレート:Cite_web
+ 41.89%  346.706    143 テンプレート:Ifempty
+ 10.99%   90.938     71 テンプレート:Accessdate
+  8.95%   74.050     71 テンプレート:Accessdate/core
+  6.47%   53.535    108 テンプレート:ISO_dateJA
+  5.68%   46.994     38 テンプレート:Citation/showdate
+  5.36%   44.336      1 テンプレート:C++
+  5.08%   42.039      1 テンプレート:Navbox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4155719-0!canonical and timestamp 20220402054205 and revision id 2459947. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=C%2B%2B20&amp;oldid=2459947">http://localhost:8080/w/index.php?title=C%2B%2B20&amp;oldid=2459947</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%AE%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/accessdate" title="カテゴリ:出典テンプレートの呼び出しエラーがある記事/accessdate">出典テンプレートの呼び出しエラーがある記事/accessdate</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">C++</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=C%2B%2B20&amp;returntoquery=curid%3D4155719%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=C%2B%2B20&amp;returntoquery=curid%3D4155719%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/C%2B%2B20" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:C%2B%2B20&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/C%2B%2B20">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=C%2B%2B20&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=C%2B%2B20&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/C%2B%2B20" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/C%2B%2B20" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=C%2B%2B20&amp;oldid=2459947" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=C%2B%2B20&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年8月23日 (日) 16:04 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.589","walltime":"0.894","ppvisitednodes":{"value":36838,"limit":1000000},"postexpandincludesize":{"value":246271,"limit":2097152},"templateargumentsize":{"value":72314,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":9,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":78322,"limit":5000000},"timingprofile":["100.00%  827.669      1 -total"," 86.37%  714.866      1 テンプレート:Reflist"," 76.64%  634.360    143 テンプレート:Cite_web"," 41.89%  346.706    143 テンプレート:Ifempty"," 10.99%   90.938     71 テンプレート:Accessdate","  8.95%   74.050     71 テンプレート:Accessdate/core","  6.47%   53.535    108 テンプレート:ISO_dateJA","  5.68%   46.994     38 テンプレート:Citation/showdate","  5.36%   44.336      1 テンプレート:C++","  5.08%   42.039      1 テンプレート:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.310","limit":"7"},"limitreport-virtmemusage":{"value":6201344,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402054206","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":2260});});</script>
+</body></html>

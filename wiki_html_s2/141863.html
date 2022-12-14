@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Standard Template Library - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Standard_Template_Library rootpage-Standard_Template_Library skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Standard Template Library</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>Standard Template Library</b> (STL) は、プログラミング言語<a href="." id="link_a_1" title="C++">C++</a>の規格で定義された<a href="." id="link_a_2" title="標準ライブラリ">標準ライブラリ</a>の一つ。<a href="." id="link_a_3" title="ヒューレット・パッカード">ヒューレット・パッカード</a>社在籍の研究者（当時）であった<a href="." id="link_a_4" title="アレクサンドル・ステパノフ (存在しないページ)">アレクサンドル・ステパノフ</a>等によって考案され、後にANSI/ISO標準に組み込まれた。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#構成要素"><span class="tocnumber">2</span> <span class="toctext">構成要素</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#コンテナ"><span class="tocnumber">2.1</span> <span class="toctext">コンテナ</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#コンテナアダプタ"><span class="tocnumber">2.2</span> <span class="toctext">コンテナアダプタ</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#イテレータ"><span class="tocnumber">2.3</span> <span class="toctext">イテレータ</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#アルゴリズム"><span class="tocnumber">2.4</span> <span class="toctext">アルゴリズム</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#関数オブジェクト"><span class="tocnumber">2.5</span> <span class="toctext">関数オブジェクト</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#配列とポインタ"><span class="tocnumber">3</span> <span class="toctext">配列とポインタ</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#STLの欠点"><span class="tocnumber">4</span> <span class="toctext">STLの欠点</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#プログラムサイズの増大"><span class="tocnumber">4.1</span> <span class="toctext">プログラムサイズの増大</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#未対応コンパイラ"><span class="tocnumber">4.2</span> <span class="toctext">未対応コンパイラ</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#難解さ"><span class="tocnumber">4.3</span> <span class="toctext">難解さ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#歴史"><span class="tocnumber">5</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>STLは、その名の通りC++の比較的新しい機能である<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a>を最大限に生かす構成を取っており、<b>コンテナ</b>、<b>イテレータ</b>（反復子）、<b>アルゴリズム</b>、そして<b>関数オブジェクト</b>と呼ばれる各要素から成っている。
+</p><p>テンプレート機能を駆使することで、決まった型に依存しないプログラミングを実現し、C++における<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">ジェネリックプログラミング</a>のはしりとなった。オブジェクトを格納するコンテナとそれを操作するアルゴリズム、その接点としてイテレータが存在し、コンテナとアルゴリズムが互いに完全に独立しているのも特徴の一つである。
+</p><p>それぞれの要素は<b>コンセプト</b>（概念）と呼ばれる要求仕様が厳格に規定され、STLと共に動作するコンポーネントはこの要求を満たしていなければならない。しかしそれによって、条件を満たしたクラスや関数を自作し、STLのコンポーネントと（あたかもSTLの一部であるかのように）協調動作させることが簡単にできるようになっている。STLの要素は何か<code>container</code>といったような基底クラスから派生するのではない。コンセプトを満たしていればどのような要素でも協調動作する点では、動的な型付けシステムを持つ言語の<a href="/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" title="ダック・タイピング">ダック・タイピング</a>と良く似るが、STLのそれは静的（テンプレートによるコンパイル時解決）であり、よく比較される。
+</p><p>STLの定義（何がSTLの一部であるか）には様々な意見があり、人によりその解釈は違っていることがある。ここではC++標準ライブラリのコンテナ、イテレータ、アルゴリズム、関数オブジェクトを指すものとする。
+</p>
+<h2><span id=".E6.A7.8B.E6.88.90.E8.A6.81.E7.B4.A0"></span><span class="mw-headline" id="構成要素">構成要素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=2" title="節を編集: 構成要素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A"></span><span class="mw-headline" id="コンテナ">コンテナ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=3" title="節を編集: コンテナ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>オブジェクトを保持する<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0" title="データ構造">データ構造</a>。基本的なものが一通り揃っている。
+</p>
+<dl><dt><code>vector</code></dt>
+<dd><a class="mw-redirect" href="/wiki/%E5%8B%95%E7%9A%84%E9%85%8D%E5%88%97" title="動的配列">動的配列</a>。</dd>
+<dt><code>array</code></dt>
+<dd>(*) 固定長配列。</dd>
+<dt><code>deque</code></dt>
+<dd><a href="/wiki/%E4%B8%A1%E7%AB%AF%E3%82%AD%E3%83%A5%E3%83%BC" title="両端キュー">両端キュー</a>（Double Ended QUEueの略）。</dd>
+<dt><code>list</code></dt>
+<dd><a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E3%83%AA%E3%82%B9%E3%83%88" title="線形リスト">双方向リスト</a>。</dd>
+<dt><code>forward_list</code></dt>
+<dd>(*) 単方向リスト。</dd>
+<dt><code>set</code></dt>
+<dd><a class="mw-redirect" href="/wiki/%E9%9B%86%E5%90%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="集合 (プログラミング)">集合</a>。順序付けられている（このため<a href="/wiki/%E6%9C%A8%E6%A7%8B%E9%80%A0_(%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0)" title="木構造 (データ構造)">ツリー</a>により実装されるのが通常で、他言語のライブラリによく見られる<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ハッシュテーブル">ハッシュテーブル</a>ではない）。</dd>
+<dt><code>map</code></dt>
+<dd><a href="/wiki/%E9%80%A3%E6%83%B3%E9%85%8D%E5%88%97" title="連想配列">連想配列</a>。順序付けられている。実装に付いてはsetと同様。</dd>
+<dt><code>multiset</code></dt>
+<dd>要素の重複が許されているset。</dd>
+<dt><code>multimap</code></dt>
+<dd>要素のキーの重複が許されているmap。</dd>
+<dt><code>unordered_set</code></dt>
+<dd>(*) 集合。順序づけされない。ハッシュテーブルによる実装が意図されている。</dd>
+<dt><code>unordered_map</code></dt>
+<dd>(*) 連想配列。順序づけされない。unordered_set同様、ハッシュテーブルによる実装が意図されている。</dd>
+<dt><code>unordered_multiset</code></dt>
+<dd>(*) 要素の重複が許されているunoredered_set。</dd>
+<dt><code>unordered_multimap</code></dt>
+<dd>(*) 要素のキーの重複が許されているunoredered_map。</dd></dl>
+<p>(*)の印の付いたものは、<a href="/wiki/C%2B%2B11" title="C++11">C++11</a>規格で導入・標準化されたものである。
+</p><p>コンテナのうち、vectorとarrayはCの配列と互換性を持ち、データ領域の連続性が保証されている（vがn要素の<code>vector&lt;char&gt;</code>であるとき、<code>&amp;v[n - 1] - &amp;v[0] == sizeof(char) * (n - 1)</code>である。arrayも同様）。
+</p><p>unorderedコンテナの名称として、例の少ないunordered_set/unordered_mapなどではなくhash_set/hash_mapなどとすることも検討された。しかし、hash_set/hash_mapなどといった名称はすでに外部のライブラリなどでよく用いられており、混乱を避けるため現在の名称となった。
+</p><p>この他、C++標準ライブラリのbasic_stringクラスがSTLのコンテナの要件を満たしていることから、これもSTLの一部として捉える向きもある。
+</p>
+<h3><span id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.8A.E3.82.A2.E3.83.80.E3.83.97.E3.82.BF"></span><span class="mw-headline" id="コンテナアダプタ">コンテナアダプタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=4" title="節を編集: コンテナアダプタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl><dt><code>stack</code></dt>
+<dd><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="スタック">スタック</a>。(<a class="mw-redirect" href="/wiki/FILO" title="FILO">FILO</a>; First In, Last Out)</dd>
+<dt><code>queue</code></dt>
+<dd><a href="/wiki/%E3%82%AD%E3%83%A5%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="キュー (コンピュータ)">キュー</a>。(<a href="/wiki/FIFO" title="FIFO">FIFO</a>; First In, First Out)</dd>
+<dt><code>priority_queue</code></dt>
+<dd>優先順位付きキュー。</dd></dl>
+<p>他のコンテナを内部に保持してそのコンテナの一部の機能のみを公開することにより、特殊な機能を実現している。STLのコンテナの要件を満たさないため、標準の一部ではあるがSTLのコンテナとしては扱えない。
+</p>
+<h3><span id=".E3.82.A4.E3.83.86.E3.83.AC.E3.83.BC.E3.82.BF"></span><span class="mw-headline" id="イテレータ">イテレータ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=5" title="節を編集: イテレータ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>STLの<a href="/wiki/%E3%82%A4%E3%83%86%E3%83%AC%E3%83%BC%E3%82%BF" title="イテレータ">イテレータ</a>は、コンテナに代表される要素集合の個々の要素を参照するための<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラス (コンピュータ)">クラス</a>である。反復子、イタレータ、アイテレータと呼ばれることもある。
+</p><p>イテレータは配列の要素を指す<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>を抽象化したものと言える。しかしながら、全てのイテレータが、ポインタの持つ機能全てを備えている訳ではない。STLでは、イテレータに対して行える操作によって幾つかのコンセプトが定義されている。
+</p>
+<dl><dt>InputIterator</dt>
+<dd>入力反復子。要素への読み込み専用アクセスを提供するイテレータ。要素の読み取りが可能であればInputIteratorとみなせる。入力<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0" title="ストリーム">ストリーム</a>に結び付けられたistream_iteratorが典型的な例である。</dd>
+<dt>OutputIterator</dt>
+<dd>出力反復子。要素への書き込み専用アクセスを提供するイテレータ。要素への代入が可能であればOutputIteratorとみなせる。出力<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0" title="ストリーム">ストリーム</a>に結び付けられたostream_iteratorが典型的な例である。</dd>
+<dt>ForwardIterator</dt>
+<dd>前方反復子。一旦前方へ進めると、逆方向へは戻れないイテレータ。要素への代入と読み取りが可能であればForwardIteratorとみなせる。InputIteratorとOutputIteratorを組み合せたものといえる。典型的な例として、<a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E3%83%AA%E3%82%B9%E3%83%88" title="線形リスト">単方向リスト</a>コンテナのイテレータがある。</dd>
+<dt>BidirectionalIterator</dt>
+<dd>双方向反復子。前方と後方のどちらへでも移動できる機能を持たせたもの。ForwardIteratorの要件に加え、デクリメントが可能であればBidirectionalIteratorとみなせる。list、set、multiset、map、multimapコンテナのイテレータがこれに該当する。</dd>
+<dt>RandomAccessIterator</dt>
+<dd>ランダムアクセス反復子。<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>のようにランダムアクセスを行えるイテレータ。BidirectionalIteratorの要件に加え、算術演算が可能であればRandomAccessIteratorとみなせる。vector、array、dequeのイテレータ（およびポインタ）がこれに該当する。STLの仕様では、vector、array、dequeのイテレータが要素n個分進めるという操作を<a class="mw-redirect" href="/wiki/O%E8%A8%98%E6%B3%95" title="O記法">O(1)</a>の効率で行うことが保証されている（逆に、これ以外のイテレータはO(n)の時間が必要である）。</dd></dl>
+<p>以上の他、全てのイテレータは前進(++it)、等号比較(it1 != it2)、デリファレンス(*it)が可能でなければならない。
+</p>
+<h3><span id=".E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0"></span><span class="mw-headline" id="アルゴリズム">アルゴリズム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=6" title="節を編集: アルゴリズム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>STLで言うアルゴリズムは一般的な<a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="アルゴリズム">アルゴリズム</a>より限定された用語であり、イテレータで指定されたコンテナの要素に対して特定の操作を行う関数である。
+</p><p>STLのアルゴリズムは標準で定義されているものだけでも多数あり、100以上の強力なアルゴリズムが用意されている。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; v1(3), v2(3);
+v1[0] = 2;
+v1[1] = 1;
+v1[2] = 7;
+std::copy(v1.begin(), v1.end(), v2.begin());
+&lt;/syntaxhighlight&gt;
+</p><p>copyは要素のコピーを行うSTLアルゴリズムである。コピー元としてコンテナv1の開始イテレータと終了イテレータを取り、v2のイテレータに順に出力する。
+この例ではコピー元とコピー先のコンテナは同じ型であるが、コンテナ要素が同一あるいは変換可能であればよい。例えば、<code>vector&lt;int&gt;</code>から<code>list&lt;int&gt;</code>、<code>set&lt;float&gt;</code>から<code>vector&lt;double&gt;</code>等でもよい。
+</p>
+<h3><span id=".E9.96.A2.E6.95.B0.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88"></span><span class="mw-headline" id="関数オブジェクト">関数オブジェクト</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=7" title="節を編集: 関数オブジェクト">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E9%96%A2%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="関数オブジェクト">関数オブジェクト</a>は<code>operator()</code>（関数呼び出し演算子）を<a href="/wiki/%E5%A4%9A%E9%87%8D%E5%AE%9A%E7%BE%A9" title="多重定義">オーバーロード</a>した<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラス (コンピュータ)">クラス</a>の一種であり、オブジェクトでありながら関数のように呼び出せるという特徴を持つ。ファンクタ (functor) とも呼ばれる。
+</p><p>関数オブジェクトの定義は例えば以下のようなものである。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct square
+{
+</p>
+<pre>   template&lt;typename T&gt;
+   T operator()(T n) const { return n * n; }
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>一般に関数オブジェクトで表された関数はオブジェクトとして作成したものをアルゴリズムに<a href="/wiki/%E5%BC%95%E6%95%B0#値渡し" title="引数">値渡し</a>するため、同じような目的で使用できる<a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="関数ポインタ">関数ポインタ</a>よりも<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%98%E3%83%83%E3%83%89" title="オーバーヘッド">オーバーヘッド</a>が大きいと思われることもあるが、実際にはコンパイラの最適化でコードのインライン展開が行われ関数呼び出しが無くなる可能性が高いため、関数ポインタを使うよりも高速であることが多い。例えばC標準ライブラリのqsortよりSTLアルゴリズムのsortの方が往々にして高速であるというのはよく知られている。
+</p><p>STLでは関数オブジェクトの代わりに関数ポインタを使うことも可能である。
+</p><p>また、標準規格<a href="/wiki/C%2B%2B11" title="C++11">C++11</a>より導入された<a href="/wiki/C%2B%2B11#ラムダ関数とラムダ式" title="C++11">ラムダ式</a>を使うことで、関数オブジェクトの定義をより簡潔に記述できるようになった。
+</p>
+<h2><span id=".E9.85.8D.E5.88.97.E3.81.A8.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF"></span><span class="mw-headline" id="配列とポインタ">配列とポインタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=8" title="節を編集: 配列とポインタ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>STLの長所の一つにCの配列との親和性の高さがある。具体的にはポインタがそのままRandomAccessIteratorとして使用できる。実のところイテレータの走査の方法はポインタ演算を模倣して作られている。アルゴリズムで配列を扱う場合、配列の先頭要素を指すポインタが開始イテレータ、そのポインタに要素数を加算したものが終了イテレータになる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; v(N);
+const int N = 16;
+int array[N]; // [0..15]
+</p><p>// このときarrayが配列の最初の要素へのイテレータ、
+// array + Nが最後の要素の次へのイテレータとして使用できる。
+std::copy(array, array + N, v.begin());
+&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id="STL.E3.81.AE.E6.AC.A0.E7.82.B9"></span><span class="mw-headline" id="STLの欠点">STLの欠点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=9" title="節を編集: STLの欠点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.A0.E3.82.B5.E3.82.A4.E3.82.BA.E3.81.AE.E5.A2.97.E5.A4.A7"></span><span class="mw-headline" id="プログラムサイズの増大">プログラムサイズの増大</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=10" title="節を編集: プログラムサイズの増大">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++のテンプレートはテンプレート引数が違うとそれぞれ全く別の型として扱われ、それぞれ別の機械語コードにコンパイルされてしまう。
+</p><p>以下のようなプログラムをコンパイルすると、<code>std::vector&lt;int&gt;</code>のコードが作成される。
+&lt;syntaxhighlight lang="cpp"&gt;
+// vectorコンテナを使う
+</p>
+<ol><li>include &lt;vector&gt;</li></ol>
+<p>std::vector&lt;int&gt; vecInt;
+&lt;/syntaxhighlight&gt;
+</p><p>ここへさらに、
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;double&gt; vecDouble;
+&lt;/syntaxhighlight&gt;
+</p><p>というオブジェクトを実体化してコンパイルすると、先とは別に<code>std::vector&lt;double&gt;</code>のコードも作成され、結果として二つ分の別個のクラスのコードが実行ファイルに含まれることになる。このため最終的に生成されるコードの量が急激に増大しやすく、組み込み向けなど記憶容量に制限のある環境ではSTLに限らずテンプレート全般の使用を禁止している開発現場もある。ただのクラスで実装した場合も事情は同じである。テンプレートを使わずに、<code>int</code>型用に<code>std::vector&lt;int&gt;</code>と同等のクラスを書き、<code>double</code>型用に<code>std::vector&lt;double&gt;</code>と同等のクラスも書き、両方のクラスをインスタンス化すれば、同様にコードの増大が起こる。しかしながら、PCのようにメモリやストレージ容量に余裕のある環境に限れば、実行プログラムとして出力されるコード量の増大は微々たるものと言える。
+</p>
+<h3><span id=".E6.9C.AA.E5.AF.BE.E5.BF.9C.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9"></span><span class="mw-headline" id="未対応コンパイラ">未対応コンパイラ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=11" title="節を編集: 未対応コンパイラ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>STLはほとんど全ての要素がC++の比較的新しい機能であるテンプレートを用いて作られているので、テンプレート関連のC++標準への準拠度が低い<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>やテンプレート機能を持たない<a href="/wiki/Embedded_C%2B%2B" title="Embedded C++">Embedded C++</a>では、一部に使用の制限があったりSTLの使用自体が不可能なことがある。
+</p><p>ただし2003年にはC++標準への準拠度が高められた最適化コンパイラである<a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Visual C++ Toolkit 2003</a>が<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>から無償配布されるなど、多くの環境ではテンプレートの利用における問題は少なくなってきている。
+</p><p>なお前述のコード量増大もそうであるが、これらはC++のテンプレート機能一般の問題であってSTL固有のものではない。
+</p>
+<h3><span id=".E9.9B.A3.E8.A7.A3.E3.81.95"></span><span class="mw-headline" id="難解さ">難解さ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=12" title="節を編集: 難解さ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>一般にSTLは柔軟で強力であると評価されているが、ライブラリを十分に生かしたプログラミングを行おうとすると、従来のC/C++プログラミングからは大きく離れた考え方や書法が必要になる。そのため、STLの使用経験を持たないプログラマには、一見して何をしているのか全くわからないソースコードになってしまうことがある。それは例えば以下のようなものである。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+size_t N = 0;
+int *pdata = NULL;
+GetData(&amp;pdata, &amp;N); // データとデータ数を得る
+</p><p>typedef std::deque&lt;int&gt; Cont;
+Cont deq(pdata, pdata + N);
+FreeData(&amp;pdata, &amp;N); // データを解放
+</p><p>// 典型的なSTLコード
+deq.erase(
+</p>
+<pre>       std::partition(
+               deq.begin(),
+               deq.end(),
+               std::bind1st(std::less&lt;Cont::value_type&gt;(), 20)
+       ),
+       deq.end()
+</pre>
+<p>);
+&lt;/syntaxhighlight&gt;
+</p><p>このコードは、何かのAPIから得られたデータの配列をdequeにコピーし、そのdequeの内容のうち20より大きい要素をコンテナの先頭に移動させた上で残りを削除している。
+</p><p>これほど複雑な処理がこれだけのコード量で表現できるのは素晴らしいとも言えるが、一時的な<a href="/wiki/Typedef" title="Typedef">typedef</a>・クラス内宣言型・<a href="/wiki/%E3%83%8D%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ネスティング">入れ子</a>のアルゴリズム・関数オブジェクト・関数アダプタなどを使用しており、STLの使い方を知らない場合には非常に理解が難しくなるのは事実である。
+</p><p>ちなみに、こういった一時オブジェクトを使うために入れ子になった関数呼び出しは<a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="関数型プログラミング言語">関数型プログラミング言語</a>の書式に類似しており、実際に同じ考え方でできている側面がある。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=13" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p><b>STL</b>の<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">アーキテクチャ</a>の多くは<a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BB%E3%82%B9%E3%83%86%E3%83%91%E3%83%8E%E3%83%95&amp;action=edit&amp;redlink=1" title="アレクサンドル・ステパノフ (存在しないページ)">アレクサンドル・ステパノフ</a>という一人の人物の手によって作られた。1979年に彼は<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">ジェネリックプログラミング</a>の初期アイデアを練り始め、そしてソフトウェア開発に革命をもたらす可能性を探究し始めた。ジェネリックプログラミングの一部は1971年にはすでにデイビッド・マッサー(Dave Musser)により開発されて提唱されていたが、どちらかといえばコンピュータ<a href="/wiki/%E4%BB%A3%E6%95%B0%E5%AD%A6" title="代数学">代数学</a>というある特定のソフトウェア開発の分野に限定されたものであった。
+</p><p>ステパノフはジェネリックプログラミングの大きな可能性に気づき、<a href="/wiki/%E3%82%BC%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%BB%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF" title="ゼネラル・エレクトリック">ゼネラル・エレクトリック</a>のR&amp;D部門の仲間たち(前述のデイビッド・マッサーとデイーパック・カプール(Deepak Kapur))に対し、ジェネリックプログラミングがソフトウェア開発の広範囲に渡る基礎として研究されるべきだということを説得した。当時はジェネリックプログラミングを実際にサポートしているプログラミング言語がまだなかった。
+</p><p>それをサポートする最初のメジャーな言語はジェネリックユニット(汎用体)の機能がある<a href="/wiki/Ada" title="Ada">Ada</a>であった。1987年までにステパノフとマッサーはジェネリックプログラミングの研究成果としてAdaの<a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E3%83%AA%E3%82%B9%E3%83%88" title="線形リスト">リスト</a>処理ライブラリを開発してリリースしていた。しかしながらAdaは軍需産業以外ではあまり普及しておらず、<a href="/wiki/C%2B%2B" title="C++">C++</a>は当時まだ言語として未成熟ではあったものの(テンプレートはまだなく後から実装された)、より広く普及してジェネリックプログラミングの良好なサポートが提供される可能性が高いと考えられた。それ以前にもステパノフはまた別の理由でC++へ転向することを考えており、<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>を使うことで効率を損なうことなくメモリに対して非常に柔軟にアクセスできるC/C++の計算モデルは普及のための決定要素と思われた。
+</p><p>単なる個々のコンポーネント開発ではなく、ジェネリックプログラミングに基づくコンポーネントライブラリの包括的なアーキテクチャを開発するためには、十分な研究と実験が必要であった。初めは<a href="/wiki/AT%26T" title="AT&amp;T">AT&amp;T</a><a href="/wiki/%E3%83%99%E3%83%AB%E7%A0%94%E7%A9%B6%E6%89%80" title="ベル研究所">ベル研究所</a>で、後には<a href="/wiki/%E3%83%92%E3%83%A5%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E3%83%BB%E3%83%91%E3%83%83%E3%82%AB%E3%83%BC%E3%83%89" title="ヒューレット・パッカード">ヒューレット・パッカード</a>(HP)研究所で、ステパノフはC言語で(後にC++で)数多くのアーキテクチャと<a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="アルゴリズム">アルゴリズム</a>の実装法を検証した。マッサーは共同で研究し、さらに1992年にはメン・リー(Meng Lee)がHPのステパノフのプロジェクトに加入して主要な貢献者の一人となった。
+</p><p>ベル研究所のアンドリュー・コーニグ(Andrew Koenig)がこの動きを察知して、1993年11月の<a class="mw-redirect" href="/wiki/ANSI" title="ANSI">ANSI</a>/<a href="/wiki/%E5%9B%BD%E9%9A%9B%E6%A8%99%E6%BA%96%E5%8C%96%E6%A9%9F%E6%A7%8B" title="国際標準化機構">ISO</a>のC++標準化委員会にアイデアを提出するように求めるようなことがもしなければ、この作業は間違いなく、さしあたっては研究プロジェクトとして、あるいはHPのプロプライエタリなライブラリとして継続されたであろう。提案は委員会で全面的に賛同を得て、すぐさま1994年3月のミーティングでのコーニグからの正式なリクエストへとつながった。非常に厳しいスケジュールであったが、ステパノフとリーはミーティングに先だって事前承認されたドラフト案を提出できた。
+</p><p>委員会は変更と拡張(主要な点を含む)を数点要求し、詳細を詰めるために委員会の小さなグループがステパノフやリーと打ち合わせた。特に重要な(コンテナに関する)拡張について、それらを全て実装することにより一貫性があることを証明することが要求され、ステパノフはマッサーにこの作業を任せた。この時点で事業全体がコントロール不能になり暴走する可能性が高まっていたが、ステパノフとリーは果敢に立ち向かい、1994年7月のANSI/ISO委員会で最終承認を得ることになる提案を提出した。(本件についての詳細は1995年3月に発刊されたDr. Dobb's Journalに掲載されているアレクサンドル・ステパノフへのインタビューで確認できる。）
+</p><p>次にステパノフとリーのドキュメント17はANSI/ISO C++標準ドラフト版に取り入れられた(17条〜27条の一部)。また同様にstringのようなその他のC++標準ライブラリの機能にも影響を与え、それらの領域ですでに標準化されていた部分が修正された。
+</p><p>委員会でSTLが成功したにもかかわらず、STLがどのように実際に利用され活用されるのかという点においては問題が残されていた。公開版ドラフト標準の一部をSTLが要求したことにより、コンパイラメーカーと独立系ソフトウェアライブラリメーカーはそれをセールスポイントにしたプロダクトを開発して販売できた。初版の共著者の一人であるアトゥル・サイニ(Atul Saini)は初期の段階でこれの商品価値に気づき、STLがまだ委員会で最終承認される前であったにもかかわらず、彼の会社であるモデナソフトウェア(Modena Software Incorporated)のビジネスとして研究を開始していた。
+</p><p>STLが早いうちに広く普及するという見通しは、1994年春にヒューレット・パッカードがその実装をインターネットに公開し自由に利用可能とするという決定をしたことで相当よくなった。標準化の過程でステパノフ、リー、マッサーにより開発されたこの実装は、今日ではコンパイラやライブラリのメーカーがリリースしている多くの実装の基礎となった。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Standard_Template_Library&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="mw-redirect" href="/wiki/%E7%B7%8F%E7%A7%B0%E5%9E%8B" title="総称型">総称型</a></li>
+<li><a class="mw-redirect" href="/wiki/Boost" title="Boost">Boost</a></li>
+<li><a class="mw-redirect" href="/wiki/TR1" title="TR1">TR1</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a class="new" href="/w/index.php?title=STLport&amp;action=edit&amp;redlink=1" title="STLport (存在しないページ)">STLport</a></li></ul>
+<div aria-labelledby="C++" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:C%2B%2B&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:C++ (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="C++" style="font-size:110%;margin:0 6em">C++</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li>C++98</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B03&amp;action=edit&amp;redlink=1" title="C++03 (存在しないページ)">C++03</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B03&amp;action=edit&amp;redlink=1" title="En:C++03 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Technical_Report_1" title="C++ Technical Report 1">C++TR1</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a href="/wiki/C%2B%2B20" title="C++20">C++20</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B23&amp;action=edit&amp;redlink=1" title="C++23 (存在しないページ)">C++23</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B23&amp;action=edit&amp;redlink=1" title="En:C++23 (存在しないページ)">英語版</a>）</span></span></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">C++の機能</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1" title="C++のクラス (存在しないページ)">クラス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B_classes&amp;action=edit&amp;redlink=1" title="En:C++ classes (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BE%8B%E5%A4%96%E5%87%A6%E7%90%86" title="例外処理">例外処理</a></li>
+<li><a href="/wiki/%E5%A4%9A%E9%87%8D%E5%AE%9A%E7%BE%A9" title="多重定義">多重定義</a></li>
+<li><a href="/wiki/New%E6%BC%94%E7%AE%97%E5%AD%90" title="New演算子">new演算子</a></li>
+<li><a href="/wiki/C%E3%81%A8C%2B%2B%E3%81%AE%E6%BC%94%E7%AE%97%E5%AD%90" title="CとC++の演算子">演算子</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a></li>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">標準C++ライブラリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Iostream&amp;action=edit&amp;redlink=1" title="Iostream (存在しないページ)">iostream</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Input/output_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:Input/output (C++) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="スマートポインタ">スマートポインタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smart_pointer&amp;action=edit&amp;redlink=1" title="En:Smart pointer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">STL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="String (C++) (存在しないページ)">string</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:String (C++) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンパイラ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="Borland C++ (存在しないページ)">Borland C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="En:Borland C++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Builder" title="C++ Builder">C++ Builder</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">gcc</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a></li>
+<li><a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Visual C++</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="Watcom C/C++ compiler (存在しないページ)">Watcom C/C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="En:Watcom C/C++ compiler (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">統合開発環境</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)" title="Eclipse (統合開発環境)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Embedded_C%2B%2B" title="Embedded C++">Embedded C++</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li>カテゴリ <b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">カテゴリ</a></b></li></ul></td></tr></tbody></table></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20220331115944
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.176 seconds
+Real time usage: 0.384 seconds
+Preprocessor visited node count: 1013/1000000
+Post‐expand include size: 42127/2097152 bytes
+Template argument size: 1848/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 10/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 223/5000000 bytes
+Lua time usage: 0.090/7 seconds
+Lua virtual size: 7249920/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  304.065      1 -total
+ 55.39%  168.422      2 テンプレート:出典の明記
+ 42.37%  128.847      1 テンプレート:C++
+ 41.38%  125.819      1 テンプレート:Navbox
+ 39.19%  119.171      2 テンプレート:Ambox
+ 30.00%   91.223      8 テンプレート:仮リンク
+ 15.46%   47.012      2 テンプレート:DMC
+ 14.42%   43.847      2 テンプレート:Find_sources_mainspace
+  4.44%   13.500      2 テンプレート:DMC/core
+  3.24%    9.849      1 テンプレート:Icon
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:141863-0!canonical and timestamp 20220331115944 and revision id 97758. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Standard_Template_Library&amp;oldid=97758">http://localhost:8080/w/index.php?title=Standard_Template_Library&amp;oldid=97758</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2012%E5%B9%B48%E6%9C%88" title="カテゴリ:出典を必要とする記事/2012年8月">出典を必要とする記事/2012年8月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B43%E6%9C%88-4%E6%9C%88" title="カテゴリ:出典を必要とする節のある記事/2015年3月-4月">出典を必要とする節のある記事/2015年3月-4月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">C++</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="カテゴリ:ライブラリ (プログラミング)">ライブラリ (プログラミング)</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Standard+Template+Library&amp;returntoquery=curid%3D141863%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Standard+Template+Library&amp;returntoquery=curid%3D141863%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Standard_Template_Library" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Standard_Template_Library&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Standard_Template_Library">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Standard_Template_Library&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Standard_Template_Library&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Standard_Template_Library" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Standard_Template_Library" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Standard_Template_Library&amp;oldid=97758" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Standard_Template_Library&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年7月5日 (日) 22:41 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.176","walltime":"0.384","ppvisitednodes":{"value":1013,"limit":1000000},"postexpandincludesize":{"value":42127,"limit":2097152},"templateargumentsize":{"value":1848,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":10,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":223,"limit":5000000},"timingprofile":["100.00%  304.065      1 -total"," 55.39%  168.422      2 テンプレート:出典の明記"," 42.37%  128.847      1 テンプレート:C++"," 41.38%  125.819      1 テンプレート:Navbox"," 39.19%  119.171      2 テンプレート:Ambox"," 30.00%   91.223      8 テンプレート:仮リンク"," 15.46%   47.012      2 テンプレート:DMC"," 14.42%   43.847      2 テンプレート:Find_sources_mainspace","  4.44%   13.500      2 テンプレート:DMC/core","  3.24%    9.849      1 テンプレート:Icon"]},"scribunto":{"limitreport-timeusage":{"value":"0.090","limit":"7"},"limitreport-virtmemusage":{"value":7249920,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331115944","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":2038});});</script>
+</body></html>

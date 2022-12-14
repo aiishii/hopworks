@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>MIPSアーキテクチャ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-MIPSアーキテクチャ rootpage-MIPSアーキテクチャ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">MIPSアーキテクチャ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><table class="infobox" style="width:22em;"><caption class="" itemprop="name" style="">MIPSアーキテクチャ</caption><tbody><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">開発者</th><td class="" itemprop="" style="">
+<a href="." id="link_i_1" title="ミップス・テクノロジーズ">ミップス・コンピュータシステムズ</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ビット数</th><td class="" itemprop="" style="">
+<a href="." id="link_i_2" title="64ビット">64ビット</a> (32→64)</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">発表</th><td class="" itemprop="" style="">
+1981年</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">デザイン</th><td class="" itemprop="" style="">
+<a href="." id="link_i_3" title="RISC">RISC</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">タイプ</th><td class="" itemprop="" style="">
+レジスタ - レジスタ</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">エンコード</th><td class="" itemprop="" style="">
+固定</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ブランチ</th><td class="" itemprop="" style="">
+条件レジスタ</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">エンディアン</th><td class="" itemprop="" style="">
+<a href="." id="link_i_4" title="エンディアン">バイ</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">拡張</th><td class="" itemprop="" style="">
+<a class="new" href="/w/index.php?title=En:MDMX&amp;action=edit&amp;redlink=1" title="En:MDMX (存在しないページ)">MDMX</a>, <a class="new" href="/w/index.php?title=En:MIPS-3D&amp;action=edit&amp;redlink=1" title="En:MIPS-3D (存在しないページ)">MIPS-3D</a></td></tr><tr style=""><th class="" colspan="2" scope="col" style="text-align:center; background:#ccf;">レジスタ</th></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">汎用</th><td class="" itemprop="" style="">
+31本 （32本中、『R0』は常に0 なので除く）</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">浮動小数点</th><td class="" itemprop="" style="">
+32本 （32ビットでは2本で<a href="." id="link_i_5" title="倍精度">倍精度</a>を表す）</td></tr></tbody></table>
+<p><b>MIPSアーキテクチャ</b>は、ミップス・コンピュータシステムズ（現<a href="." id="link_a_1" title="ミップス・テクノロジーズ">ミップス・コンピュータシステムズ</a>）が開発した<a href="." id="link_a_3" title="RISC">RISC</a>マイクロプロセッサの<a href="." id="link_a_6" title="命令セット">命令セット・アーキテクチャ</a> (ISA) である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#歴史"><span class="tocnumber">2</span> <span class="toctext">歴史</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#RISCの先駆者"><span class="tocnumber">2.1</span> <span class="toctext">RISCの先駆者</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#最初のハードウェア"><span class="tocnumber">2.2</span> <span class="toctext">最初のハードウェア</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#アーキテクチャのライセンス供与"><span class="tocnumber">2.3</span> <span class="toctext">アーキテクチャのライセンス供与</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#デスクトップ市場を失う"><span class="tocnumber">2.4</span> <span class="toctext">デスクトップ市場を失う</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#組み込み市場"><span class="tocnumber">2.5</span> <span class="toctext">組み込み市場</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#組み込み市場向けの合成可能なコア"><span class="tocnumber">2.6</span> <span class="toctext">組み込み市場向けの合成可能なコア</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#映像組み込みでの利用"><span class="tocnumber">2.7</span> <span class="toctext">映像組み込みでの利用</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#MIPSベースのスーパーコンピュータ"><span class="tocnumber">2.8</span> <span class="toctext">MIPSベースのスーパーコンピュータ</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#龍芯"><span class="tocnumber">2.9</span> <span class="toctext">龍芯</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#MIPS_IV"><span class="tocnumber">3</span> <span class="toctext">MIPS IV</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#MIPS_V"><span class="tocnumber">4</span> <span class="toctext">MIPS V</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#MIPS_CPU_ファミリ"><span class="tocnumber">5</span> <span class="toctext">MIPS CPU ファミリ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#MIPS_マイクロプロセッサの仕様"><span class="tocnumber">5.1</span> <span class="toctext">MIPS マイクロプロセッサの仕様</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#MIPS_I_の命令形式"><span class="tocnumber">6</span> <span class="toctext">MIPS I の命令形式</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#MIPS_アセンブリ言語"><span class="tocnumber">7</span> <span class="toctext">MIPS アセンブリ言語</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#整数"><span class="tocnumber">7.1</span> <span class="toctext">整数</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#浮動小数点数"><span class="tocnumber">7.2</span> <span class="toctext">浮動小数点数</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#擬似命令"><span class="tocnumber">7.3</span> <span class="toctext">擬似命令</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#その他の命令"><span class="tocnumber">7.4</span> <span class="toctext">その他の命令</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#コンパイラのレジスタ使用規則"><span class="tocnumber">8</span> <span class="toctext">コンパイラのレジスタ使用規則</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#シミュレータ"><span class="tocnumber">9</span> <span class="toctext">シミュレータ</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#注釈"><span class="tocnumber">10.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#出典"><span class="tocnumber">10.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#参考文献"><span class="tocnumber">11</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#関連項目"><span class="tocnumber">12</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#外部リンク"><span class="tocnumber">13</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>MIPS</b>は "Microprocessor without Interlocked Pipeline Stages"（<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">(命令)パイプライン</a>のステージに「インターロックされたステージ」がない<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a>）に由来しており、R2000の頃の<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="マイクロアーキテクチャ">マイクロアーキテクチャ</a>の特徴からの命名である（が、その後そのような特徴が薄れていったのも、他のRISCと同様である）。<a href="/wiki/MIPS" title="MIPS">MIPS値</a>にも掛けている。
+</p><p>当初は<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>幅の<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>とデータバスを持つ<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>の構成だったが、後に<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a>に拡張された。MIPSアーキテクチャには<a class="mw-redirect" href="/wiki/%E4%B8%8B%E4%BD%8D%E4%BA%92%E6%8F%9B" title="下位互換">下位互換</a>のある複数の<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a>が存在する。それぞれ、MIPS I、MIPS II、MIPS III、MIPS IV、MIPS 32、MIPS 64 と称する。現行版は MIPS 32（32ビット実装）と MIPS 64（64ビット実装）である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。MIPS 32 と MIPS 64では命令セットだけでなく制御レジスタについても定義している。
+</p><p>いくつかのアドオン拡張も用意されている。例えば、MIPS-3D は、3Dタスクで一般的な処理を行うための浮動小数点<a href="/wiki/SIMD" title="SIMD">SIMD</a>命令のシンプルなセットである<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。また、MDMX (MaDMaX) は、より広範な整数<a href="/wiki/SIMD" title="SIMD">SIMD</a>命令セットで、64ビット浮動小数点レジスタを流用する。その他、MIPS16e は命令列を圧縮してプログラム格納域を小さくするための拡張である (<a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARMアーキテクチャ</a>のThumbエンコーディングに対抗したもの) <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。また、MIPS MT は、米<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>社が<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング・テクノロジー</a>として普及させた技術と同等の、<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">マルチスレッディング</a>に適した拡張である<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p><p>命令セットが非常にきれいなので、<a href="/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%90%88%E8%A1%86%E5%9B%BD" title="アメリカ合衆国">アメリカ合衆国</a>では<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">コンピュータ・アーキテクチャ</a>を学校で教えるときに教材としてMIPSアーキテクチャを使うことが多い<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。MIPSのデザインは、もうひとつの初期のRISCであるバークレーRISC（<a class="new" href="/w/index.php?title=En:Berkeley_RISC&amp;action=edit&amp;redlink=1" title="En:Berkeley RISC (存在しないページ)">en:Berkeley RISC</a>）と共に、後発のRISCに影響を及ぼした。
+</p><p>MIPSプロセッサは、<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">SGI</a>のコンピュータ製品群に使われていた。日本では、<a href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC" title="ソニー">ソニー</a>の<a href="/wiki/NEWS_(%E3%82%BD%E3%83%8B%E3%83%BC)" title="NEWS (ソニー)">NEWS</a>や<a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">日本電気</a> (NEC) の<a href="/wiki/EWS4800" title="EWS4800">EWS4800</a>で使われた。また、米<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>社は、ごく短期間だけMIPSを使った<a href="/wiki/DECstation" title="DECstation">ワークステーション</a>を製品化していた<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[注 1]</a></sup>。また、機器組み込み分野で成功し、<a class="mw-redirect" href="/wiki/Microsoft_Windows_CE" title="Microsoft Windows CE">Windows CE</a>製品、<a href="/wiki/%E3%82%B7%E3%82%B9%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="シスコシステムズ">シスコシステムズ</a>の<a href="/wiki/%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC" title="ルーター">ルーター</a>、<a href="/wiki/%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" title="プリンター">プリンタ</a>のエンジンなどに使われた。<a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F" title="ゲーム機">ゲーム機</a>分野でも成功を収め、<a href="/wiki/NINTENDO64" title="NINTENDO64">NINTENDO64</a>、<a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%86%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88" title="ソニー・コンピュータエンタテインメント">ソニー・コンピュータエンタテインメント</a>の<a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">PlayStation</a>、<a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a>、<a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a>、<a href="/wiki/PlayStation_3#PS/PS2との互換性" title="PlayStation 3">PlayStation 3 (CECHA00/CECHB00 モデルのみ)</a>でもMIPSアーキテクチャのプロセッサが使われた。<a href="/wiki/1990%E5%B9%B4%E4%BB%A3" title="1990年代">1990年代</a>後半、RISCマイクロプロセッサの出荷個数ベースで3分の1がMIPSアーキテクチャの製品だったと見積もられている<sup class="reference" id="cite_ref-Victor_P._Rubio,_2004_8-0"><a href="#cite_note-Victor_P._Rubio,_2004-8">[7]</a></sup>。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=2" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="RISC.E3.81.AE.E5.85.88.E9.A7.86.E8.80.85"></span><span class="mw-headline" id="RISCの先駆者">RISCの先駆者</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=3" title="節を編集: RISCの先駆者">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>1981年、<a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E5%A4%A7%E5%AD%A6" title="スタンフォード大学">スタンフォード大学</a>の<a class="mw-redirect" href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BBL%E3%83%BB%E3%83%98%E3%83%8D%E3%82%B7%E3%83%BC" title="ジョン・L・ヘネシー">ジョン・L・ヘネシー</a>率いるチームは、後に最初のMIPSプロセッサを生むプロジェクトを開始した。基本コンセプトは、<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">命令パイプライン</a>を深くすることで劇的に性能を向上させることである。<a href="/wiki/IBM_801" title="IBM 801">IBM 801</a> などの研究や先例でこの手法はよく知られていたが、その可能性が完全に解明されていなかった。一般に<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="プロセッサ">プロセッサ</a>は、命令デコーダ、<a class="mw-redirect" href="/wiki/%E6%BC%94%E7%AE%97%E8%AB%96%E7%90%86%E8%A3%85%E7%BD%AE" title="演算論理装置">演算論理装置</a> (ALU)、メモリとやりとりするロード/ストア・ユニットといった部分で構成されている。パイプライン化されていない従来の「<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a>の」設計では、1つの命令の処理を（ほぼ）完了させないと次の命令の処理を開始できず、内部ではほとんどの時間を処理に関与せずに待機するだけの回路が多くなる。これに対して「従来のマイクロプロセッサ」ではない、例えば1960年代の<a href="/wiki/IBM_7030" title="IBM 7030">IBM 7030</a>の頃には実現されていた命令パイプライン方式では、1つの命令の処理過程を複数のステージ（段階）に分割し、各ステージを順次、次のサブユニットに送って、複数のサブユニットがオーバラップして動作できるようにする。1つ目の命令の最初のステージの処理が終わると、次のステージの処理へ引き継がれると同時に、2つ目の命令の最初のステージの処理が平行して実行される。3つ目の命令が入ると1つ目の命令は3ステージ先、2つ目の命令は2ステージ先、3つ目の命令は最初のステージで、3つの処理が同時に行われる。すべてが最も効率的に動けば、複数に分割した処理過程の内容に関わらず、1ステージの処理ごとに1つの命令が完了できることになる。
+</p><p>命令パイプラインでは、乗算・除算命令のように命令の実行に長い時間がかかる場合、パイプラインに次の命令を取り込むのを待つ必要がある。この問題の解決策として、パイプラインの各ステージが処理中であることを示せるようにして、パイプラインをインターロックして、次の命令のステージが進行しないように止めなければならない。これがストールである。分岐命令を実行すると、後続の命令が途中のステージまで進行していたものを取り消さなければならず、ストールに加えて無駄となった処理時間分も加わる。これらがインターロックのロスとなる<sup class="reference" id="cite_ref-マイクロプロセッサ_テクノロジ_9-0"><a href="#cite_note-マイクロプロセッサ_テクノロジ-9">[8]</a></sup>。ストールが発生しインターロックがかかると命令パイプラインは足踏みするため、性能向上は望めないと考えられていた。MIPSの設計上では、すべての命令を単純化して実行処理が1クロックサイクル内で完了するよう計画された。そうできればインターロックをなくすことができる。
+</p><p>このような設計にすることで掛け算や割り算などの複雑な命令が1つの命令では実行できなくなるが、単純な命令だけであれば、プロセッサに与えるクロックを高速にでき早く動作させて、性能が向上すると予想された。また、インターロック回路を加えると半導体チップの面積（ダイサイズ）が増えて、クロックを上げることが困難になるため、クロックの高速化のためにはインターロックを排除することも必要だった。
+</p><p>複雑だが有用だった命令を排除することは議論の中心になった。多くの人が「複雑な掛け算を単純な多くの足し算にして、どうして速度が向上するのか」と、この設計手法、そしてRISC一般の謳い文句に懐疑的で誇大広告だと言った。しかし、これらの意見は、この設計における速度向上のポイントが命令の機能にあるのではなく、パイプラインにあるということを無視したものだった。時間のかかる処理にまつわる問題は、<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%A3%E3%83%AC%E3%82%A4%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88" title="ディレイスロット">ディレイスロット</a>で一応解決された。例えば、2クロックサイクルかかる命令があった場合、次の命令をディレイスロットとし、そこに、前の命令と依存関係の無い、つまり前の命令の結果を必要とせず、かつ前の命令に関わっているレジスタを使用しない命令を配置することで、パイプラインを止めないようにした。これを実現するためには、プロセッサに与える命令列を生成する<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>が、あらかじめ各命令ごとのクロックサイクル数を把握して、可能な限りディレイスロットを有効な命令で埋めるようにする必要があった。それでも大部分の命令は1クロックサイクルで実行できた。また、コンパイラ技術の進展はディレイスロットの活用頻度を向上させた。
+</p><p>初期のMIPSと並び、RISCの典型であり代表とされる<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%BCRISC&amp;action=edit&amp;redlink=1" title="バークレーRISC (存在しないページ)">バークレーRISC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Berkeley_RISC&amp;action=edit&amp;redlink=1" title="En:Berkeley RISC (存在しないページ)">英語版</a>）</span></span>（<a href="/wiki/SPARC" title="SPARC">SPARC</a>への影響が大きい）と比べると、<a href="/wiki/%E3%82%B5%E3%83%96%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3" title="サブルーチン">サブルーチン</a>コールの扱い方が大きく異なる。バークレーRISCは頻繁に実行され性能への影響が大きいサブルーチンコールの性能向上を図るために、大きなレジスタファイルを持つと同時に<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%BB%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6" title="レジスタ・ウィンドウ">レジスタ・ウィンドウ</a>というメカニズムを導入したが、それによってサブルーチンコールの入れ子段数が制限されている。サブルーチンコールは、それぞれのルーチンで専用に用いるローカルのレジスタ群を必要とし、その割り当てをハードウェアでサポートするということはチップにさらなるリソースを必要とし、設計も複雑化することを意味する。ヘネシーは、賢いコンパイラであればハードウェアでの実装に頼らずに使っていないレジスタを見つけ出すことができ、単にレジスタを有効利用できるだけでなく、あらゆるタスクの性能向上にも寄与すると考えた。
+</p><p>MIPSは最も典型的なRISCのひとつだとされる、というよりも、RISCの提唱者であるヘネシーとパターソンのそれぞれが設計した命令セット（命令セットアーキテクチャ）であるということを理由に、MIPSとバークレーRISCの設計が「典型的なRISC」だとされ、それらの特徴を以て「RISCの定義」だとされているためであり、「MIPSは最も典型的なRISC」だという言明はその逆になっている。
+</p><p>命令語のビット数を節約するために、命令数を抑えることで、命令フォーマット中の<a href="/wiki/%E3%82%AA%E3%83%9A%E3%82%B3%E3%83%BC%E3%83%89" title="オペコード">オペコード</a>部として必要となるビット数を抑えている。基本オペコードは、命令語32ビットの中の6ビットを使用し<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[9]</a></sup>、残りの部分の構成の違いにより数種類の分類がある。命令語の残りの26ビットの部分について、26ビットの分岐先アドレスとする命令フォーマット、5ビットのフィールド4個で3つのレジスタとシフト値を指定し、残り6ビットを追加のオペコードとする命令フォーマット、2つのレジスタと16ビットの即値を指定する命令フォーマットがある。このような設計で、実行すべき命令と必要なデータ（<a href="/wiki/%E8%A2%AB%E6%BC%94%E7%AE%97%E5%AD%90" title="被演算子">オペランド</a>）を1サイクルでロードできるようになった（正確には、必要なデータはレジスタの中にあるのであり、もし1サイクルで全てを揃えたいのなら特殊な技法が必要になる。細かく言うと、「オペコードとオペランド指定子」を（1サイクルで32ビットをメモリからロードできるように他の部分が設計されていば）1サイクルでロードできる）。
+</p>
+<h3><span id=".E6.9C.80.E5.88.9D.E3.81.AE.E3.83.8F.E3.83.BC.E3.83.89.E3.82.A6.E3.82.A7.E3.82.A2"></span><span class="mw-headline" id="最初のハードウェア">最初のハードウェア</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=4" title="節を編集: 最初のハードウェア">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/1984%E5%B9%B4" title="1984年">1984年</a>、ヘネシーは、将来商業レベルとなる可能性のあるデザインを確立し、教え子、友人らとミップス・コンピュータシステムズを設立する。<a href="/wiki/1985%E5%B9%B4" title="1985年">1985年</a>、彼らは、最初のデザインである<a href="/wiki/R2000" title="R2000">R2000</a>を完成させた。また、<a href="/wiki/1988%E5%B9%B4" title="1988年">1988年</a>には、それを進化させた<a href="/wiki/R3000" title="R3000">R3000</a>を完成させた。これらの32ビットCPUによって、ミップス・コンピュータシステムズは、<a href="/wiki/1980%E5%B9%B4%E4%BB%A3" title="1980年代">1980年代</a>に基盤を築くことができた。なお、これらの商用デザインにおいては、スタンフォード大学での学術研究的な設計方針とは異なり、ハードウェアにインターロック機構を装備し、掛け算も割り算もサポートしていた。なぜなら、単にひとつのプログラムを実行するだけなら、上述のディレイスロットの考え方で何とかなるが、商用としてはマルチタスクや割り込みへの対応は必須であり、インターロック機構の付加は必然だったからである。また、半導体プロセス技術の急速な進歩がそれを可能にしていった。インターロック機構を備えたとしても、インターロックをなるべく発生させないコンパイラ技術は高速化に必須である。これらのプロセッサは、<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">SGI</a>、DEC DECstation、ソニー NEWS、NEC EWS4800などに使われた。これらの設計にはソフトウェアアーキテクトのアール・キリアンも参加している。彼は後に MIPS III 64ビット命令セットを設計し、R4000の<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="マイクロアーキテクチャ">マイクロアーキテクチャ</a>開発にも関わった<sup class="reference" id="cite_ref-twsNovZ23_11-0"><a href="#cite_note-twsNovZ23-11">[10]</a></sup><sup class="reference" id="cite_ref-twsNovZ14_12-0"><a href="#cite_note-twsNovZ14-12">[11]</a></sup>。
+</p><p>1991年、ミップス・コンピュータシステムズ社は、最初の64ビットマイクロプロセッサ<a href="/wiki/R4000" title="R4000">R4000</a>をリリースした<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[注 2]</a></sup><sup class="reference" id="cite_ref-マイクロプロセッサ_テクノロジ_9-1"><a href="#cite_note-マイクロプロセッサ_テクノロジ-9">[8]</a></sup>。R4000は仮想アドレスだけでなく仮想空間IDを格納できる進んだ<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="トランスレーション・ルックアサイド・バッファ">TLB</a>を採用していた。それによって頻繁な<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81" title="コンテキストスイッチ">コンテキストスイッチ</a>の度にTLBをフラッシュする必要性をなくし、他の競合するアーキテクチャ（Pentium、PowerPC、Alpha）に対して劣っていた<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="マイクロカーネル">マイクロカーネル</a>実装時の大きな性能問題を低減させることができた<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[12]</a></sup>。
+</p><p>しかし、ミップス社は、R4000を市場に提供しようとしたころ、財政危機に陥った。そこで、当時のミップス社の最大の顧客であった米<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">SGI</a>社は、<a href="/wiki/1992%E5%B9%B4" title="1992年">1992年</a>にミップス社を買い取り、これによりMIPSアーキテクチャの存続が保証された。こうしてミップス・コンピュータシステムズ社はSGIの子会社となり、社名もミップス・テクノロジーズと変更された。
+</p>
+<h3><span id=".E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.E3.81.AE.E3.83.A9.E3.82.A4.E3.82.BB.E3.83.B3.E3.82.B9.E4.BE.9B.E4.B8.8E"></span><span class="mw-headline" id="アーキテクチャのライセンス供与">アーキテクチャのライセンス供与</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=5" title="節を編集: アーキテクチャのライセンス供与">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/1990%E5%B9%B4" title="1990年">1990年</a>初頭、ミップス・テクノロジーズ社は、プロセッサの設計を<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC" title="サードパーティー">サードパーティー</a>にライセンス供与しはじめた。プロセッサ・コア、つまり主要な演算部分の単純さによって、これは「MIPSコア」として成功を収め、従来は同等のゲート数と価格の<a href="/wiki/CISC" title="CISC">CISC</a>プロセッサが占めていた様々な分野でMIPSコアが使われるようになった。ゲート数と価格は密接な関係があり、CPUの価格はキャッシュメモリ領域を除けば、ゲート数とピン数でほぼ決まっていた。<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a>も追随して<a href="/wiki/SPARC" title="SPARC">SPARC</a>コアのライセンス供与を開始したが、成功したとは言い難い。<a href="/wiki/1990%E5%B9%B4%E4%BB%A3" title="1990年代">1990年代</a>後半にはMIPSは機器<a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込み</a>用プロセッサ分野の勝者となっていた。1997年、4800万個目のMIPSベースのチップが出荷され、MIPS CPUファミリは<a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a>の<a href="/wiki/MC68000" title="MC68000">MC68000</a>ファミリを出荷個数で抜いた。この成功により、SGI社はミップス・テクノロジーズを<a href="/wiki/1998%E5%B9%B4" title="1998年">1998年</a>に<a href="/wiki/%E3%82%B9%E3%83%94%E3%83%B3%E3%82%AA%E3%83%95" title="スピンオフ">スピンオフ</a>させた。ミップス・テクノロジーズの収入の半分はライセンス料であり、残りはサードパーティーが生産するコアの設計から来ている。
+</p><p><a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a>、ミップス・テクノロジーズ社はライセンス体系を整理し、32ビットの<b>MIPS32</b>（MIPS II にそれ以降の新規機能を追加したもの）と64ビットの<b>MIPS64</b>（MIPS V ベース）に分けた。このアナウンスと同時に、NEC、<a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a>、SiByte（後に<a href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%82%B3%E3%83%A0" title="ブロードコム">ブロードコム</a>が買収）がMIPS64のライセンス供与を受けた。<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%82%B9" title="フィリップス">フィリップス</a>、<a class="mw-redirect" href="/wiki/LSI%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF" title="LSIロジック">LSIロジック</a>、<a href="/wiki/IDT" title="IDT">IDT</a>もすでに参加している。成功に成功が続き、MIPSはコンピュータに近い機器（<a href="/wiki/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%98%E3%83%AB%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハンドヘルドコンピュータ">ハンドヘルドコンピュータ</a>や<a href="/wiki/%E3%82%BB%E3%83%83%E3%83%88%E3%83%88%E3%83%83%E3%83%97%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="セットトップボックス">セットトップボックス</a>など）の市場で最も使われているヘビー級CPUコアとなっている。モトローラ社も<a href="/wiki/%E3%82%BB%E3%83%83%E3%83%88%E3%83%88%E3%83%83%E3%83%97%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="セットトップボックス">セットトップボックス</a>に自社の<a href="/wiki/PowerPC" title="PowerPC">PowerPC</a>ではなくMIPSコアを採用した。
+</p><p>いくつかの<a href="/wiki/%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC" title="ベンチャー">ベンチャー企業</a>もミップス・テクノロジーズ社よりアーキテクチャ・ライセンスの供与を受けて参入してきた。最初にMIPSプロセッサを設計したベンチャー企業は<a href="/wiki/Quantum_Effect_Devices" title="Quantum Effect Devices">Quantum Effect Devices</a>だった。MIPS社で<b><a href="/wiki/R4200" title="R4200">R4300i</a></b>を設計したチームはSandCraft社を設立し、NEC向けに<b>R5432</b>を設計し、後に<b>SR7100</b>を作った。これは、組み込み分野向けの最初の<a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">アウト・オブ・オーダー実行</a>プロセッサである。DECで最初に<a href="/wiki/StrongARM" title="StrongARM">StrongARM</a>を設計したチームはふたつのMIPS関連ベンチャーを設立した。ひとつはSiByteで<b>SB-1250</b>というMIPSベースで最初のSystem-on-a-chip (SOC) を実現した製品を作った。もうひとつのAlchemy Semiconductorは<b>Au-1000</b>という低電力のSOCを作った。SiByteはブロードコムに買収された。Alchemyは<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>に買収されたが、後にAMDはAlchemyをRaza Microelectronics (RMI) に売却した。LexraはMIPSに似たアーキテクチャをベースにDSP機能を付加したチップをオーディオ機器市場向けに、マルチスレッド機能を付加したチップをネットワーク機器市場向けに出している。LexraはMIPSからライセンス供与を受けていなかったため、MIPSとの間で2件の訴訟となった。1件はLexraがMIPS互換であることを宣伝しないという条件ですぐさま解決した。2件目は長引き、両社を疲弊させた。結局、ミップス・テクノロジーズがLexraに対してフリーライセンスと賠償金を払うことで決着した。
+</p><p>MIPSアーキテクチャを使った<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a>デバイスを構築することに特化した企業も2社登場している。<a class="new" href="/w/index.php?title=En:RMI_Corporation&amp;action=edit&amp;redlink=1" title="En:RMI Corporation (存在しないページ)">Raza Microelectronics, Inc.</a> は低迷していたSandCraftから製品ラインを買い取り、通信およびネットワーク市場向けに8コアの製品を提供した。<a class="new" href="/w/index.php?title=En:Cavium_Networks&amp;action=edit&amp;redlink=1" title="En:Cavium Networks (存在しないページ)">Cavium Networks</a> は元々はセキュリティ・プロセッサのベンダーだったが、こちらも同じ市場向けに8CPUコアを集積したデバイスを開発し、後に最大32コア版を開発している。両社ともに社内でコアを設計しており、MIPSからコア設計を買うのではなくアーキテクチャのライセンス供与だけを受けている。
+</p>
+<h3><span id=".E3.83.87.E3.82.B9.E3.82.AF.E3.83.88.E3.83.83.E3.83.97.E5.B8.82.E5.A0.B4.E3.82.92.E5.A4.B1.E3.81.86"></span><span class="mw-headline" id="デスクトップ市場を失う">デスクトップ市場を失う</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=6" title="節を編集: デスクトップ市場を失う">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPSプロセッサを使った<a href="/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ワークステーション">ワークステーション</a>システムを製造していた企業として、<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">SGI</a>、<a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・コンピュータシステムズ</a>、<a class="new" href="/w/index.php?title=En:Whitechapel_Computer_Works&amp;action=edit&amp;redlink=1" title="En:Whitechapel Computer Works (存在しないページ)">Whitechapel Workstations</a>、<a href="/wiki/%E3%82%AA%E3%83%AA%E3%83%99%E3%83%83%E3%83%86%E3%82%A3" title="オリベッティ">オリベッティ</a>、<a class="new" href="/w/index.php?title=En:Siemens_Nixdorf_Informationssysteme&amp;action=edit&amp;redlink=1" title="En:Siemens Nixdorf Informationssysteme (存在しないページ)">Siemens-Nixdorf</a>、<a href="/wiki/%E3%82%A8%E3%82%A4%E3%82%B5%E3%83%BC_(%E4%BC%81%E6%A5%AD)" title="エイサー (企業)">エイサー</a>、<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>、<a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">NEC</a>、<a href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC" title="ソニー">ソニー</a>、<a class="new" href="/w/index.php?title=En:DeskStation_Technology&amp;action=edit&amp;redlink=1" title="En:DeskStation Technology (存在しないページ)">DeskStation</a> があった。またMIPSアーキテクチャ上に移植された<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>として、SGIの<a href="/wiki/IRIX" title="IRIX">IRIX</a>、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>の<a href="/wiki/Microsoft_Windows_NT" title="Microsoft Windows NT">Windows NT</a>（v4.0まで）、<a href="/wiki/Microsoft_Windows_Embedded_CE" title="Microsoft Windows Embedded CE">Windows CE</a>、<a href="/wiki/Linux" title="Linux">Linux</a>、<a href="/wiki/Berkeley_Software_Distribution" title="Berkeley Software Distribution">BSD</a>、<a href="/wiki/UNIX_System_V" title="UNIX System V">UNIX System V</a>、<a href="/wiki/QNX" title="QNX">QNX</a>、ミップス自身の<a href="/wiki/RISC/os" title="RISC/os">RISC/os</a>などがある。
+</p><p>1990年代初頭、インテルプロセッサベースのPCに対抗してMIPSプロセッサベースのコンピューティング環境を作るために、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%83%83%E3%82%AF" title="コンパック">コンパック</a>他多数の企業によって <a class="new" href="/w/index.php?title=En:Advanced_Computing_Environment&amp;action=edit&amp;redlink=1" title="En:Advanced Computing Environment (存在しないページ)">Advanced Computing Environment</a> (ACE) というコンソーシアムが設立された。当時、MIPSなどの強力な<a href="/wiki/RISC" title="RISC">RISC</a>プロセッサがインテルの<a href="/wiki/IA-32" title="IA-32">IA-32</a>アーキテクチャに取って代わるだろうという予測がなされていた。<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>の <a href="/wiki/Microsoft_Windows_NT" title="Microsoft Windows NT">Windows NT</a> が当初、<a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>、MIPS、<a href="/wiki/PowerPC" title="PowerPC">PowerPC</a>などのRISCアーキテクチャに対応したこともその予測を裏付ける形となった。しかし<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>が<a href="/wiki/Intel_Pentium_(1993%E5%B9%B4)" title="Intel Pentium (1993年)">Pentium</a>クラスのCPUをリリースすると、マイクロソフトの Windows NT v4.0 では対応するアーキテクチャをIA-32とAlphaのみに絞った。後にSGIが<a href="/wiki/Itanium" title="Itanium">Itanium</a>や<a href="/wiki/IA-32" title="IA-32">IA-32</a>アーキテクチャへの移行を決定すると、デスクトップ市場ではMIPSプロセッサはほぼ完全に姿を消した<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[13]</a></sup>。
+</p>
+<h3><span id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E5.B8.82.E5.A0.B4"></span><span class="mw-headline" id="組み込み市場">組み込み市場</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=7" title="節を編集: 組み込み市場">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>1990年代を通して、MIPSアーキテクチャは<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="コンピュータネットワーク">コンピュータネットワーク</a>、<a href="/wiki/%E9%9B%BB%E6%B0%97%E9%80%9A%E4%BF%A1" title="電気通信">電気通信</a>、<a href="/wiki/%E3%82%A2%E3%83%BC%E3%82%B1%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0" title="アーケードゲーム">アーケードゲーム</a>、<a href="/wiki/%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F" title="ゲーム機">ゲーム機</a>、<a href="/wiki/%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" title="プリンター">プリンター</a>、デジタル<a href="/wiki/%E3%82%BB%E3%83%83%E3%83%88%E3%83%88%E3%83%83%E3%83%97%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="セットトップボックス">セットトップボックス</a>、<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%86%E3%83%AC%E3%83%93%E6%94%BE%E9%80%81" title="デジタルテレビ放送">デジタルテレビ</a>、<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8A%A0%E5%85%A5%E8%80%85%E7%B7%9A" title="デジタル加入者線">DSL</a>モデムや<a href="/wiki/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%A2%E3%83%87%E3%83%A0" title="ケーブルモデム">ケーブルモデム</a>、<a href="/wiki/%E6%90%BA%E5%B8%AF%E6%83%85%E5%A0%B1%E7%AB%AF%E6%9C%AB" title="携帯情報端末">携帯情報端末</a>といった組み込み市場で広く採用された。
+</p><p>MIPSの組み込み向け実装は低消費電力と低発熱を特徴とし、組み込み向けの開発ツールも充実しており、知識の蓄積もあることから、今も組み込み市場で人気を保っている。
+</p>
+<h3><span id=".E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E5.B8.82.E5.A0.B4.E5.90.91.E3.81.91.E3.81.AE.E5.90.88.E6.88.90.E5.8F.AF.E8.83.BD.E3.81.AA.E3.82.B3.E3.82.A2"></span><span class="mw-headline" id="組み込み市場向けの合成可能なコア">組み込み市場向けの合成可能なコア</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=8" title="節を編集: 組み込み市場向けの合成可能なコア">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>最近ではMIPSアーキテクチャは<a href="/wiki/IP%E3%82%B3%E3%82%A2" title="IPコア">IPコア</a>として、組み込み用プロセッサの設計に使える形で利用されることが多い。<a href="/wiki/1999%E5%B9%B4" title="1999年">1999年</a>の時点で、<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>と<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a>の基本コアが提供されており、それぞれ <b>MIPS32 4K</b> と <b>MIPS64 5K</b> と呼ばれている。それらのコアと<a href="/wiki/FPU" title="FPU">FPU</a>、<a href="/wiki/SIMD" title="SIMD">SIMD</a>システム、各種I/Oデバイスなどを組み合わせてチップを設計できる。
+</p><p>MIPSコアは商業的に成功を収め、様々な機器で利用されている。例えば、<a href="/wiki/%E3%82%B7%E3%82%B9%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="シスコシステムズ">シスコシステムズ</a>や<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B7%E3%82%B9" title="リンクシス">リンクシス</a>などのルーター、<a href="/wiki/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E3%83%A2%E3%83%87%E3%83%A0" title="ケーブルモデム">ケーブルモデム</a>、<a href="/wiki/ADSL" title="ADSL">ADSL</a>モデム、<a href="/wiki/IC%E3%82%AB%E3%83%BC%E3%83%89" title="ICカード">ICカード</a>、<a href="/wiki/%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%BC" title="レーザープリンター">レーザープリンター</a>、<a href="/wiki/%E3%82%BB%E3%83%83%E3%83%88%E3%83%88%E3%83%83%E3%83%97%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="セットトップボックス">セットトップボックス</a>、<a href="/wiki/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88" title="ロボット">ロボット</a>、<a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%86%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88" title="ソニー・コンピュータエンタテインメント">ソニー・コンピュータエンタテインメント</a>の<a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a>や<a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a>などで使われている。携帯電話やPDAの分野では競合する<a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARMアーキテクチャ</a>の座を奪うことはできなかった。
+</p><p>MIPSアーキテクチャの組み込み用プロセッサとして
+</p>
+<ul><li>IDT RC32438</li>
+<li><a href="/wiki/ATI_Technologies" title="ATI Technologies">ATI</a> Xilleon</li>
+<li>Alchemy Au1000/1100/1200</li>
+<li>Broadcom Sentry5</li>
+<li>RMI XLR7xx</li>
+<li>Cavium Octeon CN30xx/CN31xx/CN36xx/CN38xx/CN5xxx</li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A3%E3%83%8B%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="インフィニオン・テクノロジーズ">インフィニオン・テクノロジーズ</a> EasyPort/Amazon/Danube/ADM5120/WildPass/INCA-IP/INCA-IP2</li>
+<li>Microchip Technology PIC32</li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%8D%E3%82%B5%E3%82%B9_%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="ルネサス エレクトロニクス">NEC</a> EMMA/EMMA2/VR4181A/VR4121/VR4122/VR4181A/VR5432/VR5500</li>
+<li>Oak Technologies Generation</li>
+<li><a href="/wiki/PMC-Sierra" title="PMC-Sierra">PMC-Sierra</a> RM11200</li>
+<li>QuickLogic QuickMIPS ESP</li>
+<li><a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a> Donau/TMPR492x/TX4925/TX9956/TX7901</li></ul>
+<p>などがある。
+</p>
+<h3><span id=".E6.98.A0.E5.83.8F.E7.B5.84.E3.81.BF.E8.BE.BC.E3.81.BF.E3.81.A7.E3.81.AE.E5.88.A9.E7.94.A8"></span><span class="mw-headline" id="映像組み込みでの利用">映像組み込みでの利用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=9" title="節を編集: 映像組み込みでの利用">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2008年の時点で、MIPSはデジタルテレビで68%、DVDレコーダーで72%、Blu-Rayレコーダーで77%、ケーブルテレビのセットトップボックスで70%、IPテレビのセットトップボックスで77%のシェアがあり、動画のデコーダ・エンコーダを必要とする映像関係で広く使われている<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[14]</a></sup>。
+</p>
+<h3><span id="MIPS.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E3.82.B9.E3.83.BC.E3.83.91.E3.83.BC.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.82.BF"></span><span class="mw-headline" id="MIPSベースのスーパーコンピュータ">MIPSベースのスーパーコンピュータ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=10" title="節を編集: MIPSベースのスーパーコンピュータ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPSアーキテクチャは<a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">超並列</a>型の<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a>にも採用された。<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">シリコングラフィックス</a> (SGI) は1990年代前半からデスクトップ型のグラフィックス・ワークステーションだけでなく<a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">高性能計算</a>市場にも注力するようになった。R4400や<a href="/wiki/R8000" title="R8000">R8000</a>を使った Challenge シリーズというサーバシステムで成功を収め、後に<a href="/wiki/R10000" title="R10000">R10000</a>も採用している。その後SGIはさらに強力なシステムの開発に注力するようになる。R10000を採用した Origin 2000 は<a href="/wiki/NUMA" title="NUMA">NUMA</a>型で最大1024個のプロセッサを相互接続するものだった。さらにそこからR14000やR16000を最大1024個構成できる Origin 3000 を開発。しかし、SGIは2005年に<a href="/wiki/IA-64" title="IA-64">IA-64</a>アーキテクチャへの移行を決定し、MIPSベースのスーパーコンピュータの開発をやめた。
+</p><p>高性能計算のベンチャー企業<a href="/wiki/SiCortex" title="SiCortex">SiCortex</a>は、2007年にMIPSベースの<a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">超並列マシン</a>を発表した。MIPS64アーキテクチャをベースとし、<a class="new" href="/w/index.php?title=%E3%82%AB%E3%82%A6%E3%83%84%E3%82%B0%E3%83%A9%E3%83%95&amp;action=edit&amp;redlink=1" title="カウツグラフ (存在しないページ)">カウツグラフ</a>のトポロジーを使って高性能インターコネクトでノードを相互接続する。消費電力が小さく計算能力が高い。計算ノードはMIPS64コアを8個集積した<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a>であり、メモリコントローラ、DMAエンジン、ギガビット・イーサネット、<a href="/wiki/PCI_Express" title="PCI Express">PCI Express</a> コントローラなどがシングルチップに集積されていて、消費電力はわずか10ワットでありながら、浮動小数点演算性能はピークで6GFLOPSとされている。最大構成のSC5832はそのようなノードチップ972個で構成されており、MIPS64コアが5832個ある。ピーク性能は8.2テラFLOPSとされている。
+</p>
+<h3><span id=".E9.BE.8D.E8.8A.AF"></span><span class="mw-headline" id="龍芯">龍芯</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=11" title="節を編集: 龍芯">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龍芯</a>」を参照</div>
+<p><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龍芯</a>は<a href="/wiki/%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2" title="中国科学院">中国科学院</a>が設計したMIPS互換の<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a>であるが、当初はミップス・テクノロジーよりライセンスを受けていなかった。その<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="マイクロアーキテクチャ">マイクロアーキテクチャ</a>は中国が独自に設計したもので、初期の設計ではMIPSアーキテクチャにある4つの命令が実装されていなかった<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[15]</a></sup>。2009年6月、中国科学院はミップス・テクノロジーズから直接、MIPS32およびMIPS64アーキテクチャのライセンス供与を受けた<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[16]</a></sup>。
+</p><p>2006年から各社が龍芯をベースとしたコンピュータをリリースしており、低消費電力の<a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%96%E3%83%83%E3%82%AF" title="ネットブック">ネットブック</a>やネットトップもある<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[17]</a></sup><sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[18]</a></sup>。
+</p>
+<h2><span class="mw-headline" id="MIPS_IV">MIPS IV</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=12" title="節を編集: MIPS IV">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MIPS IV は4番目のアーキテクチャである。MIPS III のスーパーセットであり、それまでの全てのアーキテクチャと互換性がある。MIPS IV は1994年の<a href="/wiki/R8000" title="R8000">R8000</a>で初めて実装された。MIPS IV で追加された点は次の通りである。
+</p>
+<ul><li>浮動小数点数のロード/ストア命令で「レジスタ + レジスタ」形式（インデックスつき）の<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%BC%E3%83%89" title="アドレッシングモード">アドレス指定</a>を追加</li>
+<li><a class="mw-redirect" href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6" title="単精度">単精度</a>および<a class="mw-redirect" href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6" title="倍精度">倍精度</a>の<a href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="浮動小数点数">浮動小数点数</a>の<a href="/wiki/%E7%A9%8D%E5%92%8C%E6%BC%94%E7%AE%97" title="積和演算">積和演算</a>命令を追加</li>
+<li>条件転送命令（整数レジスタと浮動小数点レジスタ）を追加</li>
+<li>FPUの制御/ステータスレジスタに新たな条件ビットを追加し、全部で8ビットとした。</li></ul>
+<h2><span class="mw-headline" id="MIPS_V">MIPS V</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=13" title="節を編集: MIPS V">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MIPS V は5番目のアーキテクチャで、1996年10月21日の Microprocessor Forum 1996 で発表された<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[19]</a></sup>。主に3次元グラフィックスの性能向上を目的としている。1990年代中ごろ、組み込み用途以外では主にSGIがグラフィックス・ワークステーションにMIPSマイクロプロセッサを使っていたためである。MIPS V と同時にそれを補完する MIPS Digital Media Extensions (MDMX) というマルチメディア拡張（整数のみ）も発表された<sup class="reference" id="cite_ref-MPR:1996-11-18_22-0"><a href="#cite_note-MPR:1996-11-18-22">[20]</a></sup>。
+</p><p>MIPS V を実装した製品は結局登場しなかった。1997年、SGIはコード名 "H1" または "Beast" と、"H2" または "Capitan" というマイクロプロセッサを発表した。前者は最初の MIPS V 実装で、1999年に出荷予定とされた。"H1" と "H2" のプロジェクトは後に統合され、最終的に1998年に中止となった。
+</p><p>MIPS V は pair-single (PS) と呼ばれる新たなデータ型を追加していた。これは<a class="mw-redirect" href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6" title="単精度">単精度</a>（32ビット）浮動小数点数のペアを64ビットのFPUレジスタに格納するものである。算術演算命令、比較命令、条件転送命令ではPSデータをSIMD風に扱う。またPSデータのロード、配置変更、変換などの命令が追加されている。既存リソースで浮動小数点SIMDを実現しようという試みだった<sup class="reference" id="cite_ref-MPR:1996-11-18_22-1"><a href="#cite_note-MPR:1996-11-18-22">[20]</a></sup>。
+</p>
+<h2><span id="MIPS_CPU_.E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA"></span><span class="mw-headline" id="MIPS_CPU_ファミリ">MIPS CPU ファミリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=14" title="節を編集: MIPS CPU ファミリ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>初の商用モデル<b><a href="/wiki/R2000" title="R2000">R2000</a></b>は1985年に発表された。実行に複数サイクルを要する乗算と除算命令の処理部をチップ上にやや独立したユニットとして追加した。乗除算の結果は直接汎用レジスタには入らず、専用のレジスタに出力されるため、それを汎用レジスタに持ってくる命令も追加された。その命令を乗除算の完了前に発行するとパイプラインがインターロックする。
+</p><p>R2000は起動時に<a class="mw-redirect" href="/wiki/%E3%83%93%E3%83%83%E3%82%B0%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="ビッグエンディアン">ビッグエンディアン</a>と<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%88%E3%83%AB%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="リトルエンディアン">リトルエンディアン</a>のどちらかを選んで動作する。32ビット汎用レジスタを32本持つが、<a href="/wiki/%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF" title="ステータスレジスタ">コンディションコードレジスタ</a>を持たない。設計者はそれがボトルネックになる可能性を考慮したためで、条件判断は指定した2つのレジスタの値の比較を行い、その結果で分岐の可否を判断する。レジスタに入っている値で条件判断するのは<a href="/wiki/AMD_Am29000" title="AMD Am29000">AMD Am29000</a> や <a href="/wiki/DEC_Alpha" title="DEC Alpha">DEC Alpha</a> とよく似ている。なお、<a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF" title="プログラムカウンタ">プログラムカウンタ</a>には直接アクセスできない。
+</p><p>R2000は最大4個のコプロセッサをサポートしており、そのうち1つは主CPUに組み込まれていて、<a href="/wiki/%E4%BE%8B%E5%A4%96%E5%87%A6%E7%90%86" title="例外処理">例外処理</a>、トラップ処理、メモリ管理などを行う。したがって、実際に外付けできるコプロセッサは3個までである。オプションの <b>R2010</b> <a href="/wiki/FPU" title="FPU">FPU</a>をコプロセッサとして接続できる。R2010は32ビットの浮動小数点レジスタを32本持ち、<a class="mw-redirect" href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6" title="倍精度">倍精度</a>演算では64ビットレジスタ16本として使用できる。
+</p><p>R2000の後継として<b><a href="/wiki/R3000" title="R3000">R3000</a></b>が1988年に登場した。命令およびデータ向けにそれぞれ32KB（間もなく64KBに拡大）のキャッシュを追加し、<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a>のための<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ">キャッシュコヒーレンシ</a>にも配慮していた。そのマルチプロセッササポートには欠陥があったが、R3000で何とかマルチプロセッサ構成にした製品がいくつか存在した。R3000には当時の他のマイクロプロセッサと同様に<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">メモリ管理ユニット</a> (MMU) も組み込まれていた。R3000にもR2000のときと同様に <b>R3010</b> FPUが存在した。MIPSアーキテクチャのプロセッサとしては初めて市場で成功を収め、累計100万個以上が生産された。改良によって最高40MHzで動作する<b>R3000A</b>が登場し、32<a href="/wiki/MIPS" title="MIPS">VUPs (VAX Unit of Performance)</a>の性能を発揮した。R3000A互換の <b>R3051</b> は<a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%86%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88" title="ソニー・コンピュータエンタテインメント">ソニー・コンピュータエンタテインメント</a>の<a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">PlayStation</a>に採用され、33.8688MHzで動作した。サードパーティはR3000AとR3010をワンチップ化したものを設計しており、Performance Semiconductor の<b>PR3400</b>、IDTの<b>R3500</b>、NECの<b>VR3600</b>がある。<a href="/wiki/%E6%9D%B1%E8%8A%9D" title="東芝">東芝</a>の<b>TX3900</b>は<a href="/wiki/System-on-a-chip" title="System-on-a-chip">SoC</a>であり、<a href="/wiki/Microsoft_Windows_Embedded_CE" title="Microsoft Windows Embedded CE">Windows CE</a> の動作する<a href="/wiki/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%98%E3%83%AB%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハンドヘルドコンピュータ">ハンドヘルドPC</a>向けに開発された。航空宇宙分野向けに電磁波耐性を強化した<a class="new" href="/w/index.php?title=En:Mongoose-V&amp;action=edit&amp;redlink=1" title="En:Mongoose-V (存在しないページ)">Mongoose-V</a>もR3000とR3010をワンチップ化していた。
+</p><p><b><a href="/wiki/R4000" title="R4000">R4000</a></b>シリーズは1991年に登場した。命令セットを完全な64ビット対応に拡張し、FPUをCPUチップに統合し、従来よりずっと高いクロック周波数で動作した（当初は100MHz）。しかし、クロック周波数を上げるために一次キャッシュは命令とデータそれぞれ8KBに減らされ、キャッシュアクセスに3サイクルかかるようになった。動作周波数を上げるため、<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="スーパーパイプライン">スーパーパイプライン</a>と呼ばれるパイプライン段数を増やす工夫を行っている。改良版の<b>R4400</b>は1993年に登場。一次キャッシュが16KBに倍増され、64ビット関連のバグ（エラッタ）が一掃され、より大きな二次キャッシュをサポートしている。
+</p><p>SGIの一部門となったミップスは外部バスを32ビットに縮小した低価格の<b><a href="/wiki/R4200" title="R4200">R4200</a></b>を設計し、さらに安価な<b><a href="/wiki/R4200#R4300i" title="R4200">R4300i</a></b>のベースとなった。R4300iをベースとして<a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">NEC</a>が開発したVR4300はゲーム機の<a href="/wiki/NINTENDO64" title="NINTENDO64">NINTENDO64</a>に採用された<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[21]</a></sup>。
+</p>
+
+
+<p>ミップスの元従業員が創業した <a href="/wiki/Quantum_Effect_Devices" title="Quantum Effect Devices">Quantum Effect Devices</a> (QED) は、<b><a href="/wiki/R4600" title="R4600">R4600</a></b> <i>Orion</i>、<b>R4700</b> <i>Orion</i>、<b>R4650</b>、<b><a href="/wiki/R5000" title="R5000">R5000</a></b>を設計した。R4000がクロック周波数を上げるためにキャッシュ容量を犠牲にしたのに対して、QEDは2サイクルでアクセスできる大きなキャッシュを搭載し、シリコンの面積の効率的利用を達成した。R4600とR4700は SGI Indy の低価格版で採用され、シスコのルーター（36x0、7x00など）でもMIPSアーキテクチャとして初めて採用された。R4650は<a href="/wiki/WebTV" title="WebTV">WebTV</a>のセットトップボックスで採用された。R5000は<a class="mw-redirect" href="/wiki/%E5%8D%98%E7%B2%BE%E5%BA%A6" title="単精度">単精度</a>浮動小数点演算性能を向上させており、同クロック周波数のR4400を搭載した同型機（SGI Indy）よりもグラフィックス描画が高速になった。SGIは同じグラフィックスボードでもR5000向けは名称を変更し、性能が高いことを強調した。QEDはその後、ネットワーク機器やレーザープリンターなどの組み込み市場向けに<b>RM7000</b>と<b>RM9000</b>というファミリーを設計した<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[22]</a></sup>。RM7000は256KBの二次キャッシュをチップ上に搭載し、三次キャッシュのコントローラも備えていた。RM9xx0は<a href="/wiki/System-on-a-chip" title="System-on-a-chip">SOC</a>ファミリーで、CPUに<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="メモリコントローラ">メモリコントローラ</a>、<a href="/wiki/Peripheral_Component_Interconnect" title="Peripheral Component Interconnect">PCI</a>コントローラ、<a href="/wiki/%E3%82%AE%E3%82%AC%E3%83%93%E3%83%83%E3%83%88%E3%83%BB%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88" title="ギガビット・イーサネット">ギガビット・イーサネット</a>のコントローラ、<a href="/wiki/HyperTransport" title="HyperTransport">HyperTransport</a>ポートなどの高速I/Oといった<a href="/wiki/%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8" title="ノースブリッジ">ノースブリッジ</a>機能を集積している。QEDは2000年8月、半導体企業 <a href="/wiki/PMC-Sierra" title="PMC-Sierra">PMC-Sierra</a> に買収され、PMC-SierraがMIPSアーキテクチャのプロセッサ開発を継続している。
+</p><p><a href="/wiki/R8000" title="R8000">R8000</a>（1994年）はミップスの設計による初の<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9" title="スーパースケーラ">スーパースケーラ</a>方式で、複数の命令を同時に実行可能となった。ワンチップではなく、CPU+一次キャッシュ（命令・データそれぞれ16KB）、FPU、二次キャッシュのタグRAMチップ×3（2個はキャッシュアクセス用、1つはバススヌープ用）、キャッシュコントローラの6個のチップで構成されている。完全にパイプライン化された加算・乗算ユニットを2つ持ち、外付けの4MBの二次キャッシュからFPUが直接データを取ってくる設計である。SGIの POWER Challenge サーバで採用され、後に POWER Indigo2 ワークステーションでも採用された。しかし浮動小数点演算性能は高いが整数演算性能はあまり高くないため科学技術計算などにしか向かず、また複数チップで構成されるためコストが高く、SGI以外では採用例がない。
+</p><p>1995年<b><a href="/wiki/R10000" title="R10000">R10000</a></b>がリリースされた。シングルチップでR8000よりも高いクロック周波数で動作し、一次キャッシュは命令・データ共に32KBと大きい。スーパースケーラ設計だが、最大の改良点は<a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">アウト・オブ・オーダー実行</a>を採用した点である。メモリ・パイプラインは1つしかなく、FPUもR8000より単純だが、整数演算性能が大幅に強化されており、低コストでもあったため、市場で成功を収めた。
+</p><p>その後の設計は全てR10000コアをベースとしている。<b><a href="/wiki/R10000#R12000" title="R10000">R12000</a></b>は0.25μmプロセスを採用してチップを縮小し、クロック周波数を高めている。それを改良した<b><a href="/wiki/R10000#R14000" title="R10000">R14000</a></b>でもクロック周波数を向上させると共に、外付けの二次キャッシュに <a href="/wiki/DDR_SDRAM" title="DDR SDRAM">DDR</a> <a href="/wiki/Static_Random_Access_Memory" title="Static Random Access Memory">SRAM</a> を利用可能にした。その後もクロック周波数を向上させ内蔵キャッシュ容量を増加させた<b><a href="/wiki/R10000#R16000" title="R10000">R16000</a></b>と<b>R16000A</b>がリリースされた。
+</p><p>他にもMIPSファミリーには<b><a href="/wiki/R6000" title="R6000">R6000</a></b>（1991年）がある。<a href="/wiki/%E3%82%A8%E3%83%9F%E3%83%83%E3%82%BF%E7%B5%90%E5%90%88%E8%AB%96%E7%90%86" title="エミッタ結合論理">ECL</a>で実装したもので、Bipolar Integrated Technology が製造した。R6000では MIPS II 命令セットが初めて採用された。<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="トランスレーション・ルックアサイド・バッファ">TLB</a>とキャッシュのアーキテクチャが他のMIPSファミリーとは大きく異なる。発表したとおりの性能を発揮できなかったが、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="コントロール・データ・コーポレーション">CDC</a>がサーバに採用した。しかし、すぐに市場から姿を消した。
+</p>
+<h3><span id="MIPS_.E3.83.9E.E3.82.A4.E3.82.AF.E3.83.AD.E3.83.97.E3.83.AD.E3.82.BB.E3.83.83.E3.82.B5.E3.81.AE.E4.BB.95.E6.A7.98"></span><span class="mw-headline" id="MIPS_マイクロプロセッサの仕様">MIPS マイクロプロセッサの仕様</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=15" title="節を編集: MIPS マイクロプロセッサの仕様">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable sortable">
+<tbody><tr style="vertical-align: top">
+<th>モデル</th>
+<th>動作周波数[MHz]</th>
+<th>登場年</th>
+<th>プロセス[μm]</th>
+<th>トランジスタ[百万]</th>
+<th>ダイサイズ[mm<sup>2</sup>]</th>
+<th>ピン数</th>
+<th>電力[W]</th>
+<th>電圧[V]</th>
+<th>データキャッシュ[kB]</th>
+<th>命令キャッシュ[kB]</th>
+<th>2次キャッシュ</th>
+<th>3次キャッシュ
+</th></tr>
+<tr>
+<th>R2000
+</th>
+<td>8 - 16.67</td>
+<td>1985</td>
+<td>2.0</td>
+<td>0.11</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>32</td>
+<td>64</td>
+<td>none</td>
+<td>none
+</td></tr>
+<tr>
+<th>R3000
+</th>
+<td>12 - 40</td>
+<td>1988</td>
+<td>1.2</td>
+<td>0.11</td>
+<td>66.12</td>
+<td>145</td>
+<td>4</td>
+<td>--</td>
+<td>64</td>
+<td>64</td>
+<td>0-256KB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R4000
+</th>
+<td>100</td>
+<td>1991</td>
+<td>0.8</td>
+<td>1.35</td>
+<td>213</td>
+<td>179</td>
+<td>15</td>
+<td>5</td>
+<td>8</td>
+<td>8</td>
+<td>1MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th><a class="mw-redirect" href="/wiki/R4400" title="R4400">R4400</a>
+</th>
+<td>100-250</td>
+<td>1992</td>
+<td>0.6</td>
+<td>2.3</td>
+<td>186</td>
+<td>179</td>
+<td>15</td>
+<td>5</td>
+<td>16</td>
+<td>16</td>
+<td>1-4MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R4600
+</th>
+<td>100-133</td>
+<td>1994</td>
+<td>0.64</td>
+<td>2.2</td>
+<td>77</td>
+<td>179</td>
+<td>4.6</td>
+<td>5</td>
+<td>16</td>
+<td>16</td>
+<td>512KB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R4650
+</th>
+<td>133-180</td>
+<td>1994</td>
+<td>0.64</td>
+<td>2.2?</td>
+<td>77?</td>
+<td>179?</td>
+<td>4.6?</td>
+<td>5</td>
+<td>16</td>
+<td>16</td>
+<td>512KB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R4700
+</th>
+<td>100-200</td>
+<td>1996</td>
+<td>0.5</td>
+<td>2.2?</td>
+<td>--</td>
+<td>179</td>
+<td>--</td>
+<td>--</td>
+<td>16</td>
+<td>16</td>
+<td>外付</td>
+<td>none
+</td></tr>
+<tr>
+<th>R5000
+</th>
+<td>150-200</td>
+<td>1996</td>
+<td>0.35</td>
+<td>3.7</td>
+<td>84</td>
+<td>223</td>
+<td>10</td>
+<td>3.3</td>
+<td>32</td>
+<td>32</td>
+<td>1MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R8000
+</th>
+<td>75-90</td>
+<td>1994</td>
+<td>0.7</td>
+<td>2.6</td>
+<td>299</td>
+<td>591+591</td>
+<td>30</td>
+<td>3.3</td>
+<td>16</td>
+<td>16</td>
+<td>4MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R10000
+</th>
+<td>150-200</td>
+<td>1996</td>
+<td>0.35, 0.25</td>
+<td>6.7</td>
+<td>299</td>
+<td>599</td>
+<td>30</td>
+<td>3.3</td>
+<td>32</td>
+<td>32</td>
+<td>512KB-16MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R12000
+</th>
+<td>270-400</td>
+<td>1998</td>
+<td>0.25, 0.18</td>
+<td>6.9</td>
+<td>204</td>
+<td>600</td>
+<td>20</td>
+<td>4</td>
+<td>32</td>
+<td>32</td>
+<td>512KB-16MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>RM7000
+</th>
+<td>250-600</td>
+<td>1998</td>
+<td>0.25, 0.18, 0.13</td>
+<td>18</td>
+<td>91</td>
+<td>304</td>
+<td>10, 6, 3</td>
+<td>3.3, 2.5, 1.5</td>
+<td>16</td>
+<td>16</td>
+<td>256KB （内蔵）</td>
+<td>1MB （外付）
+</td></tr>
+<tr>
+<th>MIPS32 4K
+</th>
+<td>138
+</td>
+<td>1999
+</td>
+<td>0.18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>MIPS64 5K
+</th>
+<td>
+</td>
+<td>1999
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>MIPS64 20K
+</th>
+<td>
+</td>
+<td>2000
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>R14000
+</th>
+<td>500-600</td>
+<td>2001</td>
+<td>0.13</td>
+<td>7.2</td>
+<td>204</td>
+<td>527</td>
+<td>17</td>
+<td>--</td>
+<td>32</td>
+<td>32</td>
+<td>512KB-16MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>R16000
+</th>
+<td>700-1000</td>
+<td>2002</td>
+<td>0.11</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>20</td>
+<td>--</td>
+<td>64</td>
+<td>64</td>
+<td>512KB-16MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>MIPS32 24K
+</th>
+<td>400(130nm)<br/>750(65nm)<br/>1468(40nm)
+</td>
+<td>2003</td>
+<td>40nm 〜 130nm</td>
+<td>--</td>
+<td>0.83 （コアのみ）</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+<td>64</td>
+<td>64</td>
+<td>4-16MB （外付）</td>
+<td>none
+</td></tr>
+<tr>
+<th>MIPS32 34K
+</th>
+<td>500(90nm)<br/>1454(40nm)
+</td>
+<td>2006
+</td>
+<td>90nm<br/>65nm<br/>40nm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>MIPS32 74K
+</th>
+<td>1080
+</td>
+<td>2007
+</td>
+<td>65nm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>MIPS32 1004K
+</th>
+<td>1.1GHz
+</td>
+<td>2008
+</td>
+<td>65nm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>MIPS32 1074K
+</th>
+<td>1.5GHz
+</td>
+<td>2010
+</td>
+<td>40nm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>microAptiv
+</th>
+<td>
+</td>
+<td>2012
+</td>
+<td>90nm～65nm
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>interAptiv
+</th>
+<td>
+</td>
+<td>2012
+</td>
+<td>65nm～40nm
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>proAptiv
+</th>
+<td>
+</td>
+<td>2012
+</td>
+<td>40nm～22nm
+</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>
+</td></tr></tbody></table>
+<p>注意：主なプロセッサの仕様のみ掲載。
+</p>
+<h2><span id="MIPS_I_.E3.81.AE.E5.91.BD.E4.BB.A4.E5.BD.A2.E5.BC.8F"></span><span class="mw-headline" id="MIPS_I_の命令形式">MIPS I の命令形式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=16" title="節を編集: MIPS I の命令形式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>命令は R、I、Jの3種類に分類される。どの命令も先頭に6ビットのオペコードがある。Rタイプではオペコードの次に3本のレジスタを指定するフィールドがあり、シフト量を指定するフィールド、機能を指定するフィールドが続く。Iタイプでは2つのレジスタを指定するフィールドと16ビットの即値のフィールドがある。
+Jタイプでは、オペコードに続いて26ビットで分岐先アドレスを指定する<sup class="reference" id="cite_ref-uidaho_25-0"><a href="#cite_note-uidaho-25">[23]</a></sup><sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[24]</a></sup>。
+</p><p>次表は主要な命令セットの3種類の形式を示したものである。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>タイプ</th>
+<th colspan="6">-31-                                 フォーマット (ビット数)                                 -0-
+</th></tr>
+<tr align="center">
+<td><b>R</b></td>
+<td>オペコード (6)</td>
+<td>rs (5)</td>
+<td>rt (5)</td>
+<td>rd (5)</td>
+<td>シフト量 (5)</td>
+<td>機能 (6)
+</td></tr>
+<tr align="center">
+<td><b>I</b></td>
+<td>オペコード (6)</td>
+<td>rs (5)</td>
+<td>rt (5)</td>
+<td colspan="3">即値 (16)
+</td></tr>
+<tr align="center">
+<td><b>J</b></td>
+<td>オペコード (6)</td>
+<td colspan="5">アドレス (26)
+</td></tr></tbody></table>
+<h2><span id="MIPS_.E3.82.A2.E3.82.BB.E3.83.B3.E3.83.96.E3.83.AA.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="MIPS_アセンブリ言語">MIPS アセンブリ言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=17" title="節を編集: MIPS アセンブリ言語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>アセンブリ言語には、直接ハードウェア実装に対応した命令以外に複数命令の列に変換される「擬似命令」が存在する。
+</p>
+<ul><li>以下の表で、<i>d</i>、<i>t</i>、<i>s</i> といった文字はレジスタの番号や名前のためのプレースホルダーとなっている。</li>
+<li><i>C</i> は定数（即値）を示す。</li>
+<li>オペコード及び機能のコードは16進数である。</li>
+<li>MIPS32命令セットでは Add や Subtract 命令で使われる <i>unsigned</i> という用語が誤解を生みやすいとしている。それらの命令の <i>signed</i> と <i>unsigned</i> の違いはオペランドを<a href="/wiki/%E7%AC%A6%E5%8F%B7%E6%8B%A1%E5%BC%B5" title="符号拡張">符号拡張</a>をするかしないかではなく、オーバーフロー発生時にトラップを起こすか <i>(e.g. Add)</i> 無視するか <i>(Add unsigned)</i> である。それらの命令の即値オペランド CONST は常に符号拡張される。</li></ul>
+<h3><span id=".E6.95.B4.E6.95.B0"></span><span class="mw-headline" id="整数">整数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=18" title="節を編集: 整数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPSアーキテクチャは32本の整数レジスタを持つ。算術処理を行うにはデータがレジスタ上になければならない。レジスタ$0は常に0であり、レジスタ$1はアセンブラが一時的に使用する（擬似命令や大きな定数を扱う場合）。
+</p><p>エンコーディングは命令語の各ビットが命令のどの部分と対応しているかを示している。ハイフン (-) はそのビットが無視されることを意味する。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>種類</th>
+<th>名称</th>
+<th>構文</th>
+<th>意味</th>
+<th colspan="3">形式/オペコード/機能コード</th>
+<th>注記/エンコーディング
+</th></tr>
+<tr>
+<td rowspan="9">算術
+</td>
+<td>Add</td>
+<td>add $d,$s,$t</td>
+<td>$d = $s + $t</td>
+<td>R</td>
+<td>0</td>
+<td>20<sub>16</sub></td>
+<td>2つのレジスタを加算。オーバーフロー時にはトラップ発生<br/><pre>000000ss sssttttt ddddd--- --100000</pre>
+</td></tr>
+<tr>
+<td>Add unsigned</td>
+<td>addu $d,$s,$t</td>
+<td>$d = $s + $t</td>
+<td>R</td>
+<td>0</td>
+<td>21<sub>16</sub></td>
+<td>上と同様だが、オーバフローを無視<br/><pre>000000ss sssttttt ddddd--- --100001</pre>
+</td></tr>
+<tr>
+<td>Subtract</td>
+<td>sub $d,$s,$t</td>
+<td>$d = $s - $t</td>
+<td>R</td>
+<td>0</td>
+<td>22<sub>16</sub></td>
+<td>2つのレジスタで減算。オーバーフロー時にはトラップ発生<br/><pre>000000ss sssttttt ddddd--- --100010</pre>
+</td></tr>
+<tr>
+<td>Subtract unsigned</td>
+<td>subu $d,$s,$t</td>
+<td>$d = $s - $t</td>
+<td>R</td>
+<td>0</td>
+<td>23<sub>16</sub></td>
+<td>上と同様だが、オーバーフローを無視<br/><pre>000000ss sssttttt ddddd000 00100011</pre>
+</td></tr>
+<tr>
+<td>Add immediate</td>
+<td>addi $t,$s,C</td>
+<td>$t = $s + C (signed)</td>
+<td>I</td>
+<td>8<sub>16</sub></td>
+<td>-</td>
+<td><a href="/wiki/%E7%AC%A6%E5%8F%B7%E6%8B%A1%E5%BC%B5" title="符号拡張">符号拡張</a>した即値とレジスタを加算。addi $1, $2, 0 のようにレジスタ間転送にも使える。オーバフロー時にはトラップ発生<br/><pre>001000ss sssttttt CCCCCCCC CCCCCCCC</pre>
+</td></tr>
+<tr>
+<td>Add immediate unsigned</td>
+<td>addiu $t,$s,C</td>
+<td>$t = $s + C (signed)</td>
+<td>I</td>
+<td>9<sub>16</sub></td>
+<td>-</td>
+<td>上と同様だが、オーバフローを無視（即値は符号拡張される）<br/><pre>001001ss sssttttt CCCCCCCC CCCCCCCC</pre>
+</td></tr>
+<tr>
+<td>Multiply</td>
+<td>mult $s,$t</td>
+<td>LO = (($s * $t) &lt;&lt; 32) &gt;&gt; 32;<br/> HI = ($s * $t) &gt;&gt; 32;</td>
+<td>R</td>
+<td>0</td>
+<td>18<sub>16</sub></td>
+<td>2つのレジスタで乗算。64ビットの積は専用レジスタ HI と LO に格納。(int HI,int LO) = (64-bit) $s * $t と表すこともできる。HIとLOには mfhi および mflo でアクセスする。
+</td></tr>
+<tr>
+<td>Divide</td>
+<td>div $s, $t</td>
+<td>LO = $s / $t        HI = $s % $t</td>
+<td>R</td>
+<td>0</td>
+<td>1A<sub>16</sub></td>
+<td>2つのレジスタで除算。32ビットの商をLO、余りをHIに格納。<sup class="reference" id="cite_ref-uidaho_25-1"><a href="#cite_note-uidaho-25">[23]</a></sup>
+</td></tr>
+<tr>
+<td>Divide unsigned</td>
+<td>divu $s, $t</td>
+<td>LO = $s / $t        HI = $s % $t</td>
+<td>R</td>
+<td>0</td>
+<td>1B<sub>16</sub></td>
+<td>2つのレジスタの内容を符号なし整数と解釈して除算。商はLO、余りはHIに格納。
+</td></tr>
+<tr>
+<td rowspan="15">データ転送
+</td>
+<td>Load double word</td>
+<td>ld $t,C($s)</td>
+<td>$t = Memory[$s + C]</td>
+<td>I</td>
+<td>23<sub>16</sub></td>
+<td>-</td>
+<td>$s+C というアドレスから8バイトの連続する位置にあるデータをロードし、$tとその次のレジスタに格納する。
+</td></tr>
+<tr>
+<td>Load word</td>
+<td>lw $t,C($s)</td>
+<td>$t = Memory[$s + C]</td>
+<td>I</td>
+<td>23<sub>16</sub></td>
+<td>-</td>
+<td>$s+C というアドレスから4バイトの連続する位置にあるデータをロードする。
+</td></tr>
+<tr>
+<td>Load halfword</td>
+<td>lh $t,C($s)</td>
+<td>$t = Memory[$s + C] (signed)</td>
+<td>I</td>
+<td>21<sub>16</sub></td>
+<td>-</td>
+<td>$s+C というアドレスから2バイトの連続する位置にあるデータをロードし、<a href="/wiki/%E7%AC%A6%E5%8F%B7%E6%8B%A1%E5%BC%B5" title="符号拡張">符号拡張</a>してレジスタに格納
+</td></tr>
+<tr>
+<td>Load halfword unsigned</td>
+<td>lhu $t,C($s)</td>
+<td>$t = Memory[$s + C] (unsigned)</td>
+<td>I</td>
+<td>25<sub>16</sub></td>
+<td>-</td>
+<td>上と同様だが、符号拡張しない。
+</td></tr>
+<tr>
+<td>Load byte</td>
+<td>lb $t,C($s)</td>
+<td>$t = Memory[$s + C] (signed)</td>
+<td>I</td>
+<td>20<sub>16</sub></td>
+<td>-</td>
+<td>$s+C というアドレスの1バイトのデータをロードし、符号拡張する。
+</td></tr>
+<tr>
+<td>Load byte unsigned</td>
+<td>lbu $t,C($s)</td>
+<td>$t = Memory[$s + C] (unsigned)</td>
+<td>I</td>
+<td>24<sub>16</sub></td>
+<td>-</td>
+<td>上と同様だが、符号拡張しない。
+</td></tr>
+<tr>
+<td>Store double word</td>
+<td>sd $t,C($s)</td>
+<td>Memory[$s + C] = $t</td>
+<td>I</td>
+<td></td>
+<td>-</td>
+<td>$t とその次のレジスタの内容を $s+C という位置から8バイト連続でストアする。オペランドの順序に注意が必要。
+</td></tr>
+<tr>
+<td>Store word</td>
+<td>sw $t,C($s)</td>
+<td>Memory[$s + C] = $t</td>
+<td>I</td>
+<td>2B<sub>16</sub></td>
+<td>-</td>
+<td>$s+C という位置から4バイト連続でストアする。
+</td></tr>
+<tr>
+<td>Store half</td>
+<td>sh $t,C($s)</td>
+<td>Memory[$s + C] = $t</td>
+<td>I</td>
+<td>29<sub>16</sub></td>
+<td>-</td>
+<td>レジスタの下位16ビットを $s+C という位置から2バイト連続でストアする。
+</td></tr>
+<tr>
+<td>Store byte</td>
+<td>sb $t,C($s)</td>
+<td>Memory[$s + C] = $t</td>
+<td>I</td>
+<td>28<sub>16</sub></td>
+<td>-</td>
+<td>レジスタの下位8ビットを $s+C という位置にストアする。
+</td></tr>
+<tr>
+<td>Load upper immediate</td>
+<td>lui $t,C</td>
+<td>$t = C &lt;&lt; 16</td>
+<td>I</td>
+<td>F<sub>16</sub></td>
+<td>-</td>
+<td>16ビットの即値をレジスタの上位16ビットにロードする。ロードできる最大値は2<sup>16</sup>-1。
+</td></tr>
+<tr>
+<td>Move from high</td>
+<td>mfhi $d</td>
+<td>$d = HI</td>
+<td>R</td>
+<td>0</td>
+<td>10<sub>16</sub></td>
+<td>HIレジスタの値を汎用レジスタに転送。この命令から2命令以内に multiply または divide 命令を使ってはならない（その場合の動作は未定義）
+</td></tr>
+<tr>
+<td>Move from low</td>
+<td>mflo $d</td>
+<td>$d = LO</td>
+<td>R</td>
+<td>0</td>
+<td>12<sub>16</sub></td>
+<td>LOレジスタの値を汎用レジスタに転送。この命令から2命令以内に multiply または divide 命令を使ってはならない（その場合の動作は未定義）
+</td></tr>
+<tr>
+<td>Move from Control Register</td>
+<td>mfcZ $t, $s</td>
+<td>$t = Coprocessor[Z].ControlRegister[$s]</td>
+<td>R</td>
+<td>0</td>
+<td></td>
+<td>コプロセッサZのコントロールレジスタの内容を汎用レジスタに転送。符号拡張する。
+</td></tr>
+<tr>
+<td>Move to Control Register</td>
+<td>mtcZ $t, $s</td>
+<td>Coprocessor[Z].ControlRegister[$s] = $t</td>
+<td>R</td>
+<td>0</td>
+<td></td>
+<td>汎用レジスタの4バイトの内容をコプロセッサZのコントロールレジスタに転送。符号拡張する。
+</td></tr>
+<tr>
+<td rowspan="8">論理
+</td>
+<td>And</td>
+<td>and $d,$s,$t</td>
+<td>$d = $s &amp; $t</td>
+<td>R</td>
+<td>0</td>
+<td>24<sub>16</sub></td>
+<td><a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97" title="ビット演算">ビット毎</a>のAND<br/><pre>000000ss sssttttt ddddd--- --100100</pre>
+</td></tr>
+<tr>
+<td>And immediate</td>
+<td>andi $t,$s,C</td>
+<td>$t = $s &amp; C</td>
+<td>I</td>
+<td>C<sub>16</sub></td>
+<td>-</td>
+<td>即値とのビット毎のAND<br/><pre>001100ss sssttttt CCCCCCCC CCCCCCCC</pre>
+</td></tr>
+<tr>
+<td>Or</td>
+<td>or $d,$s,$t</td>
+<td>$d = $s | $t</td>
+<td>R</td>
+<td>0</td>
+<td>25<sub>16</sub></td>
+<td>ビット毎のOR
+</td></tr>
+<tr>
+<td>Or immediate</td>
+<td>ori $t,$s,C</td>
+<td>$t = $s | C</td>
+<td>I</td>
+<td>D<sub>16</sub></td>
+<td>-</td>
+<td>符号拡張した即値とのビット毎のOR
+</td></tr>
+<tr>
+<td>Exclusive or</td>
+<td>xor $d,$s,$t</td>
+<td>$d = $s ^ $t</td>
+<td>R</td>
+<td>0</td>
+<td>26<sub>16</sub></td>
+<td>ビット毎のXOR
+</td></tr>
+<tr>
+<td>Nor</td>
+<td>nor $d,$s,$t</td>
+<td>$d = ~ ($s | $t)</td>
+<td>R</td>
+<td>0</td>
+<td>27<sub>16</sub></td>
+<td>ビット毎のNOR
+</td></tr>
+<tr>
+<td>Set on less than</td>
+<td>slt $d,$s,$t</td>
+<td>$d = ($s &lt; $t)</td>
+<td>R</td>
+<td>0</td>
+<td>2A<sub>16</sub></td>
+<td>$sと$tの値を符号付き整数として比較し、$s が小さければ $d に1を、そうでなければ0を格納
+</td></tr>
+<tr>
+<td>Set on less than immediate</td>
+<td>slti $t,$s,C</td>
+<td>$t = ($s &lt; C)</td>
+<td>I</td>
+<td>A<sub>16</sub></td>
+<td>-</td>
+<td>符号拡張した即値と$sの値を比較し、$sが小さければ $d に1を、そうでなければ0を格納。
+</td></tr>
+<tr>
+<td rowspan="3">シフト
+</td>
+<td>Shift left logical</td>
+<td>sll $d,$t,C</td>
+<td>$d = $t &lt;&lt; C</td>
+<td>R</td>
+<td>0</td>
+<td>0</td>
+<td>$sの内容をCビット左にシフト。&lt;math&gt;2^{CONST} &lt;/math&gt; をかけるのと同等
+</td></tr>
+<tr>
+<td>Shift right logical</td>
+<td>srl $d,$t,C</td>
+<td>$d = $t &gt;&gt; C</td>
+<td>R</td>
+<td>0</td>
+<td>2<sub>16</sub></td>
+<td>$sの内容をCビットだけ右にシフト。シフトされて空いた上位ビットには0を格納。正の整数を &lt;math&gt;2^{C} &lt;/math&gt; で割ったのと同等。
+</td></tr>
+<tr>
+<td>Shift right arithmetic</td>
+<td>sra $d,$t,C</td>
+<td>&lt;math&gt;\scriptstyle \$d = \$t &gt;&gt; C + \left(\left(\sum_{n=1}^{\text{CONST}}2^{31-n}\right)\cdot \$2&gt;&gt;31\right) &lt;/math&gt;</td>
+<td>R</td>
+<td>0</td>
+<td>3<sub>16</sub></td>
+<td>$sの内容をCビットだけ右にシフト。シフトされた空いた上位ビットは元の値を符号付整数と解釈して符号拡張する。2の補数で表された符号付整数を &lt;math&gt;2^{C} &lt;/math&gt; で割ったのと同等。
+</td></tr>
+<tr>
+<td rowspan="2">条件分岐
+</td>
+<td>Branch on equal</td>
+<td>beq $s,$t,C</td>
+<td>if ($s == $t) go to PC+4+4*C</td>
+<td>I</td>
+<td>4<sub>16</sub></td>
+<td>-</td>
+<td>2つのレジスタの値が等しい場合、指定されたアドレスに分岐<br/><pre>000100ss sssttttt CCCCCCCC CCCCCCCC</pre>
+</td></tr>
+<tr>
+<td>Branch on not equal</td>
+<td>bne $s,$t,C</td>
+<td>if ($s != $t) go to PC+4+4*C</td>
+<td>I</td>
+<td>5<sub>16</sub></td>
+<td>-</td>
+<td>2つのレジスタの値が等しくない場合、指定されたアドレスに分岐
+</td></tr>
+<tr>
+<td rowspan="3">無条件ジャンプ
+</td>
+<td>Jump</td>
+<td>j C</td>
+<td>PC = PC+4[31:28] . C*4</td>
+<td>J</td>
+<td>2<sub>16</sub></td>
+<td>-</td>
+<td>指定されたアドレスに無条件ジャンプ
+</td></tr>
+<tr>
+<td>Jump register</td>
+<td>jr $s</td>
+<td>goto address $s</td>
+<td>R</td>
+<td>0</td>
+<td>8<sub>16</sub></td>
+<td>指定したレジスタが示すアドレスに無条件ジャンプ
+</td></tr>
+<tr>
+<td>Jump and link</td>
+<td>jal C</td>
+<td>$31 = PC + 8; PC = PC+4[31:28] . C*4</td>
+<td>J</td>
+<td>3<sub>16</sub></td>
+<td>-</td>
+<td>プロシージャコール用。$31にリターンアドレスを格納してジャンプする。プロシージャからの復帰は jr $31 とする。リターンアドレスが PC+8 なのは、<a href="/wiki/%E9%81%85%E5%BB%B6%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88" title="遅延スロット">遅延スロット</a>があるため。
+</td></tr></tbody></table>
+<p>注: MIPSのアセンブリ言語のコード上、分岐命令での分岐先アドレスはラベルで表現される。
+</p><p>注: "load lower immediate" 命令は存在しない。これは addi 命令や ori 命令でレジスタ $0 を使うことで実現される。例えば、<code>addi $1, $0, 100</code> も <code>ori $1, $0, 100</code> もレジスタ$1に100という値が格納される。
+</p><p>注: 即値を減算するには、その値の否定を即値として加算すればよい。
+</p>
+<h3><span id=".E6.B5.AE.E5.8B.95.E5.B0.8F.E6.95.B0.E7.82.B9.E6.95.B0"></span><span class="mw-headline" id="浮動小数点数">浮動小数点数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=19" title="節を編集: 浮動小数点数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPSアーキテクチャには32本の浮動小数点レジスタがある。2本のレジスタで<a class="mw-redirect" href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6" title="倍精度">倍精度</a>の数値を表す。奇数番目のレジスタで倍精度の数値を指定することはできない。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>種類</th>
+<th>名称</th>
+<th>構文</th>
+<th>意味</th>
+<th colspan="3">形式/オペコード/機能</th>
+<th>注記/エンコーディング
+</th></tr>
+<tr>
+<td rowspan="8">算術
+</td>
+<td>FP add single</td>
+<td>add.s $x,$y,$z</td>
+<td>$x = $y + $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>単精度加算
+</td></tr>
+<tr>
+<td>FP subtract single</td>
+<td>sub.s $x,$y,$z</td>
+<td>$x = $y - $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>単精度減算
+</td></tr>
+<tr>
+<td>FP multiply single</td>
+<td>mul.s $x,$y,$z</td>
+<td>$x = $y * $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>単精度乗算
+</td></tr>
+<tr>
+<td>FP divide single</td>
+<td>div.s $x,$y,$z</td>
+<td>$x = $y / $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>単精度除算
+</td></tr>
+<tr>
+<td>FP add double</td>
+<td>add.d $x,$y,$z</td>
+<td>$x = $y + $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>倍精度加算
+</td></tr>
+<tr>
+<td>FP subtract double</td>
+<td>sub.d $x,$y,$z</td>
+<td>$x = $y - $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>倍精度減算
+</td></tr>
+<tr>
+<td>FP multiply double</td>
+<td>mul.d $x,$y,$z</td>
+<td>$x = $y * $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>倍精度乗算
+</td></tr>
+<tr>
+<td>FP divide double</td>
+<td>div.d $x,$y,$z</td>
+<td>$x = $y / $z</td>
+<td></td>
+<td></td>
+<td></td>
+<td>倍精度除算
+</td></tr>
+<tr>
+<td rowspan="2">データ転送
+</td>
+<td>Load word coprocessor</td>
+<td>lwcZ $x,CONST ($y)</td>
+<td>Coprocessor[Z].DataRegister[$x] = Memory[$y + CONST]</td>
+<td>I</td>
+<td></td>
+<td></td>
+<td>$2+CONST の位置から4バイトをコプロセッサのデータレジスタにロード。符号拡張する。
+</td></tr>
+<tr>
+<td>Store word coprocessor</td>
+<td>swcZ $x,CONST ($y)</td>
+<td>Memory[$y + CONST] = Coprocessor[Z].DataRegister[$x]</td>
+<td>I</td>
+<td></td>
+<td></td>
+<td>コプロセッサのデータレジスタの内容を $2+CONST から4バイト連続でストアする。符号拡張する。
+</td></tr>
+<tr>
+<td rowspan="2">論理（比較）
+</td>
+<td>FP compare single (eq,ne,lt,le,gt,ge)</td>
+<td>c.lt.s $f2,$f4</td>
+<td>if ($f2 &lt; $f4) cond=1; else cond=0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2つのレジスタの内容を単精度浮動小数点数として大小比較し、$f2の方が小さければFPUのステータスレジスタの条件ビットを1に、そうでなければ0にセットする。
+</td></tr>
+<tr>
+<td>FP compare double (eq,ne,lt,le,gt,ge)</td>
+<td>c.lt.d $f2,$f4</td>
+<td>if ($f2 &lt; $f4) cond=1; else cond=0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>2つ（正確には4つ）のレジスタの内容を倍精度浮動小数点数として大小比較し、$f2の方が小さければFPUのステータスレジスタの条件ビットを1に、そうでなければ0にセットする。
+</td></tr>
+<tr>
+<td rowspan="2">分岐
+</td>
+<td>branch on FP true</td>
+<td>bc1t 100</td>
+<td>if (cond == 1) go to PC+4+100</td>
+<td></td>
+<td></td>
+<td></td>
+<td>浮動小数点条件ビットが1ならPC相対（即値）で分岐
+</td></tr>
+<tr>
+<td>branch on FP false</td>
+<td>bc1f 100</td>
+<td>if (cond == 0) go to PC+4+100</td>
+<td></td>
+<td></td>
+<td></td>
+<td>浮動小数点条件ビットが0ならPC相対（即値）で分岐
+</td></tr></tbody></table>
+<h3><span id=".E6.93.AC.E4.BC.BC.E5.91.BD.E4.BB.A4"></span><span class="mw-headline" id="擬似命令">擬似命令</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=20" title="節を編集: 擬似命令">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPSアセンブラは以下の命令を受け付けるが、これらは実際にはMIPSの命令セットに存在しない。アセンブラが同等の命令列に変換し、その際に $1 ($at) レジスタを一時的に使用することがある。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>名称</th>
+<th>構文</th>
+<th>実際の命令列</th>
+<th>意味
+</th></tr>
+<tr>
+<td>Move</td>
+<td>move  $rt,$rs</td>
+<td>addi  $rt,$rs,0</td>
+<td>R[rt]=R[rs]
+</td></tr>
+<tr>
+<td>Load Address</td>
+<td>la $at, LabelAddr</td>
+<td>lui $at, LabelAddr[31:16]; ori $at,$at, LabelAddr[15:0]</td>
+<td>$at = Label Address<br/>リンカがアドレスを決定した際に命令を書き換える。
+</td></tr>
+<tr>
+<td>Load Immediate</td>
+<td>li $at, IMMED[31:0]</td>
+<td>lui $at, IMMED[31:16]; ori $at,$at, IMMED[15:0]</td>
+<td>$at = 32ビット即値
+</td></tr>
+<tr>
+<td>Branch if greater than</td>
+<td>bgt  $rs,$rt,Label</td>
+<td>slt $at,$rt,$rs; bne $at,$zero,Label</td>
+<td>if(R[rs]&gt;R[rt]) PC=Label
+</td></tr>
+<tr>
+<td>Branch if less than</td>
+<td>blt  $rs,$rt,Label</td>
+<td>slt $at,$rs,$rt; bne $at,$zero,Label</td>
+<td>if(R[rs]&lt;R[rt]) PC=Label
+</td></tr>
+<tr>
+<td>Branch if greater than or equal</td>
+<td>bge  $rs,$rt,Label</td>
+<td>slt $at,$rs,$rt; beq $at,$zero,Label</td>
+<td>if(R[rs]&gt;=R[rt]) PC=Label
+</td></tr>
+<tr>
+<td>Branch if less than or equal</td>
+<td>ble  $rs,$rt,Label</td>
+<td>slt $at,$rt,$rs; beq $at,$zero,Label</td>
+<td>if(R[rs]&lt;=R[rt]) PC=Label
+</td></tr>
+<tr>
+<td>Branch if greater than unsigned</td>
+<td>bgtu  $rs,$rt,Label</td>
+<td></td>
+<td>if(R[rs]=&gt;R[rt]) PC=Label
+</td></tr>
+<tr>
+<td>Branch if greater than zero</td>
+<td>bgtz  $rs,$rt,Label</td>
+<td></td>
+<td>if(R[rs]&gt;0) PC=Label
+</td></tr>
+<tr>
+<td>Multiplies and returns only first 32 bits</td>
+<td>mul  $1, $2, $3</td>
+<td>mult  $2, $3; mflo $1</td>
+<td>$1 = $2 * $3
+</td></tr></tbody></table>
+<h3><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E5.91.BD.E4.BB.A4"></span><span class="mw-headline" id="その他の命令">その他の命令</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=21" title="節を編集: その他の命令">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/NOP" title="NOP">NOP</a>命令。通常 <code>sll $0,$0,0</code> という命令を使い、その機械語コードは 0x00000000 となる。</li>
+<li>break命令。<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%AC" title="デバッガ">デバッガ</a>でのブレークポイント設定で使用する。</li>
+<li>syscall命令。<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>の<a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%AB" title="システムコール">システムコール</a>に使われ、ユーザーモードからカーネルモードに移行する。</li></ul>
+<h2><span id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.AE.E3.83.AC.E3.82.B8.E3.82.B9.E3.82.BF.E4.BD.BF.E7.94.A8.E8.A6.8F.E5.89.87"></span><span class="mw-headline" id="コンパイラのレジスタ使用規則">コンパイラのレジスタ使用規則</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=22" title="節を編集: コンパイラのレジスタ使用規則">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ハードウェアのアーキテクチャにより、以下のことが定められている。
+</p>
+<ul><li>汎用レジスタ $0 は常に 0 という値を返す。このレジスタに値を書いても変化はしないし、書いた値は消失する。</li>
+<li>汎用レジスタ $31 は jal (jump and link) 命令でリンクレジスタとして使われる。</li>
+<li>HIおよびLOレジスタは乗除算の結果へのアクセスに使われ、mfhi (move from high) 命令と mflo 命令がそのためにある。</li></ul>
+<p>汎用レジスタを使う際のハードウェア上の制限はこれだけである。
+</p><p>各種MIPSツールチェーンでは、レジスタをどのように使うかについて<a href="/wiki/%E5%91%BC%E5%87%BA%E8%A6%8F%E7%B4%84" title="呼出規約">呼出規約</a>を定めている。これはツールチェーンのソフトウェアが定めているもので、ハードウェアにそのような制限があるわけではない。
+</p>
+<table class="wikitable">
+<caption><b>レジスタ</b>
+</caption>
+<tbody><tr>
+<th>名称</th>
+<th>番号</th>
+<th>用途</th>
+<th>呼び出された側が内容を保存する必要があるか?
+</th></tr>
+<tr>
+<th>$zero
+</th>
+<td>$0</td>
+<td>常に 0</td>
+<td>N/A
+</td></tr>
+<tr>
+<th>$at
+</th>
+<td>$1</td>
+<td>アセンブラが一時的に使用</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$v0–$v1
+</th>
+<td>$2–$3</td>
+<td>関数の戻り値や式を評価した結果</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$a0–$a3
+</th>
+<td>$4–$7</td>
+<td>関数の引数</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$t0–$t7
+</th>
+<td>$8–$15</td>
+<td>一時変数</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$s0–$s7
+</th>
+<td>$16–$23</td>
+<td>一時変数だがセーブされる</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td></tr>
+<tr>
+<th>$t8–$t9
+</th>
+<td>$24–$25</td>
+<td>一時変数</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$k0–$k1
+</th>
+<td>$26–$27</td>
+<td>OSのカーネル用に予約</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td></tr>
+<tr>
+<th>$gp
+</th>
+<td>$28</td>
+<td>広域（グローバル）ポインタ</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td></tr>
+<tr>
+<th>$sp
+</th>
+<td>$29</td>
+<td><a class="mw-redirect" href="/wiki/%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="スタックポインタ">スタックポインタ</a></td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td></tr>
+<tr>
+<th>$fp($s8)
+</th>
+<td>$30</td>
+<td><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="コールスタック">フレームポインタ</a></td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td></tr>
+<tr>
+<th>$ra
+</th>
+<td>$31</td>
+<td>リターンアドレス</td>
+<td>N/A
+</td></tr></tbody></table>
+<p>呼び出された側が保存すると定められているレジスタは、サブルーチンや関数の呼び出しや<a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%AB" title="システムコール">システムコール</a>でも保持される。例えば、$s-レジスタをルーチン内で使うときは、その内容をスタックに一時的に退避させなければならない。$sp と $fp はルーチンに入ってきたときにセーブされ、それぞれルーチン固有の固定値でインクリメントされる。そして、そのルーチンから戻るときに元の値に戻す。一方 $ra は jal 命令でルーチンに飛び込むときに自動的に変更される。$t-レジスタはサブルーチンを呼び出すと内容が破壊されるので、必要なら呼び出す側がセーブしておかなければならない。
+</p>
+<h2><span id=".E3.82.B7.E3.83.9F.E3.83.A5.E3.83.AC.E3.83.BC.E3.82.BF"></span><span class="mw-headline" id="シミュレータ">シミュレータ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=23" title="節を編集: シミュレータ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Open Virtual Platforms (OVP)<sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[25]</a></sup> では、非商用利用に限って無料で使えるシミュレータ <a class="new" href="/w/index.php?title=En:OVPsim&amp;action=edit&amp;redlink=1" title="En:OVPsim (存在しないページ)">OVPsim</a>、プロセッサや周辺機器やプラットフォームのモデルのライブラリ、ユーザーが独自のモデルを開発できるAPIなどを提供している。ライブラリに含まれるモデルは<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9" title="オープンソース">オープンソース</a>で<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>で書かれており、MIPSの 4K, 24K, 34K, 74K, 1004K, 1074K, M14K といったコアが揃っている。それらのモデルの開発と保守は Imperas が行っており<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[26]</a></sup>、ミップス・テクノロジーズの協力の下で評価し MIPS-Verified (tm) というマークをもらっている。MIPSベースのプラットフォームのモデルとしては、非常に単純なものとLinuxのバイナリイメージをブートできるものが用意されている。それらのプラットフォーム・エミュレータはソースとバイナリの形で提供されており、高速で使いやすい。
+</p><p>また、教育向けのMIPS32（当初はR2000/R3000をシミュレートしていた）のフリーなシミュレータ SPIM がある<sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[27]</a></sup>。EduMIPS64<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[28]</a></sup> は、GPLライセンスのグラフィカルなMIPS64シミュレータで、Java/Swingで書かれている。MIPS64 ISA の大部分をカバーするサブセットをサポートしており、アセンブリ言語で書かれたプログラムを実行したときCPU内のパイプラインで何が起きているかをグラフィカルに表示する。こちらも教育向けで、世界各地の大学で利用されている。
+</p><p>MARS<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[29]</a></sup> もGUIベースのMIPSエミュレータで教育向けに作られており、特にヘネシーの『コンピュータの構成と設計』を教科書として使う際に役立つよう設計されている。
+</p><p>より実用的なフリーなエミュレータとして<a class="new" href="/w/index.php?title=En:GXemul&amp;action=edit&amp;redlink=1" title="En:GXemul (存在しないページ)">GXemul</a>や<a href="/wiki/QEMU" title="QEMU">QEMU</a>プロジェクトのものがある。MIPS III および IV のプロセッサをエミュレートでき、コンピュータシステム全体のエミュレートも可能である。
+</p><p>商用のシミュレータは主に組み込み用MIPSプロセッサを対象としたものが存在する。例えば、Virtutech <a class="new" href="/w/index.php?title=En:Simics&amp;action=edit&amp;redlink=1" title="En:Simics (存在しないページ)">Simics</a> (MIPS 4Kc and 5Kc, PMC RM9000, QED RM7000)、VaST Systems (R3000, R4000)、<a class="new" href="/w/index.php?title=En:Coware&amp;action=edit&amp;redlink=1" title="En:Coware (存在しないページ)">CoWare</a> (MIPS4KE, MIPS24K, MIPS25Kf, MIPS34K) がある。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=24" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=25" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">MIPS社のR4000が登場する頃には、DEC社は自社製RISCマイクロプロセッサ<a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>を完成させてこれに切り替えた。</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">R4000は、スーパーパイプラインを世界で最初に導入した市販のマイクロプロセッサである。しかし、これによって、"Microprocessor <b>with</b> Interlocked Pipeline Stages" パイプライン・ステージがインターロックされるマイクロプロセッサと揶揄されることになった。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=26" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.mips.com/products/architectures/mips32/" rel="nofollow">MIPS32 Architecture</a>”.   <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・テクノロジーズ</a>. <span title="">2009年5月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.mips.com/products/architectures/mips64/" rel="nofollow">MIPS64 Architecture</a>”.   <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・テクノロジーズ</a>. <span title="">2009年5月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.mips.com/products/architectures/mips-3d-ase/" rel="nofollow">MIPS-3D ASE</a>”.   <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・テクノロジーズ</a>. <span title="">2009年5月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.mips.com/products/architectures/ase/ase16e/" rel="nofollow">MIPS16e</a>”.   <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・テクノロジーズ</a>. <span title="">2021年1月14日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.mips.com/products/architectures/mips-mt-ase/" rel="nofollow">MIPS MT ASE</a>”.   <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">ミップス・テクノロジーズ</a>. <span title="">2009年5月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">University of California, Davis. “<a class="external text" href="http://www.cs.ucdavis.edu/~peisert/teaching/ecs142-sp09/rt.html" rel="nofollow">ECS 142 (Compilers) References &amp; Tools page</a>”. <span title="">2009年5月28日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Victor_P._Rubio,_2004-8"><b><a href="#cite_ref-Victor_P._Rubio,_2004_8-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Rubio, Victor P. “<a class="external text" href="http://www.ece.nmsu.edu/~jecook/thesis/Victor_thesis.pdf" rel="nofollow">A FPGA Implementation of a MIPS RISC Processor   for Computer Architecture Education</a>”.   New Mexico State University. <span title="">2011年12月22日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-マイクロプロセッサ_テクノロジ-9">^ <a href="#cite_ref-マイクロプロセッサ_テクノロジ_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-マイクロプロセッサ_テクノロジ_9-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">神保進一著、『マイクロプロセッサ テクノロジ』、日経BP社、1999年12月6日第1版第1刷発行、ISBN 4822209261</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">Morgan Kaufmann Publishers, <i>Computer Organization and Design</i>, <a href="/wiki/%E3%83%87%E3%82%A4%E3%83%93%E3%83%83%E3%83%89%E3%83%BB%E3%83%91%E3%82%BF%E3%83%BC%E3%82%BD%E3%83%B3_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6%E8%80%85)" title="デイビッド・パターソン (計算機科学者)">David A. Patterson</a> &amp; <a class="mw-redirect" href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BBL%E3%83%BB%E3%83%98%E3%83%8D%E3%82%B7%E3%83%BC" title="ジョン・L・ヘネシー">John L. Hennessy</a>, Edition 3, ISBN 1-55860-604-1, page 63</span>
+</li>
+<li id="cite_note-twsNovZ23-11"><b><a href="#cite_ref-twsNovZ23_11-0">^</a></b> <span class="reference-text"><cite class="citation news" style="font-style:normal"><a class="external text" href="http://www.paravirtual.com/content/company/advisory_board.htm" rel="nofollow">“Earl Killian”</a>. <i>Paravirtual</i>. (2010年11月26日)<span style="display:none;">. <a class="external free" href="http://www.paravirtual.com/content/company/advisory_board.htm" rel="nofollow">http://www.paravirtual.com/content/company/advisory_board.htm</a></span> <span class="reference-accessdate"><span title="">2010年11月26日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Earl+Killian&amp;rft.atitle=&amp;rft.date=2010%E5%B9%B411%E6%9C%8826%E6%97%A5&amp;rft.pub=%27%27Paravirtual%27%27&amp;rft_id=http%3A%2F%2Fwww.paravirtual.com%2Fcontent%2Fcompany%2Fadvisory_board.htm&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-twsNovZ14-12"><b><a href="#cite_ref-twsNovZ14_12-0">^</a></b> <span class="reference-text"><cite class="citation news" style="font-style:normal"><a class="external text" href="http://www.cs.clemson.edu/~mark/s1_alumni.html" rel="nofollow">“S-1 Supercomputer Alumni: Earl Killian”</a>. <i>Clemson University</i>. (2005年6月28日)<span style="display:none;">. <a class="external free" href="http://www.cs.clemson.edu/~mark/s1_alumni.html" rel="nofollow">http://www.cs.clemson.edu/~mark/s1_alumni.html</a></span> <span class="reference-accessdate"><span title="">2010年11月26日</span>閲覧</span>. "Earl Killian's early work w... As MIPS's Director of Architecture, he designed the MIPS III 64-bit instruction-set extension, and led the work on the R4000 microarchitecture. He was a cofounder of QED, which created the R4600 and R5000 MIPS processors. Most recently he was chief architect at Tensilica working on configurable/extensible processors."</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=S-1+Supercomputer+Alumni%3A+Earl+Killian&amp;rft.atitle=&amp;rft.date=2005%E5%B9%B46%E6%9C%8828%E6%97%A5&amp;rft.pub=%27%27Clemson+University%27%27&amp;rft_id=http%3A%2F%2Fwww.cs.clemson.edu%2F%7Emark%2Fs1_alumni.html&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text">Jochen Liedtke(1995). On micro kernel construction. 15th Symposium on Operating Systems Principles, Copper Mountain Resort, Colorado.</span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><a class="external text" href="https://web.archive.org/web/20080307153053/http://www.sgi.com/support/mips_irix.html" rel="nofollow">SGI announcing the end of MIPS</a> - <a href="/wiki/%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%90%E3%83%83%E3%82%AF%E3%83%9E%E3%82%B7%E3%83%B3" title="ウェイバックマシン">ウェイバックマシン</a>（2008年3月7日アーカイブ分）</span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><a class="external text" href="https://news.mynavi.jp/articles/2009/03/05/mips_technologies/001.html" rel="nofollow">CPUコアベンダからの脱却 - 変貌するMIPS Technologiesの実像を探る</a></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external free" href="http://www.mdronline.com/mpr/h/2006/0626/202602.html" rel="nofollow">http://www.mdronline.com/mpr/h/2006/0626/202602.html</a> China's Microprocessor Dilemma</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><a class="external text" href="http://www.mips.com/news-events/newsroom/release-archive-2009/6_15_09.dot" rel="nofollow">China’s Institute of Computing Technology Licenses Industry-Standard MIPS Architectures</a></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://archive.is/8x37" rel="nofollow">LinuxDevices article about the Municator</a>”. 2012年12月16日時点の<a class="external text" href="http://www.linuxfordevices.com/c/a/News/Chinese-150-Linux-miniPC-races-OLPC-to-market/" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2010年12月12日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://archive.is/T5He" rel="nofollow"><i>Yeelong</i> Specs</a>”. 2012年12月10日時点の<a class="external text" href="http://www.linuxdevices.com/news/NS2928309621.html" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2010年12月12日</span>閲覧。</cite> (<i>LinuxDevices</i>, Oct. 22, 2008)</span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://infopad.eecs.berkeley.edu/CIC/otherpr/enhanced_mips.html" rel="nofollow">Silicon Graphics Introduces Enhanced MIPS Architecture to Lead the Interactive Digital Revolution</a>”.   <a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="シリコングラフィックス">Silicon Graphics, Inc.</a> (1996年10月21日). <span title="">2011年2月25日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-MPR:1996-11-18-22">^ <a href="#cite_ref-MPR:1996-11-18_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-MPR:1996-11-18_22-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a class="external text" href="http://studies.ac.upc.edu/ETSETB/SEGPAR/microprocessors/mdmx%20(mpr).pdf" rel="nofollow">Gwennap, Linley (18 November 1996). "Digital, MIPS Add Multimedia Extensions".</a> <i>Microprocessor Report</i>. pp. 24–28.</span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><a class="external text" href="http://www.nec.co.jp/press/en/9801/2002.html" rel="nofollow">NEC Offers Two High Cost Performance 64-bit RISC Microprocessors</a></span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text"><cite class="citation book" id="Reference-編集人_山形孝雄-2004" style="font-style:normal">編集人 山形孝雄「PMC-Sierra RMシリーズの概要とRM7900&amp;RM900x2Gの詳細」『Interface2004年7月号』CQ出版社、2004年7月1日、77-88頁。</cite></span>
+</li>
+<li id="cite_note-uidaho-25">^ <a href="#cite_ref-uidaho_25-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-uidaho_25-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a class="external text" href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html" rel="nofollow">MIPS R3000 Instruction Set Summary</a></span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text"><a class="external text" href="http://www.xs4all.nl/~vhouten/mipsel/r3000-isa.html" rel="nofollow">MIPS Instruction Reference</a></span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text"><a class="external text" href="http://www.OVPworld.org" rel="nofollow">Welcome Page | Open Virtual Platforms</a></span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><a class="external text" href="http://www.imperas.com" rel="nofollow">Welcome to Imperas | Imperas</a></span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">James Larus. “<a class="external text" href="http://pages.cs.wisc.edu/~larus/spim.html" rel="nofollow">SPIM MIPS Simulator</a>”. <span title="">2007年3月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text"><a class="external text" href="https://www.edumips.org" rel="nofollow">EduMIPS64</a></span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text"><a class="external text" href="http://courses.missouristate.edu/KenVollmar/MARS/" rel="nofollow">MARS MIPS simulator - Missouri State University</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=27" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" style="font-style:normal">David A. Patterson and John L. Hennessy (2007). <i>Computer Organization and Design: The Hardware/Software Interface</i>. Morgan Kaufmann Publishers. ISBN 978-0-12-370606-5</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization+and+Design%3A+The+Hardware%2FSoftware+Interface&amp;rft.aulast=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.au=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.date=2007&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span>
+<ul><li><cite class="citation book" style="font-style:normal">David A. Patterson and John L. Hennessy; 成田光彰 (2006). <i>コンピュータの構成と設計 第３版（上） ハードウエアとソフトウエアのインタフェース</i>. <a href="/wiki/%E6%97%A5%E7%B5%8CBP" title="日経BP">日経BP</a>. ISBN 4-8222-8266-X</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%A8%E8%A8%AD%E8%A8%88+%E7%AC%AC%EF%BC%93%E7%89%88%EF%BC%88%E4%B8%8A%EF%BC%89+%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A8%E3%82%A2%E3%81%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A8%E3%82%A2%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9&amp;rft.aulast=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.au=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.date=2006&amp;rft.pub=%5B%5B%E6%97%A5%E7%B5%8CBP%5D%5D&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">David A. Patterson and John L. Hennessy; 成田光彰 (2006). <i>コンピュータの構成と設計 第３版（下） ハードウエアとソフトウエアのインタフェース</i>. <a href="/wiki/%E6%97%A5%E7%B5%8CBP" title="日経BP">日経BP</a>. ISBN 4-8222-8267-8</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%A8%E8%A8%AD%E8%A8%88+%E7%AC%AC%EF%BC%93%E7%89%88%EF%BC%88%E4%B8%8B%EF%BC%89+%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A8%E3%82%A2%E3%81%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A8%E3%82%A2%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9&amp;rft.aulast=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.au=David+A.+Patterson+and+John+L.+Hennessy&amp;rft.date=2006&amp;rft.pub=%5B%5B%E6%97%A5%E7%B5%8CBP%5D%5D&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li>プロセッサを中心としたコンピュータの設計全般に関する書籍で、命令セットの例としてMIPSアーキテクチャを取り上げている。MIPS開発者であるジョン・L・ヘネシーも著者の一人である。</li></ul></li>
+<li><cite class="citation book" style="font-style:normal">Dominic Sweetman. <i>See MIPS Run</i>. Morgan Kaufmann Publishers. ISBN 1-55860-410-3</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=See+MIPS+Run&amp;rft.aulast=Dominic+Sweetman&amp;rft.au=Dominic+Sweetman&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span>
+<ul><li>MIPSアーキテクチャについての決定版的な本。ハードウェアアーキテクチャだけでなく、コンパイラやOSについても詳述している。</li></ul></li>
+<li><cite class="citation book" style="font-style:normal">Farquhar, Erin; Philip Bunce. <i>MIPS Programmer's Handbook</i>. Morgan Kaufmann Publishers. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/1-55860-297-6" title="特別:文献資料/1-55860-297-6">1-55860-297-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=MIPS+Programmer%27s+Handbook&amp;rft.aulast=Farquhar&amp;rft.aufirst=Erin&amp;rft.au=Farquhar%2C%26%2332%3BErin&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.isbn=1-55860-297-6&amp;rfr_id=info:sid/ja.wikipedia.org:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=28" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PlayStation_(%E3%82%B2%E3%83%BC%E3%83%A0%E6%A9%9F)" title="PlayStation (ゲーム機)">PlayStation</a> - CPUとしてR3000Aを搭載。</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=29" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.mips.com/products/architectures/" rel="nofollow">MIPS Architectures</a> at <a href="/wiki/%E3%83%9F%E3%83%83%E3%83%97%E3%82%B9%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="ミップス・テクノロジーズ">MIPS Technologies</a></li>
+<li><a class="external text" href="http://www.langens.eu/tim/ea/mips_en.php" rel="nofollow">Full overview of MIPS architecture</a></li>
+<li><a class="external text" href="http://www.cs.wisc.edu/~larus/HP_AppA.pdf" rel="nofollow">Patterson &amp; Hennessy - Appendix A</a></li>
+<li><a class="external text" href="http://logos.cs.uic.edu/366/notes/MIPS%20Quick%20Tutorial.htm" rel="nofollow">Summary of MIPS assembly language</a></li>
+<li><a class="external text" href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html" rel="nofollow">MIPS Instruction reference</a></li>
+<li><a class="external text" href="http://courses.missouristate.edu/KenVollmar/MARS/" rel="nofollow">MARS (MIPS Assembler and Runtime Simulator)</a></li>
+<li><a class="external text" href="http://www.cpu-collection.de/?tn=1&amp;l0=cl&amp;l1=MIPS%20Rx000" rel="nofollow">MIPS processor images and descriptions at cpu-collection.de</a></li>
+<li><a class="external text" href="http://chortle.ccsu.edu/AssemblyTutorial/" rel="nofollow">A programmed introduction to MIPS assembly</a></li>
+<li><a class="external text" href="http://www.cs.umd.edu/class/spring2003/cmsc311/Notes/Mips/bitshift.html" rel="nofollow">Mips bitshift operators</a></li>
+<li><a class="external text" href="http://www.it.uu.se/edu/course/homepage/datsystDV/ht04/Project/tools/machinedata/4KcProgMan.pdf" rel="nofollow">MIPS software user's manual</a></li>
+<li><a class="external text" href="http://meld.org/library/education/mips-architectures" rel="nofollow">MIPS Architecture history diagram</a></li>
+<li><a class="external text" href="https://wavecomp.ai/mipsopen" rel="nofollow">MIPS Open initiative</a> # 2018年12月17日(米国時間)にWave Computing社はMIPS Open(MIPS命令セットアーキテクチャ(ISA)のオープンソース化プログラム)を発表。</li></ul>
+<div aria-labelledby="MIPSマイクロプロセッサ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:MIPS_microprocessors&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:MIPS microprocessors (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMIPS_microprocessors&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMIPS_microprocessors&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="MIPSマイクロプロセッサ" style="font-size:110%;margin:0 6em">MIPSマイクロプロセッサ</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a class="mw-selflink selflink">MIPSアーキテクチャ</a></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">全般<br/>プロセッサー</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯3号系列</a></li></ul>
+<ul><li><ul><li>デスクトップ/産業機器
+<ul><li>LS3A1000/LS3A1000-I(LS3A1000-i)</li>
+<li>LS3A2000/LS3A1500-I</li>
+<li>LS3A3000/LS3A3000-I(LS3A3000-i)</li>
+<li>LS3A4000/LS3A4000-I(LS3A4000-i)</li></ul></li></ul></li></ul>
+<ul><li><ul><li>サーバ
+<ul><li>LS3B1000</li>
+<li>LS3B1500</li>
+<li>LS3B2000</li>
+<li>LS3B3000</li>
+<li>LS3B4000</li></ul></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用<br/>プロセッサー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Ingenic_Semiconductor&amp;action=edit&amp;redlink=1" title="Ingenic Semiconductor (存在しないページ)">Ingenic XBurst</a>
+<ul><li>JZ4720
+<ul><li><a class="new" href="/w/index.php?title=Ben_NanoNote&amp;action=edit&amp;redlink=1" title="Ben NanoNote (存在しないページ)">Ben NanoNote</a></li></ul></li>
+<li>JZ4730 (<a class="new" href="/w/index.php?title=Skytone_Alpha-400&amp;action=edit&amp;redlink=1" title="Skytone Alpha-400 (存在しないページ)">Skytone Alpha-400</a>)</li>
+<li>JZ4740 (<a class="new" href="/w/index.php?title=Dingoo_A320&amp;action=edit&amp;redlink=1" title="Dingoo A320 (存在しないページ)">Dingoo A320</a>)</li>
+<li>JZ4750 (<a class="new" href="/w/index.php?title=Game_Gadget&amp;action=edit&amp;redlink=1" title="Game Gadget (存在しないページ)">Game Gadget</a>)</li>
+<li>JZ4760
+<ul><li>Velocity Micro T103 Cruz</li>
+<li>Velocity Micro T301 Cruz</li></ul></li>
+<li>JZ4770
+<ul><li><a class="new" href="/w/index.php?title=NOVO7&amp;action=edit&amp;redlink=1" title="NOVO7 (存在しないページ)">Ainol Novo7 Paladin</a></li>
+<li>NEOGEO-X</li>
+<li>GCW-Zero</li></ul></li>
+<li>JZ4780</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯2号系列</a>
+<ul><li>LS2H</li>
+<li>LS2K1000/LS2K2000</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マイクロコントローラ<br/>(組み込み機器)</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">M4K</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Microchip_Technology&amp;action=edit&amp;redlink=1" title="Microchip Technology (存在しないページ)">Microchip Technology</a> <a class="new" href="/w/index.php?title=PIC_microcontroller&amp;action=edit&amp;redlink=1" title="PIC microcontroller (存在しないページ)">PIC32MX</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>ATI/AMD/Broadcom <a class="new" href="/w/index.php?title=Xilleon&amp;action=edit&amp;redlink=1" title="Xilleon (存在しないページ)">Xilleon</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1A0300</li>
+<li>LS1B</li>
+<li>LS1C300</li>
+<li>LS1C101</li>
+<li>LS1D</li>
+<li>LS1G</li>
+<li>LS1H</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ネットワーキング</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR2313</li>
+<li>AR2318</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT2880</li></ul></li>
+<li><a class="mw-redirect" href="/wiki/Texas_Instruments" title="Texas Instruments">Texas Instruments</a>/Infineon/Lantiq
+<ul><li>AR7</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>AMAZON</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">5Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/Marvell_Technology_Group" title="Marvell Technology Group">Marvell</a>
+<ul><li>88E6318 "Link Street"</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">24Kc/24KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR7240</li>
+<li>AR7161</li>
+<li>AR9132</li>
+<li>AR9331</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3050</li>
+<li>RT3052</li>
+<li>RT3350</li>
+<li>RT5350</li>
+<li>RT6856</li>
+<li>MT7620</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>DANUBE</li>
+<li>VINAX</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">34Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Lantiq&amp;action=edit&amp;redlink=1" title="Lantiq (存在しないページ)">Lantiq</a>
+<ul><li>AR188</li>
+<li>VRX288</li>
+<li>GRX388</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Ikanos_Communications&amp;action=edit&amp;redlink=1" title="Ikanos Communications (存在しないページ)">Ikanos</a>
+<ul><li>Fusiv Vx175/173</li>
+<li>Fusiv Vx180</li>
+<li>Fusiv Vx185/183</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">74Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Qualcomm_Atheros&amp;action=edit&amp;redlink=1" title="Qualcomm Atheros (存在しないページ)">Qualcomm Atheros</a>
+<ul><li>AR9344</li>
+<li>QCA9558</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3662</li>
+<li>RT3883</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>BCM4706</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1004Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>MT7621</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1074Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Realtek" title="Realtek">Realtek</a>
+<ul><li>RTL8198C</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Cavium&amp;action=edit&amp;redlink=1" title="Cavium (存在しないページ)">Cavium</a>
+<ul><li>various</li></ul></li>
+<li>Alchemy Semiconductor
+<ul><li><a class="new" href="/w/index.php?title=Alchemy_(processor)&amp;action=edit&amp;redlink=1" title="Alchemy (processor) (存在しないページ)">Alchemy</a></li></ul></li>
+<li><a class="new" href="/w/index.php?title=RMI_Corporation&amp;action=edit&amp;redlink=1" title="RMI Corporation (存在しないページ)">RMI Corporation</a>
+<ul><li>XLR</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Broadcom_Corporation&amp;action=edit&amp;redlink=1" title="Broadcom Corporation (存在しないページ)">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a class="new" href="/w/index.php?title=Cavium&amp;action=edit&amp;redlink=1" title="Cavium (存在しないページ)">Cavium</a>
+<ul><li>Octeon</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ゲーミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">various</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=PlayStation_(console)&amp;action=edit&amp;redlink=1" title="PlayStation (console) (存在しないページ)">PlayStation 1</a> MIPS R3000A-compatible</li>
+<li><a href="/wiki/NINTENDO64" title="NINTENDO64">Nintendo 64</a> NEC VR4300</li>
+<li><a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a> R4000-based</li>
+<li><a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a> <a href="/wiki/Emotion_Engine" title="Emotion Engine">Emotion Engine</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スーパーコンピュータ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龍芯</a>
+<ul><li>LS2F/LS2F1000</li>
+<li>LS3A1000</li>
+<li>LS3B1000</li></ul></li>
+<li><a href="/wiki/SiCortex" title="SiCortex">SiCortex</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">航空宇宙</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">MIPS64<br/>適合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1E0300/LS1E1000</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">MIPS32<br/>適合</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%BE%8D%E8%8A%AF" title="龍芯">龙芯1号系列</a>
+<ul><li>LS1E04</li>
+<li>LS1F04/LS1F0300</li>
+<li>LS1J</li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">クラシック<br/>プロセッサー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">MIPS I</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R2000" title="R2000">R2000</a></li>
+<li><a href="/wiki/R3000" title="R3000">R3000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">MIPS II</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R6000" title="R6000">R6000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">MIPS III</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R4000" title="R4000">R4000</a>
+<ul><li><a href="/wiki/R4000#R4400" title="R4000">R4400</a></li></ul></li>
+<li><a href="/wiki/R4200" title="R4200">R4200</a>
+<ul><li><a href="/wiki/R4200#R4300i" title="R4200">R4300i</a></li></ul></li>
+<li><a href="/wiki/R4600" title="R4600">R4600</a>
+<ul><li><a href="/wiki/R4600#R4700" title="R4600">R4700</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">MIPS IV</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R5000" title="R5000">R5000</a></li>
+<li><a href="/wiki/R8000" title="R8000">R8000</a></li>
+<li><a href="/wiki/R10000" title="R10000">R10000</a>
+<ul><li><a href="/wiki/R10000#R12000" title="R10000">R12000</a></li>
+<li><a href="/wiki/R10000#R12000A" title="R10000">R12000A</a></li>
+<li><a href="/wiki/R10000#R14000" title="R10000">R14000</a></li>
+<li><a href="/wiki/R10000#R14000A" title="R10000">R14000A</a></li>
+<li><a href="/wiki/R10000#R16000" title="R10000">R16000</a></li>
+<li><a href="/wiki/R10000#R16000A" title="R10000">R16000A</a></li>
+<li><a href="/wiki/R10000#R18000" title="R10000">R18000</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">MIPS V</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li class="mw-empty-elt"></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIPS%E3%81%AE%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:MIPSのマイクロプロセッサ">カテゴリ</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="プロセッサアーキテクチャ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Processor_architectures&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Processor architectures (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AProcessor_architectures&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="プロセッサアーキテクチャ" style="font-size:110%;margin:0 6em">プロセッサ<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">アーキテクチャ</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">CISC</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MC6800" title="MC6800">MC6800</a></li>
+<li><a href="/wiki/MC68000" title="MC68000">MC68000</a></li>
+<li><a href="/wiki/TRONCHIP" title="TRONCHIP">TRONCHIP</a></li>
+<li><a href="/wiki/PDP%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA" title="PDPシリーズ">PDP</a></li>
+<li><a href="/wiki/VAX" title="VAX">VAX</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/X86" title="X86">x86</a>
+<ul><li><a href="/wiki/IA-32" title="IA-32">IA-32</a></li>
+<li><a href="/wiki/X64" title="X64">x64</a>
+<ul><li><a href="/wiki/X64#AMD64" title="X64">AMD64</a></li>
+<li><a href="/wiki/X64#Intel_64" title="X64">Intel 64</a></li></ul></li></ul></li>
+<li><a href="/wiki/IA-64" title="IA-64">IA-64</a></li>
+<li><a href="/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">RISC</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a></li>
+<li><a href="/wiki/AMD_Am29000" title="AMD Am29000">AMD Am29000</a></li>
+<li><a class="new" href="/w/index.php?title=En:Apollo_PRISM&amp;action=edit&amp;redlink=1" title="En:Apollo PRISM (存在しないページ)">Apollo PRISM</a></li>
+<li><a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a></li>
+<li><a href="/wiki/Intel_i960" title="Intel i960">Intel i960</a></li>
+<li><a href="/wiki/MC88000" title="MC88000">MC88000</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a></li>
+<li><a href="/wiki/Atmel_AVR" title="Atmel AVR">Atmel AVR</a></li>
+<li><a class="new" href="/w/index.php?title=En:AVR32&amp;action=edit&amp;redlink=1" title="En:AVR32 (存在しないページ)">Atmel AVR32</a></li>
+<li><a href="/wiki/Blackfin" title="Blackfin">Analog Devices Blackfin</a></li>
+<li><a href="/wiki/DLX" title="DLX">DLX</a></li>
+<li><a class="new" href="/w/index.php?title=En:LatticeMico8&amp;action=edit&amp;redlink=1" title="En:LatticeMico8 (存在しないページ)">LatticeMico8</a></li>
+<li><a href="/wiki/LatticeMico32" title="LatticeMico32">LatticeMico32</a></li>
+<li><a href="/wiki/M32R" title="M32R">M32R</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a></li>
+<li><a class="mw-selflink selflink">MIPS</a></li>
+<li><a href="/wiki/Nios_II" title="Nios II">Altera Nios II</a></li>
+<li><a href="/wiki/OpenRISC" title="OpenRISC">OpenRISC</a></li>
+<li><a href="/wiki/PicoBlaze" title="PicoBlaze">PicoBlaze</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><a href="/wiki/Power_Architecture" title="Power Architecture">Power</a></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="/wiki/SuperH" title="SuperH">SuperH</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331145001
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.377 seconds
+Real time usage: 0.455 seconds
+Preprocessor visited node count: 11600/1000000
+Post‐expand include size: 139523/2097152 bytes
+Template argument size: 19984/2097152 bytes
+Highest expansion depth: 34/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 18658/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 7065600/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  333.910      1 -total
+ 45.18%  150.861      2 テンプレート:Reflist
+ 29.55%   98.664      7 テンプレート:Citation/core
+ 25.17%   84.037      6 テンプレート:Cite_book
+ 20.57%   68.684     11 テンプレート:Cite_web
+ 13.69%   45.721      1 テンプレート:Citation/identifier
+ 13.10%   43.729     12 テンプレート:Navbox
+ 13.10%   43.727      1 テンプレート:ISBN2
+ 12.22%   40.813      2 テンプレート:Cite_news
+  9.37%   31.285     13 テンプレート:Accessdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:335286-0!canonical and timestamp 20220331145000 and revision id 219355. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=MIPSアーキテクチャ&amp;oldid=219355">http://localhost:8080/w/index.php?title=MIPSアーキテクチャ&amp;oldid=219355</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:MIPSアーキテクチャ">MIPSアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:コンピュータアーキテクチャ">コンピュータアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MIPS%E3%81%AE%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:MIPSのマイクロプロセッサ">MIPSのマイクロプロセッサ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:命令セットアーキテクチャ">命令セットアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%89RISC%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B7%E3%82%A2%E3%83%A0" title="カテゴリ:アドバンスドRISCコンソーシアム">アドバンスドRISCコンソーシアム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D335286%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D335286%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;oldid=219355" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月28日 (月) 12:05 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.377","walltime":"0.455","ppvisitednodes":{"value":11600,"limit":1000000},"postexpandincludesize":{"value":139523,"limit":2097152},"templateargumentsize":{"value":19984,"limit":2097152},"expansiondepth":{"value":34,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":18658,"limit":5000000},"timingprofile":["100.00%  333.910      1 -total"," 45.18%  150.861      2 テンプレート:Reflist"," 29.55%   98.664      7 テンプレート:Citation/core"," 25.17%   84.037      6 テンプレート:Cite_book"," 20.57%   68.684     11 テンプレート:Cite_web"," 13.69%   45.721      1 テンプレート:Citation/identifier"," 13.10%   43.729     12 テンプレート:Navbox"," 13.10%   43.727      1 テンプレート:ISBN2"," 12.22%   40.813      2 テンプレート:Cite_news","  9.37%   31.285     13 テンプレート:Accessdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":7065600,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331145001","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1160});});</script>
+</body></html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ジェネリックプログラミング - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ジェネリックプログラミング rootpage-ジェネリックプログラミング skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ジェネリックプログラミング</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>ジェネリック</b>（総称あるいは汎用）<b>プログラミング</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">generic programming</span>）は、具体的なデータ型に直接依存しない、抽象的かつ汎用的なコード記述を可能にする<a href="." id="link_a_2" title="プログラミング (コンピュータ)">コンピュータプログラミング</a>手法である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#特徴"><span class="tocnumber">2</span> <span class="toctext">特徴</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Adaのジェネリクス"><span class="tocnumber">3</span> <span class="toctext">Adaのジェネリクス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Adaの例"><span class="tocnumber">3.1</span> <span class="toctext">Adaの例</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#利点と制限"><span class="tocnumber">3.2</span> <span class="toctext">利点と制限</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#C++のテンプレート"><span class="tocnumber">4</span> <span class="toctext">C++のテンプレート</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#D言語のテンプレート"><span class="tocnumber">5</span> <span class="toctext">D言語のテンプレート</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Static-if"><span class="tocnumber">5.1</span> <span class="toctext">Static-if</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#エイリアスパラメーター"><span class="tocnumber">5.2</span> <span class="toctext">エイリアスパラメーター</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Javaのジェネリクス"><span class="tocnumber">6</span> <span class="toctext">Javaのジェネリクス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#ワイルドカード"><span class="tocnumber">6.1</span> <span class="toctext">ワイルドカード</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#制約"><span class="tocnumber">6.2</span> <span class="toctext">制約</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Haskellのジェネリックプログラミング"><span class="tocnumber">7</span> <span class="toctext">Haskellのジェネリックプログラミング</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#PolyP"><span class="tocnumber">7.1</span> <span class="toctext">PolyP</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#ジェネリックHaskell"><span class="tocnumber">7.2</span> <span class="toctext">ジェネリックHaskell</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#「決まり文句を捨てる」アプローチ"><span class="tocnumber">7.3</span> <span class="toctext">「決まり文句を捨てる」アプローチ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#C#と.NETのジェネリックプログラミング"><span class="tocnumber">8</span> <span class="toctext">C#と.NETのジェネリックプログラミング</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#その他の言語のジェネリックプログラミング機能"><span class="tocnumber">9</span> <span class="toctext">その他の言語のジェネリックプログラミング機能</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ジェネリックプログラミングは<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="データ型">データ型</a>でコードを<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9" title="インスタンス">インスタンス</a>化するのか、あるいはデータ型をパラメータとして渡すかということにかかわらず、同じソースコードを利用できる<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。ジェネリックプログラミングは言語により異なる形で実装されている。ジェネリックプログラミングの機能は1970年代に<a href="/wiki/CLU" title="CLU">CLU</a>や<a href="/wiki/Ada" title="Ada">Ada</a>のような言語に搭載され、次に<a class="new" href="/w/index.php?title=BETA&amp;action=edit&amp;redlink=1" title="BETA (存在しないページ)">BETA</a>、<a href="/wiki/C%2B%2B" title="C++">C++</a>、<a href="/wiki/D%E8%A8%80%E8%AA%9E" title="D言語">D</a>、<a href="/wiki/Eiffel" title="Eiffel">Eiffel</a>、<a href="/wiki/Java" title="Java">Java</a>、その後<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ディジタル・イクイップメント・コーポレーション">DEC</a>の<a class="new" href="/w/index.php?title=Trellis/Owl&amp;action=edit&amp;redlink=1" title="Trellis/Owl (存在しないページ)">Trellis/Owl</a>言語などの数多くのオブジェクトベース (object-based) および<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91" title="オブジェクト指向">オブジェクト指向</a> (object-oriented) 言語に採用された。
+</p><p>1995年の書籍<a href="/wiki/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="デザインパターン (ソフトウェア)">デザインパターン</a><sup class="noprint Inline-Template nowrap">[<i><a class="mw-redirect" href="/wiki/WP:CITEHOW" title="WP:CITEHOW"><span title="文献を特定する詳細な情報が求められています。（2019年3月）">要文献特定詳細情報</span></a></i>]</sup>の共著者<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2019年3月）">誰?</span></a></i>]</sup>は（Ada、Eiffel、Java、<a href="/wiki/C_Sharp" title="C Sharp">C#</a>の）ジェネリクスや、（C++の）<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a>としても知られるパラメータ化された型 (parameterized types) としてジェネリクスについて触れている。これらは、型を指定することなく、型を定義できるようにする（型は使用する時点で引数として与えられる）。このテクニック（特に<a href="/wiki/%E3%83%87%E3%83%AA%E3%82%B2%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="デリゲート (プログラミング)">デリゲーション</a>を組み合わせるとき）は非常に強力である。
+</p>
+<h2><span id=".E7.89.B9.E5.BE.B4"></span><span class="mw-headline" id="特徴">特徴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=2" title="節を編集: 特徴">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ジェネリックプログラミングの特徴は、型を抽象化してコードの再利用性を向上させつつ、<a href="/wiki/%E9%9D%99%E7%9A%84%E5%9E%8B%E4%BB%98%E3%81%91" title="静的型付け">静的型付け</a>言語の持つ型安全性を維持できることである。
+</p><p>ジェネリックプログラミングを用いない場合、例えば伝統的な<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>や<a href="/wiki/Pascal" title="Pascal">Pascal</a>のような従来の<a href="/wiki/%E9%9D%99%E7%9A%84%E5%9E%8B%E4%BB%98%E3%81%91" title="静的型付け">静的型付け</a>言語において、ソートなどのアルゴリズムや<a href="/wiki/%E9%80%A3%E7%B5%90%E3%83%AA%E3%82%B9%E3%83%88" title="連結リスト">連結リスト</a>のようなデータ構造（オブジェクトの<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A_(%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B)" title="コンテナ (データ型)">コンテナ</a>）を記述する際は、たとえ対象となる要素のデータ型が異なるだけで事実上同一のコードであったとしても、具体的なデータ型ごとにそれぞれ実装しなければならない。<a href="/wiki/%E6%95%B4%E6%95%B0%E5%9E%8B" title="整数型">整数型</a>のリスト、<a href="/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="倍精度浮動小数点数">倍精度浮動小数点数</a>型のリスト、<a href="/wiki/%E6%96%87%E5%AD%97%E5%88%97" title="文字列">文字列</a>型のリスト、ユーザー定義<a href="/wiki/%E6%A7%8B%E9%80%A0%E4%BD%93" title="構造体">構造体</a>のリスト、……といった具合である。もしジェネリックプログラミングをサポートしない言語で汎用的なコードを記述して再利用しようと思えば、メモリ空間効率や型安全性などを犠牲にしなければならなくなる（<a href="/wiki/%E5%85%B1%E7%94%A8%E4%BD%93" title="共用体">共用体</a>や汎用<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>型と<a href="/wiki/%E5%9E%8B%E5%A4%89%E6%8F%9B" title="型変換">キャスト</a>を駆使するなど）。一方、C++の関数テンプレートやクラステンプレートのように、ジェネリックプログラミングを用いることで、抽象化された型について一度だけ記述したアルゴリズムやデータ構造をさまざまな具象データ型に適用して、コードを型安全に再利用できるようになる。これがジェネリックプログラミングの利点の一例として挙げられる。
+</p><p>以下にC++の例を示す。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename T&gt;
+class LinkedList {
+public:
+</p>
+<pre>   // 双方向連結リストのノード。
+   class Node {
+       friend class LinkedList;
+   public:
+       T value;
+   private:
+       Node* prev;
+       Node* next;
+   private:
+       Node() : value(), prev(), next() {}
+       explicit Node(const T&amp; value, Node* prev = NULL, Node* next = NULL) : value(value), prev(prev), next(next) {}
+       ~Node() {}
+   public:
+       Node* getPrev() { return this-&gt;prev; }
+       Node* getNext() { return this-&gt;next; }
+   };
+</pre>
+<p>private:
+</p>
+<pre>   Node dummy;
+</pre>
+<p>public:
+</p>
+<pre>   LinkedList() : dummy() {
+       this-&gt;dummy.prev = &amp;this-&gt;dummy;
+       this-&gt;dummy.next = &amp;this-&gt;dummy;
+   }
+   ~LinkedList() { this-&gt;clear(); }
+   size_t getSize() const { /* ... */ }
+   Node* getHead() { return this-&gt;dummy.next; }
+   Node* getTail() { return this-&gt;dummy.prev; }
+   Node* getSentinel() { return &amp;this-&gt;dummy; }
+   static Node* insertBefore(Node* node, const T&amp; value) {
+       assert(node);
+       assert(node-&gt;prev);
+       Node* temp = new Node(value, node-&gt;prev, node);
+       node-&gt;prev-&gt;next = temp;
+       node-&gt;prev = temp;
+       return temp;
+   }
+   static Node* insertAfter(Node* node, const T&amp; value) {
+       assert(node);
+       assert(node-&gt;next);
+       Node* temp = new Node(value, node, node-&gt;next);
+       node-&gt;next-&gt;prev = temp;
+       node-&gt;next = temp;
+       return temp;
+   }
+   static void remove(Node*&amp; node) {
+       assert(node);
+       if (node-&gt;prev) { node-&gt;prev-&gt;next = node-&gt;next; }
+       if (node-&gt;next) { node-&gt;next-&gt;prev = node-&gt;prev; }
+       delete node;
+       node = NULL;
+   }
+   void clear() {
+       for (Node* current = this-&gt;getHead(); current != this-&gt;getSentinel(); ) {
+           Node* temp = current;
+           current = current-&gt;next;
+           delete temp;
+       }
+       this-&gt;dummy.prev = &amp;this-&gt;dummy;
+       this-&gt;dummy.next = &amp;this-&gt;dummy;
+   }
+</pre>
+<p>};
+</p><p>LinkedList&lt;int&gt; list_of_integers;
+LinkedList&lt;Animal&gt; list_of_animals;
+LinkedList&lt;Car&gt; list_of_cars;
+&lt;/syntaxhighlight&gt;
+</p><p>上記は要素型を<code>T</code>とする<a class="mw-redirect" href="/wiki/%E5%8F%8C%E6%96%B9%E5%90%91%E9%80%A3%E7%B5%90%E3%83%AA%E3%82%B9%E3%83%88" title="双方向連結リスト">双方向連結リスト</a>の定義例である。<code>typename T</code>はテンプレートによる抽象化の対象となる型の名前（プレースホルダー）を表す。そしてこの定義されたクラステンプレートの<b>インスタンス化</b>、すなわち型パラメータ<code>T</code>に具象型を与えることによって生成されるクラス型は、<code>T</code>について実際に指定した具象型のリストとして扱われる。これらの「T型のコンテナ」を一般に<b>ジェネリクス</b> (generics) と呼び、ジェネリックプログラミングの代表的なテクニックである。プログラミング言語によって制約は様々だが、このテクニックは、<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a>関係や<a href="/wiki/%E3%82%B7%E3%82%B0%E3%83%8D%E3%83%81%E3%83%A3" title="シグネチャ">シグネチャ</a>といった制約条件 (constraint) を維持する限り、内包する<code>T</code>にあらゆるデータ型を指定可能なクラスの定義を可能にする。これはジェネリックプログラミングの典型であり、一部の言語<sup class="noprint Template-Fact">[<i><span title="このタグがつけられた文章には説明が求められています。（2019年3月）">要説明</span></i>]</sup>ではこの形式のみを実装する。ただし、概念としてのジェネリックプログラミングはジェネリクスに限定されない。
+</p><p>オブジェクト指向プログラミング言語は、サブタイプ（派生型）でスーパータイプ（基底型）の振る舞い（アルゴリズム）を<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%89" title="オーバーライド">オーバーライド</a>することによる動的な<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>（多態性）を備えており、動的な多態性もまたスーパータイプによる抽象化とサブタイプによる具象化<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>を実現するものだが、ジェネリクスは静的な多態性による抽象化と具象化を実現するという点で設計を異にする。
+</p><p>ジェネリックプログラミングのもう一つの応用例として、型に依存しないスワップ関数の例を示す。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename T&gt;
+void Swap(T&amp; a, T&amp; b) // "&amp;"により参照としてパラメーターを渡している。
+{
+</p>
+<pre>   T temp = b;
+   b = a;
+   a = temp;
+</pre>
+<p>}
+</p><p>using namespace std;
+string s1 = "world!", s2 = "Hello, ";
+Swap(s1, s2);
+cout &lt;&lt; s1 &lt;&lt; s2 &lt;&lt; endl; // 出力は"Hello, world!"
+&lt;/syntaxhighlight&gt;
+</p><p>上記の例で使用したC++の<code>template</code>文は、プログラマーや言語の開発者たちにこの概念を普及させたジェネリックプログラミングの例といわれている。この構文はジェネリックプログラミングの全ての概念に対応する。またD言語はC++のテンプレートを基に構文を単純化した完全なジェネリックの機能を提供する。JavaはJ2SE 5.0よりC++の文法に近いジェネリックプログラミングの機能を提供しており、ジェネリクス（「T型のコンテナ」）という、ジェネリックプログラミングの部分集合を実装する。
+</p><p>C# 2.0、<a class="mw-redirect" href="/wiki/Microsoft_Visual_Basic_.NET" title="Microsoft Visual Basic .NET">Visual Basic .NET</a> 2005 (VB 8.0) では、<a href="/wiki/.NET_Framework" title=".NET Framework">Microsoft .NET Framework</a> 2.0がサポートするジェネリクスを利用するための構文が追加された。<a href="/wiki/ML_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="ML (プログラミング言語)">ML</a>ファミリーは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E5%A4%9A%E7%9B%B8&amp;action=edit&amp;redlink=1" title="パラメータ多相 (存在しないページ)">パラメータ多相</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parametric_polymorphism&amp;action=edit&amp;redlink=1" title="En:Parametric polymorphism (存在しないページ)">英語版</a>）</span></span> (parametric polymorphism) とファンクタと呼ばれるジェネリックモジュールを利用してのジェネリックプログラミングを推奨する。<a href="/wiki/Haskell" title="Haskell">Haskell</a>のタイプクラスのメカニズムもまたジェネリックプログラミングに対応する。
+</p><p><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a>にあるような<a href="/wiki/%E5%8B%95%E7%9A%84%E5%9E%8B%E4%BB%98%E3%81%91" title="動的型付け">動的型付け</a>を使い、必要に応じて注意深くコーディング規約を守れば<sup class="noprint Template-Fact">[<i><span title="このタグがつけられた文章には説明が求められています。（2019年3月）">要説明</span></i>]</sup>、ジェネリックプログラミングの技術を使う必要がなくなる。全てのオブジェクトを包括する汎用型があるためである。Javaもまたそうであるが、キャストが必要なので静的な型付けの統一性を乱してしまう。例えば、ジェネリクスをサポートしていなかった時代のJavaでは、<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>のようなコレクションに格納できる要素型は<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Object.html" rel="nofollow">Object</a></code>のみであったため、要素取り出しの際には実際のサブクラス型への適切なキャストが必要だった。それに対し、ジェネリクスは静的な型付けについての利点を持ちながら動的な型付けの利点を完全ではないが得られる方法である。
+</p>
+<h2><span id="Ada.E3.81.AE.E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.82.AF.E3.82.B9"></span><span class="mw-headline" id="Adaのジェネリクス">Adaのジェネリクス</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=3" title="節を編集: Adaのジェネリクス">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Adaには1977年-1980年の設計当初から汎用体 (generics) が存在する。標準ライブラリでも多くのサービスを実装するために汎用体を用いている。Ada2005では1998年に規格化されたC++の<a href="/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL) の影響を受けた広範な汎用コンテナが標準ライブラリとして追加された。
+</p><p>汎用体 (generic unit) とは、0または複数の汎用体仮パラメータ (generic formal parameters) を採るプログラム単位（パッケージまたは副プログラム）である。
+</p><p>汎用体仮パラメータとしては、オブジェクト（変数・定数）、データ型、副プログラム、パッケージ，さらには他の汎用体のインスタンスさえ指定することができる。汎用体仮パラメータのデータ型としては、離散 (discrete) 型、<a href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="浮動小数点数">浮動小数点数</a>型、<a href="/wiki/%E5%9B%BA%E5%AE%9A%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="固定小数点数">固定小数点数</a>型、アクセス（<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>）型などを用いることができる。
+</p><p>汎用体をインスタンス化する際、プログラマは全ての仮パラメータに対応する実パラメータを指定する必要があるが、プログラマが明示的に全ての実パラメータを指定しなくても済むよう，仮パラメータにはデフォルトを指定することもできる。インスタンス化してしまえば，汎用体のインスタンスは、汎用体ではない通常のプログラム単位であるかのように振舞う。インスタンス化は実行時、例えばループの中などで行うことも可能である。
+</p>
+<h3><span id="Ada.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="Adaの例">Adaの例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=4" title="節を編集: Adaの例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>汎用体パッケージの仕様部
+</p><p>&lt;syntaxhighlight lang="ada"&gt;
+generic
+</p>
+<pre>  Max_Size : Natural; -- 汎用体仮オブジェクトの例
+  type Element_Type is private; -- 汎用体仮データ型の例;  この例では制限型でなければ任意のデータ型が該当
+</pre>
+<p>package Stacks is
+</p>
+<pre>  type Size_Type is range 0 .. Max_Size;
+  type Stack is limited private;
+  procedure Create (S : out Stack;
+                    Initial_Size : in Size_Type := Max_Size);
+  procedure Push (Into : in out Stack; Element : in Element_Type);
+  procedure Pop (From : in out Stack; Element : out Element_Type);
+  Overflow : exception;
+  Underflow : exception;
+</pre>
+<p>private
+</p>
+<pre>  subtype Index_Type is Size_Type range 1 .. Max_Size;
+  type Vector is array (Index_Type range &lt;&gt;) of Element_Type;
+  type Stack (Allocated_Size : Size_Type := 0) is record
+     Top : Index_Type;
+     Storage : Vector (1 .. Allocated_Size);
+  end record;
+</pre>
+<p>end Stacks;
+&lt;/syntaxhighlight&gt;
+</p><p>汎用体パッケージのインスタンス化
+</p><p>&lt;syntaxhighlight lang="ada"&gt;
+type Bookmark_Type is new Natural;
+-- 編集中のテキストドキュメント内の場所を記録する
+</p><p>package Bookmark_Stacks is new Stacks (Max_Size =&gt; 20,
+</p>
+<pre>                                      Element_Type =&gt; Bookmark_Type);
+</pre>
+<p>-- ドキュメント中の記録された場所にユーザがジャンプできるようにする
+&lt;/syntaxhighlight&gt;
+</p><p>汎用体パッケージインスタンスの利用
+</p><p>&lt;syntaxhighlight lang="ada"&gt;
+type Document_Type is record
+</p>
+<pre>  Contents : Ada.Strings.Unbounded.Unbounded_String;
+  Bookmarks : Bookmark_Stacks.Stack;
+</pre>
+<p>end record;
+</p><p>procedure Edit (Document_Name : in String) is
+</p>
+<pre>  Document : Document_Type;
+</pre>
+<p>begin
+</p>
+<pre>  -- ブックマークのスタックを初期化
+  Bookmark_Stacks.Create (S =&gt; Document.Bookmarks, Initial_Size =&gt; 10);
+  -- この時点でDocument_Nameファイルを開いたり、読み込んだりが可能
+</pre>
+<p>end Edit;
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E5.88.A9.E7.82.B9.E3.81.A8.E5.88.B6.E9.99.90"></span><span class="mw-headline" id="利点と制限">利点と制限</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=5" title="節を編集: 利点と制限">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Adaの言語構文では、汎用体仮パラメータとして何を許容するか、精密に制約条件を課することができる。例えば実パラメータとしてはモジュラー型（任意の上限で巡回する符号なし整数型）のみを許容するように、仮パラメータとして指定することも可能である。さらには汎用体仮パラメータ間に一定の制約があるように規制することも可能である。例えば、
+</p><p>&lt;syntaxhighlight lang="ada"&gt;
+generic
+</p>
+<pre>  type Index_Type is (&lt;&gt;); -- 離散型(discrete type)のみを許容
+  type Element_Type is private; -- 制限型(limited type)以外の任意データ型
+  type Array_Type is array (Index_Type range &lt;&gt;) of Element_Type;
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p><p>この例でArray_Typeには、Element_Typeに対応する特定のデータ型を要素とし、Index_Typeに対応する特定の離散型の部分型を添字とする配列型でなければならないという制約を課している。プログラマがこの汎用体をインスタンス化する際には、同制約を満足する配列型を実パラメタとして渡さなければならない。
+</p><p>構文の複雑さに難はあるものの、精密な制約が表現できることで、汎用体仮パラメータの全ては仕様部として完全に定義される。このため、コンパイラは汎用体本体がなくても汎用体をインスタンス化することができる（もちろん本体がないと<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="リンケージエディタ">リンク</a>はできない）。
+</p><p>C++と異なってAdaでは暗黙的な特化による汎用体のインスタンス化を許さないため、全ての汎用体は明示的にインスタンス化することが必要である。この規則により以下のような結果が生じる。
+</p>
+<ul><li>コンパイラは共有ジェネリクス (shared generics) を実装できる。すなわち、ある汎用体のオブジェクトコードは全インスタンスで共有できる（もちろんプログラマが副プログラムのインライン化を要求しない限り）。さらなる結果として、
+<ul><li>コードが肥大化する可能性がない（コードの肥大化はC++では一般的であり後述のように特別な配慮が求められる）。</li>
+<li>インスタンス化の都度に新たなオブジェクトコードを生成することは不要であるため、コンパイル時のみならず、実行時に汎用体をインスタンス化することができる。</li>
+<li>汎用体仮オブジェクトに対応する実オブジェクトは、たとえ同実オブジェクトが静的である（コンパイル時に値が確定する）としても、汎用体本体中では常に静的ではないものとみなされる。詳細についてはWikibookのGeneric formal objectsを参照。</li></ul></li>
+<li>ある汎用体の全インスタンスは全く同一であるため、他人の作成したプログラムをレビューしたり、理解することが容易である。配慮すべき「特別な場合」はないのだから。</li>
+<li>全てのインスタンス化は明示的であり、プログラムの理解が困難となるような暗黙的なインスタンス化はない。</li>
+<li>Adaでは特化を許容しないため<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%A1%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="テンプレートメタプログラミング">テンプレートメタプログラミング</a>はできない。</li></ul>
+<dl><dd>ただし仮パラメータに精密な制約を課することができるため、例えば、スワップ副プログラムを仮パラメータとして、<a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%88" title="ソート">ソート</a>を目的とした汎用体の挙動をスワップ対象に応じて変化させたり、離散型の規定演算である大小判定を用いてMaxを実装するなど、特化の利点とされる目的の一部は他の方法により、達成することができる。</dd></dl>
+<h2><span id="C.2B.2B.E3.81.AE.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="C++のテンプレート">C++のテンプレート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=6" title="節を編集: C++のテンプレート">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート (プログラミング)</a>」を参照</div>
+<p>C++のテンプレートは関数テンプレート、クラステンプレートをサポートするほか、<a href="/wiki/C%2B%2B14" title="C++14">C++14</a>では変数テンプレートもサポートするようになった。C++のテンプレートは特に静的な<a href="/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" title="ダック・タイピング">ダック・タイピング</a>を可能にする点で強力であり、JavaやC#のジェネリクスと比べて柔軟性が高い一方、テンプレート引数に関する制約条件を明示的にコード上で記述できないことからコンパイルエラーメッセージが難解になりやすい。テンプレートはC++言語仕様の複雑化の要因にもなっている。
+</p><p>C++の<a href="/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL) はテンプレートによる汎用的なアルゴリズムとデータ構造を提供する。
+</p>
+<h2><span id="D.E8.A8.80.E8.AA.9E.E3.81.AE.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="D言語のテンプレート">D言語のテンプレート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=7" title="節を編集: D言語のテンプレート">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>D言語はC++のものを発展させたテンプレートをサポートする。大半のC++テンプレートの表現はD言語でもそのまま利用できる。それに加え、D言語は一部の一般的なケースを合理化する機能をいくつか追加する。
+</p><p>最もはっきりとした違いは一部のシンタックスの変更である。D言語はテンプレートの定義で山形カッコ<code>&lt; &gt;</code>の代わりに丸カッコ<code>( )</code>を使用する。またテンプレートのインスタンス化でも山形カッコの代わりに<code>!( )</code>構文（感嘆符を前に付けた丸カッコ）を使う。従って、D言語の<code>a!(b)</code>はC++の<code>a&lt;b&gt;</code>と等価である。この変更は、テンプレート構文の<a href="/wiki/%E6%A7%8B%E6%96%87%E8%A7%A3%E6%9E%90" title="構文解析">構文解析</a>を容易にするためになされた（山形カッコは比較演算子との区別がつきにくく、構文解析器が複雑化しがちであった）。
+</p>
+<h3><span class="mw-headline" id="Static-if">Static-if</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=8" title="節を編集: Static-if">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>D言語はコンパイル時に条件をチェックする<code>static if</code>構文を提供する。これはC++の<code>#if</code>と<code>#endif</code>のプリプロセッサマクロに少し似ている。<code>static if</code>はテンプレート引数や、それらを使用したコンパイル時関数実行の結果を含めた全てのコンパイル時の値にアクセスできるというのがその主要な違いである。従ってC++でテンプレートの特殊化を必要とする多くの状況でも、D言語では特殊化の必要なく容易に書ける。D言語の再帰テンプレートは通常の実行時再帰とほぼ同じように書ける。これは典型的なコンパイル時の関数テンプレートに見られる。
+</p><p>&lt;syntaxhighlight lang="d"&gt;
+template Factorial(ulong n) {
+</p>
+<pre>   static if (n &lt;= 1)
+       const Factorial = 1u;
+   else
+       const Factorial = n * Factorial!(n - 1);
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E3.82.A8.E3.82.A4.E3.83.AA.E3.82.A2.E3.82.B9.E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E3.83.BC"></span><span class="mw-headline" id="エイリアスパラメーター">エイリアスパラメーター</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=9" title="節を編集: エイリアスパラメーター">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>D言語のテンプレートはまたエイリアスパラメーターを受け入れることができる。エイリアスパラメーターはC++の<code>typedef</code>と似ているが、テンプレートパラメーターを置き換えることもできる。これは今後利用可能なC++0x仕様に追加されるであろう、C++のテンプレートのテンプレート引数にある機能の拡張版である。エイリアスパラメーターは、テンプレート、関数、型、その他のコンパイル時のシンボルを指定できる。これは例えばテンプレート関数の中に関数をプログラマーが<i>挿入</i>できるようにする。
+</p><p>&lt;syntaxhighlight lang="d"&gt;
+template wrapper(alias Fn) {
+</p>
+<pre>   // "extern(C)"インターフェイスでD言語の関数をラップする
+   extern(C) void wrapper() {
+       Fn();
+   }
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この種のテンプレートはC言語APIとD言語のコードを接続するときに使いやすいだろう。仮想のC言語APIが関数ポインタを要求する場合、このようにテンプレートを利用できる。
+</p><p>&lt;syntaxhighlight lang="d"&gt;
+void foo() {
+</p>
+<pre>   // ...
+</pre>
+<p>}
+</p><p>some_c_function(&amp;wrapper!(foo));
+&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id="Java.E3.81.AE.E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.82.AF.E3.82.B9"></span><span class="mw-headline" id="Javaのジェネリクス">Javaのジェネリクス</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=10" title="節を編集: Javaのジェネリクス">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2004年、<a href="/wiki/Java_Platform,_Standard_Edition" title="Java Platform, Standard Edition">J2SE</a> 5.0の一部として<a href="/wiki/Java" title="Java">Java</a>にジェネリクスが追加された。C++のテンプレートとは違い、Javaコードのジェネリクスはジェネリッククラスの1つのコンパイルされたバージョンだけを生成する。ジェネリックJavaクラスは型パラメータとしてオブジェクト型だけを利用できる（基本型は許されない）。従って<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Integer.html" rel="nofollow">Integer</a></code>&gt;</code>は正しいのに対して<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;int&gt;</code>は正しくない。
+</p><p>Javaではジェネリクスはコンパイル時に型の正しさをチェックする。そしてジェネリック型情報は<a href="/wiki/%E5%9E%8B%E6%B6%88%E5%8E%BB" title="型消去">型消去</a> (type erasure) と呼ばれるプロセスを通じて除去され、親クラスの型情報だけが保持される。例えば、<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Integer.html" rel="nofollow">Integer</a></code>&gt;</code>は全てのオブジェクトを保有できる非ジェネリックの（生の）<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>に変換されるだろう。しかしながら、コンパイル時のチェックにより、コードが未チェックのコンパイルエラーを生成しない限り、型が正しいようにコードの出力が保証される。
+</p><p>このプロセスの典型的な副作用はジェネリック型の情報を実行時に参照できないことである。従って、実行時には、<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Integer.html" rel="nofollow">Integer</a></code>&gt;</code>と<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/String.html" rel="nofollow">String</a></code>&gt;</code>が同じ<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>クラスであることを示す。この副作用を緩和するひとつの方法は<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/Collection.html" rel="nofollow">Collection</a></code>の宣言を修飾するJavaの<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/Collections.html#checkedList-java.util.List-java.lang.Class-" rel="nofollow">Collections.checkedList(List&lt;E&gt;, Class&lt;E&gt;)</a></code>メソッドを利用して、実行時に型付けされた<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/Collection.html" rel="nofollow">Collection</a></code>の不正利用（例えば不適切な型の挿入）をチェックすることによるものである。これは旧式のコードとジェネリクスを利用するコードを共存運用したい場合の状況で役立つ。
+</p><p>C++やC#のように、Javaはネストされたジェネリック型を定義できる。従って、例えば<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/Map.html" rel="nofollow">Map</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Integer.html" rel="nofollow">Integer</a></code>, <code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/String.html" rel="nofollow">String</a></code>&gt;&gt;</code>は有効な型である。
+</p>
+<h3><span id=".E3.83.AF.E3.82.A4.E3.83.AB.E3.83.89.E3.82.AB.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="ワイルドカード">ワイルドカード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=11" title="節を編集: ワイルドカード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Javaのジェネリック型パラメーターは特定のクラスに制限されない。与えられたジェネリックオブジェクトが持っているかもしれないパラメーターの型の境界を指定するためにJavaでは<b>ワイルドカード</b>を使用できる。例えば、<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;?&gt;</code>は無名のオブジェクト型を持つリストを表す。引数として<code>List&lt;?&gt;</code>を取るようなメソッドは任意の型のリストを取ることができる。リストからの読み出しは<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Object.html" rel="nofollow">Object</a></code>型のオブジェクトを返し、そしてnullではない要素をリストへ書き込むことはパラメーター型が任意ではないために許されない。
+</p><p>ジェネリック要素の制約を指定するために、ジェネリック型が境界クラスのサブクラス（クラスの拡張と<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%8A%BD%E8%B1%A1%E5%9E%8B)" title="インタフェース (抽象型)">インターフェイス</a>の実装のいずれか）であることを示すキーワード<code>extends</code>を使用できる。そして<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;? extends <code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>&gt;</code>は与えられたリストが<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>クラスを拡張するオブジェクトを保持することを意味する。従って、リストが何の要素の型を保持しているのかがわからないためにnullではない要素の書き込みが許されないのに対し、リストから要素を読むと<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>が返るだろう。
+</p><p>ジェネリック要素の下限を指定するために、ジェネリック型が境界クラスのスーパークラスであることを示すキーワード<code>super</code>が使用される。そして<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;? super <code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>&gt;</code>は<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>&gt;</code>や<code><code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/util/List.html" rel="nofollow">List</a></code>&lt;<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Object.html" rel="nofollow">Object</a></code>&gt;</code>でありえる。リストに正しい型を保存することが保証されるため任意の<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Number.html" rel="nofollow">Number</a></code>型の要素をリストに追加できるのに対し、リストからの読み出しでは<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Object.html" rel="nofollow">Object</a></code>型のオブジェクトを返す。
+</p>
+<h3><span id=".E5.88.B6.E7.B4.84"></span><span class="mw-headline" id="制約">制約</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=12" title="節を編集: 制約">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Javaのジェネリクスの実装上の制約により、配列のコンポーネントの型が何であるべきかを特定する方法がないために、ジェネリック型の配列を作成することは不可能である。従って<code>new T[size];</code>経由のようにメソッドが型引数<code>T</code>を持っていた場合はプログラマはその型の新しい配列を生成することができない。しかし、この制約はJavaの<a href="/wiki/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="リフレクション (情報工学)">リフレクション</a>のメカニズムを利用して回避することが可能である。クラス<code>T</code>のインスタンスが利用可能な場合、<code>T</code>に対応する<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/Class.html" rel="nofollow">Class</a></code>オブジェクトのオブジェクトから1つを得て、新しい配列を生成するために<code><a class="external text" href="https://docs.oracle.com/javase/jp/9/docs/api/java/lang/reflect/Array.html#newInstance-java.lang.Class-int-" rel="nofollow">java.lang.reflect.Array.newInstance(Class, int)</a></code>を使うことができる。もう１つのJavaのジェネリクスの実装上の制約は、<code>&lt;?&gt;</code>以外に、型パラメーターの型でジェネリッククラスの配列を生成することが不可能であるということだ。これは言語の配列の取り扱い方法に起因するものであり、タイプセーフを維持するために、明示的にキャストしなくともコンパイラが警告を出さないことを全てのコードで保証する必要があるからである。
+</p>
+<h2><span id="Haskell.E3.81.AE.E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.83.83.E3.82.AF.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="Haskellのジェネリックプログラミング">Haskellのジェネリックプログラミング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=13" title="節を編集: Haskellのジェネリックプログラミング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Haskell" title="Haskell">Haskell</a>言語にはパラメータ化された型 (parameterized types)、パラメータ多相 (parametric polymorphism)、そしてJavaのジェネリクスやC++のテンプレートの両方に似たプログラミングのスタイルをサポートする型クラス (type classes) がある。Haskellプログラムではこれらの構文を様々なところで利用しており、避けることはかなり難しい。Haskellはまた、さらなるジェネリック性と、多態が提供する以上の再利用性を目指すようにプログラマーと言語開発者を奮起させる、さらに独特なジェネリックプログラミングの機能がある。
+</p><p>Haskellの6つの事前定義された型クラス（同一性を比較できる<code>Eq</code>という型と、値を文字列に変換できる<code>Show</code>という型を含む）は<i>導出インスタンス</i> (derived instances) をサポートしている特別なプロパティを持つ。プログラマーが新しい型を定義するということは、クラスのインスタンスを宣言するときに、普通であれば必要なクラスメソッドの実装を提供することなく、この型がこれらの特別型クラスのインスタンスとなることを明示できるということである。全ての必要なメソッドは型の構造に基づいて導出（つまり自動的に生成）される。
+</p><p>例として、下記の<a href="/wiki/%E4%BA%8C%E5%88%86%E6%9C%A8" title="二分木">二分木</a>型の宣言はこれが<code>Eq</code>と<code>Show</code>のクラスのインスタンスになることを示している。
+</p>
+<pre>data BinTree a = Leaf a | Node (BinTree a) a (Bintree a)
+      deriving (Eq, Show)
+</pre>
+<p><code>T</code>がそれらの演算子を自分でサポートしているのであれば、任意の型の<code>BinTree T</code>形式のために比較関数 (<code>==</code>) と文字列表現関数 (<code>show</code>) が自動的に定義される。
+</p><p><code>Eq</code>と<code>Show</code>の導出インスタンスへのサポートは、それらのメソッドである<code>==</code>と<code>show</code>を、パラメーター的な多態関数とは質的に異なるジェネリックにする。これらの"関数"（より正確には型でインデックス付けられた (type-indexed) 関数のファミリー）はたくさんの異なる型の値を受け入れることができ、各引数の型によってそれらは異なる動作をするが、新しい型へのサポートを追加するためにわずかな作業が必要とされる。Ralf Hinze氏 (2004) は、あるプログラミングテクニックによりユーザー定義型のクラスに対して同様の結果を達成できることを示した。彼以外の多くの研究者はこれと、Haskellの流れとは違う種類のジェネリック性やHaskellの拡張（下記参照）に対する取り組みを提案していた。
+</p>
+<h3><span class="mw-headline" id="PolyP">PolyP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=14" title="節を編集: PolyP">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PolyPはHaskellに対する最初のジェネリックプログラミング言語拡張であった。PolyPではジェネリック関数は<i>polytypic</i>と呼ばれた。通常データ型のパターン<a class="mw-redirect" href="/wiki/%E3%83%95%E3%82%A1%E3%83%B3%E3%82%AF%E3%82%BF" title="ファンクタ">ファンクタ</a>の構造によって構造的な導出を通じて定義できるpolytypic関数のような特別な構文を言語に導入した。PolyPでの通常データ型はHaskellのデータ型のサブセットである。通常データ型tは<i>* → *</i>の種類でなければならず、もし<i>a</i>が定義における表面的な型の引数である場合は、<i>t</i>に対する全ての再帰呼び出しは<i>t a</i>形式でなければならない。これらの制約は、異なる形式の再帰呼び出しである入れ子のデータタイプと同様に、上位に種類付けされたデータ型を規定する。
+</p><p>PolyPの展開された関数はここに例として示される。
+</p>
+<pre>   flatten :: Regular d =&gt; d a -&gt; [a]
+   flatten = cata fl
+   
+   polytypic fl :: f a [a] -&gt; [a]
+     case f of
+       g+h -&gt; either fl fl
+       g*h -&gt; \(x,y) -&gt; fl x ++ fl y
+       () -&gt; \x -&gt; []
+       Par -&gt; \x -&gt; [x]
+       Rec -&gt; \x -&gt; x
+       d@g -&gt; concat . flatten . pmap fl
+       Con t -&gt; \x -&gt; []
+   
+   cata :: Regular d =&gt; (FunctorOf d a b -&gt; b) -&gt; d a -&gt; b
+</pre>
+<h3><span id=".E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.83.83.E3.82.AFHaskell"></span><span class="mw-headline" id="ジェネリックHaskell">ジェネリックHaskell</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=15" title="節を編集: ジェネリックHaskell">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ジェネリックHaskellは<a href="/wiki/%E3%83%A6%E3%83%88%E3%83%AC%E3%83%92%E3%83%88%E5%A4%A7%E5%AD%A6" title="ユトレヒト大学">ユトレヒト大学</a>で開発されたHaskellのもう１つの拡張だ。この拡張は下記の特徴がある。
+</p>
+<ul><li><i>Type-indexed values</i>は様々なHaskell型のコンストラクタ（ユニット、基本型、合計、積、ユーザー定義型のコンストラクタ）に渡ってインデックス付けられた値として定義される。さらに<i>コンストラクタケース</i>を使って特定のコンストラクタに対してtype-indexed valuesの動作を指定することもでき、<i>デフォルトケース</i>を使ったもう一つの中で１つのジェネリック定義を再利用することもできる。</li></ul>
+<p>type-indexed valueの結果は任意の型に特殊化され得る。
+</p>
+<ul><li><i>Kind-indexed types</i>は<i>*</i>と<i>k → k</i>の両方のケースを与えることで定義された種別に対してインデックス付けられた型である。インスタンスは種別にkind-indexed typeを適用することで得られる。</li>
+<li>ジェネリック定義は型もしくは種別にそれらを適用することで利用できる。これは<i>ジェネリックアプリケーション</i>と呼ばれる。どの種類のジェネリック定義が適用されたかに依存して結果は型か値になる。</li>
+<li><i>Generic abstraction</i>はジェネリック定義が（与えられた種別の）型パラメーターの抽象化で定義されることを可能にする。</li>
+<li><i>Type-indexed types</i>は型コンストラクタに対してインデックス付けられた型である。これらは型がもっとジェネリック値に取り入るために利用できる。type-indexed typesの結果は任意の型に特殊化され得る。</li></ul>
+<p>ジェネリックHaskellの比較関数の一例として。
+</p>
+<pre>   type Eq {[ * ]} t1 t2 = t1 -&gt; t2 -&gt; Bool
+   type Eq {[ k -&gt; l ]} t1 t2 = forall u1 u2. Eq {[ k ]} u1 u2 -&gt; Eq {[ l ]} (t1 u1) (t2 u2)
+   
+   eq {| t :: k |} :: Eq {[ k ]} t t
+   eq {| Unit |} _ _ = True
+   eq {| :+: |} eqA eqB (Inl a1) (Inl a2) = eqA a1 a2
+   eq {| :+: |} eqA eqB (Inr b1) (Inr b2) = eqB b1 b2
+   eq {| :+: |} eqA eqB _ _ = False
+   eq {| :*: |} eqA eqB (a1 :*: b1) (a2 :*: b2) = eqA a1 a2 &amp;&amp; eqB b1 b2
+   eq {| Int |} = (==)
+   eq {| Char |} = (==)
+   eq {| Bool |} = (==)
+</pre>
+<h3><span id=".E3.80.8C.E6.B1.BA.E3.81.BE.E3.82.8A.E6.96.87.E5.8F.A5.E3.82.92.E6.8D.A8.E3.81.A6.E3.82.8B.E3.80.8D.E3.82.A2.E3.83.97.E3.83.AD.E3.83.BC.E3.83.81"></span><span class="mw-headline" id="「決まり文句を捨てる」アプローチ">「決まり文句を捨てる」アプローチ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=16" title="節を編集: 「決まり文句を捨てる」アプローチ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>決まり文句を捨てるアプローチ (Scrap your boilerplate approach) は簡易的なジェネリックプログラミングのHaskellに対するアプローチである (Lämmel and Peyton Jones, 2003)。このアプローチはHaskellのGHC&gt;=6.0の実装でサポートされる。このアプローチを使うことで、ジェネリックな読み込み、ジェネリックな明示、ジェネリックな比較（つまりgread、gshow、geq）と同様に、横断スキーム（例えばいつでもどこでも）のようなジェネリック関数をプログラマーは記述できる。このアプローチはタイプセーフなキャストとコンストラクタアプリケーションの実行のための一部の基本要素に基づいている。
+</p>
+<h2><span id="C.23.E3.81.A8.NET.E3.81.AE.E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.83.83.E3.82.AF.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="C#と.NETのジェネリックプログラミング">C#と.NETのジェネリックプログラミング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=17" title="節を編集: C#と.NETのジェネリックプログラミング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C#（およびその他の.NET言語）のジェネリクスは.NET Framework 2.0の一部として2005年11月に追加された。Javaと似てはいるが、.NETのジェネリクスは、コンパイラによるジェネリクス型から非ジェネリクス型へのコンバートとしてではなく、実行時に実装される。このことにより、ジェネリクス型に関するあらゆる情報はメタデータとして保存される。
+</p><p>.NETジェネリクスの機能
+</p>
+<ul><li>型情報を削除せず、<a href="/wiki/%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E3%83%A9%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0" title="共通言語ランタイム">CLR</a>の内部でジェネリクスが構築されるため（そしてコンパイラ上では全く構築しないため）、キャストや動的チェックの実行からくるパフォーマンスヒットがない。また、プログラマーはリフレクションを通じてジェネリック情報にアクセスできる。
+<ul><li>型情報を削除しないので、Javaでは不可能なジェネリック型の配列の生成が可能。</li></ul></li>
+<li>ジェネリック型の引数として参照型だけでなく値型（組み込みの基本型、およびユーザー定義型の両方）も利用できる。値型の場合、JITコンパイラは特殊化のためにネイティブコードの新しいインスタンスを作成する。このことにより<a href="/wiki/%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E5%8C%96" title="ボックス化">ボックス化</a>をする必要がなくなり、パフォーマンスが向上する。</li>
+<li>Javaと同様、ジェネリック型引数がそれら自身のジェネリック型であるようにできる。つまり、<code>List&lt;List&lt;Dictionary&lt;int, int&gt;&gt;&gt;</code>のような型は有効である。</li>
+<li>C#（および一般の.NET）は、キーワード<code>where</code>を使用することで、値型/参照型、デフォルトコンストラクタの存在、親クラス、実装するインターフェイスなどでジェネリック型を制約することができる。</li>
+<li><a href="/wiki/%E5%85%B1%E5%A4%89%E6%80%A7%E3%81%A8%E5%8F%8D%E5%A4%89%E6%80%A7_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="共変性と反変性 (計算機科学)">共変性と反変性</a>をサポートしている。C# 4.0以降ではout修飾子またはin修飾子により、型パラメータを共変または反変にすることができる。これによって、ジェネリック型の代入と使用の柔軟性が向上する。</li></ul>
+<p>&lt;syntaxhighlight lang="csharp"&gt;
+using System;
+using System.Collections.Generic;
+</p><p>static int FirstIndexOfMax&lt;T&gt;(List&lt;T&gt; list) where T: IComparable&lt;T&gt;
+{
+</p>
+<pre>   if (list.Count == 0) {
+       return -1;
+   }
+   int index = -1;
+   for (int i = 0; i &lt; list.Count; ++i) {
+       if ((index == -1 &amp;&amp; list[i] != null) ||
+           (index &gt;= 0 &amp;&amp; list[index] != null &amp;&amp; list[i] != null &amp;&amp; list[index].CompareTo(list[i]) &lt; 0)) {
+           index = i;
+       }
+   }
+   return index;
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この例では<code>FirstIndexOfMax</code>メソッドの型パラメータ<code>T</code>に対して、<code>IComparable&lt;T&gt;</code>インターフェイスを実装していなければならないという制約を指定している。このことにより、<code>IComparable&lt;T&gt;</code>インターフェイスのメンバである<code>CompareTo</code>メソッドが利用可能になっている。
+</p><p><a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a>は.NETのジェネリクスとC++のテンプレート両方をサポートする。ただしこれらの間に互換性はない。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A8.80.E8.AA.9E.E3.81.AE.E3.82.B8.E3.82.A7.E3.83.8D.E3.83.AA.E3.83.83.E3.82.AF.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="その他の言語のジェネリックプログラミング機能">その他の言語のジェネリックプログラミング機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=18" title="節を編集: その他の言語のジェネリックプログラミング機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>数多くの関数型言語はパラメータ化された型 (parameterized types) とパラメータ多相 (parametric polymorphism) の形で小規模なジェネリックプログラミングをサポートする。さらに標準MLとOCamlはクラステンプレートとAdaのジェネリックパッケージに似たファンクタを提供する。
+</p><p><a href="/wiki/Verilog" title="Verilog">Verilog</a>のモジュールは1つ以上のパラメタを取ることができる。パラメタの実際の値は、そのモジュールを実体化する際に与えられる。一例としてジェネリックな<a class="new" href="/w/index.php?title=En:Hardware_register&amp;action=edit&amp;redlink=1" title="En:Hardware register (存在しないページ)">レジスタ</a>アレイがあり、アレイの幅がパラメタで与えられている。そのようなアレイをジェネリックなワイヤベクトルと組み合わせることにより、単一のモジュール実装を用いて任意のビット幅を持つジェネリックなバッファやメモリを作ることができる。<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=19" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="references-small"><div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Stanley B. Lippman. “<a class="external text" href="http://msdn.microsoft.com/msdnmag/issues/05/04/PureC/" rel="nofollow">Pure C++:Generic Programming Under .NET</a>”.   <a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>・<a class="mw-redirect" href="/wiki/MSDN" title="MSDN">MSDN</a>マガジン. <span title="">2008年12月28日</span>閲覧。</cite><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2019-03）">リンク切れ</span></a></i>]</sup></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a href="/wiki/%E7%B5%B1%E4%B8%80%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="統一モデリング言語">統一モデリング言語</a> (UML) の用語では、それぞれ汎化 (generalization) および特化 (specialization) と呼ぶ。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">Verilog by Example, Section <i>The Rest for Reference</i>.  Blaine C. Readler, Full Arc Press, 2011.  ISBN 978-0-9834973-0-1</span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=20" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="mw-redirect" href="/wiki/%E7%B7%8F%E7%A7%B0%E5%9E%8B" title="総称型">総称型</a></li>
+<li><a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a></li>
+<li><a href="/wiki/%E3%83%80%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" title="ダック・タイピング">ダック・タイピング</a></li></ul>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331192921
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.238 seconds
+Real time usage: 0.415 seconds
+Preprocessor visited node count: 2990/1000000
+Post‐expand include size: 27496/2097152 bytes
+Template argument size: 7102/2097152 bytes
+Highest expansion depth: 31/40
+Expensive parser function count: 3/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2493/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5623808/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  338.165      1 -total
+ 22.20%   75.060      1 テンプレート:Cite_web
+ 18.39%   62.182      1 テンプレート:著作権問題調査依頼
+ 17.57%   59.414      1 テンプレート:Normdaten
+ 17.27%   58.412      1 テンプレート:Mbox
+ 14.08%   47.609      1 テンプレート:Full
+ 13.54%   45.804      5 テンプレート:Fix
+  6.55%   22.144     36 テンプレート:Javadoc:SE
+  5.63%   19.027      5 テンプレート:Fix/title
+  5.05%   17.065      1 テンプレート:Accessdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:740871-0!canonical and timestamp 20220331192920 and revision id 464678. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ジェネリックプログラミング&amp;oldid=464678">http://localhost:8080/w/index.php?title=ジェネリックプログラミング&amp;oldid=464678</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A4%96%E9%83%A8%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B43%E6%9C%88" title="カテゴリ:外部リンクがリンク切れになっている記事/2019年3月">外部リンクがリンク切れになっている記事/2019年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%91%97%E4%BD%9C%E6%A8%A9%E5%95%8F%E9%A1%8C%E8%AA%BF%E6%9F%BB%E4%BE%9D%E9%A0%BC" title="カテゴリ:著作権問題調査依頼">著作権問題調査依頼</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E8%AA%B0)/2019%E5%B9%B4" title="カテゴリ:言葉を濁した記述のある記事 (誰)/2019年">言葉を濁した記述のある記事 (誰)/2019年</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%AA%AC%E6%98%8E%E3%81%8C%E6%B1%82%E3%82%81%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E6%96%87%E7%AB%A0%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:説明が求められている文章がある記事">説明が求められている文章がある記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E5%B7%A5%E5%AD%A6" title="カテゴリ:ソフトウェア工学">ソフトウェア工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="カテゴリ:プログラミングパラダイム">プログラミングパラダイム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="カテゴリ:ポリモーフィズム (計算機科学)">ポリモーフィズム (計算機科学)</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D740871%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D740871%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;oldid=464678" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月12日 (月) 13:48 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.238","walltime":"0.415","ppvisitednodes":{"value":2990,"limit":1000000},"postexpandincludesize":{"value":27496,"limit":2097152},"templateargumentsize":{"value":7102,"limit":2097152},"expansiondepth":{"value":31,"limit":40},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2493,"limit":5000000},"timingprofile":["100.00%  338.165      1 -total"," 22.20%   75.060      1 テンプレート:Cite_web"," 18.39%   62.182      1 テンプレート:著作権問題調査依頼"," 17.57%   59.414      1 テンプレート:Normdaten"," 17.27%   58.412      1 テンプレート:Mbox"," 14.08%   47.609      1 テンプレート:Full"," 13.54%   45.804      5 テンプレート:Fix","  6.55%   22.144     36 テンプレート:Javadoc:SE","  5.63%   19.027      5 テンプレート:Fix/title","  5.05%   17.065      1 テンプレート:Accessdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5623808,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331192921","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":546});});</script>
+</body></html>

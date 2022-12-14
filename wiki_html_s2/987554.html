@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>PowerVR - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-PowerVR rootpage-PowerVR skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">PowerVR</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>PowerVR</b>（パワーブイアール）は、<a href="." id="link_a_1" title="イギリス">イギリス</a>の<a href="." id="link_a_2" title="ファブレス">ファブレス</a>企業である<a href="." id="link_a_3" title="ビデオロジック (存在しないページ)">ビデオロジック</a>（現：<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_4" title="イマジネーションテクノロジーズ (存在しないページ)">イマジネーションテクノロジーズ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Imagination_Technologies&amp;action=edit&amp;redlink=1" title="En:Imagination Technologies (存在しないページ)">英語版</a>）</span></span>）が開発した、<a href="." id="link_a_5" title="グラフィックコントローラIPコア">グラフィックコントローラIPコア</a>およびそれを<a href="." id="link_a_6" title="集積回路">集積回路</a>として実装したグラフィックチップである。チップ製造は<a href="." id="link_a_7" title="日本電気">NEC</a>や<a href="." id="link_a_8" title="STマイクロエレクトロニクス">STマイクロエレクトロニクス</a><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>等が行なってきた。当初、メインターゲットとされていた<a href="." id="link_a_9" title="パーソナルコンピュータ">パソコン</a>用<a href="." id="link_a_10" title="ビデオカード">ビデオカード</a>としては、ほとんど普及しなかったが、比較的メモリへの負荷が少ないというその特徴から、家庭用<a href="." id="link_a_11" title="ゲーム機">ゲーム機</a>および<a href="." id="link_a_12" title="アーケードゲーム基板">アーケードゲーム基板</a>、<a href="." id="link_a_13" title="携帯電話">携帯電話</a>、<a href="." id="link_a_14" title="携帯情報端末">携帯情報端末</a> (PDA)、<a href="." id="link_a_15" title="カーナビゲーション">カーナビゲーション</a>といった<a href="." id="link_a_16" title="組み込みシステム">組み込みシステム</a>に広く採用されている。
+</p><p>また <a href="." id="link_a_17" title="Intel Atom">Intel Atom</a>、<a href="." id="link_a_18" title="Appleシリコン">Apple Axシリーズ</a>、<a href="." id="link_a_19" title="Texas Instruments OMAP">Texas Instruments OMAP</a> などに GPU として組み込まれ、携帯電話・タブレットなどに広く採用されている。
+</p><p>特徴は、<a href="." id="link_a_20" title="Zバッファ">Zバッファ</a>法で通常行なうような「手前にある物体は上書きする」という方式を採らず、「一番手前の物体しか描画しない」という手法により、Zバッファ用のメモリをほぼ不要にした点である。タイル単位でこの処理を行なうことから "tile-based deferred rendering" と呼んでおり、TBDRと略す（詳細は<a class="new" href="/w/index.php?title=W:Tiled_rendering&amp;action=edit&amp;redlink=1" title="W:Tiled rendering (存在しないページ)">w:Tiled rendering</a>を参照）。2009年現在、<a href="." id="link_a_21" title="OpenGL ES">OpenGL ES</a>の<a href="." id="link_a_22" title="プログラマブルシェーダー">プログラマブルシェーダー</a>や、<a href="." id="link_a_23" title="H.264">H.264</a>や<a href="." id="link_a_24" title="MPEG-2">MPEG-2</a>、<a href="." id="link_a_25" title="MPEG-4">MPEG-4</a>などの動画コーデックに対応した高機能な製品をリリースしている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#ラインナップ"><span class="tocnumber">1</span> <span class="toctext">ラインナップ</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#PowerVR_チップセットの一覧"><span class="tocnumber">2</span> <span class="toctext">PowerVR チップセットの一覧</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Series_1"><span class="tocnumber">2.1</span> <span class="toctext">Series 1</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Series_2"><span class="tocnumber">2.2</span> <span class="toctext">Series 2</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Series_3"><span class="tocnumber">2.3</span> <span class="toctext">Series 3</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Series_4"><span class="tocnumber">2.4</span> <span class="toctext">Series 4</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Series_5"><span class="tocnumber">2.5</span> <span class="toctext">Series 5</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Series_5XT"><span class="tocnumber">2.6</span> <span class="toctext">Series 5XT</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Series_6"><span class="tocnumber">2.7</span> <span class="toctext">Series 6</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Series_6XE"><span class="tocnumber">2.8</span> <span class="toctext">Series 6XE</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Series_6XT"><span class="tocnumber">2.9</span> <span class="toctext">Series 6XT</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Series_7XE"><span class="tocnumber">2.10</span> <span class="toctext">Series 7XE</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Series_7XT"><span class="tocnumber">2.11</span> <span class="toctext">Series 7XT</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#搭載製品"><span class="tocnumber">3</span> <span class="toctext">搭載製品</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#ビデオカード"><span class="tocnumber">3.1</span> <span class="toctext">ビデオカード</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#オンボードビデオ"><span class="tocnumber">3.2</span> <span class="toctext">オンボードビデオ</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#家庭用ゲーム機およびアーケードゲーム機"><span class="tocnumber">3.3</span> <span class="toctext">家庭用ゲーム機およびアーケードゲーム機</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#携帯電話"><span class="tocnumber">3.4</span> <span class="toctext">携帯電話</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#PDA・モバイル端末"><span class="tocnumber">3.5</span> <span class="toctext">PDA・モバイル端末</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#カーナビゲーション"><span class="tocnumber">3.6</span> <span class="toctext">カーナビゲーション</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#その他"><span class="tocnumber">3.7</span> <span class="toctext">その他</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#注釈"><span class="tocnumber">4.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#出典"><span class="tocnumber">4.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#外部リンク"><span class="tocnumber">5</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E3.83.A9.E3.82.A4.E3.83.B3.E3.83.8A.E3.83.83.E3.83.97"></span><span class="mw-headline" id="ラインナップ">ラインナップ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=1" title="節を編集: ラインナップ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl><dt>PowerVR シリーズ1 (PCX1, μPD62010およびPCX2, μPD62011)</dt>
+<dd>1996年、秒間30万ポリゴンのPCX1発表。1997年、性能が秒間45万ポリゴンに向上したPCX2発表。これらは3D演算機能と4MBの専用RAMのみ搭載したPCIバスのボードで、表示には別途ビデオカードが必要となる。ビデオキャプチャボードのオーバーレイ機能と同様に、DirectDrawを経由し、ビデオカードのVRAMに直接表示データを書き込む。グラフィックライブラリはDirect3Dのほか、オリジナルのSGL (Super Graphics Library) が利用できる。</dd>
+<dt>PowerVR シリーズ2 (PowerVR2)</dt>
+<dd>1998年2月23日発表。2D表示機能を搭載し、単独で使用できる2D/3Dビデオカードとなった。<a href="/wiki/%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88" title="ドリームキャスト">ドリームキャスト</a>に搭載されているほか、PC用のAGPカードも存在したが、日本ではほとんど普及しなかった。</dd></dl>
+
+<dl><dt>PowerVR シリーズ3</dt>
+<dd>2000年、<a href="/wiki/KYRO" title="KYRO">KYRO</a>発表。KYRO IIは2001年発表。KYROのバグフィックスとクロックアップ。</dd>
+<dt>PowerVR シリーズ4</dt>
+<dt>PowerVR シリーズ5</dt>
+<dt>PowerVR VXD370</dt>
+<dd>HD（<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%82%A4%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%8B%E3%82%B7%E3%83%A7%E3%83%B3" title="ハイディフィニション">ハイディフィニション</a>) 品質のデコードなどに向けた<a href="/wiki/IP%E3%82%B3%E3%82%A2" title="IPコア">IPコア</a>。</dd>
+<dt>PowerVR M2VXファミリー</dt>
+<dd>SD（標準精細度）品質のデコードなどに向けたIPコア。</dd>
+<dt>PowerVR MVED1</dt>
+<dd>モバイル機器に向けたIPコア。</dd></dl>
+<h2><span id="PowerVR_.E3.83.81.E3.83.83.E3.83.97.E3.82.BB.E3.83.83.E3.83.88.E3.81.AE.E4.B8.80.E8.A6.A7"></span><span class="mw-headline" id="PowerVR_チップセットの一覧">PowerVR チップセットの一覧</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=2" title="節を編集: PowerVR チップセットの一覧">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><sup>[1]</sup> 公式 Imgtec データ</li>
+<li><sup>[2]</sup> USSE (Universal Scalable Shader Engine) pipes/TMUs</li>
+<li><sup>[3]</sup> USSE2 (Universal Scalable Shader Engine 2) pipes/TMUs</li>
+<li>全モデル Tile based deferred rendering (TBDR) 対応</li></ul>
+<h3><span class="mw-headline" id="Series_1">Series 1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=3" title="節を編集: Series 1">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>全モデル <a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> 3.0 サポート</li></ul>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">Launch
+</th>
+<th rowspan="2">Fab (nm)
+</th>
+<th rowspan="2">メモリ (MiB)
+</th>
+<th rowspan="2">コアクロック (MHz)
+</th>
+<th rowspan="2">メモリクロック (MHz)
+</th>
+<th rowspan="2">設定コア<sup>1</sup>
+</th>
+<th colspan="4"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A3%E3%83%AB%E3%83%AC%E3%83%BC%E3%83%88&amp;action=edit&amp;redlink=1" title="フィルレート (存在しないページ)">フィルレート</a>
+</th>
+<th colspan="3">メモリ
+</th></tr>
+<tr>
+<th>メガ命令/s
+</th>
+<th>メガピクセル/s
+</th>
+<th>MTextels/s
+</th>
+<th>メガ頂点/s
+</th>
+<th>帯域 (GB/s)
+</th>
+<th>バス種別
+</th>
+<th>バス幅 (ビット)
+</th></tr>
+<tr>
+<th>PCX1
+</th>
+<td>1996
+</td>
+<td>500
+</td>
+<td>4
+</td>
+<td>60
+</td>
+<td>60
+</td>
+<td>1:0:1:1
+</td>
+<td>60
+</td>
+<td>60
+</td>
+<td>60
+</td>
+<td>0
+</td>
+<td>0.48
+</td>
+<td>SDR
+</td>
+<td>64
+</td></tr>
+<tr>
+<th>PCX2
+</th>
+<td>1997
+</td>
+<td>350
+</td>
+<td>4
+</td>
+<td>66
+</td>
+<td>66
+</td>
+<td>1:0:1:1
+</td>
+<td>66
+</td>
+<td>66
+</td>
+<td>66
+</td>
+<td>0
+</td>
+<td>0.528
+</td>
+<td>SDR
+</td>
+<td>64
+</td></tr>
+</tbody></table>
+<ul><li><sup>1</sup> ピクセルシェーダ : 頂点シェーダ  : テクスチャマッピングユニット : レンダー出力ユニット</li></ul>
+<h3><span class="mw-headline" id="Series_2">Series 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=4" title="節を編集: Series 2">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>全モデル 250 nm プロセスで製造</li>
+<li>全モデル <a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> 6.0 対応。PMX1 は Mini-GL 対応。</li></ul>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">Launch
+</th>
+<th rowspan="2">メモリ (MiB)
+</th>
+<th rowspan="2">コアクロック (MHz)
+</th>
+<th rowspan="2">メモリクロック (MHz)
+</th>
+<th rowspan="2">設定コア<sup>1</sup>
+</th>
+<th colspan="4">フィルレート
+</th>
+<th colspan="3">メモリ
+</th></tr>
+<tr>
+<th>メガ命令/s
+</th>
+<th>メガピクセル/s
+</th>
+<th>MTextels/s
+</th>
+<th>メガ頂点/s
+</th>
+<th>帯域 (GB/s)
+</th>
+<th>バス種別
+</th>
+<th>バス幅 (ビット)
+</th></tr>
+<tr>
+<th>CLX2
+</th>
+<td>1998
+</td>
+<td>8
+</td>
+<td>100
+</td>
+<td>100
+</td>
+<td>1:0:1:1
+</td>
+<td>100
+</td>
+<td>100
+</td>
+<td>100
+</td>
+<td>0
+</td>
+<td>0.8
+</td>
+<td>SDR
+</td>
+<td>64
+</td></tr>
+<tr>
+<th>PMX1
+</th>
+<td>1999
+</td>
+<td>32
+</td>
+<td>125
+</td>
+<td>125
+</td>
+<td>1:0:1:1
+</td>
+<td>125
+</td>
+<td>125
+</td>
+<td>125
+</td>
+<td>0
+</td>
+<td>1
+</td>
+<td>SDR
+</td>
+<td>64
+</td></tr>
+</tbody></table>
+<ul><li><sup>1</sup> ピクセルシェーダ : 頂点シェーダ  : テクスチャマッピングユニット : レンダー出力ユニット</li></ul>
+<h3><span class="mw-headline" id="Series_3">Series 3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=5" title="節を編集: Series 3">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>全モデル <a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> 6.0 対応</li></ul>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">Launch
+</th>
+<th rowspan="2">Fab (nm)
+</th>
+<th rowspan="2">メモリ (MiB)
+</th>
+<th rowspan="2">コアクロック (MHz)
+</th>
+<th rowspan="2">メモリクロック (MHz)
+</th>
+<th rowspan="2">設定コア<sup>1</sup>
+</th>
+<th colspan="4">フィルレート
+</th>
+<th colspan="3">メモリ
+</th></tr>
+<tr>
+<th>メガ命令/s
+</th>
+<th>メガピクセル/s
+</th>
+<th>MTextels/s
+</th>
+<th>メガ頂点/s
+</th>
+<th>帯域 (GB/s)
+</th>
+<th>バス種別
+</th>
+<th>バス幅 (ビット)
+</th></tr>
+<tr>
+<th>STG4000
+</th>
+<td>2000
+</td>
+<td>250
+</td>
+<td>32/64
+</td>
+<td>115
+</td>
+<td>115
+</td>
+<td>2:0:2:2
+</td>
+<td>230
+</td>
+<td>230
+</td>
+<td>230
+</td>
+<td>0
+</td>
+<td>1.84
+</td>
+<td>SDR
+</td>
+<td>128
+</td></tr>
+<tr>
+<th>STG4500
+</th>
+<td>2001
+</td>
+<td>180
+</td>
+<td>32/64
+</td>
+<td>175
+</td>
+<td>175
+</td>
+<td>2:0:2:2
+</td>
+<td>350
+</td>
+<td>350
+</td>
+<td>350
+</td>
+<td>0
+</td>
+<td>2.8
+</td>
+<td>SDR
+</td>
+<td>128
+</td></tr>
+<tr>
+<th>STG4800
+</th>
+<td>Never Released
+</td>
+<td>180
+</td>
+<td>64
+</td>
+<td>200
+</td>
+<td>200
+</td>
+<td>2:0:2:2
+</td>
+<td>400
+</td>
+<td>400
+</td>
+<td>400
+</td>
+<td>0
+</td>
+<td>3.2
+</td>
+<td>SDR
+</td>
+<td>128
+</td></tr>
+<tr>
+<th>STG5500
+</th>
+<td>Never Released
+</td>
+<td>130
+</td>
+<td>64
+</td>
+<td>250
+</td>
+<td>250
+</td>
+<td>4:0:4:4
+</td>
+<td>1000
+</td>
+<td>1000
+</td>
+<td>1000
+</td>
+<td>0
+</td>
+<td>4
+</td>
+<td>DDR
+</td>
+<td>128
+</td></tr>
+</tbody></table>
+<ul><li><sup>1</sup> ピクセルシェーダ : 頂点シェーダ  : テクスチャマッピングユニット : レンダー出力ユニット</li></ul>
+<h3><span class="mw-headline" id="Series_4">Series 4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=6" title="節を編集: Series 4">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">年
+</th>
+<th rowspan="2">ダイサイズ (mm<sup>2</sup>)<sup>[1]</sup>
+</th>
+<th rowspan="2">設定コア
+</th>
+<th colspan="2">フィルレート (@ 200 MHz)
+</th>
+<th rowspan="2">バス幅 (ビット)
+</th>
+<th colspan="2"><a class="mw-redirect" href="/wiki/Application_Programming_Interface" title="Application Programming Interface">API</a> (version)
+</th></tr>
+<tr>
+<th>メガ三角形/s<sup>[1]</sup>
+</th>
+<th>メガピクセル/s<sup>[1]</sup>
+</th>
+<th><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a>
+</th>
+<th>OpenGL
+</th></tr>
+<tr>
+<td>MBX Lite
+</td>
+<td>Feb 2001
+</td>
+<td>4@130 nm?
+</td>
+<td>0/1/1/1
+</td>
+<td>1.0
+</td>
+<td>100
+</td>
+<td>64
+</td>
+<td>8.0
+</td>
+<td>1.1
+</td></tr>
+<tr>
+<td>MBX
+</td>
+<td>Feb 2001
+</td>
+<td>8@130 nm?
+</td>
+<td>0/1/1/1
+</td>
+<td>1.68
+</td>
+<td>150
+</td>
+<td>64
+</td>
+<td>8.0
+</td>
+<td>1.1
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Series_5">Series 5</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=7" title="節を編集: Series 5">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">年
+</th>
+<th rowspan="2">ダイサイズ (mm<sup>2</sup>)<sup>[1]</sup>
+</th>
+<th rowspan="2">設定コア<sup>[2]</sup>
+</th>
+<th colspan="2">フィルレート (@ 200 MHz)
+</th>
+<th rowspan="2">バス幅 (ビット)
+</th>
+<th colspan="3"><a class="mw-redirect" href="/wiki/Application_Programming_Interface" title="Application Programming Interface">API</a> (version)
+</th>
+<th rowspan="2">GFLOPS(@ 200 MHz)
+</th></tr>
+<tr>
+<th>メガ三角形/s<sup>[1]</sup>
+</th>
+<th>メガピクセル/s<sup>[1]</sup>
+</th>
+<th><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a>
+</th>
+<th>OpenGL
+</th>
+<th>OpenGL ES
+</th></tr>
+<tr>
+<td>SGX520
+</td>
+<td>Jul 2005
+</td>
+<td>2.6@65 nm
+</td>
+<td>1/1
+</td>
+<td>7
+</td>
+<td>250
+</td>
+<td>64
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>2.0
+</td>
+<td>0.8
+</td></tr>
+<tr>
+<td>SGX530
+</td>
+<td>Jul 2005
+</td>
+<td>7.2@65 nm
+</td>
+<td>2/1
+</td>
+<td>14
+</td>
+<td>500
+</td>
+<td>64
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>2.0
+</td>
+<td>1.6
+</td></tr>
+<tr>
+<td>SGX531
+</td>
+<td>Oct 2006
+</td>
+<td>65 nm
+</td>
+<td>2/1
+</td>
+<td>14
+</td>
+<td>500
+</td>
+<td>64
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>2.0
+</td>
+<td>1.6
+</td></tr>
+<tr>
+<td>SGX535
+</td>
+<td>Nov 2007
+</td>
+<td>65 nm
+</td>
+<td>2/2
+</td>
+<td>14
+</td>
+<td>500
+</td>
+<td>64
+</td>
+<td>9.0L
+</td>
+<td>2.1
+</td>
+<td>2.0
+</td>
+<td>1.6
+</td></tr>
+<tr>
+<td>SGX540
+</td>
+<td>Nov 2007
+</td>
+<td>65 nm
+</td>
+<td>4/2
+</td>
+<td>20
+</td>
+<td>1000
+</td>
+<td>64
+</td>
+<td>N/A
+</td>
+<td>N/A
+</td>
+<td>2.0
+</td>
+<td>3.2
+</td></tr>
+<tr>
+<td>SGX545
+</td>
+<td>Jan 2010
+</td>
+<td>12.5@65 nm
+</td>
+<td>4/2
+</td>
+<td>40
+</td>
+<td>1000
+</td>
+<td>64
+</td>
+<td>10.1
+</td>
+<td>3.2
+</td>
+<td>2.0
+</td>
+<td>7.2
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Series_5XT">Series 5XT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=8" title="節を編集: Series 5XT">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">日時
+</th>
+<th rowspan="2">コア
+</th>
+<th rowspan="2">ダイサイズ (mm<sup>2</sup>)<sup>[1]</sup>
+</th>
+<th rowspan="2">設定コア<sup>[3]</sup>
+</th>
+<th colspan="2">フィルレート (@ 200 MHz)
+</th>
+<th rowspan="2">バス幅 (ビット)
+</th>
+<th colspan="3">API (version)
+</th>
+<th rowspan="2">GFLOPS(@ 200 MHz,per core)
+</th></tr>
+<tr>
+<th>メガ三角形/s<sup>[1]</sup>
+</th>
+<th>メガピクセル/s<sup>[1]</sup>
+</th>
+<th><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a>
+</th>
+<th>OpenGL
+</th>
+<th>OpenCL
+</th></tr>
+<tr>
+<td>SGX543
+</td>
+<td>Jan 2009
+</td>
+<td>1-16
+</td>
+<td>5.4@40nm
+</td>
+<td>4/2
+</td>
+<td>35
+</td>
+<td>1000
+</td>
+<td>64
+</td>
+<td>9.0L
+</td>
+<td>2.1
+</td>
+<td>1.0
+</td>
+<td>6.4
+</td></tr>
+<tr>
+<td>SGX544
+</td>
+<td>Jun 2010
+</td>
+<td>1-16
+</td>
+<td>5.4@40nm
+</td>
+<td>4/2
+</td>
+<td>35
+</td>
+<td>1000
+</td>
+<td>64
+</td>
+<td>9.0
+</td>
+<td>2.1
+</td>
+<td>1.1
+</td>
+<td>6.4
+</td></tr>
+<tr>
+<td>SGX554
+</td>
+<td>Dec 2010
+</td>
+<td>1-16
+</td>
+<td>8.7@40nm
+</td>
+<td>8/2
+</td>
+<td>〜50
+</td>
+<td>1000
+</td>
+<td>64
+</td>
+<td>9.0
+</td>
+<td>2.1
+</td>
+<td>1.1
+</td>
+<td>12.8
+</td></tr></tbody></table>
+<p>これらの GPU はシングルコアでもマルチコアでも利用可能。<sup class="reference" id="cite_ref-omap_2-0"><a href="#cite_note-omap-2">[2]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Series_6">Series 6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=9" title="節を編集: Series 6">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">日時
+</th>
+<th rowspan="2">コア
+</th>
+<th rowspan="2">ダイサイズ (mm<sup>2</sup>)
+</th>
+<th rowspan="2">設定コア<sup>[3]</sup>
+</th>
+<th colspan="2">フィルレート (@600MHz)
+</th>
+<th rowspan="2">バス幅 (ビット)
+</th>
+<th colspan="3">API (バージョン)
+</th>
+<th rowspan="2">GFLOPS (@600MHz)
+</th></tr>
+<tr>
+<th>メガポリゴン/s
+</th>
+<th>メガピクセル/s
+</th>
+<th><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a>
+</th>
+<th>OpenGL
+</th>
+<th>OpenGL ES
+</th></tr>
+<tr>
+<td>G6100
+</td>
+<td>Feb 2013
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>1/1
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>9.0 L3
+</td>
+<td>3.x
+</td>
+<td>3.0
+</td>
+<td>63
+</td></tr>
+<tr>
+<td>G6200
+</td>
+<td>Jan 2012
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>2/1
+</td>
+<td>175
+</td>
+<td>2.5(effective fill rate 6.5)
+</td>
+<td>?
+</td>
+<td>10.1/11.1
+</td>
+<td>3.x/4.x
+</td>
+<td>3.0
+</td>
+<td>105
+</td></tr>
+<tr>
+<td>G6230
+</td>
+<td>Jun 2012
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>2/1
+</td>
+<td>175
+</td>
+<td>2.5(effective fill rate 6.5)
+</td>
+<td>?
+</td>
+<td>10.1/11.1
+</td>
+<td>3.x/4.x
+</td>
+<td>3.0
+</td>
+<td>105
+</td></tr>
+<tr>
+<td>G6400
+</td>
+<td>Jan 2012
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>4/2
+</td>
+<td>350
+</td>
+<td>5(effective fill rate 13)
+</td>
+<td>?
+</td>
+<td>10.1/11.1
+</td>
+<td>3.x/4.x
+</td>
+<td>3.0
+</td>
+<td>210
+</td></tr>
+<tr>
+<td>G6430
+</td>
+<td>Jun 2012
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>4/2
+</td>
+<td>350
+</td>
+<td>5(effective fill rate 13)
+</td>
+<td>?
+</td>
+<td>10.1/11.1
+</td>
+<td>3.x/4.x
+</td>
+<td>3.0
+</td>
+<td>210
+</td></tr>
+<tr>
+<td>G6630
+</td>
+<td>Nov 2012
+</td>
+<td>1
+</td>
+<td>??@20 nm
+</td>
+<td>6/3
+</td>
+<td>525
+</td>
+<td>7.5(effective fill rate 19.5)
+</td>
+<td>?
+</td>
+<td>10.1/11.1
+</td>
+<td>3.x/4.x
+</td>
+<td>3.0
+</td>
+<td>315
+</td></tr></tbody></table>
+<p>USSEx, 第6世代TBDR<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Series_6XE">Series 6XE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=10" title="節を編集: Series 6XE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/2014%E5%B9%B4" title="2014年">2014年</a><a href="/wiki/1%E6%9C%886%E6%97%A5" title="1月6日">1月6日</a>発表。<sup class="reference" id="cite_ref-AnandTech_PowerVR_Series6XE_architecture_4-0"><a href="#cite_note-AnandTech_PowerVR_Series6XE_architecture-4">[4]</a></sup><sup class="reference" id="cite_ref-Imagination_drives_highly-advanced_PowerVR_Series6_architecture_5-0"><a href="#cite_note-Imagination_drives_highly-advanced_PowerVR_Series6_architecture-5">[5]</a></sup>
+</p>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">Model
+</th>
+<th rowspan="2">Date
+</th>
+<th rowspan="2">Clusters
+</th>
+<th rowspan="2">Die Size (mm<sup>2</sup>)
+</th>
+<th rowspan="2">Config core<sup>[4]</sup>
+</th>
+<th rowspan="2">SIMD lane
+</th>
+<th colspan="3"><a class="new" href="/w/index.php?title=Fillrate&amp;action=edit&amp;redlink=1" title="Fillrate (存在しないページ)">Fillrate</a>
+</th>
+<th rowspan="2">Bus width<br/>(<a class="mw-redirect" href="/wiki/Bit" title="Bit">bit</a>)
+</th>
+<th rowspan="2">HSA-features
+</th>
+<th colspan="4"><a class="mw-redirect" href="/wiki/Application_programming_interface" title="Application programming interface">API</a> (version)
+</th>
+<th rowspan="2">GFLOPS(@ 650 MHz)
+</th></tr>
+<tr>
+<th>MPolygons/s
+</th>
+<th>(<a class="mw-redirect" href="/wiki/Pixel" title="Pixel">GP</a>/s)
+</th>
+<th>(<a class="new" href="/w/index.php?title=Texel_(graphics)&amp;action=edit&amp;redlink=1" title="Texel (graphics) (存在しないページ)">GT</a>/s)
+</th>
+<th>OpenGL ES
+</th>
+<th>OpenGL
+</th>
+<th>OpenCL
+</th>
+<th>Direct3D
+</th></tr>
+<tr>
+<td>G6050
+</td>
+<td>Jan 2014
+</td>
+<td>0.5
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td><a class="new" href="/w/index.php?title=Direct3D_feature_levels&amp;action=edit&amp;redlink=1" title="Direct3D feature levels (存在しないページ)">9.0 L3</a>
+</td>
+<td>?? / ??
+</td></tr>
+<tr>
+<td>G6060
+</td>
+<td>Jan 2014
+</td>
+<td>0.5
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>9.0 L3
+</td>
+<td>?? / ??
+</td></tr>
+<tr>
+<td>G6100 (XE)
+</td>
+<td>Jan 2014
+</td>
+<td>1
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>9.0 L3
+</td>
+<td>?? / ??
+</td></tr>
+<tr>
+<td>G6110
+</td>
+<td>Jan 2014
+</td>
+<td>1
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>9.0 L3
+</td>
+<td>?? / ??
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Series_6XT">Series 6XT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=11" title="節を編集: Series 6XT">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/2014%E5%B9%B4" title="2014年">2014年</a><a href="/wiki/1%E6%9C%886%E6%97%A5" title="1月6日">1月6日</a>発表。<sup class="reference" id="cite_ref-Imagination-Series6XT_6-0"><a href="#cite_note-Imagination-Series6XT-6">[6]</a></sup><sup class="reference" id="cite_ref-Anandtech-Series6XT_7-0"><a href="#cite_note-Anandtech-Series6XT-7">[7]</a></sup>
+</p>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">Model
+</th>
+<th rowspan="2">Date
+</th>
+<th rowspan="2">Clusters
+</th>
+<th rowspan="2">Die Size (mm<sup>2</sup>)
+</th>
+<th rowspan="2">Config core<sup>[4]</sup>
+</th>
+<th rowspan="2">SIMD lane
+</th>
+<th colspan="3"><a class="new" href="/w/index.php?title=Fillrate&amp;action=edit&amp;redlink=1" title="Fillrate (存在しないページ)">Fillrate</a>
+</th>
+<th rowspan="2">Bus width<br/>(<a class="mw-redirect" href="/wiki/Bit" title="Bit">bit</a>)
+</th>
+<th rowspan="2">HSA-features
+</th>
+<th colspan="4"><a class="mw-redirect" href="/wiki/Application_programming_interface" title="Application programming interface">API</a> (version)
+</th>
+<th rowspan="2">GFLOPS(@ 650 MHz)
+</th></tr>
+<tr>
+<th>MPolygons/s
+</th>
+<th>(<a class="mw-redirect" href="/wiki/Pixel" title="Pixel">GP</a>/s)
+</th>
+<th>(<a class="new" href="/w/index.php?title=Texel_(graphics)&amp;action=edit&amp;redlink=1" title="Texel (graphics) (存在しないページ)">GT</a>/s)
+</th>
+<th>OpenGL ES
+</th>
+<th>OpenGL
+</th>
+<th>OpenCL
+</th>
+<th>Direct3D
+</th></tr>
+<tr>
+<td>GX6240
+</td>
+<td>Jan 2014
+</td>
+<td>2
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>10.0
+</td>
+<td>83.2 / 166.4
+</td></tr>
+<tr>
+<td>GX6250
+</td>
+<td>Jan 2014
+</td>
+<td>2
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>10.0
+</td>
+<td>83.2/166.4
+</td></tr>
+<tr>
+<td>GX6450
+</td>
+<td>Jan 2014
+</td>
+<td>4
+</td>
+<td>19.1mm2@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>10.0
+</td>
+<td>166.4/332.8
+</td></tr>
+<tr>
+<td>GX6650
+</td>
+<td>Jan 2014
+</td>
+<td>6
+</td>
+<td>??@28 nm
+</td>
+<td>?/?
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td>??
+</td>
+<td>?
+</td>
+<td>?
+</td>
+<td><i><b>?</b></i>
+</td>
+<td>3.1
+</td>
+<td>3.2
+</td>
+<td>1.2
+</td>
+<td>10.0
+</td>
+<td>250/500
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Series_7XE">Series 7XE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=12" title="節を編集: Series 7XE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/2014%E5%B9%B4" title="2014年">2014年</a><a href="/wiki/11%E6%9C%8810%E6%97%A5" title="11月10日">11月10日</a>発表。<sup class="reference" id="cite_ref-7XE-Announce_8-0"><a href="#cite_note-7XE-Announce-8">[8]</a></sup>
+</p>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">Model
+</th>
+<th rowspan="2">Date
+</th>
+<th rowspan="2">Clusters
+</th>
+<th rowspan="2">Die Size (mm<sup>2</sup>)
+</th>
+<th rowspan="2">Config core<sup>[4]</sup>
+</th>
+<th rowspan="2">SIMD lane
+</th>
+<th colspan="3"><a class="new" href="/w/index.php?title=Fillrate&amp;action=edit&amp;redlink=1" title="Fillrate (存在しないページ)">Fillrate</a>
+</th>
+<th rowspan="2">Bus width<br/>(<a class="mw-redirect" href="/wiki/Bit" title="Bit">bit</a>)
+</th>
+<th rowspan="2">HSA-features
+</th>
+<th colspan="4"><a class="mw-redirect" href="/wiki/Application_programming_interface" title="Application programming interface">API</a> (version)
+</th>
+<th rowspan="2">GFLOPS(@ 650 MHz)
+</th></tr>
+<tr>
+<th>MPolygons/s
+</th>
+<th>(<a class="mw-redirect" href="/wiki/Pixel" title="Pixel">GP</a>/s)
+</th>
+<th>(<a class="new" href="/w/index.php?title=Texel_(graphics)&amp;action=edit&amp;redlink=1" title="Texel (graphics) (存在しないページ)">GT</a>/s)
+</th>
+<th>OpenGL ES
+</th>
+<th>OpenGL
+</th>
+<th>OpenCL
+</th>
+<th>Direct3D
+</th></tr>
+<tr>
+<td>GE7400
+</td>
+<td>Nov 2014
+</td>
+<td>0.5
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>
+</td>
+<td>1.2 embedded profile
+</td>
+<td>9.0 L3
+</td>
+<td>
+</td></tr>
+<tr>
+<td>GE7800
+</td>
+<td>Nov 2014
+</td>
+<td>1
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>
+</td>
+<td>1.2 embedded profile
+</td>
+<td>9.0 L3
+</td>
+<td>
+</td></tr>
+</tbody></table>
+<h3><span class="mw-headline" id="Series_7XT">Series 7XT</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=13" title="節を編集: Series 7XT">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/2014%E5%B9%B4" title="2014年">2014年</a><a href="/wiki/11%E6%9C%8810%E6%97%A5" title="11月10日">11月10日</a>発表。<sup class="reference" id="cite_ref-7XT-Announce_9-0"><a href="#cite_note-7XT-Announce-9">[9]</a></sup>
+</p>
+<table class="wikitable" style="text-align: center; font-size: 80%;">
+<tbody><tr>
+<th rowspan="2">Model
+</th>
+<th rowspan="2">Date
+</th>
+<th rowspan="2">Clusters
+</th>
+<th rowspan="2">Die Size (mm<sup>2</sup>)
+</th>
+<th rowspan="2">Config core<sup>[4]</sup>
+</th>
+<th rowspan="2">SIMD lane
+</th>
+<th colspan="3"><a class="new" href="/w/index.php?title=Fillrate&amp;action=edit&amp;redlink=1" title="Fillrate (存在しないページ)">Fillrate</a>
+</th>
+<th rowspan="2">Bus width<br/>(<a class="mw-redirect" href="/wiki/Bit" title="Bit">bit</a>)
+</th>
+<th rowspan="2">HSA-features
+</th>
+<th colspan="4"><a class="mw-redirect" href="/wiki/Application_programming_interface" title="Application programming interface">API</a> (version)
+</th>
+<th rowspan="2">GFLOPS(@ 650 MHz)
+</th></tr>
+<tr>
+<th>MPolygons/s
+</th>
+<th>(<a class="mw-redirect" href="/wiki/Pixel" title="Pixel">GP</a>/s)
+</th>
+<th>(<a class="new" href="/w/index.php?title=Texel_(graphics)&amp;action=edit&amp;redlink=1" title="Texel (graphics) (存在しないページ)">GT</a>/s)
+</th>
+<th>OpenGL ES
+</th>
+<th>OpenGL
+</th>
+<th>OpenCL
+</th>
+<th>Direct3D
+</th></tr>
+<tr>
+<td>GT7200
+</td>
+<td>Nov 2014
+</td>
+<td>2
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>4.4
+</td>
+<td>1.2 embedded profile (FP optional)
+</td>
+<td>10.0 (11.1 optional)
+</td>
+<td>83.20 / 166.40
+</td></tr>
+<tr>
+<td>GT7400
+</td>
+<td>Nov 2014
+</td>
+<td>4
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>4.4
+</td>
+<td>1.2 embedded profile (FP optional)
+</td>
+<td>10.0 (11.1 optional)
+</td>
+<td>166.40 / 332.80
+</td></tr>
+<tr>
+<td>GT7600
+</td>
+<td>Nov 2014
+</td>
+<td>6
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>4.4
+</td>
+<td>1.2 embedded profile (FP optional)
+</td>
+<td>10.0 (11.1 optional)
+</td>
+<td>250 / 500
+</td></tr>
+<tr>
+<td>GT7800
+</td>
+<td>Nov 2014
+</td>
+<td>8
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>4.4
+</td>
+<td>1.2 embedded profile (FP optional)
+</td>
+<td>10.0 (11.1 optional)
+</td>
+<td>333 / 666
+</td></tr>
+<tr>
+<td>GT7900
+</td>
+<td>Nov 2014
+</td>
+<td>16
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3.1
+</td>
+<td>4.4
+</td>
+<td>1.2 embedded profile (FP optional)
+</td>
+<td>10.0 (11.1 optional)
+</td>
+<td>666 / 1331
+</td></tr>
+</tbody></table>
+<h2><span id=".E6.90.AD.E8.BC.89.E8.A3.BD.E5.93.81"></span><span class="mw-headline" id="搭載製品">搭載製品</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=14" title="節を編集: 搭載製品">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.93.E3.83.87.E3.82.AA.E3.82.AB.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="ビデオカード">ビデオカード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=15" title="節を編集: ビデオカード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="日本電気ホームエレクトロニクス">日本電気ホームエレクトロニクス</a> PC 3DEngine(PCX1)およびPC 3DEngine2(PCX2) - PowerVR搭載の3Dビデオカード。</li>
+<li><a href="/wiki/Matrox" title="Matrox">Matrox</a> m3D 4MB PCI - PowerVR(PCX2)搭載、3D専用ビデオカード。</li>
+<li><a href="/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1%E3%83%AD%E3%83%BC_(%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E5%91%A8%E8%BE%BA%E6%A9%9F%E5%99%A8)" title="バッファロー (パソコン周辺機器)">メルコ</a> TGP-VR4 - PowerVR(PCX1)搭載、3D専用ビデオカード。</li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%BB%E3%83%87%E3%83%BC%E3%82%BF%E6%A9%9F%E5%99%A8" title="アイ・オー・データ機器">アイ・オー・データ機器</a> GA-PVR3D4/PCI - PowerVR(PCX1)搭載、3D専用ビデオカード。</li>
+<li><a class="new" href="/w/index.php?title=PowerColor&amp;action=edit&amp;redlink=1" title="PowerColor (存在しないページ)">PowerColor</a> EVIL KYRO 32MB AGP - PowerVR3 KYRO搭載ビデオカード。</li>
+<li>Hercules 3D PROPHET 4500 - PowerVR3 KYROII(STG4500-X)搭載ビデオカード<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[注釈 1]</a></sup></li></ul>
+<h3><span id=".E3.82.AA.E3.83.B3.E3.83.9C.E3.83.BC.E3.83.89.E3.83.93.E3.83.87.E3.82.AA"></span><span class="mw-headline" id="オンボードビデオ">オンボードビデオ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=16" title="節を編集: オンボードビデオ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Intel_GMA" title="Intel GMA">Intel GMA</a> 500/600/3600/3650（一部の<a href="/wiki/Intel_Atom" title="Intel Atom">Intel Atom</a>に統合されている）
+</p>
+<h3><span id=".E5.AE.B6.E5.BA.AD.E7.94.A8.E3.82.B2.E3.83.BC.E3.83.A0.E6.A9.9F.E3.81.8A.E3.82.88.E3.81.B3.E3.82.A2.E3.83.BC.E3.82.B1.E3.83.BC.E3.83.89.E3.82.B2.E3.83.BC.E3.83.A0.E6.A9.9F"></span><span class="mw-headline" id="家庭用ゲーム機およびアーケードゲーム機">家庭用ゲーム機およびアーケードゲーム機</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=17" title="節を編集: 家庭用ゲーム機およびアーケードゲーム機">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<ul><li><a href="/wiki/%E3%83%89%E3%83%AA%E3%83%BC%E3%83%A0%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88" title="ドリームキャスト">ドリームキャスト</a></li>
+<li><a href="/wiki/NAOMI" title="NAOMI">NAOMI</a></li>
+<li><a class="mw-redirect" href="/wiki/NAOMI2" title="NAOMI2">NAOMI2</a></li>
+<li><a href="/wiki/ATOMISWAVE" title="ATOMISWAVE">ATOMISWAVE</a></li>
+<li><a href="/wiki/PlayStation_Vita" title="PlayStation Vita">PlayStation Vita</a>/<a href="/wiki/PlayStation_Vita_TV" title="PlayStation Vita TV">PlayStation Vita TV</a>(SGX543MP4+)<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[10]</a></sup><sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[11]</a></sup></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3_%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF" title="プレイステーション クラシック">プレイステーション クラシック</a></li></ul>
+<h3><span id=".E6.90.BA.E5.B8.AF.E9.9B.BB.E8.A9.B1"></span><span class="mw-headline" id="携帯電話">携帯電話</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=18" title="節を編集: 携帯電話">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/%E5%AF%8C%E5%A3%AB%E9%80%9A" title="富士通">富士通</a> <a href="/wiki/FOMA" title="FOMA">FOMA</a> <a href="/wiki/F902i" title="F902i">F902i</a>、<a class="new" href="/w/index.php?title=F901i&amp;action=edit&amp;redlink=1" title="F901i (存在しないページ)">F901i</a>、<a href="/wiki/F702iD" title="F702iD">F702iD</a>、<a href="/wiki/F902iS" title="F902iS">F902iS</a></li>
+<li><a href="/wiki/%E4%B8%89%E8%8F%B1%E9%9B%BB%E6%A9%9F" title="三菱電機">三菱電機</a> FOMA <a href="/wiki/D702i" title="D702i">D702i</a>、<a href="/wiki/D901i" title="D901i">D901i</a>、<a href="/wiki/D901iS" title="D901iS">D901iS</a>、<a href="/wiki/D902i" title="D902i">D902i</a>、<a href="/wiki/D902iS" title="D902iS">D902iS</a>、<a href="/wiki/MUSIC_PORTER_X" title="MUSIC PORTER X">MUSIC PORTER X</a></li>
+<li><a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E6%B0%97" title="日本電気">日本電気</a> FOMA <a href="/wiki/N902i" title="N902i">N902i</a>、<a href="/wiki/N902iS" title="N902iS">N902iS</a>、<a href="/wiki/N902iX_HIGH-SPEED" title="N902iX HIGH-SPEED">N902iX HIGH-SPEED</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%8A%E3%82%BD%E3%83%8B%E3%83%83%E3%82%AF_%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA" title="パナソニック モバイルコミュニケーションズ">パナソニック モバイルコミュニケーションズ</a> FOMA <a class="new" href="/w/index.php?title=P702iS&amp;action=edit&amp;redlink=1" title="P702iS (存在しないページ)">P702iS</a>、<a href="/wiki/P902i" title="P902i">P902i</a>、<a href="/wiki/P902iS" title="P902iS">P902iS</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%97" title="シャープ">シャープ</a> <a href="/wiki/SH702iD" title="SH702iD">SH702iD</a>、<a href="/wiki/SH702iS" title="SH702iS">SH702iS</a>、<a href="/wiki/SH902i" title="SH902i">SH902i</a>、<a href="/wiki/SH902iS" title="SH902iS">SH902iS</a>、<a href="/wiki/DOLCE_SL" title="DOLCE SL">DOLCE SL</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%8B%E3%83%BC%E3%83%BB%E3%82%A8%E3%83%AA%E3%82%AF%E3%82%BD%E3%83%B3%E3%83%BB%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA" title="ソニー・エリクソン・モバイルコミュニケーションズ">ソニー・エリクソン・モバイルコミュニケーションズ</a> <a class="new" href="/w/index.php?title=P990&amp;action=edit&amp;redlink=1" title="P990 (存在しないページ)">P990</a>、<a class="new" href="/w/index.php?title=M600&amp;action=edit&amp;redlink=1" title="M600 (存在しないページ)">M600</a>、<a class="new" href="/w/index.php?title=W950&amp;action=edit&amp;redlink=1" title="W950 (存在しないページ)">W950</a>、FOMA <a href="/wiki/SO902iWP%2B" title="SO902iWP+">SO902iWP+</a>、<a class="new" href="/w/index.php?title=M600i&amp;action=edit&amp;redlink=1" title="M600i (存在しないページ)">M600i</a></li>
+<li><a href="/wiki/%E4%BA%AC%E3%82%BB%E3%83%A9" title="京セラ">京セラ</a> <a href="/wiki/WX04K" title="WX04K">WX04K</a>、<a href="/wiki/SoftBank_101K" title="SoftBank 101K">SoftBank 101K</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a> <a class="new" href="/w/index.php?title=MS550&amp;action=edit&amp;redlink=1" title="MS550 (存在しないページ)">MS550</a></li>
+<li><a href="/wiki/SK%E3%83%86%E3%83%AC%E3%83%86%E3%83%83%E3%82%AF" title="SKテレテック">SKテレテック</a> <a class="new" href="/w/index.php?title=IM-8300&amp;action=edit&amp;redlink=1" title="IM-8300 (存在しないページ)">IM-8300</a></li>
+<li><a class="new" href="/w/index.php?title=Pepperpad&amp;action=edit&amp;redlink=1" title="Pepperpad (存在しないページ)">Pepperpad</a></li>
+<li><a class="new" href="/w/index.php?title=Helio_Hero&amp;action=edit&amp;redlink=1" title="Helio Hero (存在しないページ)">Helio Hero</a></li>
+<li><a href="/wiki/Apple" title="Apple">Apple</a> <a href="/wiki/IPhone" title="IPhone">iPhone</a></li>
+<li><a href="/wiki/ASUS" title="ASUS">ASUS</a> <a class="mw-redirect" href="/wiki/ZenFone2" title="ZenFone2">ZenFone2</a></li></ul>
+<h3><span id="PDA.E3.83.BB.E3.83.A2.E3.83.90.E3.82.A4.E3.83.AB.E7.AB.AF.E6.9C.AB"></span><span class="mw-headline" id="PDA・モバイル端末">PDA・モバイル端末</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=19" title="節を編集: PDA・モバイル端末">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/%E3%83%87%E3%83%AB" title="デル">デル</a> <a href="/wiki/Axim" title="Axim">Axim</a> X50v、X51v</li>
+<li>アップル <a href="/wiki/IPad" title="IPad">iPad</a>、<a href="/wiki/IPad_mini" title="IPad mini">iPad mini</a>、<a href="/wiki/IPod_touch" title="IPod touch">iPod touch</a>、<a href="/wiki/Apple_TV" title="Apple TV">Apple TV</a></li></ul>
+<h3><span id=".E3.82.AB.E3.83.BC.E3.83.8A.E3.83.93.E3.82.B2.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="カーナビゲーション">カーナビゲーション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=20" title="節を編集: カーナビゲーション">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a class="mw-redirect" href="/wiki/%E3%82%AF%E3%83%A9%E3%83%AA%E3%82%AA%E3%83%B3" title="クラリオン">クラリオン</a> MAX960</li>
+<li>三菱電機 HDD Navi H9000、H9700</li>
+<li><a href="/wiki/%E3%83%91%E3%82%A4%E3%82%AA%E3%83%8B%E3%82%A2" title="パイオニア">パイオニア</a> Cybernavi AVIC-VH009</li></ul>
+<h3><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=21" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>アイ・オー・データ機器 IF-SEGA2/PCI(PCX2) - セガサターン周辺機器用インターフェイスボード。ISA-PCIブリッジとしてPowerVRが利用されている。<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[注釈 2]</a></sup></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=22" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=23" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:3D_Prophet_4500.jpg&amp;action=edit&amp;redlink=1" title="ファイル:3D Prophet 4500.jpg (存在しないページ)">File:3D_Prophet_4500.jpg</a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">発売前の製品写真にはメモリが搭載されたものが使われていたものの、実際の製品ではメモリが搭載されておらず、ビデオチップとして使用できない。また、デバイスとしてはPowerVRが検出されるため他のPowerVRボードとの併用は出来ない。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=24" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">パソコン用グラフィックチップからは撤退 <a class="external free" href="http://us.st.com/stonline/press/news/year2002/c1146h.htm" rel="nofollow">http://us.st.com/stonline/press/news/year2002/c1146h.htm</a></span>
+</li>
+<li id="cite_note-omap-2"><b><a href="#cite_ref-omap_2-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.anandtech.com/show/4413/ti-announces-omap-4470-and-specs-powervr-sgx544-18-ghz-dual-core-cortexa9" rel="nofollow">TI Announces OMAP4470 and Specs: PowerVR SGX544, 1.8 GHz Dual Core Cortex-A9</a>, by Brian Klug, 6/2/2011, AnandTech, Inc.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external free" href="http://www.engadget.com/2012/06/15/imagination-powervr-g6230-g6430/" rel="nofollow">http://www.engadget.com/2012/06/15/imagination-powervr-g6230-g6430/</a></span>
+</li>
+<li id="cite_note-AnandTech_PowerVR_Series6XE_architecture-4"><b><a href="#cite_ref-AnandTech_PowerVR_Series6XE_architecture_4-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.anandtech.com/show/7630/imagination-technologies-announces-entrylevel-powervr-series6xe-gpu-family" rel="nofollow">Imagination Technologies Announces Entry-Level PowerVR Series6XE GPU Family</a>, January 6, 2014, AnandTech</span>
+</li>
+<li id="cite_note-Imagination_drives_highly-advanced_PowerVR_Series6_architecture-5"><b><a href="#cite_ref-Imagination_drives_highly-advanced_PowerVR_Series6_architecture_5-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.imgtec.com/news/Release/index.asp?NewsID=822" rel="nofollow">Imagination drives highly-advanced PowerVR Series6 architecture into all key entry-level mobile and consumer segments</a>, January 6, 2014, Imagination</span>
+</li>
+<li id="cite_note-Imagination-Series6XT-6"><b><a href="#cite_ref-Imagination-Series6XT_6-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.imgtec.com/news/Release/index.asp?NewsID=821" rel="nofollow">Imagination’s new generation PowerVR Series6XT architecture delivers up to 50% higher performance and advanced power management</a></span>
+</li>
+<li id="cite_note-Anandtech-Series6XT-7"><b><a href="#cite_ref-Anandtech-Series6XT_7-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.anandtech.com/show/7629/imagination-technologies-announces-powervr-series6xt-architecture-available-for-immediate-licensing" rel="nofollow">Imagination Technologies Announces PowerVR Series6XT Architecture</a></span>
+</li>
+<li id="cite_note-7XE-Announce-8"><b><a href="#cite_ref-7XE-Announce_8-0">^</a></b> <span class="reference-text"><a class="external text" href="http://blog.imgtec.com/powervr/new-powervr-series7xe-family-targets-the-next-billion-mobile-and-embedded-gpus" rel="nofollow">New PowerVR Series7XE family targets the next billion mobile and embedded GPUs</a></span>
+</li>
+<li id="cite_note-7XT-Announce-9"><b><a href="#cite_ref-7XT-Announce_9-0">^</a></b> <span class="reference-text"><a class="external text" href="http://blog.imgtec.com/powervr/powervr-series7xt-gpus-push-graphics-and-compute-performance" rel="nofollow">PowerVR Series7XT GPUs push graphics and compute performance to the max</a></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external free" href="http://game.watch.impress.co.jp/docs/news/20110127_423061.html" rel="nofollow">http://game.watch.impress.co.jp/docs/news/20110127_423061.html</a></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external free" href="http://game.watch.impress.co.jp/docs/series/3dcg/20100316_355022.html" rel="nofollow">http://game.watch.impress.co.jp/docs/series/3dcg/20100316_355022.html</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PowerVR&amp;action=edit&amp;section=25" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.imgteckk.com/" rel="nofollow">イマジネーションテクノロジーズ</a> - <a class="external text" href="http://www.imgteckk.com/powervr/products/" rel="nofollow">PowerVR ビジュアルIPコア</a></li></ul>
+<p><br/>
+</p>
+
+<!-- 
+NewPP limit report
+Cached time: 20220331220821
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.174 seconds
+Real time usage: 0.221 seconds
+Preprocessor visited node count: 550/1000000
+Post‐expand include size: 2848/2097152 bytes
+Template argument size: 421/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6141/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 4816896/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  104.929      1 -total
+ 62.90%   66.004      1 テンプレート:仮リンク
+  8.10%    8.495      2 テンプレート:Reflist
+  5.86%    6.144      1 テンプレート:Computer-stub
+  4.68%    4.907      8 テンプレート:Dunno
+  3.09%    3.239      1 テンプレート:Asbox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:987554-0!canonical and timestamp 20220331220821 and revision id 612671. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=PowerVR&amp;oldid=612671">http://localhost:8080/w/index.php?title=PowerVR&amp;oldid=612671</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89" title="カテゴリ:グラフィックカード">グラフィックカード</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=PowerVR&amp;returntoquery=curid%3D987554%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=PowerVR&amp;returntoquery=curid%3D987554%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/PowerVR" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:PowerVR&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/PowerVR">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=PowerVR&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=PowerVR&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/PowerVR" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/PowerVR" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=PowerVR&amp;oldid=612671" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=PowerVR&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月9日 (金) 21:26 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.174","walltime":"0.221","ppvisitednodes":{"value":550,"limit":1000000},"postexpandincludesize":{"value":2848,"limit":2097152},"templateargumentsize":{"value":421,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6141,"limit":5000000},"timingprofile":["100.00%  104.929      1 -total"," 62.90%   66.004      1 テンプレート:仮リンク","  8.10%    8.495      2 テンプレート:Reflist","  5.86%    6.144      1 テンプレート:Computer-stub","  4.68%    4.907      8 テンプレート:Dunno","  3.09%    3.239      1 テンプレート:Asbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":4816896,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331220821","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":420});});</script>
+</body></html>

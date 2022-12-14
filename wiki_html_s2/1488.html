@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>インタプリタ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-インタプリタ rootpage-インタプリタ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">インタプリタ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><style data-mw-deduplicate="TemplateStyles:r2633220">.mw-parser-output .hatnote{margin:0.5em 0;padding:3px 2em;background-color:transparent;border-bottom:1px solid #a2a9b1;font-size:90%}</style>
+
+<p><b>インタプリタ</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">interpreter</span>）、<b>解釈系</b>（かいしゃくけい）<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>とは、<a href="." id="link_a_2" title="プログラミング言語">プログラミング言語</a>で書かれた<a href="." id="link_a_3" title="ソースコード">ソースコード</a>ないし<a href="." id="link_a_4" title="中間表現">中間表現</a>を逐次<a href="." id="link_a_5" title="解釈">解釈</a>しながら<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_6" title="実行 (コンピューター) (存在しないページ)">実行</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Execution_(computing)&amp;action=edit&amp;redlink=1" title="En:Execution (computing) (存在しないページ)">英語版</a>）</span></span>する<a href="." id="link_a_7" title="プログラム (コンピュータ)">プログラム</a>のこと<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。「インタープリタ」「インタープリター」などと表記することもある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#誤解"><span class="tocnumber">2</span> <span class="toctext">誤解</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#歴史"><span class="tocnumber">3</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#インタプリタの長所と短所"><span class="tocnumber">4</span> <span class="toctext">インタプリタの長所と短所</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#開発時に修正作業が容易"><span class="tocnumber">4.1</span> <span class="toctext">開発時に修正作業が容易</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#配布する上でのメリットとデメリット"><span class="tocnumber">4.2</span> <span class="toctext">配布する上でのメリットとデメリット</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#短所:_実行速度の遅さ"><span class="tocnumber">4.3</span> <span class="toctext">短所: 実行速度の遅さ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#バリエーション"><span class="tocnumber">5</span> <span class="toctext">バリエーション</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#スレッデッドコード"><span class="tocnumber">5.1</span> <span class="toctext">スレッデッドコード</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#バイトコードインタプリタ"><span class="tocnumber">5.2</span> <span class="toctext">バイトコードインタプリタ</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#抽象構文木インタプリタ"><span class="tocnumber">5.3</span> <span class="toctext">抽象構文木インタプリタ</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#実行時コンパイル"><span class="tocnumber">5.4</span> <span class="toctext">実行時コンパイル</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#トランスレータ方式"><span class="tocnumber">5.5</span> <span class="toctext">トランスレータ方式</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#応用"><span class="tocnumber">6</span> <span class="toctext">応用</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#デバッグ、教育用インタプリタ"><span class="tocnumber">7</span> <span class="toctext">デバッグ、教育用インタプリタ</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#パンチカードのインタプリタ"><span class="tocnumber">8</span> <span class="toctext">パンチカードのインタプリタ</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#インタプリタ型の処理系が一般的なプログラミング言語"><span class="tocnumber">9</span> <span class="toctext">インタプリタ型の処理系が一般的なプログラミング言語</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#インタプリタとコンパイラ方式が併用のもの"><span class="tocnumber">9.1</span> <span class="toctext">インタプリタとコンパイラ方式が併用のもの</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#「共通言語ランタイム」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.1</span> <span class="toctext">「共通言語ランタイム」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#「Erlang_VM」（BEAM）のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.2</span> <span class="toctext">「<span>Erlang VM</span>」（<span>BEAM</span>）のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#「Java仮想機械」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.3</span> <span class="toctext">「<span>Java</span>仮想機械」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#JavaScript_に変換されるもの"><span class="tocnumber">9.1.4</span> <span class="toctext"><span>JavaScript</span> に変換されるもの</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#「Lua_VM」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.5</span> <span class="toctext">「<span>Lua</span> VM」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#「Pコードマシン」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.6</span> <span class="toctext">「Pコードマシン」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#「Parrot」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.7</span> <span class="toctext">「<span>Parrot</span>」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#「Smalltalk_VM」のバイナリー・コードにコンパイルされるもの"><span class="tocnumber">9.1.8</span> <span class="toctext">「<span>Smalltalk VM</span>」のバイナリー・コードにコンパイルされるもの</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#VBAのPコードにコンパイルされるもの"><span class="tocnumber">9.1.9</span> <span class="toctext">VBAのPコードにコンパイルされるもの</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-28"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>インタプリタは、およそ次のいずれかの動作をするプログラムである。
+</p>
+<ol><li><a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>を直接解釈実行する。</li>
+<li>ソースコードを何らかの効率的な中間的なコード（<a href="/wiki/%E4%B8%AD%E9%96%93%E8%A1%A8%E7%8F%BE" title="中間表現">中間表現</a>）に、最初に全て変換して、あるいは、逐次変換しながら、解釈実行する。</li>
+<li>何らかの<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>が生成し出力した、何らかの効率的な（マシンに依存しない、あるいは、マシン依存の）中間表現を解釈実行する<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。</li></ol>
+<p>このように程度の差はあるが、ソフトウェアがソフトウェアを実行するという形になる。
+</p><p>いずれにしても、「インタプリタ言語」などという分類は本来は存在しない。単にそれぞれの言語の代表的な処理系の実装がインタプリタであったというだけで、理論上はどの言語であってもインタプリタとコンパイラのどちらでも作ることができる。しかしながら、インタプリタかしか存在しない言語があるが故に、「インタプリタ言語」や「コンパイラ言語」と区別されているのが現実である。インタプリタは実行中何度もプログラムを再解釈するため、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%87%E3%82%A3%E3%82%B9%E3%83%91%E3%83%83%E3%83%81&amp;action=edit&amp;redlink=1" title="ダイナミックディスパッチ (存在しないページ)">ダイナミックディスパッチ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dynamic_dispatch&amp;action=edit&amp;redlink=1" title="En:Dynamic dispatch (存在しないページ)">英語版</a>）</span></span>や<a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ダイナミックバインディング">ダイナミックバインディング</a>、<a href="/wiki/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="リフレクション (情報工学)">リフレクション</a>、<a href="/wiki/%E5%8B%95%E7%9A%84%E5%9E%8B%E4%BB%98%E3%81%91" title="動的型付け">動的型付け</a>のような機能を実現することが容易である。一方、コンパイラは事前にCPUで実行できるように変換するだけで実行には関与しないため、実行中に振る舞いを変更したいときはそのためのプログラムを別途用意しなければならないケースがほとんどである。さらに、自前の言語から既存の何らかの表現に変換するには、その表現と対応付けるための知識と技術が必要であり、言語機能が大規模化や複雑化するほど、既存の表現との互換性をできるだけ確保しながら、自前の言語での振る舞いを実現することは難しくなる。中間表現も自前であれば、変換する手間はずっと楽になる。
+</p>
+<h2><span id=".E8.AA.A4.E8.A7.A3"></span><span class="mw-headline" id="誤解">誤解</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=2" title="節を編集: 誤解">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>プログラミング言語処理系の実装には、インタプリタと<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>の2つがある、とされてきた。インタプリタは<u><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AE%9F%E8%A1%8C_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC)&amp;action=edit&amp;redlink=1" title="実行 (コンピューター) (存在しないページ)">実行</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Execution_(computing)&amp;action=edit&amp;redlink=1" title="En:Execution (computing) (存在しないページ)">英語版</a>）</span></span>を行う</u>が、コンパイラは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AE%9F%E8%A1%8C_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC)&amp;action=edit&amp;redlink=1" title="実行 (コンピューター) (存在しないページ)">実行</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Execution_(computing)&amp;action=edit&amp;redlink=1" title="En:Execution (computing) (存在しないページ)">英語版</a>）</span></span>を行わない、という差がある。
+</p><p>インタプリタは、インタプリタが提供する言語のプログラム文を1文ずつ、インタプリタを実装した言語の機能を呼び出していく（単純な）方式が一般的であった。コマンドラインインタプリタではこれに加えて、別のプログラムに処理を委ねて一つの機能を実現する。
+</p><p>この時代のインタプリタの長所と欠点については、およそ次のような解説がされることが一般的であった。
+</p>
+<ul><li>（長所）プログラムを作成している途中でも、とりあえず書かれた箇所まで実行させることができ、プログラマの期待通りの動作をしている場合も、期待通りの動作をしていない場合も、早期にそれを確認・発見し、そして修正後すばやく実行、再確認できる。</li>
+<li>（短所）実行速度が遅い。（<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%97_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ループ (プログラミング)">ループ</a>（＝繰り返し）の箇所などでは）1度構文解釈した文でも、毎回（あらためて、最初から）<a href="/wiki/%E8%A7%A3%E9%87%88" title="解釈">解釈</a>と実行を行うので、コンパイラ方式に比べて実行速度が遅くなる。（ループを全く含まないような、全ての命令が一回だけ解釈され、一回だけ実行されるような（ある意味、特殊な）プログラムであれば、解釈+実行のトータルの時間は、インタプリタでもコンパイラでもさほど差は生じない。だが、実用的なプログラムは一般的に、多数のループを含んでおり、そうしたプログラムではインタプリタのほうが実行を完了するまでの時間が多くかかり、特に、ループ回数が多ければ多いほど（古典的な、単純な）インタプリタの相対的な遅さは顕著になってくる。→<a href="#インタプリタの長所と短所">#インタプリタの長所と短所</a></li></ul>
+<p>その後、そうした欠点を解消すべく、（1990年代ころになって）毎回毎回、（高級言語から）機械語に変換するのではなく、中間言語に変換することで高速化をはかるインタプリタなどが作りだされた。
+</p><p>改良の結果、古典的な意味での「インタプリタ」と「コンパイラ」の双方の性質を備えたようなインタプリタが登場し、複雑化してきている。
+</p><p>（近年の）インタプリタがおこなう、（旧来の）コンパイラが行っているような変換のひとつとしては、高速化などを目的とした、<a href="/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="実行時コンパイラ">実行時コンパイラ</a>による<a href="/wiki/%E5%8B%95%E7%9A%84%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB" title="動的コンパイル">動的コンパイル</a>を挙げることができる。
+</p><p><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=3" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>インタプリタという手法、すなわち、「そのハードウェアが直接解釈するのではないプログラム」を受け取り、「プログラムで実装された抽象的な、あるいは仮想上のコンピュータで解釈実行する」というプログラムの実行法は、コンピュータが登場した時から、ないしそれ以前からある。
+</p><p><a href="/wiki/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%B7%E3%83%B3#万能チューリングマシン" title="チューリングマシン">万能チューリングマシン</a>は、「どんなチューリングマシンについても、それを模擬できるチューリングマシン」というもので、ある種の<a href="/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="エミュレータ (コンピュータ)">エミュレータ</a>ないしインタプリタであり、考察されたのは電子式のコンピュータの誕生する以前である。
+</p><p><a href="/wiki/EDSAC" title="EDSAC">EDSAC</a>（実用的な機能を持った<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%86%85%E8%94%B5%E6%96%B9%E5%BC%8F" title="プログラム内蔵方式">プログラム内蔵方式</a>の世界初の電子計算機とされている）において既に、ある種のインタプリタが実装されていたことが記録に残っている。同機におけるプログラミングの技法が書かれた <i>The Preparation of Programs for an Electronic Digital Computer</i> の chapter 2 の <i>§ 2-22 Interpretive subroutines</i> で説明されているが、複素数演算などのサブルーチンを明示的にサブルーチンとして呼ぶのではなく、通常の加減算などと同様の形式のプログラムをインタプリタで解釈してそれらのサブルーチンを利用する、というものである。また日本においても、<a href="/wiki/%E3%83%91%E3%83%B3%E3%83%81%E3%82%AB%E3%83%BC%E3%83%89" title="パンチカード">パンチカード</a>を入力として<a href="/wiki/%E3%83%91%E3%83%83%E3%83%81%E3%83%91%E3%83%8D%E3%83%AB" title="パッチパネル">パッチパネル</a>の配線によるプログラミングで処理するような機械で、配線によってある種のインタプリタのようなものを実装し、パンチカードの内容をデータとしてではなくプログラムのように扱う、というような例があると言われている<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p><p>最初の Lisp インタプリタは<a href="/wiki/%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%96%E3%83%BB%E3%83%A9%E3%83%83%E3%82%BB%E3%83%AB" title="スティーブ・ラッセル">スティーブ・ラッセル</a>が <a href="/wiki/IBM_704" title="IBM 704">IBM 704</a> 上に実装した。これにはエピソードがあり、<a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%BC" title="ジョン・マッカーシー">ジョン・マッカーシー</a>が「Lisp の論文」<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>で「数学的」に示したものだったのであるが、マッカーシー自身は実装できるものだとは考えていなかった。それを、論文を読んだ、院生であったラッセルが、実装可能だと言って数学的な記述から変換して機械語で実装してみせたという。<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+</p><p>1960年代には（現在のJavaなどと同様な）、プログラミング言語から中間表現にコンパイルし、それをインタプリタで実行する、というような手法も一般的になった（<a href="/wiki/P%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9E%E3%82%B7%E3%83%B3" title="Pコードマシン">pコードマシン</a>を参照）。
+</p>
+<h2><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF.E3.81.AE.E9.95.B7.E6.89.80.E3.81.A8.E7.9F.AD.E6.89.80"></span><span class="mw-headline" id="インタプリタの長所と短所">インタプリタの長所と短所</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=4" title="節を編集: インタプリタの長所と短所">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>初期のインタプリタと、最近のインタプリタでは、長所や短所は異なる。短所をなくすべく（減らすべく）、しくみを変えてきた歴史があるためである。
+</p>
+<h3><span id=".E9.96.8B.E7.99.BA.E6.99.82.E3.81.AB.E4.BF.AE.E6.AD.A3.E4.BD.9C.E6.A5.AD.E3.81.8C.E5.AE.B9.E6.98.93"></span><span class="mw-headline" id="開発時に修正作業が容易">開発時に修正作業が容易</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=5" title="節を編集: 開発時に修正作業が容易">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プログラム開発中、プログラマは頻繁にソースコードに手を加える。コンパイラの場合、ソースコードを変更するたびにコンパイルし、<a href="/wiki/%E3%83%AA%E3%83%B3%E3%82%B1%E3%83%BC%E3%82%B8%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="リンケージエディタ">リンク</a>して<a href="/wiki/%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="実行ファイル">実行ファイル</a>を完成させないと、そのプログラムを実行できない。プログラムが大きくなると、<a href="/wiki/%E3%83%93%E3%83%AB%E3%83%89_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="ビルド (ソフトウェア)">ビルド</a>の完了を待っている時間が長くなる。一方、インタプリタではソースコードをそのまま実行するか中間表現に変換するだけなので、ほとんど待つ必要がなく、修正がうまくいったかどうかのテストをより素早く確認できる。
+</p><p>この特性を利用したプログラムとして<a href="/wiki/REPL" title="REPL">REPL</a>がある。入力を受け取る（Read）、入力の評価（Eval）、評価結果を提示する（Print）を繰り返す（Loop）、テスト環境の一つである。評価はインタプリタに限らずコンパイラで行なわれるかもしれないが、ユーザからの入力は常にソースコードの断片であり、それを逐次実行するという点で一種のインタプリタということもできる。実際、その挙動はソースコードを指定せずに起動したBASICなどのそれとよく似ている。しかし、テスト環境も兼ねているため、エラーが起きた場合のメッセージが詳細であることが多い。<a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型言語</a>や<a class="mw-redirect" href="/wiki/%E8%AB%96%E7%90%86%E5%9E%8B%E8%A8%80%E8%AA%9E" title="論理型言語">論理型言語</a>では、通常は<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>にコンパイルする<a class="mw-redirect" href="/wiki/%E5%87%A6%E7%90%86%E7%B3%BB" title="処理系">処理系</a>であっても用意される。
+</p>
+<h3><span id=".E9.85.8D.E5.B8.83.E3.81.99.E3.82.8B.E4.B8.8A.E3.81.A7.E3.81.AE.E3.83.A1.E3.83.AA.E3.83.83.E3.83.88.E3.81.A8.E3.83.87.E3.83.A1.E3.83.AA.E3.83.83.E3.83.88"></span><span class="mw-headline" id="配布する上でのメリットとデメリット">配布する上でのメリットとデメリット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=6" title="節を編集: 配布する上でのメリットとデメリット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>コンパイラは一般にソースコードを特定のプロセッサアーキテクチャの機械語命令列に変換するので、生成されるプログラムは特定のアーキテクチャのプロセッサでしか動かない。この変換は開発者の環境で一度だけ行われ、そのバイナリが配布され、ユーザー側では変換を行う必要がない。<a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="クロスコンパイラ">クロスコンパイラ</a>を使えば、他のプロセッサアーキテクチャ向けのバイナリを生成することができる。
+</p><p>インタプリタの場合、ソースコードを配布できる。その変換はユーザー側で行う必要があるが、特定のアーキテクチャに依存しないプログラムの配布が可能である。ただし、その場合ユーザーのマシン上に適当なインタプリタが実装されていなければならない。インタプリタとソースコードを同時に提供する必要があるなら、単に実行ファイルを配布した場合より<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" title="インストール">インストール</a>が全体として複雑化することもある。
+</p><p><br/>
+逆を言えば、仕様の違うコンピュータ、若しくはOS間、同士であっても適切な同等のインタプリタ環境を整えることができ、なおかつインタプリタで実行されるべきソースコードで提供されるプログラムの仕様がOSやハードウエアの仕様・機能・要求性能を逸脱しないものであるならば、記述された処理内容については異機種間での互換性を確保できることを示唆しているが、これは仕様の違う各コンピュータにおける当該インタプリタ環境の再現性に左右されてしまうため、確実性を担保するのが非常に難しい。
+</p><p>これは例えば、表計算ソフトのマクロ記述を別の機種、若しくはOSで動作する同じ表計算ソフトで実行させた際に元のものに比べて遜色なく再現されるか、若しくは同じWEBページを別のブラウザからアクセスした場合に、元のブラウザで開いた場合に比べて同じ様に機能し、また表示され、尚且つ同じ機能を同じ様に正しく実行できるかという問題にも関係する。
+</p><p>インタプリタ用コードは人間が容易に読むことができるため、<a href="/wiki/%E8%91%97%E4%BD%9C%E6%A8%A9" title="著作権">著作権</a>保護の観点から問題があるとする見方もある。しかし、そのための様々な<a href="/wiki/%E6%9A%97%E5%8F%B7" title="暗号">暗号</a>化や<a class="mw-redirect" href="/wiki/%E9%9B%A3%E8%AA%AD%E5%8C%96%E3%82%B3%E3%83%BC%E3%83%89" title="難読化コード">難読化</a>のシステムも存在する。<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="バイトコード">バイトコード</a>のような中間コードを配布する場合、ある程度は難読化と同様の効果があるが、バイトコードを<a href="/wiki/%E9%80%86%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="逆コンパイラ">逆コンパイラ</a>あるいは<a href="/wiki/%E9%80%86%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%A9" title="逆アセンブラ">逆アセンブラ</a>でデコードすることも可能である。抗逆コンパイル性のある難読化を考慮したバイトコードとする設計もありうる。
+</p>
+<h3><span id=".E7.9F.AD.E6.89.80:_.E5.AE.9F.E8.A1.8C.E9.80.9F.E5.BA.A6.E3.81.AE.E9.81.85.E3.81.95"></span><span class="mw-headline" id="短所:_実行速度の遅さ">短所: 実行速度の遅さ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=7" title="節を編集: 短所: 実行速度の遅さ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>インタプリタ最大の短所は、コンパイラよりも実行時の性能が低いことである。この性能差は様々で、時には桁違いとなることもある。プログラムの実行時間はコンパイラよりもインタプリタの方が長いが、コンパイル時間と実行時間を合計すればインタプリタでの実行時間よりも長くなることがある。<a href="/wiki/%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0" title="プロトタイピング">プロトタイピング</a>と<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%86%E3%82%B9%E3%83%88" title="ソフトウェアテスト">テスト</a>においては、この差が重要となる。
+</p><p>コンパイラではプログラム内の<a href="/wiki/%E6%96%87_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="文 (プログラミング)">文</a>の解析を実行前に1回だけ行うが、単純な実装のインタプリタではそれを文ごとに実行時に毎回行うため、実行性能が低くなる。単純な実装のインタプリタでは変数にアクセスする際も識別子とメモリ上の位置のマッピングを確認しなければならず、しかもそれを実行中に何度も行わなければならないので、遅くなるのである。
+</p><p>単純な実装のインタプリタ方式が速度が遅くなる最大の原因は、一命令ごとに <code>switch</code> 文を実行することにある。現代の<a href="/wiki/CPU" title="CPU">CPU</a>は<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">パイプライン</a>方式を採用しており、命令の先読みが可能でないと、実行速度が著しく低下する。<code>switch</code> 文の場所が命令の先読みが不可能であるため、単純な実装のインタプリタ方式は遅くなる。単純な実装のインタプリタ方式で実装された処理系を高速化（最適化）するための、最初にとられるステップが <code>switch</code> 文を廃止し、コンパイラ方式に切り替えることである。それゆえ、実装不可能というわけではないが、効果が薄いため、インタプリタ方式で実装する場合は、一般には、<a href="/wiki/%E5%88%B6%E5%BE%A1%E3%83%95%E3%83%AD%E3%83%BC%E3%82%B0%E3%83%A9%E3%83%95" title="制御フローグラフ">制御フロー解析</a>や<a href="/wiki/%E9%9D%99%E7%9A%84%E5%8D%98%E4%B8%80%E4%BB%A3%E5%85%A5" title="静的単一代入">静的単一代入</a>などを使った、複数の命令を超えての最適化が実装されないことが多い。
+</p><p>インタプリタによる開発の速さとコンパイラによる実行の速さの間で、様々な妥協案が考案されてきた。一部の <span lang="en">LISP</span> 処理系などでは、インタプリタのコードとコンパイルされたコードが相互に呼び出しあうことができ、変数も共有できる。そのため、あるルーチンをインタプリタで評価しデバッグした後、先行してコンパイルして実行性能を高めつつ、他のルーチンを開発し続けることができる。多くのインタプリタはソースコードをそのまま実行するわけではなく、よりコンパクトな内部形式に変換している。多くの <span lang="en">BASIC</span> インタプリタは<a href="/wiki/%E4%BA%88%E7%B4%84%E8%AA%9E" title="予約語">予約語</a>を1<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88_(%E6%83%85%E5%A0%B1)" title="バイト (情報)">バイト</a>の<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%83%83%E3%83%89%E3%82%B3%E3%83%BC%E3%83%89#トークン・スレッディング" title="スレッデッドコード">トークン</a>に置換し、それを<a class="mw-redirect" href="/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ジャンプテーブル">ジャンプテーブル</a>のインデックスとして使用する。<span lang="en"><a href="/wiki/PBASIC" title="PBASIC">PBASIC</a></span> など一部のインタプリタでは、バイト単位ではなくビット単位でプログラムの短縮を行っており、例えばコマンドを5ビットで表し、一般に16ビットで表される定数をその数値の大きさに対応して可変長（3、6、10、18ビットなど）で表し、アドレスオペランドとして「ビットオフセット」を用意している。多くの <span lang="en">BASIC</span> インタプリタは独自にトークン化された内部表現を保存し、読み込むことができる。
+</p><p>インタプリタがコンパイラと同様の<a href="/wiki/%E5%AD%97%E5%8F%A5%E8%A7%A3%E6%9E%90" title="字句解析">字句解析</a>と<a href="/wiki/%E6%A7%8B%E6%96%87%E8%A7%A3%E6%9E%90" title="構文解析">構文解析</a>を行い、その結果生成された<a href="/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8" title="抽象構文木">抽象構文木</a>を解釈することもある。
+</p>
+<h2><span id=".E3.83.90.E3.83.AA.E3.82.A8.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="バリエーション">バリエーション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=8" title="節を編集: バリエーション">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.B9.E3.83.AC.E3.83.83.E3.83.87.E3.83.83.E3.83.89.E3.82.B3.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="スレッデッドコード">スレッデッドコード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=9" title="節を編集: スレッデッドコード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%83%83%E3%83%89%E3%82%B3%E3%83%BC%E3%83%89" title="スレッデッドコード">スレッデッドコード</a>」を参照</div>
+<p>それ自体はインタプリタの手法とも言えるしコンパイラの手法とも言える。そのどちらと言うよりも、中間表現の1種類というべきかもしれない。<a href="/wiki/%E4%BB%AE%E6%83%B3%E9%96%A2%E6%95%B0%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="仮想関数テーブル">仮想関数テーブル</a>や<a href="/wiki/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%97" title="テーブルジャンプ">テーブルジャンプ</a>によるフロー制御に似ていなくもない。
+</p><p>スレッデッドコードは、呼び出されるべきサブルーチンのアドレスのみが順番に羅列されたものである。「直接スレッディング」の場合は、そのアドレスが指す先は機械語のサブルーチンである。他にもいくつかのバリエーションがある。「サブルーチン・スレッディング」は最も違うタイプのバリエーションで、アドレスのみではなく、機械語のCALL命令として羅列するので、ハードウェアのプロセッサで直接実行できる。これは実行のオーバーヘッドは極小だが、メモリ効率は悪い<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。サブルーチン・スレッディング以外のスレッデッドコードは、きわめて単純なインタプリタで実行できる。<a href="/wiki/Forth" title="Forth">Forth</a>では「内部インタプリタ」と呼んでいる（これは、Forth言語自体を実装しているインタプリタである「外部インタプリタ」と対になっている）。
+</p>
+<h3><span id=".E3.83.90.E3.82.A4.E3.83.88.E3.82.B3.E3.83.BC.E3.83.89.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF"></span><span class="mw-headline" id="バイトコードインタプリタ">バイトコードインタプリタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=10" title="節を編集: バイトコードインタプリタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="バイトコード">バイトコード</a>」を参照</div>
+<p>ソースコードを実行可能な形にするには、まず、ソースコードを構文木に変換する必要がある。構文木のまま、インタプリタ型の処理系で実行する処理系もあるが、構文木をさらに、中間コード（<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="バイトコード">バイトコード</a>など）などの<a href="/wiki/%E4%B8%AD%E9%96%93%E8%A1%A8%E7%8F%BE" title="中間表現">中間表現</a>に変換してから実行する物もある。中間コードをバイトコードと呼んでいる処理系ではそのインタプリタをバイトコードインタプリタと呼ぶ。<span lang="en"><a href="/wiki/Java" title="Java">Java</a></span> や <span lang="en"><a href="/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a></span> のように、中間コードの仕様を公開しファイルに書き出すものもあるし、仕様は公開せず処理系内部だけで使用するものもある。<a href="/wiki/%E5%8B%95%E7%9A%84%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB" title="動的コンパイル">動的コンパイル</a>を使っているインタプリタは、内部で実機の<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>に変換し実行する。
+</p><p>インタプリタとコンパイラの間には様々な中間的実装が存在し、それぞれにプログラム実行前に行われる解析の度合いが異なる。例えば <span lang="en"><a href="/wiki/Emacs_Lisp" title="Emacs Lisp">Emacs Lisp</a></span> は<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="バイトコード">バイトコード</a>にコンパイルされ、<span lang="en">LISP</span> のソースを高度に圧縮し最適化した表現にしているが、それは機械語コードではない（したがって特定のプラットフォームに依存しない）。この「コンパイル」されたコードを解釈するのがバイトコードインタプリタである（それ自体は <a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語"><span lang="en">C</span></a> で書かれている）。この場合のコンパイルされたコードは<a href="/wiki/%E4%BB%AE%E6%83%B3%E6%A9%9F%E6%A2%B0" title="仮想機械">仮想機械</a>の機械語コードであり、仮想機械はハードウェアで実装されておらず、バイトコードインタプリタとして実装されている。同様の手法は <span lang="en"><a href="/wiki/Open_Firmware" title="Open Firmware">Open Firmware</a></span> システムで使われている <span lang="en">Forth</span> コードでも使われている。ソース言語は「Fコード」（バイトコードの一種）にコンパイルされ、それを<a href="/wiki/%E4%BB%AE%E6%83%B3%E6%A9%9F%E6%A2%B0" title="仮想機械">仮想機械</a>が解釈実行する。他に<a href="/wiki/P%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9E%E3%82%B7%E3%83%B3" title="Pコードマシン">Pコードマシン</a>などがある。
+</p><p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;redlink=1" title="コントロール・テーブル (存在しないページ)">コントロール・テーブル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Control_table&amp;action=edit&amp;redlink=1" title="En:Control table (存在しないページ)">英語版</a>）</span></span>はコンパイラを通さなくとも生成でき、バイトコードインタプリタと同様の方法でカスタマイズされたインタプリタでの適切なアルゴリズム的<a href="/wiki/%E5%88%B6%E5%BE%A1%E6%A7%8B%E9%80%A0" title="制御構造">制御構造</a>を記述できる。
+</p>
+<h3><span id=".E6.8A.BD.E8.B1.A1.E6.A7.8B.E6.96.87.E6.9C.A8.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF"></span><span class="mw-headline" id="抽象構文木インタプリタ">抽象構文木インタプリタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=11" title="節を編集: 抽象構文木インタプリタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>インタプリタとコンパイラの中間的手法の1つとして、ソースコードを最適化された<a href="/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8" title="抽象構文木">抽象構文木</a> (AST) に変換し、その木構造にしたがってプログラムを実行するか、<a href="/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="実行時コンパイラ">実行時コンパイラ</a>での機械語コード生成に使用する方法がある<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。この方式では各文を1回だけ構文解析する必要がある。バイトコードに比べると、ASTではプログラムの全体的構造や文と文の関係を保持でき（それらはバイトコードでは失われる）、圧縮するとさらにコンパクトな表現になる<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。そのため、実行時コンパイラにとってはバイトコードよりもASTの方が優れた中間表現だとして提案されてきた。また、実行時の解析もより優れたものにできる。
+</p><p>しかし、ASTはバイトコードよりも冗長であるため、インタプリタとしてはオーバーヘッドが大きくなるという問題がある<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。<span lang="en">CRuby</span> の場合は、1.8までは構文木インタプリタであったが、1.9では（開発中には <span lang="en">YARV</span> と呼ばれていた）バイトコードインタプリタに入れ替えられ、性能が向上した。
+</p>
+<h3><span id=".E5.AE.9F.E8.A1.8C.E6.99.82.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB"></span><span class="mw-headline" id="実行時コンパイル">実行時コンパイル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=12" title="節を編集: 実行時コンパイル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>インタプリタとコンパイラの境界をさらにぼやけさせる方式として、中間表現を<a href="/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="実行時コンパイラ">実行時コンパイラ</a> (JIT) でコンパイルし、実行時にネイティブの<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>にコンパイルする技法がある。これはネイティブなコードの実行効率を実現する代わり、ASTやバイトコードを最初にコンパイルする際に起動時間やメモリ使用量が増大するという欠点がある。これを補う技法として<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%A9%E5%BF%9C%E7%9A%84%E6%9C%80%E9%81%A9%E5%8C%96&amp;action=edit&amp;redlink=1" title="適応的最適化 (存在しないページ)">適応的最適化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adaptive_optimization&amp;action=edit&amp;redlink=1" title="En:Adaptive optimization (存在しないページ)">英語版</a>）</span></span>があり、インタプリタが実行中のプログラムを<a href="/wiki/%E6%80%A7%E8%83%BD%E8%A7%A3%E6%9E%90" title="性能解析">性能解析</a>して最も頻繁に実行される部分をネイティブのコードにコンパイルする。これらの技法は1980年代の <span lang="en"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></span> などの言語で使われ始めた<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。
+</p><p>実行時コンパイルは近年多くの言語処理系で採用されており、<a href="/wiki/Java%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0" title="Javaプラットフォーム"><span lang="en">Java</span></a>、<span lang="en"><a href="/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a></span>、最近の<span lang="en"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span> の実装でも JIT が採用されている。
+</p>
+<h3><span id=".E3.83.88.E3.83.A9.E3.83.B3.E3.82.B9.E3.83.AC.E3.83.BC.E3.82.BF.E6.96.B9.E5.BC.8F"></span><span class="mw-headline" id="トランスレータ方式">トランスレータ方式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=13" title="節を編集: トランスレータ方式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>他のインタプリタ言語に変換して、ターゲット言語のインタプリタ上で実行する方式。例えば <span lang="en"><a href="/wiki/CoffeeScript" title="CoffeeScript">CoffeeScript</a></span> は <span lang="en"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span> に変換されて、<span lang="en">JavaScript</span> インタプリタ上で実行される。
+</p>
+<h2><span id=".E5.BF.9C.E7.94.A8"></span><span class="mw-headline" id="応用">応用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=14" title="節を編集: 応用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>インタプリタは、<a href="/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="コマンドラインインタプリタ">コマンドライン</a>用言語や<a href="/wiki/%E3%82%B0%E3%83%AB%E3%83%BC%E8%A8%80%E8%AA%9E" title="グルー言語">グルー言語</a>でよく使われている。</li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%B3%E3%83%BC%E3%83%89" title="自己書き換えコード">自己書き換えコード</a>はインタプリタでは容易に実装できる。これは <span lang="en">LISP</span> と<a href="/wiki/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD" title="人工知能">人工知能</a>研究がインタプリタの起源であったこととも関係している。</li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3%E6%A9%9F%E6%A2%B0" title="仮想機械">仮想機械</a>を使って、あるアーキテクチャを別のアーキテクチャ上で実行させる<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%8C%96" title="仮想化">仮想化</a>は、基本的にインタプリタである。</li>
+<li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)" title="サンドボックス (セキュリティ)">サンドボックス</a>: インタプリタまたは仮想機械はソースコードの命令を全て実際に実行することを強制されない。特に<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="コンピュータセキュリティ">セキュリティ</a>を脅かすような処理の実行は拒否できる。</li></ul>
+<h2><span id=".E3.83.87.E3.83.90.E3.83.83.E3.82.B0.E3.80.81.E6.95.99.E8.82.B2.E7.94.A8.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF"></span><span class="mw-headline" id="デバッグ、教育用インタプリタ">デバッグ、教育用インタプリタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=15" title="節を編集: デバッグ、教育用インタプリタ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>通常<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>はコンパイラで処理されるが、デバッグ目的および教育目的のインタプリタ型のC言語の処理系もある。MS-DOS時代に、いくつかの製品が提供されていた。C-Terpなどがその様な製品の例である。C/C++のインタプリタはほかに<a class="new" href="/w/index.php?title=En:CINT&amp;action=edit&amp;redlink=1" title="En:CINT (存在しないページ)">CINT</a>や<a class="new" href="/w/index.php?title=En:Ch_interpreter&amp;action=edit&amp;redlink=1" title="En:Ch interpreter (存在しないページ)">Ch</a>がある。
+</p>
+<h2><span id=".E3.83.91.E3.83.B3.E3.83.81.E3.82.AB.E3.83.BC.E3.83.89.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF"></span><span class="mw-headline" id="パンチカードのインタプリタ">パンチカードのインタプリタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=16" title="節を編集: パンチカードのインタプリタ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="mw-redirect" href="/wiki/%E3%82%BF%E3%83%93%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%B7%E3%83%B3" title="タビュレーティングマシン">パンチカードシステム</a>において、<a href="/wiki/%E3%83%91%E3%83%B3%E3%83%81%E3%82%AB%E3%83%BC%E3%83%89" title="パンチカード">パンチカード</a>を読み込んで、その内容を人間が読める形式（文字）でパンチカード上に印字する機械をインタプリタと呼ぶ。例えば、<span lang="en"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IBM_550&amp;action=edit&amp;redlink=1" title="IBM 550 (存在しないページ)">IBM 550</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IBM_550&amp;action=edit&amp;redlink=1" title="En:IBM 550 (存在しないページ)">英語版</a>）</span></span> Numeric Interpreter</span> (1930年) や <span lang="en"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IBM_557&amp;action=edit&amp;redlink=1" title="IBM 557 (存在しないページ)">IBM 557</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IBM_557&amp;action=edit&amp;redlink=1" title="En:IBM 557 (存在しないページ)">英語版</a>）</span></span> Alphabetic Interpreter</span> (1954年) がある。
+</p>
+<h2><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF.E5.9E.8B.E3.81.AE.E5.87.A6.E7.90.86.E7.B3.BB.E3.81.8C.E4.B8.80.E8.88.AC.E7.9A.84.E3.81.AA.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="インタプリタ型の処理系が一般的なプログラミング言語">インタプリタ型の処理系が一般的なプログラミング言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=17" title="節を編集: インタプリタ型の処理系が一般的なプログラミング言語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span lang="en"><a href="/wiki/ActionScript" title="ActionScript">ActionScript</a></span></li>
+<li><span lang="en"><a href="/wiki/APL" title="APL">APL</a></span></li>
+<li><span lang="en"><a href="/wiki/AWK" title="AWK">AWK</a></span></li>
+<li><span lang="en"><a href="/wiki/Bash" title="Bash">Bash</a></span></li>
+<li><span lang="en"><a href="/wiki/BASIC" title="BASIC">BASIC</a></span>（古典的な<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="マイクロコンピュータ">マイクロコンピュータ</a>用）</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CFScript&amp;action=edit&amp;redlink=1" title="CFScript (存在しないページ)"><span lang="en">CFScript</span></a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CFScript&amp;action=edit&amp;redlink=1" title="En:CFScript (存在しないページ)">英語版</a>）</span></span></li>
+<li><span lang="en"><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/Csh" title="Csh">Csh</a></span></li>
+<li><span lang="en"><a href="/wiki/Curl_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Curl (プログラミング言語)">Curl</a></span></li>
+<li><a href="/wiki/DBASE#dBASE_プログラミング言語" title="DBASE"><span lang="en">dBASE</span></a></li>
+<li><span lang="en"><a href="/wiki/Emacs_Lisp" title="Emacs Lisp">Emacs Lisp</a></span></li>
+<li><a href="/wiki/Microsoft_Visual_FoxPro" title="Microsoft Visual FoxPro"><span lang="en">FoxPro</span></a></li>
+<li><span lang="en"><a href="/wiki/Hot_Soup_Processor" title="Hot Soup Processor">Hot Soup Processor</a></span></li>
+<li><span lang="en"><a href="/wiki/HyperTalk" title="HyperTalk">HyperTalk</a></span></li>
+<li><span lang="en"><a href="/wiki/Io_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Io (プログラミング言語)">Io</a></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JavaFX_Script&amp;action=edit&amp;redlink=1" title="JavaFX Script (存在しないページ)"><span lang="en">Java FX Script</span></a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JavaFX_Script&amp;action=edit&amp;redlink=1" title="En:JavaFX Script (存在しないページ)">英語版</a>）</span></span></li>
+<li><span lang="en"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span></li>
+<li><span lang="en"><a href="/wiki/Mathematica" title="Mathematica">Mathematica</a></span></li>
+<li><span lang="en"><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a></span></li>
+<li><span lang="en"><a href="/wiki/Perl" title="Perl">Perl</a></span>（<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2017年1月）">第5版まで</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2017年1月）">要出典</span></a></i>]</sup>）</li>
+<li><span lang="en"><a href="/wiki/PostScript" title="PostScript">PostScript</a></span></li>
+<li><span lang="fr"><a href="/wiki/Prolog" title="Prolog">Prolog</a></span></li>
+<li><span lang="en"><a href="/wiki/REXX" title="REXX">REXX</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/Ruby_(%E4%BB%A3%E8%A1%A8%E7%9A%84%E3%81%AA%E3%83%88%E3%83%94%E3%83%83%E3%82%AF)" title="Ruby (代表的なトピック)">Ruby</a></span></li>
+<li><span lang="en"><a href="/wiki/Python" title="Python">Python</a></span></li>
+<li><span lang="en"><a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a></span></li>
+<li><a href="/wiki/R%E8%A8%80%E8%AA%9E" title="R言語"><span lang="en">R</span></a></li>
+<li><a href="/wiki/S%E8%A8%80%E8%AA%9E" title="S言語"><span lang="en">S</span></a></li>
+<li><span lang="en"><a href="/wiki/Scheme" title="Scheme">Scheme</a></span></li>
+<li><span lang="en"><a href="/wiki/SKILL_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="SKILL (プログラミング言語)">SKILL</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/Tcl" title="Tcl">Tcl</a></span></li>
+<li><span lang="en"><a href="/wiki/TeX" title="TeX">TeX</a></span></li>
+<li><span lang="en"><a href="/wiki/VBScript" title="VBScript">VBScript</a></span></li>
+<li><span lang="en"><a href="/wiki/XSL_Transformations" title="XSL Transformations">XSL</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a></span></li>
+<li><a href="/wiki/%E3%81%AA%E3%81%A7%E3%81%97%E3%81%93_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="なでしこ (プログラミング言語)">なでしこ</a></li>
+<li><a href="/wiki/%E3%81%B2%E3%81%BE%E3%82%8F%E3%82%8A_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="ひまわり (プログラミング言語)">ひまわり</a></li></ul>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.97.E3.83.AA.E3.82.BF.E3.81.A8.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E6.96.B9.E5.BC.8F.E3.81.8C.E4.BD.B5.E7.94.A8.E3.81.AE.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="インタプリタとコンパイラ方式が併用のもの">インタプリタとコンパイラ方式が併用のもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=18" title="節を編集: インタプリタとコンパイラ方式が併用のもの">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".E3.80.8C.E5.85.B1.E9.80.9A.E8.A8.80.E8.AA.9E.E3.83.A9.E3.83.B3.E3.82.BF.E3.82.A4.E3.83.A0.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「共通言語ランタイム」のバイナリー・コードにコンパイルされるもの">「共通言語ランタイム」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=19" title="節を編集: 「共通言語ランタイム」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Boo_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Boo (プログラミング言語)">Boo</a></span></li>
+<li><span lang="en"><a href="/wiki/C_Sharp" title="C Sharp">C#</a></span></li>
+<li><span lang="en"><a href="/wiki/J_Sharp" title="J Sharp">J#</a></span></li>
+<li><span lang="pl"><a href="/wiki/Nemerle" title="Nemerle">Nemerle</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/Microsoft_Visual_Basic_.NET" title="Microsoft Visual Basic .NET">Visual Basic .NET</a></span></li></ul>
+<h4><span id=".E3.80.8CErlang_VM.E3.80.8D.EF.BC.88BEAM.EF.BC.89.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Erlang_VM」（BEAM）のバイナリー・コードにコンパイルされるもの">「<span lang="en">Erlang VM</span>」（<span lang="en">BEAM</span>）のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=20" title="節を編集: 「Erlang VM」（BEAM）のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Erlang" title="Erlang">Erlang</a></span></li>
+<li><span lang="en"><a href="/wiki/Elixir_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Elixir (プログラミング言語)">Elixir</a></span></li></ul>
+<h4><span id=".E3.80.8CJava.E4.BB.AE.E6.83.B3.E6.A9.9F.E6.A2.B0.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Java仮想機械」のバイナリー・コードにコンパイルされるもの">「<span lang="en">Java</span>仮想機械」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=21" title="節を編集: 「Java仮想機械」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Ceylon" title="Ceylon">Ceylon</a></span></li>
+<li><span lang="en"><a href="/wiki/Clojure" title="Clojure">Clojure</a></span></li>
+<li><span lang="en"><a href="/wiki/Fortress" title="Fortress">Fortress</a></span></li>
+<li><span lang="en"><a href="/wiki/Groovy" title="Groovy">Groovy</a></span></li>
+<li><span lang="en"><a href="/wiki/Java" title="Java">Java</a></span></li>
+<li><span lang="en"><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></span></li>
+<li><span lang="en"><a href="/wiki/Noop_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Noop (プログラミング言語)">Noop</a></span></li>
+<li><span lang="en"><a href="/wiki/Scala" title="Scala">Scala</a></span></li>
+<li><span lang="en"><a href="/wiki/Processing" title="Processing">Processing</a></span></li></ul>
+<h4><span id="JavaScript_.E3.81.AB.E5.A4.89.E6.8F.9B.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="JavaScript_に変換されるもの"><span lang="en">JavaScript</span> に変換されるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=22" title="節を編集: JavaScript に変換されるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Ceylon" title="Ceylon">Ceylon</a></span></li>
+<li><span lang="en"><a href="/wiki/CoffeeScript" title="CoffeeScript">CoffeeScript</a></span></li>
+<li><span lang="en"><a href="/wiki/Dart" title="Dart">Dart</a></span></li>
+<li><span lang="en"><a href="/wiki/Haxe" title="Haxe">Haxe</a></span></li>
+<li><span lang="en"><a href="/wiki/JSX" title="JSX">JSX</a></span></li>
+<li><span lang="en"><a href="/wiki/TypeScript" title="TypeScript">TypeScript</a></span></li></ul>
+<h4><span id=".E3.80.8CLua_VM.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Lua_VM」のバイナリー・コードにコンパイルされるもの">「<span lang="pt">Lua</span> VM」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=23" title="節を編集: 「Lua VM」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="pt"><a href="/wiki/Lua" title="Lua">Lua</a></span></li></ul>
+<h4><span id=".E3.80.8CP.E3.82.B3.E3.83.BC.E3.83.89.E3.83.9E.E3.82.B7.E3.83.B3.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Pコードマシン」のバイナリー・コードにコンパイルされるもの">「Pコードマシン」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=24" title="節を編集: 「Pコードマシン」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="fr"><a href="/wiki/Pascal" title="Pascal">Pascal</a></span></li></ul>
+<h4><span id=".E3.80.8CParrot.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Parrot」のバイナリー・コードにコンパイルされるもの">「<span lang="en">Parrot</span>」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=25" title="節を編集: 「Parrot」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Raku" title="Raku">Raku</a></span></li></ul>
+<h4><span id=".E3.80.8CSmalltalk_VM.E3.80.8D.E3.81.AE.E3.83.90.E3.82.A4.E3.83.8A.E3.83.AA.E3.83.BC.E3.83.BB.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="「Smalltalk_VM」のバイナリー・コードにコンパイルされるもの">「<span lang="en">Smalltalk VM</span>」のバイナリー・コードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=26" title="節を編集: 「Smalltalk VM」のバイナリー・コードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></span></li></ul>
+<h4><span id="VBA.E3.81.AEP.E3.82.B3.E3.83.BC.E3.83.89.E3.81.AB.E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.AB.E3.81.95.E3.82.8C.E3.82.8B.E3.82.82.E3.81.AE"></span><span class="mw-headline" id="VBAのPコードにコンパイルされるもの">VBAのPコードにコンパイルされるもの</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=27" title="節を編集: VBAのPコードにコンパイルされるもの">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul><li><span lang="en"><a href="/wiki/Visual_Basic_for_Applications" title="Visual Basic for Applications">Visual Basic for Applications</a></span></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=28" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">グリュック ロバート、横山哲郎「<a class="external text" href="https://doi.org/10.11309/jssst.33.3_108" rel="nofollow">可逆命令型言語の線形時間自己解釈系</a>」『コンピュータ ソフトウェア』第33巻第3号、日本ソフトウェア科学会、2016年7月25日、 108-128頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.11309%2Fjssst.33.3_108" rel="nofollow">10.11309/jssst.33.3_108</a>、<span title="">2019年9月21日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation book" id="Reference-bit_編集部-1990" style="font-style:normal">bit 編集部『bit 単語帳』<a href="/wiki/%E5%85%B1%E7%AB%8B%E5%87%BA%E7%89%88" title="共立出版">共立出版</a>、1990年8月15日、19頁。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-320-02526-1" title="特別:文献資料/4-320-02526-1">4-320-02526-1</a>。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">この意味では、<a href="/wiki/CPU" title="CPU">CPU</a>は機械語インタプリタであると見ることができる。</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">現在では、「インタプリタ / コンパイラ」という区分に関しては状況が変わっており、<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2015年8月）">誰?</span></a></i>]</sup>に言わせると『だが、それらは必ずしも相互排他的に2つに分類できるわけではない。なぜなら多くのインタプリタ方式の処理系は、コンパイラが行っているような変換も内部で行っているからだ。<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2015年8月）">要出典</span></a></i>]</sup>」とも言われ、『「インタプリタ言語」あるいは「コンパイラ言語」といった呼称も見掛けることがあるが、これらは単にその言語の規範的実装がインタプリタかコンパイラかを示しているに過ぎない（実際、詳しく調べれば、実験的な程度の実装まで含めれば両方ともあるということも多い）。』という見解も出てくることになる。<a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>は基本的に抽象であり、（理想的には）特定の実装からは独立している。しかし、<a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="動的プログラミング言語">動的プログラミング言語</a>のようにインタプリタでの実装が向いている方向性の言語、あるいはその逆もあるということは確かである。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external text" href="http://id.nii.ac.jp/1001/00006268/" rel="nofollow">日本のソフトウェアの草創期：座談会：日本のソフトウェアの草創期</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><i>Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I</i> のこと</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><i>History of Lisp</i> の、§3 の最後のほうに、次のようにある「S.R. Russell noticed that <i>eval</i> could serve as an interpreter for LISP, promptly hand coded it, and we now had a programming language with an interpreter. (段落) The unexpected appearance of an interpreter ...(後略)」</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a href="/wiki/%E3%83%9D%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B0%E3%83%AC%E3%82%A2%E3%83%A0" title="ポール・グレアム">ポール・グレアム</a>の『ハッカーと画家』（原著「<span lang="en">Hackers &amp; Painters</span>、185ページ）によれば、マッカーシーは「ラッセルは『ねえ、この <code>eval</code> をプログラムしようか』と言った。…私は『ほう、ほう。君は理論と実際を混同している。この <i>eval</i> は読み物として書いたもので、実際に動かすために書いたものじゃない』と答えた。しかし彼はそれをやってのけた。つまり彼は私の論文にある <i>eval</i> を <a href="/wiki/IBM_704" title="IBM 704">IBM 704</a> の機械語にコンパイルして、<a href="/wiki/%E3%83%90%E3%82%B0" title="バグ">バグ</a>を修正し、それを <span lang="en">LISP</span> インタプリタだと宣伝したし、実際それはそのとおりだった。だからその時点で <span lang="en">LISP</span> は今日のような形態を本質的に備えていた」と述べたという。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">つまり、近年では高速化にはキャッシュのほうが重要なので、高速化に有利か否かはわからない。</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external text" href="http://lambda-the-ultimate.org/node/716" rel="nofollow"><span lang="en">AST intermediate representations</span></a> — <span lang="en">Lambda the Ultimate forum</span></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external text" href="http://www.ics.uci.edu/~franz/Site/pubs-pdf/C05.pdf" rel="nofollow"><span lang="en">A Tree-Based Alternative to Java Byte-Codes</span></a> — トーマス・キスラー、マイケル・フランズ</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://webkit.org/blog/189/announcing-squirrelfish/" rel="nofollow"><span lang="en">Annoucing SquirelFish</span></a></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">L. ドイチュ、A. シフマン、<a class="external text" href="http://portal.acm.org/citation.cfm?id=800017.800542" rel="nofollow"><span lang="en">Efficient implementation of the Smalltalk-80 system</span></a>、<span lang="en">Proceedings of 11th POPL symposium</span>、1984年</span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=29" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="コマンドラインインタプリタ">コマンドラインインタプリタ</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB" title="動的コンパイル">動的コンパイル</a></li>
+<li><a href="/wiki/%E9%83%A8%E5%88%86%E8%A9%95%E4%BE%A1" title="部分評価">部分評価</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;section=30" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.columbia.edu/acis/history/interpreter.html" rel="nofollow"><span lang="en">IBM Card Interpreters</span></a> — コロンビア大学</li>
+<li><a class="external text" href="https://www.archive.org/download/TheoreticalFoundationsForPracticaltotallyFunctionalProgramming/33429551_PHD_totalthesis.pdf" rel="nofollow"><span lang="en">Theoretical Foundations For Practical 'Totally Functional Programming'</span></a> （特に <span lang="en">Chapter 7</span>） インタプリタとは何かについて定式化しようとした博士論文</li>
+<li><a class="external text" href="https://www.youtube.com/watch?v=_C5AHaS1mOA" rel="nofollow"><span lang="en">Interpreters and Compilers</span></a> - <a href="/wiki/YouTube" title="YouTube">YouTube</a> インタプリタとコンパイラの概念的差異を説明した短いアニメーション（英語）</li></ul>
+<p><span class="citation foldoc">この記事は2008年11月1日まで<a href="/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GFDL</a>バージョン1.3以降の再ライセンス規約に基づいていた<a href="/wiki/FOLDOC" title="FOLDOC">Free On-line Dictionary of Computing</a>にある項目の資料が元になっている。</span>
+</p>
+<div aria-labelledby="コンピュータ・プログラミング言語" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:プログラミング言語一覧 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ・プログラミング言語" style="font-size:110%;margin:0 6em">コンピュータ・プログラミング言語</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">低水準言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">高水準言語</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">1950年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/FORTRAN" title="FORTRAN">FORTRAN</a></span></li>
+<li><span lang="en"><a href="/wiki/LISP" title="LISP">LISP</a></span></li>
+<li><span lang="en"><a href="/wiki/ALGOL" title="ALGOL">ALGOL</a></span></li>
+<li><span lang="en"><a href="/wiki/RPG_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E8%A8%80%E8%AA%9E)" title="RPG (プログラム言語)">RPG</a></span></li>
+<li><span lang="en"><a href="/wiki/COBOL" title="COBOL">COBOL</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1960年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CPL_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="CPL (プログラミング言語)"><span lang="en">CPL</span></a></li>
+<li><span lang="en"><a href="/wiki/BASIC" title="BASIC">BASIC</a></span></li>
+<li><span lang="en"><a href="/wiki/PL/I" title="PL/I">PL/I</a></span></li>
+<li><span lang="en"><a href="/wiki/APL" title="APL">APL</a></span></li>
+<li><span lang="en"><a href="/wiki/BCPL" title="BCPL">BCPL</a></span></li>
+<li><span lang="en"><a href="/wiki/Simula" title="Simula">Simula</a></span></li>
+<li><span lang="en"><a href="/wiki/LOGO" title="LOGO">LOGO</a></span></li>
+<li><span lang="en"><a href="/wiki/B%E8%A8%80%E8%AA%9E" title="B言語">B</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1970年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Forth" title="Forth">Forth</a></span></li>
+<li><span lang="fr"><a href="/wiki/Pascal" title="Pascal">Pascal</a></span></li>
+<li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語"><span lang="en">C</span></a></li>
+<li><span lang="fr"><a href="/wiki/Prolog" title="Prolog">Prolog</a></span></li>
+<li><span lang="en"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></span></li>
+<li><span lang="en"><a href="/wiki/Scheme" title="Scheme">Scheme</a></span></li>
+<li><a href="/wiki/ML_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="ML (プログラミング言語)"><span lang="en">ML</span></a></li>
+<li><span lang="en"><a href="/wiki/AWK" title="AWK">AWK</a></span></li>
+<li><span lang="en"><a href="/wiki/Ada" title="Ada">Ada</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1980年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/C%2B%2B" title="C++">C++</a></span></li>
+<li><span lang="en"><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></span></li>
+<li><span lang="en"><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></span></li>
+<li><span lang="fr"><a href="/wiki/Eiffel" title="Eiffel">Eiffel</a></span></li>
+<li><span lang="en"><a href="/wiki/Erlang" title="Erlang">Erlang</a></span></li>
+<li><span lang="en"><a href="/wiki/Perl" title="Perl">Perl</a></span></li>
+<li><span lang="en"><a href="/wiki/Mathematica" title="Mathematica">Mathematica</a></span></li>
+<li><span lang="en"><a href="/wiki/J_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="J (プログラミング言語)">J</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">1990年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Python" title="Python">Python</a></span></li>
+<li><span lang="en"><a href="/wiki/Tcl/Tk" title="Tcl/Tk">Tcl</a></span></li>
+<li><span lang="en"><a href="/wiki/Haskell" title="Haskell">Haskell</a></span></li>
+<li><span lang="en"><a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a></span></li>
+<li><span lang="en"><a href="/wiki/Ruby" title="Ruby">Ruby</a></span></li>
+<li><span lang="pt"><a href="/wiki/Lua" title="Lua">Lua</a></span></li>
+<li><span lang="en"><a href="/wiki/Delphi" title="Delphi">Delphi</a></span></li>
+<li><span lang="en"><a href="/wiki/Java" title="Java">Java</a></span></li>
+<li><span lang="en"><a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a></span> (<span lang="en"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span>)</li>
+<li><span lang="en"><a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a></span></li>
+<li><span lang="en"><a href="/wiki/OCaml" title="OCaml">OCaml</a></span></li>
+<li><span lang="en"><a href="/wiki/SuperCollider" title="SuperCollider">SuperCollider</a></span></li>
+<li><span lang="en"><a href="/wiki/R%E8%A8%80%E8%AA%9E" title="R言語">R</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">2000年代</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/C_Sharp" title="C Sharp">C#</a></span></li>
+<li><span lang="en"><a class="mw-redirect" href="/wiki/VB.NET" title="VB.NET">VB.NET</a></span></li>
+<li><span lang="en"><a href="/wiki/Scala" title="Scala">Scala</a></span></li>
+<li><span lang="en"><a href="/wiki/Clojure" title="Clojure">Clojure</a></span></li>
+<li><span lang="en"><a href="/wiki/D%E8%A8%80%E8%AA%9E" title="D言語">D</a></span></li>
+<li><span lang="en"><a href="/wiki/F_Sharp" title="F Sharp">F#</a></span></li>
+<li><span lang="en"><a href="/wiki/Go_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Go (プログラミング言語)">Go</a></span></li>
+<li><span lang="en"><a href="/wiki/Nim" title="Nim">Nim</a></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">2010年代</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span lang="en"><a href="/wiki/Dart" title="Dart">Dart</a></span></li>
+<li><span lang="en"><a href="/wiki/Ceylon" title="Ceylon">Ceylon</a></span></li>
+<li><span lang="en"><a href="/wiki/Elixir_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Elixir (プログラミング言語)">Elixir</a></span></li>
+<li><span lang="en"><a href="/wiki/Crystal_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Crystal (プログラミング言語)">Crystal</a></span></li>
+<li><span lang="en"><a href="/wiki/Hack_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Hack (プログラミング言語)">Hack</a></span></li>
+<li><span lang="en"><a href="/wiki/Swift_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Swift (プログラミング言語)">Swift</a></span></li>
+<li><span lang="en"><a href="/wiki/Rust_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Rust (プログラミング言語)">Rust</a></span></li>
+<li><span lang="en"><a href="/wiki/Raku" title="Raku">Raku</a></span></li>
+<li><span lang="en"><a href="/wiki/Elm_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Elm (プログラミング言語)">Elm</a></span></li>
+<li><span lang="en"><a href="/wiki/Julia_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Julia (プログラミング言語)">Julia</a></span></li>
+<li><span lang="en"><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></span></li>
+<li><span lang="en"><a href="/wiki/Zig_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Zig (プログラミング言語)">Zig</a></span></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">架空の言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%93%AC%E4%BC%BC%E8%A8%80%E8%AA%9E" title="擬似言語">擬似言語</a></li>
+<li><a href="/wiki/CASL" title="CASL">CASL</a></li>
+<li><a href="/wiki/CAP-X" title="CAP-X">CAP-X</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">年表</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">パラダイム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7" title="プログラミング言語一覧">一覧</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="コンピュータ・プログラミング言語の関連項目" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:プログラミング言語の関連項目 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E9%96%A2%E9%80%A3%E9%A0%85%E7%9B%AE&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ・プログラミング言語の関連項目" style="font-size:110%;margin:0 6em">コンピュータ・プログラミング言語の関連項目</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語水準</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>(1G)</li>
+<li><a href="/wiki/%E4%BD%8E%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="低水準言語">低水準言語</a>(2G)</li>
+<li><a href="/wiki/%E9%AB%98%E6%B0%B4%E6%BA%96%E8%A8%80%E8%AA%9E" title="高水準言語">高水準言語</a>(3G)</li>
+<li><a href="/wiki/4GL" title="4GL">第四世代言語</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%BA%94%E4%B8%96%E4%BB%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="第五世代コンピュータ">第五世代言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語処理系</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブラ</a></li>
+<li><a class="mw-selflink selflink">インタプリタ</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></li>
+<li><a class="new" href="/w/index.php?title=En:Translator_(computing)&amp;action=edit&amp;redlink=1" title="En:Translator (computing) (存在しないページ)">トランスレータ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語分類</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="マルチパラダイムプログラミング言語">マルチパラダイム言語</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="命令型プログラミング">命令型言語</a></li>
+<li><a href="/wiki/%E5%AE%A3%E8%A8%80%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="宣言型プログラミング">宣言型言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="非構造化プログラミング">非構造化言語</a></li>
+<li><a href="/wiki/%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="構造化プログラミング">構造化言語</a></li>
+<li><a href="/wiki/%E9%9D%9E%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E8%A8%80%E8%AA%9E" title="非手続き型言語">非手続き型言語</a></li>
+<li><a href="/wiki/%E6%89%8B%E7%B6%9A%E3%81%8D%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="手続き型プログラミング">手続き型言語</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向言語</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型言語</a></li>
+<li><a href="/wiki/%E8%AB%96%E7%90%86%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="論理プログラミング">論理型言語</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="データフロープログラミング">データフロー言語</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="動的プログラミング言語">ダイナミック言語</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E" title="スクリプト言語">スクリプト言語</a></li>
+<li><a href="/wiki/%E8%BB%BD%E9%87%8F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="軽量プログラミング言語">軽量プログラミング言語</a></li>
+<li><a href="/wiki/%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="ビジュアルプログラミング言語">ビジュアルプログラミング言語</a></li>
+<li><a href="/wiki/%E9%9B%A3%E8%A7%A3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="難解プログラミング言語">難解プログラミング言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">ドメイン固有言語</a></li>
+<li><a href="/wiki/Job_Control_Language" title="Job Control Language">ジョブ制御言語</a></li>
+<li><a href="/wiki/%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E" title="問い合わせ言語">問い合わせ言語</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E" title="マークアップ言語">マークアップ言語</a></li>
+<li><a href="/wiki/%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="形式言語">形式言語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E8%A8%80%E8%AA%9E" title="コンピュータ言語">コンピュータ言語</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7" title="プログラミング言語一覧">プログラミング言語一覧</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">プログラミング言語年表</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">プログラミングパラダイム</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331063855
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.297 seconds
+Real time usage: 0.370 seconds
+Preprocessor visited node count: 6254/1000000
+Post‐expand include size: 101854/2097152 bytes
+Template argument size: 13001/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 12/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 9971/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 7876608/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  297.080      1 -total
+ 36.24%  107.661      1 テンプレート:Reflist
+ 22.33%   66.326      1 テンプレート:複数の問題
+ 21.12%   62.749      1 テンプレート:Ambox
+ 20.42%   60.649      1 テンプレート:Cite_book
+ 18.99%   56.430      1 テンプレート:Cite_book/和書
+ 15.31%   45.488      1 テンプレート:ISBN2
+ 11.40%   33.863      1 テンプレート:Cite_journal
+ 10.22%   30.371     10 テンプレート:仮リンク
+  9.36%   27.814      1 テンプレート:Cite_journal/和書
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1488-0!canonical and timestamp 20220331063855 and revision id 1084. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=インタプリタ&amp;oldid=1084">http://localhost:8080/w/index.php?title=インタプリタ&amp;oldid=1084</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E8%AA%B0)/2015%E5%B9%B47%E6%9C%88-12%E6%9C%88" title="カテゴリ:言葉を濁した記述のある記事 (誰)/2015年7月-12月">言葉を濁した記述のある記事 (誰)/2015年7月-12月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2015%E5%B9%B48%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2015年8月">出典を必要とする記述のある記事/2015年8月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B43%E6%9C%88" title="カテゴリ:出典を必要とする記事/2019年3月">出典を必要とする記事/2019年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2017%E5%B9%B41%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2017年1月">出典を必要とする記述のある記事/2017年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:FOLDOC%E3%82%92%E6%83%85%E5%A0%B1%E6%BA%90%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:FOLDOCを情報源とする記事">FOLDOCを情報源とする記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="カテゴリ:インタプリタ">インタプリタ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E5%AE%9F%E8%A3%85" title="カテゴリ:プログラミング言語の実装">プログラミング言語の実装</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="カテゴリ:システムソフトウェア">システムソフトウェア</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;returntoquery=curid%3D1488%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;returntoquery=curid%3D1488%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;oldid=1084" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月10日 (火) 20:19 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.297","walltime":"0.370","ppvisitednodes":{"value":6254,"limit":1000000},"postexpandincludesize":{"value":101854,"limit":2097152},"templateargumentsize":{"value":13001,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":12,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":9971,"limit":5000000},"timingprofile":["100.00%  297.080      1 -total"," 36.24%  107.661      1 テンプレート:Reflist"," 22.33%   66.326      1 テンプレート:複数の問題"," 21.12%   62.749      1 テンプレート:Ambox"," 20.42%   60.649      1 テンプレート:Cite_book"," 18.99%   56.430      1 テンプレート:Cite_book/和書"," 15.31%   45.488      1 テンプレート:ISBN2"," 11.40%   33.863      1 テンプレート:Cite_journal"," 10.22%   30.371     10 テンプレート:仮リンク","  9.36%   27.814      1 テンプレート:Cite_journal/和書"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":7876608,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331063855","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":300});});</script>
+</body></html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>分散コンピューティング - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-分散コンピューティング rootpage-分散コンピューティング skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">分散コンピューティング</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>分散コンピューティング</b>（ぶんさんコンピューティング、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">distributed computing</span>）とは、<a href="." id="link_a_2" title="プログラム (コンピュータ)">プログラム</a>の個々の部分が同時並行的に複数の<a href="." id="link_a_3" title="コンピュータ">コンピュータ</a>上で実行され、各々が<a href="." id="link_a_4" title="コンピュータネットワーク">ネットワーク</a>を介して互いに通信を行いながら全体として処理が進行する計算手法のことである。複雑な計算などをネットワークを介して複数のコンピュータを利用して行うことで、一台のコンピュータで計算するより<a href="." id="link_a_5" title="スループット">スループット</a>を上げようとする取り組み、またはそれを実現する為の仕組みである。<b>分散処理</b>（ぶんさんしょり）ともいう。<a href="." id="link_a_6" title="並列コンピューティング">並列コンピューティング</a>の一形態に分類されるが、一般に並列コンピューティングと言えば、同時並行に実行する主体は同じコンピュータシステム内の<a href="." id="link_a_7" title="CPU">CPU</a>群である。ただし、どちらもプログラムの分割（同時に実行できる部分にプログラムを分けること）が必須である。分散コンピューティングではさらに、それぞれの部分が異なる環境でも動作できるようにしなければならない<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%A4%9C%E8%A8%BC%E5%8F%AF%E8%83%BD%E6%80%A7" title="Wikipedia:検証可能性"><span title="この記述の信頼性について検証が求められています。（2009年9月）">要検証</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="トーク:分散コンピューティング (存在しないページ)">トーク</a></span></i>]</sup>。例えば、2台の異なるハードウェアを使ったコンピュータで、それぞれ異なる<a href="." id="link_a_8" title="ファイルシステム">ファイルシステム</a>構成であっても動作するよう配慮する必要がある。
+</p><p>問題を複数の部分問題に分けて各コンピュータに実行させるのが基本であり、<a href="." id="link_a_9" title="素数">素数</a>探索や数多く試してみる以外に解決できない問題の対処として用いられているものが多い。分散コンピューティングの例として<a href="." id="link_a_10" title="Berkeley Open Infrastructure for Network Computing">BOINC</a>がある。これは、大きな問題を多数の小さな問題に分割し、多数のコンピュータに分配するフレームワークである。その後、それぞれの結果を集めて大きな解を得る。一般的に処理を分散すると一台のコンピュータで計算する場合と比べ、問題データの分配、収集、集計するためのネットワークの負荷が増加し、問題解決の為の<a href="." id="link_a_11" title="ボトルネック">ボトルネック</a>となるため、部分問題間の依存関係を減らすことが重要な課題となる。
+</p><p>分散コンピューティングは、コンピュータ同士をネットワーク接続し、効率的に通信できるよう努力した結果として自然に生まれた。しかし、分散コンピューティングは<a href="." id="link_a_4" title="コンピュータネットワーク">ネットワーク</a>と同義ではない。単にコンピュータネットワークと言った場合、複数のコンピュータが互いにやり取りするが、単一のプログラムの処理を共有することはない。<a href="." id="link_a_12" title="World Wide Web">World Wide Web</a> はコンピュータネットワークの例であるが、分散コンピューティングの例ではない。
+</p><p>分散処理を構築するための様々な技術や標準が存在し、一部はその目的に特化して設計されている。例えば、<a href="." id="link_a_13" title="遠隔手続き呼出し">遠隔手続き呼出し</a> (RPC)、<a href="." id="link_a_14" title="Java Remote Method Invocation">Java Remote Method Invocation</a> (Java RMI)、<a href="." id="link_a_15" title=".NET Remoting">.NET Remoting</a> などがある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#構成"><span class="tocnumber">1</span> <span class="toctext">構成</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#目標と利点"><span class="tocnumber">2</span> <span class="toctext">目標と利点</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#オープン性"><span class="tocnumber">2.1</span> <span class="toctext">オープン性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#欠点と問題"><span class="tocnumber">3</span> <span class="toctext">欠点と問題</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#技術的問題"><span class="tocnumber">3.1</span> <span class="toctext">技術的問題</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#設計思想（アーキテクチャ）"><span class="tocnumber">4</span> <span class="toctext">設計思想（アーキテクチャ）</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#分散コンピューティングでの設計思想（アーキテクチャ）"><span class="tocnumber">4.1</span> <span class="toctext">分散コンピューティングでの設計思想（アーキテクチャ）</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#分散プログラミングでの設計思想（アーキテクチャ）"><span class="tocnumber">4.2</span> <span class="toctext">分散プログラミングでの設計思想（アーキテクチャ）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#並行性"><span class="tocnumber">5</span> <span class="toctext">並行性</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#マルチプロセッサシステム"><span class="tocnumber">5.1</span> <span class="toctext">マルチプロセッサシステム</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#マルチコアシステム"><span class="tocnumber">5.2</span> <span class="toctext">マルチコアシステム</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#マルチコンピュータシステム"><span class="tocnumber">5.3</span> <span class="toctext">マルチコンピュータシステム</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#分類"><span class="tocnumber">5.4</span> <span class="toctext">分類</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#コンピュータクラスター"><span class="tocnumber">5.5</span> <span class="toctext">コンピュータクラスター</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#グリッドコンピューティング"><span class="tocnumber">5.6</span> <span class="toctext">グリッドコンピューティング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#言語"><span class="tocnumber">6</span> <span class="toctext">言語</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#分散コンピューティングプロジェクト"><span class="tocnumber">7</span> <span class="toctext">分散コンピューティングプロジェクト</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#主なプロジェクト"><span class="tocnumber">7.1</span> <span class="toctext">主なプロジェクト</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A7.8B.E6.88.90"></span><span class="mw-headline" id="構成">構成</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=1" title="節を編集: 構成">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>コンピュータ同士の相互のやり取りを組織して系統立てることが重要である。様々なコンピュータを利用可能とするには、<a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">通信プロトコル</a>や通信経路に特定のマシンが認識できない情報が含まれていてはならない。<a href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="メッセージ (コンピュータ)">メッセージ</a>が正しく配布されるよう特に注意を払う必要があり、不正なメッセージがあるとシステムやネットワークが動作不能となる危険性があるため、それを拒絶しなければならない。
+</p><p>もう1つの重要な要因は、ソフトウェアをコンピュータからコンピュータへ送信する機能であり、それによって送られたコンピュータが既存のネットワークとやり取りできるようになる。アーキテクチャが異なっているとこれができない場合があり、<a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="クロスコンパイラ">クロスコンパイラ</a>などを使った移植が必要になる。
+</p>
+<h2><span id=".E7.9B.AE.E6.A8.99.E3.81.A8.E5.88.A9.E7.82.B9"></span><span class="mw-headline" id="目標と利点">目標と利点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=2" title="節を編集: 目標と利点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>分散コンピューティング・システムには様々な形態がある。分散コンピューティングの主な目標は、<a href="/wiki/%E9%80%8F%E9%81%8E%E6%80%A7_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="透過性 (情報工学)">透過的</a>でオープンで<a href="/wiki/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="スケーラビリティ">スケーラブル</a>な方法でユーザー群とリソース群を結びつけることである。理想的には、<a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E3%82%A2%E3%83%AD%E3%83%BC%E3%83%B3" title="スタンドアローン">スタンドアローン</a>システム群の単なる組合せよりも、より<a class="mw-redirect" href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%88%E3%83%88%E3%83%AC%E3%83%A9%E3%83%B3%E3%83%88%E6%80%A7" title="フォールトトレラント性">フォールトトレラント</a>でより強力なシステムとなることが期待される。
+</p><p>次のような利点があるとされる。
+</p>
+<ul><li>高信頼
+<ul><li>故障部分以外は稼動可能</li></ul></li>
+<li>安価
+<ul><li><a href="/wiki/%E3%82%B0%E3%83%AD%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E6%B3%95%E5%89%87" title="グロッシュの法則">グロッシュの法則</a>（<i>コンピュータの能力 ∝ コスト<sup>2</sup></i>）が破れ、<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>と<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>のコストが逆転。</li></ul></li></ul>
+<h3><span id=".E3.82.AA.E3.83.BC.E3.83.97.E3.83.B3.E6.80.A7"></span><span class="mw-headline" id="オープン性">オープン性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=3" title="節を編集: オープン性">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>分散システムのオープン性とは、各サブシステムが他のシステムとの相互作用について継続的にオープンであることをいう（参考文献参照）。<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9" title="Webサービス">Webサービス</a><a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">プロトコル</a>は、分散システムを拡張・拡大することを可能にする標準である。一般に、拡張性のあるオープンシステムは、自己完結型の完全にクローズなシステムよりも優れている。
+</p><p>オープンな分散システムは以下のような特性を持つ。
+</p>
+<dl><dt>単調性</dt>
+<dd>オープンシステム上で何かが公開されれば、それを取り消すことはできない。</dd>
+<dt>複数性</dt>
+<dd>オープンな分散システムの個々のサブシステムは、異質で重複し、場合によっては競合するような情報を含む。中心となる調停機能はオープンな分散システムには存在しない。</dd>
+<dt>無制限の非決定性</dt>
+<dd>オープンな分散システムでは、個々のサブシステムは非同期的に立ち上がったりダウンしたりし、サブシステム間の通信リンクも非同期に接続されたり切断されたりする。従って、ある処理が完了する時間を予測することはできない。</dd></dl>
+<h2><span id=".E6.AC.A0.E7.82.B9.E3.81.A8.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="欠点と問題">欠点と問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=4" title="節を編集: 欠点と問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4" title="分散コンピューティングの落とし穴">分散コンピューティングの落とし穴</a>」も参照</div>
+<ul><li>不特定多数、または特定多数のコンピューターに処理させるためにセキュリティ面で脆弱になりやすい</li>
+<li>上記されているように問題データの分配、収集、集計するためのネットワークの負荷が増加する</li>
+<li>一般参加者を募る場合、志願者が少ないとその分処理も遅れる</li></ul>
+<h3><span id=".E6.8A.80.E8.A1.93.E7.9A.84.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="技術的問題">技術的問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=5" title="節を編集: 技術的問題">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>計画に不備があると、分散システムは全体の計算の信頼性が低下し、ノードのダウンによって他のノードも動作不能に陥る可能性がある。<a href="/wiki/%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%A9%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88" title="レスリー・ランポート">レスリー・ランポート</a>は、「分散システムは、そんな障害があるとは思ってもみなかった障害によって利用不能になるシステムである」と述べている<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p><p>分散システムにおける<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="トラブルシューティング">トラブルシューティング</a>や診断はますます困難になりつつある。問題の原因を突き止めようとすれば、遠隔ノードへの接続が必要であり、ノード間の通信内容を調べる必要がある。
+</p><p>分散環境に適さない計算の種類も多い。特に通信量が多くなるものや<a href="/wiki/%E5%90%8C%E6%9C%9F_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="同期 (計算機科学)">同期</a>が必要なものは適さない。必要な<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域幅</a>があまりに大きく<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%86%E3%83%B3%E3%82%B7" title="レイテンシ">レイテンシ</a>が少ないほどよいという場合は、分散コンピューティングは不適切であり、分散でない環境の方が性能がよいと予想される。
+</p>
+<h2><span id=".E8.A8.AD.E8.A8.88.E6.80.9D.E6.83.B3.EF.BC.88.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.EF.BC.89"></span><span class="mw-headline" id="設計思想（アーキテクチャ）">設計思想（アーキテクチャ）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=6" title="節を編集: 設計思想（アーキテクチャ）">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.88.86.E6.95.A3.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E8.A8.AD.E8.A8.88.E6.80.9D.E6.83.B3.EF.BC.88.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.EF.BC.89"></span><span class="mw-headline" id="分散コンピューティングでの設計思想（アーキテクチャ）">分散コンピューティングでの設計思想（アーキテクチャ）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=7" title="節を編集: 分散コンピューティングでの設計思想（アーキテクチャ）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>分散コンピューティングでは、様々なハードウェアおよびソフトウェアの設計思想（アーキテクチャ）が使われる。大きく分けると低レベルと高レベルに分けられる。
+</p>
+<dl><dt>低レベルでの設計思想（アーキテクチャ）</dt>
+<dd>複数のCPUを何らかのネットワークで相互接続する必要がある（そのネットワークは、基板上にプリントされた回路かもしれないし、疎結合された機器とケーブルの集合体かもしれない）。</dd>
+<dt>高レベルでの設計思想（アーキテクチャ）</dt>
+<dd>何らかの通信システムで個々のコンピュータ上で動作する<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>を相互接続しなければならない。</dd></dl>
+<h3><span id=".E5.88.86.E6.95.A3.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E8.A8.AD.E8.A8.88.E6.80.9D.E6.83.B3.EF.BC.88.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.EF.BC.89"></span><span class="mw-headline" id="分散プログラミングでの設計思想（アーキテクチャ）">分散プログラミングでの設計思想（アーキテクチャ）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=8" title="節を編集: 分散プログラミングでの設計思想（アーキテクチャ）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>分散プログラミングは、一般に以下の基本アーキテクチャのいずれかに分類される。
+</p>
+<dl><dt>クライアントサーバ</dt>
+<dd>クライアントがサーバに対してデータを要求し、それをフォーマットしてユーザー向けに表示する。クライアントへの入力がサーバのデータを変更するものである場合、サーバにそれが送られる。</dd>
+<dt>3層アーキテクチャ</dt>
+<dd>3層システムは、クライアントとサーバの間に中間層を置く形態で、それによってクライアントの処理が軽減される。そのためアプリケーション配布が単純化される。多くの<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">ウェブアプリケーション</a>は3層である。</dd>
+<dt>N層アーキテクチャ</dt>
+<dd>N層とは、ウェブアプリケーションが要求をさらにバックエンドにあるエンタープライズサービスに転送するものを指す。<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%90" title="アプリケーションサーバ">アプリケーションサーバ</a>を使ったアプリケーションはここに分類される。</dd>
+<dt>密結合（クラスター）</dt>
+<dd>一般に、高度に集積されたマシン群で同じプロセスを並行して実行し、タスクを分割して個々のプロセッサに実行させる。計算結果は後に集約される。</dd>
+<dt>Peer-to-peer</dt>
+<dd>ネットワークにサービスを提供するマシンやリソースを管理する特別なマシンが存在しないアーキテクチャ。その代わりに全ての責任は参加している全マシンにある。各マシンはサーバとしてもクライアントとしても機能する。</dd>
+<dt>タプルスペース・ベース</dt>
+<dd>単一の<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E7%A9%BA%E9%96%93" title="アドレス空間">アドレス空間</a>を共有しているかのように<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%8C%96" title="仮想化">仮想化</a>するアーキテクチャを指す。データは必要に応じて<a href="/wiki/%E9%80%8F%E9%81%8E%E6%80%A7_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="透過性 (情報工学)">透過的</a>に<a href="/wiki/%E3%83%AC%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="レプリケーション">レプリケート</a>される。時間的/空間的<a href="/wiki/%E7%B5%90%E5%90%88%E5%BA%A6" title="結合度">結合度</a>が弱められる。</dd></dl>
+<p>分散コンピューティング・アーキテクチャの別の観点として、並行プロセス間の通信と作業配布の方法がある。プロセスは各種<a href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="メッセージ (コンピュータ)">メッセージパッシング</a>プロトコルを使って互いに直接通信でき、一般に<a href="/wiki/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%BC%E3%83%96" title="マスタースレーブ">マスタースレーブ</a>型の関係にある。それとは別に<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース</a>を中心とするアーキテクチャもあり、直接の<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E9%96%93%E9%80%9A%E4%BF%A1" title="プロセス間通信">プロセス間通信</a>をせず、<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース</a>を共有することで分散処理を実現する<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p>
+<h2><span id=".E4.B8.A6.E8.A1.8C.E6.80.A7"></span><span class="mw-headline" id="並行性">並行性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=9" title="節を編集: 並行性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>分散コンピューティングには、ある種の<a href="/wiki/%E4%B8%A6%E8%A1%8C%E6%80%A7" title="並行性">並行性</a>が実装される。<a href="/wiki/%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="並行計算">並行コンピューティング</a>とも密接な関係があり、しばしば同義に扱われる<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p>
+<h3><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AD.E3.82.BB.E3.83.83.E3.82.B5.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="マルチプロセッサシステム">マルチプロセッサシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=10" title="節を編集: マルチプロセッサシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッサ</a>システムは、複数の<a href="/wiki/CPU" title="CPU">CPU</a>を持つ単一のコンピュータである。オペレーティングシステムがその利点を生かすよう構築されていれば、異なる<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>（あるいは同一プロセスの異なるスレッド）を異なるCPU上で同時に実行できる。
+</p>
+<h3><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.B3.E3.82.A2.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="マルチコアシステム">マルチコアシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=11" title="節を編集: マルチコアシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>のCPUは、<a href="/wiki/Pentium_4" title="Pentium 4">Pentium 4</a>の世代の後期に<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング・テクノロジー</a>と呼ばれる技術を採用した。これは、複数の<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a>を同じCPU上で同時に実行できる技術である。その後、<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a>技術で複数のCPUコアを1つのパッケージにするようになり、<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a>は <a href="/wiki/UltraSPARC_T1" title="UltraSPARC T1">UltraSPARC T1</a> で、<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>は <a href="/wiki/Athlon_64_X2" title="Athlon 64 X2">Athlon 64 X2</a>/<a href="/wiki/Athlon_64" title="Athlon 64">FX</a>/<a href="/wiki/Opteron" title="Opteron">Opteron</a> で、インテルは <a href="/wiki/Pentium_D" title="Pentium D">Pentium D</a>/<a href="/wiki/Intel_Core" title="Intel Core">Core</a>/<a href="/wiki/Intel_Core_2" title="Intel Core 2">Core2</a>/<a href="/wiki/Xeon" title="Xeon">Xeon</a>で実装している。これにより、複数のスレッドを同時実行できるようになり、同時実行可能スレッド数は増えていく傾向にある。
+</p>
+<h3><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.82.BF.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="マルチコンピュータシステム">マルチコンピュータシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=12" title="節を編集: マルチコンピュータシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>マルチコンピュータという用語は、疎結合型の<a href="/wiki/NUMA" title="NUMA">NUMA</a>マシンや密結合型の<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a>を指す。マルチコンピュータは、電力消費を抑えつつ限られたスペースで強力な計算能力を持つシステムを構築する際に採用される。
+</p>
+<h3><span id=".E5.88.86.E9.A1.9E"></span><span class="mw-headline" id="分類">分類</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=13" title="節を編集: 分類">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>分散システムは<a href="/wiki/%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="フリンの分類">フリンの分類</a>によって次のように分類される。
+</p>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a>（Single Instruction, Single Data）</li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a>（Single Instruction, Multiple Data）</li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a>（Multiple Instruction, Single Data）</li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>（Multiple Instruction, Multiple Data）</li></ul>
+<h3><span id=".E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.82.BF.E3.82.AF.E3.83.A9.E3.82.B9.E3.82.BF.E3.83.BC"></span><span class="mw-headline" id="コンピュータクラスター">コンピュータクラスター</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=14" title="節を編集: コンピュータクラスター">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a>」を参照</div>
+<p>クラスターは複数の独立したマシンで構成され、高速なネットワークで相互接続されたマシンが並列に動作する。分散コンピューティングと<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a>の違いは、分散コンピューティングで使われる個々のマシンが必ずしも同一グループのタスクを実行するためだけにあるわけではないのに対して、クラスターでは各マシンがより密に結合されている。分散コンピューティングは、クラスターよりも地理的に広範囲にあるマシンを含むことが多い。
+</p>
+<h3><span id=".E3.82.B0.E3.83.AA.E3.83.83.E3.83.89.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="グリッドコンピューティング">グリッドコンピューティング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=15" title="節を編集: グリッドコンピューティング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a>」を参照</div>
+<p>グリッドも多数のコンピュータから構成され、ネットワーク（通常<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>）で疎結合され、大きな計算問題を解くのに使われる。パブリック・グリッドでは、世界中の数千ものコンピュータの空き時間を利用する。グリッド・コンピューティングは、高価な<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a>が必要になるような計算や、従来は不可能と思われていた計算を可能とした。
+</p>
+<h2><span id=".E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="言語">言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=16" title="節を編集: 言語">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>システム内のあらゆる<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>にアクセスできる<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a>は、時間さえあれば分散プログラミングに使える。<a href="/wiki/%E9%81%A0%E9%9A%94%E6%89%8B%E7%B6%9A%E3%81%8D%E5%91%BC%E5%87%BA%E3%81%97" title="遠隔手続き呼出し">遠隔手続き呼出し</a> (RPC) は、<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>のコマンドをネットワーク経由で分散配布する。<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88" title="オブジェクト指向設計">オブジェクト指向設計</a>をネットワークにマッピングしようとする試みとして、<a href="/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture">CORBA</a>、マイクロソフトの<a href="/wiki/Distributed_Component_Object_Model" title="Distributed Component Object Model">DCOM</a>、<a href="/wiki/Java_Remote_Method_Invocation" title="Java Remote Method Invocation">Java RMI</a> などがある。疎結合システムでは、一般に人間にも読める中間文書を使って通信を行う（例えば、<a href="/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>、<a href="/wiki/HyperText_Markup_Language" title="HyperText Markup Language">HTML</a>、<a href="/wiki/Standard_Generalized_Markup_Language" title="Standard Generalized Markup Language">SGML</a>、<a href="/wiki/X.500" title="X.500">X.500</a>、<a href="/wiki/%E9%9B%BB%E5%AD%90%E3%83%87%E3%83%BC%E3%82%BF%E4%BA%A4%E6%8F%9B" title="電子データ交換">EDI</a>）。
+</p><p>分散プログラミング向けに機能が強化されている言語としては、以下のものがある。
+</p>
+<ul><li><a href="/wiki/Ada" title="Ada">Ada</a> <sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup></li>
+<li><a class="external text" href="http://www.cs.bell-labs.com/who/rsc/thread/alef.pdf" rel="nofollow">Alef</a></li>
+<li><a class="external text" href="http://erights.org/" rel="nofollow">E言語</a></li>
+<li><a href="/wiki/Erlang" title="Erlang">Erlang</a></li>
+<li><a href="/wiki/Limbo" title="Limbo">Limbo</a></li>
+<li><a href="/wiki/KL1" title="KL1">KL1</a></li>
+<li><a href="/wiki/Oz_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Oz (プログラミング言語)">Oz</a></li>
+<li><a href="/wiki/Strand" title="Strand">Strand</a></li>
+<li><a class="external text" href="http://www.cs.washington.edu/research/zpl/home/index.html" rel="nofollow">ZPL</a></li>
+<li><a class="external text" href="http://www.cs.vu.nl/orca/" rel="nofollow">Orca</a></li></ul>
+<h2><span id=".E5.88.86.E6.95.A3.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.83.97.E3.83.AD.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88"></span><span class="mw-headline" id="分散コンピューティングプロジェクト">分散コンピューティングプロジェクト</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=17" title="節を編集: 分散コンピューティングプロジェクト">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>一般に参加者を募っている分散コンピューティングプロジェクトが多くあり、既に目的とした問題解決などの成果を出したプロジェクトもある。多くのプロジェクトでは
+</p>
+<ul><li>計算する元データの分配、収集を行うサーバを用意</li>
+<li>実際に計算を行う複数のコンピュータ用のクライアントソフトを配布</li>
+<li>集計結果を <a href="/wiki/World_Wide_Web" title="World Wide Web">Web</a> などで公開</li></ul>
+<p>などの手法を用いて、分散コンピューティングを実現、参加者の募集等をおこなっている。これらのプロジェクトでは、一般ユーザの参加により、コストの削減も目指している。これらのプロジェクト特有の課題として、クライアントなどを改ざんして、意図的に誤った計算結果をサーバに送る危険性が挙げられるため、通信方式を非公開にする、同じ計算を複数のクライアントに行わせる、などの対策が行われている。
+</p><p>通常これらのプロジェクトでは個人の所有するPCによる計算結果を集計し、プロジェクトを進行している。その為、参加者数がプロジェクトの進行速度に大きく影響する。集計ではプロジェクトの進行状況とともに、参加者個人あるいは参加者がまとまったチームでの集計結果を表示するなどしているプロジェクトが多い。これが参加者同士の交流につながったり、参加者の競争意識を煽り、参加者の増加につながっているプロジェクトも存在する。
+</p>
+<h3><span id=".E4.B8.BB.E3.81.AA.E3.83.97.E3.83.AD.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88"></span><span class="mw-headline" id="主なプロジェクト">主なプロジェクト</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=18" title="節を編集: 主なプロジェクト">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>稼働中（アルファベット順）
+<ul><li><a class="mw-redirect" href="/wiki/BOINC" title="BOINC">BOINC</a> - 分散コンピューティングの管理ソフト。さまざまなプロジェクトがこのソフトを利用して分散コンピューティングを行っている。</li>
+<li><a href="/wiki/Distributed.net" title="Distributed.net">distributed.net</a> - <a href="/wiki/%E7%B7%8F%E5%BD%93%E3%81%9F%E3%82%8A%E6%94%BB%E6%92%83" title="総当たり攻撃">全探索</a>による<a href="/wiki/%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD" title="暗号解読">暗号解読</a>によるプライバシー保護の訴え、全探索による数学的難問の証明など。</li>
+<li><a class="mw-redirect" href="/wiki/Einstein@Home" title="Einstein@Home">Einstein@Home</a> - <a href="/wiki/%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="一般相対性理論">一般相対性理論</a>から予言される<a href="/wiki/%E9%87%8D%E5%8A%9B%E6%B3%A2_(%E7%9B%B8%E5%AF%BE%E8%AB%96)" title="重力波 (相対論)">重力波</a>を、観測データから検出する事を目指す。</li>
+<li><a href="/wiki/Electric_Sheep" title="Electric Sheep">Electric Sheep</a> - <a href="/wiki/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB" title="フラクタル">フラクタル</a>の動画を生成する<a href="/wiki/%E3%83%95%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88" title="フラクタルアート">フラクタルアート</a>関連のプロジェクト。</li>
+<li><a href="/wiki/Folding@home" title="Folding@home">Folding@home</a> - <a href="/wiki/%E5%88%86%E5%AD%90%E5%8B%95%E5%8A%9B%E5%AD%A6%E6%B3%95" title="分子動力学法">分子動力学法</a>による<a href="/wiki/%E3%82%BF%E3%83%B3%E3%83%91%E3%82%AF%E8%B3%AA" title="タンパク質">タンパク質</a>の<a href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="フォールディング">折り畳み</a>の予測（<a href="/wiki/%E3%82%BF%E3%83%B3%E3%83%91%E3%82%AF%E8%B3%AA%E6%A7%8B%E9%80%A0%E4%BA%88%E6%B8%AC" title="タンパク質構造予測">タンパク質構造予測</a>）。</li>
+<li><a href="/wiki/GIMPS" title="GIMPS">GIMPS</a> - <a href="/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%B3%E3%83%8C%E6%95%B0" title="メルセンヌ数">メルセンヌ素数</a>の発見。</li>
+<li><a href="/wiki/M4_Project" title="M4 Project">M4 Project</a> - 第二次世界大戦中に傍受されたナチス・ドイツの未解読暗号の解読を目指す。</li>
+<li><a href="/wiki/World_Community_Grid" title="World Community Grid">World Community Grid</a> - 主に医療系（<a href="/wiki/%E5%BE%8C%E5%A4%A9%E6%80%A7%E5%85%8D%E7%96%AB%E4%B8%8D%E5%85%A8%E7%97%87%E5%80%99%E7%BE%A4" title="後天性免疫不全症候群">エイズ</a>や<a href="/wiki/%E6%82%AA%E6%80%A7%E8%85%AB%E7%98%8D" title="悪性腫瘍">がん</a>、<a href="/wiki/%E7%AD%8B%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC" title="筋ジストロフィー">筋ジストロフィー</a>）に関する新薬開発の為の分子解析、<a href="/wiki/%E3%82%BF%E3%83%B3%E3%83%91%E3%82%AF%E8%B3%AA" title="タンパク質">タンパク質</a>解析に関するプロジェクト。上記BOINCを使って解析も出来る。</li>
+<li><a href="/wiki/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E5%85%AB%E5%88%86#グーグル八分発見システム「∞Eyes」" title="グーグル八分">グーグル八分発見システム「∞Eyes」</a> - 検索エンジンでの検索結果を解析し、<a href="/wiki/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E5%85%AB%E5%88%86" title="グーグル八分">グーグル八分</a>を発見しようというプロジェクト。</li></ul></li></ul>
+<ul><li>稼動終了（アルファベット順）
+<ul><li><a href="/wiki/Cell_computing" title="Cell computing">cell computing</a> - <a href="/wiki/%E9%81%BA%E4%BC%9D%E5%AD%90" title="遺伝子">遺伝子</a>の周期性の検索による<a href="/wiki/%E9%81%BA%E4%BC%9D%E5%AD%90%E7%96%BE%E6%82%A3" title="遺伝子疾患">遺伝病</a>の検知を目指す。<a href="/wiki/NTT%E3%83%87%E3%83%BC%E3%82%BF" title="NTTデータ">NTTデータ</a>が提供。（2008年3月終了）</li>
+<li><a href="/wiki/SETI@home" title="SETI@home">SETI@home</a> - <a href="/wiki/%E5%AE%87%E5%AE%99%E7%94%9F%E7%89%A9%E5%AD%A6" title="宇宙生物学">宇宙生物学</a>。地球外からくる信号から非自然信号を抽出し、<a href="/wiki/%E5%9C%B0%E7%90%83%E5%A4%96%E7%94%9F%E5%91%BD" title="地球外生命">地球外生命体</a>を探索。（2020年3月終了）</li>
+<li><a href="/wiki/United_Devices_Cancer_Research_Project" title="United Devices Cancer Research Project">United Devices Cancer Research Project</a> - <a class="mw-redirect" href="/wiki/%E7%99%8C" title="癌">癌</a>治療薬開発の為の分子解析。（2007年4月終了）</li></ul></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=19" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal"><a href="/wiki/%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%A9%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88" title="レスリー・ランポート">Leslie Lamport</a>. “<a class="external text" href="http://research.microsoft.com/users/lamport/pubs/distributed-system.txt" rel="nofollow">Subject: distribution (Email message sent to a DEC SRC bulletin board at 12:23:29 PDT on 28 May 87)</a>”. <span title="">2007年4月28日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external text" href="http://www.ncbi.nlm.nih.gov/sites/entrez?db=pubmed&amp;list_uids=16711722&amp;cmd=Retrieve" rel="nofollow">A database-centric virtual chemistry system, J Chem Inf Model. 2006 May-Jun;46(3):1034-9</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="http://www.cs.technion.ac.il/~cs236370/main.html" rel="nofollow">CS236370 Concurrent and Distributed Programming 2002</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="http://www.adaic.org/standards/05rm/html/RM-TTL.html" rel="nofollow">Ada Reference Manual, ISO/IEC 8652:2005(E) Ed. 3</a>, <a class="external text" href="http://www.adaic.org/standards/05rm/html/RM-E.html" rel="nofollow">Annex E Distributed Systems</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=20" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" style="font-style:normal">Attiya, Hagit and Welch, Jennifer (2004). <i>Distributed Computing: Fundamentals, Simulations, and Advanced Topics</i>. Wiley-Interscience</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Distributed+Computing%3A+Fundamentals%2C+Simulations%2C+and+Advanced+Topics&amp;rft.aulast=Attiya%2C+Hagit+and+Welch%2C+Jennifer&amp;rft.au=Attiya%2C+Hagit+and+Welch%2C+Jennifer&amp;rft.date=2004&amp;rft.pub=Wiley-Interscience&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span> ISBN 0471453242.</li>
+<li><cite class="citation book" style="font-style:normal">Lynch, Nancy A (1997). <i>Distributed Algorithms</i>. Morgan Kaufmann</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Distributed+Algorithms&amp;rft.aulast=Lynch%2C+Nancy+A&amp;rft.au=Lynch%2C+Nancy+A&amp;rft.date=1997&amp;rft.pub=Morgan+Kaufmann&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span> ISBN 1558603484.</li>
+<li><cite class="citation book" style="font-style:normal">Tel, Gerard (1994). <i>Introduction to Distributed Algorithms</i>. Cambridge University Press</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Distributed+Algorithms&amp;rft.aulast=Tel&amp;rft.aufirst=Gerard&amp;rft.au=Tel%2C%26%2332%3BGerard&amp;rft.date=1994&amp;rft.pub=Cambridge+University+Press&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Davies, Antony (June 2004). <a class="external text" href="http://www.business.duq.edu/faculty/davies/research/EconomicsOfComputation.pdf" rel="nofollow">“Computational Intermediation and the Evolution of Computation as a Commodity”</a>. <i>Applied Economics</i><span style="display:none;">. <a class="external free" href="http://www.business.duq.edu/faculty/davies/research/EconomicsOfComputation.pdf" rel="nofollow">http://www.business.duq.edu/faculty/davies/research/EconomicsOfComputation.pdf</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Computational+Intermediation+and+the+Evolution+of+Computation+as+a+Commodity&amp;rft.jtitle=Applied+Economics&amp;rft.aulast=Davies&amp;rft.aufirst=Antony&amp;rft.au=Davies%2C%26%2332%3BAntony&amp;rft.date=June+2004&amp;rft_id=http%3A%2F%2Fwww.business.duq.edu%2Ffaculty%2Fdavies%2Fresearch%2FEconomicsOfComputation.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Kornfeld, William; Hewitt, Carl (January 1981). <a class="external text" href="https://dspace.mit.edu/handle/1721.1/5693" rel="nofollow">“The Scientific Community Metaphor”</a>. <i>MIT AI</i> (Memo 641)<span style="display:none;">. <a class="external free" href="https://dspace.mit.edu/handle/1721.1/5693" rel="nofollow">https://dspace.mit.edu/handle/1721.1/5693</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+Scientific+Community+Metaphor&amp;rft.jtitle=MIT+AI&amp;rft.aulast=Kornfeld&amp;rft.aufirst=William&amp;rft.au=Kornfeld%2C%26%2332%3BWilliam&amp;rft.date=January+1981&amp;rft.issue=Memo+641&amp;rft_id=https%3A%2F%2Fdspace.mit.edu%2Fhandle%2F1721.1%2F5693&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation conference" style="font-style:normal">Hewitt, Carl; de Jong, Peter (August 1983). “Analyzing the Roles of Descriptions and Actions in Open Systems”. <i>Proceedings of the National Conference on Artificial Intelligence</i></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Analyzing+the+Roles+of+Descriptions+and+Actions+in+Open+Systems&amp;rft.atitle=Proceedings+of+the+National+Conference+on+Artificial+Intelligence&amp;rft.aulast=Hewitt&amp;rft.aufirst=Carl&amp;rft.au=Hewitt%2C%26%2332%3BCarl&amp;rft.date=August+1983&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Hewitt, Carl (April 1985). “The Challenge of Open Systems”. <i>Byte Magazine</i>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+Challenge+of+Open+Systems&amp;rft.jtitle=Byte+Magazine&amp;rft.aulast=Hewitt&amp;rft.aufirst=Carl&amp;rft.au=Hewitt%2C%26%2332%3BCarl&amp;rft.date=April+1985&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation conference" style="font-style:normal">Hewitt, Carl (1999年10月23日–1999年10月27日). “Towards Open Information Systems Semantics”. <i>Proceedings of 10th International Workshop on Distributed Artificial Intelligence</i>. Bandera, Texas</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Towards+Open+Information+Systems+Semantics&amp;rft.atitle=Proceedings+of+10th+International+Workshop+on+Distributed+Artificial+Intelligence&amp;rft.aulast=Hewitt&amp;rft.aufirst=Carl&amp;rft.au=Hewitt%2C%26%2332%3BCarl&amp;rft.date=1999%E5%B9%B410%E6%9C%8823%E6%97%A5%26ndash%3B1999%E5%B9%B410%E6%9C%8827%E6%97%A5&amp;rft.place=Bandera%2C+Texas&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Hewitt, Carl (January 1991). “Open Information Systems Semantics”. <i>Journal of Artificial Intelligence</i>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Open+Information+Systems+Semantics&amp;rft.jtitle=Journal+of+Artificial+Intelligence&amp;rft.aulast=Hewitt&amp;rft.aufirst=Carl&amp;rft.au=Hewitt%2C%26%2332%3BCarl&amp;rft.date=January+1991&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Nadiminti, Dias de Assunção, Buyya (September 2006). <a class="external text" href="http://www.gridbus.org/~raj/papers/InfoNet-Article06.pdf" rel="nofollow">“Distributed Systems and Recent Innovations: Challenges and Benefits”</a>. <i>InfoNet Magazine, Volume 16, Issue 3, Melbourne, Australia</i><span style="display:none;">. <a class="external free" href="http://www.gridbus.org/~raj/papers/InfoNet-Article06.pdf" rel="nofollow">http://www.gridbus.org/~raj/papers/InfoNet-Article06.pdf</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Distributed+Systems+and+Recent+Innovations%3A+Challenges+and+Benefits&amp;rft.jtitle=InfoNet+Magazine%2C+Volume+16%2C+Issue+3%2C+Melbourne%2C+Australia&amp;rft.aulast=Nadiminti%2C+Dias+de+Assun%C3%A7%C3%A3o%2C+Buyya&amp;rft.au=Nadiminti%2C+Dias+de+Assun%C3%A7%C3%A3o%2C+Buyya&amp;rft.date=September+2006&amp;rft_id=http%3A%2F%2Fwww.gridbus.org%2F%7Eraj%2Fpapers%2FInfoNet-Article06.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0"><span style="display: none;"> </span></span></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=21" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Google" title="Google">Google</a>（検索エンジンのシステムなどは分散コンピューティングを用いている）</li>
+<li><a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%A3%E6%8A%80%E6%B3%95" title="分散技法">分散技法</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%93%E3%82%AD%E3%82%BF%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ユビキタスコンピューティング">ユビキタスコンピューティング</a></li>
+<li><a href="/wiki/Berkeley_Open_Infrastructure_for_Network_Computing" title="Berkeley Open Infrastructure for Network Computing">Berkeley Open Infrastructure for Network Computing</a></li>
+<li><a href="/wiki/%E5%A4%9A%E5%B1%A4%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="多層アーキテクチャ">多層アーキテクチャ</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4" title="分散コンピューティングの落とし穴">分散コンピューティングの落とし穴</a></li>
+<li><a href="/wiki/Team2ch" title="Team2ch">Team2ch</a></li>
+<li><a href="/wiki/PlayStation_3" title="PlayStation 3">プレイステーション3</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="分散ネットワーク">分散ネットワーク</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a></li>
+<li><a href="/wiki/%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="センサネットワーク">センサネットワーク</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=22" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.bacchae.co.uk/docs/dist.html" rel="nofollow">A primer on distributed computing</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://curlie.org/Computers/Computer_Science/Distributed_Computing/" rel="nofollow">Distributed computing</a> - <a href="/wiki/DMOZ" title="DMOZ">DMOZ</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://curlie.org/Computers/Computer_Science/Distributed_Computing/Publications/" rel="nofollow">Distributed computing journals</a> - <a href="/wiki/DMOZ" title="DMOZ">DMOZ</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://curlie.org/Computers/Computer_Science/Distributed_Computing/Conferences/" rel="nofollow">Distributed computing conferences</a> - <a href="/wiki/DMOZ" title="DMOZ">DMOZ</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-824-distributed-computer-systems-engineering-spring-2006/" rel="nofollow">Distributed Computer Systems Engineering</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span> - <a href="/wiki/%E3%83%9E%E3%82%B5%E3%83%81%E3%83%A5%E3%83%BC%E3%82%BB%E3%83%83%E3%83%84%E5%B7%A5%E7%A7%91%E5%A4%A7%E5%AD%A6" title="マサチューセッツ工科大学">MIT</a> OpenCourseWare</li>
+<li><a class="external text" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-852j-distributed-algorithms-fall-2009/" rel="nofollow">Distributed Algorithms</a><span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span> - MIT OpenCourseWare</li></ul>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<div aria-labelledby="並列計算" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:並列コンピューティング (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="並列計算" style="font-size:110%;margin:0 6em">並列計算</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">総論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウドコンピューティング</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a></li>
+<li><a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">高性能計算</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a></li>
+<li><a class="mw-selflink selflink">分散コンピューティング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並列レベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E4%B8%A6%E5%88%97%E6%80%A7" title="タスク並列性">タスク</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E8%A8%88%E7%AE%97#ビットレベルの並列性" title="並列計算">ビット</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スレッド</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スーパースレッディング (存在しないページ)">スーパースレッディング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Super-threading&amp;action=edit&amp;redlink=1" title="En:Super-threading (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%A0%E3%83%80%E3%83%BC%E3%83%AB%E3%81%AE%E6%B3%95%E5%89%87" title="アムダールの法則">アムダールの法則</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%82%B9%E3%82%BF%E3%83%95%E3%82%BD%E3%83%B3%E3%81%AE%E6%B3%95%E5%89%87" title="グスタフソンの法則">グスタフソンの法則</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%82%B9%E3%83%88%E5%8A%B9%E7%8E%87%E6%80%A7&amp;action=edit&amp;redlink=1" title="コスト効率性 (存在しないページ)">コスト効率性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cost_efficiency&amp;action=edit&amp;redlink=1" title="En:Cost efficiency (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="Karp-Flatt metric (存在しないページ)">Karp-Flatt metric</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="En:Karp-Flatt metric (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_slowdown&amp;action=edit&amp;redlink=1" title="Parallel slowdown (存在しないページ)">Parallel slowdown</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_slowdown&amp;action=edit&amp;redlink=1" title="En:Parallel slowdown (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Speedup&amp;action=edit&amp;redlink=1" title="Speedup (存在しないページ)">Speedup</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Speedup&amp;action=edit&amp;redlink=1" title="En:Speedup (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">要素</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ファイバー (コンピュータ)">ファイバー</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A9%9F%E6%A2%B0" title="並列ランダムアクセス機械">PRAM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Instruction_window&amp;action=edit&amp;redlink=1" title="Instruction window (存在しないページ)">Instruction window</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Instruction_window&amp;action=edit&amp;redlink=1" title="En:Instruction window (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">調整</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ">キャッシュコヒーレンシ</a></li>
+<li><a href="/wiki/%E5%90%8C%E6%9C%9F_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="同期 (計算機科学)">同期</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AA%E3%82%A2_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="バリア (計算機科学)">バリア</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9" title="メモリコヒーレンス">メモリコヒーレンス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cache_invalidation&amp;action=edit&amp;redlink=1" title="Cache invalidation (存在しないページ)">Cache invalidation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cache_invalidation&amp;action=edit&amp;redlink=1" title="En:Cache invalidation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Application_checkpointing&amp;action=edit&amp;redlink=1" title="Application checkpointing (存在しないページ)">Application checkpointing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Application_checkpointing&amp;action=edit&amp;redlink=1" title="En:Application checkpointing (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド (コンピュータ)</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E5%8C%96" title="並列化">並列プログラミングモデル</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Implicit_parallelism&amp;action=edit&amp;redlink=1" title="Implicit parallelism (存在しないページ)">Implicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Implicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Implicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Explicit_parallelism&amp;action=edit&amp;redlink=1" title="Explicit parallelism (存在しないページ)">Explicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Explicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Explicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E6%80%A7" title="並行性">並行性</a></li></ul></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="フリンの分類">フリンの分類</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SPMD&amp;action=edit&amp;redlink=1" title="SPMD (存在しないページ)">SPMD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SPMD&amp;action=edit&amp;redlink=1" title="En:SPMD (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul></li>
+<li><a href="/wiki/Lock-free%E3%81%A8Wait-free%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Lock-freeとWait-freeアルゴリズム">Lock-freeとWait-freeアルゴリズム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ハードウェア</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a></li>
+<li>マルチプロセッシング
+<ul><li><a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型</a></li>
+<li><a class="new" href="/w/index.php?title=En:Asymmetric_multiprocessing&amp;action=edit&amp;redlink=1" title="En:Asymmetric multiprocessing (存在しないページ)">非対称型</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li></ul></li>
+<li>メモリ
+<ul><li><a href="/wiki/NUMA" title="NUMA">NUMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Cache_only_memory_architecture&amp;action=edit&amp;redlink=1" title="En:Cache only memory architecture (存在しないページ)">en:COMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Distributed_memory&amp;action=edit&amp;redlink=1" title="En:Distributed memory (存在しないページ)">en:分散型</a></li>
+<li><a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有型</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="分散共有メモリ">分散共有型</a></li></ul></li>
+<li><a href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="同時マルチスレッディング">SMT</a></li>
+<li><a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">MPP</a></li>
+<li><a href="/wiki/Beowulf" title="Beowulf">Beowulf</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">API</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ateji_PX&amp;action=edit&amp;redlink=1" title="Ateji PX (存在しないページ)">Ateji PX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ateji_PX&amp;action=edit&amp;redlink=1" title="En:Ateji PX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Boost_C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA#マルチスレッド" title="Boost C++ライブラリ">Boostスレッド</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Charm%2B%2B&amp;action=edit&amp;redlink=1" title="Charm++ (存在しないページ)">Charm++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Charm%2B%2B&amp;action=edit&amp;redlink=1" title="En:Charm++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cilk&amp;action=edit&amp;redlink=1" title="Cilk (存在しないページ)">Cilk</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cilk&amp;action=edit&amp;redlink=1" title="En:Cilk (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Coarray_Fortran&amp;action=edit&amp;redlink=1" title="Coarray Fortran (存在しないページ)">Coarray Fortran</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coarray_Fortran&amp;action=edit&amp;redlink=1" title="En:Coarray Fortran (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dryad&amp;action=edit&amp;redlink=1" title="Dryad (存在しないページ)">Dryad</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dryad_(programming)&amp;action=edit&amp;redlink=1" title="En:Dryad (programming) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Global_Arrays&amp;action=edit&amp;redlink=1" title="Global Arrays (存在しないページ)">Global Arrays</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Global_Arrays&amp;action=edit&amp;redlink=1" title="En:Global Arrays (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="Intel Cilk Plus (存在しないページ)">Intel Cilk Plus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="En:Intel Cilk Plus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_Threading_Building_Blocks" title="Intel Threading Building Blocks">Intel Threading Building Blocks</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenHMPP&amp;action=edit&amp;redlink=1" title="OpenHMPP (存在しないページ)">OpenHMPP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenHMPP&amp;action=edit&amp;redlink=1" title="En:OpenHMPP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" title="POSIXスレッド">POSIXスレッド</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">問題</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Embarrassingly_parallel&amp;action=edit&amp;redlink=1" title="En:Embarrassingly parallel (存在しないページ)">en:Embarrassingly parallel</a></li>
+<li><a class="new" href="/w/index.php?title=En:Grand_Challenge_problem&amp;action=edit&amp;redlink=1" title="En:Grand Challenge problem (存在しないページ)">en:Grand Challenge</a></li>
+<li><a class="new" href="/w/index.php?title=En:Software_lockout&amp;action=edit&amp;redlink=1" title="En:Software lockout (存在しないページ)">en:Software lockout</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="並行計算">並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="カテゴリ:並行計算">カテゴリ:並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">カテゴリ:並列コンピューティング</a></li></ul></td></tr></tbody></table></div><div aria-labelledby="コンピュータ科学" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:コンピュータ科学 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="コンピュータ科学" style="font-size:110%;margin:0 6em"><a class="mw-redirect" href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6" title="コンピュータ科学">コンピュータ科学</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">ハードウェア</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><a href="/wiki/%E3%83%97%E3%83%AA%E3%83%B3%E3%83%88%E5%9F%BA%E6%9D%BF" title="プリント基板">プリント基板</a></li>
+<li><a href="/wiki/%E5%91%A8%E8%BE%BA%E6%A9%9F%E5%99%A8" title="周辺機器">周辺機器</a></li>
+<li><a href="/wiki/%E9%9B%86%E7%A9%8D%E5%9B%9E%E8%B7%AF" title="集積回路">集積回路</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Very_Large_Scale_Integration&amp;action=edit&amp;redlink=1" title="Very Large Scale Integration (存在しないページ)">Very Large Scale Integration</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Very_Large_Scale_Integration&amp;action=edit&amp;redlink=1" title="En:Very Large Scale Integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/System-on-a-chip" title="System-on-a-chip">Systems on Chip (SoCs)</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3IT" title="グリーンIT">エネルギー消費 (グリーン・コンピューティング)</a></li>
+<li><a href="/wiki/EDA" title="EDA">EDA</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%A9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ハードウェアアクセラレーション">ハードウェアアクセラレーション</a></li>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンピュータシステムの構造</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">コンピュータ・アーキテクチャ</a></li>
+<li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイムシステム</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%9A%E3%83%B3%E3%83%80%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="ディペンダビリティ">ディペンダビリティ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ネットワーク</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" title="ネットワーク・アーキテクチャ (存在しないページ)">ネットワーク・アーキテクチャ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_architecture&amp;action=edit&amp;redlink=1" title="En:Network architecture (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">通信プロトコル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2&amp;action=edit&amp;redlink=1" title="ネットワーク・ハードウェア (存在しないページ)">ネットワーク・コンポーネント</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Networking_hardware&amp;action=edit&amp;redlink=1" title="En:Networking hardware (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%A9&amp;action=edit&amp;redlink=1" title="ネットワーク・スケジューラ (存在しないページ)">ネットワーク・スケジューラ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_scheduler&amp;action=edit&amp;redlink=1" title="En:Network scheduler (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E6%80%A7%E8%83%BD&amp;action=edit&amp;redlink=1" title="ネットワーク性能 (存在しないページ)">ネットワーク性能評価</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_performance&amp;action=edit&amp;redlink=1" title="En:Network performance (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9&amp;action=edit&amp;redlink=1" title="ネットワーク・サービス (存在しないページ)">ネットワーク・サービス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_service&amp;action=edit&amp;redlink=1" title="En:Network service (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ソフトウェアの構造</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a></li>
+<li><a href="/wiki/%E3%83%9F%E3%83%89%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2" title="ミドルウェア">ミドルウェア</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%9E%E3%82%B7%E3%83%B3" title="仮想マシン">仮想マシン</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E5%93%81%E8%B3%AA" title="ソフトウェア品質">ソフトウェア品質</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="プログラミング言語理論 (存在しないページ)">ソフトウェア記法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Programming_language_theory&amp;action=edit&amp;redlink=1" title="En:Programming language theory (存在しないページ)">英語版</a>）</span></span><br/>とツール</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">プログラミングパラダイム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">ドメイン固有言語</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="モデリング言語">モデリング言語</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="ソフトウェアフレームワーク">ソフトウェアフレームワーク</a></li>
+<li><a href="/wiki/%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83" title="統合開発環境">統合開発環境</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E6%A7%8B%E6%88%90%E7%AE%A1%E7%90%86" title="ソフトウェア構成管理">ソフトウェア構成管理</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ソフトウェアライブラリ</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA" title="リポジトリ">ソフトウェアリポジトリ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ソフトウェア開発</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="ソフトウェア開発プロセス">ソフトウェア開発プロセス</a></li>
+<li><a href="/wiki/%E8%A6%81%E6%B1%82%E5%88%86%E6%9E%90" title="要求分析">要求分析</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88" title="ソフトウェア設計">ソフトウェア設計</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E6%A7%8B%E7%AF%89&amp;action=edit&amp;redlink=1" title="ソフトウェア構築 (存在しないページ)">ソフトウェア構築</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Software_construction&amp;action=edit&amp;redlink=1" title="En:Software construction (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88" title="ソフトウェアデプロイメント">ソフトウェアデプロイメント</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9" title="ソフトウェアメンテナンス">ソフトウェアメンテナンス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%81%E3%83%BC%E3%83%A0&amp;action=edit&amp;redlink=1" title="プログラミングチーム (存在しないページ)">プログラミングチーム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Programming_team&amp;action=edit&amp;redlink=1" title="En:Programming team (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="オープンソースソフトウェア">オープンソースモデル</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">計算理論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%A8%88%E7%AE%97%E3%83%A2%E3%83%87%E3%83%AB" title="計算モデル">計算モデル</a></li>
+<li><a href="/wiki/%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="形式言語">形式言語</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3%E7%90%86%E8%AB%96" title="オートマトン理論">オートマトン理論</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E5%8F%AF%E8%83%BD%E6%80%A7%E7%90%86%E8%AB%96" title="計算可能性理論">計算可能性理論</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%91%E6%80%A7%E7%90%86%E8%AB%96" title="計算複雑性理論">計算複雑性理論</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E8%AB%96%E7%90%86%E5%AD%A6&amp;action=edit&amp;redlink=1" title="コンピュータ科学における論理学 (存在しないページ)">コンピュータ科学における論理学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Logic_in_computer_science&amp;action=edit&amp;redlink=1" title="En:Logic in computer science (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%84%8F%E5%91%B3%E8%AB%96" title="プログラム意味論">意味論</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アルゴリズム</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3&amp;action=edit&amp;redlink=1" title="アルゴリズムのデザイン (存在しないページ)">アルゴリズム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Algorithm_design&amp;action=edit&amp;redlink=1" title="En:Algorithm design (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E8%A7%A3%E6%9E%90" title="アルゴリズム解析">アルゴリズム解析</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E5%8A%B9%E7%8E%87&amp;action=edit&amp;redlink=1" title="アルゴリズム効率 (存在しないページ)">アルゴリズム効率</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Algorithmic_efficiency&amp;action=edit&amp;redlink=1" title="En:Algorithmic efficiency (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="乱択アルゴリズム">乱択アルゴリズム</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E5%B9%BE%E4%BD%95%E5%AD%A6" title="計算幾何学">計算幾何学</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンピューティングの数学</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%9B%A2%E6%95%A3%E6%95%B0%E5%AD%A6" title="離散数学">離散数学</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87" title="確率">確率</a></li>
+<li><a href="/wiki/%E7%B5%B1%E8%A8%88%E5%AD%A6" title="統計学">統計学</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%AD%A6%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="数学ソフトウェア">数学ソフトウェア</a></li>
+<li><a href="/wiki/%E6%83%85%E5%A0%B1%E7%90%86%E8%AB%96" title="情報理論">情報理論</a></li>
+<li><a href="/wiki/%E8%A7%A3%E6%9E%90%E5%AD%A6" title="解析学">解析学</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%80%A4%E8%A7%A3%E6%9E%90" title="数値解析">数値解析</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">情報システム</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース管理システム</a></li>
+<li><a href="/wiki/%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE" title="記憶装置">情報ストレージシステム</a></li>
+<li><a href="/wiki/%E4%BC%81%E6%A5%AD%E6%83%85%E5%A0%B1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="企業情報システム">企業情報システム</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A4%BE%E4%BC%9A%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2&amp;action=edit&amp;redlink=1" title="社会ソフトウェア (存在しないページ)">社会情報システム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Social_software&amp;action=edit&amp;redlink=1" title="En:Social software (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%9C%B0%E7%90%86%E6%83%85%E5%A0%B1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="地理情報システム">地理情報システム</a></li>
+<li><a href="/wiki/%E6%84%8F%E6%80%9D%E6%B1%BA%E5%AE%9A%E6%94%AF%E6%8F%B4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="意思決定支援システム">意思決定支援システム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" title="プロセス制御">プロセス制御システム</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9&amp;action=edit&amp;redlink=1" title="マルチメディアデータベース (存在しないページ)">マルチメディア情報システム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Multimedia_database&amp;action=edit&amp;redlink=1" title="En:Multimedia database (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%9E%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0" title="データマイニング">データマイニング</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%AD%90%E5%9B%B3%E6%9B%B8%E9%A4%A8" title="電子図書館">電子図書館</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)" title="プラットフォーム (コンピューティング)">コンピューティング・プラットフォーム</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="デジタルマーケティング">デジタルマーケティング</a></li>
+<li><a href="/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a></li>
+<li><a href="/wiki/%E6%83%85%E5%A0%B1%E6%A4%9C%E7%B4%A2" title="情報検索">情報検索</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">セキュリティ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%9A%97%E5%8F%B7%E7%90%86%E8%AB%96" title="暗号理論">暗号理論</a></li>
+<li><a href="/wiki/%E5%BD%A2%E5%BC%8F%E6%89%8B%E6%B3%95" title="形式手法">形式手法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BB%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9&amp;action=edit&amp;redlink=1" title="セキュリティ・サービス (存在しないページ)">セキュリティ・サービス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Security_service_(telecommunication)&amp;action=edit&amp;redlink=1" title="En:Security service (telecommunication) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BE%B5%E5%85%A5%E6%A4%9C%E7%9F%A5%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入検知システム">侵入検知システム</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E6%AC%A0%E9%99%A5%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3&amp;action=edit&amp;redlink=1" title="ハードウェアの欠陥によるコンピュータ・セキュリティ (存在しないページ)">ハードウェア・セキュリティ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Computer_security_compromised_by_hardware_failure&amp;action=edit&amp;redlink=1" title="En:Computer security compromised by hardware failure (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="ネットワーク・セキュリティ">ネットワーク・セキュリティ</a></li>
+<li><a href="/wiki/%E6%83%85%E5%A0%B1%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="情報セキュリティ">情報セキュリティ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3&amp;action=edit&amp;redlink=1" title="アプリケーション・セキュリティ (存在しないページ)">アプリケーション・セキュリティ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Application_security&amp;action=edit&amp;redlink=1" title="En:Application security (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ヒューマンコンピュータ<br/>インタラクション</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3" title="インタラクションデザイン">インタラクションデザイン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="ソーシャル・コンピューティング (存在しないページ)">ソーシャル・コンピューティング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Social_computing&amp;action=edit&amp;redlink=1" title="En:Social computing (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%93%E3%82%AD%E3%82%BF%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ユビキタスコンピューティング">ユビキタスコンピューティング</a></li>
+<li><a href="/wiki/%E5%8F%AF%E8%A6%96%E5%8C%96" title="可視化">可視化</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="コンピュータアクセシビリティ">アクセシビリティ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並行性</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E4%B8%A6%E8%A1%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="並行コンピューティング">並行コンピューティング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="並列コンピューティング">並列コンピューティング</a></li>
+<li><a class="mw-selflink selflink">分散コンピューティング</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">人工知能</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E%E5%87%A6%E7%90%86" title="自然言語処理">自然言語処理</a></li>
+<li><a href="/wiki/%E7%9F%A5%E8%AD%98%E8%A1%A8%E7%8F%BE" title="知識表現">知識表現と推論</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3" title="コンピュータビジョン">コンピュータビジョン</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB" title="自動計画">自動計画とスケジューリング</a></li>
+<li><a href="/wiki/%E6%95%B0%E7%90%86%E6%9C%80%E9%81%A9%E5%8C%96" title="数理最適化">検索手法</a></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御手法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AE%E5%93%B2%E5%AD%A6&amp;action=edit&amp;redlink=1" title="人工知能の哲学 (存在しないページ)">人工知能の哲学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Philosophy_of_artificial_intelligence&amp;action=edit&amp;redlink=1" title="En:Philosophy of artificial intelligence (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E6%95%A3%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD&amp;action=edit&amp;redlink=1" title="分散人工知能 (存在しないページ)">分散人工知能</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distributed_artificial_intelligence&amp;action=edit&amp;redlink=1" title="En:Distributed artificial intelligence (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">機械学習</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%95%99%E5%B8%AB%E3%81%82%E3%82%8A%E5%AD%A6%E7%BF%92" title="教師あり学習">教師あり学習</a></li>
+<li><a href="/wiki/%E6%95%99%E5%B8%AB%E3%81%AA%E3%81%97%E5%AD%A6%E7%BF%92" title="教師なし学習">教師なし学習</a></li>
+<li><a href="/wiki/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92" title="強化学習">強化学習</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9E%E3%83%AB%E3%83%81%E3%82%BF%E3%82%B9%E3%82%AF%E5%AD%A6%E7%BF%92&amp;action=edit&amp;redlink=1" title="マルチタスク学習 (存在しないページ)">マルチタスク学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Multi-task_learning&amp;action=edit&amp;redlink=1" title="En:Multi-task learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BA%A4%E5%B7%AE%E6%A4%9C%E8%A8%BC" title="交差検証">交差検証</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">グラフィックス</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="コンピュータアニメーション">アニメーション</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%83%B3%E3%83%80%E3%83%AA%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レンダリング (コンピュータ)">レンダリング</a></li>
+<li><a href="/wiki/%E5%86%99%E7%9C%9F%E7%B7%A8%E9%9B%86" title="写真編集">画像編集</a></li>
+<li><a href="/wiki/Graphics_Processing_Unit" title="Graphics Processing Unit">GPU</a></li>
+<li><a href="/wiki/%E8%A4%87%E5%90%88%E7%8F%BE%E5%AE%9F" title="複合現実">複合現実</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3" title="バーチャル・リアリティ">バーチャル・リアリティ</a></li>
+<li><a href="/wiki/%E7%94%BB%E5%83%8F%E5%9C%A7%E7%B8%AE" title="画像圧縮">画像圧縮</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%AA%E3%83%83%E3%83%89%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" title="ソリッドモデリング">ソリッドモデリング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用コンピューティング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%9B%BB%E5%AD%90%E5%95%86%E5%8F%96%E5%BC%95" title="電子商取引">電子商取引</a></li>
+<li><a href="/wiki/%E4%BC%81%E6%A5%AD%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="企業アプリケーション">企業アプリケーション</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%A8%88%E7%AE%97%E6%95%B0%E5%AD%A6&amp;action=edit&amp;redlink=1" title="計算数学 (存在しないページ)">計算数学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Computational_mathematics&amp;action=edit&amp;redlink=1" title="En:Computational mathematics (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E7%89%A9%E7%90%86%E5%AD%A6" title="計算物理学">計算物理学</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E5%8C%96%E5%AD%A6" title="計算化学">計算化学</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6" title="計算生物学">計算生物学</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6" title="計算社会科学">計算社会科学</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%A8%88%E7%AE%97%E5%B7%A5%E5%AD%A6&amp;action=edit&amp;redlink=1" title="計算工学 (存在しないページ)">計算工学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Computational_engineering&amp;action=edit&amp;redlink=1" title="En:Computational engineering (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%81%A5%E5%BA%B7%E6%83%85%E5%A0%B1%E5%AD%A6" title="健康情報学">健康情報学</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%88" title="デジタルアート">デジタルアート</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%AD%90%E5%87%BA%E7%89%88" title="電子出版">電子出版</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E6%88%A6%E4%BA%89" title="サイバー戦争">サイバー戦争</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%AD%90%E6%8A%95%E7%A5%A8" title="電子投票">電子投票</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B2%E3%83%BC%E3%83%A0" title="コンピュータゲーム">コンピュータゲーム</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%AF%E3%83%BC%E3%83%89%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5%E3%83%BC" title="ワードプロセッサー">ワードプロセッサー</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA%E3%83%BB%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81" title="オペレーションズ・リサーチ">オペレーションズ・リサーチ</a></li>
+<li><a href="/wiki/%E6%95%99%E8%82%B2%E5%B7%A5%E5%AD%A6" title="教育工学">教育工学</a></li>
+<li><a href="/wiki/%E6%96%87%E6%9B%B8%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="文書管理システム">文書管理システム</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li>ファイル:Symbol question.svg <b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E3%81%AE%E6%A6%82%E8%A6%81&amp;action=edit&amp;redlink=1" title="コンピュータ科学の概要 (存在しないページ)">概要</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Outline_of_computer_science&amp;action=edit&amp;redlink=1" title="En:Outline of computer science (存在しないページ)">英語版</a>）</span></span></b></li>
+<li>カテゴリ <b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6" title="カテゴリ:計算機科学">カテゴリ</a></b></li>
+<li>ウィキペディア・ブック <b><a class="new" href="/w/index.php?title=Book:Computer_science&amp;action=edit&amp;redlink=1" title="Book:Computer science (存在しないページ)">ブック</a></b></li>
+<li>コモンズ <b><a class="extiw" href="https://commons.wikimedia.org/wiki/Category:Computer_science" title="commons:Category:Computer science">コモンズ</a></b></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331065449
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.319 seconds
+Real time usage: 0.467 seconds
+Preprocessor visited node count: 9082/1000000
+Post‐expand include size: 171985/2097152 bytes
+Template argument size: 15040/2097152 bytes
+Highest expansion depth: 34/40
+Expensive parser function count: 45/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1824/5000000 bytes
+Lua time usage: 0.140/7 seconds
+Lua virtual size: 7450624/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  374.853      1 -total
+ 42.34%  158.700      2 テンプレート:Navbox
+ 34.61%  129.726     43 テンプレート:仮リンク
+ 25.04%   93.856      1 テンプレート:コンピュータ科学
+ 18.63%   69.842      1 テンプレート:並列コンピューティング
+ 14.71%   55.130     10 テンプレート:Citation/core
+ 10.87%   40.739      1 テンプレート:独自研究
+  9.10%   34.105      5 テンプレート:Cite_journal
+  8.69%   32.589      1 テンプレート:Ambox
+  7.40%   27.738      3 テンプレート:Cite_book
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3185-0!canonical and timestamp 20220331065448 and revision id 2441. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=分散コンピューティング&amp;oldid=2441">http://localhost:8080/w/index.php?title=分散コンピューティング&amp;oldid=2441</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%A4%9C%E8%A8%BC%E3%81%8C%E6%B1%82%E3%82%81%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2010%E5%B9%B4%E4%BB%A5%E5%89%8D" title="カテゴリ:検証が求められている記述のある記事/2010年以前">検証が求められている記述のある記事/2010年以前</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2013%E5%B9%B41%E6%9C%88-6%E6%9C%88" title="カテゴリ:独自研究の除去が必要な節のある記事/2013年1月-6月">独自研究の除去が必要な節のある記事/2013年1月-6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="カテゴリ:コンピュータ">コンピュータ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%86%E6%95%A3%E5%87%A6%E7%90%86" title="カテゴリ:分散処理">分散処理</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="カテゴリ:プログラミングパラダイム">プログラミングパラダイム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6" title="カテゴリ:計算科学">計算科学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:ソフトウェアアーキテクチャ">ソフトウェアアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BF%A1%E9%A0%BC%E6%80%A7%E5%B7%A5%E5%AD%A6" title="カテゴリ:信頼性工学">信頼性工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">並列コンピューティング</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%84%B1%E4%B8%AD%E5%A4%AE%E9%9B%86%E6%A8%A9" title="カテゴリ:脱中央集権">脱中央集権</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D3185%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D3185%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;oldid=2441" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月8日 (月) 15:25 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.319","walltime":"0.467","ppvisitednodes":{"value":9082,"limit":1000000},"postexpandincludesize":{"value":171985,"limit":2097152},"templateargumentsize":{"value":15040,"limit":2097152},"expansiondepth":{"value":34,"limit":40},"expensivefunctioncount":{"value":45,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1824,"limit":5000000},"timingprofile":["100.00%  374.853      1 -total"," 42.34%  158.700      2 テンプレート:Navbox"," 34.61%  129.726     43 テンプレート:仮リンク"," 25.04%   93.856      1 テンプレート:コンピュータ科学"," 18.63%   69.842      1 テンプレート:並列コンピューティング"," 14.71%   55.130     10 テンプレート:Citation/core"," 10.87%   40.739      1 テンプレート:独自研究","  9.10%   34.105      5 テンプレート:Cite_journal","  8.69%   32.589      1 テンプレート:Ambox","  7.40%   27.738      3 テンプレート:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.140","limit":"7"},"limitreport-virtmemusage":{"value":7450624,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331065449","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":97});});</script>
+</body></html>

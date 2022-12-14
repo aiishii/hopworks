@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>リスト内包表記 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-リスト内包表記 rootpage-リスト内包表記 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">リスト内包表記</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>リスト内包表記</b>とは、一部のプログラミング言語で使用可能な構文構造であり、既存の<a href="." id="link_a_1" title="リスト (抽象データ型)">リスト</a>から新たなリストを作成するために用いられるものである。 これは、 <a href="." id="link_a_2" title="高階関数">map関数</a>や<a href="." id="link_a_2" title="高階関数">map関数</a>などとは異なり、数学における集合内包表記 (en:<a class="new" href="/w/index.php?title=En:Set-builder_notation&amp;action=edit&amp;redlink=1" title="En:Set-builder notation (存在しないページ)">Set-builder notation</a>) に準拠したものである。 
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#歴史"><span class="tocnumber">2</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#類似構文"><span class="tocnumber">3</span> <span class="toctext">類似構文</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#モナド内包表記"><span class="tocnumber">3.1</span> <span class="toctext">モナド内包表記</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#集合内包表記"><span class="tocnumber">3.2</span> <span class="toctext">集合内包表記</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#辞書型内包表記"><span class="tocnumber">3.3</span> <span class="toctext">辞書型内包表記</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#並列リスト内包表記"><span class="tocnumber">3.4</span> <span class="toctext">並列リスト内包表記</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#XQueryとXPath"><span class="tocnumber">3.5</span> <span class="toctext">XQueryとXPath</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#LINQ"><span class="tocnumber">3.6</span> <span class="toctext">LINQ</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#C++"><span class="tocnumber">3.7</span> <span class="toctext">C++</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#関連項目"><span class="tocnumber">4</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#脚注・参考文献"><span class="tocnumber">5</span> <span class="toctext">脚注・参考文献</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Haskell"><span class="tocnumber">5.1</span> <span class="toctext">Haskell</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#OCaml"><span class="tocnumber">5.2</span> <span class="toctext">OCaml</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Python"><span class="tocnumber">5.3</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Common_Lisp"><span class="tocnumber">5.4</span> <span class="toctext">Common Lisp</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Clojure"><span class="tocnumber">5.5</span> <span class="toctext">Clojure</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Axiom"><span class="tocnumber">5.6</span> <span class="toctext">Axiom</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#外部リンク"><span class="tocnumber">6</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>次の集合内包表記の例を考える。 
+</p>
+<dl><dd>&lt;math&gt;S=\{2\cdot x\mid x \in \mathbb{N},\ x^2&gt;3\}&lt;/math&gt;</dd></dl>
+<p>あるいは 
+</p>
+<dl><dd>&lt;math&gt;S=\{2\cdot x : x \in \mathbb{N},\ x^2&gt;3\}&lt;/math&gt;</dd></dl>
+<p>この表記は、「&lt;math&gt;S&lt;/math&gt;は、&lt;math&gt;x&lt;/math&gt;が<a href="/wiki/%E8%87%AA%E7%84%B6%E6%95%B0" title="自然数">自然数</a>の集合 (&lt;math&gt;\mathbb{N}&lt;/math&gt;) の元であり、かつ&lt;math&gt;x&lt;/math&gt;の二乗が&lt;math&gt;3&lt;/math&gt;より大きいようなすべての『&lt;math&gt;x&lt;/math&gt;の2倍』なる数」を意味する。 
+</p><p>最小の自然数x=1は、条件x<sup>2</sup>&gt;3を満たさない（1<sup>2</sup>&gt;3は偽）ため、2・1はSに含まれない。次の自然数2は、条件を満たす（2<sup>2</sup>&gt;3）。他のすべての自然数も同様である。 したがって、xは 2, 3, 4, 5... で構成される。集合Sは「xの2倍」なるすべての数値で構成されるため、S = {4, 6, 8, 10...} で与えられる。言い換えれば、Sは2より大きいすべての偶数の集合である。 
+</p><p>注釈を加えると以下のようになる。 
+</p>
+<dl><dd>&lt;math&gt;S=\{\underbrace{2\cdot x}_{\color{Violet}{\text{出力}}}\mid \underbrace{x}_{\color{Violet}{\text{変数}}} \in \underbrace{\mathbb{N}}_{\color{Violet}{\text{入力}}},\ \underbrace{x^2&gt;3}_{\color{Violet}{\text{述語}}}\}&lt;/math&gt;</dd></dl>
+<ul><li>&lt;math&gt;x&lt;/math&gt;は入力された集合の元を表す変数である。</li>
+<li>&lt;math&gt;\mathbb{N}&lt;/math&gt;は（この例においては）入力された集合である自然数の集合を表す。</li>
+<li>&lt;math&gt;x^2&gt;3&lt;/math&gt;は入力された集合の元に対するフィルターとして機能する<a href="/wiki/%E8%BF%B0%E8%AA%9E" title="述語">述語</a>式である。</li>
+<li>&lt;math&gt;2\cdot x&lt;/math&gt;は入力された集合の元から新しい集合の元を生成する出力式である。</li>
+<li>中括弧 &lt;math&gt;\{\}&lt;/math&gt; は結果が集合であることを表す。</li>
+<li>縦棒 &lt;math&gt;\mid&lt;/math&gt; は「SUCH THAT」と読む。 縦棒とコロン 「:」は同じ意味で使用される。</li>
+<li>カンマは述語を区切り、「AND」と読まれる。</li></ul>
+<p>リスト内包表記は、入力された<a href="/wiki/%E3%83%AA%E3%82%B9%E3%83%88_(%E6%8A%BD%E8%B1%A1%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B)" title="リスト (抽象データ型)">リスト</a>または<a href="/wiki/%E3%82%A4%E3%83%86%E3%83%AC%E3%83%BC%E3%82%BF" title="イテレータ">イテレータ</a>からの新たなリストの生成を表すためにこれと同じ構文構造を用いるものである。 
+</p>
+<ul><li>入力リストのメンバを表す変数。</li>
+<li>入力リスト（またはイテレーター）。</li>
+<li>述語式（任意）。</li>
+<li>述語を満たす入力イテラブルのメンバから出力リストのメンバを生成する出力式。</li></ul>
+<p>出力リストのメンバーの生成順序は、入力内のアイテムの順序に基づく。 
+</p><p><a href="/wiki/Haskell" title="Haskell">Haskell</a>のリスト内包表記では、このような集合内包表記は同様に次のように記述される。 &lt;syntaxhighlight lang="haskell"&gt;
+s = [ 2*x | x &lt;- [0..], x^2 &gt; 3 ] 
+&lt;/syntaxhighlight&gt; ここで、リスト<code>[0..]</code>は&lt;math&gt;\mathbb{N}&lt;/math&gt; 、 <code>x^2&gt;3</code>は述語式を表し、 <code>2*x</code>は出力式を表す。 
+</p><p>リスト内包表記は（集合のそれとは異なり）リストで定義された順序で結果を返す。また先のHaskellの例における無限長のリストのような定義を受け入れるために、リスト内包表記はリスト全体を変換するのではなく、リストのメンバを順に生成するような<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ジェネレータ (プログラミング)">ジェネレータ</a>を返却する。 
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=2" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>プログラミング言語<a class="new" href="/w/index.php?title=SETL&amp;action=edit&amp;redlink=1" title="SETL (存在しないページ)">SETL</a>（1969）には、リスト内包表記に似た集合形成構文が存在する。例えば以下のコードは2からNまでのすべての素数を出力する。 &lt;syntaxhighlight lang="text"&gt;
+print([n in [2..N] | forall m in {2..n - 1} | n mod m &gt; 0]); 
+&lt;/syntaxhighlight&gt; <a href="/wiki/%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="数式処理システム">数式処理システム</a><a href="/wiki/Axiom_(%E6%95%B0%E5%BC%8F%E5%87%A6%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Axiom (数式処理システム)">AXIOM</a>（1973）にも、 <a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ストリーム (プログラミング)">ストリーム</a>を処理するための同様の構文が存在するが、このような構文に対して「内包表記（comprehension）」という用語が用いられたのは、1977年にRod BurstallとJohn Darlingtonが関数型プログラミング言語<a class="new" href="/w/index.php?title=NPL%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E&amp;action=edit&amp;redlink=1" title="NPLプログラミング言語 (存在しないページ)">NPL</a>について行ったものが最初である。 
+</p><p>少なくともバージョンSmalltalk-80以降の<a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>では、リスト内包を構成するブロックコンテキストメッセージが使用されている。 
+</p><p>NPLに対するBurstallとDarlingtonの貢献は、1980年代に多くの関数型プログラミング言語に影響を与えたが、以後リスト内包表記が関数型言語のスタンダードとなるわけではなかった。例外であったのは、1985年にリリースされ流行した、純粋遅延評価関数型プログラミング言語<a href="/wiki/Miranda" title="Miranda">Miranda</a>である。その後開発された純粋遅延評価関数型言語<a href="/wiki/Haskell" title="Haskell">Haskell</a>には、リスト内包表記を含む、Mirandaの多くの機能が取り入れられた。 
+</p><p>またリスト内包表記はデータベースのクエリ表記法としても提案され<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>、<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%B3%E3%83%AA%E3%83%83%E3%83%92%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%B9%E3%83%AA" title="ハインリッヒ・クライスリ">Kleisli</a>データベースクエリ言語に実装された<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。 
+</p>
+<h2><span id=".E9.A1.9E.E4.BC.BC.E6.A7.8B.E6.96.87"></span><span class="mw-headline" id="類似構文">類似構文</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=3" title="節を編集: 類似構文">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.A2.E3.83.8A.E3.83.89.E5.86.85.E5.8C.85.E8.A1.A8.E8.A8.98"></span><span class="mw-headline" id="モナド内包表記">モナド内包表記</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=4" title="節を編集: モナド内包表記">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Haskellには<a href="/wiki/%E3%83%A2%E3%83%8A%E3%83%89_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)#構文糖衣:_do記法" title="モナド (プログラミング)">モナド内包表記</a>という記法が存在する。これは関数型プログラミングにおけるリスト内包表記の<a href="/wiki/%E3%83%A2%E3%83%8A%E3%83%89_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="モナド (プログラミング)">モナド</a>への一般化である。 
+</p>
+<h3><span id=".E9.9B.86.E5.90.88.E5.86.85.E5.8C.85.E8.A1.A8.E8.A8.98"></span><span class="mw-headline" id="集合内包表記">集合内包表記</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=5" title="節を編集: 集合内包表記">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プログラミング言語Pythonのバージョン3.xおよび2.7では、 <a href="/wiki/%E3%82%BB%E3%83%83%E3%83%88_(%E6%8A%BD%E8%B1%A1%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B)" title="セット (抽象データ型)">集合</a>内包表記の構文が導入されている。これはリスト内包表記と同様の形式をとり、リストの代わりにPythonのsetを生成する。 &lt;syntaxhighlight lang="python"&gt;
+&gt;&gt;&gt; s = {v for v in 'ABCDABCD' if v not in 'CB'}
+&gt;&gt;&gt; print(s)
+{'A', 'D'}
+&gt;&gt;&gt; type(s)
+&lt;class 'set'&gt;
+&gt;&gt;&gt;
+&lt;/syntaxhighlight&gt; <a href="/wiki/Racket" title="Racket">Racket</a>の集合内包表記は、リストではなくRacketのsetを生成する。 &lt;syntaxhighlight lang="scheme"&gt;
+(for/set ([v "ABCDABCD"] #:unless (member v (string-&gt;list "CB")))
+</p>
+<pre>     v))
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E8.BE.9E.E6.9B.B8.E5.9E.8B.E5.86.85.E5.8C.85.E8.A1.A8.E8.A8.98"></span><span class="mw-headline" id="辞書型内包表記">辞書型内包表記</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=6" title="節を編集: 辞書型内包表記">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プログラミング言語Pythonのバージョン3.xと2.7では、リスト内包表記に似た形式の<a href="/wiki/%E9%80%A3%E6%83%B3%E9%85%8D%E5%88%97" title="連想配列">辞書型</a>内包表記の新しい構文が導入された。これはリストの代わりにPythonの<a class="external text" href="https://docs.python.org/library/stdtypes.html#dict" rel="nofollow">dict</a>が生成する。 &lt;syntaxhighlight lang="python"&gt;
+&gt;&gt;&gt; s = {key: val for key, val in enumerate('ABCD') if val not in 'CB'}
+&gt;&gt;&gt; s
+{0: 'A', 3: 'D'}
+&gt;&gt;&gt;
+&lt;/syntaxhighlight&gt; Racketのハッシュテーブル内包表記は、Racketのハッシュテーブル（Racketの辞書型の実装の1つ）を生成する。 &lt;syntaxhighlight lang="scheme"&gt;
+(for/hash ([(val key) (in-indexed "ABCD")]
+</p>
+<pre>     #:unless (member val (string-&gt;list "CB")))
+(values key val)) 
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E4.B8.A6.E5.88.97.E3.83.AA.E3.82.B9.E3.83.88.E5.86.85.E5.8C.85.E8.A1.A8.E8.A8.98"></span><span class="mw-headline" id="並列リスト内包表記">並列リスト内包表記</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=7" title="節を編集: 並列リスト内包表記">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Glasgow_Haskell_Compiler" title="Glasgow Haskell Compiler">Glasgow Haskell Compiler</a>には、リスト内包表記の構文において複数の独立した修飾子 (qualifier) の分割を許可する、<b>並列リスト内包表記</b>（あるいは<b>zip-comprehension</b>）と呼ばれる拡張構文が存在する。カンマで区切られた変数は依存関係にある（すなわち、ネストされる）が、パイプ文字で区切られた修飾子は並列に評価される（マルチスレッドで動作するという意味でなく、単に修飾子が<a href="/wiki/%E9%AB%98%E9%9A%8E%E9%96%A2%E6%95%B0#zip" title="高階関数">zip</a>されるという意味である）。 &lt;syntaxhighlight lang="haskell"&gt;
+-- 通常のリスト内包表記
+a = [(x,y) | x &lt;- [1..5], y &lt;- [3..5]]
+-- [(1,3),(1,4),(1,5),(2,3),(2,4) ...
+</p><p>-- zipによるリスト内包表記
+b = [(x,y) | (x,y) &lt;- zip [1..5] [3..5]]
+-- [(1,3),(2,4),(3,5)]
+</p><p>-- 並列リスト内包表記
+c = [(x,y) | x &lt;- [1..5] | y &lt;- [3..5]]
+-- [(1,3),(2,4),(3,5)]
+&lt;/syntaxhighlight&gt; Racketの標準ライブラリには、「for」と「for*」いう2つのキーワードで区別される、並列バージョンと多重ループバージョンの2つの内包表記が含まれている。例えば、ベクトル内包表記「for/vector」および「for*/vector」は、入力シーケンスに対してそれぞれ並列および多重ループによってベクトルを作成する。以下は、上のHaskellのリスト内包表記の例をRacketコードに書き下したものである。 &lt;syntaxhighlight lang="scheme"&gt;
+&gt; (for*/list ([x (in-range 1 6)] [y (in-range 3 6)]) (list x y))
+'((1 3) (1 4) (1 5) (2 3) (2 4) (2 5) (3 3) (3 4) (3 5) (4 3) (4 4) (4 5) (5 3) (5 4) (5 5))
+&gt; (for/list ([x (in-range 1 6)] [y (in-range 3 6)]) (list x y))
+'((1 3) (2 4) (3 5)) 
+&lt;/syntaxhighlight&gt; また、Pythonでは次のように書ける。 &lt;syntaxhighlight lang="python"&gt;
+</p>
+<ol><li>通常のリスト内包表記</li></ol>
+<p>&gt;&gt;&gt; a = [(x, y) for x in range(1, 6) for y in range(3, 6)]
+[(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), ...
+</p>
+<ol><li>並列 (zipによる) 内包表記</li></ol>
+<p>&gt;&gt;&gt; b = [x for x in zip(range(1, 6), range(3, 6))]
+[(1, 3), (2, 4), (3, 5)]
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id="XQuery.E3.81.A8XPath"></span><span class="mw-headline" id="XQueryとXPath">XQueryとXPath</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=8" title="節を編集: XQueryとXPath">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>これらの言語は基本的にデータベースアクセス言語である。リスト全体（時としてXMLデータベース全体）を取得して操作することは計算時間的に不可能であるため、内包表記の概念がより重要となる。 
+</p><p><br/>
+</p><p>XPathでは、式 &lt;syntaxhighlight lang="xquery"&gt;
+/library/book//paragraph[@style='first-in-chapter'] 
+&lt;/syntaxhighlight&gt; は概念的には一連の「ステップ」として評価される。各ステップはリストを生成し、次のステップは前のステップの出力の各要素にフィルターとなる関数を適用する<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。  
+</p><p>XQueryではXPathの機能はすべて使うことができるが、それに加えて、より強力な内包表記構造である<a class="new" href="/w/index.php?title=FLWOR&amp;action=edit&amp;redlink=1" title="FLWOR (存在しないページ)">FLWOR</a>構文も同時に使用される<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。 &lt;syntaxhighlight lang="xquery"&gt;
+</p>
+<pre>for $b in //book
+where $b[@pages &lt; 400]
+order by $b//title
+return
+ &lt;shortBook&gt;
+  &lt;title&gt;{$b//title}&lt;/title&gt;
+  &lt;firstPara&gt;{($book//paragraph)[1]}&lt;/firstPara&gt;
+ &lt;/shortBook&gt; 
+</pre>
+<p>&lt;/syntaxhighlight&gt; ここでは//bookというXPathが評価され、新たなシーケンス（リスト）が作成される。where句は「フィルタ」として機能し、orderは出力のソート順序を指定し、その後に続く<code style="white-space:nowrap">&lt;shortBook&gt;...&lt;/shortBook&gt;</code> XMLスニペットは、他の関数型言語におけるmapのようなアプローチを用いてシーケンスの各要素のXMLを構築（変換）する匿名関数として機能する。 
+</p><p>したがって、他の関数型言語では、上記のFLWORによる記述を次のように実装できる。 &lt;syntaxhighlight lang="xquery"&gt;
+</p>
+<pre>map(
+ newXML(shortBook, newXML(title, $1.title), newXML(firstPara, $1...))
+ filter(
+  lt($1.pages, 400),
+  xpath(//book)
+ )
+) 
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h3><span class="mw-headline" id="LINQ">LINQ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=9" title="節を編集: LINQ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/C_Sharp" title="C Sharp">C#</a> 3.0には、<a href="/wiki/%E7%B5%B1%E5%90%88%E8%A8%80%E8%AA%9E%E3%82%AF%E3%82%A8%E3%83%AA" title="統合言語クエリ">LINQ</a>と呼ばれる関連機能のセットが存在し、オブジェクト列挙子を操作するためのクエリ演算子が定義されている。 &lt;syntaxhighlight lang="csharp"&gt;
+var s = Enumerable.Range(0, 100).Where(x =&gt; x*x &gt; 3).Select(x =&gt; x*2); 
+&lt;/syntaxhighlight&gt; また、SQLに似た別の内包表記構文も存在する。 &lt;syntaxhighlight lang="csharp"&gt;
+var s = from x in Enumerable.Range(0, 100) where x*x &gt; 3 select x*2; 
+&lt;/syntaxhighlight&gt; LINQは、典型的なリスト内包表記の実装よりも優れた機能を提供する。内包表記のルートオブジェクトがIQueryableインターフェイスを実装する場合、単に内包表記の中のチェーンメソッドを実行するだけでなく、命令のシーケンス全体を<a href="/wiki/%E6%8A%BD%E8%B1%A1%E6%A7%8B%E6%96%87%E6%9C%A8" title="抽象構文木">抽象構文木</a>オブジェクトに変換し、IQueryableオブジェクトに渡して解釈・実行する。 
+</p><p>これにより、とりわけIQueryableは 
+</p>
+<ul><li>非互換または非効率的な内包表記を書き直すことができる。</li>
+<li>抽象構文木を実行用の別のクエリ言語に翻訳する（例：SQL）ことができる。</li></ul>
+<h3><span id="C.2B.2B"></span><span class="mw-headline" id="C++">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=10" title="節を編集: C++">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++にはリスト内包表記を直接サポートする言語機能は存在しないが、 <a href="/wiki/%E5%88%A9%E7%94%A8%E8%80%85%E5%AE%9A%E7%BE%A9%E6%BC%94%E7%AE%97%E5%AD%90" title="利用者定義演算子">演算子オーバーロード</a>（例えば、|、&gt;&gt;、&gt;&gt;=など）を使用して、「埋め込み」クエリ<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">DSL</a>の構文を提供するということがしばしば行われる。また、<a class="new" href="/w/index.php?title=%E6%B6%88%E5%8E%BB-%E5%89%8A%E9%99%A4%E3%82%A4%E3%83%87%E3%82%A3%E3%82%AA%E3%83%A0&amp;action=edit&amp;redlink=1" title="消去-削除イディオム (存在しないページ)">erase-remove</a>イディオムを使用してコンテナ内の要素を選択し、STLのfor_eachアルゴリズムを使用して要素を変換することでもリスト内包表記を構築できる。 &lt;syntaxhighlight lang="cpp"&gt;
+</p>
+<ol><li>include &lt;algorithm&gt;</li>
+<li>include &lt;list&gt;</li>
+<li>include &lt;numeric&gt;</li></ol>
+<p>using namespace std;
+</p><p>template&lt;class C, class P, class T&gt;
+C comprehend(C&amp;&amp; source, const P&amp; predicate, const T&amp; transformation)
+{
+</p>
+<pre>// 出力を初期化
+C d = forward&lt;C&gt;(source);
+</pre>
+<pre>// 要素をフィルタ
+d.erase(remove_if(begin(d), end(d), predicate), end(d));
+</pre>
+<pre>// 変換を適用
+for_each(begin(d), end(d), transformation);
+</pre>
+<pre>return d;
+</pre>
+<p>}
+</p><p>int main()
+{
+</p>
+<pre>list&lt;int&gt; range(10); 
+  // rangeはサイズ10のリストで、初期値はゼロ
+iota(begin(range), end(range), 1);
+  // rangeに1,2,...,10を代入
+</pre>
+<pre>list&lt;int&gt; result = comprehend(
+  range,
+  [](int x){return x*x &lt;= 3;},
+  [](int &amp;x){x *= 2;});
+  // resultに4,6,...,20が代入される
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt; また、集合内包表記と似たリスト内包表記の構文・記法をC++に提供するための試みがいくつか存在する。 
+</p>
+<ul><li><a href="/wiki/Boost_C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="Boost C++ライブラリ">Boost</a>のrange<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>ライブラリには、アダプタ記法<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>が存在し、フィルタや変換などを任意のrangeに適用することができる。このライブラリーを使用すると、上のHaskellのコード例は次のように書ける（匿名フィルタと変換関数のためにBoost.Lambda<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>を用いている）（<a class="external text" href="http://codepad.org/y4bpgLJu" rel="nofollow">完全な例</a> ）。 &lt;syntaxhighlight lang="cpp"&gt;</li></ul>
+<p>counting_range(1,10) | filtered( _1*_1 &gt; 3 ) | transformed(ret&lt;int&gt;( _1*2 )) 
+&lt;/syntaxhighlight&gt;
+</p>
+<ul><li>ある実装<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>では、マクロと、&lt;&lt;演算子のオーバーロードを使用する。これは条件文の中の任意の式を有効と評価するため、条件文中では任意の変数名を選択できる。ただし、<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%BB%E3%83%BC%E3%83%95" title="スレッドセーフ">スレッドセーフ</a>ではない。以下のように使用される。 &lt;syntaxhighlight lang="cpp"&gt;</li></ul>
+<p>list&lt;int&gt; N;
+list&lt;double&gt; S;
+</p><p>for (int i = 0; i &lt; 10; i++)
+</p>
+<pre>  N.push_back(i);
+</pre>
+<p>S &lt;&lt; list_comprehension(3.1415 * x, x, N, x*x &gt; 3) 
+&lt;/syntaxhighlight&gt;
+</p>
+<ul><li>ある実装<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>では、クラスと演算子のオーバーロードを使用して、head/tailスライスの機能と、関数を用いてリストをフィルタするための | 演算子を提供する。以下のように用いられる。 &lt;syntaxhighlight lang="cpp"&gt;</li></ul>
+<p>bool even(int x) { return x % 2 == 0; }
+bool x2(int &amp;x) { x *= 2; return true; }
+</p><p>list&lt;int&gt; l, t;
+int x, y;
+</p><p>for (int i = 0; i &lt; 10; i++)
+</p>
+<pre>  l.push_back(i);
+</pre>
+<p>(x, t) = l | x2;
+(t, y) = t;
+</p><p>t = l &lt; 9;
+t = t &lt; 7 | even | x2; 
+&lt;/syntaxhighlight&gt;
+</p>
+<ul><li>Language for Embedded Query and Traversal（LEESA<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>）は、演算子のオーバーロードを用いてXPathに似たクエリを実装するC++の埋め込みDSLである。クエリは、XMLからC++へのバインディングを使用してXSDから取得された、型付けされたXMLツリーの上で実行される。文字列としては変換されない。XMLタグの名前までもがクラスとなるので、タイプミスによるバグが発生しにくくなる。LEESA式がデータモデルに存在しない誤ったパスを生成する場合、C++コンパイラはコンパイルに失敗する。 <br/> &lt;catalog&gt;なるXMLについて考えてみる。 &lt;syntaxhighlight lang="xml"&gt;</li></ul>
+<p>&lt;catalog&gt;
+</p>
+<pre>&lt;book&gt;
+ &lt;title&gt;Hamlet&lt;/title&gt;
+ &lt;price&gt;9.99&lt;/price&gt;
+ &lt;author&gt;
+  &lt;name&gt;William Shakespeare&lt;/name&gt;
+  &lt;country&gt;England&lt;/country&gt;
+ &lt;/author&gt;
+&lt;/book&gt;
+&lt;book&gt;...&lt;/book&gt;
+</pre>
+<p>...
+&lt;/catalog&gt; 
+&lt;/syntaxhighlight&gt;
+</p>
+<pre>LEESAは、XPathの/セパレータに対応する演算子として&gt;&gt;を提供する。 XPathにおいてツリーの中間ノードを「スキップ」する//セパレーターは、LEESAでは戦略的プログラミングと呼ばれる手法を用いて実装される。以下の例では、catalog_、およびbook_、author_、name_は、それぞれ、catalog、およびbook、author、nameクラスのインスタンスである。 &lt;syntaxhighlight lang="cpp"&gt;
+</pre>
+<p>// 対応するXPath: "catalog/book/author/name"
+std::vector&lt;name&gt; author_names = 
+evaluate(root, catalog_ &gt;&gt; book_ &gt;&gt; author_ &gt;&gt; name_);
+</p><p>// 対応するXPath: "catalog//name"
+std::vector&lt;name&gt; author_names = 
+evaluate(root, catalog_ &gt;&gt; DescendantsOf(catalog_, name_));
+</p><p>// 対応するXPath: "catalog//author[country=="England"]"
+std::vector&lt;name&gt; author_names = 
+evaluate(root, catalog_ &gt;&gt; DescendantsOf(catalog_, author_)
+</p>
+<pre>            &gt;&gt; Select(author_, [](const author &amp; a) { return a.country()=="England"; })
+            &gt;&gt; name_);
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=11" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/SELECT_(SQL)" title="SELECT (SQL)">SELECT文</a>: <a href="/wiki/SQL" title="SQL">SQL</a>においてFROM句およびWHERE句と組み合わせて用いられる。</li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8.E3.83.BB.E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="脚注・参考文献">脚注・参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=12" title="節を編集: 脚注・参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=135271" rel="nofollow">Comprehensions, a query notation for DBPLs</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external text" href="http://portal.acm.org/citation.cfm?id=351241&amp;dl=ACM&amp;coll=portal" rel="nofollow">The functional guts of the Kleisli query system</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20121209085946/http://www.w3.org/TR/xpath/#section-Location-Steps" rel="nofollow">2.1 Location Steps</a>”. <i>XML Path Language (XPath)</i>.   <a class="mw-redirect" href="/wiki/W3C" title="W3C">W3C</a> (1999年11月16日). 2012年12月9日時点の<a class="external text" href="http://www.w3.org/TR/xpath#section-Location-Steps" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="24 December 2008">2008年12月24日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20111008001258/http://w3schools.com/xquery/xquery_flwor.asp" rel="nofollow">XQuery FLWOR Expressions</a>”. <i><a href="/wiki/W3Schools" title="W3Schools">W3Schools</a></i>. 2011年10月8日時点の<a class="external text" href="https://www.w3schools.com/XQuery/xquery_flwor.asp" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2020年4月17日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.boost.org/doc/libs/1_72_0/libs/range/doc/html/index.html" rel="nofollow">Chapter 1. Range 2.0</a>”. <i>www.boost.org</i>. <span title="">2020年4月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.boost.org/doc/libs/1_72_0/libs/range/doc/html/range/reference/adaptors.html" rel="nofollow">Range Adaptors</a>”. <i>www.boost.org</i>. <span title="">2020年4月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.boost.org/doc/libs/1_72_0/doc/html/lambda.html" rel="nofollow">Chapter 20. Boost.Lambda - 1.72.0</a>”. <i>www.boost.org</i>. <span title="">2020年4月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20110821211656/http://mfoliveira.org/blog/2011/01/04/simple-list-comprehension-in-cp-using-preprocessor-macros/" rel="nofollow">Single-variable List Comprehension in C++ using Preprocessor Macros</a>”. 2011年8月21日時点の<a class="external text" href="http://mfoliveira.org/blog/2011/01/04/simple-list-comprehension-in-cp-using-preprocessor-macros/" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2011年1月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20170707125836/http://www.tedunangst.com/listcc.html" rel="nofollow">C++ list comprehensions</a>”. 2017年7月7日時点の<a class="external text" href="http://www.tedunangst.com/listcc.html" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2011年1月9日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.dre.vanderbilt.edu/LEESA/" rel="nofollow">Language for Embedded Query and Traversal (LEESA)</a>”. <span title="">2020年4月17日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<ul><li>The Free On-line Dictionary of Computingの<a class="external text" href="https://web.archive.org/web/20050125080818/http://ftp.sunet.se/foldoc/foldoc.cgi?list+comprehension" rel="nofollow">List Comprehension</a>の項、編集: Denis Howe</li>
+<li><cite class="citation conference" style="font-style:normal">Trinder, Phil (1992). <a class="external text" href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=135271" rel="nofollow">“Comprehensions, a query notation for DBPLs”</a>. <a class="external text" href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=135271" rel="nofollow"><i>Proceedings of the third international workshop on Database programming languages: bulk types &amp; persistent data, Nafplion, Greece</i></a>. pp. 55–68<span style="display:none;">. <a class="external free" href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=135271" rel="nofollow">http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=135271</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Comprehensions%2C+a+query+notation+for+DBPLs&amp;rft.atitle=Proceedings+of+the+third+international+workshop+on+Database+programming+languages%3A+bulk+types+%26+persistent+data%2C+Nafplion%2C+Greece&amp;rft.aulast=Trinder&amp;rft.aufirst=Phil&amp;rft.au=Trinder%2C%26%2332%3BPhil&amp;rft.date=1992&amp;rft.pages=pp.%26nbsp%3B55%E2%80%9368&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fcoll%3DGUIDE%26dl%3DGUIDE%26id%3D135271&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98"><span style="display: none;"> </span></span></li>
+<li><cite class="citation conference" style="font-style:normal">Wadler, Philip (1990). <a class="external text" href="http://citeseer.ist.psu.edu/wadler92comprehending.html" rel="nofollow">“Comprehending Monads”</a>. <a class="external text" href="http://citeseer.ist.psu.edu/wadler92comprehending.html" rel="nofollow"><i>Proceedings of the 1990 ACM Conference on LISP and Functional Programming, Nice</i></a><span style="display:none;">. <a class="external free" href="http://citeseer.ist.psu.edu/wadler92comprehending.html" rel="nofollow">http://citeseer.ist.psu.edu/wadler92comprehending.html</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Comprehending+Monads&amp;rft.atitle=Proceedings+of+the+1990+ACM+Conference+on+LISP+and+Functional+Programming%2C+Nice&amp;rft.aulast=Wadler&amp;rft.aufirst=Philip&amp;rft.au=Wadler%2C%26%2332%3BPhilip&amp;rft.date=1990&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fwadler92comprehending.html&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98"><span style="display: none;"> </span></span></li>
+<li><cite class="citation conference" style="font-style:normal">Wong, Limsoon (2000). <a class="external text" href="http://portal.acm.org/citation.cfm?id=351241&amp;dl=ACM&amp;coll=portal" rel="nofollow">“The Functional Guts of the Kleisli Query System”</a>. <a class="external text" href="http://portal.acm.org/citation.cfm?id=351241&amp;dl=ACM&amp;coll=portal" rel="nofollow"><i>Proceedings of the fifth ACM SIGPLAN international conference on Functional programming</i></a>. International Conference on Functional Programming. pp. 1–10<span style="display:none;">. <a class="external free" href="http://portal.acm.org/citation.cfm?id=351241&amp;dl=ACM&amp;coll=portal" rel="nofollow">http://portal.acm.org/citation.cfm?id=351241&amp;dl=ACM&amp;coll=portal</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=The+Functional+Guts+of+the+Kleisli+Query+System&amp;rft.atitle=Proceedings+of+the+fifth+ACM+SIGPLAN+international+conference+on+Functional+programming&amp;rft.aulast=Wong&amp;rft.aufirst=Limsoon&amp;rft.au=Wong%2C%26%2332%3BLimsoon&amp;rft.date=2000&amp;rft.pages=pp.%26nbsp%3B1%E2%80%9310&amp;rft_id=http%3A%2F%2Fportal.acm.org%2Fcitation.cfm%3Fid%3D351241%26dl%3DACM%26coll%3Dportal&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98"><span style="display: none;"> </span></span></li></ul>
+<h3><span class="mw-headline" id="Haskell">Haskell</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=13" title="節を編集: Haskell">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>The Haskell 98 Report, chapter <a class="external text" href="http://haskell.org/onlinereport/exps.html#list-comprehensions" rel="nofollow">3.11 List Comprehensions</a>.</li>
+<li>The Glorious Glasgow Haskell Compilation System User's Guide, chapter <a class="external text" href="https://web.archive.org/web/20051129140339/http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#parallel-list-comprehensions" rel="nofollow">7.3.4 Parallel List Comprehensions</a>.</li>
+<li>The Hugs 98 User's Guide, chapter <a class="external text" href="https://web.archive.org/web/20140515114545/http://cvs.haskell.org/Hugs/pages/users_guide/hugs-ghc.html#ZIP-COMPREHENSION" rel="nofollow">5.1.2 Parallel list comprehensions (a.k.a. zip-comprehensions)</a>.</li></ul>
+<h3><span class="mw-headline" id="OCaml">OCaml</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=14" title="節を編集: OCaml">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a class="external text" href="http://batteries.forge.ocamlcore.org/" rel="nofollow">OCaml Batteries Included</a></li>
+<li><a class="external text" href="http://batteries.forge.ocamlcore.org/doc.preview:batteries-alpha3/html/extensions.html" rel="nofollow">Language extensions introduced in OCaml Batteries Included</a></li></ul>
+<h3><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=15" title="節を編集: Python">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>The Python Tutorial, <a class="external text" href="https://docs.python.org/tutorial/datastructures.html#list-comprehensions" rel="nofollow">List Comprehensions</a>.</li>
+<li>Python Language Reference, <a class="external text" href="https://docs.python.org/reference/expressions.html#list-displays" rel="nofollow">List displays</a>.</li>
+<li>Python Enhancement Proposal <a class="external text" href="https://www.python.org/peps/pep-0202.html" rel="nofollow">PEP 202: List Comprehensions</a>.</li>
+<li>Python Language Reference, <a class="external text" href="https://docs.python.org/reference/expressions.html#generator-expressions" rel="nofollow">Generator expressions</a>.</li>
+<li>Python Enhancement Proposal <a class="external text" href="https://python.org/peps/pep-0289.html" rel="nofollow">PEP 289: Generator Expressions</a>.</li></ul>
+<h3><span class="mw-headline" id="Common_Lisp">Common Lisp</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=16" title="節を編集: Common Lisp">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a class="external text" href="http://rali.iro.umontreal.ca/rali/?q=en/node/886" rel="nofollow">Implementation of a Lisp comprehension macro</a> by Guy Lapalme</li></ul>
+<h3><span class="mw-headline" id="Clojure">Clojure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=17" title="節を編集: Clojure">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a class="external text" href="https://clojuredocs.org/clojure.core/for" rel="nofollow">Clojure API documentation - <i>for</i> macro</a></li></ul>
+<h3><span class="mw-headline" id="Axiom">Axiom</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=18" title="節を編集: Axiom">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a class="external text" href="https://web.archive.org/web/20051018040438/http://page.axiom-developer.org/zope/mathaction/Streams" rel="nofollow">Axiom stream examples</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;section=19" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/159974" rel="nofollow">Python Cookbook</a>のSQLライクな集合演算子にはリスト内包表記のワンライナーが含まれている。</li>
+<li><a class="external text" href="http://lambda-the-ultimate.org/classic/message11326.html" rel="nofollow">Discussion on list comprehensions in Scheme and related constructs</a></li>
+<li><a class="external text" href="http://langexplr.blogspot.com/2007/02/list-comprehensions-across-languages_18.html" rel="nofollow">List Comprehensions across languages</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220402051208
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.195 seconds
+Real time usage: 0.289 seconds
+Preprocessor visited node count: 5289/1000000
+Post‐expand include size: 33225/2097152 bytes
+Template argument size: 14688/2097152 bytes
+Highest expansion depth: 30/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5396/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5070848/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  222.174      1 -total
+ 77.59%  172.394      1 テンプレート:Reflist
+ 74.21%  164.870      8 テンプレート:Cite_web
+ 44.67%   99.244      8 テンプレート:Ifempty
+ 19.58%   43.506      3 テンプレート:Cite_conference
+ 14.57%   32.379      3 テンプレート:Citation/core
+ 13.84%   30.754      5 テンプレート:Citation/showdate
+ 11.49%   25.520      5 テンプレート:Citation/showdateCore
+ 11.42%   25.368     13 テンプレート:ISO_dateJA
+  9.27%   20.594      8 テンプレート:Accessdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4117827-0!canonical and timestamp 20220402051207 and revision id 2435640. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=リスト内包表記&amp;oldid=2435640">http://localhost:8080/w/index.php?title=リスト内包表記&amp;oldid=2435640</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E3%81%AE%E6%A7%8B%E6%96%87" title="カテゴリ:プログラミング言語の構文">プログラミング言語の構文</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9C%AA%E6%9F%BB%E8%AA%AD%E3%81%AE%E7%BF%BB%E8%A8%B3%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:未査読の翻訳があるページ">未査読の翻訳があるページ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;returntoquery=curid%3D4117827%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;returntoquery=curid%3D4117827%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;oldid=2435640" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月18日 (月) 12:44 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.195","walltime":"0.289","ppvisitednodes":{"value":5289,"limit":1000000},"postexpandincludesize":{"value":33225,"limit":2097152},"templateargumentsize":{"value":14688,"limit":2097152},"expansiondepth":{"value":30,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5396,"limit":5000000},"timingprofile":["100.00%  222.174      1 -total"," 77.59%  172.394      1 テンプレート:Reflist"," 74.21%  164.870      8 テンプレート:Cite_web"," 44.67%   99.244      8 テンプレート:Ifempty"," 19.58%   43.506      3 テンプレート:Cite_conference"," 14.57%   32.379      3 テンプレート:Citation/core"," 13.84%   30.754      5 テンプレート:Citation/showdate"," 11.49%   25.520      5 テンプレート:Citation/showdateCore"," 11.42%   25.368     13 テンプレート:ISO_dateJA","  9.27%   20.594      8 テンプレート:Accessdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5070848,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402051208","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":478});});</script>
+</body></html>
