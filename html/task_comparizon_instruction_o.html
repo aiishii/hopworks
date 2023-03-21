@@ -6,6 +6,7 @@
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -86,12 +87,14 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -168,7 +171,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -588,25 +591,9 @@ header, .context-menu, .megamenu-content, footer{
 
 
 
-</style>
-<script type="text/javascript">
-	function init() {
-		var imageArea = document.getElementById('sampleImageArea');
-		var images = new Array(
-			"task_comparizon_instruction_o.assets/image-20221025052734019.png",
-			"task_comparizon_instruction_o.assets/image-20221025052910170.png",
-			);
-		// var images = ['./task_comparizon_instruction_o.assets/image-20221025052734019.png', './task_comparizon_instruction_o.assets/image-20221025052910170.png'];
-		var imageNo = Math.floor( Math.random() * images.length);
-		imageArea.src = images[imageNo];
-	}
-</script>
-<title>task_comparizon_instruction_o</title>
+</style><title>task_comparizon_instruction_o</title>
 </head>
-<body class='typora-export os-windows' onLoad="init()">
-	<div class='typora-export-content'>
-		<div id='write'  class=''>
-			<h2 id='２つのwikipediaページから比較する問題を作成するタスクother'>
-				<span>２つのWikipediaページから比較する問題を作成するタスク(OTHER)</span></h2>
-				<p><span>２つのWikipediaページの情報を比較する質問を作成するタスクです。</span></p>
-				<p><img src="task_comparizon_instruction_o.assets/image-20221025030401835.png" alt="image-20221025030401835" style="zoom:67%;" /></p><h2 id='実施手順'><span>実施手順</span></h2><h4 id='①比較ページへのリンクをクリックする'><span>①比較ページへのリンクをクリックする</span></h4><p><span>Lancersの作業ページの「比較ページへのリンク」をクリックすると、２つのWikipediaページが左右に並んで表示されます。</span></p><p><img src="task_comparizon_instruction_yn.assets/image-20221024201210788.png" alt="image-20221024201210788" style="zoom: 67%;" /></p><h4 id='②質問の作成'><span>②質問の作成</span></h4><p><span>左右のページの文字列や数値を比較する質問を作成してください。作成した質問と回答は、</span><strong><span>Lancersの作業ページの質問欄</span></strong><span>に記入してください。</span></p><p><span>質問は両方のページを見ないと答えられないように作成してください。</span></p><h4 id='③回答の根拠欄に入力'><span>③回答の根拠欄に入力</span></h4><p><span>比較ページのそれぞれのWikipediaページ内で質問の作成に使用した情報を、</span><strong><span>Lancersの作業ページの回答の根拠欄</span></strong><span>に入力してください。</span></p><p><span>回答の根拠は、以下のXXXXX（目的語）とYYYYY（述語）の形で入力してください。</span></p><p><code>槇原敬之 の　XXXXX 　は　YYYYY　です。</code><span>　</span></p><p><span>回答欄は３つずつ用意されていますが、質問の作成に使用した情報に応じて１つ以上入力していただければ大丈夫です。使用しない記入欄には　"-"　(ハイフン)を入力お願いします。</span></p><p>&nbsp;</p><h2 id='質問の例'><span>質問の例</span></h2><p><img id='sampleImageArea' src="task_comparizon_instruction_o.assets/image-20221025052734019.png" style="zoom: 80%;"/></p></div></div></body></html>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='２つのwikipediaページから比較する問題を作成するタスクother'><span>２つのWikipediaページから比較する問題を作成するタスク(OTHER)</span></h2><p><span>２つのWikipediaページの情報を比較する質問を作成し、質問・答え・根拠の組を作成するタスクです。</span></p><p><img src="task_comparizon_instruction_o.assets/image-20230321132039283.png" alt="image-20230321132039283" style="zoom: 50%;" /></p><h2 id='質問の例'><span>質問の例</span></h2><ul><li><p><span>質問：映画『千と千尋の神隠し』の興行収入は『魔女の宅急便』の約何倍でしたか？</span></p><ul><li><p><span>回答：約７倍</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span> (千と千尋の神隠し - 興行収入 -  316億円)</span></p></li><li><p><span>(魔女の宅急便 - 興行収入  -　43億円)</span></p></li></ul></li></ul></li><li><p><span>質問：コロラド州に接している州と、ニュージャージー州に接している州の数はどちらが多いでしょう？</span></p><ul><li><p><span>回答：コロラド州</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span>（コロラド州 - 接している州 - ワイオミング州、ネブラスカ州、カンザス州、ニューメキシコ州、オクラホマ州、ユタ州）</span></p></li><li><p><span>（ニュージャージー州 - 接している州 - ニューヨーク州、ペンシルベニア州、デラウェア州）</span></p></li></ul></li></ul></li><li><p><span>質問：長崎県と鹿児島県の共通する隣接している県は何県ですか？</span></p><ul><li><p><span>回答：熊本県</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span>（長崎県 - 隣接している県 -  佐賀県、熊本県、福岡県）</span></p></li><li><p><span>（鹿児島県 - 隣接している県 -  熊本県、宮崎県、沖縄県）</span></p></li></ul></li></ul></li><li><p><span>質問：奈良市とドバイの人口の差は約何百万人ですか？</span></p><ul><li><p><span>回答：約3百万人</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span> (奈良市 - 人口 - 約35万2000人)</span></p></li><li><p><span>(ドバイ - 人口 - 約331万人)</span></p></li></ul></li></ul></li><li><p><span>質問：レインボーシックス シージとファイナルファンタジーXVでは、対応プラットフォームが豊富なのはどちらでしょうか？</span></p><ul><li><p><span>回答：レインボーシックス シージ</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span> (レインボーシックス シージ - 対応プラットフォーム - Windows、PlayStation 4、Xbox One、PlayStation 5、Xbox Series X/S)</span></p></li><li><p><span>(ファイナルファンタジーXV - 対応プラットフォーム  - PlayStation 4（PS4）・Xbox One)</span></p></li></ul></li></ul></li><li><p><span>質問：佐川宣寿と新原浩朗では官僚歴が長いのはどちらでしょうか？</span></p><ul><li><p><span>回答：新原浩朗</span></p></li><li><p><span>根拠：</span></p><ul><li><p><span>(佐川宣寿- 大蔵省入省年 - 1982年)</span></p></li><li><p><span>(佐川宣寿 - 辞職年 - 2018年)</span></p></li><li><p><span>(新原浩朗 - 通商産業省入省年 - 1984年)</span></p></li><li><p><span>(新原浩朗 - 現職 - 内閣官房内閣審議官)</span></p></li></ul></li></ul></li></ul><h2 id='実施手順'><span>実施手順</span></h2><h4 id='①比較ページへのリンクをクリックする'><span>①比較ページへのリンクをクリックする</span></h4><p><span>Lancersの作業ページの「比較ページへのリンク」をクリックすると、２つのWikipediaページが左右に並んで表示されます。</span></p><p><img src="task_comparizon_instruction_yn.assets/image-20221024201210788.png" alt="image-20221024201210788" style="zoom: 67%;" /></p><h4 id='②質問の作成'><span>②質問の作成</span></h4><p><span>左右のページの文字列や数値を比較する質問を作成してください。作成した質問と回答は、</span><strong><span>Lancersの作業ページの質問欄</span></strong><span>に記入してください。</span></p><p><span>質問は両方のページを見ないと答えられないように作成してください。</span></p><p><img src="task_comparizon_instruction_o.assets/image-20221025030401835.png" alt="image-20221025030401835" style="zoom:60%;" /></p><h4 id='③回答の根拠欄に入力'><span>③回答の根拠欄に入力</span></h4><p><span>比較ページのそれぞれのWikipediaページ内で質問の作成に使用した情報を、</span><strong><span>Lancersの作業ページの回答の根拠欄</span></strong><span>に入力してください。</span></p><p><span>回答の根拠は、以下のXXXXX（関係）とYYYYY（目的語）の形で入力してください。</span></p><p><code>槇原敬之 の　XXXXX 　は　YYYYY　です。</code><span>　</span></p><p><span>回答欄は３つずつ用意されていますが、質問の作成に使用した情報に応じて１つ以上入力していただければ大丈夫です。</span></p><p>&nbsp;</p><h2 id='その他の質問の例'><span>その他の質問の例</span></h2><p><img src="task_comparizon_instruction_o.assets/image-20221025052734019.png" referrerpolicy="no-referrer" alt="image-20221025052734019"></p><p><img src="task_comparizon_instruction_o.assets/image-20221025052910170.png" referrerpolicy="no-referrer" alt="image-20221025052910170"></p></div></div>
+</body>
+</html>
