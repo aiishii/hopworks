@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>非有界作用素 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-非有界作用素 rootpage-非有界作用素 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">非有界作用素</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数学">数学</a>の、特に<a href="." id="link_a_2" title="関数解析">関数解析</a>や<a href="." id="link_a_3" title="作用素論">作用素論</a>の分野における<b>非有界作用素</b>（ひゆうかいさようそ、<a href="." id="link_a_4" title="英語">英語</a>: <span lang="en"><i>unbounded operator</i></span>）は、位相線型空間のあいだの線型写像で不連続であること・全体では定義されていないことを許したようなものである。<a href="." id="link_a_5" title="幾何学">幾何学</a>における<a href="." id="link_a_6" title="微分作用素">微分作用素</a>や<a href="." id="link_a_7" title="量子力学">量子力学</a>における非有界<a href="." id="link_a_8" title="オブザーバブル">オブザーバブル</a>などを扱うための抽象的な基礎付けをあたえるのに用いられる。
+</p><p>ここで「非有界作用素」という語は誤解を招く恐れがある。実際に意味するところは、
+</p>
+<ul><li>「非有界」は、「必ずしも有界ではない」という意味で解釈される;</li>
+<li>「作用素」は、「<a href="." id="link_a_9" title="線型作用素">線型作用素</a>」と解釈される（これは「<a href="." id="link_a_10" title="有界作用素">有界作用素</a>」の場合と同様）;</li>
+<li>作用素の定義域は線型部分空間であり、必ずしも全空間ではない（これは「有界作用素」の場合と異なる）;</li>
+<li>定義域は必ずしも閉ではない; それはしばしば（常にではないが）稠密であると仮定される;</li>
+<li>有界作用素の特別な場合において、定義域は通常、全空間であると仮定される;</li></ul>
+<p>という点に注意されたい。
+</p><p><a href="." id="link_a_10" title="有界作用素">有界作用素</a>の場合と異なり、非有界作用素は個々の作用素が異なった定義域を持ちうるため、非有界作用素同士の和や合成がいつでも意味を持つわけではない。
+</p><p>「作用素」という語はしばしば「有界線型作用素」を意味するが、この記事の文脈では「非有界作用素」を表すこととする（ここで上述の注意点に留意されたい）。以下の解説では主に<a href="." id="link_a_11" title="バナッハ空間">バナッハ空間</a>や<a href="." id="link_a_12" title="ヒルベルト空間">ヒルベルト空間</a>の間の非有界作用素について説明するが、ほとんどの構成を適切な形に修正してより一般的な<a href="." id="link_a_13" title="位相ベクトル空間">位相ベクトル空間</a>へと一般化することができる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#小史"><span class="tocnumber">1</span> <span class="toctext">小史</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#定義と基本性質"><span class="tocnumber">2</span> <span class="toctext">定義と基本性質</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#例"><span class="tocnumber">3</span> <span class="toctext">例</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#共役"><span class="tocnumber">4</span> <span class="toctext">共役</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#転置"><span class="tocnumber">5</span> <span class="toctext">転置</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#対称作用素と自己共役作用素"><span class="tocnumber">6</span> <span class="toctext">対称作用素と自己共役作用素</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#拡張に関すること"><span class="tocnumber">7</span> <span class="toctext">拡張に関すること</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#自己共役作用素の重要性"><span class="tocnumber">8</span> <span class="toctext">自己共役作用素の重要性</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">11</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.B0.8F.E5.8F.B2"></span><span class="mw-headline" id="小史">小史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=1" title="節を編集: 小史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<blockquote>
+<p>非有界作用素の理論は、1920年代後半、量子力学に対する厳密な数学的基盤を構築するという試みから生じた。理論の系統的な発展は<a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A9%E3%83%B3%E3%83%BB%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3" title="ジョン・フォン・ノイマン">ジョン・フォン・ノイマン</a><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> と <a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3" title="マーシャル・ストーン">マーシャル・ストーン</a><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>によるものであった。非有界作用素を解析するためにグラフを用いる手法は、フォン・ノイマンにより <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup> において導入された(<a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, Notes to Chapter VIII, page 305)。
+</p>
+</blockquote>
+<h2><span id=".E5.AE.9A.E7.BE.A9.E3.81.A8.E5.9F.BA.E6.9C.AC.E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="定義と基本性質">定義と基本性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=2" title="節を編集: 定義と基本性質">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>B</i><sub>1</sub> および <i>B</i><sub>2</sub> を<a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ空間</a>とする。<b>非有界作用素</b>（あるいは単純に、<i>作用素</i>）<span class="nowrap"><i>T</i> : <i>B</i><sub>1</sub> → <i>B</i><sub>2</sub></span> とは、<i>B</i><sub>1</sub> の線型部分空間 <i>D</i>(<i>T</i>) （すなわち、<i>T</i> の定義域）から空間 <i>B</i><sub>2</sub> への<a href="/wiki/%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="線型写像">線型写像</a> <i>T</i> のことである<sup class="reference" id="cite_ref-Pedersen-5.1.1_4-0"><a href="#cite_note-Pedersen-5.1.1-4">[4]</a></sup>。有界線型作用素の場合とは異なり、ここでは <i>T</i> は全空間 <i>B</i><sub>1</sub> 上で定義されない場合も考慮する。二つの作用素が等しいとは、それらが共通の定義域を持ち、その定義域上で同一のものであることを意味する。
+</p><p>作用素 <i>T</i> に対して、もしその<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95_(%E9%96%A2%E6%95%B0)" title="グラフ (関数)">グラフ</a> Γ(<i>T</i>) が<a href="/wiki/%E9%96%89%E9%9B%86%E5%90%88" title="閉集合">閉集合</a>であるなら、<i>T</i> は<a href="/wiki/%E9%96%89%E4%BD%9C%E7%94%A8%E7%B4%A0" title="閉作用素">閉</a>であると言われる<sup class="reference" id="cite_ref-Pedersen-5.1.4_5-0"><a href="#cite_note-Pedersen-5.1.4-5">[5]</a></sup>ここで、グラフ Γ(<i>T</i>) は<a href="/wiki/%E7%9B%B4%E5%92%8C" title="直和">直和</a> <span class="nowrap"><i>B</i><sub>1</sub> ⊕ <i>B</i><sub>2</sub></span> の線型部分空間で、ベクトル <i>x</i> を<i>T</i> の定義域内で動かして得られる対 <span class="nowrap">(<i>x</i>, <i>Tx</i>)</span> 全てからなる集合である。一般に直和上の(l<sup>1</sup>和ノルムの）グラフへの制限はグラフノルムと呼ばれるが、<i>T</i>が閉作用素であるということはグラフノルムを用いて次のように表すことができる: 作用素 <i>T</i> が閉であることと、その定義域 <i>D</i>(<i>T</i>) がノルム
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<pre>   \|x\|_T = \sqrt{ \|x\|^2 + \|Tx\|^2 }\ . 
+ &lt;/math&gt;
+</pre>
+<p>について<a href="/wiki/%E5%AE%8C%E5%82%99%E8%B7%9D%E9%9B%A2%E7%A9%BA%E9%96%93" title="完備距離空間">完備空間</a>であることは同値な条件である<sup class="reference" id="cite_ref-BSU-5_6-0"><a href="#cite_note-BSU-5-6">[6]</a></sup>。このことを具体的に言い表すと、<i>T</i> の定義域に含まれる点からなる列 (<i>x<sub>n</sub></i>) で、<i>B</i><sub>1</sub>のベクトル <i>x</i> へと収束し、また <i>Tx<sub>n</sub></i> が<i>B</i><sub>2</sub>のベクトル <i>y</i> へと収束するようなものがあったとき、<i>x</i> は <i>T</i> の定義域に含まれ、<span class="nowrap"><i>Tx</i> = <i>y</i></span>が成立する、ということになる<sup class="reference" id="cite_ref-Pedersen-5.1.4_5-1"><a href="#cite_note-Pedersen-5.1.4-5">[5]</a></sup>。
+</p><p>作用素 <i>T</i> はその定義域が <i>B</i><sub>1</sub> において<a href="/wiki/%E7%A8%A0%E5%AF%86%E9%9B%86%E5%90%88" title="稠密集合">稠密</a>であるとき<b><a href="/wiki/%E7%A8%A0%E5%AF%86%E3%81%AB%E5%AE%9A%E7%BE%A9%E3%81%95%E3%82%8C%E3%81%9F%E4%BD%9C%E7%94%A8%E7%B4%A0" title="稠密に定義された作用素">稠密に定義されている</a></b>と言われる<sup class="reference" id="cite_ref-Pedersen-5.1.1_4-1"><a href="#cite_note-Pedersen-5.1.1-4">[4]</a></sup>。 これは全空間 <i>B</i><sub>1</sub> 上で定義される作用素も含む。なぜならば全空間はそれ自身において稠密であるからである。定義域の稠密性は、その作用素の共役（adjoint）・転置（transpose）の存在のための必要十分条件である。また、<i>S</i>と<i>T</i>について<i>D</i>(<i>S</i>) ⊂ <i>D</i>(<i>T</i>)かつ<i>T</i>|<sub><i>D</i>(<i>S</i>)</sub> = <i>S</i> が成り立つとき<i>S</i>は<i>T</i>に<b>含まれる</b>（<i>S</i> ⊂ <i>T</i>）という。
+</p><p>もし <span class="nowrap"><i>T</i> : <i>B</i><sub>1</sub> → <i>B</i><sub>2</sub></span> が閉で、その定義域上稠密に定義されており<a class="mw-redirect" href="/wiki/%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E4%BD%9C%E7%94%A8%E7%B4%A0" title="連続線型作用素">連続</a>であるなら、それは全空間 <i>B</i><sub>1</sub> で定義される<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p><p><a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E7%A9%BA%E9%96%93" title="ヒルベルト空間">ヒルベルト空間</a> <i>H</i> 上稠密に定義された作用素 <i>T</i> は、ある実数 <i>a</i> に対して <span class="nowrap"><i>T</i> + <i>a</i></span> が正作用素となるとき、<b>下に有界</b>であると言われる。これはすなわち、<i>T</i> の定義域内のすべての <i>x</i> に対して <span class="nowrap">⟨<i>Tx</i>|<i>x</i>⟩ ≥ −<i>a</i>·||<i>x</i>||<sup>2</sup></span> が成立することを意味する<sup class="reference" id="cite_ref-Pedersen-5.1.12_8-0"><a href="#cite_note-Pedersen-5.1.12-8">[8]</a></sup>。もし <i>T</i> と (–<i>T</i>) の両方とも下に有界であるなら、<i>T</i> は有界である<sup class="reference" id="cite_ref-Pedersen-5.1.12_8-1"><a href="#cite_note-Pedersen-5.1.12-8">[8]</a></sup>。
+</p>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=3" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ルベーグ測度に関するL<sup>2</sup>空間<i>H</i>=L<sub>2</sub>[0,1] は [0,1] 上のすべての二乗可積分関数からなるヒルベルト空間である（より正確には、可測で、実数値あるいは複素数値の関数の同値類）。閉区間 [0,1] 上連続的微分可能なすべての関数 <i>f</i>(<i>t</i>) からなる集合 <i>D</i>(<i>T</i>) <sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>を定義域とし、<i>t</i>に関する微分によって定義された線型変換
+</p>
+<dl><dd>&lt;math&gt; Tf = f' \; &lt;/math&gt;</dd></dl>
+<p>は、 <i>H</i>から <i>H</i>への非有界作用素を与えている。実際、二つの連続的微分可能関数 <i>f</i> および <i>g</i> の<a href="/wiki/%E7%B7%9A%E5%9E%8B%E7%B5%90%E5%90%88" title="線型結合">線型結合</a>の微分について&lt;math&gt;(af+bg)'=af'+bg'.\;&lt;/math&gt; が成り立つため、これは線型作用素である。
+</p><p>この作用素は有界ではない。例えば、[0,1] 上の関数 <i>f<sub>n</sub></i> を &lt;math&gt; f_n(t) = \sin 2\pi n t \;&lt;/math&gt; で定めると、&lt;math&gt; \|f_n\|_H = 1/\sqrt2 &lt;/math&gt; であるが &lt;math&gt; \|Tf_n\|_H = 2\pi n/\sqrt2 \to \infty &lt;/math&gt; となる。
+</p><p>この作用素は稠密に定義されているが、折れ線をグラフとするような区分線型関数とその微分の対などがグラフの閉包に含まれるため、閉作用素ではない。
+</p><p>C<sup>1</sup>級関数の空間をふくむ様々なバナッハ空間<i>B</i><sub>1</sub>と連続関数の空間を含むバナッハ空間<i>B</i><sub>2</sub> に対して、上記のように微分を非有界作用素 <i>B</i><sub>1</sub> → <i>B</i><sub>2</sub>と考えることができる。さらに、ノルムの選び方によってはこの構成から有界作用素が得られる。たとえば、定義域ではC<sup>1</sup>ノルム自身 &lt;math&gt;\| f \|_{\mathcal{C}^1} = \| f \|_{\infty} + \| f' \|_{\infty}&lt;/math&gt; を考え、値域ではsupノルムを考えれば、微分は連続写像になる。
+</p>
+<h2><span id=".E5.85.B1.E5.BD.B9"></span><span class="mw-headline" id="共役">共役</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=4" title="節を編集: 共役">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>非有界作用素の共役（adjoint）の定義には、二つの同値な方法がある。
+</p><p>一つ目として、有界作用素の共役を定義するときに用いられるものと同様な方法がある。すなわち、<i>T</i> の共役 <i>T</i><sup>∗</sup> : <i>H</i><sub>2</sub> → <i>H</i><sub>1</sub> は、次の性質を持つような最大の作用素として定義される:
+</p>
+<dl><dd>&lt;math&gt;\langle Tx \mid y \rangle_2 = \langle x \mid T^*y \rangle_1, \quad (x \in D(T)).&lt;/math&gt;</dd></dl>
+<p><i>T</i><sup>∗</sup> のより正確な定義は以下のようにする。ベクトル<i>y</i> が、&lt;math&gt;x \mapsto \langle Tx, y \rangle&lt;/math&gt; が <i>T</i> の定義域上の連続線型汎関数となるようなものであるならば、この汎関数を全空間へと拡張したのち、
+</p>
+<dl><dd>&lt;math&gt;\langle Tx \mid y \rangle_2 = \langle x \mid z \rangle_1, \quad (x \in D(T))&lt;/math&gt;</dd></dl>
+<p>を満たすような <i>z</i> を見つけることが可能である。なぜならば、ヒルベルト空間上の線型汎関数の集合は、内積によってもとの空間自身と同一視できるからである。このような <i>y</i> それぞれに対して、上の条件を満たす<i>z</i> が一意に定められることと、対応する線型汎関数が稠密に定義されていること、すなわち <i>T</i> が稠密に定義されていることは必要十分である。このとき、<i>T</i><sup>∗</sup><i>y</i> = <i>z</i> とすることによって、<i>T</i><sup>∗</sup> が定められる。このようにして<i>T</i><sup>∗</sup> の値がひとつに定まるためには、<i>T</i> が稠密に定義されていることが必要十分であることに注意されたい。
+</p><p>定義により、<i>T</i><sup>∗</sup> の定義域は、 &lt;math&gt;x \mapsto \langle Tx, y \rangle&lt;/math&gt; が <i>T</i> の定義域上で連続となるような元 &lt;math&gt;y \in H_2&lt;/math&gt; からなることが分かる。したがって、<i>T</i><sup>∗</sup> の定義域はどのようなものでもあり得、例えば自明（すなわち、ゼロのみを含む）であるようなこともある<sup class="reference" id="cite_ref-BSU-3.2_10-0"><a href="#cite_note-BSU-3.2-10">[10]</a></sup>。<i>T</i><sup>∗</sup> の定義域は、閉<a href="/wiki/%E8%B6%85%E5%B9%B3%E9%9D%A2" title="超平面">超平面</a>で、その定義上至るところで <i>T</i><sup>∗</sup> が消失することもあり得る<sup class="reference" id="cite_ref-RS-252_11-0"><a href="#cite_note-RS-252-11">[11]</a></sup><sup class="reference" id="cite_ref-BSU-3.1_12-0"><a href="#cite_note-BSU-3.1-12">[12]</a></sup>。
+したがって、定義域上での <i>T</i><sup>∗</sup> の有界性は、必ずしも <i>T</i> の有界性を意味しない。一方で、もし <i>T</i><sup>∗</sup> が全空間で定義されるなら、<i>T</i> はその定義域上で有界であり、したがって連続性により全空間上の有界作用素へと拡張することが出来る<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。もし <i>T</i><sup>∗</sup> の定義域が稠密であるなら、それには共役 <i>T</i><sup>∗∗</sup> が存在する<sup class="reference" id="cite_ref-Pedersen-5.1.5_14-0"><a href="#cite_note-Pedersen-5.1.5-14">[14]</a></sup>。稠密に定義された閉作用素 <i>T</i> が有界であることの必要十分条件は、<i>T</i><sup>∗</sup> が有界であることである<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。
+</p><p>共役作用素のもう一つの同値な定義は、グラフの直交空間を取ることにより得られる。線型作用素 &lt;math&gt;J: H_1 \oplus H_2 \to H_2 \oplus H_1&lt;/math&gt; を、&lt;math&gt;J(x \oplus y) = -y \oplus x&lt;/math&gt; によって定義する<sup class="reference" id="cite_ref-Pedersen-5.1.5_14-1"><a href="#cite_note-Pedersen-5.1.5-14">[14]</a></sup>。すると、 &lt;math&gt;J(\Gamma (T))^\bot&lt;/math&gt; がある作用素 <i>S</i> のグラフであることの必要十分条件は、 &lt;math&gt;T&lt;/math&gt; が稠密に定義されていること、であることが分かる<sup class="reference" id="cite_ref-BSU-12_16-0"><a href="#cite_note-BSU-12-16">[16]</a></sup>。簡単な計算により、この作用素 <i>S</i> は &lt;math&gt;\langle Tx \mid y \rangle_2 = \langle x \mid Sy \rangle_1&lt;/math&gt; を、<i>T</i> の定義域内のすべての <i>x</i> に対して満たすことが分かる。したがって、<i>S</i> は <i>T</i> の共役である。
+</p><p>上の定義により、共役 <i>T</i><sup>∗</sup> は閉であることがただちに分かる<sup class="reference" id="cite_ref-Pedersen-5.1.5_14-2"><a href="#cite_note-Pedersen-5.1.5-14">[14]</a></sup>。特に、<a class="mw-redirect" href="/wiki/%E8%87%AA%E5%B7%B1%E5%85%B1%E5%BD%B9%E4%BD%9C%E7%94%A8%E7%B4%A0" title="自己共役作用素">自己共役作用素</a>（すなわち、<i>T</i> = <i>T</i><sup>∗</sup>）は閉である。ある作用素 <i>T</i> が稠密に定義された閉作用素であるための必要十分条件は、<i>T</i><sup>∗∗</sup>が存在して<i>T</i><sup>∗∗</sup> = <i>T</i> が成立することである<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。
+</p><p>有界作用素に対してよく知られているいくつかの性質は、稠密に定義された閉作用素に対して一般化される。閉作用素の核は閉である。さらに、稠密に定義された閉作用素 <i>T</i> : <i>H</i><sub>1</sub> → <i>H</i><sub>2</sub> の核は、その共役の値域の直交補空間と一致する。すなわち<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>、
+</p>
+<dl><dd>&lt;math&gt;\operatorname{ker}(T) = \operatorname{ran}(T^*)^\bot&lt;/math&gt;</dd></dl>
+<p>が成立する。
+</p><p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A9%E3%83%B3%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="フォンノイマンの定理 (存在しないページ)">フォンノイマンの定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:von_Neumann%27s_theorem&amp;action=edit&amp;redlink=1" title="En:von Neumann's theorem (存在しないページ)">英語版</a>）</span></span>によれば、<i>T</i><sup>∗</sup><i>T</i> および <i>TT</i><sup>∗</sup> は自己共役であり、<i>I</i> + <i>T</i><sup>∗</sup><i>T</i> と <i>I</i> + <i>TT</i><sup>∗</sup> はともに有界な逆を持つことが分かる<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>。もし &lt;math&gt;T^*&lt;/math&gt; の核が自明であるなら、&lt;math&gt;T&lt;/math&gt; の値域は稠密となる。さらに、<i>T</i> が全射であるための必要十分条件は、
+</p>
+<dl><dd>&lt;math&gt;\forall f \in D(T^*) \colon \|f\|_2 \le K\|T^*f\|_1&lt;/math&gt;</dd></dl>
+<p>と書ける。<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>
+を満たす &lt;math&gt;K &gt; 0&lt;/math&gt; が存在することである（これは本質的にはいわゆる<a href="/wiki/%E9%96%89%E5%80%A4%E5%9F%9F%E3%81%AE%E5%AE%9A%E7%90%86" title="閉値域の定理">閉値域の定理</a>である）。
+</p><p>特に、<i>T</i> の値域が閉であることと、<i>T</i><sup>∗</sup> の値域が閉であることは必要十分である。
+</p><p>有界の場合と対照的に、必ずしも (<i>TS</i>)<sup>∗</sup> = <i>S</i><sup>∗</sup><i>T</i><sup>∗</sup> は成立しない。実際、(<i>TS</i>)<sup>∗</sup> が存在しないことさえあり得る。しかし、例えば <i>T</i> が有界であればその式は成り立つ<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>。
+</p><p>稠密に定義された閉作用素 <i>T</i> は、次の同値な条件のいずれかを満たすとき、<a href="/wiki/%E6%AD%A3%E8%A6%8F%E4%BD%9C%E7%94%A8%E7%B4%A0" title="正規作用素">正規</a>であると言われる:<sup class="reference" id="cite_ref-Pedersen-5.1.11_22-0"><a href="#cite_note-Pedersen-5.1.11-22">[22]</a></sup>
+</p>
+<ul><li><i>T</i><sup>∗</sup><i>T</i> = <i>T</i> <i>T</i><sup>∗</sup>;</li>
+<li><i>T</i> の定義域は <i>T</i><sup>∗</sup> の定義域と等しく、その領域内のすべての <i>x</i> に対して &lt;math&gt; \| T x \| = \| T^* x \| &lt;/math&gt; が成立する;</li>
+<li class="mw-empty-elt"></li></ul>
+<p><span class="nowrap"><i>T</i> = <i>A</i> + <i>iB</i></span>、
+<span class="nowrap"><i>T</i><sup>∗</sup> = <i>A</i> – <i>iB</i>,</span> であり、&lt;math&gt; \| Tx \|^2 = \| Ax \|^2 + \| Bx \|^2 &lt;/math&gt; が <i>T</i> の定義域内のすべての <i>x</i> に対して成立するような自己共役作用素 <i>A</i> と <i>B</i> が存在する。
+</p><p>すべての自己共役作用素は正規である。
+</p>
+<h2><span id=".E8.BB.A2.E7.BD.AE"></span><span class="mw-headline" id="転置">転置</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=5" title="節を編集: 転置">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>T</i> : <i>B</i><sub>1</sub> → <i>B</i><sub>2</sub> を、バナッハ空間の間の作用素とする。このとき、<i>T</i> の<a href="/wiki/%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97" title="転置行列">転置</a>（あるいは、双対）&lt;math&gt;T ': {B_2}^* \to {B_1}^*&lt;/math&gt; とは
+</p>
+<dl><dd>&lt;math&gt;\langle T x, y' \rangle = \langle x, T' y' \rangle&lt;/math&gt;</dd></dl>
+<p>がすべての <i>x</i> ∈ B<sub>1</sub> および <i>y</i> ∈ B<sub>2</sub><sup>*</sup> に対して成り立つような作用素のことを言う。ここで、記法 &lt;math&gt;\langle x, x' \rangle = x'(x)&lt;/math&gt; を用いた<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>。
+</p><p><i>T</i> の転置が存在するための必要十分条件は、<i>T</i> が稠密に定義されていることである（本質的には、上述の共役に対するものと同様の理由である）。
+</p><p><i>H</i> をヒルベルト空間、<i>y</i> ∈ <i>H</i>とするとき、&lt;math&gt;y^*(x) = \langle x \mid y \rangle_H, (x \in H)&lt;/math&gt; とおく。このとき、&lt;math&gt;J y^* = y&lt;/math&gt; によって与えられる反線型の同型&lt;math&gt;J: H^* \to H&lt;/math&gt;を考える。この同型を用いて、転置 <i>T</i><sup>'</sup> は共役 <i>T</i><sup>∗</sup> と、次のように関係付けられる:
+</p>
+<dl><dd>&lt;math&gt;T^* = J_1 T' J_2^{-1}&lt;/math&gt;<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup></dd></dl>
+<p>ここで &lt;math&gt;J_j: H_j^* \to H_j&lt;/math&gt; である（有限次元の場合、これは行列の随伴が共役転置であることと対応する）。この等式は転置によって共役の定義を与えていることに注意されたい。
+</p>
+<h2><span id=".E5.AF.BE.E7.A7.B0.E4.BD.9C.E7.94.A8.E7.B4.A0.E3.81.A8.E8.87.AA.E5.B7.B1.E5.85.B1.E5.BD.B9.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="対称作用素と自己共役作用素">対称作用素と自己共役作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=6" title="節を編集: 対称作用素と自己共役作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>稠密に定義された作用素 <i>T</i> が、 その定義域のすべての元 <i>x</i> と <i>y</i> に対して&lt;math&gt; \langle T x \mid y \rangle = \lang x \mid T y \rang &lt;/math&gt; を満たすとき、<i>T</i> は<b>対称</b>であるという<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-0"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>。つまり、稠密に定義された作用素で <i>T</i><sup>∗</sup> が <i>T</i> の拡張（次節を参照）になっているようなものが対称作用素である<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-1"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>。ある作用素 <i>T</i> が対称であるための必要十分条件は、付随する二次形式が実であること、すなわち、数 &lt;math&gt; \langle Tx \mid x \rangle &lt;/math&gt; が、<i>T</i> の定義域内のすべての <i>x</i> に対して実となることである<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-2"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>。
+</p><p>さらに
+<span class="nowrap"><i>T</i><sup>∗</sup> = <i>T</i></span> が成り立つとき、作用素 <i>T</i> は<b>自己共役</b>であると言われる<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-3"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>。共役作用素は必ず閉なので、自己共役な作用素は特に閉となる。稠密に定義された閉の対称作用素 <i>T</i> が自己共役であるための必要十分条件は、<i>T</i><sup>∗</sup> が対称になることである。<sup class="reference" id="cite_ref-RS-256_26-0"><a href="#cite_note-RS-256-26">[26]</a></sup>対称作用素の中には自己共役でないものもある。<sup class="reference" id="cite_ref-Pedersen-5.1.16_27-0"><a href="#cite_note-Pedersen-5.1.16-27">[27]</a></sup><sup class="reference" id="cite_ref-RS-257-9_28-0"><a href="#cite_note-RS-257-9-28">[28]</a></sup>
+</p><p><i>J</i>を上で用いた写像 &lt;math&gt;x \oplus y \mapsto - y \oplus x&lt;/math&gt; とする。稠密に定義された作用素 <i>T</i> に対して、そのグラフ
+<span class="nowrap">Γ(<i>T</i>)</span> が 
+<span class="nowrap"><i>J</i>(Γ(<i>T</i>))</span> と直交するなら、<i>T</i> は対称作用素になる<sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>。さらに、 &lt;math&gt; H \oplus H &lt;/math&gt; が 
+<span class="nowrap">Γ(<i>T</i>)</span> と 
+<span class="nowrap"><i>J</i>(Γ(<i>T</i>))</span> の内部直和になっているなら、<i>T</i> は自己共役である<sup class="reference" id="cite_ref-Pedersen-5.1.5_14-3"><a href="#cite_note-Pedersen-5.1.5-14">[14]</a></sup>。
+</p><p>作用素 <i>T</i> が稠密に定義された閉対称作用素で、さらに <i>T</i> の定義域上で定義された作用素 
+<span class="nowrap"><i>T</i> – <i>i</i>,</span> および 
+<span class="nowrap"><i>T</i> + <i>i</i></span> が両方とも全空間 <i>H</i> への全射であれば、<i>T</i> は自己共役になる 。つまり、<i>H</i> 内のすべての <i>x</i> に対して、<i>T</i> の定義域に含まれるような <i>y</i> と <i>z</i> で 
+<span class="nowrap"><i>T y</i> – <i>iy</i> = <i>x</i></span> および 
+<span class="nowrap"><i>Tz</i> + <i>iz</i> = <i>x</i>.</span> を満たすようなものが存在する、ということを意味する<sup class="reference" id="cite_ref-Pedersen-5.2.5_30-0"><a href="#cite_note-Pedersen-5.2.5-30">[30]</a></sup>。
+</p><p>上記の方法は稠密に定義されていない閉作用素には適用できない。稠密に定義されていない作用素の対称性は、、共役作用素ではなく直接あるいはグラフを通じて定義される。
+</p><p>対称作用素の研究はしばしばその有界変換である<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B1%E3%82%A4%E3%83%AA%E3%83%BC%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="ケイリー変換 (存在しないページ)">ケイリー変換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cayley_transform&amp;action=edit&amp;redlink=1" title="En:Cayley transform (存在しないページ)">英語版</a>）</span></span>を通じて行われる。
+</p><p>稠密に定義された作用素 <i>T</i> は、もしその二次形式が非負であるなら、すなわち &lt;math&gt; \langle Tx \mid x \rangle \ge 0 &lt;/math&gt; が <i>T</i> の定義域内のすべての <i>x</i> に対して成立するなら、<b>正</b><sup class="reference" id="cite_ref-Pedersen-5.1.12_8-2"><a href="#cite_note-Pedersen-5.1.12-8">[8]</a></sup>あるいは<b>非負</b><sup class="reference" id="cite_ref-BSU-25_31-0"><a href="#cite_note-BSU-25-31">[31]</a></sup>と呼ばれる。そのような作用素は、必ず対称である。
+</p><p>稠密に定義されたすべての閉作用素 <i>T</i> に対して、作用素 <i>T</i><sup>∗</sup><i>T</i> は、自己共役<sup class="reference" id="cite_ref-Pedersen-5.1.9_32-0"><a href="#cite_note-Pedersen-5.1.9-32">[32]</a></sup>かつ正<sup class="reference" id="cite_ref-Pedersen-5.1.12_8-3"><a href="#cite_note-Pedersen-5.1.12-8">[8]</a></sup>である。
+</p><p><a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%AE%9A%E7%90%86" title="スペクトル定理">スペクトル定理</a>は、自己共役作用素<sup class="reference" id="cite_ref-Pedersen-5.3.8_33-0"><a href="#cite_note-Pedersen-5.3.8-33">[33]</a></sup>や正規作用素<sup class="reference" id="cite_ref-BSU-89_34-0"><a href="#cite_note-BSU-89-34">[34]</a></sup><sup class="reference" id="cite_ref-Pedersen-5.3.19_35-0"><a href="#cite_note-Pedersen-5.3.19-35">[35]</a></sup>へと適用されるが、一般的に、稠密に定義された作用素や閉作用素へは適用されない。なぜならば、それらはスペクトルが空となる場合があるからである<sup class="reference" id="cite_ref-RS-254-E5_36-0"><a href="#cite_note-RS-254-E5-36">[36]</a></sup><sup class="reference" id="cite_ref-Pedersen-5.2.12_37-0"><a href="#cite_note-Pedersen-5.2.12-37">[37]</a></sup>。
+</p><p>至る所で定義された対称作用素は閉で、したがって有界<sup class="reference" id="cite_ref-Pedersen-5.1.4_5-2"><a href="#cite_note-Pedersen-5.1.4-5">[5]</a></sup>である。これは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%98%E3%83%AA%E3%83%B3%E3%82%B8%E3%83%A3%E3%83%BC-%E3%83%86%E3%83%BC%E3%83%97%E3%83%AA%E3%83%83%E3%83%84%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="ヘリンジャー-テープリッツの定理 (存在しないページ)">ヘリンジャー-テープリッツの定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hellinger%E2%80%93Toeplitz_theorem&amp;action=edit&amp;redlink=1" title="En:Hellinger–Toeplitz theorem (存在しないページ)">英語版</a>）</span></span>として知られる<sup class="reference" id="cite_ref-RS-84_38-0"><a href="#cite_note-RS-84-38">[38]</a></sup>。
+</p>
+<h2><span id=".E6.8B.A1.E5.BC.B5.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E3.81.93.E3.81.A8"></span><span class="mw-headline" id="拡張に関すること">拡張に関すること</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=7" title="節を編集: 拡張に関すること">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a class="new" href="/w/index.php?title=%E5%AF%BE%E7%A7%B0%E4%BD%9C%E7%94%A8%E7%B4%A0%E3%81%AE%E6%8B%A1%E5%BC%B5&amp;action=edit&amp;redlink=1" title="対称作用素の拡張 (存在しないページ)">対称作用素の拡張</a>」も参照</div>
+<p>作用素 <i>T</i> が作用素 <i>S</i> の<b>拡張</b>であるとは、
+<span class="nowrap">Γ (<i>S</i>) ⊆ Γ (<i>T</i>)</span>が成立することを言う<sup class="reference" id="cite_ref-RS-250_39-0"><a href="#cite_note-RS-250-39">[39]</a></sup>。同値な定義として、<i>S</i> の定義域内のすべての <i>x</i> は <i>T</i> の定義域に属し、
+<span class="nowrap"><i>Sx</i> = <i>Tx</i></span> が成立する、ということが挙げられる<sup class="reference" id="cite_ref-Pedersen-5.1.1_4-2"><a href="#cite_note-Pedersen-5.1.1-4">[4]</a></sup><sup class="reference" id="cite_ref-RS-250_39-1"><a href="#cite_note-RS-250-39">[39]</a></sup>。
+</p><p>すべての作用素に対して、至る所で定義された拡張が存在することに注意されたい。これは、代数的なベクトル空間としての基底の存在により説明され、<a href="/wiki/%E9%81%B8%E6%8A%9E%E5%85%AC%E7%90%86" title="選択公理">選択公理</a>に基づく純粋代数的な事実である。もし与えられた作用素が有界でないなら、その拡張は<a href="/wiki/%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="不連続線型写像">不連続線型写像</a>となる。これは、与えられた作用素の重要な性質を保つことはなく（下記を参照）、一般的に一意ではないため、あまり有用性が無い。
+</p><p>作用素 <i>T</i> は、次の同値な条件のいずれかを満たすとき、<b>可閉</b>と呼ばれる<sup class="reference" id="cite_ref-Pedersen-5.1.4_5-3"><a href="#cite_note-Pedersen-5.1.4-5">[5]</a></sup><sup class="reference" id="cite_ref-RS-250_39-2"><a href="#cite_note-RS-250-39">[39]</a></sup><sup class="reference" id="cite_ref-BSU-6,7_40-0"><a href="#cite_note-BSU-6,7-40">[40]</a></sup>:
+</p>
+<ul><li><i>T</i> に閉拡張が存在する;</li>
+<li><i>T</i> のグラフの閉包が、ある作用素のグラフである;</li>
+<li><i>T</i> の定義域内の点列 (<i>x<sub>n</sub></i>) で、<i>x<sub>n</sub></i> が 0 に収束し、また <i>Tx<sub>n</sub></i> がある <i>y</i> に収束するようなすべてのものに対して、</li></ul>
+<p><span class="nowrap"><i>y</i> = 0</span> が成立する。
+</p><p>すべての作用素が可閉という訳ではない<sup class="reference" id="cite_ref-BSU-7_41-0"><a href="#cite_note-BSU-7-41">[41]</a></sup>。
+</p><p>可閉な作用素 <i>T</i> は、最小の閉拡張 &lt;math&gt; \overline T &lt;/math&gt; を持ち、それは <i>T</i> の<b>閉包</b>と呼ばれる。<i>T</i> のグラフの閉包は、&lt;math&gt; \overline T &lt;/math&gt; のグラフに等しい。他の、最小ではない閉拡張も存在することがある<sup class="reference" id="cite_ref-Pedersen-5.1.16_27-1"><a href="#cite_note-Pedersen-5.1.16-27">[27]</a></sup><sup class="reference" id="cite_ref-RS-257-9_28-1"><a href="#cite_note-RS-257-9-28">[28]</a></sup>。
+</p><p>稠密に定義された作用素 <i>T</i> が可閉であるための必要十分条件は、<i>T</i><sup>∗</sup> が稠密に定義されていることである。この場合、&lt;math&gt; \overline T = T^{**} &lt;/math&gt; および &lt;math&gt; (\overline T)^* = T^*&lt;/math&gt; が成り立つ<sup class="reference" id="cite_ref-Pedersen-5.1.5_14-4"><a href="#cite_note-Pedersen-5.1.5-14">[14]</a></sup><sup class="reference" id="cite_ref-RS-253_42-0"><a href="#cite_note-RS-253-42">[42]</a></sup>。すべての対称作用素は、可閉である<sup class="reference" id="cite_ref-Pedersen-5.1.6_43-0"><a href="#cite_note-Pedersen-5.1.6-43">[43]</a></sup>。
+</p><p>もし <i>S</i> が稠密に定義されており、<i>T</i> が <i>S</i> の拡張であるなら、<i>S</i><sup>∗</sup> は <i>T</i><sup>∗</sup> の拡張となる<sup class="reference" id="cite_ref-Pedersen-5.1.2_44-0"><a href="#cite_note-Pedersen-5.1.2-44">[44]</a></sup>。
+</p><p>対称作用素は、それ自身を除いてもし対称な拡張が存在しないのなら、<b>最大対称</b>と呼ばれる<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-4"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>。すべての自己共役作用素は、最大対称である<sup class="reference" id="cite_ref-Pedersen-5.1.3_25-5"><a href="#cite_note-Pedersen-5.1.3-25">[25]</a></sup>が、その逆は成立しない<sup class="reference" id="cite_ref-Pedersen-5.2.6_45-0"><a href="#cite_note-Pedersen-5.2.6-45">[45]</a></sup>。
+</p><p>閉包が自己共役であるような作用素は、<b>本質的自己共役</b>と呼ばれる<sup class="reference" id="cite_ref-Pedersen-5.1.6_43-1"><a href="#cite_note-Pedersen-5.1.6-43">[43]</a></sup>。ある作用素が本質的自己共役であるための必要十分条件は、それがただ一つの自己共役な拡張を持つことである<sup class="reference" id="cite_ref-RS-256_26-1"><a href="#cite_note-RS-256-26">[26]</a></sup>。作用素には一つよりも多くの自己共役な拡張が存在する可能性があり、連続濃度の相異なる自己共役拡張が存在することさえある<sup class="reference" id="cite_ref-RS-257-9_28-2"><a href="#cite_note-RS-257-9-28">[28]</a></sup>。稠密に定義された対称作用素 <i>T</i> が本質的自己共役であるための必要十分条件は、作用素 
+<span class="nowrap"><i>T</i> – <i>i</i>,</span> および 
+<span class="nowrap"><i>T</i> + <i>i</i></span> が両方とも稠密な値域を持つことである<sup class="reference" id="cite_ref-RS-257_46-0"><a href="#cite_note-RS-257-46">[46]</a></sup>。
+</p><p><i>T</i> を稠密に定義された作用素とする。「<i>T</i> が <i>S</i>" の拡張である」という関係を <i>S</i> ⊂ <i>T</i> と表す（ Γ(<i>S</i>) ⊆ Γ(<i>T</i>) に対してよく用いられる省略記号である）。次が成立する<sup class="reference" id="cite_ref-RS-255-6_47-0"><a href="#cite_note-RS-255-6-47">[47]</a></sup>。
+</p>
+<ul><li>もし <i>T</i> が対称であるなら、<i>T</i> ⊂ <i>T</i><sup>∗∗</sup> ⊂ <i>T</i><sup>∗</sup> である。</li>
+<li>もし <i>T</i> が閉かつ対称であるなら、<i>T</i> = <i>T</i><sup>∗∗</sup> ⊂ <i>T</i><sup>∗</sup> である。</li>
+<li>もし <i>T</i> が自己共役であるなら、<i>T</i> = <i>T</i><sup>∗∗</sup> = <i>T</i><sup>∗</sup>である。</li>
+<li>もし <i>T</i> が本質的自己共役であるなら、<i>T</i> ⊂ <i>T</i><sup>∗∗</sup> = <i>T</i><sup>∗</sup>である。</li></ul>
+<h2><span id=".E8.87.AA.E5.B7.B1.E5.85.B1.E5.BD.B9.E4.BD.9C.E7.94.A8.E7.B4.A0.E3.81.AE.E9.87.8D.E8.A6.81.E6.80.A7"></span><span class="mw-headline" id="自己共役作用素の重要性">自己共役作用素の重要性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=8" title="節を編集: 自己共役作用素の重要性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>自己共役作用素</b>の類は、<a href="/wiki/%E6%95%B0%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6" title="数理物理学">数理物理学</a>の分野において本質的に重要となる。すべての自己共役作用素は稠密に定義され、閉かつ対称である。その逆は、有界作用素に対しては成立するが、一般には成立しない。自己共役性は実質、それら三つの性質よりも制限の強いものなのである。自己共役作用素に対しては、有名な<a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%AE%9A%E7%90%86" title="スペクトル定理">スペクトル定理</a>が成り立つ。この定理と<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%80%E5%BE%84%E6%95%B0%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E7%BE%A4%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="一径数ユニタリ群に関するストーンの定理 (存在しないページ)">一径数ユニタリ群に関するストーンの定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stone%27s_theorem_on_one-parameter_unitary_groups&amp;action=edit&amp;redlink=1" title="En:Stone's theorem on one-parameter unitary groups (存在しないページ)">英語版</a>）</span></span>を組み合わせることにより、自己共役作用素は、強連続1パラメータユニタリ群の無限小生成素であるということが示される（<a class="mw-redirect" href="/wiki/%E8%87%AA%E5%B7%B1%E5%85%B1%E5%BD%B9%E4%BD%9C%E7%94%A8%E7%B4%A0" title="自己共役作用素">自己共役作用素</a>を参照されたい）。そのようなユニタリ群は、古典力学や量子力学の分野における<a href="/wiki/%E6%99%82%E9%96%93%E7%99%BA%E5%B1%95" title="時間発展">時間発展</a>を表現する上で、特に重要となる。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=9" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E7%A9%BA%E9%96%93" title="ヒルベルト空間">ヒルベルト空間</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3-%E3%83%95%E3%82%A9%E3%83%B3%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="ストーン-フォンノイマンの定理 (存在しないページ)">ストーン-フォンノイマンの定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stone%E2%80%93von_Neumann_theorem&amp;action=edit&amp;redlink=1" title="En:Stone–von Neumann theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" title="有界作用素">有界作用素</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFvon_Neumann1929–1930" style="font-style:normal">von Neumann, J. (1929–1930), “Allgemeine Eigenwerttheorie Hermitescher Functionaloperatoren”, <i>Math. Ann.</i> <b>102</b>:  49–131, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2FBF01782338" rel="nofollow">10.1007/BF01782338</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Allgemeine+Eigenwerttheorie+Hermitescher+Functionaloperatoren&amp;rft.jtitle=Math.+Ann.&amp;rft.aulast=von+Neumann&amp;rft.aufirst=J.&amp;rft.au=von+Neumann%2C%26%2332%3BJ.&amp;rft.date=1929%E2%80%931930&amp;rft.volume=102&amp;rft.pages=49%26ndash%3B131&amp;rft_id=info:doi/10.1007%2FBF01782338&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFStone1932" style="font-style:normal">Stone, M. (1932), “Linear transformations in Hilbert spaces and their applications to analysis”, <i>Amer. Math. Soc. Colloq. Publ.</i> (New York) <b>15</b></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Linear+transformations+in+Hilbert+spaces+and+their+applications+to+analysis&amp;rft.jtitle=Amer.+Math.+Soc.+Colloq.+Publ.&amp;rft.aulast=Stone&amp;rft.aufirst=M.&amp;rft.au=Stone%2C%26%2332%3BM.&amp;rft.date=1932&amp;rft.volume=15&amp;rft.place=New+York&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFvon_Neumann1936" style="font-style:normal">von Neumann (1936), <a class="external text" href="https://jstor.org/stable/1968331" rel="nofollow">“Über Adjungierte Funktionaloperatoren”</a>, <i>Ann. Math. (2)</i> <b>33</b> (2):  294–310, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1968331" rel="nofollow">10.2307/1968331</a>, <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/1968331" rel="nofollow">1968331</a><span style="display:none;">, <a class="external free" href="https://jstor.org/stable/1968331" rel="nofollow">https://jstor.org/stable/1968331</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=%C3%9Cber+Adjungierte+Funktionaloperatoren&amp;rft.jtitle=Ann.+Math.+%282%29&amp;rft.aulast=von+Neumann&amp;rft.au=von+Neumann&amp;rft.date=1936&amp;rft.volume=33&amp;rft.issue=2&amp;rft.pages=294%26ndash%3B310&amp;rft_id=info:doi/10.2307%2F1968331&amp;rft.jstor=1968331&amp;rft_id=https%3A%2F%2Fjstor.org%2Fstable%2F1968331&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Pedersen-5.1.1-4">^ <a href="#cite_ref-Pedersen-5.1.1_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.1_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.1_4-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.1</span>
+</li>
+<li id="cite_note-Pedersen-5.1.4-5">^ <a href="#cite_ref-Pedersen-5.1.4_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.4_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.4_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.4_5-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.4</span>
+</li>
+<li id="cite_note-BSU-5-6"><b><a href="#cite_ref-BSU-5_6-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, page 5</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><i>f<sub>j</sub></i> を <i>T</i> の定義域上の列で <span class="nowrap"><i>g</i> ∈ <i>B</i><sub>1</sub></span> へと収束するものとする。<i>T</i> はその定義域上で一様連続であるため、<i>Tf<sub>j</sub></i> は <i>B</i><sub>2</sub> 内の<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E5%88%97" title="コーシー列">コーシー列</a>である。したがって <span class="nowrap">(<i>f<sub>j</sub></i>, <i>Tf<sub>j</sub></i>)</span> もコーシー列であり、<i>T</i> のグラフが閉であることから、これはある <span class="nowrap">(<i>f</i>, <i>Tf</i>)</span> へと収束する。したがって <span class="nowrap"><i>f</i> = <i>g</i></span> であり <i>T</i> の定義域は閉である。</span>
+</li>
+<li id="cite_note-Pedersen-5.1.12-8">^ <a href="#cite_ref-Pedersen-5.1.12_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.12_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.12_8-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.12_8-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.12</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">測度の台が[0, 1] 全体なのでC<sup>1</sup>級や連続な関数はL<sub>2</sub>[0, 1]の部分空間と見なせる。</span>
+</li>
+<li id="cite_note-BSU-3.2-10"><b><a href="#cite_ref-BSU-3.2_10-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, Example 3.2 on page 16</span>
+</li>
+<li id="cite_note-RS-252-11"><b><a href="#cite_ref-RS-252_11-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 252</span>
+</li>
+<li id="cite_note-BSU-3.1-12"><b><a href="#cite_ref-BSU-3.1_12-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, Example 3.1 on page 15</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">
+証明: 閉であるため、至る所定義されている <i>T</i><sup>∗</sup> は有界である。これは<i>T</i> を含む <i>T</i><sup>∗∗</sup> の有界性を導く。至る所定義されている <i>T</i> の場合として、(<a href="#CITEREFPedersen1989">Pedersen 1989</a>, 2.3.11) を参照されたい</span>
+</li>
+<li id="cite_note-Pedersen-5.1.5-14">^ <a href="#cite_ref-Pedersen-5.1.5_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.5_14-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.5_14-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.5_14-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.5_14-4"><sup><i><b>e</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.5</span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text">
+証明: &lt;math&gt;T^{**} = T&lt;/math&gt; であるため、もし &lt;math&gt;T^*&lt;/math&gt; が有界であるなら、その共役 &lt;math&gt;T&lt;/math&gt; も有界である。</span>
+</li>
+<li id="cite_note-BSU-12-16"><b><a href="#cite_ref-BSU-12_16-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, page 12</span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text">証明: もし <i>T</i> が稠密に定義された閉作用素であるなら、<i>T</i><sup>∗</sup> は稠密に定義されている。したがって、<i>T</i><sup>∗∗</sup> が存在する。<i>T</i> のグラフは <i>T</i><sup>∗∗</sup> のグラフにおいて稠密であるため、<i>T</i> = <i>T</i><sup>∗∗</sup> が成立する。逆を考える。<i>T</i><sup>∗∗</sup> の存在は <i>T</i><sup>∗</sup> の存在を意味し、これは <i>T</i> が稠密に定義されていることを意味する。<i>T</i><sup>∗∗</sup> は閉であるため、<i>T</i> は稠密に定義された閉作用素である。</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text">Brezis, pp. 28.</span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text">Yoshida, pp. 200.</span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text">もし <i>T</i> が全射であるなら、&lt;math&gt;T: (\operatorname{ker}T)^\bot \to H_2&lt;/math&gt; は有界な逆を持つ。それを <i>S</i> と表す。そうすると、求める不等式は成立する。なぜならば
+<dl><dd>&lt;math&gt;\|f\|_2^2 = |\langle TSf \mid f \rangle_2| \le \|S\| \|f\|_2 \|T^*f\|_1&lt;/math&gt;</dd></dl>
+であるからである。
+逆に、この不等式が成立しているものとする。&lt;math&gt;T^*&lt;/math&gt; の値域は閉であるため、&lt;math&gt;\operatorname{ran}(T) = \operatorname{ran}(TT^*)&lt;/math&gt; が成り立つ。 &lt;math&gt;\operatorname{ran}(T)&lt;/math&gt; は稠密であるため、&lt;math&gt;TT^*&lt;/math&gt; の値域が閉であることを示せばよい。もし &lt;math&gt;TT^* f_j&lt;/math&gt; が収束列であるなら、
+<dl><dd>&lt;math&gt;\|T^*f_j\|_1^2 = | \langle T^*f_j \mid T^*f_j \rangle_1| \le \|TT^*f_j\|_2 \|f_j\|_2.&lt;/math&gt;</dd></dl>
+が成り立つことにより、不等式から &lt;math&gt;f_j&lt;/math&gt; も収束列となる。&lt;math&gt;f_j \to g&lt;/math&gt; とする。&lt;math&gt;TT^*&lt;/math&gt; は自己共役であり、したがって閉である（フォンノイマンの定理）ため、&lt;math&gt;TT^* f_j \to TT^* g&lt;/math&gt; を得る。&lt;math&gt;\square&lt;/math&gt;</span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text">Yoshida, pp. 195.</span>
+</li>
+<li id="cite_note-Pedersen-5.1.11-22"><b><a href="#cite_ref-Pedersen-5.1.11_22-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.11</span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text">Yoshida, pp. 193.</span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text">Yoshida, pp. 196.</span>
+</li>
+<li id="cite_note-Pedersen-5.1.3-25">^ <a href="#cite_ref-Pedersen-5.1.3_25-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.3_25-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.3_25-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.3_25-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.3_25-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.3_25-5"><sup><i><b>f</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.3</span>
+</li>
+<li id="cite_note-RS-256-26">^ <a href="#cite_ref-RS-256_26-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-RS-256_26-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 256</span>
+</li>
+<li id="cite_note-Pedersen-5.1.16-27">^ <a href="#cite_ref-Pedersen-5.1.16_27-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.16_27-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.16</span>
+</li>
+<li id="cite_note-RS-257-9-28">^ <a href="#cite_ref-RS-257-9_28-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-RS-257-9_28-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-RS-257-9_28-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, Example on pages 257-259</span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text">(<a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.5)および共役作用素の定義から従う。</span>
+</li>
+<li id="cite_note-Pedersen-5.2.5-30"><b><a href="#cite_ref-Pedersen-5.2.5_30-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.2.5</span>
+</li>
+<li id="cite_note-BSU-25-31"><b><a href="#cite_ref-BSU-25_31-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, page 25</span>
+</li>
+<li id="cite_note-Pedersen-5.1.9-32"><b><a href="#cite_ref-Pedersen-5.1.9_32-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.9</span>
+</li>
+<li id="cite_note-Pedersen-5.3.8-33"><b><a href="#cite_ref-Pedersen-5.3.8_33-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.3.8</span>
+</li>
+<li id="cite_note-BSU-89-34"><b><a href="#cite_ref-BSU-89_34-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, page 89</span>
+</li>
+<li id="cite_note-Pedersen-5.3.19-35"><b><a href="#cite_ref-Pedersen-5.3.19_35-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.3.19</span>
+</li>
+<li id="cite_note-RS-254-E5-36"><b><a href="#cite_ref-RS-254-E5_36-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, Example 5 on page 254</span>
+</li>
+<li id="cite_note-Pedersen-5.2.12-37"><b><a href="#cite_ref-Pedersen-5.2.12_37-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.2.12</span>
+</li>
+<li id="cite_note-RS-84-38"><b><a href="#cite_ref-RS-84_38-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 84</span>
+</li>
+<li id="cite_note-RS-250-39">^ <a href="#cite_ref-RS-250_39-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-RS-250_39-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-RS-250_39-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 250</span>
+</li>
+<li id="cite_note-BSU-6,7-40"><b><a href="#cite_ref-BSU-6,7_40-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, pages 6,7</span>
+</li>
+<li id="cite_note-BSU-7-41"><b><a href="#cite_ref-BSU-7_41-0">^</a></b> <span class="reference-text"><a href="#CITEREFBerezanskySheftelUs1996">Berezansky, Sheftel &amp; Us 1996</a>, page 7</span>
+</li>
+<li id="cite_note-RS-253-42"><b><a href="#cite_ref-RS-253_42-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 253</span>
+</li>
+<li id="cite_note-Pedersen-5.1.6-43">^ <a href="#cite_ref-Pedersen-5.1.6_43-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Pedersen-5.1.6_43-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.6</span>
+</li>
+<li id="cite_note-Pedersen-5.1.2-44"><b><a href="#cite_ref-Pedersen-5.1.2_44-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.1.2</span>
+</li>
+<li id="cite_note-Pedersen-5.2.6-45"><b><a href="#cite_ref-Pedersen-5.2.6_45-0">^</a></b> <span class="reference-text"><a href="#CITEREFPedersen1989">Pedersen 1989</a>, 5.2.6</span>
+</li>
+<li id="cite_note-RS-257-46"><b><a href="#cite_ref-RS-257_46-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, page 257</span>
+</li>
+<li id="cite_note-RS-255-6-47"><b><a href="#cite_ref-RS-255-6_47-0">^</a></b> <span class="reference-text"><a href="#CITEREFReedSimon1980">Reed &amp; Simon 1980</a>, pages 255, 256</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation" id="CITEREFPedersen1989" style="font-style:normal">Pedersen, Gert K. (1989), <i>Analysis now</i>, Springer</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Analysis+now&amp;rft.aulast=Pedersen&amp;rft.aufirst=Gert+K.&amp;rft.au=Pedersen%2C%26%2332%3BGert+K.&amp;rft.date=1989&amp;rft.pub=Springer&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span> (see Chapter 5 "Unbounded operators").</li>
+<li><cite class="citation" id="CITEREFReedSimon1980" style="font-style:normal"><a class="new" href="/w/index.php?title=Michael_C._Reed&amp;action=edit&amp;redlink=1" title="Michael C. Reed (存在しないページ)">Reed, Michael</a>; <a class="new" href="/w/index.php?title=Barry_Simon&amp;action=edit&amp;redlink=1" title="Barry Simon (存在しないページ)">Simon, Barry</a> (1980), <i>Methods of Modern Mathematical Physics</i>, <b>1: Functional Analysis</b> (revised and enlarged ed.), Academic Press</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Methods+of+Modern+Mathematical+Physics&amp;rft.aulast=Reed&amp;rft.aufirst=Michael&amp;rft.au=Reed%2C%26%2332%3BMichael&amp;rft.au=Simon%2C%26%2332%3BBarry&amp;rft.date=1980&amp;rft.volume=1%3A+Functional+Analysis&amp;rft.edition=revised+and+enlarged&amp;rft.pub=Academic+Press&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span> (see Chapter 8 "Unbounded operators").</li>
+<li><cite class="citation" id="CITEREFBerezanskySheftelUs1996" style="font-style:normal">Berezansky, Y.M.; Sheftel, Z.G.; Us, G.F. (1996), <i>Functional analysis</i>, <b>II</b>, Birkhäuser</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Functional+analysis&amp;rft.aulast=Berezansky&amp;rft.aufirst=Y.M.&amp;rft.au=Berezansky%2C%26%2332%3BY.M.&amp;rft.au=Sheftel%2C%26%2332%3BZ.G.&amp;rft.au=Us%2C%26%2332%3BG.F.&amp;rft.date=1996&amp;rft.volume=II&amp;rft.pub=Birkh%C3%A4user&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span> (see Chapter 12 "General theory of unbounded operators in Hilbert spaces").</li>
+<li><cite class="citation" id="CITEREFYoshida1980" style="font-style:normal">Yoshida, Kôsaku (1980), <i>Functional Analysis</i> (sixth ed.), Springer</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Functional+Analysis&amp;rft.aulast=Yoshida&amp;rft.aufirst=K%C3%B4saku&amp;rft.au=Yoshida%2C%26%2332%3BK%C3%B4saku&amp;rft.date=1980&amp;rft.edition=sixth&amp;rft.pub=Springer&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFBrezis1983" style="font-style:normal">Brezis, Haïm (1983) (French), <i>Analyse fonctionnelle - Théorie et applications</i>, Paris: Mason</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Analyse+fonctionnelle+-+Th%C3%A9orie+et+applications&amp;rft.aulast=Brezis&amp;rft.aufirst=Ha%C3%AFm&amp;rft.au=Brezis%2C%26%2332%3BHa%C3%AFm&amp;rft.date=1983&amp;rft.place=Paris&amp;rft.pub=Mason&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0"><span style="display: none;"> </span></span></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401131746
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.326 seconds
+Real time usage: 0.651 seconds
+Preprocessor visited node count: 7928/1000000
+Post‐expand include size: 37943/2097152 bytes
+Template argument size: 7102/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 5/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 24035/5000000 bytes
+Lua time usage: 0.190/7 seconds
+Lua virtual size: 6066176/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  606.633      1 -total
+ 58.71%  356.146      1 テンプレート:Reflist
+ 33.97%  206.067     32 テンプレート:Harvnb
+ 19.73%  119.710      8 テンプレート:Citation
+ 18.54%  112.469      8 テンプレート:Citation/core
+ 12.18%   73.916      1 テンプレート:Lang-en
+ 11.70%   70.997      1 テンプレート:LangWithName
+ 11.16%   67.687      3 テンプレート:ISO639言語名
+  8.46%   51.308      5 テンプレート:仮リンク
+  4.76%   28.854      3 テンプレート:Harv
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2616439-0!canonical and timestamp 20220401131746 and revision id 1551103. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=非有界作用素&amp;oldid=1551103">http://localhost:8080/w/index.php?title=非有界作用素&amp;oldid=1551103</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BD%9C%E7%94%A8%E7%B4%A0%E8%AB%96" title="カテゴリ:作用素論">作用素論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%96%A2%E6%95%B0%E8%A7%A3%E6%9E%90%E5%AD%A6" title="カテゴリ:関数解析学">関数解析学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;returntoquery=curid%3D2616439%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;returntoquery=curid%3D2616439%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;oldid=1551103" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年2月27日 (土) 08:09 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.326","walltime":"0.651","ppvisitednodes":{"value":7928,"limit":1000000},"postexpandincludesize":{"value":37943,"limit":2097152},"templateargumentsize":{"value":7102,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":24035,"limit":5000000},"timingprofile":["100.00%  606.633      1 -total"," 58.71%  356.146      1 テンプレート:Reflist"," 33.97%  206.067     32 テンプレート:Harvnb"," 19.73%  119.710      8 テンプレート:Citation"," 18.54%  112.469      8 テンプレート:Citation/core"," 12.18%   73.916      1 テンプレート:Lang-en"," 11.70%   70.997      1 テンプレート:LangWithName"," 11.16%   67.687      3 テンプレート:ISO639言語名","  8.46%   51.308      5 テンプレート:仮リンク","  4.76%   28.854      3 テンプレート:Harv"]},"scribunto":{"limitreport-timeusage":{"value":"0.190","limit":"7"},"limitreport-virtmemusage":{"value":6066176,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401131746","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":980});});</script>
+</body></html>

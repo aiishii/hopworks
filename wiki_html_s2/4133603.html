@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ラッソ回帰 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ラッソ回帰 rootpage-ラッソ回帰 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ラッソ回帰</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>ラッソ回帰（らっそかいき、least absolute shrinkage and selection operator, Lasso, LASSO）</b>は、<a href="." id="link_a_1" title="特徴選択">変数選択</a>と<a href="." id="link_a_2" title="正則化">正則化の</a>両方を実行し、生成する統計モデルの予測精度と解釈可能性を向上させる<a href="." id="link_a_3" title="回帰分析">回帰分析</a>手法。 1986年に地球物理学の文献で最初に導入され<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> 、その後1996年にRobert Tibshirani<sup class="reference" id="cite_ref-Tibshirani_1996_2-0"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup> が独自に再発見して一般化した。   
+</p><p>ラッソ回帰はもともと<a href="." id="link_a_4" title="最小二乗法">最小二乗法</a>で定義されていた。最小二乗法の単純なケースでは、予測器の振る舞いについて多くの事実が分かる。すなわち、<a href="." id="link_a_5" title="リッジ回帰">リッジ回帰</a>や<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_6" title="ベストサブセット選択 (存在しないページ)">ベストサブセット選択</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Best_subset_selection&amp;action=edit&amp;redlink=1" title="En:Best subset selection (存在しないページ)">英語版</a>）</span></span>との関係、ラッソ係数予測といわゆるソフトしきい値処理（soft thresholding）との関係である。   
+</p><p><a href="." id="link_a_7" title="一般化線形モデル">一般化線形モデル</a>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_8" title="一般化推定方程式 (存在しないページ)">一般化推定方程式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Generalized_estimating_equations&amp;action=edit&amp;redlink=1" title="En:Generalized estimating equations (存在しないページ)">英語版</a>）</span></span>、 <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_9" title="比例ハザードモデル (存在しないページ)">比例ハザードモデル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Proportional_hazards_model&amp;action=edit&amp;redlink=1" title="En:Proportional hazards model (存在しないページ)">英語版</a>）</span></span>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_10" title="M推定器 (存在しないページ)">M推定器</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:M-estimator&amp;action=edit&amp;redlink=1" title="En:M-estimator (存在しないページ)">英語版</a>）</span></span>など 、さまざまな統計モデルに簡単に拡張できる<sup class="reference" id="cite_ref-Tibshirani_1996_2-1"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup><sup class="reference" id="cite_ref-Tibshirani_1997_3-0"><a href="#cite_note-Tibshirani_1997-3">[3]</a></sup> 。   
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#動機"><span class="tocnumber">1</span> <span class="toctext">動機</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#基本形"><span class="tocnumber">2</span> <span class="toctext">基本形</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#正規直交共変量"><span class="tocnumber">2.1</span> <span class="toctext">正規直交共変量</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#一般的な形式"><span class="tocnumber">3</span> <span class="toctext">一般的な形式</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#解釈"><span class="tocnumber">4</span> <span class="toctext">解釈</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#幾何学的解釈"><span class="tocnumber">4.1</span> <span class="toctext">幾何学的解釈</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#ベイジアン解釈"><span class="tocnumber">4.2</span> <span class="toctext">ベイジアン解釈</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#一般化"><span class="tocnumber">5</span> <span class="toctext">一般化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Elastic_Net"><span class="tocnumber">5.1</span> <span class="toctext">Elastic Net</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#正則化パラメータの選択"><span class="tocnumber">6</span> <span class="toctext">正則化パラメータの選択</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#参考文献"><span class="tocnumber">8</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.8B.95.E6.A9.9F"></span><span class="mw-headline" id="動機">動機</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=1" title="節を編集: 動機">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ラッソ回帰は、与えられた共変量の一部のみ最終モデルで使用することにより、回帰モデルの予測精度と解釈可能性を向上させるために導入された<sup class="reference" id="cite_ref-Tibshirani_1996_2-2"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup><sup class="reference" id="cite_ref-Breiman_1995_4-0"><a href="#cite_note-Breiman_1995-4">[4]</a></sup> 。 
+</p><p>ラッソ回帰以前は、段階的選択が変数選択に広く用いられていた。これは、少数の共変量のみが結果と強い関係がある場合などには予測精度を向上させるが、それ以外の場合は、予測誤差を悪化させる可能性がある。 また、 大きな回帰係数を縮小して<a href="/wiki/%E9%81%8E%E5%89%B0%E9%81%A9%E5%90%88" title="過剰適合">過剰適合</a>を減らす<a href="/wiki/%E3%83%AA%E3%83%83%E3%82%B8%E5%9B%9E%E5%B8%B0" title="リッジ回帰">リッジ回帰</a>も予測精度を向上させるために用いられていたが、リッジ回帰では共変量選択を実行しない。 
+</p><p>ラッソ回帰は、回帰係数の絶対値の合計を固定値よりも小さくすることでこれらの目標を両方とも達成できる。これにより、特定の係数が強制的にゼロに設定され、これらの係数を含まないより単純なモデルが効果的に選択される。 この考え方は、リッジ回帰に似ているが、リッジ回帰の場合はこれは係数のサイズを縮小するだけであり、ゼロに設定することはない。 
+</p>
+<h2><span id=".E5.9F.BA.E6.9C.AC.E5.BD.A2"></span><span class="mw-headline" id="基本形">基本形</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=2" title="節を編集: 基本形">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ラッソ回帰はもともと最小二乗法の場面で導入された。このケースを最初に検討することは有益である。 
+</p><p>それぞれが &lt;math&gt;p&lt;/math&gt; 個の<a href="/wiki/%E6%95%B0%E5%BC%8F#変数" title="数式">共変量</a>と単一の結果で構成される &lt;math&gt;N&lt;/math&gt; 個のケースで構成されるサンプルを考える。  
+</p><p>&lt;math&gt;y_i&lt;/math&gt; を結果、&lt;math&gt;x_i:=(x_1,x_2,\ldots,x_p)^T&lt;/math&gt; を&lt;math&gt;i&lt;/math&gt;番目のケースの共変量ベクトルとする。
+ラッソ回帰では、次の式を解くことを考える。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta_0, \beta } \left\{ \sum_{i=1}^N (y_i - \beta_0 - x_i^T \beta)^2 \right\}\quad \text{ subject to } \sum_{j=1}^p |\beta_j| \leq t. &lt;/math&gt; <sup class="reference" id="cite_ref-Tibshirani_1996_2-3"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup></dd></dl>
+<p>ここで、&lt;math&gt;t&lt;/math&gt; を正則化の量を決定する事前に指定された自由パラメーターとする。
+共変量行列 &lt;math&gt;X&lt;/math&gt; について、&lt;math&gt;X_{ij} = (x_i)_j&lt;/math&gt;、すなわち &lt;math&gt;x_i^T&lt;/math&gt; が &lt;math&gt;X&lt;/math&gt; の第 &lt;math&gt;i&lt;/math&gt; 行とすると、次のように簡潔に記述することができる。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta_0, \beta } \left\{ \frac{1}{N} \left\| y - \beta_0 1_N - X \beta \right\|_2^2 \right\}\quad \text{ subject to } \| \beta \|_1 \leq t. &lt;/math&gt;</dd></dl>
+<p>ここで、&lt;math&gt;\| u \|_p = \left( \sum_{i=1}^N | u_i |^p \right)^{1/p}&lt;/math&gt; を標準 <a href="/wiki/Lp%E7%A9%BA%E9%96%93" title="Lp空間">&lt;math&gt; \ell^p &lt;/math&gt;ノルム</a>とし、&lt;math&gt; 1_N&lt;/math&gt; は 1 が N 個並んだ縦ベクトルとする。 
+</p><p>データポイント &lt;math&gt;x_i&lt;/math&gt; のスカラー平均を &lt;math&gt;\bar{x}&lt;/math&gt;、応答変数 &lt;math&gt;y_i&lt;/math&gt; の平均を &lt;math&gt;\bar{y}&lt;/math&gt; と記載すると、&lt;math&gt;\beta_0&lt;/math&gt; の推定値 &lt;math&gt;\hat{\beta}_0 = \bar{y} - \bar{x}^T \beta &lt;/math&gt; を用いて下記のように記述できる。 
+</p>
+<dl><dd>&lt;math&gt; y_i - \hat{\beta}_0 - x_i^T \beta = y_i - ( \bar{y} - \bar{x}^T \beta ) - x_i^T \beta = ( y_i - \bar{y} ) - ( x_i - \bar{x} )^T \beta, &lt;/math&gt;</dd></dl>
+<p>したがって、中央に配置された（ゼロ平均化された）変数を処理するのが標準的である。 解が測定スケールに依存しないよう、共変量は通常、 <a href="/wiki/%E6%A8%99%E6%BA%96%E5%BE%97%E7%82%B9" title="標準得点">標準化されて</a>いる&lt;math&gt; \textstyle \left( \sum_{i=1}^N x_{i}^2 = 1 \right) &lt;/math&gt;。 
+</p><p>参考のために書き直すと 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta \in \mathbb{R}^p } \left\{ \frac{1}{N} \left\| y - X \beta \right\|_2^2 \right\}\quad \text{ subject to } \| \beta \|_1 \leq t. &lt;/math&gt;</dd></dl>
+<p>これは、<a href="/wiki/%E3%83%A9%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B8%E3%83%A5%E3%81%AE%E6%9C%AA%E5%AE%9A%E4%B9%97%E6%95%B0%E6%B3%95" title="ラグランジュの未定乗数法">ラグランジュの未定乗数法</a>に基づいて書き直すと、下記の形式と同値である。
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta \in \mathbb{R}^p } \left\{ \frac{1}{N} \left\| y - X \beta \right\|_2^2 + \lambda \| \beta \|_1 \right\} &lt;/math&gt;</dd></dl>
+<p>ここで、&lt;math&gt; t &lt;/math&gt; と&lt;math&gt; \lambda &lt;/math&gt;との関係はデータに依存する。 
+</p>
+<h3><span id=".E6.AD.A3.E8.A6.8F.E7.9B.B4.E4.BA.A4.E5.85.B1.E5.A4.89.E9.87.8F"></span><span class="mw-headline" id="正規直交共変量">正規直交共変量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=3" title="節を編集: 正規直交共変量">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Lasso Estimatorのいくつかの基本的なプロパティを検討する。 
+</p><p>まず、共変量が<a href="/wiki/%E6%AD%A3%E8%A6%8F%E7%9B%B4%E4%BA%A4%E7%B3%BB" title="正規直交系">正規直交</a>であると仮定すると、<a href="/wiki/%E5%86%85%E7%A9%8D" title="内積">内積</a> &lt;math&gt; (\cdot \mid \cdot) &lt;/math&gt; および<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%8D%E3%83%83%E3%82%AB%E3%83%BC%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF" title="クロネッカーのデルタ">クロネッカーのデルタ</a> &lt;math&gt;\delta_{ij}&lt;/math&gt; を用いて &lt;math&gt; ( x_i \mid x_j ) = \delta_{ij} &lt;/math&gt; と記載できる。
+これは、&lt;math&gt;X^T X = I&lt;/math&gt; と記載しても同等である。
+</p><p>次に、勾配法を使用すると、 
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>\begin{align}
+\hat{\beta}_j = {} &amp; S_{N \lambda}( \hat{\beta}^\text{OLS}_j ) = \hat{\beta}^\text{OLS}_j \max \left( 0, 1 - \frac{ N \lambda }{ |\hat{\beta}^\text{OLS}_j| } \right) \\
+&amp; \text{ where } \hat{\beta}^\text{OLS} = (X^T X)^{-1} X^T y
+\end{align}
+&lt;/math&gt; <sup class="reference" id="cite_ref-Tibshirani_1996_2-4"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup>
+</p><p>&lt;math&gt; S_\alpha &lt;/math&gt;はソフトしきい値演算子と呼ばれる。これは、小さい値をゼロに設定し、値をゼロに変換する（十分に小さい場合は正確にゼロにする）ためである。ハードしきい値演算子&lt;math&gt; H_\alpha &lt;/math&gt; は小さい値をゼロにして大きい値を変更しない。 
+</p><p>これは、下記の最小化を目的とするリッジ回帰と比較可能である。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta \in \mathbb{R}^p } \left\{ \frac{1}{N} \| y - X \beta \|_2^2 + \lambda \| \beta \|_2^2 \right\} &lt;/math&gt;</dd></dl>
+<p>これから 
+</p>
+<dl><dd>&lt;math&gt; \hat{\beta}_j = ( 1 + N \lambda )^{-1} \hat{\beta}^\text{OLS}_j. &lt;/math&gt;</dd></dl>
+<p>したがって、リッジ回帰は、 &lt;math&gt; (1 + N \lambda)^{-1} &lt;/math&gt; という一様係数で縮小することになり、係数をゼロに設定しない。 
+</p><p>ベストサブセット選択回帰と比較することもできる。この手法では、下記の最小化を目標とする。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta \in \mathbb{R}^p } \left\{ \frac{1}{N} \left\| y - X \beta \right\|_2^2 + \lambda \| \beta \|_0 \right\} &lt;/math&gt;</dd></dl>
+<p>ここで、&lt;math&gt; \| \cdot \|_0 &lt;/math&gt;は 「 &lt;math&gt; \ell^0 &lt;/math&gt;ノルム」である。zの非ゼロ成分が m 個あるとき、&lt;math&gt; \| z \| = m &lt;/math&gt; と定義する。 
+</p><p>この場合、以下が示される。 
+</p>
+<dl><dd>&lt;math&gt; \hat{\beta}_j = H_{ \sqrt{ N \lambda } } \left( \hat{\beta}^\text{OLS}_j \right) = \hat{\beta}^\text{OLS}_j \mathrm{I} \left( \left| \hat{\beta}^\text{OLS}_j \right| \geq \sqrt{ N \lambda } \right) &lt;/math&gt;</dd></dl>
+<p>ここで、&lt;math&gt; H_\alpha &lt;/math&gt; はいわゆるハードしきい値演算子で、&lt;math&gt;\mathrm{I}&lt;/math&gt; はインジケーター関数（引数がtrueの場合は1、それ以外の場合は0）である。 
+</p><p>従って、ラッソ回帰による推定値は、リッジ回帰とベストサブセット選択回帰の両方による推定値と似た特徴を持つ。すなわち、リッジ回帰のようにすべての係数の大きさを縮小するだけでなく、ベストサブセット選択回帰と同様に、それらの一部をゼロに設定する。 さらに、リッジ回帰はすべての係数を定数係数でスケーリングするが、ラッソ回帰は代わりに定数を用いて係数をゼロに近づけて、到達した場合は係数をゼロに設定する。
+</p>
+<h2><span id=".E4.B8.80.E8.88.AC.E7.9A.84.E3.81.AA.E5.BD.A2.E5.BC.8F"></span><span class="mw-headline" id="一般的な形式">一般的な形式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=4" title="節を編集: 一般的な形式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ラッソ正則化は、<a href="/wiki/%E4%B8%80%E8%88%AC%E5%8C%96%E7%B7%9A%E5%BD%A2%E3%83%A2%E3%83%87%E3%83%AB" title="一般化線形モデル">一般化線形モデル</a> 、一般化推定方程式 、 比例ハザードモデル 、一般的なM-推定量など、さまざまな目的関数に拡張できる。<sup class="reference" id="cite_ref-Tibshirani_1996_2-5"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup><sup class="reference" id="cite_ref-Tibshirani_1997_3-1"><a href="#cite_note-Tibshirani_1997-3">[3]</a></sup>
+目的関数を下記とすると 
+</p>
+<dl><dd>&lt;math&gt; \frac{1}{N} \sum_{i=1}^N f( x_i, y_i, \alpha, \beta ) &lt;/math&gt;</dd></dl>
+<p>ラッソ正則化した予測値は次の解となる 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \alpha, \beta } \frac{1}{N} \sum_{i=1}^N f( x_i, y_i, \alpha, \beta )\quad \text{subject to } \| \beta \|_1 \leq t &lt;/math&gt;</dd></dl>
+<p>ここで、&lt;math&gt; \beta &lt;/math&gt; だけが罰則を受け、&lt;math&gt;\alpha&lt;/math&gt; は許可された値を自由に取ることができる。上記の基本形において、&lt;math&gt; \beta_0 &lt;/math&gt; が罰則を受けなかったことに相当する。
+</p>
+<h2><span id=".E8.A7.A3.E9.87.88"></span><span class="mw-headline" id="解釈">解釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=5" title="節を編集: 解釈">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.B9.BE.E4.BD.95.E5.AD.A6.E7.9A.84.E8.A7.A3.E9.87.88"></span><span class="mw-headline" id="幾何学的解釈">幾何学的解釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=6" title="節を編集: 幾何学的解釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>上で説明したように、ラッソ回帰は係数をゼロに設定できるが、表面的には類似しているように見えるリッジ回帰はできない。 これは、2つのケースでの制約境界の形状の違いによるものである。 ラッソ回帰とリッジ回帰の両方は、同じ目的関数を最小化すると解釈できる。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta_0, \beta } \left\{ \frac{1}{N} \left\| y - \beta_0 - X \beta \right\|_2^2 \right\} &lt;/math&gt;</dd></dl>
+<p>ここで、制約条件が異なる。
+ラッソ回帰での制約条件は &lt;math&gt; \| \beta \|_1 \leq t &lt;/math&gt; である。
+リッジ回帰での制約条件は&lt;math&gt; \| \beta \|_2^2 \leq t &lt;/math&gt; である。
+</p><p>2次元のパラメータ空間（w<sub>1</sub>, w<sub>2</sub>）における制約領域を図示した。
+ラッソ回帰（L<sub>1</sub>-norm）では正方形に相当する（一般に &lt;math&gt;n&lt;/math&gt; 次元の<a href="/wiki/%E6%AD%A3%E8%BB%B8%E4%BD%93" title="正軸体">正軸体</a> ）。
+リッジ回帰（L<sub>2</sub>-norm）では円に相当する（一般に &lt;math&gt;n&lt;/math&gt; 次元の<a href="/wiki/%E8%B6%85%E7%90%83%E9%9D%A2" title="超球面">超球面</a>）。
+パラメータは制約条件としてパラメータ空間のこれらの領域を動いた中で、目的関数を最小化する値を取る。
+ラッソ回帰では、「角（かど）」が存在することで、特定の係数をゼロにした地点を選びやすくなる。
+</p>
+<h3><span id=".E3.83.99.E3.82.A4.E3.82.B8.E3.82.A2.E3.83.B3.E8.A7.A3.E9.87.88"></span><span class="mw-headline" id="ベイジアン解釈">ベイジアン解釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=7" title="節を編集: ベイジアン解釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>係数の事前分布として正規分布を仮定した場合のMAP推定値がリッジ回帰に相当するのと同様に、係数の事前分布として<a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%88%86%E5%B8%83" title="ラプラス分布">ラプラス分布</a>を仮定した場合のMAP推定値がラッソ回帰に相当する。
+</p><p>ラプラス分布はゼロで鋭くピークに達し（その1次導関数は不連続）、確率分布は正規分布よりもゼロに近く集中する。
+このことからも、なぜラッソ回帰では一部の係数をゼロに設定する傾向があるのに、リッジ回帰はそうではないのか、ということを説明できる<sup class="reference" id="cite_ref-Tibshirani_1996_2-6"><a href="#cite_note-Tibshirani_1996-2">[2]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;p(\mathbf{y}, \boldsymbol{\beta} \mid \mathbf{X}) = p(\mathbf{y} \mid \boldsymbol{\beta}, \mathbf{X})\;p(\boldsymbol{\beta} \mid \mathbf{X}) = \prod_{n=1}^N p(y_n \mid \boldsymbol{\beta}, \mathbf{x}_n)\;\prod_{k=0}^K p(\beta_k)&lt;/math&gt;</dd></dl>
+<p>すなわち、
+</p>
+<dl><dd>&lt;math&gt;\log{p(\mathbf{y}, \boldsymbol{\beta} \mid \mathbf{X})} = \sum_{n=1}^N \log{p(y_n \mid \boldsymbol{\beta}, \mathbf{x}_n)} + \sum_{k=0}^K \log{p(\beta_k)}&lt;/math&gt;</dd></dl>
+<p>である。
+</p><p>ここで、&lt;math&gt;\mathbf{y}&lt;/math&gt; の事前分布として平均 &lt;math&gt;\mathbf{X} \boldsymbol{\beta}&lt;/math&gt;、分散&lt;math&gt;\sigma^2&lt;/math&gt; の<a href="/wiki/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83" title="正規分布">正規分布</a>を仮定すると、右辺第1項は
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>\sum_{n=1}^N \log{\left( \frac{1}{\sqrt{2\pi}\,\sigma} \exp{\left( -\frac{(y_n - \mathbf{x}_n^\top \boldsymbol{\beta})^2}{2\sigma^2} \right)} \right)} = - N \log(\sqrt{2\pi}\,\sigma) - \frac{1}{2\sigma^2} \sum_{n=1}^N (y_n - \mathbf{x}_n^\top \boldsymbol{\beta})^2 &lt;/math&gt;
+</p><p>さらに、パラメータ &lt;math&gt;\boldsymbol{\beta}&lt;/math&gt; の事前分布として平均 &lt;math&gt;0&lt;/math&gt;、分散 &lt;math&gt;2b^2&lt;/math&gt; の<a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%88%86%E5%B8%83" title="ラプラス分布">ラプラス分布</a>を仮定すると、右辺第2項は
+</p>
+<dl><dd>&lt;math&gt; \sum_{k=0}^K \log{\left( \frac{1}{2b}\exp{\left( - \frac{|\beta_k|}{b} \right)} \right)} = - (K + 1) \log(2b) - \frac{1}{b} \sum_{k=0}^K | \beta_k |&lt;/math&gt;</dd></dl>
+<p>以上から、&lt;math&gt;\lambda = \frac{2\sigma^2}{bN}&lt;/math&gt; を用いて次のように表される。
+</p>
+<dl><dd>&lt;math&gt;\log{p(\mathbf{y}, \boldsymbol{\beta} \mid \mathbf{X})} = - \frac{N}{2\sigma^2} \left( \frac{1}{N} \sum_{n=1}^N (y_n - \mathbf{x}_n^\top \boldsymbol{\beta})^2 + \lambda \sum_{k=0}^K | \beta_i | \right) + \mathrm{const.}&lt;/math&gt;</dd></dl>
+<p>括弧内は、<a href="/wiki/%E3%83%A9%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%B8%E3%83%A5%E3%81%AE%E6%9C%AA%E5%AE%9A%E4%B9%97%E6%95%B0%E6%B3%95" title="ラグランジュの未定乗数法">ラグランジュの未定乗数法</a>に基づく記載と同等である。
+</p>
+<h2><span id=".E4.B8.80.E8.88.AC.E5.8C.96"></span><span class="mw-headline" id="一般化">一般化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=8" title="節を編集: 一般化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Elastic_Net">Elastic Net</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=9" title="節を編集: Elastic Net">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2005 年、Zou と Hastie は、ラッソ回帰のいくつかの欠点に対処するために <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Elastic_Net&amp;action=edit&amp;redlink=1" title="Elastic Net (存在しないページ)">Elastic Net</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Elastic_Net&amp;action=edit&amp;redlink=1" title="En:Elastic Net (存在しないページ)">英語版</a>）</span></span> を導入した<sup class="reference" id="cite_ref-Zou_2005_5-0"><a href="#cite_note-Zou_2005-5">[5]</a></sup>。
+ラッソ回帰は、標本数が共変量の数よりも少ないとき（&lt;math&gt; n &lt; p &lt;/math&gt;）、標本数（&lt;math&gt; n &lt;/math&gt; 個）までしか共変量を選択できない。
+また、ラッソ回帰では高度に相関する共変量の組み合わせから1つしか共変量を選択しないことが多いため、共変量が強く相関しているならば、パフォーマンスがリッジ回帰に劣る場合がある。
+</p><p>Elastic Net は &lt;math&gt;\ell^2&lt;/math&gt; による罰則項を追加することによって回帰ラッソを拡張し、下記の式を得る。 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta \in \mathbb{R}^p } \left\{ \left\| y - X \beta \right\|_2^2 + \lambda_1 \| \beta \|_1 + \lambda_2 \| \beta \|_2^2 \right\}, &lt;/math&gt;</dd></dl>
+<p>これは次の式を解くことと同じである。 
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>\begin{align}
+\min_{ \beta_0, \beta } \left\{ \left\| y - \beta_0 - X \beta \right\|_2^2 \right\} &amp; \text{ subject to } ( 1 - \alpha ) \| \beta \|_1 + \alpha \| \beta \|_2^2 \leq t, \\
+&amp; \text{ where } \alpha = \frac{\lambda_2}{\lambda_1 + \lambda_2}.
+\end{align}
+&lt;/math&gt;
+</p><p>この問題は単純なラッソ回帰の形式で記述できる 
+</p>
+<dl><dd>&lt;math&gt; \min_{ \beta^* \in \mathbb{R}^p } \left\{ \left\| y^* - X^* \beta^* \right\|_2^2 + \lambda^* \| \beta^* \|_1 \right\} &lt;/math&gt;</dd></dl>
+<p>ただし、 
+</p>
+<dl><dd>&lt;math&gt; X_{(n+p) \times p}^* = ( 1 + \lambda_2 )^{-1/2} \binom{X}{ \lambda_2^{1/2} I_{p \times p} } &lt;/math&gt; 、  &lt;math&gt; y_{(n+p)}^* = \binom{y}{0^p}, \qquad \lambda^* = \frac{ \lambda_1 }{ \sqrt{ 1 + \lambda_2 } } &lt;/math&gt; 、  &lt;math&gt; \beta^* = \sqrt{ 1 + \lambda_2 } \beta. &lt;/math&gt;</dd></dl>
+<p>そして、&lt;math&gt; \hat{\beta} = \frac{ \hat{\beta}^* }{ \sqrt{ 1 + \lambda_2 } } &lt;/math&gt; 、共変量が互いに直交する場合、 
+</p>
+<dl><dd>&lt;math&gt; \hat{\beta}_j = \frac{ \hat{\beta}^\text{*,OLS}_j }{ \sqrt{ 1 + \lambda_2 } } \max \left( 0, 1 - \frac{ \lambda^* }{ \left| \hat{\beta}^\text{*,OLS}_j \right| } \right) = \frac{ \hat{\beta}^\text{OLS}_j }{ 1 + \lambda_2 } \max \left( 0, 1 - \frac{ \lambda_1 }{ \left| \hat{\beta}^\text{OLS}_j \right| } \right) = ( 1 + \lambda_2 )^{-1} \hat{\beta}^\text{lasso}_j. &lt;/math&gt;</dd></dl>
+<p>Elastic Netによる罰則の結果は、ラッソ回帰およびリッジ回帰の罰則の組み合わせに相当する。
+</p><p>正規化パラメータ &lt;math&gt; \lambda_1, \lambda_2 &lt;/math&gt; は、交差検証法を用いたグリッド・サーチにより選択されることが多い。
+</p>
+<h2><span id=".E6.AD.A3.E5.89.87.E5.8C.96.E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E3.81.AE.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="正則化パラメータの選択">正則化パラメータの選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=10" title="節を編集: 正則化パラメータの選択">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>収縮の強度と変数の選択を制御する正則化パラメータ &lt;math&gt;\lambda&lt;/math&gt; を適切に選択することで、予測の精度と解釈可能性を向上することができる。正則化が強くなりすぎると、重要な変数がモデルから削除される、係数が過度に縮小される等の可能性がある。
+正則化パラメータ &lt;math&gt; \lambda &lt;/math&gt; の選択には<a href="/wiki/%E4%BA%A4%E5%B7%AE%E6%A4%9C%E8%A8%BC" title="交差検証">交差検証法</a>がよく用いられる。
+</p><p><a href="/wiki/%E8%B5%A4%E6%B1%A0%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96" title="赤池情報量規準">赤池情報量規準</a>（AIC）や<a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96" title="ベイズ情報量規準">ベイズ情報量規準</a>（BIC）などの<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96&amp;action=edit&amp;redlink=1" title="情報量規準 (存在しないページ)">情報量規準</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Information_criterion&amp;action=edit&amp;redlink=1" title="En:Information criterion (存在しないページ)">英語版</a>）</span></span>は、交差検証法よりも計算が高速であり、小さいサンプルでもパフォーマンスが変動しにくいため、交差検証よりも好ましい場合がある。 <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+情報量規準は、モデルのサンプル内精度を最大化することによって推定器の正則化パラメータを選択すると同時に、その有効なパラメーターの数/自由度にペナルティを課す。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=11" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E9%81%B8%E6%8A%9E&amp;action=edit&amp;redlink=1" title="モデルの選択 (存在しないページ)">モデルの選択</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Model_selection&amp;action=edit&amp;redlink=1" title="En:Model selection (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8E%E3%83%B3%E3%83%91%E3%83%A9%E3%83%A1%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;redlink=1" title="ノンパラメトリック回帰 (存在しないページ)">ノンパラメトリック回帰</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nonparametric_regression&amp;action=edit&amp;redlink=1" title="En:Nonparametric regression (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%80%86%E5%95%8F%E9%A1%8C#ティホノフの正則化法" title="逆問題">ティホノフ正則化</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;section=12" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Santosa, Fadil; Symes, William W. (1986). “Linear inversion of band-limited reflection seismograms.”. <i>SIAM Journal on Scientific and Statistical Computing</i> (SIAM) <b>7</b> (4):  1307–1330. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1137%2F0907087" rel="nofollow">10.1137/0907087</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Linear+inversion+of+band-limited+reflection+seismograms.&amp;rft.jtitle=SIAM+Journal+on+Scientific+and+Statistical+Computing&amp;rft.aulast=Santosa&amp;rft.aufirst=Fadil&amp;rft.au=Santosa%2C%26%2332%3BFadil&amp;rft.au=Symes%2C%26%2332%3BWilliam+W.&amp;rft.date=1986&amp;rft.volume=7&amp;rft.issue=4&amp;rft.pages=1307%E2%80%931330&amp;rft.pub=SIAM&amp;rft_id=info:doi/10.1137%2F0907087&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Tibshirani_1996-2">^ <a href="#cite_ref-Tibshirani_1996_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Tibshirani_1996_2-6"><sup><i><b>g</b></i></sup></a> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Tibshirani, Robert (1996). “Regression Shrinkage and Selection via the lasso”. <i>Journal of the Royal Statistical Society</i> (Wiley) <b>58</b> (1):  267–88. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/2346178" rel="nofollow">2346178</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Regression+Shrinkage+and+Selection+via+the+lasso&amp;rft.jtitle=Journal+of+the+Royal+Statistical+Society&amp;rft.aulast=Tibshirani&amp;rft.aufirst=Robert&amp;rft.au=Tibshirani%2C%26%2332%3BRobert&amp;rft.date=1996&amp;rft.volume=58&amp;rft.issue=1&amp;rft.pages=267%E2%80%9388&amp;rft.pub=Wiley&amp;rft.jstor=2346178&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Tibshirani_1997-3">^ <a href="#cite_ref-Tibshirani_1997_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Tibshirani_1997_3-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Tibshirani, Robert (1997). “The lasso Method for Variable Selection in the Cox Model”. <i><a class="new" href="/w/index.php?title=Statistics_in_Medicine_(journal)&amp;action=edit&amp;redlink=1" title="Statistics in Medicine (journal) (存在しないページ)">Statistics in Medicine</a></i> <b>16</b> (4):  385–395. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1002%2F%28SICI%291097-0258%2819970228%2916%3A4%3C385%3A%3AAID-SIM380%3E3.0.CO%3B2-3" rel="nofollow">10.1002/(SICI)1097-0258(19970228)16:4&lt;385::AID-SIM380&gt;3.0.CO;2-3</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+lasso+Method+for+Variable+Selection+in+the+Cox+Model&amp;rft.jtitle=%5B%5BStatistics+in+Medicine+%28journal%29%7CStatistics+in+Medicine%5D%5D&amp;rft.aulast=Tibshirani&amp;rft.aufirst=Robert&amp;rft.au=Tibshirani%2C%26%2332%3BRobert&amp;rft.date=1997&amp;rft.volume=16&amp;rft.issue=4&amp;rft.pages=385%E2%80%93395&amp;rft_id=info:doi/10.1002%2F%28SICI%291097-0258%2819970228%2916%3A4%3C385%3A%3AAID-SIM380%3E3.0.CO%3B2-3&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Breiman_1995-4"><b><a href="#cite_ref-Breiman_1995_4-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Santosa, Fadil; Symes, William W. (1986). “Linear inversion of band-limited reflection seismograms.”. <i>SIAM Journal on Scientific and Statistical Computing</i> (SIAM) <b>7</b> (4):  1307–1330. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1137%2F0907087" rel="nofollow">10.1137/0907087</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Linear+inversion+of+band-limited+reflection+seismograms.&amp;rft.jtitle=SIAM+Journal+on+Scientific+and+Statistical+Computing&amp;rft.aulast=Santosa&amp;rft.aufirst=Fadil&amp;rft.au=Santosa%2C%26%2332%3BFadil&amp;rft.au=Symes%2C%26%2332%3BWilliam+W.&amp;rft.date=1986&amp;rft.volume=7&amp;rft.issue=4&amp;rft.pages=1307%E2%80%931330&amp;rft.pub=SIAM&amp;rft_id=info:doi/10.1137%2F0907087&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Zou_2005-5"><b><a href="#cite_ref-Zou_2005_5-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Zou, Hui; Hastie, Trevor (2005). “Regularization and Variable Selection via the Elastic Net”. <i>Journal of the Royal Statistical Society</i> (Wiley) <b>67</b> (2):  301–20. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1111%2Fj.1467-9868.2005.00503.x" rel="nofollow">10.1111/j.1467-9868.2005.00503.x</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/3647580" rel="nofollow">3647580</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Regularization+and+Variable+Selection+via+the+Elastic+Net&amp;rft.jtitle=Journal+of+the+Royal+Statistical+Society&amp;rft.aulast=Zou&amp;rft.aufirst=Hui&amp;rft.au=Zou%2C%26%2332%3BHui&amp;rft.au=Hastie%2C%26%2332%3BTrevor&amp;rft.date=2005&amp;rft.volume=67&amp;rft.issue=2&amp;rft.pages=301%E2%80%9320&amp;rft.pub=Wiley&amp;rft_id=info:doi/10.1111%2Fj.1467-9868.2005.00503.x&amp;rft.jstor=3647580&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">
+<cite class="citation book" style="font-style:normal">Hoornweg, Victor (2018). <a class="external text" href="http://www.victorhoornweg.com" rel="nofollow">“Chapter 9”</a>. <i>Science: Under Submission</i>. Hoornweg Press. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-90-829188-0-9" title="特別:文献資料/978-90-829188-0-9">978-90-829188-0-9</a><span style="display:none;">. <a class="external free" href="http://www.victorhoornweg.com" rel="nofollow">http://www.victorhoornweg.com</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Chapter+9&amp;rft.atitle=Science%3A+Under+Submission&amp;rft.aulast=Hoornweg&amp;rft.aufirst=Victor&amp;rft.au=Hoornweg%2C%26%2332%3BVictor&amp;rft.date=2018&amp;rft.pub=Hoornweg+Press&amp;rft.isbn=978-90-829188-0-9&amp;rft_id=&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<div aria-labelledby="統計学" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E7%B5%B1%E8%A8%88%E5%AD%A6&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:統計学 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B5%B1%E8%A8%88%E5%AD%A6&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B5%B1%E8%A8%88%E5%AD%A6&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="統計学" style="font-size:110%;margin:0 6em">統計学</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">標本調査</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A8%99%E6%9C%AC_(%E7%B5%B1%E8%A8%88%E5%AD%A6)" title="標本 (統計学)">標本</a></li>
+<li><a href="/wiki/%E6%AF%8D%E9%9B%86%E5%9B%A3" title="母集団">母集団</a></li>
+<li><a href="/wiki/%E7%84%A1%E4%BD%9C%E7%82%BA%E6%8A%BD%E5%87%BA" title="無作為抽出">無作為抽出</a></li>
+<li><a href="/wiki/%E5%B1%A4%E5%8C%96%E6%8A%BD%E5%87%BA%E6%B3%95" title="層化抽出法">層化抽出法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">記述統計学</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">連続データ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%"><a class="new" href="/w/index.php?title=%E4%BD%8D%E7%BD%AE%E6%AF%8D%E6%95%B0&amp;action=edit&amp;redlink=1" title="位置母数 (存在しないページ)">位置</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%B9%B3%E5%9D%87" title="平均">平均</a>
+<ul><li><a href="/wiki/%E7%AE%97%E8%A1%93%E5%B9%B3%E5%9D%87" title="算術平均">算術</a></li>
+<li><a href="/wiki/%E5%B9%BE%E4%BD%95%E5%B9%B3%E5%9D%87" title="幾何平均">幾何</a></li>
+<li><a href="/wiki/%E8%AA%BF%E5%92%8C%E5%B9%B3%E5%9D%87" title="調和平均">調和</a></li></ul></li>
+<li><a href="/wiki/%E4%B8%AD%E5%A4%AE%E5%80%A4" title="中央値">中央値</a>
+<ul><li><a href="/wiki/%E5%88%86%E4%BD%8D%E6%95%B0" title="分位数">分位数</a></li>
+<li><a href="/wiki/%E9%A0%86%E5%BA%8F%E7%B5%B1%E8%A8%88%E9%87%8F" title="順序統計量">順序統計量</a></li></ul></li>
+<li><a href="/wiki/%E6%9C%80%E9%A0%BB%E5%80%A4" title="最頻値">最頻値</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%9A%8E%E7%B4%9A%E5%80%A4&amp;action=edit&amp;redlink=1" title="階級値 (存在しないページ)">階級値</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">分散</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E7%AF%84%E5%9B%B2_(%E7%B5%B1%E8%A8%88%E5%AD%A6)&amp;action=edit&amp;redlink=1" title="範囲 (統計学) (存在しないページ)">範囲</a></li>
+<li><a href="/wiki/%E5%81%8F%E5%B7%AE" title="偏差">偏差</a></li>
+<li><a href="/wiki/%E5%81%8F%E5%B7%AE%E5%80%A4" title="偏差値">偏差値</a></li>
+<li><a href="/wiki/%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE" title="標準偏差">標準偏差</a></li>
+<li><a href="/wiki/%E6%A8%99%E6%BA%96%E8%AA%A4%E5%B7%AE" title="標準誤差">標準誤差</a></li>
+<li><a href="/wiki/%E5%A4%89%E5%8B%95%E4%BF%82%E6%95%B0" title="変動係数">変動係数</a></li>
+<li><a href="/wiki/%E6%B1%BA%E5%AE%9A%E4%BF%82%E6%95%B0" title="決定係数">決定係数</a></li>
+<li><a href="/wiki/%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0" title="相関係数">相関係数</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E7%9B%B8%E9%96%A2" title="自己相関">自己相関</a></li>
+<li><a href="/wiki/%E5%85%B1%E5%88%86%E6%95%A3" title="共分散">共分散</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E5%85%B1%E5%88%86%E6%95%A3" title="自己共分散">自己共分散</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97" title="分散共分散行列">分散共分散行列</a></li>
+<li><a class="mw-redirect" href="/wiki/%E7%99%BE%E5%88%86%E7%8E%87" title="百分率">百分率</a></li>
+<li><a href="/wiki/%E7%B5%B1%E8%A8%88%E7%9A%84%E3%81%B0%E3%82%89%E3%81%A4%E3%81%8D" title="統計的ばらつき">統計的ばらつき</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">モーメント</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%A3_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="分散 (確率論)">分散</a></li>
+<li><a href="/wiki/%E6%AD%AA%E5%BA%A6" title="歪度">歪度</a></li>
+<li><a href="/wiki/%E5%B0%96%E5%BA%A6" title="尖度">尖度</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">カテゴリデータ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E9%A0%BB%E5%BA%A6_(%E7%B5%B1%E8%A8%88%E5%AD%A6)&amp;action=edit&amp;redlink=1" title="頻度 (統計学) (存在しないページ)">頻度</a></li>
+<li><a href="/wiki/%E5%88%86%E5%89%B2%E8%A1%A8" title="分割表">分割表</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">推計統計学</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">仮説検定</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">パラメトリック</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/T%E6%A4%9C%E5%AE%9A" title="T検定">t検定</a></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%AB%E3%83%81%E3%81%AEt%E6%A4%9C%E5%AE%9A" title="ウェルチのt検定">ウェルチのt検定</a></li>
+<li><a href="/wiki/F%E6%A4%9C%E5%AE%9A" title="F検定">F検定</a></li>
+<li><a href="/wiki/Z%E6%A4%9C%E5%AE%9A" title="Z検定">Z検定</a></li>
+<li><a href="/wiki/%E4%BA%8C%E9%A0%85%E6%A4%9C%E5%AE%9A" title="二項検定">二項検定</a></li>
+<li><a href="/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E2%80%93%E3%83%99%E3%83%A9%E6%A4%9C%E5%AE%9A" title="ジャック–ベラ検定">ジャック–ベラ検定</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%94%E3%83%AD%E2%80%93%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%AF%E6%A4%9C%E5%AE%9A" title="シャピロ–ウィルク検定">シャピロ–ウィルク検定</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%86%E6%9E%90" title="分散分析">分散分析</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%85%B1%E5%88%86%E6%95%A3%E5%88%86%E6%9E%90&amp;action=edit&amp;redlink=1" title="共分散分析 (存在しないページ)">共分散分析</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ノンパラメトリック</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%B3%E3%82%AF%E3%82%BD%E3%83%B3%E3%81%AE%E7%AC%A6%E5%8F%B7%E9%A0%86%E4%BD%8D%E6%A4%9C%E5%AE%9A" title="ウィルコクソンの符号順位検定">ウィルコクソンの符号順位検定</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%9B%E3%82%A4%E3%83%83%E3%83%88%E3%83%8B%E3%83%BC%E3%81%AEU%E6%A4%9C%E5%AE%9A" title="マン・ホイットニーのU検定">マン・ホイットニーのU検定</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%82%A4%E4%BA%8C%E4%B9%97%E6%A4%9C%E5%AE%9A" title="カイ二乗検定">カイ二乗検定</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%82%A7%E3%82%A4%E3%83%84%E3%81%AE%E3%82%AB%E3%82%A4%E4%BA%8C%E4%B9%97%E6%A4%9C%E5%AE%9A" title="イェイツのカイ二乗検定">イェイツのカイ二乗検定</a></li>
+<li><a href="/wiki/%E7%B4%AF%E7%A9%8D%E3%82%AB%E3%82%A4%E4%BA%8C%E4%B9%97%E6%A4%9C%E5%AE%9A" title="累積カイ二乗検定">累積カイ二乗検定</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC%E3%81%AE%E6%AD%A3%E7%A2%BA%E7%A2%BA%E7%8E%87%E6%A4%9C%E5%AE%9A" title="フィッシャーの正確確率検定">フィッシャーの正確確率検定</a></li>
+<li><a href="/wiki/%E5%B0%A4%E5%BA%A6%E6%AF%94%E6%A4%9C%E5%AE%9A" title="尤度比検定">尤度比検定</a></li>
+<li><a href="/wiki/G%E6%A4%9C%E5%AE%9A" title="G検定">G検定</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%BD%E3%83%B3%E2%80%93%E3%83%80%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E6%A4%9C%E5%AE%9A" title="アンダーソン–ダーリング検定">アンダーソン–ダーリング検定</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E2%80%93%E3%82%B9%E3%83%9F%E3%83%AB%E3%83%8E%E3%83%95%E6%A4%9C%E5%AE%9A" title="コルモゴロフ–スミルノフ検定">コルモゴロフ–スミルノフ検定</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%82%A4%E3%83%91%E3%83%BC%E6%A4%9C%E5%AE%9A" title="カイパー検定">カイパー検定</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%B3%E3%83%86%E3%83%AB%E6%A4%9C%E5%AE%9A" title="マンテル検定">マンテル検定</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%B3%E3%83%86%E3%83%AB%E3%83%BB%E3%83%98%E3%83%B3%E3%83%84%E3%82%A7%E3%83%AB%E3%81%AE%E7%B5%B1%E8%A8%88%E9%87%8F" title="コクラン・マンテル・ヘンツェルの統計量">コクラン・マンテル・ヘンツェルの統計量</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E5%B8%B0%E7%84%A1%E4%BB%AE%E8%AA%AC" title="帰無仮説">帰無仮説</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%AF%BE%E7%AB%8B%E4%BB%AE%E8%AA%AC" title="対立仮説">対立仮説</a></li>
+<li><a href="/wiki/%E6%9C%89%E6%84%8F" title="有意">有意</a></li>
+<li><a href="/wiki/%E6%A3%84%E5%8D%B4" title="棄却">棄却</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">区間推定</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BF%A1%E9%A0%BC%E5%8C%BA%E9%96%93" title="信頼区間">信頼区間</a></li>
+<li><a href="/wiki/%E4%BA%88%E6%B8%AC%E5%8C%BA%E9%96%93" title="予測区間">予測区間</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">モデル選択基準</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%B5%A4%E6%B1%A0%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96" title="赤池情報量規準">AIC</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96" title="ベイズ情報量規準">BIC</a></li>
+<li><a href="/wiki/%E5%BA%83%E3%81%8F%E4%BD%BF%E3%81%88%E3%82%8B%E6%83%85%E5%A0%B1%E9%87%8F%E8%A6%8F%E6%BA%96" title="広く使える情報量規準">WAIC</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%B0%8F%E8%A8%98%E8%BF%B0%E9%95%B7" title="最小記述長">MDL</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%81%8F%E3%82%8A" title="偏り">偏り</a></li>
+<li><a href="/wiki/%E5%81%8F%E3%82%8A%E3%81%A8%E5%88%86%E6%95%A3" title="偏りと分散">偏りと分散</a></li>
+<li><a href="/wiki/%E9%81%8E%E5%89%B0%E9%81%A9%E5%90%88" title="過剰適合">過剰適合</a></li>
+<li><a href="/wiki/%E6%8E%A8%E5%AE%9A%E9%87%8F" title="推定量">推定量</a></li>
+<li><a href="/wiki/%E7%82%B9%E6%8E%A8%E5%AE%9A" title="点推定">点推定</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%B0%A4%E6%8E%A8%E5%AE%9A" title="最尤推定">最尤推定</a></li>
+<li><a href="/wiki/%E5%B0%A4%E5%BA%A6%E9%96%A2%E6%95%B0" title="尤度関数">尤度関数</a></li>
+<li><a href="/wiki/%E5%B0%A4%E5%BA%A6%E6%96%B9%E7%A8%8B%E5%BC%8F" title="尤度方程式">尤度方程式</a></li>
+<li><a class="new" href="/w/index.php?title=%E6%9C%80%E5%B0%8F%E8%B7%9D%E9%9B%A2%E6%8E%A8%E5%AE%9A&amp;action=edit&amp;redlink=1" title="最小距離推定 (存在しないページ)">最小距離推定</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%BF%E3%82%A2%E3%83%8A%E3%83%AA%E3%82%B7%E3%82%B9" title="メタアナリシス">メタアナリシス</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%BC%E3%83%88%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E6%B3%95" title="ブートストラップ法">ブートストラップ法</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ベイズ統計学</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">確率</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%B8%BB%E8%A6%B3%E7%A2%BA%E7%8E%87" title="主観確率">主観確率</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E7%A2%BA%E7%8E%87" title="ベイズ確率">ベイズ確率</a></li>
+<li><a href="/wiki/%E4%BA%8B%E5%89%8D%E7%A2%BA%E7%8E%87" title="事前確率">事前確率</a></li>
+<li><a href="/wiki/%E4%BA%8B%E5%BE%8C%E7%A2%BA%E7%8E%87" title="事後確率">事後確率</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%A4%A7%E4%BA%8B%E5%BE%8C%E7%A2%BA%E7%8E%87" title="最大事後確率">最大事後確率</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A" title="ベイズ推定">ベイズ推定</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E5%9B%A0%E5%AD%90" title="ベイズ因子">ベイズ因子</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/%E7%9B%B8%E9%96%A2" title="相関">相関</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BA%A4%E7%B5%A1" title="交絡">交絡変数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%94%E3%82%A2%E3%82%BD%E3%83%B3%E3%81%AE%E7%A9%8D%E7%8E%87%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0" title="ピアソンの積率相関係数">ピアソンの積率相関係数</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%A0%86%E4%BD%8D%E7%9B%B8%E9%96%A2&amp;action=edit&amp;redlink=1" title="順位相関 (存在しないページ)">順位相関</a>（<a href="/wiki/%E3%82%B9%E3%83%94%E3%82%A2%E3%83%9E%E3%83%B3%E3%81%AE%E9%A0%86%E4%BD%8D%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0" title="スピアマンの順位相関係数">スピアマンの順位相関係数</a>・<a href="/wiki/%E3%82%B1%E3%83%B3%E3%83%89%E3%83%BC%E3%83%AB%E3%81%AE%E9%A0%86%E4%BD%8D%E7%9B%B8%E9%96%A2%E4%BF%82%E6%95%B0" title="ケンドールの順位相関係数">ケンドールの順位相関係数</a>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">モデル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%B8%80%E8%88%AC%E7%B7%9A%E5%BD%A2%E3%83%A2%E3%83%87%E3%83%AB" title="一般線形モデル">一般線形モデル</a></li>
+<li><a href="/wiki/%E4%B8%80%E8%88%AC%E5%8C%96%E7%B7%9A%E5%BD%A2%E3%83%A2%E3%83%87%E3%83%AB" title="一般化線形モデル">一般化線形モデル</a></li>
+<li><a href="/wiki/%E6%B7%B7%E5%90%88%E3%83%A2%E3%83%87%E3%83%AB" title="混合モデル">混合モデル</a></li>
+<li><a href="/wiki/%E4%B8%80%E8%88%AC%E5%8C%96%E7%B7%9A%E5%BD%A2%E6%B7%B7%E5%90%88%E3%83%A2%E3%83%87%E3%83%AB" title="一般化線形混合モデル">一般化線形混合モデル</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">回帰</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">線形</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B7%9A%E5%BD%A2%E5%9B%9E%E5%B8%B0" title="線形回帰">線形回帰</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%83%E3%82%B8%E5%9B%9E%E5%B8%B0" title="リッジ回帰">リッジ回帰</a></li>
+<li><a class="mw-selflink selflink">ラッソ回帰</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%A8%E3%83%A9%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%83%8D%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="エラスティックネット (存在しないページ)">エラスティックネット</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">非線形</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/K%E8%BF%91%E5%82%8D%E6%B3%95" title="K近傍法">k近傍法</a></li>
+<li><a href="/wiki/%E6%B1%BA%E5%AE%9A%E6%9C%A8" title="決定木">回帰木</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88" title="ランダムフォレスト">ランダムフォレスト</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3" title="サポートベクターマシン">サポートベクター回帰</a></li>
+<li><a href="/wiki/%E5%B0%84%E5%BD%B1%E8%BF%BD%E8%B7%A1%E5%9B%9E%E5%B8%B0" title="射影追跡回帰">射影追跡回帰</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">時系列</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%87%AA%E5%B7%B1%E5%9B%9E%E5%B8%B0%E3%83%A2%E3%83%87%E3%83%AB" title="自己回帰モデル">自己回帰モデル</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E5%9B%9E%E5%B8%B0%E7%A7%BB%E5%8B%95%E5%B9%B3%E5%9D%87%E3%83%A2%E3%83%87%E3%83%AB" title="自己回帰移動平均モデル">自己回帰移動平均モデル</a></li>
+<li><a href="/wiki/ARCH%E3%83%A2%E3%83%87%E3%83%AB" title="ARCHモデル">ARCHモデル</a></li>
+<li><a href="/wiki/%E5%AF%BE%E7%A7%BB%E5%8B%95%E5%B9%B3%E5%9D%87%E6%AF%94%E7%8E%87%E6%B3%95" title="対移動平均比率法">対移動平均比率法</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89%E5%AE%9A%E5%B8%B8" title="トレンド定常">トレンド定常</a></li>
+<li><a href="/wiki/%E5%82%BE%E5%90%91%E6%8E%A8%E5%AE%9A" title="傾向推定">傾向推定</a></li>
+<li><a href="/wiki/%E5%85%B1%E5%92%8C%E5%88%86" title="共和分">共和分</a></li>
+<li><a href="/wiki/%E6%A7%8B%E9%80%A0%E5%A4%89%E5%8C%96" title="構造変化">構造変化</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">分類</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">線形</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>線形<a href="/wiki/%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90" title="判別分析">判別分析</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%82%B8%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E5%9B%9E%E5%B8%B0" title="ロジスティック回帰">ロジスティック回帰</a></li>
+<li><a href="/wiki/%E5%8D%98%E7%B4%94%E3%83%99%E3%82%A4%E3%82%BA%E5%88%86%E9%A1%9E%E5%99%A8" title="単純ベイズ分類器">単純ベイズ分類器</a></li>
+<li>単純<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BB%E3%83%97%E3%83%88%E3%83%AD%E3%83%B3" title="パーセプトロン">パーセプトロン</a></li>
+<li>線形<a href="/wiki/%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3" title="サポートベクターマシン">サポートベクターマシン</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">二次</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>二次<a href="/wiki/%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90" title="判別分析">判別分析</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">非線形</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/K%E8%BF%91%E5%82%8D%E6%B3%95" title="K近傍法">k近傍法</a></li>
+<li><a href="/wiki/%E6%B1%BA%E5%AE%9A%E6%9C%A8" title="決定木">決定木</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88" title="ランダムフォレスト">ランダムフォレスト</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3" title="サポートベクターマシン">サポートベクターマシン</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%B8%E3%82%A2%E3%83%B3%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ベイジアンネットワーク">ベイジアンネットワーク</a></li>
+<li><a href="/wiki/%E9%9A%A0%E3%82%8C%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%83%A2%E3%83%87%E3%83%AB" title="隠れマルコフモデル">隠れマルコフモデル</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BA%8C%E9%A0%85%E5%88%86%E9%A1%9E" title="二項分類">二項分類</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%A4%9A%E3%82%AF%E3%83%A9%E3%82%B9%E5%88%86%E9%A1%9E&amp;action=edit&amp;redlink=1" title="多クラス分類 (存在しないページ)">多クラス分類</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">第一種過誤と第二種過誤</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">教師なし学習</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">クラスタリング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/K%E5%B9%B3%E5%9D%87%E6%B3%95" title="K平均法">k平均法</a>（<a href="/wiki/K-means%2B%2B%E6%B3%95" title="K-means++法">k-means++法</a>）</li>
+<li><a href="/wiki/DBSCAN" title="DBSCAN">DBSCAN</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AF%86%E5%BA%A6%E6%8E%A8%E5%AE%9A&amp;action=edit&amp;redlink=1" title="密度推定 (存在しないページ)">密度推定</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:density_estimation&amp;action=edit&amp;redlink=1" title="En:density estimation (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB%E5%AF%86%E5%BA%A6%E6%8E%A8%E5%AE%9A" title="カーネル密度推定">カーネル密度推定</a>（<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB_(%E7%B5%B1%E8%A8%88%E5%AD%A6)" title="カーネル (統計学)">カーネル</a>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90" title="主成分分析">主成分分析</a></li>
+<li><a href="/wiki/%E7%8B%AC%E7%AB%8B%E6%88%90%E5%88%86%E5%88%86%E6%9E%90" title="独立成分分析">独立成分分析</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E7%B5%84%E7%B9%94%E5%8C%96%E5%86%99%E5%83%8F" title="自己組織化写像">自己組織化写像</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">統計図表</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%A3%92%E3%82%B0%E3%83%A9%E3%83%95" title="棒グラフ">棒グラフ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%82%A4%E3%83%97%E3%83%AD%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="バイプロット (存在しないページ)">バイプロット</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Biplot&amp;action=edit&amp;redlink=1" title="En:Biplot (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%AE%B1%E3%81%B2%E3%81%92%E5%9B%B3" title="箱ひげ図">箱ひげ図</a></li>
+<li><a href="/wiki/%E7%AE%A1%E7%90%86%E5%9B%B3" title="管理図">管理図</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A3%AE%E6%9E%97%E3%83%97%E3%83%AD%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="森林プロット (存在しないページ)">森林プロット</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Forest_plot&amp;action=edit&amp;redlink=1" title="En:Forest plot (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0" title="ヒストグラム">ヒストグラム</a></li>
+<li><a href="/wiki/%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95" title="円グラフ">円グラフ</a></li>
+<li><a href="/wiki/Q-Q%E3%83%97%E3%83%AD%E3%83%83%E3%83%88" title="Q-Qプロット">Q-Qプロット</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%A9%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88&amp;action=edit&amp;redlink=1" title="ランチャート (存在しないページ)">ランチャート</a></li>
+<li><a href="/wiki/%E6%95%A3%E5%B8%83%E5%9B%B3" title="散布図">散布図</a></li>
+<li><a href="/wiki/%E5%B9%B9%E8%91%89%E8%A1%A8%E7%A4%BA" title="幹葉表示">幹葉図</a></li>
+<li><a href="/wiki/%E3%83%90%E3%82%A4%E3%82%AA%E3%83%AA%E3%83%B3%E5%9B%B3" title="バイオリン図">バイオリン図</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%83%83%E3%83%88" title="ドットプロット">ドットプロット</a></li>
+<li><a href="/wiki/%E3%83%92%E3%83%BC%E3%83%88%E3%83%9E%E3%83%83%E3%83%97" title="ヒートマップ">ヒートマップ</a></li>
+<li><a href="/wiki/%E9%9A%8E%E7%B4%9A%E5%8C%BA%E5%88%86%E5%9B%B3" title="階級区分図">階級区分図</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="new" href="/w/index.php?title=%E7%94%9F%E5%AD%98%E6%99%82%E9%96%93%E5%88%86%E6%9E%90&amp;action=edit&amp;redlink=1" title="生存時間分析 (存在しないページ)">生存時間分析</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E7%94%9F%E5%AD%98%E6%99%82%E9%96%93%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" title="生存時間関数 (存在しないページ)">生存時間関数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%9D%E3%83%9E%E3%82%A4%E3%83%A4%E3%83%BC%E6%8E%A8%E5%AE%9A%E9%87%8F&amp;action=edit&amp;redlink=1" title="カプラン＝マイヤー推定量 (存在しないページ)">カプラン＝マイヤー推定量</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kaplan%E2%80%93Meier_estimator&amp;action=edit&amp;redlink=1" title="En:Kaplan–Meier estimator (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%B3%E3%82%AF%E6%A4%9C%E5%AE%9A&amp;action=edit&amp;redlink=1" title="ログランク検定 (存在しないページ)">ログランク検定</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Logrank_test&amp;action=edit&amp;redlink=1" title="En:Logrank test (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="new" href="/w/index.php?title=%E6%95%85%E9%9A%9C%E7%8E%87&amp;action=edit&amp;redlink=1" title="故障率 (存在しないページ)">故障率</a></li>
+<li><a class="new" href="/w/index.php?title=%E6%AF%94%E4%BE%8B%E3%83%8F%E3%82%B6%E3%83%BC%E3%83%89%E3%83%A2%E3%83%87%E3%83%AB&amp;action=edit&amp;redlink=1" title="比例ハザードモデル (存在しないページ)">比例ハザードモデル</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%AD%A6%E6%AD%B4%E5%8F%B2&amp;action=edit&amp;redlink=1" title="統計学歴史 (存在しないページ)">歴史</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%AD%A6%E6%AD%B4%E5%8F%B2&amp;action=edit&amp;redlink=1" title="統計学歴史 (存在しないページ)">統計学歴史</a></li>
+<li><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%AE%E5%89%B5%E5%A7%8B%E8%80%85&amp;action=edit&amp;redlink=1" title="統計学の創始者 (存在しないページ)">統計学の創始者</a></li>
+<li><a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E8%AB%96%E3%81%A8%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%AE%E6%AD%A9%E3%81%BF&amp;action=edit&amp;redlink=1" title="確率論と統計学の歩み (存在しないページ)">確率論と統計学の歩み</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%A4%BE%E4%BC%9A%E7%B5%B1%E8%A8%88%E5%AD%A6" title="社会統計学">社会統計学</a></li>
+<li><a href="/wiki/%E7%96%AB%E5%AD%A6" title="疫学">疫学</a></li>
+<li><a href="/wiki/%E7%94%9F%E7%89%A9%E7%B5%B1%E8%A8%88%E5%AD%A6" title="生物統計学">生物統計学</a></li>
+<li><a href="/wiki/%E7%B5%B1%E8%A8%88%E5%8A%9B%E5%AD%A6" title="統計力学">統計力学</a></li>
+<li><a href="/wiki/%E8%A8%88%E9%87%8F%E7%B5%8C%E6%B8%88%E5%AD%A6" title="計量経済学">計量経済学</a></li>
+<li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92" title="機械学習">機械学習</a></li>
+<li><a href="/wiki/%E5%AE%9F%E9%A8%93%E8%A8%88%E7%94%BB%E6%B3%95" title="実験計画法">実験計画法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">出版物</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E5%AD%A6%E8%A1%93%E8%AA%8C%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="統計学に関する学術誌一覧 (存在しないページ)">統計学に関する学術誌一覧</a></li>
+<li><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E9%87%8D%E8%A6%81%E3%81%AA%E5%87%BA%E7%89%88%E7%89%A9%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="統計学における重要な出版物一覧 (存在しないページ)">重要な出版物</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%96%B9%E5%90%91%E7%B5%B1%E8%A8%88%E5%AD%A6" title="方向統計学">方向統計学</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">全般</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%B1%E8%A8%88%E5%AD%A6%E3%81%8A%E3%82%88%E3%81%B3%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%81%AE%E8%A9%95%E4%BE%A1%E6%8C%87%E6%A8%99" title="統計学および機械学習の評価指標">統計学および機械学習の評価指標</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%B1%E8%A8%88%E5%AD%A6" title="カテゴリ:統計学">カテゴリ</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402052525
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.392 seconds
+Real time usage: 0.571 seconds
+Preprocessor visited node count: 5762/1000000
+Post‐expand include size: 136985/2097152 bytes
+Template argument size: 9161/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 14/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 12274/5000000 bytes
+Lua time usage: 0.130/7 seconds
+Lua virtual size: 7319552/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  467.128      1 -total
+ 52.10%  243.353      1 テンプレート:Reflist
+ 45.44%  212.261      6 テンプレート:Citation/core
+ 29.68%  138.630      5 テンプレート:Cite_journal
+ 24.12%  112.669      9 テンプレート:Navbox
+ 20.74%   96.885      7 テンプレート:Citation/identifier
+ 20.20%   94.380      1 テンプレート:Cite_book
+ 19.97%   93.304     15 テンプレート:仮リンク
+ 16.45%   76.861      1 テンプレート:統計学
+ 16.30%   76.122      1 テンプレート:ISBN2
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4133603-0!canonical and timestamp 20220402052524 and revision id 2445903. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ラッソ回帰&amp;oldid=2445903">http://localhost:8080/w/index.php?title=ラッソ回帰&amp;oldid=2445903</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%BF%BB%E8%A8%B3%E7%9B%B4%E5%BE%8C" title="カテゴリ:翻訳直後">翻訳直後</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%94%B9%E8%A8%B3%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:改訳が必要なページ">改訳が必要なページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A7%A3%E6%B6%88%E6%B8%88%E3%81%BF%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:解消済み仮リンクを含む記事">解消済み仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%9B%9E%E5%B8%B0%E5%88%86%E6%9E%90" title="カテゴリ:回帰分析">回帰分析</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9C%AA%E6%9F%BB%E8%AA%AD%E3%81%AE%E7%BF%BB%E8%A8%B3%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:未査読の翻訳があるページ">未査読の翻訳があるページ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;returntoquery=curid%3D4133603%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;returntoquery=curid%3D4133603%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;oldid=2445903" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%A9%E3%83%83%E3%82%BD%E5%9B%9E%E5%B8%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月25日 (金) 10:55 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.392","walltime":"0.571","ppvisitednodes":{"value":5762,"limit":1000000},"postexpandincludesize":{"value":136985,"limit":2097152},"templateargumentsize":{"value":9161,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":14,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":12274,"limit":5000000},"timingprofile":["100.00%  467.128      1 -total"," 52.10%  243.353      1 テンプレート:Reflist"," 45.44%  212.261      6 テンプレート:Citation/core"," 29.68%  138.630      5 テンプレート:Cite_journal"," 24.12%  112.669      9 テンプレート:Navbox"," 20.74%   96.885      7 テンプレート:Citation/identifier"," 20.20%   94.380      1 テンプレート:Cite_book"," 19.97%   93.304     15 テンプレート:仮リンク"," 16.45%   76.861      1 テンプレート:統計学"," 16.30%   76.122      1 テンプレート:ISBN2"]},"scribunto":{"limitreport-timeusage":{"value":"0.130","limit":"7"},"limitreport-virtmemusage":{"value":7319552,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402052525","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1731});});</script>
+</body></html>

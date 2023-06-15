@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Windows Identity Foundation - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Windows_Identity_Foundation rootpage-Windows_Identity_Foundation skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Windows Identity Foundation</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>Windows Identity Foundation</b> (WIF) は、<a href="." id="link_a_1" title="マイクロソフト">マイクロソフト</a>が開発した<a href="." id="link_a_2" title="クレーム （認証） (存在しないページ)">クレームベース認証</a>に対応のアプリケーションを構築するためのフレームワーク。<a href="." id="link_a_3" title="ASP.NET">ASP.NET</a>または<a href="." id="link_a_4" title="Windows Communication Foundation">WCF</a>ベースの<a href="." id="link_a_5" title="セキュリティトークン">セキュリティトークンサービス</a>を構築するための<a href="." id="link_a_6" title="アプリケーションプログラミングインタフェース">API</a>と、クレーム対応および連合可能なアプリケーションを構築するためのツールを提供する。バージョン1.0では独立した製品として公開されたが、現在は<a href="." id="link_a_7" title=".NET Framework">.NET Framework</a> 4.5の一部として構成されている<sup class="reference" id="cite_ref-FOOTNOTEMSDN(WIF)_1-0"><a href="#cite_note-FOOTNOTEMSDN(WIF)-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#技術的背景"><span class="tocnumber">1</span> <span class="toctext">技術的背景</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#主な機能"><span class="tocnumber">2</span> <span class="toctext">主な機能</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#関連"><span class="tocnumber">3</span> <span class="toctext">関連</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#出典"><span class="tocnumber">5</span> <span class="toctext">出典　</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.8A.80.E8.A1.93.E7.9A.84.E8.83.8C.E6.99.AF"></span><span class="mw-headline" id="技術的背景">技術的背景</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit&amp;section=1" title="節を編集: 技術的背景">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>認証に関しては旧来、下記のような課題があった<sup class="reference" id="cite_ref-FOOTNOTEMSDN(.NET)_2-0"><a href="#cite_note-FOOTNOTEMSDN(.NET)-2">[2]</a></sup>。
+</p>
+<ul><li><b>セキュリティ管理</b> : ログインなどの認証機能をWebアプリケーションへ実装する開発者は一般にセキュリティ専門家ではないため、セキュリティに強いID管理機能を実装するハードルが高かった。</li>
+<li><b>サービス独自の認証</b> : ひとつの企業でも多くのWebアプリケーションを提供するが、Webアプリケーションごとに認証方式が異なり、認証システムの構築自体にコストがかかる。また、巨大な統一認証システムも構築に高度な専門技術が必要な上、<a href="/wiki/M%26A" title="M&amp;A">M＆A</a>などによる再構築リスクが非常に高くなり、柔軟性がない。</li></ul>
+<p>マイクロソフトはこのような課題から、認証の機能を一元化した手法を考案し、サードパーティも含め業界共通に相互運用可能なシステムである<a class="mw-redirect" href="/wiki/%E3%83%95%E3%82%A7%E3%83%87%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3ID" title="フェデレーションID">フェデレーションID</a>を構想した。フェデレーションIDは<a href="/wiki/Active_Directory" title="Active Directory">Active Directory フェデレーションサービス(ADFS)</a>、<a href="/wiki/Windows_CardSpace" title="Windows CardSpace">Windows CardSpace</a>、<b>WIF</b>の３つのコンポーネントから構築される。これらの一部を担う <b>WIF</b>は、クレームベースのIDモデルと認証に特化したフレームワークとして旧来の技術的課題を解決している。
+</p>
+<h2><span id=".E4.B8.BB.E3.81.AA.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="主な機能">主な機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit&amp;section=2" title="節を編集: 主な機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>WIFには下記の主な特徴がある<sup class="reference" id="cite_ref-FOOTNOTEMSDN(WIF)_1-1"><a href="#cite_note-FOOTNOTEMSDN(WIF)-1">[1]</a></sup>。
+</p>
+<ul><li>開発者は、開発者が<a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%A0_%EF%BC%88%E8%AA%8D%E8%A8%BC%EF%BC%89&amp;action=edit&amp;redlink=1" title="クレーム （認証） (存在しないページ)">クレーム</a>に基づいてアプリケーションへのアクセスを決定するためのコードを記述するのに役立つ<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="アプリケーションプログラミングインタフェース">API</a>のセットを提供することにより、クレーム対応アプリケーションを構築が可能。</li>
+<li>開発者がクレーム対応アプリケーションの構築を開始できるようにするためのテンプレートが用意されている。</li>
+<li>クレーム対応アプリケーション（<a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3&amp;action=edit&amp;redlink=1" title="リライングパーティ (存在しないページ)">リライングパーティアプリケーション</a>またはRPとも呼ばれる）と<a class="new" href="/w/index.php?title=%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9&amp;action=edit&amp;redlink=1" title="セキュリティトークンサービス (存在しないページ)">セキュリティトークンサービス</a>（STS）との間の信頼関係の作成を容易にするユーティリティを提供する。</li>
+<li>開発者がクレーム対応アプリケーションでWebページを作成するのに役立つ一連のASP.NETコントロールを提供する。</li>
+<li>開発者がクレームと<a class="new" href="/w/index.php?title=NT%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3&amp;action=edit&amp;redlink=1" title="NTトークン (存在しないページ)">NTトークン</a>の間で翻訳するのに役立つユーティリティが含まれているため、クレーム対応アプリケーションを使用してNTトークンベースのIDを必要とするリソースにアクセスすることができる。</li>
+<li>これには、アイデンティティが複数のサービス境界にわたって維持され、クレームの委任が可能になる機能が含まれる。</li>
+<li>開発者が<a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>または<a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a>を使用してカスタムセキュリティトークンサービスを構築するためのツールを提供する。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3"></span><span class="mw-headline" id="関連">関連</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit&amp;section=3" title="節を編集: 関連">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A7%E3%83%87%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3&amp;action=edit&amp;redlink=1" title="フェデレーション (存在しないページ)">フェデレーション</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3%E7%AE%A1%E7%90%86" title="アイデンティティ管理">アイデンティティ管理</a></li>
+<li><a href="/wiki/%E8%AA%8D%E8%A8%BC" title="認証">認証</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit&amp;section=4" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-FOOTNOTEMSDN(WIF)-1">^ <a href="#cite_ref-FOOTNOTEMSDN(WIF)_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEMSDN(WIF)_1-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFMSDN(WIF)">MSDN(WIF)</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTEMSDN(.NET)-2"><b><a href="#cite_ref-FOOTNOTEMSDN(.NET)_2-0">^</a></b> <span class="reference-text"><a href="#CITEREFMSDN(.NET)">MSDN(.NET)</a>.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典　</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit&amp;section=5" title="節を編集: 出典　">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><cite class="citation web" id="CITEREFMSDN(WIF)" style="font-style:normal">MSDN(WIF). “<a class="external text" href="https://msdn.microsoft.com/ja-jp/library/ee748475.aspx" rel="nofollow">Windows Identity Foundation の概要</a>”.   Microsoft. <span title="">2017年10月2日</span>閲覧。</cite>
+</p><p><cite class="citation web" id="CITEREFMSDN(.NET)" style="font-style:normal">MSDN(.NET). “<a class="external text" href="https://msdn.microsoft.com/ja-jp/library/ee517276.aspx" rel="nofollow">.NET開発 ID管理概要</a>”.   Microsoft. <span title="">2017年10月2日</span>閲覧。</cite>
+</p>
+<div aria-labelledby=".NET_Framework（カテゴリ）" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:.NET&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:.NET (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A.NET&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A.NET&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id=".NET_Framework（カテゴリ）" style="font-size:110%;margin:0 6em">.NET Framework<span style="font-weight:normal; font-size:smaller">（<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:.NET_Framework" title="カテゴリ:.NET Framework">カテゴリ</a>）</span></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">アーキテクチャ</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E5%9F%BA%E7%9B%A4" title="共通言語基盤">共通言語基盤</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA_(%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E5%9F%BA%E7%9B%A4)" title="アセンブリ (共通言語基盤)">アセンブリ</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF_(%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E5%9F%BA%E7%9B%A4)" title="メタデータ (共通言語基盤)">メタデータ</a></li>
+<li><a href="/wiki/%E5%9F%BA%E6%9C%AC%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="基本クラスライブラリ">基本クラスライブラリ</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BB%AE%E6%83%B3%E5%AE%9F%E8%A1%8C%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="仮想実行システム">仮想実行システム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">共通言語基盤</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E3%83%A9%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0" title="共通言語ランタイム">共通言語ランタイム</a></li>
+<li><a href="/wiki/%E5%85%B1%E9%80%9A%E5%9E%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="共通型システム">共通型システム</a></li>
+<li><a href="/wiki/%E5%85%B1%E9%80%9A%E4%B8%AD%E9%96%93%E8%A8%80%E8%AA%9E" title="共通中間言語">共通中間言語</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E8%A8%80%E8%AA%9E%E3%83%A9%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0" title="動的言語ランタイム">動的言語ランタイム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">言語</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_Sharp" title="C Sharp">C#</a></li>
+<li><a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a></li>
+<li><a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a> <small>（<a href="/wiki/C%2B%2B%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E6%8B%A1%E5%BC%B5" title="C++マネージ拡張">マネージ拡張</a>）</small></li>
+<li><a href="/wiki/F_Sharp" title="F Sharp">F#</a></li>
+<li><a href="/wiki/J_Sharp" title="J Sharp">J#</a></li>
+<li><a href="/wiki/JScript" title="JScript">JScript .NET</a></li>
+<li><a class="mw-redirect" href="/wiki/Windows_PowerShell" title="Windows PowerShell">Windows PowerShell</a></li>
+<li><a href="/wiki/IronPython" title="IronPython">IronPython</a></li>
+<li><a href="/wiki/IronRuby" title="IronRuby">IronRuby</a></li>
+<li><a href="/wiki/Nemerle" title="Nemerle">Nemerle</a></li>
+<li><a href="/wiki/Boo_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="Boo (プログラミング言語)">Boo</a></li>
+<li><a href="/wiki/Phalanger" title="Phalanger">Phalanger</a><small>（PHPコンパイラ）</small></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li>
+<li><a href="/wiki/Windows_Workflow_Foundation" title="Windows Workflow Foundation">WF</a></li>
+<li><a href="/wiki/Windows_CardSpace" title="Windows CardSpace">WCS</a></li>
+<li><a href="/wiki/Windows_Forms" title="Windows Forms">Windows Forms</a></li>
+<li><a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a></li>
+<li><a href="/wiki/ADO.NET" title="ADO.NET">ADO.NET</a></li>
+<li><a href="/wiki/ASP.NET_MVC_Framework" title="ASP.NET MVC Framework">ASP.NET MVC Framework</a></li>
+<li><a href="/wiki/ClickOnce" title="ClickOnce">ClickOnce</a></li>
+<li><a href="/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a></li>
+<li><a href="/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="/wiki/%E7%B5%B1%E5%90%88%E8%A8%80%E8%AA%9E%E3%82%AF%E3%82%A8%E3%83%AA" title="統合言語クエリ">LINQ</a></li>
+<li><a href="/wiki/.NET_Remoting" title=".NET Remoting">.NET Remoting</a></li>
+<li><a href="/wiki/MSBuild" title="MSBuild">MSBuild</a></li>
+<li><a href="/wiki/XSP_(Web%E3%82%B5%E3%83%BC%E3%83%90)" title="XSP (Webサーバ)">XSP</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他のCLI実装</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%BC%E3%83%89%E3%82%BD%E3%83%BC%E3%82%B9%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E5%9F%BA%E7%9B%A4" title="シェアードソース共通言語基盤">シェアードソースCLI</a></li>
+<li><a href="/wiki/Mono_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Mono (ソフトウェア)">Mono</a></li>
+<li><a class="new" href="/w/index.php?title=Portable.NET&amp;action=edit&amp;redlink=1" title="Portable.NET (存在しないページ)">Portable.NET</a></li>
+<li><a href="/wiki/.NET_Core" title=".NET Core">.NET Core</a></li>
+<li><a href="/wiki/.NET_Compact_Framework" title=".NET Compact Framework">.NET Compact Framework</a></li>
+<li><a href="/wiki/Microsoft_XNA" title="Microsoft XNA">Microsoft XNA</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">組織</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/.NET_Foundation" title=".NET Foundation">.NET Foundation</a></li>
+<li><a href="/wiki/Xamarin" title="Xamarin">Xamarin</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="マイクロソフトのAPIとフレームワーク" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Microsoft_APIs&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Microsoft APIs (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMicrosoft_APIs&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AMicrosoft_APIs&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="マイクロソフトのAPIとフレームワーク" style="font-size:110%;margin:0 6em">マイクロソフトのAPIとフレームワーク</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">グラフィック</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Desktop_Window_Manager" title="Desktop Window Manager">Desktop Window Manager</a></li>
+<li><a href="/wiki/Direct2D" title="Direct2D">Direct2D</a></li>
+<li><a href="/wiki/Direct3D" title="Direct3D">Direct3D</a> <a class="new" href="/w/index.php?title=D3DX&amp;action=edit&amp;redlink=1" title="D3DX (存在しないページ)">(拡張)</a></li>
+<li><a href="/wiki/Graphics_Device_Interface" title="Graphics Device Interface">GDI / GDI+</a></li>
+<li><a href="/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="/wiki/Windows_%E3%82%AB%E3%83%A9%E3%83%BC_%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="Windows カラー システム">Windows Color System</a></li>
+<li><a href="/wiki/Windows_Image_Acquisition" title="Windows Image Acquisition">Windows Image Acquisition</a></li>
+<li><a href="/wiki/Windows_Imaging_Component" title="Windows Imaging Component">Windows Imaging Component</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">オーディオ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=DirectMusic&amp;action=edit&amp;redlink=1" title="DirectMusic (存在しないページ)">DirectMusic</a></li>
+<li><a href="/wiki/DirectSound" title="DirectSound">DirectSound</a></li>
+<li><a class="new" href="/w/index.php?title=DirectX_plugin&amp;action=edit&amp;redlink=1" title="DirectX plugin (存在しないページ)">DirectX plugin</a></li>
+<li><a href="/wiki/XACT" title="XACT">XACT</a></li>
+<li><a href="/wiki/Speech_Application_Programming_Interface" title="Speech Application Programming Interface">Speech API</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マルチメディア</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/DirectX" title="DirectX">DirectX</a> (<a class="new" href="/w/index.php?title=DirectX_Media_Objects&amp;action=edit&amp;redlink=1" title="DirectX Media Objects (存在しないページ)">Media Objects</a></li>
+<li><a href="/wiki/DirectX_Video_Acceleration" title="DirectX Video Acceleration">Video Acceleration</a>)</li>
+<li><a href="/wiki/DirectInput" title="DirectInput">DirectInput</a></li>
+<li><a class="new" href="/w/index.php?title=DirectPlay&amp;action=edit&amp;redlink=1" title="DirectPlay (存在しないページ)">DirectPlay</a></li>
+<li><a href="/wiki/DirectShow" title="DirectShow">DirectShow</a></li>
+<li><a href="/wiki/Image_Mastering_API" title="Image Mastering API">Image Mastering API</a></li>
+<li><a class="new" href="/w/index.php?title=Managed_DirectX&amp;action=edit&amp;redlink=1" title="Managed DirectX (存在しないページ)">Managed DirectX</a></li>
+<li><a href="/wiki/Media_Foundation" title="Media Foundation">Media Foundation</a></li>
+<li><a href="/wiki/Microsoft_XNA" title="Microsoft XNA">XNA</a></li>
+<li><a href="/wiki/Windows_Media" title="Windows Media">Windows Media</a></li>
+<li><a href="/wiki/Video_for_Windows" title="Video for Windows">Video for Windows</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ウェブ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Trident" title="Trident">MSHTML</a></li>
+<li><a href="/wiki/EdgeHTML" title="EdgeHTML">EdgeHTML</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_RSS_Platform&amp;action=edit&amp;redlink=1" title="Windows RSS Platform (存在しないページ)">RSS Platform</a></li>
+<li><a href="/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="/wiki/VBScript" title="VBScript">VBScript</a></li>
+<li><a href="/wiki/Browser_Helper_Object" title="Browser Helper Object">BHO</a></li>
+<li><a href="/wiki/XMLHttpRequest" title="XMLHttpRequest">XDR</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Gadgets&amp;action=edit&amp;redlink=1" title="Microsoft Gadgets (存在しないページ)">SideBar Gadgets</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">データアクセス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microsoft_Data_Access_Components" title="Microsoft Data Access Components">Data Access Components</a></li>
+<li><a class="new" href="/w/index.php?title=Extensible_Storage_Engine&amp;action=edit&amp;redlink=1" title="Extensible Storage Engine (存在しないページ)">Extensible Storage Engine</a></li>
+<li><a href="/wiki/ADO.NET" title="ADO.NET">ADO.NET</a></li>
+<li><a class="mw-redirect" href="/wiki/ADO.NET_Entity_Framework" title="ADO.NET Entity Framework">ADO.NET Entity Framework</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Sync_Framework&amp;action=edit&amp;redlink=1" title="Microsoft Sync Framework (存在しないページ)">Sync Framework</a></li>
+<li><a href="/wiki/Microsoft_Jet_Database_Engine" title="Microsoft Jet Database Engine">Jet Engine</a></li>
+<li><a class="new" href="/w/index.php?title=MSXML&amp;action=edit&amp;redlink=1" title="MSXML (存在しないページ)">MSXML</a></li>
+<li><a href="/wiki/OLE_DB" title="OLE DB">OLE DB</a></li>
+<li><a href="/wiki/Open_Packaging_Conventions" title="Open Packaging Conventions">OPC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ネットワーク</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Winsock" title="Winsock">Winsock</a> (<a class="new" href="/w/index.php?title=Layered_Service_Provider&amp;action=edit&amp;redlink=1" title="Layered Service Provider (存在しないページ)">LSP</a>)</li>
+<li><a class="new" href="/w/index.php?title=Windows_Vista_networking_technologies&amp;action=edit&amp;redlink=1" title="Windows Vista networking technologies (存在しないページ)">Winsock Kernel</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_Filtering_Platform&amp;action=edit&amp;redlink=1" title="Windows Filtering Platform (存在しないページ)">Filtering Platform</a></li>
+<li><a href="/wiki/Network_Driver_Interface_Specification" title="Network Driver Interface Specification">Network Driver Interface Specification</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_Rally&amp;action=edit&amp;redlink=1" title="Windows Rally (存在しないページ)">Windows Rally</a></li>
+<li><a href="/wiki/Background_Intelligent_Transfer_Service" title="Background Intelligent Transfer Service">BITS</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_Vista_networking_technologies&amp;action=edit&amp;redlink=1" title="Windows Vista networking technologies (存在しないページ)">P2P API</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Message_Queuing&amp;action=edit&amp;redlink=1" title="Microsoft Message Queuing (存在しないページ)">MSMQ</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Messaging_Passing_Interface&amp;action=edit&amp;redlink=1" title="Microsoft Messaging Passing Interface (存在しないページ)">MS MPI</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コミュニケーション</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Messaging_Application_Programming_Interface" title="Messaging Application Programming Interface">Messaging API</a></li>
+<li><a class="new" href="/w/index.php?title=Telephony_Application_Programming_Interface&amp;action=edit&amp;redlink=1" title="Telephony Application Programming Interface (存在しないページ)">Telephony API</a></li>
+<li><a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">管理</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Win32%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB" title="Win32コンソール">Win32 console</a></li>
+<li><a href="/wiki/Windows_Script_Host" title="Windows Script Host">Windows Script Host</a></li>
+<li><a href="/wiki/Windows_Management_Instrumentation" title="Windows Management Instrumentation">WMI</a></li>
+<li><a class="mw-redirect" href="/wiki/Windows_PowerShell" title="Windows PowerShell">PowerShell</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%A9" title="タスクスケジューラ">Task Scheduler</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_Vista_I/O_technologies&amp;action=edit&amp;redlink=1" title="Windows Vista I/O technologies (存在しないページ)">Offline Files</a></li>
+<li><a class="new" href="/w/index.php?title=Shadow_Copy&amp;action=edit&amp;redlink=1" title="Shadow Copy (存在しないページ)">Shadow Copy</a></li>
+<li><a href="/wiki/Microsoft_Windows_Installer" title="Microsoft Windows Installer">Windows Installer</a></li>
+<li><a class="new" href="/w/index.php?title=Windows_Error_Reporting&amp;action=edit&amp;redlink=1" title="Windows Error Reporting (存在しないページ)">Error Reporting</a></li>
+<li><a class="new" href="/w/index.php?title=Event_Viewer&amp;action=edit&amp;redlink=1" title="Event Viewer (存在しないページ)">Event Log</a></li>
+<li><a class="new" href="/w/index.php?title=Common_Log_File_System&amp;action=edit&amp;redlink=1" title="Common Log File System (存在しないページ)">Common Log File System</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンポーネントモデル</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Component_Object_Model" title="Component Object Model">COM</a></li>
+<li><a href="/wiki/Component_Object_Model#COM+" title="Component Object Model">COM+</a></li>
+<li><a href="/wiki/ActiveX" title="ActiveX">ActiveX</a></li>
+<li><a href="/wiki/Distributed_Component_Object_Model" title="Distributed Component Object Model">Distributed Component Object Model</a></li>
+<li><a href="/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ライブラリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%9F%BA%E6%9C%AC%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="基本クラスライブラリ">Base Class Library (BCL)</a></li>
+<li><a href="/wiki/Microsoft_Foundation_Class" title="Microsoft Foundation Class">Microsoft Foundation Classes (MFC)</a></li>
+<li><a href="/wiki/Active_Template_Library" title="Active Template Library">Active Template Library (ATL)</a></li>
+<li><a href="/wiki/Windows_Template_Library" title="Windows Template Library">Windows Template Library (WTL)</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">デバイスドライバ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Windows_Driver_Model" title="Windows Driver Model">Windows Driver Model</a></li>
+<li><a href="/wiki/Windows_Driver_Foundation" title="Windows Driver Foundation">Windows Driver Foundation</a>
+<ul><li><a class="mw-redirect" href="/wiki/Kernel-Mode_Driver_Framework" title="Kernel-Mode Driver Framework">KMDF</a></li>
+<li><a class="mw-redirect" href="/wiki/User-Mode_Driver_Framework" title="User-Mode Driver Framework">UMDF</a></li></ul></li>
+<li><a href="/wiki/Windows_Display_Driver_Model" title="Windows Display Driver Model">WDDM</a></li>
+<li><a href="/wiki/Network_Driver_Interface_Specification" title="Network Driver Interface Specification">NDIS</a></li>
+<li><a class="new" href="/w/index.php?title=Universal_Audio_Architecture&amp;action=edit&amp;redlink=1" title="Universal Audio Architecture (存在しないページ)">UAA</a></li>
+<li><a class="new" href="/w/index.php?title=Broadcast_Driver_Architecture&amp;action=edit&amp;redlink=1" title="Broadcast Driver Architecture (存在しないページ)">Broadcast Driver Architecture</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="仮想デバイスドライバ">VxD</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">セキュリティ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cryptographic_API" title="Cryptographic API">Crypto API</a> (<a class="new" href="/w/index.php?title=CAPICOM&amp;action=edit&amp;redlink=1" title="CAPICOM (存在しないページ)">CAPICOM</a>)</li>
+<li><a href="/wiki/Windows_CardSpace" title="Windows CardSpace">Windows CardSpace</a></li>
+<li><a class="mw-redirect" href="/wiki/Data_Protection_API" title="Data Protection API">Data Protection API</a></li>
+<li><a href="/wiki/Security_Support_Provider_Interface" title="Security Support Provider Interface">Security Support Provider Interface</a> (SSPI)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">.NET</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a></li>
+<li><a href="/wiki/ADO.NET" title="ADO.NET">ADO.NET</a></li>
+<li><a href="/wiki/%E5%9F%BA%E6%9C%AC%E3%82%AF%E3%83%A9%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="基本クラスライブラリ">Base Class Library (BCL)</a></li>
+<li><a href="/wiki/.NET_Remoting" title=".NET Remoting">Remoting</a></li>
+<li><a href="/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a class="new" href="/w/index.php?title=Parallel_Extensions&amp;action=edit&amp;redlink=1" title="Parallel Extensions (存在しないページ)">TPL</a></li>
+<li><a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li>
+<li><a href="/wiki/Windows_CardSpace" title="Windows CardSpace">WCS</a></li>
+<li><a href="/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="/wiki/Windows_Workflow_Foundation" title="Windows Workflow Foundation">WF</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ソフトウェアファクトリー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=EFx_Factory&amp;action=edit&amp;redlink=1" title="EFx Factory (存在しないページ)">EFx Factory</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Enterprise_Library&amp;action=edit&amp;redlink=1" title="Microsoft Enterprise Library (存在しないページ)">Enterprise Library</a></li>
+<li><a class="new" href="/w/index.php?title=Composite_UI_Application_Block&amp;action=edit&amp;redlink=1" title="Composite UI Application Block (存在しないページ)">Composite UI</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Customer_Care_Framework&amp;action=edit&amp;redlink=1" title="Microsoft Customer Care Framework (存在しないページ)">CCF</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_Connected_Services_Framework&amp;action=edit&amp;redlink=1" title="Microsoft Connected Services Framework (存在しないページ)">CSF</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">IPC</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Microsoft_RPC&amp;action=edit&amp;redlink=1" title="Microsoft RPC (存在しないページ)">MSRPC</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%87%E3%83%BC%E3%82%BF%E4%BA%A4%E6%8F%9B" title="動的データ交換">Dynamic Data Exchange</a> (DDE)</li>
+<li><a href="/wiki/.NET_Remoting" title=".NET Remoting">Remoting</a></li>
+<li><a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">WCF</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アクセシビリティ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microsoft_Active_Accessibility" title="Microsoft Active Accessibility">Active Accessibility</a></li>
+<li><a href="/wiki/Microsoft_UI_Automation" title="Microsoft UI Automation">UI Automation</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><div style="line-height:1.1em;">テキストと多言語<br/>サポート</div></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DirectWrite" title="DirectWrite">DirectWrite</a></li>
+<li><a href="/wiki/Text_Services_Framework" title="Text Services Framework">Text Services Framework</a></li>
+<li><a class="new" href="/w/index.php?title=Text_Object_Model&amp;action=edit&amp;redlink=1" title="Text Object Model (存在しないページ)">Text Object Model</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89" title="インプットメソッド">Input method editor</a></li>
+<li><a class="new" href="/w/index.php?title=Language_Interface_Pack&amp;action=edit&amp;redlink=1" title="Language Interface Pack (存在しないページ)">Language Interface Pack</a></li>
+<li><a class="new" href="/w/index.php?title=Multilingual_User_Interface&amp;action=edit&amp;redlink=1" title="Multilingual User Interface (存在しないページ)">Multilingual User Interface</a></li>
+<li><a href="/wiki/Uniscribe" title="Uniscribe">Uniscribe</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E3%81%AEAPI%E3%81%A8%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%AE%E4%B8%80%E8%A6%A7" title="マイクロソフトのAPIとフレームワークの一覧">一覧</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E3%81%AEAPI" title="カテゴリ:マイクロソフトのAPI">カテゴリ:マイクロソフトのAPI</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401234600
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.139 seconds
+Real time usage: 0.253 seconds
+Preprocessor visited node count: 946/1000000
+Post‐expand include size: 48093/2097152 bytes
+Template argument size: 1215/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 887/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5517312/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  152.328      1 -total
+ 43.50%   66.259      3 テンプレート:Sfn
+ 30.17%   45.959      2 テンプレート:Cite_web
+ 18.54%   28.238      2 テンプレート:Navbox
+ 12.65%   19.277      1 テンプレート:.NET
+ 10.60%   16.145      1 テンプレート:Microsoft_APIs
+  9.30%   14.170      2 テンプレート:Accessdate
+  8.72%   13.282      2 テンプレート:Ifempty
+  7.63%   11.625      2 テンプレート:Accessdate/core
+  4.81%    7.330      2 テンプレート:ISO_dateJA
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3682258-0!canonical and timestamp 20220401234600 and revision id 2151465. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Windows_Identity_Foundation&amp;oldid=2151465">http://localhost:8080/w/index.php?title=Windows_Identity_Foundation&amp;oldid=2151465</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="カテゴリ:データベース">データベース</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E3%81%AEAPI" title="カテゴリ:マイクロソフトのAPI">マイクロソフトのAPI</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:.NET_Framework" title="カテゴリ:.NET Framework">.NET Framework</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Windows+Identity+Foundation&amp;returntoquery=curid%3D3682258%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Windows+Identity+Foundation&amp;returntoquery=curid%3D3682258%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Windows_Identity_Foundation" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Windows_Identity_Foundation&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Windows_Identity_Foundation">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Windows_Identity_Foundation&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Windows_Identity_Foundation&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Windows_Identity_Foundation" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Windows_Identity_Foundation" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Windows_Identity_Foundation&amp;oldid=2151465" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Windows_Identity_Foundation&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年10月5日 (月) 07:23 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.139","walltime":"0.253","ppvisitednodes":{"value":946,"limit":1000000},"postexpandincludesize":{"value":48093,"limit":2097152},"templateargumentsize":{"value":1215,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":887,"limit":5000000},"timingprofile":["100.00%  152.328      1 -total"," 43.50%   66.259      3 テンプレート:Sfn"," 30.17%   45.959      2 テンプレート:Cite_web"," 18.54%   28.238      2 テンプレート:Navbox"," 12.65%   19.277      1 テンプレート:.NET"," 10.60%   16.145      1 テンプレート:Microsoft_APIs","  9.30%   14.170      2 テンプレート:Accessdate","  8.72%   13.282      2 テンプレート:Ifempty","  7.63%   11.625      2 テンプレート:Accessdate/core","  4.81%    7.330      2 テンプレート:ISO_dateJA"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5517312,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401234600","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":2632});});</script>
+</body></html>

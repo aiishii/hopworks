@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>古典電磁気学の共変定式 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-古典電磁気学の共変定式 rootpage-古典電磁気学の共変定式 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">古典電磁気学の共変定式</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><table class="infobox" style="width: 200px; float: right; clear: right; text-align:center; font-size:90%; overflow:visible; transition: all 300ms 0s ease;">
+<tbody><tr>
+<th style="position:sticky; top:0; background-color: #87cefa;">電磁気学
+</th></tr>
+<tr>
+<td>ファイル:VFPt Solenoid correct2.svg
+<p><br/>
+</p>
+</td></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_1" title="電気">電気</a></li>
+<li><a href="." id="link_i_2" title="磁性">磁性</a></li></ul>
+</div>
+</td></tr>
+<tr>
+<td>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;">静電気学
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_3" title="電荷">電荷</a></li>
+<li><a href="." id="link_i_4" title="クーロンの法則">クーロンの法則</a></li>
+<li><a href="." id="link_i_5" title="電場">電場</a></li>
+<li><a href="." id="link_i_6" title="電束">電束</a></li>
+<li><a href="." id="link_i_7" title="ガウスの法則">ガウスの法則</a></li>
+<li><a href="." id="link_i_8" title="電位">電位</a></li>
+<li><a href="." id="link_i_9" title="静電誘導">静電誘導</a></li>
+<li><a href="." id="link_i_10" title="電気双極子">電気双極子</a></li>
+<li><a href="." id="link_i_11" title="分極電荷密度">分極電荷密度</a></li></ul>
+</div>
+</td></tr></tbody></table>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;">静磁気学
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_12" title="アンペールの法則">アンペールの法則</a></li>
+<li><a href="." id="link_i_13" title="電流">電流</a></li>
+<li><a href="." id="link_i_14" title="磁場">磁場</a></li>
+<li><a href="." id="link_i_15" title="磁化">磁化</a></li>
+<li><a href="." id="link_i_16" title="磁束">磁束</a></li>
+<li><a href="." id="link_i_17" title="ビオ・サバールの法則">ビオ・サバールの法則</a></li>
+<li><a href="." id="link_i_18" title="磁気モーメント">磁気モーメント</a></li>
+<li><a href="." id="link_i_19" title="ガウスの法則 (磁場)">ガウスの法則</a></li></ul>
+</div>
+</td></tr></tbody></table>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;">電気力学
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_20" title="自由空間">自由空間</a></li>
+<li><a href="." id="link_i_21" title="ローレンツ力">ローレンツ力</a></li>
+<li><a href="." id="link_i_22" title="起電力">起電力</a></li>
+<li><a href="." id="link_i_23" title="電磁誘導">電磁誘導</a></li>
+<li><a href="." id="link_i_24" title="ファラデーの電磁誘導の法則">ファラデーの法則</a></li>
+<li><a href="." id="link_i_25" title="レンツの法則">レンツの法則</a></li>
+<li><a href="." id="link_i_26" title="変位電流">変位電流</a></li>
+<li><a href="." id="link_i_27" title="マクスウェルの方程式">マクスウェルの方程式</a></li>
+<li><a href="." id="link_i_28" title="電磁場">電磁場</a></li>
+<li><a href="." id="link_i_29" title="電磁波">電磁波</a></li>
+<li><span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="." id="link_i_30" title="リエナール・ヴィーヘルト・ポテンシャル">リエナール・ヴィーヘルト・ポテンシャル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Li%C3%A9nard%E2%80%93Wiechert_potential&amp;action=edit&amp;redlink=1" title="En:Liénard–Wiechert potential (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_31" title="マクスウェルの応力テンソル">マクスウェル・テンソル</a></li>
+<li><a href="." id="link_i_32" title="渦電流">渦電流</a></li></ul>
+</div>
+</td></tr></tbody></table>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;">電気回路
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_33" title="電気伝導">電気伝導</a></li>
+<li><a href="." id="link_i_34" title="電圧">電圧</a></li>
+<li><a href="." id="link_i_35" title="キルヒホッフの法則 (電気回路)">キルヒホッフの法則</a></li>
+<li><a href="." id="link_i_36" title="電気抵抗">電気抵抗</a></li>
+<li><a href="." id="link_i_37" title="静電容量">静電容量</a></li>
+<li><a href="." id="link_i_38" title="インダクタンス">インダクタンス</a></li>
+<li><a href="." id="link_i_39" title="交流">交流</a></li>
+<li><a href="." id="link_i_40" title="インピーダンス">インピーダンス</a></li>
+<li><a href="." id="link_i_41" title="アドミタンス">アドミタンス</a></li>
+<li><a href="." id="link_i_42" title="共振器">共鳴空洞</a></li>
+<li><a href="." id="link_i_43" title="導波管 (電磁気)">導波管</a></li></ul>
+</div>
+</td></tr></tbody></table>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;"><a class="mw-selflink selflink">共変定式</a>
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_44" title="電磁場テンソル">電磁場テンソル</a></li>
+<li><a href="." id="link_i_45" title="4元電流密度">4元電流密度</a></li>
+<li><a href="." id="link_i_46" title="電磁ポテンシャル">電磁ポテンシャル</a></li>
+<li><span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="." id="link_i_47" title="エネルギー・運動量テンソル">電磁場の応力エネルギーテンソル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Electromagnetic_stress%E2%80%93energy_tensor&amp;action=edit&amp;redlink=1" title="En:Electromagnetic stress–energy tensor (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div>
+</td></tr></tbody></table>
+<table class="mw-collapsible collapsed" style="width:100%">
+<tbody><tr>
+<th scope="col" style="position:sticky; top:0; text-align: left; background-color: #87cefa;">科学者
+</th></tr>
+<tr style="line-height: 150%;">
+<td><div class="hlist hlist-separated">
+<ul><li><a href="." id="link_i_48" title="アンドレ＝マリ・アンペール">アンペール</a></li>
+<li><a href="." id="link_i_49" title="シャルル・ド・クーロン">クーロン</a></li>
+<li><a href="." id="link_i_50" title="マイケル・ファラデー">ファラデー</a></li>
+<li><a href="." id="link_i_51" title="カール・フリードリヒ・ガウス">ガウス</a></li>
+<li><a href="." id="link_i_52" title="オリヴァー・ヘヴィサイド">ヘヴィサイド</a></li>
+<li><a href="." id="link_i_53" title="ジョセフ・ヘンリー">ヘンリー</a></li>
+<li><a href="." id="link_i_54" title="ハインリヒ・ヘルツ">ヘルツ</a></li>
+<li><a href="." id="link_i_55" title="ヘンドリック・ローレンツ">ローレンツ</a></li>
+<li><a href="." id="link_i_56" title="ジェームズ・クラーク・マクスウェル">マクスウェル</a></li>
+<li><a href="." id="link_i_57" title="ニコラ・テスラ">テスラ</a></li>
+<li><a href="." id="link_i_58" title="アレッサンドロ・ボルタ">ボルタ</a></li>
+<li><a href="." id="link_i_59" title="ヴィルヘルム・ヴェーバー">ヴェーバー</a></li>
+<li><a href="." id="link_i_60" title="ハンス・クリスティアン・エルステッド">エルステッド</a></li></ul>
+</div>
+</td></tr></tbody></table>
+</td></tr>
+<tr style="text-align: center;">
+<td><div class="noprint plainlinks" style="background-color:transparent; padding:0; font-size:75%; color:#000000; white-space:nowrap; font-weight:normal; ;"><span style=";" title="このテンプレートを表示します">表</span><span style="font-size:80%;">・</span><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:電磁気学 (存在しないページ)"><span style="color:#002bb8;;" title="このテンプレートのノートを表示します">話</span></a><span style="font-size:80%;">・</span><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6&amp;action=edit" rel="nofollow"><span style="color:#002bb8;;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a><span style="font-size:80%;">・</span><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6&amp;action=history" rel="nofollow"><span style="color:#002bb8;;" title="このテンプレートの過去の版を表示します">歴</span></a></div>
+</td></tr></tbody></table>
+<p><b><a href="." id="link_a_61" title="古典電磁気学">古典電磁気学</a>の<a href="." id="link_a_62" title="ベクトルの共変性と反変性">共変</a>定式</b>（こてんでんじきがくのきょうへんていしき）は古典電磁気学の法則（特に<a href="." id="link_a_63" title="マクスウェル方程式">マクスウェル方程式</a>と<a href="." id="link_a_21" title="ローレンツ力">ローレンツ力</a>）を<a href="." id="link_a_64" title="ローレンツ変換">ローレンツ変換</a>のもとで明白に不変な形で、直線<a href="." id="link_a_65" title="慣性座標系">慣性座標系</a>を使った<a href="." id="link_a_66" title="特殊相対論">特殊相対論</a>の形式で書く方法を指す。これらの表現はともに古典電磁気学の法則がどの慣性座標系でも同じ形をとるということを証明するのを容易にし、場と力をあるフレームから別のフレームへ変換する方法を提供してくれる。曲がった時空の場合や非直線座標系の場合はここでは対象外とする<small>（曲がった時空の場合は <a class="new" href="/w/index.php?title=En:Maxwell%27s_equations_in_curved_spacetime&amp;action=edit&amp;redlink=1" title="En:Maxwell's equations in curved spacetime (存在しないページ)">en:Maxwell's equations in curved spacetime</a> を参照）</small>。
+</p><p>この記事は<a href="." id="link_a_67" title="テンソル">テンソル</a>の古典的扱いと<a href="." id="link_a_68" title="アインシュタインの縮約記法">アインシュタインの縮約記法</a>をいたるところで使っており、<a href="." id="link_a_69" title="ミンコフスキー空間">ミンコフスキー計量</a>はdiag (-1, +1, +1, +1)という形式を取る<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="この記事中で 符号+−−− と書いている箇所もあるが、統一されていないのか？（2021年7月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;redlink=1" title="トーク:古典電磁気学の共変定式 (存在しないページ)">トーク</a></span></i>]</sup>。方程式が真空中で成り立つものと明示されている場合、代わりに（<a href="." id="link_a_70" title="分極電荷">分極電荷</a>や<a href="." id="link_a_15" title="磁化">磁化</a>電流を含む）総電荷・総電流に関するマクスウェル方程式の定式化と見てもよい<small>（参照: <a href="." id="link_a_27" title="マクスウェルの方程式">マクスウェルの方程式</a>）</small>。
+</p><p>この画像<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%9F%B7%E7%AD%86%E3%83%BB%E7%BF%BB%E8%A8%B3%E8%80%85%E3%81%AE%E5%BA%83%E5%A0%B4" title="Wikipedia:執筆・翻訳者の広場"><span title="原文からの翻訳について、疑問が提出されています。候補:「描像」?（2021年4月）">訳語疑問点</span></a></i>]</sup>の様々な概念的な含意を含む、古典電磁気学と特殊相対論の間の関係のより一般的な概要については<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_71" title="古典電磁気学と特殊相対性理論 (存在しないページ)">古典電磁気学と特殊相対性理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Classical_electromagnetism_and_special_relativity&amp;action=edit&amp;redlink=1" title="En:Classical electromagnetism and special relativity (存在しないページ)">英語版</a>）</span></span>参照。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#共変的な物理量"><span class="tocnumber">1</span> <span class="toctext">共変的な物理量</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#時空の記述"><span class="tocnumber">1.1</span> <span class="toctext">時空の記述</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#粒子の記述"><span class="tocnumber">1.2</span> <span class="toctext">粒子の記述</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#電磁場の記述"><span class="tocnumber">1.3</span> <span class="toctext">電磁場の記述</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#電磁ポテンシャル"><span class="tocnumber">1.3.1</span> <span class="toctext">電磁ポテンシャル</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#電磁場テンソル"><span class="tocnumber">1.3.2</span> <span class="toctext">電磁場テンソル</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#源と媒質の記述"><span class="tocnumber">1.4</span> <span class="toctext">源と媒質の記述</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#4元電流密度"><span class="tocnumber">1.4.1</span> <span class="toctext">4元電流密度</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#分極テンソル"><span class="tocnumber">1.4.2</span> <span class="toctext">分極テンソル</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#電磁気学のラグランジュ形式"><span class="tocnumber">2</span> <span class="toctext">電磁気学のラグランジュ形式</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#運動項"><span class="tocnumber">2.1</span> <span class="toctext">運動項</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#自由空間"><span class="tocnumber">2.2</span> <span class="toctext">自由空間</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#媒質中"><span class="tocnumber">2.3</span> <span class="toctext">媒質中</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#線形媒質"><span class="tocnumber">2.3.1</span> <span class="toctext">線形媒質</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#マクスウェル方程式"><span class="tocnumber">3</span> <span class="toctext">マクスウェル方程式</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#構成方程式"><span class="tocnumber">3.1</span> <span class="toctext">構成方程式</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#自由空間におけるマクスウェル方程式"><span class="tocnumber">3.2</span> <span class="toctext">自由空間におけるマクスウェル方程式</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#ポテンシャル表示"><span class="tocnumber">3.3</span> <span class="toctext">ポテンシャル表示</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#ローレンツ力"><span class="tocnumber">4</span> <span class="toctext">ローレンツ力</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#帯電連続体"><span class="tocnumber">4.1</span> <span class="toctext">帯電連続体</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#エネルギーと運動量"><span class="tocnumber">5</span> <span class="toctext">エネルギーと運動量</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#保存則"><span class="tocnumber">6</span> <span class="toctext">保存則</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#電荷"><span class="tocnumber">6.1</span> <span class="toctext">電荷</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#電磁気エネルギー_-_運動量"><span class="tocnumber">6.2</span> <span class="toctext">電磁気エネルギー - 運動量</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#脚注"><span class="tocnumber">7</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#参考文献"><span class="tocnumber">8</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.85.B1.E5.A4.89.E7.9A.84.E3.81.AA.E7.89.A9.E7.90.86.E9.87.8F"></span><span class="mw-headline" id="共変的な物理量">共変的な物理量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=1" title="節を編集: 共変的な物理量">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ニュートン的な物理量は<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E7%A9%BA%E9%96%93" title="ユークリッド空間">ユークリッド空間</a>における<a class="mw-redirect" href="/wiki/%E5%9B%9E%E8%BB%A2%E5%A4%89%E6%8F%9B" title="回転変換">回転変換</a>の下での変換性によってスカラー量やベクトル量、テンソル量として区別されていたが、相対論的な<a class="mw-redirect" href="/wiki/%E3%83%9F%E3%83%B3%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E6%99%82%E7%A9%BA" title="ミンコフスキー時空">ミンコフスキー時空</a>においてはローレンツ変換の下での変換性によってスカラー量やベクトル量、テンソル量として区別される。
+ローレンツ変換の下でのベクトル量 <span class="texhtml mvar" lang="en" style="font-style:italic;">V</span> は<a href="/wiki/4%E5%85%83%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="4元ベクトル">4元ベクトル</a>と呼ばれる。4元ベクトル <span class="texhtml mvar" lang="en" style="font-style:italic;">V</span> はニュートン的な空間におけるベクトル <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>V</b></span> と、対応するスカラー <span class="texhtml mvar" lang="en" style="font-style:italic;">v</span> の組が
+</p>
+<dl><dd>&lt;math&gt;V^\mu =(V^0, V^1,V^2,V^3) =(v,\boldsymbol{V})&lt;/math&gt;</dd></dl>
+<p>として対応する<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+2階反対称テンソル量 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> は独立成分が6つであり、ベクトルと<a href="/wiki/%E6%93%AC%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="擬ベクトル">擬ベクトル</a>（軸性ベクトル）の組によって
+</p>
+<dl><dd>&lt;math&gt;F^{\mu\nu} =(F^{01},F^{02},F^{03}, F^{23},F^{31},F^{12}) =(\boldsymbol{F}_\text{v},\boldsymbol{F}_\text{a})&lt;/math&gt;</dd></dl>
+<p>として対応する<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+2階対称テンソル量 <span class="texhtml mvar" lang="en" style="font-style:italic;">S</span> は独立成分が10であり、スカラーとベクトル、2階対称テンソルの組によって
+</p>
+<dl><dd>&lt;math&gt;S^{\mu\nu} =(S^{00}; S^{01},S^{02},S^{03}; S^{11},S^{22},S^{33},S^{23},S^{31},S^{12}) =(s,\boldsymbol{S}_\text{v},\boldsymbol{S}_\text{t})&lt;/math&gt;</dd></dl>
+<p>として対応する。
+</p><p>ニュートン的なスカラー量やベクトル量は、組み合わせられる量に応じて変換性が異なる。
+</p>
+<h3><span id=".E6.99.82.E7.A9.BA.E3.81.AE.E8.A8.98.E8.BF.B0"></span><span class="mw-headline" id="時空の記述">時空の記述</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=2" title="節を編集: 時空の記述">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ニュートン的な空間における位置 <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>x</b></span> は、相対論的な時空において、時間 <span class="texhtml mvar" lang="en" style="font-style:italic;">t</span> とともに4元ベクトル
+</p>
+<dl><dd>&lt;math&gt;x^\mu = (ct,\boldsymbol{x}) = (ct, x, y, z)&lt;/math&gt;</dd></dl>
+<p>を構成する。時空上のスカラー場 <span class="texhtml mvar" lang="en" style="font-style:italic;">ψ</span> に対する勾配は
+</p>
+<dl><dd>&lt;math&gt;\partial_\mu \psi(x) =\frac{\partial\psi}{\partial x^\mu} =\left( \frac{1}{c} \frac{\partial\psi}{\partial t}, \nabla\psi \right)&lt;/math&gt;</dd></dl>
+<p>である。平坦な時空において<a href="/wiki/%E3%83%80%E3%83%A9%E3%83%B3%E3%83%99%E3%83%BC%E3%83%AB%E6%BC%94%E7%AE%97%E5%AD%90" title="ダランベール演算子">ダランベール演算子</a>は
+</p>
+<dl><dd>&lt;math&gt;\partial^\mu \partial_\mu \psi(x) =-\frac{1}{c^2} \frac{\partial^2\psi}{\partial t^2} +\triangle\psi &lt;/math&gt;</dd></dl>
+<p>と表される。
+</p>
+<h3><span id=".E7.B2.92.E5.AD.90.E3.81.AE.E8.A8.98.E8.BF.B0"></span><span class="mw-headline" id="粒子の記述">粒子の記述</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=3" title="節を編集: 粒子の記述">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>粒子の運動を記述する<a href="/wiki/%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF" title="パラメータ">パラメータ</a>を <span class="texhtml mvar" lang="en" style="font-style:italic;">λ</span> として、粒子の位置が
+</p>
+<dl><dd>&lt;math&gt;x^\mu =X^\mu(\lambda)&lt;/math&gt;</dd></dl>
+<p>で表されるとき、自由粒子のラグランジュ関数に対して、<a href="/wiki/4%E5%85%83%E9%81%8B%E5%8B%95%E9%87%8F" title="4元運動量">4元運動量</a>が
+</p>
+<dl><dd>&lt;math&gt;p_\mu(\lambda) = \frac{\partial L_X}{\partial\dot{X}^\mu}&lt;/math&gt;</dd></dl>
+<p>で定義される。4元運動量の成分は
+</p>
+<dl><dd>&lt;math&gt;p^\mu(\lambda) =(E/c,\boldsymbol{p})&lt;/math&gt;</dd></dl>
+<p>である。
+</p>
+<h3><span id=".E9.9B.BB.E7.A3.81.E5.A0.B4.E3.81.AE.E8.A8.98.E8.BF.B0"></span><span class="mw-headline" id="電磁場の記述">電磁場の記述</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=4" title="節を編集: 電磁場の記述">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".E9.9B.BB.E7.A3.81.E3.83.9D.E3.83.86.E3.83.B3.E3.82.B7.E3.83.A3.E3.83.AB"></span><span class="mw-headline" id="電磁ポテンシャル">電磁ポテンシャル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=5" title="節を編集: 電磁ポテンシャル">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E9%9B%BB%E7%A3%81%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB" title="電磁ポテンシャル">電磁ポテンシャル</a>」を参照</div>
+<p>電磁場を記述する基本的な力学変数はスカラーポテンシャル <span class="texhtml mvar" lang="en" style="font-style:italic;">φ</span> とベクトルポテンシャル <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>A</b></span> の組である。ニュートン的な空間においてスカラーとベクトルとして振舞うこれらの量は、相対論的な時空においては4元ベクトル
+</p>
+<dl><dd>&lt;math&gt;A^\mu(x) =(\phi/c, \boldsymbol{A})&lt;/math&gt;</dd></dl>
+<p>として振舞う。添え字を下に下げると
+&lt;math&gt;A_\mu(x) =\eta_{\mu\nu} A^\nu(x) =(-\phi/c, \boldsymbol{A})&lt;/math&gt;
+である。
+</p>
+<h4><span id=".E9.9B.BB.E7.A3.81.E5.A0.B4.E3.83.86.E3.83.B3.E3.82.BD.E3.83.AB"></span><span class="mw-headline" id="電磁場テンソル">電磁場テンソル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=6" title="節を編集: 電磁場テンソル">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E9%9B%BB%E7%A3%81%E5%A0%B4%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="電磁場テンソル">電磁場テンソル</a>」を参照</div>
+<p>電荷に力を及ぼす場である<a href="/wiki/%E9%9B%BB%E5%A0%B4" title="電場">電場の強度</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>E</b></span> と<a href="/wiki/%E7%A3%81%E6%9D%9F%E5%AF%86%E5%BA%A6" title="磁束密度">磁束密度</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>B</b></span> は、ニュートン的な空間においてそれぞれ極性ベクトルと軸性ベクトルとして振舞う。
+相対論的な時空においては2階の反対称テンソルとして振舞う電磁場強度
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。
+電磁場強度は4元ポテンシャルの微分
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>により定義される<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p><p><a class="new" href="/w/index.php?title=%E5%AE%8C%E5%85%A8%E5%8F%8D%E5%AF%BE%E7%A7%B0%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="完全反対称テンソル (存在しないページ)">完全反対称テンソル</a> <span class="texhtml mvar" lang="en" style="font-style:italic;">ε</span> により電磁場強度の双対テンソルが
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>により定義される<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+</p><p>電荷の周囲に生じる場である<a class="mw-redirect" href="/wiki/%E9%9B%BB%E6%B0%97%E5%A4%89%E4%BD%8D" title="電気変位">電気変位</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>D</b></span> と<a href="/wiki/%E7%A3%81%E5%A0%B4" title="磁場">磁場の強度</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>H</b></span> も同様に2階反対称テンソルとして振舞い
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p>
+<h3><span id=".E6.BA.90.E3.81.A8.E5.AA.92.E8.B3.AA.E3.81.AE.E8.A8.98.E8.BF.B0"></span><span class="mw-headline" id="源と媒質の記述">源と媒質の記述</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=7" title="節を編集: 源と媒質の記述">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id="4.E5.85.83.E9.9B.BB.E6.B5.81.E5.AF.86.E5.BA.A6"></span><span class="mw-headline" id="4元電流密度">4元電流密度</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=8" title="節を編集: 4元電流密度">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/4%E5%85%83%E9%9B%BB%E6%B5%81%E5%AF%86%E5%BA%A6" title="4元電流密度">4元電流密度</a>」を参照</div>
+<p>電磁場を作り出す源となる<a href="/wiki/%E9%9B%BB%E8%8D%B7%E5%AF%86%E5%BA%A6" title="電荷密度">電荷密度</a> <span class="texhtml mvar" lang="en" style="font-style:italic;">ρ</span> と<a href="/wiki/%E9%9B%BB%E6%B5%81%E5%AF%86%E5%BA%A6" title="電流密度">電流密度</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>j</b></span> は、相対論的な時空において4元ベクトル
+</p>
+<dl><dd>&lt;math&gt;J^\mu(x) = (c\rho, \boldsymbol{j} )&lt;/math&gt;</dd></dl>
+<p>として振舞う。
+</p>
+<h4><span id=".E5.88.86.E6.A5.B5.E3.83.86.E3.83.B3.E3.82.BD.E3.83.AB"></span><span class="mw-headline" id="分極テンソル">分極テンソル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=9" title="節を編集: 分極テンソル">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E9%9B%BB%E7%A3%81%E5%A0%B4%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="電磁場テンソル">電磁場テンソル</a>」を参照</div>
+<p>誘電体や磁性体などの媒質における、電場や磁場に対する応答を表す<a href="/wiki/%E8%AA%98%E9%9B%BB%E5%88%86%E6%A5%B5" title="誘電分極">誘電分極</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>P</b></span> と<a href="/wiki/%E7%A3%81%E5%8C%96" title="磁化">磁化</a> <span class="texhtml mvar" lang="en" style="font-style:italic;"><b>M</b></span> は、2階反対称テンソル
+</p>
+<dl><dd>&lt;math&gt;P^{\mu\nu}(x) =(\boldsymbol{P},-\boldsymbol{M}/c)&lt;/math&gt;</dd></dl>
+<p>として振舞う。
+</p><p>電磁場強度 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> および <span class="texhtml mvar" lang="en" style="font-style:italic;">G</span> との間に構成方程式
+</p>
+<dl><dd>&lt;math&gt;G^{\mu\nu}(x) =\frac{1}{Z_0} F^{\mu\nu}(x) +P^{\mu\nu}(x)&lt;/math&gt;</dd></dl>
+<p>を満たす。
+</p>
+<h2><span id=".E9.9B.BB.E7.A3.81.E6.B0.97.E5.AD.A6.E3.81.AE.E3.83.A9.E3.82.B0.E3.83.A9.E3.83.B3.E3.82.B8.E3.83.A5.E5.BD.A2.E5.BC.8F"></span><span class="mw-headline" id="電磁気学のラグランジュ形式">電磁気学のラグランジュ形式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=10" title="節を編集: 電磁気学のラグランジュ形式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>電磁場を記述する系の力学変数は4元ポテンシャル <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> であり、一般化速度に相当する力学変数の微分は電磁場強度 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> である。
+作用汎関数
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>から導かれる電磁場 <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の運動方程式は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>{\partial A_\mu} \sqrt{-g}
+</p><pre>-\partial_\nu \left[ \frac{\partial\mathcal{L}}{\partial(\partial_\nu A_\mu)} \sqrt{-g} \right] \\
+&amp;=\frac{\partial\mathcal{L}}{\partial A_\mu} \sqrt{-g}
+-2\,\partial_\nu \left[ \frac{\partial\mathcal{L}}{\partial F_{\nu\mu}} \sqrt{-g} \right] \\
+&amp;=\left[ \frac{\partial\mathcal{L}}{\partial A_\mu}
+-2\,\mathcal{D}_\nu \frac{\partial\mathcal{L}}{\partial F_{\nu\mu}} \right] \sqrt{-g} \\
+</pre>
+<p>\end{align}&lt;/math&gt;
+}}
+である。ここで <span class="texhtml" lang="en">√-g</span> は<a class="mw-redirect" href="/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97%E5%BC%8F" title="ヤコビ行列式">ヤコビ行列式</a>であり、<a href="/wiki/%E5%BE%AE%E5%88%86%E4%BD%9C%E7%94%A8%E7%B4%A0" title="微分作用素">微分作用素</a> &lt;math&gt;\mathcal{D}&lt;/math&gt; は<a href="/wiki/%E5%85%B1%E5%A4%89%E5%BE%AE%E5%88%86" title="共変微分">共変微分</a>である。
+</p>
+<h3><span id=".E9.81.8B.E5.8B.95.E9.A0.85"></span><span class="mw-headline" id="運動項">運動項</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=11" title="節を編集: 運動項">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>電磁場の作用汎関数の運動項は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>であり<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>、ラグランジュ関数は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>である。電磁場の運動項は多くの力学系の運動項と同様に一般化速度の二次形式で書かれる。
+ラグランジュ関数の微分は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;\frac{\partial\mathcal{L}_A}{\partial F_{\nu\mu
+</p>
+</div><p> =-\frac{1}{2Z_0} F^{\nu\mu}(x)&lt;/math&gt;
+</p><p>}}
+となるので、運動項の汎関数微分は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。
+</p>
+<h3><span id=".E8.87.AA.E7.94.B1.E7.A9.BA.E9.96.93"></span><span class="mw-headline" id="自由空間">自由空間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=12" title="節を編集: 自由空間">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>自由空間において荷電粒子と相互作用する電磁場の作用汎関数は粒子と電磁場の運動項、および相互作用項の和で
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>と書かれる。
+</p><p>相互作用項はどのような粒子であるかによって具体的な形が変わるが、粒子のふるまいを4元電流密度 <span class="texhtml mvar" lang="en" style="font-style:italic;">J</span> で表すことで、電磁場と粒子の相互作用項は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>で与えられる<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。相互作用項の汎関数微分は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>で与えられるので、電磁場 <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> に対する運動方程式としてマクスウェル方程式
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が得られる。
+</p>
+<h3><span id=".E5.AA.92.E8.B3.AA.E4.B8.AD"></span><span class="mw-headline" id="媒質中">媒質中</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=13" title="節を編集: 媒質中">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>媒質が存在する場合は、媒質の状態を記述する力学変数として分極テンソル <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> が導入される。
+媒質中での作用汎関数には、媒質と電磁場との相互作用と、媒質の自己相互作用を記述する部分が追加されて
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>で与えられる。相互作用項のラグランジュ関数は、再び4元電流密度 <span class="texhtml mvar" lang="en" style="font-style:italic;">J</span> を用いれば
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>で与えられる。ラグランジュ関数の電磁場の強度 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> による偏導関数は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;\frac{\partial\mathcal{L
+</p>
+</div><p>{\partial F_{\mu\nu}} =-\frac{1}{2Z_0} F^{\mu\nu} -\frac{1}{2} P^{\mu\nu} =-\frac{1}{2} G^{\mu\nu}&lt;/math&gt;
+</p><p>}}
+であり、サブ電磁テンソル <span class="texhtml mvar" lang="en" style="font-style:italic;">G</span> が導かれる。サブ電磁テンソルは、ラグランジュ関数の速度による偏導関数である共役運動量と対応している。
+</p><p>運動方程式として
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が導かれる。
+</p>
+<h4><span id=".E7.B7.9A.E5.BD.A2.E5.AA.92.E8.B3.AA"></span><span class="mw-headline" id="線形媒質">線形媒質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=14" title="節を編集: 線形媒質">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>媒質の自己相互作用の具体的な形は媒質の性質に依存するが、一様等方的な線形媒質の場合は二次形式だけを残して
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。理論に微分を含まないので、分極テンソルは力学変数ではなく補助場である。拘束条件として
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が導かれる。
+</p>
+<h2><span id=".E3.83.9E.E3.82.AF.E3.82.B9.E3.82.A6.E3.82.A7.E3.83.AB.E6.96.B9.E7.A8.8B.E5.BC.8F"></span><span class="mw-headline" id="マクスウェル方程式">マクスウェル方程式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=15" title="節を編集: マクスウェル方程式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E3%83%9E%E3%82%AF%E3%82%B9%E3%82%A6%E3%82%A7%E3%83%AB%E6%96%B9%E7%A8%8B%E5%BC%8F" title="マクスウェル方程式">マクスウェル方程式</a>」を参照</div>
+<p>電磁場の作用汎関数から運動方程式として
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が導かれた。
+方程式はマクスウェル方程式のうち、ソースとの結合を表す<a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%81%AE%E6%B3%95%E5%89%87" title="ガウスの法則">ガウスの法則</a>とマクスウェルにより変位電流が追加された<a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%AB%E3%81%AE%E6%B3%95%E5%89%87" title="アンペールの法則">アンペールの法則</a>である。
+</p><p>残りの式は電磁場強度 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> の定義式から導かれる<a class="mw-redirect" href="/wiki/%E3%83%93%E3%82%A2%E3%83%B3%E3%82%AD%E6%81%92%E7%AD%89%E5%BC%8F" title="ビアンキ恒等式">ビアンキ恒等式</a>
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が成り立つ<sup class="reference" id="cite_ref-landau-pg75_8-0"><a href="#cite_note-landau-pg75-8">[8]</a></sup>。
+双対テンソルを用いれば
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>と表すことも出来る<sup class="reference" id="cite_ref-landau-pg75_8-1"><a href="#cite_note-landau-pg75-8">[8]</a></sup>。磁気に対するガウスの法則と<a href="/wiki/%E3%83%95%E3%82%A1%E3%83%A9%E3%83%87%E3%83%BC%E3%81%AE%E9%9B%BB%E7%A3%81%E8%AA%98%E5%B0%8E%E3%81%AE%E6%B3%95%E5%89%87" title="ファラデーの電磁誘導の法則">ファラデーの電磁誘導の法則</a>である。
+</p>
+<h3><span id=".E6.A7.8B.E6.88.90.E6.96.B9.E7.A8.8B.E5.BC.8F"></span><span class="mw-headline" id="構成方程式">構成方程式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=16" title="節を編集: 構成方程式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>電磁場の力学変数である4元ポテンシャル <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> に共役な運動量として、<a class="mw-redirect" href="/wiki/%E6%A7%8B%E6%88%90%E6%96%B9%E7%A8%8B%E5%BC%8F" title="構成方程式">構成方程式</a>
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;\frac{\partial\mathcal{L
+</p>
+</div><p>{\partial(\partial_\nu A_\mu)} =G^{\mu\nu}(x)
+</p><pre>=\frac{1}{Z_0} F^{\mu\nu}(x) +P^{\mu\nu}(x)&lt;/math&gt;
+</pre>
+<p>}}
+が導かれた。これを用いて運動方程式を変形すれば
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。ここで導入された拘束電流密度
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>{\partial t} +\operatorname{rot}\boldsymbol{M} \right)&lt;/math&gt;
+</p><p>}}
+は分極電荷密度と分極電流密度、および磁化電流密度である。
+</p>
+<h3><span id=".E8.87.AA.E7.94.B1.E7.A9.BA.E9.96.93.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E3.83.9E.E3.82.AF.E3.82.B9.E3.82.A6.E3.82.A7.E3.83.AB.E6.96.B9.E7.A8.8B.E5.BC.8F"></span><span class="mw-headline" id="自由空間におけるマクスウェル方程式">自由空間におけるマクスウェル方程式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=17" title="節を編集: 自由空間におけるマクスウェル方程式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>自由空間においては分極が存在せず運動方程式が
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。
+平坦な時空において標準座標を用いた場合は共変微分が通常の偏微分に置き換えられて
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>である。これとビアンキ恒等式を用いれば
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が導かれる。これは電磁場強度に対する電磁波の<a href="/wiki/%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F" title="波動方程式">波動方程式</a>である。
+</p>
+<h3><span id=".E3.83.9D.E3.83.86.E3.83.B3.E3.82.B7.E3.83.A3.E3.83.AB.E8.A1.A8.E7.A4.BA"></span><span class="mw-headline" id="ポテンシャル表示">ポテンシャル表示</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=18" title="節を編集: ポテンシャル表示">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>平坦な時空において電磁場強度 <span class="texhtml mvar" lang="en" style="font-style:italic;">F</span> の定義を用いると
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>となる。
+ローレンツ・ゲージ <span class="texhtml" lang="en"><span class="texhtml mvar" lang="en" style="font-style:italic;">∂<sub>μ</sub> A<sup>μ</sup></span> = 0</span> の条件を課すと
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>として4元ポテンシャルに対する電磁波の波動方程式が導かれる。
+ローレンツ・ゲージはクーロン・ゲージなどと異なりローレンツ不変なゲージ条件である。
+</p>
+<h2><span id=".E3.83.AD.E3.83.BC.E3.83.AC.E3.83.B3.E3.83.84.E5.8A.9B"></span><span class="mw-headline" id="ローレンツ力">ローレンツ力</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=19" title="節を編集: ローレンツ力">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%83%84%E5%8A%9B" title="ローレンツ力">ローレンツ力</a>」を参照</div>
+
+<p>電磁場と相互作用する古典的な荷電粒子系を考えると、電磁場と荷電粒子の相互作用項は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>で与えられる。<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> に対する汎関数微分は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>{\partial X_i^\mu} -\frac{d}{d\lambda} \frac{\partial L_\text{int}}{\partial \dot{X}_i^\mu} \\
+</p><pre>&amp;=q_i\dot{X}_i^\nu(\lambda)\, \partial_\mu A_\nu(X_i) -q_i \frac{d}{d\lambda} A_\mu(X_i) \\
+&amp;=q_i\dot{X}_i^\nu(\lambda)\, \partial_\mu A_\nu(X_i) -q_i\dot{X}_i^\nu \partial_\nu A_\mu(X_i) \\
+&amp;=-q_i\dot{X}_i^\nu(\lambda)\, F_{\nu\mu}(X_i) \\
+</pre>
+<p>\end{aligned}&lt;/math&gt;
+}}
+となる。
+これと自由粒子の作用汎関数 <span class="texhtml mvar" lang="en" style="font-style:italic;">S<sub>X</sub></span> から荷電粒子 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> に対する運動方程式が
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>が得られる。
+</p><p>運動のパラメータ <span class="texhtml mvar" lang="en" style="font-style:italic;">λ</span> として時間 <span class="texhtml mvar" lang="en" style="font-style:italic;">t</span> を選べば、空間成分に対して
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;\frac{d\boldsymbol{p
+</p>
+</div><p>{dt} =q_i\boldsymbol{E}(\boldsymbol{X}_i,t)+q\frac{d\boldsymbol{X}_i}{dt} \times \boldsymbol{B}(\boldsymbol{X}_i,t)&lt;/math&gt;
+</p><p>}}
+となり、<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%83%84%E5%8A%9B" title="ローレンツ力">ローレンツ力</a>を再現する。なお、時間成分は
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>であり、ローレンツ力（<a class="mw-redirect" href="/wiki/%E3%82%AF%E3%83%BC%E3%83%AD%E3%83%B3%E5%8A%9B" title="クーロン力">クーロン力</a>）による<a href="/wiki/%E4%BB%95%E4%BA%8B%E7%8E%87" title="仕事率">仕事率</a>を与える。
+</p>
+<h3><span id=".E5.B8.AF.E9.9B.BB.E9.80.A3.E7.B6.9A.E4.BD.93"></span><span class="mw-headline" id="帯電連続体">帯電連続体</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=20" title="節を編集: 帯電連続体">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E9%80%A3%E7%B6%9A%E4%BD%93%E5%8A%9B%E5%AD%A6" title="連続体力学">連続体力学</a>」を参照</div>
+
+<p>空間部分がローレンツ力である電磁気による力の密度は、次で与えられる。
+</p>
+<dl><dd>&lt;math&gt;f_{\alpha} = F_{\alpha\beta}J^{\beta} .\!&lt;/math&gt;</dd></dl>
+<p>そしてこれは電磁気応力 - エネルギーテンソルと次のような関係にある。
+</p>
+<dl><dd>&lt;math&gt;f^{\alpha} = - {T^{\alpha\beta}}_{,\beta} \equiv  - \frac{\partial T^{\alpha\beta}}{\partial x^\beta}.&lt;/math&gt;</dd></dl>
+<h2><span id=".E3.82.A8.E3.83.8D.E3.83.AB.E3.82.AE.E3.83.BC.E3.81.A8.E9.81.8B.E5.8B.95.E9.87.8F"></span><span class="mw-headline" id="エネルギーと運動量">エネルギーと運動量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=21" title="節を編集: エネルギーと運動量">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%BB%E9%81%8B%E5%8B%95%E9%87%8F%E5%AF%86%E5%BA%A6" title="エネルギー・運動量密度">エネルギー・運動量密度</a>」を参照</div>
+<p>電磁応力 - エネルギーテンソルは、運動量4元ベクトルの<a class="mw-redirect" href="/wiki/%E6%B5%81%E6%9D%9F%E5%AF%86%E5%BA%A6" title="流束密度">流束密度</a>と解釈することができ、全体の<a href="/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%BB%E9%81%8B%E5%8B%95%E9%87%8F%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="エネルギー・運動量テンソル">応力 - エネルギーテンソル</a>に対する電磁場の寄与である反変<a href="/wiki/%E5%AF%BE%E7%A7%B0%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="対称テンソル">対称テンソル</a>である。
+</p>
+<dl><dd>&lt;math&gt;T^{\alpha\beta} = \begin{pmatrix} \epsilon_{0}E^2/2 + B^2/2\mu_{0} &amp; S_x/c &amp; S_y/c &amp; S_z/c \\ S_x/c &amp; -\sigma_{xx} &amp; -\sigma_{xy} &amp; -\sigma_{xz} \\</dd></dl>
+<p>S_y/c &amp; -\sigma_{yx} &amp; -\sigma_{yy} &amp; -\sigma_{yz} \\
+S_z/c &amp; -\sigma_{zx} &amp; -\sigma_{zy} &amp; -\sigma_{zz} \end{pmatrix}\,,&lt;/math&gt;
+</p><p><i>ε</i><sub>0</sub>は<a href="/wiki/%E9%9B%BB%E6%B0%97%E5%AE%9A%E6%95%B0" title="電気定数">真空の誘電率</a>、<i>μ</i><sub>0</sub>は<a href="/wiki/%E7%A3%81%E6%B0%97%E5%AE%9A%E6%95%B0" title="磁気定数">真空の透磁率</a>。<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="ポインティング・ベクトル">ポインティング・ベクトル</a>は
+</p>
+<dl><dd>&lt;math&gt;\mathbf{S} = \frac{1}{\mu_{0}} \mathbf{E} \times \mathbf{B} &lt;/math&gt;</dd></dl>
+<p>と表され、<a href="/wiki/%E3%83%9E%E3%82%AF%E3%82%B9%E3%82%A6%E3%82%A7%E3%83%AB%E3%81%AE%E5%BF%9C%E5%8A%9B%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="マクスウェルの応力テンソル">マクスウェルの応力テンソル</a>は以下で与えられる。
+</p>
+<dl><dd>&lt;math&gt;\sigma_{ij} = \epsilon_{0}E_{i}E_{j} + \frac{1}{\mu_{0}}B_{i}B_{j} -</dd></dl>
+<p>\left(\frac12\epsilon_{0}E^2 + \frac{1}{2\mu_{0}}B^2\right)\delta_{ij} \,.&lt;/math&gt;
+</p><p>電磁場テンソル<i>F</i>は次式により電磁応力 - エネルギーテンソル<i>T</i>を構築する。
+</p>
+<dl><dd>&lt;math&gt;T^{\alpha\beta} = \frac{1}{\mu_{0}} \left( \eta_{\gamma \nu}F^{\alpha \gamma}F^{\nu \beta} + \frac{1}{4}\eta^{\alpha\beta}F_{\gamma \nu}F^{\gamma \nu}\right)&lt;/math&gt;</dd></dl>
+<p><i>η</i>は<a href="/wiki/%E3%83%9F%E3%83%B3%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E7%A9%BA%E9%96%93" title="ミンコフスキー空間">ミンコフスキー計量</a>テンソル（符号+−−−）。次の事実を用いる。
+</p>
+<dl><dd>&lt;math&gt;\epsilon_{0} \mu_{0} c^2 = 1\,,&lt;/math&gt;</dd></dl>
+<p>これはマクスウェル方程式により予測されるものである。
+</p>
+<h2><span id=".E4.BF.9D.E5.AD.98.E5.89.87"></span><span class="mw-headline" id="保存則">保存則</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=22" title="節を編集: 保存則">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E9.9B.BB.E8.8D.B7"></span><span class="mw-headline" id="電荷">電荷</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=23" title="節を編集: 電荷">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E9%80%A3%E7%B6%9A%E3%81%AE%E6%96%B9%E7%A8%8B%E5%BC%8F" title="連続の方程式">連続方程式</a>
+</p>
+<dl><dd>&lt;math&gt;{J^{\alpha}}_{,\alpha} \, \stackrel{\mathrm{def}}{=} \,  \partial_{\alpha} J^{\alpha} \, = \, 0 \,.&lt;/math&gt;</dd></dl>
+<p><a href="/wiki/%E9%9B%BB%E8%8D%B7%E4%BF%9D%E5%AD%98%E5%89%87" title="電荷保存則">電荷保存則</a>を表す。
+</p>
+<h3><span id=".E9.9B.BB.E7.A3.81.E6.B0.97.E3.82.A8.E3.83.8D.E3.83.AB.E3.82.AE.E3.83.BC_-_.E9.81.8B.E5.8B.95.E9.87.8F"></span><span class="mw-headline" id="電磁気エネルギー_-_運動量">電磁気エネルギー - 運動量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=24" title="節を編集: 電磁気エネルギー - 運動量">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>マクスウェル方程式を用いると、（上で定義された）<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%BB%E9%81%8B%E5%8B%95%E9%87%8F%E5%AF%86%E5%BA%A6" title="エネルギー・運動量密度">電磁応力 - エネルギーテンソル</a>は次の微分方程式を満たし、 これを電磁テンソルと電流4元テンソルと関係づけることがわかる。
+</p>
+<dl><dd>&lt;math&gt;{T^{\alpha\beta}}_{,\beta} + F^{\alpha\beta} J_{\beta} = 0&lt;/math&gt;</dd></dl>
+<p>もしくは
+</p>
+<dl><dd>&lt;math&gt;\eta_{\alpha \nu} { T^{\nu \beta } }_{,\beta} + F_{\alpha \beta} J^{\beta} = 0,&lt;/math&gt;</dd></dl>
+<p>これは電磁相互作用による線形運動量とエネルギー保存を表す。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=25" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 17頁</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 21頁</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 68頁</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a href="#jackson">ジャクソン</a> 819頁</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a href="#jackson">ジャクソン</a> 820頁</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 77頁</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 80頁</span>
+</li>
+<li id="cite_note-landau-pg75-8">^ <a href="#cite_ref-landau-pg75_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-landau-pg75_8-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#landau">ランダウ, リフシッツ</a> 75頁</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=26" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" style="font-style:normal">Einstein, A. (1961). <i>Relativity: The Special and General Theory</i>. New York: Crown. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-517-02961-8" title="特別:文献資料/0-517-02961-8">0-517-02961-8</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Relativity%3A+The+Special+and+General+Theory&amp;rft.aulast=Einstein%2C+A.&amp;rft.au=Einstein%2C+A.&amp;rft.date=1961&amp;rft.place=New+York&amp;rft.pub=Crown&amp;rft.isbn=0-517-02961-8&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Misner, Charles; Thorne, Kip S.; Wheeler, John Archibald (1973). <i>Gravitation</i>. San Francisco: W. H. Freeman. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-7167-0344-0" title="特別:文献資料/0-7167-0344-0">0-7167-0344-0</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Gravitation&amp;rft.aulast=Misner%2C+Charles&amp;rft.au=Misner%2C+Charles&amp;rft.au=Thorne%2C+Kip+S.&amp;rft.au=Wheeler%2C+John+Archibald&amp;rft.date=1973&amp;rft.place=San+Francisco&amp;rft.pub=W.+H.+Freeman&amp;rft.isbn=0-7167-0344-0&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">R. P. Feynman; F. B. Moringo; W. G. Wagner (1995). <i>Feynman Lectures on Gravitation</i>. Addison-Wesley. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-201-62734-5" title="特別:文献資料/0-201-62734-5">0-201-62734-5</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Feynman+Lectures+on+Gravitation&amp;rft.aulast=R.+P.+Feynman&amp;rft.au=R.+P.+Feynman&amp;rft.au=F.+B.+Moringo&amp;rft.au=W.+G.+Wagner&amp;rft.date=1995&amp;rft.pub=Addison-Wesley&amp;rft.isbn=0-201-62734-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" id="landau" style="font-style:normal"><a href="/wiki/%E3%83%AC%E3%83%95%E3%83%BB%E3%83%A9%E3%83%B3%E3%83%80%E3%82%A6" title="レフ・ランダウ">L.D.ランダウ</a>, <a href="/wiki/%E3%82%A8%E3%83%95%E3%82%B2%E3%83%8B%E3%83%BC%E3%83%BB%E3%83%AA%E3%83%95%E3%82%B7%E3%83%83%E3%83%84" title="エフゲニー・リフシッツ">E.M.リフシッツ</a>『場の古典論』東京図書〈<a href="/wiki/%E7%90%86%E8%AB%96%E7%89%A9%E7%90%86%E5%AD%A6%E6%95%99%E7%A8%8B" title="理論物理学教程">理論物理学教程</a>〉、1978年。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-489-01161-X" title="特別:文献資料/4-489-01161-X">4-489-01161-X</a>。</cite></li>
+<li><cite class="citation book" id="jackson" style="font-style:normal">J.D.ジャクソン『電磁気学』吉岡書店〈物理学叢書〉、2003年。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-8427-0308-3" title="特別:文献資料/4-8427-0308-3">4-8427-0308-3</a>。</cite></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;section=27" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%85%B1%E5%A4%89%E5%8F%A4%E5%85%B8%E5%A0%B4%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="共変古典場理論 (存在しないページ)">共変古典場理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Covariant_classical_field_theory&amp;action=edit&amp;redlink=1" title="En:Covariant classical field theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E9%9B%BB%E7%A3%81%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="電磁テンソル">電磁テンソル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9B%BB%E7%A3%81%E6%B3%A2%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;action=edit&amp;redlink=1" title="電磁波方程式 (存在しないページ)">電磁波方程式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Electromagnetic_wave_equation&amp;action=edit&amp;redlink=1" title="En:Electromagnetic wave equation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A8%E3%83%8A%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%98%E3%83%AB%E3%83%88%E3%83%BB%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB" title="リエナール・ヴィーヘルト・ポテンシャル">リエナール・ヴィーヘルト・ポテンシャル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8B%95%E3%81%8F%E7%A3%81%E7%9F%B3%E3%81%A8%E5%B0%8E%E4%BD%93%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" title="動く磁石と導体問題 (存在しないページ)">動く磁石と導体問題</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Moving_magnet_and_conductor_problem&amp;action=edit&amp;redlink=1" title="En:Moving magnet and conductor problem (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%8D%E5%9D%87%E4%B8%80%E9%9B%BB%E7%A3%81%E5%A0%B4%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;action=edit&amp;redlink=1" title="不均一電磁場方程式 (存在しないページ)">不均一電磁場方程式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nonhomogeneous_electromagnetic_wave_equation&amp;action=edit&amp;redlink=1" title="En:Nonhomogeneous electromagnetic wave equation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%AB%E6%96%B9%E7%A8%8B%E5%BC%8F" title="プロカ方程式">プロカ方程式</a></li>
+<li><a href="/wiki/%E9%87%8F%E5%AD%90%E9%9B%BB%E7%A3%81%E5%8A%9B%E5%AD%A6" title="量子電磁力学">量子電磁力学</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6&amp;action=edit&amp;redlink=1" title="相対論的電磁気学 (存在しないページ)">相対論的電磁気学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Relativistic_electromagnetism&amp;action=edit&amp;redlink=1" title="En:Relativistic electromagnetism (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A5%E3%83%86%E3%83%A5%E3%83%83%E3%82%B1%E3%83%AB%E3%83%99%E3%83%AB%E3%82%AF%E6%8B%A1%E5%BC%B5&amp;action=edit&amp;redlink=1" title="シュテュッケルベルク拡張 (存在しないページ)">シュテュッケルベルク拡張</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stueckelberg_action&amp;action=edit&amp;redlink=1" title="En:Stueckelberg action (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%BB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E3%81%AE%E5%90%B8%E5%8F%8E%E5%AF%BE%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="ホイーラー・ファインマンの吸収対理論 (存在しないページ)">ホイーラー・ファインマンの吸収対理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wheeler%E2%80%93Feynman_absorber_theory&amp;action=edit&amp;redlink=1" title="En:Wheeler–Feynman absorber theory (存在しないページ)">英語版</a>）</span></span></li></ul>
+<div aria-labelledby="物理学の分野" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style="background-color:#f99"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;background-color:#f99;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;background-color:#f99;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Physics-footer&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Physics-footer (存在しないページ)"><span style="font-size:125%;color:#002bb8;;background-color:#f99;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3APhysics-footer&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background-color:#f99;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3APhysics-footer&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background-color:#f99;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="物理学の分野" style="font-size:110%;margin:0 6em">物理学の分野</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">古典・量子</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%8F%A4%E5%85%B8%E7%89%A9%E7%90%86%E5%AD%A6" title="古典物理学">古典物理学</a>（<a href="/wiki/%E5%8F%A4%E5%85%B8%E8%AB%96" title="古典論">古典論</a>）</li>
+<li><a href="/wiki/%E5%8D%8A%E5%8F%A4%E5%85%B8%E8%AB%96" title="半古典論">半古典論</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%87%8F%E5%AD%90%E7%89%A9%E7%90%86%E5%AD%A6" title="量子物理学">量子物理学</a>（<a href="/wiki/%E9%87%8F%E5%AD%90%E8%AB%96" title="量子論">量子論</a>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">研究方法</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%90%86%E8%AB%96%E7%89%A9%E7%90%86%E5%AD%A6" title="理論物理学">理論物理学</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%AE%97%E7%89%A9%E7%90%86%E5%AD%A6" title="計算物理学">計算物理学</a></li>
+<li><a href="/wiki/%E5%AE%9F%E9%A8%93%E7%89%A9%E7%90%86%E5%AD%A6" title="実験物理学">実験物理学</a>（<a href="/wiki/%E9%AB%98%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E7%89%A9%E7%90%86%E5%AD%A6" title="高エネルギー物理学">高エネルギー物理学</a>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">基礎理論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%8A%9B%E5%AD%A6" title="力学">力学</a></li>
+<li><a href="/wiki/%E5%8F%A4%E5%85%B8%E5%8A%9B%E5%AD%A6" title="古典力学">古典力学</a>
+<ul><li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E5%8A%9B%E5%AD%A6" title="ニュートン力学">ニュートン力学</a></li>
+<li><a href="/wiki/%E8%A7%A3%E6%9E%90%E5%8A%9B%E5%AD%A6" title="解析力学">解析力学</a></li></ul></li>
+<li><a href="/wiki/%E9%80%A3%E7%B6%9A%E4%BD%93%E5%8A%9B%E5%AD%A6" title="連続体力学">連続体力学</a></li>
+<li><a href="/wiki/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6" title="流体力学">流体力学</a></li>
+<li><a href="/wiki/%E7%86%B1%E5%8A%9B%E5%AD%A6" title="熱力学">熱力学</a></li>
+<li><a href="/wiki/%E7%B5%B1%E8%A8%88%E5%8A%9B%E5%AD%A6" title="統計力学">統計力学</a></li>
+<li><a href="/wiki/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6" title="電磁気学">電磁気学</a></li>
+<li><a href="/wiki/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6" title="量子力学">量子力学</a></li>
+<li><a href="/wiki/%E7%9B%B8%E5%AF%BE%E8%AB%96%E7%9A%84%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6" title="相対論的量子力学">相対論的量子力学</a></li>
+<li><a href="/wiki/%E5%A0%B4%E3%81%AE%E9%87%8F%E5%AD%90%E8%AB%96" title="場の量子論">場の量子論</a></li>
+<li><a href="/wiki/%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="相対性理論">相対性理論</a>
+<ul><li><a href="/wiki/%E7%89%B9%E6%AE%8A%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="特殊相対性理論">特殊相対性理論</a></li>
+<li><a href="/wiki/%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="一般相対性理論">一般相対性理論</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">研究対象</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B4%A0%E7%B2%92%E5%AD%90%E7%89%A9%E7%90%86%E5%AD%A6" title="素粒子物理学">素粒子物理学</a></li>
+<li><a href="/wiki/%E5%8E%9F%E5%AD%90%E6%A0%B8%E7%89%A9%E7%90%86%E5%AD%A6" title="原子核物理学">原子核物理学</a>
+<ul><li><a href="/wiki/%E6%A0%B8%E6%A7%8B%E9%80%A0%E7%89%A9%E7%90%86%E5%AD%A6" title="核構造物理学">核構造物理学</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%89%E3%83%AD%E3%83%B3%E7%89%A9%E7%90%86%E5%AD%A6" title="ハドロン物理学">ハドロン物理学</a></li></ul></li>
+<li><a class="mw-redirect" href="/wiki/%E5%AE%87%E5%AE%99%E7%89%A9%E7%90%86%E5%AD%A6" title="宇宙物理学">宇宙物理学</a>
+<ul><li><a href="/wiki/%E7%8F%BE%E4%BB%A3%E5%AE%87%E5%AE%99%E8%AB%96" title="現代宇宙論">宇宙論</a></li></ul></li>
+<li><a href="/wiki/%E7%89%A9%E6%80%A7%E7%89%A9%E7%90%86%E5%AD%A6" title="物性物理学">物性物理学</a>
+<ul><li><a href="/wiki/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6" title="固体物理学">固体物理学</a></li>
+<li><a href="/wiki/%E8%A1%A8%E9%9D%A2%E7%A7%91%E5%AD%A6" title="表面科学">表面科学</a></li>
+<li><a href="/wiki/%E4%BD%8E%E6%B8%A9%E7%89%A9%E7%90%86%E5%AD%A6" title="低温物理学">低温物理学</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%83%9E%E3%82%BF%E3%83%BC%E7%89%A9%E7%90%86%E5%AD%A6" title="ソフトマター物理学">ソフトマター物理学</a></li>
+<li><a href="/wiki/%E9%AB%98%E5%88%86%E5%AD%90%E7%89%A9%E7%90%86%E5%AD%A6" title="高分子物理学">高分子物理学</a></li></ul></li>
+<li><a href="/wiki/%E5%8E%9F%E5%AD%90%E7%89%A9%E7%90%86%E5%AD%A6" title="原子物理学">原子物理学</a></li>
+<li><a href="/wiki/%E5%88%86%E5%AD%90%E7%89%A9%E7%90%86%E5%AD%A6" title="分子物理学">分子物理学</a></li>
+<li><a href="/wiki/%E5%85%89%E5%AD%A6" title="光学">光学</a></li>
+<li><a href="/wiki/%E9%9F%B3%E9%9F%BF%E5%AD%A6" title="音響学">音響学</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%A9%E3%82%BA%E3%83%9E%E7%89%A9%E7%90%86%E5%AD%A6" title="プラズマ物理学">プラズマ物理学</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">境界領域</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%95%B0%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6" title="数理物理学">数理物理学</a></li>
+<li><a href="/wiki/%E5%8C%96%E5%AD%A6%E7%89%A9%E7%90%86%E5%AD%A6" title="化学物理学">化学物理学</a></li>
+<li><a href="/wiki/%E7%94%9F%E7%89%A9%E7%89%A9%E7%90%86%E5%AD%A6" title="生物物理学">生物物理学</a></li>
+<li><a href="/wiki/%E5%9C%B0%E7%90%83%E7%89%A9%E7%90%86%E5%AD%A6" title="地球物理学">地球物理学</a>
+<ul><li><a href="/wiki/%E5%A4%A7%E6%B0%97%E7%89%A9%E7%90%86%E5%AD%A6" title="大気物理学">大気物理学</a></li>
+<li><a href="/wiki/%E6%B5%B7%E6%B4%8B%E7%89%A9%E7%90%86%E5%AD%A6" title="海洋物理学">海洋物理学</a></li></ul></li>
+<li><a href="/wiki/%E8%BE%B2%E6%A5%AD%E7%89%A9%E7%90%86%E5%AD%A6" title="農業物理学">農業物理学</a>
+<ul><li><a href="/wiki/%E5%9C%9F%E5%A3%8C%E7%89%A9%E7%90%86%E5%AD%A6" title="土壌物理学">土壌物理学</a></li></ul></li>
+<li><a href="/wiki/%E5%8C%BB%E5%AD%A6%E7%89%A9%E7%90%86%E5%AD%A6" title="医学物理学">医学物理学</a></li>
+<li><a href="/wiki/%E4%BF%9D%E5%81%A5%E7%89%A9%E7%90%86%E5%AD%A6" title="保健物理学">保健物理学</a></li>
+<li><a href="/wiki/%E6%94%BE%E5%B0%84%E7%B7%9A%E7%89%A9%E7%90%86%E5%AD%A6" title="放射線物理学">放射線物理学</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;background-color:#fcc">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%8F%BE%E4%BB%A3%E7%89%A9%E7%90%86%E5%AD%A6" title="現代物理学">現代物理学</a></li>
+<li><a href="/wiki/%E5%BF%9C%E7%94%A8%E7%89%A9%E7%90%86%E5%AD%A6" title="応用物理学">応用物理学</a></li>
+<li><a href="/wiki/%E7%89%A9%E7%90%86%E6%95%B0%E5%AD%A6" title="物理数学">物理数学</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2" style="background-color:#f99">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%89%A9%E7%90%86%E5%AD%A6%E3%81%AE%E5%88%86%E9%87%8E" title="カテゴリ:物理学の分野">カテゴリ</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="テンソル" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:テンソル (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="テンソル" style="font-size:110%;margin:0 6em">テンソル</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<i><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Glossary_of_tensor_theory&amp;action=edit&amp;redlink=1" title="Glossary of tensor theory (存在しないページ)">Glossary of tensor theory</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Glossary_of_tensor_theory&amp;action=edit&amp;redlink=1" title="En:Glossary of tensor theory (存在しないページ)">英語版</a>）</span></span></i></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">範囲 <span lang="en">(<i>Scope</i>)</span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;font-weight:normal;">数学</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%BA%A7%E6%A8%99" title="座標">座標</a></li>
+<li><a href="/wiki/%E5%A4%9A%E9%87%8D%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0" title="多重線型代数">多重線型代数</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E5%B9%BE%E4%BD%95%E5%AD%A6" title="ユークリッド幾何学">ユークリッド幾何学</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E4%BB%A3%E6%95%B0" title="テンソル代数">テンソル代数</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E5%B9%BE%E4%BD%95%E5%AD%A6" title="微分幾何学">微分幾何学</a></li>
+<li><a href="/wiki/%E5%A4%96%E5%BE%AE%E5%88%86" title="外微分">exterior calculus</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E8%A7%A3%E6%9E%90" title="テンソル解析">テンソル解析</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;font-weight:normal;">物理学 • <a href="/wiki/%E5%B7%A5%E5%AD%A6" title="工学">工学</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%80%A3%E7%B6%9A%E4%BD%93%E5%8A%9B%E5%AD%A6" title="連続体力学">連続体力学</a></li>
+<li><a href="/wiki/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6" title="電磁気学">電磁気学</a></li>
+<li><a href="/wiki/%E7%A7%BB%E5%8B%95%E7%8F%BE%E8%B1%A1%E8%AB%96" title="移動現象論">移動現象論</a></li>
+<li><a href="/wiki/%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="一般相対性理論">一般相対性理論</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%93%E3%82%B8%E3%83%A7%E3%83%B3" title="コンピュータビジョン">コンピュータビジョン</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">表記法 <span lang="en">(<i>Notation</i>)</span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%B7%BB%E5%AD%97%E8%A1%A8%E8%A8%98%E6%B3%95" title="添字表記法">添字表記法</a></li>
+<li><a href="/wiki/%E5%A4%9A%E9%87%8D%E6%8C%87%E6%95%B0" title="多重指数">多重指数</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E3%81%AE%E7%B8%AE%E7%B4%84%E8%A8%98%E6%B3%95" title="アインシュタインの縮約記法">アインシュタインの縮約記法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%83%E3%83%81%E8%A7%A3%E6%9E%90&amp;action=edit&amp;redlink=1" title="リッチ解析 (存在しないページ)">リッチ解析</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ricci_calculus&amp;action=edit&amp;redlink=1" title="En:Ricci calculus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Penrose_graphical_notation&amp;action=edit&amp;redlink=1" title="Penrose graphical notation (存在しないページ)">Penrose graphical notation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Penrose_graphical_notation&amp;action=edit&amp;redlink=1" title="En:Penrose graphical notation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%88%E8%A1%A8%E8%A8%98" title="フォークト表記">フォークト表記</a></li>
+<li><a href="/wiki/%E6%8A%BD%E8%B1%A1%E6%B7%BB%E5%AD%97%E8%A8%98%E6%B3%95" title="抽象添字記法">抽象添字記法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%88%E3%83%A9%E3%83%89%E8%A1%A8%E8%A8%98&amp;action=edit&amp;redlink=1" title="テトラド表記 (存在しないページ)">テトラド表記</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tetrad_(index_notation)&amp;action=edit&amp;redlink=1" title="En:tetrad (index notation) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%87%E3%83%AB%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%87%E3%83%B3%E8%A1%A8%E7%A4%BA" title="ファン・デル・ヴェルデン表示">ファン・デル・ヴェルデン表示</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">テンソルの定義</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%BA%E9%96%93" title="テンソル空間">テンソル空間</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E5%A0%B4" title="テンソル場">テンソル場</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E5%AF%86%E5%BA%A6&amp;action=edit&amp;redlink=1" title="テンソル密度 (存在しないページ)">テンソル密度</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tensor_density&amp;action=edit&amp;redlink=1" title="En:tensor density (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9B%B2%E7%B7%9A%E5%BA%A7%E6%A8%99%E7%B3%BB%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="曲線座標系におけるテンソル (存在しないページ)">曲線座標系におけるテンソル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tensors_in_curvilinear_coordinates&amp;action=edit&amp;redlink=1" title="En:tensors in curvilinear coordinates (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%B7%B7%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="混テンソル (存在しないページ)">混テンソル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:mixed_tensor&amp;action=edit&amp;redlink=1" title="En:mixed tensor (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%8F%8D%E5%AF%BE%E7%A7%B0%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="反対称テンソル">反対称テンソル</a></li>
+<li><a href="/wiki/%E5%AF%BE%E7%A7%B0%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="対称テンソル">対称テンソル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;redlink=1" title="テンソル作用素 (存在しないページ)">テンソル作用素</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tensor_operator&amp;action=edit&amp;redlink=1" title="En:tensor operator (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E6%9D%9F&amp;action=edit&amp;redlink=1" title="テンソル束 (存在しないページ)">テンソル束</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tensor_bundle&amp;action=edit&amp;redlink=1" title="En:tensor bundle (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">算法</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D" title="テンソル積">テンソル積</a></li>
+<li><a href="/wiki/%E5%A4%96%E7%A9%8D%E4%BB%A3%E6%95%B0" title="外積代数">楔積</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E3%81%AE%E7%B8%AE%E7%B4%84" title="テンソルの縮約">テンソルの縮約</a></li>
+<li><a href="/wiki/%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97" title="転置行列">行列（2階テンソル）の転置</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%B7%BB%E5%AD%97%E3%81%AE%E4%B8%8A%E3%81%92%E4%B8%8B%E3%81%92&amp;action=edit&amp;redlink=1" title="添字の上げ下げ (存在しないページ)">添字の上げ下げ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:raising_and_lowering_indices&amp;action=edit&amp;redlink=1" title="En:raising and lowering indices (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9B%E3%83%83%E3%82%B8%E5%8F%8C%E5%AF%BE" title="ホッジ双対">ホッジ双対</a></li>
+<li><a href="/wiki/%E5%85%B1%E5%A4%89%E5%BE%AE%E5%88%86" title="共変微分">共変微分</a></li>
+<li><a href="/wiki/%E5%A4%96%E5%BE%AE%E5%88%86" title="外微分">外微分</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%85%B1%E5%A4%89%E5%A4%96%E5%BE%AE%E5%88%86&amp;action=edit&amp;redlink=1" title="共変外微分 (存在しないページ)">共変外微分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:exterior_covariant_derivative&amp;action=edit&amp;redlink=1" title="En:exterior covariant derivative (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%BC%E5%BE%AE%E5%88%86" title="リー微分">リー微分</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連事項</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%AC%A1%E5%85%83_(%E6%95%B0%E5%AD%A6)" title="次元 (数学)">次元</a></li>
+<li><a href="/wiki/%E5%9F%BA%E5%BA%95_(%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="基底 (線型代数学)">基底</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB#数学・物理学を中心とした数理科学・工学分野" title="ベクトル">ベクトル</a>、<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="ベクトル空間">ベクトル空間</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%A4%9A%E9%87%8D%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB&amp;action=edit&amp;redlink=1" title="多重ベクトル (存在しないページ)">多重ベクトル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:multivector&amp;action=edit&amp;redlink=1" title="En:multivector (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E5%85%B1%E5%A4%89%E6%80%A7%E3%81%A8%E5%8F%8D%E5%A4%89%E6%80%A7" title="ベクトルの共変性と反変性">ベクトルの共変性と反変性</a></li>
+<li><a href="/wiki/%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="線型写像">線型写像</a></li>
+<li><a href="/wiki/%E8%A1%8C%E5%88%97" title="行列">行列</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%94%E3%83%8E%E3%83%BC%E3%83%AB" title="スピノール">スピノール</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AB%E3%82%BF%E3%83%B3%E5%BD%A2%E5%BC%8F_(%E7%89%A9%E7%90%86%E5%AD%A6)" title="カルタン形式 (物理学)">カルタン形式</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F" title="微分形式">微分形式</a></li>
+<li><a href="/wiki/%E6%8E%A5%E7%B6%9A%E5%BD%A2%E5%BC%8F" title="接続形式">接続形式</a></li>
+<li><a href="/wiki/%E6%B8%AC%E5%9C%B0%E7%B7%9A" title="測地線">測地線</a></li>
+<li><a href="/wiki/%E5%A4%9A%E6%A7%98%E4%BD%93" title="多様体">多様体</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC%E6%9D%9F" title="ファイバー束">ファイバー束</a></li>
+<li><a href="/wiki/%E6%9B%B2%E7%8E%87%E5%BD%A2%E5%BC%8F" title="曲率形式">曲率形式</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%83%B4%E3%82%A3%E3%83%BB%E3%83%81%E3%83%B4%E3%82%A3%E3%82%BF%E6%8E%A5%E7%B6%9A" title="レヴィ・チヴィタ接続">レヴィ・チヴィタ接続</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E6%8E%A5%E7%B6%9A" title="アフィン接続">アフィン接続</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">有名なテンソル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;font-weight:normal;">数学</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%8D%E3%83%83%E3%82%AB%E3%83%BC%E3%81%AE%E3%83%87%E3%83%AB%E3%82%BF" title="クロネッカーのデルタ">クロネッカーのデルタ</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%87%E3%82%A3%E3%83%B3%E3%83%88%E3%83%B3%E3%81%AE%E3%82%A4%E3%83%97%E3%82%B7%E3%83%AD%E3%83%B3" title="エディントンのイプシロン">エディントンのイプシロン</a></li>
+<li><a href="/wiki/%E8%A8%88%E9%87%8F%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="計量テンソル">計量テンソル</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%83%E3%83%95%E3%82%A7%E3%83%AB%E8%A8%98%E5%8F%B7" title="クリストッフェル記号">クリストッフェル記号</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="リッチテンソル">リッチテンソル</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E6%9B%B2%E7%8E%87%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="リーマン曲率テンソル">リーマン曲率テンソル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="ワイルテンソル (存在しないページ)">ワイルテンソル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Weyl_tensor&amp;action=edit&amp;redlink=1" title="En:Weyl tensor (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%8D%A9%E3%82%8C%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="捩れテンソル">捩れテンソル</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;font-weight:normal;">物理学</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%85%A3%E6%80%A7%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88" title="慣性モーメント">慣性モーメント</a></li>
+<li><a href="/wiki/%E8%A7%92%E9%81%8B%E5%8B%95%E9%87%8F" title="角運動量">角運動量</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%BF%9C%E5%8A%9B%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="応力テンソル">応力テンソル</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%BB%E9%81%8B%E5%8B%95%E9%87%8F%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="エネルギー・運動量テンソル">エネルギー・運動量テンソル</a></li>
+<li><a href="/wiki/%E9%9B%BB%E7%A3%81%E5%A0%B4%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="電磁場テンソル">電磁場テンソル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B0%E3%83%AB%E3%83%BC%E3%82%AA%E3%83%B3%E5%A0%B4%E3%81%AE%E5%BC%B7%E5%BA%A6%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB&amp;action=edit&amp;redlink=1" title="グルーオン場の強度テンソル (存在しないページ)">グルーオン場の強度テンソル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:gluon_field_strength_tensor&amp;action=edit&amp;redlink=1" title="En:gluon field strength tensor (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="アインシュタインテンソル">アインシュタインテンソル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%A8%88%E9%87%8F%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB_(%E4%B8%80%E8%88%AC%E7%9B%B8%E5%AF%BE%E8%AB%96)&amp;action=edit&amp;redlink=1" title="計量テンソル (一般相対論) (存在しないページ)">計量テンソル (一般相対論)</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Metric_tensor_(general_relativity)&amp;action=edit&amp;redlink=1" title="En:Metric tensor (general relativity) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">数学者</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%B3%E3%83%8F%E3%83%AB%E3%83%88%E3%83%BB%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC" title="レオンハルト・オイラー">レオンハルト・オイラー</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%92%E3%83%BB%E3%82%AC%E3%82%A6%E3%82%B9" title="カール・フリードリヒ・ガウス">カール・フリードリヒ・ガウス</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%82%AE%E3%83%A5%E3%82%B9%E3%82%BF%E3%83%B3%EF%BC%9D%E3%83%AB%E3%82%A4%E3%83%BB%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC" title="オーギュスタン＝ルイ・コーシー">オーギュスタン＝ルイ・コーシー</a></li>
+<li><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%BB%E3%82%B0%E3%83%A9%E3%82%B9%E3%83%9E%E3%83%B3" title="ヘルマン・グラスマン">ヘルマン・グラスマン</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AC%E3%82%B4%E3%83%AA%E3%82%AA%E3%83%BB%E3%83%AA%E3%83%83%E3%83%81%EF%BC%9D%E3%82%AF%E3%83%AB%E3%83%90%E3%82%B9%E3%83%88%E3%83%AD" title="グレゴリオ・リッチ＝クルバストロ">グレゴリオ・リッチ＝クルバストロ</a></li>
+<li><a href="/wiki/%E3%83%88%E3%82%A5%E3%83%BC%E3%83%AA%E3%82%AA%E3%83%BB%E3%83%AC%E3%83%B4%E3%82%A3%EF%BC%9D%E3%83%81%E3%83%B4%E3%82%A3%E3%82%BF" title="トゥーリオ・レヴィ＝チヴィタ">トゥーリオ・レヴィ＝チヴィタ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Jan_Arnoldus_Schouten&amp;action=edit&amp;redlink=1" title="Jan Arnoldus Schouten (存在しないページ)">Jan Arnoldus Schouten</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Jan_Arnoldus_Schouten&amp;action=edit&amp;redlink=1" title="En:Jan Arnoldus Schouten (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%B3%E3%83%8F%E3%83%AB%E3%83%88%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3" title="ベルンハルト・リーマン">ベルンハルト・リーマン</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%AB%E3%83%B4%E3%82%A3%E3%83%B3%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88%E3%83%83%E3%83%95%E3%82%A7%E3%83%AB" title="エルヴィン・クリストッフェル">エルヴィン・クリストッフェル</a></li>
+<li><a href="/wiki/%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%87%E3%83%9E%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%88" title="ヴォルデマール・フォークト">ヴォルデマール・フォークト</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%AA%E3%83%BB%E3%82%AB%E3%83%AB%E3%82%BF%E3%83%B3" title="エリ・カルタン">エリ・カルタン</a></li>
+<li><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%AB" title="ヘルマン・ワイル">ヘルマン・ワイル</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E3%83%BB%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3" title="アルベルト・アインシュタイン">アルベルト・アインシュタイン</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB" title="カテゴリ:テンソル">Category:テンソル</a></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402030549
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.335 seconds
+Real time usage: 0.458 seconds
+Preprocessor visited node count: 6800/1000000
+Post‐expand include size: 134166/2097152 bytes
+Template argument size: 18865/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 28/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 12830/5000000 bytes
+Lua time usage: 0.120/7 seconds
+Lua virtual size: 6848512/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  353.414      1 -total
+ 38.62%  136.499      5 テンプレート:Cite_book
+ 28.66%  101.274     27 テンプレート:仮リンク
+ 25.62%   90.557      3 テンプレート:Citation/core
+ 23.67%   83.651      5 テンプレート:ISBN2
+ 19.70%   69.613      2 テンプレート:Navbox
+ 19.20%   67.844      3 テンプレート:Citation/identifier
+ 18.52%   65.466      1 テンプレート:Tensors
+ 15.08%   53.306      5 テンプレート:Catalog_lookup_link
+ 14.31%   50.587      1 テンプレート:電磁気学
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3949586-0!canonical and timestamp 20220402030549 and revision id 2321187. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=古典電磁気学の共変定式&amp;oldid=2321187">http://localhost:8080/w/index.php?title=古典電磁気学の共変定式&amp;oldid=2321187</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%B3%E8%AA%9E%E3%81%AB%E7%96%91%E5%95%8F%E7%82%B9%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:訳語に疑問点のある記事">訳語に疑問点のある記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%89%B9%E6%AE%8A%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96" title="カテゴリ:特殊相対性理論">特殊相対性理論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6" title="カテゴリ:電磁気学">電磁気学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%89%A9%E7%90%86%E5%AD%A6%E3%81%AE%E6%A6%82%E5%BF%B5" title="カテゴリ:物理学の概念">物理学の概念</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;returntoquery=curid%3D3949586%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;returntoquery=curid%3D3949586%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;oldid=2321187" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6%E3%81%AE%E5%85%B1%E5%A4%89%E5%AE%9A%E5%BC%8F&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月14日 (水) 07:44 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.335","walltime":"0.458","ppvisitednodes":{"value":6800,"limit":1000000},"postexpandincludesize":{"value":134166,"limit":2097152},"templateargumentsize":{"value":18865,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":28,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":12830,"limit":5000000},"timingprofile":["100.00%  353.414      1 -total"," 38.62%  136.499      5 テンプレート:Cite_book"," 28.66%  101.274     27 テンプレート:仮リンク"," 25.62%   90.557      3 テンプレート:Citation/core"," 23.67%   83.651      5 テンプレート:ISBN2"," 19.70%   69.613      2 テンプレート:Navbox"," 19.20%   67.844      3 テンプレート:Citation/identifier"," 18.52%   65.466      1 テンプレート:Tensors"," 15.08%   53.306      5 テンプレート:Catalog_lookup_link"," 14.31%   50.587      1 テンプレート:電磁気学"]},"scribunto":{"limitreport-timeusage":{"value":"0.120","limit":"7"},"limitreport-virtmemusage":{"value":6848512,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402030549","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":671});});</script>
+</body></html>

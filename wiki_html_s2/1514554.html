@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>X Window Systemプロトコルとアーキテクチャ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-X_Window_Systemプロトコルとアーキテクチャ rootpage-X_Window_Systemプロトコルとアーキテクチャ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">X Window Systemプロトコルとアーキテクチャ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b><a href="." id="link_a_1" title="X Window System">X Window System</a></b>（<b>X11</b>、<b>X</b>）は、<a href="." id="link_a_2" title="コンピュータネットワーク透過性 (情報工学)">ネットワーク透過</a>な<a href="." id="link_a_3" title="ビットマップ画像">ビットマップ</a>ディスプレイ用<a href="." id="link_a_4" title="ウィンドウシステム">ウィンドウシステム</a>である。本項目は、X11のプロトコルと技術的構造の詳細を解説する。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Xクライアントサーバモデルとネットワーク透過性"><span class="tocnumber">1</span> <span class="toctext">Xクライアントサーバモデルとネットワーク透過性</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#設計思想"><span class="tocnumber">2</span> <span class="toctext">設計思想</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#X_Window_System_コアプロトコル"><span class="tocnumber">3</span> <span class="toctext">X Window System コアプロトコル</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#ウィンドウ"><span class="tocnumber">3.1</span> <span class="toctext">ウィンドウ</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#識別子"><span class="tocnumber">3.2</span> <span class="toctext">識別子</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#属性とプロパティ"><span class="tocnumber">3.3</span> <span class="toctext">属性とプロパティ</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#イベント"><span class="tocnumber">3.4</span> <span class="toctext">イベント</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#色名称"><span class="tocnumber">3.5</span> <span class="toctext">色名称</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Xlibなどのクライアントライブラリ"><span class="tocnumber">4</span> <span class="toctext">Xlibなどのクライアントライブラリ</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#クライアント間通信"><span class="tocnumber">5</span> <span class="toctext">クライアント間通信</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#セレクション、カットバッファ、ドラッグ・アンド・ドロップ"><span class="tocnumber">5.1</span> <span class="toctext">セレクション、カットバッファ、ドラッグ・アンド・ドロップ</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#ウィンドウマネージャ"><span class="tocnumber">5.2</span> <span class="toctext">ウィンドウマネージャ</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#セッションマネージャ"><span class="tocnumber">5.3</span> <span class="toctext">セッションマネージャ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Xディスプレイマネージャ"><span class="tocnumber">6</span> <span class="toctext">Xディスプレイマネージャ</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#ユーザインタフェースの要素"><span class="tocnumber">7</span> <span class="toctext">ユーザインタフェースの要素</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#拡張"><span class="tocnumber">8</span> <span class="toctext">拡張</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#廃止された拡張"><span class="tocnumber">8.1</span> <span class="toctext">廃止された拡張</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id="X.E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E3.82.B5.E3.83.BC.E3.83.90.E3.83.A2.E3.83.87.E3.83.AB.E3.81.A8.E3.83.8D.E3.83.83.E3.83.88.E3.83.AF.E3.83.BC.E3.82.AF.E9.80.8F.E9.81.8E.E6.80.A7"></span><span class="mw-headline" id="Xクライアントサーバモデルとネットワーク透過性">Xクライアントサーバモデルとネットワーク透過性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=1" title="節を編集: Xクライアントサーバモデルとネットワーク透過性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Xは<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%A2%E3%83%87%E3%83%AB" title="クライアントサーバモデル">クライアントサーバモデル</a>に基づいている。「Xサーバ」プログラムはグラフィックディスプレイのあるコンピュータ上で動作し、各種「クライアントプログラム」と通信する。サーバはグラフィカルな出力（ウィンドウ）の要求を受け付け、（キーボードやマウスの）ユーザー入力をクライアントに送信する。
+</p><p>Xでは、サーバがユーザーの使っているマシン上で動作し、クライアントは他のマシンでも動作できる。これは一般的なクライアントサーバモデル(「クライアント」がユーザーのコンピュータ上で、「サーバ」が遠隔のコンピュータ上で動作する)とは逆であり、Xを新たに使おうとする人は、この逆転に戸惑うことが多い。Xの用語はエンドユーザーやハードウェアよりもプログラムの観点を採用している。遠隔にあるプログラムはローカルなマシン上で動作するXサーバのディスプレイと接続し、クライアントとして機能する。ローカルなXディスプレイは入っているトラフィックを受け付けるので、サーバとして機能する。
+</p>
+
+<p>サーバとクライアント間の<a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">通信プロトコル</a>は<a href="/wiki/%E9%80%8F%E9%81%8E%E6%80%A7_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="透過性 (情報工学)">透過性</a>を実現している。クライアントとサーバは同じマシン上でも動作できるし、異なったマシン上でも動作できる。それらマシンの<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="コンピュータ・アーキテクチャ">アーキテクチャ</a>や<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>の差異は問題にならない。クライアントとサーバ間の通信を<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>上で行う場合、暗号化されたコネクション上でトンネリングすることで<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="コンピュータセキュリティ">コンピュータセキュリティ</a>を確保できる。
+</p>
+<h2><span id=".E8.A8.AD.E8.A8.88.E6.80.9D.E6.83.B3"></span><span class="mw-headline" id="設計思想">設計思想</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=2" title="節を編集: 設計思想">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Bob ScheiflerとJim Gettysは設計にあたって、Xの基本原則を以下のように定めた（Scheifler/Gettys 1996）。
+</p>
+<ul><li>実際のアプリケーションでどうしても必要という場合以外は、新機能を追加するな。</li>
+<li>システムが何でないのかを定義することは、何であるのかを定義するのと同じように重要である。あらゆるニーズに答える必要はない。むしろ、互換性を維持した状態で拡張可能にしておけ。</li>
+<li>1つでも例を挙げて一般化したほうが、全く例を挙げずに一般化するよりもマシである。</li>
+<li>問題が完全に把握できないときは、解決策も提供しないのが最善の方法である。</li>
+<li>作業の10%について90%の効果しか得られないときは、単純な解法を使え。</li>
+<li>複雑さは可能な限り分離せよ。</li>
+<li>ポリシーよりも機構を提供せよ。特にユーザインタフェースのポリシーはクライアント側に任せておけ。</li></ul>
+<p>先頭の原則は、X11の設計中に「具体的アプリケーションがそれを必要としていることを知っている場合に限って、新たな機能を追加せよ」に修正された。X はだいたいにおいてこれらの原則に従ってきた。リファレンス実装は拡張性と改良を視野に入れて開発されており、1987年当時のプロトコルとほぼ完全な互換性を維持している。
+</p>
+<h2><span id="X_Window_System_.E3.82.B3.E3.82.A2.E3.83.97.E3.83.AD.E3.83.88.E3.82.B3.E3.83.AB"></span><span class="mw-headline" id="X_Window_System_コアプロトコル">X Window System コアプロトコル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=3" title="節を編集: X Window System コアプロトコル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/X_Window_System_%E3%82%B3%E3%82%A2%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="X Window System コアプロトコル">X Window System コアプロトコル</a>」を参照</div>
+<p>サーバとクライアント間の通信は、ネットワーク経路上でパケットを交換することでなされる。コネクション確立はクライアント側から先にパケットを送ることでなされる。サーバはコネクション確立について受理または拒否のパケットを送り返すか、さらなる認証を求めるパケットを送る。コネクションが受理された場合、受理パケットにはクライアントがその後のサーバとのやり取りで必要とするデータが含まれている。
+</p><p>コネクション確立後、クライアントとサーバの間で以下の4種類のパケットがやり取りされる。
+</p>
+<ol><li><b>要求 (Request)</b>: クライアントがサーバから情報を要求するか、サーバに何らかの実行を要求する。</li>
+<li><b>応答 (Reply)</b>: サーバへの要求に対する応答。全ての要求パケットに対して応答パケットが生成されるわけではない。</li>
+<li><b>イベント (Event)</b>: サーバがクライアントに対して、キーボードやマウスからの入力、ウィンドウの移動、リサイズ、前面への露出などのイベントを知らせる。</li>
+<li><b>エラー (Error)</b>: 要求が不正だった場合、サーバはエラーパケットを送る。要求はキューイングされるので、要求に対するエラーは即座に返ってくるとは限らない。</li></ol>
+<p>Xサーバは基本的なサービス群を提供する。クライアントはサーバとのやり取りによって、より複雑な機能を実現する。
+</p>
+<h3><span id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6"></span><span class="mw-headline" id="ウィンドウ">ウィンドウ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=4" title="節を編集: ウィンドウ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>他の<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="グラフィカルユーザインタフェース">グラフィカルユーザインタフェース</a>でウィンドウと呼ばれるものは、X Window Systemでは「トップレベルウィンドウ」と呼ばれる。「ウィンドウ」は他のウィンドウの中にあるウィンドウも含めた用語である（「親ウィンドウ」と「子ウィンドウ」）。ボタン、メニュー、アイコンといったグラフィカルな要素も全てウィンドウを使って実現される。
+</p><p>ウィンドウは常に親ウィンドウの子ウィンドウとして生成される。このため、ウィンドウ群は<a href="/wiki/%E6%9C%A8_(%E6%95%B0%E5%AD%A6)" title="木 (数学)">木</a>のような階層を形成する。この階層構造の根にあたるウィンドウを「<a class="new" href="/w/index.php?title=%E3%83%AB%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6&amp;action=edit&amp;redlink=1" title="ルートウィンドウ (存在しないページ)">ルートウィンドウ</a>」と呼び、サーバが自動的に生成する。トップレベルウィンドウは、ルートウィンドウの直接の子ウィンドウである。見た目では、ルートウィンドウは画面と同じ大きさで、全てのウィンドウの背後にある。
+</p>
+<h3><span id=".E8.AD.98.E5.88.A5.E5.AD.90"></span><span class="mw-headline" id="識別子">識別子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=5" title="節を編集: 識別子">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ウィンドウ、フォントなどに関する全てのデータはサーバに格納される。クライアントはそれらオブジェクトの識別子を知っている。識別子は整数であり、サーバとやり取りする際のオブジェクトを指定する名前の役割を果たす。例えば、クライアントがウィンドウを生成したい場合、サーバに対して識別子を指定してウィンドウ生成を要求する。サーバはウィンドウを生成すると、それを指定された識別子と結びつける。この識別子はその後のクライアントからの要求に使われる（例えば、そのウィンドウに文字列を描画する場合など）。
+</p><p>識別子はサーバ上で一意であり、クライアント間でも重ならない。2つの異なるクライアントが作成したウィンドウであっても、2つのウィンドウが同じ識別子を持つことはない。クライアントは、自身が生成したオブジェクトでなくとも、識別子さえ知っていれば、そのオブジェクトにアクセスできる。
+</p>
+<h3><span id=".E5.B1.9E.E6.80.A7.E3.81.A8.E3.83.97.E3.83.AD.E3.83.91.E3.83.86.E3.82.A3"></span><span class="mw-headline" id="属性とプロパティ">属性とプロパティ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=6" title="節を編集: 属性とプロパティ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>各ウィンドウには事前定義された属性群とプロパティ群があり、それらは全てサーバに格納されていて、クライアントは適切な要求によってそれらにアクセスできる。属性とは、大きさ、位置、背景色などのウィンドウに関するデータである。プロパティとは、ウィンドウに付加されたデータである。属性とは異なり、プロパティはX Window System コアプロトコルのレベルでは何の意味も持たない。クライアントは任意のデータをウィンドウのプロパティに格納できる。
+</p><p>プロパティには、名前と型と値がある。<a href="/wiki/%E5%91%BD%E4%BB%A4%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="命令型プログラミング">命令型プログラミング</a>言語における<a href="/wiki/%E5%A4%89%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="変数 (プログラミング)">変数</a>に似ていて、アプリケーションは新たなプロパティを生成するときに名前と型を指定し、値を格納できる。プロパティはウィンドウ毎にあるので、各ウィンドウに同じ名前のプロパティがある場合、型と値はそれぞれ異なる。
+</p><p>プロパティはクライアント間通信で主に使われる。例えば、<code>WM_NAME</code>という名前のプロパティはウィンドウの名前を格納するのに使われる。ウィンドウマネージャはこのプロパティを読んで、そのウィンドウの上辺に名前を表示する。
+</p><p>ウィンドウのプロパティ群は<code>xprop</code>プログラムを使って表示できる。特に<code>xprop -root</code>とすればX resource（<a class="new" href="/w/index.php?title=En:X_resources&amp;action=edit&amp;redlink=1" title="En:X resources (存在しないページ)">en:X resources</a>を含むルートウィンドウのプロパティが表示される。
+</p>
+<h3><span id=".E3.82.A4.E3.83.99.E3.83.B3.E3.83.88"></span><span class="mw-headline" id="イベント">イベント</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=7" title="節を編集: イベント">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>イベントとは、サーバからクライアントに送信されるパケットで、クライアントが関心を持つ可能性のある事象を通知する。クライアントはサーバに対して、別のクライアントにイベントを送信するよう要求でき、これを使ってクライアント間通信がなされる。例えば、あるクライアントが現在選択されているテキストを要求する場合、選択が行われているウィンドウを制御しているクライアントにイベントが送信される。
+</p><p>ウィンドウの内容は状況によって破壊されることがある（例えば、別のウィンドウの陰になった場合）。破壊された内容を見えるようにするため、サーバは<code>Expose</code>イベントをクライアントに送り、クライアントにウィンドウの再描画の必要があることを知らせる。
+</p><p>他には、キーボードやマウスからの入力を知らせるイベント、新たなウィンドウの生成を知らせるイベントなどがある。
+</p><p>ある種のイベントは常にクライアントに送られるが、ほとんどのイベントはクライアントが事前に指定していないと送信されない。例えば、キーボード入力しか受け付けないクライアントは、キーボードに関するイベントのみを指定し、マウスに関するイベントは指定しないといったことが考えられる。
+</p>
+<h3><span id=".E8.89.B2.E5.90.8D.E7.A7.B0"></span><span class="mw-headline" id="色名称">色名称</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=8" title="節を編集: 色名称">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>X Window Systemでの色の扱い方はユーザーを混乱させることがあり、歴史的経緯からいくつかの異なるモードをサポートしている。多くのアプリケーションはTrueColor（24ビットで、赤・緑・青がそれぞれ8ビット）を使用するが、古いアプリケーションや特殊なアプリケーションは異なる色モードを要求することがある。特に商用の特殊アプリケーションはPseudoColorを使用する。
+</p><p>X11プロトコルでは、色は32ビットの符号なし整数で表され、これを「ピクセル値」と呼ぶ。<a href="/wiki/%E5%8E%9F%E8%89%B2" title="原色">原色</a>の強さを指定する場合は、それぞれの色成分を16ビット整数で表す。色の表現には以下のモードがあるが、あるディスプレイ機器でこれらが全てサポートされているとは限らない。
+</p>
+<ul><li><b>DirectColor:</b> ピクセル値は赤・緑・青のビット列に分割される。それぞれの成分に独立したカラーマップがある。カラーマップ上のエントリは全て変更可能である。
+<ul><li><b>TrueColor:</b> DirectColor と同じだが、カラーマップのエントリはハードウェアによって決まっていて、変更できない。通常、赤・緑・青はそれぞれの光の強さを表している。</li></ul></li>
+<li><b>GrayScale:</b> ピクセル値は単一のカラーマップのインデックスであり、白黒階調を表す。カラーマップのエントリは変更可能である。
+<ul><li><b>StaticGray:</b> GrayScale と同じだが、カラーマップのエントリはハードウェアによって決まっていて、変更できない。</li></ul></li>
+<li><b>PseudoColor:</b> ピクセル値は単一のカラーマップのインデックスであり、カラーマップの各エントリが色を示している。カラーマップのエントリは変更可能である。
+<ul><li><b>StaticColor:</b> PseudoColor と同じだが、カラーマップのエントリはハードウェアによって決まっていて、変更できない。</li></ul></li></ul>
+<h2><span id="Xlib.E3.81.AA.E3.81.A9.E3.81.AE.E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA"></span><span class="mw-headline" id="Xlibなどのクライアントライブラリ">Xlibなどのクライアントライブラリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=9" title="節を編集: Xlibなどのクライアントライブラリ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/Xlib" title="Xlib">Xlib</a>」を参照</div>
+<p>クライアントプログラムの多くは、<a href="/wiki/Xlib" title="Xlib">Xlib</a>というクライアント用ライブラリを経由してサーバと通信する。さらに、多くの場合<a href="/wiki/Xlib" title="Xlib">Xlib</a>を直接使うのではなく、<a href="/wiki/Motif_(GUI)" title="Motif (GUI)">Motif</a>、<a href="/wiki/GTK_(%E3%83%84%E3%83%BC%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88)" title="GTK (ツールキット)">GTK</a>、<a href="/wiki/Qt" title="Qt">Qt</a> といったライブラリを使う。
+</p>
+<h2><span id=".E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E9.96.93.E9.80.9A.E4.BF.A1"></span><span class="mw-headline" id="クライアント間通信">クライアント間通信</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=10" title="節を編集: クライアント間通信">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>X Window System コアプロトコルは、クライアント間の通信機構としてプロパティとイベントを提供しており、特にクライアント間のメッセージイベントがある。しかし、そのやり取りを規定するプロトコルは存在しない。そのようなプロトコルは個別のクライアント間通信規定で扱われる。
+</p><p><a href="/wiki/Inter-Client_Communication_Conventions_Manual" title="Inter-Client Communication Conventions Manual">Inter-Client Communication Conventions Manual</a>は、セレクションによるそのようなデータ交換のプロトコルとウィンドウマネージャとアプリケーションのやり取りを規定している。しかし、この仕様には混乱があり、理解するのが困難と言われてきた。アプリケーションの<a href="/wiki/%E3%83%AB%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB" title="ルック・アンド・フィール">ルック・アンド・フィール</a>と通信の一貫性は、一般に<a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E7%92%B0%E5%A2%83" title="デスクトップ環境">デスクトップ環境</a>を指定してプログラミングすることで保たれる。
+</p><p>Inter-Client Exchange (ICE) プロトコルはクライアント間のやり取りのためのプロトコル構築のフレームワークとなり、これを使って特定のプロトコルを構築できる。例えば、X Session Manager Protocol (XSMP) はICEに基づくプロトコルで、<a class="new" href="/w/index.php?title=X%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3&amp;action=edit&amp;redlink=1" title="Xセッションマネージャ (存在しないページ)">Xセッションマネージャ</a>（後述）とアプリケーション間のやり取りを規定している。
+</p><p>より新しい規定として<a href="/wiki/Freedesktop.org" title="Freedesktop.org">freedesktop.org</a>による仕様群がある。これには、Xdnd（ドラッグ・アンド・ドロップ規定）、Xembed（あるアプリケーションを別のアプリケーションの子ウィンドウとして動作させる際の詳細な規定）などがある。
+</p>
+<h3><span id=".E3.82.BB.E3.83.AC.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.80.81.E3.82.AB.E3.83.83.E3.83.88.E3.83.90.E3.83.83.E3.83.95.E3.82.A1.E3.80.81.E3.83.89.E3.83.A9.E3.83.83.E3.82.B0.E3.83.BB.E3.82.A2.E3.83.B3.E3.83.89.E3.83.BB.E3.83.89.E3.83.AD.E3.83.83.E3.83.97"></span><span class="mw-headline" id="セレクション、カットバッファ、ドラッグ・アンド・ドロップ">セレクション、カットバッファ、ドラッグ・アンド・ドロップ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=11" title="節を編集: セレクション、カットバッファ、ドラッグ・アンド・ドロップ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=X_Window_%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3&amp;action=edit&amp;redlink=1" title="X Window セレクション (存在しないページ)">セレクション</a> (selection)、カットバッファ (cut buffer)、<a href="/wiki/%E3%83%89%E3%83%A9%E3%83%83%E3%82%B0%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%89%E3%83%AD%E3%83%83%E3%83%97" title="ドラッグ・アンド・ドロップ">ドラッグ・アンド・ドロップ</a> (drag-and-drop) は、ユーザーがX Window Systemでウィンドウからウィンドウにデータを転送するための機構である。セレクションとカットバッファは一般に、ユーザーがウィンドウ内のテキストなどの何らかのデータを選択し、それを他のウィンドウに貼り付けるのに使われる。ドラッグ・アンド・ドロップは、ユーザーがウィンドウ内の何かを選択し、選択したものの上でマウスをクリックし、それを他のウィンドウにドラッグするという場合に使われる。
+</p><p>2つのウィンドウはそれぞれ独立した別々のアプリケーションが制御しているので、Xサーバに接続された2つのクライアントが相互にやり取りしないとデータ転送できない。X Window System コアプロトコルはセレクションの交換に対応した要求やイベントを用意しているが、転送自体はクライアント同士のイベント送信とウィンドウプロパティで実現され、これはセレクションの転送に限った話ではない。
+</p><p>クライアント間で転送されるデータには様々なものがある。テキストであることが多いが、ピクスマップや数値やオブジェクトのリストなどもある。
+</p><p>セレクションとドラッグ・アンド・ドロップは能動的機構である。あるウィンドウ上でテキストを選択した場合、そのウィンドウを制御しているクライアントがデータを要求しているアプリケーションにデータを転送するプロトコルを能動的にサポートしていなければならない。対照的にカットバッファは受動的機構である。ユーザーがテキストを選択した場合、その内容はカットバッファに転送され、元のウィンドウを制御していたアプリケーションが終了してウィンドウが消えても、カットバッファ内の内容は残る。
+</p>
+<h3><span id=".E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3"></span><span class="mw-headline" id="ウィンドウマネージャ">ウィンドウマネージャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=12" title="節を編集: ウィンドウマネージャ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="ウィンドウマネージャ">ウィンドウマネージャ</a>」を参照</div>
+<p>ウィンドウマネージャは、ウィンドウの全体的見た目や他の<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="グラフィカルユーザインタフェース">GUI</a>要素を制御する。X Window System が使用されているマシン毎に異なる見た目となるのは、主にウィンドウマネージャが違うためか、あるいはウィンドウマネージャの設定が異なるためである。
+</p><p>ウィンドウマネージャは、ウィンドウの位置決め、ウィンドウ周囲の装飾の配置、アイコンの処理、特定キーストロークの処理（例えば ALT-F4 押下でウィンドウをアイコン化するなど）といった処理をする。
+</p><p>Xサーバから見れば、ウィンドウマネージャも通常のクライアントと違いはない。初期の位置決めや周囲の装飾の配置は、ウィンドウマネージャによる以下のような要求で制御される。
+</p>
+<ol><li>アプリケーションは、サーバがウィンドウの子ウィンドウを表示する前に、イベントを送信してもらうよう設定できる。</li>
+<li>アプリケーションは、親ウィンドウの変更を要求できる。</li></ol>
+<p>ウィンドウマネージャは、第一の要求を使ってトップレベルウィンドウ（ルートウィンドウの子ウィンドウ）の表示要求をインターセプトする。他のアプリケーションがトップレベルウィンドウの表示を要求すると、サーバは表示する前にウィンドウマネージャにイベントを送る。多くのウィンドウマネージャはRe-parenting Window Managerと呼ばれ、フレームウィンドウと呼ばれる大きなトップレベルウィンドウを生成し、本来のウィンドウをその子ウィンドウとして表示する。画面上はフレームウィンドウの内側に本来のウィンドウが表示される。フレームウィンドウは若干大きいので、周辺部分は元のウィンドウで覆われない。この部分が周囲の装飾（ボーダーやタイトルバー）の表示に使われる。
+</p><p>ウィンドウマネージャはフレームウィンドウでのマウスクリックを管理する。このため、ボーダー部分やタイトルバー部分でマウスをクリックしてドラッグすることで、ウィンドウを移動させたり、サイズを変更したりできる。
+</p><p>ウィンドウマネージャはアイコンや関連するGUI要素の制御も行う。アイコンという概念はX Window System コアプロトコルのレベルでは存在せず、ウィンドウマネージャによって実装されている。例えば、ウィンドウを「アイコン化」するとき、<a href="/wiki/FVWM" title="FVWM">FVWM</a>などのウィンドウマネージャがウィンドウをアンマップし、見えないようにし、アイコン名のウィンドウと（もしあれば）アイコンの画像のウィンドウを生成する。このようにアイコンの制御は完全にウィンドウマネージャが行っている。中には全くアイコンを実装していないウィンドウマネージャもある（例えば <a class="external text" href="http://www.all-day-breakfast.com/wm2/" rel="nofollow">wm2</a>）。
+</p>
+<h3><span id=".E3.82.BB.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3"></span><span class="mw-headline" id="セッションマネージャ">セッションマネージャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=13" title="節を編集: セッションマネージャ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>「セッション (session)」の状態とは、大まかに言えばある時点での「デスクトップの状態」、すなわちウィンドウ群の現在の内容の総体である。より正確に言えば、それらウィンドウ群を管理しているアプリケーションと、それらアプリケーションが要求されたときにウィンドウの状態を復元するのに必要とする情報の集まりである。<a class="new" href="/w/index.php?title=X%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3&amp;action=edit&amp;redlink=1" title="Xセッションマネージャ (存在しないページ)">Xセッションマネージャ</a>とは、セッションの状態を保存し復元するプログラムである。
+</p><p>セッションマネージャを使うと何ができるかというと、ログアウトして再びログインしたときに、ログアウト前と全く同じウィンドウ群が表示されるという効果がわかりやすい。このため、セッションマネージャはログアウト時点の動作中アプリケーションの名前を記録しておき、再度ログインした際にそれらを再開させる。各アプリケーションの状態も復元するには、アプリケーション自体が実行状態をセッションマネージャの要求に応じて保存し、再開時に復元できるようになっている必要がある。
+</p><p>X Window Systemにはデフォルトのセッションマネージャとして<code>xsm</code>がある。他のセッションマネージャとしては、例えば<a href="/wiki/KDE" title="KDE">KDE</a>のデフォルトのセッションマネージャである<code>ksmserver</code>などがある。
+</p>
+<h2><span id="X.E3.83.87.E3.82.A3.E3.82.B9.E3.83.97.E3.83.AC.E3.82.A4.E3.83.9E.E3.83.8D.E3.83.BC.E3.82.B8.E3.83.A3"></span><span class="mw-headline" id="Xディスプレイマネージャ">Xディスプレイマネージャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=14" title="節を編集: Xディスプレイマネージャ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/X%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="Xディスプレイマネージャ">Xディスプレイマネージャ</a>」を参照</div>
+<p><a href="/wiki/X%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="Xディスプレイマネージャ">Xディスプレイマネージャ</a>は、X Window Systemのグラフィカルなログインプロンプトを表示するプログラムである。それだけでなく、Xディスプレイマネージャはローカルのコンピュータ上で1つ以上のXサーバを起動し、遠隔にあるコンピュータで動作するXクライアントからのコネクション要求を受信する。ローカルなサーバはディスプレイマネージャによって起動され、相互に接続し、ログイン画面を表示する。遠隔のサーバはディスプレイマネージャとは独立して起動され、ディスプレイマネージャと接続する。この場合、ディスプレイマネージャは一種のグラフィカルな<a href="/wiki/Telnet" title="Telnet">telnet</a>サーバのように働く。Xサーバがディスプレイマネージャと接続することでセッションが開始される。このとき、このセッションで実行されるプログラムはディスプレイマネージャの動作しているコンピュータ上で動作するが、入出力はXサーバの動作するコンピュータ上で行われる（そして、ユーザーはそのXサーバの動作する遠隔のコンピュータを使っている）。
+</p><p><a href="/wiki/X_Window_Display_Manager" title="X Window Display Manager">XDM</a>はX Window Systemの基本のディスプレイマネージャである。他のディスプレイマネージャとしては、<a href="/wiki/GNOME_%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC" title="GNOME ディスプレイマネージャー">GNOME ディスプレイマネージャー</a> (GDM)、<a href="/wiki/KDE%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="KDEディスプレイマネージャ">KDEディスプレイマネージャ</a> (KDM) などがある。
+</p>
+<h2><span id=".E3.83.A6.E3.83.BC.E3.82.B6.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9.E3.81.AE.E8.A6.81.E7.B4.A0"></span><span class="mw-headline" id="ユーザインタフェースの要素">ユーザインタフェースの要素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=15" title="節を編集: ユーザインタフェースの要素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>初期のX向け<a href="/wiki/%E3%82%A6%E3%82%A3%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%83%BB%E3%83%84%E3%83%BC%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88" title="ウィジェット・ツールキット">ウィジェット・ツールキット</a>としては、<a class="new" href="/w/index.php?title=Xaw&amp;action=edit&amp;redlink=1" title="Xaw (存在しないページ)">Xaw</a> (<a href="/wiki/Project_Athena" title="Project Athena">Athena</a> Widget Set)、<a class="new" href="/w/index.php?title=OLIT&amp;action=edit&amp;redlink=1" title="OLIT (存在しないページ)">OLIT</a> (<a href="/wiki/OPEN_LOOK" title="OPEN LOOK">OPEN LOOK</a> Instrinsics Toolkit)、<a class="new" href="/w/index.php?title=XView&amp;action=edit&amp;redlink=1" title="XView (存在しないページ)">XView</a>、<a href="/wiki/Motif_(GUI)" title="Motif (GUI)">Motif</a>、<a href="/wiki/Tk_(%E3%83%84%E3%83%BC%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88)" title="Tk (ツールキット)">Tk</a>などがある。OLITとXViewは<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a>のかつてのデスクトップ環境 <a href="/wiki/OpenWindows" title="OpenWindows">OpenWindows</a> のベースとなっている。
+</p><p>Motifは <a href="/wiki/Common_Desktop_Environment" title="Common Desktop Environment">Common Desktop Environment</a> (CDE) のベースとなっており、<a href="/wiki/Solaris" title="Solaris">Solaris</a>、<a href="/wiki/AIX" title="AIX">AIX</a>、<a href="/wiki/HP-UX" title="HP-UX">HP-UX</a>といった商用<a href="/wiki/UNIX" title="UNIX">UNIX</a>のデスクトップ環境として使われていた。
+</p><p>比較的新しいツールキットとしては、<a href="/wiki/Qt" title="Qt">Qt</a>（<a href="/wiki/KDE" title="KDE">KDE</a>）、<a href="/wiki/GTK_(%E3%83%84%E3%83%BC%E3%83%AB%E3%82%AD%E3%83%83%E3%83%88)" title="GTK (ツールキット)">GTK</a>（<a href="/wiki/GNOME" title="GNOME">GNOME</a>）、<a href="/wiki/WxWidgets" title="WxWidgets">wxWidgets</a>、<a href="/wiki/FLTK" title="FLTK">FLTK</a>などがある。
+</p>
+<h2><span id=".E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="拡張">拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=16" title="節を編集: 拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Xサーバは単純だが拡張可能となるよう設計された。そのため、プロトコルに対して様々な機能拡張がなされている。
+</p><p>プロトコルレベルでは、拡張は要求/イベント/エラーのパケットの新たな型として認識される。クライアントのアプリケーションは拡張ライブラリを通して拡張機能にアクセスできる。Xサーバ実装への拡張の追加は、サーバがモジュール設計になっていないため、難しいと言われている<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2008年7月）">要出典</span></a></i>]</sup>。<a href="/wiki/XCB" title="XCB">XCB</a>プロジェクトの長期目標の一つとして、XMLによるプロトコル記述から拡張機能のクライアント側とサーバ側のコードを自動生成するというものがある。
+</p><p>以下は、これまで開発された拡張の一部である。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>拡張名</th>
+<th>内容と備考
+</th></tr>
+<tr>
+<td>Composite</td>
+<td>ウィンドウの階層全体を画面外で描画できるようにする。半透明なウィンドウやウィンドウに影を付ける場合に必要。
+</td></tr>
+<tr>
+<td>Damage</td>
+<td>ウィンドウの変更された部分の描画で、なるべく帯域幅を消費しないようにする。
+</td></tr>
+<tr>
+<td>XFixes</td>
+<td>いくつかのプロトコルの変更
+</td></tr>
+<tr>
+<td>Extended-Visual-Information (EvIE)</td>
+<td>クライアントが全てのキーボード/マウス・イベントをインターセプトできるようにする。
+</td></tr>
+<tr>
+<td>Distributed Multihead (DMX)</td>
+<td>DMX Xサーバとの通信
+</td></tr>
+<tr>
+<td>X-Video Motion Compensation (XvMC)</td>
+<td>GPUが動画処理をサポートしている場合、GPUにオフロードする。
+</td></tr>
+<tr>
+<td><a href="/wiki/GLX" title="GLX">GLX</a></td>
+<td><a href="/wiki/OpenGL" title="OpenGL">OpenGL</a>を使った描画のサポート
+</td></tr>
+<tr>
+<td><a href="/wiki/XRender" title="XRender">XRender</a></td>
+<td>ハードウェアを使ったアルファブレンディングによる画像合成の高速化
+</td></tr>
+<tr>
+<td><a href="/wiki/XRandR" title="XRandR">Resize and Rotate (XRandR)</a></td>
+<td>画面の解像度、方向などを動的に変更する。
+</td></tr>
+<tr>
+<td><a href="/wiki/Xinerama" title="Xinerama">Xinerama</a></td>
+<td>デスクトップを複数のディスプレイ機器にまたがった状態にする。
+</td></tr>
+<tr>
+<td>Display Power Management Signaling (<a href="/wiki/VESA_Display_Power_Management_Signaling" title="VESA Display Power Management Signaling">DPMS</a>)</td>
+<td>ディスプレイ機器の節電モード制御
+</td></tr>
+<tr>
+<td>XPRINT</td>
+<td>
+</td></tr>
+<tr>
+<td>X keyboard extension</td>
+<td>キーボードのキー配置制御の拡張
+</td></tr>
+<tr>
+<td>DOUBLE-BUFFER</td>
+<td>ちらつきのないアニメーション
+</td></tr>
+<tr>
+<td>RECORD</td>
+<td>
+</td></tr>
+<tr>
+<td>MIT-SHM</td>
+<td>共有メモリを使った性能向上
+</td></tr>
+<tr>
+<td>SYNC</td>
+<td>Xサーバとクライアントの時刻同期をサポート。
+</td></tr>
+<tr>
+<td>XTEST</td>
+<td>
+</td></tr>
+<tr>
+<td>XInputExtension</td>
+<td>グラフィックタブレットなどの入力デバイスサポート
+</td></tr>
+<tr>
+<td>BIG-REQUESTS</td>
+<td>262140バイト以上の長さの要求を可能にする。
+</td></tr>
+<tr>
+<td>XC-MISC</td>
+<td>
+</td></tr>
+<tr>
+<td><a class="new" href="/w/index.php?title=X_video_extension&amp;action=edit&amp;redlink=1" title="X video extension (存在しないページ)">X video extension</a></td>
+<td>ハードウェアによるビデオオーバーレイとビデオ再生時の拡大縮小をサポート。Xv と略記されることもある。
+</td></tr>
+<tr>
+<td>Shape</td>
+<td>矩形以外のウィンドウや部分的に透明なウィンドウのサポート
+</td></tr>
+<tr>
+<td>DEC-XTRAP</td>
+<td>
+</td></tr>
+<tr>
+<td>MIT-SCREEN-SAVER</td>
+<td>
+</td></tr>
+<tr>
+<td>MIT-SUNDRY-NONSTANDARD</td>
+<td>
+</td></tr>
+<tr>
+<td>SECURITY</td>
+<td>
+</td></tr>
+<tr>
+<td>TOG-CUP</td>
+<td>カラーマップ利用ポリシーの提供
+</td></tr>
+<tr>
+<td>X-Resource</td>
+<td>
+</td></tr>
+<tr>
+<td>XC-APPGROUP</td>
+<td>
+</td></tr>
+<tr>
+<td>XFree86-Bigfont</td>
+<td>
+</td></tr>
+<tr>
+<td>XFree86-DGA</td>
+<td>ダイレクト・リニア・フレームバッファへのアクセス (Direct Graphics Access)
+</td></tr>
+<tr>
+<td>XFree86-Misc</td>
+<td>
+</td></tr>
+<tr>
+<td>XFree86-VidModeExtension</td>
+<td>モードラインとガンマの動的設定
+</td></tr></tbody></table>
+<h3><span id=".E5.BB.83.E6.AD.A2.E3.81.95.E3.82.8C.E3.81.9F.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="廃止された拡張">廃止された拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=17" title="節を編集: 廃止された拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>拡張名</th>
+<th>内容と備考
+</th></tr>
+<tr>
+<td><a class="new" href="/w/index.php?title=En:Low_Bandwidth_X&amp;action=edit&amp;redlink=1" title="En:Low Bandwidth X (存在しないページ)">Low Bandwidth X</a> (LBX)</td>
+<td><a href="/wiki/Secure_Shell" title="Secure Shell">Secure Shell</a>のコネクションを利用したトンネリングの方が性能がよいため、廃れた。
+</td></tr>
+<tr>
+<td><a href="/wiki/PHIGS" title="PHIGS">PHIGS Extension to X (PEX)</a></td>
+<td>PHIGSによる3次元グラフィックスAPIサポート。OpenGLに対応したGLXの方がよく使われている。
+</td></tr>
+<tr>
+<td>XImage Extension</td>
+<td>MIT-SHMが代替として使われている。
+</td></tr></tbody></table>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=18" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Xlib" title="Xlib">Xlib</a></li>
+<li><a class="mw-redirect" href="/wiki/Intrinsics" title="Intrinsics">Intrinsics</a> (Xt)</li>
+<li><a href="/wiki/X_Window_System_%E3%82%B3%E3%82%A2%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="X Window System コアプロトコル">X Window System コアプロトコル</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=19" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Robert W. Scheifler and James Gettys: <i>X Window System: Core and extension protocols, X version 11, releases 6 and 6.1</i>, Digital Press 1996, ISBN 1-55558-148-X</li>
+<li><a class="external text" href="http://www.visi.com/~grante/Xtut/" rel="nofollow">An Introduction to X11 User Interfaces</a></li>
+<li><a class="external text" href="http://www.its.strath.ac.uk/courses/x/" rel="nofollow">Introduction to X Windows</a></li>
+<li><a class="external text" href="http://freedesktop.org/~jg/roadmap.html" rel="nofollow">Open Source Desktop Technology Road Map</a> (Jim Gettys, 09 Dec 2003)</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=20" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.x.org/" rel="nofollow">X.Org Foundation</a> 公式サイト</li>
+<li><a class="external text" href="http://xorg.freedesktop.org/wiki/" rel="nofollow">X.Org Foundation wiki</a></li>
+<li><a class="external text" href="http://www.rahul.net/kenton/bib.html" rel="nofollow">Kenton Lee's pages on X Window and Motif</a></li></ul>
+<div aria-labelledby="X_Window_System" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:XWinSys&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:XWinSys (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AXWinSys&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AXWinSys&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="X_Window_System" style="font-size:110%;margin:0 6em">X Window System</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/X_Window_System_%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="X Window System プロトコルとアーキテクチャ">アーキテクチャ</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/X_Window_System_%E3%82%B3%E3%82%A2%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="X Window System コアプロトコル">コアプロトコル</a></li>
+<li><a href="/wiki/Xlib" title="Xlib">Xlib</a></li>
+<li><a href="/wiki/XCB" title="XCB">XCB</a></li>
+<li><a class="new" href="/w/index.php?title=X_Window_selection&amp;action=edit&amp;redlink=1" title="X Window selection (存在しないページ)">X Window selection</a></li>
+<li><a href="/wiki/X%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="Xウィンドウマネージャ">Xウィンドウマネージャ</a></li>
+<li><a class="new" href="/w/index.php?title=X_session_manager&amp;action=edit&amp;redlink=1" title="X session manager (存在しないページ)">X session manager</a></li>
+<li><a href="/wiki/X%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="Xディスプレイマネージャ">Xディスプレイマネージャ</a></li>
+<li><a href="/wiki/X_Toolkit_Intrinsics" title="X Toolkit Intrinsics">X Toolkit Intrinsics</a></li>
+<li><a class="new" href="/w/index.php?title=X_Window_authorization&amp;action=edit&amp;redlink=1" title="X Window authorization (存在しないページ)">X Window authorization</a></li>
+<li><a href="/wiki/X11%E3%81%AE%E8%89%B2%E5%90%8D%E7%A7%B0" title="X11の色名称">X11 color names</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ウィンドウマネージャ<br/>の方式</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%9D%E3%82%B8%E3%83%83%E3%83%88%E5%9E%8B%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="コンポジット型ウィンドウマネージャ">コンポジット型</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%9A%E3%82%A2%E3%83%AC%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E5%9E%8B%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="リペアレンティング型ウィンドウマネージャ">リペアレンティング型</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF%E5%9E%8B%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="スタック型ウィンドウマネージャ">スタック型</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%AB%E5%9E%8B%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="タイル型ウィンドウマネージャ">タイル型</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">拡張</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=X_Image_Extension&amp;action=edit&amp;redlink=1" title="X Image Extension (存在しないページ)">X Image Extension</a></li>
+<li><a class="new" href="/w/index.php?title=X_keyboard_extension&amp;action=edit&amp;redlink=1" title="X keyboard extension (存在しないページ)">X keyboard extension</a></li>
+<li><a class="new" href="/w/index.php?title=X_video_extension&amp;action=edit&amp;redlink=1" title="X video extension (存在しないページ)">X video extension</a></li>
+<li><a class="new" href="/w/index.php?title=Shape_extension&amp;action=edit&amp;redlink=1" title="Shape extension (存在しないページ)">Shape extension</a></li>
+<li><a class="new" href="/w/index.php?title=MIT-SHM&amp;action=edit&amp;redlink=1" title="MIT-SHM (存在しないページ)">Shared memory extension</a></li>
+<li><a href="/wiki/GLX" title="GLX">GLX</a></li>
+<li><a href="/wiki/XRender" title="XRender">XRender</a></li>
+<li><a class="new" href="/w/index.php?title=MPX&amp;action=edit&amp;redlink=1" title="MPX (存在しないページ)">MPX</a></li>
+<li><a href="/wiki/XRandR" title="XRandR">XRandR</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">実装</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cygwin/X" title="Cygwin/X">Cygwin/X</a></li>
+<li><a href="/wiki/X11.app" title="X11.app">X11.app</a></li>
+<li><a href="/wiki/X.Org_Server" title="X.Org Server">X.Org Server</a></li>
+<li><a class="new" href="/w/index.php?title=X-Win32&amp;action=edit&amp;redlink=1" title="X-Win32 (存在しないページ)">X-Win32</a></li>
+<li><a href="/wiki/XFree86" title="XFree86">XFree86</a></li>
+<li><a href="/wiki/XDarwin" title="XDarwin">XDarwin</a></li>
+<li><a href="/wiki/Xming" title="Xming">Xming</a></li>
+<li><a href="/wiki/Xsun" title="Xsun">Xsun</a></li>
+<li><a href="/wiki/Xgl" title="Xgl">Xgl</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">標準</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Inter-Client_Communication_Conventions_Manual" title="Inter-Client Communication Conventions Manual">ICCCM</a></li>
+<li><a href="/wiki/Extended_Window_Manager_Hints" title="Extended Window Manager Hints">EWMH</a></li>
+<li><a href="/wiki/Direct_Save_Protocol" title="Direct Save Protocol">XDS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span class="nowrap">ウィンドウマネージャ</span></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=9wm&amp;action=edit&amp;redlink=1" title="9wm (存在しないページ)">9wm</a></li>
+<li><a class="new" href="/w/index.php?title=AfterStep&amp;action=edit&amp;redlink=1" title="AfterStep (存在しないページ)">AfterStep</a></li>
+<li><a class="new" href="/w/index.php?title=Amiwm&amp;action=edit&amp;redlink=1" title="Amiwm (存在しないページ)">Amiwm</a></li>
+<li><a href="/wiki/Awesome" title="Awesome">awesome</a></li>
+<li><a href="/wiki/Beryl" title="Beryl">Beryl</a></li>
+<li><a href="/wiki/Blackbox" title="Blackbox">Blackbox</a></li>
+<li><a href="/wiki/CTWM" title="CTWM">CTWM</a></li>
+<li><a href="/wiki/Cwm_(%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3)" title="Cwm (ウィンドウマネージャ)">cwm</a></li>
+<li><a href="/wiki/Dwm_(%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3)" title="Dwm (ウィンドウマネージャ)">dwm</a></li>
+<li><a href="/wiki/Enlightenment" title="Enlightenment">Enlightenment</a></li>
+<li><a class="new" href="/w/index.php?title=Evilwm&amp;action=edit&amp;redlink=1" title="Evilwm (存在しないページ)">evilwm</a></li>
+<li><a href="/wiki/Fluxbox" title="Fluxbox">Fluxbox</a></li>
+<li><a href="/wiki/FVWM" title="FVWM">FVWM</a></li>
+<li><a href="/wiki/FVWM95" title="FVWM95">FVWM95</a></li>
+<li><a href="/wiki/I3_(%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3)" title="I3 (ウィンドウマネージャ)">i3</a></li>
+<li><a href="/wiki/IceWM" title="IceWM">IceWM</a></li>
+<li><a class="new" href="/w/index.php?title=Ion&amp;action=edit&amp;redlink=1" title="Ion (存在しないページ)">Ion</a></li>
+<li><a href="/wiki/JWM" title="JWM">JWM</a></li>
+<li><a href="/wiki/KWin" title="KWin">KWin</a></li>
+<li><a class="new" href="/w/index.php?title=Larswm&amp;action=edit&amp;redlink=1" title="Larswm (存在しないページ)">larswm</a></li>
+<li><a class="new" href="/w/index.php?title=Mlvwm&amp;action=edit&amp;redlink=1" title="Mlvwm (存在しないページ)">Mlvwm</a></li>
+<li><a href="/wiki/Metacity" title="Metacity">Metacity</a></li>
+<li><a href="/wiki/Motif_(GUI)" title="Motif (GUI)">Mwm</a></li>
+<li><a href="/wiki/Mutter" title="Mutter">Mutter</a></li>
+<li><a class="mw-redirect" href="/wiki/OpenBox" title="OpenBox">OpenBox</a></li>
+<li><a href="/wiki/PekWM" title="PekWM">PekWM</a></li>
+<li><a class="new" href="/w/index.php?title=Qvwm&amp;action=edit&amp;redlink=1" title="Qvwm (存在しないページ)">Qvwm</a></li>
+<li><a href="/wiki/Ratpoison" title="Ratpoison">Ratpoison</a></li>
+<li><a class="new" href="/w/index.php?title=Sawfish&amp;action=edit&amp;redlink=1" title="Sawfish (存在しないページ)">Sawfish</a></li>
+<li><a class="new" href="/w/index.php?title=Scwm&amp;action=edit&amp;redlink=1" title="Scwm (存在しないページ)">Scwm</a></li>
+<li><a class="new" href="/w/index.php?title=Stumpwm&amp;action=edit&amp;redlink=1" title="Stumpwm (存在しないページ)">Stumpwm</a></li>
+<li><a href="/wiki/Twm" title="Twm">Twm</a></li>
+<li><a href="/wiki/Window_Maker" title="Window Maker">Window Maker</a></li>
+<li><a class="new" href="/w/index.php?title=Wmii&amp;action=edit&amp;redlink=1" title="Wmii (存在しないページ)">wmii</a></li>
+<li><a href="/wiki/Xmonad" title="Xmonad">xmonad</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E7%92%B0%E5%A2%83" title="デスクトップ環境">デスクトップ環境</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連組織</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/The_Open_Group" title="The Open Group">The Open Group</a></li>
+<li><a href="/wiki/X.Org_Foundation" title="X.Org Foundation">X.Org Foundation</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401025404
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.134 seconds
+Real time usage: 0.167 seconds
+Preprocessor visited node count: 760/1000000
+Post‐expand include size: 21043/2097152 bytes
+Template argument size: 2181/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 4968448/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   99.036      1 -total
+ 55.28%   54.744      4 テンプレート:Main
+ 50.54%   50.049      4 テンプレート:Rellink
+ 45.07%   44.637      4 テンプレート:See/core
+ 22.04%   21.830      1 テンプレート:要出典
+ 22.04%   21.826      1 テンプレート:XWinSys
+ 18.94%   18.757      1 テンプレート:Fix
+ 18.25%   18.071      1 テンプレート:Navbox
+  8.86%    8.770      1 テンプレート:DMC/core
+  4.61%    4.569      2 テンプレート:要出典/dateHandler
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1514554-0!canonical and timestamp 20220401025404 and revision id 915867. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=X_Window_Systemプロトコルとアーキテクチャ&amp;oldid=915867">http://localhost:8080/w/index.php?title=X_Window_Systemプロトコルとアーキテクチャ&amp;oldid=915867</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2008%E5%B9%B47%E6%9C%88-8%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2008年7月-8月">出典を必要とする記述のある記事/2008年7月-8月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:X_Window_System" title="カテゴリ:X Window System">X Window System</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=X+Window+System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D1514554%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=X+Window+System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D1514554%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;oldid=915867" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=X_Window_System%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%81%A8%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年11月17日 (火) 07:03 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.134","walltime":"0.167","ppvisitednodes":{"value":760,"limit":1000000},"postexpandincludesize":{"value":21043,"limit":2097152},"templateargumentsize":{"value":2181,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   99.036      1 -total"," 55.28%   54.744      4 テンプレート:Main"," 50.54%   50.049      4 テンプレート:Rellink"," 45.07%   44.637      4 テンプレート:See/core"," 22.04%   21.830      1 テンプレート:要出典"," 22.04%   21.826      1 テンプレート:XWinSys"," 18.94%   18.757      1 テンプレート:Fix"," 18.25%   18.071      1 テンプレート:Navbox","  8.86%    8.770      1 テンプレート:DMC/core","  4.61%    4.569      2 テンプレート:要出典/dateHandler"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":4968448,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401025404","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":341});});</script>
+</body></html>

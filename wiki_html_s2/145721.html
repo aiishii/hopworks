@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>素数計数関数 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-素数計数関数 rootpage-素数計数関数 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">素数計数関数</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>素数計数関数</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Prime-counting function</span>）とは、正の<a href="." id="link_a_2" title="実数">実数</a>にそれ以下の<a href="." id="link_a_3" title="素数">素数</a>の個数を対応させる<a href="." id="link_a_4" title="関数 (数学)">関数</a>のことであり、<b><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>)</b> で表す<sup class="reference" id="cite_ref-Bach_1-0"><a href="#cite_note-Bach-1">[1]</a></sup><sup class="reference" id="cite_ref-mathworld_pcf_2-0"><a href="#cite_note-mathworld_pcf-2">[2]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#歴史"><span class="tocnumber">1</span> <span class="toctext">歴史</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#素数定理"><span class="tocnumber">1.1</span> <span class="toctext">素数定理</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#リーマン予想との関係"><span class="tocnumber">1.2</span> <span class="toctext">リーマン予想との関係</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#数表"><span class="tocnumber">2</span> <span class="toctext">数表</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#π(x)_の公式"><span class="tocnumber">3</span> <span class="toctext"><span>π</span>(<i>x</i>) の公式</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#不等式"><span class="tocnumber">4</span> <span class="toctext">不等式</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#出典"><span class="tocnumber">6</span> <span class="toctext">出典</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=1" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E6%95%B0%E8%AB%96" title="数論">数論</a>の<a href="/wiki/%E6%AD%B4%E5%8F%B2" title="歴史">歴史</a>において <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) の増大度は重要な関心事とされてきた<sup class="reference" id="cite_ref-Caldwell_3-0"><a href="#cite_note-Caldwell-3">[3]</a></sup><sup class="reference" id="cite_ref-Dickson_4-0"><a href="#cite_note-Dickson-4">[4]</a></sup>。
+</p><p><a href="/wiki/18%E4%B8%96%E7%B4%80" title="18世紀">18世紀</a>の<a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%B3%E3%83%8F%E3%83%AB%E3%83%88%E3%83%BB%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC" title="レオンハルト・オイラー">レオンハルト・オイラー</a>は、素数列の<a href="/wiki/%E9%80%86%E6%95%B0" title="逆数">逆数</a>の和が<a href="/wiki/%E7%99%BA%E6%95%A3" title="発散">発散</a>することを示した（<a href="/wiki/%E7%B4%A0%E6%95%B0%E3%81%8C%E7%84%A1%E6%95%B0%E3%81%AB%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E8%A8%BC%E6%98%8E#オイラー" title="素数が無数に存在することの証明">素数の無限性の証明</a>を参照）。<a href="/wiki/%E5%B9%B3%E6%96%B9%E6%95%B0" title="平方数">平方数</a>の逆数の和は収束するため、これは <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) が平方数ほど速く増大しないことを示している<sup class="reference" id="cite_ref-paulo_5-0"><a href="#cite_note-paulo-5">[5]</a></sup>。
+</p><p><a href="/wiki/1808%E5%B9%B4" title="1808年">1808年</a>、<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AA%E3%82%A2%E3%83%B3%EF%BC%9D%E3%83%9E%E3%83%AA%E3%83%BB%E3%83%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%89%E3%83%AB" title="アドリアン＝マリ・ルジャンドル">アドリアン＝マリ・ルジャンドル</a>は以下の<a href="/wiki/%E7%AD%89%E5%BC%8F" title="等式">等式</a>を示した<sup class="reference" id="cite_ref-paulo_5-1"><a href="#cite_note-paulo-5">[5]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\pi (N)=\pi (\sqrt{N} )-1+\sum_d \mu (d)\left[ \frac{N}{d} \right]&lt;/math&gt;</dd></dl>
+<p>ここで &lt;math&gt;\mu(d)&lt;/math&gt; は<a href="/wiki/%E3%83%A1%E3%83%93%E3%82%A6%E3%82%B9%E9%96%A2%E6%95%B0" title="メビウス関数">メビウス関数</a>、&lt;math&gt;[x]&lt;/math&gt; は<a href="/wiki/%E5%BA%8A%E9%96%A2%E6%95%B0%E3%81%A8%E5%A4%A9%E4%BA%95%E9%96%A2%E6%95%B0" title="床関数と天井関数">ガウス記号</a>であり、和は &lt;math&gt;\sqrt{N}&lt;/math&gt; 以下のすべての素数の積 <i>P</i> のすべての正の約数 <i>d</i> を動く。この式より、
+</p>
+<dl><dd>&lt;math&gt;\lim_{x\to \infty} \frac{\pi(x)}{x} =0&lt;/math&gt;</dd></dl>
+<p>が導かれる<sup class="reference" id="cite_ref-paulo_5-2"><a href="#cite_note-paulo-5">[5]</a></sup>。
+</p>
+<h3><span id=".E7.B4.A0.E6.95.B0.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="素数定理">素数定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=2" title="節を編集: 素数定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>18世紀末には、<span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) が &lt;math&gt;\frac{x}{\operatorname{ln} x}&lt;/math&gt; に漸近近似できること、即ち
+</p>
+<dl><dd>&lt;math&gt;\lim_{x\to \infty} \frac{\pi (x)}{x/\operatorname{ln} x} =1&lt;/math&gt;</dd></dl>
+<p>が成り立つであろうということが、<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%92%E3%83%BB%E3%82%AC%E3%82%A6%E3%82%B9" title="カール・フリードリヒ・ガウス">カール・フリードリヒ・ガウス</a>により予想されていた。<a href="/wiki/1850%E5%B9%B4" title="1850年">1850年</a>頃に<a href="/wiki/%E3%83%91%E3%83%95%E3%83%8C%E3%83%86%E3%82%A3%E3%83%BB%E3%83%81%E3%82%A7%E3%83%93%E3%82%B7%E3%82%A7%E3%83%95" title="パフヌティ・チェビシェフ">パフヌティ・チェビシェフ</a>は、この等式の左辺がもし<a href="/wiki/%E6%A5%B5%E9%99%90" title="極限">極限</a>を持つならば、それは1でなくてはならないことを示した<sup class="reference" id="cite_ref-paulo_5-3"><a href="#cite_note-paulo-5">[5]</a></sup>。その後もこの予想は長らく証明されなかったが、<a href="/wiki/1896%E5%B9%B4" title="1896年">1896年</a>になって<a href="/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%80%E3%83%9E%E3%83%BC%E3%83%AB" title="ジャック・アダマール">ジャック・アダマール</a>と<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AB%EF%BC%9D%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%BB%E3%83%89%E3%83%BB%E3%83%A9%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%AC%E3%83%BC%E3%83%BB%E3%83%97%E3%83%BC%E3%82%B5%E3%83%B3&amp;action=edit&amp;redlink=1" title="シャルル＝ジャン・ド・ラ・ヴァレー・プーサン (存在しないページ)">シャルル＝ジャン・ド・ラ・ヴァレー・プーサン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Charles-Jean_de_La_Vall%C3%A9e_Poussin&amp;action=edit&amp;redlink=1" title="En:Charles-Jean de La Vallée Poussin (存在しないページ)">英語版</a>）</span></span>により独立に証明され、現在では<b><a href="/wiki/%E7%B4%A0%E6%95%B0%E5%AE%9A%E7%90%86" title="素数定理">素数定理</a></b>と呼ばれている。彼らの証明は、<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%BC%E3%83%BC%E3%82%BF%E9%96%A2%E6%95%B0" title="リーマンゼータ関数">リーマンゼータ関数</a>の性質を用いている。
+</p><p>長い間、<a href="/wiki/%E8%A7%A3%E6%9E%90" title="解析">解析</a>的方法を用いなければ素数定理を証明することはできないと信じられていたが<sup class="reference" id="cite_ref-paulo_5-4"><a href="#cite_note-paulo-5">[5]</a></sup>、<a href="/wiki/1948%E5%B9%B4" title="1948年">1948年</a>頃、<a href="/wiki/%E3%82%A2%E3%83%88%E3%83%AB%E3%83%BB%E3%82%BB%E3%83%AB%E3%83%90%E3%83%BC%E3%82%B0" title="アトル・セルバーグ">アトル・セルバーグ</a>と<a href="/wiki/%E3%83%9D%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%A8%E3%83%AB%E3%83%87%E3%82%B7%E3%83%A5" title="ポール・エルデシュ">ポール・エルデシュ</a>は<a href="/wiki/%E8%A4%87%E7%B4%A0%E8%A7%A3%E6%9E%90" title="複素解析">複素解析</a>を用いない素数定理の証明を（ほぼ独立に）発見した<sup class="reference" id="cite_ref-Ireland_6-0"><a href="#cite_note-Ireland-6">[6]</a></sup>。それらの証明では、<a href="/wiki/%E6%95%B0%E8%AB%96%E7%9A%84%E9%96%A2%E6%95%B0" title="数論的関数">数論的関数</a>の初等的評価のみを用いていた。
+</p>
+<h3><span id=".E3.83.AA.E3.83.BC.E3.83.9E.E3.83.B3.E4.BA.88.E6.83.B3.E3.81.A8.E3.81.AE.E9.96.A2.E4.BF.82"></span><span class="mw-headline" id="リーマン予想との関係">リーマン予想との関係</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=3" title="節を編集: リーマン予想との関係">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E7%B4%A0%E6%95%B0%E5%85%AC%E5%BC%8F" title="リーマンの素数公式">リーマンの素数公式</a>」を参照</div></li></ul>
+<p><a href="/wiki/1859%E5%B9%B4" title="1859年">1859年</a><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3" title="リーマン">リーマン</a>は、<span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) をゼータ関数の零点を用いて表す式を発見した<sup class="reference" id="cite_ref-paulo_5-5"><a href="#cite_note-paulo-5">[5]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\pi (x)=R(x)-\sum_{\rho} R(x^{\rho})&lt;/math&gt;</dd></dl>
+<p>ここで &lt;math&gt;R(x)&lt;/math&gt; は、
+</p>
+<dl><dd>&lt;math&gt;R(x)=\sum_{m=1}^{\infty} \frac{\mu (m)}{m} \operatorname{li} (x^{\tfrac{1}{m}})&lt;/math&gt;</dd></dl>
+<p>と定義され、和の ρ はゼータ関数の全ての<a href="/wiki/%E9%9B%B6%E7%82%B9" title="零点">零点</a>をわたる。
+</p>
+<ul><li>また、リーマン予想と下の式が正しいことは同値である。</li></ul>
+<dl><dd>&lt;math&gt;\pi (x)=\operatorname{li} (x)+O\left( \sqrt{x} \ln x\right)&lt;/math&gt;</dd></dl>
+<p>また、&lt;math&gt;O&lt;/math&gt;は、<a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%82%A6%E3%81%AE%E8%A8%98%E5%8F%B7" title="ランダウの記号">ランダウの記号</a>である。
+また、リーマン予想が正しい場合、以下の式が成り立つことが知られている。<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p>
+<dl><dd>&lt;math&gt;|\pi(x) - \operatorname{li}(x)| &lt; \frac{1}{8\pi} \sqrt{x} \, \log{x}, \qquad \text{for all } x \ge 2657. &lt;/math&gt;</dd></dl>
+<h2><span id=".E6.95.B0.E8.A1.A8"></span><span class="mw-headline" id="数表">数表</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=4" title="節を編集: 数表">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下に <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>), <i>x</i> / ln <i>x</i> および li <i>x</i> の3つの関数を10の冪において比較した表を掲載する<sup class="reference" id="cite_ref-Caldwell_3-1"><a href="#cite_note-Caldwell-3">[3]</a></sup><sup class="reference" id="cite_ref-Silva_8-0"><a href="#cite_note-Silva-8">[8]</a></sup><sup class="reference" id="cite_ref-Kulsha_9-0"><a href="#cite_note-Kulsha-9">[9]</a></sup><sup class="reference" id="cite_ref-Gourdon_10-0"><a href="#cite_note-Gourdon-10">[10]</a></sup><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> 。 
+</p>
+<table class="wikitable" style="text-align:right">
+<tbody><tr>
+<th><i>x</i>
+</th>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>)
+</th>
+<th><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) − <i>x</i> / ln <i>x</i>
+</th>
+<th>li <i>x</i> − <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>)
+</th>
+<th><i>x</i> / <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>)
+</th></tr>
+<tr>
+<td>10
+</td>
+<td>4
+</td>
+<td>−0.3
+</td>
+<td>2.2
+</td>
+<td>2.500
+</td></tr>
+<tr>
+<td>10<sup>2</sup>
+</td>
+<td>25
+</td>
+<td>3.3
+</td>
+<td>5.1
+</td>
+<td>4.000
+</td></tr>
+<tr>
+<td>10<sup>3</sup>
+</td>
+<td>168
+</td>
+<td>23
+</td>
+<td>10
+</td>
+<td>5.952
+</td></tr>
+<tr>
+<td>10<sup>4</sup>
+</td>
+<td>1,229
+</td>
+<td>143
+</td>
+<td>17
+</td>
+<td>8.137
+</td></tr>
+<tr>
+<td>10<sup>5</sup>
+</td>
+<td>9,592
+</td>
+<td>906
+</td>
+<td>38
+</td>
+<td>10.425
+</td></tr>
+<tr>
+<td>10<sup>6</sup>
+</td>
+<td>78,498
+</td>
+<td>6,116
+</td>
+<td>130
+</td>
+<td>12.740
+</td></tr>
+<tr>
+<td>10<sup>7</sup>
+</td>
+<td>664,579
+</td>
+<td>44,158
+</td>
+<td>339
+</td>
+<td>15.047
+</td></tr>
+<tr>
+<td>10<sup>8</sup>
+</td>
+<td>5,761,455
+</td>
+<td>332,774
+</td>
+<td>754
+</td>
+<td>17.357
+</td></tr>
+<tr>
+<td>10<sup>9</sup>
+</td>
+<td>50,847,534
+</td>
+<td>2,592,592
+</td>
+<td>1,701
+</td>
+<td>19.667
+</td></tr>
+<tr>
+<td>10<sup>10</sup>
+</td>
+<td>455,052,511
+</td>
+<td>20,758,029
+</td>
+<td>3,104
+</td>
+<td>21.975
+</td></tr>
+<tr>
+<td>10<sup>11</sup>
+</td>
+<td>4,118,054,813
+</td>
+<td>169,923,159
+</td>
+<td>11,588
+</td>
+<td>24.283
+</td></tr>
+<tr>
+<td>10<sup>12</sup>
+</td>
+<td>37,607,912,018
+</td>
+<td>1,416,705,193
+</td>
+<td>38,263
+</td>
+<td>26.590
+</td></tr>
+<tr>
+<td>10<sup>13</sup>
+</td>
+<td>346,065,536,839
+</td>
+<td>11,992,858,452
+</td>
+<td>108,971
+</td>
+<td>28.896
+</td></tr>
+<tr>
+<td>10<sup>14</sup>
+</td>
+<td>3,204,941,750,802
+</td>
+<td>102,838,308,636
+</td>
+<td>314,890
+</td>
+<td>31.202
+</td></tr>
+<tr>
+<td>10<sup>15</sup>
+</td>
+<td>29,844,570,422,669
+</td>
+<td>891,604,962,452
+</td>
+<td>1,052,619
+</td>
+<td>33.507
+</td></tr>
+<tr>
+<td>10<sup>16</sup>
+</td>
+<td>279,238,341,033,925
+</td>
+<td>7,804,289,844,393
+</td>
+<td>3,214,632
+</td>
+<td>35.812
+</td></tr>
+<tr>
+<td>10<sup>17</sup>
+</td>
+<td>2,623,557,157,654,233
+</td>
+<td>68,883,734,693,281
+</td>
+<td>7,956,589
+</td>
+<td>38.116
+</td></tr>
+<tr>
+<td>10<sup>18</sup>
+</td>
+<td>24,739,954,287,740,860
+</td>
+<td>612,483,070,893,536
+</td>
+<td>21,949,555
+</td>
+<td>40.420
+</td></tr>
+<tr>
+<td>10<sup>19</sup>
+</td>
+<td>234,057,667,276,344,607
+</td>
+<td>5,481,624,169,369,960
+</td>
+<td>99,877,775
+</td>
+<td>42.725
+</td></tr>
+<tr>
+<td>10<sup>20</sup>
+</td>
+<td>2,220,819,602,560,918,840
+</td>
+<td>49,347,193,044,659,701
+</td>
+<td>222,744,644
+</td>
+<td>45.028
+</td></tr>
+<tr>
+<td>10<sup>21</sup>
+</td>
+<td>21,127,269,486,018,731,928
+</td>
+<td>446,579,871,578,168,707
+</td>
+<td>597,394,254
+</td>
+<td>47.332
+</td></tr>
+<tr>
+<td>10<sup>22</sup>
+</td>
+<td>201,467,286,689,315,906,290
+</td>
+<td>4,060,704,006,019,620,994
+</td>
+<td>1,932,355,208
+</td>
+<td>49.636
+</td></tr>
+<tr>
+<td>10<sup>23</sup>
+</td>
+<td>1,925,320,391,606,803,968,923
+</td>
+<td>37,083,513,766,578,631,309
+</td>
+<td>7,250,186,216
+</td>
+<td>51.939
+</td></tr>
+<tr>
+<td>10<sup>24</sup>
+</td>
+<td>18,435,599,767,349,200,867,866
+</td>
+<td>339,996,354,713,708,049,069
+</td>
+<td>17,146,907,278
+</td>
+<td>54.243
+</td></tr>
+<tr>
+<td>10<sup>25</sup>
+</td>
+<td>176,846,309,399,143,769,411,680
+</td>
+<td>3,128,516,637,843,038,351,228
+</td>
+<td>55,160,980,939
+</td>
+<td>56.546
+</td></tr>
+<tr>
+<td>10<sup>26</sup>
+</td>
+<td>1,699,246,750,872,437,141,327,603
+</td>
+<td>28,883,358,936,853,188,823,261
+</td>
+<td>155,891,678,121
+</td>
+<td>58.850
+</td></tr></tbody></table>
+
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(10<sup>24</sup>) の値は初めJ. Buethe、<a class="new" href="/w/index.php?title=Jens_Franke&amp;action=edit&amp;redlink=1" title="Jens Franke (存在しないページ)">J. Franke</a>、A. Jost、およびT. Kleinjungらにより<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E4%BA%88%E6%83%B3" title="リーマン予想">リーマン予想</a>の仮定の下で計算されたが<sup class="reference" id="cite_ref-Franke_12-0"><a href="#cite_note-Franke-12">[12]</a></sup> 、後にD. J. Plattによりコンピュータを用いて検証された<sup class="reference" id="cite_ref-PlattARXIV2012_13-0"><a href="#cite_note-PlattARXIV2012-13">[13]</a></sup>。
+</p>
+<h2><span id=".CF.80.28x.29_.E3.81.AE.E5.85.AC.E5.BC.8F"></span><span class="mw-headline" id="π(x)_の公式"><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) の公式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=5" title="節を編集: π(x) の公式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>上述のルジャンドルやリーマンらによる公式以外にも、<span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) を表す公式がいくつか存在する。例えばWilliansは、<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86" title="ウィルソンの定理">ウィルソンの定理</a>に基づき次の初等的な公式を与えている<sup class="reference" id="cite_ref-paulo_5-6"><a href="#cite_note-paulo-5">[5]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\pi (m)=-1+\sum_{j=1}^m F(j)&lt;/math&gt;</dd></dl>
+<p>ここで &lt;math&gt;F(j)&lt;/math&gt; は、ガウス記号を用いて
+</p>
+<dl><dd>&lt;math&gt;F(j)=\left[ \cos^2 \pi \frac{(j-1)!+1}{j} \right]&lt;/math&gt;</dd></dl>
+<p>と定義される関数である。これが <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) を表す理由は単純で、<i>F</i>(<i>j</i>) は<a href="/wiki/%E5%90%88%E6%88%90%E6%95%B0" title="合成数">合成数</a>ならば 0、その他の値に対しては 1 を取るからである。ウィルソンの定理と同様、この公式も実用的な計算には用いることができない。
+</p><p>その他、ドイツの数学者<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A8%E3%83%AB%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%BB%E3%83%AB&amp;action=edit&amp;redlink=1" title="エルンスト・マイセル (存在しないページ)">エルンスト・マイセル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ernst_Meissel&amp;action=edit&amp;redlink=1" title="En:Ernst Meissel (存在しないページ)">英語版</a>）</span></span>による巧妙な<a href="/wiki/%E6%BC%B8%E5%8C%96%E5%BC%8F" title="漸化式">漸化関係</a>を持つ公式などが知られている<sup class="reference" id="cite_ref-paulo_5-7"><a href="#cite_note-paulo-5">[5]</a></sup>。マイセルは<a href="/wiki/1885%E5%B9%B4" title="1885年">1885年</a>自身の公式を用いて <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(10<sup>9</sup>) の値を求めた。
+</p>
+<h2><span id=".E4.B8.8D.E7.AD.89.E5.BC.8F"></span><span class="mw-headline" id="不等式">不等式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=6" title="節を編集: 不等式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) と <style data-mw-deduplicate="TemplateStyles:r2600424">.mw-parser-output .sfrac{white-space:nowrap}.mw-parser-output .sfrac.tion,.mw-parser-output .sfrac .tion{display:inline-block;vertical-align:-0.5em;font-size:85%;text-align:center}.mw-parser-output .sfrac .num,.mw-parser-output .sfrac .den{display:block;line-height:1em;margin:0 0.1em}.mw-parser-output .sfrac .den{border-top:1px solid}.mw-parser-output .sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}</style><span class="sfrac tion" role="math"><span class="num"><i>x</i></span><span class="sr-only">/</span><span class="den">ln <i>x</i></span></span> の関係として以下の<a href="/wiki/%E4%B8%8D%E7%AD%89%E5%BC%8F" title="不等式">不等式</a>が知られている<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\frac{x}{\ln x} &lt;\pi (x)&lt;1.25506\frac{x}{\ln x}&lt;/math&gt;</dd></dl>
+<p>左の不等号は <i>x</i> ≥ 17 で、右の不等号は <i>x</i> &gt; 1 で成り立つ。
+</p><p><a href="/wiki/%E3%83%94%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%87%E3%82%B6%E3%83%AB%E3%83%88" title="ピエール・デザルト">ピエール・デザルト</a>は<a href="/wiki/2010%E5%B9%B4" title="2010年">2010年</a>に次の6つの不等式
+</p>
+<ul><li>&lt;math&gt;\frac{x}{\ln x} (1+\frac{1}{\ln x}) &lt;\pi (x)&lt;/math&gt;（ただし <i>x</i> ≥ 599）</li>
+<li>&lt;math&gt;\pi (x)&lt;\frac{x}{\ln x} (1+\frac{1.2762}{\ln x}) &lt;/math&gt;（ただし <i>x</i> ≥ 1）</li>
+<li>&lt;math&gt;\frac{x}{\ln x-1} &lt;\pi (x)&lt;/math&gt;（ただし <i>x</i> ≥ 5393）</li>
+<li>&lt;math&gt;\pi (x)&lt;\frac{x}{\ln x-1.1}&lt;/math&gt;（ただし <i>x</i> ≥ 60184）</li>
+<li>&lt;math&gt;\frac{x}{\ln x} (1+\frac{1}{\ln x}+\frac{2}{\ln^2 x}) &lt;\pi (x)&lt;/math&gt;（ただし <i>x</i> ≥ 88783）</li>
+<li>&lt;math&gt;\pi (x)&lt;\frac{x}{\ln x} (1+\frac{1}{\ln x}+\frac{2.334}{\ln^2 x}) &lt;/math&gt;（ただし <i>x</i> ≥ 2953652287）</li></ul>
+<p>を示した<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=7" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E4%B8%8E%E3%81%88%E3%82%89%E3%82%8C%E3%81%9F%E6%95%B0%E3%82%88%E3%82%8A%E5%B0%8F%E3%81%95%E3%81%84%E7%B4%A0%E6%95%B0%E3%81%AE%E5%80%8B%E6%95%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="与えられた数より小さい素数の個数について">与えられた数より小さい素数の個数について</a></li>
+<li><a href="/wiki/%E5%AF%BE%E6%95%B0%E7%A9%8D%E5%88%86" title="対数積分">対数積分</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E4%BA%88%E6%83%B3" title="リーマン予想">リーマン予想</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9" title="エラトステネスの篩">エラトステネスの篩</a></li>
+<li><a href="/wiki/%E3%83%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%89%E3%83%AB%E4%BA%88%E6%83%B3" title="ルジャンドル予想">ルジャンドル予想</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%81%AE%E4%BB%AE%E8%AA%AC" title="ベルトランの仮説">ベルトランの仮説</a></li></ul>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=8" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-Bach-1"><b><a href="#cite_ref-Bach_1-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Bach, Eric; Shallit, Jeffrey (1996). <i>Algorithmic Number Theory</i>. MIT Press. volume 1 page 234 section 8.8. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-262-02405-5" title="特別:文献資料/0-262-02405-5">0-262-02405-5</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algorithmic+Number+Theory&amp;rft.aulast=Bach&amp;rft.aufirst=Eric&amp;rft.au=Bach%2C%26%2332%3BEric&amp;rft.au=Shallit%2C+Jeffrey&amp;rft.date=1996&amp;rft.pages=volume+1+page+234+section+8.8&amp;rft.pub=MIT+Press&amp;rft.isbn=0-262-02405-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-mathworld_pcf-2"><b><a href="#cite_ref-mathworld_pcf_2-0">^</a></b> <span class="reference-text"><span class="citation mathworld" id="Reference-Mathworld-Prime_Counting_Function"><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><cite class="citation web cs1" id="CITEREFWeisstein,_Eric_W"><span style="font-style:normal;"><a class="new" href="/w/index.php?title=En:Eric_W._Weisstein&amp;action=edit&amp;redlink=1" title="En:Eric W. Weisstein (存在しないページ)">Weisstein, Eric W</a></span>. <a class="external text" href="https://mathworld.wolfram.com/PrimeCountingFunction.html" rel="nofollow">"<span style="font-style:normal;">Prime Counting Function</span>"</a>. <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i> (English).</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MathWorld&amp;rft.atitle=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EPrime+Counting+Function%3C%2Fspan%3E&amp;rft.au=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EWeisstein%2C+Eric+W%3C%2Fspan%3E&amp;rft_id=https%3A%2F%2Fmathworld.wolfram.com%2FPrimeCountingFunction.html&amp;rfr_id=info%3Asid%2Flocalhost%3A8080%3A%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"></span></span></span>
+</li>
+<li id="cite_note-Caldwell-3">^ <a href="#cite_ref-Caldwell_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Caldwell_3-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://primes.utm.edu/howmany.shtml" rel="nofollow">How many primes are there?</a>”.   Chris K. Caldwell. <span title="">2008年12月2日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Dickson-4"><b><a href="#cite_ref-Dickson_4-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"><a class="mw-redirect" href="/wiki/L._E._Dickson" title="L. E. Dickson">Dickson, Leonard Eugene</a> (2005). <i><a class="new" href="/w/index.php?title=History_of_the_Theory_of_Numbers&amp;action=edit&amp;redlink=1" title="History of the Theory of Numbers (存在しないページ)">History of the Theory of Numbers</a>, Vol. I: Divisibility and Primality</i>. Dover Publications. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-486-44232-2" title="特別:文献資料/0-486-44232-2">0-486-44232-2</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5B%5BHistory+of+the+Theory+of+Numbers%5D%5D%2C+Vol.+I%3A+Divisibility+and+Primality&amp;rft.aulast=Dickson&amp;rft.aufirst=Leonard+Eugene&amp;rft.au=Dickson%2C%26%2332%3BLeonard+Eugene&amp;rft.date=2005&amp;rft.pub=Dover+Publications&amp;rft.isbn=0-486-44232-2&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-paulo-5">^ <a href="#cite_ref-paulo_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-paulo_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-paulo_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-paulo_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-paulo_5-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-paulo_5-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-paulo_5-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-paulo_5-7"><sup><i><b>h</b></i></sup></a> <span class="reference-text">Paulo Ribenboim著 吾郷 孝視訳編 『素数の世界』2001年、共立出版</span>
+</li>
+<li id="cite_note-Ireland-6"><b><a href="#cite_ref-Ireland_6-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Ireland, Kenneth; Rosen, Michael (1998). <i>A Classical Introduction to Modern Number Theory</i> (Second ed.). Springer. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-97329-X" title="特別:文献資料/0-387-97329-X">0-387-97329-X</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Classical+Introduction+to+Modern+Number+Theory&amp;rft.aulast=Ireland&amp;rft.aufirst=Kenneth&amp;rft.au=Ireland%2C%26%2332%3BKenneth&amp;rft.au=Rosen%2C+Michael&amp;rft.date=1998&amp;rft.edition=Second&amp;rft.pub=Springer&amp;rft.isbn=0-387-97329-X&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal"><a class="new" href="/w/index.php?title=Lowell_Schoenfeld&amp;action=edit&amp;redlink=1" title="Lowell Schoenfeld (存在しないページ)">Schoenfeld, Lowell</a> (1976). “Sharper bounds for the Chebyshev functions <i>θ</i>(<i>x</i>) and <i>ψ</i>(<i>x</i>). II”. <i><a class="new" href="/w/index.php?title=Mathematics_of_Computation&amp;action=edit&amp;redlink=1" title="Mathematics of Computation (存在しないページ)">Mathematics of Computation</a></i> (American Mathematical Society) <b>30</b> (134):  337–360. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F2005976" rel="nofollow">10.2307/2005976</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0025-5718" rel="nofollow">0025-5718</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/2005976" rel="nofollow">2005976</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0457374" rel="nofollow">0457374</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Sharper+bounds+for+the+Chebyshev+functions+%27%27%CE%B8%27%27%28%27%27x%27%27%29+and+%27%27%CF%88%27%27%28%27%27x%27%27%29.+II&amp;rft.jtitle=%5B%5BMathematics+of+Computation%5D%5D&amp;rft.aulast=Schoenfeld&amp;rft.aufirst=Lowell&amp;rft.au=Schoenfeld%2C%26%2332%3BLowell&amp;rft.date=1976&amp;rft.volume=30&amp;rft.issue=134&amp;rft.pages=337%E2%80%93360&amp;rft.pub=American+Mathematical+Society&amp;rft_id=info:doi/10.2307%2F2005976&amp;rft.issn=0025-5718&amp;rft.jstor=2005976&amp;rft.mr=0457374&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Silva-8"><b><a href="#cite_ref-Silva_8-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.ieeta.pt/~tos/primes.html" rel="nofollow">Tables of values of pi(x) and of pi2(x)</a>”.   <a class="new" href="/w/index.php?title=Tom%C3%A1s_Oliveira_e_Silva&amp;action=edit&amp;redlink=1" title="Tomás Oliveira e Silva (存在しないページ)">Tomás Oliveira e Silva</a>. <span title="">2008年9月14日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Kulsha-9"><b><a href="#cite_ref-Kulsha_9-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.primefan.ru/stuff/primes/table.html" rel="nofollow">Values of π(x) and Δ(x) for various x's</a>”.   Andrey V. Kulsha. <span title="">2008年9月14日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Gourdon-10"><b><a href="#cite_ref-Gourdon_10-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://numbers.computation.free.fr/Constants/Primes/pixtable.html" rel="nofollow">A table of values of pi(x)</a>”.   Xavier Gourdon, Pascal Sebah, Patrick Demichel. <span title="">2008年9月14日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>において <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) , <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) − <i>x</i> / ln <i>x</i>、li <i>x</i> − <span class="texhtml mvar" lang="en" style="font-style:italic;">π</span>(<i>x</i>) の値はそれぞれ<a class="external text" href="https://oeis.org/A006880" rel="nofollow">A006880</a>, <a class="external text" href="https://oeis.org/A057835" rel="nofollow">A057835</a>, <a class="external text" href="https://oeis.org/A057752" rel="nofollow">A057752</a>に掲載されている。</span>
+</li>
+<li id="cite_note-Franke-12"><b><a href="#cite_ref-Franke_12-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://primes.utm.edu/notes/pi(10%5E24).html" rel="nofollow">Conditional Calculation of pi(10<sup>24</sup>)</a>”.   Chris K. Caldwell. <span title="">2010年8月3日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-PlattARXIV2012-13"><b><a href="#cite_ref-PlattARXIV2012_13-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://arxiv.org/abs/1203.5712" rel="nofollow">Computing π(x) Analytically)</a>”. <span title="Jul 25, 2012">2012年7月25日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Rosser, J. Barkley; Schoenfeld, Lowell (1962). <a class="external text" href="http://projecteuclid.org/DPubS?service=UI&amp;version=1.0&amp;verb=Display&amp;handle=euclid.ijm/1255631807" rel="nofollow">“Approximate formulas for some functions of prime numbers”</a>. <i>Illinois J. Math.</i> <b>6</b>:  64–94. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0019-2082" rel="nofollow">0019-2082</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0122.05001" rel="nofollow">0122.05001</a><span style="display:none;">. <a class="external free" href="http://projecteuclid.org/DPubS?service=UI&amp;version=1.0&amp;verb=Display&amp;handle=euclid.ijm/1255631807" rel="nofollow">http://projecteuclid.org/DPubS?service=UI&amp;version=1.0&amp;verb=Display&amp;handle=euclid.ijm/1255631807</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Approximate+formulas+for+some+functions+of+prime+numbers&amp;rft.jtitle=Illinois+J.+Math.&amp;rft.aulast=Rosser&amp;rft.aufirst=J.+Barkley&amp;rft.au=Rosser%2C%26%2332%3BJ.+Barkley&amp;rft.au=Schoenfeld%2C%26%2332%3BLowell&amp;rft.date=1962&amp;rft.volume=6&amp;rft.pages=64%E2%80%9394&amp;rft.issn=0019-2082&amp;rft_id=info:zbl/0122.05001&amp;rft_id=http%3A%2F%2Fprojecteuclid.org%2FDPubS%3Fservice%3DUI%26amp%3Bversion%3D1.0%26amp%3Bverb%3DDisplay%26amp%3Bhandle%3Deuclid.ijm%2F1255631807&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Dusart, Pierre. “<a class="external text" href="http://arxiv.org/PS_cache/arxiv/pdf/1002/1002.0442v1.pdf" rel="nofollow">"ESTIMATES OF SOME FUNCTIONS OVER PRIMES WITHOUT R.H."</a>”.   arxiv.org. <span title="22 April 2014">2014年4月22日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;section=9" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Chris Caldwell, <a class="external text" href="http://primes.utm.edu/nthprime/" rel="nofollow"><i>The Nth Prime Page</i></a> at The <a href="/wiki/Prime_Pages" title="Prime Pages">Prime Pages</a>.</li>
+<li>Tomás Oliveira e Silva, <a class="external text" href="http://sweet.ua.pt/tos/primes.html" rel="nofollow">Tables of prime-counting functions</a>.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331120418
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.453 seconds
+Real time usage: 0.678 seconds
+Preprocessor visited node count: 7827/1000000
+Post‐expand include size: 56264/2097152 bytes
+Template argument size: 12934/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 2/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 32686/5000000 bytes
+Lua time usage: 0.160/7 seconds
+Lua virtual size: 8781824/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  574.424      1 -total
+ 77.83%  447.088      1 テンプレート:Reflist
+ 44.26%  254.264      5 テンプレート:Citation/core
+ 33.48%  192.322      9 テンプレート:Citation/identifier
+ 27.56%  158.333      3 テンプレート:Cite_book
+ 20.04%  115.108      2 テンプレート:Cite_journal
+ 19.54%  112.235      7 テンプレート:Catalog_lookup_link
+ 19.15%  110.011      3 テンプレート:ISBN2
+ 14.33%   82.300      7 テンプレート:Cite_web
+ 12.54%   72.020      1 テンプレート:MathWorld
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:145721-0!canonical and timestamp 20220331120418 and revision id 100216. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=素数計数関数&amp;oldid=100216">http://localhost:8080/w/index.php?title=素数計数関数&amp;oldid=100216</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A7%A3%E6%9E%90%E7%9A%84%E6%95%B4%E6%95%B0%E8%AB%96" title="カテゴリ:解析的整数論">解析的整数論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B4%A0%E6%95%B0" title="カテゴリ:素数">素数</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;returntoquery=curid%3D145721%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;returntoquery=curid%3D145721%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;oldid=100216" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E8%A8%88%E6%95%B0%E9%96%A2%E6%95%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月9日 (金) 12:54 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.453","walltime":"0.678","ppvisitednodes":{"value":7827,"limit":1000000},"postexpandincludesize":{"value":56264,"limit":2097152},"templateargumentsize":{"value":12934,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":32686,"limit":5000000},"timingprofile":["100.00%  574.424      1 -total"," 77.83%  447.088      1 テンプレート:Reflist"," 44.26%  254.264      5 テンプレート:Citation/core"," 33.48%  192.322      9 テンプレート:Citation/identifier"," 27.56%  158.333      3 テンプレート:Cite_book"," 20.04%  115.108      2 テンプレート:Cite_journal"," 19.54%  112.235      7 テンプレート:Catalog_lookup_link"," 19.15%  110.011      3 テンプレート:ISBN2"," 14.33%   82.300      7 テンプレート:Cite_web"," 12.54%   72.020      1 テンプレート:MathWorld"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"7"},"limitreport-virtmemusage":{"value":8781824,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331120418","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":811});});</script>
+</body></html>

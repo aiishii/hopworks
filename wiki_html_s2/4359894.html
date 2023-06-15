@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>BOINCクライアント-サーバ技術 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-BOINCクライアント-サーバ技術 rootpage-BOINCクライアント-サーバ技術 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">BOINCクライアント-サーバ技術</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><style data-mw-deduplicate="TemplateStyles:r2633220">.mw-parser-output .hatnote{margin:0.5em 0;padding:3px 2em;background-color:transparent;border-bottom:1px solid #a2a9b1;font-size:90%}</style>
+
+<p><b>BOINCクライアント-サーバ技術</b>（ボインク・クライアントサーバぎじゅつ、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">BOINC client–server technology</span>）とは、<a href="." id="link_a_2" title="Berkeley Open Infrastructure for Network Computing">BOINC</a>が機能するモデルを指す。BOINCフレームワークは、<a href="." id="link_a_3" title="クライアントサーバモデル">クライアントサーバ</a><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_4" title="ネットワークアーキテクチャ (存在しないページ)">アーキテクチャ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Network_architecture&amp;action=edit&amp;redlink=1" title="En:Network architecture (存在しないページ)">英語版</a>）</span></span>の下で動作する2つのレイヤーで構成されている。BOINCソフトウェアが各マシンにインストールされると、<a href="." id="link_a_5" title="サーバー">サーバ</a>は<a href="." id="link_a_6" title="クライアント (コンピュータ)">クライアント</a>にタスクを送信する。操作は<a href="." id="link_a_7" title="クライアントサイド">クライアント側</a>で行われ、その結果は<a href="." id="link_a_8" title="サーバサイド">サーバ側</a>にアップロードされる<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#BOINCの設計と構造"><span class="tocnumber">1</span> <span class="toctext">BOINCの設計と構造</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#サーバ構造"><span class="tocnumber">2</span> <span class="toctext">サーバ構造</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#クライアント構造"><span class="tocnumber">3</span> <span class="toctext">クライアント構造</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#クライアントプラットフォーム"><span class="tocnumber">4</span> <span class="toctext">クライアントプラットフォーム</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#参照項目"><span class="tocnumber">5</span> <span class="toctext">参照項目</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+</ul>
+</div>
+<h2><span id="BOINC.E3.81.AE.E8.A8.AD.E8.A8.88.E3.81.A8.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="BOINCの設計と構造">BOINCの設計と構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=1" title="節を編集: BOINCの設計と構造">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>BOINCは、分散コンピューティングのプロジェクトを始めたい人のために、自由な構造になるように設計されている。</li>
+<li>BOINCは、サーバシステムとクライアントソフトウェアで構成され、相互に通信してワークユニットを配布、処理、返却する。</li></ul>
+<h2><span id=".E3.82.B5.E3.83.BC.E3.83.90.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="サーバ構造">サーバ構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=2" title="節を編集: サーバ構造">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>BOINCシステムの主要部分はバックエンドサーバである。このサーバは1台のマシンでも複数台のマシンでも動作するので、BOINCは任意の規模のプロジェクトにも簡単に対応することができる。BOINCサーバは、Linuxベースのコンピュータ上で動作し、<a href="/wiki/World_Wide_Web" title="World Wide Web">ウェブ</a>システムと<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース</a>システムに<a href="/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache</a>、<a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a>、<a href="/wiki/MySQL" title="MySQL">MySQL</a>を使用する。
+</p><p><a href="/wiki/%E8%A8%88%E7%AE%97%E7%A7%91%E5%AD%A6" title="計算科学">科学計算</a>は、参加者のコンピュータ上で実行される。ユーザーのクライアントから科学研究者のデータベースにアップロードされた後、バックエンドサーバが結果を検証し、分析する。検証作業には、すべてのタスクを複数の参加者のコンピュータで実行し、結果を比較することが含まれる。
+</p><p>BOINCサーバは、次の機能も提供する。
+</p>
+<ul><li><b>同種の冗長性</b>（同じ<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)" title="プラットフォーム (コンピューティング)">プラットフォーム</a>のコンピューターにのみワークユニットを送信する。例：Windows XP SP2のみ）</li>
+<li><b>ワークユニット・トリッキング</b>（ワークユニットが完了する前にサーバに情報を送信する）</li>
+<li><b>ローカリティ・スケジューリング</b>（必要なファイルをすでに持っているコンピュータにワークユニットを送信し、オンデマンドで作業を作成する）</li>
+<li><b>ホストのパラメータに基づいた作業配布</b>（たとえば、512MBのRAMを必要とするワークユニットは、少なくともその量のRAMを持つホストにのみ送信される<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>）</li></ul>
+<p>サーバは<a href="/wiki/C%2B%2B" title="C++">C++</a>で記述された2つの<a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a>プログラムと（通常は）5つの<a href="/wiki/%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="デーモン (ソフトウェア)">デーモン</a>で構成されている。クライアントが実行する計算を<b>ワークユニット</b>と呼ぶ。<b>結果</b>はワークユニットのインスタンスを記述する（それが完了していなくても）。プロジェクトでは明示的に結果を作成することはなく、サーバがワークユニットからそれらを自動的に作成する。
+</p><p><b>スケジューラー</b>（scheduler）CGIプログラムは、クライアントからの要求を処理し、完了した結果を受け取り、新しい作業を計算機に送信する。スケジューラーは、データベースから直接に利用可能な結果を取得するわけではない。その代わりに、<b>フィーダー</b>（feeder）デーモンがデータベースからタスクをロードして<a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有メモリ</a>ブロックに保持し、スケジューラーがそれを読み取る。スケジューラーがそれらの結果をクライアントに送信した後、フィーダーは、共有メモリブロックの空の「スロット」を定期的に埋める。
+</p><p>ワークユニットのすべての結果が完了して返されると、<b>バリデーター</b>（validator）はそれをチェックする。一般的な方法の一つは、結果を相互に比較することである。バリデーターは、結果どうしのファジー比較を行うカスタムプロジェクト<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">コード</a>を持つことも、<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88" title="ビット">ビット</a>単位で比較することもできる。バリデーターは、少なくとも一部の結果が有効であると判断した場合、ワークユニットと有効な結果にマークを付け、正当な結果を返したユーザーには<a href="/wiki/BOINC%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="BOINCクレジットシステム"><b>クレジット</b></a>が付与され、「正規の結果」が選択される<sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（March 2016）">誰によって?</span></a></i>]</sup>。バリデーターがどの結果が有効なのか判断できない場合や、すべての結果を無効であると宣言した場合は、新しい結果を生成して、バリデーターがどの結果が有効なのか判断できるようになるまで、このサイクルを繰り返すことができる。
+</p><p>次に、<b>アシミレーター</b>（assimilator）デーモンが、プロジェクト固有のコードを使用して、正規の結果を処理する。たとえば、ファイルを解析してデータベースに情報を保存するプロジェクトもあれば、ファイルを別の場所にコピーするだけのプロジェクトもある。また、アシミレーターは、返されたデータに基づいて、より多くのワークユニットを生成することもできる。
+</p><p><b>ファイル_デリーター</b>（file_deleter）デーモンは、アシミレーターが処理した後の出力ファイルを削除したり、不要になった入力ファイルを削除する。
+</p><p><b>トランジショナー</b>（transitioner）デーモンは、ワークユニットと結果の状態遷移を処理する。また、ワークユニットが最初に作成されたときや、さらに必要なときに（たとえば、結果が無効であることが判明した場合）、ワークユニットから結果を生成する。
+</p>
+<h2><span id=".E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="クライアント構造">クライアント構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=3" title="節を編集: クライアント構造">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>クライアント上のBOINCは、いくつかの独立したアプリケーションで構造化されている。これらはBOINC<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%97%E3%83%AD%E3%82%B7%E3%83%BC%E3%82%B8%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%AB" title="リモートプロシージャコール">リモート・プロシージャ・コール</a>（RPC）メカニズムを使用して相互に通信する。    
+</p><p>これらのコンポーネントアプリケーションは次のとおり。
+</p>
+<ul><li>プログラム <style data-mw-deduplicate="TemplateStyles:r2428604">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">boinc</span> （または <link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">boinc.exe</span> ）はコア・クライアントである。</li>
+<li>コア・クライアントは、次のような<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>である。
+<ul><li>クライアントとサーバ間の通信を行う。</li>
+<li>コア・クライアントは、科学アプリケーションのダウンロード、統一されたロギング・メカニズムの提供、科学アプリケーションのバイナリが最新であることの確認、科学アプリケーション間でCPUリソースをスケジューリングする（複数インストールされている場合）。</li>
+<li>コア・クライアントは新しい科学アプリケーションをダウンロードすることができるが、それ自体はアップデートしない。BOINCの開発者は、自動更新は許容できないセキュリティ上のリスク<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（January 2008）">要出典</span></a></i>]</sup>が生じるだけでなく、コンピュータにおける自動更新手順が持つあらゆるリスクが発生すると考えた。</li>
+<li><a href="/wiki/UNIX" title="UNIX">Unix</a>では、コア・クライアントは通常は<a href="/wiki/%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="デーモン (ソフトウェア)">デーモン</a>として実行される（場合によっては<a class="mw-redirect" href="/wiki/Cron" title="Cron">cron</a>ジョブとして）。</li>
+<li>Windowsでは、BOINCは当初、Windowsサービスではなく、普通のアプリケーションであった。BOINC Client for Windowsバージョン5.2.13以降では、インストール時に「サービスのインストール」というオプションが追加される。</li>
+<li>BOINCクライアントソフトウェアのインストール方法に応じて、デーモンのようにバックグラウンドで動作することも、個々のユーザーがログインしたときに開始することもできる（ユーザーがログアウトすると停止する）。コア・クライアントが提供するソフトウェアのバージョン管理やワークユニット処理により、科学アプリケーションのコーディングが大幅に簡素化される。</li></ul></li>
+<li>1つまたは複数の科学アプリケーション。科学アプリケーションは、科学的な計算の中核を担う。BOINCフレームワークを利用した分散計算プロジェクトごとに特定の科学アプリケーションがある。科学アプリケーションは、BOINCデーモンを使用して、ワークユニットをアップロードやダウンロードし、サーバと統計情報を交換する。</li>
+<li><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">boincmgr</span> （または <link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">boincmgr.exe</span> ）は、<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%97%E3%83%AD%E3%82%B7%E3%83%BC%E3%82%B8%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%AB" title="リモートプロシージャコール">リモート・プロシージャ・コール</a>を使用してコア・アプリケーションと通信する<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%82%AB%E3%83%AB%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="グラフィカルユーザインタフェース">GUI</a>である。デフォルトでは、コア・クライアントは同じコンピュータからの接続しか許可しないが、他のコンピュータからの接続を許可するように構成することができる（オプションでパスワード認証を使用できる）。このメカニズムにより、一人のユーザーが単一のワークステーションからBOINCインストールのファームを管理できる。RPCメカニズムを使用することの欠点は、<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC" title="ハッカー">ハッカー</a>が標的のコンピューターに侵入するための経路となる可能性があるため、しばしばセキュリティリスクがあると感じられることである（同じコンピューターからの接続に構成されている場合でも）。</li>
+<li>GUIは、クロスプラットフォームの<a href="/wiki/WxWidgets" title="WxWidgets">WxWidgets</a>ツールキットを使用して記述されており、異なるプラットフォームでも同じ<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9" title="ユーザーエクスペリエンス">ユーザーエクスペリエンス</a>を提供する。ユーザーは、BOINCコア・クライアントに接続し、それらのクライアントに新しい科学アプリケーションをインストールするよう指示し、進行中の計算の進行状況の監視や、BOINCシステムのメッセージログを閲覧できる。</li>
+<li>BOINC<a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%BB%E3%83%BC%E3%83%90%E3%83%BC" title="スクリーンセーバー">スクリーンセーバー</a>。これは、科学アプリケーションがユーザーのスクリーンセーバーウィンドウにグラフィックを表示する<a href="/wiki/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="フレームワーク">フレームワーク</a>を提供する。BOINCスクリーンセーバーは、BOINCグラフィックスAPI、<a href="/wiki/OpenGL" title="OpenGL">OpenGL</a>、<a href="/wiki/OpenGL_Utility_Toolkit" title="OpenGL Utility Toolkit">GLUT</a>ツールキットを使用してコーディングされている。通常、BOINCスクリーンセーバーは、進行中の作業の詳細を示すアニメーションを表示し、おそらくはグラフやチャート等のデータ視覚化グラフィックを表示する。</li>
+<li>科学アプリケーションの中には、スクリーンセーバー機能を提供していないものがある（または、アイドル状態でスクリーンセーバー画像の表示を停止する）。この場合、スクリーンセーバーは画面上を跳ね回る小さなBOINCロゴを表示する。</li></ul>
+<p>BOINCは、一般のユーザーには見えないようにする機能があり、そのため許可されていないインストールや、検知が困難なインストールが行われる危険がある。これにより、BOINCクレジットサブカルチャー中でのステータスを巡って他の人と競争しているホビイストたちによるBOINCクレジットポイントの蓄積を促進する。
+</p>
+<h2><span id=".E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88.E3.83.97.E3.83.A9.E3.83.83.E3.83.88.E3.83.95.E3.82.A9.E3.83.BC.E3.83.A0"></span><span class="mw-headline" id="クライアントプラットフォーム">クライアントプラットフォーム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=4" title="節を編集: クライアントプラットフォーム">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>オペレーティングシステム
+</th>
+<th>ハードウェア
+</th>
+<th>例
+</th>
+<th>状態
+</th></tr>
+<tr>
+<td><a href="/wiki/Linux" title="Linux">Linux</a>
+</td>
+<td><a href="/wiki/IA-32" title="IA-32">IA-32</a>
+<p>または<a class="mw-redirect" href="/wiki/AMD64" title="AMD64">AMD64</a>
+</p>
+</td>
+<td rowspan="3">デスクトップPCおよびPCサーバ
+</td>
+<td>ほとんどのLinuxプロジェクトでは、64ビットLinuxが必要である。32ビットLinuxプロジェクトを64ビットLinuxで実行する場合、32ビットライブラリのインストールが必要になることがある。
+</td></tr>
+<tr>
+<td><a href="/wiki/MacOS" title="MacOS">macOS</a>
+</td>
+<td><a class="mw-redirect" href="/wiki/X86_64" title="X86 64">X86-64</a>, <a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARMv8</a>
+</td>
+<td>BOINCクライアントは、PowerPC、IA-32、AMD64に対応している。 AMD64クライアントは、BOINCサーバがサポートしていればIA-32アプリケーションを実行できた。BOINC Manager 7.16.13はX86-64とARMv8の両方に対応している。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>
+</td>
+<td><a href="/wiki/IA-32" title="IA-32">IA-32</a>
+<p>または<a class="mw-redirect" href="/wiki/AMD64" title="AMD64">AMD64</a>
+</p>
+</td>
+<td>IA-32とAMD64では、それぞれ異なるBOINCクライアントを使用できる。64ビットクライアントは、BOINCサーバがサポートしていれば、32ビットアプリケーションを実行する。
+</td></tr>
+<tr>
+<td><a class="mw-redirect" href="/wiki/Raspbian" title="Raspbian">Raspbian</a> (<a href="/wiki/Linux" title="Linux">Linux</a>)
+</td>
+<td><a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a>
+</td>
+<td><a href="/wiki/Raspberry_Pi" title="Raspberry Pi">Raspberry Pi</a>
+</td>
+<td>利用可能なクライアントアプリケーションはほとんどない。
+</td></tr>
+<tr>
+<td><a href="/wiki/Android_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Android (オペレーティングシステム)">Android</a> (<a href="/wiki/Linux" title="Linux">Linux</a>)
+</td>
+<td><a href="/wiki/ARM#64ビットARM" title="ARM">ARM</a>, <a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPS</a>, <a href="/wiki/IA-32" title="IA-32">IA-32</a>
+</td>
+<td>スマートフォンおよびタブレット
+</td>
+<td>利用可能なクライアントアプリケーションはほとんどない。プロジェクトによっては、非公式のクライアント（NativeBOINC）が必要となる。
+</td></tr></tbody></table>
+<h2><span id=".E5.8F.82.E7.85.A7.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="参照項目">参照項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=5" title="節を編集: 参照項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Berkeley_Open_Infrastructure_for_Network_Computing" title="Berkeley Open Infrastructure for Network Computing">BOINC</a></li>
+<li><a href="/wiki/BOINC%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="BOINCクレジットシステム">BOINCクレジットシステム</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="分散コンピューティング">分散コンピューティング</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;section=6" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Anderson, David P. (2020-03-01). <a class="external text" href="https://doi.org/10.1007/s10723-019-09497-9" rel="nofollow">“BOINC: A Platform for Volunteer Computing”</a> (英語). <i>Journal of Grid Computing</i> <b>18</b> (1):  99–122. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2Fs10723-019-09497-9" rel="nofollow">10.1007/s10723-019-09497-9</a>. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:1572-9184" rel="nofollow">1572-9184</a><span style="display:none;">. <a class="external free" href="https://doi.org/10.1007/s10723-019-09497-9" rel="nofollow">https://doi.org/10.1007/s10723-019-09497-9</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=BOINC%3A+A+Platform+for+Volunteer+Computing&amp;rft.jtitle=Journal+of+Grid+Computing&amp;rft.aulast=Anderson&amp;rft.aufirst=David+P.&amp;rft.au=Anderson%2C%26%2332%3BDavid+P.&amp;rft.date=2020-03-01&amp;rft.volume=18&amp;rft.issue=1&amp;rft.pages=99%E2%80%93122&amp;rft_id=info:doi/10.1007%2Fs10723-019-09497-9&amp;rft.issn=1572-9184&amp;rft_id=https%3A%2F%2Fdoi.org%2F10.1007%2Fs10723-019-09497-9&amp;rfr_id=info:sid/ja.wikipedia.org:BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://setiathome.berkeley.edu/transition.php" rel="nofollow">SETI@home's transition to BOINC</a>”. <i>setiathome.berkeley.edu</i>. <span title="">2021年4月23日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<div aria-labelledby="Berkeley_Open_Infrastructure_for_Network_Computing" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:BOINC_topics&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:BOINC topics (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ABOINC_topics&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ABOINC_topics&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Berkeley_Open_Infrastructure_for_Network_Computing" style="font-size:110%;margin:0 6em">Berkeley Open Infrastructure for Network Computing</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">現在活動しているプロジェクト</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Asteroids@home&amp;action=edit&amp;redlink=1" title="Asteroids@home (存在しないページ)">Asteroids@home</a></li>
+<li><a class="new" href="/w/index.php?title=CAS@home&amp;action=edit&amp;redlink=1" title="CAS@home (存在しないページ)">CAS@home</a></li>
+<li><a class="new" href="/w/index.php?title=Citizen_Science_Grid&amp;action=edit&amp;redlink=1" title="Citizen Science Grid (存在しないページ)">Citizen Science Grid</a></li>
+<li><a class="new" href="/w/index.php?title=Climateprediction.net&amp;action=edit&amp;redlink=1" title="Climateprediction.net (存在しないページ)">Climateprediction.net</a></li>
+<li><a class="new" href="/w/index.php?title=Collatz_Conjecture&amp;action=edit&amp;redlink=1" title="Collatz Conjecture (存在しないページ)">Collatz Conjecture</a></li>
+<li><a class="new" href="/w/index.php?title=Cosmology@Home&amp;action=edit&amp;redlink=1" title="Cosmology@Home (存在しないページ)">Cosmology@Home</a></li>
+<li><a href="/wiki/Einstein@home" title="Einstein@home">Einstein@home</a></li>
+<li><a class="new" href="/w/index.php?title=Enigma@Home&amp;action=edit&amp;redlink=1" title="Enigma@Home (存在しないページ)">Enigma@Home</a></li>
+<li><a href="/wiki/GPUGRID" title="GPUGRID">GPUGRID</a></li>
+<li><a class="new" href="/w/index.php?title=Kryptos@Home&amp;action=edit&amp;redlink=1" title="Kryptos@Home (存在しないページ)">Kryptos@Home</a></li>
+<li><a href="/wiki/LHC@home" title="LHC@home">LHC@home</a></li>
+<li><a href="/wiki/MilkyWay@home" title="MilkyWay@home">MilkyWay@home</a></li>
+<li><a class="new" href="/w/index.php?title=MindModeling@Home&amp;action=edit&amp;redlink=1" title="MindModeling@Home (存在しないページ)">MindModeling@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Moo!_Wrapper&amp;action=edit&amp;redlink=1" title="Moo! Wrapper (存在しないページ)">Moo! Wrapper</a></li>
+<li><a href="/wiki/PrimeGrid" title="PrimeGrid">PrimeGrid</a></li>
+<li><a href="/wiki/Quake-Catcher_Network" title="Quake-Catcher Network">Quake-Catcher Network</a></li>
+<li><a href="/wiki/Rosetta@home" title="Rosetta@home">Rosetta@home</a></li>
+<li><a class="new" href="/w/index.php?title=Universe@Home&amp;action=edit&amp;redlink=1" title="Universe@Home (存在しないページ)">Universe@Home</a></li>
+<li><a href="/wiki/World_Community_Grid" title="World Community Grid">World Community Grid</a></li>
+<li><a class="new" href="/w/index.php?title=Yoyo@home&amp;action=edit&amp;redlink=1" title="Yoyo@home (存在しないページ)">Yoyo@home</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ベータ版のプロジェクト</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=BURP&amp;action=edit&amp;redlink=1" title="BURP (存在しないページ)">BURP</a></li>
+<li><a class="new" href="/w/index.php?title=Charity_Engine&amp;action=edit&amp;redlink=1" title="Charity Engine (存在しないページ)">Charity Engine</a></li>
+<li><a class="new" href="/w/index.php?title=Climateprediction.net&amp;action=edit&amp;redlink=1" title="Climateprediction.net (存在しないページ)">CPDN Beta</a></li>
+<li><a class="new" href="/w/index.php?title=Ibercivis&amp;action=edit&amp;redlink=1" title="Ibercivis (存在しないページ)">Ibercivis</a></li>
+<li><a class="new" href="/w/index.php?title=RNA_World&amp;action=edit&amp;redlink=1" title="RNA World (存在しないページ)">RNA World</a></li>
+<li><a class="mw-redirect" href="/wiki/SETI@home_beta" title="SETI@home beta">SETI@home beta</a></li>
+<li><a class="new" href="/w/index.php?title=WEP-M%2B2_Project&amp;action=edit&amp;redlink=1" title="WEP-M+2 Project (存在しないページ)">WEP-M+2 Project</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アルファ版のプロジェクト</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Albert@Home&amp;action=edit&amp;redlink=1" title="Albert@Home (存在しないページ)">Albert@Home</a></li>
+<li><a class="new" href="/w/index.php?title=BOINC@TACC&amp;action=edit&amp;redlink=1" title="BOINC@TACC (存在しないページ)">BOINC@TACC</a></li>
+<li><a class="new" href="/w/index.php?title=DENIS@Home&amp;action=edit&amp;redlink=1" title="DENIS@Home (存在しないページ)">DENIS@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Donate@Home&amp;action=edit&amp;redlink=1" title="Donate@Home (存在しないページ)">Donate@Home</a></li>
+<li><a class="new" href="/w/index.php?title=FightMalaria@Home&amp;action=edit&amp;redlink=1" title="FightMalaria@Home (存在しないページ)">FightMalaria@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Gerasim@Home&amp;action=edit&amp;redlink=1" title="Gerasim@Home (存在しないページ)">Gerasim@Home</a></li>
+<li><a class="new" href="/w/index.php?title=IThena&amp;action=edit&amp;redlink=1" title="IThena (存在しないページ)">iThena</a></li>
+<li><a class="new" href="/w/index.php?title=MLC@Home&amp;action=edit&amp;redlink=1" title="MLC@Home (存在しないページ)">MLC@Home</a></li>
+<li><a class="new" href="/w/index.php?title=NanoHUB@home&amp;action=edit&amp;redlink=1" title="NanoHUB@home (存在しないページ)">nanoHUB@home</a></li>
+<li><a class="new" href="/w/index.php?title=NFS@Home&amp;action=edit&amp;redlink=1" title="NFS@Home (存在しないページ)">NFS@Home</a></li>
+<li><a class="new" href="/w/index.php?title=NumberFields@home&amp;action=edit&amp;redlink=1" title="NumberFields@home (存在しないページ)">NumberFields@home</a></li>
+<li><a class="new" href="/w/index.php?title=ODLK&amp;action=edit&amp;redlink=1" title="ODLK (存在しないページ)">ODLK</a></li>
+<li><a class="new" href="/w/index.php?title=RADIOACTIVE@HOME&amp;action=edit&amp;redlink=1" title="RADIOACTIVE@HOME (存在しないページ)">RADIOACTIVE@HOME</a></li>
+<li><a class="mw-redirect" href="/wiki/RALPH@home" title="RALPH@home">RALPH@home</a></li>
+<li><a class="new" href="/w/index.php?title=VGTU@Home&amp;action=edit&amp;redlink=1" title="VGTU@Home (存在しないページ)">VGTU@Home</a></li>
+<li><a class="new" href="/w/index.php?title=WUProp@Home&amp;action=edit&amp;redlink=1" title="WUProp@Home (存在しないページ)">WUProp@Home</a></li>
+<li><a class="new" href="/w/index.php?title=YAFU&amp;action=edit&amp;redlink=1" title="YAFU (存在しないページ)">YAFU</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">将来予想されているプロジェクト</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=PlanetQuest&amp;action=edit&amp;redlink=1" title="PlanetQuest (存在しないページ)">PlanetQuest</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">休止中・終了したプロジェクト</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=3x%2B1@home&amp;action=edit&amp;redlink=1" title="3x+1@home (存在しないページ)">3x+1@home</a></li>
+<li><a href="/wiki/ABC@home" title="ABC@home">ABC@home</a></li>
+<li><a class="new" href="/w/index.php?title=AlmereGrid_Boinc_Grid&amp;action=edit&amp;redlink=1" title="AlmereGrid Boinc Grid (存在しないページ)">AlmereGrid Boinc Grid</a></li>
+<li><a class="new" href="/w/index.php?title=APS@Home&amp;action=edit&amp;redlink=1" title="APS@Home (存在しないページ)">APS@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Astropulse&amp;action=edit&amp;redlink=1" title="Astropulse (存在しないページ)">Astropulse</a></li>
+<li><a href="/wiki/AQUA@home" title="AQUA@home">AQUA@home</a></li>
+<li><a class="new" href="/w/index.php?title=Artificial_Intelligence_System&amp;action=edit&amp;redlink=1" title="Artificial Intelligence System (存在しないページ)">Artificial Intelligence System</a></li>
+<li><a class="new" href="/w/index.php?title=BBC_Climate_Change_Experiment&amp;action=edit&amp;redlink=1" title="BBC Climate Change Experiment (存在しないページ)">BBC Climate Change Experiment</a></li>
+<li><a class="new" href="/w/index.php?title=BRaTS@Home&amp;action=edit&amp;redlink=1" title="BRaTS@Home (存在しないページ)">BRaTS@Home</a></li>
+<li><a href="/wiki/Cell_computing" title="Cell computing">cell computing</a></li>
+<li><a class="new" href="/w/index.php?title=Cels@Home&amp;action=edit&amp;redlink=1" title="Cels@Home (存在しないページ)">Cels@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Chess960@Home&amp;action=edit&amp;redlink=1" title="Chess960@Home (存在しないページ)">Chess960@Home</a></li>
+<li><a class="new" href="/w/index.php?title=DepSpid&amp;action=edit&amp;redlink=1" title="DepSpid (存在しないページ)">DepSpid</a></li>
+<li><a class="new" href="/w/index.php?title=DistributedDataMining&amp;action=edit&amp;redlink=1" title="DistributedDataMining (存在しないページ)">DistributedDataMining</a></li>
+<li><a href="/wiki/Docking@Home" title="Docking@Home">Docking@Home</a></li>
+<li><a class="new" href="/w/index.php?title=DNETC@HOME&amp;action=edit&amp;redlink=1" title="DNETC@HOME (存在しないページ)">DNETC@HOME</a></li>
+<li><a class="new" href="/w/index.php?title=DrugDiscovery@Home&amp;action=edit&amp;redlink=1" title="DrugDiscovery@Home (存在しないページ)">DrugDiscovery@Home</a></li>
+<li><a class="new" href="/w/index.php?title=DynaPing&amp;action=edit&amp;redlink=1" title="DynaPing (存在しないページ)">DynaPing</a></li>
+<li><a class="new" href="/w/index.php?title=EDGeS@Home&amp;action=edit&amp;redlink=1" title="EDGeS@Home (存在しないページ)">EDGeS@Home</a></li>
+<li><a class="new" href="/w/index.php?title=EOn&amp;action=edit&amp;redlink=1" title="EOn (存在しないページ)">eOn</a></li>
+<li><a class="new" href="/w/index.php?title=Eternity2.net&amp;action=edit&amp;redlink=1" title="Eternity2.net (存在しないページ)">Eternity2.net</a></li>
+<li><a class="new" href="/w/index.php?title=FreeHAL&amp;action=edit&amp;redlink=1" title="FreeHAL (存在しないページ)">FreeHAL</a></li>
+<li><a class="new" href="/w/index.php?title=Genetic_Life&amp;action=edit&amp;redlink=1" title="Genetic Life (存在しないページ)">Genetic Life</a></li>
+<li><a class="new" href="/w/index.php?title=HashClash&amp;action=edit&amp;redlink=1" title="HashClash (存在しないページ)">HashClash</a></li>
+<li><a class="new" href="/w/index.php?title=Hydrogen@Home&amp;action=edit&amp;redlink=1" title="Hydrogen@Home (存在しないページ)">Hydrogen@Home</a></li>
+<li><a class="new" href="/w/index.php?title=The_Lattice_Project&amp;action=edit&amp;redlink=1" title="The Lattice Project (存在しないページ)">The Lattice Project</a></li>
+<li><a class="new" href="/w/index.php?title=Leiden_Classical&amp;action=edit&amp;redlink=1" title="Leiden Classical (存在しないページ)">Leiden Classical</a></li>
+<li><a class="new" href="/w/index.php?title=Magnetism@home&amp;action=edit&amp;redlink=1" title="Magnetism@home (存在しないページ)">Magnetism@home</a></li>
+<li><a href="/wiki/Malaria_Control_Project" title="Malaria Control Project">Malaria Control Project</a></li>
+<li><a href="/wiki/%CE%9CFluids@Home" title="ΜFluids@Home">μFluids@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Nano-Hive@home&amp;action=edit&amp;redlink=1" title="Nano-Hive@home (存在しないページ)">Nano-Hive@home</a></li>
+<li><a class="new" href="/w/index.php?title=NQueens@home&amp;action=edit&amp;redlink=1" title="NQueens@home (存在しないページ)">NQueens@home</a></li>
+<li><a href="/wiki/Orbit@home" title="Orbit@home">Orbit@home</a></li>
+<li><a class="new" href="/w/index.php?title=Pirates@home&amp;action=edit&amp;redlink=1" title="Pirates@home (存在しないページ)">Pirates@home</a></li>
+<li><a class="new" href="/w/index.php?title=POEM@home&amp;action=edit&amp;redlink=1" title="POEM@home (存在しないページ)">POEM@home</a></li>
+<li><a class="new" href="/w/index.php?title=Predictor@home&amp;action=edit&amp;redlink=1" title="Predictor@home (存在しないページ)">Predictor@home</a></li>
+<li><a class="new" href="/w/index.php?title=Primaboinca&amp;action=edit&amp;redlink=1" title="Primaboinca (存在しないページ)">Primaboinca</a></li>
+<li><a class="new" href="/w/index.php?title=Proteins@home&amp;action=edit&amp;redlink=1" title="Proteins@home (存在しないページ)">Proteins@home</a></li>
+<li><a class="new" href="/w/index.php?title=QMC@Home&amp;action=edit&amp;redlink=1" title="QMC@Home (存在しないページ)">QMC@Home</a></li>
+<li><a class="new" href="/w/index.php?title=QuantumFIRE&amp;action=edit&amp;redlink=1" title="QuantumFIRE (存在しないページ)">QuantumFIRE</a></li>
+<li><a class="new" href="/w/index.php?title=Ramsey@Home&amp;action=edit&amp;redlink=1" title="Ramsey@Home (存在しないページ)">Ramsey@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Rectilinear_Crossing_Number&amp;action=edit&amp;redlink=1" title="Rectilinear Crossing Number (存在しないページ)">Rectilinear Crossing Number</a></li>
+<li><a class="new" href="/w/index.php?title=Renderfarm.fi&amp;action=edit&amp;redlink=1" title="Renderfarm.fi (存在しないページ)">Renderfarm.fi</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%82%BB%E3%83%AD_(%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)" title="オセロ (ボードゲーム)">Reversi</a></li>
+<li><a class="new" href="/w/index.php?title=RSA_Lattice_Siever&amp;action=edit&amp;redlink=1" title="RSA Lattice Siever (存在しないページ)">RSA Lattice Siever</a></li>
+<li><a href="/wiki/Riesel_Sieve" title="Riesel Sieve">Riesel Sieve</a></li>
+<li><a class="new" href="/w/index.php?title=RND@home&amp;action=edit&amp;redlink=1" title="RND@home (存在しないページ)">RND@home</a></li>
+<li><a class="new" href="/w/index.php?title=SciLINC&amp;action=edit&amp;redlink=1" title="SciLINC (存在しないページ)">SciLINC</a></li>
+<li><a class="new" href="/w/index.php?title=Seasonal_Attribution_Project&amp;action=edit&amp;redlink=1" title="Seasonal Attribution Project (存在しないページ)">Seasonal Attribution Project</a></li>
+<li><a href="/wiki/SETI@home" title="SETI@home">SETI@home</a></li>
+<li><a class="new" href="/w/index.php?title=SHA-1_Collision_Search_Graz&amp;action=edit&amp;redlink=1" title="SHA-1 Collision Search Graz (存在しないページ)">SHA-1 Collision Search Graz</a></li>
+<li><a href="/wiki/SIMAP" title="SIMAP">SIMAP</a></li>
+<li><a class="new" href="/w/index.php?title=Spinhenge@Home&amp;action=edit&amp;redlink=1" title="Spinhenge@Home (存在しないページ)">Spinhenge@Home</a></li>
+<li><a class="new" href="/w/index.php?title=Sudoku_project&amp;action=edit&amp;redlink=1" title="Sudoku project (存在しないページ)">Sudoku project</a></li>
+<li><a class="new" href="/w/index.php?title=Superlink@Technion&amp;action=edit&amp;redlink=1" title="Superlink@Technion (存在しないページ)">Superlink@Technion</a></li>
+<li><a class="new" href="/w/index.php?title=SZTAKI_Desktop_Grid&amp;action=edit&amp;redlink=1" title="SZTAKI Desktop Grid (存在しないページ)">SZTAKI Desktop Grid</a></li>
+<li><a href="/wiki/TANPAKU" title="TANPAKU">TANPAKU</a></li>
+<li><a class="new" href="/w/index.php?title=Virtual_Prairie&amp;action=edit&amp;redlink=1" title="Virtual Prairie (存在しないページ)">Virtual Prairie</a></li>
+<li><a class="new" href="/w/index.php?title=Virus_Respiratorio_Sincitial&amp;action=edit&amp;redlink=1" title="Virus Respiratorio Sincitial (存在しないページ)">Virus Respiratorio Sincitial</a></li>
+<li><a class="new" href="/w/index.php?title=XtremLab&amp;action=edit&amp;redlink=1" title="XtremLab (存在しないページ)">XtremLab</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ツールと技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=BOINC_Account_Manager&amp;action=edit&amp;redlink=1" title="BOINC Account Manager (存在しないページ)">BOINC Account Manager</a></li>
+<li><a class="new" href="/w/index.php?title=BOINC_client-server_technology&amp;action=edit&amp;redlink=1" title="BOINC client-server technology (存在しないページ)">BOINC client-server technology</a></li>
+<li><a class="new" href="/w/index.php?title=BOINC_Credit_System&amp;action=edit&amp;redlink=1" title="BOINC Credit System (存在しないページ)">BOINC Credit System</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402080446
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.393 seconds
+Real time usage: 0.555 seconds
+Preprocessor visited node count: 3825/1000000
+Post‐expand include size: 59767/2097152 bytes
+Template argument size: 8864/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 5/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 5454/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 7135232/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  461.901      1 -total
+ 44.52%  205.653      1 テンプレート:Reflist
+ 38.50%  177.839      1 テンプレート:Cite_journal
+ 36.16%  167.017      1 テンプレート:Citation/core
+ 21.72%  100.335      1 テンプレート:複数の問題
+ 20.27%   93.606      1 テンプレート:Ambox
+ 20.11%   92.907      2 テンプレート:Citation/identifier
+ 17.61%   81.333      1 テンプレート:ISSN
+ 12.63%   58.341      1 テンプレート:Catalog_lookup_link
+ 12.22%   56.445      1 テンプレート:WikipediaPage
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4359894-0!canonical and timestamp 20220402080446 and revision id 2590739. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=BOINCクライアント-サーバ技術&amp;oldid=2590739">http://localhost:8080/w/index.php?title=BOINCクライアント-サーバ技術&amp;oldid=2590739</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2016%E5%B9%B41%E6%9C%88" title="カテゴリ:出典を必要とする記事/2016年1月">出典を必要とする記事/2016年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%89%B9%E7%AD%86%E6%80%A7%E3%81%AE%E5%9F%BA%E6%BA%96%E3%82%92%E6%BA%80%E3%81%9F%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E3%81%8A%E3%81%9D%E3%82%8C%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2016%E5%B9%B41%E6%9C%88" title="カテゴリ:特筆性の基準を満たしていないおそれのある記事/2016年1月">特筆性の基準を満たしていないおそれのある記事/2016年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E8%AA%B02)/2016%E5%B9%B41%E6%9C%88-6%E6%9C%88" title="カテゴリ:言葉を濁した記述のある記事 (誰2)/2016年1月-6月">言葉を濁した記述のある記事 (誰2)/2016年1月-6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2008%E5%B9%B41%E6%9C%88-3%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2008年1月-3月">出典を必要とする記述のある記事/2008年1月-3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="カテゴリ:分散コンピューティングプロジェクト">分散コンピューティングプロジェクト</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:分散コンピューティングアーキテクチャ">分散コンピューティングアーキテクチャ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;returntoquery=curid%3D4359894%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;returntoquery=curid%3D4359894%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;oldid=2590739" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=BOINC%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88-%E3%82%B5%E3%83%BC%E3%83%90%E6%8A%80%E8%A1%93&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年5月14日 (金) 20:36 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.393","walltime":"0.555","ppvisitednodes":{"value":3825,"limit":1000000},"postexpandincludesize":{"value":59767,"limit":2097152},"templateargumentsize":{"value":8864,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":5454,"limit":5000000},"timingprofile":["100.00%  461.901      1 -total"," 44.52%  205.653      1 テンプレート:Reflist"," 38.50%  177.839      1 テンプレート:Cite_journal"," 36.16%  167.017      1 テンプレート:Citation/core"," 21.72%  100.335      1 テンプレート:複数の問題"," 20.27%   93.606      1 テンプレート:Ambox"," 20.11%   92.907      2 テンプレート:Citation/identifier"," 17.61%   81.333      1 テンプレート:ISSN"," 12.63%   58.341      1 テンプレート:Catalog_lookup_link"," 12.22%   56.445      1 テンプレート:WikipediaPage"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":7135232,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402080446","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":691});});</script>
+</body></html>

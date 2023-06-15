@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>pgrep - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Pgrep rootpage-Pgrep skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">pgrep</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>pgrep</b> は、拡張<a href="." id="link_a_1" title="正規表現">正規表現</a>パターンで<a href="." id="link_a_2" title="プロセス">プロセス</a>名を検索し、デフォルトでは検索結果を<a href="." id="link_a_3" title="プロセス識別子">プロセス識別子</a>で示すコマンド。<a href="." id="link_a_4" title="Solaris">Solaris 7</a> で最初に導入されたコマンドであり、後に <a href="." id="link_a_5" title="Linux">Linux</a> および <a href="." id="link_a_6" title="OpenBSD">OpenBSD</a> に再実装された。類似の機能を持つコマンドとして <a href="." id="link_a_7" title="Pidof">pidof</a> と <a href="." id="link_a_8" title="Ps (UNIX)">ps</a> がある。
+</p>
+<h2><span id=".E4.BD.BF.E7.94.A8.E4.BE.8B"></span><span class="mw-headline" id="使用例">使用例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pgrep&amp;action=edit&amp;section=1" title="節を編集: 使用例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>プロセス（タスク）名を指定してそのプロセス識別子を返すというデフォルトの動作をさせるには、以下のように入力する。
+</p>
+<dl><dd><code>pgrep <i>taskname</i></code></dd></dl>
+<p>これは、次のコマンド行とほぼ等価である。
+</p>
+<dl><dd><code>ps ax | <a href="/wiki/Grep" title="Grep">grep</a> <i>taskname</i> | grep -v grep | <a href="/wiki/AWK" title="AWK">awk</a> '{print $1}'</code></dd></dl>
+<p>このように、pgrep は複雑なコマンド行を単純化できる。他にも次のような機能がある。
+</p>
+<ul><li><i>other</i> というグループに属する全プロセスをロング形式（IDと名前）で表示する。</li></ul>
+<dl><dd><dl><dd><code>pgrep -l -G other</code></dd></dl></dd></dl>
+<ul><li><i>root</i> というユーザーに属さない全プロセスを表示する。</li></ul>
+<dl><dd><dl><dd><code>pgrep -v -u root</code></dd></dl></dd></dl>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pgrep&amp;action=edit&amp;section=2" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Pkill" title="Pkill">pkill</a> – <a href="/wiki/%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB_(Unix)" title="シグナル (Unix)">シグナル</a>をプロセス名などの属性を指定して送る。</li>
+<li><a href="/wiki/Ps_(UNIX)" title="Ps (UNIX)">ps</a> – 現在動作中のプロセス群を表示する。</li>
+<li><a href="/wiki/Grep" title="Grep">grep</a> – 正規表現にマッチングする行を出力する。</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pgrep&amp;action=edit&amp;section=3" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://linuxjm.osdn.jp/html/procps/man1/pgrep.1.html" rel="nofollow">pgrep(1)</a> JM Project</li></ul>
+<div aria-labelledby="Unixコマンド" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Unix%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Unixコマンド (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AUnix%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AUnix%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Unixコマンド" style="font-size:110%;margin:0 6em">Unix<a href="/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="コマンド (コンピュータ)">コマンド</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">ファイルとファイルシステム管理</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cat_(UNIX)" title="Cat (UNIX)">cat</a></li>
+<li><a href="/wiki/Chmod" title="Chmod">chmod</a></li>
+<li><a href="/wiki/Chown" title="Chown">chown</a></li>
+<li><a href="/wiki/Chgrp" title="Chgrp">chgrp</a></li>
+<li><a href="/wiki/Cksum_(UNIX)" title="Cksum (UNIX)">cksum</a></li>
+<li><a href="/wiki/Cmp" title="Cmp">cmp</a></li>
+<li><a href="/wiki/Cp_(UNIX)" title="Cp (UNIX)">cp</a></li>
+<li><a href="/wiki/Dd_(UNIX)" title="Dd (UNIX)">dd</a></li>
+<li><a href="/wiki/Du_(Unix)" title="Du (Unix)">du</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Df_(Unix)&amp;action=edit&amp;redlink=1" title="Df (Unix) (存在しないページ)">df</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:df_(Unix)&amp;action=edit&amp;redlink=1" title="En:df (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/File_(UNIX)" title="File (UNIX)">file</a></li>
+<li><a href="/wiki/Fsck" title="Fsck">fsck</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Fuser&amp;action=edit&amp;redlink=1" title="Fuser (存在しないページ)">fuser</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:fuser_(Unix)&amp;action=edit&amp;redlink=1" title="En:fuser (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Ln_(UNIX)" title="Ln (UNIX)">ln</a></li>
+<li><a href="/wiki/Ls_(UNIX)" title="Ls (UNIX)">ls</a></li>
+<li><a href="/wiki/Lsof" title="Lsof">lsof</a></li>
+<li><a href="/wiki/Mkdir" title="Mkdir">mkdir</a></li>
+<li><a href="/wiki/Mount_(UNIX)" title="Mount (UNIX)">mount</a></li>
+<li><a href="/wiki/Mv_(UNIX)" title="Mv (UNIX)">mv</a></li>
+<li><a href="/wiki/Pax" title="Pax">pax</a></li>
+<li><a href="/wiki/Pwd" title="Pwd">pwd</a></li>
+<li><a href="/wiki/Rm_(UNIX)" title="Rm (UNIX)">rm</a></li>
+<li><a href="/wiki/Rmdir" title="Rmdir">rmdir</a></li>
+<li><a class="new" href="/w/index.php?title=Size_(UNIX)&amp;action=edit&amp;redlink=1" title="Size (UNIX) (存在しないページ)">size</a></li>
+<li><a href="/wiki/Split" title="Split">split</a></li>
+<li><a href="/wiki/Tee_(UNIX)" title="Tee (UNIX)">tee</a></li>
+<li><a href="/wiki/Touch_(UNIX)" title="Touch (UNIX)">touch</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Type_(UNIX)&amp;action=edit&amp;redlink=1" title="Type (UNIX) (存在しないページ)">type</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:type_(Unix)&amp;action=edit&amp;redlink=1" title="En:type (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Umask&amp;action=edit&amp;redlink=1" title="Umask (存在しないページ)">umask</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:umask&amp;action=edit&amp;redlink=1" title="En:umask (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プロセス管理</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/At_(UNIX)" title="At (UNIX)">at</a></li>
+<li><a class="new" href="/w/index.php?title=Bg_(UNIX)&amp;action=edit&amp;redlink=1" title="Bg (UNIX) (存在しないページ)">bg</a></li>
+<li><a href="/wiki/Chroot" title="Chroot">chroot</a></li>
+<li><a href="/wiki/Crontab" title="Crontab">cron</a></li>
+<li><a class="new" href="/w/index.php?title=Fg_(UNIX)&amp;action=edit&amp;redlink=1" title="Fg (UNIX) (存在しないページ)">fg</a></li>
+<li><a href="/wiki/Kill" title="Kill">kill</a></li>
+<li><a href="/wiki/Killall" title="Killall">killall</a></li>
+<li><a href="/wiki/Nice_(UNIX)" title="Nice (UNIX)">nice</a></li>
+<li><a class="mw-selflink selflink">pgrep</a></li>
+<li><a href="/wiki/Pidof" title="Pidof">pidof</a></li>
+<li><a href="/wiki/Pkill" title="Pkill">pkill</a></li>
+<li><a href="/wiki/Ps_(UNIX)" title="Ps (UNIX)">ps</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Pstree&amp;action=edit&amp;redlink=1" title="Pstree (存在しないページ)">pstree</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:pstree&amp;action=edit&amp;redlink=1" title="En:pstree (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%86%8D%E8%B5%B7%E5%8B%95#reboot_(UNIXコマンド)" title="再起動">reboot</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%83%83%E3%83%88%E3%83%80%E3%82%A6%E3%83%B3" title="シャットダウン">shutdown</a></li>
+<li><a href="/wiki/Time_(UNIX)" title="Time (UNIX)">time</a></li>
+<li><a href="/wiki/Top_(UNIX)" title="Top (UNIX)">top</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ユーザ管理/環境</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Clear_(UNIX)" title="Clear (UNIX)">clear</a></li>
+<li><a href="/wiki/Env" title="Env">env</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Exit_(%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)&amp;action=edit&amp;redlink=1" title="Exit (コマンド) (存在しないページ)">exit</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:exit_(command)&amp;action=edit&amp;redlink=1" title="En:exit (command) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Finger%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="Fingerプロトコル">finger</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=History&amp;action=edit&amp;redlink=1" title="History (存在しないページ)">history</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:history_(Unix)&amp;action=edit&amp;redlink=1" title="En:history (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Id_(UNIX)" title="Id (UNIX)">id</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Logname&amp;action=edit&amp;redlink=1" title="Logname (存在しないページ)">logname</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:logname&amp;action=edit&amp;redlink=1" title="En:logname (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Mesg" title="Mesg">mesg</a></li>
+<li><a href="/wiki/Passwd" title="Passwd">passwd</a></li>
+<li><a href="/wiki/Su_(Unix)" title="Su (Unix)">su</a></li>
+<li><a href="/wiki/Sudo" title="Sudo">sudo</a></li>
+<li><a href="/wiki/Uptime" title="Uptime">uptime</a></li>
+<li><a href="/wiki/Talk" title="Talk">talk</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Tput&amp;action=edit&amp;redlink=1" title="Tput (存在しないページ)">tput</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:tput&amp;action=edit&amp;redlink=1" title="En:tput (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Uname" title="Uname">uname</a></li>
+<li><a href="/wiki/W_(UNIX)" title="W (UNIX)">w</a></li>
+<li><a href="/wiki/Wall_(UNIX)" title="Wall (UNIX)">wall</a></li>
+<li><a href="/wiki/Who_(UNIX)" title="Who (UNIX)">who</a></li>
+<li><a href="/wiki/Whoami" title="Whoami">whoami</a></li>
+<li><a href="/wiki/Write_(UNIX)" title="Write (UNIX)">write</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">テキスト処理</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AWK" title="AWK">awk</a></li>
+<li><a href="/wiki/Banner_(UNIX)" title="Banner (UNIX)">banner</a></li>
+<li><a href="/wiki/Basename" title="Basename">basename</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Comm_(UNIX)&amp;action=edit&amp;redlink=1" title="Comm (UNIX) (存在しないページ)">comm</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:comm&amp;action=edit&amp;redlink=1" title="En:comm (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Csplit&amp;action=edit&amp;redlink=1" title="Csplit (存在しないページ)">csplit</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:csplit&amp;action=edit&amp;redlink=1" title="En:csplit (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Cut" title="Cut">cut</a></li>
+<li><a href="/wiki/Diff" title="Diff">diff</a></li>
+<li><a href="/wiki/Dirname" title="Dirname">dirname</a></li>
+<li><a href="/wiki/Ed_(%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF)" title="Ed (テキストエディタ)">ed</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ex_(%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF)&amp;action=edit&amp;redlink=1" title="Ex (エディタ) (存在しないページ)">ex</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ex_(text_editor)&amp;action=edit&amp;redlink=1" title="En:ex (text editor) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Fmt" title="Fmt">fmt</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Fold&amp;action=edit&amp;redlink=1" title="Fold (存在しないページ)">fold</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:fold_(Unix)&amp;action=edit&amp;redlink=1" title="En:fold (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Head" title="Head">head</a></li>
+<li><a href="/wiki/Iconv" title="Iconv">iconv</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Join_(UNIX)&amp;action=edit&amp;redlink=1" title="Join (UNIX) (存在しないページ)">join</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:join_(Unix)&amp;action=edit&amp;redlink=1" title="En:join (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Less" title="Less">less</a></li>
+<li><a href="/wiki/More_(UNIX)" title="More (UNIX)">more</a></li>
+<li><a href="/wiki/Network_Kanji_Filter" title="Network Kanji Filter">nkf</a></li>
+<li><a href="/wiki/Nl_(UNIX)" title="Nl (UNIX)">nl</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Paste_(UNIX)&amp;action=edit&amp;redlink=1" title="Paste (UNIX) (存在しないページ)">paste</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:paste_(Unix)&amp;action=edit&amp;redlink=1" title="En:paste (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Printf" title="Printf">printf</a></li>
+<li><a href="/wiki/Sed_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="Sed (コンピュータ)">sed</a></li>
+<li><a href="/wiki/Sort_(UNIX)" title="Sort (UNIX)">sort</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Spell_(UNIX)&amp;action=edit&amp;redlink=1" title="Spell (UNIX) (存在しないページ)">spell</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:spell_(Unix)&amp;action=edit&amp;redlink=1" title="En:spell (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Strings_(UNIX)" title="Strings (UNIX)">strings</a></li>
+<li><a href="/wiki/Tail" title="Tail">tail</a></li>
+<li><a href="/wiki/Tr_(UNIX)" title="Tr (UNIX)">tr</a></li>
+<li><a href="/wiki/Uniq" title="Uniq">uniq</a></li>
+<li><a href="/wiki/Vi" title="Vi">vi</a></li>
+<li><a href="/wiki/Wc_(UNIX)" title="Wc (UNIX)">wc</a></li>
+<li><a href="/wiki/Xargs" title="Xargs">xargs</a></li>
+<li><a href="/wiki/Yes_(UNIX)" title="Yes (UNIX)">yes</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">シェルビルトイン</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Alias_(%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)" title="Alias (コマンド)">alias</a></li>
+<li><a href="/wiki/Cd_(UNIX)" title="Cd (UNIX)">cd</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%B3%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="エコー (コンピュータ)">echo</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Test_(UNIX)&amp;action=edit&amp;redlink=1" title="Test (UNIX) (存在しないページ)">test</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:test_(Unix)&amp;action=edit&amp;redlink=1" title="En:test (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0#UNIXの環境変数" title="環境変数">unset</a></li>
+<li><a href="/wiki/Wait" title="Wait">wait</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">通信</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dig_(UNIX)" title="Dig (UNIX)">dig</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Host_(UNIX)&amp;action=edit&amp;redlink=1" title="Host (UNIX) (存在しないページ)">host</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:host_(Unix)&amp;action=edit&amp;redlink=1" title="En:host (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Ifconfig" title="Ifconfig">ifconfig</a></li>
+<li><a href="/wiki/Inetd" title="Inetd">inetd</a></li>
+<li><a href="/wiki/Iproute2" title="Iproute2">ip (iproute2)</a></li>
+<li><a href="/wiki/Netcat" title="Netcat">netcat</a></li>
+<li><a href="/wiki/Netstat" title="Netstat">netstat</a></li>
+<li><a href="/wiki/Nslookup" title="Nslookup">nslookup</a></li>
+<li><a href="/wiki/Ping" title="Ping">ping</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Rdate&amp;action=edit&amp;redlink=1" title="Rdate (存在しないページ)">rdate</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:rdate&amp;action=edit&amp;redlink=1" title="En:rdate (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Rlogin" title="Rlogin">rlogin</a></li>
+<li><a href="/wiki/Route" title="Route">route</a></li>
+<li><a href="/wiki/Secure_Shell" title="Secure Shell">ssh</a></li>
+<li><a href="/wiki/Traceroute" title="Traceroute">traceroute</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">検索</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Find_(UNIX)" title="Find (UNIX)">find</a></li>
+<li><a href="/wiki/Grep" title="Grep">grep</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Locate&amp;action=edit&amp;redlink=1" title="Locate (存在しないページ)">locate</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:locate_(Unix)&amp;action=edit&amp;redlink=1" title="En:locate (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Whatis&amp;action=edit&amp;redlink=1" title="Whatis (存在しないページ)">whatis</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:whatis&amp;action=edit&amp;redlink=1" title="En:whatis (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Whereis&amp;action=edit&amp;redlink=1" title="Whereis (存在しないページ)">whereis</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:whereis&amp;action=edit&amp;redlink=1" title="En:whereis (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マニュアル</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Apropos&amp;action=edit&amp;redlink=1" title="Apropos (存在しないページ)">apropos</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:apropos_(Unix)&amp;action=edit&amp;redlink=1" title="En:apropos (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Help_(%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)&amp;action=edit&amp;redlink=1" title="Help (コマンド) (存在しないページ)">help</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:help_(command)&amp;action=edit&amp;redlink=1" title="En:help (command) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Man%E3%83%9A%E3%83%BC%E3%82%B8" title="Manページ">man</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bc_(UNIX)" title="Bc (UNIX)">bc</a></li>
+<li><a href="/wiki/Dc_(UNIX)" title="Dc (UNIX)">dc</a></li>
+<li><a href="/wiki/Cal_(UNIX)" title="Cal (UNIX)">cal</a></li>
+<li><a href="/wiki/Date_(UNIX)" title="Date (UNIX)">date</a></li>
+<li><a href="/wiki/Expr" title="Expr">expr</a></li>
+<li><a href="/wiki/False_(UNIX)" title="False (UNIX)">false</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Lp_(UNIX)&amp;action=edit&amp;redlink=1" title="Lp (UNIX) (存在しないページ)">lp</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:lp_(Unix)&amp;action=edit&amp;redlink=1" title="En:lp (Unix) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Line_Printer_Daemon_protocol" title="Line Printer Daemon protocol">lpr</a></li>
+<li><a href="/wiki/Od_(UNIX)" title="Od (UNIX)">od</a></li>
+<li><a href="/wiki/Sl_(UNIX)" title="Sl (UNIX)">sl</a></li>
+<li><a href="/wiki/Sleep_(UNIX)" title="Sleep (UNIX)">sleep</a></li>
+<li><a class="new" href="/w/index.php?title=Stty&amp;action=edit&amp;redlink=1" title="Stty (存在しないページ)">stty</a></li>
+<li><a href="/wiki/True_(UNIX)" title="True (UNIX)">true</a></li>
+<li><a href="/wiki/Tty" title="Tty">tty</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:UNIX%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="カテゴリ:UNIXのソフトウェア">Category:UNIXのソフトウェア</a></li>
+<li><a href="/wiki/UNIX%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E4%B8%80%E8%A6%A7" title="UNIXユーティリティの一覧">UNIXユーティリティの一覧</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401025920
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.130 seconds
+Real time usage: 0.301 seconds
+Preprocessor visited node count: 372/1000000
+Post‐expand include size: 52144/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 25/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.110/7 seconds
+Lua virtual size: 5799936/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  216.929      1 -total
+ 98.51%  213.701      1 テンプレート:Unixコマンド
+ 90.11%  195.474      1 テンプレート:Navbox
+ 64.74%  140.443     25 テンプレート:仮リンク
+  1.43%    3.109      1 テンプレート:小文字
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1524491-0!canonical and timestamp 20220401025919 and revision id 921951. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Pgrep&amp;oldid=921951">http://localhost:8080/w/index.php?title=Pgrep&amp;oldid=921951</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:UNIX%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="カテゴリ:UNIXのソフトウェア">UNIXのソフトウェア</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Pgrep&amp;returntoquery=curid%3D1524491%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Pgrep&amp;returntoquery=curid%3D1524491%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Pgrep" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Pgrep&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Pgrep">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Pgrep&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Pgrep&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Pgrep" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Pgrep" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Pgrep&amp;oldid=921951" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Pgrep&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2019年10月31日 (木) 19:52 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.130","walltime":"0.301","ppvisitednodes":{"value":372,"limit":1000000},"postexpandincludesize":{"value":52144,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":25,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%  216.929      1 -total"," 98.51%  213.701      1 テンプレート:Unixコマンド"," 90.11%  195.474      1 テンプレート:Navbox"," 64.74%  140.443     25 テンプレート:仮リンク","  1.43%    3.109      1 テンプレート:小文字"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"7"},"limitreport-virtmemusage":{"value":5799936,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401025920","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":479});});</script>
+</body></html>

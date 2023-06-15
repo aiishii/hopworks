@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>文字符号化方式 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-文字符号化方式 rootpage-文字符号化方式 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">文字符号化方式</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>文字符号化方式</b>（もじふごうかほうしき、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">character encoding scheme</span>、<b>CES</b>）とは、<a href="." id="link_a_2" title="符号化文字集合">符号化文字集合</a>で<a href="." id="link_a_3" title="文字">文字</a>に対応付けた<a href="." id="link_a_4" title="正の数と負の数整数">非負整数</a>値を、実際に<a href="." id="link_a_5" title="コンピュータ">コンピュータ</a>が利用できる<a href="." id="link_a_6" title="データ">データ</a>列（通常、<a href="." id="link_a_7" title="バイト (情報)">バイト</a>列）に変換する<a href="." id="link_a_8" title="符号化方式">符号化方式</a>。
+</p><p><b>文字符号化体系</b>、<b>文字符号化スキーム</b> (<span lang="en"><abbr title="character coding scheme">CCS</abbr></span>) とも言う。文字について述べていることが明確なときは、単に<b>符号化方式</b>、また<a href="." id="link_a_9" title="IBM">IBM</a>の用語では<b>コード化体系</b> (<span lang="en"><abbr title="encoding scheme">ES</abbr></span>) などとも言う。
+</p><p>この用語は<a href="." id="link_a_10" title="Unicode">Unicode</a>や<a href="." id="link_a_11" title="Internet Engineering Task Force">IETF</a>の<a href="." id="link_a_12" title="標準化">標準</a>などで用いているが、<a href="." id="link_a_13" title="国際標準化機構">ISO</a>/<a href="." id="link_a_14" title="国際電気標準会議">IEC</a>や<a href="." id="link_a_15" title="日本産業規格">JIS</a>の標準では用いず「符号化文字集合の構造」あるいは「<a href="." id="link_a_16" title="ISO/IEC 2022">文字符号の構造及び拡張法</a>」として扱われている。この用語の定義は、世界の文字コード規格とは必ずしも合致しないことがある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#符号化文字集合と文字符号化方式"><span class="tocnumber">1</span> <span class="toctext">符号化文字集合と文字符号化方式</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#文字符号化形式と文字符号化スキーム"><span class="tocnumber">2</span> <span class="toctext">文字符号化形式と文字符号化スキーム</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#キャラクタセット"><span class="tocnumber">3</span> <span class="toctext">キャラクタセット</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#参考資料"><span class="tocnumber">5</span> <span class="toctext">参考資料</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E7.AC.A6.E5.8F.B7.E5.8C.96.E6.96.87.E5.AD.97.E9.9B.86.E5.90.88.E3.81.A8.E6.96.87.E5.AD.97.E7.AC.A6.E5.8F.B7.E5.8C.96.E6.96.B9.E5.BC.8F"></span><span class="mw-headline" id="符号化文字集合と文字符号化方式">符号化文字集合と文字符号化方式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=1" title="節を編集: 符号化文字集合と文字符号化方式">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>符号化文字集合とCESの関係を示すため、<a href="/wiki/JIS_X_0208" title="JIS X 0208">JIS X 0208</a>を例にとる。なお、話を簡単にするため、附属書は無視する。
+</p><p>JIS X 0208は、<b>符号化文字集合</b>であり、文字の表と、各文字に対応付けられた1区1点～94区94点の番号（区点）と、それに対応したビット組合せからなる。例えば、「亜」という漢字の区点番号は16区1点であり、対応するビット組合せは x0110000 x0100001 の2バイトである (xは呼出し先がGLであれば0、GRであれば1)。こうした符号化文字集合について、他の符号化文字集合と組み合わせたり、計算によって変形したりする方式を、<b>文字符号化方式</b> (CES) と呼ぶことがある。また、特定の符号化文字集合とCESとの組み合わせによって実現する文字列の表現を<b>符号化表現</b>と呼ぶことがある (符号化表現は<b><a href="#キャラクタセット">キャラクタセット</a></b>とほぼ同義である)。
+</p><p>1つの符号化文字集合に適用できるCESが複数ある場合、符号化表現も1つではない。JIS X 0208の場合、主要なものとして、<a href="/wiki/ISO-2022-JP" title="ISO-2022-JP">ISO-2022-JP</a> (<a class="external text" href="https://tools.ietf.org/html/rfc1468" rel="nofollow">RFC1468</a>符号化表現)・<a href="/wiki/EUC-JP" title="EUC-JP">EUC-JP</a>・<a href="/wiki/Shift_JIS" title="Shift JIS">Shift_JIS</a>がある。
+</p><p>ISO-2022-JPは、JIS X 0208の文字に対応付けた1～94の区点を、それぞれ21<sub>16</sub>～7E<sub>16</sub>の範囲の1バイト、計2バイトで表す。さらに、<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%97%E3%83%BB%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9" title="エスケープ・シーケンス">エスケープ・シーケンス</a>を使い、<a href="/wiki/ASCII" title="ASCII">ASCII</a>や<a href="/wiki/JIS_X_0201" title="JIS X 0201">JIS X 0201</a>など別の文字集合に切り替えることができる。このように、1つのCESが使う符号化文字集合は、1つとは限らない。
+</p><p>ほとんどの場合、ISO-2022-JPのように符号化文字集合とバイト列の対応は単純であるが、常にそうだとは限らない。Shift_JISでは、JIS X 0208文字集合を、複雑な計算式により、2バイトで表現できる0000<sub>16</sub>～FFFF<sub>16</sub>のうち<a href="/wiki/JIS_X_0201" title="JIS X 0201">JIS X 0201</a>と競合しない長方形の領域に詰め込んでいる。
+</p>
+<h2><span id=".E6.96.87.E5.AD.97.E7.AC.A6.E5.8F.B7.E5.8C.96.E5.BD.A2.E5.BC.8F.E3.81.A8.E6.96.87.E5.AD.97.E7.AC.A6.E5.8F.B7.E5.8C.96.E3.82.B9.E3.82.AD.E3.83.BC.E3.83.A0"></span><span class="mw-headline" id="文字符号化形式と文字符号化スキーム">文字符号化形式と文字符号化スキーム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=2" title="節を編集: 文字符号化形式と文字符号化スキーム">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Unicode" title="Unicode">Unicode</a>では、文字符号化スキーム (<span lang="en"><abbr title="character encoding scheme">CES</abbr></span>) を、文字符号化形式 (<span lang="en"><abbr title="character encoding form">CEF</abbr></span>) と、バイト<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA" title="シリアライズ">直列化</a>等の2つの段階に分けて標準化している<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<table align="right" class="wikitable">
+<tbody><tr>
+<th>符号化文字集合</th>
+<th>符号化形式<br/>(CEF)</th>
+<th>符号化スキーム<br/>(CES)
+</th></tr>
+<tr>
+<td rowspan="7">Unicode文字集合</td>
+<td>UTF-8</td>
+<td>UTF-8
+</td></tr>
+<tr>
+<td rowspan="3">UTF-16</td>
+<td>UTF-16BE
+</td></tr>
+<tr>
+<td>UTF-16LE
+</td></tr>
+<tr>
+<td>UTF-16
+</td></tr>
+<tr>
+<td rowspan="3">UTF-32</td>
+<td>UTF-32BE
+</td></tr>
+<tr>
+<td>UTF-32LE
+</td></tr>
+<tr>
+<td>UTF-32
+</td></tr></tbody></table>
+<p>Unicodeでは、Unicode符号化文字集合のU+0000〜U+10FFFFの各<a href="/wiki/%E7%AC%A6%E5%8F%B7%E7%82%B9" title="符号点">符号位置</a>に、Unicodeスカラ値という非負整数値を対応付けている。CEFは、このUnicodeスカラ値を<a class="new" href="/w/index.php?title=%E7%AC%A6%E5%8F%B7%E5%8D%98%E4%BD%8D&amp;action=edit&amp;redlink=1" title="符号単位 (存在しないページ)">符号単位</a>列に変換する。UnicodeのCEFには、<a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>・<a href="/wiki/UTF-16" title="UTF-16">UTF-16</a>・<a href="/wiki/UTF-32" title="UTF-32">UTF-32</a>があり、これらが使う符号単位はそれぞれ、符号なし8ビット<a href="/wiki/%E6%95%B4%E6%95%B0%E5%9E%8B" title="整数型">整数</a><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>・符号なし16ビット整数・符号なし32ビット整数である。これらの文字符号化形式はプログラムにおける文字の内部表現として実装される。
+</p><p>しかし、情報交換のためファイルの読み書きや通信を行う場合には、符号単位列をバイト列にする必要があり、8ビット以外の符号単位列をバイト列にするには、バイト順序（<a href="/wiki/%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="エンディアン">エンディアン</a>）を決める必要がある。そのためCESでは、CEFに加え、バイト直列化の手続きを決める、つまり、エンディアンを指定するかまたはエンディアンを記述する方法を規格化している。（各CESのバイト直列化の具体的な内容については、<a href="/wiki/UTF-16#符号化スキーム" title="UTF-16">UTF-16#符号化スキーム</a>を参照）
+</p><p>Unicodeで定められたCEFとCESは、表のものがある（ただし、Unicode技術標準<sup class="reference" id="cite_ref-reports-types_3-0"><a href="#cite_note-reports-types-3">[3]</a></sup>で<a href="/wiki/SCSU" title="SCSU">SCSU</a> (UTS 6) が、Unicode技術報告<sup class="reference" id="cite_ref-reports-types_3-1"><a href="#cite_note-reports-types-3">[3]</a></sup>で<a href="/wiki/UTF-EBCDIC" title="UTF-EBCDIC">UTF-EBCDIC</a> (UTR 16) と<a href="/wiki/UTF-8#サロゲートペアの扱い" title="UTF-8">CESU-8</a> (UTR 26) が、Unicode技術ノート<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>で<a class="new" href="/w/index.php?title=BOCU-1&amp;action=edit&amp;redlink=1" title="BOCU-1 (存在しないページ)">BOCU-1</a> (UTN 6) が、その他、ISO/IEC標準や<a href="/wiki/Request_for_Comments" title="Request for Comments">RFC</a>で、Unicode文字集合を使ったCEFやCESを規格化している）。同じ名称のCEFとCESがあり、これらを区別するときは、「UTF-16符号化形式」「UTF-16符号化スキーム」のように呼ぶ。一般にUTF-16と呼ばれるものは、UTF-16符号化形式に対応する3つのCESの総称である。なお、UTF-8符号化形式とUTF-8符号化スキームは実質的に同じものだが、便宜上、分けている。
+</p><p>Unicode以外でも、原理的にはCEFとCESを区別して論ずることができる。しかし、ほとんどの場合8ビット整数を符号単位とするため、UTF-8の場合と同様に区別する意味は少ない。たとえば、Shift_JISの文字データを扱うプログラムは、8ビット整数を符号単位とする<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%82%A4%E3%83%88%E6%96%87%E5%AD%97" title="マルチバイト文字">マルチバイト文字</a>の文字データの処理を行っているため、ファイルの読み書きや通信などでバイト直列化処理をあらためて行うことはない。
+</p>
+<h2><span id=".E3.82.AD.E3.83.A3.E3.83.A9.E3.82.AF.E3.82.BF.E3.82.BB.E3.83.83.E3.83.88"></span><span class="mw-headline" id="キャラクタセット">キャラクタセット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=3" title="節を編集: キャラクタセット">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89#コードセット" title="文字コード">文字コード#コードセット</a>」を参照</div>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=4" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">本節の用語の日本語表記は次に従った。<cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.unicode.org/terminology/term_en_ja.html" rel="nofollow">Unicode Terminology English - Japanese</a>”.   Unicode, inc. <span title="">2009年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">ここでの「符号」とは正負のことである。</span>
+</li>
+<li id="cite_note-reports-types-3">^ <a href="#cite_ref-reports-types_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-reports-types_3-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">詳細は次を参照。<a class="external text" href="http://www.unicode.org/reports/about-reports.html#Types" rel="nofollow">About Unicode Technical Reports - Types of Unicode Technical Reports: UTR, UTS, UAX</a>, Unicode, Inc.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">詳細は次を参照。<a class="external text" href="http://www.unicode.org/notes/about-notes.html" rel="nofollow">About Unicode Technical Notes</a>, Unicode, Inc.</span>
+</li>
+</ol></div>
+<h2><span id=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99"></span><span class="mw-headline" id="参考資料">参考資料</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=5" title="節を編集: 参考資料">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>JIS X 0202:1998『情報技術 - 文字符号の構造及び拡張法』(ISO/IEC 2022:1994 <i>Information technology - Character code structure and extension techniques</i> 第4版の国際一致規格) 1998年、日本規格協会。</li>
+<li><a class="external text" href="http://www.unicode.org/standard/standard.html" rel="nofollow"><i>The Unicode Standard, Version 5.0</i></a>、2006年11月、Addison-Wesley。ISBN 0321480910</li>
+<li>RFC 2978 <i>IANA Charset Registration Procedures</i> (『IANA キャラクタセット登録手続き』) N. Freed 他著、2000年10月。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=6" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E6%96%87%E5%AD%97%E9%9B%86%E5%90%88" title="文字集合">文字集合</a></li>
+<li><a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="文字コード">文字コード</a></li>
+<li><a href="/wiki/%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F" title="符号化方式">符号化方式</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8" title="コードページ">コードページ</a></li>
+<li><a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF" title="バイト順マーク">バイト順マーク</a> (BOM)</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;section=7" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://www.iana.org/assignments/character-sets/character-sets.xhtml" rel="nofollow">IANA 文字集合レジストリ (IANA Character Set Registry)</a> (<a class="mw-redirect" href="/wiki/IANA" title="IANA">IANA</a> が登録しているキャラクタセットの情報一覧)</li>
+<li><a class="external text" href="http://www.unicode.org/reports/tr17/" rel="nofollow">UTR#17: Character Encoding Model</a>（<a href="/wiki/Unicode" title="Unicode">Unicode</a>の文字符号化モデル）</li>
+<li><a class="external text" href="http://www.ietf.org/rfc/rfc2130.txt" rel="nofollow">RFC2130: The Report of the IAB Character Set Workshop held 29 February 1 March</a>（<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E5%A7%94%E5%93%A1%E4%BC%9A" title="インターネットアーキテクチャ委員会">IAB</a>の文字符号化モデルについて記述がある）</li>
+<li><a class="external text" href="http://www-306.ibm.com/software/globalization/cdra/index.jsp" rel="nofollow">Character Data Representation Architecture Reference</a>（IBMの文字データ表現体系 (CDRA) リファレンス）</li>
+<li><a class="external text" href="http://www-306.ibm.com/software/globalization/ccsid/ccsid_registered.jsp" rel="nofollow">IBM Coded Character Set Identifier (CCSID)</a>（IBMのコード化文字セット識別コード (CCSID) の管理簿）</li></ul>
+<div aria-labelledby="文字コード" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:文字コード (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="文字コード" style="font-size:110%;margin:0 6em">文字コード</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="カテゴリ:文字コード">カテゴリ</a></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">日本語用の<br/>文字コード</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">JIS規格</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">符号化文字集合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/JIS_X_0201" title="JIS X 0201">JIS X 0201</a></li>
+<li><a href="/wiki/JIS_X_0208" title="JIS X 0208">JIS X 0208</a></li>
+<li><a href="/wiki/JIS_X_0212" title="JIS X 0212">JIS X 0212</a></li>
+<li><a href="/wiki/JIS_X_0213" title="JIS X 0213">JIS X 0213</a></li>
+<li><a href="/wiki/JIS_X_0221" title="JIS X 0221">JIS X 0221</a>（<a href="/wiki/JIS_X_0221#日本文字部分レパートリ" title="JIS X 0221">日本文字部分レパートリ</a>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-selflink selflink">文字符号化方式</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO-2022-JP" title="ISO-2022-JP">ISO-2022-JP</a></li>
+<li><a href="/wiki/EUC-JP" title="EUC-JP">EUC-JP</a></li>
+<li><a href="/wiki/Shift_JIS" title="Shift JIS">Shift_JIS</a></li>
+<li><a class="mw-redirect" href="/wiki/Shift_JISX0213" title="Shift JISX0213">Shift_JISX0213</a></li>
+<li><a href="/wiki/Shift_JIS-2004" title="Shift JIS-2004">Shift_JIS-2004</a></li>
+<li><a class="mw-redirect" href="/wiki/EUC-JISX0213" title="EUC-JISX0213">EUC-JISX0213</a></li>
+<li><a href="/wiki/EUC-JIS-2004" title="EUC-JIS-2004">EUC-JIS-2004</a></li>
+<li><a class="mw-redirect" href="/wiki/ISO-2022-JP-3" title="ISO-2022-JP-3">ISO-2022-JP-3</a></li>
+<li><a href="/wiki/ISO-2022-JP-2004" title="ISO-2022-JP-2004">ISO-2022-JP-2004</a></li>
+<li><a href="/wiki/%E6%BC%A2%E5%AD%97%E3%82%B7%E3%83%95%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="漢字シフトコード">漢字シフトコード</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">文字一覧</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/JIS_X_0213%E9%9D%9E%E6%BC%A2%E5%AD%97%E4%B8%80%E8%A6%A7" title="JIS X 0213非漢字一覧">JIS X 0213非漢字一覧</a></li>
+<li><a href="/wiki/JIS_X_0213%E6%BC%A2%E5%AD%97%E4%B8%80%E8%A6%A7%E3%81%AE1%E9%9D%A2" title="JIS X 0213漢字一覧の1面">JIS X 0213漢字一覧の1面</a></li>
+<li><a href="/wiki/JIS_X_0213%E6%BC%A2%E5%AD%97%E4%B8%80%E8%A6%A7%E3%81%AE2%E9%9D%A2" title="JIS X 0213漢字一覧の2面">JIS X 0213漢字一覧の2面</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">JIS以外の公規格</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MJ%E6%96%87%E5%AD%97" title="MJ文字">MJ文字</a></li>
+<li><a href="/wiki/%E5%9C%A8%E7%95%99%E3%82%AB%E3%83%BC%E3%83%89%E5%8F%8A%E3%81%B3%E7%89%B9%E5%88%A5%E6%B0%B8%E4%BD%8F%E8%80%85%E8%A8%BC%E6%98%8E%E6%9B%B8%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%AD%A3%E5%AD%97" title="在留カード及び特別永住者証明書における正字">入管正字</a></li>
+<li><a href="/wiki/ARIB%E5%A4%96%E5%AD%97" title="ARIB外字">ARIB外字</a>
+<ul><li><a href="/wiki/ARIB%E5%A4%96%E5%AD%97%E3%81%AE%E8%BF%BD%E5%8A%A0%E8%A8%98%E5%8F%B7%E4%B8%80%E8%A6%A7" title="ARIB外字の追加記号一覧">ARIB外字の追加記号一覧</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">メーカーの規格</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">符号化文字集合</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IBM%E6%8B%A1%E5%BC%B5%E6%96%87%E5%AD%97" title="IBM拡張文字">IBM拡張文字</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88%E6%A8%99%E6%BA%96%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%82%BB%E3%83%83%E3%83%88" title="マイクロソフト標準キャラクタセット">マイクロソフト標準キャラクタセット</a></li>
+<li><a href="/wiki/Adobe-Japan1" title="Adobe-Japan1">Adobe-Japan1</a></li>
+<li><a href="/wiki/I%E3%83%A2%E3%83%BC%E3%83%89%E7%B5%B5%E6%96%87%E5%AD%97" title="Iモード絵文字">iモード絵文字</a></li>
+<li><a href="/wiki/EZweb%E7%B5%B5%E6%96%87%E5%AD%97" title="EZweb絵文字">EZweb絵文字</a></li>
+<li><a href="/wiki/SoftBank%E7%B5%B5%E6%96%87%E5%AD%97" title="SoftBank絵文字">SoftBank絵文字</a></li>
+<li><a href="/wiki/%E4%BB%8A%E6%98%94%E6%96%87%E5%AD%97%E9%8F%A1" title="今昔文字鏡">今昔文字鏡</a></li>
+<li><a href="/wiki/JIPS" title="JIPS">JIPS</a></li>
+<li><a href="/wiki/EBCDIC" title="EBCDIC">EBCDIC</a></li>
+<li><a href="/wiki/GT%E6%9B%B8%E4%BD%93" title="GT書体">GT書体</a></li>
+<li><a href="/wiki/KEIS" title="KEIS">KEIS</a></li>
+<li><a href="/wiki/IBM%E6%BC%A2%E5%AD%97%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="IBM漢字システム">IBM漢字システム</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E7%94%A8%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7" title="レコード用文字符号">レコード用文字符号</a></li>
+<li><a href="/wiki/%E3%83%93%E3%83%96%E3%83%AD%E3%82%B9%E5%A4%96%E5%AD%97" title="ビブロス外字">ビブロス外字</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-selflink selflink">文字符号化方式</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microsoft%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8932" title="Microsoftコードページ932">Microsoftコードページ932</a></li>
+<li><a href="/wiki/MacJapanese" title="MacJapanese">MacJapanese</a></li>
+<li><a href="/wiki/JEF%E6%BC%A2%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="JEF漢字コード">JEF漢字コード</a></li>
+<li><a href="/wiki/U-PRESS" title="U-PRESS">U-PRESS</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">日本語を含む<br/>多言語文字集合</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Unicode<br/><a href="/wiki/ISO/IEC_10646" title="ISO/IEC 10646">ISO/IEC 10646</a><br/><a href="/wiki/JIS_X_0221" title="JIS X 0221">JIS X 0221</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">面</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%9F%BA%E6%9C%AC%E5%A4%9A%E8%A8%80%E8%AA%9E%E9%9D%A2" title="基本多言語面">基本多言語面</a></li>
+<li><a href="/wiki/%E8%BF%BD%E5%8A%A0%E9%9D%A2" title="追加面">追加面</a>
+<ul><li><a href="/wiki/%E8%BF%BD%E5%8A%A0%E5%A4%9A%E8%A8%80%E8%AA%9E%E9%9D%A2" title="追加多言語面">追加多言語面</a></li>
+<li><a href="/wiki/%E8%BF%BD%E5%8A%A0%E6%BC%A2%E5%AD%97%E9%9D%A2" title="追加漢字面">追加漢字面</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%B8%89%E6%BC%A2%E5%AD%97%E9%9D%A2" title="第三漢字面">第三漢字面</a></li>
+<li><a href="/wiki/%E8%BF%BD%E5%8A%A0%E7%89%B9%E6%AE%8A%E7%94%A8%E9%80%94%E9%9D%A2" title="追加特殊用途面">追加特殊用途面</a></li>
+<li><a href="/wiki/%E7%A7%81%E7%94%A8%E9%9D%A2" title="私用面">私用面</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-selflink selflink">文字符号化方式</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/UTF-8" title="UTF-8">UTF-8</a></li>
+<li><a href="/wiki/UTF-16" title="UTF-16">UTF-16/UCS-2</a></li>
+<li><a href="/wiki/UTF-32" title="UTF-32">UTF-32/UCS-4</a></li>
+<li><a href="/wiki/UTF-7" title="UTF-7">UTF-7</a></li>
+<li><a href="/wiki/UTF-EBCDIC" title="UTF-EBCDIC">UTF-EBCDIC</a></li>
+<li><a href="/wiki/GB_18030" title="GB 18030">GB 18030</a></li>
+<li><a class="new" href="/w/index.php?title=Standard_Compression_Scheme_for_Unicode&amp;action=edit&amp;redlink=1" title="Standard Compression Scheme for Unicode (存在しないページ)">SCSU</a></li>
+<li><a class="new" href="/w/index.php?title=BOCU-1&amp;action=edit&amp;redlink=1" title="BOCU-1 (存在しないページ)">BOCU-1</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">文字一覧</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Unicode%E4%B8%80%E8%A6%A7" title="Unicode一覧">Unicode一覧</a></li>
+<li><a href="/wiki/Unicode%E4%B8%80%E8%A6%A7%E8%A1%A8" title="Unicode一覧表">Unicode一覧表</a></li>
+<li><a href="/wiki/Unicode6.0%E3%81%AE%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1%E3%81%AE%E7%B5%B5%E6%96%87%E5%AD%97%E3%81%AE%E4%B8%80%E8%A6%A7" title="Unicode6.0の携帯電話の絵文字の一覧">Unicode6.0の携帯電話の絵文字の一覧</a></li>
+<li><a href="/wiki/Unicode%E3%81%AEEmoji%E3%81%AE%E4%B8%80%E8%A6%A7" title="UnicodeのEmojiの一覧">UnicodeのEmojiの一覧</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">TRONコード</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/TRON%E3%82%B3%E3%83%BC%E3%83%89" title="TRONコード">TRONコード</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">日本語以外用の<br/>文字集合</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">初期の文字コード</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ASCII" title="ASCII">ASCII</a></li>
+<li><a href="/wiki/Baudot_Code" title="Baudot Code">Baudot Code</a></li>
+<li><a href="/wiki/ISO/IEC_646" title="ISO/IEC 646">ISO/IEC 646</a></li>
+<li><a href="/wiki/ISO/IEC_6937" title="ISO/IEC 6937">ISO/IEC 6937</a></li>
+<li><a class="new" href="/w/index.php?title=T.61_(ITU-T_recommendation)&amp;action=edit&amp;redlink=1" title="T.61 (ITU-T recommendation) (存在しないページ)">T.61</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ISO/IEC 8859</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO/IEC_8859-1" title="ISO/IEC 8859-1">-1</a></li>
+<li><a href="/wiki/ISO/IEC_8859-2" title="ISO/IEC 8859-2">-2</a></li>
+<li><a href="/wiki/ISO/IEC_8859-3" title="ISO/IEC 8859-3">-3</a></li>
+<li><a href="/wiki/ISO/IEC_8859-4" title="ISO/IEC 8859-4">-4</a></li>
+<li><a href="/wiki/ISO/IEC_8859-5" title="ISO/IEC 8859-5">-5</a></li>
+<li><a href="/wiki/ISO/IEC_8859-6" title="ISO/IEC 8859-6">-6</a></li>
+<li><a href="/wiki/ISO/IEC_8859-7" title="ISO/IEC 8859-7">-7</a></li>
+<li><a href="/wiki/ISO/IEC_8859-8" title="ISO/IEC 8859-8">-8</a></li>
+<li><a href="/wiki/ISO/IEC_8859-9" title="ISO/IEC 8859-9">-9</a></li>
+<li><a href="/wiki/ISO/IEC_8859-10" title="ISO/IEC 8859-10">-10</a></li>
+<li><a href="/wiki/ISO/IEC_8859-11" title="ISO/IEC 8859-11">-11</a></li>
+<li><a href="/wiki/ISO/IEC_8859-13" title="ISO/IEC 8859-13">-13</a></li>
+<li><a href="/wiki/ISO/IEC_8859-14" title="ISO/IEC 8859-14">-14</a></li>
+<li><a href="/wiki/ISO/IEC_8859-15" title="ISO/IEC 8859-15">-15</a></li>
+<li><a href="/wiki/ISO/IEC_8859-16" title="ISO/IEC 8859-16">-16</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">書誌用</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>ISO 5426</li>
+<li>ISO 5426-2</li>
+<li>ISO 5427</li>
+<li>ISO 5428</li>
+<li><a class="new" href="/w/index.php?title=ISO_6438&amp;action=edit&amp;redlink=1" title="ISO 6438 (存在しないページ)">ISO 6438</a></li>
+<li>ISO 6861</li>
+<li>ISO 6862</li>
+<li><a href="/wiki/ASMO_449" title="ASMO 449">ISO 9036</a></li>
+<li>ISO 10585</li>
+<li>ISO 10586</li>
+<li>ISO 10754</li>
+<li>ISO 11822</li>
+<li><a class="new" href="/w/index.php?title=ANSEL&amp;action=edit&amp;redlink=1" title="ANSEL (存在しないページ)">ANSEL</a></li>
+<li><a class="new" href="/w/index.php?title=MARC-8&amp;action=edit&amp;redlink=1" title="MARC-8 (存在しないページ)">MARC-8</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">国家標準</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/ArmSCII" title="ArmSCII">ArmSCII</a></li>
+<li><a href="/wiki/CNS_11643" title="CNS 11643">CNS 11643</a></li>
+<li><a class="new" href="/w/index.php?title=GOST_10859&amp;action=edit&amp;redlink=1" title="GOST 10859 (存在しないページ)">GOST 10859</a></li>
+<li><a href="/wiki/GB_2312" title="GB 2312">GB 2312</a></li>
+<li><a href="/wiki/%E9%A6%99%E6%B8%AF%E5%A2%97%E8%A3%9C%E5%AD%97%E7%AC%A6%E9%9B%86" title="香港増補字符集">HKSCS</a></li>
+<li><a href="/wiki/ISCII" title="ISCII">ISCII</a></li>
+<li><a href="/wiki/KPS_9566" title="KPS 9566">KPS 9566</a></li>
+<li><a href="/wiki/KS_X_1001" title="KS X 1001">KS X 1001</a></li>
+<li><a href="/wiki/PASCII" title="PASCII">PASCII</a></li>
+<li><a href="/wiki/TIS-620" title="TIS-620">TIS-620</a></li>
+<li><a href="/wiki/TSCII" title="TSCII">TSCII</a></li>
+<li><a href="/wiki/VISCII" title="VISCII">VISCII</a></li>
+<li><a class="new" href="/w/index.php?title=YUSCII&amp;action=edit&amp;redlink=1" title="YUSCII (存在しないページ)">YUSCII</a></li>
+<li><a href="/wiki/KOI8-R" title="KOI8-R">KOI8-R</a></li>
+<li><a class="new" href="/w/index.php?title=KOI8-RU&amp;action=edit&amp;redlink=1" title="KOI8-RU (存在しないページ)">KOI8-RU</a></li>
+<li><a href="/wiki/KOI8-U" title="KOI8-U">KOI8-U</a></li>
+<li><a class="new" href="/w/index.php?title=KOI8-T&amp;action=edit&amp;redlink=1" title="KOI8-T (存在しないページ)">KOI8-T</a></li>
+<li><a class="new" href="/w/index.php?title=KOI8-CS&amp;action=edit&amp;redlink=1" title="KOI8-CS (存在しないページ)">KOI8-CS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">EUC</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/EUC-CN" title="EUC-CN">EUC-CN</a></li>
+<li><a class="mw-redirect" href="/wiki/EUC-KR" title="EUC-KR">EUC-KR</a></li>
+<li><a class="mw-redirect" href="/wiki/EUC-TW" title="EUC-TW">EUC-TW</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ISO/IEC 2022</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=ISO/IEC_2022_CN&amp;action=edit&amp;redlink=1" title="ISO/IEC 2022 CN (存在しないページ)">ISO/IEC 2022 CN</a></li>
+<li><a class="new" href="/w/index.php?title=ISO/IEC_2022_KR&amp;action=edit&amp;redlink=1" title="ISO/IEC 2022 KR (存在しないページ)">ISO/IEC 2022 KR</a></li>
+<li><a href="/wiki/CCCII" title="CCCII">CCCII</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="new" href="/w/index.php?title=MacOS%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="MacOSコードページ (存在しないページ)">MacOS<br/>コードページ</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Macintosh_Standard_Roman_Character_Set&amp;action=edit&amp;redlink=1" title="Macintosh Standard Roman Character Set (存在しないページ)">Macintosh Standard Roman Character Set</a></li>
+<li><a class="new" href="/w/index.php?title=MacArabic_encoding&amp;action=edit&amp;redlink=1" title="MacArabic encoding (存在しないページ)">アラビア語</a></li>
+<li><a class="new" href="/w/index.php?title=Macintosh_Central_European_encoding&amp;action=edit&amp;redlink=1" title="Macintosh Central European encoding (存在しないページ)">CentralEurRoman</a></li>
+<li><a class="mw-redirect" href="/wiki/EUC-CN" title="EUC-CN">EUC-CN</a></li>
+<li><a href="/wiki/Big5" title="Big5">Big5</a></li>
+<li><a class="new" href="/w/index.php?title=MacCroatian&amp;action=edit&amp;redlink=1" title="MacCroatian (存在しないページ)">クロアチア語</a></li>
+<li><a class="new" href="/w/index.php?title=MacCyrillic&amp;action=edit&amp;redlink=1" title="MacCyrillic (存在しないページ)">キリル</a></li>
+<li><a class="new" href="/w/index.php?title=MacDevanagari&amp;action=edit&amp;redlink=1" title="MacDevanagari (存在しないページ)">デーヴァナーガリー</a></li>
+<li><a class="new" href="/w/index.php?title=MacDingbats&amp;action=edit&amp;redlink=1" title="MacDingbats (存在しないページ)">Dingbats</a></li>
+<li><a class="new" href="/w/index.php?title=MacFarsi&amp;action=edit&amp;redlink=1" title="MacFarsi (存在しないページ)">ペルシャ語</a></li>
+<li><a class="new" href="/w/index.php?title=MacGreek&amp;action=edit&amp;redlink=1" title="MacGreek (存在しないページ)">ギリシア語</a></li>
+<li><a class="new" href="/w/index.php?title=MacGujarati&amp;action=edit&amp;redlink=1" title="MacGujarati (存在しないページ)">グジャラート語</a></li>
+<li><a class="new" href="/w/index.php?title=MacGurmukhi&amp;action=edit&amp;redlink=1" title="MacGurmukhi (存在しないページ)">グルムキー</a></li>
+<li><a class="new" href="/w/index.php?title=MacHebrew&amp;action=edit&amp;redlink=1" title="MacHebrew (存在しないページ)">ヘブライ語</a></li>
+<li><a class="new" href="/w/index.php?title=MacIceland&amp;action=edit&amp;redlink=1" title="MacIceland (存在しないページ)">アイスランド語</a></li>
+<li><a class="mw-redirect" href="/wiki/EUC-KR" title="EUC-KR">EUC-KR</a></li>
+<li><a class="new" href="/w/index.php?title=MacRomanian&amp;action=edit&amp;redlink=1" title="MacRomanian (存在しないページ)">ルーマニア語</a></li>
+<li><a href="/wiki/Symbol" title="Symbol">MacSymbol</a></li>
+<li><a href="/wiki/TIS-620" title="TIS-620">TIS-620</a></li>
+<li><a class="new" href="/w/index.php?title=MacTurkish&amp;action=edit&amp;redlink=1" title="MacTurkish (存在しないページ)">トルコ語</a></li>
+<li><a class="new" href="/w/index.php?title=MacUkrainian&amp;action=edit&amp;redlink=1" title="MacUkrainian (存在しないページ)">ウクライナ語</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="new" href="/w/index.php?title=DOS%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="DOSコードページ (存在しないページ)">DOS<br/>コードページ</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8437" title="コードページ437">437</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8720&amp;action=edit&amp;redlink=1" title="コードページ720 (存在しないページ)">720</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8737&amp;action=edit&amp;redlink=1" title="コードページ737 (存在しないページ)">737</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8775&amp;action=edit&amp;redlink=1" title="コードページ775 (存在しないページ)">775</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8850" title="コードページ850">850</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8852&amp;action=edit&amp;redlink=1" title="コードページ852 (存在しないページ)">852</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8855&amp;action=edit&amp;redlink=1" title="コードページ855 (存在しないページ)">855</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8857&amp;action=edit&amp;redlink=1" title="コードページ857 (存在しないページ)">857</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8858&amp;action=edit&amp;redlink=1" title="コードページ858 (存在しないページ)">858</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8860&amp;action=edit&amp;redlink=1" title="コードページ860 (存在しないページ)">860</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8861&amp;action=edit&amp;redlink=1" title="コードページ861 (存在しないページ)">861</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8862&amp;action=edit&amp;redlink=1" title="コードページ862 (存在しないページ)">862</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8863&amp;action=edit&amp;redlink=1" title="コードページ863 (存在しないページ)">863</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8864&amp;action=edit&amp;redlink=1" title="コードページ864 (存在しないページ)">864</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8865&amp;action=edit&amp;redlink=1" title="コードページ865 (存在しないページ)">865</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8866&amp;action=edit&amp;redlink=1" title="コードページ866 (存在しないページ)">866</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8869&amp;action=edit&amp;redlink=1" title="コードページ869 (存在しないページ)">869</a></li>
+<li><a href="/wiki/KOI8" title="KOI8">KOI8</a></li>
+<li><a class="new" href="/w/index.php?title=Kamenicky_encoding&amp;action=edit&amp;redlink=1" title="Kamenicky encoding (存在しないページ)">Kamenicky</a></li>
+<li><a class="new" href="/w/index.php?title=Mazovia_encoding&amp;action=edit&amp;redlink=1" title="Mazovia encoding (存在しないページ)">Mazovia</a></li>
+<li><a class="new" href="/w/index.php?title=MIK_Code_page&amp;action=edit&amp;redlink=1" title="MIK Code page (存在しないページ)">MIK</a></li>
+<li><a class="new" href="/w/index.php?title=Iran_System_encoding_standard&amp;action=edit&amp;redlink=1" title="Iran System encoding standard (存在しないページ)">Iran System</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="new" href="/w/index.php?title=Windows%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8&amp;action=edit&amp;redlink=1" title="Windowsコードページ (存在しないページ)">Windows<br/>コードページ</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Windows-874&amp;action=edit&amp;redlink=1" title="Windows-874 (存在しないページ)">874</a> (<a href="/wiki/TIS-620" title="TIS-620">TIS-620</a>)</li>
+<li><a class="new" href="/w/index.php?title=Code_page_936&amp;action=edit&amp;redlink=1" title="Code page 936 (存在しないページ)">936</a> (<a href="/wiki/GBK" title="GBK">GBK</a>)</li>
+<li><a class="new" href="/w/index.php?title=Code_page_949&amp;action=edit&amp;redlink=1" title="Code page 949 (存在しないページ)">949</a> (<a class="mw-redirect" href="/wiki/EUC-KR" title="EUC-KR">EUC-KR</a>)</li>
+<li><a class="new" href="/w/index.php?title=Code_page_950&amp;action=edit&amp;redlink=1" title="Code page 950 (存在しないページ)">950</a> (<a href="/wiki/Big5" title="Big5">Big5</a>)</li>
+<li><a class="new" href="/w/index.php?title=Windows-1250&amp;action=edit&amp;redlink=1" title="Windows-1250 (存在しないページ)">1250</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1251&amp;action=edit&amp;redlink=1" title="Windows-1251 (存在しないページ)">1251</a></li>
+<li><a href="/wiki/Windows-1252" title="Windows-1252">1252</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1253&amp;action=edit&amp;redlink=1" title="Windows-1253 (存在しないページ)">1253</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1254&amp;action=edit&amp;redlink=1" title="Windows-1254 (存在しないページ)">1254</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1255&amp;action=edit&amp;redlink=1" title="Windows-1255 (存在しないページ)">1255</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1256&amp;action=edit&amp;redlink=1" title="Windows-1256 (存在しないページ)">1256</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1257&amp;action=edit&amp;redlink=1" title="Windows-1257 (存在しないページ)">1257</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-1258&amp;action=edit&amp;redlink=1" title="Windows-1258 (存在しないページ)">1258</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B81361&amp;action=edit&amp;redlink=1" title="コードページ1361 (存在しないページ)">1361</a></li>
+<li><a class="new" href="/w/index.php?title=Windows-54936&amp;action=edit&amp;redlink=1" title="Windows-54936 (存在しないページ)">54936</a> (<a href="/wiki/GB_18030" title="GB 18030">GB18030</a>)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">EBCDIC<br/>コードページ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B837&amp;action=edit&amp;redlink=1" title="コードページ37 (存在しないページ)">37</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=EBCDIC_293&amp;action=edit&amp;redlink=1" title="EBCDIC 293 (存在しないページ)">293</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:EBCDIC_293&amp;action=edit&amp;redlink=1" title="En:EBCDIC 293 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8300&amp;action=edit&amp;redlink=1" title="コードページ300 (存在しないページ)">300</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_300&amp;action=edit&amp;redlink=1" title="En:Code page 300 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8310&amp;action=edit&amp;redlink=1" title="コードページ310 (存在しないページ)">310</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_310&amp;action=edit&amp;redlink=1" title="En:Code page 310 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8351&amp;action=edit&amp;redlink=1" title="コードページ351 (存在しないページ)">351</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_351&amp;action=edit&amp;redlink=1" title="En:Code page 351 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8353&amp;action=edit&amp;redlink=1" title="コードページ353 (存在しないページ)">353</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_353&amp;action=edit&amp;redlink=1" title="En:Code page 353 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8355&amp;action=edit&amp;redlink=1" title="コードページ355 (存在しないページ)">355</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_355&amp;action=edit&amp;redlink=1" title="En:Code page 355 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8357&amp;action=edit&amp;redlink=1" title="コードページ357 (存在しないページ)">357</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_357&amp;action=edit&amp;redlink=1" title="En:Code page 357 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8358&amp;action=edit&amp;redlink=1" title="コードページ358 (存在しないページ)">358</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_358&amp;action=edit&amp;redlink=1" title="En:Code page 358 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8359&amp;action=edit&amp;redlink=1" title="コードページ359 (存在しないページ)">359</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_359&amp;action=edit&amp;redlink=1" title="En:Code page 359 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8360&amp;action=edit&amp;redlink=1" title="コードページ360 (存在しないページ)">360</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_360&amp;action=edit&amp;redlink=1" title="En:Code page 360 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/EBCDIC_819" title="EBCDIC 819">819</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8930&amp;action=edit&amp;redlink=1" title="コードページ930 (存在しないページ)">930</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_930&amp;action=edit&amp;redlink=1" title="En:Code page 930 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8933&amp;action=edit&amp;redlink=1" title="コードページ933 (存在しないページ)">933</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_933&amp;action=edit&amp;redlink=1" title="En:Code page 933 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8939&amp;action=edit&amp;redlink=1" title="コードページ939 (存在しないページ)">939</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_939&amp;action=edit&amp;redlink=1" title="En:Code page 939 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B81364&amp;action=edit&amp;redlink=1" title="コードページ1364 (存在しないページ)">1364</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_1364&amp;action=edit&amp;redlink=1" title="En:Code page 1364 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B81390&amp;action=edit&amp;redlink=1" title="コードページ1390 (存在しないページ)">1390</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_1390&amp;action=edit&amp;redlink=1" title="En:Code page 1390 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B81399&amp;action=edit&amp;redlink=1" title="コードページ1399 (存在しないページ)">1399</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Code_page_1399&amp;action=edit&amp;redlink=1" title="En:Code page 1399 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=EBCDIC_8859&amp;action=edit&amp;redlink=1" title="EBCDIC 8859 (存在しないページ)">8859</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:EBCDIC_8859&amp;action=edit&amp;redlink=1" title="En:EBCDIC 8859 (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">その他標準</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%E9%9B%86%E5%90%88" title="モザイク集合">モザイク集合</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">記号用</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Symbol" title="Symbol">Symbol</a></li>
+<li><a href="/wiki/Wingdings" title="Wingdings">Wingdings</a></li>
+<li><a href="/wiki/Webdings" title="Webdings">Webdings</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">プラットフォーム<br/>固有</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=ATASCII&amp;action=edit&amp;redlink=1" title="ATASCII (存在しないページ)">ATASCII</a></li>
+<li><a class="new" href="/w/index.php?title=CDC_display_code&amp;action=edit&amp;redlink=1" title="CDC display code (存在しないページ)">CDC display code</a></li>
+<li><a class="new" href="/w/index.php?title=DEC_Radix-50&amp;action=edit&amp;redlink=1" title="DEC Radix-50 (存在しないページ)">DEC Radix-50</a></li>
+<li><a class="new" href="/w/index.php?title=Fieldata&amp;action=edit&amp;redlink=1" title="Fieldata (存在しないページ)">Fieldata</a></li>
+<li><a class="new" href="/w/index.php?title=GSM_03.38&amp;action=edit&amp;redlink=1" title="GSM 03.38 (存在しないページ)">GSM 03.38</a></li>
+<li><a class="new" href="/w/index.php?title=HP_roman8&amp;action=edit&amp;redlink=1" title="HP roman8 (存在しないページ)">HP roman8</a></li>
+<li><a class="new" href="/w/index.php?title=PETSCII&amp;action=edit&amp;redlink=1" title="PETSCII (存在しないページ)">PETSCII</a></li>
+<li><a class="new" href="/w/index.php?title=TI_calculator_character_sets&amp;action=edit&amp;redlink=1" title="TI calculator character sets (存在しないページ)">TI calculator character sets</a></li>
+<li><a class="new" href="/w/index.php?title=ZX_Spectrum_character_set&amp;action=edit&amp;redlink=1" title="ZX Spectrum character set (存在しないページ)">ZX Spectrum character set</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ソフトウェア</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89%E8%A1%A8_(Windows)" title="文字コード表 (Windows)">文字コード表 (Windows)</a></li>
+<li><a class="mw-redirect" href="/wiki/%E6%96%87%E5%AD%97%E3%83%91%E3%83%AC%E3%83%83%E3%83%88" title="文字パレット">文字パレット</a></li>
+<li><a href="/wiki/KCharSelect" title="KCharSelect">KCharSelect</a></li>
+<li><a href="/wiki/IME%E3%83%91%E3%83%83%E3%83%89" title="IMEパッド">IMEパッド</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">区分け</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%A4%96%E5%AD%97" title="外字">外字</a></li>
+<li><a href="/wiki/%E5%9B%B3%E5%BD%A2%E6%96%87%E5%AD%97" title="図形文字">図形文字</a></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E6%96%87%E5%AD%97" title="制御文字">制御文字</a></li>
+<li><a href="/wiki/%E7%89%B9%E6%AE%8A%E6%96%87%E5%AD%97" title="特殊文字">特殊文字</a></li>
+<li><a class="new" href="/w/index.php?title=C0_and_C1_control_codes&amp;action=edit&amp;redlink=1" title="C0 and C1 control codes (存在しないページ)">C0 and C1 control codes</a></li>
+<li><a href="/wiki/CJK%E7%B5%B1%E5%90%88%E6%BC%A2%E5%AD%97" title="CJK統合漢字">CJK統合漢字</a></li>
+<li><a href="/wiki/%E3%83%AF%E3%82%A4%E3%83%89%E6%96%87%E5%AD%97" title="ワイド文字">ワイド文字</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%90%E3%82%A4%E3%83%88%E6%96%87%E5%AD%97" title="マルチバイト文字">マルチバイト文字</a></li>
+<li><a href="/wiki/%E6%A9%9F%E7%A8%AE%E4%BE%9D%E5%AD%98%E6%96%87%E5%AD%97" title="機種依存文字">機種依存文字</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">概念</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%83%9A%E3%83%BC%E3%82%B8" title="コードページ">コードページ</a></li>
+<li><a class="new" href="/w/index.php?title=%E7%BE%A4_(%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89)&amp;action=edit&amp;redlink=1" title="群 (文字コード) (存在しないページ)">群</a></li>
+<li><a href="/wiki/%E9%9D%A2_(%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89)" title="面 (文字コード)">面</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%8C%BA_(%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89)&amp;action=edit&amp;redlink=1" title="区 (文字コード) (存在しないページ)">区</a></li>
+<li><a href="/wiki/%E7%AC%A6%E5%8F%B7%E7%82%B9" title="符号点">点</a></li>
+<li><a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89%E8%A1%A8" title="文字コード表">文字コード表</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連トピック</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/CCSID" title="CCSID">CCSID</a></li>
+<li><a class="new" href="/w/index.php?title=Charset_detection&amp;action=edit&amp;redlink=1" title="Charset detection (存在しないページ)">charset detection</a></li>
+<li><a class="new" href="/w/index.php?title=ISO/IEC_6429&amp;action=edit&amp;redlink=1" title="ISO/IEC 6429 (存在しないページ)">ISO 6429/IEC 6429/ANSI X3.64</a></li>
+<li><a class="new" href="/w/index.php?title=Legacy_encoding&amp;action=edit&amp;redlink=1" title="Legacy encoding (存在しないページ)">legacy encoding</a></li>
+<li><a href="/wiki/%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91" title="文字化け">文字化け</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%BC%E3%83%AB%E3%82%B9%E7%AC%A6%E5%8F%B7" title="モールス符号">モールス符号</a></li>
+<li><a class="new" href="/w/index.php?title=6%E3%83%93%E3%83%83%E3%83%88%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="6ビット文字コード (存在しないページ)">6ビット文字コード</a></li>
+<li><a href="/wiki/%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1%E3%81%AE%E7%B5%B5%E6%96%87%E5%AD%97" title="携帯電話の絵文字">携帯電話の絵文字</a></li>
+<li><a href="/wiki/%E6%A9%9F%E6%A2%B0%E5%BD%AB%E5%88%BB%E7%94%A8%E6%A8%99%E6%BA%96%E6%9B%B8%E4%BD%93" title="機械彫刻用標準書体">機械彫刻用標準書体</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B5%E3%83%AD%E3%82%B2%E3%83%BC%E3%83%88%E3%83%9A%E3%82%A2" title="サロゲートペア">サロゲートペア</a></li>
+<li><a href="/wiki/%E7%95%B0%E4%BD%93%E5%AD%97%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF" title="異体字セレクタ">異体字セレクタ</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88" title="フォント">フォント</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331173030
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.236 seconds
+Real time usage: 0.570 seconds
+Preprocessor visited node count: 1129/1000000
+Post‐expand include size: 122023/2097152 bytes
+Template argument size: 1264/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 17/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1930/5000000 bytes
+Lua time usage: 0.110/7 seconds
+Lua virtual size: 6709248/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  345.794      1 -total
+ 52.67%  182.123      1 テンプレート:文字コード
+ 50.98%  176.289      1 テンプレート:Navbox
+ 49.60%  171.512      6 テンプレート:Navbox_subgroup
+ 37.83%  130.827     17 テンプレート:仮リンク
+ 25.26%   87.348      1 テンプレート:See
+ 24.03%   83.102      1 テンプレート:Rellink
+ 22.91%   79.232      1 テンプレート:See/core
+ 11.05%   38.221      1 テンプレート:Cite_web
+  5.84%   20.193      1 テンプレート:Accessdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:557666-0!canonical and timestamp 20220331173029 and revision id 357271. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=文字符号化方式&amp;oldid=357271">http://localhost:8080/w/index.php?title=文字符号化方式&amp;oldid=357271</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="カテゴリ:文字コード">文字コード</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Unicode" title="カテゴリ:Unicode">Unicode</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;returntoquery=curid%3D557666%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;returntoquery=curid%3D557666%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;oldid=357271" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月11日 (月) 02:08 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.236","walltime":"0.570","ppvisitednodes":{"value":1129,"limit":1000000},"postexpandincludesize":{"value":122023,"limit":2097152},"templateargumentsize":{"value":1264,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":17,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1930,"limit":5000000},"timingprofile":["100.00%  345.794      1 -total"," 52.67%  182.123      1 テンプレート:文字コード"," 50.98%  176.289      1 テンプレート:Navbox"," 49.60%  171.512      6 テンプレート:Navbox_subgroup"," 37.83%  130.827     17 テンプレート:仮リンク"," 25.26%   87.348      1 テンプレート:See"," 24.03%   83.102      1 テンプレート:Rellink"," 22.91%   79.232      1 テンプレート:See/core"," 11.05%   38.221      1 テンプレート:Cite_web","  5.84%   20.193      1 テンプレート:Accessdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"7"},"limitreport-virtmemusage":{"value":6709248,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331173030","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":853});});</script>
+</body></html>

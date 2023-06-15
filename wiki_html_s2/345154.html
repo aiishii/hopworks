@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>インサーキット・エミュレータ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-インサーキット・エミュレータ rootpage-インサーキット・エミュレータ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">インサーキット・エミュレータ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>インサーキット・エミュレータ</b>（<a href="." id="link_a_1" title="英語">英語</a>：in-circuit emulator、略称：<b>ICE</b>）は<a href="." id="link_a_2" title="デジタル">デジタル</a>機器の開発装置の1つである。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ICEの基本形態と動作"><span class="tocnumber">2</span> <span class="toctext">ICEの基本形態と動作</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#ICEの基本機能"><span class="tocnumber">3</span> <span class="toctext">ICEの基本機能</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#レジスタの表示、変更"><span class="tocnumber">3.1</span> <span class="toctext">レジスタの表示、変更</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#メモリ内容の表示、変更"><span class="tocnumber">3.2</span> <span class="toctext">メモリ内容の表示、変更</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#ブレークポイント"><span class="tocnumber">3.3</span> <span class="toctext">ブレークポイント</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#ステップ実行"><span class="tocnumber">3.4</span> <span class="toctext">ステップ実行</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#プログラムトレース"><span class="tocnumber">3.5</span> <span class="toctext">プログラムトレース</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#プロファイル解析"><span class="tocnumber">3.6</span> <span class="toctext">プロファイル解析</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#ICEの変遷"><span class="tocnumber">4</span> <span class="toctext">ICEの変遷</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#初期のフルICE"><span class="tocnumber">4.1</span> <span class="toctext">初期のフルICE</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#フルICE"><span class="tocnumber">4.2</span> <span class="toctext">フルICE</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#EVAチップによるICE"><span class="tocnumber">4.3</span> <span class="toctext">EVAチップによるICE</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#JTAG_ICE"><span class="tocnumber">4.4</span> <span class="toctext">JTAG ICE</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/CPU" title="CPU">CPU</a>とも呼ばれる<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a>の機能を<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%88" title="エミュレート">エミュレート</a>する<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2" title="ハードウェア">ハードウェア</a>を主体としており、実際のマイクロプロセッサと同じ機能を実装し、さらにブレーク・ポイントといった<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>の実行途中で一時停止するといった<a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="デバッグ">デバッグ</a>機能を操作するための<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>と組み合わされた装置である。<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>デバッガでは実時間での処理が行えないので、デジタル機器類での<a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a>や<a href="/wiki/Basic_Input/Output_System" title="Basic Input/Output System">BIOS</a>といった入出力動作を確認する必要がある開発環境で使用される。<b>ICE</b>（<b>アイス</b>）と呼ばれることが多い。
+</p><p>"In-Circuit Emulator"は、米<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>社の登録商標である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<h2><span id="ICE.E3.81.AE.E5.9F.BA.E6.9C.AC.E5.BD.A2.E6.85.8B.E3.81.A8.E5.8B.95.E4.BD.9C"></span><span class="mw-headline" id="ICEの基本形態と動作">ICEの基本形態と動作</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=2" title="節を編集: ICEの基本形態と動作">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>基本的には、本来のCPUを外した<a href="/wiki/CPU%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88" title="CPUソケット">CPUソケット</a>にICEのプローブを接続する形態をとり、外部でCPUの動作を行いながら主要な信号の変化を追うことが可能である。CPUは多様なデジタル機器に実装されるがICEをCPUソケットにつなぐために、最終製品が動作する環境でデバッグが可能となる<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。さらに指定した<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="メモリアドレス">メモリアドレス</a>へのアクセスのような特定条件でのブレークやプログラムが暴走した時に強制ブレークをかけるなどの強力なデバッグ機能を持ち、ハードウェアの動作検証用にテストプログラムを実行するなど、ソフトウェア開発だけでなくハードウェア開発においても用いられる。多くが<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">PC</a>と接続されて操作される。
+</p>
+<h2><span id="ICE.E3.81.AE.E5.9F.BA.E6.9C.AC.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="ICEの基本機能">ICEの基本機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=3" title="節を編集: ICEの基本機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ICEは、<a href="/wiki/CPU" title="CPU">CPU</a>上のプログラムの実行、停止（ブレーク）以外にも、次のような機能を持つ<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p>
+<h3><span id=".E3.83.AC.E3.82.B8.E3.82.B9.E3.82.BF.E3.81.AE.E8.A1.A8.E7.A4.BA.E3.80.81.E5.A4.89.E6.9B.B4"></span><span class="mw-headline" id="レジスタの表示、変更">レジスタの表示、変更</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=4" title="節を編集: レジスタの表示、変更">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/CPU" title="CPU">CPU</a>が持っている<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ (コンピュータ)</a>の値を表示し、デバッグの状況に応じて任意の値に変更することができる。
+表示、変更可能なレジスタは、汎用レジスタ以外にも、<a class="mw-redirect" href="/wiki/SoC" title="SoC">SoC</a>毎に定義される<a class="mw-redirect" href="/wiki/%E3%83%9A%E3%83%AA%E3%83%95%E3%82%A7%E3%83%A9%E3%83%AB" title="ペリフェラル">ペリフェラル</a>レジスタも含まれる。
+CPUレジスタ以外にも<a href="/wiki/FPU" title="FPU">FPU</a>レジスタも操作可能なICEもある。
+</p>
+<h3><span id=".E3.83.A1.E3.83.A2.E3.83.AA.E5.86.85.E5.AE.B9.E3.81.AE.E8.A1.A8.E7.A4.BA.E3.80.81.E5.A4.89.E6.9B.B4"></span><span class="mw-headline" id="メモリ内容の表示、変更">メモリ内容の表示、変更</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=5" title="節を編集: メモリ内容の表示、変更">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/CPU" title="CPU">CPU</a>に接続される<a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA" title="メモリ">メモリ</a>の値を表示し、デバッグの状況に応じて任意の値に変更することができる。
+MMU(<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">メモリ管理ユニット</a>)実装のCPUでは、プログラムから見た論理アドレスによる操作の他、実際のメモリアドレスとなる<a href="/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="物理アドレス">物理アドレス</a>での操作も可能である。物理アドレスによるメモリ操作は、主に<a class="mw-redirect" href="/wiki/%E3%83%9A%E3%83%AA%E3%83%95%E3%82%A7%E3%83%A9%E3%83%AB" title="ペリフェラル">ペリフェラル</a>レジスタの操作に用いられる。
+メインメモリの他にもキャッシュ内の値を操作するような機能を持つICEもある<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+メモリ操作はアドレス指定により行うことも可能であるが、実際は変数名などの<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>に準じた名称で行われる。
+</p>
+<h3><span id=".E3.83.96.E3.83.AC.E3.83.BC.E3.82.AF.E3.83.9D.E3.82.A4.E3.83.B3.E3.83.88"></span><span class="mw-headline" id="ブレークポイント">ブレークポイント</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=6" title="節を編集: ブレークポイント">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ICEでは、<a href="/wiki/CPU" title="CPU">CPU</a>のプログラム実行を停止させる場所を<b>ブレークポイント</b>と呼び、強制ブレークの他にブレークポイントを指定してブレークさせることが可能である。プログラムの任意の命令でブレークさせる機能はソフトウェアデバッガにも存在するが、ICEはハードウェアによりブレークを実現するため、様々なブレークポイントを指定することが可能になる。ICEには以下のようなブレークがある。
+</p>
+<ul><li>実行前ブレーク(指定された命令を実行する前にブレークが発生する。ソフトウェアデバッガのブレークポイントと同等)</li>
+<li>実行後ブレーク(指定された命令を実行した後にブレークが発生する)</li>
+<li>メモリ操作によるブレーク(指定したアドレスをデータアクセスした時にブレークが発生する)</li>
+<li>カウントブレーク(または、カウンタブルブレーク。上記のブレーク発生条件が指定された回数発生した時点でブレークが発生する)</li>
+<li>トレース終了ブレーク(下記、プログラムトレースが終了した時点でブレークが発生する)</li></ul>
+<h3><span id=".E3.82.B9.E3.83.86.E3.83.83.E3.83.97.E5.AE.9F.E8.A1.8C"></span><span class="mw-headline" id="ステップ実行">ステップ実行</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=7" title="節を編集: ステップ実行">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>の１命令、もしくは、<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>の１行のみを実行して即ブレークする。<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>の１行をステップ実行する場合は、関数呼び出しを１行として関数から戻った時点でブレークする方式と、関数に入ってブレークする方式がある。
+またICEによっては、ブレークした時点から逆戻るステップ実行も可能である<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。コンパイラの最適化によってコードが別の場所に移動した結果として、該当ソース行に相当する機械語がなくなる場合があり、その場合は該当ソース行は抜かされているように見える(また、該当ソース行には相当する機械語が存在しないため、ブレークポイントは設定できない)。
+</p>
+<h3><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.A0.E3.83.88.E3.83.AC.E3.83.BC.E3.82.B9"></span><span class="mw-headline" id="プログラムトレース">プログラムトレース</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=8" title="節を編集: プログラムトレース">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プログラムの実行経路を表示する機能である。基本は実行開始からブレーク発生までに実行した命令を<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>もしくは<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースコード</a>により表示する。表示にはタイムスタンプも付加されるため、命令を実行したタイミングを時間により確認することができる。また、フルICEでは、実際に発生したバスの動きをタイムスタンプと共に表示するとも可能である。
+長時間のプログラム実行では全ての動作をトレースすることは不可能なため、キーとなるポイント(トリガポイント)を指定し、そのポイントまで、その前後、またはそれ以降のプログラムトレースを行うように指定することもある。
+主に、不正な例外が発生した場合の不正処理の発生源の特定や、リアルタイムにデータのアクセスを確認することに用いられる<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p>
+<h3><span id=".E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E8.A7.A3.E6.9E.90"></span><span class="mw-headline" id="プロファイル解析">プロファイル解析</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=9" title="節を編集: プロファイル解析">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プログラムのデバッグではなく、プログラムの性能(実行時間等のパフォーマンスや、品質の信頼性など)を測定することが可能である。
+この機能は統一的な仕様が無いため、ICEメーカ各社で表現や機能が異なることが多い。代表的な機能としては、2点間実行時間測定、関数実行時間比較、タスク遷移表示、カバレッジ(<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E7%B6%B2%E7%BE%85%E7%8E%87" title="コード網羅率">コード網羅率</a>)測定などがある。
+</p>
+<h2><span id="ICE.E3.81.AE.E5.A4.89.E9.81.B7"></span><span class="mw-headline" id="ICEの変遷">ICEの変遷</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=10" title="節を編集: ICEの変遷">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.88.9D.E6.9C.9F.E3.81.AE.E3.83.95.E3.83.ABICE"></span><span class="mw-headline" id="初期のフルICE">初期のフルICE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=11" title="節を編集: 初期のフルICE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>最も初期のICEでは、CPUの内部回路をいくつかに分けて基板上に再現したものが存在した。これが古典的なICEであり、CPU回路が複雑化し動作速度も向上すると、外部で<a href="/wiki/%E3%83%95%E3%83%AA%E3%83%83%E3%83%97%E3%83%95%E3%83%AD%E3%83%83%E3%83%97" title="フリップフロップ">フリップフロップ</a>回路をつないでいたのでは対応できなくなり、初期のフルICEの方式は比較的短命であった<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p>
+<h3><span id=".E3.83.95.E3.83.ABICE"></span><span class="mw-headline" id="フルICE">フルICE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=12" title="節を編集: フルICE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<dl><dt>高性能CPU用のフルICE</dt></dl>
+<p>量産されるCPUチップでも、動作確認用に内部回路の読み出し機能やブレークポイント機能はダイ上に設けられることが多く、僅かなボンディング操作や専用コードの実行によってEVAチップと同様にICE用に使用できるCPUチップが得られた。こういったチップを使って高性能なフルICEを作る事ができた。CPUの動作速度が早くなると、メモリアクセスでのウェイト数の増加程度では収まらなくなり<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>、高性能CPU用のフルICEは現実的ではなくなった<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p>
+<dl><dt>8ビット等のフルICE</dt></dl>
+<p>8ビットのコントローラ製品などは動作速度も遅いため、配線の引き回しや外部に置いたデバッグ支援回路が作り易い。このため、プローブの交換で幾つもの製品に対応できるICE製品が存在した<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p>
+<h3><span id="EVA.E3.83.81.E3.83.83.E3.83.97.E3.81.AB.E3.82.88.E3.82.8BICE"></span><span class="mw-headline" id="EVAチップによるICE">EVAチップによるICE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=13" title="節を編集: EVAチップによるICE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>CPUメーカーでは、評価用チップ（evaluation chip）と呼ばれる、確実な動作までは保証しないが概ね量産品と似たようには動くレベルの試作品の半導体を、大口顧客である電子機器メーカーへ提供することで、量産出荷前に最終製品の開発を始められるようにすることが多い。
+</p><p>CPUメーカーでもこの評価用チップ上にデバッグ回路を作り込むことで、社内での半導体の検証作業を行うことが多く、こういったチップを顧客へ提供し、多少の外部回路と操作用ソフトウェアを加えることで、ICEに似た動作が行えた。これが「EVAチップ」と呼ばれるものであり、1980年代から2000年までの間は、フルICE製品に代ってこのような、ある種のニッチな需要に対する開発装置が製造されて販売されていた。
+</p><p>古典的なものを含めたフルICEやEVAチップを使用したICEも、ともに開発環境として使用するには最強と言えるが、
+</p>
+<ul><li>高価格である</li>
+<li>特定のCPUにしか対応できない</li>
+<li>高速化したCPUでは外部に信号線を引き回すことが難しい</li>
+<li>組み込みシステムでは<a href="/wiki/ASIC" title="ASIC">ASIC</a>を採用する例が多くなってきており、ICEを使用できない</li></ul>
+<p>といった事情により、1980年代中ごろから徐々に、特に高速で高性能なCPU用としてはICE製品そのものが少なくなり、1990年代を通じてEVAチップやそれと同等のチップを用いたICE製品はしだいに少なくなった<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+</p>
+<h3><span class="mw-headline" id="JTAG_ICE">JTAG ICE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=14" title="節を編集: JTAG ICE">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>デジタル製品では、開発時や製造した製品の動作確認等のために外部ピンに多数のプローブを接続して信号を得ていたが、高密度実装によってピンの間隔が狭まったりBGAのような端子そのものが隠れてしまうようになった。これに対応して、デジタル回路の内部に、要所要所の信号を外部に読み出せるようにした専用端子が設けられるようになり、その仕組みは1990年に「<a href="/wiki/JTAG" title="JTAG">JTAG</a>」という名前で標準化された。
+</p><p>JTAG端子は内部的には数珠つなぎになっているので読み出しに時間がかかったり、回路ブロックそのものが停止すれば読み出せなくなるなど、ロジックアナライザ用やICE用の信号を得る手段としては万全ではないが、フルICEに比べて簡便なプローブで接続できるため、多くの大規模ロジック回路を持つ半導体製品用の開発装置として利用され、JTAGエミュレータやROMエミュレータなどの<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%81%E3%83%83%E3%83%97%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="オンチップ・エミュレータ">オンチップ・エミュレータ</a>を使用することが多くなってきている。このような開発装置の中には「ICE」と名乗るものもあり、従来型のフルICEとの違いで多少の混乱がある<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。
+</p><p>JTAG ICEでは、レジスタ読み書き、メモリ読み書き、ブレークポイント設定、実行、停止、ステップ実行などの機能回路が集積されたJTAG端子付き CPU にて、JTAG端子経由にてオンチップデバッグ機能を提供可能である。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=15" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%AC" title="デバッガ">デバッガ</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%81%E3%83%83%E3%83%97%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="オンチップ・エミュレータ">オンチップ・エミュレータ</a></li>
+<li><a href="/wiki/JTAG" title="JTAG">JTAG</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=16" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p242</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p242～248</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">ICEメーカー各社取扱説明書による</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="http://www2.yokogawa-digital.com/product/advice/luna2_1.html#bar5" rel="nofollow">キャッシュビューアー</a>機能など。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a class="external text" href="http://www.lauterbach.com/frames.html?home.html" rel="nofollow">TRACE32</a>バックトレース機能など</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a class="external text" href="http://www.kumikomi.net/interface/sample/200907/if07_052.pdf" rel="nofollow">ICEによるトレース機能を使ったデバッグ手法</a></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p242～243</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text">i80386の40MHz動作ではICEプローブの寄生容量さえも問題となった。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">米<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>社の<a href="/wiki/IA-32" title="IA-32">IA-32</a>アーキテクチャのCPUはICE機能を内蔵していて、ハードウェア・<a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88" title="ブレークポイント">ブレークポイント</a>の設定やコンテキストへの介入を自ら行う事ができた。内蔵ICEへのアクセスは外部のコンピューターの助けがあった方が望ましいが、主要な動作をソフトウエアで行う"ICD"（インサーキット・デバッガー）と呼ばれる製品もあった。マイクロプロセッサのデバッガの代表であった時代が長かったこともあり、現在でも組み込みシステム向けのデバッガを総称して「ICE」と呼んでいる技術者も少なくない。</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p248</span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p243～244</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">みわよしこ「"ICE"の魅力」みわよしこ、他『組込みソフトウェアエンジニアのためのハードウェア入門』Chapter 19、技術評論社、p247</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;section=17" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>みわよしこ、他著、『組込みソフトウェアエンジニアのためのハードウェア入門』、技術評論社、2009年11月25日発行、ISBN 978-4-7741-4015-5</li></ul>
+<div aria-labelledby="マイクロコントローラ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:マイクロコントローラ (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="マイクロコントローラ" style="font-size:110%;margin:0 6em">マイクロコントローラ</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">メイン</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AF%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%89%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3" title="ワンボードマイコン">ワンボードマイコン</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アーキテクチャ</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Intel_8051" title="Intel 8051">8051</a></li>
+<li><a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a></li>
+<li><a href="/wiki/Atmel_AVR" title="Atmel AVR">AVR</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C166&amp;action=edit&amp;redlink=1" title="C166 (存在しないページ)">C166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C166_family&amp;action=edit&amp;redlink=1" title="En:C166 family (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Infineon_TriCore&amp;action=edit&amp;redlink=1" title="Infineon TriCore (存在しないページ)">Infineon TriCore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infineon_TriCore&amp;action=edit&amp;redlink=1" title="En:Infineon TriCore (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/FR-V" title="FR-V">FR-V</a></li>
+<li><a href="/wiki/MC6800" title="MC6800">MC6800</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ファミリー</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">4ビット</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="Toshiba TLCS (存在しないページ)">Toshiba TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">8ビット</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Atmel_AVR" title="Atmel AVR">AVR</a></li>
+<li><a href="/wiki/PIC_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="PIC (コントローラ)">PIC</a></li>
+<li><span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="/wiki/COP8" title="COP8">COP8</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:COP8&amp;action=edit&amp;redlink=1" title="En:COP8 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_8048" title="Intel 8048">MCS-48</a></li>
+<li><a href="/wiki/Intel_8051" title="Intel 8051">MCS-51</a></li>
+<li><a href="/wiki/Z8_(%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9)" title="Z8 (コントローラ)">Z8</a></li>
+<li><a href="/wiki/EZ80" title="EZ80">eZ80</a></li>
+<li><a href="/wiki/Freescale_68HC08" title="Freescale 68HC08">HC08</a></li>
+<li><a href="/wiki/Freescale_68HC11" title="Freescale 68HC11">HC11</a></li>
+<li><a href="/wiki/H8" title="H8">H8</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XC800&amp;action=edit&amp;redlink=1" title="XC800 (存在しないページ)">XC800</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XC800_family&amp;action=edit&amp;redlink=1" title="En:XC800 family (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">16ビット</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C166&amp;action=edit&amp;redlink=1" title="C166 (存在しないページ)">C166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C166&amp;action=edit&amp;redlink=1" title="En:C166 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CR16/CR16C&amp;action=edit&amp;redlink=1" title="CR16/CR16C (存在しないページ)">CR16/CR16C</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CR16/CR16C&amp;action=edit&amp;redlink=1" title="En:CR16/CR16C (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/H8" title="H8">H8S</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TI_MSP430&amp;action=edit&amp;redlink=1" title="TI MSP430 (存在しないページ)">TI MSP430</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TI_MSP430&amp;action=edit&amp;redlink=1" title="En:TI MSP430 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/R8C/Tiny" title="R8C/Tiny">R8C/Tiny</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XC_2000&amp;action=edit&amp;redlink=1" title="XC 2000 (存在しないページ)">XC 2000</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XC_2000_family&amp;action=edit&amp;redlink=1" title="En:XC 2000 family (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XE166&amp;action=edit&amp;redlink=1" title="XE166 (存在しないページ)">XE166</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XE166_family&amp;action=edit&amp;redlink=1" title="En:XE166 family (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">32ビット</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><i><a href="/wiki/AMD_Am29000" title="AMD Am29000">Am29000</a></i></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AVR32&amp;action=edit&amp;redlink=1" title="AVR32 (存在しないページ)">AVR32</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AVR32&amp;action=edit&amp;redlink=1" title="En:AVR32 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/ColdFire" title="ColdFire">ColdFire</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CompactRISC&amp;action=edit&amp;redlink=1" title="CompactRISC (存在しないページ)">CompactRISC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CompactRISC&amp;action=edit&amp;redlink=1" title="En:CompactRISC (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%AF%8C%E5%A3%AB%E9%80%9A_FR" title="富士通 FR">FR</a></li>
+<li><a href="/wiki/FR-V" title="FR-V">FR-V</a></li>
+<li><a href="/wiki/H8" title="H8">H8SX</a></li>
+<li><a href="/wiki/MPC5xx" title="MPC5xx">MPC5xx</a></li>
+<li><a href="/wiki/PowerPC" title="PowerPC">PowerPC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9D%B1%E8%8A%9D_TLCS&amp;action=edit&amp;redlink=1" title="東芝 TLCS (存在しないページ)">東芝 TLCS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Toshiba_TLCS&amp;action=edit&amp;redlink=1" title="En:Toshiba TLCS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Infineon_TriCore&amp;action=edit&amp;redlink=1" title="Infineon TriCore (存在しないページ)">Infineon TriCore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infineon_TriCore&amp;action=edit&amp;redlink=1" title="En:Infineon TriCore (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/V850" title="V850">V850</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">インタフェース</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=In-circuit_serial_programming&amp;action=edit&amp;redlink=1" title="In-circuit serial programming (存在しないページ)">In-circuit serial programming</a> (ICSP)</li>
+<li><a href="/wiki/In-System_Programming" title="In-System Programming">In-System Programming</a> (ISP)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">デバッグ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DebugWIRE&amp;action=edit&amp;redlink=1" title="DebugWIRE (存在しないページ)">debugWIRE</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:debugWIRE&amp;action=edit&amp;redlink=1" title="En:debugWIRE (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/JTAG" title="JTAG">JTAG</a></li>
+<li><a class="mw-selflink selflink">インサーキット・エミュレータ</a> (ICE)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=In-target_probe&amp;action=edit&amp;redlink=1" title="In-target probe (存在しないページ)">In-target probe</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:In-target_probe&amp;action=edit&amp;redlink=1" title="En:In-target probe (存在しないページ)">英語版</a>）</span></span> (ITP)</li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">シミュレータ</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Gpsim&amp;action=edit&amp;redlink=1" title="Gpsim (存在しないページ)">Gpsim</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Gpsim&amp;action=edit&amp;redlink=1" title="En:Gpsim (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込みシステム</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331145740
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.196 seconds
+Real time usage: 0.361 seconds
+Preprocessor visited node count: 725/1000000
+Post‐expand include size: 69407/2097152 bytes
+Template argument size: 172/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 15/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4646/5000000 bytes
+Lua time usage: 0.120/7 seconds
+Lua virtual size: 7786496/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  298.464      1 -total
+ 48.56%  144.948      1 テンプレート:マイクロコントローラ
+ 47.30%  141.184      1 テンプレート:Navbox
+ 42.75%  127.581      1 テンプレート:単一の出典
+ 38.85%  115.958      1 テンプレート:Ambox
+ 38.71%  115.550     19 テンプレート:仮リンク
+ 32.72%   97.666      2 テンプレート:Navbox_subgroup
+ 20.55%   61.346      1 テンプレート:Find_sources_mainspace
+  2.19%    6.536      1 テンプレート:Reflist
+  2.05%    6.123      1 テンプレート:DMC
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:345154-0!canonical and timestamp 20220331145740 and revision id 225306. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=インサーキット・エミュレータ&amp;oldid=225306">http://localhost:8080/w/index.php?title=インサーキット・エミュレータ&amp;oldid=225306</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8D%98%E4%B8%80%E3%81%AE%E5%87%BA%E5%85%B8" title="カテゴリ:単一の出典">単一の出典</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%9B%BB%E5%AD%90%E5%B7%A5%E5%AD%A6" title="カテゴリ:電子工学">電子工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E3%83%84%E3%83%BC%E3%83%AB" title="カテゴリ:ソフトウェア開発ツール">ソフトウェア開発ツール</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%87%E3%83%90%E3%83%83%E3%82%B0" title="カテゴリ:デバッグ">デバッグ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;returntoquery=curid%3D345154%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;returntoquery=curid%3D345154%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;oldid=225306" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%83%E3%83%88%E3%83%BB%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年10月2日 (金) 13:54 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.196","walltime":"0.361","ppvisitednodes":{"value":725,"limit":1000000},"postexpandincludesize":{"value":69407,"limit":2097152},"templateargumentsize":{"value":172,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":15,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4646,"limit":5000000},"timingprofile":["100.00%  298.464      1 -total"," 48.56%  144.948      1 テンプレート:マイクロコントローラ"," 47.30%  141.184      1 テンプレート:Navbox"," 42.75%  127.581      1 テンプレート:単一の出典"," 38.85%  115.958      1 テンプレート:Ambox"," 38.71%  115.550     19 テンプレート:仮リンク"," 32.72%   97.666      2 テンプレート:Navbox_subgroup"," 20.55%   61.346      1 テンプレート:Find_sources_mainspace","  2.19%    6.536      1 テンプレート:Reflist","  2.05%    6.123      1 テンプレート:DMC"]},"scribunto":{"limitreport-timeusage":{"value":"0.120","limit":"7"},"limitreport-virtmemusage":{"value":7786496,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331145740","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1365});});</script>
+</body></html>

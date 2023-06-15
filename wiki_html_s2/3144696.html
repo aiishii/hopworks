@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ファミリーワイズエラー率 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ファミリーワイズエラー率 rootpage-ファミリーワイズエラー率 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ファミリーワイズエラー率</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="統計学">統計学</a>において、<b>ファミリーワイズエラー率</b>（ファミリーワイズエラーりつ、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">familywise error rate</span>、略称: <b>FWER</b>）は、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_3" title="多重仮説検定 (存在しないページ)">多重仮説検定</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Multiple_comparisons_problem&amp;action=edit&amp;redlink=1" title="En:Multiple comparisons problem (存在しないページ)">英語版</a>）</span></span>を行う際に、全ての仮説の中で少なくとも1つの正しい帰無仮説が誤って棄却されてしまう（<a href="." id="link_a_4" title="第一種過誤と第二種過誤">第一種過誤</a>）<a href="." id="link_a_5" title="確率">確率</a>である。ファミリーは帰無仮説の集合（帰無仮説族<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>）のことであり、ファミリーワイズは「帰無仮説の集合ごとの」といった意味である。したがってFWERは「<b>帰無仮説の集合ごとの第一種の過誤の確率</b>」を意味する。Error rateは<b>誤り率</b>や<b>危険率</b>とも訳される。
+</p><p><a href="." id="link_a_6" title="ボンフェローニ補正">ボンフェローニ補正</a>といったFWER手順は、<a href="." id="link_a_7" title="偽発見率 (存在しないページ)">偽発見率</a> (FDR) 制御法と比較してより厳しく偽発見を制御する。FWER制御は、偽発見の予測比率ではなく、「たった1つの」偽発見の確率を減らそうと試みる。ゆえに、FDR手順は第一種過誤の確率が上昇するという代償を払ってより高い<a href="." id="link_a_8" title="統計的検出力 (存在しないページ)">検出力</a>を有している<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#m個の仮説検定の分類"><span class="tocnumber">1.1</span> <span class="toctext"><i>m</i>個の仮説検定の分類</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#FWER"><span class="tocnumber">1.2</span> <span class="toctext">FWER</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#ファミリーの概念"><span class="tocnumber">2</span> <span class="toctext">ファミリーの概念</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#歴史"><span class="tocnumber">2.1</span> <span class="toctext">歴史</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#同時推定と選択的推定"><span class="tocnumber">3</span> <span class="toctext">同時推定と選択的推定</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#制御手順"><span class="tocnumber">4</span> <span class="toctext">制御手順</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#ボンフェローニ補正"><span class="tocnumber">4.1</span> <span class="toctext">ボンフェローニ補正</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#シダックの手順"><span class="tocnumber">4.2</span> <span class="toctext">シダックの手順</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#テューキーの手順"><span class="tocnumber">4.3</span> <span class="toctext">テューキーの手順</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#ホルムのステップダウン手順（1979年）"><span class="tocnumber">4.4</span> <span class="toctext">ホルムのステップダウン手順（1979年）</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#ホッホベルクのステップアップ手順（1988年）"><span class="tocnumber">4.5</span> <span class="toctext">ホッホベルクのステップアップ手順（1988年）</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#ダネットの補正"><span class="tocnumber">4.6</span> <span class="toctext">ダネットの補正</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#シェッフェの方法"><span class="tocnumber">4.7</span> <span class="toctext">シェッフェの方法</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#閉検定手順"><span class="tocnumber">4.8</span> <span class="toctext">閉検定手順</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#その他の手順"><span class="tocnumber">4.9</span> <span class="toctext">その他の手順</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#例"><span class="tocnumber">5</span> <span class="toctext">例</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#外部リンク"><span class="tocnumber">8</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="m.E5.80.8B.E3.81.AE.E4.BB.AE.E8.AA.AC.E6.A4.9C.E5.AE.9A.E3.81.AE.E5.88.86.E9.A1.9E"></span><span class="mw-headline" id="m個の仮説検定の分類"><i>m</i>個の仮説検定の分類</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=2" title="節を編集: m個の仮説検定の分類">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="new" href="/w/index.php?title=%E5%A4%9A%E9%87%8D%E6%AF%94%E8%BC%83%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" title="多重比較問題 (存在しないページ)">多重比較問題</a>」を参照</div>
+<p>以下の<i>m</i>個の帰無仮説を仮定する。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p><i>H</i><sub>1</sub>, <i>H</i><sub>2</sub>, ..., <i>H</i><sub><i>m</i></sub>
+</p>
+</div>
+<p><a href="/wiki/%E4%BB%AE%E8%AA%AC%E6%A4%9C%E5%AE%9A" title="仮説検定">統計的検定</a>を用い、それぞれの仮説が有意であるか有意でないかを示す。<i>H<sub>i</sub></i> に渡る検定結果を合計すると、以下の表ならびに関連する確率変数が得られる。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>
+</th>
+<th>帰無仮説が真
+</th>
+<th>対立仮説が真
+</th>
+<th>系
+</th></tr>
+<tr align="center">
+<th>有意
+</th>
+<td>&lt;math&gt;V&lt;/math&gt;
+</td>
+<td>&lt;math&gt;S&lt;/math&gt;
+</td>
+<td>&lt;math&gt;R&lt;/math&gt;
+</td></tr>
+<tr align="center">
+<th>有意でない
+</th>
+<td>&lt;math&gt;U&lt;/math&gt;
+</td>
+<td>&lt;math&gt;T&lt;/math&gt;
+</td>
+<td>&lt;math&gt;m - R&lt;/math&gt;
+</td></tr>
+<tr align="center">
+<th>Total
+</th>
+<td>&lt;math&gt;m_0&lt;/math&gt;
+</td>
+<td>&lt;math&gt;m - m_0&lt;/math&gt;
+</td>
+<td>&lt;math&gt;m&lt;/math&gt;
+</td></tr></tbody></table>
+<ul><li>&lt;math&gt;m_0&lt;/math&gt;は真である<a class="mw-redirect" href="/wiki/%E5%B8%B0%E7%84%A1%E4%BB%AE%E8%AA%AC" title="帰無仮説">帰無仮説</a>の数で未知のパラメーター。</li>
+<li>&lt;math&gt;m - m_0&lt;/math&gt;は真である<a class="mw-redirect" href="/wiki/%E5%AF%BE%E7%AB%8B%E4%BB%AE%E8%AA%AC" title="対立仮説">対立仮説</a>の数</li>
+<li>&lt;math&gt;V&lt;/math&gt;は<a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">偽陽性（第一種過誤）</a>の数</li>
+<li>&lt;math&gt;S&lt;/math&gt;は<a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">真陽性</a>の数</li>
+<li>&lt;math&gt;T&lt;/math&gt;は<a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">偽陰性（第二種過誤）</a>の数</li>
+<li>&lt;math&gt;U&lt;/math&gt;は<a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">真陰性</a>の数</li>
+<li>&lt;math&gt;R&lt;/math&gt;は棄却される帰無仮説の数</li>
+<li>&lt;math&gt;R&lt;/math&gt;は観測できる<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0" title="確率変数">確率変数</a>であるが、&lt;math&gt;S&lt;/math&gt;、&lt;math&gt;T&lt;/math&gt;、&lt;math&gt;U&lt;/math&gt;、および&lt;math&gt;V&lt;/math&gt;は観測できない確率変数である。</li></ul>
+<h3><span class="mw-headline" id="FWER">FWER</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=3" title="節を編集: FWER">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>FWERはファミリーの中の少なくとも1つの正しい帰無仮説が誤って棄却されてしまう確率である。
+</p>
+<dl><dd>&lt;math&gt; \mathrm{FWER} = \Pr(V \ge 1), \,&lt;/math&gt;</dd></dl>
+<p>あるいは
+</p>
+<dl><dd>&lt;math&gt; \mathrm{FWER} = 1 -\Pr(V = 0).&lt;/math&gt;</dd></dl>
+<p>ゆえに、&lt;math&gt; \mathrm{FWER} \le \alpha\,\! \,&lt;/math&gt;であることを保証することによって、ファミリーの中の少なくとも1つの正しい帰無仮説が誤って棄却されてしまう確率が&lt;math&gt;\alpha\,\!&lt;/math&gt;水準に制御される。
+</p><p>全ての帰無仮説が真（すなわち&lt;math&gt;m_0&lt;/math&gt; = &lt;math&gt;m&lt;/math&gt;であり、包括的帰無仮説が真）である時のみ&lt;math&gt;\alpha\,\!&lt;/math&gt;水準でのFWER制御が保証される場合、この手法は<b>弱い意味</b>でFWERを制御する。
+</p><p>真である帰無仮説や偽である帰無仮説のいかなる組み合わせ（包括的帰無仮説を含む）に対しても&lt;math&gt;\alpha\,\!&lt;/math&gt;水準でのFWER制御が保証される場合、この手法は<b>強い意味</b>でFWERを制御する。
+</p>
+<h2><span id=".E3.83.95.E3.82.A1.E3.83.9F.E3.83.AA.E3.83.BC.E3.81.AE.E6.A6.82.E5.BF.B5"></span><span class="mw-headline" id="ファミリーの概念">ファミリーの概念</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=4" title="節を編集: ファミリーの概念">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>統計的枠組みの中では、「ファミリー」という用語に対して複数の定義が存在する。
+</p><p>まず第一に、<a class="new" href="/w/index.php?title=%E6%8E%A2%E7%B4%A2%E7%9A%84%E3%83%87%E3%83%BC%E3%82%BF%E8%A7%A3%E6%9E%90&amp;action=edit&amp;redlink=1" title="探索的データ解析 (存在しないページ)">探索的データ解析</a>と<a href="/wiki/%E4%BB%AE%E8%AA%AC%E6%A4%9C%E5%AE%9A" title="仮説検定">確認的データ解析</a>との間の区別を付けなければならない。探索的解析では、ファミリーは全ての下された推定と下される可能性のある推定から構成されるのに対して、確認的解析の場合は、ファミリーは研究に先立って指定された興味のある推定のみを含む。
+</p><p><b>Hochberg &amp; Tamhane (1987)</b><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>は、「ファミリー」を「ある組み合わされたエラーの程度を考慮するために意味を持つ推定の集合」と定義する。
+</p><p><b>Cox (1982)</b>によれば、一組の推定は
+</p>
+<ol><li><a class="new" href="/w/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%B5%9A%E6%B8%AB&amp;action=edit&amp;redlink=1" title="データの浚渫 (存在しないページ)">データの浚渫</a>による選択効果を考慮するため</li>
+<li>全体の決定が正しいことを保証するために一組の推論を同時の正しさを確かにするため</li></ol>
+<p>にファミリーと見なされなければならない。
+</p><p>まとめると、ファミリーは目の前にした選択される可能性のある推定によって適切に定義できる。ファミリーは分析における推定の最小の組であり、研究の目標のためのそれらの意味については置き換え可能であり、影響、発表、あるいは強調のために結果の選択がなされうる。
+</p>
+<h3><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=5" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%86%E3%83%A5%E3%83%BC%E3%82%AD%E3%83%BC" title="ジョン・テューキー">テューキー</a>は初め、研究者が多重仮説実験における制御水準として用いなければならない過誤の確率として、<b>実験あたりの（experimentwise）エラー率</b>と<b>実験前</b>のエラー率という用語を造った。
+</p><p>実験で行われる全ての検定が単一のファミリーによって構成されなければならない訳ではない（例えば多段階の実験では、それぞれの段階ごとに異なるファミリーが用いられる）ため、この用語はミラーによって「ファミリーワイズエラー率」と改名された（後にテューキーはこれを「バッチワイズ」あるいは「バッチごとの」として採用した）。
+</p>
+<h2><span id=".E5.90.8C.E6.99.82.E6.8E.A8.E5.AE.9A.E3.81.A8.E9.81.B8.E6.8A.9E.E7.9A.84.E6.8E.A8.E5.AE.9A"></span><span class="mw-headline" id="同時推定と選択的推定">同時推定と選択的推定</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=6" title="節を編集: 同時推定と選択的推定">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>FWERの制御は、ファミリー中の全ての推定が前もって指定されたエラー率まで一緒に修正される<b>同時推定</b>の一形式である。ファミリーの定義に依存し、研究者は異なる形式の推定を選択できる。
+</p><p>例えば、同時推定は、現在科学が取り組んでいるような特定の大規模な問題に対しては保守的過ぎるかもしれない。こういった問題に対しては、大規模な集合からの仮説の部分集合をファミリーと見なす<b>選択的推定</b>アプローチがより適している。選択的推定は大抵、<a class="new" href="/w/index.php?title=%E5%81%BD%E7%99%BA%E8%A6%8B%E7%8E%87&amp;action=edit&amp;redlink=1" title="偽発見率 (存在しないページ)">偽発見率</a>（FDR）を制御することによって行われる。FDR制御は（<a href="/wiki/%E3%83%9C%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%8B%E8%A3%9C%E6%AD%A3" title="ボンフェローニ補正">ボンフェローニ補正</a>といった）FWER手順よりも<a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E7%9A%84%E6%A4%9C%E5%87%BA%E5%8A%9B&amp;action=edit&amp;redlink=1" title="統計的検出力 (存在しないページ)">検出力</a>が高い（すなわちより保守的でない）手順であり、棄却された仮説の中に偽陽性を含む確率が増大する代償を払っている。
+</p>
+<h2><span id=".E5.88.B6.E5.BE.A1.E6.89.8B.E9.A0.86"></span><span class="mw-headline" id="制御手順">制御手順</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=7" title="節を編集: 制御手順">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下は強力な&lt;math&gt;\alpha&lt;/math&gt;水準でのFWER制御が保証されている「old and trusted（頼りになる）」な手順の一部である。
+</p>
+<h3><span id=".E3.83.9C.E3.83.B3.E3.83.95.E3.82.A7.E3.83.AD.E3.83.BC.E3.83.8B.E8.A3.9C.E6.AD.A3"></span><span class="mw-headline" id="ボンフェローニ補正">ボンフェローニ補正</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=8" title="節を編集: ボンフェローニ補正">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%9C%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%8B%E8%A3%9C%E6%AD%A3" title="ボンフェローニ補正">ボンフェローニ補正</a>」を参照</div>
+<ul><li>帰無仮説&lt;math&gt;H_{i}&lt;/math&gt;を検定するためのp値&lt;math&gt;p_{i}&lt;/math&gt;によって示される</li>
+<li>&lt;math&gt; p_{i} \leq \frac{\alpha}{m} &lt;/math&gt;ならば&lt;math&gt;H_{i}&lt;/math&gt;は棄却される</li></ul>
+<h3><span id=".E3.82.B7.E3.83.80.E3.83.83.E3.82.AF.E3.81.AE.E6.89.8B.E9.A0.86"></span><span class="mw-headline" id="シダックの手順">シダックの手順</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=9" title="節を編集: シダックの手順">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B7%E3%83%80%E3%83%83%E3%82%AF%E8%A3%9C%E6%AD%A3" title="シダック補正">シダック補正</a>」を参照</div>
+<ul><li>検定統計量が独立とすると、水準&lt;math&gt; \alpha_{SID} = 1-(1-\alpha)^\frac{1}{m} &lt;/math&gt;での個々の仮説の検定がシダックの多重検定手順である。</li>
+<li>この検定はボンフェローニ補正よりも強力であるが、得られるものは小さく、独立性を必要とするためにボンフェローニの手順よりも一般的でない。</li></ul>
+<h3><span id=".E3.83.86.E3.83.A5.E3.83.BC.E3.82.AD.E3.83.BC.E3.81.AE.E6.89.8B.E9.A0.86"></span><span class="mw-headline" id="テューキーの手順">テューキーの手順</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=10" title="節を編集: テューキーの手順">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%86%E3%83%A5%E3%83%BC%E3%82%AD%E3%83%BC%E3%81%AE%E7%AF%84%E5%9B%B2%E6%A4%9C%E5%AE%9A" title="テューキーの範囲検定">テューキーの範囲検定</a>」を参照</div>
+<ul><li>テューキーの手順は<a class="new" href="/w/index.php?title=%E4%B8%80%E5%AF%BE%E6%AF%94%E8%BC%83&amp;action=edit&amp;redlink=1" title="一対比較 (存在しないページ)">一対比較</a>にのみ適用できる。</li>
+<li>検定される観測の独立と観測全体での<a href="/wiki/%E7%AD%89%E5%88%86%E6%95%A3%E6%80%A7" title="等分散性">等分散性</a>を仮定する。</li>
+<li>それぞれの対に対して<a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%81%E3%83%A5%E3%83%BC%E3%83%87%E3%83%B3%E3%83%88%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F%E7%AF%84%E5%9B%B2&amp;action=edit&amp;redlink=1" title="スチューデント化された範囲 (存在しないページ)">スチューデント化された範囲</a>の統計量&lt;math&gt; \frac {Y_{A}-Y_{B}} {SE} &lt;/math&gt;を計算する（&lt;math&gt;Y_{A}&lt;/math&gt;2つの平均のうち大きい方、&lt;math&gt;Y_{B}&lt;/math&gt;は小さい方、&lt;math&gt;SE&lt;/math&gt;は問題になっているデータの標準誤差）。</li>
+<li>テューキーの検定は<b>ファミリーワイズエラー率</b>を制御することを除けば<a href="/wiki/T%E6%A4%9C%E5%AE%9A" title="T検定">スチューデントのt検定</a>と本質的に同じである。</li></ul>
+<h3><span id=".E3.83.9B.E3.83.AB.E3.83.A0.E3.81.AE.E3.82.B9.E3.83.86.E3.83.83.E3.83.97.E3.83.80.E3.82.A6.E3.83.B3.E6.89.8B.E9.A0.86.EF.BC.881979.E5.B9.B4.EF.BC.89"></span><span class="mw-headline" id="ホルムのステップダウン手順（1979年）">ホルムのステップダウン手順（1979年）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=11" title="節を編集: ホルムのステップダウン手順（1979年）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%9B%E3%83%AB%E3%83%A0%EF%BC%9D%E3%83%9C%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%8B%E6%B3%95" title="ホルム＝ボンフェローニ法">ホルム＝ボンフェローニ法</a>」を参照</div>
+<ul><li>p値を（最小から最大まで）&lt;math&gt;P_{(1)} \ldots P_{(m)}&lt;/math&gt;と順序付け、結び付いた仮説を&lt;math&gt;H_{(1)} \ldots H_{(m)}&lt;/math&gt;とする</li>
+<li>&lt;math&gt;R&lt;/math&gt;は&lt;math&gt;P_{(k)} &gt; \frac{\alpha}{m+1-k}&lt;/math&gt;となるような最小の&lt;math&gt;k&lt;/math&gt;とする</li>
+<li>帰無仮説&lt;math&gt;H_{(1)} \ldots H_{(R-1)}&lt;/math&gt;を棄却する。&lt;math&gt;R = 1&lt;/math&gt;ならば全ての帰無仮説は棄却されない</li>
+<li>この手順はボンフェローニのものよりも一様に優れている<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（August 2014）">要出典</span></a></i>]</sup></li>
+<li>この手順がm個全ての仮説を強くα水準で制御する理由は、これが実質的に<a class="new" href="/w/index.php?title=%E9%96%89%E6%A4%9C%E5%AE%9A%E6%89%8B%E9%A0%86&amp;action=edit&amp;redlink=1" title="閉検定手順 (存在しないページ)">閉検定手順</a>だからである。つまり、それぞれの共通集合は単純なボンフェローニ補正を用いて検定される。</li></ul>
+<h3><span id=".E3.83.9B.E3.83.83.E3.83.9B.E3.83.99.E3.83.AB.E3.82.AF.E3.81.AE.E3.82.B9.E3.83.86.E3.83.83.E3.83.97.E3.82.A2.E3.83.83.E3.83.97.E6.89.8B.E9.A0.86.EF.BC.881988.E5.B9.B4.EF.BC.89"></span><span class="mw-headline" id="ホッホベルクのステップアップ手順（1988年）">ホッホベルクのステップアップ手順（1988年）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=12" title="節を編集: ホッホベルクのステップアップ手順（1988年）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ホッホベルクのステップアップ手順（1988年）は、以下の段階を用いて行われる<sup class="reference" id="cite_ref-Hochberg1988_4-0"><a href="#cite_note-Hochberg1988-4">[4]</a></sup> 。
+</p>
+<ul><li>p値を（最小から最大まで）&lt;math&gt;P_{(1)} \ldots P_{(m)}&lt;/math&gt;と順序付け、結び付いた仮説を&lt;math&gt;H_{(1)} \ldots H_{(m)}&lt;/math&gt;とする</li>
+<li>任意の&lt;math&gt;\alpha&lt;/math&gt;に対して、&lt;math&gt;R&lt;/math&gt;は&lt;math&gt;P_{(k)} \leq \frac{\alpha}{m+1-k}&lt;/math&gt;となるような最大の&lt;math&gt;k&lt;/math&gt;とする。</li>
+<li>帰無仮説&lt;math&gt;H_{(1)} \ldots H_{(R)}&lt;/math&gt;を棄却する</li></ul>
+<p>ホッホベルグの手順はホルムの手順よりも検出力が高い。そうは言っても、ホルムの手順が検定統計量の併さった分布について制限のないボンフェローニ補正に基づいているのに対して、ホッホベルグの手順は<a class="new" href="/w/index.php?title=%E5%81%BD%E7%99%BA%E8%A6%8B%E7%8E%87&amp;action=edit&amp;redlink=1" title="偽発見率 (存在しないページ)">シムズ検定（1987年）</a>に基づいているため、独立が仮定される時のみ（あるいはある種の正の依存性が仮定される時のみ）有効である。
+</p>
+<h3><span id=".E3.83.80.E3.83.8D.E3.83.83.E3.83.88.E3.81.AE.E8.A3.9C.E6.AD.A3"></span><span class="mw-headline" id="ダネットの補正">ダネットの補正</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=13" title="節を編集: ダネットの補正">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%80%E3%83%8D%E3%83%83%E3%83%88%E3%81%AE%E6%A4%9C%E5%AE%9A" title="ダネットの検定">ダネットの検定</a>」を参照</div>
+<p><a href="/wiki/%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%BB%E3%83%80%E3%83%8D%E3%83%83%E3%83%88" title="チャールズ・ダネット">チャールズ・ダネット</a>（1955年、1966年）は<i>k</i>個の群を同じ対照群と比較する時にαエラーを調節する代替手法を記述した。現在は<a href="/wiki/%E3%83%80%E3%83%8D%E3%83%83%E3%83%88%E3%81%AE%E6%A4%9C%E5%AE%9A" title="ダネットの検定">ダネットの検定</a>として知られているこの手法は、ボンフェローニ補正よりも保守的でない。
+</p>
+<h3><span id=".E3.82.B7.E3.82.A7.E3.83.83.E3.83.95.E3.82.A7.E3.81.AE.E6.96.B9.E6.B3.95"></span><span class="mw-headline" id="シェッフェの方法">シェッフェの方法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=14" title="節を編集: シェッフェの方法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%83%E3%83%95%E3%82%A7%E3%81%AE%E6%96%B9%E6%B3%95" title="シェッフェの方法">シェッフェの方法</a>」を参照</div>
+
+<h3><span id=".E9.96.89.E6.A4.9C.E5.AE.9A.E6.89.8B.E9.A0.86"></span><span class="mw-headline" id="閉検定手順">閉検定手順</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=15" title="節を編集: 閉検定手順">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="new" href="/w/index.php?title=%E9%96%89%E6%A4%9C%E5%AE%9A%E6%89%8B%E9%A0%86&amp;action=edit&amp;redlink=1" title="閉検定手順 (存在しないページ)">閉検定手順</a>」を参照</div>
+<p>閉検定手順における全ての共通集合仮説が正当な局所α水準を用いて検定されるとすると、閉検定手順はファミリーワイズの第一種過誤の確率を制御する。閉検定手順は、ボンフェローニの手順やホルムのステップダウン手順を含む検定手順の柔軟な一般分類である。
+</p>
+<h3><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E6.89.8B.E9.A0.86"></span><span class="mw-headline" id="その他の手順">その他の手順</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=16" title="節を編集: その他の手順">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>強い&lt;math&gt;\alpha&lt;/math&gt;水準FWER制御を保証する進んだ手順としては、最大絶対値検定がある。
+</p><p>また注目すべきは、ファミリーワイズエラー率を制御するための試みには多くの代替手段が存在することである。中でも注目すべきは、<a class="new" href="/w/index.php?title=%E3%83%A8%E3%82%A2%E3%83%95%E3%83%BB%E3%83%99%E3%83%B3%E3%82%B8%E3%83%A3%E3%83%9F%E3%83%BC%E3%83%8B&amp;action=edit&amp;redlink=1" title="ヨアフ・ベンジャミーニ (存在しないページ)">ベンジャミーニ</a>とホッホベルクによって1955年に考案された<a class="new" href="/w/index.php?title=%E5%81%BD%E7%99%BA%E8%A6%8B%E7%8E%87&amp;action=edit&amp;redlink=1" title="偽発見率 (存在しないページ)">偽発見率</a>であり、偽発見率はより実用的な方法で大規模推定問題の多くに対処する。
+</p>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=17" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下の3つの群を用いた新しい抗うつ薬のランダム化臨床試験を考える。
+</p>
+<ul><li>既存薬</li>
+<li>新薬</li>
+<li>プラセボ</li></ul>
+<p>こうようなデザインにおいて、研究者は新しい薬を使用した時に古い薬を使用した時よりもうつ症状が減少するか（例えば<a class="new" href="/w/index.php?title=%E3%83%99%E3%83%83%E3%82%AF%E3%81%AE%E3%81%86%E3%81%A4%E8%A9%95%E4%BE%A1%E5%B0%BA%E5%BA%A6&amp;action=edit&amp;redlink=1" title="ベックのうつ評価尺度 (存在しないページ)">ベックのうつ評価尺度</a>よって計測される）に興味があるだろう。その上、<a href="/wiki/%E5%89%AF%E4%BD%9C%E7%94%A8" title="副作用">副作用</a>（例えば<a href="/wiki/%E9%81%8E%E7%9C%A0%E7%97%87" title="過眠症">過眠症</a>、性欲減退、<a href="/wiki/%E5%8F%A3%E8%85%94%E4%B9%BE%E7%87%A5%E7%97%87" title="口腔乾燥症">ドライマウス</a>）が観察されるかに興味があるかもしれない。こういった場合、以下の<b>2つのファミリー</b>が同定されうる。
+</p>
+<ul><li>うつ症状に対する薬の効果</li>
+<li>副作用の発生</li></ul>
+<p>研究者はそれぞれのファミリーに対して容認できる<a href="/wiki/%E7%AC%AC%E4%B8%80%E7%A8%AE%E9%81%8E%E8%AA%A4%E3%81%A8%E7%AC%AC%E4%BA%8C%E7%A8%AE%E9%81%8E%E8%AA%A4" title="第一種過誤と第二種過誤">第一種過誤</a>（Type Iエラー）の確率&lt;math&gt;\alpha&lt;/math&gt;（通常0.05）を指定し、適切な多重比較手順を用いてファミリーワイズのエラーを制御する。
+</p>
+<ul><li>一つ目のファミリーであるうつ症状に対する抗うつ薬の効果では、群間の<a class="new" href="/w/index.php?title=%E4%B8%80%E5%AF%BE%E6%AF%94%E8%BC%83&amp;action=edit&amp;redlink=1" title="一対比較 (存在しないページ)">一対比較</a>が<a href="/wiki/%E3%83%86%E3%83%A5%E3%83%BC%E3%82%AD%E3%83%BC%E3%81%AE%E7%AF%84%E5%9B%B2%E6%A4%9C%E5%AE%9A" title="テューキーの範囲検定">テューキーの範囲検定</a>といった手法を用いて一緒に制御される。ここでは、検定が3つのみのため、<a href="/wiki/%E3%83%9C%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%8B%E8%A3%9C%E6%AD%A3" title="ボンフェローニ補正">ボンフェローニ補正</a>でも十分である。</li>
+<li>副作用プロフィールに関しては、それぞれの副作用について3つの比較を行うため、それぞれの副作用に0.05のα水準を与えて検定すると、少くとも1つの第一種過誤を犯す確率は37%になってしまう（&lt;math&gt;1 - 0.95^9 = 1 - 0.63 = 0.37&lt;/math&gt;）。計9個の仮説があるため、この場合はボンフェローニ補正は保守的過ぎ、<a href="/wiki/%E3%83%86%E3%83%A5%E3%83%BC%E3%82%AD%E3%83%BC%E3%81%AE%E7%AF%84%E5%9B%B2%E6%A4%9C%E5%AE%9A" title="テューキーの範囲検定">テューキーの範囲検定</a>や<a href="/wiki/%E3%83%9B%E3%83%AB%E3%83%A0%EF%BC%9D%E3%83%9C%E3%83%B3%E3%83%95%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%8B%E6%B3%95" title="ホルム＝ボンフェローニ法">ホルム＝ボンフェローニ法</a>といったより検出力の高い手法がより適切であろう。例えば、研究者は&lt;math&gt;\alpha&lt;/math&gt;を3で割り（0.05/3 = 0.0167）、この0.0167をそれぞれの副作用の多重比較手順に割り当てることができる。したがって、テューキーの範囲検定の場合、スチューデント化された範囲検定量の臨界値qは、0.0167の&lt;math&gt;\alpha&lt;/math&gt;値に基づくこととなる。</li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=18" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation book" id="Reference-[[永田靖_(統計学者)|永田_靖]]、吉田_道弘-1997" style="font-style:normal"><a href="/wiki/%E6%B0%B8%E7%94%B0%E9%9D%96_(%E7%B5%B1%E8%A8%88%E5%AD%A6%E8%80%85)" title="永田靖 (統計学者)">永田 靖</a>、吉田 道弘『統計的多重比較法の基礎』サイエンティスト社、東京都、1997年。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4914903466" title="特別:文献資料/978-4914903466">978-4914903466</a>。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Shaffer J.P. (1995). “Multiple hypothesis testing”. <i>Annual Review of Psychology</i> <b>46</b>:  561-584. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1146%2Fannurev.ps.46.020195.003021" rel="nofollow">10.1146/annurev.ps.46.020195.003021</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Multiple+hypothesis+testing&amp;rft.jtitle=Annual+Review+of+Psychology&amp;rft.aulast=Shaffer+J.P.&amp;rft.au=Shaffer+J.P.&amp;rft.date=1995&amp;rft.volume=46&amp;rft.pages=561-584&amp;rft_id=info:doi/10.1146%2Fannurev.ps.46.020195.003021&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Hochberg Y, Tamhane AC (1987). <i>Multiple comparison procedures</i>. New York: Wiley</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Multiple+comparison+procedures&amp;rft.aulast=Hochberg+Y%2C+Tamhane+AC&amp;rft.au=Hochberg+Y%2C+Tamhane+AC&amp;rft.date=1987&amp;rft.place=New+York&amp;rft.pub=Wiley&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Hochberg1988-4"><b><a href="#cite_ref-Hochberg1988_4-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Hochberg, Yosef (1988). <a class="external text" href="http://www-stat.wharton.upenn.edu/~steele/Courses/956/Resource/MultipleComparision/Hochberg88.pdf" rel="nofollow">“A Sharper Bonferroni Procedure for Multiple Tests of Significance”</a>. <i><a class="new" href="/w/index.php?title=Biometrika&amp;action=edit&amp;redlink=1" title="Biometrika (存在しないページ)">Biometrika</a></i> <b>75</b> (4):  800–802. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1093%2Fbiomet%2F75.4.800" rel="nofollow">10.1093/biomet/75.4.800</a><span style="display:none;">. <a class="external free" href="http://www-stat.wharton.upenn.edu/~steele/Courses/956/Resource/MultipleComparision/Hochberg88.pdf" rel="nofollow">http://www-stat.wharton.upenn.edu/~steele/Courses/956/Resource/MultipleComparision/Hochberg88.pdf</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+Sharper+Bonferroni+Procedure+for+Multiple+Tests+of+Significance&amp;rft.jtitle=%5B%5BBiometrika%5D%5D&amp;rft.aulast=Hochberg&amp;rft.aufirst=Yosef&amp;rft.au=Hochberg%2C%26%2332%3BYosef&amp;rft.date=1988&amp;rft.volume=75&amp;rft.issue=4&amp;rft.pages=800%E2%80%93802&amp;rft_id=info:doi/10.1093%2Fbiomet%2F75.4.800&amp;rft_id=http%3A%2F%2Fwww-stat.wharton.upenn.edu%2F%7Esteele%2FCourses%2F956%2FResource%2FMultipleComparision%2FHochberg88.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=19" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="new" href="/w/index.php?title=%E5%81%BD%E7%99%BA%E8%A6%8B%E7%8E%87&amp;action=edit&amp;redlink=1" title="偽発見率 (存在しないページ)">偽発見率</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;section=20" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www-stat.stanford.edu/~omkar/329/" rel="nofollow">Large-scale Simultaneous Inference</a> – Syllabus, notes, and homework from Efron's course at Stanford.  Includes PDFs for each chapter of his book.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401183402
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.207 seconds
+Real time usage: 0.247 seconds
+Preprocessor visited node count: 4117/1000000
+Post‐expand include size: 33895/2097152 bytes
+Template argument size: 8758/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 2/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7031/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 6164480/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  219.368      1 -total
+ 34.48%   75.640      2 テンプレート:Cite_book
+ 29.43%   64.565      1 テンプレート:Cite_book/和書
+ 21.31%   46.742      1 テンプレート:ISBN2
+ 15.90%   34.870      2 テンプレート:Cite_journal
+ 15.55%   34.110      3 テンプレート:Citation/core
+ 12.67%   27.799      1 テンプレート:仮リンク
+ 12.53%   27.495      1 テンプレート:Catalog_lookup_link
+ 10.43%   22.889      1 テンプレート:Citation_needed
+  9.75%   21.392      1 テンプレート:Empty_section
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3144696-0!canonical and timestamp 20220401183402 and revision id 1854770. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ファミリーワイズエラー率&amp;oldid=1854770">http://localhost:8080/w/index.php?title=ファミリーワイズエラー率&amp;oldid=1854770</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2014%E5%B9%B48%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2014年8月">出典を必要とする記述のある記事/2014年8月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%B1%E8%A8%88%E7%9A%84%E4%BB%AE%E8%AA%AC%E6%A4%9C%E5%AE%9A" title="カテゴリ:統計的仮説検定">統計的仮説検定</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A4%9A%E9%87%8D%E6%AF%94%E8%BC%83" title="カテゴリ:多重比較">多重比較</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;returntoquery=curid%3D3144696%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;returntoquery=curid%3D3144696%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;oldid=1854770" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%83%AF%E3%82%A4%E3%82%BA%E3%82%A8%E3%83%A9%E3%83%BC%E7%8E%87&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年4月19日 (月) 03:29 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.207","walltime":"0.247","ppvisitednodes":{"value":4117,"limit":1000000},"postexpandincludesize":{"value":33895,"limit":2097152},"templateargumentsize":{"value":8758,"limit":2097152},"expansiondepth":{"value":25,"limit":40},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":7031,"limit":5000000},"timingprofile":["100.00%  219.368      1 -total"," 34.48%   75.640      2 テンプレート:Cite_book"," 29.43%   64.565      1 テンプレート:Cite_book/和書"," 21.31%   46.742      1 テンプレート:ISBN2"," 15.90%   34.870      2 テンプレート:Cite_journal"," 15.55%   34.110      3 テンプレート:Citation/core"," 12.67%   27.799      1 テンプレート:仮リンク"," 12.53%   27.495      1 テンプレート:Catalog_lookup_link"," 10.43%   22.889      1 テンプレート:Citation_needed","  9.75%   21.392      1 テンプレート:Empty_section"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":6164480,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401183402","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":770});});</script>
+</body></html>

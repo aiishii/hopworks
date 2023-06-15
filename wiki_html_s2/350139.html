@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>GUIDパーティションテーブル - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-GUIDパーティションテーブル rootpage-GUIDパーティションテーブル skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">GUIDパーティションテーブル</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>GUIDパーティションテーブル</b> (<i><a href="." id="link_a_1" title="GUID">GUID</a> Partition Table</i>, <b>GPT</b>) は、<a href="." id="link_a_2" title="ハードディスクドライブ">ハードディスクドライブ</a>上の<a href="." id="link_a_3" title="パーティションテーブル">パーティションテーブル</a>の配置に関する標準規格である。これは<a href="." id="link_a_4" title="インテル">インテル</a>の提案している<a href="." id="link_a_5" title="Unified Extensible Firmware Interface">EFI</a>標準の一部であり、旧来の<a href="." id="link_a_6" title="Basic Input/Output System">BIOS</a>で使用されている<a href="." id="link_a_7" title="マスターブートレコード">マスターブートレコード</a> (MBR) の置き換えを意図している。従来のMBRパーティションが、テーブルのパラメータから、1セクタ512Byteで定義した場合、最大2<a href="." id="link_a_8" title="テビバイト">TiB</a>迄の領域までしか管理できないのに対し、GPTでは、最大8<a href="." id="link_a_9" title="ゼビバイト">ZiB</a>迄の領域を定義、管理できる。
+</p><p>2013年頃には、PC用として一般に市販のHDDの大容量化で、2T越えが始まっておりGPT導入は必至の課題であったが、マザーボード上のROM内などの<a href="." id="link_a_10" title="システムソフトウェア">システムソフトウェア</a>のEFI対応もだいたい進んできていたことで、無事に導入が進んだという状況であった。
+</p>
+
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#機能"><span class="tocnumber">1</span> <span class="toctext">機能</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#従来のMBR_(LBA_0)"><span class="tocnumber">2</span> <span class="toctext">従来のMBR (LBA 0)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#パーティションテーブル・ヘッダー_(LBA_1)"><span class="tocnumber">3</span> <span class="toctext">パーティションテーブル・ヘッダー (LBA 1)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#パーティションエントリ_(LBA_2〜33)"><span class="tocnumber">4</span> <span class="toctext">パーティションエントリ (LBA 2〜33)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#OSのサポート"><span class="tocnumber">5</span> <span class="toctext">OSのサポート</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#UNIX_/_Unix系"><span class="tocnumber">5.1</span> <span class="toctext">UNIX / Unix系</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Windows（32ビット版）"><span class="tocnumber">5.2</span> <span class="toctext">Windows（32ビット版）</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Windows（64ビット版）"><span class="tocnumber">5.3</span> <span class="toctext">Windows（64ビット版）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#パーティションの型を表すGUID"><span class="tocnumber">6</span> <span class="toctext">パーティションの型を表すGUID</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">7</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#注釈"><span class="tocnumber">7.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#出典"><span class="tocnumber">7.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="機能">機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=1" title="節を編集: 機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MBRがマスターブートコード（ブートローダ：起動できるアクティブ<a href="/wiki/%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3" title="パーティション">パーティション</a>を探してプログラムをそこからロードして実行する機械語コードが入っている）で始まるのに対して、GPTはEFIが持つ拡張機能を使ってその処理を実現している。MBRのエントリがディスクの保護と互換性維持の目的で存在しているのに対して、GPTはパーティションテーブル・ヘッダーとしての役割を担っている。
+</p><p>GPTは<a href="/wiki/Logical_Block_Addressing" title="Logical Block Addressing">Logical Block Addressing</a> (LBA) を使ってディスク内の位置を示す。MBRでは<a href="/wiki/Cylinder_head_sector" title="Cylinder head sector">CHS</a>によって位置を指定していた。古いMBR情報は LBA 0 に含まれていて、GPTヘッダーは LBA 1 に置かれ、その後にパーティションテーブルが続く。<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a><a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a> (OS) では、16,384バイト（32セクター、16KiB）がGPT用に予約されていて、LBA 34 から通常の使い方ができるようになっている。
+</p><p>GPTは冗長性も提供している。GPTヘッダーとパーティションテーブルはディスクの先頭と最後部の両方に書き込まれている。
+</p>
+<h2><span id=".E5.BE.93.E6.9D.A5.E3.81.AEMBR_.28LBA_0.29"></span><span class="mw-headline" id="従来のMBR_(LBA_0)">従来のMBR (LBA 0)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=2" title="節を編集: 従来のMBR (LBA 0)">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GPTを使用するディスクにもMBRが存在するのは、MBRを前提としたディスクユーティリティを利用した場合の事故の防止のため（誤って何も中身がないと判断されないため）である。MBRにはそのディスク全体がひとつのパーティションになっているという情報が記述されることになっている。GPT自体がBIOSによるMBRパーティションの代替であるため、そのパーティション識別子はシステムIDとして 0xEE が設定され、GPTを使用していることを示すことになっているが、双方のパーティションテーブルに有効な値を定義し、それをハイブリッドMBRと呼称する向きもある。但し、これはGPTの「MBRパーティションに対する置き換え」という目的から標準化、明示的な定義がされていない実装であり、OSによって扱いが異なる。ハイブリッドMBRの構成では多くの場合GUIDパーティションの方が優先されるが、Windowsをベースとするシステムでは、GPTをサポートするものであっても有効なMBRが存在する場合は、そちらを優先して解釈する。また、本来EFIとセットの実装であるが、MBRからGPTを理解するローダへ処理を移すという手段により、比較的最近の<a href="/wiki/Linux" title="Linux">Linux</a>ではEFIが実装されていないシステムであっても、GPTからの起動や利用を可能としている<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<h2><span id=".E3.83.91.E3.83.BC.E3.83.86.E3.82.A3.E3.82.B7.E3.83.A7.E3.83.B3.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB.E3.83.BB.E3.83.98.E3.83.83.E3.83.80.E3.83.BC_.28LBA_1.29"></span><span class="mw-headline" id="パーティションテーブル・ヘッダー_(LBA_1)">パーティションテーブル・ヘッダー (LBA 1)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=3" title="節を編集: パーティションテーブル・ヘッダー (LBA 1)">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>パーティションテーブル・ヘッダーでは、ユーザが使用可能なディスクの範囲を定義している。また、パーティションテーブル内のパーティションエントリ数とサイズを定義している。Windowsマシンでは、128エントリであり、それぞれ128バイトである。したがって、最大128個のパーティションを作成できる。
+</p><p>ヘッダーはディスクの<a href="/wiki/GUID" title="GUID">GUID</a> (Globally Unique Identifier) を含んでいる。また、ヘッダー自身のサイズと位置（常に LBA 1）と、第二GPTヘッダーのサイズと位置（常にディスクの最後のセクター）を記録している。また重要な点として、自身のCRC32チェックサムを持っているので、専用のユーティリティ以外でGPTを変更するとチェックサムと不整合を起こす。チェックサムが不整合を起こすと、EFIは第二GPTを第一GPTにコピーする。第二GPTのチェックサムも不正だった場合はディスクにアクセスできなくなる。
+</p>
+<h2><span id=".E3.83.91.E3.83.BC.E3.83.86.E3.82.A3.E3.82.B7.E3.83.A7.E3.83.B3.E3.82.A8.E3.83.B3.E3.83.88.E3.83.AA_.28LBA_2.E3.80.9C33.29"></span><span class="mw-headline" id="パーティションエントリ_(LBA_2〜33)">パーティションエントリ (LBA 2〜33)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=4" title="節を編集: パーティションエントリ (LBA 2〜33)">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>パーティションエントリは単純である。最初の16バイトにパーティションの種類を表すGUIDが書き込まれている。たとえば、<a href="/wiki/EFI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3" title="EFIシステムパーティション">EFIシステムパーティション</a>のGUIDは {C12A7328-F81F-11D2-BA4B-00A0C93EC93B} である。ただし先頭3項目（8バイト）は項目内で<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%88%E3%83%AB%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="リトルエンディアン">リトルエンディアン</a>なので、実際には先頭から、28 73 2A C1 1F F8 D2 11 BA 4B 00 A0 C9 3E C9 3B のように書き込まれている。次の16バイトにはそのパーティション固有のGUIDが書き込まれている。続く8バイトにパーティションの最初のLBA、その次の8バイトにパーティションの最後のLBAが<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%88%E3%83%AB%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="リトルエンディアン">リトルエンディアン</a>で書き込まれている。さらにその後に、パーティション名と属性を書き込めるようになっている。
+</p>
+<h2><span id="OS.E3.81.AE.E3.82.B5.E3.83.9D.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="OSのサポート">OSのサポート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=5" title="節を編集: OSのサポート">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>表中の注釈</b>
+</p>
+<dl><dt>"このバージョンではサポートされない"</dt>
+<dd>データ用としてもサポートされない。MBRにあるパーティションだけがOSからアクセス可能。</dd>
+<dt>"リムーバブルディスクはMBRだけサポート"</dt>
+<dd>ユーザーからはGUIDパーティションにアクセス不可。<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC" title="サードパーティー">サードパーティー</a>製のツール経由でだけGUIDパーティションにアクセス可能。</dd></dl>
+<h3><span id="UNIX_.2F_Unix.E7.B3.BB"></span><span class="mw-headline" id="UNIX_/_Unix系"><a href="/wiki/UNIX" title="UNIX">UNIX</a> / <a href="/wiki/Unix%E7%B3%BB" title="Unix系">Unix系</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=6" title="節を編集: UNIX / Unix系">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+<tbody><tr>
+<th>OS
+</th>
+<th>バージョン
+</th>
+<th>アーキテクチャ
+</th>
+<th>BIOS経由でGPTからの起動
+</th>
+<th>EFI経由でGPTからの起動
+</th>
+<th>備考
+</th></tr>
+<tr>
+<td><a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a>
+</td>
+<td>7.0以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/X64" title="X64">x86-64</a>
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成ではGUID、MBRパーティションの両方が使われる。
+</td></tr>
+<tr>
+<td><a href="/wiki/Linux" title="Linux">Linux</a>
+</td>
+<td>ほとんどのx86 Linuxディストリビューション<br/>
+<p><a href="/wiki/Fedora" title="Fedora">Fedora</a> 8以降、<a href="/wiki/Ubuntu" title="Ubuntu">Ubuntu</a> 8.04以降<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+</td>
+<td><a href="/wiki/X64" title="X64">x86-64</a>, <a href="/wiki/IA-64" title="IA-64">IA-64</a>, <a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>GPTを扱えないツールもある。gdisk<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>、<a href="/wiki/GNU_GRUB" title="GNU GRUB">GNU GRUB</a>、<a href="/wiki/GNU_GRUB" title="GNU GRUB">grub2</a>などがGPTに対応。
+</td></tr>
+<tr>
+<td><a href="/wiki/MacOS" title="MacOS">macOS</a>
+</td>
+<td>10.4.0以降<br/>（一部機能は10.4.6以降）<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/X64" title="X64">x86-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wiki/Solaris" title="Solaris">Solaris</a>
+</td>
+<td>Solaris 10 1/06以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/X64" title="X64">x86-64</a>
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>Sparc版は非対応。x86/x64版は1/06 (update 2) よりGRUBが標準ブートローダーとなる。よってGPT対応もそれ以降。
+</td></tr></tbody></table>
+<h3><span id="Windows.EF.BC.8832.E3.83.93.E3.83.83.E3.83.88.E7.89.88.EF.BC.89"></span><span class="mw-headline" id="Windows（32ビット版）">Windows（32ビット版）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=7" title="節を編集: Windows（32ビット版）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>古いバージョンの32ビット版（x86版）Windowsでは、2TiB以上の容量のディスク、およびGUIDパーティション自体を扱えないという問題がある。これは各ベンダーの32ビット版デバイスドライバーに起因する。
+</p><p>Vista以降では、32ビット版でもこれらの問題は修正されている。2TiB以上のパーティションを扱えないのはMBRパーティションの制限である。
+</p><p>下記の表にない、以前のOS（x86版）ではGPTはサポートされない。x86より以前のアーキテクチャでも同様。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>OS
+</th>
+<th>バージョン
+</th>
+<th>アーキテクチャ
+</th>
+<th>BIOS経由でGPTからの起動
+</th>
+<th>EFI経由でGPTからの起動
+</th>
+<th>GPTへのアクセス
+</th>
+<th>備考
+</th></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2003" title="Microsoft Windows Server 2003">Windows Server 2003</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2003" title="Microsoft Windows Server 2003">Windows Server 2003</a>
+</td>
+<td>Service Pack 1以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可<sup class="reference" id="cite_ref-microsoft_5-0"><a href="#cite_note-microsoft-5">[5]</a></sup>
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Vista" title="Microsoft Windows Vista">Windows Vista</a>
+</td>
+<td>RTM以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2008" title="Microsoft Windows Server 2008">Windows Server 2008</a>
+</td>
+<td>RTM以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_7" title="Microsoft Windows 7">Windows 7</a>
+</td>
+<td>RTM以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-0"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_8" title="Microsoft Windows 8">Windows 8</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-1"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_8#Windows_8.1" title="Microsoft Windows 8">Windows 8.1</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-2"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_10" title="Microsoft Windows 10">Windows 10</a>
+</td>
+<td>TH1 RTM以降
+</td>
+<td><a href="/wiki/X86" title="X86">x86</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-3"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr></tbody></table>
+<h3><span id="Windows.EF.BC.8864.E3.83.93.E3.83.83.E3.83.88.E7.89.88.EF.BC.89"></span><span class="mw-headline" id="Windows（64ビット版）">Windows（64ビット版）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=8" title="節を編集: Windows（64ビット版）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>IA-64版とx86-64版を列挙している。下記の表にないOS（64ビット版）ではGPTはサポートされない。
+</p><p>IA-64アーキテクチャのOSでは当初から、<a href="/wiki/EFI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3" title="EFIシステムパーティション">EFI</a>とGPTからの起動をサポートしている。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>OS
+</th>
+<th>バージョン
+</th>
+<th>アーキテクチャ
+</th>
+<th>BIOS経由でGPTからの起動
+</th>
+<th>EFI経由でGPTからの起動
+</th>
+<th>GPTへのアクセス
+</th>
+<th>備考
+</th></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a>
+</td>
+<td>64-bit Edition, RTM
+</td>
+<td><a href="/wiki/IA-64" title="IA-64">IA-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。リムーバブルディスクはMBRだけサポート。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a>
+</td>
+<td>64-bit Edition, Version 2003
+</td>
+<td><a href="/wiki/IA-64" title="IA-64">IA-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。リムーバブルディスクはMBRだけサポート。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2003" title="Microsoft Windows Server 2003">Windows Server 2003</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/IA-64" title="IA-64">IA-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。起動ディスクはGPTが必須<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2003" title="Microsoft Windows Server 2003">Windows Server 2003</a>
+</td>
+<td>x64, Service Pack 1
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_XP" title="Microsoft Windows XP">Windows XP</a>
+</td>
+<td>x64 Edition
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可<sup class="reference" id="cite_ref-microsoft_5-1"><a href="#cite_note-microsoft-5">[5]</a></sup>
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。リムーバブルディスクはMBRだけサポート。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Vista" title="Microsoft Windows Vista">Windows Vista</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">データ用可、起動不可<sup class="reference" id="cite_ref-uefiwin_8-0"><a href="#cite_note-uefiwin-8">[8]</a></sup>
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Vista" title="Microsoft Windows Vista">Windows Vista</a>
+</td>
+<td>Service Pack 1
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">VGAだけ要CSM
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2008" title="Microsoft Windows Server 2008">Windows Server 2008</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>, <a href="/wiki/IA-64" title="IA-64">IA-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">VGAだけ要CSM
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_7" title="Microsoft Windows 7">Windows 7</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">VGAだけ要CSM
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-4"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2008_R2" title="Microsoft Windows Server 2008 R2">Windows Server 2008 R2</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>, <a href="/wiki/IA-64" title="IA-64">IA-64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-partial" style="background-color:#ffffdd; vertical-align:middle; text-align:center;">VGAだけ要CSM
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_8" title="Microsoft Windows 8">Windows 8</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-5"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_8#Windows_8.1" title="Microsoft Windows 8">Windows 8.1</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-6"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2012" title="Microsoft Windows Server 2012">Windows Server 2012</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-7"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_Server_2012#Windows_Server_2012_R2" title="Microsoft Windows Server 2012">Windows Server 2012 R2</a>
+</td>
+<td>RTM
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-8"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr>
+<tr>
+<td><a href="/wiki/Microsoft_Windows_10" title="Microsoft Windows 10">Windows 10</a>
+</td>
+<td>TH1 RTM以降
+</td>
+<td><a href="/wiki/X64" title="X64">x64</a>
+</td>
+<td class="table-no" style="background:#f99;vertical-align:middle;text-align:center;">No
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td class="table-yes" style="background:#9f9;vertical-align:middle;text-align:center;">Yes
+</td>
+<td>ハイブリッドMBRの構成でMBRパーティションの方が優先される<sup class="reference" id="cite_ref-rodsbooks_6-9"><a href="#cite_note-rodsbooks-6">[6]</a></sup>。
+</td></tr></tbody></table>
+<h2><span id=".E3.83.91.E3.83.BC.E3.83.86.E3.82.A3.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.AE.E5.9E.8B.E3.82.92.E8.A1.A8.E3.81.99GUID"></span><span class="mw-headline" id="パーティションの型を表すGUID">パーティションの型を表すGUID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=9" title="節を編集: パーティションの型を表すGUID">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>対応OS
+</th>
+<th>パーティション・タイプ
+</th>
+<th>Globally-Unique Identifier (GUID)
+</th></tr>
+<tr>
+<td bgcolor="#F0F0F0" rowspan="4"><i>(None)</i>
+</td>
+<td bgcolor="#F0F0F0">未使用エントリ
+</td>
+<td bgcolor="#F0F0F0"><tt>00000000-0000-0000-0000-000000000000</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">MBRパーティション形式
+</td>
+<td bgcolor="#F0F0F0"><tt>024DEE41-33E7-11D3-9D69-0008C781F39F</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><a href="/wiki/EFI%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3" title="EFIシステムパーティション">EFIシステムパーティション</a>
+</td>
+<td bgcolor="#F0F0F0"><tt>C12A7328-F81F-11D2-BA4B-00A0C93EC93B</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><a href="/wiki/GNU_GRUB" title="GNU GRUB">GNU GRUB</a>の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=BIOS%E3%83%96%E3%83%BC%E3%83%88%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3&amp;action=edit&amp;redlink=1" title="BIOSブートパーティション (存在しないページ)">BIOSブートパーティション</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:BIOS_boot_partition&amp;action=edit&amp;redlink=1" title="En:BIOS boot partition (存在しないページ)">英語版</a>）</span></span><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</td>
+<td bgcolor="#F0F0F0"><tt>21686148-6449-6E6F-744E-656564454649</tt>
+</td></tr>
+<tr>
+<td rowspan="4"><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>
+</td>
+<td>予約されたパーティション
+</td>
+<td><tt>E3C9E316-0B5C-4DB8-817D-F92DF00215AE</tt>
+</td></tr>
+<tr>
+<td>データパーティション（FATまたはNTFS）
+</td>
+<td><tt>EBD0A0A2-B9E5-4433-87C0-68B6B72699C7</tt>
+</td></tr>
+<tr>
+<td>ダイナミックボリューム (LDM) メタデータ・パーティション
+</td>
+<td><tt>5808C8AA-7E8F-42E0-85D2-E1E90434CFB3</tt>
+</td></tr>
+<tr>
+<td>ダイナミックボリューム (LDM) データ・パーティション
+</td>
+<td><tt>AF9B60A0-1431-4F62-BC68-3311714A69AD</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0" rowspan="2"><a href="/wiki/HP-UX" title="HP-UX">HP-UX</a>
+</td>
+<td bgcolor="#F0F0F0">データパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>75894C1E-3AEB-11D3-B7C1-7B03A0000000</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">サービスパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>E2A1E728-32E3-11D6-A682-7B03A0000000</tt>
+</td></tr>
+<tr>
+<td rowspan="38"><a href="/wiki/Linux" title="Linux">Linux</a><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</td>
+<td>データパーティション<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[注釈 1]</a></sup>
+</td>
+<td><tt>0FC63DAF-8483-4772-8E79-3D69D8477DE4</tt>
+</td></tr>
+<tr>
+<td>RAIDパーティション
+</td>
+<td><tt>A19D880F-05FC-4D3B-A006-743F0F84911E</tt>
+</td></tr>
+<tr>
+<td>スワップパーティション
+</td>
+<td><tt>0657FD6D-A4AB-43C4-84E5-0933C84B4F4F</tt>
+</td></tr>
+<tr>
+<td>LVMパーティション
+</td>
+<td><tt>E6D6D379-F507-44C2-A23C-238F2A3DF928</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (<a href="/wiki/X86" title="X86">x86</a>)
+</td>
+<td><tt>44479540-F297-41B2-9AF7-D131D5F0458A</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (<a href="/wiki/X64" title="X64">x86-64</a>)
+</td>
+<td><tt>4F68BCE3-E8CD-4DB1-96E7-FBCAF984B709</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (<a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a> 32ビット)
+</td>
+<td><tt>69DAD710-2CE4-4E3C-B16C-21A1D49ABED3</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (ARM 64ビット)
+</td>
+<td><tt>B921B045-1DF0-41C3-AF44-4C6F280D3FAE</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (<a href="/wiki/IA-64" title="IA-64">IA-64</a>)
+</td>
+<td><tt>993D8D3D-F80E-4225-855A-9DAF8ED7EA97</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (<a href="/wiki/RISC-V" title="RISC-V">RISC-V</a> 32ビット)
+</td>
+<td><tt>60D5A7FE-8E7D-435C-B714-3DD8162144E1</tt>
+</td></tr>
+<tr>
+<td>ルートパーティション (RISC-V 64ビット)
+</td>
+<td><tt>72EC70A6-CF74-40E6-BD49-4BDA08E8F224</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (x86)<sup class="reference" id="cite_ref-dm-verify_13-0"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>D13C5D3B-B5D1-422A-B29F-9454FDC89D76</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (x86-64)<sup class="reference" id="cite_ref-dm-verify_13-1"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>2C7357ED-EBD2-46D9-AEC1-23D437EC2BF5</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (ARM 32ビット)<sup class="reference" id="cite_ref-dm-verify_13-2"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>7386CDF2-203C-47A9-A498-F2ECCE45A2D6</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (ARM 64ビット)<sup class="reference" id="cite_ref-dm-verify_13-3"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>DF3300CE-D69F-4C92-978C-9BFB0F38D820</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (IA-64)<sup class="reference" id="cite_ref-dm-verify_13-4"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>86ED10D5-B607-45BB-8957-D350F23D0571</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (RISC-V 32ビット)<sup class="reference" id="cite_ref-dm-verify_13-5"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>AE0253BE-1167-4007-AC68-43926C14C5DE</tt>
+</td></tr>
+<tr>
+<td>ルートベリファイパーティション (RISC-V 64ビット)<sup class="reference" id="cite_ref-dm-verify_13-6"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>B6ED5582-440B-4209-B8DA-5FF7C419EA3D</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (x86)
+</td>
+<td><tt>75250D76-8CC6-458E-BD66-BD47CC81A812</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (x86-64)
+</td>
+<td><tt>8484680C-9521-48C6-9C11-B0720656F69E</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (ARM 32ビット)
+</td>
+<td><tt>7D0359A3-02B3-4F0A-865C-654403E70625</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (ARM 64ビット)
+</td>
+<td><tt>B0E01050-EE5F-4390-949A-9101B17104E9</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (IA-64)
+</td>
+<td><tt>4301D2A6-4E3B-4B2A-BB94-9E0B2C4225EA</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (RISC-V 32ビット)
+</td>
+<td><tt>B933FB22-5C3F-4F91-AF90-E2BB0FA50702</tt>
+</td></tr>
+<tr>
+<td>/usr/パーティション (RISC-V 64ビット)
+</td>
+<td><tt>BEAEC34B-8442-439B-A40B-984381ED097D</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (x86)<sup class="reference" id="cite_ref-dm-verify_13-7"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>8F461B0D-14EE-4E81-9AA9-049B6FB97ABD</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (x86-64)<sup class="reference" id="cite_ref-dm-verify_13-8"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>77FF5F63-E7B6-4633-ACF4-1565B864C0E6</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (ARM 32ビット)<sup class="reference" id="cite_ref-dm-verify_13-9"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>C215D751-7BCD-4649-BE90-6627490A4C05</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (ARM 64ビット)<sup class="reference" id="cite_ref-dm-verify_13-10"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>6E11A4E7-FBCA-4DED-B9E9-E1A512BB664E</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (IA-64)<sup class="reference" id="cite_ref-dm-verify_13-11"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>6A491E03-3BE7-4545-8E38-83320E0EA880</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (RISC-V 32ビット)<sup class="reference" id="cite_ref-dm-verify_13-12"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>CB1EE4E3-8CD0-4136-A0A4-AA61A32E8730</tt>
+</td></tr>
+<tr>
+<td>/usr/ベリファイパーティション (RISC-V 64ビット)<sup class="reference" id="cite_ref-dm-verify_13-13"><a href="#cite_note-dm-verify-13">[注釈 2]</a></sup>
+</td>
+<td><tt>8F1056BE-9B05-47C4-81D6-BE53128E5B54</tt>
+</td></tr>
+<tr>
+<td>ホームパーティション (/home/)
+</td>
+<td><tt>933AC7E1-2EB4-4F13-B844-0E14E2AEF915</tt>
+</td></tr>
+<tr>
+<td>サーバーデータパーティション (/srv/)
+</td>
+<td><tt>3B8F8425-20E0-4F3B-907F-1A25A76F98E8</tt>
+</td></tr>
+<tr>
+<td>バリアブルデータパーティション (/var/)
+</td>
+<td><tt>4D21B016-B534-45C2-A9FB-5C16E091FD2D</tt>
+</td></tr>
+<tr>
+<td>一時データパーティション (/var/tmp/)
+</td>
+<td><tt>7EC6F557-3BC5-4ACA-B293-16EF5DF639D1</tt>
+</td></tr>
+<tr>
+<td>拡張ブートローダーパーティション (/boot/)
+</td>
+<td><tt>BC13C2FF-59E6-4262-A352-B275FD6F7172</tt>
+</td></tr>
+<tr>
+<td>予約済み
+</td>
+<td><tt>8DA63339-0007-60C0-C436-083AC8230908</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0" rowspan="6"><a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[12]</a></sup>
+</td>
+<td bgcolor="#F0F0F0"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=BSD%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%99%E3%83%AB&amp;action=edit&amp;redlink=1" title="BSDディスクラベル (存在しないページ)">BSDディスクラベル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:BSD_disklabel&amp;action=edit&amp;redlink=1" title="En:BSD disklabel (存在しないページ)">英語版</a>）</span></span> (freebsd)
+</td>
+<td bgcolor="#F0F0F0"><tt>516E7CB4-6ECF-11D6-8FF8-00022D09712B</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">ブートパーティション (freebsd-boot)
+</td>
+<td bgcolor="#F0F0F0"><tt>83BD6B9D-7F41-11DC-BE0B-001560B84F0F</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">スワップパーティション (freebsd-swap)
+</td>
+<td bgcolor="#F0F0F0"><tt>516E7CB5-6ECF-11D6-8FF8-00022D09712B</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><a href="/wiki/Unix_File_System" title="Unix File System">UFS</a>パーティション (freebsd-ufs)
+</td>
+<td bgcolor="#F0F0F0"><tt>516E7CB6-6ECF-11D6-8FF8-00022D09712B</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vinum_Volume_Manager&amp;action=edit&amp;redlink=1" title="Vinum Volume Manager (存在しないページ)">Vinum Volume Manager</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vinum_volume_manager&amp;action=edit&amp;redlink=1" title="En:Vinum volume manager (存在しないページ)">英語版</a>）</span></span>パーティション (freebsd-vinum)
+</td>
+<td bgcolor="#F0F0F0"><tt>516E7CB8-6ECF-11D6-8FF8-00022D09712B</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><a href="/wiki/ZFS" title="ZFS">ZFS</a>パーティション (freebsd-zfs)
+</td>
+<td bgcolor="#F0F0F0"><tt>516E7CBA-6ECF-11D6-8FF8-00022D09712B</tt>
+</td></tr>
+<tr>
+<td rowspan="14"><a href="/wiki/MacOS" title="MacOS">macOS</a><br/><a href="/wiki/Darwin_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Darwin (オペレーティングシステム)">Darwin</a>
+</td>
+<td><a class="mw-redirect" href="/wiki/HFS" title="HFS">HFS</a> (HFS+) パーティション
+</td>
+<td><style data-mw-deduplicate="TemplateStyles:r2428604">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">48465300-0000-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td><a href="/wiki/Apple" title="Apple">Apple</a> <a href="/wiki/Unix_File_System" title="Unix File System">UFS</a> 容器
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">55465300-0000-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td><a href="/wiki/APFS" title="APFS">APFS</a> 容器、<br/>APFS 用 <a href="/wiki/FileVault" title="FileVault">FileVault</a> パーティションの容器
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">7C3457EF-0000-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td><a href="/wiki/ZFS" title="ZFS">ZFS</a><sup class="reference" id="cite_ref-solmac_15-0"><a href="#cite_note-solmac-15">[注釈 3]</a></sup>
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">6A898CC3-1DD2-11B2-99A6-080020736631</span>
+</td></tr>
+<tr>
+<td>Apple RAID パーティション
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">52414944-0000-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>Apple RAID 、オフライン
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">52414944-5F4F-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>Apple ブートパーティション (回復モード)
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">426F6F74-0000-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>Apple ラベル
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">4C616265-6C00-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>Apple TV リカバリパーティション
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">5265636F-7665-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>Apple Core Storage 容器、<br/>HFS+ 用 FileVault パーティションの容器
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">53746F72-6167-11AA-AA11-00306543ECAC</span>
+</td></tr>
+<tr>
+<td>SoftRAID_Status
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">B6FA30DA-92D2-4A9A-96F1-871EC6486200</span>
+</td></tr>
+<tr>
+<td>SoftRAID_Scratch
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">2E313465-19B9-463F-8126-8A7993773801</span>
+</td></tr>
+<tr>
+<td>SoftRAID_Volume
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">FA709C7E-65B1-4593-BFD5-E71D61DE9B02</span>
+</td></tr>
+<tr>
+<td>SoftRAID_Cache
+</td>
+<td><link href="mw-data:TemplateStyles:r2428604" rel="mw-deduplicated-inline-style"/><span class="monospaced">BBBA6DF5-F46F-4A89-8F59-8765B2727503</span>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0" rowspan="13"><a href="/wiki/Solaris" title="Solaris">Solaris</a>
+</td>
+<td bgcolor="#F0F0F0">ブートパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A82CB45-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">Rootパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A85CF4D-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">スワップパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A87C46F-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">バックアップパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A8B642B-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">/usrパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A898CC3-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">/varパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A8EF2E9-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">/homeパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A90BA39-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0">EFI_ALTSCTR
+</td>
+<td bgcolor="#F0F0F0"><tt>6A9283A5-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0" rowspan="5">予約済みパーティション
+</td>
+<td bgcolor="#F0F0F0"><tt>6A945A3B-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><tt>6A9630D1-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><tt>6A980767-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><tt>6A96237F-1DD2-11B2-99A6-080020736631</tt>
+</td></tr>
+<tr>
+<td bgcolor="#F0F0F0"><tt>6A8D2AC7-1DD2-11B2-99A6-080020736631</tt>
+</td></tr></tbody></table>
+<p><small>注意:この表にあるGUIDは<a href="/wiki/%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3" title="エンディアン">リトルエンディアン</a>で表記されている。例えば、EFIシステムパーティションのGUIDは C12A7328-F81F-11D2-BA4B-00A0C93EC93B となっているが、これは次のような16バイトの並びである: 28 73 2A C1 1F F8 D2 11 BA 4B 00 A0 C9 3E C9 3B。先頭3ブロックだけバイト順序が入れ替わっている点に注意。</small>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=11" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">当初はWindowsのデータパーティションと同じ値を使用していた。のちに変更が提案され、現在に至る<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。</span>
+</li>
+<li id="cite_note-dm-verify-13">^ <a href="#cite_ref-dm-verify_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-dm-verify_13-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-dm-verify_13-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-dm-verify_13-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-dm-verify_13-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-dm-verify_13-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-dm-verify_13-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-dm-verify_13-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-dm-verify_13-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-dm-verify_13-9"><sup><i><b>j</b></i></sup></a> <a href="#cite_ref-dm-verify_13-10"><sup><i><b>k</b></i></sup></a> <a href="#cite_ref-dm-verify_13-11"><sup><i><b>l</b></i></sup></a> <a href="#cite_ref-dm-verify_13-12"><sup><i><b>m</b></i></sup></a> <a href="#cite_ref-dm-verify_13-13"><sup><i><b>n</b></i></sup></a> <span class="reference-text"><a class="new" href="/w/index.php?title=Dm-verify&amp;action=edit&amp;redlink=1" title="Dm-verify (存在しないページ)">dm-verify</a>の検証データの保存用</span>
+</li>
+<li id="cite_note-solmac-15"><b><a href="#cite_ref-solmac_15-0">^</a></b> <span class="reference-text"> Solaris の<code>/usr</code>のGUIDは、macOSでZFS通用GUIDとも使われている。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=12" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external free" href="http://www.gnu.org/software/grub/manual/html_node/BIOS-installation.html" rel="nofollow">http://www.gnu.org/software/grub/manual/html_node/BIOS-installation.html</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external free" href="https://help.ubuntu.com/community/MacBook" rel="nofollow">https://help.ubuntu.com/community/MacBook</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external free" href="http://www.rodsbooks.com/gdisk" rel="nofollow">http://www.rodsbooks.com/gdisk</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external free" href="http://refit.sourceforge.net/myths/" rel="nofollow">http://refit.sourceforge.net/myths/</a></span>
+</li>
+<li id="cite_note-microsoft-5">^ <a href="#cite_ref-microsoft_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-microsoft_5-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a class="external free" href="http://www.microsoft.com/whdc/device/storage/GPT_FAQ.mspx#ELD" rel="nofollow">http://www.microsoft.com/whdc/device/storage/GPT_FAQ.mspx#ELD</a></span>
+</li>
+<li id="cite_note-rodsbooks-6">^ <a href="#cite_ref-rodsbooks_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-rodsbooks_6-9"><sup><i><b>j</b></i></sup></a> <span class="reference-text"><a class="external free" href="http://www.rodsbooks.com/gdisk/hybrid.html" rel="nofollow">http://www.rodsbooks.com/gdisk/hybrid.html</a></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a class="external free" href="http://codeidol.com/windows/inside-windows-server-2003/Configuring-Data-Storage/Working-with-GPT-Disks/" rel="nofollow">http://codeidol.com/windows/inside-windows-server-2003/Configuring-Data-Storage/Working-with-GPT-Disks/</a> Working with GPT Disks</span>
+</li>
+<li id="cite_note-uefiwin-8"><b><a href="#cite_ref-uefiwin_8-0">^</a></b> <span class="reference-text">UEFI と Windows <a class="external free" href="http://www.microsoft.com/japan/whdc/system/platform/firmware/UEFI_Windows.mspx" rel="nofollow">http://www.microsoft.com/japan/whdc/system/platform/firmware/UEFI_Windows.mspx</a></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.gnu.org/software/grub/manual/grub/html_node/BIOS-installation.html" rel="nofollow">GNU GRUB Manual 2.04: BIOS installation</a>”. <span title="">2021年5月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://systemd.io/DISCOVERABLE_PARTITIONS/" rel="nofollow">Discoverable Partitions Specification</a>”. <i>systemd</i>. <span title="">2021年5月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Smith, Rod (2011年6月23日). “<a class="external text" href="https://lists.gnu.org/archive/html/bug-parted/2011-06/msg00026.html" rel="nofollow">Need for a unique Linux GPT GUID type code (PATCH included)</a>”. <i>bug-parted Archives</i>. <span title="">2021年5月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.freebsd.org/cgi/man.cgi?query=gpart&amp;apropos=0&amp;sektion=8&amp;manpath=FreeBSD+13.0-RELEASE&amp;arch=default&amp;format=html" rel="nofollow">FreeBSD System Manager's Manual gpart(8)</a>”. <span title="">2021年8月15日</span>閲覧。</cite></span>
+</li>
+</ol></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=13" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%96%E3%83%BC%E3%83%88%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89" title="マスターブートレコード">マスターブートレコード</a> (MBR)</li>
+<li><a href="/wiki/GUID" title="GUID">GUID</a></li>
+<li><a href="/wiki/Unified_Extensible_Firmware_Interface" title="Unified Extensible Firmware Interface">Unified Extensible Firmware Interface</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;section=14" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://technet.microsoft.com/ja-jp/library/cc773223.aspx" rel="nofollow">GUID パーティション テーブル</a> <a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>社のWebサイトにある説明</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331150124
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.256 seconds
+Real time usage: 0.323 seconds
+Preprocessor visited node count: 2852/1000000
+Post‐expand include size: 18948/2097152 bytes
+Template argument size: 4813/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 3/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 12512/5000000 bytes
+Lua time usage: 0.050/7 seconds
+Lua virtual size: 5357568/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  206.075      1 -total
+ 29.40%   60.589      3 テンプレート:仮リンク
+ 25.19%   51.918      4 テンプレート:Cite_web
+ 15.30%   31.520      6 テンプレート:Ifempty
+ 11.52%   23.742      1 テンプレート:Notelist
+ 10.76%   22.182      1 テンプレート:Reflist
+  8.42%   17.349      4 テンプレート:Accessdate
+  7.79%   16.063     14 テンプレート:Mono
+  7.74%   15.940     16 テンプレート:Efn
+  6.93%   14.286      4 テンプレート:Accessdate/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:350139-0!canonical and timestamp 20220331150124 and revision id 228312. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=GUIDパーティションテーブル&amp;oldid=228312">http://localhost:8080/w/index.php?title=GUIDパーティションテーブル&amp;oldid=228312</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%96%E3%83%BC%E3%83%88" title="カテゴリ:ブート">ブート</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A3%9C%E5%8A%A9%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE" title="カテゴリ:補助記憶装置">補助記憶装置</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:BIOS" title="カテゴリ:BIOS">BIOS</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;returntoquery=curid%3D350139%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;returntoquery=curid%3D350139%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;oldid=228312" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=GUID%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月15日 (日) 08:23 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.256","walltime":"0.323","ppvisitednodes":{"value":2852,"limit":1000000},"postexpandincludesize":{"value":18948,"limit":2097152},"templateargumentsize":{"value":4813,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":12512,"limit":5000000},"timingprofile":["100.00%  206.075      1 -total"," 29.40%   60.589      3 テンプレート:仮リンク"," 25.19%   51.918      4 テンプレート:Cite_web"," 15.30%   31.520      6 テンプレート:Ifempty"," 11.52%   23.742      1 テンプレート:Notelist"," 10.76%   22.182      1 テンプレート:Reflist","  8.42%   17.349      4 テンプレート:Accessdate","  7.79%   16.063     14 テンプレート:Mono","  7.74%   15.940     16 テンプレート:Efn","  6.93%   14.286      4 テンプレート:Accessdate/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.050","limit":"7"},"limitreport-virtmemusage":{"value":5357568,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331150124","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":834});});</script>
+</body></html>

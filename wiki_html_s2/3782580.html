@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>F2FS - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-F2FS rootpage-F2FS skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">F2FS</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><table class="infobox" style="width:22em;"><tbody><tr><th class="" colspan="2" itemprop="" style="text-align:center; font-size:125%; font-weight:bold; background-color:#D7E4F7">F2FS</th></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">開発者</th><td class="" itemprop="" style="">
+<a href="." id="link_i_1" title="サムスン電子">サムスン電子</a>、<a href="." id="link_i_2" title="モトローラ・モビリティ">モトローラ・モビリティ</a>、<a href="." id="link_i_3" title="ファーウェイ">ファーウェイ</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">正式名</th><td class="" itemprop="" style="">
+Flash-Friendly File System</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">導入</th><td class="" itemprop="" style="">
+2012年12月20日<span style="display:none;speak:none"> (<span class="bday dtstart published updated">2012-12-20</span>)</span> (Linux 3.8)</td></tr><tr style=""><th class="" colspan="2" scope="col" style="text-align:center; background-color:#DCE7F5">構造</th></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ディレクトリ</th><td class="" itemprop="" style="">
+マルチレベル<a href="." id="link_i_4" title="ハッシュテーブル">ハッシュテーブル</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">領域管理</th><td class="" itemprop="" style="">
+ビットマップ (空き容量)、テーブル</td></tr><tr style=""><th class="" colspan="2" scope="col" style="text-align:center; background-color:#DCE7F5">限度</th></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">最大ファイル サイズ</th><td class="" itemprop="" style="">
+3.94 <a href="." id="link_i_5" title="テビバイト">TiB</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">最大ファイル数</th><td class="" itemprop="" style="">
+ボリュームサイズに依存</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">最大ファイル名長</th><td class="" itemprop="" style="">
+255バイト</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">最大ボリューム サイズ</th><td class="" itemprop="" style="">
+16 TiB</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">ファイル名の文字</th><td class="" itemprop="" style="">
+NUL と '/' 以外の全ての文字</td></tr><tr style=""><th class="" colspan="2" scope="col" style="text-align:center; background-color:#DCE7F5">特徴</th></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">タイムスタンプ</th><td class="" itemprop="" style="">
+変更、属性変更、アクセス</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">日付分解能</th><td class="" itemprop="" style="">
+1ナノ秒</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">属性</th><td class="" itemprop="" style="">
+<a href="." id="link_i_6" title="POSIX">POSIX</a>、<a href="." id="link_i_7" title="拡張ファイル属性">拡張属性</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">パーミッション</th><td class="" itemprop="" style="">
+POSIX、<a href="." id="link_i_8" title="アクセス制御リスト">ACL</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">透過的圧縮</th><td class="" itemprop="" style="">
+なし</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">透過的暗号化</th><td class="" itemprop="" style="">
+あり</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">対応OS</th><td class="" itemprop="" style="">
+<a href="." id="link_i_9" title="Linux">Linux</a></td></tr><tr class="noprint"><td colspan="2" style="text-align:right; font-size:85%;">テンプレートを表示</td></tr></tbody></table>
+<p><b>F2FS</b> (<b>Flash-Friendly File System</b>) は、<a href="." id="link_a_1" title="サムスン電子">サムスン電子</a>の金載極 (<a href="." id="link_a_10" title="朝鮮語">韓国語</a>: <span lang="ko-kr">김재극</span>、<a href="." id="link_a_11" title="英語">英語</a>: <span lang="en">Jaegeuk Kim</span>) によって開発された<a href="." id="link_a_9" title="Linux">Linux</a>向けの<a href="." id="link_a_12" title="フラッシュファイルシステム">フラッシュファイルシステム</a>である<sup class="reference" id="cite_ref-lwn.net_518718_1-0"><a href="#cite_note-lwn.net_518718-1">[1]</a></sup>。
+</p><p><a href="." id="link_a_13" title="NAND型フラッシュメモリ">NANDフラッシュメモリ</a>ベースのストレージ<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[注釈 1]</a></sup>は、<a href="." id="link_a_14" title="スマートデバイス">スマートフォン・タブレット</a>から<a href="." id="link_a_15" title="サーバ">サーバ</a>まで、様々な種類の<a href="." id="link_a_16" title="コンピュータ">コンピュータ</a>で利用されている。F2FSはこれらのストレージの特性を考慮した<a href="." id="link_a_17" title="ファイルシステム">ファイルシステム</a>として設計が行われている<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[2]</a></sup>。
+</p><p>F2FSは<a href="." id="link_a_18" title="ログ構造ファイルシステム">ログ構造ファイルシステム</a>を、NANDフラッシュメモリベースのストレージに適したものにして取り入れている。F2FSでは、従来のログ構造ファイルシステムの問題点である<a href="." id="link_a_19" title="ガベージコレクション">ガベージコレクション</a>の負荷の高さなどを解消している<sup class="reference" id="cite_ref-lwn.net_518718_1-1"><a href="#cite_note-lwn.net_518718-1">[1]</a></sup>。NANDフラッシュメモリベースのストレージではフラッシュ変換レイヤ (<a href="." id="link_a_11" title="英語">英語</a>: <span lang="en">Flash Translation Layer</span>、FTL) が実装されており、<a href="." id="link_a_20" title="フラッシュメモリ">フラッシュメモリ</a>の特性<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[注釈 2]</a></sup>の隠蔽と<a href="." id="link_a_21" title="ハードディスクドライブ">HDD</a>の<a href="." id="link_a_22" title="エミュレータ">エミュレート</a>を行い、<a href="." id="link_a_23" title="シリアルATA">SATA</a>などの<a href="." id="link_a_24" title="インタフェース (情報技術)">インタフェース</a>で利用ができるようにしている。F2FSはFTLの存在を前提として、NANDフラッシュメモリベースのストレージの性能を引き出すことができるように設計されている<sup class="reference" id="cite_ref-lwn.net_518718_1-2"><a href="#cite_note-lwn.net_518718-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#特徴"><span class="tocnumber">1</span> <span class="toctext">特徴</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#設計"><span class="tocnumber">2</span> <span class="toctext">設計</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#ディスクレイアウト"><span class="tocnumber">2.1</span> <span class="toctext">ディスクレイアウト</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#メタデータ構造"><span class="tocnumber">2.2</span> <span class="toctext">メタデータ構造</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#インデックス構造"><span class="tocnumber">2.3</span> <span class="toctext">インデックス構造</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#ディレクトリ構造"><span class="tocnumber">2.4</span> <span class="toctext">ディレクトリ構造</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#デフォルトのブロック割り当て"><span class="tocnumber">2.5</span> <span class="toctext">デフォルトのブロック割り当て</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#消去処理"><span class="tocnumber">2.6</span> <span class="toctext">消去処理</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#製品適用"><span class="tocnumber">3</span> <span class="toctext">製品適用</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#注釈"><span class="tocnumber">4.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#出典"><span class="tocnumber">4.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#外部リンク"><span class="tocnumber">6</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E7.89.B9.E5.BE.B4"></span><span class="mw-headline" id="特徴">特徴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=1" title="節を編集: 特徴">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>F2FSには、以下の機能が実装されている<sup class="reference" id="cite_ref-development_5-0"><a href="#cite_note-development-5">[3]</a></sup>。
+</p>
+<div style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul><li>マルチヘッドログ</li>
+<li>マルチレベル<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ハッシュテーブル">ハッシュテーブル</a></li>
+<li>静的/動的なホットデータとコールドデータの分離</li>
+<li>Adaptive logging scheme</li>
+<li>Configurable operational units</li>
+<li>二重チェックポイント</li>
+<li>巻き戻しと前進復帰の対応</li>
+<li>ヒープ形式のブロック割り当て</li>
+<li><a href="/wiki/TRIM" title="TRIM">TRIM</a> / FITRIMのサポート</li>
+<li>オンライン<a href="/wiki/%E3%83%87%E3%83%95%E3%83%A9%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="デフラグメンテーション">デフラグメンテーション</a></li>
+<li>インライン拡張属性</li>
+<li>インラインデータ</li>
+<li>インラインディレクトリ</li>
+<li>オフライン<a href="/wiki/Fsck" title="Fsck">ファイルシステムチェック</a></li>
+<li>Atomic operations</li>
+<li>ファイルシステム全体の暗号化</li>
+<li>オフラインでのファイルシステムのサイズ変更</li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5" title="キャッシュ">キャッシュ (コンピュータシステム)</a>の定期的な書き込み</li>
+<li>Extent cache</li>
+<li>Move_file_range</li>
+<li>Host-managed SMR</li>
+<li>複数のデバイスに対応</li>
+<li>Large IO submission</li>
+<li>Disk Quota (user/group)</li></ul>
+</div>
+<p>また、以下の機能の実装が予定されている<sup class="reference" id="cite_ref-development_5-1"><a href="#cite_note-development-5">[3]</a></sup>。
+</p>
+<div style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul><li>FS Fuzzing (AFL)</li>
+<li>16 <a href="/wiki/%E3%83%86%E3%83%93%E3%83%90%E3%82%A4%E3%83%88" title="テビバイト">TiB</a>以上のサポート</li>
+<li>Open-channel SSD/ lightNVM FTL</li>
+<li><a href="/wiki/%E3%82%B9%E3%83%8A%E3%83%83%E3%83%97%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="スナップショット (ファイルシステム)">スナップショット</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="トランザクション">トランザクション</a>のサポート</li>
+<li>透過圧縮</li>
+<li>Tiered storages</li>
+<li>Reflink, copy_file_range, clone_file_range</li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li>DAX</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8D%E8%A4%87%E6%8E%92%E9%99%A4&amp;action=edit&amp;redlink=1" title="重複排除 (存在しないページ)">重複排除</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Data_deduplication&amp;action=edit&amp;redlink=1" title="En:Data deduplication (存在しないページ)">英語版</a>）</span></span></li>
+<li>Better direct I/O</li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A0%E3%83%BC%E3%83%90%E3%83%96%E3%83%AB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2" title="リムーバブルメディア">リムーバブルメディア</a>のサポート</li>
+<li><a class="mw-redirect" href="/wiki/Windows" title="Windows">Windows</a>向け<a href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90" title="デバイスドライバ">デバイスドライバ</a>の開発</li>
+<li>マルチチャネルSSD</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OrangeFS&amp;action=edit&amp;redlink=1" title="OrangeFS (存在しないページ)">OrangeFS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OrangeFS&amp;action=edit&amp;redlink=1" title="En:OrangeFS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/GNU_GRUB" title="GNU GRUB">GRUB 2</a>への対応</li></ul>
+</div>
+<h2><span id=".E8.A8.AD.E8.A8.88"></span><span class="mw-headline" id="設計">設計</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=2" title="節を編集: 設計">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.87.E3.82.A3.E3.82.B9.E3.82.AF.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88"></span><span class="mw-headline" id="ディスクレイアウト">ディスクレイアウト</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=3" title="節を編集: ディスクレイアウト">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>F2FSはボリューム全体を多数のセグメントに分割する。各セグメントのサイズは2MB固定である。連続する複数セグメントをまとめてセクションが定義され、セクションの集合としてゾーンが定義される。デフォルト設定では、セクションとゾーンは同じサイズに設定されるが、ユーザは<code>mkfs</code>を用いて簡単にサイズを変更できる。
+</p><p>F2FSはボリューム全体を6個のエリアに分割する。以下に記述するように、スーパーブロックエリアを除き、各エリアは複数のセグメントから構成される。
+</p>
+<dl><dt>スーパーブロック (SB)</dt>
+<dd>パーティションの先頭に配置される。ファイルシステムが壊れないよう、２つのコピーが作られる。スーパーブロックはパーティションの基本情報とF2FSのデフォルトパラメータを持つ。</dd>
+<dt>チェックポイント (CP)</dt>
+<dd>ファイルシステム情報、有効NAT/SIT集合のビットマップ、orphan inodeリスト、現在アクティブなセグメントのエントリーサマリーを持つ。</dd>
+<dt>セグメント情報テーブル (SIT)</dt>
+<dd>有効ブロック数と、全てのメインエリアブロックの有効ビットマップを持つ。</dd>
+<dt>ノードアドレステーブル (NAT)</dt>
+<dd>メインエリアを構成するノードブロックのアドレステーブル。</dd>
+<dt>セグメントサマリーエリア (SSA)</dt>
+<dd>メインエリアとノードブロックの所有者情報エントリーを持つ。</dd>
+<dt>メインエリア</dt>
+<dd>ファイル、ディレクトリ、およびそれらのインデックスを持つ。</dd></dl>
+<p>ファイルシステムとフラッシュ記憶装置の不整合を避けるため、F2FSはCPの開始ブロックアドレスをセグメントサイズ境界に配置する。また、メインエリアの開始ブロックアドレスもゾーンサイズ境界に配置する。このためにSSAにセグメントを追加確保している。
+</p>
+<h3><span id=".E3.83.A1.E3.82.BF.E3.83.87.E3.83.BC.E3.82.BF.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="メタデータ構造">メタデータ構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=4" title="節を編集: メタデータ構造">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>F2FSはチェックポイント(CP)を用いてファイルシステムの一貫性を保持する。F2FSはマウント時にCPエリアをスキャンし、最後に作られた有効なCPを探す。スキャンにかかる時間を短縮するため、F2FSはCPのコピーを２つしか持たない。２つのコピーのうち１つが、最後に作られた有効なCPである。この方式をシャドーコピー方式と呼ぶ。CPだけでなく、ノードアドレステーブル(NAT)とセグメント情報テーブル(SIT)にもシャドーコピー方式が使われる。ファイルシステムの一貫性を保つため、各CPは有効なノードアドレステーブル(NAT)とセグメント情報テーブル(SIT)に関連付けられる。
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.83.87.E3.83.83.E3.82.AF.E3.82.B9.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="インデックス構造">インデックス構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=5" title="節を編集: インデックス構造">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ファイルシステムの鍵となるデータ構造は「ノード」である。伝統的なファイルシステムと同様に、F2FSも３種類のノード、すなわち、iノード(<a href="/wiki/Inode" title="Inode">inode</a>)、直接ノード、間接ノードを持つ。iノードブロック１つのサイズは4KBである。以下に示すように、iノードブロックは923のデータブロックインデックス、２つの直接ノードポインタ、２つの間接ノードポインタ、そして１つの二重間接ノードポインタを持つ。直接ノードブロックは1018のデータブロックインデックスを持ち、間接ノードブロックは1018のノードブロックインデックスを持つ。よって、１つのiノードブロック (すなわち一つのファイル) は以下のサイズのデータを保持できる。
+</p>
+<pre>4 KB × (923 + 2×1018 + 2×1018<sup>2</sup> + 1018<sup>3</sup>) = 3.94 TB
+</pre>
+<p>全てのノードブロックの配置は、ノードアドレステーブル(NAT)によって管理される。すなわち、各ノードの配置アドレスはNATを参照して取得する。F2FSは、このインデックス構造により葉 (リーフ) に当たるデータを書き換えたときのノード情報更新範囲を限定し、木構造放浪問題(wandering tree problem)を軽減している。
+</p>
+<h3><span id=".E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="ディレクトリ構造">ディレクトリ構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=6" title="節を編集: ディレクトリ構造">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ディレクトリエントリ (dentry) は11バイトのサイズをもち、以下の属性を持つ。 
+</p>
+<table class="wikitable" style="float; margin:0.5em 1em">
+<caption>ディレクトリエントリ構造
+</caption>
+<tbody><tr>
+<th align="left">hash
+</th>
+<td align="left">ファイル名のハッシュ値
+</td></tr>
+<tr>
+<th align="left">ino
+</th>
+<td align="left"><a href="/wiki/Inode" title="Inode">inode</a> 番号
+</td></tr>
+<tr>
+<th align="left">len
+</th>
+<td align="left">ファイル名の長さ
+</td></tr>
+<tr>
+<th align="left">type
+</th>
+<td align="left">ディレクトリ、シンボリックリンクなどのファイルタイプ
+</td></tr></tbody></table>
+<p>dentryブロックは214のdentryスロットとファイル名を持つ。各dentryが有効かどうかは、ビットマップにより管理される。dentryブロックは4KBのサイズを持ち、以下の構造を持っている。
+</p>
+<pre>dentry ブロック (4 K) = ビットマップ (27 bytes) + 予約域 (3 bytes) +
+                      dentryスロット (11 * 214 bytes) + ファイル名 (8 * 214 bytes)
+</pre>
+<p>F2FSのディレクトリ構造はマルチレベルハッシュテーブルとして実装されている。以下に示すように、各レベルのハッシュテーブルは専用のハッシュバケットを複数持っている。"A(2B)"は、１つのハッシュバケットが２つのデータブロックを持つことを意味する。
+</p>
+<dl><dt>定義</dt>
+<dd>A ... ハッシュバケット</dd>
+<dd>B ... ブロック</dd>
+<dd>N ... MAX_DIR_HASH_DEPTH (最大ハッシュ深さ)</dd></dl>
+<pre>レベル #0    A(2B)
+レベル #1    A(2B) - A(2B)
+レベル #2    A(2B) - A(2B) - A(2B) - A(2B)
+    ...
+レベル #N/2  A(2B) - A(2B) - A(2B) - A(2B) - A(2B) - ... - A(2B)
+    ...
+レベル #N    A(4B) - A(4B) - A(4B) - A(4B) - A(4B) - ... - A(4B)
+</pre>
+<p>F2FSはディレクトリの中にあるファイル名をみつけると、まずそのファイル名のハッシュ値を計算する。次にレベル#0のハッシュテーブルを走査し、そのファイル名を持つdentryとそのinodeを見つける。見つからない場合は、レベル#1のハッシュテーブルを走査する。以下同様に、各レベルのハッシュテーブルを1から<i>N</i>まで順次走査していく。このとき、各レベルの走査対象となるハッシュテーブルは、以下の式によって決まるテーブル１つですむ。この式の複雑さはO(log(ファイル数))である。
+</p>
+<pre> レベル#nにおいて走査するバケット番号 = (ハッシュ値) % (レベル#nのバケットの数)
+</pre>
+<p>ファイル作成時には、F2FSはファイル名を格納できる連続する空エントリを探す。この空エントリの探索は、ファイル名の走査と同様に、ハッシュテーブルの全レベルについて、レベル1から<i>N</i>まで順次行われる。
+</p>
+<h3><span id=".E3.83.87.E3.83.95.E3.82.A9.E3.83.AB.E3.83.88.E3.81.AE.E3.83.96.E3.83.AD.E3.83.83.E3.82.AF.E5.89.B2.E3.82.8A.E5.BD.93.E3.81.A6"></span><span class="mw-headline" id="デフォルトのブロック割り当て">デフォルトのブロック割り当て</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=7" title="節を編集: デフォルトのブロック割り当て">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>F2FSはメインエリアに６つのアクティブログを持つ。Hot/Warm/Coldノード、およびHot/Warm/Coldデータの６つである.
+</p>
+<table class="wikitable" style="float; margin:0.5em 1em">
+<caption>ブロック割り当てポリシー
+</caption>
+<tbody><tr>
+<th align="left">Hotノード
+</th>
+<td align="left">ディレクトリの直接ノードブロック
+</td></tr>
+<tr>
+<th align="left">Warmノード
+</th>
+<td align="left">Hotノード以外の直接ノードブロック
+</td></tr>
+<tr>
+<th align="left">Coldノード
+</th>
+<td align="left">間接ノードブロック
+</td></tr>
+<tr>
+<th align="left">Hotデータ
+</th>
+<td align="left">dentryブロック
+</td></tr>
+<tr>
+<th align="left">Warmデータ
+</th>
+<td align="left">Hotデータ、Coldデータ以外のデータブロック
+</td></tr>
+<tr>
+<th align="left">Coldデータ
+</th>
+<td align="left">マルチメディアデータブロックと移行データブロック
+</td></tr></tbody></table>
+<p>F2FSの空領域管理方式は「スレディッドログ方式」と「コピーコンパクション方式」の２つである。コピーコンパクション方式は「消去処理 (クリーニング)」とも呼ばれ、空領域を常に新しいデータの書き込みに使用するため、高い順次書き込み性能を持つデバイスに適している。一方、使用率が高くなると消去処理のオーバーヘッドが大きくなるという欠点がある。対象的に、スレディッドログ方式はランダム書き込みのオーバーヘッドが大きいが、消去処理は不要である。F2FSはこれらの方式のハイブリッド方式を採用している。デフォルトの空領域管理方式はコピーコンパクション方式であるが、ファイルシステムの状態に応じて、動的にスレディッドログ方式に切り替える。
+</p><p>F2FSとフラッシュストレージ境界の整合を取るため、F2FSのセグメントはセクションを単位として確保される。F2FSは、セクションのサイズが、FTLのガベージコレクションの単位サイズと同じであることを仮定している。FTLの持つマッピング精度の観点から、F2FSはアクティブログの各セクションを、より多くの異なるゾーンから確保しようとする。FTLはアクティブログのデータを、FTLのマッピング精度と同じ単位で書き込むことができる。
+</p>
+<h3><span id=".E6.B6.88.E5.8E.BB.E5.87.A6.E7.90.86"></span><span class="mw-headline" id="消去処理">消去処理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=8" title="節を編集: 消去処理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>F2FSは、オンデマンドとバックグラウンド、両方のタイミングで消去処理を実行する。オンデマンド消去処理は、VFSコールの実行に必要な空きセグメントが足りないときに実行される。バックグラウンド消去処理は、システムアイドル時にカーネルスレッドにより実行される。
+</p><p>F2FSは２つの犠牲者選択ポリシー(victim selection policy)を持つ。貪欲(greedy)アルゴリズムと、費用便益(cost-benefit)アルゴリズムである。貪欲アルゴリズムでは、最小の有効ブロック数を持つセグメントが選択される。費用便益アルゴリズムでは、セグメントの寿命と有効ブロック数から対象セグメントを選択することで、貪欲アルゴリズムのスラッシング問題を避けている。F2FSは、オンデマンド消去処理に貪欲アルゴリズムを用い、バックグラウンド消去処理には費用便益アルゴリズムを用いている。
+</p><p>犠牲者セグメントに含まれるデータが有効かどうかを確認するため、F2FSはビットマップを管理している。このビットマップはメインエリアに含まれるブロック全体をカバーしており。各ビットは各ブロック１つが有効かどうかを示す。
+</p>
+<h2><span id=".E8.A3.BD.E5.93.81.E9.81.A9.E7.94.A8"></span><span class="mw-headline" id="製品適用">製品適用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=9" title="節を編集: 製品適用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2012年、<a class="mw-redirect" href="/wiki/Motorola_Mobility" title="Motorola Mobility">Motorola Mobility</a> はF2FSをMoto G/E/XとDroid phoneに適用した。
+2014年、<a href="/wiki/Google" title="Google">Google</a>はF2FSを初めて<a href="/wiki/Nexus_9" title="Nexus 9">Nexus 9</a>に適用した。<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[4]</a></sup> その後しばらくGoogleは自社製品にF2FSを適用しなかったが、F2FSをインライン暗号化ハードウェアに対応させて<a href="/wiki/Pixel_3" title="Pixel 3">Pixel 3</a>に適用した。 <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[5]</a></sup>
+2016年、ファーウェイは<a class="new" href="/w/index.php?title=Huawei_P9&amp;action=edit&amp;redlink=1" title="Huawei P9 (存在しないページ)">Huawei P9</a>にF2FSを適用した。<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[6]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[7]</a></sup>
+2016年、<a href="/wiki/OnePlus" title="OnePlus">OnePlus</a>はOnePlus 3TにF2FSを適用した。<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[8]</a></sup>
+2019年、<a href="/wiki/ZTE" title="ZTE">ZTE</a> はF2FSを ZTE Axon 10 Proに適用した。<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[9]</a></sup>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=11" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a href="/wiki/SD%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%BC%E3%82%AB%E3%83%BC%E3%83%89" title="SDメモリーカード">SDカード</a>・<a href="/wiki/%E3%82%BD%E3%83%AA%E3%83%83%E3%83%89%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96" title="ソリッドステートドライブ">SSD</a>など</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">書き込み回数の上限の存在など</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=12" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-lwn.net_518718-1">^ <a href="#cite_ref-lwn.net_518718_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-lwn.net_518718_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-lwn.net_518718_1-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">Jaegeuk Kim (2012年10月5日). “<a class="external text" href="https://lwn.net/Articles/518718/" rel="nofollow">f2fs: introduce flash-friendly file system</a>”. <span title="">2018年4月28日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Jaegeuk Kim (2016年12月3日). “<a class="external text" href="https://f2fs.wiki.kernel.org/start" rel="nofollow">start [F2FS Wiki</a>]”. <span title="">2018年4月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-development-5">^ <a href="#cite_ref-development_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-development_5-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">Jaegeuk Kim (2017年7月12日). “<a class="external text" href="https://f2fs.wiki.kernel.org/development" rel="nofollow">development [F2FS Wiki</a>]”. <span title="">2018年4月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Smith, Joshua Ho, Ryan. “<a class="external text" href="https://www.anandtech.com/show/8701/the-google-nexus-9-review" rel="nofollow">The Google Nexus 9 Review</a>”. <i>www.anandtech.com</i>. <span title="">2019年5月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Frumusanu, Andrei (2018年11月2日). “<a class="external text" href="https://www.anandtech.com/show/13474/the-google-pixel-3-review/2" rel="nofollow">The Google Pixel 3 Review</a>”. <i>www.anandtech.com</i>. <span title="">2019年5月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Larabel, Michael (2018年12月28日). “<a class="external text" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=F2FS-Linux-4.21-Changes" rel="nofollow">F2FS Gets More Fixes In Linux 4.21 With The File-System Now Supported By Google's Pixel</a>”. <i>www.phoronix.com</i>. <span title="">2019年5月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Humrick, Matt (2017年5月12日). “<a class="external text" href="https://www.anandtech.com/show/11292/performance-battery-life-report-huawei-p10" rel="nofollow">Huawei P10 and P10 Plus</a>”. <i>www.anandtech.com</i>. <span title="">2019年5月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Chester, Brandon. “<a class="external text" href="https://www.anandtech.com/show/10836/the-oneplus-3t-mini-review/4" rel="nofollow">The OnePlus 3T Review</a>”. <i>www.anandtech.com</i>. <span title="">2019年5月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.gizchina.com/2019/05/06/zte-axon-10-pro-officially-uncovered-the-first-to-use-f2fs/" rel="nofollow">ZTE Axon 10 Pro Officially Uncovered: The First To Use F2FS</a>” (英語). <i>Gizchina.com</i> (2019年5月6日). <span title="">2019年5月10日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=13" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="フラッシュファイルシステム">フラッシュファイルシステム</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F2FS&amp;action=edit&amp;section=14" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://f2fs.wiki.kernel.org/" rel="nofollow">F2FS Wiki</a></li></ul>
+
+
+<div aria-labelledby="ファイルシステム（カテゴリ）" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:ファイルシステム (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="ファイルシステム（カテゴリ）" style="font-size:110%;margin:0 6em">ファイルシステム<span style="font-weight:normal; font-size:smaller">（<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:OS%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:OSのファイルシステム">カテゴリ</a>）</span></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">ディスク</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Advanced_Disc_Filing_System&amp;action=edit&amp;redlink=1" title="Advanced Disc Filing System (存在しないページ)">Advanced Disc Filing System</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Advanced_Disc_Filing_System&amp;action=edit&amp;redlink=1" title="En:Advanced Disc Filing System (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AdvFS&amp;action=edit&amp;redlink=1" title="AdvFS (存在しないページ)">AdvFS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AdvFS&amp;action=edit&amp;redlink=1" title="En:AdvFS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Apple_File_System" title="Apple File System">APFS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Be_File_System&amp;action=edit&amp;redlink=1" title="Be File System (存在しないページ)">Be File System</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Be_File_System&amp;action=edit&amp;redlink=1" title="En:Be File System (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Btrfs" title="Btrfs">Btrfs</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CrossDOS&amp;action=edit&amp;redlink=1" title="CrossDOS (存在しないページ)">CrossDOS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CrossDOS&amp;action=edit&amp;redlink=1" title="En:CrossDOS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Disc_Filing_System&amp;action=edit&amp;redlink=1" title="Disc Filing System (存在しないページ)">Disc Filing System</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Disc_Filing_System&amp;action=edit&amp;redlink=1" title="En:Disc Filing System (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Episode_filesystem&amp;action=edit&amp;redlink=1" title="Episode filesystem (存在しないページ)">Episode</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Episode_filesystem&amp;action=edit&amp;redlink=1" title="En:Episode filesystem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Encrypting_File_System" title="Encrypting File System">EFS</a></li>
+<li><a href="/wiki/HPFS" title="HPFS">HPFS</a></li>
+<li><a href="/wiki/Ext" title="Ext">ext</a>
+<ul><li><a href="/wiki/Ext2" title="Ext2">ext2</a></li>
+<li><a href="/wiki/Ext3" title="Ext3">ext3</a></li>
+<li><a href="/wiki/Ext3cow" title="Ext3cow">ext3cow</a></li>
+<li><a href="/wiki/Ext4" title="Ext4">ext4</a></li></ul></li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a>
+<ul><li><a href="/wiki/File_Allocation_Table#FAT12" title="File Allocation Table">FAT12</a></li>
+<li><a href="/wiki/File_Allocation_Table#FAT16" title="File Allocation Table">FAT16</a></li>
+<li><a href="/wiki/File_Allocation_Table#FAT32" title="File Allocation Table">FAT32</a></li>
+<li><a href="/wiki/ExFAT" title="ExFAT">exFAT</a></li></ul></li>
+<li><a class="new" href="/w/index.php?title=Files-11&amp;action=edit&amp;redlink=1" title="Files-11 (存在しないページ)">Files-11</a></li>
+<li><a href="/wiki/HAMMER" title="HAMMER">HAMMER</a></li>
+<li><a href="/wiki/Hierarchical_File_System" title="Hierarchical File System">HFS</a>
+<ul><li><a href="/wiki/HFS_Plus" title="HFS Plus">HFS Plus</a></li></ul></li>
+<li><a href="/wiki/IBM_General_Parallel_File_System" title="IBM General Parallel File System">IBM General Parallel File System</a></li>
+<li><a href="/wiki/Journaled_File_System" title="Journaled File System">JFS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Macintosh_File_System&amp;action=edit&amp;redlink=1" title="Macintosh File System (存在しないページ)">Macintosh File System</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Macintosh_File_System&amp;action=edit&amp;redlink=1" title="En:Macintosh File System (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/MINIX%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="MINIXファイルシステム">MINIX</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NetWare_File_System&amp;action=edit&amp;redlink=1" title="NetWare File System (存在しないページ)">NetWare File System</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:NetWare_File_System&amp;action=edit&amp;redlink=1" title="En:NetWare File System (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NILFS" title="NILFS">NILFS</a></li>
+<li><a href="/wiki/Novell_Storage_Service" title="Novell Storage Service">Novell Storage Service</a></li>
+<li><a href="/wiki/NT_File_System" title="NT File System">NTFS</a></li>
+<li><a class="new" href="/w/index.php?title=QFS&amp;action=edit&amp;redlink=1" title="QFS (存在しないページ)">QFS</a></li>
+<li><a class="new" href="/w/index.php?title=QNX4FS&amp;action=edit&amp;redlink=1" title="QNX4FS (存在しないページ)">QNX4FS</a></li>
+<li><a href="/wiki/ReFS" title="ReFS">ReFS</a></li>
+<li><a href="/wiki/ReiserFS" title="ReiserFS">ReiserFS</a>
+<ul><li><a href="/wiki/Reiser4" title="Reiser4">Reiser4</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SpadFS&amp;action=edit&amp;redlink=1" title="SpadFS (存在しないページ)">SpadFS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SpadFS&amp;action=edit&amp;redlink=1" title="En:SpadFS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/UBIFS" title="UBIFS">UBIFS</a></li>
+<li><a href="/wiki/Unix_File_System" title="Unix File System">UFS</a></li>
+<li><a href="/wiki/VERITAS_File_System" title="VERITAS File System">VERITAS File System</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Write_Anywhere_File_Layout&amp;action=edit&amp;redlink=1" title="Write Anywhere File Layout (存在しないページ)">Write Anywhere File Layout</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Write_Anywhere_File_Layout&amp;action=edit&amp;redlink=1" title="En:Write Anywhere File Layout (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/XFS" title="XFS">XFS</a></li>
+<li><a href="/wiki/Xsan" title="Xsan">Xsan</a></li>
+<li><a href="/wiki/ZFS" title="ZFS">ZFS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">光ディスク / <a href="/wiki/%E7%A3%81%E6%B0%97%E3%83%86%E3%83%BC%E3%83%97" title="磁気テープ">磁気テープ</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=High_Sierra_Format&amp;action=edit&amp;redlink=1" title="High Sierra Format (存在しないページ)">HSF</a></li>
+<li><a href="/wiki/ISO_9660" title="ISO 9660">ISO 9660</a></li>
+<li><a class="new" href="/w/index.php?title=ISO_13490&amp;action=edit&amp;redlink=1" title="ISO 13490 (存在しないページ)">ISO 13490</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="ユニバーサルディスクフォーマット">UDF</a></li>
+<li><a href="/wiki/LTFS" title="LTFS">LTFS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><a class="mw-redirect" href="/wiki/Flash%E3%83%A1%E3%83%A2%E3%83%AA" title="Flashメモリ">Flashメモリ</a> / SSD</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_File_System" title="Apple File System">APFS</a></li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a></li>
+<li><a href="/wiki/ExFAT" title="ExFAT">exFAT</a></li>
+<li><a class="new" href="/w/index.php?title=CHFS&amp;action=edit&amp;redlink=1" title="CHFS (存在しないページ)">CHFS</a></li>
+<li><a href="/wiki/Transaction-Safe_FAT_File_System" title="Transaction-Safe FAT File System">TFAT</a></li>
+<li><a href="/wiki/EROFS" title="EROFS">EROFS</a></li>
+<li><a class="new" href="/w/index.php?title=Flash_file_system&amp;action=edit&amp;redlink=1" title="Flash file system (存在しないページ)">FFS2</a></li>
+<li><a class="mw-selflink selflink">F2FS</a></li>
+<li><a href="/wiki/JFFS" title="JFFS">JFFS</a></li>
+<li><a href="/wiki/JFFS2" title="JFFS2">JFFS2</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=LogFS&amp;action=edit&amp;redlink=1" title="LogFS (存在しないページ)">LogFS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:LogFS&amp;action=edit&amp;redlink=1" title="En:LogFS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/NILFS" title="NILFS">NILFS</a></li>
+<li><a class="new" href="/w/index.php?title=Non-Volatile_File_System&amp;action=edit&amp;redlink=1" title="Non-Volatile File System (存在しないページ)">NVFS</a></li>
+<li><a href="/wiki/YAFFS" title="YAFFS">YAFFS</a></li>
+<li><a href="/wiki/UBIFS" title="UBIFS">UBIFS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">分散ファイルシステム</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Coda_(file_system)&amp;action=edit&amp;redlink=1" title="Coda (file system) (存在しないページ)">Coda</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CXFS&amp;action=edit&amp;redlink=1" title="CXFS (存在しないページ)">CXFS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CXFS&amp;action=edit&amp;redlink=1" title="En:CXFS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="new" href="/w/index.php?title=GFS2&amp;action=edit&amp;redlink=1" title="GFS2 (存在しないページ)">GFS2</a></li>
+<li><a href="/wiki/GlusterFS" title="GlusterFS">GlusterFS</a></li>
+<li><a href="/wiki/Google_File_System" title="Google File System">Google File System</a></li>
+<li><a class="mw-redirect" href="/wiki/OCFS2" title="OCFS2">OCFS2</a></li>
+<li><a class="new" href="/w/index.php?title=QFS&amp;action=edit&amp;redlink=1" title="QFS (存在しないページ)">QFS</a></li>
+<li><a href="/wiki/Xsan" title="Xsan">Xsan</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ネットワーク型</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Andrew_File_System" title="Andrew File System">AFS</a>
+<ul><li><a href="/wiki/OpenAFS" title="OpenAFS">OpenAFS</a></li></ul></li>
+<li><a href="/wiki/Apple_Filing_Protocol" title="Apple Filing Protocol">AFP</a></li>
+<li><a class="new" href="/w/index.php?title=Distributed_File_System_(Microsoft)&amp;action=edit&amp;redlink=1" title="Distributed File System (Microsoft) (存在しないページ)">DFS</a></li>
+<li><a href="/wiki/IBM_General_Parallel_File_System" title="IBM General Parallel File System">GPFS</a></li>
+<li><a href="/wiki/GlusterFS" title="GlusterFS">GlusterFS</a></li>
+<li><a href="/wiki/Google_File_System" title="Google File System">Google File System</a></li>
+<li><a href="/wiki/Lustre_(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Lustre (ファイルシステム)">Lustre</a></li>
+<li><a href="/wiki/NetWare_Core_Protocol" title="NetWare Core Protocol">NCP</a></li>
+<li><a href="/wiki/Network_File_System" title="Network File System">NFS</a></li>
+<li><a class="new" href="/w/index.php?title=POHMELFS&amp;action=edit&amp;redlink=1" title="POHMELFS (存在しないページ)">POHMELFS</a></li>
+<li><a class="mw-redirect" href="/wiki/Hadoop" title="Hadoop">Hadoop</a></li>
+<li><a class="new" href="/w/index.php?title=Plan_9_FS&amp;action=edit&amp;redlink=1" title="Plan 9 FS (存在しないページ)">Plan 9 FS</a></li>
+<li><a href="/wiki/Server_Message_Block" title="Server Message Block">SMB (CIFS)</a></li>
+<li><a class="new" href="/w/index.php?title=SSHFS&amp;action=edit&amp;redlink=1" title="SSHFS (存在しないページ)">SSHFS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">特殊用途</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cramfs" title="Cramfs">cramfs</a></li>
+<li><a href="/wiki/Dokan" title="Dokan">Dokan</a></li>
+<li><a href="/wiki/EROFS" title="EROFS">EROFS</a></li>
+<li><a href="/wiki/Filesystem_in_Userspace" title="Filesystem in Userspace">FUSE</a></li>
+<li><a href="/wiki/SquashFS" title="SquashFS">SquashFS</a></li>
+<li><a class="new" href="/w/index.php?title=FAT_filesystem_and_Linux&amp;action=edit&amp;redlink=1" title="FAT filesystem and Linux (存在しないページ)">UMSDOS</a></li>
+<li><a href="/wiki/UnionFS" title="UnionFS">UnionFS</a></li>
+<li><a href="/wiki/Aufs" title="Aufs">aufs</a></li>
+<li><a href="/wiki/Initrd" title="Initrd">initrd</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">疑似・仮想</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Configfs&amp;action=edit&amp;redlink=1" title="Configfs (存在しないページ)">configfs</a></li>
+<li><a class="new" href="/w/index.php?title=Device_file&amp;action=edit&amp;redlink=1" title="Device file (存在しないページ)">devfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a class="new" href="/w/index.php?title=Specfs&amp;action=edit&amp;redlink=1" title="Specfs (存在しないページ)">specfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Tmpfs" title="Tmpfs">tmpfs</a></li>
+<li><a href="/wiki/WinFS" title="WinFS">WinFS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">暗号化</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/EncFS" title="EncFS">EncFS</a></li>
+<li><a href="/wiki/Encrypting_File_System" title="Encrypting File System">EFS</a></li>
+<li><a href="/wiki/ZFS" title="ZFS">ZFS</a></li>
+<li><a href="/wiki/UFS2" title="UFS2">UFS2</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%AF%94%E8%BC%83&amp;action=edit&amp;redlink=1" title="ファイルシステムの比較 (存在しないページ)">ファイルシステムの比較</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Comparison_of_file_systems&amp;action=edit&amp;redlink=1" title="En:Comparison of file systems (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402005714
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.293 seconds
+Real time usage: 0.565 seconds
+Preprocessor visited node count: 4847/1000000
+Post‐expand include size: 88390/2097152 bytes
+Template argument size: 10933/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 15/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6129/5000000 bytes
+Lua time usage: 0.120/7 seconds
+Lua virtual size: 6639616/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  430.429      1 -total
+ 38.60%  166.137      1 テンプレート:ファイルシステム
+ 37.63%  161.986      1 テンプレート:Navbox
+ 35.05%  150.865     15 テンプレート:仮リンク
+ 31.48%  135.483      2 テンプレート:Navbox_subgroup
+ 28.78%  123.886      2 テンプレート:Reflist
+ 26.44%  113.795      9 テンプレート:Cite_web
+ 14.84%   63.890      1 テンプレート:Infobox_filesystem
+ 14.15%   60.912      1 テンプレート:Infobox
+ 10.30%   44.347      9 テンプレート:Ifempty
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3782580-0!canonical and timestamp 20220402005713 and revision id 2214621. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=F2FS&amp;oldid=2214621">http://localhost:8080/w/index.php?title=F2FS&amp;oldid=2214621</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96" title="カテゴリ:ソフトウェア関連のスタブ">ソフトウェア関連のスタブ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Linux%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:Linuxのファイルシステム">Linuxのファイルシステム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:フラッシュファイルシステム">フラッシュファイルシステム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=F2FS&amp;returntoquery=curid%3D3782580%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=F2FS&amp;returntoquery=curid%3D3782580%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/F2FS" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:F2FS&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/F2FS">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=F2FS&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=F2FS&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/F2FS" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/F2FS" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=F2FS&amp;oldid=2214621" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=F2FS&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月22日 (金) 20:09 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.293","walltime":"0.565","ppvisitednodes":{"value":4847,"limit":1000000},"postexpandincludesize":{"value":88390,"limit":2097152},"templateargumentsize":{"value":10933,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":15,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6129,"limit":5000000},"timingprofile":["100.00%  430.429      1 -total"," 38.60%  166.137      1 テンプレート:ファイルシステム"," 37.63%  161.986      1 テンプレート:Navbox"," 35.05%  150.865     15 テンプレート:仮リンク"," 31.48%  135.483      2 テンプレート:Navbox_subgroup"," 28.78%  123.886      2 テンプレート:Reflist"," 26.44%  113.795      9 テンプレート:Cite_web"," 14.84%   63.890      1 テンプレート:Infobox_filesystem"," 14.15%   60.912      1 テンプレート:Infobox"," 10.30%   44.347      9 テンプレート:Ifempty"]},"scribunto":{"limitreport-timeusage":{"value":"0.120","limit":"7"},"limitreport-virtmemusage":{"value":6639616,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402005714","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":708});});</script>
+</body></html>

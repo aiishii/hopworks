@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Harmonic Vector Excitation Coding - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Harmonic_Vector_Excitation_Coding rootpage-Harmonic_Vector_Excitation_Coding skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Harmonic Vector Excitation Coding</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>Harmonic Vector Excitation Coding</b>、あるいは <b>HVXC</b> は、<a href="." id="link_a_1" title="MPEG-4">MPEG-4</a> オーディオ（MPEG-4 Part 3）で採用された低<a href="." id="link_a_2" title="ビットレート">ビットレート</a>の<a href="." id="link_a_3" title="音声符号化">音声符号化</a>方式である。人間の<a href="." id="link_a_4" title="音声">音声</a>を対象とし、2 k<a href="." id="link_a_5" title="ビット毎秒">bps</a> と 4 kbps の2種類の固定ビットレート、および 1.2 ～ 1.7 kbps 程度の可変ビットレートをサポートする。
+</p><p>HVXC は、<a href="." id="link_a_6" title="デジタル放送">デジタル放送</a>、<a href="." id="link_a_7" title="携帯電話">携帯電話</a>、<a href="." id="link_a_8" title="インターネット電話">インターネット電話</a>、音声<a href="." id="link_a_9" title="データベース">データベース</a>などの様々な用途に使うことができる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#MPEG-4_オーディオでの位置付け"><span class="tocnumber">2</span> <span class="toctext">MPEG-4 オーディオでの位置付け</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#アルゴリズム"><span class="tocnumber">3</span> <span class="toctext">アルゴリズム</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#参考文献"><span class="tocnumber">5</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>HVXC は <a href="/wiki/MPEG-4" title="MPEG-4">MPEG-4</a> オーディオの<a href="/wiki/%E9%9F%B3%E5%A3%B0%E7%AC%A6%E5%8F%B7%E5%8C%96" title="音声符号化">音声符号化</a>方式の1つで、1999年に <a class="mw-redirect" href="/wiki/ISO" title="ISO">ISO</a>/<a href="/wiki/%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0" title="国際電気標準会議">IEC</a> 14496-3 Subpart 2 で定義され
+<sup class="reference" id="cite_ref-mpeg4audio_1-0"><a href="#cite_note-mpeg4audio-1">[1]</a></sup>、
+その後 MPEG-4 Audio バージョン 2（ISO/IEC 14496-3:1999/Amd 1:2000）で拡張された
+<sup class="reference" id="cite_ref-mpeg4audio-iso-2-amd_2-0"><a href="#cite_note-mpeg4audio-iso-2-amd-2">[2]</a></sup><sup class="reference" id="cite_ref-mpeg4audio-version2_3-0"><a href="#cite_note-mpeg4audio-version2-3">[3]</a></sup>。
+</p><p>MPEG-4 オーディオの中で最も低いビットレートでの音声符号化を受けもち、固定<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="ビットレート">ビットレート</a> （2 k<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%AF%8E%E7%A7%92" title="ビット毎秒">bps</a>、4 kbps）、可変ビットレート（2 kbps 以下、4 kbps 以下）の両方をサポートする。
+<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E5%91%A8%E6%B3%A2%E6%95%B0" title="サンプリング周波数">サンプリング周波数</a> 8 kHz の 100 Hz - 3800 Hz の<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域幅</a>の音声信号を、低ビットレートでは<a href="/wiki/%E4%BA%86%E8%A7%A3%E5%BA%A6" title="了解度">了解度</a>のみが確保された通信用の品質で、高ビットレートでは有線電話に近い品質で符号化できる
+<sup class="reference" id="cite_ref-mpeg4audio-version4-2009_4-0"><a href="#cite_note-mpeg4audio-version4-2009-4">[4]</a></sup>。
+</p><p>また、HVXC では音声の波形を直接符号化するのではなくパラメータ化して符号化するため、デコード時に音声の速度とピッチ（音声の基本周波数）を独立して変えることができる。
+</p><p>HVXC の特徴は以下の通りである。
+</p>
+<ul><li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E5%91%A8%E6%B3%A2%E6%95%B0" title="サンプリング周波数">サンプリング周波数</a> 8 kHz、<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域幅</a> 100 Hz - 3800 Hz</li>
+<li><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" title="フレーム">フレーム</a>長 20 ms</li>
+<li>固定<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="ビットレート">ビットレート</a> （2 k<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%AF%8E%E7%A7%92" title="ビット毎秒">bps</a>、4 kbps）、可変ビットレート（2 kbps 以下、4 kbps 以下）の両方をサポート</li>
+<li>符号化遅延 36 ms <sup class="reference" id="cite_ref-FOOTNOTENishiguchi2006_5-0"><a href="#cite_note-FOOTNOTENishiguchi2006-5">[5]</a></sup></li>
+<li>デコード時に音声の速度とピッチ（音声の基本周波数）を変更可能</li></ul>
+<h2><span id="MPEG-4_.E3.82.AA.E3.83.BC.E3.83.87.E3.82.A3.E3.82.AA.E3.81.A7.E3.81.AE.E4.BD.8D.E7.BD.AE.E4.BB.98.E3.81.91"></span><span class="mw-headline" id="MPEG-4_オーディオでの位置付け">MPEG-4 オーディオでの位置付け</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=2" title="節を編集: MPEG-4 オーディオでの位置付け">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MPEG-4 オーディオは多くのツールの組み合わせからなり、HVXC や <a href="/wiki/MPEG-4_CELP" title="MPEG-4 CELP">MPEG-4 CELP</a> は人間の自然な音声の符号化を行う自然音声符号化ツール（<span lang="en"><i>natural speech coding tools</i></span>）の1つである<sup class="reference" id="cite_ref-mpeg4audio-version4-2009_4-1"><a href="#cite_note-mpeg4audio-version4-2009-4">[4]</a></sup>。 MPEG-4 CELP が2種類のサンプリング周波数（8 kHz, 16 kHz）と比較的高い<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E3%83%AC%E3%83%BC%E3%83%88" title="ビットレート">ビットレート</a>をカバーするのに対し、HVXC は MPEG-4 CELP でカバーできない超低ビットレートでの符号化を担当する。
+</p><p>さらに低ビットレートでの音声表現が必要な場合は、文字から音声を合成するツールである MPEG-4 <a href="/wiki/%E9%9F%B3%E5%A3%B0%E5%90%88%E6%88%90" title="音声合成">TTS</a> Interface（<span lang="en"><i>Text-to-speech interface</i></span>）を使用する。
+</p><p>また、HVXC が音声のみをサポートするのに対し、音楽をパラメトリックに符号化/復号するツールとして MPEG-4 <a class="mw-redirect" href="/wiki/HILN" title="HILN">HILN</a>（<span lang="en"><i>Harmonic and Individual Lines plus Noise</i></span>）があり、超低ビットレートで音楽の符号化ができ、また HVXC と同様デコード時に音声の速度とピッチ（音声の基本周波数）を変更できる<sup class="reference" id="cite_ref-mpeg4audio-version4-2009_4-2"><a href="#cite_note-mpeg4audio-version4-2009-4">[4]</a></sup>。
+音楽と音声を含む信号の低ビットレート符号化には、HVXC と <a class="mw-redirect" href="/wiki/HILN" title="HILN">HILN</a> とを信号の内容に応じ切り替えながら使うこともできる。
+</p>
+<h2><span id=".E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0"></span><span class="mw-headline" id="アルゴリズム">アルゴリズム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=3" title="節を編集: アルゴリズム">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>HVXC の符号化アルゴリズムは、<a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測符号化</a>（LPC）をベースに、LPC の残差信号の表現方法を工夫したものである<sup class="reference" id="cite_ref-FOOTNOTENishiguchi2006_5-1"><a href="#cite_note-FOOTNOTENishiguchi2006-5">[5]</a></sup>。
+</p><p>人間の<a href="/wiki/%E5%A3%B0" title="声">声</a>は、声道の周波数選択特性と音源である<a href="/wiki/%E5%A3%B0%E5%B8%AF" title="声帯">声帯</a>などの音の特性や<a class="mw-redirect" href="/wiki/%E6%9C%89%E5%A3%B0" title="有声">有声</a>・<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声</a>の区別でモデル化できる。 HVXC では、<a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測符号化</a>と同様、声道に相当する合成フィルターのパラメータとして<a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E6%B3%95" title="線形予測法">線形予測</a>（LP）<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ディジタルフィルタ">フィルター</a>の係数を用い、<a href="/wiki/%E6%9C%89%E5%A3%B0%E9%9F%B3" title="有声音">有声音</a>・<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声音</a>で LPC の残差信号にあたる音源のパラメータのモデル化方法を切り替える。
+</p><p><a href="/wiki/%E6%9C%89%E5%A3%B0%E9%9F%B3" title="有声音">有声音</a>での残差信号は、ハーモニックコーディング（<span lang="en"><i>harmonic coding</i></span>）と呼ばれる方法を用い、声帯音の基本周波数にあたるピッチ周波数と共にその<a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB" title="スペクトル">スペクトル</a>形状とゲインとをパラメータ化する。スペクトル形状は残差信号を <a href="/wiki/%E9%9B%A2%E6%95%A3%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="離散フーリエ変換">離散フーリエ変換</a>（DFT）を使って分析することで求める。<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声音</a>での残差信号は、単純な<a href="/wiki/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%8E%E3%82%A4%E3%82%BA" title="ホワイトノイズ">ホワイトノイズ</a>でモデル化するのではなく、<a class="mw-redirect" href="/wiki/CELP" title="CELP">CELP</a> のようにあらかじめ用意した固定型コードブックを用い、コードブック値の中で適切なものを選ぶ VXC（<span lang="en"><i>vector excitation coding</i></span>）と呼ばれる方法で信号の形状とゲインのパラメータ化を行う。
+</p><p><a class="mw-redirect" href="/wiki/%E6%9C%89%E5%A3%B0" title="有声">有声</a>・<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声</a>の区別を単純に行うのではなく４段階（有声1/2/3、無声）に区別することで音質の向上を行う。
+</p><p>ビットレートが高い場合は、<a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E6%B3%95" title="線形予測法">線形予測</a>係数の数や<a href="/wiki/%E6%9C%89%E5%A3%B0%E9%9F%B3" title="有声音">有声音</a>での<a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB" title="スペクトル">スペクトル</a>形状を表すビット数、<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声音</a>での形状/ゲインパラメータの更新周期を増やし、より音声信号が適切に表現できるようにする。
+</p><p>具体的な符号化は以下のように行われる<sup class="reference" id="cite_ref-FOOTNOTENishiguchi2006_5-2"><a href="#cite_note-FOOTNOTENishiguchi2006-5">[5]</a></sup>。
+</p>
+<ol><li><a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測</a>パラメータの計算と<a href="/wiki/LSP" title="LSP">LSP</a>の量子化
+<ul><li>音声信号から<a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測</a>係数を計算</li>
+<li>係数を<a href="/wiki/%E9%87%8F%E5%AD%90%E5%8C%96" title="量子化">量子化</a>特性に優れた<a href="/wiki/%E7%B7%9A%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%AF%BE" title="線スペクトル対">線スペクトル対</a>（LSP）に変換</li>
+<li><a href="/wiki/%E9%87%8F%E5%AD%90%E5%8C%96" title="量子化">量子化</a>には<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E9%87%8F%E5%AD%90%E5%8C%96" title="ベクトル量子化">ベクトル量子化</a>の一種（PPM-VQ）を使用</li></ul></li>
+<li>音声を分析フィルターに通し残差信号を計算
+<ul><li><a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測</a>係数から生成した分析フィルターに音声信号を入力し、線形予測の残差信号を計算</li></ul></li>
+<li>オープンループでのピッチ分析
+<ul><li>残差信号の<a href="/wiki/%E8%87%AA%E5%B7%B1%E7%9B%B8%E9%96%A2" title="自己相関">自己相関</a>から大まかなピッチ周波数を推定</li></ul></li>
+<li>残差信号の<a href="/wiki/%E5%80%8D%E9%9F%B3" title="倍音">ハーモニック</a>強度を推定
+<ul><li>オープンループでのピッチ周波数をベースに正確なピッチ周波数を求める</li>
+<li>残差信号の<a href="/wiki/%E9%9B%A2%E6%95%A3%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="離散フーリエ変換">離散フーリエ変換</a>（DFT）より<a href="/wiki/%E5%80%8D%E9%9F%B3" title="倍音">倍音</a>成分の強度を求める</li></ul></li>
+<li><a class="mw-redirect" href="/wiki/%E6%9C%89%E5%A3%B0" title="有声">有声</a>・<a href="/wiki/%E7%84%A1%E5%A3%B0%E9%9F%B3" title="無声音">無声</a>の判定
+<ul><li>ハーモニック強度などを用い、周期的な波形を持つ有声音とそうでない無声音の区別を判定</li></ul></li>
+<li>ハーモニック強度の<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E9%87%8F%E5%AD%90%E5%8C%96" title="ベクトル量子化">ベクトル量子化</a>（有声音のみ）
+<ul><li>ピッチ周波数の<a href="/wiki/%E5%80%8D%E9%9F%B3" title="倍音">倍音</a>成分の強度を<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E9%87%8F%E5%AD%90%E5%8C%96" title="ベクトル量子化">ベクトル量子化</a></li></ul></li>
+<li>無声音の残差信号を符号化（無声音のみ）
+<ul><li>あらかじめ用意した形状とゲインのコードブックを用い残差信号を符号化</li></ul></li></ol>
+<p>復号時には、符号化とは逆に、有声/無声判定や各種パラメータから残差信号を生成し、線形予測係数から生成した合成フィルターの入力として加えることで、最終的な音声信号を再合成する。
+</p><p>復号時に音声の速度を変えたい場合には、各パラメータを時間軸方向に補間しながら再合成を行う。ピッチ周波数や線形予測フィルターで表現された<a href="/wiki/%E3%83%95%E3%82%A9%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%88" title="フォルマント">フォルマント</a>周波数などを変えることなく速度の変更ができる。
+</p><p>ピッチ周波数も音声データの一部としてパラメータ化されているため、ピッチ周波数だけを独立して変えることも容易である。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=4" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-mpeg4audio-1"><b><a href="#cite_ref-mpeg4audio_1-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal"><a class="mw-redirect" href="/wiki/ISO" title="ISO">ISO</a> (1999年). “<a class="external text" href="http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?csnumber=25035" rel="nofollow">ISO/IEC 14496-3:1999 - Information technology -- Coding of audio-visual objects -- Part 3: Audio</a>”.   ISO. <span title="">2010年8月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-mpeg4audio-iso-2-amd-2"><b><a href="#cite_ref-mpeg4audio-iso-2-amd_2-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal"><a class="mw-redirect" href="/wiki/ISO" title="ISO">ISO</a> (2000年). “<a class="external text" href="http://www.iso.org/iso/iso_catalogue/catalogue_ics/catalogue_detail_ics.htm?csnumber=31568" rel="nofollow">ISO/IEC 14496-3:1999/Amd 1:2000 - Audio extensions</a>”.   ISO. <span title="">2010年8月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-mpeg4audio-version2-3"><b><a href="#cite_ref-mpeg4audio-version2_3-0">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFISO/IEC_JTC_1/SC_29/WG_111999" style="font-style:normal"><a class="mw-redirect" href="/wiki/ISO" title="ISO">ISO</a>/<a href="/wiki/%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0" title="国際電気標準会議">IEC</a> JTC 1/SC 29/WG 11 (1999-07) (PDF), <a class="external text" href="ftp://ftp.tnt.uni-hannover.de/pub/MPEG/audio/mpeg4/documents/w2803/w2803_n.pdf" rel="nofollow"><i>ISO/IEC 14496-3:/Amd.1 - Final Committee Draft - MPEG-4 Audio Version 2</i></a><span style="display:none;">, <a class="external free" href="ftp://ftp.tnt.uni-hannover.de/pub/MPEG/audio/mpeg4/documents/w2803/w2803_n.pdf" rel="nofollow">ftp://ftp.tnt.uni-hannover.de/pub/MPEG/audio/mpeg4/documents/w2803/w2803_n.pdf</a></span> <span class="reference-accessdate"><span title="">2010年8月15日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ISO%2FIEC+14496-3%3A%2FAmd.1+-+Final+Committee+Draft+-+MPEG-4+Audio+Version+2&amp;rft.aulast=%5B%5BISO%5D%5D%2F%5B%5B%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0%7CIEC%5D%5D+JTC+1%2FSC+29%2FWG+11&amp;rft.au=%5B%5BISO%5D%5D%2F%5B%5B%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0%7CIEC%5D%5D+JTC+1%2FSC+29%2FWG+11&amp;rft.date=1999-07&amp;rft_id=ftp%3A%2F%2Fftp.tnt.uni-hannover.de%2Fpub%2FMPEG%2Faudio%2Fmpeg4%2Fdocuments%2Fw2803%2Fw2803_n.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Harmonic_Vector_Excitation_Coding"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-mpeg4audio-version4-2009-4">^ <a href="#cite_ref-mpeg4audio-version4-2009_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mpeg4audio-version4-2009_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-mpeg4audio-version4-2009_4-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation" id="CITEREFISO/IEC2009" style="font-style:normal"><a class="mw-redirect" href="/wiki/ISO" title="ISO">ISO</a>/<a href="/wiki/%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0" title="国際電気標準会議">IEC</a> (2009) (PDF), <a class="external text" href="http://webstore.iec.ch/preview/info_isoiec14496-3%7Bed4.0%7Den.pdf" rel="nofollow"><i>ISO/IEC 14496-3:2009 - Information technology -- Coding of audio-visual objects -- Part 3: Audio</i></a>, IEC<span style="display:none;">, <a class="external free" href="http://webstore.iec.ch/preview/info_isoiec14496-3%7Bed4.0%7Den.pdf" rel="nofollow">http://webstore.iec.ch/preview/info_isoiec14496-3%7Bed4.0%7Den.pdf</a></span> <span class="reference-accessdate"><span title="">2010年8月15日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ISO%2FIEC+14496-3%3A2009+-+Information+technology+--+Coding+of+audio-visual+objects+--+Part+3%3A+Audio&amp;rft.aulast=%5B%5BISO%5D%5D%2F%5B%5B%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0%7CIEC%5D%5D&amp;rft.au=%5B%5BISO%5D%5D%2F%5B%5B%E5%9B%BD%E9%9A%9B%E9%9B%BB%E6%B0%97%E6%A8%99%E6%BA%96%E4%BC%9A%E8%AD%B0%7CIEC%5D%5D&amp;rft.date=2009&amp;rft.pub=IEC&amp;rft_id=http%3A%2F%2Fwebstore.iec.ch%2Fpreview%2Finfo_isoiec14496-3%257Bed4.0%257Den.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Harmonic_Vector_Excitation_Coding"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-FOOTNOTENishiguchi2006-5">^ <a href="#cite_ref-FOOTNOTENishiguchi2006_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTENishiguchi2006_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTENishiguchi2006_5-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREFNishiguchi2006">Nishiguchi 2006</a>.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=5" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>ISO/IEC. <i>Information technology — Coding of audio-visual objects — Part 3:Audio</i>. ISO/IEC 14496-3:2009, Fourth edition, 2009.</li>
+<li>Jacob Benesty, M. M. Sondhi, Yiteng Huang (ed). <i>Springer Handbook of Speech Processing</i>. Springer, 2007. ISBN 978-3540491255.</li>
+<li><cite class="citation journal" id="CITEREFNishiguchi2006" style="font-style:normal">Nishiguchi, Masayuki (2006-11). “Harmonic vector excitation coding of speech”. <i>Acoustical science and technology</i> (社団法人日本音響学会) <b>27</b> (6):  375-383. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1250%2Fast.27.375" rel="nofollow">10.1250/ast.27.375</a>. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/%E5%9B%BD%E7%AB%8B%E6%83%85%E5%A0%B1%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80" title="国立情報学研究所">NAID</a> <a class="external text" href="https://ci.nii.ac.jp/naid/110004836513/" rel="nofollow">110004836513</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Harmonic+vector+excitation+coding+of+speech&amp;rft.jtitle=Acoustical+science+and+technology&amp;rft.aulast=Nishiguchi&amp;rft.aufirst=Masayuki&amp;rft.au=Nishiguchi%2C%26%2332%3BMasayuki&amp;rft.date=2006-11&amp;rft.volume=27&amp;rft.issue=6&amp;rft.pages=375-383&amp;rft.pub=%E7%A4%BE%E5%9B%A3%E6%B3%95%E4%BA%BA%E6%97%A5%E6%9C%AC%E9%9F%B3%E9%9F%BF%E5%AD%A6%E4%BC%9A&amp;rft_id=info:doi/10.1250%2Fast.27.375&amp;rft.naid=110004836513&amp;rfr_id=info:sid/ja.wikipedia.org:Harmonic_Vector_Excitation_Coding"><span style="display: none;"> </span></span></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=6" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E9%9F%B3%E5%A3%B0%E7%AC%A6%E5%8F%B7%E5%8C%96" title="音声符号化">音声符号化</a></li>
+<li><a href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BA%88%E6%B8%AC%E7%AC%A6%E5%8F%B7" title="線形予測符号">線形予測符号</a></li>
+<li><a href="/wiki/MPEG-4" title="MPEG-4">MPEG-4</a></li>
+<li><a href="/wiki/MPEG-4_CELP" title="MPEG-4 CELP">MPEG-4 CELP</a></li>
+<li><a class="mw-redirect" href="/wiki/HILN" title="HILN">HILN</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;section=7" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://mpeg.chiariglione.org/tutorials/papers/icj-mpeg4-si/09-natural_audio_paper/speechalg.html" rel="nofollow">Speech coding in MPEG-4 Audio (Overview of the MPEG-4 Natural Speech Coding Tools)</a> - MPEG-4 音声符号化ツールの概要(英語)</li>
+<li><a class="external text" href="https://web.archive.org/web/20031021020652/http://www.ifip.or.at/con2000/icct2000/icct483.pdf" rel="nofollow">Overview of MPEG-4 Audio and its Applications in Mobile Communications</a> MPEG-4 オーディオとアプリケーションの概要(PDF, 130 kByte, 英語)</li></ul>
+<div aria-labelledby="マルチメディア圧縮フォーマット" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E5%9C%A7%E7%B8%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:圧縮フォーマット (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%9C%A7%E7%B8%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%9C%A7%E7%B8%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="マルチメディア圧縮フォーマット" style="font-size:110%;margin:0 6em">マルチメディア<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE" title="データ圧縮">圧縮</a>フォーマット</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">動画ファイルフォーマット</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:5em"><a class="mw-redirect" href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a>/<a class="mw-redirect" href="/wiki/International_Electrotechnical_Commission" title="International Electrotechnical Commission">IEC</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Motion_JPEG" title="Motion JPEG">MJPEG</a></li>
+<li><a class="mw-redirect" href="/wiki/Motion_JPEG_2000" title="Motion JPEG 2000">Motion JPEG 2000</a></li>
+<li><a href="/wiki/MPEG-1" title="MPEG-1">MPEG-1</a></li>
+<li><a href="/wiki/MPEG-2" title="MPEG-2">MPEG-2</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=H.262/MPEG-2_Part_2&amp;action=edit&amp;redlink=1" title="H.262/MPEG-2 Part 2 (存在しないページ)">Part 2</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:H.262/MPEG-2_Part_2&amp;action=edit&amp;redlink=1" title="En:H.262/MPEG-2 Part 2 (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/MPEG-4" title="MPEG-4">MPEG-4</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG-4_Part_2&amp;action=edit&amp;redlink=1" title="MPEG-4 Part 2 (存在しないページ)">Part 2/ASP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG-4_Part_2&amp;action=edit&amp;redlink=1" title="En:MPEG-4 Part 2 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/H.264/MPEG-4_AVC" title="H.264/MPEG-4 AVC">Part 10/AVC</a></li></ul></li>
+<li><a href="/wiki/MPEG-H" title="MPEG-H">MPEG-H</a>
+<ul><li><a href="/wiki/H.265" title="H.265">Part 2/HEVC</a></li></ul></li>
+<li><a class="new" href="/w/index.php?title=MPEG-I&amp;action=edit&amp;redlink=1" title="MPEG-I (存在しないページ)">MPEG-I</a>
+<ul><li><a href="/wiki/Versatile_Video_Coding" title="Versatile Video Coding">VVC</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">ITU-T</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=H.120&amp;action=edit&amp;redlink=1" title="H.120 (存在しないページ)">H.120</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:H.120&amp;action=edit&amp;redlink=1" title="En:H.120 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/H.261" title="H.261">H.261</a></li>
+<li><a href="/wiki/MPEG-2" title="MPEG-2">H.262</a></li>
+<li><a href="/wiki/H.263" title="H.263">H.263</a></li>
+<li><a class="mw-redirect" href="/wiki/H.264/MPEG-4_AVC" title="H.264/MPEG-4 AVC">H.264</a></li>
+<li><a href="/wiki/H.265" title="H.265">H.265</a></li>
+<li><a href="/wiki/DV_(%E3%83%93%E3%83%87%E3%82%AA%E8%A6%8F%E6%A0%BC)" title="DV (ビデオ規格)">DV</a></li>
+<li><a href="/wiki/Versatile_Video_Coding" title="Versatile Video Coding">H.266</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">SMPTE</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/VC-1" title="VC-1">VC-1</a></li>
+<li><a href="/wiki/Dirac" title="Dirac">VC-2</a> (Dirac)</li>
+<li><a href="/wiki/Avid_DNxHD" title="Avid DNxHD">VC-3</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CineForm&amp;action=edit&amp;redlink=1" title="CineForm (存在しないページ)">VC-5</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CineForm&amp;action=edit&amp;redlink=1" title="En:CineForm (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">AOMedia</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/AOMedia_Video_1" title="AOMedia Video 1">AV1</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">IETF</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/VP8" title="VP8">VP8</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em"><a class="new" href="/w/index.php?title=Standardization_Administration_of_the_People%27s_Republic_of_China&amp;action=edit&amp;redlink=1" title="Standardization Administration of the People's Republic of China (存在しないページ)">SAC</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Audio_Video_Standard&amp;action=edit&amp;redlink=1" title="Audio Video Standard (存在しないページ)">AVS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Audio_Video_Standard&amp;action=edit&amp;redlink=1" title="En:Audio Video Standard (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Apple_Video&amp;action=edit&amp;redlink=1" title="Apple Video (存在しないページ)">Apple Video</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Apple_Video&amp;action=edit&amp;redlink=1" title="En:Apple Video (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Bink_Video&amp;action=edit&amp;redlink=1" title="Bink Video (存在しないページ)">Bink</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bink_Video&amp;action=edit&amp;redlink=1" title="En:Bink Video (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Daala" title="Daala">Daala</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Digital_Video_Interactive&amp;action=edit&amp;redlink=1" title="Digital Video Interactive (存在しないページ)">DVI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Digital_Video_Interactive&amp;action=edit&amp;redlink=1" title="En:Digital Video Interactive (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=EVC&amp;action=edit&amp;redlink=1" title="EVC (存在しないページ)">EVC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Essential_Video_Coding&amp;action=edit&amp;redlink=1" title="En:Essential Video Coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/GIF%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="GIFアニメーション">GIFアニメーション</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Microsoft_Video_1&amp;action=edit&amp;redlink=1" title="Microsoft Video 1 (存在しないページ)">Microsoft Video 1</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Microsoft_Video_1&amp;action=edit&amp;redlink=1" title="En:Microsoft Video 1 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MSU_Lossless_Video_Codec&amp;action=edit&amp;redlink=1" title="MSU Lossless Video Codec (存在しないページ)">MSU Lossless</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MSU_Lossless_Video_Codec&amp;action=edit&amp;redlink=1" title="En:MSU Lossless Video Codec (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OMS_Video&amp;action=edit&amp;redlink=1" title="OMS Video (存在しないページ)">OMS Video</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OMS_Video&amp;action=edit&amp;redlink=1" title="En:OMS Video (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Pixlet" title="Pixlet">Pixlet</a></li>
+<li><a class="mw-redirect" href="/wiki/ProRes_422" title="ProRes 422">ProRes 422</a></li>
+<li><a class="mw-redirect" href="/wiki/ProRes_4444" title="ProRes 4444">ProRes 4444</a></li>
+<li>QuickTime
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=QuickTime_Animation&amp;action=edit&amp;redlink=1" title="QuickTime Animation (存在しないページ)">Animation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:QuickTime_Animation&amp;action=edit&amp;redlink=1" title="En:QuickTime Animation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=QuickTime_Graphics&amp;action=edit&amp;redlink=1" title="QuickTime Graphics (存在しないページ)">Graphics</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:QuickTime_Graphics&amp;action=edit&amp;redlink=1" title="En:QuickTime Graphics (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=RTVideo&amp;action=edit&amp;redlink=1" title="RTVideo (存在しないページ)">RTVideo</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:RTVideo&amp;action=edit&amp;redlink=1" title="En:RTVideo (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SheerVideo&amp;action=edit&amp;redlink=1" title="SheerVideo (存在しないページ)">SheerVideo</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SheerVideo&amp;action=edit&amp;redlink=1" title="En:SheerVideo (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Smacker_video&amp;action=edit&amp;redlink=1" title="Smacker video (存在しないページ)">Smacker</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smacker_video&amp;action=edit&amp;redlink=1" title="En:Smacker video (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Snow_(%E3%82%B3%E3%83%BC%E3%83%87%E3%83%83%E3%82%AF)" title="Snow (コーデック)">Snow</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Sorenson_Media&amp;action=edit&amp;redlink=1" title="Sorenson Media (存在しないページ)">Sorenson Video, Spark</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Sorenson_Media&amp;action=edit&amp;redlink=1" title="En:Sorenson Media (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/VP6" title="VP6">VP6</a></li>
+<li><a href="/wiki/VP9" title="VP9">VP9</a></li>
+<li><a href="/wiki/Windows_Media_Video" title="Windows Media Video">WMV</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=YULS&amp;action=edit&amp;redlink=1" title="YULS (存在しないページ)">YULS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:YULS&amp;action=edit&amp;redlink=1" title="En:YULS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="new" href="/w/index.php?title=XVC&amp;action=edit&amp;redlink=1" title="XVC (存在しないページ)">XVC</a></li>
+<li><a href="/wiki/Xvid" title="Xvid">Xvid</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">可逆圧縮</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FFV1&amp;action=edit&amp;redlink=1" title="FFV1 (存在しないページ)">FFV1</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FFV1&amp;action=edit&amp;redlink=1" title="En:FFV1 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Ut_Video_Codec_Suite" title="Ut Video Codec Suite">Ut Video Codec Suite</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">開発停止</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AVIzlib" title="AVIzlib">Zlib</a></li>
+<li><a href="/wiki/Cinepak" title="Cinepak">Cinepak</a></li>
+<li><a href="/wiki/Huffyuv" title="Huffyuv">Huffyuv</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Lagarith&amp;action=edit&amp;redlink=1" title="Lagarith (存在しないページ)">Lagarith</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lagarith&amp;action=edit&amp;redlink=1" title="En:Lagarith (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/RealVideo" title="RealVideo">RealVideo</a></li>
+<li><a href="/wiki/RMP4" title="RMP4">RMP4</a></li>
+<li><a href="/wiki/Indeo" title="Indeo">Indeo</a></li>
+<li><a href="/wiki/Microsoft_MPEG-4" title="Microsoft MPEG-4">Microsoft MPEG-4</a></li>
+<li><a href="/wiki/Theora" title="Theora">Theora</a></li>
+<li><a href="/wiki/Thor" title="Thor">Thor</a></li>
+<li><a href="/wiki/VP3" title="VP3">VP3</a></li>
+<li><a href="/wiki/VP7" title="VP7">VP7</a></li>
+<li><a href="/wiki/RatDVD" title="RatDVD">XEB</a></li>
+<li><a href="/wiki/XVD" title="XVD">XVD</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">音声ファイルフォーマット</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:5em"><a class="mw-redirect" href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a>/<a class="mw-redirect" href="/wiki/International_Electrotechnical_Commission" title="International Electrotechnical Commission">IEC</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MP3" title="MP3">MPEG-1 Layer III (MP3)</a></li>
+<li><a class="mw-redirect" href="/wiki/MPEG-1_Audio_Layer_II" title="MPEG-1 Audio Layer II">MPEG-1 Layer II</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG_Multichannel&amp;action=edit&amp;redlink=1" title="MPEG Multichannel (存在しないページ)">Multichannel</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG_Multichannel&amp;action=edit&amp;redlink=1" title="En:MPEG Multichannel (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG-1_Audio_Layer_I&amp;action=edit&amp;redlink=1" title="MPEG-1 Audio Layer I (存在しないページ)">MPEG-1 Layer I</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG-1_Audio_Layer_I&amp;action=edit&amp;redlink=1" title="En:MPEG-1 Audio Layer I (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/Advanced_Audio_Coding" title="Advanced Audio Coding">AAC</a>
+<ul><li><a href="/wiki/HE-AAC" title="HE-AAC">HE-AAC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AAC-LD&amp;action=edit&amp;redlink=1" title="AAC-LD (存在しないページ)">AAC-LD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AAC-LD&amp;action=edit&amp;redlink=1" title="En:AAC-LD (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG_Surround&amp;action=edit&amp;redlink=1" title="MPEG Surround (存在しないページ)">MPEG Surround</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG_Surround&amp;action=edit&amp;redlink=1" title="En:MPEG Surround (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/MPEG-4_ALS" title="MPEG-4 ALS">MPEG-4 ALS</a></li>
+<li><a href="/wiki/MPEG-4_SLS" title="MPEG-4 SLS">MPEG-4 SLS</a></li>
+<li><a href="/wiki/Super_Audio_CD#DST" title="Super Audio CD">MPEG-4 DST</a></li>
+<li><a href="/wiki/Harmonic_and_Individual_Lines_plus_Noise" title="Harmonic and Individual Lines plus Noise">MPEG-4 HILN</a></li>
+<li><a class="mw-selflink selflink">MPEG-4 HVXC</a></li>
+<li><a href="/wiki/Code_Excited_Linear_Prediction" title="Code Excited Linear Prediction">MPEG-4 CELP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Unified_Speech_and_Audio_Coding&amp;action=edit&amp;redlink=1" title="Unified Speech and Audio Coding (存在しないページ)">MPEG-D USAC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Unified_Speech_and_Audio_Coding&amp;action=edit&amp;redlink=1" title="En:Unified Speech and Audio Coding (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG-H_3D_Audio&amp;action=edit&amp;redlink=1" title="MPEG-H 3D Audio (存在しないページ)">MPEG-H 3D Audio</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG-H_3D_Audio&amp;action=edit&amp;redlink=1" title="En:MPEG-H 3D Audio (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">ITU-T</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/G.711" title="G.711">G.711</a> (<a href="/wiki/A-law%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="A-lawアルゴリズム">A-law</a>, <a href="/wiki/%CE%9C-law%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Μ-lawアルゴリズム">µ-law</a>)</li>
+<li><a href="/wiki/G.718" title="G.718">G.718</a></li>
+<li><a href="/wiki/G.719" title="G.719">G.719</a></li>
+<li><a href="/wiki/G.721" title="G.721">G.721</a></li>
+<li><a href="/wiki/G.722" title="G.722">G.722</a></li>
+<li><a href="/wiki/G.722.1" title="G.722.1">G.722.1</a></li>
+<li><a class="mw-redirect" href="/wiki/Adaptive_Multi-Rate_Wideband" title="Adaptive Multi-Rate Wideband">G.722.2</a></li>
+<li><a href="/wiki/G.723" title="G.723">G.723</a></li>
+<li><a href="/wiki/G.723.1" title="G.723.1">G.723.1</a></li>
+<li><a href="/wiki/G.726" title="G.726">G.726</a></li>
+<li><a href="/wiki/G.728" title="G.728">G.728</a></li>
+<li><a href="/wiki/G.729" title="G.729">G.729</a></li>
+<li><a href="/wiki/G.729.1" title="G.729.1">G.729.1</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">IETF</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Opus_(%E9%9F%B3%E5%A3%B0%E5%9C%A7%E7%B8%AE)" title="Opus (音声圧縮)">Opus</a></li>
+<li><a href="/wiki/Internet_Low_Bitrate_Codec" title="Internet Low Bitrate Codec">iLBC</a></li>
+<li><a href="/wiki/Speex" title="Speex">Speex</a></li>
+<li><a href="/wiki/Vorbis" title="Vorbis">Vorbis</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">3GPP</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Adaptive_Multi-Rate" title="Adaptive Multi-Rate">AMR</a></li>
+<li><a class="mw-redirect" href="/wiki/Adaptive_Multi-Rate_Wideband" title="Adaptive Multi-Rate Wideband">AMR-WB</a></li>
+<li><a href="/wiki/AMR-WB%2B" title="AMR-WB+">AMR-WB+</a></li>
+<li><a href="/wiki/EVRC" title="EVRC">EVRC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Enhanced_Variable_Rate_Codec_B&amp;action=edit&amp;redlink=1" title="Enhanced Variable Rate Codec B (存在しないページ)">EVRC-B</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Enhanced_Variable_Rate_Codec_B&amp;action=edit&amp;redlink=1" title="En:Enhanced Variable Rate Codec B (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Enhanced_Voice_Services" title="Enhanced Voice Services">EVS</a></li>
+<li><a href="/wiki/GSM-HR" title="GSM-HR">GSM-HR</a></li>
+<li><a href="/wiki/GSM-FR" title="GSM-FR">GSM-FR</a></li>
+<li><a href="/wiki/GSM-EFR" title="GSM-EFR">GSM-EFR</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em"><a class="mw-redirect" href="/wiki/ETSI" title="ETSI">ETSI</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/Dolby_Digital" title="Dolby Digital">AC-3</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dolby_AC-4&amp;action=edit&amp;redlink=1" title="Dolby AC-4 (存在しないページ)">AC-4</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dolby_AC-4&amp;action=edit&amp;redlink=1" title="En:Dolby AC-4 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/DTS_(%E3%82%B5%E3%82%A6%E3%83%B3%E3%83%89%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="DTS (サウンドシステム)">DTS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em"><a class="new" href="/w/index.php?title=Standardization_Administration_of_the_People%27s_Republic_of_China&amp;action=edit&amp;redlink=1" title="Standardization Administration of the People's Republic of China (存在しないページ)">SAC</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Audio_Video_Standard&amp;action=edit&amp;redlink=1" title="Audio Video Standard (存在しないページ)">AVS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Audio_Video_Standard&amp;action=edit&amp;redlink=1" title="En:Audio Video Standard (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dynamic_Resolution_Adaptation&amp;action=edit&amp;redlink=1" title="Dynamic Resolution Adaptation (存在しないページ)">DRA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dynamic_Resolution_Adaptation&amp;action=edit&amp;redlink=1" title="En:Dynamic Resolution Adaptation (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Algebraic_Code_Excited_Linear_Prediction" title="Algebraic Code Excited Linear Prediction">ACELP</a></li>
+<li><a href="/wiki/%E9%81%A9%E5%BF%9C%E7%9A%84%E5%B7%AE%E5%88%86%E3%83%91%E3%83%AB%E3%82%B9%E7%AC%A6%E5%8F%B7%E5%A4%89%E8%AA%BF" title="適応的差分パルス符号変調">ADPCM</a></li>
+<li><a href="/wiki/Apple_Lossless" title="Apple Lossless">ALAC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Asao&amp;action=edit&amp;redlink=1" title="Asao (存在しないページ)">Asao</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Asao_(codec)&amp;action=edit&amp;redlink=1" title="En:Asao (codec) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/ATRAC" title="ATRAC">ATRAC</a></li>
+<li><a href="/wiki/CELT" title="CELT">CELT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Codec_2&amp;action=edit&amp;redlink=1" title="Codec 2 (存在しないページ)">Codec 2</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Codec_2&amp;action=edit&amp;redlink=1" title="En:Codec 2 (存在しないページ)">英語版</a>）</span></span><a class="new" href="/w/index.php?title=Codec_2&amp;action=edit&amp;redlink=1" title="Codec 2 (存在しないページ)">Codec 2</a></li>
+<li><a href="/wiki/Cook_Codec" title="Cook Codec">Cook</a></li>
+<li><a href="/wiki/FLAC" title="FLAC">FLAC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Internet_Speech_Audio_Codec&amp;action=edit&amp;redlink=1" title="Internet Speech Audio Codec (存在しないページ)">iSAC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:internet_Speech_Audio_Codec&amp;action=edit&amp;redlink=1" title="En:internet Speech Audio Codec (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/La_(%E9%9F%B3%E5%A3%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88)" title="La (音声ファイルフォーマット)">La</a></li>
+<li><a href="/wiki/Monkey%27s_Audio" title="Monkey's Audio">Monkey's Audio</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MT9&amp;action=edit&amp;redlink=1" title="MT9 (存在しないページ)">MT9</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MT9&amp;action=edit&amp;redlink=1" title="En:MT9 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Musepack" title="Musepack">Musepack</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OptimFROG&amp;action=edit&amp;redlink=1" title="OptimFROG (存在しないページ)">OptimFROG</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OptimFROG&amp;action=edit&amp;redlink=1" title="En:OptimFROG (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Original_Sound_Quality&amp;action=edit&amp;redlink=1" title="Original Sound Quality (存在しないページ)">OSQ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Original_Sound_Quality&amp;action=edit&amp;redlink=1" title="En:Original Sound Quality (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PASC" title="PASC">PASC</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%AB%E3%82%B9%E7%AC%A6%E5%8F%B7%E5%A4%89%E8%AA%BF" title="パルス符号変調">PCM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Qualcomm_code-excited_linear_prediction&amp;action=edit&amp;redlink=1" title="Qualcomm code-excited linear prediction (存在しないページ)">QCELP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Qualcomm_code-excited_linear_prediction&amp;action=edit&amp;redlink=1" title="En:Qualcomm code-excited linear prediction (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/RCELP" title="RCELP">RCELP</a></li>
+<li><a href="/wiki/RealAudio" title="RealAudio">RealAudio</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=RTAudio&amp;action=edit&amp;redlink=1" title="RTAudio (存在しないページ)">RTAudio</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:RTAudio&amp;action=edit&amp;redlink=1" title="En:RTAudio (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Digidesign" title="Digidesign">SD2</a></li>
+<li><a href="/wiki/Shorten" title="Shorten">SHN</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SILK_(%E9%9F%B3%E5%A3%B0%E5%9C%A7%E7%B8%AE)&amp;action=edit&amp;redlink=1" title="SILK (音声圧縮) (存在しないページ)">SILK</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SILK&amp;action=edit&amp;redlink=1" title="En:SILK (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Siren_(%E9%9F%B3%E5%A3%B0%E5%9C%A7%E7%B8%AE)&amp;action=edit&amp;redlink=1" title="Siren (音声圧縮) (存在しないページ)">Siren</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Siren_(codec)&amp;action=edit&amp;redlink=1" title="En:Siren (codec) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/SMV" title="SMV">SMV</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SVOPC&amp;action=edit&amp;redlink=1" title="SVOPC (存在しないページ)">SVOPC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SVOPC&amp;action=edit&amp;redlink=1" title="En:SVOPC (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/TAK" title="TAK">TAK</a></li>
+<li><a href="/wiki/TTA" title="TTA">TTA</a>
+<ul><li>True Audio</li></ul></li>
+<li><a href="/wiki/TwinVQ" title="TwinVQ">TwinVQ</a></li>
+<li><a href="/wiki/VMR-WB" title="VMR-WB">VMR-WB</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vector_sum_excited_linear_prediction&amp;action=edit&amp;redlink=1" title="Vector sum excited linear prediction (存在しないページ)">VSELP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vector_sum_excited_linear_prediction&amp;action=edit&amp;redlink=1" title="En:Vector sum excited linear prediction (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/WavPack" title="WavPack">WavPack</a></li>
+<li><a href="/wiki/Windows_Media_Audio" title="Windows Media Audio">WMA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Master_Quality_Authenticated&amp;action=edit&amp;redlink=1" title="Master Quality Authenticated (存在しないページ)">MQA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Master_Quality_Authenticated&amp;action=edit&amp;redlink=1" title="En:Master Quality Authenticated (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/AptX" title="AptX">aptX</a></li>
+<li><a href="/wiki/LDAC" title="LDAC">LDAC</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/%E7%94%BB%E5%83%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88" title="画像ファイルフォーマット">画像ファイルフォーマット</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:5em"><a class="mw-redirect" href="/wiki/International_Electrotechnical_Commission" title="International Electrotechnical Commission">IEC</a>, <a class="mw-redirect" href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a>,<br/>ITU-T, <a href="/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a>, <a href="/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Group_4_compression&amp;action=edit&amp;redlink=1" title="Group 4 compression (存在しないページ)">CCITT Group 4</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Group_4_compression&amp;action=edit&amp;redlink=1" title="En:Group 4 compression (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/GIF" title="GIF">GIF</a></li>
+<li><a href="/wiki/High_Efficiency_Image_File_Format" title="High Efficiency Image File Format">HEIF</a></li>
+<li><a class="mw-redirect" href="/wiki/High_Efficiency_Video_Coding#Main_Still_Picture" title="High Efficiency Video Coding">HEVC</a></li>
+<li><a href="/wiki/JBIG" title="JBIG">JBIG</a></li>
+<li><a href="/wiki/JBIG2" title="JBIG2">JBIG2</a></li>
+<li><a href="/wiki/JPEG" title="JPEG">JPEG</a></li>
+<li><a class="mw-redirect" href="/wiki/JPEG-LS" title="JPEG-LS">JPEG-LS</a></li>
+<li><a href="/wiki/JPEG_2000" title="JPEG 2000">JPEG 2000</a></li>
+<li><a href="/wiki/JPEG_XR" title="JPEG XR">JPEG XR</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JPEG_XT&amp;action=edit&amp;redlink=1" title="JPEG XT (存在しないページ)">JPEG XT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JPEG_XT&amp;action=edit&amp;redlink=1" title="En:JPEG XT (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/JPEG_XL" title="JPEG XL">JPEG XL</a></li>
+<li><a href="/wiki/Lossless_JPEG" title="Lossless JPEG">Lossless JPEG</a></li>
+<li><a href="/wiki/Portable_Network_Graphics" title="Portable Network Graphics">PNG</a></li>
+<li><a href="/wiki/Tagged_Image_File_Format" title="Tagged Image File Format">TIFF</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TIFF/EP&amp;action=edit&amp;redlink=1" title="TIFF/EP (存在しないページ)">TIFF/EP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TIFF/EP&amp;action=edit&amp;redlink=1" title="En:TIFF/EP (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TIFF/IT&amp;action=edit&amp;redlink=1" title="TIFF/IT (存在しないページ)">TIFF/IT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TIFF/IT&amp;action=edit&amp;redlink=1" title="En:TIFF/IT (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/APNG" title="APNG">APNG</a></li>
+<li><a href="/wiki/Better_Portable_Graphics" title="Better Portable Graphics">BPG</a></li>
+<li><a href="/wiki/DjVu" title="DjVu">DjVu</a></li>
+<li><a href="/wiki/Digital_Negative" title="Digital Negative">DNG</a></li>
+<li><a href="/wiki/OpenEXR" title="OpenEXR">EXR</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Free_Lossless_Image_Format&amp;action=edit&amp;redlink=1" title="Free Lossless Image Format (存在しないページ)">FLIF</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Free_Lossless_Image_Format&amp;action=edit&amp;redlink=1" title="En:Free Lossless Image Format (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ICER&amp;action=edit&amp;redlink=1" title="ICER (存在しないページ)">ICER</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ICER&amp;action=edit&amp;redlink=1" title="En:ICER (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/ILBM" title="ILBM">ILBM</a></li>
+<li><a href="/wiki/JPEG_Network_Graphics" title="JPEG Network Graphics">JPEG Network Graphics</a></li>
+<li><a href="/wiki/Multiple-image_Network_Graphics" title="Multiple-image Network Graphics">MNG</a></li>
+<li><a href="/wiki/PCX" title="PCX">PCX</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Progressive_Graphics_File&amp;action=edit&amp;redlink=1" title="Progressive Graphics File (存在しないページ)">PGF</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Progressive_Graphics_File&amp;action=edit&amp;redlink=1" title="En:Progressive Graphics File (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=QuickTime_VR&amp;action=edit&amp;redlink=1" title="QuickTime VR (存在しないページ)">QTVR</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:QuickTime_VR&amp;action=edit&amp;redlink=1" title="En:QuickTime VR (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/TGA" title="TGA">TGA</a></li>
+<li><a href="/wiki/Wireless_Application_Protocol_Bitmap_Format" title="Wireless Application Protocol Bitmap Format">WBMP</a></li>
+<li><a href="/wiki/WebP" title="WebP">WebP</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マルチメディアコンテナフォーマット</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:5em"><a class="mw-redirect" href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a>/<a class="mw-redirect" href="/wiki/International_Electrotechnical_Commission" title="International Electrotechnical Commission">IEC</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Elementary_stream&amp;action=edit&amp;redlink=1" title="Elementary stream (存在しないページ)">MPEG-ES</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Elementary_stream&amp;action=edit&amp;redlink=1" title="En:Elementary stream (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Packetized_elementary_stream&amp;action=edit&amp;redlink=1" title="Packetized elementary stream (存在しないページ)">MPEG-PES</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Packetized_elementary_stream&amp;action=edit&amp;redlink=1" title="En:Packetized elementary stream (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG_program_stream&amp;action=edit&amp;redlink=1" title="MPEG program stream (存在しないページ)">MPEG-PS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG_program_stream&amp;action=edit&amp;redlink=1" title="En:MPEG program stream (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/MPEG-2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="MPEG-2システム">MPEG-TS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ISO_base_media_file_format&amp;action=edit&amp;redlink=1" title="ISO base media file format (存在しないページ)">ISO base media file format</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ISO_base_media_file_format&amp;action=edit&amp;redlink=1" title="En:ISO base media file format (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/MPEG-4_Part_14" title="MPEG-4 Part 14">MPEG-4 Part 14</a> (MP4)</li>
+<li><a class="mw-redirect" href="/wiki/Motion_JPEG_2000" title="Motion JPEG 2000">Motion JPEG 2000</a></li>
+<li><a href="/wiki/MPEG-21" title="MPEG-21">MPEG-21 Part 9</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG_media_transport&amp;action=edit&amp;redlink=1" title="MPEG media transport (存在しないページ)">MPEG media transport</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG_media_transport&amp;action=edit&amp;redlink=1" title="En:MPEG media transport (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">ITU-T</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MPEG-2#Systems" title="MPEG-2">H.222.0</a></li>
+<li><a class="mw-redirect" href="/wiki/Motion_JPEG_2000" title="Motion JPEG 2000">T.802</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">IETF</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">RTP</a></li>
+<li><a href="/wiki/Ogg" title="Ogg">Ogg</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">SMPTE</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=General_Exchange_Format&amp;action=edit&amp;redlink=1" title="General Exchange Format (存在しないページ)">GXF</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:General_Exchange_Format&amp;action=edit&amp;redlink=1" title="En:General Exchange Format (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Material_Exchange_Format" title="Material Exchange Format">MXF</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">3GPP</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=3GP_and_3G2&amp;action=edit&amp;redlink=1" title="3GP and 3G2 (存在しないページ)">3GP and 3G2</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:3GP_and_3G2&amp;action=edit&amp;redlink=1" title="En:3GP and 3G2 (存在しないページ)">英語版</a>）</span></span>
+<ul><li>3GP</li>
+<li><a href="/wiki/3GPP2" title="3GPP2">3G2</a></li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:5em">その他</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMV_video_format" title="AMV video format">AMV</a></li>
+<li><a href="/wiki/Advanced_Systems_Format" title="Advanced Systems Format">ASF</a></li>
+<li><a href="/wiki/AIFF" title="AIFF">AIFF</a></li>
+<li><a href="/wiki/Audio_Video_Interleave" title="Audio Video Interleave">AVI</a></li>
+<li><a href="/wiki/Sun%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="Sunオーディオファイル">AU</a></li>
+<li><a href="/wiki/Better_Portable_Graphics" title="Better Portable Graphics">BPG</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Bink_Video&amp;action=edit&amp;redlink=1" title="Bink Video (存在しないページ)">Bink</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bink_Video&amp;action=edit&amp;redlink=1" title="En:Bink Video (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Smacker_video&amp;action=edit&amp;redlink=1" title="Smacker video (存在しないページ)">Smacker</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smacker_video&amp;action=edit&amp;redlink=1" title="En:Smacker video (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/Windows_bitmap" title="Windows bitmap">BMP</a></li>
+<li><a href="/wiki/DivX#DivX_Media_Format" title="DivX">DivX Media Format</a></li>
+<li><a href="/wiki/Digital_Picture_Exchange" title="Digital Picture Exchange">DPX</a></li>
+<li><a href="/wiki/DirectShow_Media" title="DirectShow Media">DSM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Enhanced_VOB&amp;action=edit&amp;redlink=1" title="Enhanced VOB (存在しないページ)">EVO</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Enhanced_VOB&amp;action=edit&amp;redlink=1" title="En:Enhanced VOB (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Flash_Video" title="Flash Video">Flash Video</a> (FLV)</li>
+<li><a href="/wiki/Interchange_File_Format" title="Interchange File Format">IFF</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=.m2ts&amp;action=edit&amp;redlink=1" title=".m2ts (存在しないページ)">M2TS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:.m2ts&amp;action=edit&amp;redlink=1" title="En:.m2ts (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Matroska" title="Matroska">Matroska</a>
+<ul><li><a href="/wiki/WebM" title="WebM">WebM</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=QuickTime_File_Format&amp;action=edit&amp;redlink=1" title="QuickTime File Format (存在しないページ)">QuickTime File Format</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:QuickTime_File_Format&amp;action=edit&amp;redlink=1" title="En:QuickTime File Format (存在しないページ)">英語版</a>）</span></span> (<a href="/wiki/QuickTime" title="QuickTime">MOV</a>)</li>
+<li><a href="/wiki/RatDVD" title="RatDVD">RatDVD</a></li>
+<li><a href="/wiki/RealMedia" title="RealMedia">RealMedia</a></li>
+<li><a href="/wiki/Resource_Interchange_File_Format" title="Resource Interchange File Format">RIFF</a>
+<ul><li><a href="/wiki/WAV" title="WAV">WAV</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MOD_and_TOD&amp;action=edit&amp;redlink=1" title="MOD and TOD (存在しないページ)">MOD and TOD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MOD_and_TOD&amp;action=edit&amp;redlink=1" title="En:MOD and TOD (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=VOB&amp;action=edit&amp;redlink=1" title="VOB (存在しないページ)">VOB, IFO and BUP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:VOB&amp;action=edit&amp;redlink=1" title="En:VOB (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">団体</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NETVC&amp;action=edit&amp;redlink=1" title="NETVC (存在しないページ)">NETVC</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:NETVC&amp;action=edit&amp;redlink=1" title="En:NETVC (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MPEG_LA&amp;action=edit&amp;redlink=1" title="MPEG LA (存在しないページ)">MPEG LA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MPEG_LA&amp;action=edit&amp;redlink=1" title="En:MPEG LA (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+圧縮技術については<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9C%A7%E7%B8%AE" title="データ圧縮">データ圧縮</a>を、コーデックについては<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%87%E3%83%83%E3%82%AF#データ圧縮・伸張を行うコーデック" title="コーデック">データ圧縮・伸張を行うコーデック</a>を参照</td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401090307
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.460 seconds
+Real time usage: 0.914 seconds
+Preprocessor visited node count: 4841/1000000
+Post‐expand include size: 220005/2097152 bytes
+Template argument size: 7814/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 65/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8284/5000000 bytes
+Lua time usage: 0.340/7 seconds
+Lua virtual size: 7233536/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+124.30%  958.965      5 テンプレート:Navbox
+100.00%  771.474      1 -total
+ 64.76%  499.582      1 テンプレート:圧縮フォーマット
+ 58.29%  449.691     68 テンプレート:仮リンク
+ 15.51%  119.693      3 テンプレート:Citation/core
+ 14.25%  109.927      1 テンプレート:Reflist
+ 12.26%   94.600      1 テンプレート:Cite_journal
+  8.84%   68.182      2 テンプレート:Citation/identifier
+  8.05%   62.102      3 テンプレート:Sfn
+  7.76%   59.862      2 テンプレート:Cite_web
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2167922-0!canonical and timestamp 20220401090306 and revision id 1299465. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;oldid=1299465">http://localhost:8080/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;oldid=1299465</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%BC%E3%83%87%E3%83%83%E3%82%AF" title="カテゴリ:コーデック">コーデック</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:MPEG" title="カテゴリ:MPEG">MPEG</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%95%B7%E5%A4%A7%E3%81%AA%E9%A0%85%E7%9B%AE%E5%90%8D" title="カテゴリ:長大な項目名">長大な項目名</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Harmonic+Vector+Excitation+Coding&amp;returntoquery=curid%3D2167922%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Harmonic+Vector+Excitation+Coding&amp;returntoquery=curid%3D2167922%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Harmonic_Vector_Excitation_Coding" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Harmonic_Vector_Excitation_Coding&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Harmonic_Vector_Excitation_Coding">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Harmonic_Vector_Excitation_Coding" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Harmonic_Vector_Excitation_Coding" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;oldid=1299465" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Harmonic_Vector_Excitation_Coding&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年8月12日 (水) 23:07 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.460","walltime":"0.914","ppvisitednodes":{"value":4841,"limit":1000000},"postexpandincludesize":{"value":220005,"limit":2097152},"templateargumentsize":{"value":7814,"limit":2097152},"expansiondepth":{"value":25,"limit":40},"expensivefunctioncount":{"value":65,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8284,"limit":5000000},"timingprofile":["124.30%  958.965      5 テンプレート:Navbox","100.00%  771.474      1 -total"," 64.76%  499.582      1 テンプレート:圧縮フォーマット"," 58.29%  449.691     68 テンプレート:仮リンク"," 15.51%  119.693      3 テンプレート:Citation/core"," 14.25%  109.927      1 テンプレート:Reflist"," 12.26%   94.600      1 テンプレート:Cite_journal","  8.84%   68.182      2 テンプレート:Citation/identifier","  8.05%   62.102      3 テンプレート:Sfn","  7.76%   59.862      2 テンプレート:Cite_web"]},"scribunto":{"limitreport-timeusage":{"value":"0.340","limit":"7"},"limitreport-virtmemusage":{"value":7233536,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401090307","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1063});});</script>
+</body></html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>DBSCAN - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-DBSCAN rootpage-DBSCAN skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">DBSCAN</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:250px;margin:0 0 1.0em 1.0em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em">機械学習および<br/><a href="." id="link_i_1" title="データマイニング">データマイニング</a></th></tr><tr><td style="padding:0.2em 0 0.4em;padding:0.25em 0.25em 0.75em;">ファイル:Kernel Machine.svg</td></tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left">問題</div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_2" title="分類 (統計学)">分類</a></li>
+<li><a href="." id="link_i_3" title="データ・クラスタリング">クラスタリング</a></li>
+<li><a href="." id="link_i_4" title="回帰分析">回帰</a></li>
+<li><a href="." id="link_i_5" title="異常検知">異常検知</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_6" title="相関ルール学習 (存在しないページ)">相関ルール</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Association_rule_learning&amp;action=edit&amp;redlink=1" title="En:Association rule learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_7" title="強化学習">強化学習</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_8" title="構造化予測 (存在しないページ)">構造化予測</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Structured_prediction&amp;action=edit&amp;redlink=1" title="En:Structured prediction (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_9" title="特徴量設計 (存在しないページ)">特徴量設計</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Feature_engineering&amp;action=edit&amp;redlink=1" title="En:Feature engineering (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_10" title="表現学習 (存在しないページ)">表現学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Feature_learning&amp;action=edit&amp;redlink=1" title="En:Feature learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_11" title="オンライン機械学習 (存在しないページ)">オンライン学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Online_machine_learning&amp;action=edit&amp;redlink=1" title="En:Online machine learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_12" title="半教師あり学習 (存在しないページ)">半教師あり学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Semi-supervised_learning&amp;action=edit&amp;redlink=1" title="En:Semi-supervised learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_13" title="教師なし学習">教師なし学習</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_14" title="ランキング学習 (存在しないページ)">ランキング学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Learning_to_rank&amp;action=edit&amp;redlink=1" title="En:Learning to rank (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_15" title="文法獲得 (存在しないページ)">文法獲得 </a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Grammar_induction&amp;action=edit&amp;redlink=1" title="En:Grammar induction (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><div style="padding:0.1em 0;line-height:1.2em;"><a href="." id="link_i_16" title="教師あり学習">教師あり学習</a><span style="font-weight:normal !important;"><small>（<b><a href="." id="link_i_2" title="分類 (統計学)">分類</a></b> • <b> <a href="." id="link_i_4" title="回帰分析">回帰</a></b>）</small></span></div></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_17" title="決定木学習 (存在しないページ)">決定木</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Decision_tree_learning&amp;action=edit&amp;redlink=1" title="En:Decision tree learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_18" title="アンサンブル学習 (存在しないページ)">アンサンブル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ensemble_learning&amp;action=edit&amp;redlink=1" title="En:Ensemble learning (存在しないページ)">英語版</a>）</span></span><br/>（<a href="." id="link_i_19" title="バギング">バギング</a>、<a href="." id="link_i_20" title="ブースティング">ブースティング</a>、<br/><a href="." id="link_i_21" title="ランダムフォレスト">ランダムフォレスト</a>）</li>
+<li><a href="." id="link_i_22" title="K近傍法">k-NN</a></li>
+<li><a href="." id="link_i_23" title="線形回帰">線形回帰</a></li>
+<li><a href="." id="link_i_24" title="単純ベイズ分類器">単純ベイズ</a></li>
+<li><a href="." id="link_i_25" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><a href="." id="link_i_26" title="ロジスティック回帰">ロジスティック回帰</a></li>
+<li><a href="." id="link_i_27" title="パーセプトロン">パーセプトロン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_28" title="関連ベクトルマシン (存在しないページ)">関連ベクトルマシン (RVM)</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Relevance_vector_machine&amp;action=edit&amp;redlink=1" title="En:Relevance vector machine (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_29" title="サポートベクターマシン">サポートベクトルマシン (SVM)</a></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><a href="." id="link_i_3" title="データ・クラスタリング">クラスタリング</a></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_30" title="BIRCH (存在しないページ)">BIRCH</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:BIRCH&amp;action=edit&amp;redlink=1" title="En:BIRCH (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_31" title="階層的クラスタリング (存在しないページ)">階層的</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hierarchical_clustering&amp;action=edit&amp;redlink=1" title="En:Hierarchical clustering (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_32" title="K平均法">k平均法</a></li>
+<li><a href="." id="link_i_33" title="EMアルゴリズム">期待値最大化法 (EM)</a></li>
+<li><br/><a class="mw-selflink selflink">DBSCAN</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_34" title="OPTICSアルゴリズム (存在しないページ)">OPTICS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OPTICS&amp;action=edit&amp;redlink=1" title="En:OPTICS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_35" title="平均値シフト (存在しないページ)">平均値シフト</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mean-shift&amp;action=edit&amp;redlink=1" title="En:Mean-shift (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_36" title="次元削減 (存在しないページ)">次元削減</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dimensionality_reduction&amp;action=edit&amp;redlink=1" title="En:Dimensionality reduction (存在しないページ)">英語版</a>）</span></span></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_37" title="因子分析">因子分析</a></li>
+<li><a href="." id="link_i_38" title="カノニカル相関">CCA</a></li>
+<li><a href="." id="link_i_39" title="独立成分分析">ICA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_40" title="線形判別分析 (存在しないページ)">LDA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Linear_discriminant_analysis&amp;action=edit&amp;redlink=1" title="En:Linear discriminant analysis (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_41" title="非負値行列因子分解 (存在しないページ)">NMF</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Non-negative_matrix_factorization&amp;action=edit&amp;redlink=1" title="En:Non-negative matrix factorization (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_42" title="主成分分析">PCA</a></li>
+<li><a href="." id="link_i_43" title="T分布型確率的近傍埋め込み法">t-SNE</a></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_8" title="構造化予測 (存在しないページ)">構造化予測</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Structured_prediction&amp;action=edit&amp;redlink=1" title="En:Structured prediction (存在しないページ)">英語版</a>）</span></span></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_44" title="グラフィカルモデル">グラフィカルモデル</a><br/>（<a href="." id="link_i_45" title="ベイジアンネットワーク">ベイジアンネットワーク</a>、<br/><a href="." id="link_i_46" title="条件付き確率場">CRF</a>、<a href="." id="link_i_47" title="隠れマルコフモデル">HMM</a>）</li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><a href="." id="link_i_5" title="異常検知">異常検知</a></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_22" title="K近傍法">k-NN</a></li>
+<li><a href="." id="link_i_48" title="局所外れ値因子法">局所外れ値因子法</a></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><a href="." id="link_i_25" title="ニューラルネットワーク">ニューラルネットワーク</a></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_49" title="オートエンコーダ">オートエンコーダ</a></li>
+<li><a href="." id="link_i_50" title="ディープラーニング">ディープラーニング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_51" title="DeepDream (存在しないページ)">DeepDream</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DeepDream&amp;action=edit&amp;redlink=1" title="En:DeepDream (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_52" title="多層パーセプトロン">多層パーセプトロン</a></li>
+<li><a href="." id="link_i_53" title="回帰型ニューラルネットワーク">RNN</a>
+<ul><li><a href="." id="link_i_54" title="長・短期記憶">LSTM</a></li>
+<li><a href="." id="link_i_55" title="ゲート付き回帰型ユニット">GRU</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_56" title="制約ボルツマンマシン (存在しないページ)">制約ボルツマンマシン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Restricted_Boltzmann_machine&amp;action=edit&amp;redlink=1" title="En:Restricted Boltzmann machine (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_57" title="自己組織化写像">SOM</a></li>
+<li><a href="." id="link_i_58" title="畳み込みニューラルネットワーク">畳み込みニューラルネットワーク</a>
+<ul><li><a href="." id="link_i_59" title="U-Net (存在しないページ)">U-Net</a></li></ul></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left"><a href="." id="link_i_7" title="強化学習">強化学習</a></div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_60" title="Q学習">Q学習</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_61" title="SARSAアルゴリズム (存在しないページ)">SARSA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:State-Action-Reward-State-Action&amp;action=edit&amp;redlink=1" title="En:State-Action-Reward-State-Action (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_62" title="時間差分学習 (存在しないページ)">時間差分 (TD)</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Temporal_Difference_Learning&amp;action=edit&amp;redlink=1" title="En:Temporal Difference Learning (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left">理論</div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_63" title="偏りと分散">偏りと分散</a>のトレードオフ</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_64" title="計算論的学習理論 (存在しないページ)">計算論的学習理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Computational_learning_theory&amp;action=edit&amp;redlink=1" title="En:Computational learning theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_65" title="経験損失最小化 (存在しないページ)">経験損失最小化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Empirical_risk_minimization&amp;action=edit&amp;redlink=1" title="En:Empirical risk minimization (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_66" title="オッカム学習 (存在しないページ)">オッカム学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Occam_learning&amp;action=edit&amp;redlink=1" title="En:Occam learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="." id="link_i_67" title="確率的で近似的に正しい学習">PAC学習</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_68" title="統計的学習理論 (存在しないページ)">統計的学習</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Statistical_learning_theory&amp;action=edit&amp;redlink=1" title="En:Statistical learning theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_69" title="ヴァプニーク・チェルヴォーネンキス理論 (存在しないページ)">VC理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vapnik%E2%80%93Chervonenkis_theory&amp;action=edit&amp;redlink=1" title="En:Vapnik–Chervonenkis theory (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left">学会・論文誌等</div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_70" title="NIPS (存在しないページ)">NIPS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Conference_on_Neural_Information_Processing_Systems&amp;action=edit&amp;redlink=1" title="En:Conference on Neural Information Processing Systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_71" title="ICML (存在しないページ)">ICML</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:International_Conference_on_Machine_Learning&amp;action=edit&amp;redlink=1" title="En:International Conference on Machine Learning (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_72" title="Machine learning (書籍) (存在しないページ)">ML</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Machine_Learning_(journal)&amp;action=edit&amp;redlink=1" title="En:Machine Learning (journal) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_i_73" title="JMLR (存在しないページ)">JMLR</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Journal_of_Machine_Learning_Research&amp;action=edit&amp;redlink=1" title="En:Journal of Machine Learning Research (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="external text" href="http://arxiv.org/list/cs.LG/recent" rel="nofollow">ArXiv:cs.LG</a></li></ul>
+</div></div></div></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0"><div class="NavHead" style="font-size:105%;background:transparent;text-align:left">全般</div><div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center"><div class="hlist">
+<ul><li><a href="." id="link_i_74" title="統計学および機械学習の評価指標">統計学および機械学習の評価指標</a></li></ul>
+</div></div></div></td>
+</tr><tr><td style="text-align:right;font-size:75%;padding-top: 0.6em;"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><abbr title="このテンプレートを表示します">表</abbr></li><li class="nv-talk"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Machine_learning_bar&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Machine learning bar (存在しないページ)"><span title="このテンプレートのノートを表示します">話</span></a></li><li class="nv-edit"><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:Machine_learning_bar&amp;action=edit" rel="nofollow"><span title="このテンプレートを編集します">編</span></a></li><li class="nv-history"><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:Machine_learning_bar&amp;action=history" rel="nofollow"><span title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></td></tr></tbody></table>
+<p><b>DBSCAN</b> (<b>Density-based spatial clustering of applications with noise </b>) は、1996 年に Martin Ester, Hans-Peter Kriegel, Jörg Sander および Xiaowei Xu によって提案された<a href="." id="link_a_3" title="データ・クラスタリング">クラスタリング</a>アルゴリズムである。<sup class="reference" id="cite_ref-dbscan_1-0"><a href="#cite_note-dbscan-1">[1]</a></sup>これは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_75" title="密度準拠クラスタリング (存在しないページ)">密度準拠クラスタリング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cluster_analysis&amp;action=edit&amp;redlink=1" title="En:Cluster analysis (存在しないページ)">英語版</a>）</span></span>アルゴリズムである。ある空間に点集合が与えられたとき、互いに密接にきっちり詰まっている点をグループにまとめ(多くの隣接点を持つ点、<a class="new" href="/w/index.php?title=En:Fixed-radius_near_neighbors&amp;action=edit&amp;redlink=1" title="En:Fixed-radius near neighbors (存在しないページ)">en:Fixed-radius_near_neighbors</a>)、低密度領域にある点(その最近接点が遠すぎる点)を外れ値とする。DBSCAN は最も一般的なクラスタリングアルゴリズムのひとつであり、科学文献の中で最も引用されている。<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p><p>2014 年、このアルゴリズムは主要なデータマイニングカンファレンスの KDD にて、the test of time award (理論および実践にてかなりの注目を集めたアルゴリズムに与えられる賞) を受賞した。<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#アルゴリズム"><span class="tocnumber">2</span> <span class="toctext">アルゴリズム</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#計算量"><span class="tocnumber">3</span> <span class="toctext">計算量</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#利点"><span class="tocnumber">4</span> <span class="toctext">利点</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#欠点"><span class="tocnumber">5</span> <span class="toctext">欠点</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#パラメータ評価"><span class="tocnumber">6</span> <span class="toctext">パラメータ評価</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#拡張"><span class="tocnumber">7</span> <span class="toctext">拡張</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#実用性"><span class="tocnumber">8</span> <span class="toctext">実用性</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">11</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">12</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ある空間内にある、クラスタリングしたい点集合を考える。 <span class="texhtml mvar" lang="en" style="font-style:italic;">ε</span> はある点からの半径を表すパラメータとする。DBSCAN クラスタリングの目的として、点は、コア点(<i>core points</i>)、(密度)到達可能点、外れ値に分類される。以下のように行う。
+</p>
+<ul><li>点 <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> を含め、点 <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> から距離 <span class="texhtml mvar" lang="en" style="font-style:italic;">ε</span> 以内に少なくとも <span class="texhtml" lang="en">minPts</span> 個の点があれば、点 <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> はコア点である。</li>
+<li>点 <span class="texhtml mvar" lang="en" style="font-style:italic;">q</span> がコア点 <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> から距離 <span class="texhtml mvar" lang="en" style="font-style:italic;">ε</span> 以内にあれば、<span class="texhtml mvar" lang="en" style="font-style:italic;">q</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> から「直接到達可能」であるという。</li>
+<li>各 <span class="texhtml" lang="en"><i>p</i><sub><i>i</i>+1</sub></span> が <span class="texhtml" lang="en"><i>p</i><sub><i>i</i></sub></span> から直接到達可能であり、<span class="texhtml" lang="en"><i>p</i><sub>1</sub> = <i>p</i></span> かつ <span class="texhtml" lang="en"><i>p<sub>n</sub></i> = <i>q</i></span> であるパス <span class="texhtml" lang="en"><i>p</i><sub>1</sub>, ..., <i>p<sub>n</sub></i></span> があれば、<span class="texhtml mvar" lang="en" style="font-style:italic;">q</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> から「到達可能」である。ここでパス上のすべての点は、 <span class="texhtml mvar" lang="en" style="font-style:italic;">q</span> が例外である可能性があるが、コア点で無ければならない。</li>
+<li>他のどの点からも到達可能でないすべての点は外れ値である。</li></ul>
+<p>今、<span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> がコア点であれば、点<span class="texhtml mvar" lang="en" style="font-style:italic;">p</span> から到達可能なすべての点(コア点または非コア点)と一緒にクラスタを形成する。各クラスタは少なくともひとつのコア点を含む。非コア点はあるクラスタの一部となるが、非コア点はその"端"を形成する。非コア点はより多くの点に到達するのに使用できないためである。
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:402px;">ファイル:DBSCAN-Illustration.svg <div class="thumbcaption">上図において、<span class="texhtml" lang="en">minPts = 4</span> である。点 A およびその他の赤点はコア点である。その理由は、半径 <span class="texhtml mvar" lang="en" style="font-style:italic;">ε</span> でこれらの点を囲んでいる領域は少なくとも(その点自身を含めて) 4 つの点を含んでいるからである。上図のコア点はすべて互いに到達可能であり、単一のクラスタを形成する。点 B および C はコア点ではない。しかし、A から(他のコア点を介して)到達可能であり、それゆえこのクラスタに属す。点 N はコア点でなければ密度到達可能点でもないので、ノイズ点である。</div></div></div></div>
+<p>到達可能性は対称関係ではない。なぜなら、定義により、距離にかかわらず、非コア点から到達可能な点は存在しないためである。非コア点は他の点から到達可能になる可能性があるが、非コア点から他のどの点にも到達不可能である。それゆえ、DBSCAN によって発見されるクラスタの範囲を形式的に定義するために、<i>連結性</i>の新たな概念が必要とされる。点oから2点pとqへ到達可能であるような点oが存在するとき、pとqは 密度連結(density-connected) である。密度連結性(density-connectedness) は対称的である。
+</p><p>クラスタは、次の 2 つの特徴を満たす。
+</p>
+<ol><li>クラスタ内のすべての点は、相互に密度連結(density-connected) である。</li>
+<li>ある点がクラスタのどの点からも密度到達可能(density-reachable) ならば、その点もクラスタの一部である。</li></ol>
+<h2><span id=".E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0"></span><span class="mw-headline" id="アルゴリズム">アルゴリズム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=2" title="節を編集: アルゴリズム">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DBSCAN は 2 つのパラメータを必要とする。ε (eps) および密領域を形成するのに必要となる点の最小数である(minPts)。<sup class="reference" id="cite_ref-minpts_4-0"><a href="#cite_note-minpts-4">[注釈 1]</a></sup>アルゴリズムでは、まだ訪れていない任意の開始点から処理を始める。この点の ε 近傍を検索し、それが十分に多くの点を含んでいるなら、クラスタが開始される。そうでなければ、その点はノイズ点とラベル付けされる。注意として、この点は後に、異なる点から見て閾値以上の点を含んだ ε 近傍の一部となり、それゆえあるクラスタの一部になるかもしれない。
+</p><p>ある点があるクラスタの密部分であることが判明した場合、その ε 近傍もまたそのクラスタの一部である。それゆえ、ε 近傍内にあるすべての点が加えられ、それらが稠密であるときにはそれら自身のε-近傍も同様に加算される。この過程は密度連結クラスタ(density-connected cluster)が完全に発見されるまで続く。そして、まだ訪問されていない新しい点が検索および処理され、さらなるクラスタまたはノイズが発見される。
+</p><p>アルゴリズムは以下の元々投稿された命名法に従う擬似コードのようにして導かれる。<sup class="reference" id="cite_ref-dbscan_1-1"><a href="#cite_note-dbscan-1">[1]</a></sup>
+</p>
+<pre>DBSCAN(D, eps, MinPts) {
+   C = 0
+   <b>for each</b> point P in dataset D {
+      <b>if</b> P is visited
+         <b>continue</b> next point
+      mark P as visited
+      NeighborPts = regionQuery(P, eps)
+      <b>if</b> <a href="/wiki/Sizeof" title="Sizeof">sizeof</a>(NeighborPts) &lt; MinPts
+         mark P as NOISE
+      <b>else</b> {
+         C = next cluster
+         expandCluster(P, NeighborPts, C, eps, MinPts)
+      }
+   }
+}
+
+expandCluster(P, NeighborPts, C, eps, MinPts) {
+   add P to cluster C
+   <b>for each</b> point P' in NeighborPts { 
+      <b>if</b> P' is not visited {
+         mark P' as visited
+         NeighborPts' = regionQuery(P', eps)
+         <b>if</b> <a href="/wiki/Sizeof" title="Sizeof">sizeof</a>(NeighborPts') &gt;= MinPts
+            NeighborPts = NeighborPts joined with NeighborPts'
+      }
+      <b>if</b> P' is not yet member of any cluster
+         add P' to cluster C
+   }
+}
+
+regionQuery(P, eps)
+   <b>return</b> all points within P's eps-neighborhood (including P)
+</pre>
+<p>このアルゴリズムは、"expandCluster" サブルーチンの内容(これは 1 箇所からのみよばれる)の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E5%B1%95%E9%96%8B" title="インライン展開">インライン化</a> および、点ごとの "すでに訪れた点" および "クラスタ C に所属する" ロジックを統合することによって、単純にすることができる。これらの単純化は、元々投稿されたバージョンを反映するために、上記の擬似コードでは省略されている。また、regionQuery関数は、ローカル密度推定でまだカウントされている限り、訪問されるべき点のリスト内でPを返す必要はない。
+</p>
+<h2><span id=".E8.A8.88.E7.AE.97.E9.87.8F"></span><span class="mw-headline" id="計算量">計算量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=3" title="節を編集: 計算量">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DBSCAN はデータベースの各点を訪れる。複数回訪れることもある(たとえば、異なるクラスタへの候補として)。しかし、実践の考慮のため、<a class="new" href="/w/index.php?title=En:Time_complexity&amp;action=edit&amp;redlink=1" title="En:Time complexity (存在しないページ)">時間計算量</a>はたいてい regionQuery の呼び出しの回数によって支配される。DBSCAN は各点でそのようなクエリをまさに 1 度だけ実行し、<span class="texhtml" lang="en">O(log <i>n</i>)</span> で近隣クエリ(<a class="new" href="/w/index.php?title=En:Fixed-radius_near_neighbors&amp;action=edit&amp;redlink=1" title="En:Fixed-radius near neighbors (存在しないページ)">en:Fixed-radius_near_neighbors</a>)を実行するインデックス構造が使用されるならば、<span class="texhtml" lang="en">O(<i>n</i> log <i>n</i>)</span> の全体平均のランタイム複雑性が獲得される(パラメータ <span class="texhtml" lang="en">ε</span> が意味のある中で選ばれたならば。すなわち、平均して <span class="texhtml" lang="en">O(log <i>n</i>)</span> の点が返される場合ならば)。加速させるようなインデックス構造を使用しない場合、または縮退データ(たとえばすべての点が <span class="texhtml" lang="en">ε</span> より小さい距離内にある)の場合は、その最悪計算時間は <span class="texhtml" lang="en">O(<i>n</i>²)</span> のままである。サイズ <span class="texhtml" lang="en">(<i>n</i>²-<i>n</i>)/2</span> の距離行列は距離の再計算を回避するために出現しうるが、これは <span class="texhtml" lang="en">O(<i>n</i>²)</span> のメモリを必要とする。一方、DBSCAN の非行列に基づく実装はわずか <span class="texhtml" lang="en">O(<i>n</i>)</span> のメモリを必要とする。
+</p>
+
+<h2><span id=".E5.88.A9.E7.82.B9"></span><span class="mw-headline" id="利点">利点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=4" title="節を編集: 利点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol><li><a href="/wiki/K%E5%B9%B3%E5%9D%87%E6%B3%95" title="K平均法">k平均法</a>とは対照的に、DBSCAN は事前にデータのクラスタ数を明示的に指定する必要は無い。</li>
+<li>DBSCAN は任意の形状のクラスタを見つけることができる。DBSCAN は他のクラスタによって完全に囲まれた(しかし接続していない)クラスタさえ見つけることができる。MinPts パラメータのため、いわゆる single-link 効果(異なるクラスタが細い線によって結ばれてしまうこと)は減少している。</li>
+<li>DBSCAN はノイズという概念を持っており、外れ値に対して<a href="/wiki/%E3%83%AD%E3%83%90%E3%82%B9%E3%83%88%E3%83%8D%E3%82%B9" title="ロバストネス">ロバスト</a>である。</li>
+<li>DBSCAN に必要なパラメータは 2 つだけであり、たいていはデータ点の順序に影響を受けない。(しかし、2 つの異なるクラスタのどちらからも端に位置する点は、点の順序が変えられ、クラスタの割り当てが同型写像までしかユニークではないならば、どちらのクラスタに属するかが入れ替わるかもしれない。)</li>
+<li>DBSCAN は、たとえば<a class="new" href="/w/index.php?title=R*%E6%9C%A8&amp;action=edit&amp;redlink=1" title="R*木 (存在しないページ)">R*木</a>を使用するような region query を加速させることができるデータベースでの使用に対して設計されている。</li>
+<li>minPts および ε パラメータは、もしデータがよく理解されているならば、ドメインの専門家によって設定できる。</li></ol>
+<h2><span id=".E6.AC.A0.E7.82.B9"></span><span class="mw-headline" id="欠点">欠点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=5" title="節を編集: 欠点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol><li>DBSCAN は完全に決定論的というわけではない。ひとつよりも多くのクラスタから到達できる境界点は、データが処理される順序に依存して、どちらのクラスタにもなることができる。幸運にも、この状況は頻繁には起きない。また、クラスタリング結果に与える影響は小さい。<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（March 2017）">要出典</span></a></i>]</sup>コア点とノイズ点に関しては、DBSCAN は決定論的である。DBSCAN*<sup class="reference" id="cite_ref-hdbscan1_5-0"><a href="#cite_note-hdbscan1-5">[4]</a></sup> は境界点をノイズとして扱う変種であり、この方法では、密度連結成分(density-connected components)のより一貫した統計的解釈と同様に、完全に決定論的な結果となる。</li>
+<li>DBSCAN の質は、関数 regionQuery(P, ε) で使用される<a href="/wiki/%E8%B7%9D%E9%9B%A2%E5%87%BD%E6%95%B0" title="距離函数">距離尺度</a>に依存する。最も一般的に使用される尺度は<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E8%B7%9D%E9%9B%A2" title="ユークリッド距離">ユークリッド距離</a>である。特に、<a class="new" href="/w/index.php?title=En:Clustering_high-dimensional_data&amp;action=edit&amp;redlink=1" title="En:Clustering high-dimensional data (存在しないページ)">高次元データ</a>に対しては、この尺度はいわゆる「<a href="/wiki/%E6%AC%A1%E5%85%83%E3%81%AE%E5%91%AA%E3%81%84" title="次元の呪い">次元の呪い</a>」のために、ほとんど使えないものとなってしまい、ε の適切な値を見つけるのは困難となる。しかしこの欠点は、ユークリッド距離に基づく他のアルゴリズムにも当てはまる。</li>
+<li>DBSCAN は密度に大きな違いのあるデータ集合をクラスタリングできない。すべてのクラスタに対して適切なminPts-εの組み合わせを選ぶことができないためである。</li>
+<li>データおよびスケールがよく理解されていないならば、意味のある距離閾値 ε を選ぶことは困難である。</li></ol>
+<p>これらの問題を扱うためのアルゴリズムの修正に関する拡張については下記のセクションを参照すること。
+</p>
+<h2><span id=".E3.83.91.E3.83.A9.E3.83.A1.E3.83.BC.E3.82.BF.E8.A9.95.E4.BE.A1"></span><span class="mw-headline" id="パラメータ評価">パラメータ評価</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=6" title="節を編集: パラメータ評価">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>どのデータマイニングタスクもパラメータの問題がある。どのパラメータも明確な方法でアルゴリズムに影響を与える。DBSCAN では、パラメータ ε および <i>minPts</i> が必要とされる。パラメータはユーザーが指定する必要があるさ。理想的には、ε の値は解くべき問題によって与えられ(たとえば、物理的な距離)、<i>minPts</i> は望む最小クラスターのサイズである。<sup class="reference" id="cite_ref-minpts_4-1"><a href="#cite_note-minpts-4">[注釈 1]</a></sup>
+</p>
+<ul><li><i>minPts</i> - 大まかなやり方では、最小の <i>minPts</i> はデータセットの次元 <i>D</i> から引き出され、<i>minPts ≥ D + 1</i> である。<i>minPts = 1</i> の低い値は意味を成さない。どの点もそのままクラスタであるからである。<i>minPts ≤ 2</i> では、結果は single link metric での階層クラスタリングと同じになり、デンドログラム(dendrogram)は高さ ε でカットされる。それゆえ、<i>minPts</i> は少なくとも 3 に選ばれなければならない。しかし、より大きい値はたいていの場合ノイズを持ったデータ集合に対してより有効であり、かなりのクラスタを生じるだろう。データ集合が大きくなれば、<i>minPts</i> の値はより大きく選ばれるべきである。</li>
+<li>ε - ε の値は、<a class="new" href="/w/index.php?title=Nearest_neighbor_graph&amp;action=edit&amp;redlink=1" title="Nearest neighbor graph (存在しないページ)">k距離グラフ</a> を用い、 <i>k = minPts</i> の最近傍への距離をプロットすることで選ばれる。ε が良い値であると、このプロットが強く結ばれている。ε が非常に小さい値に選ばれると、データの大部分はクラスタリングされない。一方、大きな値が選ばれると、クラスタは併合され、オブジェクトの大多数は同一のクラスタにあることになる。一般に、小さな ε 値が好ましく、大まかにいって点の小片がお互いにこの距離内にあるべきである。</li>
+<li>距離関数 - 距離関数の選択は ε の選択に密に結合しており、結果に大きな影響を与える。一般に、パラメータ ε が選ばれる前に、データセットに対する類似度の合理的な尺度を最初に特定することが必要である。</li></ul>
+<p>OPTICS は、パフォーマンスに大部分の影響を与える最大値で ε を置換した、DBSCAN の一般化と見なされる。<i>minPts</i> は、発見される最小のクラスターサイズとなる。このアルゴリズムは DBSCAN よりもずっとパラメータ化しやすい一方で、結果を使うのにはもうすこし困難がある。たいてい、DBSCAN が生成する単純なデータパーティショニングの代わりに、階層クラスタリングを生成するためである。
+最近、DBSCAN の元々の著者の一人が DBSCAN と OPTICS を再訪し、階層 DBSCAN (HDBSCAN*)<sup class="reference" id="cite_ref-hdbscan1_5-1"><a href="#cite_note-hdbscan1-5">[4]</a></sup>の洗練バージョンを投稿した。これはもはや境界点の考え方をもっていない。
+</p>
+<h2><span id=".E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="拡張">拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=7" title="節を編集: 拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>一般化 DBSCAN (GDBSCAN) <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[5]</a></sup><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[6]</a></sup> は、DBSCANと同一の著者が、任意の"近隣"("neighborhood")および"密度"("dense")という述語を一般化したものである。ε および minPts パラメータは元々のアルゴリズムから除外され、述語(predicates)に移る。たとえば、ポリゴンデータでは、"近隣"は任意の交差するポリゴンである。一方、密度(density predicate)はオブジェクト数の代わりにポリゴンの領域を使用する。
+</p><p>DBSCAN アルゴリズムへの様々な拡張が提案されてきた。これには、並列化、パラメータ推定、不確かなデータのサポートに対する手法を含む。基本的な考え方は OPTICS アルゴリズム による階層クラスタリングに拡張されてきた。DBSCAN もまた <a class="new" href="/w/index.php?title=PreDeCon&amp;action=edit&amp;redlink=1" title="PreDeCon (存在しないページ)">PreDeCon</a> や <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SUBCLU&amp;action=edit&amp;redlink=1" title="SUBCLU (存在しないページ)">SUBCLU</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SUBCLU&amp;action=edit&amp;redlink=1" title="En:SUBCLU (存在しないページ)">英語版</a>）</span></span> のような部分空間クラスタリングアルゴリズムの一部として使用されてきた。HDBSCAN <sup class="reference" id="cite_ref-hdbscan1_5-2"><a href="#cite_note-hdbscan1-5">[4]</a></sup> はOPTICS よりも高速なDBSCAN の階層バージョンである。そこから、最も卓越したクラスタを構成するフラットなパーティションがその階層から抽出される。<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[7]</a></sup>
+</p>
+<h2><span id=".E5.AE.9F.E7.94.A8.E6.80.A7"></span><span class="mw-headline" id="実用性">実用性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=8" title="節を編集: 実用性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>このアルゴリズムの様々な実装があり、大きなパフォーマンスの違いがある。あるデータセットに対して、最も早いアルゴリズムでは 1.4 秒で終わるが、最も遅いものでは 13803 秒かかる。<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[8]</a></sup>この差異は実装の質、言語、コンパイラの違い、またアクセラレーションのためのインデックス(索引)の使用による。
+</p>
+<ul><li><a href="/wiki/Apache_Commons" title="Apache Commons">Apache_Commons</a> <a class="external text" href="http://commons.apache.org/proper/commons-math/" rel="nofollow">Math</a> は 2 次のオーダーで動作するアルゴリズムの Java 実装を含む。</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ELKI&amp;action=edit&amp;redlink=1" title="ELKI (存在しないページ)">ELKI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ELKI&amp;action=edit&amp;redlink=1" title="En:ELKI (存在しないページ)">英語版</a>）</span></span> はDBSCAN、GDBSCAN とその変種、の実装を提供している。この実装はほぼ 2 次の計算オーダーのための様々なインデックス(索引)構造を使用できる。また、任意の距離関数および任意のデータ型をサポートしている。しかし、小規模データに関する低レベルの最適化(および特殊化)実装が性能を上回るかもしれない。</li>
+<li><a href="/wiki/R%E8%A8%80%E8%AA%9E" title="R言語">R</a> は <a class="external text" href="https://cran.r-project.org/package=fpc" rel="nofollow">fpc</a> パッケージに DBSCAN を含み、距離行列を介した任意の距離関数をサポートしている。しかし、インデックス(索引)のサポートをしていない。(それゆえ、2 次の計算オーダーおよびメモリ消費の計算複雑性を持つ。) また、R インタープリタのため、かなり遅い。高速バージョンが <a href="/wiki/Kd%E6%9C%A8" title="Kd木">kd木</a> を用いた C++ で実装されており、<a class="external text" href="https://cran.r-project.org/package=dbscan" rel="nofollow">dbscan</a> パッケージにある。</li>
+<li><a href="/wiki/Scikit-learn" title="Scikit-learn">Scikit-learn</a> は、任意の<a href="/wiki/%E3%83%9F%E3%83%B3%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E8%B7%9D%E9%9B%A2" title="ミンコフスキー距離">ミンコフスキー距離</a>に対して、DBSCAN の Python 実装を含む。これは<a href="/wiki/Kd%E6%9C%A8" title="Kd木">kd木</a>および<a class="new" href="/w/index.php?title=En:Ball_tree&amp;action=edit&amp;redlink=1" title="En:Ball tree (存在しないページ)">en:Ball_tree</a>を用いて高速化させることができるが、最悪な場合における 2 次オーダーのメモリ使用量となる。<a class="external text" href="https://github.com/scikit-learn-contrib/hdbscan" rel="nofollow">HDBSCAN* アルゴリズム</a> が github で提供されている。</li>
+<li><a class="external text" href="http://www.philippe-fournier-viger.com/spmf/" rel="nofollow">SPMF</a> は <a href="/wiki/Kd%E6%9C%A8" title="Kd木">kd木</a>をサポート(ただしユークリッド距離のみ)したDBSCAN アルゴリズムの GPL-V3 Java 実装を提供している。</li>
+<li><a href="/wiki/Weka" title="Weka">Weka</a> は 2 次オーダーの計算時間および線形メモリ使用量で動作するDBSCAN の基本的な実装を(最新バージョンのオプショナルパッケージとして)含む。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=9" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>OPTICS アルゴリズム - 複数レンジへの DBSCAN の一般化。パラメータ <span class="texhtml" lang="en">ε</span> を最大探索半径に効率的に置き換える。</li>
+<li><a href="/wiki/%E9%80%A3%E7%B5%90%E3%82%B0%E3%83%A9%E3%83%95" title="連結グラフ">連結成分</a></li>
+<li><a href="/wiki/%E7%B4%A0%E9%9B%86%E5%90%88%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0" title="素集合データ構造">素集合データ構造</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-minpts-4">^ <a href="#cite_ref-minpts_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-minpts_4-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">minPts は直感的には最小クラスターサイズであるが、いくつかの場合では DBSCAN はより小さいクラスターを生成することができる。DBSCAN クラスタは少なくとも <i>1 コア点</i> から成る。ほかの点は 1 つよりも多いクラスタへの境界点であるかもしれないので、少なくとも minPts 点がどのクラスタにも含まれている保証は無い。</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-dbscan-1">^ <a href="#cite_ref-dbscan_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-dbscan_1-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation conference" style="font-style:normal">Simoudis, Evangelos; Han, Jiawei; Fayyad, Usama M., eds (1996). “A density-based algorithm for discovering clusters in large spatial databases with noise”. Proceedings of the Second International Conference on Knowledge Discovery and Data Mining (KDD-96). <a class="new" href="/w/index.php?title=AAAI_Press&amp;action=edit&amp;redlink=1" title="AAAI Press (存在しないページ)">AAAI Press</a>. pp. 226–231. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/1-57735-004-9" title="特別:文献資料/1-57735-004-9">1-57735-004-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=A+density-based+algorithm+for+discovering+clusters+in+large+spatial+databases+with+noise&amp;rft.atitle=&amp;rft.au=Sander%2C%26%2332%3BJ%C3%B6rg&amp;rft.au=Xu%2C%26%2332%3BXiaowei&amp;rft.date=1996&amp;rft.pages=pp.%26nbsp%3B226%E2%80%93231&amp;rft.pub=%5B%5BAAAI+Press%5D%5D&amp;rft.isbn=1-57735-004-9&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external autonumber" href="http://academic.research.microsoft.com/CSDirectory/paper_category_7.htm" rel="nofollow">[1]</a> Most cited data mining articles according to Microsoft academic search; DBSCAN is on rank 24, when accessed on: 4/18/2010</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.kdd.org/News/view/2014-sigkdd-test-of-time-award" rel="nofollow">2014 SIGKDD Test of Time Award</a>”.   <a href="/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">ACM</a> SIGKDD (2014年8月18日). <span title="">2016年7月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-hdbscan1-5">^ <a href="#cite_ref-hdbscan1_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-hdbscan1_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-hdbscan1_5-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Campello, Ricardo J. G. B.; Moulavi, Davoud; Zimek, Arthur; Sander, Jörg (2015). “Hierarchical Density Estimates for Data Clustering, Visualization, and Outlier Detection”. <i>ACM Transactions on Knowledge Discovery from Data</i> <b>10</b> (1):  1–51. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1145%2F2733381" rel="nofollow">10.1145/2733381</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:15564681" rel="nofollow">15564681</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Hierarchical+Density+Estimates+for+Data+Clustering%2C+Visualization%2C+and+Outlier+Detection&amp;rft.jtitle=ACM+Transactions+on+Knowledge+Discovery+from+Data&amp;rft.aulast=Campello&amp;rft.aufirst=Ricardo+J.+G.+B.&amp;rft.au=Campello%2C%26%2332%3BRicardo+J.+G.+B.&amp;rft.au=Moulavi%2C%26%2332%3BDavoud&amp;rft.au=Zimek%2C%26%2332%3BArthur&amp;rft.au=Sander%2C%26%2332%3BJ%C3%B6rg&amp;rft.date=2015&amp;rft.volume=10&amp;rft.issue=1&amp;rft.pages=1%E2%80%9351&amp;rft_id=info:doi/10.1145%2F2733381&amp;rft.issn=15564681&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Sander, Jörg; Ester, Martin; <a class="new" href="/w/index.php?title=Hans-Peter_Kriegel&amp;action=edit&amp;redlink=1" title="Hans-Peter Kriegel (存在しないページ)">Kriegel, Hans-Peter</a>; Xu, Xiaowei (1998). <a class="external text" href="http://www.springerlink.com/content/n22065n21n1574k6" rel="nofollow">“Density-Based Clustering in Spatial Databases: The Algorithm GDBSCAN and Its Applications”</a>. <i>Data Mining and Knowledge Discovery</i> (Berlin: <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>) <b>2</b> (2):  169–194. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1023%2FA%3A1009745219419" rel="nofollow">10.1023/A:1009745219419</a><span style="display:none;">. <a class="external free" href="http://www.springerlink.com/content/n22065n21n1574k6" rel="nofollow">http://www.springerlink.com/content/n22065n21n1574k6</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Density-Based+Clustering+in+Spatial+Databases%3A+The+Algorithm+GDBSCAN+and+Its+Applications&amp;rft.jtitle=Data+Mining+and+Knowledge+Discovery&amp;rft.aulast=Sander&amp;rft.aufirst=J%C3%B6rg&amp;rft.au=Sander%2C%26%2332%3BJ%C3%B6rg&amp;rft.au=Ester%2C%26%2332%3BMartin&amp;rft.au=Kriegel%2C%26%2332%3BHans-Peter&amp;rft.au=Xu%2C%26%2332%3BXiaowei&amp;rft.date=1998&amp;rft.volume=2&amp;rft.issue=2&amp;rft.pages=169%E2%80%93194&amp;rft.place=Berlin&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft_id=info:doi/10.1023%2FA%3A1009745219419&amp;rft_id=http%3A%2F%2Fwww.springerlink.com%2Fcontent%2Fn22065n21n1574k6&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Sander, Jörg (1998). <i>Generalized Density-Based Clustering for Spatial Data Mining</i>. München: Herbert Utz Verlag. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/3-89675-469-6" title="特別:文献資料/3-89675-469-6">3-89675-469-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Generalized+Density-Based+Clustering+for+Spatial+Data+Mining&amp;rft.aulast=Sander&amp;rft.aufirst=J%C3%B6rg&amp;rft.au=Sander%2C%26%2332%3BJ%C3%B6rg&amp;rft.date=1998&amp;rft.place=M%C3%BCnchen&amp;rft.pub=Herbert+Utz+Verlag&amp;rft.isbn=3-89675-469-6&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Campello, R. J. G. B.; Moulavi, D.; Zimek, A.; Sander, J. (2013). “A framework for semi-supervised and unsupervised optimal extraction of clusters from hierarchies”. <i>Data Mining and Knowledge Discovery</i> <b>27</b> (3):  344. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2Fs10618-013-0311-4" rel="nofollow">10.1007/s10618-013-0311-4</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+framework+for+semi-supervised+and+unsupervised+optimal+extraction+of+clusters+from+hierarchies&amp;rft.jtitle=Data+Mining+and+Knowledge+Discovery&amp;rft.aulast=Campello&amp;rft.aufirst=R.+J.+G.+B.&amp;rft.au=Campello%2C%26%2332%3BR.+J.+G.+B.&amp;rft.au=Moulavi%2C%26%2332%3BD.&amp;rft.au=Zimek%2C%26%2332%3BA.&amp;rft.au=Sander%2C%26%2332%3BJ.&amp;rft.date=2013&amp;rft.volume=27&amp;rft.issue=3&amp;rft.pages=344&amp;rft_id=info:doi/10.1007%2Fs10618-013-0311-4&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Kriegel, Hans-Peter; Schubert, Erich; Zimek, Arthur (2016). “The (black) art of runtime evaluation: Are we comparing algorithms or implementations?”. <i>Knowledge and Information Systems</i>. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2Fs10115-016-1004-2" rel="nofollow">10.1007/s10115-016-1004-2</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0219-1377" rel="nofollow">0219-1377</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+%28black%29+art+of+runtime+evaluation%3A+Are+we+comparing+algorithms+or+implementations%3F&amp;rft.jtitle=Knowledge+and+Information+Systems&amp;rft.aulast=Kriegel&amp;rft.aufirst=Hans-Peter&amp;rft.au=Kriegel%2C%26%2332%3BHans-Peter&amp;rft.au=Schubert%2C%26%2332%3BErich&amp;rft.au=Zimek%2C%26%2332%3BArthur&amp;rft.date=2016&amp;rft_id=info:doi/10.1007%2Fs10115-016-1004-2&amp;rft.issn=0219-1377&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DBSCAN&amp;action=edit&amp;section=12" title="節を編集: Further reading">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation conference" style="font-style:normal">Arlia, Domenica; Coppola, Massimo. “Experiments in Parallel Clustering with DBSCAN”. <i>Euro-Par 2001: Parallel Processing: 7th International Euro-Par Conference Manchester, UK August 28–31, 2001, Proceedings</i>. Springer Berlin</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Experiments+in+Parallel+Clustering+with+DBSCAN&amp;rft.atitle=Euro-Par+2001%3A+Parallel+Processing%3A+7th+International+Euro-Par+Conference+Manchester%2C+UK+August+28%E2%80%9331%2C+2001%2C+Proceedings&amp;rft.aulast=Arlia&amp;rft.aufirst=Domenica&amp;rft.au=Arlia%2C%26%2332%3BDomenica&amp;rft.au=Coppola%2C%26%2332%3BMassimo&amp;rft.pub=Springer+Berlin&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal"><a class="new" href="/w/index.php?title=Hans-Peter_Kriegel&amp;action=edit&amp;redlink=1" title="Hans-Peter Kriegel (存在しないページ)">Kriegel, Hans-Peter</a>; Kröger, Peer (2011). <a class="external text" href="http://wires.wiley.com/WileyCDA/WiresArticle/wisId-WIDM30.html" rel="nofollow">“Density-based Clustering”</a>. <i>WIREs Data Mining and Knowledge Discovery</i> <b>1</b> (3):  231–240. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1002%2Fwidm.30" rel="nofollow">10.1002/widm.30</a><span style="display:none;">. <a class="external free" href="http://wires.wiley.com/WileyCDA/WiresArticle/wisId-WIDM30.html" rel="nofollow">http://wires.wiley.com/WileyCDA/WiresArticle/wisId-WIDM30.html</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Density-based+Clustering&amp;rft.jtitle=WIREs+Data+Mining+and+Knowledge+Discovery&amp;rft.aulast=Kriegel&amp;rft.aufirst=Hans-Peter&amp;rft.au=Kriegel%2C%26%2332%3BHans-Peter&amp;rft.au=Kr%C3%B6ger%2C%26%2332%3BPeer&amp;rft.date=2011&amp;rft.volume=1&amp;rft.issue=3&amp;rft.pages=231%E2%80%93240&amp;rft_id=info:doi/10.1002%2Fwidm.30&amp;rft_id=http%3A%2F%2Fwires.wiley.com%2FWileyCDA%2FWiresArticle%2FwisId-WIDM30.html&amp;rfr_id=info:sid/ja.wikipedia.org:DBSCAN"><span style="display: none;"> </span></span></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401225758
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.529 seconds
+Real time usage: 0.869 seconds
+Preprocessor visited node count: 9491/1000000
+Post‐expand include size: 145961/2097152 bytes
+Template argument size: 18691/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 35/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 20360/5000000 bytes
+Lua time usage: 0.240/7 seconds
+Lua virtual size: 6758400/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  777.180      1 -total
+ 41.65%  323.710      2 テンプレート:Reflist
+ 34.14%  265.335      1 テンプレート:Machine_learning_bar
+ 33.60%  261.119      1 テンプレート:Sidebar_with_collapsible_lists
+ 33.39%  259.536      8 テンプレート:Citation/core
+ 30.28%  235.301     35 テンプレート:仮リンク
+ 22.20%  172.564      9 テンプレート:Citation/identifier
+ 17.37%  134.967      2 テンプレート:Cite_conference
+ 15.34%  119.212      5 テンプレート:Cite_journal
+ 14.49%  112.619      2 テンプレート:ISBN2
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3593117-0!canonical and timestamp 20220401225757 and revision id 2105609. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=DBSCAN&amp;oldid=2105609">http://localhost:8080/w/index.php?title=DBSCAN&amp;oldid=2105609</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%BF%BB%E8%A8%B3%E7%9B%B4%E5%BE%8C" title="カテゴリ:翻訳直後">翻訳直後</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2017%E5%B9%B43%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2017年3月">出典を必要とする記述のある記事/2017年3月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC%E5%88%86%E6%9E%90%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:クラスター分析アルゴリズム">クラスター分析アルゴリズム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=DBSCAN&amp;returntoquery=curid%3D3593117%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=DBSCAN&amp;returntoquery=curid%3D3593117%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/DBSCAN" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:DBSCAN&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/DBSCAN">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=DBSCAN&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=DBSCAN&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/DBSCAN" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/DBSCAN" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=DBSCAN&amp;oldid=2105609" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=DBSCAN&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月16日 (金) 02:40 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.529","walltime":"0.869","ppvisitednodes":{"value":9491,"limit":1000000},"postexpandincludesize":{"value":145961,"limit":2097152},"templateargumentsize":{"value":18691,"limit":2097152},"expansiondepth":{"value":25,"limit":40},"expensivefunctioncount":{"value":35,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":20360,"limit":5000000},"timingprofile":["100.00%  777.180      1 -total"," 41.65%  323.710      2 テンプレート:Reflist"," 34.14%  265.335      1 テンプレート:Machine_learning_bar"," 33.60%  261.119      1 テンプレート:Sidebar_with_collapsible_lists"," 33.39%  259.536      8 テンプレート:Citation/core"," 30.28%  235.301     35 テンプレート:仮リンク"," 22.20%  172.564      9 テンプレート:Citation/identifier"," 17.37%  134.967      2 テンプレート:Cite_conference"," 15.34%  119.212      5 テンプレート:Cite_journal"," 14.49%  112.619      2 テンプレート:ISBN2"]},"scribunto":{"limitreport-timeusage":{"value":"0.240","limit":"7"},"limitreport-virtmemusage":{"value":6758400,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401225758","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1079});});</script>
+</body></html>

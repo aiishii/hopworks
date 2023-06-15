@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>オン・ボード・ダイアグノーシス - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-オン・ボード・ダイアグノーシス rootpage-オン・ボード・ダイアグノーシス skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">オン・ボード・ダイアグノーシス</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>オン・ボード・ダイアグノーシス</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">On-board diagnostics; OBD</span>）とは、自動車各部に取り付けられた<a href="." id="link_a_2" title="エンジンコントロールユニット">ECU</a>（Electrical Controll Unit）にプログラミングされている自己診断機能である。On-Board Diagnosticsの頭文字を取って、OBDと略称されている。当記事もOBDとして述べる。
+</p><p>例えばエンジンの燃料噴射システムを構成する各<a href="." id="link_a_3" title="センサ">センサー</a>、および各<a href="." id="link_a_4" title="アクチュエータ">アクチュエータ</a>に、なんらかの異常が発生した場合、エンジンのECU<sup class="reference" id="cite_ref-ecu_1-0"><a href="#cite_note-ecu-1">[1]</a></sup>は異常の発生を記憶し、<a href="." id="link_a_5" title="インストルメントパネル">インストルメントパネル</a>（計器盤）の警告ランプを点灯させるなりして、ドライバーに異常の発生を知らせる。この警告灯はMIL（Malfunction Indication Lamp）と呼ばれている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#歴史"><span class="tocnumber">1</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ECUとの通信規格"><span class="tocnumber">2</span> <span class="toctext">ECUとの通信規格</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#OBD1"><span class="tocnumber">2.1</span> <span class="toctext">OBD1</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#OBD2"><span class="tocnumber">2.2</span> <span class="toctext">OBD2</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#OBD2の故障コード体系"><span class="tocnumber">3</span> <span class="toctext">OBD2の故障コード体系</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#フリーズ・フレーム・データ"><span class="tocnumber">4</span> <span class="toctext">フリーズ・フレーム・データ</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#OBD2スキャンツール"><span class="tocnumber">5</span> <span class="toctext">OBD2スキャンツール</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#DTCの読み取りと消去"><span class="tocnumber">5.1</span> <span class="toctext">DTCの読み取りと消去</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#ライブデータ表示機能"><span class="tocnumber">5.2</span> <span class="toctext">ライブデータ表示機能</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#アクティブテスト機能"><span class="tocnumber">5.3</span> <span class="toctext">アクティブテスト機能</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#OBD2スキャンツール使用上の注意点"><span class="tocnumber">6</span> <span class="toctext">OBD2スキャンツール使用上の注意点</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#いきなり部品交換に走らない"><span class="tocnumber">6.1</span> <span class="toctext">いきなり部品交換に走らない</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#センサーの特性の狂いは検知できない"><span class="tocnumber">6.2</span> <span class="toctext">センサーの特性の狂いは検知できない</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#脚注・出典"><span class="tocnumber">7</span> <span class="toctext">脚注・出典</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#参考文献"><span class="tocnumber">8</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#外部リンク"><span class="tocnumber">10</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=1" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>OBD2の歴史は以下の通りである<sup class="reference" id="cite_ref-obdhistory_2-0"><a href="#cite_note-obdhistory-2">[2]</a></sup>。
+</p>
+<ul><li>1968年ごろからフォルクスワーゲンなどで、燃料噴射システムのECUに、従来の<a href="/wiki/%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="アナログコンピュータ">アナログコンピュータ</a>に替って<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="マイクロコンピュータ">マイクロコンピュータ</a>が採用され始めた<sup class="reference" id="cite_ref-yada_3-0"><a href="#cite_note-yada-3">[3]</a></sup></li>
+<li>1970年、日産がECUにマイクロコンピュータを使った燃料噴射&amp;点火制御システム、<a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="エンジンコントロールユニット">ECCS</a>の搭載を開始。このシステムのECUには簡単な自己診断機能があり、ECUの基板上にある<a class="mw-redirect" href="/wiki/LED" title="LED">LED</a>の点滅回数で、故障箇所を表示するようになっていた<sup class="reference" id="cite_ref-eccs2_4-0"><a href="#cite_note-eccs2-4">[4]</a></sup>。</li>
+<li>1980年、<a href="/wiki/%E3%82%BC%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BA" title="ゼネラルモーターズ">ゼネラルモーターズ</a>（GM）は、車両組立ライン上でのエンジンECUの検査用のデータ通信システムを開発した。これはALDL（assembly line diagnostic link）と呼ばれたが、あくまで品質管理のための機能で、<a href="/wiki/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88" title="アフターマーケット">アフターマーケット</a>での活用を意図したものではなかった。しかし、サービス用カプラーのある特定の端子同士を短絡することで、インスツルメンタルパネル（計器盤）の警告ランプの点滅回数で、故障コードを表示できた。GM・<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%87%E3%83%A9%E3%83%83%E3%82%AF" title="キャデラック">キャデラック</a>のマイコン制御エアコン仕様車では、エアコンのコントロールディスプレイで、各アクチュエータのテストを行ったり、各センサのデータを表示したり、故障コードを表示できた。</li>
+<li>1986年、ALDLの通信規格（プロトコル）のアップグレードが行われる。</li>
+<li>1988年、自動車技術者協会（<a href="/wiki/SAE" title="SAE">SAE</a>）が標準化された診断コネクターと診断コードの標準化を勧告。</li>
+<li>1991年カリフォルニア州大気資源局（CARB）は、1991年以降に州内で販売される新車に、エンジンについての自己診断機能の搭載を義務付けた。この時期の自己診断機能は、一般に『OBD1』と呼ばれ、診断コネクター、診断コードも、各社まちまちであった。</li>
+<li>1996年以降は、アメリカ合衆国内で販売される乗用車と小型トラックに、OBD2仕様の自己診断機能の搭載を義務付けられた。</li>
+<li>2001年、EU（欧州連合）が排出ガス規制の一環として、EU圏内で販売されるすべてのガソリンエンジン搭載の乗用車、小型トラックに、OBD2仕様の自己診断機能の搭載を義務付けた。さらに2004年、EU（欧州連合）が排出ガス規制の一環として、EU圏内で販売されるすべてのディーゼルエンジン搭載の乗用車、小型トラックに、OBD2仕様の自己診断機能の搭載を義務付けた。この自己診断機能はEOBD（EはEuropeを表す）と呼ばれる。</li>
+<li>2006年、日本の国土交通省は、2008年10月以降に型式認定を受け生産が開始される乗用車及び小型トラックに、OBD2仕様の自己診断機能の搭載を義務付けた。この自己診断機能はJOBDと呼ばれている<sup class="reference" id="cite_ref-Jobd_5-0"><a href="#cite_note-Jobd-5">[5]</a></sup>。</li>
+<li>2008年、アメリカ合衆国は、国内で販売されるすべての乗用車、小型トラックのECU間のネットワークに<a href="/wiki/Controller_Area_Network" title="Controller Area Network">CAN</a>規格（Controller Area Network ）の採用を義務付けた。</li>
+<li>2010年、大型トラックなどのエンジンのためのHDOBD（heavy duty OBD）<sup class="reference" id="cite_ref-hdobd_6-0"><a href="#cite_note-hdobd-6">[6]</a></sup>の仕様が発表され、今後アメリカ合衆国内で販売される当該車両には、搭載が義務付けられる。</li></ul>
+<h2><span id="ECU.E3.81.A8.E3.81.AE.E9.80.9A.E4.BF.A1.E8.A6.8F.E6.A0.BC"></span><span class="mw-headline" id="ECUとの通信規格">ECUとの通信規格</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=2" title="節を編集: ECUとの通信規格">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="OBD1">OBD1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=3" title="節を編集: OBD1">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>現在OBD1（On Board Diagnosis first generation）と呼ばれている自己診断機能は、GMのALDLにルーツを持つものであるが、その後各メーカーが独自にアレンジを加えていった。そのため、通信規格はもちろん、故障コードを表示させる手順、そして表示される故障コードの意味付けも、各メーカーばらばらのものになっていた。
+例えば『11』と二桁の数字で表現される故障コードが、あるメーカーではクランク角センサーからの信号異常を表し、またある別のメーカーではエアフローセンサーから信号異常を表す、いう状況にあった。
+時期を同じくして各メーカーは自車専用のスキャンツール（外部診断装置）を開発し、各販売店のサービス工場に常備させていた。しかしそれらのスキャンツールには、まったく互換性はなく、車との接続用ケーブルや接続コネクタの形状も、まったく違っていた。そのため一般の自動車整備工場向けの汎用スキャンツールは、各社ごとの変換コネクターが付属している。
+</p>
+<h3><span class="mw-headline" id="OBD2">OBD2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=4" title="節を編集: OBD2">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>こうした状況を改善するために制定されたのが<a class="mw-redirect" href="/wiki/OBD2" title="OBD2">OBD2</a>（On Board Diagnosis second generation）ということになる。OBD2は各メーカーの枠を超えて、DLC（Data link coupler）と呼ばれる同じ形状・ピン配置の接続コネクターと、同じ故障コードを使い、故障発生時には同じように警告灯を点灯させる機能を実現させた。図のように、OBD2では5種類の通信規格が定められている。
+</p>
+<table class="wikitable" style="margin:0 auto">
+<caption>OBD2の各通信規格
+</caption>
+<tbody><tr>
+<th>規格</th>
+<th>通信速度</th>
+<th>最高電圧</th>
+<th>メッセージ長</th>
+<th>備考
+</th></tr>
+<tr>
+<th>SAEJ1850（PWM）
+</th>
+<td>41.6 <a href="/wiki/%E3%82%AD%E3%83%AD" title="キロ">k</a><a href="/wiki/%E3%83%9C%E3%83%BC" title="ボー">baud</a></td>
+<td>5V</td>
+<td>11 bytes（<a href="/wiki/%E5%B7%A1%E5%9B%9E%E5%86%97%E9%95%B7%E6%A4%9C%E6%9F%BB" title="巡回冗長検査">CRC</a>含む）</td>
+<td>フォードの標準プロトコル、CSMA/NDA採用
+</td></tr>
+<tr>
+<th>SAEJ1850（VPM）
+</th>
+<td>10.4/41.6 kbaud</td>
+<td>7V</td>
+<td>11 bytes（CRC含む）</td>
+<td>GMの標準プロトコル、CSMA/NDA採用
+</td></tr>
+<tr>
+<th>ISO 9141-2
+</th>
+<td>10.4 kbaud</td>
+<td>バッテリー電圧</td>
+<td>11 bytes</td>
+<td>クライスラー、日本車、ヨーロッパ車の標準プロトコル
+</td></tr>
+<tr>
+<th>ISO 14230
+</th>
+<td>1.2～10.4 kbaud</td>
+<td>-</td>
+<td>255 bytes</td>
+<td>ISO9121-2を改良した規格
+</td></tr>
+<tr>
+<th>ISO 15765（CAN）
+</th>
+<td>250/500 k<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%AF%8E%E7%A7%92" title="ビット毎秒">bps</a></td>
+<td>-</td>
+<td>-</td>
+<td>2008年から米国内で装備が義務付けられた。
+</td></tr></tbody></table>
+<p>つまりアメリカの<a href="/wiki/%E3%83%93%E3%83%83%E3%82%B0%E3%82%B9%E3%83%AA%E3%83%BC" title="ビッグスリー">ビッグスリー</a>、GM、フォード、クライスラーがそれぞれ定めた規格、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=K%E3%83%A9%E3%82%A4%E3%83%B3&amp;action=edit&amp;redlink=1" title="Kライン (存在しないページ)">Kライン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=De:K-Leitung&amp;action=edit&amp;redlink=1" title="De:K-Leitung (存在しないページ)">ドイツ語版</a>）</span></span>とも呼ばれるヨーロッパの各メーカー及び日本の各メーカーが採用している規格、そして<a href="/wiki/Controller_Area_Network" title="Controller Area Network">CAN</a>（Controller Area Network）である。これら5種類のうち、当初はいずれかの通信規格を備えていれば、その車種はOBD2に対応した自己診断機能を搭載していると認められていた<sup class="reference" id="cite_ref-freeze_7-0"><a href="#cite_note-freeze-7">[7]</a></sup>。
+</p><p>そのため各メーカーは、16ある端子の残りを、自社の専用スキャンツールで使う端子として割り当てている。
+</p>
+<div class="center"><div class="thumb tnone">
+<div class="thumbinner" style="width:606px">
+<table cellspacing="0" style="background: transparent; border: 0; padding: 0; margin: 0; width:606px;">
+<tbody><tr>
+<td class="thumbimage" style="padding: 0; margin: 0;">OBD2(メス:車体側 SAE J1962 type A)コネクターの端子正面図（左）と、トヨタおよびダイハツ独自の端子（右）。トヨタとダイハツは、KラインとCANのhigh、low、信号接地、車体接地、バッテリー電圧(+)の6本の端子以外は、各自社のスキャンツール用に割り当ててある。
+</td>
+<td style="padding: 0; margin: 0; border: 0; width: 2px">
+</td>
+<td class="thumbimage" style="padding: 0; margin: 0;">OBD2(メス:車体側 SAE J1962 type A)コネクターの端子正面図（左）と、トヨタおよびダイハツ独自の端子（右）。トヨタとダイハツは、KラインとCANのhigh、low、信号接地、車体接地、バッテリー電圧(+)の6本の端子以外は、各自社のスキャンツール用に割り当ててある。
+</td></tr>
+<tr>
+<td colspan="3" style="padding: 0; margin: 0; border: 0; vertical-align: top;"><div class="thumbcaption">OBD2(メス:車体側 SAE J1962 type A)コネクターの端子正面図（左）と、<a href="/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E8%87%AA%E5%8B%95%E8%BB%8A" title="トヨタ自動車">トヨタ</a>および<a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8F%E3%83%84%E5%B7%A5%E6%A5%AD" title="ダイハツ工業">ダイハツ</a>独自の端子（右）。トヨタとダイハツは、KラインとCANのhigh、low、信号接地、車体接地、バッテリー電圧(+)の6本の端子以外は、各自社のスキャンツール用に割り当ててある。</div>
+</td></tr></tbody></table>
+</div>
+</div></div>
+<p>2008年、アメリカ合衆国は、国内で販売されるすべての乗用車、小型トラックのECU間のネットワークにCAN規格（Controller Area Network ）の採用を義務付けたことにより、概ね2010年以降の新しいモデルは、CAN経由でスキャンツールとのデータのやり取りを行うようになっている。
+</p>
+<h2><span id="OBD2.E3.81.AE.E6.95.85.E9.9A.9C.E3.82.B3.E3.83.BC.E3.83.89.E4.BD.93.E7.B3.BB"></span><span class="mw-headline" id="OBD2の故障コード体系">OBD2の故障コード体系</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=5" title="節を編集: OBD2の故障コード体系">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>OBD2の故障コードは、<a href="/wiki/DTC" title="DTC">DTC</a>（Diagnostic Trouble Code）と呼ばれ、 アルファベット1文字と、4桁の数字から構成されている。4桁の数字を使えば、0000～9999まで実に一万個の故障コードを設定することができる。OBD1で使われていた2桁のコードとは違い、各メーカーは、非常に細かく故障コードを設定できる。
+</p><p>OBD2は元来、エンジンの排気ガスの有害成分抑制装置の不具合を検知するものであったので、当初はP（Power Train)で始まるDTC（通称Pコード）から設定されたが、車の他の部位にまで拡大されていった。現在DTCはPコードの他に、次の3種類のDTCが設定されている。
+</p>
+<ul><li>Cコード：Cで始まるコードで、シャーシ（Chassis）に関するDTC。ABSに関するDTCが該当する。</li>
+<li>Bコード：Bで始まるコードで、ボディ（Body）に関するDTC。エアバッグに関するDTCが該当する。</li>
+<li>Uコード：Uで始まるコードで、CANに関するDTC。</li></ul>
+<p>また アルファベットの次の数字が“0”の場合は、生産国に関係なく共通の意味を持つDTC（例：P0120：スロットルポジションセンサー回路異常）であり、これに対して“1”ないし“2”の場合は、各メーカーが独自に設定したDTCである。
+各メーカーは独自のDTCを設定した場合、SAEにそれを通知することが求められる。その情報はSAEから公開されることになっている。
+したがってもしスキャンツールでDTCの読み出しを行った場合、意味を把握できないDTCが読み出された場合、インターネットのDTCに関する検索サイトを用いて、その意味を把握することができる<sup class="reference" id="cite_ref-internet_8-0"><a href="#cite_note-internet-8">[8]</a></sup>。
+</p>
+
+<p>OBD2が搭載されることによって、自動車整備の現場では、迅速かつ正確に行えるようになった。例えば<a href="/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%83%E3%83%84" title="トヨタ・ヴィッツ">ヴィッツ</a>のSCP10系におけるエンジン関係の故障コード一覧表を見ると、この車はOBD2スキャンツールを用いる方法の他に、“エンジンチェックランプの点滅回数を読みとる”という従来のOBD1の方法でも、コードを読み取れるのがわかる。
+</p><p>その場合は従来からのトヨタ独自の二桁コードを読みとることになるが、“クランクセンサー異常”も“カムセンサー異常”も、同じ“12”が表示される。つまり、“12”が表示されたら、この二つのセンサーを両方とも点検する必要が生ずる。また、それぞれのセンサーと取り付け位置であるが、一方はシリンダーヘッドの後ろ側、一方はクランクプーリー付近と位置的にも離れていて、両方のセンサーの点検作業はかなりの労力を要する。しかしながら<a class="new" href="/w/index.php?title=%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%84%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="スキャンツール (存在しないページ)">スキャンツール</a>を用いてOBD2のDTCを読み取れば、その段階で点検箇所をどちらか一方に絞り込むことができる。
+</p>
+<h2><span id=".E3.83.95.E3.83.AA.E3.83.BC.E3.82.BA.E3.83.BB.E3.83.95.E3.83.AC.E3.83.BC.E3.83.A0.E3.83.BB.E3.83.87.E3.83.BC.E3.82.BF"></span><span class="mw-headline" id="フリーズ・フレーム・データ">フリーズ・フレーム・データ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=6" title="節を編集: フリーズ・フレーム・データ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フリーズ・フレーム・データ（<a class="new" href="/w/index.php?title=Freeze_frame_data&amp;action=edit&amp;redlink=1" title="Freeze frame data (存在しないページ)">Freeze frame data</a>）とは、OBD2に対応したエンジン・コントロール・ユニットが記憶することができる情報である。各センサーあるいは各アクチュエータに異常が生じ、エンジン・コントロール・ユニットはDTCを記憶すると同時に、DTCを記憶した瞬間のエンジン冷却水温、エンジン回転数、負荷の状態（高負荷時であったか、低負荷時であったか）、などの情報を記憶する。これがフリーズ・フレーム・データである。
+OBD2に対応したエンジン・コントロール・ユニットは、必ずこの機能を有することが求められているが、記憶する情報の項目、項目数、表示方法は、各メーカーの意向に委ねられている。したがって実際の故障診断作業に当たっては、常に有益な情報を得られるとは限らない事に留意したい<sup class="reference" id="cite_ref-freeze_7-1"><a href="#cite_note-freeze-7">[7]</a></sup>。
+</p>
+<h2><span id="OBD2.E3.82.B9.E3.82.AD.E3.83.A3.E3.83.B3.E3.83.84.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="OBD2スキャンツール">OBD2スキャンツール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=7" title="節を編集: OBD2スキャンツール">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+
+<p>OBD2のDTCを読取るには、ECU内部のマイクロコンピュータと通信を取り合い、記憶されたDTCを読み取り、それをディスプレイに表示する装置が必要となる。この装置をスキャンツール（Scan Tools）と呼ぶ。
+</p><p>スキャンツールは、おおむね次のように分類できる。
+</p>
+<ul><li>各自動車メーカーが、自社のディーラーのサービス工場向けに開発したもの。機能的には最も充実しているが、一般には市販されない。また他社の車には使用できない（例：トヨタ・TaScan）。</li>
+<li>価格帯が30〜100万円の汎用高級タイプ。カラーディスプレイを備え、DTCの読み取りと消去、ライブデータ表示、アクティブテスト、さらには<a href="/wiki/%E3%82%AA%E3%82%B7%E3%83%AD%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97" title="オシロスコープ">オシロスコープ</a>機能も備えている。ただし本体の他に、各メーカーごとのプログラムを別途購入する必要があり、それぞれのプログラムのバージョンアップ費用も発生してくる。</li>
+<li>価格帯が10万円以下の汎用ハンドヘルドタイプ。テレビのリモコン程度のサイズで、小さなモノクロディスプレイが装備される。主にDTCの読み取りと消去に特化したもの。最もいろいろなメーカーで生産されているものであるが、近年ライブデータ表示、アクティブテスト機能を備えたものが登場してきている<sup class="reference" id="cite_ref-cordreader_9-0"><a href="#cite_note-cordreader-9">[9]</a></sup>。</li>
+<li>パソコンベースのタイプ。トヨタディーラーのサービス工場向け専用機「Global Tech Stream」や日産のディーラーのサービス工場向け専用機 「consult3」がこのタイプである。DLCとパソコンのUSB端子とを結ぶコンバータとケーブル類、PC用プログラム・インストールディスク、以上が一セットいう形態で販売されている。</li></ul>
+<h3><span id="DTC.E3.81.AE.E8.AA.AD.E3.81.BF.E5.8F.96.E3.82.8A.E3.81.A8.E6.B6.88.E5.8E.BB"></span><span class="mw-headline" id="DTCの読み取りと消去">DTCの読み取りと消去</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=8" title="節を編集: DTCの読み取りと消去">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>DLCには常時自動車側のバッテリー電圧がかかっているので、スキャンツールを接続すると自動的に電源がオンになる。ECUがDTCを記憶している場合はDTCがディスプレイに表示される。Pコードの場合は、フリーズ・フレーム・データも確認する。
+表示されたDTCにしたがって、ワイヤーハーネスやカプラーの修理が終わったら、ECUが記憶しているDTCの消去を行う。その上で再びエンジンを始動し、必要に応じて試運転を行い、前回DTCが記憶された運転状態を再現する。
+もし再び同じDTCが記憶されるのなら、先ほどの修理作業が不完全ということになる。別のDTCが記憶されるのなら、それにしたがって修理作業を行う。そしてDTCの消去を行い、試運転を行い、DTCが記憶されないなら、整備作業は完了、ということになる。
+</p>
+<h3><span id=".E3.83.A9.E3.82.A4.E3.83.96.E3.83.87.E3.83.BC.E3.82.BF.E8.A1.A8.E7.A4.BA.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="ライブデータ表示機能">ライブデータ表示機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=9" title="節を編集: ライブデータ表示機能">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ライブデータ（Live data）表示機能とは、各センサーからエンジンのECUに送られる信号をリアルタイムに表示する機能である。この機能を用いれば、例えば水温センサーが、始動時から完全暖機まで、どのようなデータを観測することが可能になる。何項目のライブデータが表示可能であるかは、それぞれの車のエンジンのECUに依存するが、図の例の車では、合計59種類のライブデータが表示可能であるのが分かる（図の右やや上の25/59という表示）。
+</p><p>それぞれのライブデータは、グラフとして表示可能である。図はエアフローセンサーからの信号をグラフ表示させたものであるが、電圧が低い状態はエンジンがアイドリング状態、電圧が山型に上昇し降下している部分は、アクセルペダルを踏み込んですぐ離した時の電圧変化である。
+</p><p>このように、エンジン回転数が上がって吸入空気量が増えた場合、エアフローセンサーの信号電圧が上昇するのが分かる。
+</p>
+<div class="center"><div class="thumb tnone">
+<div class="thumbinner" style="width:406px">
+<table cellspacing="0" style="background: transparent; border: 0; padding: 0; margin: 0; width:406px;">
+<tbody><tr>
+<td class="thumbimage" style="padding: 0; margin: 0;">ライブデータの一覧表示（左）と、ライブデータの一グラフ表示（右）。
+</td>
+<td style="padding: 0; margin: 0; border: 0; width: 2px">
+</td>
+<td class="thumbimage" style="padding: 0; margin: 0;">ライブデータの一覧表示（左）と、ライブデータの一グラフ表示（右）。
+</td></tr>
+<tr>
+<td colspan="3" style="padding: 0; margin: 0; border: 0; vertical-align: top;"><div class="thumbcaption">ライブデータの一覧表示（左）と、ライブデータの一グラフ表示（右）。</div>
+</td></tr></tbody></table>
+</div>
+</div></div>
+<h3><span id=".E3.82.A2.E3.82.AF.E3.83.86.E3.82.A3.E3.83.96.E3.83.86.E3.82.B9.E3.83.88.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="アクティブテスト機能">アクティブテスト機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=10" title="節を編集: アクティブテスト機能">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>アクティブテスト機能とは、スキャンツールからECUにコマンドを送信し、車の各機能になんらかの変化を発生させる機能を指す。
+例えばパワーバランステストと称されるテストがある。これは運転中の4気筒エンジンの各イグニッションコイルを、一つ毎に順番に作動を停止させる方法である。エンジンの吹き上がりが悪く、アイドリングが不安定という症状の場合、いずれかのシリンダーでイグニッションプラグが点火していない事が原因として考えられる。しかしながらどのシリンダーで失火しているかを特定するのは困難である。
+よってこのアクティブテスト機能を使って、順番に作動を停止させる。正常なイグニッションコイルの作動を停止させれば、2つのプラグが失火するので、アイドリングはより不安定になる。それに対して、元々失火しているプラグのイグニッションコイルの作動を停止させても、アイドリングの不安定さは変わらない。よって失火しているシリンダーを特定することが可能である。
+</p><p>アクティブテスト機能には、いろいろな種類がある。トヨタのハイブリッド車は、2年に一回の継続検査の時、排気ガス有害成分測定のためにアイドリングストップを解除し、スピードメーターテストのためにTCS（トラクション・コントロール・システム）を解除する必要がある。この状態を整備モードと呼ぶが、この整備モードへの移行作業も、スキャンツールのアクティブテスト機能で行うことができる。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+</p>
+<h2><span id="OBD2.E3.82.B9.E3.82.AD.E3.83.A3.E3.83.B3.E3.83.84.E3.83.BC.E3.83.AB.E4.BD.BF.E7.94.A8.E4.B8.8A.E3.81.AE.E6.B3.A8.E6.84.8F.E7.82.B9"></span><span class="mw-headline" id="OBD2スキャンツール使用上の注意点">OBD2スキャンツール使用上の注意点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=11" title="節を編集: OBD2スキャンツール使用上の注意点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>実際の整備現場において、スキャンツールの使用に当たり心得ておきたいことは以下の通りである。
+</p>
+<h3><span id=".E3.81.84.E3.81.8D.E3.81.AA.E3.82.8A.E9.83.A8.E5.93.81.E4.BA.A4.E6.8F.9B.E3.81.AB.E8.B5.B0.E3.82.89.E3.81.AA.E3.81.84"></span><span class="mw-headline" id="いきなり部品交換に走らない">いきなり部品交換に走らない</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=12" title="節を編集: いきなり部品交換に走らない">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>例えば 水温センサーの不具合を示すDTCが読取れた場合、いきなり部品交換に進んでしまうのは、誤りである。水温センサー自体は、<a class="mw-redirect" href="/wiki/%E3%82%B5%E3%83%BC%E3%83%9F%E3%82%B9%E3%82%BF%E3%83%BC" title="サーミスター">サーミスター</a>を使った簡単な部品だが、エンジンのECUの中では図のような配線になっている。したがってセンサーの配線やカプラーの異常の他に、ECU内部の分圧抵抗なども点検の対象となる。しかし万が一、内部の分圧抵抗の異常と結論が出たら、ECUアセンブリ交換となってしまう。<br/>
+</p><p>また水温センサーについてのDTCが、エンジンのECUに記憶される条件は、以下のようにメーカー及び車種によって違っている。
+</p><p>【P0115　水温センサー回路異常】
+</p>
+<ul><li><a href="/wiki/%E3%83%88%E3%83%A8%E3%82%BF%E3%83%BB%E3%83%9E%E3%83%BC%E3%82%AFX" title="トヨタ・マークX">トヨタ・マークX</a> - イグニッションスイッチをオンにしてから、水温センサー回路が断線あるいは短絡状態が0.5秒間続いた場合</li>
+<li><a href="/wiki/%E6%97%A5%E7%94%A3%E3%83%BB%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3" title="日産・オッティ">日産・オッティ</a> - イグニッションスイッチをオンにしてから60秒間経過した後、センサー出力電圧が4.6V以上あるいは0.1V以下になった場合</li></ul>
+<p>したがって故障診断作業に当たっては、こうした情報をサービスマニュアルで確認しておくのが、肝要である<sup class="reference" id="cite_ref-replace_10-0"><a href="#cite_note-replace-10">[10]</a></sup>。
+</p>
+<h3><span id=".E3.82.BB.E3.83.B3.E3.82.B5.E3.83.BC.E3.81.AE.E7.89.B9.E6.80.A7.E3.81.AE.E7.8B.82.E3.81.84.E3.81.AF.E6.A4.9C.E7.9F.A5.E3.81.A7.E3.81.8D.E3.81.AA.E3.81.84"></span><span class="mw-headline" id="センサーの特性の狂いは検知できない">センサーの特性の狂いは検知できない</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=13" title="節を編集: センサーの特性の狂いは検知できない">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>図の黒線ように、水温センサーからECUに送られる電圧信号は、エンジン始動時が最大で、後はエンジンの暖機が進むにつれ、低下していく。OBD1、OBD2にかかわらず、ECUの自己診断機能は、水温センサーの電圧信号がある値以下、あるいはある値以上の時、DTCを記憶する。
+</p><p>しかし水温センサーの特性の狂いの原因で、図の赤線のようにいくらエンジンの冷却水温が上昇しても、ある電圧以下に下がらない場合がある。この場合エンジンのECUは必要以上の燃料を噴射してしまい、非常に調子が悪くなる。ところが、電圧変化が規定の範囲に収まっている場合は、エンジンのECUはDTCを記憶することはできない。<sup class="reference" id="cite_ref-senser_11-0"><a href="#cite_note-senser-11">[11]</a></sup>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8.E3.83.BB.E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="脚注・出典">脚注・出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=14" title="節を編集: 脚注・出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-ecu-1"><b><a href="#cite_ref-ecu_1-0">^</a></b> <span class="reference-text">我が国では<a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="エンジンコントロールユニット">エンジンコントロールユニット</a>と呼ばれることが多い</span>
+</li>
+<li id="cite_note-obdhistory-2"><b><a href="#cite_ref-obdhistory_2-0">^</a></b> <span class="reference-text"><a class="new" href="/w/index.php?title=En:On-Board_Diagnostics&amp;action=edit&amp;redlink=1" title="En:On-Board Diagnostics (存在しないページ)">　On-Board_Diagnostics（英語）</a></span>
+</li>
+<li id="cite_note-yada-3"><b><a href="#cite_ref-yada_3-0">^</a></b> <span class="reference-text">。マイコン時代の自動車工学と新しい整備技術　矢田平祐著　<a class="new" href="/w/index.php?title=%E9%89%84%E9%81%93%E6%97%A5%E6%9C%AC%E7%A4%BE&amp;action=edit&amp;redlink=1" title="鉄道日本社 (存在しないページ)">鉄道日本社</a>　1977年12月発行</span>
+</li>
+<li id="cite_note-eccs2-4"><b><a href="#cite_ref-eccs2_4-0">^</a></b> <span class="reference-text">登場当時のECCSには、マイクロコンピュータ自体が異常を起こした場合、最低限の自走を可能にするバックアップ機能が備わっていた。</span>
+</li>
+<li id="cite_note-Jobd-5"><b><a href="#cite_ref-Jobd_5-0">^</a></b> <span class="reference-text">。<a class="external text" href="http://www.mlit.go.jp/report/press/jidosha09_hh_000041.html" rel="nofollow">国土交通省のJOBDに関する通達</a></span>
+</li>
+<li id="cite_note-hdobd-6"><b><a href="#cite_ref-hdobd_6-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.epa.gov/obd/regtech/heavy.htm" rel="nofollow">アメリカ環境保護局のHDOBDの解説ページ</a></span>
+</li>
+<li id="cite_note-freeze-7">^ <a href="#cite_ref-freeze_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-freeze_7-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">自動車工学2009年6月号(鉄道日本社)p113-114</span>
+</li>
+<li id="cite_note-internet-8"><b><a href="#cite_ref-internet_8-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.equus.com/Dtc/Index?make=Acura&amp;dtc=P0001&amp;image.x=39&amp;image.y=15" rel="nofollow">現在さまざまな検索サイトがあるが、一例としてこのサイトが挙げられる</a></span>
+</li>
+<li id="cite_note-cordreader-9"><b><a href="#cite_ref-cordreader_9-0">^</a></b> <span class="reference-text"><a class="external text" href="http://www.was-inc.jp/manufacturer/innova.html" rel="nofollow">このような製品が一例として挙げられる</a></span>
+</li>
+<li id="cite_note-replace-10"><b><a href="#cite_ref-replace_10-0">^</a></b> <span class="reference-text">自動車工学2009年6月号　鉄道日本社　113ページ〜</span>
+</li>
+<li id="cite_note-senser-11"><b><a href="#cite_ref-senser_11-0">^</a></b> <span class="reference-text">自動車工学2008年6月号　鉄道日本社　113ページ〜</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=15" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>自動車工学臨時増刊　すっきりわかるカーエレクトロニクス読本　2012年7月　鉄道日本社　<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0388-3841" rel="nofollow">0388-3841</a>
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=16" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E8%A8%88%E5%99%A8%E3%83%BB%E4%B9%97%E5%93%A1%E8%AD%A6%E5%91%8A%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="エンジン計器・乗員警告システム">エンジン計器・乗員警告システム</a> - <a href="/wiki/%E3%83%9C%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0" title="ボーイング">ボーイング</a>などが旅客機に搭載する自己診断機能を有するモニタリング装置</li>
+<li><a href="/wiki/%E9%9B%BB%E5%AD%90%E5%BC%8F%E9%9B%86%E4%B8%AD%E5%8C%96%E8%88%AA%E7%A9%BA%E6%A9%9F%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC" title="電子式集中化航空機モニター">電子式集中化航空機モニター</a> - <a href="/wiki/%E3%82%A8%E3%82%A2%E3%83%90%E3%82%B9" title="エアバス">エアバス</a>が旅客機に搭載する自己診断機能を有するモニタリング装置</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;section=17" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.jasea.org/" rel="nofollow">日本自動車整備工具協会</a></li>
+<li><a class="external text" href="http://www.mlit.go.jp/report/press/jidosha09_hh_000084.html" rel="nofollow">「スキャンツールを活用した整備の高度化等推進事業」の公募について</a></li></ul>
+<div aria-labelledby="自動車部品" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E8%87%AA%E5%8B%95%E8%BB%8A%E9%83%A8%E5%93%81&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:自動車部品 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E8%87%AA%E5%8B%95%E8%BB%8A%E9%83%A8%E5%93%81&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E8%87%AA%E5%8B%95%E8%BB%8A%E9%83%A8%E5%93%81&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="自動車部品" style="font-size:110%;margin:0 6em">自動車部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="エンジン" style="font-size:110%;margin:0 6em">エンジン</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">方式</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AC%E3%82%B7%E3%83%97%E3%83%AD%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="レシプロエンジン">レシプロエンジン</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%BC%E3%82%BF%E3%83%AA%E3%83%BC%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="ロータリーエンジン">ロータリーエンジン</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%BD%E3%83%AA%E3%83%B3%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="ガソリンエンジン">ガソリンエンジン</a>
+<ul><li><a href="/wiki/2%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%AF%E6%A9%9F%E9%96%A2" title="2ストローク機関">2st</a></li>
+<li><a href="/wiki/4%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%AF%E6%A9%9F%E9%96%A2" title="4ストローク機関">4st</a></li></ul></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%82%BC%E3%83%AB%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="ディーゼルエンジン">ディーゼルエンジン</a>
+<ul><li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%95%E3%83%AD%E3%83%BC%E6%8E%83%E6%B0%97%E3%83%87%E3%82%A3%E3%83%BC%E3%82%BC%E3%83%AB%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="ユニフロー掃気ディーゼルエンジン">2st</a></li>
+<li>4st</li></ul></li>
+<li><a href="/wiki/%E7%B8%A6%E7%BD%AE%E3%81%8D%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="縦置きエンジン">縦置きエンジン</a></li>
+<li><a href="/wiki/%E6%A8%AA%E7%BD%AE%E3%81%8D%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="横置きエンジン">横置きエンジン</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%AB%E3%83%BC" title="ハイブリッドカー">ハイブリッド (HV)</a>
+<ul><li><a href="/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%AB%E3%83%BC" title="プラグインハイブリッドカー">プラグインハイブリッド（PHV）</a></li></ul></li>
+<li><a href="/wiki/%E9%9B%BB%E6%B0%97%E8%87%AA%E5%8B%95%E8%BB%8A" title="電気自動車">電気自動車 (EV)</a>
+<ul><li><a href="/wiki/%E7%87%83%E6%96%99%E9%9B%BB%E6%B1%A0%E8%87%AA%E5%8B%95%E8%BB%8A" title="燃料電池自動車">燃料電池自動車（FC）</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%A9%E3%83%BC%E3%82%AB%E3%83%BC" title="ソーラーカー">ソーラーカー</a></li></ul></li>
+<li><a href="/wiki/%E6%B0%B4%E7%B4%A0%E8%87%AA%E5%8B%95%E8%BB%8A" title="水素自動車">水素自動車</a></li>
+<li><a href="/wiki/LPG%E8%87%AA%E5%8B%95%E8%BB%8A" title="LPG自動車">LPG自動車</a></li>
+<li><a href="/wiki/%E5%A4%A9%E7%84%B6%E3%82%AC%E3%82%B9%E8%87%AA%E5%8B%95%E8%BB%8A" title="天然ガス自動車">天然ガス自動車</a></li>
+<li>冷却
+<ul><li><a href="/wiki/%E7%A9%BA%E5%86%B7%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="空冷エンジン">空冷エンジン</a></li>
+<li><a href="/wiki/%E6%B0%B4%E5%86%B7%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="水冷エンジン">水冷エンジン</a></li>
+<li><a href="/wiki/%E6%B2%B9%E5%86%B7%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="油冷エンジン">油冷エンジン</a></li></ul></li>
+<li><a href="/wiki/%E3%82%B5%E3%82%A4%E3%83%89%E3%83%90%E3%83%AB%E3%83%96" title="サイドバルブ">サイドバルブ</a></li>
+<li><a href="/wiki/OHV" title="OHV">OHV</a></li>
+<li><a href="/wiki/SOHC" title="SOHC">SOHC</a></li>
+<li><a href="/wiki/DOHC" title="DOHC">DOHC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">内部構成部品</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%86%85%E7%87%83%E6%A9%9F%E9%96%A2" title="内燃機関">内燃機関</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%A0%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88" title="カムシャフト">カムシャフト</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88" title="ガスケット">ガスケット</a>
+<ul><li><a href="/wiki/%E3%83%98%E3%83%83%E3%83%89%E3%82%AC%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88" title="ヘッドガスケット">ヘッドガスケット</a></li></ul></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%8D%E3%82%AF%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AD%E3%83%83%E3%83%89" title="コネクティングロッド">コネクティングロッド</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%83%B3%E3%83%80%E3%83%BC%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF" title="シリンダーブロック">シリンダーブロック</a>
+<ul><li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%83%B3%E3%83%80%E3%83%BC" title="シリンダー">シリンダー</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%83%B3%E3%83%80%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%8A%E3%83%BC" title="シリンダーライナー">シリンダーライナー</a></li></ul></li>
+<li><a href="/wiki/%E3%82%B3%E3%82%A2%E3%83%97%E3%83%A9%E3%82%B0" title="コアプラグ">コアプラグ</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%B1%E3%83%BC%E3%82%B9" title="クランクケース">クランクケース</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%AA%E3%83%B3%E3%83%80%E3%83%BC%E3%83%98%E3%83%83%E3%83%89" title="シリンダーヘッド">シリンダーヘッド</a></li>
+<li><a href="/wiki/%E3%83%98%E3%83%83%E3%83%89%E3%82%AB%E3%83%90%E3%83%BC" title="ヘッドカバー">ヘッドカバー</a></li>
+<li><a href="/wiki/%E3%83%94%E3%82%B9%E3%83%88%E3%83%B3" title="ピストン">ピストン</a></li>
+<li><a href="/wiki/%E3%83%94%E3%82%B9%E3%83%88%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%B0" title="ピストンリング">ピストンリング</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%83%E3%82%AB%E3%83%BC%E3%82%A2%E3%83%BC%E3%83%A0" title="ロッカーアーム">ロッカーアーム</a>
+<ul><li><a href="/wiki/%E3%83%87%E3%82%B9%E3%83%A2%E3%83%89%E3%83%AD%E3%83%9F%E3%83%83%E3%82%AF" title="デスモドロミック">デスモドロミック</a></li></ul></li>
+<li><a href="/wiki/%E3%82%BF%E3%83%9A%E3%83%83%E3%83%88" title="タペット">タペット</a>
+<ul><li><a href="/wiki/%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%B9%E3%82%BF%E3%83%BC" title="ラッシュアジャスター">ラッシュアジャスター</a></li></ul></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88" title="クランクシャフト">クランクシャフト</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3" title="タイミングチェーン">タイミングチェーン</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E3%82%AB%E3%83%90%E3%83%BC" title="タイミングチェーンカバー">タイミングチェーンカバー</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%99%E3%83%AB%E3%83%88" title="タイミングベルト">タイミングベルト</a></li>
+<li><a href="/wiki/%E6%B5%AE%E5%8B%95%E3%83%96%E3%83%83%E3%82%B7%E3%83%A5%E8%BB%B8%E5%8F%97" title="浮動ブッシュ軸受">浮動ブッシュ軸受</a></li>
+<li><a href="/wiki/%E3%81%99%E3%81%B9%E3%82%8A%E8%BB%B8%E5%8F%97" title="すべり軸受">すべり軸受</a>
+<ul><li><a href="/wiki/%E3%83%90%E3%83%93%E3%83%83%E3%83%88%E3%83%A1%E3%82%BF%E3%83%AB" title="バビットメタル">バビットメタル</a></li></ul></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AB%E3%83%96#内燃機関におけるバルブ" title="バルブ">バルブ</a>
+<ul><li><a href="/wiki/%E3%83%9D%E3%83%9A%E3%83%83%E3%83%88%E3%83%90%E3%83%AB%E3%83%96" title="ポペットバルブ">ポペットバルブ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%96%E3%83%90%E3%83%AB%E3%83%96" title="スリーブバルブ">スリーブバルブ</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%BC%E3%82%BF%E3%83%AA%E3%83%BC%E3%83%90%E3%83%AB%E3%83%96" title="ロータリーバルブ">ロータリーバルブ</a></li></ul></li>
+<li><a href="/wiki/%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88" title="バランスシャフト">バランスシャフト</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%AB%E3%83%9D%E3%83%B3%E3%83%97" title="オイルポンプ">オイルポンプ</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%AB%E3%83%91%E3%83%B3" title="オイルパン">オイルパン</a>
+<ul><li><a href="/wiki/%E3%82%A6%E3%82%A8%E3%83%83%E3%83%88%E3%82%B5%E3%83%B3%E3%83%97" title="ウエットサンプ">ウエットサンプ</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%82%A4%E3%82%B5%E3%83%B3%E3%83%97" title="ドライサンプ">ドライサンプ</a></li></ul></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9D%E3%83%B3%E3%83%97" title="ウォーターポンプ">ウォーターポンプ</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%B1%E3%83%BC%E3%82%B9%E3%83%96%E3%83%AA%E3%83%BC%E3%82%B6%E3%83%BC" title="クランクケースブリーザー">クランクケースブリーザー</a>
+<ul><li>PCVバルブ</li>
+<li>内圧コントロールバルブ</li></ul></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">補機類</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/V%E3%83%99%E3%83%AB%E3%83%88" title="Vベルト">Vベルト</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%88%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96" title="ベルトドライブ">Vリブドベルト</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%88_(%E6%A9%9F%E6%A2%B0)" title="ベルト (機械)">ファンベルト</a></li>
+<li><a href="/wiki/%E6%AD%AF%E4%BB%98%E3%83%99%E3%83%AB%E3%83%88" title="歯付ベルト">歯付ベルト</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%A9%E3%82%A4%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB" title="フライホイール">フライホイール</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%AD%E3%83%83%E3%83%88%E3%83%AB" title="スロットル">スロットル（アクセル）</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="エンジンコントロールユニット">エンジンコントロールユニット (ECU)</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%AB%E3%82%BF%E3%83%8D%E3%83%BC%E3%82%BF%E3%83%BC" title="オルタネーター">オルタネーター</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%82%B8%E3%82%A8%E3%83%BC%E3%82%BF%E3%83%BC" title="ラジエーター">ラジエーター</a>
+<ul><li><a href="/wiki/%E3%83%95%E3%82%A1%E3%83%B3%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81" title="ファンクラッチ">ファンクラッチ</a></li></ul></li>
+<li><a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%AB%E3%82%AF%E3%83%BC%E3%83%A9%E3%83%BC" title="オイルクーラー">オイルクーラー</a></li>
+<li>始動装置
+<ul><li><a href="/wiki/%E3%82%BB%E3%83%AB%E3%83%A2%E3%83%BC%E3%82%BF%E3%83%BC" title="セルモーター">セルモーター</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%8F%E3%83%B3%E3%83%89%E3%83%AB" title="スターティング・ハンドル">スターティング・ハンドル</a></li></ul></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC" title="リモートエンジンスターター">エンジンスターター</a></li>
+<li><a href="/wiki/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%8F%E3%83%BC%E3%83%8D%E3%82%B9" title="ワイヤーハーネス">ワイヤーハーネス</a></li>
+<li><a href="/wiki/%E7%82%B9%E7%81%AB%E8%A3%85%E7%BD%AE" title="点火装置">点火装置</a>
+<ul><li><a href="/wiki/%E3%83%9E%E3%82%B0%E3%83%8D%E3%83%88%E3%83%BC" title="マグネトー">マグネトー</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC" title="ディストリビューター">ディストリビューター</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%82%B0%E3%83%8A%E3%82%A4%E3%82%BF%E3%83%BC" title="イグナイター">イグナイター</a></li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%91%E3%82%B7%E3%82%BF%E3%83%BC%E3%83%BB%E3%83%87%E3%82%A3%E3%82%B9%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E3%83%89%E3%83%BB%E3%82%A4%E3%82%B0%E3%83%8B%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="キャパシター・ディスチャージド・イグニッション">CDI</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%82%A4%E3%82%B0%E3%83%8B%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="ダイレクトイグニッション">ダイレクトイグニッション</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%82%B0%E3%83%8B%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B3%E3%82%A4%E3%83%AB" title="イグニッションコイル">点火コイル</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%B3%E3%83%BC%E3%83%89" title="プラグコード">プラグコード</a>）</li></ul></li>
+<li><a href="/wiki/%E7%82%B9%E7%81%AB%E3%83%97%E3%83%A9%E3%82%B0" title="点火プラグ">点火プラグ（スパークプラグ）</a></li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%96%E3%83%AC%E3%82%BF%E3%83%BC" title="キャブレター">キャブレター</a></li>
+<li><a href="/wiki/%E5%8A%A0%E9%80%9F%E3%83%9D%E3%83%B3%E3%83%97" title="加速ポンプ">加速ポンプ</a></li>
+<li><a href="/wiki/%E3%83%81%E3%83%A7%E3%83%BC%E3%82%AF%E5%BC%81" title="チョーク弁">チョーク弁</a></li>
+<li><a href="/wiki/%E3%83%86%E3%82%A3%E3%82%AF%E3%83%A9%E3%83%BC" title="ティクラー">ティクラー</a></li>
+<li><a href="/wiki/%E7%87%83%E6%96%99%E5%99%B4%E5%B0%84%E8%A3%85%E7%BD%AE" title="燃料噴射装置">燃料噴射装置（インジェクター）</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%83%95%E3%83%AD%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="エアフロメーター">エアフロメーター</a></li>
+<li><a href="/wiki/%E7%87%83%E6%96%99%E3%82%BF%E3%83%B3%E3%82%AF_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="燃料タンク (自動車)">燃料タンク</a></li>
+<li><a href="/wiki/%E7%87%83%E6%96%99%E3%83%9D%E3%83%B3%E3%83%97" title="燃料ポンプ">燃料ポンプ</a>
+<ul><li><a href="/wiki/%E5%99%B4%E5%B0%84%E3%83%9D%E3%83%B3%E3%83%97" title="噴射ポンプ">噴射ポンプ</a></li></ul></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%AA%E3%82%A4%E3%83%AB%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%82%BF%E3%83%B3%E3%82%AF" title="オイルキャッチタンク">オイルキャッチタンク</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="動力伝達装置" style="font-size:110%;margin:0 6em">動力伝達装置</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="トランスミッション">トランスミッション</a>（ギヤボックス）</li>
+<li><a href="/wiki/%E3%83%87%E3%83%A5%E3%82%A2%E3%83%AB%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="デュアルクラッチトランスミッション">デュアルクラッチトランスミッション</a>(DCT)</li>
+<li><a href="/wiki/%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="マニュアルトランスミッション">マニュアルトランスミッション</a>(MT)</li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%81%E3%83%83%E3%82%AF%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="オートマチックトランスミッション">オートマチックトランスミッション</a>(AT)</li>
+<li><a href="/wiki/%E7%84%A1%E6%AE%B5%E5%A4%89%E9%80%9F%E6%A9%9F" title="無段変速機">無段変速機</a>(CVT)</li>
+<li><a href="/wiki/%E3%82%BB%E3%83%9F%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%81%E3%83%83%E3%82%AF%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="セミオートマチックトランスミッション">セミオートマチックトランスミッション</a>（セミAT）</li>
+<li><a href="/wiki/%E3%83%8E%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%AF%E3%83%AD%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="ノンシンクロトランスミッション">ノンシンクロトランスミッション</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3" title="シーケンシャルマニュアルトランスミッション">シーケンシャルマニュアルトランスミッション</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%82%B7%E3%83%95%E3%83%88" title="フィンガーシフト">フィンガーシフト</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%AB%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF" title="トルクコンバータ">トルクコンバータ</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88" title="プロペラシャフト">プロペラシャフト</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%82%B7%E3%83%A3%E3%83%95%E3%83%88" title="ドライブシャフト">ドライブシャフト</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81" title="クラッチ">クラッチ</a></li>
+<li><a href="/wiki/%E5%B7%AE%E5%8B%95%E8%A3%85%E7%BD%AE" title="差動装置">差動装置</a>（デファレンシャルギア）</li>
+<li><a href="/wiki/%E3%83%87%E3%83%95%E3%83%AD%E3%83%83%E3%82%AF" title="デフロック">デフロック</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%B9%E3%83%AB" title="トランスアクスル">トランスアクスル</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%95%E3%82%A1%E3%83%BC" title="トランスファー">トランスファー</a></li>
+<li><a href="/wiki/%E3%83%93%E3%82%B9%E3%82%AB%E3%82%B9%E3%82%AB%E3%83%83%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="ビスカスカップリング">ビスカスカップリング</a></li>
+<li><a href="/wiki/%E9%81%8A%E6%98%9F%E6%AD%AF%E8%BB%8A%E6%A9%9F%E6%A7%8B" title="遊星歯車機構">遊星歯車機構</a></li>
+<li><a href="/wiki/%E5%89%8D%E8%BC%AA%E9%A7%86%E5%8B%95" title="前輪駆動">前輪駆動</a>（FF）</li>
+<li><a href="/wiki/%E5%BE%8C%E8%BC%AA%E9%A7%86%E5%8B%95" title="後輪駆動">後輪駆動</a>（FR）</li>
+<li><a href="/wiki/%E3%83%9F%E3%83%83%E3%83%89%E3%82%B7%E3%83%83%E3%83%97" title="ミッドシップ">ミッドシップ</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3" title="リアエンジン">リアエンジン</a></li>
+<li><a href="/wiki/%E5%9B%9B%E8%BC%AA%E9%A7%86%E5%8B%95" title="四輪駆動">四輪駆動</a>(4WD/AWD)</li>
+<li><a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%B3%E3%83%81%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB" title="ローンチコントロール">ローンチコントロール</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%97_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="クリープ (自動車)">クリープ</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%AB%E3%82%AF%E3%82%B9%E3%83%86%E3%82%A2" title="トルクステア">トルクステア</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="吸排気系部品" style="font-size:110%;margin:0 6em">吸排気系部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%8A%E3%83%BC" title="エアクリーナー">エアクリーナー（エアエレメント）</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%B0%E3%83%AA%E3%83%AB" title="フロントグリル">フロントグリル</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%82%AF" title="エアインテーク">エアインテーク</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%BC%E3%82%AF%E3%83%9E%E3%83%8B%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%89" title="インテークマニホールド">インテークマニホールド</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%AD%E3%82%BE%E3%83%BC%E3%82%B9%E3%83%88%E3%83%9E%E3%83%8B%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%89" title="エキゾーストマニホールド">エキゾーストマニホールド（エキゾーストパイプ）</a></li>
+<li><a href="/wiki/%E9%81%8E%E7%B5%A6%E6%A9%9F" title="過給機">過給機</a>（<a href="/wiki/%E3%82%BF%E3%83%BC%E3%83%9C%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC" title="ターボチャージャー">ターボチャージャー</a>、<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC" title="スーパーチャージャー">スーパーチャージャー</a>）</li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%82%A4%E3%82%B9%E3%83%88%E3%82%B2%E3%83%BC%E3%83%88%E3%83%90%E3%83%AB%E3%83%96" title="ウェイストゲートバルブ">ウェイストゲートバルブ</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%AF%E3%83%BC%E3%83%A9%E3%83%BC" title="インタークーラー">インタークーラー</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AA%E3%83%95%E3%83%90%E3%83%AB%E3%83%96" title="ブローオフバルブ">ブローオフバルブ</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%BC%E3%82%B8%E3%82%BF%E3%83%B3%E3%82%AF" title="サージタンク">サージタンク</a></li>
+<li><a href="/wiki/%E3%83%9F%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ミスファイアリングシステム">ミスファイアリングシステム</a></li>
+<li><a href="/wiki/%E4%B8%89%E5%85%83%E8%A7%A6%E5%AA%92" title="三元触媒">三元触媒</a></li>
+<li><a href="/wiki/%E4%BA%8C%E6%AC%A1%E7%A9%BA%E6%B0%97%E5%B0%8E%E5%85%A5%E8%A3%85%E7%BD%AE" title="二次空気導入装置">二次空気導入装置</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%95%E3%83%A9%E3%83%BC_(%E5%8E%9F%E5%8B%95%E6%A9%9F)" title="マフラー (原動機)">マフラー</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%82%BC%E3%83%AB%E5%BE%AE%E7%B2%92%E5%AD%90%E6%8D%95%E9%9B%86%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="ディーゼル微粒子捕集フィルター">DPF</a></li>
+<li><a href="/wiki/%E6%8E%92%E6%B0%97%E5%86%8D%E5%BE%AA%E7%92%B0" title="排気再循環">排気再循環 (EGR)</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%88%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9" title="ディフィートデバイス">ディフィートデバイス</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="油脂類" style="font-size:110%;margin:0 6em">油脂類</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%AA%E3%82%A4%E3%83%AB" title="エンジンオイル">エンジンオイル</a>
+<ul><li><a href="/wiki/2%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%82%AF%E3%82%AA%E3%82%A4%E3%83%AB" title="2ストロークオイル">2ストロークオイル</a></li></ul></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%AA%E3%82%A4%E3%83%AB#オイルフィルター" title="エンジンオイル">オイルエレメント</a>
+<ul><li><a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="オイルフィルター">オイルフィルター</a></li></ul></li>
+<li><a href="/wiki/%E3%82%AE%E3%82%A2%E3%82%AA%E3%82%A4%E3%83%AB" title="ギアオイル">ギアオイル</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%81%E3%83%83%E3%82%AF%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AB%E3%83%BC%E3%83%89" title="オートマチックトランスミッションフルード">オートマチックトランスミッションフルード</a> (ATF)</li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%95%E3%83%AB%E3%83%BC%E3%83%89" title="ブレーキフルード">ブレーキフルード</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0#パワーステアリングフルード（PSF）" title="パワーステアリング">パワーステアリングフルード (PSF)</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%83%E3%83%97%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF" title="ディップスティック">オイルレベルゲージ</a></li>
+<li><a href="/wiki/%E8%9D%8B" title="蝋">蝋（カーワックス）</a></li>
+<li><a href="/wiki/%E7%87%83%E6%96%99%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="燃料フィルター">燃料フィルター</a></li>
+<li>テンプレート自動車用燃料</li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="運転装置" style="font-size:110%;margin:0 6em">運転装置</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%86%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0" title="ステアリング">ステアリング</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0" title="パワーステアリング">パワーステアリング</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%94%E3%83%8B%E3%82%AA%E3%83%B3" title="ラック・アンド・ピニオン">ラック・アンド・ピニオン</a></li>
+<li><a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%8A%E3%83%83%E3%83%88" title="ボール・ナット">ボール・ナット</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%86%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%A9%E3%83%A0" title="ステアリングコラム">ステアリングコラム</a></li>
+<li><a href="/wiki/%E5%9B%9B%E8%BC%AA%E6%93%8D%E8%88%B5" title="四輪操舵">四輪操舵 (4WS)</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%AB%E3%83%9A%E3%83%80%E3%83%AB" title="アクセルペダル">アクセルペダル</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%83%BB%E3%83%90%E3%82%A4%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%A4" title="ドライブ・バイ・ワイヤ">ドライブ・バイ・ワイヤ</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%9A%E3%83%80%E3%83%AB" title="ブレーキペダル">ブレーキペダル</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%83%9A%E3%83%80%E3%83%AB" title="クラッチペダル">クラッチペダル</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="クラッチスタートシステム">クラッチスタートシステム</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%95%E3%83%88%E3%83%AC%E3%83%90%E3%83%BC" title="シフトレバー">シフトレバー</a>（セレクトレバー）</li>
+<li><a href="/wiki/%E3%82%B7%E3%83%95%E3%83%88%E3%83%8E%E3%83%96" title="シフトノブ">シフトノブ</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="パーキングブレーキ">パーキングブレーキ</a>（ハンドブレーキ）</li>
+<li><a href="/wiki/%E6%96%B9%E5%90%91%E6%8C%87%E7%A4%BA%E5%99%A8#ウインカー・スイッチ" title="方向指示器">ウインカー・スイッチ</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="足回り部品" style="font-size:110%;margin:0 6em">足回り部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">緩衝装置</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3" title="サスペンション">サスペンション</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF%E3%82%A2%E3%83%96%E3%82%BD%E3%83%BC%E3%83%90%E3%83%BC" title="ショックアブソーバー">ショックアブソーバー</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%93%E3%83%A9%E3%82%A4%E3%82%B6%E3%83%BC_(%E8%87%AA%E5%8B%95%E8%BB%8A%E9%83%A8%E5%93%81)" title="スタビライザー (自動車部品)">スタビライザー</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%88%E3%82%BF%E3%83%AF%E3%83%BC%E3%83%90%E3%83%BC" title="ストラットタワーバー">ストラットタワーバー</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制動装置</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="ブレーキ">ブレーキ</a>
+<ul><li><a class="mw-redirect" href="/wiki/%E6%B2%B9%E5%9C%A7%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="油圧ブレーキ">油圧</a></li>
+<li><a href="/wiki/%E7%A9%BA%E6%B0%97%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="空気ブレーキ">空気</a></li>
+<li><a href="/wiki/%E6%8E%92%E6%B0%97%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="排気ブレーキ">排気</a></li></ul></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="ディスクブレーキ">ディスクブレーキ</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%96%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC" title="ブレーキブースター">ブレーキブースター</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%82%AD%E3%83%A3%E3%83%AA%E3%83%91%E3%83%BC" title="ブレーキキャリパー">ブレーキキャリパー</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%91%E3%83%83%E3%83%89" title="ブレーキパッド">ブレーキパッド</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%AD%E3%83%BC%E3%82%BF%E3%83%BC" title="ブレーキローター">ブレーキローター</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%83%A0%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="ドラムブレーキ">ドラムブレーキ</a></li>
+<li><a href="/wiki/%E5%88%B6%E8%BC%AA%E5%AD%90" title="制輪子">ブレーキシュー</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%BF%E3%83%BC%E3%83%80" title="リターダ">リターダ</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%BB%E3%83%90%E3%82%A4%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%A4" title="ブレーキ・バイ・ワイヤ">ブレーキ・バイ・ワイヤ</a></li>
+<li><a href="/wiki/%E5%9B%9E%E7%94%9F%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="回生ブレーキ">回生ブレーキ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">車輪</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%A4" title="タイヤ">タイヤ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%89%E3%83%AC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%A4" title="スタッドレスタイヤ">スタッドレスタイヤ</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%95%E3%83%A9%E3%83%83%E3%83%88%E3%82%BF%E3%82%A4%E3%83%A4" title="ランフラットタイヤ">ランフラットタイヤ</a></li>
+<li><a href="/wiki/%E3%83%93%E3%83%BC%E3%83%89%E3%83%AD%E3%83%83%E3%82%AF" title="ビードロック">ビードロック</a></li>
+<li><a href="/wiki/%E8%BB%8A%E8%BC%AA" title="車輪">ホイール</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%81%E3%83%BC%E3%83%AB%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB" title="スチールホイール">スチールホイール</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB" title="アルミホイール">アルミホイール</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%B0%E3%83%8D%E3%82%B7%E3%82%A6%E3%83%A0%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB" title="マグネシウムホイール">マグネシウムホイール</a></li>
+<li><a href="/wiki/%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%BC%E3%83%81" title="ホイールアーチ">ホイールアーチ</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%96_(%E6%A9%9F%E6%A2%B0)" title="ハブ (機械)">ハブ</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB%E3%83%8F%E3%83%96" title="フリーホイールハブ">フリーホイールハブ</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%96%E3%83%AA%E3%83%80%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="ハブリダクション">ハブリダクション</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="計器・センサー部品" style="font-size:110%;margin:0 6em">計器・センサー部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%80%9F%E5%BA%A6%E8%A8%88" title="速度計">速度計（スピードメーター）</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%B3%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="タコメーター">タコメーター</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%89%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="オドメーター">オドメーター</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%AA%E3%83%83%E3%83%97%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="トリップメーター">トリップメーター</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="デジタルメーター">デジタルメーター</a></li>
+<li><a href="/wiki/%E8%87%AA%E7%99%BA%E5%85%89%E5%BC%8F%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="自発光式メーター">自発光式メーター</a></li>
+<li><a href="/wiki/%E7%87%83%E6%96%99%E8%A8%88" title="燃料計">燃料計</a></li>
+<li><a href="/wiki/%E6%B0%B4%E6%B8%A9%E8%A8%88" title="水温計">水温計</a></li>
+<li><a href="/wiki/%E6%B2%B9%E6%B8%A9%E8%A8%88" title="油温計">油温計</a></li>
+<li><a href="/wiki/%E6%B2%B9%E5%9C%A7%E8%A8%88" title="油圧計">油圧計</a></li>
+<li><a href="/wiki/%E6%8E%92%E6%B0%97%E6%B8%A9%E5%BA%A6%E8%A8%88" title="排気温度計">排気温度計</a></li>
+<li><a href="/wiki/%E7%A9%BA%E7%87%83%E6%AF%94%E8%A8%88" title="空燃比計">空燃比計</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%9C%A7%E8%A8%88" title="電圧計">電圧計</a></li>
+<li><a href="/wiki/%E9%9B%BB%E6%B5%81%E8%A8%88" title="電流計">電流計</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%BC%E3%82%B9%E3%83%88%E8%A8%88" title="ブースト計">ブースト計</a></li>
+<li><a href="/wiki/%E8%B2%A0%E5%9C%A7%E8%A8%88" title="負圧計">負圧計</a>（<a href="/wiki/%E5%90%B8%E6%B0%97%E5%9C%A7%E5%8A%9B%E8%A8%88" title="吸気圧力計">吸気圧力計</a>）</li>
+<li><a href="/wiki/%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%83%AA%E3%83%9F%E3%83%83%E3%82%BF%E3%83%BC" title="スピードリミッター">スピードリミッター</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%83%95%E3%83%AD%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC" title="エアフロメーター">エアフロメーター</a></li>
+<li><a href="/wiki/%E9%80%9F%E5%BA%A6%E8%AD%A6%E5%91%8A%E9%9F%B3" title="速度警告音">速度警告音</a></li>
+<li><a href="/wiki/%E9%80%9F%E5%BA%A6%E8%A1%A8%E7%A4%BA%E7%81%AF" title="速度表示灯">速度表示灯</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="車内の部位・部品" style="font-size:110%;margin:0 6em">車内の部位・部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%80%E3%83%83%E3%82%B7%E3%83%A5%E3%83%9C%E3%83%BC%E3%83%89_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="ダッシュボード (自動車)">ダッシュボード</a>
+<ul><li>インストルメント・パネル</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B7%E3%82%A2_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="フェイシア (自動車)">フェイシア</a></li></ul></li>
+<li><a href="/wiki/%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%B3%E3%83%B3%E3%82%BD%E3%83%BC%E3%83%AB" title="センターコンソール">センターコンソール</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%90%E3%82%A4%E3%82%B6%E3%83%BC" title="サンバイザー">サンバイザー</a></li>
+<li><a href="/wiki/%E5%BA%A7%E5%B8%AD" title="座席">シート</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%AF_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="トランク (自動車)">トランク</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%AC%E3%83%BC%E3%83%A9%E3%82%A4%E3%82%BF%E3%83%BC" title="シガーライター">シガーライター</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="照明・灯火装置関連" style="font-size:110%;margin:0 6em">照明・灯火装置関連</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%86%E3%82%B7%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%97" title="カーテシーランプ">カーテシーランプ</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%AB%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%B3%E3%83%97&amp;action=edit&amp;redlink=1" title="ルームランプ (存在しないページ)">ルームランプ</a></li>
+<li><a href="/wiki/%E5%89%8D%E7%85%A7%E7%81%AF" title="前照灯">前照灯（ヘッドライト）</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%96%E3%83%AB%E3%83%BB%E3%83%98%E3%83%83%E3%83%89%E3%83%A9%E3%82%A4%E3%83%88" title="リトラクタブル・ヘッドライト">リトラクタブル・ヘッドライト</a></li>
+<li><a href="/wiki/%E3%83%9D%E3%83%83%E3%83%97%E3%82%A2%E3%83%83%E3%83%97%E5%BC%8F%E3%83%98%E3%83%83%E3%83%89%E3%83%A9%E3%83%B3%E3%83%97" title="ポップアップ式ヘッドランプ">ポップアップ式ヘッドランプ</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%80%E3%83%97%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="アダプティブ・フロントライティング・システム">アダプティブ・フロントライティングシステム（AFS）</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%AD%E3%82%B2%E3%83%B3%E3%83%A9%E3%83%B3%E3%83%97" title="ハロゲンランプ">ハロゲンランプ</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B9%E3%83%81%E3%83%A3%E3%83%BC%E3%82%B8%E3%83%98%E3%83%83%E3%83%89%E3%83%A9%E3%83%B3%E3%83%97" title="ディスチャージヘッドランプ">ディスチャージヘッドランプ</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A9%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%97" title="フォグランプ">霧灯（フォグランプ）</a></li>
+<li><a href="/wiki/%E5%B0%BE%E7%81%AF" title="尾灯">尾灯（テールランプ・ブレーキランプ）</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%82%B9%E3%83%88%E3%83%83%E3%83%97%E3%83%A9%E3%83%B3%E3%83%97" title="ハイマウントストップランプ">ハイマウントストップランプ</a></li>
+<li><a href="/wiki/%E6%96%B9%E5%90%91%E6%8C%87%E7%A4%BA%E5%99%A8" title="方向指示器">方向指示器</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%83%88" title="オートライト">オートライト</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="車外の部位・部品" style="font-size:110%;margin:0 6em">車外の部位・部品</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%83%AD%E3%83%91%E3%83%BC%E3%83%84" title="エアロパーツ">エアロパーツ</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%B3%E3%83%91%E3%83%BC" title="バンパー">バンパー</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A7%E3%83%B3%E3%83%80%E3%83%BC_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="フェンダー (自動車)">フェンダー</a></li>
+<li><a href="/wiki/%E3%83%9C%E3%83%B3%E3%83%8D%E3%83%83%E3%83%88_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="ボンネット (自動車)">ボンネット</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%83%90%E3%83%AB%E3%82%B8" title="パワーバルジ">パワーバルジ</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%B0%E3%83%AA%E3%83%AB" title="フロントグリル">フロントグリル</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%89%E3%82%AF%E3%83%AC%E3%82%B9%E3%83%88%E3%83%9E%E3%83%BC%E3%82%AF" title="フードクレストマーク">フードクレストマーク</a>(エンブレム/オーナメント)</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A7%E3%83%B3%E3%83%80%E3%83%BC%E3%83%9D%E3%83%BC%E3%83%AB" title="フェンダーポール">フェンダーポール</a></li>
+<li><a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%95%E3%83%AC%E3%83%BC%E3%83%AB" title="ルーフレール">ルーフレール</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%AB%E3%83%BC%E3%83%95" title="サンルーフ">サンルーフ</a></li>
+<li><a href="/wiki/%E4%B8%89%E8%A7%92%E7%AA%93" title="三角窓">三角窓</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%89%E3%82%A6" title="パワーウインドウ">パワーウインドウ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%83%89%E3%82%A2" title="スライドドア">スライドドア</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%8B%95%E5%BC%8F%E3%83%AA%E3%82%A2%E3%83%86%E3%83%BC%E3%83%AB%E3%82%B2%E3%83%BC%E3%83%88" title="電動式リアテールゲート">電動式リアテールゲート</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%88" title="パワーゲート">パワーゲート</a></li>
+<li><a href="/wiki/%E3%83%9D%E3%83%B3%E3%83%84%E3%83%BC%E3%83%B3#自動車" title="ポンツーン">ポンツーン</a></li>
+<li><a href="/wiki/%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88" title="ナンバープレート">ナンバープレート</a></li>
+<li><a href="/wiki/%E9%89%9B%E8%93%84%E9%9B%BB%E6%B1%A0" title="鉛蓄電池">鉛蓄電池（カーバッテリー）</a></li></ul>
+</div></td></tr></tbody></table></div></td></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" style="width:100%;;padding:0px;;;;;;;;;;;;;;;;;;;;;;;;"><div><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style=";;"><div style="float:left;width:6em"> </div><div id="その他の部品・関連項目" style="font-size:110%;margin:0 6em">その他の部品・関連項目</div></th></tr><tr><td class="navbox-list navbox-odd hlist hlist-pipe" colspan="2" style="width:100%;padding:0px;;;;;;;;;;;;;;;;;;;;;;;"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">安全装置<br/>安全技術<br/>ミラー<br/>セキュリティ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%A1%9D%E7%AA%81%E5%AE%89%E5%85%A8%E3%83%9C%E3%83%87%E3%82%A3%E3%83%BC" title="衝突安全ボディー">衝突安全ボディー</a></li>
+<li><a href="/wiki/%E3%83%81%E3%83%A3%E3%82%A4%E3%83%AB%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88" title="チャイルドシート">チャイルドシート</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%BC%E3%83%88%E3%83%99%E3%83%AB%E3%83%88" title="シートベルト">シートベルト</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%A2%E3%83%90%E3%83%83%E3%82%B0" title="エアバッグ">エアバッグ</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%81%E3%83%AD%E3%83%83%E3%82%AF%E3%83%BB%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="アンチロック・ブレーキ・システム">アンチロック・ブレーキ・システム (ABS)</a></li>
+<li><a href="/wiki/%E8%A1%9D%E7%AA%81%E8%A2%AB%E5%AE%B3%E8%BB%BD%E6%B8%9B%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD" title="衝突被害軽減ブレーキ">衝突被害軽減ブレーキ</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%AD%90%E5%88%B6%E5%BE%A1%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="電子制御ブレーキシステム">電子制御ブレーキシステム（EBD）</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="トラクションコントロールシステム">トラクションコントロールシステム（TCS）</a></li>
+<li><a href="/wiki/%E6%A8%AA%E6%BB%91%E3%82%8A%E9%98%B2%E6%AD%A2%E8%A3%85%E7%BD%AE" title="横滑り防止装置">横滑り防止装置（ESC）</a></li>
+<li><a href="/wiki/%E5%9D%82%E9%81%93%E7%99%BA%E9%80%B2%E8%A3%9C%E5%8A%A9%E8%A3%85%E7%BD%AE" title="坂道発進補助装置">坂道発進補助装置</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%83%AA%E3%83%9F%E3%83%83%E3%82%BF%E3%83%BC" title="スピードリミッター">スピードリミッター</a></li>
+<li><a href="/wiki/%E3%83%92%E3%83%AB%E3%83%87%E3%82%A3%E3%82%BB%E3%83%B3%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB" title="ヒルディセントコントロール">ヒルディセントコントロール（HDC）</a></li>
+<li><a href="/wiki/%E8%AD%A6%E7%AC%9B" title="警笛">警笛（クラクション）</a></li>
+<li><a href="/wiki/%E3%83%89%E3%82%A2%E3%83%9F%E3%83%A9%E3%83%BC" title="ドアミラー">ドアミラー</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%82%A4%E3%83%89%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%83%9F%E3%83%A9%E3%83%BC" title="サイドアンダーミラー">サイドアンダーミラー</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A7%E3%83%B3%E3%83%80%E3%83%BC%E3%83%9F%E3%83%A9%E3%83%BC" title="フェンダーミラー">フェンダーミラー</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%83%9F%E3%83%A9%E3%83%BC" title="バックミラー">バックミラー</a></li>
+<li><a href="/wiki/%E3%83%AF%E3%82%A4%E3%83%91%E3%83%BC" title="ワイパー">ワイパー</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%95%E3%82%A9%E3%83%83%E3%82%AC%E3%83%BC" title="デフォッガー">デフォッガー（デフロスター）</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%A2%E3%83%93%E3%83%A9%E3%82%A4%E3%82%B6%E3%83%BC" title="イモビライザー">イモビライザー</a></li>
+<li><a href="/wiki/%E8%BB%8A%E7%B7%9A%E9%80%B8%E8%84%B1%E9%98%B2%E6%AD%A2%E6%94%AF%E6%8F%B4%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="車線逸脱防止支援システム">車線逸脱防止支援システム</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%83%E3%83%89%E3%83%9E%E3%83%B3%E8%A3%85%E7%BD%AE" title="デッドマン装置">ドライバー異常時対応システム</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%87%E3%83%BC%E3%82%BF%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="イベントデータレコーダー">イベントデータレコーダー</a></li>
+<li><a class="mw-selflink selflink">オン・ボード・ダイアグノーシス</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">常備品<br/>オプション部品</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%BB%8A%E6%A4%9C%E6%9F%BB%E8%A8%BC" title="自動車検査証">自動車検査証</a></li>
+<li><a href="/wiki/%E7%99%BA%E7%82%8E%E7%AD%92" title="発炎筒">発炎筒</a></li>
+<li><a href="/wiki/%E4%B8%89%E8%A7%92%E8%A1%A8%E7%A4%BA%E6%9D%BF" title="三角表示板">三角表示板</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%A2%E3%82%BF%E3%82%A4%E3%83%A4" title="スペアタイヤ">スペアタイヤ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%89%E3%83%AC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%A4" title="スタッドレスタイヤ">スタッドレスタイヤ</a></li>
+<li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%A4%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3" title="タイヤチェーン">タイヤチェーン</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%8E%E3%83%BC%E3%82%BD%E3%83%83%E3%82%AF%E3%82%B9" title="スノーソックス">スノーソックス</a></li>
+<li><a href="/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD" title="ジャッキ">ジャッキ</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB" title="ブースターケーブル">ブースターケーブル</a></li>
+<li><a href="/wiki/%E7%89%BD%E5%BC%95%E3%83%AD%E3%83%BC%E3%83%97" title="牽引ロープ">牽引ロープ</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" title="カーオーディオ">カーオーディオ</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カーナビゲーション">カーナビゲーション</a></li>
+<li><a href="/wiki/%E7%AC%AC%E4%BA%94%E8%BC%AA" title="第五輪">第五輪</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC" title="スマートエントリー">スマートエントリー</a></li>
+<li><a href="/wiki/ETC" title="ETC">ETC</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC" title="リモートエンジンスターター">リモートエンジンスターター</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%BA%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB" title="クルーズコントロール">クルーズコントロール</a></li>
+<li><a href="/wiki/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%80%E3%83%BC" title="ドライブレコーダー">ドライブレコーダー</a></li>
+<li><a href="/wiki/%E5%AF%92%E5%86%B7%E5%9C%B0%E4%BB%95%E6%A7%98" title="寒冷地仕様">寒冷地仕様</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88" title="アクセサリーソケット">アクセサリーソケット</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">空調設備</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%83%B3%E3%83%81%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC" title="ベンチレーター">ベンチレーター</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%82%A8%E3%82%A2%E3%82%B3%E3%83%B3" title="カーエアコン">カーエアコン</a>
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%82%AF%E3%83%BC%E3%83%A9%E3%83%BC" title="カークーラー">カークーラー</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%92%E3%83%BC%E3%82%BF%E3%83%BC" title="カーヒーター">カーヒーター</a></li></ul></li>
+<li><a href="/wiki/%E5%9C%A7%E7%B8%AE%E6%A9%9F" title="圧縮機">コンプレッサー</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%A8%E3%82%A2%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF_(%E8%87%AA%E5%8B%95%E8%BB%8A%E7%94%A8)" title="クリーンエアフィルタ (自動車用)">クリーンエアフィルタ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E8%87%AA%E5%8B%95%E8%BB%8A)" title="プラットフォーム (自動車)">プラットフォーム</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E7%94%A8%E5%93%81" title="カー用品">カー用品</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%BB%8A%E3%83%87%E3%82%A3%E3%83%BC%E3%83%A9%E3%83%BC" title="自動車ディーラー">自動車ディーラー</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%BB%8A%E6%8E%92%E5%87%BA%E3%82%AC%E3%82%B9%E8%A6%8F%E5%88%B6" title="自動車排出ガス規制">自動車排出ガス規制</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%88%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9" title="ディフィートデバイス">ディフィートデバイス</a></li>
+<li><a href="/wiki/%E5%B7%A5%E6%A5%AD%E8%A3%BD%E5%93%81%E3%81%AE%E8%87%AA%E4%B8%BB%E8%A6%8F%E5%88%B6" title="工業製品の自主規制">工業製品の自主規制</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%BB%8A%E9%A6%AC%E5%8A%9B%E8%A6%8F%E5%88%B6" title="自動車馬力規制">自動車馬力規制</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E8%BB%8A%E9%83%A8%E5%93%81%E7%94%9F%E7%94%A3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%B1%95" title="自動車部品生産システム展">自動車部品生産システム展</a></li>
+<li><a href="/wiki/%E3%83%92%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%88%E3%82%A6" title="ヒール・アンド・トウ">ヒール・アンド・トウ</a></li>
+<li><a href="/wiki/%E5%8D%8A%E3%82%AF%E3%83%A9%E3%83%83%E3%83%81" title="半クラッチ">半クラッチ</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AD%E3%81%A8%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%AB%E3%81%AE%E8%B8%8F%E3%81%BF%E9%96%93%E9%81%95%E3%81%88%E4%BA%8B%E6%95%85" title="ブレーキとアクセルの踏み間違え事故">ブレーキとアクセルの踏み間違え事故</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A2" title="アンダーステア">アンダーステア</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A2" title="オーバーステア">オーバーステア</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%B3%E3%82%AF" title="パンク">パンク</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B5%E3%82%A4%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88" title="ダウンサイジングコンセプト">ダウンサイジングコンセプト</a></li>
+<li><a href="/wiki/%E3%83%9B%E3%82%A4%E3%83%BC%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B9" title="ホイールベース">ホイールベース</a></li>
+<li><a href="/wiki/%E9%83%A8%E5%93%81%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0" title="部品カタログ">部品カタログ</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AB%E3%83%96%E3%82%B5%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0" title="バルブサージング">バルブサージング</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%8F%E3%83%B3%E3%82%B0_(%E8%87%AA%E5%8B%95%E8%BB%8A%E7%94%A8%E8%AA%9E)" title="オーバーハング (自動車用語)">オーバーハング</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220401161858
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.340 seconds
+Real time usage: 0.508 seconds
+Preprocessor visited node count: 845/1000000
+Post‐expand include size: 97196/2097152 bytes
+Template argument size: 2116/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6020/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 6635520/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  306.180      1 -total
+ 27.44%   84.027      1 テンプレート:ISSN
+ 20.49%   62.748      2 テンプレート:仮リンク
+ 16.67%   51.027      1 テンプレート:Catalog_lookup_link
+ 15.81%   48.413      1 テンプレート:自動車部品
+ 14.01%   42.892      1 テンプレート:Navbox_with_collapsible_groups
+ 10.92%   33.427      1 テンプレート:Normdaten
+  9.69%   29.675      1 テンプレート:Lang-en-short
+  8.62%   26.398      1 テンプレート:LangWithName
+  5.10%   15.623      1 テンプレート:Error-small
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2909703-0!canonical and timestamp 20220401161857 and revision id 1719774. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=オン・ボード・ダイアグノーシス&amp;oldid=1719774">http://localhost:8080/w/index.php?title=オン・ボード・ダイアグノーシス&amp;oldid=1719774</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%BB%8A" title="カテゴリ:自動車">自動車</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%BB%8A%E5%B7%A5%E5%AD%A6" title="カテゴリ:自動車工学">自動車工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%BB%8A%E6%95%B4%E5%82%99" title="カテゴリ:自動車整備">自動車整備</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%BB%8A%E9%9B%BB%E5%AD%90%E6%8A%80%E8%A1%93" title="カテゴリ:自動車電子技術">自動車電子技術</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;returntoquery=curid%3D2909703%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;returntoquery=curid%3D2909703%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;oldid=1719774" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%89%E3%83%BB%E3%83%80%E3%82%A4%E3%82%A2%E3%82%B0%E3%83%8E%E3%83%BC%E3%82%B7%E3%82%B9&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年5月5日 (水) 00:19 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.340","walltime":"0.508","ppvisitednodes":{"value":845,"limit":1000000},"postexpandincludesize":{"value":97196,"limit":2097152},"templateargumentsize":{"value":2116,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6020,"limit":5000000},"timingprofile":["100.00%  306.180      1 -total"," 27.44%   84.027      1 テンプレート:ISSN"," 20.49%   62.748      2 テンプレート:仮リンク"," 16.67%   51.027      1 テンプレート:Catalog_lookup_link"," 15.81%   48.413      1 テンプレート:自動車部品"," 14.01%   42.892      1 テンプレート:Navbox_with_collapsible_groups"," 10.92%   33.427      1 テンプレート:Normdaten","  9.69%   29.675      1 テンプレート:Lang-en-short","  8.62%   26.398      1 テンプレート:LangWithName","  5.10%   15.623      1 テンプレート:Error-small"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":6635520,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401161858","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":641});});</script>
+</body></html>

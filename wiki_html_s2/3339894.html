@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>控えめなJavaScript - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-控えめなJavaScript rootpage-控えめなJavaScript skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">控えめなJavaScript</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>控えめなJavaScript</b>(<a href="." id="link_a_1" title="英語">英語</a>: <span lang="en">Unobtrusive JavaScript</span>)とは、<a href="." id="link_a_2" title="Webページ">Webページ</a>での<a href="." id="link_a_3" title="JavaScript">JavaScript</a>の利用における一般的なアプローチである。この用語は正式には定義されていないが、基本的な原理は一般的に次のようなことが含まれると理解されている。
+</p>
+<ul><li>機能(behavior layer)の、Webページの<a href="." id="link_a_4" title="マークアップ言語">構造/コンテンツ</a>、<a href="." id="link_a_5" title="Cascading Style Sheets">表示</a>との分離<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup></li>
+<li>伝統的なJavaScriptプログラミングの問題(<a href="." id="link_a_6" title="ブラウザ">ブラウザ</a>による違いや<a href="." id="link_a_7" title="拡張性">拡張性</a>の欠如など)を回避するためのベストプラクティス</li>
+<li>高度なJavaScriptの機能をサポートしない可能性のある<a href="." id="link_a_8" title="ユーザエージェント">ユーザエージェント</a>をサポートするための、プログレッシブエンハンスメント<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup></li></ul>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#新しいパラダイム"><span class="tocnumber">1</span> <span class="toctext">新しいパラダイム</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#動作とマークアップの分離"><span class="tocnumber">2</span> <span class="toctext">動作とマークアップの分離</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#脚注"><span class="tocnumber">3</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#関連項目"><span class="tocnumber">4</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.96.B0.E3.81.97.E3.81.84.E3.83.91.E3.83.A9.E3.83.80.E3.82.A4.E3.83.A0"></span><span class="mw-headline" id="新しいパラダイム">新しいパラダイム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit&amp;section=1" title="節を編集: 新しいパラダイム">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>歴史的にJavaScriptは本格的なアプリケーション開発には適さない、扱いにくい言語とされてきた。<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+これは主に、言語そのものと、各種ブラウザでの<a class="mw-redirect" href="/wiki/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB" title="ドキュメントオブジェクトモデル">ドキュメントオブジェクトモデル</a>(DOM)の一貫性のない実装、<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+さらにバグを生みやすいコピーアンドペーストで作られたコードが広く使われてきたことによるものである。ランタイムエラーは非常によく見られるため(また、デバッグが非常に困難であるため)、スクリプトが多かれ少なかれ意図したとおりに動いている限り、それを修正しようとするプログラマはほとんどいなかった。<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup> しかし、一部のブラウザでは全く動かないスクリプトもあった。
+一部のWeb開発者は、1994年以降、グレースフル・デグラデーション(適切な低均作用)を推奨してきた。<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+近年、<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E6%A8%99%E6%BA%96" title="ウェブ標準">標準</a>に準拠したブラウザや、JavaScriptフレームワーク、高品質なデバッグツールの出現により、体系化され、拡張可能なJavaScriptコードが可能になった。そして、<a href="/wiki/Ajax" title="Ajax">Ajax</a>インターフェースの出現によって、そのようなコードが望まれるようになった。JavaScriptはかつて、バリデーションや装飾的な真新しさを出すなどの、比較的シンプルで非クリティカルなタスクを行う言語だとされてきたが、現在はWebサイトの中核機能の一部にもなりうる巨大で複雑なコードベースを記述するために使われている。ランタイムエラーや予期しない動作は、もはや小さな厄介ごとではなく、致命的な欠陥である。
+控えめなJavaScriptの支持者は、それをより大きなウェブ標準の動きの一部として見ている。ブラウザ間の互換性への要求によって、標準化されたマークアップと<a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a>がより重視されるようになったが、<a href="/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="リッチインターネットアプリケーション">リッチインターネットアプリケーション</a>の需要によって、JavaScriptの使用法のベタープラクティスを志向した動きが促進されている。JavaScriptプログラミングに関連した控えめさ(unobtrusiveness)の概念は、2002年にStuart Langridgeによって、彼の記事”Unobtrusive DHTML, and the power of unordered lists”の中で考案された。<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>彼はその記事の中で、イベントハンドラを含むすべてのJavaScriptコードをHTMLの外に置くという方法を主張している。その後、Stuart Langridgeはこの考え方を本や記事の形式でさらに詳しく述べた。
+<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>David Flanaganは控えめ(unobtrusive)なパラダイムの本質的な要素を洗練して定義しようとした。彼は影響力のある著書” JavaScript: The Definitive Guide”の中で、具体的な公式はないものの3つの主要な目標があると述べている。
+</p>
+<ol><li>JavaScriptのモジュールをほかのモジュールと分けるとともに、JavaScriptをHTMLマークアップと分離すること</li>
+<li>控えめなJavaScriptは、グレースフル・デグラデーションする必要がある。つまり全てのコンテンツはJavaScriptが動作せずとも利用可能でなればいけない。</li>
+<li>控えめなJavaScriptは、ユーザが障害を持っていたり、一般的でないブラウザを使っていたり、一般的でない設定をしていたりしても、HTMLのアクセシビリティを低下させてはならず、理想的にはそれを向上させるべきである。<sup class="reference" id="cite_ref-Flanagan2006_11-0"><a href="#cite_note-Flanagan2006-11">[11]</a></sup></li></ol>
+<p><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="ウェブスタンダードプロジェクト">ウェブスタンダードプロジェクト</a>はJavaScriptマニフェストの中で控えめなDOMスクリプティングの4つの利点を説明している。
+</p>
+<ol><li>ユーザビリティ：控えめなDOMスクリプトは、ユーザの注意を引かない。つまり、サイトの訪問者は、それについて考えなくても利用できる。</li>
+<li>グレースフル・デグラデーション：控えめなDOMスクリプトは、あらゆるブラウザで、たとえうまく動作しなくても、決してエラーメッセージを出さない。機能が正しく表示できなくても、静かに消える。</li>
+<li>アクセシビリティ：あるスクリプトが動作しなくても、そのページの中核の機能と情報は、マークアップ、スタイルシートやサーバサイドのスクリプトによって提供される。</li>
+<li>分離：他のWeb開発者や将来のWeb開発者への利点として、他のファイルやスクリプト、HTMLに影響を与えずに、すべてのJavaScriptコードが別々に維持されていることがある。<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li></ol>
+<p>2007年のパリWebカンファレンスに向けて、Christian Heilmannは控えめなJavaScriptの7つのルールを同定した。
+</p>
+<ol><li>あらゆる仮定を行わない：防御的プログラミング(Defensive programming)の技法はJavaScriptが動かなかったり、ブラウザが期待されたメソッドをサポートしていない可能性を見込まなければいけない。また、HTMLが変更されていることや、予期しない入力デバイスが使われること、他のスクリプトが存在しなかったり、他のスクリプトがグローバルな名前空間に侵入してきたりする可能性もある。</li>
+<li>結びつけるものや関係を見つける。想定しているHTMLの、IDや他の性質などである。</li>
+<li>個々のDOMオブジェクトを縦断的に見るのは、その専門家に任せる。例えば、ブラウザに組み込まれたCSSハンドラなどである。</li>
+<li>ブラウザとユーザを理解する。特にそれらがどのように動作しなかったり、どんな仮定をしているかということや、一般的でない設定や使い方をしているかということである。</li>
+<li><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="イベント (プログラミング)">イベント</a>を理解する。どのようにイベントが発生するかということや、ほとんどのイベントハンドラに渡される<code>Event</code>オブジェクトの機能の理解も含まれる。</li>
+<li>他のスクリプトとうまく共存して実行する。グローバルな関数や変数名を避けるなどする。</li>
+<li>次の開発者のために作業する。わかりやすい変数や関数名を使ったり、論理的で読みやすいコードを書いたり、依存関係を明らかにしたり、混乱をきたす可能性のあるすべてのコードにコメントを書いたりする。<sup class="reference" id="cite_ref-Heilmann_13-0"><a href="#cite_note-Heilmann-13">[13]</a></sup></li></ol>
+<h2><span id=".E5.8B.95.E4.BD.9C.E3.81.A8.E3.83.9E.E3.83.BC.E3.82.AF.E3.82.A2.E3.83.83.E3.83.97.E3.81.AE.E5.88.86.E9.9B.A2"></span><span class="mw-headline" id="動作とマークアップの分離">動作とマークアップの分離</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit&amp;section=2" title="節を編集: 動作とマークアップの分離">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>伝統的に、JavaScriptはHTMLドキュメントのマークアップとともにインラインに記述されることが多かった。例えば、下の例はインラインに記述された典型的なJavaScriptのフォームバリデーションの実装である。
+</p><p>&lt;syntaxhighlight lang="xml"&gt;
+&lt;input type="text" name="date" onchange="validateDate()" /&gt;
+&lt;/syntaxhighlight&gt;
+</p><p>控えめなJavaScriptの支持者は、マークアップの目的は、プログラム的な動作ではなく文書の構造を記述することであり、その2つを一緒にすることで、コンテンツと表示を一緒にするのと同様に、サイトの保守性に悪影響を与えると主張している。また、1つの要素に対して複数のイベントを設定するときや、同じイベントハンドラを複数の要素に設定しなければいけないとき、イベントデリゲートを使うときに、インラインのイベントハンドラは利用するのも維持するのも難しいとも主張している。さらに、カスタムイベントを使うこともできない。
+</p><p>控えめなパラダイムによる解決策は、インラインではなく、必要なイベントハンドラをプログラム的に登録することである。<code>onchange</code>属性を上の例のように明示的に記述するのではなく、適切な要素を<code>class</code>や<code>id</code>属性などによって単純に識別する。
+&lt;syntaxhighlight lang="xml"&gt;
+&lt;input type="text" name="date" id="date" /&gt;
+&lt;/syntaxhighlight&gt;
+以下は、ページが最初に読み込まれたときに実行され、適切な要素を探してそれぞれに設定を行うスクリプトである。
+&lt;syntaxhighlight lang="javascript"&gt;
+window.onload = function() {
+</p>
+<pre>   document.getElementById('date').onchange = validateDate;
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit&amp;section=3" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Keith, Jeremy (2006年6月20日). “<a class="external text" href="http://www.alistapart.com/articles/behavioralseparation" rel="nofollow">Behavioral Separation</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Olsson, Tommy (2007年2月6日). “<a class="external text" href="http://accessites.org/site/2007/02/graceful-degradation-progressive-enhancement/" rel="nofollow">Graceful Degradation &amp; Progressive Enhancement</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Crockford, Douglas (2007年1月24日). “<a class="external text" href="http://yuiblog.com/blog/2007/01/24/video-crockford-tjpl/" rel="nofollow">The JavaScript Programming Language</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Crockford, Douglas (2006年11月27日). “<a class="external text" href="http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/" rel="nofollow">Advanced JavaScript</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Crockford, Douglas (2006年10月20日). “<a class="external text" href="http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/" rel="nofollow">An Inconvenient API: The Theory of the Dom</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Crockford, Douglas (2007年6月8日). “<a class="external text" href="http://yuiblog.com/blog/2007/06/08/video-crockford-goodstuff/" rel="nofollow">JavaScript: The Good Parts</a>”. <span title="">2015年12月31日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">
+Aaron Gustafson.
+<a class="external text" href="http://alistapart.com/article/understandingprogressiveenhancement" rel="nofollow">"Understanding Progressive Enhancement"</a>.
+2008.</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Langridge, Stuart (2002年11月). “<a class="external text" href="http://www.kryogenix.org/code/browser/aqlists/" rel="nofollow">Unobtrusive DHTML, and the power of unordered lists</a>”. <span title="">2008年8月7日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Langridge, Stuart (2005). <i>DHTML Utopia:Modern Web Design Using JavaScript &amp; DOM</i>. SitePoint. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-9579218-9-6" title="特別:文献資料/0-9579218-9-6">0-9579218-9-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=DHTML+Utopia%3AModern+Web+Design+Using+JavaScript+%26+DOM&amp;rft.aulast=Langridge&amp;rft.aufirst=Stuart&amp;rft.au=Langridge%2C%26%2332%3BStuart&amp;rft.date=2005&amp;rft.pub=SitePoint&amp;rft.isbn=0-9579218-9-6&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript"><span style="display: none;"> </span></span> (Reference to the first edition, since it shows how the author pioneered the concept.)</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">E.g.: <cite class="citation web" style="font-style:normal">Langridge, Stuart (2005年6月1日). “<a class="external text" href="http://articles.sitepoint.com/article/dhtml-utopia-modern-web-design" rel="nofollow">DHTML Utopia: Modern Web Design Using JavaScript &amp; DOM</a>”. <span title="">2000年11月3日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Flanagan2006-11"><b><a href="#cite_ref-Flanagan2006_11-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Flanagan, David (2006). <i>JavaScript: The Definitive Guide</i> (5th ed.). O'Reilly &amp; Associates. p. 241. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-596-10199-6" title="特別:文献資料/0-596-10199-6">0-596-10199-6</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=JavaScript%3A+The+Definitive+Guide&amp;rft.aulast=Flanagan&amp;rft.aufirst=David&amp;rft.au=Flanagan%2C%26%2332%3BDavid&amp;rft.date=2006&amp;rft.pages=p.%26nbsp%3B241&amp;rft.edition=5th&amp;rft.pub=O%27Reilly+%26+Associates&amp;rft.isbn=0-596-10199-6&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.webstandards.org/action/dstf/manifesto/" rel="nofollow">The JavaScript Manifesto</a>”.   The Web Standards Project. <span title="8 Feb 2011">2011年2月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-Heilmann-13"><b><a href="#cite_ref-Heilmann_13-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Heilmann, Christian (2007年). “<a class="external text" href="http://icant.co.uk/articles/seven-rules-of-unobtrusive-javascript/" rel="nofollow">The seven rules of Unobtrusive JavaScript</a>”. <span title="8 Feb 2011">2011年2月8日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit&amp;section=4" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96%E3%82%A6%E3%82%A7%E3%83%96%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3" title="レスポンシブウェブデザイン">レスポンシブウェブデザイン</a></li></ul>
+<p><br/>
+</p>
+<div aria-labelledby="JavaScript" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:JavaScript&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:JavaScript (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AJavaScript&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AJavaScript&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="JavaScript" style="font-size:110%;margin:0 6em">JavaScript</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">概念</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JavaScript%E3%81%AE%E6%96%87%E6%B3%95&amp;action=edit&amp;redlink=1" title="JavaScriptの文法 (存在しないページ)">文法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JavaScript_syntax&amp;action=edit&amp;redlink=1" title="En:JavaScript syntax (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/JavaScript%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="JavaScriptライブラリ">JavaScriptライブラリ</a></li>
+<li><a class="mw-selflink selflink">控えめなJavaScript</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">エンジン</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Presto" title="Presto">Carakan/Futhark/Linear B</a></li>
+<li><a href="/wiki/Chakra" title="Chakra">Chakra</a></li>
+<li><a href="/wiki/WebKit" title="WebKit">JavaScriptCore</a></li>
+<li><a href="/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="/wiki/KJS" title="KJS">KJS</a></li>
+<li><a href="/wiki/Narcissus" title="Narcissus">Narcissus</a></li>
+<li><a href="/wiki/Nashorn" title="Nashorn">Nashorn</a></li>
+<li><a href="/wiki/Rhino" title="Rhino">Rhino</a></li>
+<li><a href="/wiki/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a></li>
+<li><a href="/wiki/V8_(JavaScript%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3)" title="V8 (JavaScriptエンジン)">V8</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンパイラ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AtScript" title="AtScript">AtScript</a></li>
+<li><a href="/wiki/Babel_(%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9)" title="Babel (トランスコンパイラ)">Babel</a></li>
+<li><a href="/wiki/Clojure" title="Clojure">ClojureScript</a></li>
+<li><a href="/wiki/CoffeeScript" title="CoffeeScript">CoffeeScript</a></li>
+<li><a href="/wiki/Emscripten" title="Emscripten">Emscripten</a></li>
+<li><a class="mw-redirect" href="/wiki/Google_Closure_Tools" title="Google Closure Tools">Google Closure Compiler</a></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><a href="/wiki/Haxe" title="Haxe">Haxe</a></li>
+<li><a href="/wiki/JSX" title="JSX">JSX</a></li>
+<li><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></li>
+<li><a href="/wiki/Nim" title="Nim">Nim</a></li>
+<li><a href="/wiki/PureScript" title="PureScript">PureScript</a></li>
+<li><a href="/wiki/TypeScript" title="TypeScript">TypeScript</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">デバッガ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Firebug" title="Firebug">Firebug</a></li>
+<li><a href="/wiki/Google_Chrome" title="Google Chrome">Google Chrome Developer Tools</a></li>
+<li><a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer Developer Tools</a></li>
+<li><a href="/wiki/Opera" title="Opera">Opera Dragonfly</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Visual Studio</a>
+<ul><li><a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Visual Studio Express</a></li></ul></li>
+<li><a href="/wiki/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a></li>
+<li><a href="/wiki/Safari" title="Safari">Web Inspector</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">エディタ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Atom_(%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF)" title="Atom (テキストエディタ)">Atom</a></li>
+<li><a href="/wiki/Brackets" title="Brackets">Brackets</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Visual Studio</a>
+<ul><li><a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Visual Studio Express</a></li></ul></li>
+<li><a href="/wiki/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a></li>
+<li><a href="/wiki/IntelliJ_IDEA" title="IntelliJ IDEA">WebStorm</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">サーバーサイド</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a></li>
+<li><a href="/wiki/CommonJS" title="CommonJS">CommonJS</a></li>
+<li><a href="/wiki/Deno" title="Deno">Deno</a></li>
+<li><a href="/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vert.x&amp;action=edit&amp;redlink=1" title="Vert.x (存在しないページ)">Vert.x</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vert.x&amp;action=edit&amp;redlink=1" title="En:Vert.x (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Wakanda&amp;action=edit&amp;redlink=1" title="Wakanda (存在しないページ)">Wakanda</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wakanda_(software)&amp;action=edit&amp;redlink=1" title="En:Wakanda (software) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">フレームワーク<div style="clear:both;"></div>・<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Angular" title="Angular">Angular</a>/<a href="/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a></li>
+<li><a href="/wiki/Express.js" title="Express.js">Express.js</a></li>
+<li><a href="/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><a href="/wiki/JQuery" title="JQuery">jQuery</a>
+<ul><li><a href="/wiki/JQuery_Mobile" title="JQuery Mobile">Mobile</a></li></ul></li>
+<li><a href="/wiki/MathJax" title="MathJax">MathJax</a></li>
+<li><a href="/wiki/MochiKit" title="MochiKit">MochiKit</a></li>
+<li><a href="/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="/wiki/React" title="React">React</a></li>
+<li><a href="/wiki/Vue.js" title="Vue.js">Vue.js</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=YUI_Library&amp;action=edit&amp;redlink=1" title="YUI Library (存在しないページ)">YUI Library</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:YUI_Library&amp;action=edit&amp;redlink=1" title="En:YUI Library (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ユニットテスト</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Jasmine_(JavaScript_testing_framework)&amp;action=edit&amp;redlink=1" title="Jasmine (JavaScript testing framework) (存在しないページ)">Jasmine</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Jasmine_(JavaScript_testing_framework)&amp;action=edit&amp;redlink=1" title="En:Jasmine (JavaScript testing framework) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Jest&amp;action=edit&amp;redlink=1" title="Jest (存在しないページ)">Jest</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Jest_(JavaScript_framework)&amp;action=edit&amp;redlink=1" title="En:Jest (JavaScript framework) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mocha_(JavaScript%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF)&amp;action=edit&amp;redlink=1" title="Mocha (JavaScriptフレームワーク) (存在しないページ)">Mocha</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mocha_(JavaScript_framework)&amp;action=edit&amp;redlink=1" title="En:Mocha (JavaScript framework) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/QUnit" title="QUnit">QUnit</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF%E4%B8%80%E8%A6%A7#JavaScript" title="ユニットテスト・フレームワーク一覧">ユニットテスト・フレームワーク一覧</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Docジェネレータ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/JSDoc" title="JSDoc">JSDoc</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コード解析</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ESLint&amp;action=edit&amp;redlink=1" title="ESLint (存在しないページ)">ESLint</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ESLint&amp;action=edit&amp;redlink=1" title="En:ESLint (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/JSHint" title="JSHint">JSHint</a></li>
+<li><a href="/wiki/JSLint" title="JSLint">JSLint</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">パッケージ管理</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Npm_(%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86%E3%83%84%E3%83%BC%E3%83%AB)" title="Npm (パッケージ管理ツール)">npm</a></li>
+<li><a href="/wiki/NuGet" title="NuGet">NuGet</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">アプリケーション<div style="clear:both;"></div>バンドラー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Webpack" title="Webpack">Webpack</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連技術</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ajax" title="Ajax">Ajax</a></li>
+<li><a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AFHTML" title="ダイナミックHTML">DHTML</a></li>
+<li><a href="/wiki/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wiki/HyperText_Markup_Language" title="HyperText Markup Language">HTML</a></li>
+<li><a href="/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation">JSON</a></li>
+<li><a href="/wiki/JSONP" title="JSONP">JSONP</a></li>
+<li><a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Asm.js&amp;action=edit&amp;redlink=1" title="Asm.js (存在しないページ)">asm.js</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:asm.js&amp;action=edit&amp;redlink=1" title="En:asm.js (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">人物</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AC%E3%82%B7%E3%82%B0" title="ジョン・レシグ">ジョン・レシグ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%82%B0%E3%83%A9%E3%82%B9%E3%83%BB%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" title="ダグラス・クロックフォード (存在しないページ)">ダグラス・クロックフォード</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Douglas_Crockford&amp;action=edit&amp;redlink=1" title="En:Douglas Crockford (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%80%E3%83%B3%E3%83%BB%E3%82%A2%E3%82%A4%E3%82%AF" title="ブレンダン・アイク">ブレンダン・アイク</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%80%E3%83%BC%E3%83%AB" title="ライアン・ダール">ライアン・ダール</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li>カテゴリ <a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:JavaScript" title="カテゴリ:JavaScript">カテゴリ</a></li>
+<li>コモンズ <a class="extiw" href="https://commons.wikimedia.org/wiki/Category:JavaScript" title="commons:Category:JavaScript">コモンズ</a></li>
+<li>ウィキブックス <a class="new" href="/w/index.php?title=B:JavaScript&amp;action=edit&amp;redlink=1" title="B:JavaScript (存在しないページ)">ウィキブックス</a></li>
+<li>ポータル <a href="/wiki/Portal:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="Portal:コンピュータ">Portal:コンピュータ</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401201457
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.378 seconds
+Real time usage: 0.564 seconds
+Preprocessor visited node count: 6938/1000000
+Post‐expand include size: 65588/2097152 bytes
+Template argument size: 10737/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 11/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 12157/5000000 bytes
+Lua time usage: 0.130/7 seconds
+Lua virtual size: 6742016/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  489.007      1 -total
+ 61.80%  302.212      1 テンプレート:Reflist
+ 29.99%  146.647     10 テンプレート:Cite_web
+ 29.70%  145.224      2 テンプレート:Cite_book
+ 27.62%  135.044      2 テンプレート:Citation/core
+ 23.33%  114.063      1 テンプレート:JavaScript
+ 22.58%  110.442      1 テンプレート:Navbox
+ 21.31%  104.207      2 テンプレート:Citation/identifier
+ 20.64%  100.925      2 テンプレート:ISBN2
+ 14.46%   70.717     11 テンプレート:仮リンク
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3339894-0!canonical and timestamp 20220401201457 and revision id 1951018. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=控えめなJavaScript&amp;oldid=1951018">http://localhost:8080/w/index.php?title=控えめなJavaScript&amp;oldid=1951018</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:JavaScript" title="カテゴリ:JavaScript">JavaScript</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="カテゴリ:ウェブアクセシビリティ">ウェブアクセシビリティ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3" title="カテゴリ:ウェブデザイン">ウェブデザイン</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="カテゴリ:ユーザビリティ">ユーザビリティ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;returntoquery=curid%3D3339894%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;returntoquery=curid%3D3339894%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;oldid=1951018" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年9月5日 (土) 02:06 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.378","walltime":"0.564","ppvisitednodes":{"value":6938,"limit":1000000},"postexpandincludesize":{"value":65588,"limit":2097152},"templateargumentsize":{"value":10737,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":11,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":12157,"limit":5000000},"timingprofile":["100.00%  489.007      1 -total"," 61.80%  302.212      1 テンプレート:Reflist"," 29.99%  146.647     10 テンプレート:Cite_web"," 29.70%  145.224      2 テンプレート:Cite_book"," 27.62%  135.044      2 テンプレート:Citation/core"," 23.33%  114.063      1 テンプレート:JavaScript"," 22.58%  110.442      1 テンプレート:Navbox"," 21.31%  104.207      2 テンプレート:Citation/identifier"," 20.64%  100.925      2 テンプレート:ISBN2"," 14.46%   70.717     11 テンプレート:仮リンク"]},"scribunto":{"limitreport-timeusage":{"value":"0.130","limit":"7"},"limitreport-virtmemusage":{"value":6742016,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401201457","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":842});});</script>
+</body></html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>広義積分 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-広義積分 rootpage-広義積分 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">広義積分</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="解析学">解析学</a>において、<b>広義積分</b>（こうぎせきぶん、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">improper integral</span>）とは何らかの<a href="." id="link_a_3" title="定積分">定積分</a>の積分区間を動かしたときの<a href="." id="link_a_4" title="極限">極限</a>である。極限値は有限確定値に収束することもあるが発散することもある。積分区間の端点（片方または両方）は何らかの<a href="." id="link_a_5" title="実数">実数</a>か正または負の無限大に近づく。（<a href="." id="link_a_6" title="多変数関数">多変数関数</a>に対する広義重積分の場合には積分領域を取り尽くす、適当な<a href="." id="link_a_7" title="有界集合可測集合">有界可測集合</a>列に関する極限をとる<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。）
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定式化"><span class="tocnumber">1</span> <span class="toctext">定式化</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#記法"><span class="tocnumber">2</span> <span class="toctext">記法</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#定義に関する注意"><span class="tocnumber">3</span> <span class="toctext">定義に関する注意</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#意味の解釈に関する注意"><span class="tocnumber">4</span> <span class="toctext">意味の解釈に関する注意</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#特異性"><span class="tocnumber">5</span> <span class="toctext">特異性</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#積分区間が有界でない場合について"><span class="tocnumber">6</span> <span class="toctext">積分区間が有界でない場合について</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#積分区間の端点における発散"><span class="tocnumber">7</span> <span class="toctext">積分区間の端点における発散</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#コーシーの主値"><span class="tocnumber">8</span> <span class="toctext">コーシーの主値</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E5.BC.8F.E5.8C.96"></span><span class="mw-headline" id="定式化">定式化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=1" title="節を編集: 定式化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>厳密に言えば<b>広義積分</b>とは積分の一種ではなく、以下のような形の式の総称である。まず
+</p>
+<dl><dd>&lt;math&gt; \lim_{b\to c}\int_a^b f(x)\,dx &lt;/math&gt;</dd></dl>
+<p>ここで <i>c</i> は正または負の無限大であるか、<i>x</i> → <i>c</i> -0につれて|<i>f</i> (<i>x</i>)|が無限大となるような定数である。
+または
+</p>
+<dl><dd>&lt;math&gt; \lim_{b\to a}\int_b^c f(x)\,dx &lt;/math&gt;</dd></dl>
+<p>ここで <i>a</i> は正または負の無限大であるか、<i>x</i> → <i>a</i> +0 につれて|<i>f</i> (<i>x</i>)|が無限大となるような定数である。
+あるいは以下のような形もある。
+</p>
+<dl><dd>&lt;math&gt; \lim_{s\to a}\int_s^b f(x)\,dx + \lim_{t\to c}\int_b^t f(x)\,dx &lt;/math&gt;</dd></dl>
+<p><i>a</i> および <i>c</i> は正または負の無限大であるか、<i>x</i> が積分区間の内側から近づくにつれて|<i>f</i> (<i>x</i>)|が無限大となるような定数である。この値は（存在する限り）<i>b</i> の取り方によらない。
+</p><p>こうして、この分野における基本的な問がどんなものか分かる：
+</p>
+<ul><li>極限は（<a href="/wiki/%E8%A7%A3%E6%9E%90%E5%AD%A6" title="解析学">解析学</a>的な意味で）存在するか？</li>
+<li>存在するとして、その値を計算できるか？</li></ul>
+<p>2つ目の問には微積分計算のテクニックも使えるが、場合により<a class="mw-redirect" href="/wiki/%E5%91%A8%E5%9B%9E%E7%A9%8D%E5%88%86" title="周回積分">周回積分</a>や<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ変換</a>等の高度な技法が必要なこともある。
+</p>
+<h2><span id=".E8.A8.98.E6.B3.95"></span><span class="mw-headline" id="記法">記法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=2" title="節を編集: 記法">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>普通の積分と良く似た記法を使うことが多い。しかし同じ広義積分に対する記法には以下のような種類がある：
+</p>
+<dl><dd>&lt;math&gt;\int_a^\infty f(x)\,dx\, := \lim_{t\to \infty}\int_a^t f(x)\,dx\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\int_{-\infty} ^ {b} f(x)\,dx\,:= \lim_{t\to -\infty}\int_t^b f(x)\,dx\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\int_{-\infty}^{\infty} f(x)\,dx\, := \lim_{t\to -\infty}\int_t^a f(x)\,dx\,+\lim_{t\to \infty} \int_a^t f(x)\,dx\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\int_a^b f(x)\,dx\, := \lim_{t\to b^-}\int_a^t f(x)\,dx&lt;/math&gt;、ここで &lt;math&gt;\lim_{x\to b^-} |f(x)| = \infty&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\int_a^b f(x)\,dx\, := \lim_{t\to a^+}\int_t^b f(x)\,dx&lt;/math&gt;、ここで &lt;math&gt;\lim_{x\to a^+} |f(x)| = \infty&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\int_a^b f(x)\,dx\,:=\lim_{t\to c^-} \int_a^t f(x)\,dx\, + \lim_{t\to c^+ } \int_t^b f(x)\,dx&lt;/math&gt;、ここで &lt;math&gt;\lim_{x\to c} |f(x)| = \infty&lt;/math&gt;</dd></dl>
+<h2><span id=".E5.AE.9A.E7.BE.A9.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E6.B3.A8.E6.84.8F"></span><span class="mw-headline" id="定義に関する注意">定義に関する注意</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=3" title="節を編集: 定義に関する注意">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+
+<p>場合によっては、次の積分
+</p>
+<dl><dd>&lt;math&gt;\int_a^c f(x)\,dx\,&lt;/math&gt;</dd></dl>
+<p>は、次の極限の存在を抜きにして<b>定義</b>できる：
+</p>
+<dl><dd>&lt;math&gt;\lim_{b\to c^-}\int_a^b f(x)\,dx\,&lt;/math&gt;.</dd></dl>
+<p>しかしこの極限なしでは値の計算が困難である。例えば関数 <i>f</i> を <i>a</i> から <i>c</i> で積分する際、(1)関数 <i>f</i> が <i>c</i> で正または負の無限大に発散するとき、または(2) <i>c</i> = ∞のときに、そのような状況がしばしば生ずる。
+</p><p>また場合によっては、<i>f</i>(<i>x</i>) <i>dx</i> の正部分と負部分それぞれの <i>a</i> から <i>c</i> までの積分が共に無限大となり、単なる「<i>f</i> の <i>a</i> から <i>c</i> までの積分」が定義すらできなくても、上記の極限だけは存在することがある。それは（通常の積分に帰着できないという意味で）「真の」広義積分と呼べるだろう。
+</p>
+<h2><span id=".E6.84.8F.E5.91.B3.E3.81.AE.E8.A7.A3.E9.87.88.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E6.B3.A8.E6.84.8F"></span><span class="mw-headline" id="意味の解釈に関する注意">意味の解釈に関する注意</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=4" title="節を編集: 意味の解釈に関する注意">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="mw-redirect" href="/wiki/%E7%A9%8D%E5%88%86" title="積分">積分</a>の理論には複数のものが存在する。微積分計算の立場からは、（特に指定がなければ）積分記号の意味として普通は<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E7%A9%8D%E5%88%86" title="リーマン積分">リーマン積分</a>の理論が仮定される。しかし広義積分を扱う際には、基礎となっている積分理論の区別が必要となることがある。
+</p><p>この積分
+</p>
+<dl><dd>&lt;math&gt;\int_0^\infty\frac{dx}{1+x^2}&lt;/math&gt;</dd></dl>
+<p>は、次のように<b>解釈できる</b>：
+</p>
+<dl><dd>&lt;math&gt;\lim_{b\to\infty}\int_0^b\frac{dx}{1+x^2}=\lim_{b\to\infty}\arctan{b}=\frac{\pi}{2}&lt;/math&gt;</dd></dl>
+<p>しかし一般にはそう解釈する<b>必然性はない</b>。例えば集合 (0,∞) 上での<a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%8D%E5%88%86" title="ルベーグ積分">ルベーグ積分</a>としても解釈できる。とは言うものの、「有限区間上での定積分の極限」という解釈は便利である（便利なのは値の計算だけかもしれないが）。
+</p><p><br/>
+対照的に、次の積分は、
+</p>
+<dl><dd>&lt;math&gt;\int_0^\infty\frac{\sin(x)}{x}\,dx&lt;/math&gt;</dd></dl>
+<p>ルベーグ積分としては<b>解釈できない</b>。なぜなら
+</p>
+<dl><dd>&lt;math&gt;\int_0^\infty\left|\frac{\sin(x)}{x}\right|\,dx=\infty&lt;/math&gt;</dd></dl>
+<p>だからである。
+ゆえに上記の積分は「真の」広義積分であり、値は次式で与えられる：
+</p>
+<dl><dd>&lt;math&gt;\int_0^\infty\frac{\sin(x)}{x}\,dx=\lim_{b\rightarrow\infty}\int_0^b\frac{\sin(x)}{x}\,dx=\frac{\pi}{2}&lt;/math&gt;.</dd></dl>
+<h2><span id=".E7.89.B9.E7.95.B0.E6.80.A7"></span><span class="mw-headline" id="特異性">特異性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=5" title="節を編集: 特異性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>広義積分において、極限が使われる補完数直線上の点を指して<a href="/wiki/%E7%89%B9%E7%95%B0%E7%82%B9" title="特異点">特異点</a>と言うことがある。
+</p><p>そのような積分はしばしば、積分区間の端点を無限大と書くことで、普通の定積分と同様に表記される。
+しかしそのような記法では極限操作は裏に隠れてしまう。
+リーマン積分でなくルベーグ積分を使うことで、極限操作を回避できる場合がある。
+しかし具体的な値を得たいときには、そうしたところで助けにはならない。
+例えば<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ変換</a>では数直線全体に渡る積分があらゆるところに現れるが、
+その厳密な取り扱いにおいて広義積分を意識することも、しないこともある。
+</p>
+<h2><span id=".E7.A9.8D.E5.88.86.E5.8C.BA.E9.96.93.E3.81.8C.E6.9C.89.E7.95.8C.E3.81.A7.E3.81.AA.E3.81.84.E5.A0.B4.E5.90.88.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6"></span><span class="mw-headline" id="積分区間が有界でない場合について">積分区間が有界でない場合について</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=6" title="節を編集: 積分区間が有界でない場合について">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>最も基本的な広義積分は、積分区間が有界でない積分、例えば
+</p>
+<dl><dd>&lt;math&gt;\int_0^\infty {dx \over x^2+1}&lt;/math&gt;</dd></dl>
+<p>である。
+前述のように、これは広義積分として定義しなくとも、代わりにルベーグ積分としても定義できる。
+しかし実際に計算する上では広義積分として扱うのが便利である。
+すなわち積分区間の上限が有限だとして計算し、
+次に上限が無限大に近づくときの極限を取るのがよい。
+被積分関数の<a class="mw-redirect" href="/wiki/%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0" title="原始関数">原始関数</a>は<a href="/wiki/%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0" title="三角関数">逆正接関数</a> arctan(<i>x</i>) なので、
+</p>
+<dl><dd>&lt;math&gt;\lim_{b\rightarrow\infty}\int_0^b\frac{dx}{1+x^2}=\lim_{b\rightarrow\infty}\arctan b-\arctan 0=\pi/2-0=\pi/2&lt;/math&gt;</dd></dl>
+<p>となる。
+広義積分の収束は、対応する極限が（有限値に）収束することと同値である。
+以下に収束しない広義積分の例を示す：
+</p>
+<dl><dd>&lt;math&gt;\int_1^\infty {dx \over x} = \lim_{b\rightarrow\infty}\int_1^b\frac{dx}{x}=\lim_{b\rightarrow\infty}\ln b=\infty&lt;/math&gt;.</dd></dl>
+<p>積分区間の両端点が無限大の場合もある。
+そのような場合には二つの広義積分の和として考える：
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^{+\infty} f(x) \,dx = \int_{-\infty}^a f(x) \,dx + \int_a^{+\infty} f(x) \,dx&lt;/math&gt;.</dd></dl>
+<p>ここで <i>a</i> は任意の（有限な）実数である。
+</p><p>この場合、広義積分の収束は、分割された両方の積分の収束と同値である。
+片方の積分が正の無限大に発散し、もう片方が負の無限大に発散するとき、元の積分は<a class="new" href="/w/index.php?title=%E4%B8%8D%E5%AE%9A%E5%BD%A2&amp;action=edit&amp;redlink=1" title="不定形 (存在しないページ)">不定形</a>となる。
+その値は、積分区間の端点それぞれがどのような関係を持っているかによって様々に変わり得る。
+コーシーの主値はこの不定性を取り除くための概念である。
+</p>
+<h2><span id=".E7.A9.8D.E5.88.86.E5.8C.BA.E9.96.93.E3.81.AE.E7.AB.AF.E7.82.B9.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E7.99.BA.E6.95.A3"></span><span class="mw-headline" id="積分区間の端点における発散">積分区間の端点における発散</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=7" title="節を編集: 積分区間の端点における発散">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>広義積分の中には、被積分関数が正または負の無限大に発散するものがある（→<a href="/wiki/%E6%BC%B8%E8%BF%91%E7%B7%9A" title="漸近線">漸近線</a>）。
+</p><p>例えば次の広義積分で、被積分関数は<i>x</i> = 0において正の無限大に発散する（漸近線<i>x</i> = 0を持つ）：
+</p>
+<dl><dd>&lt;math&gt;\int_0^1 \frac{dx}{x^{2/3}}&lt;/math&gt;</dd></dl>
+<p>この積分の評価には、まず正数 <i>b</i> を導入して <i>b</i> から1までの区間で積分を実行し、次に <i>b</i> が右から0に近づくときの極限を取る（積分区間が0より右にあるので）。
+なお原始関数が&lt;math&gt;3 x^{1/3}&lt;/math&gt;なので、次のようにも計算できる：
+</p>
+<dl><dd>&lt;math&gt;\lim_{b\rightarrow 0^+}\int_b^1\frac{dx}{x^{2/3}}=3 \cdot 1^{1/3}-\lim_{b\rightarrow 0^+}3 b^{1/3}=3-0=3&lt;/math&gt;.</dd></dl>
+<h2><span id=".E3.82.B3.E3.83.BC.E3.82.B7.E3.83.BC.E3.81.AE.E4.B8.BB.E5.80.A4"></span><span class="mw-headline" id="コーシーの主値">コーシーの主値</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=8" title="節を編集: コーシーの主値">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%BB%E5%80%A4" title="コーシーの主値">コーシーの主値</a>」を参照</div>
+<p>以下の二つの極限の違いについて考えよう：
+</p>
+<dl><dd>&lt;math&gt;\lim_{a\rightarrow 0+}\left(\int_{-1}^{-a}\frac{dx}{x}+\int_a^1\frac{dx}{x}\right)=0&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\lim_{a\rightarrow 0+}\left(\int_{-1}^{-a}\frac{dx}{x}+\int_{2a}^1\frac{dx}{x}\right)=-\ln 2&lt;/math&gt;</dd></dl>
+<p>前者は<b>コーシーの主値</b>である。似て非なる次式がよく定義されていないことに注意しよう：
+</p>
+<dl><dd>&lt;math&gt;\int_{-1}^1\frac{dx}{x}&lt;/math&gt; （これは−∞+∞になる）</dd></dl>
+<p>同様に、
+</p>
+<dl><dd>&lt;math&gt;\lim_{a\rightarrow\infty}\int_{-a}^a\frac{2x\,dx}{x^2+1}=0&lt;/math&gt;</dd></dl>
+<p>であるが
+</p>
+<dl><dd>&lt;math&gt;\lim_{a\rightarrow\infty}\int_{-2a}^a\frac{2x\,dx}{x^2+1}=-\ln 4&lt;/math&gt;</dd></dl>
+<p>である。この場合も前者は主値であり、似て非なる次式はよく定義されていない：
+</p>
+<dl><dd>&lt;math&gt;\int_{-\infty}^\infty\frac{2x\,dx}{x^2+1}&lt;/math&gt; （これは−∞+∞になる）</dd></dl>
+<p>これらの極限はいずれも∞−∞の形の<a class="new" href="/w/index.php?title=%E4%B8%8D%E5%AE%9A%E5%BD%A2&amp;action=edit&amp;redlink=1" title="不定形 (存在しないページ)">不定形</a>である。
+</p><p>なおこれらの病的な例は、<a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%8D%E5%88%86#ルベーグ可積分" title="ルベーグ積分">ルベーグ可積分</a>な関数すなわち絶対値の積分が有限な関数に対しては問題にならない。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=9" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">
+<cite class="citation book" id="CITEREFMoskowitzPaliogiannis2011" style="font-style:normal">Moskowitz, M. A.; Paliogiannis, F. (2011). “<span class="plainlinks"><a class="external text" href="https://books.google.co.jp/books?id=34Ic0K3LQxEC&amp;pg=PA328&amp;dq=%22%22" rel="nofollow">Improper multiple integrals</a></span>”. <i>Functions of Several Real Variables</i>. World Scientific. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-981-4299-26-8" title="特別:文献資料/978-981-4299-26-8">978-981-4299-26-8</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:1233.26001" rel="nofollow">1233.26001</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%3Cspan+class%3D%22plainlinks%22%3E%5Bhttps%3A%2F%2Fbooks.google.co.jp%2Fbooks%3Fid%3D34Ic0K3LQxEC%26pg%3DPA328%26dq%3D%2522%2522+Improper+multiple+integrals%5D%3C%2Fspan%3E&amp;rft.atitle=Functions+of+Several+Real+Variables&amp;rft.aulast=Moskowitz&amp;rft.aufirst=M.+A.&amp;rft.au=Moskowitz%2C%26%2332%3BM.+A.&amp;rft.au=Paliogiannis%2C%26%2332%3BF.&amp;rft.date=2011&amp;rft.pub=World+Scientific&amp;rft.isbn=978-981-4299-26-8&amp;rft_id=info:zbl/1233.26001&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;section=10" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://numericalmethods.eng.usf.edu/mws/gen/07int/mws_gen_int_spe_improper.doc" rel="nofollow">Numerical Methods to Solve Improper Integrals</a> at Holistic Numerical Methods Institute</li></ul>
+<div aria-labelledby="積分" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Integral&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Integral (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AIntegral&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AIntegral&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="積分" style="font-size:110%;margin:0 6em"><a class="mw-redirect" href="/wiki/%E7%A9%8D%E5%88%86" title="積分">積分</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">積分法</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E7%A9%8D%E5%88%86" title="リーマン積分">リーマン</a></li>
+<li><a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%8D%E5%88%86" title="ルベーグ積分">ルベーグ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%83%BC%E3%82%AD%E3%83%AB%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="バーキル積分 (存在しないページ)">バーキル</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Burkill_integral&amp;action=edit&amp;redlink=1" title="En:Burkill integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9C%E3%83%9B%E3%83%8A%E3%83%BC%E7%A9%8D%E5%88%86" title="ボホナー積分">ボホナー</a></li>
+<li><a href="/wiki/%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB%E7%A9%8D%E5%88%86" title="ダニエル積分">ダニエル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%83%AB%E3%83%96%E3%83%BC%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="ダルブー積分 (存在しないページ)">ダルブー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Darboux_integral&amp;action=edit&amp;redlink=1" title="En:Darboux integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%98%E3%83%B3%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E2%80%93%E3%82%AF%E3%83%AB%E3%83%84%E3%83%B4%E3%82%A1%E3%82%A4%E3%83%AB%E7%A9%8D%E5%88%86" title="ヘンストック–クルツヴァイル積分">HK</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%AB%E6%B8%AC%E5%BA%A6" title="ハール測度">不変</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%98%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%BC%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="ヘリンガー積分 (存在しないページ)">ヘリンガー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hellinger_integral&amp;action=edit&amp;redlink=1" title="En:Hellinger integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%92%E3%83%B3%E3%83%81%E3%83%B3%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="ヒンチン積分 (存在しないページ)">ヒンチン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Khinchin_integral&amp;action=edit&amp;redlink=1" title="En:Khinchin integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="コルモゴロフ積分 (存在しないページ)">コルモゴロフ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kolmogorov_integral&amp;action=edit&amp;redlink=1" title="En:Kolmogorov integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E2%80%93%E3%82%B9%E3%83%86%E3%82%A3%E3%83%AB%E3%83%81%E3%82%A7%E3%82%B9%E7%A9%8D%E5%88%86" title="ルベーグ–スティルチェス積分">LS</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%86%E3%82%A3%E3%82%B9%E7%A9%8D%E5%88%86" title="ペティス積分">ペティス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%97%E3%83%95%E3%82%A7%E3%83%83%E3%83%95%E3%82%A1%E3%83%BC%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="プフェッファー積分 (存在しないページ)">プフェッファー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Pfeffer_integral&amp;action=edit&amp;redlink=1" title="En:Pfeffer integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E2%80%93%E3%82%B9%E3%83%86%E3%82%A3%E3%83%AB%E3%83%81%E3%82%A7%E3%82%B9%E7%A9%8D%E5%88%86" title="リーマン–スティルチェス積分">RS</a></li>
+<li><a href="/wiki/%E6%96%B9%E6%AD%A3%E7%A9%8D%E5%88%86" title="方正積分">方正</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">計算法</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%83%A8%E5%88%86%E7%A9%8D%E5%88%86" title="部分積分">部分積分</a></li>
+<li><a href="/wiki/%E7%BD%AE%E6%8F%9B%E7%A9%8D%E5%88%86" title="置換積分">置換積分</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%80%86%E5%87%BD%E6%95%B0%E3%81%AE%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="逆函数の積分 (存在しないページ)">逆函数の積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Inverse_function_integration&amp;action=edit&amp;redlink=1" title="En:Inverse function integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E3%81%AE%E9%A0%86%E5%BA%8F&amp;action=edit&amp;redlink=1" title="積分の順序 (存在しないページ)">積分の順序</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Order_of_integration_(calculus)&amp;action=edit&amp;redlink=1" title="En:Order of integration (calculus) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%BD%AE%E6%8F%9B&amp;action=edit&amp;redlink=1" title="三角函数置換 (存在しないページ)">三角函数置換</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:trigonometric_substitution&amp;action=edit&amp;redlink=1" title="En:trigonometric substitution (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%83%A8%E5%88%86%E5%88%86%E6%95%B0%E5%88%86%E8%A7%A3%E3%82%92%E9%80%9A%E3%81%98%E3%81%9F%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="部分分数分解を通じた積分 (存在しないページ)">部分分数分解を通じた積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integration_by_partial_fractions&amp;action=edit&amp;redlink=1" title="En:Integration by partial fractions (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E3%81%AE%E6%BC%B8%E5%8C%96%E5%BC%8F&amp;action=edit&amp;redlink=1" title="積分の漸化式 (存在しないページ)">積分の漸化式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integration_by_reduction_formulae&amp;action=edit&amp;redlink=1" title="En:Integration by reduction formulae (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AA%92%E4%BB%8B%E5%A4%89%E6%95%B0%E5%BE%AE%E5%88%86%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="媒介変数微分を用いた積分 (存在しないページ)">媒介変数微分を用いた積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integration_using_parametric_derivatives&amp;action=edit&amp;redlink=1" title="En:Integration using parametric derivatives (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%85%AC%E5%BC%8F%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="オイラーの公式を用いた積分 (存在しないページ)">オイラーの公式を用いた積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integration_using_Euler%27s_formula&amp;action=edit&amp;redlink=1" title="En:Integration using Euler's formula (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E8%A8%98%E5%8F%B7%E4%B8%8B%E3%81%AE%E5%BE%AE%E5%88%86&amp;action=edit&amp;redlink=1" title="積分記号下の微分 (存在しないページ)">積分記号下の微分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Differentiation_under_the_integral_sign&amp;action=edit&amp;redlink=1" title="En:Differentiation under the integral sign (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E8%A4%87%E7%B4%A0%E7%B7%9A%E7%A9%8D%E5%88%86" title="複素線積分">複素線積分</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">広義積分</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E7%A9%8D%E5%88%86" title="ガウス積分">ガウス積分</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%83%B3%E3%83%9E%E9%96%A2%E6%95%B0" title="ガンマ関数">ガンマ関数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率積分</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BC%8A%E8%97%A4%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="伊藤積分 (存在しないページ)">伊藤積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:It%C5%8D_integral&amp;action=edit&amp;redlink=1" title="En:Itō integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%88%E3%83%A9%E3%83%88%E3%83%8E%E3%83%B4%E3%82%A3%E3%83%83%E3%83%81%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="ストラトノヴィッチ積分 (存在しないページ)">ストラトノヴィッチ積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stratonovich_integral&amp;action=edit&amp;redlink=1" title="En:Stratonovich integral (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%82%B3%E3%83%AD%E3%83%9B%E3%83%83%E3%83%89%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="スコロホッド積分 (存在しないページ)">スコロホッド積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Skorokhod_integral&amp;action=edit&amp;redlink=1" title="En:Skorokhod integral (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">数値積分</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%8F%B0%E5%BD%A2%E5%85%AC%E5%BC%8F" title="台形公式">台形公式</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E6%B1%82%E7%A9%8D" title="ガウス求積">ガウス求積</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%82%AF%E3%83%AD%E3%83%B3%E3%83%AD%E3%83%83%E3%83%89%E6%B1%82%E7%A9%8D%E6%B3%95" title="ガウス＝クロンロッド求積法">ガウス＝クロンロッド求積法</a></li>
+<li><a href="/wiki/%E4%BA%8C%E9%87%8D%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0%E5%9E%8B%E6%95%B0%E5%80%A4%E7%A9%8D%E5%88%86%E5%85%AC%E5%BC%8F" title="二重指数関数型数値積分公式">二重指数関数型数値積分公式</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">積分方程式</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%89%E3%83%9B%E3%83%AB%E3%83%A0%E7%A9%8D%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="フレドホルム積分方程式">フレドホルム積分方程式</a></li>
+<li><a href="/wiki/%E3%83%B4%E3%82%A9%E3%83%AB%E3%83%86%E3%83%A9%E7%A9%8D%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="ヴォルテラ積分方程式">ヴォルテラ積分方程式</a></li></ul>
+</div></td></tr></tbody></table></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20220401010015
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.201 seconds
+Real time usage: 0.321 seconds
+Preprocessor visited node count: 1615/1000000
+Post‐expand include size: 48480/2097152 bytes
+Template argument size: 2859/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 17/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 6135/5000000 bytes
+Lua time usage: 0.080/7 seconds
+Lua virtual size: 6316032/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  286.214      1 -total
+ 39.60%  113.328      1 テンプレート:Reflist
+ 37.68%  107.855      1 テンプレート:Cite_book
+ 34.83%   99.682      1 テンプレート:Citation/core
+ 27.22%   77.917      1 テンプレート:Main
+ 26.27%   75.195      1 テンプレート:Rellink
+ 25.93%   74.228      1 テンプレート:Integral
+ 25.55%   73.122      1 テンプレート:See/core
+ 25.13%   71.934      1 テンプレート:Navbox
+ 24.70%   70.701      2 テンプレート:Citation/identifier
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1287998-0!canonical and timestamp 20220401010015 and revision id 790512. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=広義積分&amp;oldid=790512">http://localhost:8080/w/index.php?title=広義積分&amp;oldid=790512</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A7%A3%E6%9E%90%E5%AD%A6%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:解析学関連のスタブ項目">解析学関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A7%A3%E6%9E%90%E5%AD%A6" title="カテゴリ:解析学">解析学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%A9%8D%E5%88%86%E6%B3%95" title="カテゴリ:積分法">積分法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;returntoquery=curid%3D1287998%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;returntoquery=curid%3D1287998%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;oldid=790512" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E7%A9%8D%E5%88%86&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月19日 (火) 11:27 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.201","walltime":"0.321","ppvisitednodes":{"value":1615,"limit":1000000},"postexpandincludesize":{"value":48480,"limit":2097152},"templateargumentsize":{"value":2859,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":17,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":6135,"limit":5000000},"timingprofile":["100.00%  286.214      1 -total"," 39.60%  113.328      1 テンプレート:Reflist"," 37.68%  107.855      1 テンプレート:Cite_book"," 34.83%   99.682      1 テンプレート:Citation/core"," 27.22%   77.917      1 テンプレート:Main"," 26.27%   75.195      1 テンプレート:Rellink"," 25.93%   74.228      1 テンプレート:Integral"," 25.55%   73.122      1 テンプレート:See/core"," 25.13%   71.934      1 テンプレート:Navbox"," 24.70%   70.701      2 テンプレート:Citation/identifier"]},"scribunto":{"limitreport-timeusage":{"value":"0.080","limit":"7"},"limitreport-virtmemusage":{"value":6316032,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401010015","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":772});});</script>
+</body></html>

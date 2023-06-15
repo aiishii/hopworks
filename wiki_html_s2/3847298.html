@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>タイミング攻撃 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-タイミング攻撃 rootpage-タイミング攻撃 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">タイミング攻撃</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>タイミング攻撃</b>（タイミングこうげき、英:timing attack）とは、<a href="." id="link_a_1" title="アルゴリズム">アルゴリズム</a>の動作特性を利用した<a href="." id="link_a_2" title="サイドチャネル攻撃">サイドチャネル攻撃</a>のひとつ。暗号処理のタイミングが<a href="." id="link_a_3" title="鍵 (暗号)">暗号鍵</a>の論理値により変化することに着目し、暗号化や復号に要する時間を解析することで暗号鍵を推定する手法<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#例証"><span class="tocnumber">2</span> <span class="toctext">例証</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#備考"><span class="tocnumber">3</span> <span class="toctext">備考</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#脚注"><span class="tocnumber">4</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#参考文献"><span class="tocnumber">5</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>暗号化におけるタイミング攻撃とは、暗号アルゴリズムを実行するのにかかる時間を解析することで、攻撃者が暗号システムへの不正侵入を試みようとするサイドチャネル攻撃である。コンピュータ内で全ての論理演算を実行するには時間がかかり、入力に応じて時間が異なることがある。各演算の時間を正確に測定することで、攻撃者は入力の後からの作業ができる<sup class="reference" id="cite_ref-Bess_2-0"><a href="#cite_note-Bess-2">[2]</a></sup>。
+</p><p>ある質問への応答にかかる時間を測定することにより、システムから情報が漏れる可能性がある。この情報が攻撃者をどの程度助けるかは多くの変動要因しだいであり、暗号システムの設計、システムを実行する<a href="/wiki/CPU" title="CPU">CPU</a>、使われているアルゴリズム、さまざまな<a href="/wiki/%E5%AE%9F%E8%A3%85" title="実装">実装</a>の詳細、タイミング攻撃対策、タイミング測定の精度、などで異なる。
+</p><p>タイミング攻撃は実装に非常に依存しており、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E6%9C%80%E9%81%A9%E5%8C%96" title="コンパイラ最適化">コンパイラ最適化</a>に伴って不注意で取り込まれる可能性があるため、設計段階ではしばしば見落とされることがある。タイミング攻撃を回避するには、一定時間(constant-time)機能の設計と最終実行可能<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">コード</a>の慎重な試験が必要となる。
+</p><p>タイミング攻撃は、アルゴリズムの数学的特性というよりも、アルゴリズム実装のデータ依存動作特性を利用する攻撃の例である。データ依存のタイミング情報を削減または排除する方法で、多くの暗号アルゴリズムを実装（または<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7" title="プロキシ">プロキシ</a>によって隠す）することが可能となる。具体的には<a href="/wiki/%E3%82%B5%E3%83%96%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3" title="サブルーチン">サブルーチン</a>への全ての呼び出しが常に正確にx秒、ここでのxは可能な全ての入力認可に対してルーチンを実行するのに必要な最大時間、で返される実装を考える。そのような実装なら、アルゴリズムのタイミングが何らかの呼出しに供給されたデータに関する情報を漏らすことはない。このアプローチの欠点は、全ての実行に対して使用される時間が機能パフォーマンスの最悪な場合となってしまうことである。
+</p><p>多くの場合、タイミング攻撃は実用的である。
+</p>
+<ul><li>タイミング攻撃は、データ依存のタイミング変化を有するアルゴリズムに適用できる。データ<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="キャッシュ (コンピュータシステム)">キャッシュ</a>を備えたCPU上で実行されるソフトウェアは、<a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA" title="メモリ">メモリ</a>がキャッシュを調べる結果として、データ依存のタイミング変化を見せる。乗算などの一部の演算では、入力に応じて実行時間が変化することがある。さまざまな実行時間を頻繁に示す低いレベルの演算を使用するアルゴリズムでは、タイミング依存性を削除することが難しくなる。</li>
+<li>タイミング情報を通して秘密を見つけることは、知られている平文の暗号解読や、暗号文の<a href="/wiki/ID%E3%83%99%E3%83%BC%E3%82%B9%E6%9A%97%E5%8F%B7" title="IDベース暗号">ペア</a>解読を使うよりもはるかに容易い。時々、タイミング情報が暗号解読と組み合わされて、情報漏洩の割合が増加することがある。</li></ul>
+<h2><span id=".E4.BE.8B.E8.A8.BC"></span><span class="mw-headline" id="例証">例証</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;section=2" title="節を編集: 例証">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E5%86%AA%E5%89%B0%E4%BD%99" title="冪剰余">冪剰余</a>(modular exponentiation)で使用される<a href="/wiki/%E3%83%96%E3%83%BC%E3%82%B9%E3%81%AE%E4%B9%97%E7%AE%97%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ブースの乗算アルゴリズム">平方乗算アルゴリズム</a>（より詳しくは<a class="new" href="/w/index.php?title=En:Square-and-multiply_algorithm&amp;action=edit&amp;redlink=1" title="En:Square-and-multiply algorithm (存在しないページ)">Square-and-multiply algorithm</a>）の実行時間は、キー内の「1」ビットの数に応じて線形に依存する。「1」ビットの数だけでは鍵の発見を容易にするのに十分な情報ではないが、同じ鍵と異なる入力で繰り返される実行では、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%97%E5%8B%95%E7%9A%84%E6%94%BB%E6%92%83%E8%80%85&amp;action=edit&amp;redlink=1" title="受動的攻撃者 (存在しないページ)">受動的攻撃者</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Passive_attack&amp;action=edit&amp;redlink=1" title="En:Passive attack (存在しないページ)">英語版</a>）</span></span>でさえも、タイミング情報の統計的な相関分析を実行して鍵を完全に復元することだろう。
+</p><p>観測されたタイミング測定には、しばしばノイズ（その源としてはネットワーク遅延や、アクセス移行によるディスクドライブアクセスの違い、伝送エラーから回復するために使用される<a href="/wiki/%E8%AA%A4%E3%82%8A%E6%A4%9C%E5%87%BA%E8%A8%82%E6%AD%A3" title="誤り検出訂正">エラー訂正</a>技術など）が含まれる。にもかかわらず、タイミング攻撃は、<a href="/wiki/RSA%E6%9A%97%E5%8F%B7" title="RSA暗号">RSA暗号</a>、<a href="/wiki/ElGamal%E6%9A%97%E5%8F%B7" title="ElGamal暗号">ElGamal暗号</a>、<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D" title="デジタル署名">デジタル署名</a> アルゴリズムを含む多くの暗号化アルゴリズムに対して実用的である。
+</p><p>2003年に<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%83%B3%E3%83%BB%E3%83%9C%E3%83%8D%E3%82%A2&amp;action=edit&amp;redlink=1" title="ダン・ボネア (存在しないページ)">ダン・ボネア</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dan_Boneh&amp;action=edit&amp;redlink=1" title="En:Dan Boneh (存在しないページ)">英語版</a>）</span></span>と<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%87%E3%83%93%E3%83%83%E3%83%88%E3%83%BB%E3%83%96%E3%83%A9%E3%83%A0%E3%83%AA%E3%83%BC&amp;action=edit&amp;redlink=1" title="デビット・ブラムリー (存在しないページ)">デビット・ブラムリー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:David_Brumley&amp;action=edit&amp;redlink=1" title="En:David Brumley (存在しないページ)">英語版</a>）</span></span>が、<a class="mw-redirect" href="/wiki/Secure_Sockets_Layer" title="Secure Sockets Layer">SSL対応</a>のWebサーバーに対する実践的なネットワークベースのタイミング攻撃を実演し、それは<a href="/wiki/%E4%B8%AD%E5%9B%BD%E3%81%AE%E5%89%B0%E4%BD%99%E5%AE%9A%E7%90%86" title="中国の剰余定理">中国の剰余定理</a>最適化を伴うRSAの使用によるものとは異なる脆弱性に基づいていた。実験における実際のネットワーク距離は小さかったが、その攻撃は見事に数時間でサーバー秘密鍵を復元した。この実演は、SSL実装における<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B9%BB%E6%83%91%E6%8A%80%E8%A1%93&amp;action=edit&amp;redlink=1" title="幻惑技術 (存在しないページ)">幻惑技術</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Blinding_(cryptography)&amp;action=edit&amp;redlink=1" title="En:Blinding (cryptography) (存在しないページ)">英語版</a>）</span></span>の普及と使用をもたらした。この文脈内で、幻惑（Blinding）とは鍵と暗号化時間との間の相関を取り除くことを意図している。
+</p><p>いくつかのバージョンの<a class="mw-redirect" href="/wiki/Unix" title="Unix">Unix</a>では、8文字のパスワードを11文字の文字列に<a href="/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0" title="暗号学的ハッシュ関数">ハッシュ</a>するために、比較的高価な暗号<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>関数を実装している。旧式のハードウェアでは、この算出には計測可能な程の長い時間がかかり、場合によっては2-3秒かかった。Unixの初期バージョンの<a href="/wiki/%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3" title="ログイン">ログイン</a>プログラムは、システムによりログイン名が認識された場合に限り暗号関数（crypt関数）を実行した。これは、パスワードが間違っていたとしても、ログイン名の有効性に関するタイミングを通して情報漏洩となる。攻撃者は、まず<a href="/wiki/%E7%B7%8F%E5%BD%93%E3%81%9F%E3%82%8A%E6%94%BB%E6%92%83" title="総当たり攻撃">ブルートフォース</a>をかけて有効だと分かったログイン名のリストを作成し、次にこれらの名前だけを、頻繁に使用されることが知られている大量のパスワードセットと組み合わせてアクセスを試みる。ログイン名の有効性に関する情報がなくても、そうしたアプローチの実行に必要とされる時間は桁違いに増加し、効果的にそれを無効状態にしていく。Unixの以後のバージョンでは、ログイン名の有効性にかかわらず、常にcrypt関数を実行することでこの漏洩を修正している。
+</p><p><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュメモリ</a>または<a class="mw-redirect" href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%A1%E3%83%A2%E3%83%AA" title="仮想メモリ">仮想メモリ</a>の両方を用いた単一のシステム上で実行されている安全に分離された<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>は、意図的に<a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%88" title="ページフォールト">ページフォールト</a>および/または<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="キャッシュ (コンピュータシステム)">キャッシュミス</a>を1つのプロセスで発生させ、その結果生じるアクセス時間の変化をもう一方から監視することにより通信を可能にする。同様に、アプリケーションは信頼できるものの、その<a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E6%96%B9%E5%BC%8F" title="ページング方式">ページング</a>/キャッシングが分岐<a href="/wiki/%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF" title="ロジック">ロジック</a>の影響を受ける場合においては、アクセス時間の変化を監視することにより分岐条件で比較されたデータの値を決定することが、第2アプリケーションで可能となり得る。極端な例では、これが暗号鍵ビットの復元を可能にさせてしまう<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+</p><p>CPU製造業者（<a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a>、<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%90%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%BB%E3%83%87%E3%83%90%E3%82%A4%E3%82%BB%E3%82%BA" title="アドバンスト・マイクロ・デバイセズ">AMD</a>、<a href="/wiki/ARM%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9" title="ARMホールディングス">ARM</a>、<a href="/wiki/IBM" title="IBM">IBM</a>を含む）にCPUの再設計を強いることになった2017年の<a href="/wiki/Meltdown" title="Meltdown">Meltdown</a>と<a href="/wiki/Spectre" title="Spectre">Spectre</a>攻撃は、どちらもタイミング攻撃に依拠したものである<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p><p>2018年の初頭に、世界のほぼ全てのコンピュータシステムがSpectreに襲われたが、それがタイミング攻撃の歴史上最も強力な例となっている<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+</p><p>以下の<a class="mw-redirect" href="/wiki/Microsoft_Visual_Basic" title="Microsoft Visual Basic">Visual Basic</a>コードは、文字の不一致があると即座に検査を停止する、安全性に欠けた典型的なデータ列(string)比較を表したものである。例えば、これは "ABCDE"と "ABxDE"を比べる時に3回のループ反復後に（結果を）返すことになる。
+&lt;syntaxhighlight lang="vb"&gt;
+Function InsecureCompare(StrA As String, StrB As String, length As Integer) As Boolean
+</p>
+<pre>Dim result As Boolean
+For i = 1 To length
+ If Mid(StrA, i, 1) &lt;&gt; Mid(StrB, i, 1) Then Exit For
+Next
+result = (i &gt; length)
+InsecureCompare = result
+</pre>
+<p>End Function&lt;/syntaxhighlight&gt;
+</p><p>比較すると、次のバージョンは全ての文字を検査し、<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97" title="ビット演算">ビット演算</a>を使用して条件付きジャンプなしで検査することにより、一定時間で実行される。
+&lt;syntaxhighlight lang="vb"&gt;
+Function SecureCompare(StrA As String, StrB As String, length As Integer) As Boolean
+</p>
+<pre>Dim result As Boolean
+For i = 1 To length
+ result = result Or (Asc(Mid(StrA, i, 1)) Xor Asc(Mid(StrB, i, 1)))
+Next
+SecureCompare = Not result
+</pre>
+<p>End Function&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id=".E5.82.99.E8.80.83"></span><span class="mw-headline" id="備考">備考</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;section=3" title="節を編集: 備考">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>もしも敵がハードウェア実装の内部を知っている場合、さらには使用する暗号システムまでも知っていたら、タイミング攻撃を仕掛けるのはより簡単になる。暗号セキュリティは決して隠蔽(obscurity)に依存するべきではない（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9A%A0%E8%94%BD%E3%81%AB%E3%82%88%E3%82%8B%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3&amp;action=edit&amp;redlink=1" title="隠蔽によるセキュリティ (存在しないページ)">隠蔽によるセキュリティ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Security_through_obscurity&amp;action=edit&amp;redlink=1" title="En:Security through obscurity (存在しないページ)">英語版</a>）</span></span>と、<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%89%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%8E%E3%83%B3" title="クロード・シャノン">シャノン</a>の格言こと<a href="/wiki/%E3%82%B1%E3%83%AB%E3%82%AF%E3%83%9B%E3%83%95%E3%82%B9%E3%81%AE%E5%8E%9F%E7%90%86" title="ケルクホフスの原理">ケルクホフスの原理</a>を参照）し、タイミング攻撃への対策もそうであるべきではない。少なくとも、模範を購入して<a href="/wiki/%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B9%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0" title="リバースエンジニアリング">リバースエンジニアリング</a>することはできる。タイミング攻撃やその他のサイドチャネル攻撃は、一部のデバイスで使用されている暗号アルゴリズムを特定する場合や、場合によってはリバースエンジニアリングに役立つ場合もある。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;section=4" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">「<a class="external text" href="https://www.sc-siken.com/kakomon/25_aki/am2_6.html" rel="nofollow">平成25年秋期問6 タイミング攻撃の対策</a>」情報処理安全確保支援士ドットコム、2018年9月29日閲覧。</span>
+</li>
+<li id="cite_note-Bess-2"><b><a href="#cite_ref-Bess_2-0">^</a></b> <span class="reference-text"><a class="external text" href="https://www.bearssl.org/constanttime.html" rel="nofollow">"BearSSL Why Constant-Time Crypto"</a>. www.bearssl.org. Retrieved 2017-01-10.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">See Percival, Colin, <a class="external text" href="http://www.daemonology.net/papers/htt.pdf" rel="nofollow">Cache Missing for Fun and Profit</a>, 2005.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">Bernstein, Daniel J., <a class="external text" href="http://cr.yp.to/antiforgery/cachetiming-20050414.pdf" rel="nofollow">Cache-timing attacks on AES</a>, 2005.</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">「<a class="external text" href="https://blog.trendmicro.co.jp/archives/17154" rel="nofollow">「Meltdown」および「Spectre」を狙う攻撃の検出手法を検証</a>」トレンドマイクロ、2018年3月28日。2018年9月30日閲覧。</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">「<a class="external text" href="http://techtarget.itmedia.co.jp/tt/news/1807/17/news12.html" rel="nofollow">CPU脆弱性「Meltdown」「Spectre」がセキュリティに及ぼす決定的な影響</a>」ITメディア tech target、2018年7月17日。2018年9月30日閲覧。</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a class="external text" href="https://www.reuters.com/article/us-cyber-intel/security-flaws-put-virtually-all-phones-computers-at-risk-idUSKBN1ES1BO" rel="nofollow">Security flaws put virtually all phones, computers at risk</a>,reuter,January 4, 2018.</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a class="external text" href="https://www.ibm.com/blogs/psirt/potential-impact-processors-power-family/" rel="nofollow">Potential Impact on Processors in the POWER Family</a>,IBM,Aug 16, 2018.</span>
+</li>
+</ol></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;section=5" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>野崎華恵、藤崎浩一、川村信一「<a class="external text" href="https://www.toshiba.co.jp/tech/review/2009/07/64_07pdf/a08.pdf" rel="nofollow">暗号モジュールの実装攻撃対策技術 -</a>」『東芝レビューvol64 No.7』、2009年、28-31頁。（タイミング解析として言及）</li>
+<li>Paul C. Kocher: Timing Attacks on Implementations of <a class="new" href="/w/index.php?title=Diffie-Hellman&amp;action=edit&amp;redlink=1" title="Diffie-Hellman (存在しないページ)">Diffie-Hellman</a>, <a class="new" href="/w/index.php?title=RSA_(algorithm)&amp;action=edit&amp;redlink=1" title="RSA (algorithm) (存在しないページ)">RSA</a>, <a href="/wiki/Digital_Signature_Algorithm" title="Digital Signature Algorithm">DSS</a>, and Other Systems. CRYPTO 1996: 104-113 (<a class="external free" href="https://www.paulkocher.com/TimingAttacks.pdf" rel="nofollow">https://www.paulkocher.com/TimingAttacks.pdf</a> pdf file])</li>
+<li>David Brumley and Dan Boneh: Remote timing attacks are practical. USENIX Security Symposium, August 2003. <a class="external text" href="http://crypto.stanford.edu/~dabo/papers/ssl-timing.pdf" rel="nofollow">pdf file</a></li>
+<li>Colin Percival: Cache Missing for Fun and Profit, 13 May 2005 (<a class="external text" href="http://www.daemonology.net/papers/htt.pdf" rel="nofollow">pdf file</a>)</li>
+<li><cite class="citation journal" style="font-style:normal"><a class="new" href="/w/index.php?title=Richard_J._Lipton&amp;action=edit&amp;redlink=1" title="Richard J. Lipton (存在しないページ)">Lipton, Richard</a>; Naughton, Jeffrey F. (March 1993). <a class="external text" href="http://www.springerlink.com/content/m45w74398002p462/" rel="nofollow">“Clocked adversaries for hashing”</a>. <i>Algorithmica</i> <b>9</b> (3):  239-252. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2FBF01190898" rel="nofollow">10.1007/BF01190898</a><span style="display:none;">. <a class="external free" href="http://www.springerlink.com/content/m45w74398002p462/" rel="nofollow">http://www.springerlink.com/content/m45w74398002p462/</a></span> <span class="reference-accessdate"><span title="2 September 2008">2008年9月2日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Clocked+adversaries+for+hashing&amp;rft.jtitle=Algorithmica&amp;rft.aulast=Lipton&amp;rft.aufirst=Richard&amp;rft.au=Lipton%2C%26%2332%3BRichard&amp;rft.au=Naughton%2C+Jeffrey+F.&amp;rft.date=March+1993&amp;rft.volume=9&amp;rft.issue=3&amp;rft.pages=239-252&amp;rft_id=info:doi/10.1007%2FBF01190898&amp;rft_id=http%3A%2F%2Fwww.springerlink.com%2Fcontent%2Fm45w74398002p462%2F&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83"><span style="display: none;"> </span></span></li></ul>
+<div aria-label="Navbox" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><td class="navbox-list navbox-odd hlist" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col" style="background:#ccf;"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;background:#ccf;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;background:#ccf;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Cryptography_navbox&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Cryptography navbox (存在しないページ)"><span style="font-size:125%;color:#002bb8;;background:#ccf;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACryptography_navbox&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background:#ccf;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACryptography_navbox&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;background:#ccf;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="暗号" style="font-size:100%;margin:0 6em">暗号</div></th></tr><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%9A%97%E5%8F%B7%E5%8F%B2" title="暗号史">暗号史</a></li>
+<li><a href="/wiki/%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD" title="暗号解読">暗号解読</a></li>
+<li><a class="new" href="/w/index.php?title=En:Portal:Cryptography&amp;action=edit&amp;redlink=1" title="En:Portal:Cryptography (存在しないページ)">Cryptography portal</a></li>
+<li><a class="new" href="/w/index.php?title=En:Outline_of_cryptography&amp;action=edit&amp;redlink=1" title="En:Outline of cryptography (存在しないページ)">en:Outline of cryptography</a></li></ul>
+</div></td></tr><tr><td class="navbox-list navbox-even" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%85%B1%E9%80%9A%E9%8D%B5%E6%9A%97%E5%8F%B7" title="共通鍵暗号">共通鍵暗号</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E6%9A%97%E5%8F%B7" title="ブロック暗号">ブロック暗号</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E6%9A%97%E5%8F%B7" title="ストリーム暗号">ストリーム暗号</a></li>
+<li><a href="/wiki/%E6%9A%97%E5%8F%B7%E5%88%A9%E7%94%A8%E3%83%A2%E3%83%BC%E3%83%89" title="暗号利用モード">暗号利用モード</a></li>
+<li><a href="/wiki/%E5%85%AC%E9%96%8B%E9%8D%B5%E6%9A%97%E5%8F%B7" title="公開鍵暗号">公開鍵暗号</a></li>
+<li><a href="/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0" title="暗号学的ハッシュ関数">暗号学的ハッシュ関数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%AA%8D%E8%A8%BC%E3%82%B3%E3%83%BC%E3%83%89" title="メッセージ認証コード">メッセージ認証コード</a></li>
+<li><a href="/wiki/%E8%AA%8D%E8%A8%BC%E4%BB%98%E3%81%8D%E6%9A%97%E5%8F%B7" title="認証付き暗号">認証付き暗号</a></li>
+<li><a href="/wiki/%E6%9A%97%E5%8F%B7%E8%AB%96%E7%9A%84%E6%93%AC%E4%BC%BC%E4%B9%B1%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8" title="暗号論的擬似乱数生成器">乱数生成器</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%86%E3%82%AC%E3%83%8E%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%BC" title="ステガノグラフィー">ステガノグラフィー</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="脆弱性、攻撃手法、エクスプロイト" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:エクスプロイト (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="脆弱性、攻撃手法、エクスプロイト" style="font-size:110%;margin:0 6em">脆弱性、攻撃手法、<a href="/wiki/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88" title="エクスプロイト">エクスプロイト</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">クロスサイト攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%AA" title="クロスサイトリクエストフォージェリ">クロスサイトリクエストフォージェリ</a> (CSRF)</li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クロスサイトスクリプティング">クロスサイトスクリプティング</a> (XSS)</li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BB%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0" title="クロスサイト・クッキング">クロスサイト・クッキング</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0" title="クロスサイトトレーシング">クロスサイトトレーシング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="クロスゾーンスクリプティング (存在しないページ)">クロスゾーンスクリプティング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cross-zone_scripting&amp;action=edit&amp;redlink=1" title="En:Cross-zone scripting (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">インジェクション攻撃 (CWE-74)</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クロスサイトスクリプティング">クロスサイトスクリプティング</a> (XSS) (CWE-79)</li>
+<li><a href="/wiki/SQL%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%A7%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="SQLインジェクション">SQLインジェクション</a> (CWE-89)</li>
+<li><a href="/wiki/HTTP%E3%83%98%E3%83%83%E3%83%80%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%A7%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="HTTPヘッダ・インジェクション">HTTPヘッダ・インジェクション</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HTTP%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%97%E3%83%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="HTTPレスポンススプリッティング (存在しないページ)">HTTPレスポンススプリッティング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HTTP_response_splitting&amp;action=edit&amp;redlink=1" title="En:HTTP response splitting (存在しないページ)">英語版</a>）</span></span> (CWE-113)</li>
+<li><a href="/wiki/%E6%9B%B8%E5%BC%8F%E6%96%87%E5%AD%97%E5%88%97%E6%94%BB%E6%92%83" title="書式文字列攻撃">書式文字列攻撃</a> (CWE-134)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スプーフィング攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DNS%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="DNSスプーフィング">DNSスプーフィング</a></li>
+<li><a href="/wiki/IP%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="IPスプーフィング">IPスプーフィング</a></li>
+<li><a href="/wiki/ARP%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="ARPスプーフィング">ARPスプーフィング</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0" title="クリックジャッキング">クリックジャッキング</a> (CAPEC-103)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="リファラスプーフィング (存在しないページ)">リファラスプーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Referer_spoofing&amp;action=edit&amp;redlink=1" title="En:Referer spoofing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=E%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="Eメールスプーフィング (存在しないページ)">Eメールスプーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Email_spoofing&amp;action=edit&amp;redlink=1" title="En:Email spoofing (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0_(%E8%A9%90%E6%AC%BA)" title="フィッシング (詐欺)">フィッシング</a> (CAPEC-98)</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0" title="ファーミング">ファーミング</a> (CAPEC-89)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">セッションハイジャック関連</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8F%E3%82%A4%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF#セッションID固定化攻撃" title="セッションハイジャック">セッションフィクセーション</a> (CWE-384, CAPEC-61)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9D%E3%82%A4%E3%82%BA%E3%83%8B%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="セッションポイズニング (存在しないページ)">セッションポイズニング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Session_poisoning&amp;action=edit&amp;redlink=1" title="En:Session poisoning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/TCP%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E7%95%AA%E5%8F%B7%E4%BA%88%E6%B8%AC%E6%94%BB%E6%92%83" title="TCPシーケンス番号予測攻撃">TCPシーケンス番号予測攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="クッキーモンスター攻撃 (存在しないページ)">クッキーモンスター攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cookiemonster_attack&amp;action=edit&amp;redlink=1" title="En:Cookiemonster attack (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">DoS攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Land%E6%94%BB%E6%92%83" title="Land攻撃">Land攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AA%E3%82%A2%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E8%A9%95%E4%BE%A1%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="クリアチャネル評価攻撃 (存在しないページ)">クリアチャネル評価攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Clear_channel_assessment_attack&amp;action=edit&amp;redlink=1" title="En:Clear channel assessment attack (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">サイドチャネル攻撃</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%96%E3%83%BC%E3%83%88%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="コールドブート攻撃 (存在しないページ)">コールドブート攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cold_boot_attack&amp;action=edit&amp;redlink=1" title="En:Cold boot attack (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Meltdown" title="Meltdown">Meltdown</a></li>
+<li><a href="/wiki/Spectre" title="Spectre">Spectre</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Lazy_FP_state_restore&amp;action=edit&amp;redlink=1" title="Lazy FP state restore (存在しないページ)">Lazy FP state restore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lazy_FP_state_restore&amp;action=edit&amp;redlink=1" title="En:Lazy FP state restore (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TLBleed&amp;action=edit&amp;redlink=1" title="TLBleed (存在しないページ)">TLBleed</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TLBleed&amp;action=edit&amp;redlink=1" title="En:TLBleed (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">不適切な入力確認 (CWE-20)</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%83%B3" title="バッファオーバーラン">バッファオーバーラン</a> (CWE-119、120、121等)</li>
+<li><a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">Return-to-libc攻撃</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%88%E3%83%A9%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB" title="ディレクトリトラバーサル">ディレクトリトラバーサル</a> (CWE-22)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">未分類</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%B8%AD%E9%96%93%E8%80%85%E6%94%BB%E6%92%83" title="中間者攻撃">中間者攻撃</a> (CAPEC-94)</li>
+<li><a href="/wiki/%E3%83%9E%E3%83%B3%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%B6%E3%83%BB%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" title="マン・イン・ザ・ブラウザ">MITB攻撃</a></li>
+<li><a href="/wiki/Off-by-one%E3%82%A8%E3%83%A9%E3%83%BC" title="Off-by-oneエラー">Off-by-oneエラー</a> (CWE-193)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%89%E8%84%86%E5%BC%B1%E6%80%A7&amp;action=edit&amp;redlink=1" title="ファイルインクルード脆弱性 (存在しないページ)">ファイルインクルード脆弱性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:File_inclusion_vulnerability&amp;action=edit&amp;redlink=1" title="En:File inclusion vulnerability (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mass_Assignment%E8%84%86%E5%BC%B1%E6%80%A7&amp;action=edit&amp;redlink=1" title="Mass Assignment脆弱性 (存在しないページ)">Mass Assignment脆弱性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mass_assignment_vulnerability&amp;action=edit&amp;redlink=1" title="En:Mass assignment vulnerability (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF&amp;action=edit&amp;redlink=1" title="ダングリングポインタ (存在しないページ)">ダングリングポインタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dangling_pointer&amp;action=edit&amp;redlink=1" title="En:Dangling pointer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/DNS%E3%83%AA%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="DNSリバインディング">DNSリバインディング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=In-session%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="In-sessionフィッシング (存在しないページ)">in-sessionフィッシング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:In-session_phishing&amp;action=edit&amp;redlink=1" title="En:In-session phishing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="クッキースタッフィング (存在しないページ)">クッキースタッフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cookie_stuffing&amp;action=edit&amp;redlink=1" title="En:Cookie stuffing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%82%AA%E9%AD%94%E3%81%AE%E5%8F%8C%E5%AD%90%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="悪魔の双子攻撃 (存在しないページ)">悪魔の双子攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Evil_twin_(wireless_networks)&amp;action=edit&amp;redlink=1" title="En:Evil twin (wireless networks) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9B%E3%83%A2%E3%82%B0%E3%83%A9%E3%83%95%E6%94%BB%E6%92%83" title="ホモグラフ攻撃">IDNホモグラフ攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%8A%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スナーフィング (存在しないページ)">スナーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Snarfing&amp;action=edit&amp;redlink=1" title="En:Snarfing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JIT%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="JITスプレーイング (存在しないページ)">JITスプレーイング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JIT_spraying&amp;action=edit&amp;redlink=1" title="En:JIT spraying (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%8F%8D%E5%B0%84%E6%94%BB%E6%92%83" title="反射攻撃">リプレイ攻撃</a></li>
+<li><a href="/wiki/%E8%AA%95%E7%94%9F%E6%97%A5%E6%94%BB%E6%92%83" title="誕生日攻撃">誕生日攻撃</a></li>
+<li><a class="mw-redirect" href="/wiki/CRIME" title="CRIME">CRIME</a></li>
+<li><a href="/wiki/KRACK" title="KRACK">KRACK</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_ME&amp;action=edit&amp;redlink=1" title="Intel ME (存在しないページ)">Intel ME</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Management_Engine&amp;action=edit&amp;redlink=1" title="En:Intel Management Engine (存在しないページ)">英語版</a>）</span></span>の脆弱性</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">対策</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Outbound_Port_25_Blocking" title="Outbound Port 25 Blocking">OP25B</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Content_Security_Policy&amp;action=edit&amp;redlink=1" title="Content Security Policy (存在しないページ)">Content Security Policy</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Content_Security_Policy&amp;action=edit&amp;redlink=1" title="En:Content Security Policy (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%88%E3%82%B9%E3%83%8B%E3%83%83%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="コンテントスニッフィング (存在しないページ)">コンテントスニッフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Content_sniffing&amp;action=edit&amp;redlink=1" title="En:Content sniffing (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/HTTP_Strict_Transport_Security" title="HTTP Strict Transport Security">HTTP Strict Transport Security</a> (HSTS)</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB" title="ファイアウォール">ファイアウォール</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BE%B5%E5%85%A5%E9%98%B2%E6%AD%A2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入防止システム">侵入防止システム</a> (IPS)</li>
+<li><a href="/wiki/%E4%BE%B5%E5%85%A5%E6%A4%9C%E7%9F%A5%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入検知システム">侵入検知システム</a> (IDS)</li>
+<li><a href="/wiki/Web_Application_Firewall" title="Web Application Firewall">Web Application Firewall</a> (WAF)</li>
+<li><a href="/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2" title="マルウェア">マルウェア</a></li>
+<li><a href="/wiki/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%9B%E3%83%BC%E3%83%AB" title="セキュリティホール">セキュリティホール</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラッキング (コンピュータ)">クラッキング</a></li>
+<li><a href="/wiki/%E8%84%86%E5%BC%B1%E6%80%A7%E6%83%85%E5%A0%B1%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="脆弱性情報データベース">脆弱性情報データベース</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC" title="ブラウザクラッシャー">ブラウザクラッシャー</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89" title="シェルコード">シェルコード</a></li>
+<li><a href="/wiki/Metasploit" title="Metasploit">Metasploit</a></li>
+<li><a href="/wiki/Sshnuke" title="Sshnuke">Sshnuke</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Nikto_Web_Scanner&amp;action=edit&amp;redlink=1" title="Nikto Web Scanner (存在しないページ)">Nikto Web Scanner</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nikto_Web_Scanner&amp;action=edit&amp;redlink=1" title="En:Nikto Web Scanner (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OWASP&amp;action=edit&amp;redlink=1" title="OWASP (存在しないページ)">OWASP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OWASP&amp;action=edit&amp;redlink=1" title="En:OWASP (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=W3af&amp;action=edit&amp;redlink=1" title="W3af (存在しないページ)">w3af</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:w3af&amp;action=edit&amp;redlink=1" title="En:w3af (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9A%A0%E3%82%8C%E9%80%9A%E4%BF%A1%E8%B7%AF&amp;action=edit&amp;redlink=1" title="隠れ通信路 (存在しないページ)">隠れ通信路</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Covert_channel&amp;action=edit&amp;redlink=1" title="En:Covert channel (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402014454
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.226 seconds
+Real time usage: 0.437 seconds
+Preprocessor visited node count: 1614/1000000
+Post‐expand include size: 79427/2097152 bytes
+Template argument size: 2254/2097152 bytes
+Highest expansion depth: 31/40
+Expensive parser function count: 30/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3256/5000000 bytes
+Lua time usage: 0.150/7 seconds
+Lua virtual size: 6213632/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  363.197      1 -total
+ 68.64%  249.306     30 テンプレート:仮リンク
+ 48.77%  177.127      3 テンプレート:Navbox
+ 44.49%  161.595      1 テンプレート:エクスプロイト
+ 19.75%   71.734      1 テンプレート:Cite_journal
+ 16.77%   60.921      1 テンプレート:Citation/core
+  5.06%   18.387      1 テンプレート:Accessdate
+  4.95%   17.971      1 テンプレート:Cryptography_navbox
+  4.48%   16.289      1 テンプレート:Accessdate/core
+  3.73%   13.550      1 テンプレート:Citation/identifier
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3847298-0!canonical and timestamp 20220402014453 and revision id 2256466. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=タイミング攻撃&amp;oldid=2256466">http://localhost:8080/w/index.php?title=タイミング攻撃&amp;oldid=2256466</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9A%97%E5%8F%B7%E6%8A%80%E8%A1%93" title="カテゴリ:暗号技術">暗号技術</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD%E6%94%BB%E6%92%83" title="カテゴリ:暗号解読攻撃">暗号解読攻撃</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;returntoquery=curid%3D3847298%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;returntoquery=curid%3D3847298%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;oldid=2256466" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E6%94%BB%E6%92%83&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年5月4日 (月) 10:24 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.226","walltime":"0.437","ppvisitednodes":{"value":1614,"limit":1000000},"postexpandincludesize":{"value":79427,"limit":2097152},"templateargumentsize":{"value":2254,"limit":2097152},"expansiondepth":{"value":31,"limit":40},"expensivefunctioncount":{"value":30,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3256,"limit":5000000},"timingprofile":["100.00%  363.197      1 -total"," 68.64%  249.306     30 テンプレート:仮リンク"," 48.77%  177.127      3 テンプレート:Navbox"," 44.49%  161.595      1 テンプレート:エクスプロイト"," 19.75%   71.734      1 テンプレート:Cite_journal"," 16.77%   60.921      1 テンプレート:Citation/core","  5.06%   18.387      1 テンプレート:Accessdate","  4.95%   17.971      1 テンプレート:Cryptography_navbox","  4.48%   16.289      1 テンプレート:Accessdate/core","  3.73%   13.550      1 テンプレート:Citation/identifier"]},"scribunto":{"limitreport-timeusage":{"value":"0.150","limit":"7"},"limitreport-virtmemusage":{"value":6213632,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402014454","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":777});});</script>
+</body></html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>環境変数 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-環境変数 rootpage-環境変数 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">環境変数</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>環境変数</b>（かんきょうへんすう、<a href="." id="link_a_1" title="英語">英語</a>: <span lang="en">environment variable</span>）は<a href="." id="link_a_2" title="オペレーティングシステム">オペレーティングシステム</a> (OS) が提供するデータ共有機能の一つ。OS上で動作する<a href="." id="link_a_3" title="タスク">タスク</a>（<a href="." id="link_a_4" title="プロセス">プロセス</a>）が<a href="." id="link_a_5" title="データ">データ</a>を共有するための仕組みである。特にタスクに対して外部からデータを与え、タスクの挙動・設定を変更するために用いる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#UNIXの環境変数"><span class="tocnumber">2</span> <span class="toctext">UNIXの環境変数</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#環境変数の設定法"><span class="tocnumber">2.1</span> <span class="toctext">環境変数の設定法</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#環境変数の例"><span class="tocnumber">2.2</span> <span class="toctext">環境変数の例</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#シェル変数"><span class="tocnumber">2.3</span> <span class="toctext">シェル変数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#MS-DOSの環境変数"><span class="tocnumber">3</span> <span class="toctext">MS-DOSの環境変数</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#環境変数の設定法_2"><span class="tocnumber">3.1</span> <span class="toctext">環境変数の設定法</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#環境変数の例_2"><span class="tocnumber">3.2</span> <span class="toctext">環境変数の例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Windowsの環境変数"><span class="tocnumber">4</span> <span class="toctext">Windowsの環境変数</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#環境変数の設定法_3"><span class="tocnumber">4.1</span> <span class="toctext">環境変数の設定法</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#環境変数の例_3"><span class="tocnumber">4.2</span> <span class="toctext">環境変数の例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#HTTP環境変数"><span class="tocnumber">5</span> <span class="toctext">HTTP環境変数</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#利点"><span class="tocnumber">6</span> <span class="toctext">利点</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#利用"><span class="tocnumber">7</span> <span class="toctext">利用</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#機密情報の挿入"><span class="tocnumber">7.1</span> <span class="toctext">機密情報の挿入</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>環境変数は、<a href="/wiki/UNIX" title="UNIX">UNIX</a>（互換OSや互換環境も含む）、<a href="/wiki/MS-DOS" title="MS-DOS">MS-DOS</a>、<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>に存在する。
+</p><p>一つの環境変数は、変数名とその値をもち、通常「変数名=値」と表記する。
+変数名は英数字と<a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B9%E3%82%B3%E3%82%A2" title="アンダースコア">アンダースコア</a>で構成される。
+値は一般的にはとくに型や構造は定義されておらず、単なる<a href="/wiki/%E6%96%87%E5%AD%97%E5%88%97" title="文字列">文字列</a>である（ただし、特定の環境変数は、それを解釈する<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>によって値の構造が規定されていることがある）。
+</p><p>環境変数は、各プロセスに付随するデータである。一つのプロセスが複数の環境変数をもつことができる。
+あるプロセスに付随している環境変数の総体のことを、<b>環境</b>ということがある。
+プロセスは、任意に環境変数を参照して、各種の情報を取得したり、動作を変更したりすることができる。
+また、プロセスは、自分の環境において、環境変数を新規に作成したり、既存の環境変数の値を変更したり、環境変数を削除したりできる。
+</p><p>環境変数には、システムにより定義されるものとユーザが任意に定義するもの、ほとんどのプログラムに影響を与えるものと特定のプログラムにのみ影響を与えるものがある。
+</p><p>環境は、親プロセスから子プロセスに複製されて継承される。
+すなわち、子プロセスで環境を変更しない限り、子プロセスの環境は親プロセスのそれと同一の内容である。
+また、子プロセスが自分の環境に対して行った変更は、親プロセスの環境に影響しない。
+</p><p><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>の<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>においては、main()関数の第3引数（慣習的にenvpという仮引数名である）で環境を参照することができる。ただしこれは<a href="/wiki/%E5%9B%BD%E9%9A%9B%E6%A8%99%E6%BA%96%E5%8C%96%E6%A9%9F%E6%A7%8B" title="国際標準化機構">ISO</a>/<a href="/wiki/%E7%B1%B3%E5%9B%BD%E5%9B%BD%E5%AE%B6%E8%A6%8F%E6%A0%BC%E5%8D%94%E4%BC%9A" title="米国国家規格協会">ANSI</a>の標準規格で規定されているものではなく、通常はより簡便なgetenv()関数などが使われる。
+</p>
+<h2><span id="UNIX.E3.81.AE.E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="UNIXの環境変数">UNIXの環境変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=2" title="節を編集: UNIXの環境変数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>UNIXのシェルコマンドや<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88" title="シェルスクリプト">シェルスクリプト</a>において、環境変数の値は「$環境変数名」という書式で参照する。
+</p>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E8.A8.AD.E5.AE.9A.E6.B3.95"></span><span class="mw-headline" id="環境変数の設定法">環境変数の設定法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=3" title="節を編集: 環境変数の設定法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>環境変数を設定する方法はシェルにより異なる。
+</p>
+<ul><li>shの場合</li></ul>
+<p>&lt;syntaxhighlight lang="sh"&gt;
+$ VAR=value
+$ export VAR
+&lt;/syntaxhighlight&gt;
+</p>
+<ul><li>cshの場合</li></ul>
+<p>&lt;syntaxhighlight lang="csh"&gt;
+</p>
+<pre>% setenv VAR value
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p>
+<ul><li>bashの場合</li></ul>
+<p>&lt;syntaxhighlight lang="bash"&gt;
+$ export VAR=value
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="環境変数の例">環境変数の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=4" title="節を編集: 環境変数の例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><b>COLUMNS, LINES</b>: キャラクタ端末の桁数と行数を指定する。termcap/terminfo/cursesなどを利用したプログラムで利用される。他の方法（termcap、sttyなど）によって指定されていない場合に有効。</li>
+<li><b>EDITOR</b>: <a href="/wiki/%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF" title="エディタ">エディタ</a>のコマンド名を指定する。エディタを起動するプログラム（mail、lessなど）で参照される。</li>
+<li><b>HOME</b>: <a href="/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA" title="ホームディレクトリ">ホームディレクトリ</a>を指定する。cdコマンドで引数を指定しない場合、このディレクトリに移動する。例: /home/$USER</li>
+<li><b>LANG</b>: <a class="mw-redirect" href="/wiki/%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%AB" title="ロケール">ロケール</a>を指定する。日本語ロケールの場合はjaまたはja_JPなどを指定する。setlocale()関数の呼び出しにより有効となる。</li>
+<li><b>LESSCHARSET</b>: lessの入力・出力<a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="文字コード">文字コード</a>を指定する。</li>
+<li><b>MAIL</b>: メールボックスのパス名を指定する。例: /var/mail/$USER, /usr/spool/mail/$USER</li>
+<li><b>NAME</b>: ユーザの名前を指定する。メール送信時などに使われる。</li>
+<li><b>PAGER</b>: <a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%A3" title="ページャ">ページャ</a>（more、less、pgなど）を指定する。ページャを起動するプログラム（manなど）で使われる。</li>
+<li><b>PATH</b>: コマンド検索パスをコロンで区切って指定する。シェルが参照する。</li>
+<li><b>PWD</b>: カレントディレクトリが設定される。シェルスクリプトでpwdコマンドの代わりに$PWDを参照することがある。</li>
+<li><b>SHELL</b>: 現在のシェルの起動パスが設定される。シェルを確認するのに利用できる。例: /bin/sh</li>
+<li><b>TERM</b>: 端末種別が設定される。この値をキーとしてtermcap/terminfoデータベースが検索される。例: vt100</li>
+<li><b>TERMCAP</b>: termcapデータベースファイルのパス、あるいは検索されたデータベースエントリの内容が設定される。例: /etc/termcap</li>
+<li><b>TERMINFO</b>: terminfoデータベースディレクトリのパスが設定される。例: /usr/share/misc/terminfo</li>
+<li><b>TZ</b>: タイムゾーン情報を指定する。標準Cライブラリの日時関連の関数で参照される。例: JST-9</li>
+<li><b>USER</b>: ログイン名が設定される。</li>
+<li><b>VISUAL</b>: スクリーンエディタのコマンド名を指定する。EDITORと同様。</li></ul>
+<h3><span id=".E3.82.B7.E3.82.A7.E3.83.AB.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="シェル変数">シェル変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=5" title="節を編集: シェル変数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>UNIXのシェル（UNIX以外の環境に移植されたものも含む）には、<b>シェル変数</b>という概念がある。
+環境変数と類似しているが、シェル内で独自に保持しているものであり、シェル以外のプロセスには存在しない。
+</p>
+<h2><span id="MS-DOS.E3.81.AE.E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="MS-DOSの環境変数">MS-DOSの環境変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=6" title="節を編集: MS-DOSの環境変数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MS-DOSのコマンドラインや<a href="/wiki/%E3%83%90%E3%83%83%E3%83%81%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="バッチファイル">バッチファイル</a>において、環境変数の値は「%変数名%」という書式で参照する。
+</p>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E8.A8.AD.E5.AE.9A.E6.B3.95_2"></span><span class="mw-headline" id="環境変数の設定法_2">環境変数の設定法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=7" title="節を編集: 環境変数の設定法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>コマンドラインやバッチファイル内で以下のように設定する。
+&lt;syntaxhighlight lang="doscon"&gt;
+set VAR=value
+&lt;/syntaxhighlight&gt;
+</p><p>起動時から有効にするためには、AUTOEXEC.BATに記述する。
+</p>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E4.BE.8B_2"></span><span class="mw-headline" id="環境変数の例_2">環境変数の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=8" title="節を編集: 環境変数の例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MS-DOSでは標準的に規定されている環境変数は非常に少ない。
+</p>
+<ul><li><b>COMSPEC</b>: シェル (<a href="/wiki/COMMAND.COM" title="COMMAND.COM">COMMAND.COM</a>) のパス名が設定される。CONFIG.SYSのSHELL=行の記述が反映される。例: C:\COMMAND.COM</li>
+<li><b>INCLUDE</b>: Cの<a href="/wiki/%E3%83%98%E3%83%83%E3%83%80%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="ヘッダファイル">ヘッダファイル</a>のパスを指定する。MS-Cなどが参照する。</li>
+<li><b>LIB</b>: Cの<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>ファイルのパスを指定する。MS-Cなどが参照する。</li>
+<li><b>PATH</b>: コマンド検索パスをセミコロンで区切って指定する。シェルが参照する。</li>
+<li><b>PROMPT</b>: <a href="/wiki/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88" title="コマンドプロンプト">コマンドプロンプト</a>の形式を指定する。例: $p$g</li>
+<li><b>TEMP</b>: 一時ファイルを置くディレクトリを指定する。ソフトウェアによっては<b>TMP</b>を参照することもある。例: C:\TEMP</li></ul>
+<h2><span id="Windows.E3.81.AE.E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="Windowsの環境変数">Windowsの環境変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=9" title="節を編集: Windowsの環境変数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E8.A8.AD.E5.AE.9A.E6.B3.95_3"></span><span class="mw-headline" id="環境変数の設定法_3">環境変数の設定法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=10" title="節を編集: 環境変数の設定法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MS-DOSと同様の方法の他、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%91%E3%83%8D%E3%83%AB_(Windows)" title="コントロールパネル (Windows)">コントロールパネル</a>でも設定することができる。
+コントロールパネルで設定したものは、それ以降起動されるプロセスで有効となる。また、再起動後も有効。
+</p><p>コントロールパネルの設定は、システム環境変数とユーザー環境変数に分かれている。
+コントロールパネルでシステム環境変数を変更するには、管理者権限が必要。
+</p><p>"path" あるいは "set" コマンドで設定した環境変数は、そのコマンドを実行したプロンプト上、及びそこから起動したプロセス上でしか有効ではないため注意が必要である。
+</p>
+<h3><span id=".E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0.E3.81.AE.E4.BE.8B_3"></span><span class="mw-headline" id="環境変数の例_3">環境変数の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=11" title="節を編集: 環境変数の例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Windows_NT%E7%B3%BB" title="Windows NT系">Windows NT系</a>の例を示す。<a href="/wiki/Windows_9x%E7%B3%BB" title="Windows 9x系">Windows 9x系</a>では存在しないものもある。
+</p>
+<ul><li><b>COPYCMD</b>: COPYコマンドのスイッチを指定する。</li>
+<li><b>COMPUTERNAME</b>: コンピュータ名が設定されている</li>
+<li><b>CPU, NUMBER_OF_PROCESSORS, PROCESSOR_ARCHITECTURE, PROCESSOR_IDENTIFIER, PROCESSOR_LEVEL, PROCESSOR_REVISION</b>: コンピュータのプロセッサに関する情報が設定されている。</li>
+<li><b>DIRCMD</b>: DIRコマンドのスイッチを指定する。</li>
+<li><b>HOMEDRIVE</b>: ホームフォルダのドライブ名が設定されている。例: C:</li>
+<li><b>HOMEPATH</b>: ホームフォルダのパス名が設定されている。例: \Documents and Settings\%USERNAME%</li>
+<li><b>OS</b>: OSの種類が設定されている。例: Windows_NT</li>
+<li><b>PATH</b>: MS-DOSと同じ。</li>
+<li><b>PATHEXT</b>: 実行可能ファイルの拡張子をコロンで区切って指定する。例: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH</li>
+<li><b>PROMPT</b>: MS-DOSと同じ。</li>
+<li><b>ProgramFiles</b>: Program Filesフォルダのパス名が設定されている。例: C:\Program Files</li>
+<li><b>SystemDrive</b>: システムドライブ名が設定されている。例: C:</li>
+<li><b>SystemRoot</b>: Windowsフォルダのパス名が設定されている。例: C:\WINDOWS</li>
+<li><b>USERDOMAIN</b>: 現在のユーザのログオンドメインが設定されている。ドメインのない環境ではローカルコンピュータにログオンするためCOMPUTERNAMEと同じになる。</li>
+<li><b>USERNAME</b>: 現在のユーザのユーザ名が設定されている。</li>
+<li><b>USERPROFILE</b>: 現在のユーザのユーザプロファイルフォルダのパス名が設定されている。例: C:\Documents and Settings\%USERNAME%</li>
+<li><b>TEMP</b>: MS-DOSと同じ。例: C:\Documents and Settings\%USERNAME%\Local Settings\Temp</li>
+<li><b>WINDIR</b>: Windowsフォルダのパス名が設定されている。例: C:\WINDOWS</li></ul>
+<h2><span id="HTTP.E7.92.B0.E5.A2.83.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="HTTP環境変数">HTTP環境変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=12" title="節を編集: HTTP環境変数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" title="ウェブブラウザ">ウェブブラウザ</a>などの<a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a><a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88" title="ユーザーエージェント">ユーザーエージェント</a>が<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90" title="サーバ">サーバ</a>にアクセスする際、HTTPリクエストヘッダに各種の情報を含めて送信する。
+要求された<a href="/wiki/%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90" title="計算資源">リソース</a>がWeb上の<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">プログラム</a>（<a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a>や<a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a>、<a href="/wiki/Java" title="Java">Java</a>など）である場合、サーバはHTTPリクエストヘッダの情報や、アクセス元の<a href="/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="IPアドレス">IPアドレス</a>などの情報を環境変数に設定してプログラムを起動することが一般的である。
+HTTPリクエストヘッダの情報は、ヘッダフィールド名に対応した環境変数で渡される。
+</p><p>これらは、 RFC 3875 The Common Gateway Interface (CGI) Version 1.1の4.1. Request Meta-Variablesで規定されている。<a href="/wiki/Python" title="Python">Python</a><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>や<a href="/wiki/Ruby" title="Ruby">Ruby</a><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>でもこれが参照されている。
+</p>
+<table class="wikitable">
+<caption>HTTP環境変数で利用される主な情報
+</caption>
+<tbody><tr>
+<th>情報
+</th>
+<th>リクエストヘッダ
+</th>
+<th>環境変数
+</th></tr>
+<tr>
+<td>クライアントのIPアドレス
+</td>
+<td>なし
+</td>
+<td>REMOTE_ADDR
+</td></tr>
+<tr>
+<td>クライアントの<a href="/wiki/%E9%80%86%E5%BC%95%E3%81%8D" title="逆引き">逆引き</a><a href="/wiki/%E3%83%9B%E3%82%B9%E3%83%88%E5%90%8D" title="ホスト名">ホスト名</a>
+</td>
+<td>なし
+</td>
+<td>REMOTE_HOST
+</td></tr>
+<tr>
+<td>クライアントの<a href="/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a><a class="mw-redirect" href="/wiki/%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7" title="ポート番号">ポート番号</a>
+</td>
+<td>なし
+</td>
+<td>REMOTE_PORT
+</td></tr>
+<tr>
+<td>ユーザーエージェントが受理する<a href="/wiki/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%BF%E3%82%A4%E3%83%97" title="メディアタイプ">MIMEメディアタイプ</a>
+</td>
+<td>Accept:
+</td>
+<td>HTTP_ACCEPT
+</td></tr>
+<tr>
+<td>ユーザーエージェントが受理する<a href="/wiki/%E6%96%87%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89" title="文字コード">文字コード</a>
+</td>
+<td>Accept-Charset:
+</td>
+<td>HTTP_ACCEPT_CHARSET
+</td></tr>
+<tr>
+<td>ユーザーエージェントが受理する<a href="/wiki/%E8%A8%80%E8%AA%9E" title="言語">言語</a>
+</td>
+<td>Accept-Language:
+</td>
+<td>HTTP_ACCEPT_LANGUAGE
+</td></tr>
+<tr>
+<td>サーバのホスト名
+</td>
+<td>Host:
+</td>
+<td>HTTP_HOST
+</td></tr>
+<tr>
+<td>ユーザーエージェントの<a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%83%BC" title="リファラー">リファラー</a>
+</td>
+<td>Referer:
+</td>
+<td>HTTP_REFERER
+</td></tr>
+<tr>
+<td>ユーザーエージェントの名称
+</td>
+<td>User-Agent:
+</td>
+<td>HTTP_USER_AGENT
+</td></tr></tbody></table>
+<p>この仕組みを指して、俗に「ブラウザが環境変数を吐く」などということがあるが、これは正しい表現ではない。ユーザーエージェントがプログラムに対して環境変数を送っているわけではなく、サーバがプログラムに対して環境変数を設定しているにすぎないためである。
+</p>
+<h2><span id=".E5.88.A9.E7.82.B9"></span><span class="mw-headline" id="利点">利点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=13" title="節を編集: 利点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>環境変数は以下の利点を持つ。
+</p>
+<ul><li>OSレベルでの<a href="/wiki/%E3%83%87%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89" title="デファクトスタンダード">事実上の標準</a>機能である
+<ul><li>Linux・MacOS・Windows・Android等に存在</li>
+<li>ほぼすべてのプログラミング言語でアクセス可能</li></ul></li>
+<li>アプリケーションの言語に依存しない
+<ul><li>OSレベルでありアプリケーションのプログラミング言語がCでもNode.jsでも利用可能</li></ul></li>
+<li>単純である
+<ul><li>アプリケーション外にKeyValueペアで存在する変数、というシンプルな機能</li>
+<li>Key・Valueともに文字列、型等をもたない</li></ul></li></ul>
+<h2><span id=".E5.88.A9.E7.94.A8"></span><span class="mw-headline" id="利用">利用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=14" title="節を編集: 利用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>環境変数は様々な用途で利用される。
+</p>
+<h3><span id=".E6.A9.9F.E5.AF.86.E6.83.85.E5.A0.B1.E3.81.AE.E6.8C.BF.E5.85.A5"></span><span class="mw-headline" id="機密情報の挿入">機密情報の挿入</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=15" title="節を編集: 機密情報の挿入">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>環境変数はアプリケーションへ機密情報（Credentials）を渡すために用いられる。
+</p><p>アプリケーションコードはしばしば<a href="/wiki/Git" title="Git">Git</a>等のバージョン管理ソフトで管理され、レポジトリに登録される。レポジトリに登録されるコードは特定・不特定多数に見られることを前提としているが、機密情報はむしろそれを避ける必要がある。ゆえにコードと機密情報を分離し、コードの実行時に機密情報を渡す仕組みが必要になる。
+</p><p>機密情報を渡す方法の1つは、バージョン管理から除外された設定ファイルである<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。プログラム実行時の引数としてこの設定ファイルを渡すことで機密情報を利用できるが、設定ファイルはコードと同じ「ファイル」であり、レポジトリへ誤ってコミットされ機密情報が暴露されるリスクがある。
+</p><p>アプリケーション外からのデータ挿入において、環境変数がもつ単純さ・言語非依存性・OS間可搬性は大きなメリットを持つ<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。また環境変数はファイルでないため誤コミットのリスクは小さい<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。そのため特にクラウドネイティブアプリケーションのベストプラクティスとして、機密情報の挿入に環境変数が用いられる<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=16" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">J. Eby, Phillip (2003年11月7日). “<a class="external text" href="https://www.python.org/dev/peps/pep-0333/#environ-variables" rel="nofollow">PEP 333 -- Python Web Server Gateway Interface v1.0</a>” (英語). <i>Python.org</i>. <span title="">2017年3月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.rubydoc.info/github/rack/rack/file/SPEC" rel="nofollow">File: SPEC — Documentation for rack/rack (master)</a>” (英語). <span title="">2017年3月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">設定に対するもう1つのアプローチは、バージョン管理システムにチェックインされない設定ファイルを使う方法である。 <a class="external text" href="https://12factor.net/ja/config" rel="nofollow">The Twelve-Factor App - III. 設定</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">独自形式の設定ファイルやJava System Propertiesなど他の設定の仕組みとは異なり、環境変数は言語やOSに依存しない標準である。 <a class="external text" href="https://12factor.net/ja/config" rel="nofollow">The Twelve-Factor App</a></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">設定ファイルとは異なり、誤ってリポジトリにチェックインされる可能性はほとんどない。 <a class="external text" href="https://12factor.net/ja/config" rel="nofollow">The Twelve-Factor App</a></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">設定には以下のものが含まれる。 ... 外部サービスの認証情報 ... <b>Twelve-Factor Appは設定を <i>環境変数</i> に格納する。</b> <a class="external text" href="https://12factor.net/ja/config" rel="nofollow">The Twelve-Factor App - III. 設定</a></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331155050
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.103 seconds
+Real time usage: 0.149 seconds
+Preprocessor visited node count: 1021/1000000
+Post‐expand include size: 3486/2097152 bytes
+Template argument size: 1575/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2916/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 5246976/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  116.943      1 -total
+ 49.78%   58.210      1 テンプレート:Reflist
+ 45.82%   53.589      2 テンプレート:Cite_web
+ 36.99%   43.257      5 テンプレート:ISO639言語名
+ 35.79%   41.852      1 テンプレート:Lang-en
+ 33.54%   39.218      1 テンプレート:LangWithName
+ 12.34%   14.427      2 テンプレート:Accessdate
+ 10.65%   12.458      2 テンプレート:Ifempty
+ 10.41%   12.172      1 テンプレート:Citation/showdate
+  7.53%    8.805      1 テンプレート:Citation/showdateCore
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:414965-0!canonical and timestamp 20220331155050 and revision id 269372. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=環境変数&amp;oldid=269372">http://localhost:8080/w/index.php?title=環境変数&amp;oldid=269372</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF" title="カテゴリ:オペレーティングシステムの仕組み">オペレーティングシステムの仕組み</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;returntoquery=curid%3D414965%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;returntoquery=curid%3D414965%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;oldid=269372" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年4月19日 (日) 04:52 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.103","walltime":"0.149","ppvisitednodes":{"value":1021,"limit":1000000},"postexpandincludesize":{"value":3486,"limit":2097152},"templateargumentsize":{"value":1575,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2916,"limit":5000000},"timingprofile":["100.00%  116.943      1 -total"," 49.78%   58.210      1 テンプレート:Reflist"," 45.82%   53.589      2 テンプレート:Cite_web"," 36.99%   43.257      5 テンプレート:ISO639言語名"," 35.79%   41.852      1 テンプレート:Lang-en"," 33.54%   39.218      1 テンプレート:LangWithName"," 12.34%   14.427      2 テンプレート:Accessdate"," 10.65%   12.458      2 テンプレート:Ifempty"," 10.41%   12.172      1 テンプレート:Citation/showdate","  7.53%    8.805      1 テンプレート:Citation/showdateCore"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":5246976,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331155050","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":278});});</script>
+</body></html>

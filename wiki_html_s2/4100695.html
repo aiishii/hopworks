@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Cypher (問い合わせ言語) - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Cypher_問い合わせ言語 rootpage-Cypher_問い合わせ言語 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Cypher (問い合わせ言語)</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>Cypher</b>は<a href="." id="link_a_1" title="宣言型プログラミング">宣言型</a> グラフクエリ言語であり、プロパティグラフにおいて理解しやすい表現で効率的なデータクエリを可能にします。<sup class="reference" id="cite_ref-cypher-introduction_1-0"><a href="#cite_note-cypher-introduction-1">[1]</a></sup>
+</p><p>Cypherの大部分は2011年に Neo4j,Inc (旧、Neo Technology) のアンドレス・テイラー (Andrés Taylor) が考案しました。<sup class="reference" id="cite_ref-cypher-paper_2-0"><a href="#cite_note-cypher-paper-2">[2]</a></sup> Cypherはもともと<a href="." id="link_a_2" title="Neo4j">Neo4j</a>グラフデータベースで使用することを目的としていましたが、2015年10月にopenCypherと言うオープンソースプロジェクトとして公開されました。<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>この言語は、RDBMSの標準クエリ言語である<a href="." id="link_a_3" title="SQL">SQL</a>の能力と機能を念頭に置いて設計されましたが、<a href="." id="link_a_4" title="グラフ理論">グラフ理論</a>の概念を持つデータベースの構成と要求に基づいて設計されています。グラフモデルでは、データはノードおよびリレーションシップ（エッジ）で表現され、データのエンティティ間の接続や関連に焦点を当てています。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#グラフモデル"><span class="tocnumber">1</span> <span class="toctext">グラフモデル</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#型システム"><span class="tocnumber">1.1</span> <span class="toctext">型システム</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#構文"><span class="tocnumber">2</span> <span class="toctext">構文</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#キーワード"><span class="tocnumber">2.1</span> <span class="toctext">キーワード</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#標準化"><span class="tocnumber">3</span> <span class="toctext">標準化</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#関連記事"><span class="tocnumber">4</span> <span class="toctext">関連記事</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<h2><span id=".E3.82.B0.E3.83.A9.E3.83.95.E3.83.A2.E3.83.87.E3.83.AB"></span><span class="mw-headline" id="グラフモデル">グラフモデル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=1" title="節を編集: グラフモデル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cypherは、データをノードとエッジ（Cypherでは「リレーションシップ」と呼ばれます）で表現するプロパティグラフモデルに基づいています。ノードとリレーションシップと言う標準の要素に加え、プロパティグラフモデルではデータのより細かいカテゴリと属性を記述するためにラベルとプロパティを追加しています。
+</p><p>ノードはグラフではエンティティを表します。ノードとリレーションシップはプロパティと呼ばれる属性（キーバリューペア）をいくつでも持つことができます。ノードは、さまざまな分類を表す0個以上のラベル（タグやカテゴリのようなもの）を付けることができます。リレーションシップは、2つのノードの間に意味のある有向の接続関係を作ります。1つのリレーションシップには、常に方向、開始ノード、終了ノード、および1つのリレーションシップの型があります。ノードと同様に、リレーションシップにもプロパティを設定できます。<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>
+</p><p>ノードに0個以上のラベルを割り当てることにより、類似したノードをグループ化できます。ラベルは一種のタグであり、エンティティの特定の型を指定して検索または作成できます。プロパティは、文字列キーとCypherのデータ型の値で関連づけられたキーバリューペアです。
+Cypherのクエリは、データを作成、読み取り、更新、削除する記述と検索条件を組み合わせたノードとリレーションシップで構成されています。
+</p>
+<h3><span id=".E5.9E.8B.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="型システム">型システム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=2" title="節を編集: 型システム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Cypherのデータ型は、他のプログラミング言語やクエリ言語で使用される一般的な型の多くが含まれています。サポートされる型は、ブール、文字列、数値、整数、浮動小数点数などのスカラー値の型が含まれます。また、datetime、localdatetime、date、time、localtime、durationなどの時間型もサポートしています。<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>
+</p>
+<h2><span id=".E6.A7.8B.E6.96.87"></span><span class="mw-headline" id="構文">構文</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=3" title="節を編集: 構文">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cypherクエリ言語は、ノードとリレーションシップのパターンを表し、ラベルとプロパティでそれらのパターンをフィルタリングします。Cypherの構文は、<a href="/wiki/%E3%82%A2%E3%82%B9%E3%82%AD%E3%83%BC%E3%82%A2%E3%83%BC%E3%83%88" title="アスキーアート">アスキーアート</a>に基づいています。これは、コンピューター用ASCIIコードを使ったテキストベースのビジュアルアートです。これにより、言語はクエリで指定されたデータ構造を視覚的および構造的に表すため、非常に視覚的で読みやすくなっています。
+たとえば、ノードは、エンティティに関する属性と情報を囲む丸括弧で表されます。リレーションシップは、リレーションシップタイプを角括弧で囲んだ矢印（有向または無向）で示されます。
+&lt;syntaxhighlight lang="cypher"&gt;
+//ノード
+(variable:Label {propertyKey: 'propertyValue'})
+</p><p>//リレーションシップ
+-[variable:RELATIONSHIP_TYPE]-&gt;
+</p><p>//Cypherパターン
+(node1:LabelA)-[rel1:RELATIONSHIP_TYPE]-&gt;(node2:LabelB)
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E3.82.AD.E3.83.BC.E3.83.AF.E3.83.BC.E3.83.89"></span><span class="mw-headline" id="キーワード">キーワード</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=4" title="節を編集: キーワード">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>他のクエリ言語と同様に、Cypherにはパターンの指定、パターンのフィルタリング、および結果を返すためのさまざまなキーワードが含まれています。最も一般的なものは、MATCH、WHERE、RETURNです。これらは、<a href="/wiki/SQL" title="SQL">SQL</a>のSELECTおよびWHEREとは少し異なる記述になりますが、同じような動作になります。
+</p><p>MATCHは、ノード、リレーションシップ、またはノードとリレーションシップの組み合わせを検索するための検索パターンを記述する時に使用されます。<sup class="reference" id="cite_ref-cypher-match_6-0"><a href="#cite_note-cypher-match-6">[6]</a></sup> CypherのWHEREは、パターンに制約を追加したり不要なパターンを除外したりするために使用されます。<sup class="reference" id="cite_ref-cypher-where_7-0"><a href="#cite_note-cypher-where-7">[7]</a></sup> CypherのRETURNは、結果の出力をフォーマットしたり並べたりします。他のクエリ言語と同様に、特定のプロパティ、リスト、並べ替えなどを使用して結果を返すことができます。<sup class="reference" id="cite_ref-cypher-return_8-0"><a href="#cite_note-cypher-return-8">[8]</a></sup>
+</p><p>上記のパターン構文のキーワードを使用して、以下のクエリの例では、ノード（Actorラベルとnameプロパティが「Nicole Kidman」の値を持つ）からリレーションシップ（ACTED_INの矢印）によって別のノード（Movieラベル）に接続されたパターンを検索します。次に、WHERE句は、MATCH句のMovieノードに渡されたパラメーターの値より小さいyearプロパティがあるパターンのみを検索するようにフィルター処理します。戻り値は、パターンに一致するMovieノードを出力するように指定し、MATCH句とWHERE句で選択します。
+</p><p>&lt;syntaxhighlight lang="cypher"&gt;
+MATCH (nicole:Actor {name: 'Nicole Kidman'})-[:ACTED_IN]-&gt;(movie:Movie)
+WHERE movie.year &lt; $yearParameter
+RETURN movie&lt;/syntaxhighlight&gt;
+</p><p>Cypherには、データの書き込み、更新、削除の句を指定するキーワードもあります。CREATEおよびDELETEは、ノードおよびリレーションシップを作成および削除するために使用されます。SETおよびREMOVEは、プロパティに値を設定したりノードにラベルを追加したりするために使用されます。MERGEは、重複することなく一意にノードを作成するために使用されます。ノードは、他とのリレーションシップがまだ存在しない場合にのみ削除できます。Cypherの事例: <sup class="reference" id="cite_ref-cypher-queries_9-0"><a href="#cite_note-cypher-queries-9">[9]</a></sup>
+</p><p>&lt;syntaxhighlight lang="cypher"&gt;
+MATCH (startContent:Content)-[relationship:IS_RELATED_TO]-&gt;(endContent:Content)
+WHERE endContent.source = 'user'
+OPTIONAL MATCH (endContent)-[r]-()
+DELETE relationship, endContent&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id=".E6.A8.99.E6.BA.96.E5.8C.96"></span><span class="mw-headline" id="標準化">標準化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=5" title="節を編集: 標準化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>openCypherプロジェクトにおいて、Cypherをグラフ処理のクエリ言語として標準化する取り組みが始まりました。この取り組みでは、5回のopenCypher Implementers Meeting (oCIM) が開催されました。最初の会議は2017年2月にドイツのヴァルドルフにあるSAP本社で開催され、Linked Data Benchmark Councilの会議と同時に開催されました。直近のoCIMは2019年3月にベルリンで<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>グラフデータのWeb標準に関するW3Cワークショップと同時開催されました。<sup class="reference" id="cite_ref-W3C_Graph_Data_Berlin_11-0"><a href="#cite_note-W3C_Graph_Data_Berlin-11">[11]</a></sup>.
+</p><p>その会議では、国際標準化されたGQLと呼ばれるグラフクエリ言語のより大きなプロジェクトに重要なインプットとなるCypherに対して作業を行うという合意がありました。2019年9月、GQL標準プロジェクトの提案は、ISOとIECの第一合同技術委員会（情報技術分野の標準化活動を担当）のメンバーである国家標準化団体の投票により承認されました。<sup class="reference" id="cite_ref-39075_GQL_12-0"><a href="#cite_note-39075_GQL-12">[12]</a></sup>GQLプロジェクトの提案では、次のことを述べています:
+</p><p><i>データモデリングの基本的な表現としてグラフを使用することは、データ管理の新しいアプローチです。このアプローチでは、データセットはグラフとしてモデル化され、各データエンティティをグラフの頂点（ノードとも呼ばれます）として表し、2つのエンティティ間の各関係を対応する頂点間のエッジとして表します。グラフデータモデルは、そのユニークな利点で注目されています。まず、グラフモデルは、階層構造、複雑な構造、任意の構造を持つデータセットにも自然に適合することができます。このような構造は、エッジとしてグラフモデルに簡単に変換できます。これは、全てに共通の列を持つテーブルでデータの正規化を必要とするリレーショナルモデルよりも便利です。次に、グラフモデルにより、到達可能性クエリ、最短経路または最安経路クエリ、中心性分析など、データエンティティ間のマルチホップ関係を観察する必要があるような価値があるクエリまたはデータ分析機能を効率的に実行できます。現在使用されているグラフモデルには、リソース記述フレームワーク（RDF）モデルとプロパティグラフモデルの2つがあります。RDFモデルは、多くの仕様でW3Cによって標準化されています。一方、プロパティグラフモデルは、グラフデータベース、グラフアルゴリズム、およびグラフ処理機能など数多く実装されています。しかしながら、プロパティグラフの一般的に標準化されたクエリ言語（リレーショナルデータベースシステムのSQLのようなもの）がありません。GQLはこの空白を埋めるために提案されています。</i><sup class="reference" id="cite_ref-BSI_39075_GQL_13-0"><a href="#cite_note-BSI_39075_GQL-13">[13]</a></sup>.
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E8.A8.98.E4.BA.8B"></span><span class="mw-headline" id="関連記事">関連記事</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=6" title="節を編集: 関連記事">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Neo4j" title="Neo4j">Neo4j</a>, Cypherクエリ言語を実装した最も人気のあるグラフデータベース</li>
+<li><a href="/wiki/SPARQL" title="SPARQL">SPARQL</a>, RDF問合せ言語</li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AC%E3%83%A0%E3%83%AA%E3%83%B3_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="グレムリン (プログラミング言語)">グレムリン (プログラミング言語)</a>, Apache TinkerPopにより開発されたプログラミング言語</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;section=7" title="節を編集: References">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-cypher-introduction-1"><b><a href="#cite_ref-cypher-introduction_1-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://neo4j.com/docs/cypher-manual/current/" rel="nofollow">Cypher Introduction</a>”.   Neo4j. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-cypher-paper-2"><b><a href="#cite_ref-cypher-paper_2-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://hal.archives-ouvertes.fr/hal-01803524/file/paper.pdf" rel="nofollow">Cypher: An Evolving Query Language for Property Graphs</a>”.   Proceedings of the 2018 International Conference on Management of Data. ACM. <span title="">2018年6月27日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation news" style="font-style:normal"><a class="external text" href="https://neo4j.com/blog/open-cypher-sql-for-graphs/" rel="nofollow">“Meet openCypher: The SQL for Graphs - Neo4j Graph Database”</a> (英語). <i>Neo4j Graph Database</i>. (2015年10月21日)<span style="display:none;">. <a class="external free" href="https://neo4j.com/blog/open-cypher-sql-for-graphs/" rel="nofollow">https://neo4j.com/blog/open-cypher-sql-for-graphs/</a></span> <span class="reference-accessdate"><span title="">2019年11月8日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Meet+openCypher%3A+The+SQL+for+Graphs+-+Neo4j+Graph+Database&amp;rft.jtitle=Neo4j+Graph+Database&amp;rft.date=2015%E5%B9%B410%E6%9C%8821%E6%97%A5&amp;rft_id=https%3A%2F%2Fneo4j.com%2Fblog%2Fopen-cypher-sql-for-graphs%2F&amp;rfr_id=info:sid/ja.wikipedia.org:Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://github.com/opencypher/openCypher/blob/master/docs/property-graph-model.adoc" rel="nofollow">Property Graph Model</a>” (英語). <i>GitHub</i>. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://github.com/opencypher/openCypher/blob/master/cip/1.accepted/CIP2015-09-16-public-type-system-type-annotation.adoc" rel="nofollow">Cypher Type System</a>” (英語). <i>GitHub</i>. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-cypher-match-6"><b><a href="#cite_ref-cypher-match_6-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://neo4j.com/docs/cypher-manual/current/clauses/match/" rel="nofollow">Cypher manual - MATCH clause</a>”.   Neo4j. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-cypher-where-7"><b><a href="#cite_ref-cypher-where_7-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://neo4j.com/docs/cypher-manual/current/clauses/where/" rel="nofollow">Cypher manual - WHERE clause</a>”.   Neo4j. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-cypher-return-8"><b><a href="#cite_ref-cypher-return_8-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://neo4j.com/docs/cypher-manual/current/clauses/return/" rel="nofollow">Cypher manual - RETURN clause</a>”.   Neo4j. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-cypher-queries-9"><b><a href="#cite_ref-cypher-queries_9-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://neo4j.com/docs/cypher-manual/current/clauses/" rel="nofollow">Cypher manual clauses</a>”.   Neo4j. <span title="">2019年11月8日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external free" href="https://www.opencypher.org/events" rel="nofollow">https://www.opencypher.org/events</a></span>
+</li>
+<li id="cite_note-W3C_Graph_Data_Berlin-11"><b><a href="#cite_ref-W3C_Graph_Data_Berlin_11-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.w3.org/Data/events/data-ws-2019/cfp.html" rel="nofollow">W3C Workshop on Web Standardization for Graph Data. Creating Bridges: RDF, Property Graph and SQL</a>”.   W3C. <span title="September 29, 2019">2019年9月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-39075_GQL-12"><b><a href="#cite_ref-39075_GQL_12-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.iso.org/standard/76120.html" rel="nofollow">ISO/IEC WD 39075 Information Technology — Database Languages — GQL</a>”.   ISO. <span title="September 29, 2019">2019年9月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-BSI_39075_GQL-13"><b><a href="#cite_ref-BSI_39075_GQL_13-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://standardsdevelopment.bsigroup.com/projects/9019-02970" rel="nofollow">ISO/IEC JTC 1/SC 32 N 3007 - ISO/IEC NP 39075 Information Technology -- Database Languages -- GQL</a>”.   British Standards Institute. <span title="September 29, 2019">2019年9月29日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<div aria-labelledby="問い合わせ言語" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:問い合わせ言語 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="問い合わせ言語" style="font-size:110%;margin:0 6em">問い合わせ言語</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">現役</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=.QL&amp;action=edit&amp;redlink=1" title=".QL (存在しないページ)">.QL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:.QL&amp;action=edit&amp;redlink=1" title="En:.QL (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Alpha_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;redlink=1" title="Alpha (プログラミング言語) (存在しないページ)">Alpha</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Alpha_(programming_language)&amp;action=edit&amp;redlink=1" title="En:Alpha (programming language) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Contextual_Query_Language" title="Contextual Query Language">CQL</a></li>
+<li><a class="mw-selflink selflink">Cypher</a></li>
+<li><a href="/wiki/D_(%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E8%A8%80%E8%AA%9E%E4%BB%95%E6%A7%98)" title="D (データベース言語仕様)">D</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Data_Mining_Extensions&amp;action=edit&amp;redlink=1" title="Data Mining Extensions (存在しないページ)">DMX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Data_Mining_Extensions&amp;action=edit&amp;redlink=1" title="En:Data Mining Extensions (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Datalog&amp;action=edit&amp;redlink=1" title="Datalog (存在しないページ)">Datalog</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Datalog&amp;action=edit&amp;redlink=1" title="En:Datalog (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/GraphQL" title="GraphQL">GraphQL</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AC%E3%83%A0%E3%83%AA%E3%83%B3_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="グレムリン (プログラミング言語)">Gremlin</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ISBL&amp;action=edit&amp;redlink=1" title="ISBL (存在しないページ)">ISBL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ISBL&amp;action=edit&amp;redlink=1" title="En:ISBL (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/LDAP" title="LDAP">LDAP</a></li>
+<li><a class="mw-redirect" href="/wiki/LINQ" title="LINQ">LINQ</a></li>
+<li><a href="/wiki/Molecular_Query_Language" title="Molecular Query Language">MQL</a></li>
+<li><a href="/wiki/MDX_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)" title="MDX (問い合わせ言語)">MDX</a></li>
+<li><a class="mw-redirect" href="/wiki/OQL" title="OQL">OQL</a></li>
+<li><a class="mw-redirect" href="/wiki/OCL" title="OCL">OCL</a></li>
+<li><a href="/wiki/QUEL" title="QUEL">QUEL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SMILES_arbitrary_target_specification&amp;action=edit&amp;redlink=1" title="SMILES arbitrary target specification (存在しないページ)">SMARTS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SMILES_arbitrary_target_specification&amp;action=edit&amp;redlink=1" title="En:SMILES arbitrary target specification (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/SPARQL" title="SPARQL">SPARQL</a></li>
+<li><a href="/wiki/SQL" title="SQL">SQL</a></li>
+<li><a href="/wiki/XQuery" title="XQuery">XQuery</a></li>
+<li><a class="mw-redirect" href="/wiki/XPath" title="XPath">XPath</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Yahoo!_Query_Language&amp;action=edit&amp;redlink=1" title="Yahoo! Query Language (存在しないページ)">YQL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Yahoo!_Query_Language&amp;action=edit&amp;redlink=1" title="En:Yahoo! Query Language (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プロプライエタリ</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Yahoo!_Query_Language&amp;action=edit&amp;redlink=1" title="Yahoo! Query Language (存在しないページ)">YQL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Yahoo!_Query_Language&amp;action=edit&amp;redlink=1" title="En:Yahoo! Query Language (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/LINQ" title="LINQ">LINQ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">歴史的</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CODASYL" title="CODASYL">CODASYL</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402045724
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.216 seconds
+Real time usage: 0.429 seconds
+Preprocessor visited node count: 4673/1000000
+Post‐expand include size: 39476/2097152 bytes
+Template argument size: 9451/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 7/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 7646/5000000 bytes
+Lua time usage: 0.090/7 seconds
+Lua virtual size: 6017024/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  375.521      1 -total
+ 69.97%  262.745      1 テンプレート:Reflist
+ 40.39%  151.670     11 テンプレート:Cite_web
+ 30.01%  112.678      1 テンプレート:問い合わせ言語
+ 27.39%  102.871      1 テンプレート:Navbox
+ 23.90%   89.731      8 テンプレート:Ill
+ 23.19%   87.086     11 テンプレート:Ifempty
+ 21.75%   81.669      1 テンプレート:Cite_news
+ 19.39%   72.809      1 テンプレート:Citation/core
+ 10.90%   40.940     12 テンプレート:Accessdate
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4100695-0!canonical and timestamp 20220402045724 and revision id 2423327. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Cypher_(問い合わせ言語)&amp;oldid=2423327">http://localhost:8080/w/index.php?title=Cypher_(問い合わせ言語)&amp;oldid=2423327</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E" title="カテゴリ:問い合わせ言語">問い合わせ言語</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:NoSQL%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="カテゴリ:NoSQLデータベース">NoSQLデータベース</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Cypher+%28%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E%29&amp;returntoquery=curid%3D4100695%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Cypher+%28%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E%29&amp;returntoquery=curid%3D4100695%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;oldid=2423327" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Cypher_(%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E8%A8%80%E8%AA%9E)&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年11月30日 (月) 03:37 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.216","walltime":"0.429","ppvisitednodes":{"value":4673,"limit":1000000},"postexpandincludesize":{"value":39476,"limit":2097152},"templateargumentsize":{"value":9451,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":7,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7646,"limit":5000000},"timingprofile":["100.00%  375.521      1 -total"," 69.97%  262.745      1 テンプレート:Reflist"," 40.39%  151.670     11 テンプレート:Cite_web"," 30.01%  112.678      1 テンプレート:問い合わせ言語"," 27.39%  102.871      1 テンプレート:Navbox"," 23.90%   89.731      8 テンプレート:Ill"," 23.19%   87.086     11 テンプレート:Ifempty"," 21.75%   81.669      1 テンプレート:Cite_news"," 19.39%   72.809      1 テンプレート:Citation/core"," 10.90%   40.940     12 テンプレート:Accessdate"]},"scribunto":{"limitreport-timeusage":{"value":"0.090","limit":"7"},"limitreport-virtmemusage":{"value":6017024,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402045724","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":586});});</script>
+</body></html>

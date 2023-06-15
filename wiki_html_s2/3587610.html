@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>フレッツ網におけるIPv6 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-フレッツ網におけるIPv6 rootpage-フレッツ網におけるIPv6 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">フレッツ網におけるIPv6</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>フレッツ網におけるIPv6</b>では、<a href="." id="link_a_1" title="東日本電信電話">NTT東日本</a>および<a href="." id="link_a_2" title="西日本電信電話">NTT西日本</a>が提供する<a href="." id="link_a_3" title="フレッツ">フレッツ</a>サービスにおける<a href="." id="link_a_4" title="IPv6">IPv6</a>の適用について記述する。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#閉域網としてのIPv6サービス"><span class="tocnumber">2</span> <span class="toctext">閉域網としてのIPv6サービス</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#IPv6接続サービス"><span class="tocnumber">3</span> <span class="toctext">IPv6接続サービス</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#インターネット_(IPv6_IPoE)_接続"><span class="tocnumber">3.1</span> <span class="toctext">インターネット (IPv6 IPoE) 接続</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#IPv4_over_IPv6"><span class="tocnumber">3.1.1</span> <span class="toctext">IPv4 over IPv6</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#対応CPE_(IPv4_over_IPv6を利用する場合)"><span class="tocnumber">3.1.2</span> <span class="toctext">対応CPE (IPv4 over IPv6を利用する場合)</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#対応CPE_(IPv4_over_IPv6を利用しない場合)"><span class="tocnumber">3.1.3</span> <span class="toctext">対応CPE (IPv4 over IPv6を利用しない場合)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#インターネット_(IPv6_PPPoE)_接続"><span class="tocnumber">3.2</span> <span class="toctext">インターネット (IPv6 PPPoE) 接続</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#対応CPE"><span class="tocnumber">3.2.1</span> <span class="toctext">対応CPE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#フレッツ網でのIPv6サービスに関する諸問題"><span class="tocnumber">4</span> <span class="toctext">フレッツ網でのIPv6サービスに関する諸問題</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#IPv6-IPv4フォールバック問題"><span class="tocnumber">4.1</span> <span class="toctext">IPv6-IPv4フォールバック問題</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#フォールバックのタイムアウト時間とフレッツ網側対策"><span class="tocnumber">4.2</span> <span class="toctext">フォールバックのタイムアウト時間とフレッツ網側対策</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#AAAAフィルタ"><span class="tocnumber">4.3</span> <span class="toctext">AAAAフィルタ</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#IPv6マルチプレフィックス問題"><span class="tocnumber">4.4</span> <span class="toctext">IPv6マルチプレフィックス問題</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#（参考）IPv6_PPPoE対応CPEの要求仕様"><span class="tocnumber">4.5</span> <span class="toctext">（参考）IPv6 PPPoE対応CPEの要求仕様</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#IPv4、IPv6二重投資問題"><span class="tocnumber">5</span> <span class="toctext">IPv4、IPv6二重投資問題</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#注釈"><span class="tocnumber">6.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#出典"><span class="tocnumber">6.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1" title="日本電信電話">NTT</a>（<a href="/wiki/%E6%9D%B1%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1" title="東日本電信電話">東日本</a>、<a href="/wiki/%E8%A5%BF%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1" title="西日本電信電話">西日本</a>）の<a href="/wiki/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84" title="フレッツ">フレッツ</a>網は、実運用されているIPv6のネットワークとしては2011年現在で約1390万回線を有する世界最大級のネットワークである。NTTのフレッツ網では、IPv6のグローバルユニキャストアドレスで構築されている。グローバルユニキャストアドレスである理由は、
+</p>
+<ol><li>NTTがIPv6の採用を検討していた時点では、ユニークローカルユニキャストアドレスやサイトローカルユニキャストアドレスに関する仕様変更が議論の的になっており確実に使用できる保証が無かったこと。</li>
+<li>今後NTTが予定している回線すべてにIPv6プレフィックスを配布するにはユニークローカルユニキャストアドレスではIPv6プレフィックスの数が足りないこと。</li>
+<li>フレッツ網でユニークローカルユニキャストアドレスを使用してしまうと、ユーザ側でユニークローカルユニキャストアドレスを使用できなくなるためである。</li>
+<li>また、マルチキャストによるコンテンツ配信のインフラ整備も計画されていた。</li></ol>
+<p>しかし、<a href="/wiki/%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B" title="日本電信電話株式会社等に関する法律">日本電信電話株式会社等に関する法律</a>により、<a href="/wiki/%E6%97%A5%E6%9C%AC" title="日本">日本</a>国外との通信業務が制限されていることから、グローバルユニキャストアドレスを使用していても、IPv6インターネット<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[注 1]</a></sup>に対する接続サービスをNTTが提供することができないため<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202026_2-0"><a href="#cite_note-FOOTNOTE小川久保田202026-2">[1]</a></sup>、<a href="/wiki/Next_Generation_Network#NGN（NTTグループ）" title="Next Generation Network">NGN</a>は閉域網としてインターネット (IPv6) からは孤立しており<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202026_2-1"><a href="#cite_note-FOOTNOTE小川久保田202026-2">[1]</a></sup>、相互にルーティングはされないのが基本である。また、そのような構造の副作用により、IPv6-IPv4フォールバック問題や、IPv6マルチプレフィックス問題が発生している<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[2]</a></sup>。
+</p>
+<h2><span id=".E9.96.89.E5.9F.9F.E7.B6.B2.E3.81.A8.E3.81.97.E3.81.A6.E3.81.AEIPv6.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9"></span><span class="mw-headline" id="閉域網としてのIPv6サービス">閉域網としてのIPv6サービス</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=2" title="節を編集: 閉域網としてのIPv6サービス">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>NTT西日本のフレッツ光プレミアム及びv6アプリの個別契約、NTT東日本のフレッツ・ドットネットの個別契約、並びに平成19年2月24日以降、新規開通したBフレッツに割り当てられる。また、準備が整いしだいNTT東日本の既存BフレッツユーザにもIPv6が割り当てられるようになる。ただし、これらは「フレッツ」網内だけ（「フレッツスクウェア」など「フレッツ」網内だけで提供されるサービス）の機能であり、インターネットのIPv6空間への接続には「フレッツ光ネクスト」およびこれに対応したプロバイダへの契約が必要となる（当初2011年4月にサービス開始予定であったが、東日本大震災のため遅延した）。また、プロバイダによっては現状のIPv4網内にトンネリングなどの形でIPv6網へ接続できるサービスを提供しているところもある。
+</p>
+<h2><span id="IPv6.E6.8E.A5.E7.B6.9A.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9"></span><span class="mw-headline" id="IPv6接続サービス">IPv6接続サービス</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=3" title="節を編集: IPv6接続サービス">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>NTTのフレッツ網では、<a href="/wiki/Next_Generation_Network" title="Next Generation Network">NGN</a>サービスであるフレッツ 光ネクストにおいては、IPv6インターネットに接続するための回線サービス品目の名称として、「インターネット (IPv6 IPoE) 接続」と「インターネット (IPv6 PPPoE) 接続」の2つの方法により提供をしている。なお、IPv4と同様にインターネットへの最終的な接続性を提供するのはISPである。フレッツ光ネクストにおけるISPによるIPv6接続サービスの普及率は、2020年9月現在で76.1％である<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[3]</a></sup>。
+</p><p>Bフレッツやフレッツ 光プレミアム<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[注 2]</a></sup>の既存ユーザの一部については、前述「<a href="#閉域網としてのIPv6サービス">閉域網としてのIPv6サービス</a>」のとおり、フレッツ網内の閉域網通信用にIPv6プロトコルが使用されている場合があるが、「インターネット (IPv6 IPoE) 接続」と「インターネット (IPv6 PPPoE) 接続」のような、IPv6インターネットに接続するための回線サービスは提供されておらず、利用できない。NTT東西及びISP側は、フレッツ 光ネクストへの変更を推奨している。フレッツ 光ネクストに変更せずにIPv6インターネットに接続したい場合には、フレッツサービス以外の一般のトンネリング接続サービス (IPv6 over IPv4) を別途利用する必要がある。
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.8D.E3.83.83.E3.83.88_.28IPv6_IPoE.29_.E6.8E.A5.E7.B6.9A"></span><span class="mw-headline" id="インターネット_(IPv6_IPoE)_接続">インターネット (IPv6 IPoE) 接続</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=4" title="節を編集: インターネット (IPv6 IPoE) 接続">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>網構成から「ネイティブ方式」<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[注 3]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE小川久保田202025_7-0"><a href="#cite_note-FOOTNOTE小川久保田202025-7">[4]</a></sup>、「NGN IPoE」と呼ばれる事もある。<sup class="reference" id="cite_ref-:1_8-0"><a href="#cite_note-:1-8">[注 4]</a></sup>
+</p><p>ISPが<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a>事業者<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[注 5]</a></sup>をリセールする契約形態<sup class="reference" id="cite_ref-:4_10-0"><a href="#cite_note-:4-10">[注 6]</a></sup>により、ユーザはVNEが振り当てるIPv6プレフィックスを使用し、フレッツ網 (NGN) からVNEを介して、直接インターネットに通信する方式である<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[注 7]</a></sup><sup class="reference" id="cite_ref-internet.watch.impress-534687_12-0"><a href="#cite_note-internet.watch.impress-534687-12">[5]</a></sup><sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[6]</a></sup><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[7]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE小川久保田20203,31,33-34_15-0"><a href="#cite_note-FOOTNOTE小川久保田20203,31,33-34-15">[8]</a></sup>。IPv6についてはNGN経由でインターネットと直結（ダイレクトルーティング）<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[注 8]</a></sup>する事になる。
+</p><p>この方式を利用したいユーザは、NTT東西とフレッツ・v6オプションを契約することが前提となる<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202088_17-0"><a href="#cite_note-FOOTNOTE小川久保田202088-17">[9]</a></sup>。この契約により、フレッツ 光ネクストの標準契約では閉域網であったNGNを、指定した<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a>（加えて、フレッツ・v6オプションにより同じフレッツ網に接続されている全ユーザ間）との直接のIPv6通信のために利用できるようになる。これらのIPv6通信の経路に関しては、VNE接続事業者のリセール元であるISP<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[注 9]</a></sup><sup class="reference" id="cite_ref-:4_10-1"><a href="#cite_note-:4-10">[注 6]</a></sup>のPPPoEネットワークを介さず、NGNを介した直接通信となる。よって、IPv6のためにはフレッツ網のPPPoEセッションを消費しない。<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[注 10]</a></sup><sup class="reference" id="cite_ref-internet.watch.impress-534687_12-1"><a href="#cite_note-internet.watch.impress-534687-12">[5]</a></sup>
+</p><p>事例として後述の<a href="/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4" title="ホームゲートウェイ">ホームゲートウェイ</a> (HGW) 有りの場合、DHCPv6-PDによりNGNからHGWに対しVNEの /56 プレフィックスだけが払い出され、HGWからカスタマLAN内に /64 のプレフィックスが広告 (RA) される。HGW無しの場合、NGNからカスタマLAN向けに VNEの /64 プレフィクスが広告される<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[注 11]</a></sup>。すなわち、PPPoEと異なり<a href="/wiki/RADIUS" title="RADIUS">RADIUS</a>による認証が不要となる。
+</p><p>前に述べたリセール形態の故に、ユーザーが契約するISPが、自ら<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a>事業を運営せず、VNEのリセールサービスをも提供していない場合には、ユーザーはこの方式を利用できない。この通信形態では、ISPにとっては、そのISP自身がVNEである場合を除き、IPv4・IPv6のトラフィックを特定のVNEに委託する形になる。<sup class="reference" id="cite_ref-:0_22-0"><a href="#cite_note-:0-22">[注 12]</a></sup>
+</p><p>PPPoEにおけるようなISP相互接続点の網終端装置（NTT東西提供）を通さず、NGNと直接ルーティングする事の副効用として、網終端装置の帯域輻輳による混雑時の通信速度低下が起きにくい、PPPoEを介さずレイテンシが改善、等があるとされており、それをアピールするISP事業者もある。また、この事は次の「IPv4 over IPv6」によるIPv4通信にも及ぶ。<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[注 13]</a></sup><sup class="reference" id="cite_ref-internet.watch.impress-534687_12-2"><a href="#cite_note-internet.watch.impress-534687-12">[5]</a></sup>
+</p>
+<h4><span class="mw-headline" id="IPv4_over_IPv6">IPv4 over IPv6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=5" title="節を編集: IPv4 over IPv6">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>「インターネット (IPv6 IPoE) 接続」利用時では、VNE側がオプションとしてIPv4 over IPv6サービスを提供する場合がある<sup class="reference" id="cite_ref-FOOTNOTE小川久保田2020_24-0"><a href="#cite_note-FOOTNOTE小川久保田2020-24">[11]</a></sup>。多くのVNEや対応ISPでは、IPv6 IPoEサービスに付随して標準でIPv4 over IPv6サービスも提供しているが、提供およびユーザ側での実際の利用について必須ではない。<sup class="reference" id="cite_ref-:0_22-1"><a href="#cite_note-:0-22">[注 12]</a></sup>
+</p><p>IPv6 IPoE接続ネットワーク上で、<a href="/wiki/IPv6%E7%A7%BB%E8%A1%8C%E6%8A%80%E8%A1%93" title="IPv6移行技術">トンネリングまたはトランスレーション (IPv4 over IPv6)</a><sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[注 14]</a></sup>によりIPv4接続性を確保する。IPv4の仮想経路は、ユーザー<a href="/wiki/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E6%A7%8B%E5%86%85%E8%A8%AD%E5%82%99" title="カスタマ構内設備">CPE</a>とVNE事業者機器（仮想経路出口）の間のIPv6上で直接張られ、VNEは、（NGN経由で）インターネットとの間でIPv6の疎通と、IPv4仮想経路出口での接続性を担当することになる。
+</p><p>IPv4が基本的にトンネル経由となる事、<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89NAT" title="キャリアグレードNAT">キャリアグレードNAT</a>が方式によっては多段適用となる事およびIPoE対応CPEが限定される等の事情により、従来のIPv4 PPPoEで可能であったCPEでのポートフォワード、サーバー公開（<a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%8D%E3%83%BC%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ダイナミックドメインネームシステム">Dynamic DNS</a>等）、<a href="/wiki/Point_to_Point_Tunneling_Protocol" title="Point to Point Tunneling Protocol">PPTP</a>等が従来通り利用できるかは不透明である。<sup class="reference" id="cite_ref-:0_22-2"><a href="#cite_note-:0-22">[注 12]</a></sup>
+</p>
+<h4><span id=".E5.AF.BE.E5.BF.9CCPE_.28IPv4_over_IPv6.E3.82.92.E5.88.A9.E7.94.A8.E3.81.99.E3.82.8B.E5.A0.B4.E5.90.88.29"></span><span class="mw-headline" id="対応CPE_(IPv4_over_IPv6を利用する場合)">対応CPE (IPv4 over IPv6を利用する場合)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=6" title="節を編集: 対応CPE (IPv4 over IPv6を利用する場合)">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>IPv6 IPoE + IPv4 over IPv6を利用する場合、次のいずれかの<a href="/wiki/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E6%A7%8B%E5%86%85%E8%A8%AD%E5%82%99" title="カスタマ構内設備">CPE</a>が必要となる<sup class="reference" id="cite_ref-:2_26-0"><a href="#cite_note-:2-26">[注 15]</a></sup><sup class="reference" id="cite_ref-internet.watch.impress-534687_12-3"><a href="#cite_note-internet.watch.impress-534687-12">[5]</a></sup>
+</p>
+<ul><li>ひかり電話対応ホームゲートウェイ（ルータ機能内蔵） - フレッツ 光ネクストでひかり電話を使用する際にレンタルされる（HGW)。
+<ul><li>現状、HGW単体で利用できるIPv4 over IPv6サービスは<a href="/wiki/V6%E3%83%97%E3%83%A9%E3%82%B9" title="V6プラス">V6プラス</a>だけである。</li>
+<li>型番が300番台以降について、フレッツ・ジョイントによりリモート設定サポート（ユーザーがルータ設定画面操作不要）を提供する（<a href="/wiki/V6%E3%83%97%E3%83%A9%E3%82%B9" title="V6プラス">V6プラス</a>の<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a>提供）</li>
+<li>型番が100 - 200番台の場合<sup class="reference" id="cite_ref-:3_27-0"><a href="#cite_note-:3-27">[注 16]</a></sup>、IPv6ブリッジにしか対応していないので以下の対応ルーターが必須になる。</li>
+<li>一時期、VNEの<a href="/wiki/BBIX" title="BBIX">BBIX</a>は、NTT東西のHGWの一部機種で、<a href="/wiki/IPv6%E7%A7%BB%E8%A1%8C%E6%8A%80%E8%A1%93" title="IPv6移行技術">IPv4 over IPv6方式</a>におけるスループットが著しく低下したり、ファームウェアアップデート後にIPv6を全てフィルタする設定になるものがあると指摘した。<sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[12]</a></sup></li></ul></li>
+<li>IPv6 IPoE（ネイティブ方式） および VNEが提供する<a href="/wiki/IPv6%E7%A7%BB%E8%A1%8C%E6%8A%80%E8%A1%93" title="IPv6移行技術">IPv4 over IPv6方式</a>の両方に対応した<a class="mw-redirect" href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC" title="ブロードバンドルーター">ブロードバンドルーター</a><sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[注 17]</a></sup><sup class="reference" id="cite_ref-:5_30-0"><a href="#cite_note-:5-30">[注 18]</a></sup></li></ul>
+<h4><span id=".E5.AF.BE.E5.BF.9CCPE_.28IPv4_over_IPv6.E3.82.92.E5.88.A9.E7.94.A8.E3.81.97.E3.81.AA.E3.81.84.E5.A0.B4.E5.90.88.29"></span><span class="mw-headline" id="対応CPE_(IPv4_over_IPv6を利用しない場合)">対応CPE (IPv4 over IPv6を利用しない場合)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=7" title="節を編集: 対応CPE (IPv4 over IPv6を利用しない場合)">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>IPv6 IPoEだけを利用し、IPv4 over IPv6は利用しない場合、次のいずれかの<a href="/wiki/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E6%A7%8B%E5%86%85%E8%A8%AD%E5%82%99" title="カスタマ構内設備">CPE</a>が必要となる<sup class="reference" id="cite_ref-:2_26-1"><a href="#cite_note-:2-26">[注 15]</a></sup><sup class="reference" id="cite_ref-internet.watch.impress-534687_12-4"><a href="#cite_note-internet.watch.impress-534687-12">[5]</a></sup>
+</p>
+<ul><li>ひかり電話対応ホームゲートウェイ（ルータ機能内蔵）</li>
+<li>IPv6 IPoE（ネイティブ方式） に対応した<a class="mw-redirect" href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC" title="ブロードバンドルーター">ブロードバンドルーター</a><sup class="reference" id="cite_ref-:5_30-1"><a href="#cite_note-:5-30">[注 18]</a></sup></li></ul>
+<p>なお、最低限IPv6パススルー（IPv6ブリッジ）機能のあるルーターを使用すれば、各端末でIPv6接続可能となる場合がある。
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.8D.E3.83.83.E3.83.88_.28IPv6_PPPoE.29_.E6.8E.A5.E7.B6.9A"></span><span class="mw-headline" id="インターネット_(IPv6_PPPoE)_接続">インターネット (IPv6 PPPoE) 接続</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=8" title="節を編集: インターネット (IPv6 PPPoE) 接続">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>網構成から「トンネル方式」<sup class="reference" id="cite_ref-:1_8-1"><a href="#cite_note-:1-8">[注 4]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE小川久保田202025_7-1"><a href="#cite_note-FOOTNOTE小川久保田202025-7">[4]</a></sup>、「NGN PPPoE」と呼ばれる事もある。<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[注 19]</a></sup>
+</p><p>フレッツADSL以降のフレッツサービスにおいては、IPv4 PPPoE を用いて、地域IP網または<a href="/wiki/Next_Generation_Network#NGN（NTTグループ）" title="Next Generation Network">NGN</a>上において、ISP相互接続点の網終端装置（NTT東西提供）までIPv4トンネルを張る事により従来のIPv4接続が実現されているが、これと同様な手法によりNGN上に IPv6 PPPoE トンネルを網終端装置まで張り、IPv6の接続性を実現する方式である<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202031-32_32-0"><a href="#cite_note-FOOTNOTE小川久保田202031-32-32">[13]</a></sup>。
+</p><p>IPv6 IPoEとは異なり、NGNに直結はしないためフレッツ・v6オプションの契約は不要であるが、IPv6 PPPoE を追加セッションとして張るため、フレッツサービスにて新たなPPPoEセッションを1つ消費する<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[注 20]</a></sup>と共に、利用中のISPに別途オプション等としての契約が必要となる。
+</p><p>後述の<a href="#（参考）IPv6_PPPoE対応CPEの要求仕様">対応CPEの仕様</a>の通り端末との通信の際、IPv4については、従来通りNAT/NAPTが適用される。またIPv6については、IPv6インターネットへの通信と、NGN閉域網へのIPv6通信を正しく振り分ける機能を持つ。さらに、IPv6インターネットへの通信は、単純にルーティングのみを行う。NGN閉域網への通信に対しては、NAT/NAPTが適用される。<sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[注 21]</a></sup>
+</p>
+<h4><span id=".E5.AF.BE.E5.BF.9CCPE"></span><span class="mw-headline" id="対応CPE">対応CPE</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=9" title="節を編集: 対応CPE">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>この方式のために、次のいずれかの<a href="/wiki/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E6%A7%8B%E5%86%85%E8%A8%AD%E5%82%99" title="カスタマ構内設備">CPE</a>が必要となる<sup class="reference" id="cite_ref-:2_26-2"><a href="#cite_note-:2-26">[注 15]</a></sup><sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[注 22]</a></sup>。なお、ユーザー住所（地方）によっては利用できない（全国サービス未実施）ISPがある。
+</p>
+<ul><li>ひかり電話対応ホームゲートウェイ（ルータ機能内蔵） - フレッツ 光ネクストで<a href="/wiki/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84" title="フレッツ">ひかり電話</a>を使用する際にレンタルされる。
+<ul><li>型番が300番台以降について IPv6 PPPoE（トンネル方式）の機能が提供される。既存設置ユーザーに対しても<a href="/wiki/%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2" title="ファームウェア">ファームウェア</a>のリモートアップデートにより対応される。よって、トンネル対応のために以下のトンネルアダプタ (MA-100) や対応ルーターの入手は不要 <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[14]</a></sup><sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[注 23]</a></sup>。</li>
+<li>型番が100 - 200番台の場合<sup class="reference" id="cite_ref-:3_27-1"><a href="#cite_note-:3-27">[注 16]</a></sup>、IPv6ブリッジにしか対応していないので以下のトンネルアダプタ (MA-100) や対応ルーターが必要になる。</li>
+<li>なおホームゲートウェイでは接続できないISPがある（後述）。</li></ul></li>
+<li>IPv6トンネル対応アダプタ (MA-100) - ひかり電話を契約せず、一般のルーター<sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[注 24]</a></sup>を使用する場合に必要。</li>
+<li>IPv6 PPPoE（トンネル方式）対応の<a class="mw-redirect" href="/wiki/%E3%83%96%E3%83%AD%E3%83%BC%E3%83%89%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC" title="ブロードバンドルーター">ブロードバンドルーター</a>
+<ul><li><a href="/wiki/NTT%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA" title="NTTコミュニケーションズ">NTTコミュニケーションズ</a>（<a href="/wiki/OCN" title="OCN">OCN</a>向け）提供の「IPv6対応ブロードバンドルータ DS-RA01」</li>
+<li>その他「IPv6トンネル対応アダプタ機能」搭載のルーター（ISPが指定する指定メーカーの指定機種が望ましい）</li>
+<li>ISPによっては、ホームゲートウェイでは不可で、指定メーカーの指定機種で無いとサービス接続できない場合がある。<sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[注 25]</a></sup></li></ul></li></ul>
+<p>なお、IPv4 PPPoE（従来のPPPoE）だけに対応するルーターではこの方式を利用できない。
+</p>
+<h2><span id=".E3.83.95.E3.83.AC.E3.83.83.E3.83.84.E7.B6.B2.E3.81.A7.E3.81.AEIPv6.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E8.AB.B8.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="フレッツ網でのIPv6サービスに関する諸問題">フレッツ網でのIPv6サービスに関する諸問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=10" title="節を編集: フレッツ網でのIPv6サービスに関する諸問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下の「IPv6-IPv4フォールバック問題」や「IPv6マルチプレフィックス問題」は、概ねフレッツ 光ネクストとそのIPv6インターネット接続サービスが開始される以前に<sup class="reference" id="cite_ref-40"><a href="#cite_note-40">[注 26]</a></sup>、LAN内の端末がIPv6通信機能を搭載し始めた事などにより、ルーターの機能が未対応であったり、IPv6設定が正しく行われなかった<sup class="reference" id="cite_ref-41"><a href="#cite_note-41">[注 27]</a></sup>ための副作用である。フレッツ網がここまでに述べた特殊な閉域網である事に起因する過渡的な副作用であり、本質的にはISP側、CPE側およびユーザー端末の全てで正しい設定によりIPv6接続すれば解決される問題だとされている。<sup class="reference" id="cite_ref-42"><a href="#cite_note-42">[15]</a></sup>
+</p><p>「インターネット (IPv6 IPoE) 接続」や「インターネット (IPv6 PPPoE) 接続」サービス利用においても、正しく対応したルーターを使用し、端末側も正しく設定がされていれば、通常は発生しない。
+</p><p>なお、設定可能な端末においては、IPv6プロトコルを無効にしてオフロードする設定にすれば、容易かつ完全に回避はできる。<sup class="reference" id="cite_ref-43"><a href="#cite_note-43">[注 28]</a></sup>
+</p>
+<h3><span id="IPv6-IPv4.E3.83.95.E3.82.A9.E3.83.BC.E3.83.AB.E3.83.90.E3.83.83.E3.82.AF.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="IPv6-IPv4フォールバック問題">IPv6-IPv4フォールバック問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=11" title="節を編集: IPv6-IPv4フォールバック問題">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>NTTのフレッツ網においてフレッツ網内IPv6アドレスが端末に割り振られている状況下で、DNSによる名前解決でAAAAレコードによるIPv6アドレスの返答を端末が受け取った場合、IPv4によるアクセスが遅延する問題。フレッツ網内IPv6アドレスは、グローバルユニキャストアドレスであるが、IPv6インターネットとの間で直接の経路は広告されておらず、疎通できない、孤立したアドレスである。
+</p><p>DNSクエリにより<a class="mw-redirect" href="/wiki/FQDN" title="FQDN">FQDN</a>からAAAAレコードにより宛先のIPv6アドレス、Aレコードにより宛先のIPv4アドレス（いずれもインターネット上のアドレス）を受け取った場合、まずIPv6でアクセスを試みるが、端末にフレッツ網内アドレスが割当たっており、宛先のIPv6には不到達となる。端末（ブラウザー）が不到達と決定するまでに<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="タイムアウト (コンピュータ)">タイムアウト</a>時間（<a href="#フォールバックのタイムアウト時間とフレッツ網側対策">#フォールバックのタイムアウト時間とフレッツ網側対策</a>）を消費し、タイムアウト後にIPv4でのアクセスを試みるという動作になる。この再試行により、アクセス待ち時間が増大することが問題となる。DNSから複数のAAAAレコードが返って来た場合は、各AAAAレコードに対してIPv6アクセスを試みるため、タイムアウト時間が逓倍で増加する。<sup class="reference" id="cite_ref-44"><a href="#cite_note-44">[注 29]</a></sup>
+</p><p>なお、フレッツ網以外の一般のIPv6のネットワークにおいても、ファイアーウォールでICMPv6の宛先不達 (Destination Unreachable) をフィルタしていたり、インターネットに接続されていない<a href="/wiki/IP%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="IPネットワーク">IPネットワーク</a><sup class="reference" id="cite_ref-45"><a href="#cite_note-45">[注 30]</a></sup>であったりした場合には同様の問題が生じる。
+</p><p>アプリケーションによる RFC 6555 - Happy Eyeballs: Success with Dual-Stack Hosts の実装により、IPv6でのアクセスとIPv4でのアクセスとを同時に試みることで緩和される場合があるが、根本的解決には、IPv6インターネットへの接続サービスの利用<sup class="reference" id="cite_ref-46"><a href="#cite_note-46">[注 31]</a></sup>が必要である。
+</p><p>また、<a href="/wiki/Microsoft_Windows_8" title="Microsoft Windows 8">Windows 8</a>では、RFC 6724（旧版 RFC 3484）の実装を変更することで、IPv6-IPv4フォールバック問題に対応している<sup class="reference" id="cite_ref-47"><a href="#cite_note-47">[16]</a></sup>。具体的には、30日おきにMicrosoft によりホストされた IPv6 のみのサーバーに対する簡単な HTTP GETによるネットワーク接続テストを実行し、IPv6で到達できるときにはIPv6を優先的に使用する。逆にIPv6で不到達の場合には、IPv4を優先する。<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">MS</a>はこのアプローチによりWebブラウザーだけでなく、標準Windows APIを使用してデュアル スタックの接続先に接続するアプリケーションについても改善されるとしている。
+</p>
+<h3><span id=".E3.83.95.E3.82.A9.E3.83.BC.E3.83.AB.E3.83.90.E3.83.83.E3.82.AF.E3.81.AE.E3.82.BF.E3.82.A4.E3.83.A0.E3.82.A2.E3.82.A6.E3.83.88.E6.99.82.E9.96.93.E3.81.A8.E3.83.95.E3.83.AC.E3.83.83.E3.83.84.E7.B6.B2.E5.81.B4.E5.AF.BE.E7.AD.96"></span><span class="mw-headline" id="フォールバックのタイムアウト時間とフレッツ網側対策">フォールバックのタイムアウト時間とフレッツ網側対策</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=12" title="節を編集: フォールバックのタイムアウト時間とフレッツ網側対策">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フォールバックによる<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="タイムアウト (コンピュータ)">タイムアウト</a>時間は環境と状況によって異なり、何の対策も打たない状況下では数10秒におよぶ事があり、サービスは実質的に使用不能に陥る<sup class="reference" id="cite_ref-48"><a href="#cite_note-48">[17]</a></sup>。
+</p><p>フレッツ網側ではこの対策のため、ユーザ側からフレッツ閉域網のネットワークに対し通常のIPv6インターネット上アドレスを宛先とした<a href="/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a>コネクションを試みた場合、ユーザにTCP RST<sup class="reference" id="cite_ref-49"><a href="#cite_note-49">[注 32]</a></sup>を返してセッションを強制的に切断させ、端末側にIPv4へのフォールバックさせると言う仕組みを導入している。これによりタイムアウト時間は環境にもよるが最大1秒程度に短縮できる場合がある。
+</p><p>ただしこの手法は<a href="/wiki/User_Datagram_Protocol" title="User Datagram Protocol">UDP</a>には効果がなく<sup class="reference" id="cite_ref-50"><a href="#cite_note-50">[注 33]</a></sup>、また端末の実装によってはIPv4にフォールバックせずエラーとなる場合もあり、完全に解決されるものではない。
+</p><p>また全般的に、タイムアウト時間は<a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a> (TCP) の1セッションにおける値であり、Webブラウザーで1ページの表示に数10のセッションを張るような場合（そしてそれが通常である）にはタイムアウトによる遅延が累積し、大幅なページ表示速度（いわゆる体感速度）の低下に繋がる場合がある。リアルタイム性を追求するアプリケーション（動画、ゲーム）等においても深刻な影響を生じる場合がある。
+</p>
+<h3><span id="AAAA.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF"></span><span class="mw-headline" id="AAAAフィルタ">AAAAフィルタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=13" title="節を編集: AAAAフィルタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>このIPv6-IPv4フォールバックによる遅延を解消ないし改善するために、ISPが提供し指定するDNSサーバーにおいて、端末からDNSクエリを受けてもAAAAレコードを返さずにAレコードだけを返すと言う対策が取られる場合がある。これをAAAAフィルタと言う。<sup class="reference" id="cite_ref-51"><a href="#cite_note-51">[18]</a></sup>
+多くのISPで、IPv4だけの接続ユーザーに対しAAAAフィルタが適用される。ただし、各ISP毎に細かい相違がある。代表的なAAAAフィルタの適用、非適用のパターンは下記の通りである。
+</p>
+<ul><li>IPv4のPPPoEだけを使用するユーザーにを適用。IPv6 PPPoEも使用するユーザーには非適用。</li>
+<li>DNSサーバーへのクエリがIPv4による場合、適用。IPv6による場合には非適用。</li>
+<li>全適用（IPv4サービスだけ提供）</li>
+<li>全非適用（IPv6サービスも提供）</li></ul>
+<p>ただし、端末（またはルーター等のCPE）がISPが提供し指定するもの以外のDNSサーバーに接続するような設定にした場合、この接続形態に応じたAAAAフィルタは適用されない場合があり、端末がAAAAレコードを受取ってフォールバック問題が起きる可能性がある。なお、AAAAフィルタによる対策を取るDNSサーバーを提供するのは、日本の、しかもフレッツ網により提供するISPサービスに概ね限られる。
+</p>
+<h3><span id="IPv6.E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AC.E3.83.95.E3.82.A3.E3.83.83.E3.82.AF.E3.82.B9.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="IPv6マルチプレフィックス問題">IPv6マルチプレフィックス問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=14" title="節を編集: IPv6マルチプレフィックス問題">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>NTTのフレッツ網においてフレッツ網内IPv6アドレスが端末に割り振られており、同時にその端末でIPv6インターネットへの接続サービスを利用している場合に、フレッツ網とインターネットの双方からIPv6プレフィックスが配布され、一つの端末が複数のIPv6プレフィックスを持つことにより発生する問題<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202026-31_52-0"><a href="#cite_note-FOOTNOTE小川久保田202026-31-52">[19]</a></sup>。フレッツ網以外のネットワークであっても、複数のIPv6プレフィックスが配布される環境であれば、同様の問題が発生する<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202026-31_52-1"><a href="#cite_note-FOOTNOTE小川久保田202026-31-52">[19]</a></sup>。
+</p><p>この問題により、アプリケーションが通信を行う際に選択した送信元アドレスによって、通信相手先によって通信ができたり、できなかったりするトラブルが発生する<sup class="reference" id="cite_ref-FOOTNOTE小川久保田202026-31_52-2"><a href="#cite_note-FOOTNOTE小川久保田202026-31-52">[19]</a></sup>。これは、フレッツ網内のIPv6アドレスがグローバルユニキャストアドレスであるにも関わらずIPv6インターネットと接続されていない根本的な問題によっている。インターネット上のIPv6アドレスを持つある宛先ホストと通信する際に、送信元IPv6アドレスとしてフレッツ網内のIPv6アドレスを選択して通信を開始し<sup class="reference" id="cite_ref-53"><a href="#cite_note-53">[注 34]</a></sup>、よって宛先ホストからのパケットが返って来ない<sup class="reference" id="cite_ref-54"><a href="#cite_note-54">[注 35]</a></sup>ため通信を行うことができない。
+</p><p>解決策としては、RFC 6724（旧版 RFC 3484）のポリシーテーブルでネットワークを仮想的に分離するものと、ルーターによる解決策がある。ポリシーテーブルによる対応について、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>は、<a class="external text" href="http://support.microsoft.com/kb/2551233/ja" rel="nofollow">KB2551233</a>として設定方法を公開する一方で、総務省の研究会に提出した資料において問題<sup class="noprint Template-Fact">[<i><span title="このタグがつけられた文章には説明が求められています。（2017年4月）">要説明</span></i>]</sup>が発生する可能性があるため少なくともWindowsマシンでは設定しないように勧告している。ルーターによる解決策としては、ユーザ側ルーターから端末に広報するIPv6プレフィックスをISP側のIPv6プレフィックスに限定し、よってLAN内の端末にマルチプレフィクスが割り当てられないようにする方法がとられる。
+</p><p>なお、フレッツ・ADSL、Bフレッツやフレッツ 光プレミアムのユーザー端末において、フレッツ網内IPv6アドレスが端末に割り振られており、同時に、その端末<sup class="reference" id="cite_ref-55"><a href="#cite_note-55">[注 36]</a></sup>で（フレッツサービス以外の一般の）トンネリング接続サービス (IPv6 over IPv4) を利用している場合にも、同様にIPv6マルチプレフィックス問題が生じる場合がある<sup class="reference" id="cite_ref-56"><a href="#cite_note-56">[注 37]</a></sup>。フレッツ・ADSL、Bフレッツやフレッツ 光プレミアムについては一部地域を除き新規申し込みを中止して暫時縮小していく方針であることから、前述のルーターによりフレッツ網内のIPv6プレフィクスをLANに広報しない方法以外には具体的な対策がない。
+</p>
+<h3><span id=".EF.BC.88.E5.8F.82.E8.80.83.EF.BC.89IPv6_PPPoE.E5.AF.BE.E5.BF.9CCPE.E3.81.AE.E8.A6.81.E6.B1.82.E4.BB.95.E6.A7.98"></span><span class="mw-headline" id="（参考）IPv6_PPPoE対応CPEの要求仕様">（参考）IPv6 PPPoE対応CPEの要求仕様</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=15" title="節を編集: （参考）IPv6 PPPoE対応CPEの要求仕様">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フレッツ 光ネクスト (NGN) 下においては、IPv6 PPPoEに対応するCPEには次の機能が要求されることになる。これも、日本のフレッツ網 (NGN) により提供するサービス特有の仕様である。<sup class="reference" id="cite_ref-57"><a href="#cite_note-57">[20]</a></sup>
+</p>
+<ul><li>CPEから配下の端末に対しては、ISP側から取得したプレフィックスだけを払い出す（配布）</li>
+<li>CPE配下の端末からNGN内への通信を可能とするための「IPv6NAT」機能</li>
+<li>NGN内のプレフィックスを判別しIPv6NATを適用する「経路振り分け機能」</li></ul>
+<h2><span id="IPv4.E3.80.81IPv6.E4.BA.8C.E9.87.8D.E6.8A.95.E8.B3.87.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="IPv4、IPv6二重投資問題">IPv4、IPv6二重投資問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=16" title="節を編集: IPv4、IPv6二重投資問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ISPにとっては、既存のIPv4接続のためのネットワークおよび設備<sup class="reference" id="cite_ref-58"><a href="#cite_note-58">[注 38]</a></sup>と、IPv6接続用のそれの、2つのネットワーク設備を個別に維持していく必要があり、二重投資によるコストアップが問題になっている。このため、IPv4 over IPv6 (RFC 2473) に基づき、NGNを含めたIPv6ネットワークの一元化（IPv4はIPv6上にトンネル接続として実現）が検討され、「<a href="#インターネット_(IPv6_IPoE)_接続">インターネット (IPv6 IPoE) 接続</a>」としての提供が実現している。詳細は、同項目を参照。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=17" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=18" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">以下、単に「狭義の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>のうち<a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E5%B1%A4" title="ネットワーク層">ネットワーク層</a>がIPv6であるもの」の意味で用いる。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">なお、フレッツ・ADSL、フレッツ・ISDNユーザーについては、サービス自体にIPv6が提供されていない（ユーザ・網インタフェースがIPv4だけ）</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">ただし、NGNを介さず直接IPv6に接続する方式（フレッツサービスでは提供されない）をネイティブと呼ぶ立場もある。その立場からは「NGN ネイティブ」と呼ばれる。あくまでもフレッツサービス上でのネイティブ方式を言う。</span>
+</li>
+<li id="cite_note-:1-8">^ <a href="#cite_ref-:1_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:1_8-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">（参考）世界的な<a href="/wiki/IPv6%E7%A7%BB%E8%A1%8C%E6%8A%80%E8%A1%93" title="IPv6移行技術">IPv6移行技術</a>の文脈においては、IPv4をIPv6によりカプセル化することを「トンネル」と称する（対して、IPv4-IPv6間のヘッダ翻訳を「トランスレーション」）が、日本のフレッツサービスの文脈においては、IPv6通信のフレッツ網上の通過方法の視点である事に注意。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a> (<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">Virtual Netrwork Enabler</a>)。「ネイティブ（接続）事業者」とも呼ばれる。現状、NTT東西のフレッツ 光ネクスト(NGN)、しかも「ネイティブ方式」に特有のサービス事業者形態である。</span>
+</li>
+<li id="cite_note-:4-10">^ <a href="#cite_ref-:4_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:4_10-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">ISP自身が<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">VNE</a>を兼ねる場合もある。</span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">2012年9月時点では、VNE接続事業者への参入枠が16事業者までに拡大されている。なお、事業者数が少数に制限されているのは、NTT東西が管理するところの、フレッツ網 (NGN) 上のルーティング経路に関する技術的制限とされている。</span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text">なお、IPv6インターネットの全経路がNGNに流される訳ではなく、NGN内ではあくまでも契約したVNE事業者と、v6オプションに参加するユーザーとの間の経路（v6オプション参加全ユーザー同士の経路を含む）だけが設定されるので、NGNがIPv6インターネットに開放されている訳ではない。これにより法律上の閉域網としての性格は維持されるとしている。</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text">ISPがユーザーにとっての契約窓口となる（<a href="/wiki/%E4%BB%AE%E6%83%B3%E5%9B%BA%E5%AE%9A%E9%80%9A%E4%BF%A1%E6%8F%90%E4%BE%9B%E8%80%85" title="仮想固定通信提供者">仮想固定通信提供者</a>参照）</span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text">（参考）フレッツ網を利用した一般的なIPv4接続 (PPPoE) や、次項のIPv6 PPPoEでは、ユーザーCPEから、ISPとの相互接続点となる網終端装置〈NTT東西提供〉に対して、NGN網上でIPv4 (およびIPv6）のトンネルを張っている事になる）</span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text">網構成によってはこれと異なる。<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[10]</a></sup></span>
+</li>
+<li id="cite_note-:0-22">^ <a href="#cite_ref-:0_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_22-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:0_22-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text">ISPとの契約、接続形態、方式およびCPEの機能もしくは構成にもよるが、IPv4通信をIPv4 PPPoE経由とする事も可能。</span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text">ただし、（IPv4通信の）網終端装置における輻輳については、全国的大手サービスとしてはNTT東西のフレッツサービスに特有の問題である。また、IPv4通信に関してはトンネリング (IPv4 over IPv6) の方式が各種あり（DS-Lite、MAP-E等）、ステートフル/ステートレス方式による差異、<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89NAT" title="キャリアグレードNAT">キャリアグレードNAT</a>による負荷も含めて、今後利用ユーザーが漸増した場合にIPv6→IPv4トンネル出口での帯域幅が輻輳しよって通信速度低下が顕著となるかどうかは、各方式における帯域処理性能も含めて、未知数である。ただし、IPv6通信であればNAT/NAPTが基本的に行われないため、IPv4の速度低下が顕著になる場合にクライアントがIPv6通信を優先使用すると言う方策も有り得る。</span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text">2016 - 2017年現在、DS-Lite、MAP-E等が営業サービスとして提供中。464XLATは試験サービス中。</span>
+</li>
+<li id="cite_note-:2-26">^ <a href="#cite_ref-:2_26-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:2_26-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:2_26-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="/wiki/%E5%85%89%E5%9B%9E%E7%B7%9A%E7%B5%82%E7%AB%AF%E8%A3%85%E7%BD%AE" title="光回線終端装置">ONU</a>、ONU一体型CPEまたは<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8A%A0%E5%85%A5%E8%80%85%E7%B7%9A#VDSL" title="デジタル加入者線">VDSL</a>アダプタも必要</span>
+</li>
+<li id="cite_note-:3-27">^ <a href="#cite_ref-:3_27-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:3_27-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">通常、フレッツ 光ネクストにサービス変更した場合は300番台以降に取り替えられる。</span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text">対応ルーターに関し、2016 - 2017年時点では、ISP（正確には、VNE）が指定する特定メーカーの特定機種に限られている場合が殆どである。また、前述のようにIPv4 over IPv6の方式にも複数の種類があるため、その方式が異なると「IPv6 IPoE」対応を謳っていても利用できない場合がある。（ISP側の接続サポートも、ISP指定ルーター利用を前提としているのが現状である）</span>
+</li>
+<li id="cite_note-:5-30">^ <a href="#cite_ref-:5_30-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:5_30-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">さらに本方式 (IPv6 IPoE) は、次項の「IPv6 PPPoE」方式とは、IPv6関連技術としては大きな違いがあり、また2016-2017年時点で、IPv6 IPoEとIPv6 PPPoEの両方式をサポートするような、大手メーカーのコンシューマ向けブロードバンドルータはほぼ発売されていない状況であり、ISPの乗り換え等には注意を要する。</span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text">IPv6 IPoE方式においては、IPv6上でIPv4をトンネル/トランスレーションする（ただし必須ではない）が、本方式においてはIPv6をPPPoEトンネル化する。</span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text">ISPのサービス及びCPEとの組み合わせによっては、1つのPPPoEセッションでIPv4とIPv6の双方を同時接続し、よってセッションは新たに消費しない場合もある。</span>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <span class="reference-text">なお、ISPとのPPPoE接続に失敗した場合、ISPが配布するIPv6プレフィックスの代わりにLAN上の機器にユニークローカルユニキャストアドレスのプレフィックスを広報することで、NAT機能によりNGN内の機器と通信可能になる。</span>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <span class="reference-text">IPv6 PPPoEについては、前項の「IPv6 IPoE」方式とは、v6関連技術としては大きな違いがある。契約するISPのIPv6 PPPoEサービスで、ホームゲートウェイやアダプタ（MA-100）が利用できるかどうか、または、契約するISPが指定する特定機種を利用（入手）できるか否かなど、ISPが指定するCPEに関しISPの乗り換え等には注意を要する。</span>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <span class="reference-text">2012 - 2013年にNTT東西がHGWにてアダプター機能を搭載する以前は、トンネルアダプター (MA-100) は必要であった</span>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <span class="reference-text">ホームゲートウェイでは無く、かつIPv6 PPPoE非対応のもの</span>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <span class="reference-text">ホームゲートウェイが、IPv6 PPPoEの接続IDに ".hgw6" を固定的に付加する仕様であるため</span>
+</li>
+<li id="cite_note-40"><b><a href="#cite_ref-40">^</a></b> <span class="reference-text">Bフレッツやフレッツ 光プレミアムなど</span>
+</li>
+<li id="cite_note-41"><b><a href="#cite_ref-41">^</a></b> <span class="reference-text">さらに、NTT東西がフレッツ閉域網を通じて「フレッツ・スクウェア」サービスによりクローズドなネットワークサービスの提供を企図した事も遠因にある。「フレッツ・スクウェア」は縮小されて2011年に「サービス情報サイト」に変更された。</span>
+</li>
+<li id="cite_note-43"><b><a href="#cite_ref-43">^</a></b> <span class="reference-text">ただし、IPv6接続サービスの利用を開始する場合は、元に戻す必要がある。端末によってはIPv6オフロード設定が困難な場合もある。</span>
+</li>
+<li id="cite_note-44"><b><a href="#cite_ref-44">^</a></b> <span class="reference-text">これは<a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a>1セッションにおける値である（<a href="#フォールバックのタイムアウト時間とフレッツ網側対策">#フォールバックのタイムアウト時間とフレッツ網側対策</a>）</span>
+</li>
+<li id="cite_note-45"><b><a href="#cite_ref-45">^</a></b> <span class="reference-text">かつ、グローバルユニキャストアドレスが割り当てられるネットワーク</span>
+</li>
+<li id="cite_note-46"><b><a href="#cite_ref-46">^</a></b> <span class="reference-text">それにより、IPv6インターネットと疎通できるグローバルユニキャストアドレス等を端末に割り当てる。</span>
+</li>
+<li id="cite_note-49"><b><a href="#cite_ref-49">^</a></b> <span class="reference-text">TCPヘッダのRSTフラグを1にしたもの</span>
+</li>
+<li id="cite_note-50"><b><a href="#cite_ref-50">^</a></b> <span class="reference-text">DNS等を遮断すると問題が起きるため等</span>
+</li>
+<li id="cite_note-53"><b><a href="#cite_ref-53">^</a></b> <span class="reference-text">これは、マルチプレフィクスであり、かついずれのプレフィクスもグローバルユニキャストアドレスが属するプレフィクスである場合の、IPv6端末の一般的仕様である。</span>
+</li>
+<li id="cite_note-54"><b><a href="#cite_ref-54">^</a></b> <span class="reference-text">宛先ホストは、受け取ったパケットの送信元アドレス（＝フレッツ網内アドレス）に対して返信パケットを送信する。</span>
+</li>
+<li id="cite_note-55"><b><a href="#cite_ref-55">^</a></b> <span class="reference-text">厳密には、同一の<a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%89" title="ネットワークカード">NIC</a></span>
+</li>
+<li id="cite_note-56"><b><a href="#cite_ref-56">^</a></b> <span class="reference-text">端末がIPv6マルチプレフィクスとならない方式の場合は、この限りではない。</span>
+</li>
+<li id="cite_note-58"><b><a href="#cite_ref-58">^</a></b> <span class="reference-text">フレッツ網のISPとの相互接続点 (POI) に設置される網終端装置への接続費用（これはNTT東西側のコストでもある）、ISP側設備としてPPPoEスタック、<a href="/wiki/RADIUS" title="RADIUS">RADIUS</a>等</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=19" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-FOOTNOTE小川久保田202026-2">^ <a href="#cite_ref-FOOTNOTE小川久保田202026_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE小川久保田202026_2-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, p. 26.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/chousa/ipv6_internet/02kiban04_03000074.html" rel="nofollow">IPv6によるインターネットの利用高度化に関する研究会（第18回）配布資料</a>”. <span title="">2012年5月28日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation pressrelease" style="font-style:normal"><a class="external text" href="http://v6pc.jp/jp/spread/ipv6spread_03.phtml" rel="nofollow">“日本におけるIPv6の普及状況”</a> (プレスリリース), IPv6普及・高度化推進協議会, (2017年6月16日)<span style="display:none;">, <a class="external free" href="http://v6pc.jp/jp/spread/ipv6spread_03.phtml" rel="nofollow">http://v6pc.jp/jp/spread/ipv6spread_03.phtml</a></span> <span class="reference-accessdate"><span title="">2021年2月1日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%E6%97%A5%E6%9C%AC%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6%E3%81%AE%E6%99%AE%E5%8F%8A%E7%8A%B6%E6%B3%81&amp;rft.atitle=&amp;rft.date=2017%E5%B9%B46%E6%9C%8816%E6%97%A5&amp;rft.pub=IPv6%E6%99%AE%E5%8F%8A%E3%83%BB%E9%AB%98%E5%BA%A6%E5%8C%96%E6%8E%A8%E9%80%B2%E5%8D%94%E8%AD%B0%E4%BC%9A&amp;rft_id=http%3A%2F%2Fv6pc.jp%2Fjp%2Fspread%2Fipv6spread_03.phtml&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田202025-7">^ <a href="#cite_ref-FOOTNOTE小川久保田202025_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE小川久保田202025_7-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, p. 25.</span>
+</li>
+<li id="cite_note-internet.watch.impress-534687-12">^ <a href="#cite_ref-internet.watch.impress-534687_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-internet.watch.impress-534687_12-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-internet.watch.impress-534687_12-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-internet.watch.impress-534687_12-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-internet.watch.impress-534687_12-4"><sup><i><b>e</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://internet.watch.impress.co.jp/docs/news/534687.html" rel="nofollow">「フレッツ 光」でのIPv6インターネット普及に向け“ネイティブ枠”拡大など</a>”. <span title="">2017年4月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://internet.watch.impress.co.jp/docs/news/562697.html" rel="nofollow">「フレッツ 光ネクスト」のIPv6ネイティブ接続事業者枠を16社に拡大へ</a>”. <span title="">2017年4月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://internet.watch.impress.co.jp/docs/news/756737.html" rel="nofollow">朝日ネット、IPv6ネイティブ接続のローミング事業に参入、4社目のVNEに</a>”. <span title="">2017年4月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田20203,31,33-34-15"><b><a href="#cite_ref-FOOTNOTE小川久保田20203,31,33-34_15-0">^</a></b> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, pp. 3,31,33-34.</span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田202088-17"><b><a href="#cite_ref-FOOTNOTE小川久保田202088_17-0">^</a></b> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, pp. 88.</span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://xtech.nikkei.com/it/article/COLUMN/20110628/361809/" rel="nofollow">ネイティブ方式入門（第3回）：ネイティブ方式のネットワーク構成を知る</a>”. pp. 1-2. <span title="">2017年4月12日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田2020-24"><b><a href="#cite_ref-FOOTNOTE小川久保田2020_24-0">^</a></b> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>.</span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<span class="PDFlink"><a class="external text" href="https://www.soumu.go.jp/main_content/000161560.pdf" rel="nofollow">IPv6の普及に向けて</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”. pp. 13-14. <span title="">2021年2月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田202031-32-32"><b><a href="#cite_ref-FOOTNOTE小川久保田202031-32_32-0">^</a></b> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, pp. 31-32.</span>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://internet.watch.impress.co.jp/docs/news/600671.html" rel="nofollow">フレッツ 光ネクストのIPv6接続、PPPoEアダプター不要に、宅内装置に一体化</a>”. <span title="">2017年4月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-42"><b><a href="#cite_ref-42">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://xtech.nikkei.com/it/article/Keyword/20120912/422281/" rel="nofollow">AAAAフィルター</a>”. <span title="">2017年4月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-47"><b><a href="#cite_ref-47">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://web.archive.org/web/20121210045318/http://blogs.msdn.com/b/b8_ja/archive/2012/06/12/windows-8-ipv6.aspx" rel="nofollow">Windows 8 で IPv6 を使って接続する</a>”. 2012年12月10日時点の<a class="external text" href="http://blogs.msdn.com/b/b8_ja/archive/2012/06/12/windows-8-ipv6.aspx" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2021-02-15）">リンク切れ</span></a></i>]</sup>よりアーカイブ。<span title="">2012年8月18日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-48"><b><a href="#cite_ref-48">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.jpne.co.jp/technical/wp/fallback_at_closed_network/" rel="nofollow">フォールバックの問題について</a>”. <span title="">2021年2月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-51"><b><a href="#cite_ref-51">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<span class="PDFlink"><a class="external text" href="https://www.soumu.go.jp/main_content/000385653.pdf" rel="nofollow">ISPにおけるAAAAフィルタの適用状況及びMVNOにおけるIPv6提供状況と課題</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”. <span title="">2021年2月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE小川久保田202026-31-52">^ <a href="#cite_ref-FOOTNOTE小川久保田202026-31_52-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE小川久保田202026-31_52-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE小川久保田202026-31_52-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF小川久保田2020">小川 &amp; 久保田 2020</a>, pp. 26-31.</span>
+</li>
+<li id="cite_note-57"><b><a href="#cite_ref-57">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<span class="PDFlink"><a class="external text" href="https://www.ntt-east.co.jp/info-st/mutial/ngn/110721IPv6tunnel_guide.pdf" rel="nofollow">NGN IPv6 ISP 接続＜トンネル方式＞用 アダプタガイドライン</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”. <span title="">2021年2月15日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=20" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" id="CITEREF小川久保田2020" style="font-style:normal">小川, 晃通、久保田, 聡『<a class="external text" href="https://www.jpne.co.jp/ebooks/v6plus-ebook.pdf" rel="nofollow">徹底解説v6プラス</a>』(PDF)<a href="/wiki/%E6%97%A5%E6%9C%AC%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A4%E3%83%8D%E3%82%A4%E3%83%96%E3%83%A9%E3%83%BC" title="日本ネットワークイネイブラー">日本ネットワークイネイブラー</a>監修、ラムダノート、2020年1月。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/9784908686085" title="特別:文献資料/9784908686085">9784908686085</a>。<span title="">2021年2月15日</span>閲覧。</cite></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=21" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Next_Generation_Network" title="Next Generation Network">Next Generation Network</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AA%E3%83%B3%E3%82%B0" title="トンネリング">トンネリング</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0_(%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88)" title="ブロッキング (インターネット)">ブロッキング (インターネット)</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;section=22" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://flets-w.com/opt/v6ap/" rel="nofollow">NTT西日本 フレッツ・v6アプリ</a></li>
+<li><a class="external text" href="https://www.ntt.com/personal/services/internet/hikari/ipv6/ipoe/faq.html" rel="nofollow">NTTコミュニケーションズのIPv6サービス</a></li></ul>
+<div aria-labelledby="Internet_Protocol_version_6" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:IPv6&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:IPv6 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AIPv6&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AIPv6&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Internet_Protocol_version_6" style="font-size:110%;margin:0 6em">Internet Protocol version 6</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">一般</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IPv6" title="IPv6">IPv6</a></li>
+<li><a href="/wiki/IPv6%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="IPv6アドレス">IPv6アドレス</a></li>
+<li><a href="/wiki/IPv6%E3%83%91%E3%82%B1%E3%83%83%E3%83%88" title="IPv6パケット">IPv6パケット</a></li>
+<li><a class="mw-redirect" href="/wiki/Mobile_IPv6" title="Mobile IPv6">Mobile IPv6</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">経緯</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IPv6%E3%81%AE%E5%B1%95%E9%96%8B&amp;action=edit&amp;redlink=1" title="IPv6の展開 (存在しないページ)">IPv6の展開</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IPv6_deployment&amp;action=edit&amp;redlink=1" title="En:IPv6 deployment (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/World_IPv6_Launch" title="World IPv6 Launch">World IPv6 Launch</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AEIPv6%E5%AF%BE%E5%BF%9C%E3%81%AE%E6%AF%94%E8%BC%83" title="オペレーティングシステムのIPv6対応の比較">オペレーティングシステムのIPv6対応の比較</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IPv6%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E3%83%96%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%BC%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="IPv6トンネルブローカー一覧 (存在しないページ)">IPv6トンネルブローカー一覧</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:List_of_IPv6_tunnel_brokers&amp;action=edit&amp;redlink=1" title="En:List of IPv6 tunnel brokers (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">フレッツ網におけるIPv6</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">IPv4 to IPv6 トピックス</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%9E%AF%E6%B8%87%E5%95%8F%E9%A1%8C" title="IPアドレス枯渇問題">IPアドレス枯渇問題</a></li>
+<li><a href="/wiki/IPv6%E7%A7%BB%E8%A1%8C%E6%8A%80%E8%A1%93" title="IPv6移行技術">IPv6移行技術</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連プロトコル</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DHCPv6" title="DHCPv6">DHCPv6</a></li>
+<li><a class="mw-redirect" href="/wiki/ICMPv6" title="ICMPv6">ICMPv6</a>
+<ul><li><a href="/wiki/%E8%BF%91%E9%9A%A3%E6%8E%A2%E7%B4%A2%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="近隣探索プロトコル">近隣探索プロトコル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Secure_Neighbor_Discovery&amp;action=edit&amp;redlink=1" title="Secure Neighbor Discovery (存在しないページ)">Secure Neighbor Discovery</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Secure_Neighbor_Discovery&amp;action=edit&amp;redlink=1" title="En:Secure Neighbor Discovery (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Multicast_Listener_Discovery" title="Multicast Listener Discovery">Multicast Listener Discovery</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Site_Multihoming_by_IPv6_Intermediation&amp;action=edit&amp;redlink=1" title="Site Multihoming by IPv6 Intermediation (存在しないページ)">Site Multihoming by IPv6 Intermediation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Site_Multihoming_by_IPv6_Intermediation&amp;action=edit&amp;redlink=1" title="En:Site Multihoming by IPv6 Intermediation (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401225451
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.403 seconds
+Real time usage: 0.673 seconds
+Preprocessor visited node count: 8937/1000000
+Post‐expand include size: 71270/2097152 bytes
+Template argument size: 23179/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 6/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 31971/5000000 bytes
+Lua time usage: 0.260/7 seconds
+Lua virtual size: 6500352/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  620.231      1 -total
+ 37.48%  232.458     46 テンプレート:Efn2
+ 34.72%  215.367     61 テンプレート:Ifempty
+ 18.39%  114.036      2 テンプレート:Reflist
+ 13.56%   84.073     11 テンプレート:Sfn
+ 10.92%   67.714      1 テンプレート:独自研究
+ 10.88%   67.483     12 テンプレート:Cite_web
+  9.69%   60.100      1 テンプレート:Cite_book
+  8.97%   55.653      1 テンプレート:Cite_book/和書
+  8.37%   51.929      1 テンプレート:Ambox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3587610-0!canonical and timestamp 20220401225451 and revision id 2102128. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=フレッツ網におけるIPv6&amp;oldid=2102128">http://localhost:8080/w/index.php?title=フレッツ網におけるIPv6&amp;oldid=2102128</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E8%A8%98%E4%BA%8B/2021%E5%B9%B42%E6%9C%88" title="カテゴリ:独自研究の除去が必要な記事/2021年2月">独自研究の除去が必要な記事/2021年2月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%AA%AC%E6%98%8E%E3%81%8C%E6%B1%82%E3%82%81%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E6%96%87%E7%AB%A0%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:説明が求められている文章がある記事">説明が求められている文章がある記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:IPv6" title="カテゴリ:IPv6">IPv6</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E6%8E%A5%E7%B6%9A" title="カテゴリ:インターネット接続">インターネット接続</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9D%B1%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1" title="カテゴリ:東日本電信電話">東日本電信電話</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A5%BF%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1" title="カテゴリ:西日本電信電話">西日本電信電話</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;returntoquery=curid%3D3587610%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;returntoquery=curid%3D3587610%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;oldid=2102128" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%83%83%E3%83%84%E7%B6%B2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8BIPv6&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年5月8日 (土) 22:05 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.403","walltime":"0.673","ppvisitednodes":{"value":8937,"limit":1000000},"postexpandincludesize":{"value":71270,"limit":2097152},"templateargumentsize":{"value":23179,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":31971,"limit":5000000},"timingprofile":["100.00%  620.231      1 -total"," 37.48%  232.458     46 テンプレート:Efn2"," 34.72%  215.367     61 テンプレート:Ifempty"," 18.39%  114.036      2 テンプレート:Reflist"," 13.56%   84.073     11 テンプレート:Sfn"," 10.92%   67.714      1 テンプレート:独自研究"," 10.88%   67.483     12 テンプレート:Cite_web","  9.69%   60.100      1 テンプレート:Cite_book","  8.97%   55.653      1 テンプレート:Cite_book/和書","  8.37%   51.929      1 テンプレート:Ambox"]},"scribunto":{"limitreport-timeusage":{"value":"0.260","limit":"7"},"limitreport-virtmemusage":{"value":6500352,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401225451","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":788});});</script>
+</body></html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>確率変数 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-確率変数 rootpage-確率変数 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">確率変数</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:210px;margin:0 0 1.0em 1.0em;background:#f8f9fa;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em">確率論</th></tr><tr><td style="padding:0.2em 0 0.4em">ファイル:Nuvola apps atlantik.png</td></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="." id="link_i_1" title="確率の公理">確率の公理</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="." id="link_i_2" title="確率空間">確率空間</a></li>
+<li><a href="." id="link_i_3" title="標本空間">標本空間</a></li>
+<li><a href="." id="link_i_4" title="根元事象">根元事象</a></li>
+<li><a href="." id="link_i_5" title="事象 (確率論)">事象</a></li>
+<li><a class="mw-selflink selflink">確率変数</a></li>
+<li><a href="." id="link_i_6" title="確率測度">確率測度</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="." id="link_i_7" title="余事象 (存在しないページ)">余事象</a></li>
+<li><a href="." id="link_i_8" title="同時分布">結合確立</a></li>
+<li><a href="." id="link_i_9" title="周辺分布">周辺確率</a></li>
+<li><a href="." id="link_i_10" title="条件付確率">条件付確率</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="." id="link_i_11" title="独立 (確率論)">独立</a></li>
+<li><a href="." id="link_i_12" title="条件付き独立 (存在しないページ)">条件付き独立</a></li>
+<li><a href="." id="link_i_13" title="全確率の法則 (存在しないページ)">全確率の法則</a></li>
+<li><a href="." id="link_i_14" title="大数の法則">大数の法則</a></li>
+<li><a href="." id="link_i_15" title="ベイズの定理">ベイズの定理</a></li>
+<li><a href="." id="link_i_16" title="ブールの不等式">ブールの不等式</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="." id="link_i_17" title="ベン図">ベン図</a></li>
+<li><a href="." id="link_i_18" title="樹形図(確率論) (存在しないページ)">樹形図</a></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:75%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><abbr title="このテンプレートを表示します">表</abbr></li><li class="nv-talk"><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Probability_fundamentals&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Probability fundamentals (存在しないページ)"><span title="このテンプレートのノートを表示します">話</span></a></li><li class="nv-edit"><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:Probability_fundamentals&amp;action=edit" rel="nofollow"><span title="このテンプレートを編集します">編</span></a></li><li class="nv-history"><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88:Probability_fundamentals&amp;action=history" rel="nofollow"><span title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></td></tr></tbody></table>
+<p><b>確率変数</b>（かくりつへんすう、<a href="." id="link_a_19" title="英語">英</a>: <span lang="en">random variable, aleatory variable, stochastic variable</span>）とは、<a href="." id="link_a_20" title="統計学">統計学</a>の<a href="." id="link_a_21" title="確率論">確率論</a>において、起こりうることがらに割り当てている値（ふつうは<a href="." id="link_a_22" title="実数">実数</a>や<a href="." id="link_a_23" title="整数">整数</a>）を取る<a href="." id="link_a_24" title="変数 (数学)">変数</a>。各<a href="." id="link_a_5" title="事象 (確率論)">事象</a>は確率をもち、その比重に応じて確率変数は<a href="." id="link_a_25" title="ランダム">ランダム</a><sup class="reference" id="cite_ref-Yates_1-0"><a href="#cite_note-Yates-1">[1]</a></sup><sup class="reference" style="white-space:nowrap;">:391</sup>に値をとる。
+</p><p>確率変数は<b>離散型確率変数</b>（りさんがたかくりつへんすう、<a href="." id="link_a_19" title="英語">英</a>: <span lang="en">discrete random variable</span>）と<b>連続型確率変数</b>（れんぞくがたかくりつへんすう、<a href="." id="link_a_19" title="英語">英</a>: <span lang="en">continuous random variable</span>）に分けられる。離散型確率変数の場合の<a href="." id="link_a_26" title="確率分布">確率分布</a>は<a href="." id="link_a_27" title="確率質量関数">確率質量関数</a>で表される。連続型確率変数の場合の確率分布は、<a href="." id="link_a_6" title="確率測度">確率測度</a>が<a href="." id="link_a_28" title="絶対連続">絶対連続</a>ならば<a href="." id="link_a_29" title="確率密度関数">確率密度関数</a>で表される。
+</p><p><a href="." id="link_a_2" title="確率空間">確率空間</a> &lt;math&gt;(\Omega, \mathcal{F}, P)&lt;/math&gt; において、<a href="." id="link_a_3" title="標本空間">標本空間</a> <span class="texhtml" lang="en">Ω</span> の大きさが<a href="." id="link_a_30" title="連続体濃度">連続体濃度</a>の場合、確率変数とは、Ω 上で定義された実数値関数で、<a href="." id="link_a_31" title="可測関数">&lt;math&gt;\mathcal{F}&lt;/math&gt; 可測</a>であるものといえる。確率変数値をとる <span class="texhtml" lang="en">Ω</span> の部分集合が事象であり従って確率をもつために「&lt;math&gt;\mathcal{F}&lt;/math&gt; 可測」は必要になる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#用語の定義"><span class="tocnumber">1</span> <span class="toctext">用語の定義</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#定義"><span class="tocnumber">2</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#実例"><span class="tocnumber">2.1</span> <span class="toctext">実例</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#概念の拡張"><span class="tocnumber">2.2</span> <span class="toctext">概念の拡張</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#実例_2"><span class="tocnumber">3</span> <span class="toctext">実例</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#測度論的定義"><span class="tocnumber">4</span> <span class="toctext">測度論的定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#実数確率変数"><span class="tocnumber">4.1</span> <span class="toctext">実数確率変数</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#確率変数の分布関数"><span class="tocnumber">4.2</span> <span class="toctext">確率変数の分布関数</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#確率変数値の平均"><span class="tocnumber">4.3</span> <span class="toctext">確率変数値の平均</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#モーメント"><span class="tocnumber">5</span> <span class="toctext">モーメント</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#確率変数の関数"><span class="tocnumber">6</span> <span class="toctext">確率変数の関数</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#例1"><span class="tocnumber">6.1</span> <span class="toctext">例1</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#例2"><span class="tocnumber">6.2</span> <span class="toctext">例2</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#例3"><span class="tocnumber">6.3</span> <span class="toctext">例3</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#確率変数の同値性"><span class="tocnumber">7</span> <span class="toctext">確率変数の同値性</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#分布が等しい"><span class="tocnumber">7.1</span> <span class="toctext">分布が等しい</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#ほとんど確実に等しい"><span class="tocnumber">7.2</span> <span class="toctext">ほとんど確実に等しい</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#等しい"><span class="tocnumber">7.3</span> <span class="toctext">等しい</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#収束"><span class="tocnumber">8</span> <span class="toctext">収束</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#注"><span class="tocnumber">10</span> <span class="toctext">注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#参考文献"><span class="tocnumber">10.1</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E7.94.A8.E8.AA.9E.E3.81.AE.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="用語の定義">用語の定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=1" title="節を編集: 用語の定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E6%97%A5%E6%9C%AC%E7%94%A3%E6%A5%AD%E8%A6%8F%E6%A0%BC" title="日本産業規格">日本産業規格</a>では、確率変数（かくりつへんすう、random variable）を
+</p>
+<style data-mw-deduplicate="TemplateStyles:r2270229">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><div>どのような値となるかが，ある確率法則によって決まる変数。確率法則は確率分布で記述される。とることができる値が離散的であるか，連続的であるかによって，それぞれ離散（確率）変数，連続（確率）変数という。離散確率変数で表されるデータを計数値 (discrete variable)，連続確率変数で表されるデータを計量値 (continuous variable) という。(<a href='#"JIS_Z_8101-1"'>JIS Z 8101-1:1999 統計 − 用語と記号 − 第1部:確率および一般統計用語</a>, 1.2 確率変数)
+</div></blockquote>
+<p>と規定している。
+</p><p>確率変数は、
+</p>
+<ol><li>これから行う試行の結果</li>
+<li>既に行った試行の結果が未だ不確かである場合（実験結果が出揃っていない場合や測定結果が不確実である場合など）の結果</li></ol>
+<p>に割り当てられている値である。
+</p><p><a href="/wiki/%E7%A2%BA%E7%8E%87%E8%AB%96" title="確率論">確率論</a>においては、確率変数は<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="確率分布">確率分布</a>を記述する上で事実上必要な概念である。
+</p><p>確率変数は離散型確率変数（有限個または<a href="/wiki/%E5%8F%AF%E7%AE%97%E9%9B%86%E5%90%88" title="可算集合">可算</a>個）と連続型確率変数に分けられる。離散型確率変数の場合の確率は<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%B3%AA%E9%87%8F%E9%96%A2%E6%95%B0" title="確率質量関数">確率質量関数</a>および<a href="/wiki/%E9%9B%A2%E6%95%A3%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="離散確率分布">離散確率分布</a>を参照。連続型確率変数の場合の確率は<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0" title="確率密度関数">確率密度関数</a>を参照。
+</p><p>本項では、確率変数を<a href="/wiki/%E6%A8%99%E6%9C%AC%E7%A9%BA%E9%96%93" title="標本空間">標本空間</a>に定義された<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a>から得られた数値として考える<sup class="reference" id="cite_ref-UCSB_2-0"><a href="#cite_note-UCSB-2">[2]</a></sup>。<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%AB%96" title="確率論">確率論</a>での数学的な取り扱いは<a href="#測度論的定義">#測度論的定義</a>を参照のこと。
+</p>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=2" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>確率変数 &lt;math&gt;X : \Omega \to E&lt;/math&gt; は、<a href="/wiki/%E6%A8%99%E6%9C%AC%E7%A9%BA%E9%96%93" title="標本空間">標本空間</a>（起こりうることがらの集まり）<span class="texhtml" lang="en">Ω</span> の元に数 <span class="texhtml mvar" lang="en" style="font-style:italic;">E</span> を対応させる<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a>である（<span class="texhtml" lang="en">Ω</span>, <span class="texhtml mvar" lang="en" style="font-style:italic;">E</span> はそれぞれ<a class="mw-redirect" href="/wiki/%E5%8F%AF%E6%B8%AC%E7%A9%BA%E9%96%93" title="可測空間">可測空間</a>）（<a href="#測度論的定義">#測度論的定義</a>も参照）。<span class="texhtml mvar" lang="en" style="font-style:italic;">E</span> は通常 &lt;math&gt;\mathbb{R}&lt;/math&gt; または &lt;math&gt;\mathbb{N}&lt;/math&gt;（や &lt;math&gt;\mathbb{Z}&lt;/math&gt;）である。そうでない場合は<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%A6%81%E7%B4%A0" title="確率要素">確率要素</a>として考察する（<a href="#概念の拡張">#概念の拡張</a>参照）。
+</p><p><span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の値として、測定値や観測値（例えば、様々な人々の身長など）だけでなく、<a href="/wiki/%E6%8C%87%E7%A4%BA%E9%96%A2%E6%95%B0" title="指示関数">指示関数</a>値（例えば、ある回数コイントスをしたときの表が出た回数）を採用することが多い。
+</p><p><span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の<a href="/wiki/%E5%83%8F_(%E6%95%B0%E5%AD%A6)" title="像 (数学)">像</a>（値域）が高々<a href="/wiki/%E5%8F%AF%E7%AE%97%E9%9B%86%E5%90%88" title="可算集合">可算</a>個である時、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> は<b>離散型確率変数</b>と呼ばれ<sup class="reference" id="cite_ref-Yates_1-1"><a href="#cite_note-Yates-1">[1]</a></sup><sup class="reference" style="white-space:nowrap;">:399</sup>、その分布（<a href="/wiki/%E9%9B%A2%E6%95%A3%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="離散確率分布">離散確率分布</a>）は確率変数値の確率の全てを表したものとして<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%B3%AA%E9%87%8F%E9%96%A2%E6%95%B0" title="確率質量関数">確率質量関数</a>で記述できる。
+</p><p>像が<a href="/wiki/%E9%9D%9E%E5%8F%AF%E7%AE%97%E9%9B%86%E5%90%88" title="非可算集合">非可算個</a>である時、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> は<b>連続型確率変数</b>と呼ばれ、確率分布 <span class="texhtml mvar" lang="en" style="font-style:italic;">P<sub>X</sub></span> が<a href="/wiki/%E7%B5%B6%E5%AF%BE%E9%80%A3%E7%B6%9A" title="絶対連続">絶対連続</a>ならば<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0" title="確率密度関数">確率密度関数</a>が存在し、確率変数が &lt;math&gt;E \in \mathcal{E}&lt;/math&gt;（例えば区間）に属する確率が確率密度関数の <span class="texhtml mvar" lang="en" style="font-style:italic;">E</span> 上の<a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%8D%E5%88%86" title="ルベーグ積分">ルベーグ積分</a>で表される。
+</p><p>注意すべき点は、絶対連続のとき<a href="/wiki/%E9%80%A3%E7%B6%9A%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="連続確率分布">連続確率分布</a>であるため、確率変数がある値をとる確率は全て 0 になるということである。確率分布が連続でも絶対連続とは限らない<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%B7%B7%E5%90%88%E5%88%86%E5%B8%83&amp;action=edit&amp;redlink=1" title="混合分布 (存在しないページ)">混合分布</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:mixture_distribution&amp;action=edit&amp;redlink=1" title="En:mixture distribution (存在しないページ)">英語版</a>）</span></span>がその例である。そのような確率変数は確率密度関数または確率質量関数で記述できない。
+</p><p>あらゆる確率分布は<a href="/wiki/%E7%B4%AF%E7%A9%8D%E5%88%86%E5%B8%83%E9%96%A2%E6%95%B0" title="累積分布関数">累積分布関数</a>で記述できる。分布関数とは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> に確率変数が <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> 以下である確率を対応される関数のことである。
+</p><p>確率変数が可測関数として<a href="/wiki/%E5%8F%AF%E7%A9%8D%E5%88%86%E7%B3%BB" title="可積分系">可積分</a>ならば、<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a>が存在する。
+</p>
+<h3><span id=".E5.AE.9F.E4.BE.8B"></span><span class="mw-headline" id="実例">実例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=3" title="節を編集: 実例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>例えば、任意に抽出した人の身長を確率変数とする場合を考える。数学的には、確率変数は 対象となる人→その身長 という関数を意味する。確率変数は確率分布に対応し、妥当にあり得る範囲の確率（身長180cm以上190cm以下である確率や 150cm未満または200cm超である確率）を計算できるようになる。
+</p><p>もう一つの確率変数の例は、抽出した人には何人の子供がいるかというものである。これは非負の整数値を取る離散型確率変数である。この場合、確率分布は確率質量関数の積分により表される。また、無限個の仮説を想定することも可能である。例えば、偶数人の子供がいるか、といったものである。何方の場合においても、確率値は確率質量関数の要素の和を無限に取っていくことで求めることができる。子供が0人の可能性 + 子供が2人の可能性 + 子供が4人の可能性 + … という要領である。
+</p><p>このような例では標本空間はしばしば有限に制限される。離散値を無限に計算していくのが数学的に困難だからである。しかしアウトカムの標本空間内で2つの確率変数が同時に測定される場合、すなわちある人について身長と子供の数とを同時に調査する場合などは、両変数に相関関係があるのか否かを知るのは容易である。
+</p>
+<h3><span id=".E6.A6.82.E5.BF.B5.E3.81.AE.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="概念の拡張">概念の拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=4" title="節を編集: 概念の拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>統計学における基本として、<i>確率変数</i>がとる値は<a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数</a>であり、従って<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a>や<a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%A3_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="分散 (確率論)">分散</a>その他の値を計算することができる。しかし、実数以外の要素を値としてとる確率変数も考えられる。値として取る要素としては、<a href="/wiki/%E3%83%96%E3%83%BC%E3%83%AB%E9%A0%98%E5%9F%9F" title="ブール領域">ブール変数</a>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%82%AB%E3%83%AB%E5%A4%89%E6%95%B0&amp;action=edit&amp;redlink=1" title="カテゴリカル変数 (存在しないページ)">カテゴリカル変数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:categorical_variable&amp;action=edit&amp;redlink=1" title="En:categorical variable (存在しないページ)">英語版</a>）</span></span>、<a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E5%88%86%E6%95%A3%E8%A1%8C%E5%88%97#複素数の確率変数ベクトル" title="分散共分散行列">複素数ベクトル</a>、<a class="new" href="/w/index.php?title=En:Random_vector&amp;action=edit&amp;redlink=1" title="En:Random vector (存在しないページ)">ベクトル</a>、<a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E8%A1%8C%E5%88%97" title="ランダム行列">行列</a>、<a class="new" href="/w/index.php?title=En:random_sequence&amp;action=edit&amp;redlink=1" title="En:random sequence (存在しないページ)">数列</a>、<a href="/wiki/%E6%9C%A8_(%E6%95%B0%E5%AD%A6)" title="木 (数学)">樹形図</a>、<a class="new" href="/w/index.php?title=En:random_compact_set&amp;action=edit&amp;redlink=1" title="En:random compact set (存在しないページ)">コンパクト集合</a>、<a href="/wiki/%E5%9B%B3%E5%BD%A2" title="図形">図形</a>、<a href="/wiki/%E5%A4%9A%E6%A7%98%E4%BD%93" title="多様体">多様体</a>、<a href="/wiki/%E9%96%A2%E6%95%B0_(%E6%95%B0%E5%AD%A6)" title="関数 (数学)">関数</a>等が考えられる。<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%A6%81%E7%B4%A0" title="確率要素">確率要素</a>という用語はこれら全ての概念を指し示す。
+</p><p>もう1つの拡張は<a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a>、すなわち時間や空間などで<a href="/wiki/%E6%B7%BB%E3%81%88%E5%AD%97" title="添え字">添字</a>付けられた添字付き確率変数である。
+</p><p>このような、より一般化された概念は<a href="/wiki/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6" title="計算機科学">計算機科学</a>や<a href="/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E%E5%87%A6%E7%90%86" title="自然言語処理">自然言語処理</a>といった非数的要素を扱う分野で特に有用である。これらの確率要素は実数値の確率変数（主に乱数ベクトル）として取り扱えることが多い。
+</p><p>下記に実例を上げる。
+</p>
+<ul><li>「ランダムな単語」は語彙集合の中で整数を添字としてパラメータ化することができる。あるいは、単語に対応する特定のベクトル要素一つのみが1で他の全ての要素が0であるような指示ベクトルとして、表現し得る。</li>
+<li>「ランダムな文章」はランダムな単語のベクトルとしてパラメータ化することができる。</li>
+<li>数学において <span class="texhtml mvar" lang="en" style="font-style:italic;">V</span> 本の辺を持つ「ランダムなグラフ」は、<span class="texhtml mvar" lang="en" style="font-style:italic;">N</span>次正方行列を用いて各辺の重みならびに辺以外での値を0として表すことができる。（グラフに重み付けがない場合、辺の値は1とする）</li></ul>
+<p>要素の数値化は、非数的な独立した確率要素を扱う際の必須操作ではない。
+</p>
+<h2><span id=".E5.AE.9F.E4.BE.8B_2"></span><span class="mw-headline" id="実例_2">実例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=5" title="節を編集: 実例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%82%B3%E3%82%A4%E3%83%B3%E3%83%88%E3%82%B9" title="コイントス">コイントス</a>をするという試行において、標本空間は &lt;math&gt;\Omega = \{ \text{heads}, \text{tails}\}&lt;/math&gt; である。表が出る回数を調べたい場合は、ここから確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> を次の式で定義する：
+</p>
+<dl><dd>&lt;math&gt;X( \omega )=\begin{cases}</dd></dl>
+<p>1, &amp;\text{if} \ \ \omega = \text{heads} ,\\
+\\
+0, &amp; \text{if} \ \ \omega = \text{tails}.
+\end{cases}&lt;/math&gt;
+</p><p>コインの表 (head) と裏 (tail) が出る確率が等しい時、確率質量関数 &lt;math&gt;f_X&lt;/math&gt; は次式の通りである。
+</p>
+<dl><dd>&lt;math&gt;f_X (x)= \begin{cases}</dd></dl>
+<p>\tfrac 12, &amp; \text{if }x=1,\\
+\\
+\tfrac 12, &amp;\text{if }x=0.
+\end{cases}&lt;/math&gt;
+</p>
+
+<p>2つのサイコロを振るとき、出た目の和の確率分布を調べるには、確率変数を次のように取る。
+</p><p>標本空間 <span class="texhtml" lang="en">Ω</span> は、"2つのサイコロを振って出た目の集合"である。これを &lt;math&gt;\Omega = \{ 1,2,3,4,5,6 \}^2&lt;/math&gt; と略記する<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> は2つのサイコロの出た目に書かれた数の和を表現する、<span class="texhtml" lang="en">Ω</span> から &lt;math&gt;\mathbb{Z}&lt;/math&gt; への写像である。これは次の式で定義される：
+</p>
+<dl><dd>&lt;math&gt;X(( n_1, n_2 )) = n_1 + n_2&lt;/math&gt;</dd></dl>
+<p><span class="texhtml" lang="en"><i>n</i><sub>1</sub></span> は1つ目のサイコロ、<span class="texhtml" lang="en"><i>n</i><sub>2</sub></span> は2つ目のサイコロの出た目が表す数を表す。
+</p><p>このとき確率質量関数 <span class="texhtml mvar" lang="en" style="font-style:italic;">f<sub>X</sub></span> は次の式になる：
+</p>
+<dl><dd>&lt;math&gt;f_X (S) = \tfrac{\min(S-1, 13-S)}{36}, \text{for } S \in \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \}&lt;/math&gt;</dd></dl>
+<p>連続型確率変数の例として、水平方向に回る<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88" title="ルーレット">ルーレット</a>を挙げることができる。標本空間としては「ルーレットの向き全体」を考える。この「向き」は連続的な状態を取り得るのでその標本空間の表現には実数を使うことが適切である。そこで真北方向を0（度）とし、確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> を「ルーレットが真北の向きに対して取る角度」として定義すると、確率変数の値域は区間 <span class="texhtml" lang="en">[0, 360)</span>（0度以上360度未満の実数）であり、ルーレットの元々の目的から各値を取る確率は等しいと考えられる。このとき区間内のあらゆる実数について、その値を取る確率は <span class="texhtml" lang="en">0</span> であるが、ある範囲内の角度をなす確率は正の値である。例えば、<span class="texhtml" lang="en">[0, 180]</span>（0度以上180度以下）となる確率は <style data-mw-deduplicate="TemplateStyles:r2600424">.mw-parser-output .sfrac{white-space:nowrap}.mw-parser-output .sfrac.tion,.mw-parser-output .sfrac .tion{display:inline-block;vertical-align:-0.5em;font-size:85%;text-align:center}.mw-parser-output .sfrac .num,.mw-parser-output .sfrac .den{display:block;line-height:1em;margin:0 0.1em}.mw-parser-output .sfrac .den{border-top:1px solid}.mw-parser-output .sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}</style><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">2</span></span> である。
+</p><p>確率質量関数の代わりに、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の確率密度を考えると、幅1度の確率密度は <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">360</span></span> である。確率は幅に比例し、確率分布は<a href="/wiki/%E9%80%A3%E7%B6%9A%E4%B8%80%E6%A7%98%E5%88%86%E5%B8%83" title="連続一様分布">連続一様分布</a>になる。一般に、連続型確率変数における確率は、存在すれば確率密度関数の範囲における積分値でとらえることができる。
+</p><p>混合タイプの確率変数としては例えば、コインを投げて表が出た時のみルーレットを回すということを考えることができる。コインが裏であれば <span class="texhtml" lang="en"><span style="white-space: normal;"><i>X</i> = −1</span></span>、表であれば <span class="texhtml" lang="en"><i>X</i> =</span> ルーレットの角度 とすると、この確率変数は確率 <link href="mw-data:TemplateStyles:r2600424" rel="mw-deduplicated-inline-style"/><span class="sfrac tion" role="math"><span class="num">1</span><span class="sr-only">/</span><span class="den">2</span></span> で <span class="texhtml" lang="en">−1</span>、その他の数 <span class="texhtml" lang="en">[0, 360)</span> である確率は上記の例の半分である。
+</p>
+<h2><span id=".E6.B8.AC.E5.BA.A6.E8.AB.96.E7.9A.84.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="測度論的定義">測度論的定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=6" title="節を編集: 測度論的定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%B8%AC%E5%BA%A6%E8%AB%96" title="測度論">測度論</a>」を参照</div>
+<p><a href="/wiki/%E7%A2%BA%E7%8E%87%E7%A9%BA%E9%96%93" title="確率空間">確率空間</a> &lt;math&gt;( \Omega, \mathcal{F}, P)&lt;/math&gt; が与えられたとき、確率変数とは、事象 &lt;math&gt;F \in \mathcal{F}&lt;/math&gt; に割り当てた値をとる変数のことである。値にはその名の通り &lt;math&gt;\mathbb{R}&lt;/math&gt; や &lt;math&gt;\mathbb{Z}&lt;/math&gt; の他、ベクトル値 &lt;math&gt;\mathbb{R}^d&lt;/math&gt; を割り当てることもある。「値」として、一般的には<a class="mw-redirect" href="/wiki/%E5%8F%AF%E6%B8%AC%E7%A9%BA%E9%96%93" title="可測空間">可測空間</a> &lt;math&gt;(E, \mathcal{E})&lt;/math&gt; とする<sup class="reference" id="cite_ref-UCSB_2-1"><a href="#cite_note-UCSB-2">[2]</a></sup>。確率変数とは &lt;math&gt;(\mathcal{F},\mathcal{E})&lt;/math&gt;-<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a> &lt;math&gt;X : \Omega \to E&lt;/math&gt; である。つまり、値 &lt;math&gt;B\in\mathcal{E}&lt;/math&gt; の<a href="/wiki/%E5%83%8F_(%E6%95%B0%E5%AD%A6)" title="像 (数学)">原像</a> &lt;math&gt;X^{-1}(B) = \{\omega : X(\omega)\in B\}&lt;/math&gt; が &lt;math&gt;\mathcal{F}&lt;/math&gt; の元であることを意味している<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p><p>特に <span class="texhtml mvar" lang="en" style="font-style:italic;">E</span> が<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" title="位相空間">位相空間</a>である時、最も一般的な<a href="/wiki/%E5%AE%8C%E5%85%A8%E5%8A%A0%E6%B3%95%E6%97%8F" title="完全加法族">σ-集合代数</a> &lt;math&gt;\mathcal{E}&lt;/math&gt; は<a href="/wiki/%E3%83%9C%E3%83%AC%E3%83%AB%E9%9B%86%E5%90%88" title="ボレル集合">ボレルσ-集合代数</a> &lt;math&gt;\mathcal{B} (E)&lt;/math&gt; である。これは、<span class="texhtml mvar" lang="en" style="font-style:italic;">E</span>の全ての<a href="/wiki/%E9%96%8B%E9%9B%86%E5%90%88" title="開集合">開集合</a>から生成されるσ-代数である。
+</p>
+<h3><span id=".E5.AE.9F.E6.95.B0.E7.A2.BA.E7.8E.87.E5.A4.89.E6.95.B0"></span><span class="mw-headline" id="実数確率変数">実数確率変数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=7" title="節を編集: 実数確率変数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ここでは観測値を実数とする。&lt;math&gt;(\Omega, \mathcal{F}, P)&lt;/math&gt; が確率空間である。下記の場合、実測値空間として、関数&lt;math&gt;X:\Omega \rightarrow \mathbb{R}&lt;/math&gt;を実数確率変数とする。
+</p>
+<dl><dd>&lt;math&gt;\{ \omega:X(\omega ) \le r \} \in \mathcal{F} \qquad \forall r\in \mathbb{R}.&lt;/math&gt;</dd></dl>
+<p>この定義は上記の特別な場合である。集合 &lt;math&gt;\{ (-\infty ,r]:r\in \R \}&lt;/math&gt; が実数空間内に<a href="/wiki/%E3%83%9C%E3%83%AC%E3%83%AB%E9%9B%86%E5%90%88" title="ボレル集合">ボレル完全加法族</a>を成し、それが集合の可測性を示す十分条件だからである。
+これで&lt;math&gt;\{ \omega:X(\omega )\le r\} =X^{-1} ((-\infty ,r])&lt;/math&gt; を用いて生成する集合の可測性が証明される。
+</p>
+<h3><span id=".E7.A2.BA.E7.8E.87.E5.A4.89.E6.95.B0.E3.81.AE.E5.88.86.E5.B8.83.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="確率変数の分布関数">確率変数の分布関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=8" title="節を編集: 確率変数の分布関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>確率変数 &lt;math&gt;X:\Omega \to \mathbb{R}&lt;/math&gt; が確率空間 &lt;math&gt;(\Omega ,\mathcal{F} ,P)&lt;/math&gt; 内に定義されたとすると、「<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の値が2をとる確率はいくつか？」等と問うことができる。これは事象 &lt;math&gt;\{ \omega :X(\omega )=2 \}&lt;/math&gt; の確率と同じであり、しばしば短く &lt;math&gt;P(X=2)&lt;/math&gt; や &lt;math&gt;p_X (2)&lt;/math&gt; と記述される。
+</p><p>実数確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> が示す範囲の確率を全て記録すると、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="確率分布">確率分布</a>が得られる。確率分布は <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の定義に使われた特定の確率空間を「忘れる」ので、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の様々な値の確率を記録するのみである。このような確率分布は常に<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83#分布関数" title="確率分布">分布関数</a>で捉えることができる。
+</p>
+<dl><dd>&lt;math&gt;F_X (x) = \operatorname{P}(X \le x)&lt;/math&gt;</dd></dl>
+<p>加えて<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0" title="確率密度関数">確率密度関数</a> &lt;math&gt;p_X&lt;/math&gt; を使える場合も多い。<a href="/wiki/%E6%B8%AC%E5%BA%A6%E8%AB%96" title="測度論">測度論</a>的には確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> は、<span class="texhtml" lang="en">Ω</span> 上での <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の測定から &lt;math&gt;\mathbb{R}&lt;/math&gt; 上での &lt;math&gt;p_X&lt;/math&gt; の測定に「押し進める」もの、といえる。根底にある確率空間 <span class="texhtml" lang="en">Ω</span> は確率変数の存在を保証するツールであり、しばしば変数を構成し、同一確率空間内の2つ以上の変数の<a href="/wiki/%E5%90%8C%E6%99%82%E5%88%86%E5%B8%83" title="同時分布">同時分布</a>における<a href="/wiki/%E7%9B%B8%E9%96%A2%E9%96%A2%E4%BF%82%E3%81%A8%E5%9B%A0%E6%9E%9C%E9%96%A2%E4%BF%82" title="相関関係と因果関係">相関・依存</a>や<a href="/wiki/%E7%8B%AC%E7%AB%8B_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="独立 (確率論)">独立性</a>の基礎となる。実際は、空間 <span class="texhtml" lang="en">Ω</span> 全体に1つの変数を置き、数直線 &lt;math&gt;\mathbb{R}&lt;/math&gt; 全体で1つの変数とする。つまり、その変数が確率変数に代わって確率分布する。
+</p>
+<h3><span id=".E7.A2.BA.E7.8E.87.E5.A4.89.E6.95.B0.E5.80.A4.E3.81.AE.E5.B9.B3.E5.9D.87"></span><span class="mw-headline" id="確率変数値の平均">確率変数値の平均</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=9" title="節を編集: 確率変数値の平均">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4#連続型確率変数" title="期待値">期待値#連続型確率変数</a>」を参照</div>
+<p><a href="/wiki/%E7%A2%BA%E7%8E%87%E7%A9%BA%E9%96%93" title="確率空間">確率空間</a> <span class="texhtml" lang="en">(Ω, <i>F</i>, <i>P</i>)</span> に割り当てた確率変数 &lt;math&gt;X: \Omega \to \mathcal{E}&lt;/math&gt; が<a href="/wiki/%E5%8F%AF%E7%A9%8D%E5%88%86%E7%B3%BB" title="可積分系">可積分</a>であるとは、
+</p>
+<dl><dd>&lt;math&gt;\int_{\Omega} |X( \omega )|\, dP( \omega )&lt; \infty&lt;/math&gt;</dd></dl>
+<p>を満たすことである。これは<a href="/wiki/%E6%B8%AC%E5%BA%A6%E8%AB%96" title="測度論">測度論</a>における<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a>の可積分性と同じである。
+</p><p>このとき確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> あるいはその確率分布の<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">平均</a>は
+</p>
+<dl><dd>&lt;math&gt;E[X] = \int_{\Omega} X( \omega ) \, dP( \omega )&lt;/math&gt;</dd></dl>
+<p>で定義される。
+</p><p>事象 &lt;math&gt;A \in \mathcal{F}&lt;/math&gt; の下での確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の<a href="/wiki/%E6%9D%A1%E4%BB%B6%E4%BB%98%E6%9C%9F%E5%BE%85%E5%80%A4" title="条件付期待値">条件付期待値</a>は
+</p>
+<dl><dd>&lt;math&gt;E[X:A] = E[ 1_A X] = \int_A X( \omega )\, dP( \omega )&lt;/math&gt;</dd></dl>
+<p>で定義される。ここで <span class="texhtml" lang="en">1<sub><i>A</i></sub></span> は<a href="/wiki/%E6%8C%87%E7%A4%BA%E9%96%A2%E6%95%B0" title="指示関数">指示関数</a>である。
+</p>
+<h2><span id=".E3.83.A2.E3.83.BC.E3.83.A1.E3.83.B3.E3.83.88"></span><span class="mw-headline" id="モーメント">モーメント</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=10" title="節を編集: モーメント">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="モーメント (確率論)">モーメント (確率論)</a>」を参照</div>
+<p>確率変数の確率分布は、多くの場合少数の特性値で規定される。例えば、確率変数の<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a> (<span class="texhtml" lang="en">E[<i>X</i>]</span>) は確率分布の"1次<a href="/wiki/%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="モーメント (確率論)">モーメント</a>"であり、平均とも呼ばれる。一般に、<span class="texhtml" lang="en">E[<i>f</i>(<i>X</i>)]</span> は <span class="texhtml" lang="en"><i>f</i>(E[<i>X</i>])</span> と等しくない。次に、確率変数値が全体として「平均」からどれだけ散らばっているかを表す特性値として<a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%A3_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="分散 (確率論)">分散</a> (<span class="texhtml" lang="en">V[<i>X</i>]</span>) および<a href="/wiki/%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE" title="標準偏差">標準偏差</a> (<span class="texhtml" lang="en">σ[<i>X</i>]</span>) がある。分散 <span class="texhtml" lang="en">V[<i>X</i>]</span> とは、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> と平均の差の2乗の期待値 <span class="texhtml" lang="en">E[(<i>X</i> − E[<i>X</i>])<sup>2</sup>]</span> のことである。
+</p><p>数学的には、与えられた確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> が所属する母集団に関する（一般化された）<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" title="モーメント問題 (存在しないページ)">モーメント問題</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:moment_problem&amp;action=edit&amp;redlink=1" title="En:moment problem (存在しないページ)">英語版</a>）</span></span>として知られ、確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の分布の性質を示す期待値 <span class="texhtml" lang="en">E[<i>f<sub>i</sub></i>(<i>X</i>)]</span> の関数のコレクション <span class="texhtml" lang="en">{<i>f<sub>i</sub></i>}</span> である。
+</p><p>モーメントは確率変数が実数関数である場合（複素数等についても）に定義できる。確率変数自身が連続であるならば、変数のモーメント自身は確率変数の恒等関数 <span class="texhtml" lang="en"><i>f</i>(<i>X</i>) = <i>X</i></span> と等価である。しかし、非実数の確率変数の場合にも、モーメントをその変数の実数関数として得ることができる。例えば、<a href="/wiki/%E5%B0%BA%E5%BA%A6%E6%B0%B4%E6%BA%96#名義尺度" title="尺度水準">名義尺度</a>変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> として「赤」、「青」、「緑」がある場合、実数関数 &lt;math&gt;[X = \text{green}]&lt;/math&gt; を考えることができる。こうして<a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%90%E3%83%BC%E3%82%BD%E3%83%B3%E3%81%AE%E8%A8%98%E6%B3%95" title="アイバーソンの記法">アイバーソンの記法</a>を用いることで、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> が「緑」の時は1、それ以外は0と記述できるので、<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a>および他のモーメントを定義できる。
+</p>
+<h2><span id=".E7.A2.BA.E7.8E.87.E5.A4.89.E6.95.B0.E3.81.AE.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="確率変数の関数">確率変数の関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=11" title="節を編集: 確率変数の関数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>実数のボレル<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a> &lt;math&gt;g: \mathbb{R} \rightarrow \mathbb{R}&lt;/math&gt; を<a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数値</a>確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> に適用すると、新たな確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> を定義することができる。<span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> の<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83#分布関数" title="確率分布">分布関数</a>は、
+</p>
+<dl><dd>&lt;math&gt;F_Y (y) = \operatorname{P}(g(X) \le y)&lt;/math&gt;</dd></dl>
+<p>である。
+</p><p>関数 <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> に逆関数 <span class="texhtml" lang="en"><i>g</i><sup>−1</sup></span> が定義可能であり、かつそれが増加関数かまたは減少関数である場合には、
+上記の関係は以下のように展開できる。
+</p>
+<div style="margin:0 0 0 1em">
+<table align="center" border="0" cellpadding="2" cellspacing="0" style="font-size:smaller">
+<tbody><tr>
+<td colspan="3" style="text-align:left">&lt;math&gt;F_Y (y) = \operatorname{P} (g(X) \le y)&lt;/math&gt;
+</td></tr>
+<tr>
+<td rowspan="2" style="width:10%">
+</td>
+<td rowspan="2" style="text-align:left">&lt;math&gt;=\begin{cases}
+<p>\operatorname{P}(X \le g^{-1}(y)) = F_X(g^{-1}(y)), &amp; \, \\
+\operatorname{P}(X \ge g^{-1}(y)) = 1 - F_X(g^{-1}(y)), \,
+\end{cases}&lt;/math&gt;
+</p>
+</td>
+<td>（<span class="texhtml" lang="en"><i>g</i><sup>−1</sup></span> が増加関数の場合）,
+</td></tr>
+<tr>
+<td>（<span class="texhtml" lang="en"><i>g</i><sup>−1</sup></span> が減少関数の場合）.
+</td></tr></tbody></table>
+</div>
+<p>さらに、同じく <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> の可逆性に加えて微分可能性も仮定すると、両辺を <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> で微分することにより、<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0" title="確率密度関数">確率密度関数</a>の関係を下記のように記述できる。
+</p>
+<dl><dd>&lt;math&gt;f_Y (y) = f_X (g^{-1} (y)) \left| \frac{d g^{-1}(y)}{dy} \right|&lt;/math&gt;</dd></dl>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> の逆関数が存在しない場合でも、それぞれの <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> が<a href="/wiki/%E9%AB%98%E3%80%85_(%E6%95%B0%E5%AD%A6)" title="高々 (数学)">高々</a><a href="/wiki/%E5%8F%AF%E7%AE%97%E9%9B%86%E5%90%88" title="可算集合">可算</a>個の根を持つ場合（すなわち、<span class="texhtml" lang="en"><i>y</i> = <i>g</i>(<i>x<sub>i</sub></i>)</span> である <span class="texhtml mvar" lang="en" style="font-style:italic;">x<sub>i</sub></span> の数が有限または可算無限の場合）には、上記の確率密度関数の関係は次のように一般化できる。        
+</p>
+<dl><dd>&lt;math&gt;f_Y (y) = \sum_i f_X (g_i^{-1} (y)) \left| \frac{d g_i^{-1} (y)}{dy} \right|&lt;/math&gt;</dd>
+<dd>ただし <span class="texhtml" lang="en"><i>x<sub>i</sub></i> = <i>g<sub>i</sub></i><sup>−1</sup>(<i>y</i>)</span></dd></dl>
+<p>この式は <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> が増加関数でなくとも成立する。
+</p><p>確率に対する公理的アプローチとしての測度論において、空間 <span class="texhtml" lang="en">Ω</span> 上の確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> およびボレル<a href="/wiki/%E5%8F%AF%E6%B8%AC%E9%96%A2%E6%95%B0" title="可測関数">可測関数</a> &lt;math&gt;g: \mathbb{R} \rightarrow \mathbb{R}&lt;/math&gt; を取る。可測関数を合成したものもまた可測である（しかし、<span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> が<a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E6%B8%AC%E5%BA%A6" title="ルベーグ測度">ルベーグ可測</a>の場合はその限りではない)ため、<span class="texhtml" lang="en"><i>Y</i> = <i>g</i>(<i>X</i>)</span> もまた空間 <span class="texhtml" lang="en">Ω</span> 上の確率変数である。<span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> の分布を知るために、確率空間 <span class="texhtml" lang="en">(Ω, <i>P</i>)</span> から &lt;math&gt;(\mathbb{R}, dF_X )&lt;/math&gt; への移行と同じ手順を利用できる。
+</p>
+<h3><span id=".E4.BE.8B1"></span><span class="mw-headline" id="例1">例1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=12" title="節を編集: 例1">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> を実数の<a class="mw-redirect" href="/wiki/%E9%80%A3%E7%B6%9A%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0" title="連続確率変数">連続確率分布</a>とした時、<span class="texhtml" lang="en"><span style="white-space: normal;"><i>Y</i> = <i>X</i><sup>2</sup></span></span> とすると、
+</p>
+<dl><dd>&lt;math&gt;F_Y (y) = \operatorname{P} (X^2 \le y)&lt;/math&gt;</dd></dl>
+<p><span class="texhtml" lang="en"><span style="white-space: normal;"><i>y</i> &lt; 0</span></span> の時は &lt;math&gt;\operatorname{P}(X^2 \le y) = 0&lt;/math&gt; であるので、
+</p>
+<dl><dd>&lt;math&gt;F_Y (y) = 0&lt;/math&gt;（ただし <span class="texhtml" lang="en"><span style="white-space: normal;"><i>y</i> &lt; 0</span></span>）である。</dd></dl>
+<p><span class="texhtml" lang="en"><span style="white-space: normal;"><i>y</i> ≥ 0</span></span> の時は &lt;math&gt;\operatorname{P} (X^2 \le y) = \operatorname{P}(|X| \le \sqrt{y})
+</p>
+<pre>= \operatorname{P}(-\sqrt{y} \le  X \le \sqrt{y})&lt;/math&gt; であるので、
+</pre>
+<dl><dd>&lt;math&gt;F_Y (y) = F_X(\sqrt{y}) - F_X(-\sqrt{y})&lt;/math&gt;（ただし <span class="texhtml" lang="en"><span style="white-space: normal;"><i>y</i> ≥ 0</span></span>）である。</dd></dl>
+<h3><span id=".E4.BE.8B2"></span><span class="mw-headline" id="例2">例2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=13" title="節を編集: 例2">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は、分布関数が
+</p>
+<dl><dd>&lt;math&gt;F_X (x) = \operatorname{P}(X \leq x) = \frac{1}{(1 + e^{-x})^{\theta}}&lt;/math&gt;</dd></dl>
+<p>となる確率変数とする。ただし <span class="texhtml" lang="en"><i>θ</i> &gt; 0</span> は固定されたパラメーターである。 確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> を &lt;math&gt;Y=\log (1+e^{-X} )&lt;/math&gt; とすると、
+</p>
+<dl><dd>&lt;math&gt;F_Y (y)=\operatorname{P}(Y \leq y)=\operatorname{P}(\log (1+e^{-X} ) \leq y)=\operatorname{P}(X&gt;-\log (e^y -1)).&lt;/math&gt;</dd></dl>
+<p>最後の表現は <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の分布関数で計算できる。すなわち
+</p>
+<dl><dd>&lt;math&gt;F_Y (y)=1- F_X (-\log (e^y -1))&lt;/math&gt;
+<dl><dd><dl><dd>&lt;math&gt;=1-\frac{1}{(1+e^{\log (e^y -1)})^{\theta}}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;=1-\frac{1}{(1+e^y -1 )^{\theta}}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;=1-e^{-y \theta}.&lt;/math&gt;</dd></dl></dd></dl></dd></dl>
+<h3><span id=".E4.BE.8B3"></span><span class="mw-headline" id="例3">例3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=14" title="節を編集: 例3">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> を標準<a href="/wiki/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83" title="正規分布">正規分布</a>に従う確率変数であるとすると、その確率密度は下記の通りである。
+</p>
+<dl><dd>&lt;math&gt;f_X (x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}&lt;/math&gt;</dd></dl>
+<p>確率変数 <span class="texhtml" lang="en"><span style="white-space: normal;"><i>Y</i> = <i>X</i><sup>2</sup></span></span> を考えると、上記の式を変数変換して確率密度を下記のように表すことができる。
+</p>
+<dl><dd>&lt;math&gt;f_Y (y) = \sum_i f_X ( g_i^{-1} (y)) \left| \frac{d g_i^{-1} (y)}{dy} \right|&lt;/math&gt;</dd></dl>
+<p>この場合、<span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> の値は2つの <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span>（正の値と負の値）に対応するので、変換は<a href="/wiki/%E5%8D%98%E8%AA%BF%E5%86%99%E5%83%8F" title="単調写像">単調写像</a>ではない。しかし、関数が対称であるので、両半分をそれぞれ変形することができる。すなわち、
+</p>
+<dl><dd>&lt;math&gt;f_Y (y) = 2 f_X (g^{-1} (y)) \left| \frac{d g^{-1} (y)}{d y} \right|&lt;/math&gt;</dd></dl>
+<p>である。この逆変換は、
+</p>
+<dl><dd>&lt;math&gt;x = g^{-1} (y) = \sqrt{y}&lt;/math&gt;</dd></dl>
+<p>であり、両辺を微分すると
+</p>
+<dl><dd>&lt;math&gt;\frac{d g^{-1}(y)}{dy} = \frac{1}{2\sqrt{y}}&lt;/math&gt;</dd></dl>
+<p>である。従って、
+</p>
+<dl><dd>&lt;math&gt;f_Y (y) = 2\frac{1}{\sqrt{2\pi}} e^{-y/2} \frac{1}{2\sqrt{y}} = \frac{1}{\sqrt{2\pi y}}e^{-y/2}&lt;/math&gt;</dd></dl>
+<p>これは<a href="/wiki/%E8%87%AA%E7%94%B1%E5%BA%A6" title="自由度">自由度</a> <span class="texhtml" lang="en">1</span> の<a href="/wiki/%E3%82%AB%E3%82%A4%E4%BA%8C%E4%B9%97%E5%88%86%E5%B8%83" title="カイ二乗分布"><span class="texhtml" lang="en"><i>χ</i><sup>2</sup></span>分布</a>である。
+</p>
+<h2><span id=".E7.A2.BA.E7.8E.87.E5.A4.89.E6.95.B0.E3.81.AE.E5.90.8C.E5.80.A4.E6.80.A7"></span><span class="mw-headline" id="確率変数の同値性">確率変数の同値性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=15" title="節を編集: 確率変数の同値性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>確率変数が同値と見なされるには「等しい」「ほとんど確実に等しい」「分布が等しい」といった、いくつかの異なる意味がある。強さの順に並べると、これらの正確な定義は以下の通り。
+</p>
+<h3><span id=".E5.88.86.E5.B8.83.E3.81.8C.E7.AD.89.E3.81.97.E3.81.84"></span><span class="mw-headline" id="分布が等しい">分布が等しい</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=16" title="節を編集: 分布が等しい">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>標本空間が実数直線の部分集合の場合、確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> の分布が等しいとは（&lt;math&gt;X \; \stackrel{d}{=} \; Y&lt;/math&gt; と表記する）下記のように同じ分布関数を持つことである。
+</p>
+<dl><dd>&lt;math&gt;\operatorname{P}(X\le x) = \operatorname{P}(Y\le x)\quad \hbox{for all} \quad x.&lt;/math&gt;</dd></dl>
+<p>2つの確率変数は同じ<a href="/wiki/%E7%A9%8D%E7%8E%87%E6%AF%8D%E9%96%A2%E6%95%B0" title="積率母関数">積率母関数</a>を持つ時に同じ分布になる。この事実は、例えば独立同一分布の確率変数による複数の異なった関数が同じ分布になるかどうかを調べるための便利な方法を提供する。しかしながら、積率母関数が存在するのは、<a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a>が定義される分布関数に対してのみである。
+</p>
+<h3><span id=".E3.81.BB.E3.81.A8.E3.82.93.E3.81.A9.E7.A2.BA.E5.AE.9F.E3.81.AB.E7.AD.89.E3.81.97.E3.81.84"></span><span class="mw-headline" id="ほとんど確実に等しい">ほとんど確実に等しい</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=17" title="節を編集: ほとんど確実に等しい">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2つの確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> が「<a href="/wiki/%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9_(%E6%95%B0%E5%AD%A6)#ほとんど確実に" title="ほとんど (数学)">ほとんど確実に</a>等しい」とは、その2つが異なる確率が <span class="texhtml" lang="en">0</span> であることと同値である<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[注 1]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\operatorname{P}(X\neq Y)=0.&lt;/math&gt;</dd></dl>
+<p>これは、以下で定義される<a href="/wiki/%E8%B7%9D%E9%9B%A2" title="距離">距離</a>が0であることとも同値である。
+</p>
+<dl><dd>&lt;math&gt;d_\infty (X,Y)=\operatorname{ess} \sup_\omega |X(\omega )-Y(\omega )|,&lt;/math&gt;</dd></dl>
+<p>(ただし、ess sup は<a href="/wiki/%E6%B8%AC%E5%BA%A6%E8%AB%96" title="測度論">測度論</a>の意味での<a href="/wiki/%E6%9C%AC%E8%B3%AA%E7%9A%84%E4%B8%8A%E9%99%90%E3%81%A8%E6%9C%AC%E8%B3%AA%E7%9A%84%E4%B8%8B%E9%99%90" title="本質的上限と本質的下限">本質的上限</a>)
+</p><p>確率論におけるすべての現実的な目的に関して、この同値性の概念は実際に等しい場合と同等の強さをもつ。
+</p>
+<h3><span id=".E7.AD.89.E3.81.97.E3.81.84"></span><span class="mw-headline" id="等しい">等しい</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=18" title="節を編集: 等しい">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>最後に、2つの確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> が等しいとは、それらが定義される可測空間上の関数として等しいことを指す。
+</p>
+<dl><dd>&lt;math&gt;X(\omega )=Y(\omega )\qquad \hbox{for all } \omega \in \Omega&lt;/math&gt;</dd></dl>
+<h2><span id=".E5.8F.8E.E6.9D.9F"></span><span class="mw-headline" id="収束">収束</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=19" title="節を編集: 収束">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%AE%E5%8F%8E%E6%9D%9F" title="確率変数の収束">確率変数の収束</a>」を参照</div>
+<p>数理統計学の重要なテーマは、例えば<a href="/wiki/%E5%A4%A7%E6%95%B0%E3%81%AE%E6%B3%95%E5%89%87" title="大数の法則">大数の法則</a>や<a href="/wiki/%E4%B8%AD%E5%BF%83%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86" title="中心極限定理">中心極限定理</a>のように、ある確率変数の特定の<a href="/wiki/%E5%88%97_(%E6%95%B0%E5%AD%A6)" title="列 (数学)">列</a>の収束結果を得ることである。
+</p><p>確率変数列 <span class="texhtml" lang="en">(<i>X<sub>n</sub></i>)</span> を確率変数 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> に収束させる方法は様々なものがある。詳細は<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%AE%E5%8F%8E%E6%9D%9F" title="確率変数の収束">確率変数の収束</a>で説明する。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=20" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="div-col columns column-width" style="-moz-column-count:auto; -webkit-column-count:auto; column-count:auto; -moz-column-width: 22em; -webkit-column-width: 22em; column-width: 22em;">
+<ul><li><a href="/wiki/%E7%A2%BA%E7%8E%87%E8%AB%96" title="確率論">確率論</a></li>
+<li><a class="new" href="/w/index.php?title=En:Aleatoricism&amp;action=edit&amp;redlink=1" title="En:Aleatoricism (存在しないページ)">en:Aleatoricism</a></li>
+<li><a class="new" href="/w/index.php?title=En:Algebra_of_random_variables&amp;action=edit&amp;redlink=1" title="En:Algebra of random variables (存在しないページ)">en:Algebra of random variables</a></li>
+<li><a href="/wiki/%E4%BA%8B%E8%B1%A1_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="事象 (確率論)">事象 (確率論)</a></li>
+<li><a class="new" href="/w/index.php?title=En:Multivariate_random_variable&amp;action=edit&amp;redlink=1" title="En:Multivariate random variable (存在しないページ)">en:Multivariate random variable</a></li>
+<li><a class="new" href="/w/index.php?title=En:Observable_variable&amp;action=edit&amp;redlink=1" title="En:Observable variable (存在しないページ)">en:Observable variable</a></li>
+<li><a class="new" href="/w/index.php?title=En:Random_measure&amp;action=edit&amp;redlink=1" title="En:Random measure (存在しないページ)">en:Random measure</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="確率分布">確率分布</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E8%A6%81%E7%B4%A0" title="確率要素">確率要素</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0" title="ランダム">ランダム</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a></li></ul>
+</div>
+<h2><span id=".E6.B3.A8"></span><span class="mw-headline" id="注">注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=21" title="節を編集: 注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">測度論としての立場で考えれば、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span>, <span class="texhtml mvar" lang="en" style="font-style:italic;">Y</span> が確率測度 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> で<a href="/wiki/%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9_(%E6%95%B0%E5%AD%A6)" title="ほとんど (数学)">ほとんど至るところ等しい</a>、ことと同値である。</span>
+</li>
+</ol></div></div>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Yates-1">^ <a href="#cite_ref-Yates_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Yates_1-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation book" style="font-style:normal">Yates, Daniel S.; Moore, David S; Starnes, Daren S. (2003). <a class="external text" href="http://bcs.whfreeman.com/yates2e/" rel="nofollow"><i>The Practice of Statistics</i></a> (2nd ed.). New York: <a class="new" href="/w/index.php?title=W._H._Freeman_and_Company&amp;action=edit&amp;redlink=1" title="W. H. Freeman and Company (存在しないページ)">Freeman</a>. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-7167-4773-4" title="特別:文献資料/978-0-7167-4773-4">978-0-7167-4773-4</a><span style="display:none;">. <a class="external free" href="http://bcs.whfreeman.com/yates2e/" rel="nofollow">http://bcs.whfreeman.com/yates2e/</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Practice+of+Statistics&amp;rft.aulast=Yates&amp;rft.aufirst=Daniel+S.&amp;rft.au=Yates%2C%26%2332%3BDaniel+S.&amp;rft.au=Moore%2C%26%2332%3BDavid+S&amp;rft.au=Starnes%2C%26%2332%3BDaren+S.&amp;rft.date=2003&amp;rft.edition=2nd&amp;rft.place=New+York&amp;rft.pub=%5B%5BW.+H.+Freeman+and+Company%7CFreeman%5D%5D&amp;rft.isbn=978-0-7167-4773-4&amp;rft_id=http%3A%2F%2Fbcs.whfreeman.com%2Fyates2e%2F&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-UCSB-2">^ <a href="#cite_ref-UCSB_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-UCSB_2-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">Steigerwald, Douglas G.. “<span class="PDFlink"><a class="external text" href="http://econ.ucsb.edu/~doug/245a/Lectures/Measure%20Theory.pdf" rel="nofollow">Economics 245A – Introduction to Measure Theory</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”.   University of California, Santa Barbara. <span title="">2013年4月26日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">L. Castañeda, V. Arunachalam, and S. Dharmaraja (2012). <a class="external text" href="https://books.google.co.jp/books?id=zxXRn-Qmtk8C&amp;pg=PA67&amp;redir_esc=y&amp;hl=ja" rel="nofollow"><i>Introduction to Probability and Stochastic Processes with Applications</i></a>. Wiley. p. 67<span style="display:none;">. <a class="external free" href="https://books.google.co.jp/books?id=zxXRn-Qmtk8C&amp;pg=PA67&amp;redir_esc=y&amp;hl=ja" rel="nofollow">https://books.google.co.jp/books?id=zxXRn-Qmtk8C&amp;pg=PA67&amp;redir_esc=y&amp;hl=ja</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Probability+and+Stochastic+Processes+with+Applications&amp;rft.aulast=L.+Casta%C3%B1eda%2C+V.+Arunachalam%2C+and+S.+Dharmaraja&amp;rft.au=L.+Casta%C3%B1eda%2C+V.+Arunachalam%2C+and+S.+Dharmaraja&amp;rft.date=2012&amp;rft.pages=p.%26nbsp%3B67&amp;rft.pub=Wiley&amp;rft_id=https%3A%2F%2Fbooks.google.co.jp%2Fbooks%3Fid%3DzxXRn-Qmtk8C%26pg%3DPA67%26redir_esc%3Dy%26hl%3Dja&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">サイコロの目に書かれた数字は単なる<a href="/wiki/%E5%B0%BA%E5%BA%A6%E6%B0%B4%E6%BA%96#名義尺度" title="尺度水準">名義尺度</a>であるから、この場合の &lt;math&gt;\{ 1,2,3,4,5,6 \}^2&lt;/math&gt; とは &lt;math&gt;\mathbb{Z}^2&lt;/math&gt; の部分集合ではなく、単なる <span class="texhtml" lang="en">{1, 2, 3, 4, 5, 6}</span> という「記号」の対集合に過ぎない。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><a href="#CITEREFFristedtGray1996">Fristedt &amp; Gray (1996</a>, page 11)</span>
+</li>
+</ol></div></div>
+
+<h3><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=22" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<style data-mw-deduplicate="TemplateStyles:r2399935">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-100{font-size:100%}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}</style><div class="refbegin" style="">
+<ul><li><cite class="citation book" id="Reference-西岡康夫-2013" style="font-style:normal">西岡康夫『数学チュートリアル やさしく語る 確率統計』<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%A0%E7%A4%BE" title="オーム社">オーム社</a>、2013年。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/9784274214073" title="特別:文献資料/9784274214073">9784274214073</a>。</cite></li>
+<li><cite class="citation book" id="Reference-[[伏見康治]]-1942" style="font-style:normal"><a href="/wiki/%E4%BC%8F%E8%A6%8B%E5%BA%B7%E6%B2%BB" title="伏見康治">伏見康治</a>『<a class="external text" href="http://ebsa.ism.ac.jp/ebooks/ebook/204" rel="nofollow"></a><a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E8%AB%96%E5%8F%8A%E7%B5%B1%E8%A8%88%E8%AB%96&amp;action=edit&amp;redlink=1" title="確率論及統計論 (存在しないページ)">確率論及統計論</a>』<a class="mw-redirect" href="/wiki/%E6%B2%B3%E5%87%BA%E6%9B%B8%E6%88%BF" title="河出書房">河出書房</a>、1942年。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/9784874720127" title="特別:文献資料/9784874720127">9784874720127</a>。</cite></li>
+<li><cite class="citation book" id="Reference-[[日本数学会]]-2007" style="font-style:normal"><a href="/wiki/%E6%97%A5%E6%9C%AC%E6%95%B0%E5%AD%A6%E4%BC%9A" title="日本数学会">日本数学会</a>『数学辞典』<a href="/wiki/%E5%B2%A9%E6%B3%A2%E6%9B%B8%E5%BA%97" title="岩波書店">岩波書店</a>、2007年。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/9784000803090" title="特別:文献資料/9784000803090">9784000803090</a>。</cite></li>
+<li><cite class="citation web" id='"JIS_Z_8101-1"' style="font-style:normal">“<a class="external text" href="http://kikakurui.com/z8/Z8101-1-1999-01.html" rel="nofollow">JIS Z 8101-1:1999 統計 − 用語と記号 − 第1部 :確率及び一般統計用語</a>”.   <a href="/wiki/%E6%97%A5%E6%9C%AC%E8%A6%8F%E6%A0%BC%E5%8D%94%E4%BC%9A" title="日本規格協会">日本規格協会</a>. <span title="">2016年7月6日</span>閲覧。</cite></li></ul>
+<ul><li><cite class="citation book" id="CITEREFFristedtGray1996" style="font-style:normal">Fristedt, Bert; Gray, Lawrence (1996). <a class="external text" href="http://books.google.com/books/about/A_Modern_Approach_to_Probability_Theory.html?id=5D5O8xyM-kMC" rel="nofollow"><i>A modern approach to probability theory</i></a>. Boston: Birkhäuser. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/3-7643-3807-5" title="特別:文献資料/3-7643-3807-5">3-7643-3807-5</a><span style="display:none;">. <a class="external free" href="http://books.google.com/books/about/A_Modern_Approach_to_Probability_Theory.html?id=5D5O8xyM-kMC" rel="nofollow">http://books.google.com/books/about/A_Modern_Approach_to_Probability_Theory.html?id=5D5O8xyM-kMC</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+modern+approach+to+probability+theory&amp;rft.aulast=Fristedt&amp;rft.aufirst=Bert&amp;rft.au=Fristedt%2C%26%2332%3BBert&amp;rft.au=Gray%2C%26%2332%3BLawrence&amp;rft.date=1996&amp;rft.place=Boston&amp;rft.pub=Birkh%C3%A4user&amp;rft.isbn=3-7643-3807-5&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%2Fabout%2FA_Modern_Approach_to_Probability_Theory.html%3Fid%3D5D5O8xyM-kMC&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Olav_Kallenberg&amp;action=edit&amp;redlink=1" title="En:Olav Kallenberg (存在しないページ)">Kallenberg, Olav</a> (1986). <a class="external text" href="http://books.google.com/books/about/Random_measures.html?id=bBnvAAAAMAAJ" rel="nofollow"><i>Random Measures</i></a> (4th ed.). Berlin: <a class="new" href="/w/index.php?title=Akademie_Verlag&amp;action=edit&amp;redlink=1" title="Akademie Verlag (存在しないページ)">Akademie Verlag</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-12-394960-2" title="特別:文献資料/0-12-394960-2">0-12-394960-2</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=MR0854102" rel="nofollow">MR0854102</a><span style="display:none;">. <a class="external free" href="http://books.google.com/books/about/Random_measures.html?id=bBnvAAAAMAAJ" rel="nofollow">http://books.google.com/books/about/Random_measures.html?id=bBnvAAAAMAAJ</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Random+Measures&amp;rft.aulast=Kallenberg&amp;rft.aufirst=Olav&amp;rft.au=Kallenberg%2C%26%2332%3BOlav&amp;rft.date=1986&amp;rft.edition=4th&amp;rft.place=Berlin&amp;rft.pub=%5B%5BAkademie+Verlag%5D%5D&amp;rft.isbn=0-12-394960-2&amp;rft.mr=MR0854102&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%2Fabout%2FRandom_measures.html%3Fid%3DbBnvAAAAMAAJ&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Kallenberg, Olav (2001). <a class="external text" href="http://books.google.de/books/about/Foundations_of_Modern_Probability.html?hl=de&amp;id=L6fhXh13OyMC" rel="nofollow"><i>Foundations of Modern Probability</i></a> (2nd ed.). Berlin: <a class="mw-redirect" href="/wiki/Springer_Verlag" title="Springer Verlag">Springer Verlag</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-95313-2" title="特別:文献資料/0-387-95313-2">0-387-95313-2</a><span style="display:none;">. <a class="external free" href="http://books.google.de/books/about/Foundations_of_Modern_Probability.html?hl=de&amp;id=L6fhXh13OyMC" rel="nofollow">http://books.google.de/books/about/Foundations_of_Modern_Probability.html?hl=de&amp;id=L6fhXh13OyMC</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Foundations+of+Modern+Probability&amp;rft.aulast=Kallenberg&amp;rft.aufirst=Olav&amp;rft.au=Kallenberg%2C%26%2332%3BOlav&amp;rft.date=2001&amp;rft.edition=2nd&amp;rft.place=Berlin&amp;rft.pub=%5B%5BSpringer+Verlag%5D%5D&amp;rft.isbn=0-387-95313-2&amp;rft_id=http%3A%2F%2Fbooks.google.de%2Fbooks%2Fabout%2FFoundations_of_Modern_Probability.html%3Fhl%3Dde%26id%3DL6fhXh13OyMC&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Athanasios_Papoulis&amp;action=edit&amp;redlink=1" title="En:Athanasios Papoulis (存在しないページ)">Papoulis, Athanasios</a> (1965). <a class="external text" href="http://www.mhhe.com/engcs/electrical/papoulis/" rel="nofollow"><i>Probability, Random Variables, and Stochastic Processes</i></a> (9th ed.). Tokyo: <a class="new" href="/w/index.php?title=McGraw%E2%80%93Hill&amp;action=edit&amp;redlink=1" title="McGraw–Hill (存在しないページ)">McGraw–Hill</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-07-119981-0" title="特別:文献資料/0-07-119981-0">0-07-119981-0</a><span style="display:none;">. <a class="external free" href="http://www.mhhe.com/engcs/electrical/papoulis/" rel="nofollow">http://www.mhhe.com/engcs/electrical/papoulis/</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Probability%2C+Random+Variables%2C+and+Stochastic+Processes&amp;rft.aulast=Papoulis&amp;rft.aufirst=Athanasios&amp;rft.au=Papoulis%2C%26%2332%3BAthanasios&amp;rft.date=1965&amp;rft.edition=9th&amp;rft.place=Tokyo&amp;rft.pub=%5B%5BMcGraw%E2%80%93Hill%5D%5D&amp;rft.isbn=0-07-119981-0&amp;rft_id=http%3A%2F%2Fwww.mhhe.com%2Fengcs%2Felectrical%2Fpapoulis%2F&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li></ul>
+</div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;section=23" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation" id="CITEREFHazewinkel2001" style="font-style:normal">Hazewinkel, Michiel, ed. (2001), <a class="external text" href="http://eom.springer.de/p/r077360.htm" rel="nofollow">“Random variable”</a>, <i><a class="new" href="/w/index.php?title=En:Encyclopaedia_of_Mathematics&amp;action=edit&amp;redlink=1" title="En:Encyclopaedia of Mathematics (存在しないページ)">Encyclopaedia of Mathematics</a></i>, <a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%97%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%BC%E3%83%BB%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2" title="シュプリンガー・サイエンス・アンド・ビジネス・メディア">Springer</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-1-55608-010-4" title="特別:文献資料/978-1-55608-010-4">978-1-55608-010-4</a><span style="display:none;">, <a class="external free" href="http://eom.springer.de/p/r077360.htm" rel="nofollow">http://eom.springer.de/p/r077360.htm</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Random+variable&amp;rft.atitle=%5B%5B%3Aen%3AEncyclopaedia+of+Mathematics%7CEncyclopaedia+of+Mathematics%5D%5D&amp;rft.date=2001&amp;rft.pub=%5B%5B%E3%82%B7%E3%83%A5%E3%83%97%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%BC%E3%83%BB%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%A2%E3%83%B3%E3%83%89%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%7CSpringer%5D%5D&amp;rft.isbn=978-1-55608-010-4&amp;rft_id=&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFZukerman2014" style="font-style:normal">Zukerman, Moshe (2014) (PDF), <a class="external text" href="http://www.ee.cityu.edu.hk/~zukerman/classnotes.pdf" rel="nofollow"><i>Introduction to Queueing Theory and Stochastic Teletraffic Models</i></a><span style="display:none;">, <a class="external free" href="http://www.ee.cityu.edu.hk/~zukerman/classnotes.pdf" rel="nofollow">http://www.ee.cityu.edu.hk/~zukerman/classnotes.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Queueing+Theory+and+Stochastic+Teletraffic+Models&amp;rft.aulast=Zukerman&amp;rft.aufirst=Moshe&amp;rft.au=Zukerman%2C%26%2332%3BMoshe&amp;rft.date=2014&amp;rft_id=http%3A%2F%2Fwww.ee.cityu.edu.hk%2F%7Ezukerman%2Fclassnotes.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFZukerman2014" style="font-style:normal">Zukerman, Moshe (2014) (PDF), <a class="external text" href="http://www.ee.cityu.edu.hk/~zukerman/probability.pdf" rel="nofollow"><i>Basic Probability Topics</i></a><span style="display:none;">, <a class="external free" href="http://www.ee.cityu.edu.hk/~zukerman/probability.pdf" rel="nofollow">http://www.ee.cityu.edu.hk/~zukerman/probability.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Basic+Probability+Topics&amp;rft.aulast=Zukerman&amp;rft.aufirst=Moshe&amp;rft.au=Zukerman%2C%26%2332%3BMoshe&amp;rft.date=2014&amp;rft_id=http%3A%2F%2Fwww.ee.cityu.edu.hk%2F%7Ezukerman%2Fprobability.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0"><span style="display: none;"> </span></span></li></ul>
+<div aria-labelledby="確率論" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist hlist-slash mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E7%A2%BA%E7%8E%87%E8%AB%96&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:確率論 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%A2%BA%E7%8E%87%E8%AB%96&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%A2%BA%E7%8E%87%E8%AB%96&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="確率論" style="font-size:110%;margin:0 6em">確率論</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率の歴史</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AC%E3%82%A4%E3%83%BB%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95" title="アンドレイ・コルモゴロフ">アンドレイ・コルモゴロフ</a></li>
+<li><a href="/wiki/%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E3%83%BB%E3%83%99%E3%82%A4%E3%82%BA" title="トーマス・ベイズ">トーマス・ベイズ</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AC%E3%82%A4%E3%83%BB%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95" title="アンドレイ・マルコフ">アンドレイ・マルコフ</a></li>
+<li><a href="/wiki/%E4%BC%8A%E8%97%A4%E6%B8%85" title="伊藤清">伊藤清</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率の定義</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">客観確率</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=%E7%B5%B1%E8%A8%88%E7%9A%84%E7%A2%BA%E7%8E%87&amp;action=edit&amp;redlink=1" title="統計的確率 (存在しないページ)">統計的確率</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%8F%A4%E5%85%B8%E7%9A%84%E7%A2%BA%E7%8E%87&amp;action=edit&amp;redlink=1" title="古典的確率 (存在しないページ)">古典的確率</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E8%AB%96#公理的確率論" title="確率論">公理的確率</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">主観確率</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E7%A2%BA%E7%8E%87" title="ベイズ確率">ベイズ確率</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率の拡張</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%A4%96%E7%A2%BA%E7%8E%87" title="外確率">外確率</a></li>
+<li><a href="/wiki/%E8%B2%A0%E3%81%AE%E7%A2%BA%E7%8E%87" title="負の確率">負の確率</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">基礎概念</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">モデル</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%A9%A6%E8%A1%8C_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="試行 (確率論)">試行</a></li>
+<li><a href="/wiki/%E7%B5%90%E6%9E%9C_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="結果 (確率論)">結果</a></li>
+<li><a href="/wiki/%E4%BA%8B%E8%B1%A1_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="事象 (確率論)">事象</a></li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC%E7%A9%BA%E9%96%93" title="標本空間">標本空間</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E6%B8%AC%E5%BA%A6" title="確率測度">確率測度</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E7%A9%BA%E9%96%93" title="確率空間">確率空間</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-selflink selflink">確率変数</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0%E3%81%AE%E5%8F%8E%E6%9D%9F" title="確率変数の収束">確率変数の収束</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率分布</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%9B%A2%E6%95%A3%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="離散確率分布">離散確率分布</a></li>
+<li><a href="/wiki/%E9%80%A3%E7%B6%9A%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="連続確率分布">連続確率分布</a></li>
+<li><a href="/wiki/%E5%90%8C%E6%99%82%E5%88%86%E5%B8%83" title="同時分布">同時分布</a></li>
+<li><a href="/wiki/%E5%91%A8%E8%BE%BA%E5%88%86%E5%B8%83" title="周辺分布">周辺分布</a></li>
+<li><a href="/wiki/%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="条件付き確率分布">条件付き確率分布</a></li>
+<li><a href="/wiki/%E7%8B%AC%E7%AB%8B%E5%90%8C%E5%88%86%E5%B8%83" title="独立同分布">独立同分布</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関数</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%A2%BA%E7%8E%87%E8%B3%AA%E9%87%8F%E9%96%A2%E6%95%B0" title="確率質量関数">確率質量関数</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0" title="確率密度関数">確率密度関数</a></li>
+<li><a href="/wiki/%E7%B4%AF%E7%A9%8D%E5%88%86%E5%B8%83%E9%96%A2%E6%95%B0" title="累積分布関数">累積分布関数</a></li>
+<li><a href="/wiki/%E7%89%B9%E6%80%A7%E9%96%A2%E6%95%B0_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="特性関数 (確率論)">特性関数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">用語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%8B%AC%E7%AB%8B_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="独立 (確率論)">独立</a></li>
+<li><a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="モーメント (確率論)">モーメント</a></li>
+<li><a href="/wiki/%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E7%A2%BA%E7%8E%87" title="条件付き確率">条件付き確率</a></li>
+<li><a href="/wiki/%E6%9D%A1%E4%BB%B6%E4%BB%98%E6%9C%9F%E5%BE%85%E5%80%A4" title="条件付期待値">条件付き期待値</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率の解釈</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%81%AE%E9%80%86%E8%AA%AC" title="ベルトランの逆説">ベルトランの逆説</a></li>
+<li><a href="/wiki/3%E5%9B%9A%E4%BA%BA%E5%95%8F%E9%A1%8C" title="3囚人問題">3囚人問題</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%B3%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9B%E3%83%BC%E3%83%AB%E5%95%8F%E9%A1%8C" title="モンティ・ホール問題">モンティ・ホール問題</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%82%AF%E3%83%88%E3%83%9A%E3%83%86%E3%83%AB%E3%83%96%E3%83%AB%E3%82%AF%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9" title="サンクトペテルブルクのパラドックス">サンクトペテルブルクのパラドックス</a></li>
+<li><a href="/wiki/%E5%90%88%E6%8E%A5%E3%81%AE%E8%AA%A4%E8%AC%AC" title="合接の誤謬">合接の誤謬</a></li>
+<li><a href="/wiki/%E3%82%AE%E3%83%A3%E3%83%B3%E3%83%96%E3%83%A9%E3%83%BC%E3%81%AE%E8%AA%A4%E8%AC%AC" title="ギャンブラーの誤謬">ギャンブラーの誤謬</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">問題</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%A3%BA%E5%95%8F%E9%A1%8C" title="壺問題">壺問題</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%BC%E3%83%9D%E3%83%B3%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%BF%E3%83%BC%E5%95%8F%E9%A1%8C" title="クーポンコレクター問題">クーポンコレクター問題</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">法則・定理</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E3%81%AE%E5%AE%9A%E7%90%86" title="ベイズの定理">ベイズの定理</a></li>
+<li><a href="/wiki/%E5%A4%A7%E6%95%B0%E3%81%AE%E6%B3%95%E5%89%87" title="大数の法則">大数の法則</a></li>
+<li><a href="/wiki/%E4%B8%AD%E5%BF%83%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86" title="中心極限定理">中心極限定理</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E3%81%AE0-1%E6%B3%95%E5%89%87" title="コルモゴロフの0-1法則">コルモゴロフの0-1法則</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BB%E3%83%95%E3%82%A3%E3%83%8D%E3%83%83%E3%83%86%E3%82%A3%E3%81%AE%E5%AE%9A%E7%90%86" title="デ・フィネッティの定理">デ・フィネッティの定理</a></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%8A%E3%83%BC%EF%BC%9D%E3%83%92%E3%83%B3%E3%83%81%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86" title="ウィーナー＝ヒンチンの定理">ウィーナー＝ヒンチンの定理</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">測度論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%B4%E3%82%A3%E3%82%BF%E3%83%AA%E3%81%AE%E5%8F%8E%E6%9D%9F%E5%AE%9A%E7%90%86" title="ヴィタリの収束定理">ヴィタリの収束定理</a></li>
+<li><a href="/wiki/%E5%84%AA%E5%8F%8E%E6%9D%9F%E5%AE%9A%E7%90%86" title="優収束定理">優収束定理</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%8E%9F%E7%90%86" title="ラプラス原理">ラプラス原理</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%B3%E3%83%AD%E3%83%9B%E3%83%83%E3%83%89%E3%81%AE%E8%A1%A8%E7%8F%BE%E5%AE%9A%E7%90%86" title="スコロホッドの表現定理">スコロホッドの表現定理</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%B3%EF%BC%9D%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86" title="ハーン＝コルモゴロフの定理">ハーン＝コルモゴロフの定理</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率微分方程式</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BC%8A%E8%97%A4%E3%81%AE%E8%A3%9C%E9%A1%8C" title="伊藤の補題">伊藤の補題</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">確率過程</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%8B%AC%E7%AB%8B%E5%A2%97%E5%88%86%E9%81%8E%E7%A8%8B" title="独立増分過程">独立増分過程</a></li>
+<li><a href="/wiki/%E5%AE%9A%E5%B8%B8%E9%81%8E%E7%A8%8B" title="定常過程">定常過程</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%AB" title="マルチンゲール">マルチンゲール</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%81%8E%E7%A8%8B" title="マルコフ過程">マルコフ過程</a>（<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E6%80%A7" title="マルコフ性">マルコフ性</a>・<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96" title="マルコフ連鎖">マルコフ連鎖</a>・<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E6%B1%BA%E5%AE%9A%E9%81%8E%E7%A8%8B" title="マルコフ決定過程">マルコフ決定過程</a>・<a href="/wiki/%E9%83%A8%E5%88%86%E8%A6%B3%E6%B8%AC%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E6%B1%BA%E5%AE%9A%E9%81%8E%E7%A8%8B" title="部分観測マルコフ決定過程">部分観測マルコフ決定過程</a>・<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E5%86%8D%E7%94%9F%E9%81%8E%E7%A8%8B" title="マルコフ再生過程">マルコフ再生過程</a>）</li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%8A%E3%83%BC%E9%81%8E%E7%A8%8B" title="ウィーナー過程">ウィーナー過程</a>（<a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="ブラウン運動">ブラウン運動</a>・<a href="/wiki/%E5%B9%BE%E4%BD%95%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="幾何ブラウン運動">幾何ブラウン運動</a>・<a href="/wiki/%E9%9D%9E%E6%95%B4%E6%95%B0%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="非整数ブラウン運動">非整数ブラウン運動</a>）</li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E9%81%8E%E7%A8%8B" title="ベルヌーイ過程">ベルヌーイ過程</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E9%81%8E%E7%A8%8B" title="ガウス過程">ガウス過程</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E7%9B%B8%E4%BC%BC%E9%81%8E%E7%A8%8B" title="自己相似過程">自己相似過程</a></li>
+<li><a href="/wiki/%E7%B5%8C%E9%A8%93%E9%81%8E%E7%A8%8B" title="経験過程">経験過程</a></li>
+<li><a href="/wiki/%E4%B8%AD%E8%8F%AF%E6%96%99%E7%90%86%E5%BA%97%E9%81%8E%E7%A8%8B" title="中華料理店過程">中華料理店過程</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%AB%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%EF%BC%9D%E3%82%A6%E3%83%BC%E3%83%AC%E3%83%B3%E3%83%99%E3%83%83%E3%82%AF%E9%81%8E%E7%A8%8B" title="オルンシュタイン＝ウーレンベック過程">オルンシュタイン＝ウーレンベック過程</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">情報量</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%9C%80%E5%A4%A7%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC%E5%8E%9F%E7%90%86" title="最大エントロピー原理">最大エントロピー原理</a></li>
+<li><a href="/wiki/%E4%BA%A4%E5%B7%AE%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC" title="交差エントロピー">交差エントロピー</a></li>
+<li><a href="/wiki/%E7%B5%90%E5%90%88%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AD%E3%83%94%E3%83%BC" title="結合エントロピー">結合エントロピー</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%83%BB%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%BC%E6%83%85%E5%A0%B1%E9%87%8F" title="カルバック・ライブラー情報量">カルバック・ライブラー情報量</a></li>
+<li><a href="/wiki/%E7%9B%B8%E4%BA%92%E6%83%85%E5%A0%B1%E9%87%8F" title="相互情報量">相互情報量</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">数理ファイナンス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E2%80%93%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%AB%E3%82%BA%E6%96%B9%E7%A8%8B%E5%BC%8F" title="ブラック–ショールズ方程式">ブラック–ショールズ方程式</a></li>
+<li><a href="/wiki/%E7%A2%BA%E7%8E%87%E7%9A%84%E3%83%9C%E3%83%A9%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3%E3%83%A2%E3%83%87%E3%83%AB" title="確率的ボラティリティモデル">確率的ボラティリティモデル</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%A2%BA%E7%8E%87%E8%AB%96" title="カテゴリ:確率論">カテゴリ</a></b></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331123145
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.503 seconds
+Real time usage: 0.670 seconds
+Preprocessor visited node count: 14885/1000000
+Post‐expand include size: 145950/2097152 bytes
+Template argument size: 24340/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 4/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 29692/5000000 bytes
+Lua time usage: 0.160/7 seconds
+Lua virtual size: 8966144/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  577.799      1 -total
+ 36.28%  209.604      9 テンプレート:Cite_book
+ 29.30%  169.309      9 テンプレート:Citation/core
+ 22.29%  128.784      9 テンプレート:ISBN2
+ 19.14%  110.563      7 テンプレート:Citation/identifier
+ 19.12%  110.471      2 テンプレート:Reflist
+ 17.15%   99.087      1 テンプレート:出典の明記
+ 15.90%   91.854      2 テンプレート:Ambox
+ 15.37%   88.806     10 テンプレート:Catalog_lookup_link
+ 10.18%   58.805      3 テンプレート:Cite_book/和書
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:171465-0!canonical and timestamp 20220331123144 and revision id 116757. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=確率変数&amp;oldid=116757">http://localhost:8080/w/index.php?title=確率変数&amp;oldid=116757</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B45%E6%9C%88" title="カテゴリ:出典を必要とする記事/2019年5月">出典を必要とする記事/2019年5月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%A2%BA%E7%8E%87%E8%AB%96" title="カテゴリ:確率論">確率論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%B1%E8%A8%88%E5%AD%A6" title="カテゴリ:統計学">統計学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B9%B1%E6%95%B0" title="カテゴリ:乱数">乱数</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;returntoquery=curid%3D171465%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;returntoquery=curid%3D171465%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;oldid=116757" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月13日 (土) 16:41 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.503","walltime":"0.670","ppvisitednodes":{"value":14885,"limit":1000000},"postexpandincludesize":{"value":145950,"limit":2097152},"templateargumentsize":{"value":24340,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":4,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":29692,"limit":5000000},"timingprofile":["100.00%  577.799      1 -total"," 36.28%  209.604      9 テンプレート:Cite_book"," 29.30%  169.309      9 テンプレート:Citation/core"," 22.29%  128.784      9 テンプレート:ISBN2"," 19.14%  110.563      7 テンプレート:Citation/identifier"," 19.12%  110.471      2 テンプレート:Reflist"," 17.15%   99.087      1 テンプレート:出典の明記"," 15.90%   91.854      2 テンプレート:Ambox"," 15.37%   88.806     10 テンプレート:Catalog_lookup_link"," 10.18%   58.805      3 テンプレート:Cite_book/和書"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"7"},"limitreport-virtmemusage":{"value":8966144,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331123145","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1722});});</script>
+</body></html>

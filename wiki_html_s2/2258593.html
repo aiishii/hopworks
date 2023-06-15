@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>直交ミラーフィルタ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-直交ミラーフィルタ rootpage-直交ミラーフィルタ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">直交ミラーフィルタ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>直交ミラーフィルタ</b>（ちょっこうミラーフィルタ、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en"><i>Quadrature Mirror Filter</i></span>、QMF）は<a href="." id="link_a_2" title="フィルタバンク">フィルタバンク</a>の一種で、<a href="." id="link_a_3" title="折り返し雑音">折り返し雑音</a>が発生しない特徴がある。<a href="." id="link_a_4" title="サンプリング周波数">サンプリング周波数</a>の 1/4 の周波数に対し対称な<a href="." id="link_a_5" title="周波数特性">周波数特性</a>を持つ2つの<a href="." id="link_a_6" title="デジタルフィルタ">デジタルフィルタ</a>を組み合わせることで、<a href="." id="link_a_7" title="サンプリング">サンプリング</a>時の<a href="." id="link_a_3" title="折り返し雑音">折り返し雑音</a>をキャンセルする。
+</p><p>直交ミラーフィルタはオーディオ信号や画像信号の<a href="." id="link_a_8" title="知覚符号化">知覚符号化</a>を行う際などの<a href="." id="link_a_2" title="フィルタバンク">フィルタバンク</a>に用いられることが多く、例えば<a href="." id="link_a_9" title="MP3">MP3</a>や<a href="." id="link_a_10" title="ATRAC">ATRAC</a>などのオーディオ<a href="." id="link_a_11" title="コーデック">コーデック</a>で利用されている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#折り返し雑音の除去"><span class="tocnumber">1.1</span> <span class="toctext">折り返し雑音の除去</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#信号の完全再構成"><span class="tocnumber">1.2</span> <span class="toctext">信号の完全再構成</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#共役直交フィルタ"><span class="tocnumber">2</span> <span class="toctext">共役直交フィルタ</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#マルチチャネルフィルタバンク"><span class="tocnumber">3</span> <span class="toctext">マルチチャネルフィルタバンク</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#フィルタバンクと離散ウェーブレット変換"><span class="tocnumber">4</span> <span class="toctext">フィルタバンクと離散ウェーブレット変換</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#脚注"><span class="tocnumber">5</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>様々な信号の<a href="/wiki/%E7%AC%A6%E5%8F%B7%E5%8C%96" title="符号化">符号化</a>を行う際など、信号を複数の周波数に分割して処理を行うことは多い。このような場合、入力信号を<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%9B%9E%E8%B7%AF" title="フィルタ回路">フィルタ</a>を使って複数の周波数成分に分解し、各成分を<a class="mw-redirect" href="/wiki/%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="ダウンサンプリング">ダウンサンプリング</a>して処理を行う。元の信号の復元には、各信号を<a class="mw-redirect" href="/wiki/%E3%82%A2%E3%83%83%E3%83%97%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="アップサンプリング">アップサンプリング</a>した後に再度<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%9B%9E%E8%B7%AF" title="フィルタ回路">フィルタ</a>で必要な周波数成分のみを取り出して合成する。
+</p><p>このような場合、<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%9B%9E%E8%B7%AF" title="フィルタ回路">フィルタ</a>の不完全な<a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E7%89%B9%E6%80%A7" title="周波数特性">周波数特性</a>のため、<a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="サンプリング">サンプリング</a>時に隣り合う周波数成分による<a href="/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3" title="折り返し雑音">折り返し雑音</a>が発生し、最終的な信号は元の信号と異なるものになる。例えば、オーディオ信号の符号化の場合には再生された音の歪みとして現れる。
+</p><p>直交ミラーフィルタは、<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a>を構成する各<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%9B%9E%E8%B7%AF" title="フィルタ回路">フィルタ</a>の特性に<a href="/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3" title="折り返し雑音">折り返し雑音</a>のキャンセルを行うような制限を設けたもので、折り返し雑音が全く発生しない。
+また、入力と全く同じ信号を完全再構成することも可能である。
+</p>
+<h3><span id=".E6.8A.98.E3.82.8A.E8.BF.94.E3.81.97.E9.9B.91.E9.9F.B3.E3.81.AE.E9.99.A4.E5.8E.BB"></span><span class="mw-headline" id="折り返し雑音の除去">折り返し雑音の除去</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=2" title="節を編集: 折り返し雑音の除去">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>単純化した直交ミラーフィルタの構成は以下の図で表現できる。
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:522px;">ファイル:QMF.svg <div class="thumbcaption">2チャネルの直交ミラーフィルタ</div></div></div>
+<p>ここで <i>H<sub>0</sub></i>、<i>G<sub>0</sub></i>、<i>H<sub>1</sub></i>、<i>G<sub>1</sub></i> はフィルタを表し、↓2、↑2 はそれぞれ<a class="mw-redirect" href="/wiki/%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="ダウンサンプリング">ダウンサンプリング</a>と<a class="mw-redirect" href="/wiki/%E3%82%A2%E3%83%83%E3%83%97%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="アップサンプリング">アップサンプリング</a>を示す。図の左半分は信号を分析するステージで、右半分は信号を合成するステージである。この構成では信号を<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ローパスフィルタ">ローパスフィルタ</a>と<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ハイパスフィルタ">ハイパスフィルタ</a>により、2つの帯域に分割する。
+</p><p><a href="/wiki/Z%E5%A4%89%E6%8F%9B" title="Z変換">Z変換</a>を使うと、出力 &lt;math&gt;\hat X(z)&lt;/math&gt; は以下の式で表現できることが分かっている
+<sup class="reference" id="cite_ref-ASPC39_1-0"><a href="#cite_note-ASPC39-1">[1]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\hat X(z) = \frac{1}{2} X(z) \left( H_0(z) G_0(z) + H_1(z) G_1(z) \right) +  \frac{1}{2} X(-z) \left( H_0(-z) G_0(z) + H_1(-z) G_1(z) \right) &lt;/math&gt;</dd></dl>
+<p>入力 <i>X(z)</i> を含む最初の項が信号成分、 <i>X(-z)</i> を含む2番目の項が折り返し成分を表す。この式より<a href="/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3" title="折り返し雑音">折り返し雑音</a>が無くなる条件は以下の式で表される
+<sup class="reference" id="cite_ref-WSC127_2-0"><a href="#cite_note-WSC127-2">[2]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;H_0(-z) G_0(z) + H_1(-z) G_1(z) = 0\,&lt;/math&gt;</dd></dl>
+<p>直交ミラーフィルタの制約条件は、この式を満たす以下の条件となる<sup class="reference" id="cite_ref-WSC127_2-1"><a href="#cite_note-WSC127-2">[2]</a></sup><sup class="reference" id="cite_ref-Smith_QMF_3-0"><a href="#cite_note-Smith_QMF-3">[3]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;H_1(z) = H_0(-z) \qquad \mbox{ (QMF Symmetry Constraint) } \,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;G_0(z) = H_1(-z) = H_0(z)\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;G_1(z) = - H_1(z) = -H_0(-z)\,&lt;/math&gt;</dd></dl>
+<p>この条件の最初の式は分析フィルタ <i>H<sub>0</sub></i> と <i>H<sub>1</sub></i> が周波数に対し対称な特性を持つ制約を表す。<a href="/wiki/%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2" title="複素平面">複素平面</a>での |Z| = 1 の<a href="/wiki/%E5%8D%98%E4%BD%8D%E5%86%86" title="単位円">単位円</a>上を考えると以下の式が成立する。
+</p>
+<dl><dd>&lt;math&gt;| H_1(e^{j\omega}) | = | H_0(-e^{j\omega}) | = | H_0(e^{j(\omega-\pi)}) | = | H_0(e^{j(\pi-\omega)}) |\,&lt;/math&gt;</dd></dl>
+<p>このようにフィルタ特性が<a href="/wiki/%E8%A4%87%E7%B4%A0%E5%B9%B3%E9%9D%A2" title="複素平面">複素平面</a>上で<a href="/wiki/%E9%8F%A1%E6%98%A0" title="鏡映">鏡映</a><a href="/wiki/%E5%AF%BE%E7%A7%B0%E6%80%A7" title="対称性">対称性</a>を持つため、直交ミラーフィルタの名称で呼ばれる。
+</p><p>また、時間領域での各フィルタの関係は以下の式で表現される<sup class="reference" id="cite_ref-ASPC155_4-0"><a href="#cite_note-ASPC155-4">[4]</a></sup><sup class="reference" id="cite_ref-Smith_QMF_3-1"><a href="#cite_note-Smith_QMF-3">[3]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;h_1[n] = (-1)^n h_0[n]\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_0[n] = h_0[n]\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_1[n] = -(-1)^n h_0[n]\,&lt;/math&gt;</dd></dl>
+<p>2チャネル直交ミラーフィルタの各フィルタの特性は、<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ローパスフィルタ">ローパスフィルタ</a> <i>H<sub>0</sub></i>から導き出すことができる。
+</p>
+<h3><span id=".E4.BF.A1.E5.8F.B7.E3.81.AE.E5.AE.8C.E5.85.A8.E5.86.8D.E6.A7.8B.E6.88.90"></span><span class="mw-headline" id="信号の完全再構成">信号の完全再構成</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=3" title="節を編集: 信号の完全再構成">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フィルタによる<a href="/wiki/%E6%8C%AF%E5%B9%85" title="振幅">振幅</a>歪みや<a href="/wiki/%E4%BD%8D%E7%9B%B8" title="位相">位相</a>歪みも考慮すると、<a href="/wiki/%E6%8A%98%E3%82%8A%E8%BF%94%E3%81%97%E9%9B%91%E9%9F%B3" title="折り返し雑音">折り返し雑音</a>が無くなるだけでは信号の完全再構成（Perfect Reconstruction、PR）の条件を満たすわけではない。折り返し雑音が無くなる制約条件が成り立つ場合、出力 &lt;math&gt;\hat X(z)&lt;/math&gt; についての前出の式より信号の完全再構成の条件は以下のように表現できる<sup class="reference" id="cite_ref-WSC127_2-2"><a href="#cite_note-WSC127-2">[2]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;H_0(z) G_0(z) + H_1(z) G_1(z) = 2z^{-l}\,&lt;/math&gt;</dd></dl>
+<p>ここで <i>l</i> は<a href="/wiki/%E6%95%B4%E6%95%B0" title="整数">非負整数</a>である。式の右辺の &lt;math&gt;z^{-l}&lt;/math&gt; は入力と全く同じサンプル値が <i>l</i> ステップだけ遅れて出力に現れるような変換を表し、時間領域での以下の関係式に等しい。
+</p>
+<dl><dd>&lt;math&gt;\hat x[n] = x[n - l]\,&lt;/math&gt;</dd></dl>
+<p>この式と折り返し雑音が無くなる条件とを組み合わせると、直交ミラーフィルタで信号の完全再構成を行うための制約として以下の式が求まる<sup class="reference" id="cite_ref-WSC127_2-3"><a href="#cite_note-WSC127-2">[2]</a></sup><sup class="reference" id="cite_ref-Smith_QMF_3-2"><a href="#cite_note-Smith_QMF-3">[3]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;H_0^2(z) - H_0^2(-z) = 2z^{-l} \qquad \mbox{ (QMF Perfect Reconstruction Constraint) } \,&lt;/math&gt;</dd></dl>
+<p>この関係を満たすフィルタとしてハールフィルタ（Haar filter）&lt;math&gt;H_0(z) = (1 + z^{-1})/ \sqrt{2}&lt;/math&gt; がある。この式を代入すると、以下の式が成り立ち、1 サンプルの遅延で元の信号を完全再構成できることが分かる<sup class="reference" id="cite_ref-WSC127_2-4"><a href="#cite_note-WSC127-2">[2]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\frac{1}{2} \left( 1 + 2z^{-1} + z^{-2} \right) - \frac{1}{2} \left( 1 - 2z^{-1} + z^{-2} \right)  = 2z^{-1}\,&lt;/math&gt;</dd></dl>
+<p>より特性の優れた高次の<a href="/wiki/%E6%9C%89%E9%99%90%E3%82%A4%E3%83%B3%E3%83%91%E3%83%AB%E3%82%B9%E5%BF%9C%E7%AD%94" title="有限インパルス応答">FIR</a>フィルタは完全再構成を行うための条件を満たすことができないことが分かっており<sup class="reference" id="cite_ref-WSC127_2-5"><a href="#cite_note-WSC127-2">[2]</a></sup>、近似的に条件を満たすようフィルタを構成する<sup class="reference" id="cite_ref-WSC127_2-6"><a href="#cite_note-WSC127-2">[2]</a></sup>。このような方法でも適切な設計により周波数特性の変動を非常な小さな値（±0.0015<a href="/wiki/%E3%83%87%E3%82%B7%E3%83%99%E3%83%AB" title="デシベル">dB</a>程度）に抑えることができる
+<sup class="reference" id="cite_ref-Johnson1980_5-0"><a href="#cite_note-Johnson1980-5">[5]</a></sup>。このようなフィルタは疑似QMF（Pseudo QMF）と呼ばれる。
+また、<a href="/wiki/%E7%84%A1%E9%99%90%E3%82%A4%E3%83%B3%E3%83%91%E3%83%AB%E3%82%B9%E5%BF%9C%E7%AD%94" title="無限インパルス応答">IIR</a>フィルタでは完全再構成が可能な特性の優れたフィルタを構成できる<sup class="reference" id="cite_ref-MSFB201_6-0"><a href="#cite_note-MSFB201-6">[6]</a></sup><sup class="reference" id="cite_ref-Smith_QMF_3-3"><a href="#cite_note-Smith_QMF-3">[3]</a></sup>。
+</p>
+<h2><span id=".E5.85.B1.E5.BD.B9.E7.9B.B4.E4.BA.A4.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF"></span><span class="mw-headline" id="共役直交フィルタ">共役直交フィルタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=4" title="節を編集: 共役直交フィルタ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>直交ミラーフィルタ以外でも、折り返し雑音の除去と完全再構成についての下記関係式を満たせば信号の完全再構成が可能である。
+</p>
+<dl><dd>&lt;math&gt;H_0(-z) G_0(z) + H_1(-z) G_1(z) = 0\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;H_0(z) G_0(z) + H_1(z) G_1(z) = 2z^{-l}\,&lt;/math&gt;</dd></dl>
+<p>直交ミラーフィルタと同様に対称的な特性のフィルタを組み合わせる例として、<b>共役直交フィルタ</b>（<a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英</a>: <span lang="en"><i>Conjugate Quadrature Filter</i></span>、CQF）がある<sup class="reference" id="cite_ref-ASPC155_4-1"><a href="#cite_note-ASPC155-4">[4]</a></sup><sup class="reference" id="cite_ref-Smith_CQF_7-0"><a href="#cite_note-Smith_CQF-7">[7]</a></sup>。
+<i>H<sub>0</sub></i> がフィルタ長 <i>L</i> の<a href="/wiki/%E6%9C%89%E9%99%90%E3%82%A4%E3%83%B3%E3%83%91%E3%83%AB%E3%82%B9%E5%BF%9C%E7%AD%94" title="有限インパルス応答">FIR</a>フィルタの場合、共役直交フィルタの制約条件は以下のようになる<sup class="reference" id="cite_ref-Smith_CQF_7-1"><a href="#cite_note-Smith_CQF-7">[7]</a></sup>。<i>L</i> は<a href="/wiki/%E5%81%B6%E6%95%B0" title="偶数">偶数</a>とする。
+</p>
+<dl><dd>&lt;math&gt;H_1(z) = z^{-(L-1)} H_0(-z^{-1})\,&lt;/math&gt;</dd></dl>
+<p>また、時間領域での各フィルタの関係は以下の式で表現される<sup class="reference" id="cite_ref-ASPC155_4-2"><a href="#cite_note-ASPC155-4">[4]</a></sup><sup class="reference" id="cite_ref-Smith_CQF_7-2"><a href="#cite_note-Smith_CQF-7">[7]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;h_1[n] = (-1)^n h_0[L - 1 - n]\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_0[n] = h_0[L - 1 - n]\,&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_1[n] = -(-1)^n h_0[n] = -h_1[L - 1 - n]\,&lt;/math&gt;</dd></dl>
+<p>合成フィルタのインパルス応答は解析フィルタのインパルス応答を逆順に時間反転したものとなる。
+</p>
+<h2><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.83.81.E3.83.A3.E3.83.8D.E3.83.AB.E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF.E3.83.90.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="マルチチャネルフィルタバンク">マルチチャネルフィルタバンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=5" title="節を編集: マルチチャネルフィルタバンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>オーディオ信号の符号化など、多くの応用では2チャネル以上の<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a>を構成する必要がある。2チャネルの場合と同様の原理を用いて、折り返し雑音の除去や信号の完全再構成が可能なマルチチャネルの直交ミラーフィルタや共役直交フィルタを構築できる
+<sup class="reference" id="cite_ref-ASPC156_8-0"><a href="#cite_note-ASPC156-8">[8]</a></sup>。
+</p><p>最も単純には、2チャネルのフィルタバンクを<a href="/wiki/%E6%9C%A8_(%E6%95%B0%E5%AD%A6)" title="木 (数学)">木構造</a>に接続していく方法がある。
+2チャネルに分割した両出力をそれぞれ必要なチャネル数になるまで分割していき、合成時は逆に2チャネルの合成を同じように繰り返す。個々の2チャネルフィルタバンクが完全再構成の特性を満たせば、全体のフィルタも完全再構成ができる。
+</p><p>この方式は、比較的設計が簡単でチャネル分割の自由度が高いという特徴がある<sup class="reference" id="cite_ref-ASPC156_8-1"><a href="#cite_note-ASPC156-8">[8]</a></sup>。チャネル分割の仕方は、全体を均一な<a href="/wiki/%E6%9C%A8_(%E6%95%B0%E5%AD%A6)" title="木 (数学)">木構造</a>にして全てを同じ<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域幅</a>にすることもでき、周波数により分割数を変えることでそれぞれ異なった<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域幅</a>にすることも可能である。例えば、片側のみに枝が伸びる木構造の形に2チャネルのフィルタバンクを接続すれば、帯域を 1/2、1/4、1/8、1/16、… と分割する<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%96" title="オクターブ">オクターブ</a>バンド構成のフィルタになる。
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:182px;">ファイル:Wavelets - DWT Freq.png <div class="thumbcaption">オクターブバンド構成フィルタバンクの周波数特性の例</div></div></div>
+<p>もっと直接的に2チャネルの構成を任意の M-チャネルに拡張し、M 個の分析フィルタと 1/M <a class="mw-redirect" href="/wiki/%E3%83%80%E3%82%A6%E3%83%B3%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="ダウンサンプリング">ダウンサンプリング</a>、及び M 倍<a class="mw-redirect" href="/wiki/%E3%82%A2%E3%83%83%E3%83%97%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0" title="アップサンプリング">アップサンプリング</a>とM 個の合成フィルタを並列に並べることで実現する方法もある。2チャネルの場合より複雑になるが、折り返し雑音の除去、及び信号の完全再構成の制約条件があり
+<sup class="reference" id="cite_ref-WSC170_9-0"><a href="#cite_note-WSC170-9">[9]</a></sup>、それを満たすフィルタの組み合わせで完全再構成が可能なマルチチャネルフィルタバンクを実現できる<sup class="reference" id="cite_ref-ASPC156_8-2"><a href="#cite_note-ASPC156-8">[8]</a></sup>。
+</p>
+<h2><span id=".E3.83.95.E3.82.A3.E3.83.AB.E3.82.BF.E3.83.90.E3.83.B3.E3.82.AF.E3.81.A8.E9.9B.A2.E6.95.A3.E3.82.A6.E3.82.A7.E3.83.BC.E3.83.96.E3.83.AC.E3.83.83.E3.83.88.E5.A4.89.E6.8F.9B"></span><span class="mw-headline" id="フィルタバンクと離散ウェーブレット変換">フィルタバンクと離散ウェーブレット変換</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=6" title="節を編集: フィルタバンクと離散ウェーブレット変換">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>直交ミラーフィルタや共役直交フィルタによる<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a>は<a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E5%A4%89%E6%8F%9B" title="離散ウェーブレット変換">離散ウェーブレット変換</a>の理論と関係がある。片側のみに枝が伸びる木構造の形に2チャネルのフィルタバンクを接続した<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%96" title="オクターブ">オクターブ</a>バンド構成の<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a>は、2進<a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E5%A4%89%E6%8F%9B" title="離散ウェーブレット変換">離散ウェーブレット変換</a>に等しい。
+</p>
+<div class="thumb tnone"><div class="thumbinner" style="width:182px;">ファイル:Wavelets - Filter Bank.png <div class="thumbcaption">2進ウェーブレット変換の係数の<a href="/wiki/%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89" title="カスケード">カスケード</a>計算の例</div></div></div>
+<p><a href="/wiki/%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="信号処理">信号処理</a>と<a href="/wiki/%E5%BF%9C%E7%94%A8%E6%95%B0%E5%AD%A6" title="応用数学">応用数学</a>の分野で別々に使われてきた<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a>と<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E5%A4%89%E6%8F%9B" title="ウェーブレット変換">ウェーブレット変換</a>は、1つの理論の別の側面として扱われるようになっている<sup class="reference" id="cite_ref-Vetterli1992_10-0"><a href="#cite_note-Vetterli1992-10">[10]</a></sup>。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=7" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="references-small">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-ASPC39-1"><b><a href="#cite_ref-ASPC39_1-0">^</a></b> <span class="reference-text">Andreas Spanias, Ted Painter, Venkatraman Atti. <i>Audio signal processing and coding</i>.  p.39.</span>
+</li>
+<li id="cite_note-WSC127-2">^ <a href="#cite_ref-WSC127_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-WSC127_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-WSC127_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-WSC127_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-WSC127_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-WSC127_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-WSC127_2-6"><sup><i><b>g</b></i></sup></a> <span class="reference-text">Martin Vetterli, Jelena Kovacevic. <i>Wavelets and Subband Coding.</i> p.127.</span>
+</li>
+<li id="cite_note-Smith_QMF-3">^ <a href="#cite_ref-Smith_QMF_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Smith_QMF_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Smith_QMF_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Smith_QMF_3-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">Julius Orion Smith III. “<a class="external text" href="https://ccrma.stanford.edu/~jos/sasp/Quadrature_Mirror_Filters_QMF.html" rel="nofollow">Quadrature Mirror Filters (QMF)</a>”.   CCRMA, Stanford University. <span title="">2010年12月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-ASPC155-4">^ <a href="#cite_ref-ASPC155_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ASPC155_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ASPC155_4-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text">Andreas Spanias, Ted Painter, Venkatraman Atti. <i>Audio signal processing and coding</i>.  p.155.</span>
+</li>
+<li id="cite_note-Johnson1980-5"><b><a href="#cite_ref-Johnson1980_5-0">^</a></b> <span class="reference-text">J. D. Johnston. <i>A filter family designed for use in quadrature mirror filter banks.</i> Proc. IEEE Int. Conf. Acoust. Speech and Signal Proc., pp.291-294, 1980.</span>
+</li>
+<li id="cite_note-MSFB201-6"><b><a href="#cite_ref-MSFB201_6-0">^</a></b> <span class="reference-text">P. P. Vaidyanathan. <i>Multirate Systems And Filter Banks.</i> pp201-205.</span>
+</li>
+<li id="cite_note-Smith_CQF-7">^ <a href="#cite_ref-Smith_CQF_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Smith_CQF_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Smith_CQF_7-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">Julius Orion Smith III. “<a class="external text" href="https://ccrma.stanford.edu/~jos/sasp/Conjugate_Quadrature_Filters_CQF.html" rel="nofollow">Conjugate Quadrature Filters (CQF)</a>”.   CCRMA, Stanford University. <span title="">2010年12月10日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-ASPC156-8">^ <a href="#cite_ref-ASPC156_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ASPC156_8-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ASPC156_8-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text">Andreas Spanias, Ted Painter, Venkatraman Atti. <i>Audio signal processing and coding</i>.  pp.156-160.</span>
+</li>
+<li id="cite_note-WSC170-9"><b><a href="#cite_ref-WSC170_9-0">^</a></b> <span class="reference-text">詳細は Martin Vetterli, Jelena Kovacevic. <i>Wavelets and Subband Coding.</i> p.170. など参照のこと。</span>
+</li>
+<li id="cite_note-Vetterli1992-10"><b><a href="#cite_ref-Vetterli1992_10-0">^</a></b> <span class="reference-text">Martin Vetterli, Cormac Herly. <i>Wavelets and Filter Banks: Theory and Design.</i> IEEE Tran. Signal Proc., Vol.40, No. 9, 1992.</span>
+</li>
+</ol></div>
+</div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=8" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Andreas Spanias, Ted Painter, Venkatraman Atti. <i>Audio signal processing and coding.</i> Wiley-Interscience, John Wiley &amp; Sons, Inc., 2007. ISBN 978-0471791478.</li>
+<li>Martin Vetterli, Jelena Kovacevic. <i><a class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.79.6218&amp;rep=rep1&amp;type=pdf" rel="nofollow">Wavelets and Subband Coding.</a></i>(PDF) Prentice Hall PTR, 1995. ISBN 978-0130970800.</li>
+<li>P. P. Vaidyanathan. <i>Multirate Systems And Filter Banks.</i> Prentice Hall PTR, 1993. ISBN 978-0136057185</li>
+<li><cite class="citation web" style="font-style:normal">Julius Orion Smith III. “<a class="external text" href="https://ccrma.stanford.edu/~jos/sasp/Quadrature_Mirror_Filters_QMF.html" rel="nofollow">Quadrature Mirror Filters (QMF)</a>”.   CCRMA, Stanford University. <span title="">2010年12月10日</span>閲覧。</cite></li>
+<li><cite class="citation web" style="font-style:normal">Julius Orion Smith III. “<a class="external text" href="https://ccrma.stanford.edu/~jos/sasp/Conjugate_Quadrature_Filters_CQF.html" rel="nofollow">Conjugate Quadrature Filters (CQF)</a>”.   CCRMA, Stanford University. <span title="">2010年12月10日</span>閲覧。</cite></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;section=9" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%9B%9E%E8%B7%AF" title="フィルタ回路">フィルタ回路</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%90%E3%83%B3%E3%82%AF" title="フィルタバンク">フィルタバンク</a></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88" title="ウェーブレット">ウェーブレット</a></li>
+<li><a href="/wiki/%E9%9B%A2%E6%95%A3%E3%82%A6%E3%82%A7%E3%83%BC%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E5%A4%89%E6%8F%9B" title="離散ウェーブレット変換">離散ウェーブレット変換</a></li>
+<li><a href="/wiki/%E7%9F%A5%E8%A6%9A%E7%AC%A6%E5%8F%B7%E5%8C%96" title="知覚符号化">知覚符号化</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401095302
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.126 seconds
+Real time usage: 0.169 seconds
+Preprocessor visited node count: 1545/1000000
+Post‐expand include size: 5805/2097152 bytes
+Template argument size: 2963/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6394/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 4956160/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  127.472      1 -total
+ 70.30%   89.612      4 テンプレート:Cite_web
+ 46.82%   59.677      4 テンプレート:Ifempty
+ 16.09%   20.509      4 テンプレート:Accessdate
+ 13.05%   16.638      4 テンプレート:Accessdate/core
+  7.97%   10.161      4 テンプレート:ISO_dateJA
+  6.36%    8.110      2 テンプレート:Lang-en-short
+  4.11%    5.242      2 テンプレート:LangWithName
+  3.81%    4.862      4 テンプレート:ISO_date/ymd
+  2.06%    2.628      2 テンプレート:Lang
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2258593-0!canonical and timestamp 20220401095302 and revision id 1350535. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=直交ミラーフィルタ&amp;oldid=1350535">http://localhost:8080/w/index.php?title=直交ミラーフィルタ&amp;oldid=1350535</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="カテゴリ:信号処理">信号処理</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%9F%B3%E9%9F%BF%E5%B7%A5%E5%AD%A6" title="カテゴリ:音響工学">音響工学</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;returntoquery=curid%3D2258593%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;returntoquery=curid%3D2258593%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;oldid=1350535" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E3%83%9F%E3%83%A9%E3%83%BC%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2018年10月18日 (木) 11:01 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.126","walltime":"0.169","ppvisitednodes":{"value":1545,"limit":1000000},"postexpandincludesize":{"value":5805,"limit":2097152},"templateargumentsize":{"value":2963,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6394,"limit":5000000},"timingprofile":["100.00%  127.472      1 -total"," 70.30%   89.612      4 テンプレート:Cite_web"," 46.82%   59.677      4 テンプレート:Ifempty"," 16.09%   20.509      4 テンプレート:Accessdate"," 13.05%   16.638      4 テンプレート:Accessdate/core","  7.97%   10.161      4 テンプレート:ISO_dateJA","  6.36%    8.110      2 テンプレート:Lang-en-short","  4.11%    5.242      2 テンプレート:LangWithName","  3.81%    4.862      4 テンプレート:ISO_date/ymd","  2.06%    2.628      2 テンプレート:Lang"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":4956160,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401095302","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":374});});</script>
+</body></html>

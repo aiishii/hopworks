@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>依存性逆転の原則 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-依存性逆転の原則 rootpage-依存性逆転の原則 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">依存性逆転の原則</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="オブジェクト指向設計">オブジェクト指向設計</a>において、<b>依存性逆転の原則</b>、または<b>依存関係逆転の原則</b><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup><b>（dependency inversion principle)</b>　とはソフトウエアモジュールを<a href="." id="link_a_2" title="結合度">疎結合</a>に保つための特定の形式を指す用語。この原則に従うとソフトウェアの振る舞いを定義する上位レベルのモジュールから下位レベルモジュールへの従来の依存関係は逆転し、結果として下位レベルモジュールの実装の詳細から上位レベルモジュールを独立に保つことができるようになる。この原則で述べられていることは以下の２つである:<sup class="reference" id="cite_ref-Martin2003_2-0"><a href="#cite_note-Martin2003-2">[2]</a></sup>
+</p>
+<ul><li><i>A. 上位レベルのモジュールは下位レベルのモジュールに依存すべきではない。両方とも<a href="." id="link_a_3" title="抽象化 (計算機科学)">抽象</a>（abstractions)に依存すべきである。</i></li>
+<li><i>B. 抽象は詳細に依存してはならない。詳細が抽象に依存すべきである。</i></li></ul>
+<p>この上位レベル、下位レベルの<i>両方とも</i>抽象に依存しなければならないと言う要求により、この設計原理は一部の人々のオブジェクト指向プログラミングに対する考え方を<i>反転</i>させる。<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>この原理について述べた上記のポイント A と B の背景にある考えは、上位モジュールと下位モジュールの相互作用を設計する際に、これらの関係が抽象的な相互作用として捉えられるべきであるということであり、これによって上位モジュールだけでなく下位レベルモジュールも設計的な影響を受けることになる。下位モジュールは相互作用を念頭に設計されるべきで、その結果自身を使用するためのインターフェースについて変更を行う必要が生じる可能性がある。多くの場合、相互作用を抽象的な概念として捉えることにより追加のコーディングパターンを導入せずにコンポーネント間の結合を減らすことができ、より軽量で実装への依存が少ない総合作用スキーマを用いるだけで済むようになる。
+</p><p>２つのモジュールの間で見出された抽象的な相互関係が一般性を持ち、かつ一般化が意味を持つとき、この設計原理は以下の依存性の逆転コーディングパターンを導く。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#従来のレイヤーパターン"><span class="tocnumber">1</span> <span class="toctext">従来のレイヤーパターン</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#依存性逆転パターン"><span class="tocnumber">2</span> <span class="toctext">依存性逆転パターン</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#依存性逆転パターンの一般化"><span class="tocnumber">3</span> <span class="toctext">依存性逆転パターンの一般化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#一般化における制約"><span class="tocnumber">3.1</span> <span class="toctext">一般化における制約</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#インターフェースモック化の制約"><span class="tocnumber">3.2</span> <span class="toctext">インターフェースモック化の制約</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#将来的な方向性"><span class="tocnumber">3.3</span> <span class="toctext">将来的な方向性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#実装"><span class="tocnumber">4</span> <span class="toctext">実装</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#例"><span class="tocnumber">5</span> <span class="toctext">例</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#家系モジュール"><span class="tocnumber">5.1</span> <span class="toctext">家系モジュール</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#リモートファイルサーバークライアント"><span class="tocnumber">5.2</span> <span class="toctext">リモートファイルサーバークライアント</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Model_View_Controller"><span class="tocnumber">5.3</span> <span class="toctext">Model View Controller</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#関連するパターン"><span class="tocnumber">6</span> <span class="toctext">関連するパターン</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#History"><span class="tocnumber">7</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#外部リンク"><span class="tocnumber">10</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.BE.93.E6.9D.A5.E3.81.AE.E3.83.AC.E3.82.A4.E3.83.A4.E3.83.BC.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3"></span><span class="mw-headline" id="従来のレイヤーパターン">従来のレイヤーパターン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=1" title="節を編集: 従来のレイヤーパターン">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>伝統的なアプリケーションアーキテクチャーにおいて、下位レベルコンポーネント（e.g. Utility Layer）はより複雑なシステムの構築を可能にする上位レベルコンポーネント（e.g. Policy Layer）によって使用される形で設計がおこなわれる。この方法では上位レベルコンポーネントは直接下位レベルコンポーネントに依存する。この低レベルコンポーネントへの依存は、上位レベルコンポーネントの再利用の機会を制限してしまう。<sup class="reference" id="cite_ref-Martin2003_2-1"><a href="#cite_note-Martin2003-2">[2]</a></sup>
+</p>
+<div class="center"><div class="floatnone">ファイル:Traditional Layers Pattern.png</div></div>
+<p>依存性逆転パターンの目指すところは、抽象レイヤーを導入することによってこの高度に結合した状態を回避し、上位の policy layer の再利用性を高めることにある。
+</p>
+<h2><span id=".E4.BE.9D.E5.AD.98.E6.80.A7.E9.80.86.E8.BB.A2.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3"></span><span class="mw-headline" id="依存性逆転パターン">依存性逆転パターン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=2" title="節を編集: 依存性逆転パターン">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>抽象レイヤーを加える事により、上位レベルレイヤーと下位レベルレイヤーの両方とも top から bottom に向かう従来の依存関係を減らす事ができるが、"反転" の概念は下位レベルレイヤーが上位レベルレイヤーに依存することを意味しない。両方のレイヤーは上位レベルレイヤーが要求する振る舞いを表現した抽象に依存すべきである。
+</p>
+<div class="center"><div class="floatnone">ファイル:DIPLayersPattern.png</div></div>
+<p>依存性逆転の直接のアプリケーションでは、抽象は上位/policy レイヤーによって所有される。このアーキテクチャーでは上位/policyコンポーネントと下位サービスを規定する抽象レイヤーを同一のパッケージとして扱う。低レベルレイヤーはこれらの抽象クラスやインターフェースを継承して生成される。<sup class="reference" id="cite_ref-Martin2003_2-2"><a href="#cite_note-Martin2003-2">[2]</a></sup>
+</p><p>依存性とオーナーシップの逆転は上位/policyレイヤーの再利用性を高め、上位レイヤーは他の低レベルサービスを利用することができるようになる。もし低レベルレイヤーがクローズドなコンポーネントであったり、アプリケーションが既存のサービスを再利用する必要がある場合、サービスと抽象レイヤーの間を仲介する<a href="/wiki/Adapter_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Adapter パターン">Adapter</a>を設けるのが一般的である。 
+</p>
+<h2><span id=".E4.BE.9D.E5.AD.98.E6.80.A7.E9.80.86.E8.BB.A2.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3.E3.81.AE.E4.B8.80.E8.88.AC.E5.8C.96"></span><span class="mw-headline" id="依存性逆転パターンの一般化">依存性逆転パターンの一般化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=3" title="節を編集: 依存性逆転パターンの一般化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>多くのプロジェクトにおいて依存性逆転の原則とパターンは一般化されるべき概念であると考えられる。これには少なくとも以下の２つの理由がある。
+</p>
+<ol><li>優れた考えの原則をコーディングパターンとみなすほうがよりシンプルである。ひとたび抽象クラスやインターフェースが実装されるとプログラマーは「自分は抽象化のための仕事をした」と言うかもしれない。</li>
+<li>多くのユニットテストツールがモックを作成するためにインターフェースに依存しているため、クラス間のジェネリックなインターフェースを利用することは（モジュール間に限った話ではなく一般的にも）ルールになっている。</li></ol>
+<p>もし、インターフェースのみに依存するモック作成ツールを使用している場合、一般化された依存性逆転パターンが必要になることがあるが、これには大きな欠点がある。
+</p>
+<ol><li>クラスに対して単純にインターフェースを実装するだけでは不十分であり、一般的に結合を減らすことにはならない。相互作用に対しての潜在的な抽象化を考える事が唯一結合を減らす設計につながり得る。</li>
+<li>ジェネリックなインターフェースをプロジェクト内の全ての箇所で実装してしまうと、理解してメンテナンスをするのが非常に難しくなる。ソースコードを読む人は全てのステップにおいて「このインターフェースの他の実装はなんだろうか」と自問することになり、そしてその答えはほとんど「モックだけ」ということになりかねない。</li>
+<li>インタフェースの一般化はより "plumbing code" である事が要求され、一般的に依存性注入フレームワークに依存するファクトリーなどが特にそれにあたる。</li>
+<li>インターフェースの一般化はプログラミング言語の利用も制限する。</li></ol>
+<h3><span id=".E4.B8.80.E8.88.AC.E5.8C.96.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E5.88.B6.E7.B4.84"></span><span class="mw-headline" id="一般化における制約">一般化における制約</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=4" title="節を編集: 一般化における制約">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>依存性逆転のパターン（DIP）を達成するためにインターフェースが存在することは、<a class="mw-redirect" href="/wiki/Object-oriented_programming" title="Object-oriented programming">オブジェクト指向プログラム</a>において他の設計上の制約をもたらす:
+</p>
+<ul><li>クラス内の全てのメンバー変数はインターフェース、もしくは抽象でなくてはならない。</li>
+<li>全ての具象クラスパッケージはインターフェース、もしくは抽象クラスパッケージを通してのみ結合されなければならない。</li>
+<li>具象クラスを派生してはならない。</li>
+<li>既に実装済みのメソッドをオーバーライドしてはならない。<sup class="reference" id="cite_ref-Martin2003_2-3"><a href="#cite_note-Martin2003-2">[2]</a></sup></li>
+<li>全ての変数のインスタンス化において<a href="/wiki/Factory_Method_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Factory Method パターン">Factory Method</a>もしくは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3&amp;action=edit&amp;redlink=1" title="Factory パターン (存在しないページ)">Factory パターン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_(object-oriented_programming)&amp;action=edit&amp;redlink=1" title="En:Factory (object-oriented programming) (存在しないページ)">英語版</a>）</span></span>のような<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%94%9F%E6%88%90%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3&amp;action=edit&amp;redlink=1" title="生成に関するパターン (存在しないページ)">生成に関するパターン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Creational_pattern&amp;action=edit&amp;redlink=1" title="En:Creational pattern (存在しないページ)">英語版</a>）</span></span>の実装が必要になる。もしくは<a href="/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5" title="依存性の注入">DI</a>フレームワークが必要になる。</li></ul>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9.E3.83.A2.E3.83.83.E3.82.AF.E5.8C.96.E3.81.AE.E5.88.B6.E7.B4.84"></span><span class="mw-headline" id="インターフェースモック化の制約">インターフェースモック化の制約</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=5" title="節を編集: インターフェースモック化の制約">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>継承ベースのモック化ツールを使用した場合でも以下の制約が生じる。
+</p>
+<ul><li>外部公開されている静的メンバーも体系的に依存性性注入されるべきだが、そのための実装はかなり難しい。</li>
+<li>テスト可能な全てのモジュールはインターフェースの実装、もしくは抽象定義のオーバーライドを行う必要がある。</li></ul>
+<h3><span id=".E5.B0.86.E6.9D.A5.E7.9A.84.E3.81.AA.E6.96.B9.E5.90.91.E6.80.A7"></span><span class="mw-headline" id="将来的な方向性">将来的な方向性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=6" title="節を編集: 将来的な方向性">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>原則は考えるための方法であり、パターンは問題解決のための共通手段である。コーディングパターンはプログラミング言語に欠如している機能であるとみなされるかもしれない。
+</p>
+<ul><li>プログラミング言語は少なくとも２つの方向で、その使用においてより正確に、より強力になる方向に進化を続けるだろう。ひとつは使用条件の強化（事前、事後、そして不変条件）、もう一つは状態ベースのインターフェースである。これらは多くの状況において、より強力な依存性逆転の応用の促進し、潜在的に単純化に寄与するだろう。</li>
+<li>　静的メンバーや非仮想メンバーの置き換えの問題を解決するために、今やより多くのモック化ツールがコード注入を用いるようになっている。プログラミング言語は "mocking-conpatible" なバイトコードを生成するように今後進化するかもしれない。 一つの方向性は非仮想メンバーの使用を制限するというもの。そしてもう一つは、少なくともテストを行う状況においては、非継承ベースのモック化が可能なバイトコードを生成するというものだ。</li></ul>
+<h2><span id=".E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="実装">実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=7" title="節を編集: 実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DIPの２つの一般的な実装では、さまざまな意味でよく似た論理アーキテクチャを使用する。
+</p><p>直接的な実装において、 policy クラスと service 抽象クラスは一つのライブラリーにパッケージ化される。この実装では上位コンポーネントと下位コンポーネントは別々のパッケージ/ライブラリとして配布される。上位レベルコンポーネントによって要求される振る舞い/サービスを定義した<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%8A%BD%E8%B1%A1%E5%9E%8B)" title="インタフェース (抽象型)">インターフェース</a>は上位レベルコンポーネントによって所有され、上位レベルコンポーネントと同じライブラリの中に存在する。 
+</p><p>上位レベルコンポーネントのインターフェースは下位レベルコンポーネントによって実装されるため、コンパイル時に下位レベルコンポーネントが上位レベルコンポーネントに依存する事が必要になる。よって従来の依存関係は逆転する。
+</p>
+<div class="center"><div class="floatnone">ファイル:Dependency inversion.png</div></div>
+<p>Figures 1 and 2 では同じ機能を実現したコードを表現している。しかし、 Figure 2 ではインターフェースは依存性を逆転させるために使用されている。policy コードの再利用性を最大化したり、循環依存を排除するために依存の方向は選択することができる。
+</p><p>このバージョンの DIP では、下位レイヤーコンポーネントが上位レベルレイヤーのインターフェース/抽象に依存しているため、下位レベルレイヤーの再利用は困難になる。 この実装はその変わりに伝統的な to-to-bottom の依存関係を反対の bottom-to-top へと逆転させる。
+</p><p>抽象コンポーネントをライブラリやパッケージから独立させて置くと、より柔軟性が増す。
+</p>
+<div class="center"><div class="floatnone">ファイル:DIPLayersPattern v2.png</div></div>
+<p>全てのレイヤーを分離して個別のパッケージに置くことでどのレイヤーの再利用性も向上し、ロバストネス性とモビリティーを得ることができる。<sup class="reference" id="cite_ref-Martin2003_2-4"><a href="#cite_note-Martin2003-2">[2]</a></sup>
+</p>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=8" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.AE.B6.E7.B3.BB.E3.83.A2.E3.82.B8.E3.83.A5.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="家系モジュール">家系モジュール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=9" title="節を編集: 家系モジュール">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ある家系システムでは人々の間の関係を第一レベル関係のグラフとして表現するかもしれない(父親/息子, 父親/娘, 母親/息子, 母親/娘, 夫/妻, 妻/夫...)。これは非常に効率的である(そして拡張も可能: 元夫/元妻, 法的保護者...)。
+</p><p>しかし、上位レベルモジュールでは家系をブラウズするためのより簡単な方法が必要になるかもしれない: 人には、子供、父親、母親、兄弟と姉妹(異母兄弟を含む含まないも合わせて）、祖父、祖母、伯父、伯母、従兄弟... などがいるかもしれない。
+</p><p>家系モジュールの使用法に応じて、共通の関係を明確で直接的な属性として（グラフを隠して）表示することは上位レベルモジュールと家系モジュールの間の結合を遥かに軽くでき、モジュールの使用になんの影響も与えることなく内部表現を完全に変更することを可能にする。またそれによって、家系モジュールに対し兄弟、姉妹（異母兄弟であるかどうか）の正確な定義を埋め込む事が可能になる... またそれは<a class="new" href="/w/index.php?title=%E5%8D%98%E4%B8%80%E8%B2%AC%E5%8B%99%E3%81%AE%E6%B3%95%E5%89%87&amp;action=edit&amp;redlink=1" title="単一責務の法則 (存在しないページ)">単一責務の法則</a>を強制することにも繋がる。
+</p><p>最終的に、もし最初の一般化された拡張可能なグラフアプローチが一番拡張可能に思えるのであれば、家系モジュールの利用は更に特殊化及び単純化された関係の実装がアプリケーションに対して十分であることを示しているかもしれないし、より効率的なシステムを作成する手助けになるかもしれない。
+</p><p>この例でのモジュール間の相互関係の抽象化は下位レベルモジュールのインターフェースの単純化だけでなく、より単純化された実装につながるかもしれない。
+</p>
+<h3><span id=".E3.83.AA.E3.83.A2.E3.83.BC.E3.83.88.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC.E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.88"></span><span class="mw-headline" id="リモートファイルサーバークライアント">リモートファイルサーバークライアント</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=10" title="節を編集: リモートファイルサーバークライアント">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>リモートファイルサーバー(FTP, cloud strage ...)に対するクライアントを実装しなければならないケースを想像せよ。あなたはそのクライアントに抽象インターフェースを持たせる事を考えるだろう。 
+</p>
+<ol><li>Connection/Disconnection (a connection persistence layer may be needed)</li>
+<li>Folder/tags creation/rename/delete/list interface</li>
+<li>File creation/replacement/rename/delete/read interface</li>
+<li>File searching</li>
+<li>Concurrent replacement or delete resolution</li>
+<li>File history management ...</li></ol>
+<p>ローカルファイル、リモートファイルの両方が同じ抽象インターフェースを提供する場合、ローカルファイルと完全に実装された依存性逆転パターンを使用するどんな上位レベルモジュールもローカルとリモートの区別なくファイルにアクセスすることが可能になる。
+</p><p>ローカルディスクは一般的にフォルダーを使用し、リモートストレージもフォルダーを使用するかもしれない(もしくはタグのみ、フォルダーとタグの両方など）。 もし可能であればそれらを統一する方法を決めておく必要がある。
+</p><p>リモートファイルに対しては、作成と置換のみを行う必要があるかもしれない(ローカルファイルに比べてリモートファイルのランダムアップデートはあまりに遅く、実装も難しくなる可能性があるので、リモートファイルの更新は意味をなさない)。リモートファイルに対して部分的な読み込みと書き込みを行う必要があるかもしれない（少なくともリモートファイルモジュールの内部では通信中断後のダウンロードとアップロードの再開をできるようにする必要がある）。しかし、ローカルキャッシュを利用している場合を除き、ランダムリードは適さない。
+</p><p>ファイル検索は "pluggable" であるかもしれない ファイル検索は OS、特にタグや全文検索に依存し、異なるシステムでも実装する事ができる。(OS に組み込まれていたり、別に入手する事も可能) 並行実行される置換または削除の検出は、他の抽象インタフェースに影響を与える可能性がある。 
+</p><p>概念的なそれぞれのインターフェースに対してリモートファイルサーバーを設計するときは、上位レベルモジュールが要求するサービスのレベル (必ずしも全てが要求されるわけではない）を良く考える必要がある。そして、どのようにリモートファイルサーバーの機能を実装するかだけでなく、アプリケーション内に既に存在するファイルサービス（ローカルファイル、既にあるクラウドクライアントなど）と新たしいリモートファイルサーバークライアントの間で整合を取るかについても同様に考える必要がある。 
+</p><p>必要なインターフェースの設計が完了したら、リモートファイルサーバークライアントはこれらのインターフェースを実装すべきである。 
+</p><p>また、既に存在するローカルファイルに対しての機能 (例えばファイル更新など）について制限を加えたい場合、同じ抽象インタフェースを提供するローカルまたは他の既存のリモートファイルアクセスモジュール用のアダプタを記述する必要があるかもしれない。また、コンピュータ上に構成されている利用可能なファイル互換システムを検索するために独自のファイルアクセス列挙子を記述しておく必要もある。
+</p><p>これらが完了すると、アプリケーションはドキュメントをローカルとリモートに透過的に保存する事が可能になる。さらに簡単に言うと、新しいファイルアクセスインターフェースを使用している上位レベルモジュールは使用の際にローカルとリモートファイルにアクセルするシナリオを意識する必要がなくなり、再利用性が向上する。
+</p><p>注意: 多くの OS がこの手の機能を実装し始めているため、新規実装のクライアントをこの既に存在している抽象モデルへ適用するのは控えた方が良いかもしれない。
+</p><p>この例では、モジュールを抽象インターフェースのセットとして考え、このインターフェースのセットに他のモジュールを適合させることで、様々なファイルストレージシステムに対し、共通のインターフェースを提供する事ができる。
+</p>
+<h3><span class="mw-headline" id="Model_View_Controller">Model View Controller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=11" title="節を編集: Model View Controller">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="center"><div class="floatnone">Example of DIP</div></div>
+<p>UI とアプリケーションレイヤーパッケージは主に具象クラスを含んでいて、コントローラーは抽象/インターフェース型を含んでいる。また UI は ICustomerHandler のインスタンスを保持し、全てのパッケージは物理的に分離されていて。アプリケーションレイヤーには Page クラスが使用する具象クラスの実装が存在している。これらのインターフェースのインスタンスは （コントローラーと同じパッケージに存在するかもしれない）Factory によって動的に生成される。具象タイプである Page と CustomerHandler はお互いに依存してはらなず、両方とも ICustomerHandler に依存する。 
+</p><p>これらの直接的な効果は、UI が直接 ApplicatonLayer や、ICustomerHandler を実装したどの具象パッケージも参照する必要がない事である。コンクリートクラスはリフレクションを使用してロードされる。またどの時点であっても、具象実装は UI クラスに変更を及ぼさずに他の具象実装に差し替える事ができる。他の興味深い可能性は Page クラスが ICustomerHander のメソッドに引数として渡す事ができるインターフェース IPageViewer を実装していると言う事で、これによってt具象実装は具象的な依存なしに UI と通信する事ができる。何故なら両者はインターフェースでリンクされているからである。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E3.81.99.E3.82.8B.E3.83.91.E3.82.BF.E3.83.BC.E3.83.B3"></span><span class="mw-headline" id="関連するパターン">関連するパターン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=12" title="節を編集: 関連するパターン">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>依存性逆転の原則の適用はアダプターパターンの一例と見ることもできる。例えば、上位レベルクラスが自身が依存する抽象への固有のアダプターインターフェースを定義するような場合がそれに当たる。アダプティーの実装はまたアダプターインターフェスに依存しますが（もちろん、このインターフェースを実装しているので）独自の下位レベルモジュール内のコードを用いて実装を行うこともできる。上位レベルモジュールは、アダプティーとその下位レベルモジュールによって実装されたインターフェースへのポリモーフィックな関数を呼び出すことによってアダプターインターフェースを介して間接的に下位レベルモジュールを利用するため、上位レベルモジュールが下位レベルモジュールに依存するといったことはない。
+</p><p>Plugin, <a class="new" href="/w/index.php?title=Service_Locator_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3&amp;action=edit&amp;redlink=1" title="Service Locator パターン (存在しないページ)">Service Locator</a>, or <a href="/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5" title="依存性の注入">Dependency Injection</a> などの様々なパターンは上位レベルコンポーネントに対する選択された下位レベルコンポーネントの "run-time provisioning" を容易にする目的で導入される。
+</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=13" title="節を編集: History">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The dependency inversion principle was postulated by <a class="new" href="/w/index.php?title=Robert_C._Martin&amp;action=edit&amp;redlink=1" title="Robert C. Martin (存在しないページ)">Robert C. Martin</a> and described in several publications including the paper <i>Object Oriented Design Quality Metrics: an analysis of dependencies</i>,<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> an article appearing in the C++ Report in May 1996 entitled <i>The Dependency Inversion Principle</i>,<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup> and the books <i>Agile Software Development, Principles, Patterns, and Practices</i>, and <i>Agile Principles, Patterns, and Practices in C#</i>.
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=14" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">ロバート・C・マーチン『アジャイルソフトウェア開発の奥義　第2版』SBクリエイティブ、163頁。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-7973-4778-4" title="特別:文献資料/978-4-7973-4778-4">978-4-7973-4778-4</a>。</cite></span>
+</li>
+<li id="cite_note-Martin2003-2">^ <a href="#cite_ref-Martin2003_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Martin2003_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Martin2003_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Martin2003_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Martin2003_2-4"><sup><i><b>e</b></i></sup></a> <span class="reference-text"><cite class="citation book" style="font-style:normal">Martin, Robert C. (2003). <a class="external text" href="https://books.google.com/books/about/Agile_Software_Development.html?id=0HYhAQAAIAAJ&amp;redir_esc=y" rel="nofollow"><i>Agile Software Development, Principles, Patterns, and Practices</i></a>. Prentice Hall. pp. 127–131. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0135974445" title="特別:文献資料/978-0135974445">978-0135974445</a><span style="display:none;">. <a class="external free" href="https://books.google.com/books/about/Agile_Software_Development.html?id=0HYhAQAAIAAJ&amp;redir_esc=y" rel="nofollow">https://books.google.com/books/about/Agile_Software_Development.html?id=0HYhAQAAIAAJ&amp;redir_esc=y</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Agile+Software+Development%2C+Principles%2C+Patterns%2C+and+Practices&amp;rft.aulast=Martin&amp;rft.aufirst=Robert+C.&amp;rft.au=Martin%2C%26%2332%3BRobert+C.&amp;rft.date=2003&amp;rft.pages=pp.%26nbsp%3B127%E2%80%93131&amp;rft.pub=Prentice+Hall&amp;rft.isbn=978-0135974445&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%2Fabout%2FAgile_Software_Development.html%3Fid%3D0HYhAQAAIAAJ%26redir_esc%3Dy&amp;rfr_id=info:sid/ja.wikipedia.org:%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Freeman, Eric; Freeman, Elisabeth; Kathy, Sierra; Bert, Bates (2004). Hendrickson, Mike; Loukides, Mike. eds (paperback). <a class="external text" href="http://shop.oreilly.com/product/9780596007126.do" rel="nofollow"><i>Head First Design Patterns</i></a>. <b>1</b>. O'REILLY. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-596-00712-6" title="特別:文献資料/978-0-596-00712-6">978-0-596-00712-6</a><span style="display:none;">. <a class="external free" href="http://shop.oreilly.com/product/9780596007126.do" rel="nofollow">http://shop.oreilly.com/product/9780596007126.do</a></span> <span class="reference-accessdate"><span title="">2012年6月21日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Head+First+Design+Patterns&amp;rft.aulast=Freeman&amp;rft.aufirst=Eric&amp;rft.au=Freeman%2C%26%2332%3BEric&amp;rft.au=Freeman%2C%26%2332%3BElisabeth&amp;rft.au=Kathy%2C%26%2332%3BSierra&amp;rft.au=Bert%2C%26%2332%3BBates&amp;rft.date=2004&amp;rft.volume=1&amp;rft.pub=O%27REILLY&amp;rft.isbn=978-0-596-00712-6&amp;rft_id=http%3A%2F%2Fshop.oreilly.com%2Fproduct%2F9780596007126.do&amp;rfr_id=info:sid/ja.wikipedia.org:%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Martin, Robert C.. “<a class="external text" href="https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf" rel="nofollow">Object Oriented Design Quality Metrics: An analysis of dependencies</a>”. <span title="">2016年10月15日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Martin, Robert C. (1996年5月). “<a class="external text" href="https://web.archive.org/web/20110714224327/http://www.objectmentor.com/resources/articles/dip.pdf" rel="nofollow">The Dependency Inversion Principle</a>”.   C++ Report. 2011年7月14日時点の<a class="external text" href="http://www.objectmentor.com/resources/articles/dip.pdf" rel="nofollow">オリジナル</a><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#リンク切れの回避と修復" title="Wikipedia:出典を明記する"><span title="外部リンクがリンク切れとなっています。（2018-11-12）">リンク切れ</span></a></i>]</sup>よりアーカイブ。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=15" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Adapter_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Adapter パターン">Adapter パターン</a></li>
+<li><a href="/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E3%81%AE%E6%B3%A8%E5%85%A5" title="依存性の注入">依存性の注入</a></li>
+<li><a href="/wiki/%E5%A5%91%E7%B4%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="契約プログラミング">契約プログラミング</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース (情報技術)</a></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E3%81%AE%E5%8F%8D%E8%BB%A2" title="制御の反転">制御の反転</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3" title="プラグイン">プラグイン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Service_locator_pattern&amp;action=edit&amp;redlink=1" title="Service locator pattern (存在しないページ)">Service locator pattern</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Service_locator_pattern&amp;action=edit&amp;redlink=1" title="En:Service locator pattern (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/SOLID" title="SOLID">SOLID</a>：the "D" in "SOLID" stands for the dependency inversion principle</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;section=16" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf" rel="nofollow">Object Oriented Design Quality Metrics: an analysis of dependencies Robert C. Martin, C++ Report, Sept/Oct 1995</a></li>
+<li><a class="external text" href="https://web.archive.org/web/20110714224327/http://www.objectmentor.com/resources/articles/dip.pdf" rel="nofollow">The Dependency Inversion Principle, Robert C. Martin, C++ Report, May 1996</a></li>
+<li><a class="external text" href="http://www.aspiringcraftsman.com/default/2008/12/28/examining-dependency-inversion/" rel="nofollow">Examining the Dependency Inversion Principle, Derek Greer</a></li>
+<li><a class="external text" href="http://martinfowler.com/articles/dipInTheWild.html" rel="nofollow">DIP in the Wild, Brett L. Schuchert, May 2013</a></li>
+<li><a class="external text" href="http://blog.sebaslab.com/tag/dependency-injection/" rel="nofollow">IoC Container for Unity3D – part 2</a></li></ul>
+<div aria-labelledby="SOLID" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:SOLID_(%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88)&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:SOLID (オブジェクト指向設計) (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ASOLID_%28%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88%29&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ASOLID_%28%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%AD%E8%A8%88%29&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="SOLID" style="font-size:110%;margin:0 6em">SOLID</div></th></tr><tr><td class="navbox-list navbox-odd" colspan="2" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8D%98%E4%B8%80%E8%B2%AC%E4%BB%BB%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;redlink=1" title="単一責任の原則 (存在しないページ)">単一責任の原則</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Single_responsibility_principle&amp;action=edit&amp;redlink=1" title="En:Single responsibility principle (存在しないページ)">英語版</a>）</span></span> (SRP)</li>
+<li><a href="/wiki/%E9%96%8B%E6%94%BE/%E9%96%89%E9%8E%96%E5%8E%9F%E5%89%87" title="開放/閉鎖原則">開放/閉鎖原則</a> (OCP)</li>
+<li><a href="/wiki/%E3%83%AA%E3%82%B9%E3%82%B3%E3%83%95%E3%81%AE%E7%BD%AE%E6%8F%9B%E5%8E%9F%E5%89%87" title="リスコフの置換原則">リスコフの置換原則</a> (LSP)</li>
+<li><a class="mw-selflink selflink">依存性逆転の原則</a> (DIP)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E5%88%86%E9%9B%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;redlink=1" title="インタフェース分離の原則 (存在しないページ)">インタフェース分離の原則</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Interface_segregation_principle&amp;action=edit&amp;redlink=1" title="En:Interface segregation principle (存在しないページ)">英語版</a>）</span></span> (ISP)</li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA" title="アジャイルソフトウェア開発">アジャイルソフトウェア開発</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="デザインパターン (ソフトウェア)">デザインパターン</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402012657
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.200 seconds
+Real time usage: 0.252 seconds
+Preprocessor visited node count: 4198/1000000
+Post‐expand include size: 39231/2097152 bytes
+Template argument size: 8173/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 5/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 12849/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 6262784/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  219.906      1 -total
+ 78.09%  171.727      1 テンプレート:Reflist
+ 41.10%   90.383      2 テンプレート:Cite_book
+ 30.19%   66.387      3 テンプレート:ISBN2
+ 26.79%   58.921      1 テンプレート:Cite_book/和書
+ 22.60%   49.696      2 テンプレート:Citation/core
+ 21.11%   46.425      2 テンプレート:Cite_web
+ 19.12%   42.056      3 テンプレート:Catalog_lookup_link
+ 16.59%   36.482      5 テンプレート:仮リンク
+ 13.53%   29.750      1 テンプレート:Cite_journal
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3823430-0!canonical and timestamp 20220402012657 and revision id 2240420. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=依存性逆転の原則&amp;oldid=2240420">http://localhost:8080/w/index.php?title=依存性逆転の原則&amp;oldid=2240420</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="カテゴリ:ソフトウェアパターン">ソフトウェアパターン</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%8E%9F%E5%89%87" title="カテゴリ:プログラミング原則">プログラミング原則</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;returntoquery=curid%3D3823430%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;returntoquery=curid%3D3823430%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;oldid=2240420" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E4%BE%9D%E5%AD%98%E6%80%A7%E9%80%86%E8%BB%A2%E3%81%AE%E5%8E%9F%E5%89%87&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年2月4日 (木) 11:44 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.200","walltime":"0.252","ppvisitednodes":{"value":4198,"limit":1000000},"postexpandincludesize":{"value":39231,"limit":2097152},"templateargumentsize":{"value":8173,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":12849,"limit":5000000},"timingprofile":["100.00%  219.906      1 -total"," 78.09%  171.727      1 テンプレート:Reflist"," 41.10%   90.383      2 テンプレート:Cite_book"," 30.19%   66.387      3 テンプレート:ISBN2"," 26.79%   58.921      1 テンプレート:Cite_book/和書"," 22.60%   49.696      2 テンプレート:Citation/core"," 21.11%   46.425      2 テンプレート:Cite_web"," 19.12%   42.056      3 テンプレート:Catalog_lookup_link"," 16.59%   36.482      5 テンプレート:仮リンク"," 13.53%   29.750      1 テンプレート:Cite_journal"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":6262784,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402012657","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":413});});</script>
+</body></html>

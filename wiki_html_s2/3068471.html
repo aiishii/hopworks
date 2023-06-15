@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>NT LAN Manager - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-NT_LAN_Manager rootpage-NT_LAN_Manager skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">NT LAN Manager</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>NT LAN Manager</b> (<b>NTLM</b>) は、<a href="." id="link_a_1" title="マイクロソフト">マイクロソフト</a>によるセキュリティプロトコルであり、利用者に機密性、完全性、可用性といった<a href="." id="link_a_2" title="情報セキュリティ">情報セキュリティ</a>を提供する<sup class="reference" id="cite_ref-technet-ntlm_1-0"><a href="#cite_note-technet-ntlm-1">[1]</a></sup><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup class="reference" id="cite_ref-frequency-x_3-0"><a href="#cite_note-frequency-x-3">[3]</a></sup>。NTLMは、マイクロソフトによるアプリケーションプロトコルである<a href="." id="link_a_3" title="LAN Manager">LAN Manager</a> (LANMAN, LM) の後継である。NTLM バージョン2 (NTLMv2) は<a href="." id="link_a_4" title="Windows NT 4.0">Windows NT 4.0</a> SP4から導入され（Windows 2000以降で標準対応）、多くの攻撃に対する耐性の向上と、クライアント認証機能の追加が行われた<sup class="reference" id="cite_ref-technet-ntlm_1-1"><a href="#cite_note-technet-ntlm-1">[1]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup><sup class="reference" id="cite_ref-security-guide_5-0"><a href="#cite_note-security-guide-5">[5]</a></sup>
+。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#ベンダーによる推奨"><span class="tocnumber">1</span> <span class="toctext">ベンダーによる推奨</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#NTLMとケルベロス認証"><span class="tocnumber">2</span> <span class="toctext">NTLMとケルベロス認証</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#プロトコル"><span class="tocnumber">3</span> <span class="toctext">プロトコル</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#NTLMv1"><span class="tocnumber">3.1</span> <span class="toctext">NTLMv1</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#NTLMv2"><span class="tocnumber">3.2</span> <span class="toctext">NTLMv2</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#NTLM2セッション"><span class="tocnumber">3.3</span> <span class="toctext">NTLM2セッション</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#脆弱性"><span class="tocnumber">4</span> <span class="toctext">脆弱性</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#脚注"><span class="tocnumber">5</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E3.83.99.E3.83.B3.E3.83.80.E3.83.BC.E3.81.AB.E3.82.88.E3.82.8B.E6.8E.A8.E5.A5.A8"></span><span class="mw-headline" id="ベンダーによる推奨">ベンダーによる推奨</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=1" title="節を編集: ベンダーによる推奨">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2014年現在、マイクロソフトではNTLMの利用を推奨していない<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+。
+</p>
+<blockquote><p>"（NTLMを）実装する者は、NTLMが<a href="/wiki/Advanced_Encryption_Standard" title="Advanced Encryption Standard">AES</a>や<a href="/wiki/SHA-2" title="SHA-2">SHA-256</a>といった最近の暗号メソッドをサポートしていないことを考慮してください。NTLMでは、データの完全性の検証に<a href="/wiki/%E5%B7%A1%E5%9B%9E%E5%86%97%E9%95%B7%E6%A4%9C%E6%9F%BB" title="巡回冗長検査">巡回冗長検査</a> (CRC) あるいは Message Digest Algorithm (RFC 1321)（注：<a href="/wiki/MD5" title="MD5">MD5</a>のこと）を、暗号化には<a href="/wiki/RC4" title="RC4">RC4</a>を用いています。
+</p><p>パスワードから導出される鍵は RFC 1320（注：<a href="/wiki/MD4" title="MD4">MD4</a>のこと）および FIPS 46-2（注：<a href="/wiki/Data_Encryption_Standard" title="Data Encryption Standard">DES</a>のこと）に基づいています。以上の理由より、アプリケーションではNTLMを使用しないよう推奨します。"
+</p>
+</blockquote>
+<p>マイクロソフトでは、運用性向上のためにNTLMハッシュを<a href="/wiki/%E3%82%B1%E3%83%AB%E3%83%99%E3%83%AD%E3%82%B9%E8%AA%8D%E8%A8%BC" title="ケルベロス認証">ケルベロス認証</a>の実装に追加している。研究者によると、このような設計により、NTLMハッシュが既知の場合に攻撃者がドメインコントローラにケルベロス認証のチケットを発行させることが可能となっている<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+</p><p><a href="/wiki/Active_Directory" title="Active Directory">Active Directory</a>による<a href="/wiki/%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%AA%E3%83%B3" title="シングルサインオン">シングルサインオン</a>においてはNTLMに代わりケルベロス認証が既定の認証プロトコルとなったが、NTLMは<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="ドメインコントローラ">ドメインコントローラ</a>が利用できない環境において広く利用されている。例えば、クライアントがケルベロス認証に対応していない場合、サーバがドメインに参加していない場合、ユーザーがインターネット経由のリモートで認証されている場合などが挙げられる<sup class="reference" id="cite_ref-technet-ntlm_1-2"><a href="#cite_note-technet-ntlm-1">[1]</a></sup><sup class="reference" id="cite_ref-frequency-x_3-1"><a href="#cite_note-frequency-x-3">[3]</a></sup>。
+</p>
+<h2><span id="NTLM.E3.81.A8.E3.82.B1.E3.83.AB.E3.83.99.E3.83.AD.E3.82.B9.E8.AA.8D.E8.A8.BC"></span><span class="mw-headline" id="NTLMとケルベロス認証">NTLMとケルベロス認証</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=2" title="節を編集: NTLMとケルベロス認証">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>マイクロソフトではWindows 2000以降およびActive Directoryドメインにおいてはケルベロス認証を推奨の認証プロトコルとしており<sup class="reference" id="cite_ref-security-guide_5-1"><a href="#cite_note-security-guide-5">[5]</a></sup>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Windows%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3&amp;action=edit&amp;redlink=1" title="Windowsドメイン (存在しないページ)">Windowsドメイン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Windows_domain&amp;action=edit&amp;redlink=1" title="En:Windows domain (存在しないページ)">英語版</a>）</span></span>に参加しているサーバで広く利用されている。
+</p><p>一方、NTLMは以下のような状況で現在でも使われている。
+</p>
+<ul><li><a href="/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="IPアドレス">IPアドレス</a>で指定されたサーバにクライアントが認証する</li>
+<li>異なるActive Directory（ディレクトリ間の信頼モデルではなく旧式のNTLMの信頼モデルを使用している）に参加しているサーバにクライアントが認証する</li>
+<li>ドメインに参加していないサーバーにクライアントが認証する</li>
+<li>Active Directoryのドメインが存在しない（"workgroup"あるいは"peer-to-peer"と参照されることが多い）</li>
+<li>ファイアーウォールがケルベロス認証に必要なポート（通常はTCP 88）の使用を制限している</li></ul>
+<p>Windows Vista以降では、<a href="/wiki/LAN_Manager" title="LAN Manager">LM</a>およびNTLMは既定では使用されない。NTLMは内部認証には使用されているが、外部向けの認証ではNTLMv2が使用される。古いバージョンのWindowsでも同様の設定を行うことが可能である。
+</p>
+<h2><span id=".E3.83.97.E3.83.AD.E3.83.88.E3.82.B3.E3.83.AB"></span><span class="mw-headline" id="プロトコル">プロトコル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=3" title="節を編集: プロトコル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>NTLMは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%26%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC&amp;action=edit&amp;redlink=1" title="チャレンジ&amp;レスポンス認証 (存在しないページ)">チャレンジ&amp;レスポンス認証</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Challenge-response_authentication&amp;action=edit&amp;redlink=1" title="En:Challenge-response authentication (存在しないページ)">英語版</a>）</span></span>プロトコルであり、クライアントの認証には3つのメッセージが用いられ、データ完全性の検証のためにさらに1つのメッセージが用いられる<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>
+</p>
+<ol><li>クライアントがサーバへのネットワークパスを確立し、対応機能を告知するNEGOTIATE_MESSAGEを送信する<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup></li>
+<li>サーバがクライアントの身元を確立するためのCHALLENGE_MESSAGEを返信する<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup></li>
+<li>クライアントがAUTHENTICATE_MESSAGEと共にチャレンジを返信する<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup></li></ol>
+<p>NTLMプロトコルでは1つあるいは2つのパスワードのハッシュ値が用いられ、サーバ（あるいはドメインコントローラ）に保存される。これらのハッシュ値はパスワードと等価に扱われる。すなわち、何らかの方法でこれらのハッシュ値をサーバから取得することができれば、実際のパスワードを知ることなく認証を行うことが可能となる。ハッシュ値の一方は<i><a href="/wiki/LM%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5" title="LMハッシュ">LMハッシュ</a></i>（パスワードの最初の14文字から<a href="/wiki/Data_Encryption_Standard" title="Data Encryption Standard">DES</a>を基とした関数によって生成されたハッシュ値）、もう一方は<i>NTハッシュ</i>（パスワードを<a href="/wiki/UTF-16" title="UTF-16">UTF-16</a>リトルエンディアンで表現したものの<a href="/wiki/MD4" title="MD4">MD4</a>）である。どちらも長さは16バイト（128ビット）である<sup class="reference" id="cite_ref-v1_15-0"><a href="#cite_note-v1-15">[15]</a></sup>
+</p><p>NTLMでは<a class="mw-redirect" href="/wiki/%E4%B8%80%E6%96%B9%E5%90%91%E9%96%A2%E6%95%B0" title="一方向関数">一方向関数</a>も用いられる。バージョン1ではDESをベースとしたLanMan one way function (LMOWF)が、バージョン2では<a href="/wiki/MD4" title="MD4">MD4</a>をベースとしたNT MD4 based one way function (NTOWF)が用いられる。<sup class="reference" id="cite_ref-v1_15-1"><a href="#cite_note-v1-15">[15]</a></sup><sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p>
+<h3><span class="mw-headline" id="NTLMv1">NTLMv1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=4" title="節を編集: NTLMv1">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>NTLMバージョン1 (NTLMv1) では、サーバは8バイトのランダム文字列をチャレンジとして送信することでクライアントを認証する。クライアントはこのチャレンジと秘密鍵を組み合わせる。秘密鍵は前述のパスワードのハッシュ値の1つから生成され、合わせて24バイトの文字列が返信される。実際には、パスワードのハッシュ値の両方が用いられ、それぞれから求められる24バイトの文字列の両方が送信される。サーバはクライアントから送信された文字列を検証し、クライアントを認証する。
+</p><p>どちらのハッシュ値も16バイトの長さを有している。5バイト分の0を追加し21バイトとした後に、7バイト（56ビット）ずつに分割する。これら56ビットの文字列を鍵として、64ビットのチャレンジをDESによって暗号化する。得られたチャレンジの暗号化結果3つを統合し、24バイトのレスポンスとする。LMハッシュ、NTハッシュからそれぞれ得られたレスポンスをサーバへ返信する。
+</p>
+<pre>C = 8-byte server challenge, random
+K1 | K2 | K3 = NT-Hash | 5-bytes-0
+R1 = DES(K1,C) | DES(K2,C) | DES(K3,C)
+K1 | K2 | K3 = LM-Hash | 5-bytes-0
+R2 = DES(K1,C) | DES(K2,C) | DES(K3,C)
+response = R1 | R2
+</pre>
+<h3><span class="mw-headline" id="NTLMv2">NTLMv2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=5" title="節を編集: NTLMv2">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/Windows_NT_4.0" title="Windows NT 4.0">Windows NT 4.0</a>で導入された<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>NTLMバージョン2 (NTLMv2) は、NTLMv1を暗号学的により強固にしたものである。
+</p><p>NTLMv2では、8バイトのサーバチャレンジを2つクライアントへ送信する。それぞれに対するレスポンスは、サーバチャレンジ、ランダムに生成されたクライアントチャレンジ、ユーザのパスワードやそのほかの認証情報のHMA-MD5ハッシュの3つの<a href="/wiki/HMAC" title="HMAC">HMAC</a>-<a href="/wiki/MD5" title="MD5">MD5</a>ハッシュを含んでいる。
+</p><p>2つのレスポンスでは、クライアントチャレンジのフォーマットが異なっている。短い方のレスポンスでは、8バイトのランダム文字列をクライアントチャレンジとして用いる。レスポンスの検証のために、サーバはこのクライアントチャレンジをレスポンスの一部として受け取る。この短いレスポンスでは、8バイトのクライアントチャレンジを16バイトに伸ばしたうえでNTLMv1プロトコルと同様の手法で24バイトのレスポンスとする。非公式のドキュメントでは、このレスポンスはLMv2と呼ばれる。
+</p><p>もう一方のレスポンスでは、(1)<a class="new" href="/w/index.php?title=NT_Time&amp;action=edit&amp;redlink=1" title="NT Time (存在しないページ)">NT Time</a>フォーマットによる現在時刻、(2)8バイトのランダム文字列（以下の式におけるCC2）、(3)ドメイン名、(4)標準化のための埋め草を含む可変長のクライアントチャレンジを用いる。この可変長クライアントチャレンジを含むため、こちらのレスポンスも可変長となる。非公式のドキュメントではこちらのレスポンスはNTv2と呼ばれる。
+</p><p>LMv2とNTv2はいずれも、サーバチャレンジ、クライアントチャレンジ、ユーザのパスワードやそのほかの認証情報のハッシュとなる。
+</p>
+<pre>SC = 8-byte server challenge, random
+CC = 8-byte client challenge, random
+CC* = (X, time, CC2, domain name)
+v2-Hash = HMAC-MD5(NT-Hash, user name, domain name)
+LMv2 = HMAC-MD5(v2-Hash, SC, CC)
+NTv2 = HMAC-MD5(v2-Hash, SC, CC*)
+response = LMv2 | CC | NTv2 | CC*
+</pre>
+<h3><span id="NTLM2.E3.82.BB.E3.83.83.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="NTLM2セッション">NTLM2セッション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=6" title="節を編集: NTLM2セッション">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>NTLM2セッションは<a class="new" href="/w/index.php?title=MS-CHAP&amp;action=edit&amp;redlink=1" title="MS-CHAP (存在しないページ)">MS-CHAPv2</a>と類似している<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。認証にNTLMv1を、セッションのセキュリティにNTLMv2を利用している。
+</p><p>NTLM2セッションは、8バイトのクライアントチャレンジを8バイトのサーバチャレンジと合わせたうえでMD5ハッシュをとる以外はNTLMv1アルゴリズムと同じである。ハッシュの前半はNTLMv1におけるチャレンジと一致する。クライアントチャレンジはレスポンスの1つの24バイトのスロットとして返信され、計算された24バイトのレスポンスは異なるスロットとして返信される。
+</p><p>これは既存のドメインコントローラにおける互換性を維持しつつ、辞書攻撃への耐性を強化したNTLMv1の変形と言える。チャレンジの選択にクライアントが関与しない場合、サーバ側が<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="レインボーテーブル">レインボーテーブル</a>によって攻撃が可能となる<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>
+。
+</p><p>既存のNTLMv1インフラではチャレンジ/レスポンスの組はサーバによって検証されないが、ドメインコントローラに送ることで検証が可能となる。NTLM2セッションを用いることで、サーバチャレンジをサーバ・クライアントチャレンジのハッシュで代用することでこれら古いインフラを継続して利用可能となる。
+</p>
+<pre>NTLMv1
+  Client&lt;-Server:  SC
+  Client-&gt;Server:  H(P,SC)
+  Server-&gt;DomCntl: H(P,SC), SC
+  Server&lt;-DomCntl: yes or no
+
+NTLM2 Session
+  Client&lt;-Server:  SC
+  Client-&gt;Server:  H(P,H'(SC,CC)), CC
+  Server-&gt;DomCntl: H(P,H'(SC,CC)), H'(SC,CC)
+  Server&lt;-DomCntl: yes or no
+</pre>
+<h2><span id=".E8.84.86.E5.BC.B1.E6.80.A7"></span><span class="mw-headline" id="脆弱性">脆弱性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=7" title="節を編集: 脆弱性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>NTLMは広く用いられており、古いシステムとの互換性維持のために新しいシステムにおいても利用されている。NTLMは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="リフレクション攻撃 (存在しないページ)">リフレクション攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Reflection_attack&amp;action=edit&amp;redlink=1" title="En:Reflection attack (存在しないページ)">英語版</a>）</span></span>の一種である<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Pass_the_hash&amp;action=edit&amp;redlink=1" title="Pass the hash (存在しないページ)">pass the hash</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:pass_the_hash&amp;action=edit&amp;redlink=1" title="En:pass the hash (存在しないページ)">英語版</a>）</span></span>に対して脆弱である (MS08-068)。例えば、<a href="/wiki/Metasploit" title="Metasploit">Metasploit</a>を用いてあるマシンから認証情報を取得することで、他のマシンの制御を奪うことが可能である<sup class="reference" id="cite_ref-frequency-x_3-2"><a href="#cite_note-frequency-x-3">[3]</a></sup><sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>。Squirtle toolkitによって、ウェブサイトへの<a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クロスサイトスクリプティング">クロスサイトスクリプティング</a>攻撃をNTLM経由での攻撃に利用することも可能である<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>
+。
+</p><p>2010年2月、WindowsのNTLM認証メカニズムの実装における複数の欠陥がAmplia Securityによって発見された。この欠陥を利用することで、攻撃者がファイルへの読み込み/書込み権限やリモートでのコード実行の権限を取得することが可能となる。攻撃の1つは、NTLMにおける<a class="mw-redirect" href="/wiki/%E7%96%91%E4%BC%BC%E4%B9%B1%E6%95%B0" title="疑似乱数">疑似乱数</a>とチャレンジ&amp;レスポンス認証を推測可能なものであった。これらの欠陥は、Windowsのすべてのバージョンで17年以上にわたり存在していたものである。セキュリティアドバイザリでは、これとは異なる完全に動作する<a href="/wiki/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88" title="エクスプロイト">エクスプロイト</a>が含まれていた。これらの欠陥のすべてはMS10-012によって修正された<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup><sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>
+。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=8" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-technet-ntlm-1">^ <a href="#cite_ref-technet-ntlm_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-technet-ntlm_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-technet-ntlm_1-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx" rel="nofollow">“Introduction”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Introduction&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236701%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx" rel="nofollow">“Session Security Details”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236701%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Session+Security+Details&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236701%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-frequency-x-3">^ <a href="#cite_ref-frequency-x_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-frequency-x_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-frequency-x_3-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><cite class="citation" id="CITEREFTakahashi2009" style="font-style:normal">Takahashi, T (2009-12-17), <a class="external text" href="http://blogs.iss.net/archive/NTLMReflection.html" rel="nofollow">“Reflecting on NTLM Reflection”</a>, <i>FrequencyX Blog</i> (IBM Internet System Security (ISS))<span style="display:none;">, <a class="external free" href="http://blogs.iss.net/archive/NTLMReflection.html" rel="nofollow">http://blogs.iss.net/archive/NTLMReflection.html</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Reflecting+on+NTLM+Reflection&amp;rft.jtitle=FrequencyX+Blog&amp;rft.aulast=Takahashi&amp;rft.aufirst=T&amp;rft.au=Takahashi%2C%26%2332%3BT&amp;rft.date=2009-12-17&amp;rft.pub=IBM+Internet+System+Security+%28ISS%29&amp;rft_id=http%3A%2F%2Fblogs.iss.net%2Farchive%2FNTLMReflection.html&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"> <a class="external text" href="http://support.microsoft.com/?kbid=239869" rel="nofollow"><i>How to enable NTLM 2 authentication</i></a>, Support, Microsoft, (2007-01-25)<span style="display:none;">, <a class="external free" href="http://support.microsoft.com/?kbid=239869" rel="nofollow">http://support.microsoft.com/?kbid=239869</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=How+to+enable+NTLM+2+authentication&amp;rft.date=2007-01-25&amp;rft.series=Support&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fsupport.microsoft.com%2F%3Fkbid%3D239869&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-security-guide-5">^ <a href="#cite_ref-security-guide_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-security-guide_5-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://technet.microsoft.com/en-us/library/dd277307.aspx" rel="nofollow">“Security Configuration”</a>, <i>Microsoft Windows 2000 Security Hardening Guide</i>, TechNet (Microsoft)<span style="display:none;">, <a class="external free" href="http://technet.microsoft.com/en-us/library/dd277307.aspx" rel="nofollow">http://technet.microsoft.com/en-us/library/dd277307.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Security+Configuration&amp;rft.jtitle=Microsoft+Windows+2000+Security+Hardening+Guide&amp;rft.series=TechNet&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fdd277307.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236715(v=PROT.10).aspx" rel="nofollow">“Security Considerations for Implementers”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236715(v=PROT.10).aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236715(v=PROT.10).aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Security+Considerations+for+Implementers&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236715%28v%3DPROT.10%29.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.aorato.com/blog/active-directory-vulnerability-disclosure-weak-encryption-enables-attacker-change-victims-password-without-logged/" rel="nofollow">Active Directory Vulnerability Disclosure: Weak encryption enables attacker to change a victim’s password without being logged</a>” (2014年7月15日). <span title="">2014年10月5日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/aa378749%28VS.85%29.aspx" rel="nofollow">“Microsoft NTLM”</a>, <i>MSDN</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/aa378749%28VS.85%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/aa378749%28VS.85%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Microsoft+NTLM&amp;rft.jtitle=MSDN&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Faa378749%2528VS.85%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236639%28v=PROT.10%29.aspx" rel="nofollow">“Message Syntax | section 2.2”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236639%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236639%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Message+Syntax+%26%23124%3B+section+2.2&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236639%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236674%28v=PROT.10%29.aspx" rel="nofollow">“Connection-Oriented”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236674%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236674%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Connection-Oriented&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=3.1.5.1&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236674%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236677%28v=PROT.10%29.aspx" rel="nofollow">“Connectionless”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236677%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236677%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Connectionless&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=3.1.5.2&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236677%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236641%28v=PROT.10%29.aspx" rel="nofollow">“NEGOTIATE_MESSAGE”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236641%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236641%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=NEGOTIATE_MESSAGE&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=2.2.1.1&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236641%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236642%28v=PROT.10%29.aspx" rel="nofollow">“CHALLENGE_MESSAGE”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236642%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236642%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=CHALLENGE_MESSAGE&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=2.2.1.2&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236642%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236643%28v=PROT.10%29.aspx" rel="nofollow">“AUTHENTICATE_MESSAGE”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236643%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236643%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=AUTHENTICATE_MESSAGE&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=2.2.1.3&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236643%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-v1-15">^ <a href="#cite_ref-v1_15-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-v1_15-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236699%28PROT.10%29.aspx" rel="nofollow">“NTLM v1 Authentication”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236699%28PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236699%28PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=NTLM+v1+Authentication&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=3.3.1&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236699%2528PROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><cite class="citation" style="font-style:normal"><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236700%28v=PROT.10%29.aspx" rel="nofollow">“NTLM v2 Authentication”</a>, <i>NT LAN Manager (NTLM) Authentication Protocol Specification</i> (Microsoft)<span style="display:none;">, <a class="external free" href="http://msdn.microsoft.com/en-us/library/cc236700%28v=PROT.10%29.aspx" rel="nofollow">http://msdn.microsoft.com/en-us/library/cc236700%28v=PROT.10%29.aspx</a></span> <span class="reference-accessdate"><span title="">2014年10月5日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=NTLM+v2+Authentication&amp;rft.jtitle=NT+LAN+Manager+%28NTLM%29+Authentication+Protocol+Specification&amp;rft.edition=3.3.1&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fcc236700%2528v%3DPROT.10%2529.aspx&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><a class="external text" href="https://web.archive.org/web/19990117055557/http://www.microsoft.com/ntserver/nts/exec/overview/NT4SP4whatnew.asp" rel="nofollow">What's New in Windows NT 4.0 Service Pack 4?</a></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFGlass" style="font-style:normal">Glass, Eric, <a class="external text" href="http://davenport.sourceforge.net/ntlm.html" rel="nofollow">“NTLM”</a>, <i>Davenport</i>, Source forge<span style="display:none;">, <a class="external free" href="http://davenport.sourceforge.net/ntlm.html" rel="nofollow">http://davenport.sourceforge.net/ntlm.html</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=NTLM&amp;rft.atitle=Davenport&amp;rft.aulast=Glass&amp;rft.aufirst=Eric&amp;rft.au=Glass%2C%26%2332%3BEric&amp;rft.pub=Source+forge&amp;rft_id=http%3A%2F%2Fdavenport.sourceforge.net%2Fntlm.html&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Varughese, Sam (2006年2月). “<a class="external text" href="http://palisade.plynt.com/issues/2006Feb/rainbow-tables/" rel="nofollow">Rainbow Cracking and Password Security</a>”.   Palisade. <span title="">2014年10月5日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">HD Moore. “<a class="external text" href="http://blog.metasploit.com/2008/11/ms08-067-metasploit-and-smb-relay.html" rel="nofollow">MS08-068: Metasploit and SMB Relay</a>”. <span title="">2014年10月5日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text"><cite class="citation conference" style="font-style:normal">Kurt Grutzmacher (2008-08-08). <a class="external text" href="https://www.defcon.org/html/links/dc-archives/dc-16-archive.html#Grutzmacher" rel="nofollow">“Nail the Coffin Shut, NTLM is Dead”</a>. Defcon 16<span style="display:none;">. <a class="external free" href="https://www.defcon.org/html/links/dc-archives/dc-16-archive.html#Grutzmacher" rel="nofollow">https://www.defcon.org/html/links/dc-archives/dc-16-archive.html#Grutzmacher</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Nail+the+Coffin+Shut%2C+NTLM+is+Dead&amp;rft.atitle=&amp;rft.aulast=Kurt+Grutzmacher&amp;rft.au=Kurt+Grutzmacher&amp;rft.date=2008-08-08&amp;rft_id=https%3A%2F%2Fwww.defcon.org%2Fhtml%2Flinks%2Fdc-archives%2Fdc-16-archive.html%23Grutzmacher&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text"><cite class="citation conference" style="font-style:normal">Hernan Ochoa and Agustin Azubel (2010-07-28). <a class="external text" href="http://www.ampliasecurity.com/research/NTLMWeakNonce-bh2010-usa-ampliasecurity.pdf" rel="nofollow">“Understanding the Windows SMB NTLM Weak Nonce vulnerability”</a> (PDF). Blackhat USA 2010<span style="display:none;">. <a class="external free" href="http://www.ampliasecurity.com/research/NTLMWeakNonce-bh2010-usa-ampliasecurity.pdf" rel="nofollow">http://www.ampliasecurity.com/research/NTLMWeakNonce-bh2010-usa-ampliasecurity.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Understanding+the+Windows+SMB+NTLM+Weak+Nonce+vulnerability&amp;rft.atitle=&amp;rft.aulast=Hernan+Ochoa+and+Agustin+Azubel&amp;rft.au=Hernan+Ochoa+and+Agustin+Azubel&amp;rft.date=2010-07-28&amp;rft_id=http%3A%2F%2Fwww.ampliasecurity.com%2Fresearch%2FNTLMWeakNonce-bh2010-usa-ampliasecurity.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:NT_LAN_Manager"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Hernan Ochoa and Agustin Azubel. “<a class="external text" href="http://www.ampliasecurity.com/research/OCHOA-2010-0209.txt" rel="nofollow">Windows SMB NTLM Weak Nonce vulnerability Security Advisory</a>”. <span title="">2014年10月5日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=9" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/LAN_Manager" title="LAN Manager">LAN Manager</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NTLMSSP&amp;action=edit&amp;redlink=1" title="NTLMSSP (存在しないページ)">NTLMSSP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:NTLMSSP&amp;action=edit&amp;redlink=1" title="En:NTLMSSP (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%B5%B1%E5%90%88Windows%E8%AA%8D%E8%A8%BC&amp;action=edit&amp;redlink=1" title="統合Windows認証 (存在しないページ)">統合Windows認証</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integrated_Windows_Authentication&amp;action=edit&amp;redlink=1" title="En:Integrated Windows Authentication (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B1%E3%83%AB%E3%83%99%E3%83%AD%E3%82%B9%E8%AA%8D%E8%A8%BC" title="ケルベロス認証">ケルベロス認証</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NT_LAN_Manager&amp;action=edit&amp;section=10" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.OnlineHashCrack.com" rel="nofollow">Online NTLM hash crack using Rainbow tables</a></li>
+<li><a class="external text" href="http://msdn.microsoft.com/en-us/library/cc236621(PROT.10).aspx" rel="nofollow">NT LAN Manager (NTLM) Authentication Protocol Specification</a></li>
+<li><a class="external text" href="http://cntlm.sourceforge.net/" rel="nofollow">Cntlm – NTLM, NTLMSR, NTLMv2 Authentication Proxy and Accelerator</a> Personal HTTP(S) and SOCKS5 proxy for NTLM-unaware applications (Windows/Linux/UNIX)</li>
+<li><a class="external text" href="http://davenport.sourceforge.net/ntlm.html" rel="nofollow">The NTLM Authentication Protocol and Security Support Provider</a> A detailed analysis of the NTLM protocol.</li>
+<li><a class="external text" href="http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/523ae943-5e6a-4200-9103-9808baa00157.mspx" rel="nofollow">MSDN article explaining the protocol and that it has been renamed</a></li>
+<li><a class="external text" href="http://msdn.microsoft.com/en-us/library/aa378749.aspx" rel="nofollow">MSDN page on NTLM authentication</a></li>
+<li><a class="external text" href="http://josefsson.org/libntlm/" rel="nofollow">Libntlm</a> – a free implementation.</li>
+<li><a class="external text" href="http://ntlmaps.sourceforge.net/" rel="nofollow">NTLM Authorization Proxy Server</a> software that allows users to authenticate via an MS Proxy Server.</li>
+<li><a class="external text" href="http://www.midgard-project.org/documentation/ntlm-single-sign-on/" rel="nofollow">Installing NTLM authentication</a> – NTLM set-up instructions for <a class="new" href="/w/index.php?title=Samba_(software)&amp;action=edit&amp;redlink=1" title="Samba (software) (存在しないページ)">Samba</a> and <a class="new" href="/w/index.php?title=Midgard_(software)&amp;action=edit&amp;redlink=1" title="Midgard (software) (存在しないページ)">Midgard</a> on <a href="/wiki/Linux" title="Linux">Linux</a></li>
+<li><a class="external text" href="http://www.microsoft.com/technet/technetmag/issues/2006/08/SecurityWatch" rel="nofollow">NTLM version 2 (NTLMv2) and the LMCompatibilityLevel setting that governs it</a></li>
+<li><a class="external text" href="http://www.ioplex.com/jespa.html" rel="nofollow">Jespa – Java Active Directory Integration</a> Full NTLM security service provider with <i>server-side NETLOGON validation</i> (commercial but free up to 25 users)</li>
+<li><a class="external text" href="http://sourceforge.net/projects/ntlmv2auth/" rel="nofollow">ntlmv2-auth</a> NTLMv2 API and Servlet Filter for Java</li>
+<li><a class="external text" href="http://htt.sourceforge.net/cgi-bin/cwiki/bin/public?page=ExplainHtntlm" rel="nofollow">A ntlm message generator tool</a></li>
+<li><a class="external text" href="http://waffle.codeplex.com" rel="nofollow">WAFFLE – Java/C# Windows Authentication Framework</a></li>
+<li><a class="external text" href="http://www.objectif-securite.ch/en/products.php" rel="nofollow">objectif-securite (Rainbow tables for ophcrack)</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401175008
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.358 seconds
+Real time usage: 0.493 seconds
+Preprocessor visited node count: 16885/1000000
+Post‐expand include size: 82116/2097152 bytes
+Template argument size: 31513/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 6/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 27209/5000000 bytes
+Lua time usage: 0.050/7 seconds
+Lua virtual size: 5476352/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  415.208      1 -total
+ 73.57%  305.458      1 テンプレート:Reflist
+ 43.96%  182.544     16 テンプレート:Citation
+ 43.43%  180.334     18 テンプレート:Citation/core
+ 23.88%   99.161      6 テンプレート:仮リンク
+ 20.01%   83.089      4 テンプレート:Cite_web
+ 12.51%   51.961     19 テンプレート:Accessdate
+ 10.14%   42.123     19 テンプレート:Accessdate/core
+  9.25%   38.408      2 テンプレート:Citation/showdate
+  7.68%   31.873     21 テンプレート:ISO_dateJA
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3068471-0!canonical and timestamp 20220401175007 and revision id 1810193. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=NT_LAN_Manager&amp;oldid=1810193">http://localhost:8080/w/index.php?title=NT_LAN_Manager&amp;oldid=1810193</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="カテゴリ:コンピュータ・ネットワーク・セキュリティ">コンピュータ・ネットワーク・セキュリティ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%AA%8D%E8%A8%BC%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="カテゴリ:認証プロトコル">認証プロトコル</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=NT+LAN+Manager&amp;returntoquery=curid%3D3068471%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=NT+LAN+Manager&amp;returntoquery=curid%3D3068471%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/NT_LAN_Manager" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:NT_LAN_Manager&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/NT_LAN_Manager">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=NT_LAN_Manager&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=NT_LAN_Manager&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/NT_LAN_Manager" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/NT_LAN_Manager" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=NT_LAN_Manager&amp;oldid=1810193" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=NT_LAN_Manager&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年9月12日 (土) 23:05 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.358","walltime":"0.493","ppvisitednodes":{"value":16885,"limit":1000000},"postexpandincludesize":{"value":82116,"limit":2097152},"templateargumentsize":{"value":31513,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":27209,"limit":5000000},"timingprofile":["100.00%  415.208      1 -total"," 73.57%  305.458      1 テンプレート:Reflist"," 43.96%  182.544     16 テンプレート:Citation"," 43.43%  180.334     18 テンプレート:Citation/core"," 23.88%   99.161      6 テンプレート:仮リンク"," 20.01%   83.089      4 テンプレート:Cite_web"," 12.51%   51.961     19 テンプレート:Accessdate"," 10.14%   42.123     19 テンプレート:Accessdate/core","  9.25%   38.408      2 テンプレート:Citation/showdate","  7.68%   31.873     21 テンプレート:ISO_dateJA"]},"scribunto":{"limitreport-timeusage":{"value":"0.050","limit":"7"},"limitreport-virtmemusage":{"value":5476352,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401175008","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":720});});</script>
+</body></html>

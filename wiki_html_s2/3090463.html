@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>稠密部分加群 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-稠密部分加群 rootpage-稠密部分加群 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">稠密部分加群</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="抽象代数学">抽象代数学</a>、とくに<a href="." id="link_a_2" title="加群論">加群論</a>において、加群の<b>稠密部分加群</b>（ちゅうみつぶぶんかぐん、<a href="." id="link_a_3" title="英語">英</a>: <span lang="en">dense submodule</span>）は<a href="." id="link_a_4" title="本質部分加群">本質部分加群</a>の概念の精密化である。<i>N</i> が <i>M</i> の稠密部分加群であれば、"<i>N</i> ⊆ <i>M</i> は<b>有理拡大</b> (rational extension) である"ということもできる。稠密部分加群は非可換環論における商環と関係がある。ここで現れるたいていの結果は最初 (<a href="#CITEREFJohnson1951">Johnson 1951</a>), (<a href="#CITEREFUtumi1956">Utumi 1956</a>) と (<a href="#CITEREFFindlayLambek1958">Findlay &amp; Lambek 1958</a>) において証明された。
+</p><p>この用語は<a href="." id="link_a_5" title="位相空間論">位相空間論</a>における<a href="." id="link_a_6" title="稠密部分集合">稠密部分集合</a>の概念とは異なることを注意すべきである。稠密部分加群を定義するのに位相は全く必要ないし、稠密部分加群は位相加群において位相的に稠密かもしれないしそうでないかもしれない。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#性質"><span class="tocnumber">2</span> <span class="toctext">性質</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#例"><span class="tocnumber">3</span> <span class="toctext">例</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#応用"><span class="tocnumber">4</span> <span class="toctext">応用</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#加群の有理包"><span class="tocnumber">4.1</span> <span class="toctext">加群の有理包</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#極大右商環"><span class="tocnumber">4.2</span> <span class="toctext">極大右商環</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#参考文献"><span class="tocnumber">5</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>この記事は (<a href="#CITEREFStorrer1972">Storrer 1972</a>) と (<a href="#CITEREFLam1999">Lam 1999</a>, p. 272) に現れる <a class="new" href="/w/index.php?title=En:Exposition_(literary_technique)&amp;action=edit&amp;redlink=1" title="En:Exposition (literary technique) (存在しないページ)">exposition</a> を修正する。<i>R</i> を環とし <i>M</i> を右 <i>R</i> 加群とし <i>N</i> をその部分加群とする。<i>M</i> の元 <i>y</i> of <i>M</i> に対し、
+</p>
+<dl><dd>&lt;math&gt;y^{-1}N=\{r\in R \mid yr\in N \} \,&lt;/math&gt;</dd></dl>
+<p>と定義する。表現 <i>y</i><sup>−1</sup> は形式的なものに過ぎないことに注意する。加群の元 <i>y</i> が<a href="/wiki/%E5%8F%AF%E9%80%86" title="可逆">可逆</a>であると言うことは意味がないからだ。しかしこの表記は <i>y</i>⋅(<i>y</i><sup>−1</sup><i>N</i>) ⊆ <i>N</i> であることを示唆する助けになる。集合 <i>y</i> <sup>−1</sup><i>N</i> はつねに <i>R</i> の右<a class="mw-redirect" href="/wiki/%E3%82%A4%E3%83%87%E3%82%A2%E3%83%AB" title="イデアル">イデアル</a>である。
+</p><p><i>M</i> の部分加群 <i>N</i> が<b>稠密部分加群</b> (dense submodule) であるとは、<i>M</i> のすべての元 <i>x</i> ≠ 0 と <i>y</i> に対して <i>R</i> のある元 <i>r</i> が存在して <i>xr</i> ≠ {0} かつ <i>yr</i> が <i>N</i> の元となることである。言い換えると、導入した表記を用いて、集合
+</p>
+<dl><dd>&lt;math&gt;x(y^{-1}N)\neq\{0\} \,&lt;/math&gt;</dd></dl>
+<p>ということである。このとき、関係は
+</p>
+<dl><dd>&lt;math&gt;N\subseteq_d M\,&lt;/math&gt;</dd></dl>
+<p>と表記される。
+</p><p>別の同値な定義は本質的に<a class="mw-redirect" href="/wiki/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC%E4%BB%A3%E6%95%B0" title="ホモロジー代数">ホモロジカル</a>である。<i>N</i> が <i>M</i> において稠密であることと
+</p>
+<dl><dd>&lt;math&gt;\mathrm{Hom}_R (M/N,E(M))=\{0\}\,&lt;/math&gt;</dd></dl>
+<p>ただし <i>E</i>(<i>M</i>) は <i>M</i> の<a href="/wiki/%E7%A7%BB%E5%85%A5%E5%8C%85%E7%B5%A1" title="移入包絡">移入包絡</a>、は同値である。
+</p>
+<h2><span id=".E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="性質">性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=2" title="節を編集: 性質">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><i>N</i> が <i>M</i> の本質部分加群であることと <i>M</i> のすべての元 <i>y</i> ≠ 0 に対して集合 <i>y</i>⋅(<i>y</i> <sup>−1</sup><i>N</i>) ≠ {0} であることが同値であることを示すことができる。すると明らかにすべての稠密部分加群は本質部部加群である。</li>
+<li><i>M</i> が<a class="mw-redirect" href="/wiki/%E9%9D%9E%E7%89%B9%E7%95%B0%E5%8A%A0%E7%BE%A4" title="非特異加群">非特異加群</a> (nonsingular module) であれば、<i>N</i> が <i>M</i> において稠密であることと本質であることは同値である。</li>
+<li>環が右<a class="mw-redirect" href="/wiki/%E9%9D%9E%E7%89%B9%E7%95%B0%E7%92%B0" title="非特異環">非特異環</a> (right nonsingular ring) であることとその本質右イデアルがすべて稠密右イデアルであることは同値である。</li>
+<li><i>N</i> と <i>N' </i> が <i>M</i> の稠密部分加群であれば、<i>N</i> ∩ <i>N' </i> もそうである。</li>
+<li><i>N</i> が稠密で <i>N</i> ⊆ <i>K</i> ⊆ <i>M</i> であれば <i>K</i> もまた稠密である。</li>
+<li><i>B</i> が <i>R</i> の稠密右イデアルであれば、<i>R</i> の任意の <i>y</i> に対して <i>y</i><sup>−1</sup><i>B</i> もそうである。</li></ul>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=3" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><i>x</i> が <i>R</i> の<a href="/wiki/%E4%B8%AD%E5%BF%83_(%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="中心 (代数学)">中心</a>の非零因子であれば、<i>xR</i> は <i>R</i> の稠密右イデアルである。</li>
+<li><i>I</i> が <i>R</i> の両側イデアルであれば、<i>I</i> が右イデアルとして稠密であることと <i>I</i> の<i>左</i><a href="/wiki/%E9%9B%B6%E5%8C%96%E3%82%A4%E3%83%87%E3%82%A2%E3%83%AB" title="零化イデアル">零化イデアル</a>が 0 であること、すなわち &lt;math&gt;\ell\cdot \mathrm{Ann}(I)=\{0\}\,&lt;/math&gt; は同値である。とくに、可換環において、稠密イデアルはちょうど<a href="/wiki/%E5%BF%A0%E5%AE%9F%E5%8A%A0%E7%BE%A4" title="忠実加群">忠実加群</a>であるイデアルのことである。</li></ul>
+<h2><span id=".E5.BF.9C.E7.94.A8"></span><span class="mw-headline" id="応用">応用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=4" title="節を編集: 応用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.8A.A0.E7.BE.A4.E3.81.AE.E6.9C.89.E7.90.86.E5.8C.85"></span><span class="mw-headline" id="加群の有理包">加群の有理包</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=5" title="節を編集: 加群の有理包">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>すべての右 <i>R</i> 加群 <i>M</i> はその<a href="/wiki/%E7%A7%BB%E5%85%A5%E5%8C%85%E7%B5%A1" title="移入包絡">移入包絡</a> (injective hull) である極大本質拡大 <i>E</i>(<i>M</i>) をもつ。極大稠密拡大を用いた類似の構成の結果が、<i>E</i>(<i>M</i>) の部分加群である <b>rational hull</b> <i>Ẽ</i>(<i>M</i>) である。加群が真の有理拡大をもたず <i>Ẽ</i>(<i>M</i>) = <i>M</i> であるとき、加群を <b>rationally complete</b> という。<i>R</i> が右非特異であれば、もちろん <i>Ẽ</i>(<i>M</i>) = <i>E</i>(<i>M</i>) である。
+</p><p>rational hull は直ちに移入包絡の部分加群と同一視される。<i>S</i> = End<sub><i>R</i></sub>(<i>E</i>(<i>M</i>)) を移入包絡の<a href="/wiki/%E8%87%AA%E5%B7%B1%E6%BA%96%E5%90%8C%E5%9E%8B%E7%92%B0" title="自己準同型環">自己準同型環</a>とする。すると移入包絡の元 <i>x</i> が rational hull に入ることと <i>x</i> が <i>M</i> 上 0 である <i>S</i> のすべての写像によって 0 に送られることが同値である。記号で書けば、
+</p>
+<dl><dd>&lt;math&gt;\tilde{E}(M)=\{x\in E(M) \mid \forall f\in S, f(M)=0 \implies f(x)=0\}\,&lt;/math&gt;</dd></dl>
+<p>一般に、<i>M</i> 上 0 だが <i>M</i> の元でないある <i>x</i> で 0 でないような <i>S</i> の写像が存在するかもしれず、そのような <i>x</i> は rational hull には入らない。
+</p>
+<h3><span id=".E6.A5.B5.E5.A4.A7.E5.8F.B3.E5.95.86.E7.92.B0"></span><span class="mw-headline" id="極大右商環">極大右商環</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=6" title="節を編集: 極大右商環">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>極大右商環 (maximal right ring of quotients) は <i>R</i> の稠密右イデアルと関連して2つの方法で記述することができる。
+</p>
+<ul><li>1つの方法は、<i>Ẽ</i>(<i>R</i>) はある自己準同型環と同型な加群であることが証明され、その環構造からこの同型によって <i>Ẽ</i>(<i>R</i>) に環構造、極大右商環の構造が入る (<a href="#CITEREFLam1999">Lam 1999</a>, p. 366)。</li></ul>
+<ul><li>2つ目の方法は、極大右商環は <i>R</i> の稠密右イデアルから <i>R</i> の中への準同型の<a href="/wiki/%E5%90%8C%E5%80%A4%E9%A1%9E" title="同値類">同値類</a>の集合と同一視される。同値関係は、2つの関数が同値であることを <i>R</i> のある稠密右イデアルで一致することによって定める (<a href="#CITEREFLam1999">Lam 1999</a>, p. 370)。</li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;section=7" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<ul><li><cite class="citation" id="CITEREFFindlay,_G._D.Lambek,_J.1958" style="font-style:normal">Findlay, G. D.; Lambek, J. (1958), “A generalized ring of quotients. I, II”, <i><a class="new" href="/w/index.php?title=Canadian_Mathematical_Bulletin&amp;action=edit&amp;redlink=1" title="Canadian Mathematical Bulletin (存在しないページ)">Canadian Mathematical Bulletin</a></i> <b>1</b>:  77–85, 155–167, <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0008-4395" rel="nofollow">0008-4395</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0094370+%2820+%23888%29" rel="nofollow">0094370 (20 #888)</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+generalized+ring+of+quotients.+I%2C+II&amp;rft.jtitle=%5B%5BCanadian+Mathematical+Bulletin%5D%5D&amp;rft.aulast=Findlay%2C+G.+D.&amp;rft.au=Findlay%2C+G.+D.&amp;rft.au=Lambek%2C+J.&amp;rft.date=1958&amp;rft.volume=1&amp;rft.pages=77%E2%80%9385%2C+155%E2%80%93167&amp;rft.issn=0008-4395&amp;rft.mr=0094370+%2820+%23888%29&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFJohnson,_R._E.1951" style="font-style:normal">Johnson, R. E. (1951), “The extended centralizer of a ring over a module”, <i>Proc. Amer. Math. Soc.</i> <b>2</b>:  891–895, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1090%2Fs0002-9939-1951-0045695-9" rel="nofollow">10.1090/s0002-9939-1951-0045695-9</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0002-9939" rel="nofollow">0002-9939</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0045695+%2813%2C618c%29" rel="nofollow">0045695 (13,618c)</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+extended+centralizer+of+a+ring+over+a+module&amp;rft.jtitle=Proc.+Amer.+Math.+Soc.&amp;rft.aulast=Johnson%2C+R.+E.&amp;rft.au=Johnson%2C+R.+E.&amp;rft.date=1951&amp;rft.volume=2&amp;rft.pages=891%E2%80%93895&amp;rft_id=info:doi/10.1090%2Fs0002-9939-1951-0045695-9&amp;rft.issn=0002-9939&amp;rft.mr=0045695+%2813%2C618c%29&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFLam1999" style="font-style:normal">Lam, Tsit-Yuen (1999), <i>Lectures on modules and rings</i>, Graduate Texts in Mathematics No. 189, Berlin, New York: <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-387-98428-5" title="特別:文献資料/978-0-387-98428-5">978-0-387-98428-5</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1653294" rel="nofollow">1653294</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Lectures+on+modules+and+rings&amp;rft.aulast=Lam&amp;rft.aufirst=Tsit-Yuen&amp;rft.au=Lam%2C%26%2332%3BTsit-Yuen&amp;rft.date=1999&amp;rft.series=Graduate+Texts+in+Mathematics+No.+189&amp;rft.place=Berlin%2C+New+York&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft.isbn=978-0-387-98428-5&amp;rft.mr=1653294&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFStorrer,_Hans_H.1972" style="font-style:normal">Storrer, Hans H. (1972), “On Goldman's primary decomposition”, <i>Lecutres on rings and modules (Tulane Univ. Ring and Operator Theory)</i> (Berlin: Springer) <b>I</b>:  617–661. Lecture Notes in Math., Vol. 246, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2Fbfb0059571" rel="nofollow">10.1007/bfb0059571</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0360717+%2850+%2313164%29" rel="nofollow">0360717 (50 #13164)</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+Goldman%27s+primary+decomposition&amp;rft.jtitle=Lecutres+on+rings+and+modules+%28Tulane+Univ.+Ring+and+Operator+Theory%29&amp;rft.aulast=Storrer%2C+Hans+H.&amp;rft.au=Storrer%2C+Hans+H.&amp;rft.date=1972&amp;rft.volume=I&amp;rft.pages=617%E2%80%93661.+Lecture+Notes+in+Math.%2C+Vol.+246&amp;rft.place=Berlin&amp;rft.pub=Springer&amp;rft_id=info:doi/10.1007%2Fbfb0059571&amp;rft.mr=0360717+%2850+%2313164%29&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFUtumi,_Yuzo1956" style="font-style:normal">Utumi, Yuzo (1956), “On quotient rings”, <i>Osaka Math. J.</i> <b>8</b>:  1–18, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0078966+%2818%2C7c%29" rel="nofollow">0078966 (18,7c)</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+quotient+rings&amp;rft.jtitle=Osaka+Math.+J.&amp;rft.aulast=Utumi%2C+Yuzo&amp;rft.au=Utumi%2C+Yuzo&amp;rft.date=1956&amp;rft.volume=8&amp;rft.pages=1%E2%80%9318&amp;rft.mr=0078966+%2818%2C7c%29&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4"><span style="display: none;"> </span></span></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401180146
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.210 seconds
+Real time usage: 0.379 seconds
+Preprocessor visited node count: 5060/1000000
+Post‐expand include size: 30603/2097152 bytes
+Template argument size: 7189/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 17062/5000000 bytes
+Lua time usage: 0.130/7 seconds
+Lua virtual size: 5763072/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  353.104      1 -total
+ 73.72%  260.313      5 テンプレート:Citation
+ 71.73%  253.286      5 テンプレート:Citation/core
+ 55.14%  194.702     10 テンプレート:Citation/identifier
+ 35.02%  123.640      8 テンプレート:Catalog_lookup_link
+ 23.94%   84.518      7 テンプレート:Harv
+ 22.91%   80.886      2 テンプレート:ISSN
+ 17.09%   60.333      5 テンプレート:MathSciNet
+  7.23%   25.512      1 テンプレート:ISBN2
+  5.05%   17.823      3 テンプレート:Error-small
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3090463-0!canonical and timestamp 20220401180145 and revision id 1822745. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=稠密部分加群&amp;oldid=1822745">http://localhost:8080/w/index.php?title=稠密部分加群&amp;oldid=1822745</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%AD%A6" title="カテゴリ:抽象代数学">抽象代数学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8A%A0%E7%BE%A4%E8%AB%96" title="カテゴリ:加群論">加群論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%92%B0%E8%AB%96" title="カテゴリ:環論">環論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;returntoquery=curid%3D3090463%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;returntoquery=curid%3D3090463%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;oldid=1822745" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%A8%A0%E5%AF%86%E9%83%A8%E5%88%86%E5%8A%A0%E7%BE%A4&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2018年4月28日 (土) 00:46 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.210","walltime":"0.379","ppvisitednodes":{"value":5060,"limit":1000000},"postexpandincludesize":{"value":30603,"limit":2097152},"templateargumentsize":{"value":7189,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":17062,"limit":5000000},"timingprofile":["100.00%  353.104      1 -total"," 73.72%  260.313      5 テンプレート:Citation"," 71.73%  253.286      5 テンプレート:Citation/core"," 55.14%  194.702     10 テンプレート:Citation/identifier"," 35.02%  123.640      8 テンプレート:Catalog_lookup_link"," 23.94%   84.518      7 テンプレート:Harv"," 22.91%   80.886      2 テンプレート:ISSN"," 17.09%   60.333      5 テンプレート:MathSciNet","  7.23%   25.512      1 テンプレート:ISBN2","  5.05%   17.823      3 テンプレート:Error-small"]},"scribunto":{"limitreport-timeusage":{"value":"0.130","limit":"7"},"limitreport-virtmemusage":{"value":5763072,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401180146","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1979});});</script>
+</body></html>

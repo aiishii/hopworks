@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ウィルソン素数 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ウィルソン素数 rootpage-ウィルソン素数 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ウィルソン素数</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>ウィルソン素数</b>（ウィルソンそすう、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Wilson prime</span>）とは、<i>p</i><sup>2</sup> が (<i>p</i> − 1)! + 1 を<a href="." id="link_a_2" title="約数">割り切る</a>ような<a href="." id="link_a_3" title="素数">素数</a> <i>p</i> である。ここで "!" は<a href="." id="link_a_4" title="階乗">階乗</a>。任意の素数 <i>p</i> が (<i>p</i> − 1)! + 1 を割り切ることはわかっている（<a href="." id="link_a_5" title="ウィルソンの定理">ウィルソンの定理</a>）。名称は<a href="." id="link_a_6" title="イングランド人">イングランド</a>の数学者<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_7" title="ジョン・ウィルソン (数学者) (存在しないページ)">ジョン・ウィルソン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:John_Wilson_(mathematician)&amp;action=edit&amp;redlink=1" title="En:John Wilson (mathematician) (存在しないページ)">英語版</a>）</span></span>にちなむ。 
+</p><p>既知のウィルソン素数は 5, 13, 563 のみである（<a href="." id="link_a_8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A007540" rel="nofollow">A007540</a>）。もしこれ以外のウィルソン素数が存在すれば、それは 2<span style="margin:0 .15em 0 .25em">×</span>10<sup><span style="white-space:nowrap">13</span></sup> より大きくなければならない<sup class="reference" id="cite_ref-Search_1-0"><a href="#cite_note-Search-1">[1]</a></sup>。ウィルソン素数は無限個存在し、さらに<a href="." id="link_a_9" title="区間 (数学)">区間</a>  [<i>x</i>, <i>y</i>] に約 log(log(<i>y</i>)/log(<i>x</i>)) 個存在すると<a href="." id="link_a_10" title="予想">予想</a>されている<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p><p>新たなウィルソン素数を発見すべく、コンピュータによる探索が幾度か行われた<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup><sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_11" title="Ibercivis (存在しないページ)">Ibercivis</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ibercivis&amp;action=edit&amp;redlink=1" title="En:Ibercivis (存在しないページ)">英語版</a>）</span></span><a href="." id="link_a_12" title="分散コンピューティング">分散コンピューティング</a>にはウィルソン素数の探索も含まれており<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>、また mersenneforum.org でも探索の連携が行われている<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#一般化"><span class="tocnumber">1</span> <span class="toctext">一般化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#オーダー_n_のウィルソン素数"><span class="tocnumber">1.1</span> <span class="toctext">オーダー <i>n</i> のウィルソン素数</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#ニアウィルソン素数"><span class="tocnumber">1.2</span> <span class="toctext">ニアウィルソン素数</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#ウィルソン数"><span class="tocnumber">1.3</span> <span class="toctext">ウィルソン数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#関連項目"><span class="tocnumber">2</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#脚注"><span class="tocnumber">3</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#参考文献"><span class="tocnumber">4</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#外部リンク"><span class="tocnumber">5</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E4.B8.80.E8.88.AC.E5.8C.96"></span><span class="mw-headline" id="一般化">一般化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=1" title="節を編集: 一般化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.AA.E3.83.BC.E3.83.80.E3.83.BC_n_.E3.81.AE.E3.82.A6.E3.82.A3.E3.83.AB.E3.82.BD.E3.83.B3.E7.B4.A0.E6.95.B0"></span><span class="mw-headline" id="オーダー_n_のウィルソン素数">オーダー <i>n</i> のウィルソン素数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=2" title="節を編集: オーダー n のウィルソン素数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ウィルソンの定理はより一般に、任意の整数 <i>n</i> ≥ 1 と素数 <i>p</i> ≥ <i>n</i> に対し 
+</p>
+<dl><dd>&lt;math&gt;(n-1)!(p-n)!\equiv(-1)^n\  (\bmod p ) &lt;/math&gt;</dd></dl>
+<p>と表現できる（ &lt;math&gt;p-n+k\equiv(-1)(n-k)\  (\bmod p ) &lt;/math&gt; だから）。オーダー <i>n</i> の一般化ウィルソン素数（generalized Wilson prime of order n）とは <i>p</i><sup>2</sup> が(<i>n</i> − 1)!(<i>p</i> − n)! − (− 1)<sup>n</sup> を割り切るような素数 <i>p</i> のことである。
+</p><p>任意の自然数 <i>n</i> に対し、オーダー <i>n</i> の一般化ウィルソン素数は無限に存在すると予想されている。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th><i>n</i>
+</th>
+<th><i>p</i><sup>2</sup> が(<i>n</i> − 1)!(<i>p</i> − n)! − (− 1)<sup>n</sup> を<br/>割り切るような素数 <i>p</i>
+</th>
+<th><a class="mw-redirect" href="/wiki/OEIS" title="OEIS">OEIS</a>
+</th></tr>
+<tr>
+<td>1
+</td>
+<td>5, 13, 563, ...
+</td>
+<td><a class="external text" href="https://oeis.org/A007540" rel="nofollow">A007540</a>
+</td></tr>
+<tr>
+<td>2
+</td>
+<td>2, 3, 11, 107, 4931, ...
+</td>
+<td><a class="external text" href="https://oeis.org/A079853" rel="nofollow">A079853</a>
+</td></tr>
+<tr>
+<td>3
+</td>
+<td>7, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>4
+</td>
+<td>10429, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>5
+</td>
+<td>5, 7, 47, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>6
+</td>
+<td>11, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>7
+</td>
+<td>17, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>8
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>9
+</td>
+<td>541, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>10
+</td>
+<td>11, 1109, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>11
+</td>
+<td>17, 2713, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>12
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>13
+</td>
+<td>13, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>14
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>15
+</td>
+<td>349, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>16
+</td>
+<td>31, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>17
+</td>
+<td>61, 251, 479, ...
+</td>
+<td><a class="external text" href="https://oeis.org/A152413" rel="nofollow">A152413</a>
+</td></tr>
+<tr>
+<td>18
+</td>
+<td>13151527, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>19
+</td>
+<td>71, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>20
+</td>
+<td>59, 499, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>21
+</td>
+<td>217369, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>22
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>23
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>24
+</td>
+<td>47, 3163, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>25
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>26
+</td>
+<td>97579, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>27
+</td>
+<td>53, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>28
+</td>
+<td>347, ...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>29
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>30
+</td>
+<td>137, 1109, 5179, ...
+</td>
+<td>
+</td></tr></tbody></table>
+<p>オーダー <i>n</i> の一般化ウィルソン素数の最小値を順に並べた数列は以下のとおりである。この次の項（<i>n</i> = 8）の値は 1.4×10<sup>7</sup> よりも大きいことが分かっている。
+</p>
+<dl><dd>5, 2, 7, 10429, 5, 11, 17, ...  （<a class="external text" href="https://oeis.org/A128666" rel="nofollow">A128666</a>）</dd></dl>
+<h3><span id=".E3.83.8B.E3.82.A2.E3.82.A6.E3.82.A3.E3.83.AB.E3.82.BD.E3.83.B3.E7.B4.A0.E6.95.B0"></span><span class="mw-headline" id="ニアウィルソン素数">ニアウィルソン素数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=3" title="節を編集: ニアウィルソン素数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table align="right" class="wikitable mw-collapsible mw-collapsed" style="border:0px;text-align:right;">
+<tbody><tr>
+<th><i>p</i></th>
+<th><i>B</i>
+</th></tr>
+<tr>
+<td>1282279</td>
+<td>+20
+</td></tr>
+<tr>
+<td>1306817</td>
+<td>−30
+</td></tr>
+<tr>
+<td>1308491</td>
+<td>−55
+</td></tr>
+<tr>
+<td>1433813</td>
+<td>−32
+</td></tr>
+<tr>
+<td>1638347</td>
+<td>−45
+</td></tr>
+<tr>
+<td>1640147</td>
+<td>−88
+</td></tr>
+<tr>
+<td>1647931</td>
+<td>+14
+</td></tr>
+<tr>
+<td>1666403</td>
+<td>+99
+</td></tr>
+<tr>
+<td>1750901</td>
+<td>+34
+</td></tr>
+<tr>
+<td>1851953</td>
+<td>−50
+</td></tr>
+<tr>
+<td>2031053</td>
+<td>−18
+</td></tr>
+<tr>
+<td>2278343</td>
+<td>+21
+</td></tr>
+<tr>
+<td>2313083</td>
+<td>+15
+</td></tr>
+<tr>
+<td>2695933</td>
+<td>−73
+</td></tr>
+<tr>
+<td>3640753</td>
+<td>+69
+</td></tr>
+<tr>
+<td>3677071</td>
+<td>−32
+</td></tr>
+<tr>
+<td>3764437</td>
+<td>−99
+</td></tr>
+<tr>
+<td>3958621</td>
+<td>+75
+</td></tr>
+<tr>
+<td>5062469</td>
+<td>+39
+</td></tr>
+<tr>
+<td>5063803</td>
+<td>+40
+</td></tr>
+<tr>
+<td>6331519</td>
+<td>+91
+</td></tr>
+<tr>
+<td>6706067</td>
+<td>+45
+</td></tr>
+<tr>
+<td>7392257</td>
+<td>+40
+</td></tr>
+<tr>
+<td>8315831</td>
+<td>+3
+</td></tr>
+<tr>
+<td>8871167</td>
+<td>−85
+</td></tr>
+<tr>
+<td>9278443</td>
+<td>−75
+</td></tr>
+<tr>
+<td>9615329</td>
+<td>+27
+</td></tr>
+<tr>
+<td>9756727</td>
+<td>+23
+</td></tr>
+<tr>
+<td>10746881</td>
+<td>−7
+</td></tr>
+<tr>
+<td>11465149</td>
+<td>−62
+</td></tr>
+<tr>
+<td>11512541</td>
+<td>−26
+</td></tr>
+<tr>
+<td>11892977</td>
+<td>−7
+</td></tr>
+<tr>
+<td>12632117</td>
+<td>−27
+</td></tr>
+<tr>
+<td>12893203</td>
+<td>−53
+</td></tr>
+<tr>
+<td>14296621</td>
+<td>+2
+</td></tr>
+<tr>
+<td>16711069</td>
+<td>+95
+</td></tr>
+<tr>
+<td>16738091</td>
+<td>+58
+</td></tr>
+<tr>
+<td>17879887</td>
+<td>+63
+</td></tr>
+<tr>
+<td>19344553</td>
+<td>−93
+</td></tr>
+<tr>
+<td>19365641</td>
+<td>+75
+</td></tr>
+<tr>
+<td>20951477</td>
+<td>+25
+</td></tr>
+<tr>
+<td>20972977</td>
+<td>+58
+</td></tr>
+<tr>
+<td>21561013</td>
+<td>−90
+</td></tr>
+<tr>
+<td>23818681</td>
+<td>+23
+</td></tr>
+<tr>
+<td>27783521</td>
+<td>−51
+</td></tr>
+<tr>
+<td>27812887</td>
+<td>+21
+</td></tr>
+<tr>
+<td>29085907</td>
+<td>+9
+</td></tr>
+<tr>
+<td>29327513</td>
+<td>+13
+</td></tr>
+<tr>
+<td>30959321</td>
+<td>+24
+</td></tr>
+<tr>
+<td>33187157</td>
+<td>+60
+</td></tr>
+<tr>
+<td>33968041</td>
+<td>+12
+</td></tr>
+<tr>
+<td>39198017</td>
+<td>−7
+</td></tr>
+<tr>
+<td>45920923</td>
+<td>−63
+</td></tr>
+<tr>
+<td>51802061</td>
+<td>+4
+</td></tr>
+<tr>
+<td>53188379</td>
+<td>−54
+</td></tr>
+<tr>
+<td>56151923</td>
+<td>−1
+</td></tr>
+<tr>
+<td>57526411</td>
+<td>−66
+</td></tr>
+<tr>
+<td>64197799</td>
+<td>+13
+</td></tr>
+<tr>
+<td>72818227</td>
+<td>−27
+</td></tr>
+<tr>
+<td>87467099</td>
+<td>−2
+</td></tr>
+<tr>
+<td>91926437</td>
+<td>−32
+</td></tr>
+<tr>
+<td>92191909</td>
+<td>+94
+</td></tr>
+<tr>
+<td>93445061</td>
+<td>−30
+</td></tr>
+<tr>
+<td>93559087</td>
+<td>−3
+</td></tr>
+<tr>
+<td>94510219</td>
+<td>−69
+</td></tr>
+<tr>
+<td>101710369</td>
+<td>−70
+</td></tr>
+<tr>
+<td>111310567</td>
+<td>+22
+</td></tr>
+<tr>
+<td>117385529</td>
+<td>−43
+</td></tr>
+<tr>
+<td>176779259</td>
+<td>+56
+</td></tr>
+<tr>
+<td>212911781</td>
+<td>−92
+</td></tr>
+<tr>
+<td>216331463</td>
+<td>−36
+</td></tr>
+<tr>
+<td>253512533</td>
+<td>+25
+</td></tr>
+<tr>
+<td>282361201</td>
+<td>+24
+</td></tr>
+<tr>
+<td>327357841</td>
+<td>−62
+</td></tr>
+<tr>
+<td>411237857</td>
+<td>−84
+</td></tr>
+<tr>
+<td>479163953</td>
+<td>−50
+</td></tr>
+<tr>
+<td>757362197</td>
+<td>−28
+</td></tr>
+<tr>
+<td>824846833</td>
+<td>+60
+</td></tr>
+<tr>
+<td>866006431</td>
+<td>−81
+</td></tr>
+<tr>
+<td>1227886151</td>
+<td>−51
+</td></tr>
+<tr>
+<td>1527857939</td>
+<td>−19
+</td></tr>
+<tr>
+<td>1636804231</td>
+<td>+64
+</td></tr>
+<tr>
+<td>1686290297</td>
+<td>+18
+</td></tr>
+<tr>
+<td>1767839071</td>
+<td>+8
+</td></tr>
+<tr>
+<td>1913042311</td>
+<td>−65
+</td></tr>
+<tr>
+<td>1987272877</td>
+<td>+5
+</td></tr>
+<tr>
+<td>2100839597</td>
+<td>−34
+</td></tr>
+<tr>
+<td>2312420701</td>
+<td>−78
+</td></tr>
+<tr>
+<td>2476913683</td>
+<td>+94
+</td></tr>
+<tr>
+<td>3542985241</td>
+<td>−74
+</td></tr>
+<tr>
+<td>4036677373</td>
+<td>−5
+</td></tr>
+<tr>
+<td>4271431471</td>
+<td>+83
+</td></tr>
+<tr>
+<td>4296847931</td>
+<td>+41
+</td></tr>
+<tr>
+<td>5087988391</td>
+<td>+51
+</td></tr>
+<tr>
+<td>5127702389</td>
+<td>+50
+</td></tr>
+<tr>
+<td>7973760941</td>
+<td>+76
+</td></tr>
+<tr>
+<td>9965682053</td>
+<td>−18
+</td></tr>
+<tr>
+<td>10242692519</td>
+<td>−97
+</td></tr>
+<tr>
+<td>11355061259</td>
+<td>−45
+</td></tr>
+<tr>
+<td>11774118061</td>
+<td>−1
+</td></tr>
+<tr>
+<td>12896325149</td>
+<td>+86
+</td></tr>
+<tr>
+<td>13286279999</td>
+<td>+52
+</td></tr>
+<tr>
+<td>20042556601</td>
+<td>+27
+</td></tr>
+<tr>
+<td>21950810731</td>
+<td>+93
+</td></tr>
+<tr>
+<td>23607097193</td>
+<td>+97
+</td></tr>
+<tr>
+<td>24664241321</td>
+<td>+46
+</td></tr>
+<tr>
+<td>28737804211</td>
+<td>−58
+</td></tr>
+<tr>
+<td>35525054743</td>
+<td>+26
+</td></tr>
+<tr>
+<td>41659815553</td>
+<td>+55
+</td></tr>
+<tr>
+<td>42647052491</td>
+<td>+10
+</td></tr>
+<tr>
+<td>44034466379</td>
+<td>+39
+</td></tr>
+<tr>
+<td>60373446719</td>
+<td>−48
+</td></tr>
+<tr>
+<td>64643245189</td>
+<td>−21
+</td></tr>
+<tr>
+<td>66966581777</td>
+<td>+91
+</td></tr>
+<tr>
+<td>67133912011</td>
+<td>+9
+</td></tr>
+<tr>
+<td>80248324571</td>
+<td>+46
+</td></tr>
+<tr>
+<td>80908082573</td>
+<td>−20
+</td></tr>
+<tr>
+<td>100660783343</td>
+<td>+87
+</td></tr>
+<tr>
+<td>112825721339</td>
+<td>+70
+</td></tr>
+<tr>
+<td>231939720421</td>
+<td>+41
+</td></tr>
+<tr>
+<td>258818504023</td>
+<td>+4
+</td></tr>
+<tr>
+<td>260584487287</td>
+<td>−52
+</td></tr>
+<tr>
+<td>265784418461</td>
+<td>−78
+</td></tr>
+<tr>
+<td>298114694431</td>
+<td>+82
+</td></tr>
+</tbody></table>
+<p>小さな <i>|B|</i> に対し<a class="mw-redirect" href="/wiki/%E5%90%88%E5%90%8C%E5%BC%8F" title="合同式">合同式</a> (<i>p</i> − 1)! ≡ −1 + <i>Bp</i> (mod <i>p</i><sup>2</sup>) を満たす素数 <i>p</i> を<b>ニアウィルソン素数</b>（near-Wilson prime）という。ニアウィルソン素数で <i>B</i> = 0 としたものがウィルソン素数である。本節の表は 10<sup><span style="white-space:nowrap">6</span></sup> から 4<span style="margin:0 .15em 0 .25em">×</span>10<sup><span style="white-space:nowrap">11</span></sup> までで <i>|B|</i> ≤ 100 となる全てのニアウィルソン素数を挙げたものである<sup class="reference" id="cite_ref-Search_1-1"><a href="#cite_note-Search-1">[1]</a></sup>。
+</p>
+<h3><span id=".E3.82.A6.E3.82.A3.E3.83.AB.E3.82.BD.E3.83.B3.E6.95.B0"></span><span class="mw-headline" id="ウィルソン数">ウィルソン数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=4" title="節を編集: ウィルソン数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>ウィルソン数</b>（Wilson number）は <i>W</i>(<i>n</i>) ≡ 0 (mod <i>n</i><sup>2</sup>) となる自然数 <i>n</i> である。ここで &lt;math&gt;W(n) =e+ \prod_\stackrel{1 \le k \le n}{\gcd(k,n)=1}{k} &lt;/math&gt; であり、定数 <i>e</i> は <i>n</i> を法とする<a class="mw-redirect" href="/wiki/%E5%8E%9F%E5%A7%8B%E6%A0%B9" title="原始根">原始根</a>が存在するとき 1 , そうでないとき <i>e</i> = −1 とする<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。全ての自然数 <i>n</i> に対し <i>W</i>(<i>n</i>) は <i>n</i> で割り切れる（この商を一般化<a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E5%95%86" title="ウィルソン商">ウィルソン商</a>という（<a class="external text" href="https://oeis.org/A157249" rel="nofollow">A157249</a>））。ウィルソン数は
+</p>
+<dl><dd>1, 5, 13, 563, 5971, 558771, 1964215, 8121909, 12326713, 23025711, 26921605, 341569806, 399292158, ... （<a class="external text" href="https://oeis.org/A157250" rel="nofollow">A157250</a>）</dd></dl>
+<p>と続く。ウィルソン数 <i>n</i> が素数であるとき、ウィルソン素数である。5<span style="margin:0 .15em 0 .25em">×</span>10<sup><span style="white-space:nowrap">8</span></sup> までに13個のウィルソン数が存在する<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=5" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%95%E3%82%A7%E3%83%AA%E3%83%83%E3%83%92%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ヴィーフェリッヒ素数 (存在しないページ)">ヴィーフェリッヒ素数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wieferich_prime&amp;action=edit&amp;redlink=1" title="En:Wieferich prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E2%80%93%E3%82%B9%E3%83%B3%E2%80%93%E3%82%B9%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ウォール–スン–スン素数 (存在しないページ)">ウォール–スン–スン素数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wall%E2%80%93Sun%E2%80%93Sun_prime&amp;action=edit&amp;redlink=1" title="En:Wall–Sun–Sun prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A9%E3%83%AB%E3%82%B9%E3%83%86%E3%83%B3%E3%83%9B%E3%83%AB%E3%83%A0%E7%B4%A0%E6%95%B0" title="ウォルステンホルム素数">ウォルステンホルム素数</a></li>
+<li><a href="/wiki/PrimeGrid" title="PrimeGrid">PrimeGrid</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%90%88%E5%90%8C%E9%96%A2%E4%BF%82%E3%81%AE%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="合同関係の一覧 (存在しないページ)">合同関係の一覧</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Table_of_congruences&amp;action=edit&amp;redlink=1" title="En:Table of congruences (存在しないページ)">英語版</a>）</span></span></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=6" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Search-1">^ <a href="#cite_ref-Search_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Search_1-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a class="external text" href="https://arxiv.org/pdf/1209.3436v2.pdf" rel="nofollow">A Search for Wilson primes</a> Retrieved on November 2, 2012.</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><a class="external text" href="http://primes.utm.edu/glossary/page.php?sort=WilsonPrime" rel="nofollow">The Prime Glossary: Wilson prime</a></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal"><a class="new" href="/w/index.php?title=Richard_McIntosh&amp;action=edit&amp;redlink=1" title="Richard McIntosh (存在しないページ)">McIntosh, R.</a> (2004年3月9日). “<a class="external text" href="http://www.loria.fr/~zimmerma/records/Wieferich.status" rel="nofollow">WILSON STATUS (Feb. 1999)</a>”. <i>E-Mail to <a class="new" href="/w/index.php?title=Paul_Zimmermann_(mathematician)&amp;action=edit&amp;redlink=1" title="Paul Zimmermann (mathematician) (存在しないページ)">Paul Zimmermann</a></i>. <span title="6 June 2011">2011年6月6日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><i>A search for Wieferich and Wilson primes</i>, p 443</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=Paulo_Ribenboim&amp;action=edit&amp;redlink=1" title="Paulo Ribenboim (存在しないページ)">Ribenboim, P.</a>; Keller, W. (2006) (German). <a class="external text" href="https://books.google.com/?id=-nEM9ZVr4CsC&amp;pg=PA248&amp;dq=die+welt+der+primzahlen+rodenkirch#v=onepage&amp;q&amp;f=false" rel="nofollow"><i>Die Welt der Primzahlen: Geheimnisse und Rekorde</i></a>. Berlin Heidelberg New York: Springer. p. 241. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/3-540-34283-4" title="特別:文献資料/3-540-34283-4">3-540-34283-4</a><span style="display:none;">. <a class="external free" href="https://books.google.com/?id=-nEM9ZVr4CsC&amp;pg=PA248&amp;dq=die+welt+der+primzahlen+rodenkirch#v=onepage&amp;q&amp;f=false" rel="nofollow">https://books.google.com/?id=-nEM9ZVr4CsC&amp;pg=PA248&amp;dq=die+welt+der+primzahlen+rodenkirch#v=onepage&amp;q&amp;f=false</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Die+Welt+der+Primzahlen%3A+Geheimnisse+und+Rekorde&amp;rft.aulast=Ribenboim&amp;rft.aufirst=P.&amp;rft.au=Ribenboim%2C%26%2332%3BP.&amp;rft.au=Keller%2C%26%2332%3BW.&amp;rft.date=2006&amp;rft.pages=p.%26nbsp%3B241&amp;rft.place=Berlin+Heidelberg+New+York&amp;rft.pub=Springer&amp;rft.isbn=3-540-34283-4&amp;rft_id=https%3A%2F%2Fbooks.google.com%2F%3Fid%3D-nEM9ZVr4CsC%26pg%3DPA248%26dq%3Ddie%2Bwelt%2Bder%2Bprimzahlen%2Brodenkirch%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a class="external text" href="http://www.ibercivis.net/index.php?module=public&amp;section=channels&amp;action=view&amp;id_channel=2&amp;id_subchannel=138" rel="nofollow">Ibercivis site</a></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><a class="external text" href="http://www.mersenneforum.org/showthread.php?t=16028" rel="nofollow">Distributed search for Wilson primes</a> (at mersenneforum.org)</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><a class="new" href="/w/index.php?title=En:Wilson%27s_theorem&amp;action=edit&amp;redlink=1" title="En:Wilson's theorem (存在しないページ)">Gauss's generalization of Wilson's theorem</a>を参照。<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AA%E3%83%92%E3%83%BB%E3%82%AC%E3%82%A6%E3%82%B9" title="カール・フリードリヒ・ガウス">ガウス</a>はウィルソンの定理を一般化し、次を証明した。
+<dl><dd>&lt;math&gt;</dd></dl>
+\prod_{k = 1 \atop \gcd(k,m)=1}^m \!\!k \ \equiv
+\begin{cases}
+-1      \pmod{m}  &amp; \text{if } m=4,\;p^\alpha,\;2p^\alpha \\
+\;\;\,1 \pmod{m}  &amp; \text{otherwise}
+\end{cases}
+&lt;/math&gt;
+ここで、<i>p</i> は奇数、α は正整数。剰余が −1 になるための必要十分条件は <i>m</i> を法とする原始根が存在することである。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Agoh, Takashi; Dilcher, Karl; <a class="new" href="/w/index.php?title=Ladislav_Skula&amp;action=edit&amp;redlink=1" title="Ladislav Skula (存在しないページ)">Skula, Ladislav</a> (1998). <a class="external text" href="http://www.ams.org/journals/mcom/1998-67-222/S0025-5718-98-00951-X/S0025-5718-98-00951-X.pdf" rel="nofollow">“Wilson quotients for composite moduli”</a>. <i>Math. Comput.</i> <b>67</b> (222):  843–861. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1090%2FS0025-5718-98-00951-X" rel="nofollow">10.1090/S0025-5718-98-00951-X</a><span style="display:none;">. <a class="external free" href="http://www.ams.org/journals/mcom/1998-67-222/S0025-5718-98-00951-X/S0025-5718-98-00951-X.pdf" rel="nofollow">http://www.ams.org/journals/mcom/1998-67-222/S0025-5718-98-00951-X/S0025-5718-98-00951-X.pdf</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Wilson+quotients+for+composite+moduli&amp;rft.jtitle=Math.+Comput.&amp;rft.aulast=Agoh&amp;rft.aufirst=Takashi&amp;rft.au=Agoh%2C%26%2332%3BTakashi&amp;rft.au=Dilcher%2C%26%2332%3BKarl&amp;rft.au=Skula%2C%26%2332%3BLadislav&amp;rft.date=1998&amp;rft.volume=67&amp;rft.issue=222&amp;rft.pages=843%E2%80%93861&amp;rft_id=info:doi/10.1090%2FS0025-5718-98-00951-X&amp;rft_id=http%3A%2F%2Fwww.ams.org%2Fjournals%2Fmcom%2F1998-67-222%2FS0025-5718-98-00951-X%2FS0025-5718-98-00951-X.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=7" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation journal" style="font-style:normal">Beeger, N. G. W. H. (1913–1914). “Quelques remarques sur les congruences <i>r</i><sup><i>p</i>−1</sup> ≡ 1 (mod <i>p</i><sup>2</sup>) et (<i>p</i> − 1!) ≡ −1 (mod p<sup>2</sup>)”. <i><a class="new" href="/w/index.php?title=Messenger_of_Mathematics&amp;action=edit&amp;redlink=1" title="Messenger of Mathematics (存在しないページ)">The Messenger of Mathematics</a></i> <b>43</b>:  72–84.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Quelques+remarques+sur+les+congruences+%27%27r%27%27%3Csup%3E%27%27p%27%27%E2%88%921%3C%2Fsup%3E+%E2%89%A1%26nbsp%3B1+%28mod%26nbsp%3B%27%27p%27%27%3Csup%3E2%3C%2Fsup%3E%29+et+%28%27%27p%27%27%26nbsp%3B%E2%88%92%26nbsp%3B1%21%29%26nbsp%3B%E2%89%A1%26nbsp%3B%E2%88%921+%28mod+p%3Csup%3E2%3C%2Fsup%3E%29&amp;rft.jtitle=%5B%5BMessenger+of+Mathematics%7CThe+Messenger+of+Mathematics%5D%5D&amp;rft.aulast=Beeger&amp;rft.aufirst=N.+G.+W.+H.&amp;rft.au=Beeger%2C%26%2332%3BN.+G.+W.+H.&amp;rft.date=1913%E2%80%931914&amp;rft.volume=43&amp;rft.pages=72%E2%80%9384&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Goldberg, Karl (1953). “A table of Wilson quotients and the third Wilson prime”. <i><a class="new" href="/w/index.php?title=J._London_Math._Soc.&amp;action=edit&amp;redlink=1" title="J. London Math. Soc. (存在しないページ)">J. London Math. Soc.</a></i> <b>28</b> (2):  252–256. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1112%2Fjlms%2Fs1-28.2.252" rel="nofollow">10.1112/jlms/s1-28.2.252</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+table+of+Wilson+quotients+and+the+third+Wilson+prime&amp;rft.jtitle=%5B%5BJ.+London+Math.+Soc.%5D%5D&amp;rft.aulast=Goldberg&amp;rft.aufirst=Karl&amp;rft.au=Goldberg%2C%26%2332%3BKarl&amp;rft.date=1953&amp;rft.volume=28&amp;rft.issue=2&amp;rft.pages=252%E2%80%93256&amp;rft_id=info:doi/10.1112%2Fjlms%2Fs1-28.2.252&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=Paulo_Ribenboim&amp;action=edit&amp;redlink=1" title="Paulo Ribenboim (存在しないページ)">Ribenboim, Paulo</a> (1996). <i>The new book of prime number records</i>. <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>. pp. 346. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-94457-5" title="特別:文献資料/0-387-94457-5">0-387-94457-5</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+new+book+of+prime+number+records&amp;rft.aulast=Ribenboim&amp;rft.aufirst=Paulo&amp;rft.au=Ribenboim%2C%26%2332%3BPaulo&amp;rft.date=1996&amp;rft.pages=pp.%26nbsp%3B346&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft.isbn=0-387-94457-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Crandall, Richard E.; Dilcher, Karl; Pomerance, Carl (1997). “A search for Wieferich and Wilson primes”. <i>Math. Comput.</i> <b>66</b> (217):  433–449. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1090%2FS0025-5718-97-00791-6" rel="nofollow">10.1090/S0025-5718-97-00791-6</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+search+for+Wieferich+and+Wilson+primes&amp;rft.jtitle=Math.+Comput.&amp;rft.aulast=Crandall&amp;rft.aufirst=Richard+E.&amp;rft.au=Crandall%2C%26%2332%3BRichard+E.&amp;rft.au=Dilcher%2C%26%2332%3BKarl&amp;rft.au=Pomerance%2C%26%2332%3BCarl&amp;rft.date=1997&amp;rft.volume=66&amp;rft.issue=217&amp;rft.pages=433%E2%80%93449&amp;rft_id=info:doi/10.1090%2FS0025-5718-97-00791-6&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Crandall, Richard E.; Pomerance, Carl (2001). <i>Prime Numbers: A Computational Perspective</i>. Springer-Verlag. p. 29. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-94777-9" title="特別:文献資料/0-387-94777-9">0-387-94777-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Prime+Numbers%3A+A+Computational+Perspective&amp;rft.aulast=Crandall&amp;rft.aufirst=Richard+E.&amp;rft.au=Crandall%2C%26%2332%3BRichard+E.&amp;rft.au=Pomerance%2C%26%2332%3BCarl&amp;rft.date=2001&amp;rft.pages=p.%26nbsp%3B29&amp;rft.pub=Springer-Verlag&amp;rft.isbn=0-387-94777-9&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li>
+<li><cite class="citation journal" style="font-style:normal">Pearson, Erna H. (1963). <a class="external text" href="http://www.ams.org/journals/mcom/1963-17-082/S0025-5718-1963-0159780-0/S0025-5718-1963-0159780-0.pdf" rel="nofollow">“On the Congruences (<i>p</i> − 1)! ≡ −1 and 2<sup><i>p</i>−1</sup> ≡ 1 (mod <i>p</i><sup>2</sup>)”</a>. <i>Math. Comput.</i> <b>17</b>:  194–195<span style="display:none;">. <a class="external free" href="http://www.ams.org/journals/mcom/1963-17-082/S0025-5718-1963-0159780-0/S0025-5718-1963-0159780-0.pdf" rel="nofollow">http://www.ams.org/journals/mcom/1963-17-082/S0025-5718-1963-0159780-0/S0025-5718-1963-0159780-0.pdf</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+the+Congruences+%28%27%27p%27%27%26nbsp%3B%E2%88%92%26nbsp%3B1%29%21+%E2%89%A1%26nbsp%3B%E2%88%921+and+2%3Csup%3E%27%27p%27%27%E2%88%921%3C%2Fsup%3E%26nbsp%3B%E2%89%A1%26nbsp%3B1%26nbsp%3B%28mod%26nbsp%3B%27%27p%27%27%3Csup%3E2%3C%2Fsup%3E%29&amp;rft.jtitle=Math.+Comput.&amp;rft.aulast=Pearson&amp;rft.aufirst=Erna+H.&amp;rft.au=Pearson%2C%26%2332%3BErna+H.&amp;rft.date=1963&amp;rft.volume=17&amp;rft.pages=194%E2%80%93195&amp;rft_id=http%3A%2F%2Fwww.ams.org%2Fjournals%2Fmcom%2F1963-17-082%2FS0025-5718-1963-0159780-0%2FS0025-5718-1963-0159780-0.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"><span style="display: none;"> </span></span></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;section=8" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://primes.utm.edu/glossary/page.php?sort=WilsonPrime" rel="nofollow">The Prime Glossary: Wilson prime</a></li>
+<li><span class="citation mathworld" id="Reference-Mathworld-Wilson_prime"><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><cite class="citation web cs1" id="CITEREFWeisstein,_Eric_W"><span style="font-style:normal;"><a class="new" href="/w/index.php?title=En:Eric_W._Weisstein&amp;action=edit&amp;redlink=1" title="En:Eric W. Weisstein (存在しないページ)">Weisstein, Eric W</a></span>. <a class="external text" href="https://mathworld.wolfram.com/WilsonPrime.html" rel="nofollow">"<span style="font-style:normal;">Wilson prime</span>"</a>. <i><a href="/wiki/MathWorld" title="MathWorld">MathWorld</a></i> (English).</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MathWorld&amp;rft.atitle=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EWilson+prime%3C%2Fspan%3E&amp;rft.au=%3Cspan+style%3D%22font-style%3Anormal%3B%22%3EWeisstein%2C+Eric+W%3C%2Fspan%3E&amp;rft_id=https%3A%2F%2Fmathworld.wolfram.com%2FWilsonPrime.html&amp;rfr_id=info%3Asid%2Flocalhost%3A8080%3A%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0"></span></span></li>
+<li><a class="external text" href="http://www.loria.fr/~zimmerma/records/Wieferich.status" rel="nofollow">Status of the search for Wilson primes</a></li></ul>
+<div aria-labelledby="素数の分類" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E7%B4%A0%E6%95%B0%E3%81%AE%E5%88%86%E9%A1%9E&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:素数の分類 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B4%A0%E6%95%B0%E3%81%AE%E5%88%86%E9%A1%9E&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E7%B4%A0%E6%95%B0%E3%81%AE%E5%88%86%E9%A1%9E&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="素数の分類" style="font-size:110%;margin:0 6em">素数の分類</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">生成式</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9E%E3%83%BC%E6%95%B0" title="フェルマー数">フェルマー</a> (<span class="texhtml" lang="en">2<sup>2<sup><i>n</i></sup></sup> + 1</span>)</li>
+<li><a href="/wiki/%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%B3%E3%83%8C%E6%95%B0" title="メルセンヌ数">メルセンヌ</a> (<span class="texhtml" lang="en">2<sup><i>p</i></sup> − 1</span>)</li>
+<li><a href="/wiki/%E4%BA%8C%E9%87%8D%E3%83%A1%E3%83%AB%E3%82%BB%E3%83%B3%E3%83%8C%E6%95%B0" title="二重メルセンヌ数">二重メルセンヌ</a> (<span class="texhtml" lang="en">2<sup>2<sup><i>p</i></sup>−1</sup> − 1</span>)</li>
+<li><a href="/wiki/%E3%83%AF%E3%82%B0%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E7%B4%A0%E6%95%B0" title="ワグスタッフ素数">ワグスタッフ</a> (<span class="texhtml" lang="en">(2<sup><i>p</i></sup> + 1)/3</span>)</li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B9%E6%95%B0" title="プロス数">プロス</a> (<span class="texhtml" lang="en"><i>k</i>·2<sup><i>n</i></sup> + 1</span>)</li>
+<li><a href="/wiki/%E9%9A%8E%E4%B9%97%E7%B4%A0%E6%95%B0" title="階乗素数">階乗</a> (<span class="texhtml" lang="en"><i>n</i>! ± 1</span>)</li>
+<li><a href="/wiki/%E7%B4%A0%E6%95%B0%E9%9A%8E%E4%B9%97%E7%B4%A0%E6%95%B0" title="素数階乗素数">素数階乗</a> (<span class="texhtml" lang="en"><i>p<sub>n</sub></i># ± 1</span>)</li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E6%95%B0" title="ユークリッド数">ユークリッド</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Euclid_number&amp;action=edit&amp;redlink=1" title="En:Euclid number (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en"><i>p<sub>n</sub></i># + 1</span>)</li>
+<li><a href="/wiki/%E3%83%94%E3%82%BF%E3%82%B4%E3%83%A9%E3%82%B9%E7%B4%A0%E6%95%B0" title="ピタゴラス素数">ピタゴラス</a> (<span class="texhtml" lang="en">4<i>n</i> + 1</span>)</li>
+<li><a href="/wiki/%E3%83%94%E3%82%A2%E3%83%9D%E3%83%B3%E3%83%88%E7%B4%A0%E6%95%B0" title="ピアポント素数">ピアポント</a> (<span class="texhtml" lang="en">2<sup><i>u</i></sup>·3<sup><i>v</i></sup> + 1</span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Quartan%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="Quartan素数 (存在しないページ)">Quartan</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quartan_prime&amp;action=edit&amp;redlink=1" title="En:Quartan prime (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en"><i>x</i><sup>4</sup> + <i>y</i><sup>4</sup></span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BD%E3%83%AA%E3%83%8A%E3%82%B9%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ソリナス素数 (存在しないページ)">ソリナス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Solinas_prime&amp;action=edit&amp;redlink=1" title="En:Solinas prime (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en">2<sup><i>a</i></sup> ± 2<sup><i>b</i></sup> ± 1</span>)</li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AC%E3%83%B3%E6%95%B0" title="カレン数">カレン</a> (<span class="texhtml" lang="en"><i>n</i>·2<sup><i>n</i></sup> + 1</span>)</li>
+<li><a href="/wiki/%E3%82%A6%E3%83%83%E3%83%80%E3%83%AB%E6%95%B0" title="ウッダル数">ウッダル</a> (<span class="texhtml" lang="en"><i>n</i>·2<sup><i>n</i></sup> − 1</span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cuban%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="Cuban素数 (存在しないページ)">Cuban</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cuban_prime&amp;action=edit&amp;redlink=1" title="En:Cuban prime (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en">(<i>x</i><sup>3</sup> − <i>y</i><sup>3</sup>)/(<i>x</i> − <i>y</i>)</span>)</li>
+<li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%AD%E3%83%AB%E6%95%B0" title="キャロル数">キャロル</a> (<span class="texhtml" lang="en">(2<sup><i>n</i></sup> − 1)<sup>2</sup> − 2</span>)</li>
+<li><a href="/wiki/Kynea%E6%95%B0" title="Kynea数">Kynea</a> (<span class="texhtml" lang="en">(2<sup><i>n</i></sup> + 1)<sup>2</sup> − 2</span>)</li>
+<li><a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%E6%95%B0" title="レイランド数">レイランド</a> (<span class="texhtml" lang="en"><i>x<sup>y</sup></i> + <i>y<sup>x</sup></i></span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B5%E3%83%BC%E3%83%93%E3%83%88%E6%95%B0&amp;action=edit&amp;redlink=1" title="サービト数 (存在しないページ)">サービト</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Thabit_number&amp;action=edit&amp;redlink=1" title="En:Thabit number (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en">3·2<sup><i>n</i></sup> − 1</span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9F%E3%83%AB%E3%82%BA%E5%AE%9A%E6%95%B0&amp;action=edit&amp;redlink=1" title="ミルズ定数 (存在しないページ)">ミルズ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mills%27_constant&amp;action=edit&amp;redlink=1" title="En:Mills' constant (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en">[<i>A</i>]<sup>3<sup><i>n</i></sup></sup></span>)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Integer_sequence_prime&amp;action=edit&amp;redlink=1" title="Integer sequence prime (存在しないページ)">漸化式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integer_sequence_prime&amp;action=edit&amp;redlink=1" title="En:Integer sequence prime (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E7%B4%A0%E6%95%B0" title="フィボナッチ素数">フィボナッチ</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%A5%E3%82%AB%E6%95%B0" title="リュカ数">リュカ</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%AB%E6%95%B0" title="ペル数">ペル</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%9E%E3%83%B3%E2%80%93%E3%82%B7%E3%83%A3%E3%83%B3%E3%82%AF%E3%82%B9%E2%80%93%E3%82%A6%E3%82%A3%E3%83%AA%E3%82%A2%E3%83%A0%E3%82%BA%E7%B4%A0%E6%95%B0" title="ニューマン–シャンクス–ウィリアムズ素数">ニューマン–シャンクス–ウィリアムズ</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%A9%E3%83%B3%E6%95%B0" title="ペラン数">ペラン</a></li>
+<li><a href="/wiki/%E8%87%AA%E7%84%B6%E6%95%B0%E3%81%AE%E5%88%86%E5%89%B2" title="自然数の分割">分割</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E6%95%B0" title="ベル数">ベル</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%84%E3%82%AD%E3%83%B3%E6%95%B0" title="モツキン数">モツキン</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">各種の性質</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%95%E3%82%A7%E3%83%AA%E3%83%83%E3%83%92%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ヴィーフェリッヒ素数 (存在しないページ)">ヴィーフェリッヒ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wieferich_prime&amp;action=edit&amp;redlink=1" title="En:Wieferich prime (存在しないページ)">英語版</a>）</span></span> (<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%95%E3%82%A7%E3%83%AA%E3%83%83%E3%83%92%E5%AF%BE&amp;action=edit&amp;redlink=1" title="ヴィーフェリッヒ対 (存在しないページ)">対</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wieferich_pair&amp;action=edit&amp;redlink=1" title="En:Wieferich pair (存在しないページ)">英語版</a>）</span></span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E2%80%93%E5%AD%AB%E2%80%93%E5%AD%AB%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ウォール–孫–孫素数 (存在しないページ)">ウォール–孫–孫</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Wall%E2%80%93Sun%E2%80%93Sun_prime&amp;action=edit&amp;redlink=1" title="En:Wall–Sun–Sun prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A9%E3%83%AB%E3%82%B9%E3%83%86%E3%83%B3%E3%83%9B%E3%83%AB%E3%83%A0%E7%B4%A0%E6%95%B0" title="ウォルステンホルム素数">ウォルステンホルム</a></li>
+<li><a class="mw-selflink selflink">ウィルソン</a></li>
+<li><a href="/wiki/%E5%B9%B8%E9%81%8B%E6%95%B0" title="幸運数">幸運</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%81%E3%83%A5%E3%83%B3%E6%95%B0" title="フォーチュン数">フォーチュン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A9%E3%83%9E%E3%83%8C%E3%82%B8%E3%83%A3%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ラマヌジャン素数 (存在しないページ)">ラマヌジャン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ramanujan_prime&amp;action=edit&amp;redlink=1" title="En:Ramanujan prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%94%E3%83%A9%E3%82%A4%E7%B4%A0%E6%95%B0" title="ピライ素数">ピライ</a></li>
+<li><a href="/wiki/%E6%AD%A3%E5%89%87%E7%B4%A0%E6%95%B0" title="正則素数">正則</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BC%B7%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="強素数 (存在しないページ)">強</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Strong_prime&amp;action=edit&amp;redlink=1" title="En:Strong prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%B3%E7%B4%A0%E6%95%B0" title="スターン素数">スターン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Supersingular_%E7%B4%A0%E6%95%B0_(for_an_elliptic_curve)&amp;action=edit&amp;redlink=1" title="Supersingular 素数 (for an elliptic curve) (存在しないページ)">Supersingular (楕円曲線)</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Supersingular_prime_(for_an_elliptic_curve)&amp;action=edit&amp;redlink=1" title="En:Supersingular prime (for an elliptic curve) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Supersingular_%E7%B4%A0%E6%95%B0_(moonshine_theory)&amp;action=edit&amp;redlink=1" title="Supersingular 素数 (moonshine theory) (存在しないページ)">Supersingular (ムーンシャイン理論)</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Supersingular_prime_(moonshine_theory)&amp;action=edit&amp;redlink=1" title="En:Supersingular prime (moonshine theory) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E8%89%AF%E3%81%84%E7%B4%A0%E6%95%B0" title="良い素数">良い</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E7%B4%A0%E6%95%B0" title="スーパー素数">スーパー</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%92%E3%83%83%E3%82%B0%E3%82%B9%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="ヒッグス素数 (存在しないページ)">ヒッグス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Higgs_prime&amp;action=edit&amp;redlink=1" title="En:Higgs prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Highly_cototient_%E6%95%B0&amp;action=edit&amp;redlink=1" title="Highly cototient 数 (存在しないページ)">Highly cototient</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Highly_cototient_number&amp;action=edit&amp;redlink=1" title="En:Highly cototient number (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">基数依存</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%8F%E3%83%83%E3%83%94%E3%83%BC%E6%95%B0" title="ハッピー数">ハッピー</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BA%8C%E9%9D%A2%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="二面素数 (存在しないページ)">二面</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dihedral_prime&amp;action=edit&amp;redlink=1" title="En:Dihedral prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%9B%9E%E6%96%87%E7%B4%A0%E6%95%B0" title="回文素数">回文</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%9E%E3%83%BC%E3%83%97" title="エマープ">エマープ</a></li>
+<li><a href="/wiki/%E3%83%AC%E3%83%94%E3%83%A5%E3%83%8B%E3%83%83%E3%83%88" title="レピュニット">レピュニット</a> (<span class="texhtml" lang="en">(10<sup><i>n</i></sup> − 1)/9</span>)</li>
+<li><a href="/wiki/%E7%BD%AE%E6%8F%9B%E5%8F%AF%E8%83%BD%E7%B4%A0%E6%95%B0" title="置換可能素数">置換可能</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Circular_prime&amp;action=edit&amp;redlink=1" title="Circular prime (存在しないページ)">Circular</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Circular_prime&amp;action=edit&amp;redlink=1" title="En:Circular prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%88%87%E3%82%8A%E6%8D%A8%E3%81%A6%E5%8F%AF%E8%83%BD%E7%B4%A0%E6%95%B0" title="切り捨て可能素数">切り捨て可能</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Strobogrammatic_%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="Strobogrammatic 素数 (存在しないページ)">Strobogrammatic</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Strobogrammatic_prime&amp;action=edit&amp;redlink=1" title="En:Strobogrammatic prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Minimal_prime_(recreational_mathematics)&amp;action=edit&amp;redlink=1" title="Minimal prime (recreational mathematics) (存在しないページ)">Minimal</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Minimal_prime_(recreational_mathematics)&amp;action=edit&amp;redlink=1" title="En:Minimal prime (recreational mathematics) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BC%B1%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="弱素数 (存在しないページ)">弱</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Weakly_prime_number&amp;action=edit&amp;redlink=1" title="En:Weakly prime number (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AB%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%83%97%E3%83%A9%E3%82%A4%E3%83%A0" title="フルサイクルプライム">フルサイクルプライム</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Unique_%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="Unique 素数 (存在しないページ)">Unique</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Unique_prime&amp;action=edit&amp;redlink=1" title="En:Unique prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Primeval_%E6%95%B0&amp;action=edit&amp;redlink=1" title="Primeval 数 (存在しないページ)">Primeval</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Primeval_number&amp;action=edit&amp;redlink=1" title="En:Primeval number (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E8%87%AA%E5%B7%B1%E6%95%B0#自己素数" title="自己数">自己</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%9E%E3%83%A9%E3%83%B3%E3%83%80%E3%83%81%E3%82%A7%E2%80%93%E3%82%A6%E3%82%A7%E3%83%A9%E3%83%B3%E6%95%B0&amp;action=edit&amp;redlink=1" title="スマランダチェ–ウェラン数 (存在しないページ)">スマランダチェ–ウェラン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smarandache%E2%80%93Wellin_number&amp;action=edit&amp;redlink=1" title="En:Smarandache–Wellin number (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">組</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BA%92%E3%81%84%E3%81%AB%E7%B4%A0" title="互いに素">互いに素</a></li>
+<li><a href="/wiki/%E5%8F%8C%E5%AD%90%E7%B4%A0%E6%95%B0" title="双子素数">双子</a> (<span class="texhtml" lang="en"><i>p</i>, <i>p</i> + 2</span>)</li>
+<li><a class="new" href="/w/index.php?title=Bi-twin_chain&amp;action=edit&amp;redlink=1" title="Bi-twin chain (存在しないページ)">Bi-twin chain</a> (<span class="texhtml" lang="en"><i>n</i> − 1, <i>n</i> + 1, 2<i>n</i> − 1, 2<i>n</i> + 1, …</span>)</li>
+<li><a href="/wiki/%E4%B8%89%E3%81%A4%E5%AD%90%E7%B4%A0%E6%95%B0" title="三つ子素数">三つ子</a> (<span class="texhtml" lang="en"><i>p</i>, <i>p</i> + 2</span> or <span class="texhtml" lang="en"><i>p</i> + 4, <i>p</i> + 6</span>)</li>
+<li><a href="/wiki/%E5%9B%9B%E3%81%A4%E5%AD%90%E7%B4%A0%E6%95%B0" title="四つ子素数">四つ子</a> (<span class="texhtml" lang="en"><i>p</i>, <i>p</i> + 2, <i>p</i> + 6, <i>p</i> + 8</span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Prime_k-tuple&amp;action=edit&amp;redlink=1" title="Prime k-tuple (存在しないページ)"><i>k</i>−Tuple</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Prime_k-tuple&amp;action=edit&amp;redlink=1" title="En:Prime k-tuple (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%81%84%E3%81%A8%E3%81%93%E7%B4%A0%E6%95%B0" title="いとこ素数">いとこ</a> (<span class="texhtml" lang="en"><i>p</i>, <i>p</i> + 4</span>)</li>
+<li><a href="/wiki/%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%BC%E7%B4%A0%E6%95%B0" title="セクシー素数">セクシー</a> (<span class="texhtml" lang="en"><i>p</i>, <i>p</i> + 6</span>)</li>
+<li><a href="/wiki/%E9%99%B3%E7%B4%A0%E6%95%B0" title="陳素数">陳</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%82%B8%E3%82%A7%E3%83%AB%E3%83%9E%E3%83%B3%E7%B4%A0%E6%95%B0" title="ソフィー・ジェルマン素数">ソフィー・ジェルマン</a> (<span class="texhtml" lang="en"><i>p</i>, 2<i>p</i> + 1</span>)</li>
+<li><a href="/wiki/%E3%82%AB%E3%83%8B%E3%83%B3%E3%82%AC%E3%83%A0%E9%8E%96" title="カニンガム鎖">カニンガム鎖</a> (<span class="texhtml" lang="en"><i>p</i>, 2<i>p</i> ± 1, …</span>)</li>
+<li><a href="/wiki/%E5%AE%89%E5%85%A8%E7%B4%A0%E6%95%B0" title="安全素数">安全</a> (<span class="texhtml" lang="en"><i>p</i>, (<i>p</i> − 1)/2</span>)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%AE%97%E8%A1%93%E6%95%B0%E5%88%97%E3%81%AE%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="算術数列の素数 (存在しないページ)">算術数列</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Primes_in_arithmetic_progression&amp;action=edit&amp;redlink=1" title="En:Primes in arithmetic progression (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en"><i>p</i> + <i>an</i>; <i>n</i> = 0, 1, …</span>)</li>
+<li><a href="/wiki/%E5%B9%B3%E8%A1%A1%E7%B4%A0%E6%95%B0" title="平衡素数">平衡</a> (<span class="texhtml" lang="en"><i>p</i> − <i>n</i>, <i>p</i>, <i>p</i> + <i>n</i></span>)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">桁数</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%82%BF%E3%83%8B%E3%83%83%E3%82%AF%E7%B4%A0%E6%95%B0" title="タイタニック素数">タイタニック</a> <small>(<span class="texhtml" lang="en">10<sup>3</sup></span>桁以上)</small></li>
+<li><a href="/wiki/%E5%B7%A8%E5%A4%A7%E7%B4%A0%E6%95%B0" title="巨大素数">巨大</a> <small>(<span class="texhtml" lang="en">10<sup>4</sup></span>桁以上)</small></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AC%E7%B4%A0%E6%95%B0" title="メガ素数">メガ</a> <small>(<span class="texhtml" lang="en">10<sup>6</sup></span>桁以上)</small></li>
+<li><a href="/wiki/%E5%B7%A8%E5%A4%A7%E3%81%AA%E7%B4%A0%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="巨大な素数の一覧">巨大な素数の一覧</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">複素数</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%82%A4%E3%82%BC%E3%83%B3%E3%82%B7%E3%83%A5%E3%82%BF%E3%82%A4%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" title="アイゼンシュタイン素数 (存在しないページ)">アイゼンシュタイン素数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Eisenstein_prime&amp;action=edit&amp;redlink=1" title="En:Eisenstein prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E6%95%B4%E6%95%B0" title="ガウス整数">ガウス素数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">合成数</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%93%AC%E7%B4%A0%E6%95%B0" title="擬素数">擬素数</a></li>
+<li><a href="/wiki/%E6%A6%82%E7%B4%A0%E6%95%B0" title="概素数">概素数</a></li>
+<li><a href="/wiki/%E5%8D%8A%E7%B4%A0%E6%95%B0" title="半素数">半素数</a></li>
+<li><a href="/wiki/%E6%A5%94%E6%95%B0" title="楔数">楔数</a></li>
+<li><a href="/wiki/%E5%9B%9B%E7%B4%A0%E5%90%88%E6%88%90%E6%95%B0" title="四素合成数">四素合成数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Interprime&amp;action=edit&amp;redlink=1" title="Interprime (存在しないページ)">Interprime</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Interprime&amp;action=edit&amp;redlink=1" title="En:Interprime (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連する話題</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%A2%BA%E7%8E%87%E7%9A%84%E7%B4%A0%E6%95%B0" title="確率的素数">確率的素数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Industrial-grade_prime&amp;action=edit&amp;redlink=1" title="Industrial-grade prime (存在しないページ)">Industrial-grade prime</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Industrial-grade_prime&amp;action=edit&amp;redlink=1" title="En:Industrial-grade prime (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%81%95%E6%B3%95%E7%B4%A0%E6%95%B0" title="違法素数">違法素数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%B4%A0%E6%95%B0%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;redlink=1" title="素数の公式 (存在しないページ)">素数の公式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Formula_for_primes&amp;action=edit&amp;redlink=1" title="En:Formula for primes (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="/wiki/%E7%B4%A0%E6%95%B0%E3%81%AE%E9%96%93%E9%9A%94" title="素数の間隔">素数の間隔</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Prime_gap&amp;action=edit&amp;redlink=1" title="En:Prime gap (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">最初の50個</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="texhtml" lang="en"><a href="/wiki/2" title="2">2</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/3" title="3">3</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/5" title="5">5</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/7" title="7">7</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/11" title="11">11</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/13" title="13">13</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/17" title="17">17</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/19" title="19">19</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/23" title="23">23</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/29" title="29">29</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/31" title="31">31</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/37" title="37">37</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/41" title="41">41</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/43" title="43">43</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/47" title="47">47</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/53" title="53">53</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/59" title="59">59</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/61" title="61">61</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/67" title="67">67</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/71" title="71">71</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/73" title="73">73</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/79" title="79">79</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/83" title="83">83</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/89" title="89">89</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/97" title="97">97</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/101" title="101">101</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/103" title="103">103</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/107" title="107">107</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/109" title="109">109</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/113" title="113">113</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/127" title="127">127</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/131" title="131">131</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/137" title="137">137</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/139" title="139">139</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/149" title="149">149</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/151" title="151">151</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/157" title="157">157</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/163" title="163">163</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/167" title="167">167</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/173" title="173">173</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/179" title="179">179</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/181" title="181">181</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/191" title="191">191</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/193" title="193">193</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/197" title="197">197</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/199" title="199">199</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/211" title="211">211</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/223" title="223">223</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/227" title="227">227</a></span></li>
+<li><span class="texhtml" lang="en"><a href="/wiki/229" title="229">229</a></span></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<a href="/wiki/%E7%B4%A0%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="素数の一覧">素数の一覧</a></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220402021938
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.352 seconds
+Real time usage: 0.515 seconds
+Preprocessor visited node count: 10793/1000000
+Post‐expand include size: 162211/2097152 bytes
+Template argument size: 18098/2097152 bytes
+Highest expansion depth: 30/40
+Expensive parser function count: 35/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 15581/5000000 bytes
+Lua time usage: 0.160/7 seconds
+Lua virtual size: 9711616/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  444.071      1 -total
+ 28.84%  128.069      1 テンプレート:Reflist
+ 28.57%  126.867      8 テンプレート:Citation/core
+ 27.86%  123.732      1 テンプレート:素数の分類
+ 27.23%  120.925     36 テンプレート:仮リンク
+ 27.01%  119.928      1 テンプレート:Navbox
+ 22.76%  101.084      3 テンプレート:Cite_book
+ 16.61%   73.756      6 テンプレート:Citation/identifier
+ 14.41%   63.998      3 テンプレート:ISBN2
+ 10.10%   44.856      1 テンプレート:MathWorld
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3892602-0!canonical and timestamp 20220402021937 and revision id 2285043. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ウィルソン素数&amp;oldid=2285043">http://localhost:8080/w/index.php?title=ウィルソン素数&amp;oldid=2285043</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E8%AB%96" title="カテゴリ:数論">数論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B4%A0%E6%95%B0" title="カテゴリ:素数">素数</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B4%E6%95%B0%E3%81%AE%E9%A1%9E" title="カテゴリ:整数の類">整数の類</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;returntoquery=curid%3D3892602%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;returntoquery=curid%3D3892602%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;oldid=2285043" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%AB%E3%82%BD%E3%83%B3%E7%B4%A0%E6%95%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月8日 (日) 13:45 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.352","walltime":"0.515","ppvisitednodes":{"value":10793,"limit":1000000},"postexpandincludesize":{"value":162211,"limit":2097152},"templateargumentsize":{"value":18098,"limit":2097152},"expansiondepth":{"value":30,"limit":40},"expensivefunctioncount":{"value":35,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":15581,"limit":5000000},"timingprofile":["100.00%  444.071      1 -total"," 28.84%  128.069      1 テンプレート:Reflist"," 28.57%  126.867      8 テンプレート:Citation/core"," 27.86%  123.732      1 テンプレート:素数の分類"," 27.23%  120.925     36 テンプレート:仮リンク"," 27.01%  119.928      1 テンプレート:Navbox"," 22.76%  101.084      3 テンプレート:Cite_book"," 16.61%   73.756      6 テンプレート:Citation/identifier"," 14.41%   63.998      3 テンプレート:ISBN2"," 10.10%   44.856      1 テンプレート:MathWorld"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"7"},"limitreport-virtmemusage":{"value":9711616,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402021938","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":746});});</script>
+</body></html>

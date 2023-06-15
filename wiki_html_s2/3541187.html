@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>リー環のコホモロジー - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-リー環のコホモロジー rootpage-リー環のコホモロジー skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">リー環のコホモロジー</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数学">数学</a>において，<b>リー環のコホモロジー</b>（<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">Lie algebra cohomology</span>）とは，<a href="." id="link_a_3" title="リー代数">リー環</a>に対する<a href="." id="link_a_4" title="コホモロジー">コホモロジー</a>論である．それは <cite class="inline"><a href="." id="link_a_5" title="Claude Chevalley"> Chevalley</a> and <a href="." id="link_a_6" title="Samuel Eilenberg"> Eilenberg</a> (<a href="#CITEREFChevalleyEilenberg1948">1948</a>)</cite> によって，コンパクト<a href="." id="link_a_7" title="リー群">リー群</a>の<a href="." id="link_a_8" title="位相空間">位相空間</a>としてのコホモロジーの代数的構成を与えるために，定義された．上の論文では，<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="." id="link_a_9" title="コシュール複体 (存在しないページ)">コシュール複体</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Koszul_complex&amp;action=edit&amp;redlink=1" title="En:Koszul complex (存在しないページ)">英語版</a>）</span></span>と呼ばれる<a href="." id="link_a_10" title="鎖複体">鎖複体</a>がリー環上の<a href="." id="link_a_11" title="環上の加群">加群</a>に対して定義され，そのコホモロジーが普通の意味で取られる．
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#動機付け"><span class="tocnumber">1</span> <span class="toctext">動機付け</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#定義"><span class="tocnumber">2</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#シュバレー・アイレンバーグ複体"><span class="tocnumber">3</span> <span class="toctext">シュバレー・アイレンバーグ複体</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#小さい次元のコホモロジー"><span class="tocnumber">4</span> <span class="toctext">小さい次元のコホモロジー</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.8B.95.E6.A9.9F.E4.BB.98.E3.81.91"></span><span class="mw-headline" id="動機付け">動機付け</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=1" title="節を編集: 動機付け">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">G</span> が<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88" title="コンパクト">コンパクト</a><a class="mw-redirect" href="/wiki/%E5%8D%98%E9%80%A3%E7%B5%90" title="単連結">単連結</a><a href="/wiki/%E3%83%AA%E3%83%BC%E7%BE%A4" title="リー群">リー群</a>のとき，<span class="texhtml mvar" lang="en" style="font-style:italic;">G</span> はそのリー環によって決定され，したがってそのコホモロジーはリー環から計算できるはずである．これは次のようにしてできる．そのコホモロジーは <span class="texhtml mvar" lang="en" style="font-style:italic;">G</span> 上の<a href="/wiki/%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F" title="微分形式">微分形式</a>の複体の<a href="/wiki/%E3%83%89%E3%83%BB%E3%83%A9%E3%83%BC%E3%83%A0%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC" title="ド・ラームコホモロジー">ド・ラームコホモロジー</a>である．これは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%90%8C%E5%A4%89%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F&amp;action=edit&amp;redlink=1" title="同変微分形式 (存在しないページ)">同変微分形式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:equivariant_differential_form&amp;action=edit&amp;redlink=1" title="En:equivariant differential form (存在しないページ)">英語版</a>）</span></span>の複体に置き換えることができ，それは今度は適切な微分でリー環の<a href="/wiki/%E5%A4%96%E7%A9%8D%E4%BB%A3%E6%95%B0" title="外積代数">外積代数</a>と同一視できる．外積代数のこの微分の構成は任意のリー環に対して意味をなし，したがってすべてのリー環に対してリー環のコホモロジーを定義するのに使われる．より一般に加群に係数を持つリー環のコホモロジーを定義するために類似の構成を用いる．
+</p>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=2" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>&lt;math&gt;\mathfrak g&lt;/math&gt; を可換環 <span class="texhtml mvar" lang="en" style="font-style:italic;">R</span> 上のリー環，&lt;math&gt;U\mathfrak g&lt;/math&gt; をその<a class="mw-redirect" href="/wiki/%E6%99%AE%E9%81%8D%E5%8C%85%E7%B5%A1%E7%92%B0" title="普遍包絡環">普遍包絡環</a>とし，<span class="texhtml mvar" lang="en" style="font-style:italic;">M</span> を &lt;math&gt;\mathfrak g&lt;/math&gt; の表現とする（同じことだが &lt;math&gt;U\mathfrak g&lt;/math&gt;-加群とする）．<span class="texhtml mvar" lang="en" style="font-style:italic;">R</span> を &lt;math&gt;\mathfrak g&lt;/math&gt; の自明表現と考え，コホモロジー群
+</p>
+<dl><dd><dl><dd>&lt;math&gt;\mathrm{H}^n(\mathfrak{g}; M) := \mathrm{Ext}^n_{U\mathfrak{g}}(R, M)&lt;/math&gt;</dd></dl></dd></dl>
+<p>を定義する（<span class="texhtml" lang="en">Ext</span> の定義は <a href="/wiki/Ext%E9%96%A2%E6%89%8B" title="Ext関手">Ext関手</a>を参照）．同じことだが，これらは左完全不変部分加群関手
+</p>
+<dl><dd><dl><dd>&lt;math&gt;M \mapsto M^{\mathfrak{g}} := \{ m \in M \mid xm = 0\ \text{ for all } x \in \mathfrak{g}\}&lt;/math&gt;</dd></dl></dd></dl>
+<p>の右<a href="/wiki/%E5%B0%8E%E6%9D%A5%E9%96%A2%E6%89%8B" title="導来関手">導来関手</a>である．
+</p><p>同様に，リー環のホモロジーを
+</p>
+<dl><dd><dl><dd>&lt;math&gt;\mathrm{H}_n(\mathfrak{g}; M) := \mathrm{Tor}_n^{U\mathfrak{g}}(R, M)&lt;/math&gt;</dd></dl></dd></dl>
+<p>と定義でき（<span class="texhtml" lang="en">Tor</span> の定義は <a href="/wiki/Tor%E9%96%A2%E6%89%8B" title="Tor関手">Tor関手</a>を参照），これは右完全<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BD%99%E4%B8%8D%E5%A4%89&amp;action=edit&amp;redlink=1" title="余不変 (存在しないページ)">余不変</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:coinvariant&amp;action=edit&amp;redlink=1" title="En:coinvariant (存在しないページ)">英語版</a>）</span></span>関手
+</p>
+<dl><dd><dl><dd>&lt;math&gt; M \mapsto M_{\mathfrak{g}} := M / \mathfrak{g} M.&lt;/math&gt;</dd></dl></dd></dl>
+<p>の左導来関手と同値である．
+</p><p>リー環のコホモロジーについての重要な基本的な結果の中には<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%98%E3%83%83%E3%83%89%E3%81%AE%E8%A3%9C%E9%A1%8C_(%E3%83%AA%E3%83%BC%E7%92%B0)&amp;action=edit&amp;redlink=1" title="ホワイトヘッドの補題 (リー環) (存在しないページ)">ホワイトヘッドの補題</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Whitehead%27s_lemma_(Lie_algebras)&amp;action=edit&amp;redlink=1" title="En:Whitehead's lemma (Lie algebras) (存在しないページ)">英語版</a>）</span></span>，<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AF%E3%82%A4%E3%83%AB%E3%81%AE%E5%AE%8C%E5%85%A8%E5%8F%AF%E7%B4%84%E6%80%A7%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="ワイルの完全可約性定理 (存在しないページ)">ワイルの完全可約性定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Weyl%27s_theorem_on_complete_reducibility&amp;action=edit&amp;redlink=1" title="En:Weyl's theorem on complete reducibility (存在しないページ)">英語版</a>）</span></span>，<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AC%E3%83%B4%E3%82%A3%E5%88%86%E8%A7%A3&amp;action=edit&amp;redlink=1" title="レヴィ分解 (存在しないページ)">レヴィ分解</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Levi_decomposition&amp;action=edit&amp;redlink=1" title="En:Levi decomposition (存在しないページ)">英語版</a>）</span></span>定理がある．
+</p>
+<h2><span id=".E3.82.B7.E3.83.A5.E3.83.90.E3.83.AC.E3.83.BC.E3.83.BB.E3.82.A2.E3.82.A4.E3.83.AC.E3.83.B3.E3.83.90.E3.83.BC.E3.82.B0.E8.A4.87.E4.BD.93"></span><span class="mw-headline" id="シュバレー・アイレンバーグ複体">シュバレー・アイレンバーグ複体</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=3" title="節を編集: シュバレー・アイレンバーグ複体">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>体 <span class="texhtml mvar" lang="en" style="font-style:italic;">k</span> 上のLie環 &lt;math&gt;\mathfrak{g}&lt;/math&gt; の左 &lt;math&gt;\mathfrak{g}&lt;/math&gt;-加群 <span class="texhtml mvar" lang="en" style="font-style:italic;">M</span> に値を持つリー環コホモロジーは<i>シュバレー・アイレンバーグ複体</i> &lt;math&gt;\mathrm{Hom}_k(\Lambda^\ast\mathfrak{g},M)&lt;/math&gt; を用いて計算できる．この複体の <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span>-コチェインは <span class="texhtml mvar" lang="en" style="font-style:italic;">M</span> に値を持つ <span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> 変数の交代 <span class="texhtml mvar" lang="en" style="font-style:italic;">k</span>-多重線型関数 &lt;math&gt;f:\Lambda^n\mathfrak{g}\to M&lt;/math&gt; である．<span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> コチェインのコバウンダリは次で与えられる <span class="texhtml" lang="en">(<i>n</i> + 1)</span>-コチェイン <span class="texhtml" lang="en"><i>δf</i></span> である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>：
+</p>
+<dl><dd><dl><dd>&lt;math&gt;(\delta f)(x_1,\ldots,x_{n+1})=\sum_i (-1)^{i+1}x_i\, f(x_1,\ldots,\hat x_i,\ldots,x_{n+1})+\sum_{i&lt;j} (-1)^{i+j}f([x_i,x_j],x_1,\ldots,\hat x_i,\ldots,\hat x_j,\ldots,x_{n+1})\, ,&lt;/math&gt;</dd></dl></dd></dl>
+<p>ただしキャレットはその引数を除くことを意味する．
+</p>
+<h2><span id=".E5.B0.8F.E3.81.95.E3.81.84.E6.AC.A1.E5.85.83.E3.81.AE.E3.82.B3.E3.83.9B.E3.83.A2.E3.83.AD.E3.82.B8.E3.83.BC"></span><span class="mw-headline" id="小さい次元のコホモロジー">小さい次元のコホモロジー</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=4" title="節を編集: 小さい次元のコホモロジー">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>0次コホモロジー群は（定義により）加群に作用するリー環の不変加群である：
+</p>
+<dl><dd>&lt;math&gt;H^0(\mathfrak{g}; M) =M^{\mathfrak{g}} = \{ m \in M \mid xm = 0\ \text{ for all } x \in \mathfrak{g}\}.&lt;/math&gt;</dd></dl>
+<p>1次コホモロジー群は内部微分の空間 <span class="texhtml" lang="en">Ider</span> を法とした微分の空間 <span class="texhtml" lang="en">Der</span> である：
+</p>
+<dl><dd>&lt;math&gt;H^1(\mathfrak{g}; M) = \mathrm{Der}(\mathfrak{g}, M)/\mathrm{Ider}(\mathfrak{g}, M)&lt;/math&gt;</dd></dl>
+<p>ただし微分はリー環から <span class="texhtml mvar" lang="en" style="font-style:italic;">M</span> への写像 <span class="texhtml mvar" lang="en" style="font-style:italic;">d</span> で
+</p>
+<dl><dd>&lt;math&gt;d[x,y] = x\,dy-y\,dx~&lt;/math&gt;</dd></dl>
+<p>なるもので，それが内部微分とはそれがある <span class="texhtml" lang="en"><i>a</i> ∈ <i>M</i></span> で
+</p>
+<dl><dd>&lt;math&gt;dx = xa~&lt;/math&gt;</dd></dl>
+<p>で与えられることをいう．
+</p><p>2次コホモロジー群
+</p>
+<dl><dd>&lt;math&gt;H^2(\mathfrak{g}; M)&lt;/math&gt;</dd></dl>
+<p>はリー環の加群 <span class="texhtml mvar" lang="en" style="font-style:italic;">M</span> によるリー環の拡大
+</p>
+<dl><dd>&lt;math&gt;0\rightarrow M\rightarrow \mathfrak{h}\rightarrow\mathfrak{g}\rightarrow 0&lt;/math&gt;</dd></dl>
+<p>の同値類の空間である．
+</p><p>より高次のコホモロジー群に対しては同様の易しい解釈は無いようである．
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=5" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=BRST_formalism&amp;action=edit&amp;redlink=1" title="BRST formalism (存在しないページ)">BRST formalism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:BRST_formalism&amp;action=edit&amp;redlink=1" title="En:BRST formalism (存在しないページ)">英語版</a>）</span></span>（理論物理学）</li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;section=6" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation" id="CITEREFChevalleyEilenberg1948" style="font-style:normal">Chevalley, Claude; <a class="mw-redirect" href="/wiki/Samuel_Eilenberg" title="Samuel Eilenberg">Eilenberg, Samuel</a> (1948), <a class="external text" href="https://jstor.org/stable/1990637" rel="nofollow">“Cohomology Theory of Lie Groups and Lie Algebras”</a>, <i><a class="new" href="/w/index.php?title=Transactions_of_the_American_Mathematical_Society&amp;action=edit&amp;redlink=1" title="Transactions of the American Mathematical Society (存在しないページ)">Transactions of the American Mathematical Society</a></i> (Providence, R.I.: <a class="mw-redirect" href="/wiki/American_Mathematical_Society" title="American Mathematical Society">American Mathematical Society</a>) <b>63</b> (1):  85–124, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1990637" rel="nofollow">10.2307/1990637</a>, <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0002-9947" rel="nofollow">0002-9947</a>, <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/1990637" rel="nofollow">1990637</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0024908" rel="nofollow">0024908</a><span style="display:none;">, <a class="external free" href="https://jstor.org/stable/1990637" rel="nofollow">https://jstor.org/stable/1990637</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Cohomology+Theory+of+Lie+Groups+and+Lie+Algebras&amp;rft.jtitle=%5B%5BTransactions+of+the+American+Mathematical+Society%5D%5D&amp;rft.aulast=Chevalley&amp;rft.aufirst=Claude&amp;rft.au=Chevalley%2C%26%2332%3BClaude&amp;rft.au=Eilenberg%2C%26%2332%3BSamuel&amp;rft.date=1948&amp;rft.volume=63&amp;rft.issue=1&amp;rft.pages=85%E2%80%93124&amp;rft.place=Providence%2C+R.I.&amp;rft.pub=%5B%5BAmerican+Mathematical+Society%5D%5D&amp;rft_id=info:doi/10.2307%2F1990637&amp;rft.issn=0002-9947&amp;rft.jstor=1990637&amp;rft.mr=0024908&amp;rft_id=https%3A%2F%2Fjstor.org%2Fstable%2F1990637&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFHiltonStammbach1997" style="font-style:normal">Hilton, P. J.; Stammbach, U. (1997), <i>A course in homological algebra</i>, Graduate Texts in Mathematics, <b>4</b> (2nd ed.), Berlin, New York: <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-387-94823-2" title="特別:文献資料/978-0-387-94823-2">978-0-387-94823-2</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1438546" rel="nofollow">1438546</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+course+in+homological+algebra&amp;rft.aulast=Hilton&amp;rft.aufirst=P.+J.&amp;rft.au=Hilton%2C%26%2332%3BP.+J.&amp;rft.au=Stammbach%2C%26%2332%3BU.&amp;rft.date=1997&amp;rft.series=Graduate+Texts+in+Mathematics&amp;rft.volume=4&amp;rft.edition=2nd&amp;rft.place=Berlin%2C+New+York&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft.isbn=978-0-387-94823-2&amp;rft.mr=1438546&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFKnapp1988" style="font-style:normal">Knapp, Anthony W. (1988), <i>Lie groups, Lie algebras, and cohomology</i>, Mathematical Notes, <b>34</b>, <a class="mw-redirect" href="/wiki/Princeton_University_Press" title="Princeton University Press">Princeton University Press</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-691-08498-5" title="特別:文献資料/978-0-691-08498-5">978-0-691-08498-5</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=938524" rel="nofollow">938524</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Lie+groups%2C+Lie+algebras%2C+and+cohomology&amp;rft.aulast=Knapp&amp;rft.aufirst=Anthony+W.&amp;rft.au=Knapp%2C%26%2332%3BAnthony+W.&amp;rft.date=1988&amp;rft.series=Mathematical+Notes&amp;rft.volume=34&amp;rft.pub=%5B%5BPrinceton+University+Press%5D%5D&amp;rft.isbn=978-0-691-08498-5&amp;rft.mr=938524&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC"><span style="display: none;"> </span></span></li></ul>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Weibel, Charles A. (1994). <i>An introduction to homological algebra</i>. Cambridge University Press. p. 240</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+introduction+to+homological+algebra&amp;rft.aulast=Weibel&amp;rft.aufirst=Charles+A.&amp;rft.au=Weibel%2C%26%2332%3BCharles+A.&amp;rft.date=1994&amp;rft.pages=p.%26nbsp%3B240&amp;rft.pub=Cambridge+University+Press&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401221656
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.222 seconds
+Real time usage: 0.331 seconds
+Preprocessor visited node count: 4796/1000000
+Post‐expand include size: 34181/2097152 bytes
+Template argument size: 6626/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 7/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13809/5000000 bytes
+Lua time usage: 0.080/7 seconds
+Lua virtual size: 5894144/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  311.054      1 -total
+ 53.45%  166.248      3 テンプレート:Citation
+ 52.20%  162.365      4 テンプレート:Citation/core
+ 39.42%  122.622      8 テンプレート:Citation/identifier
+ 30.22%   93.988      7 テンプレート:仮リンク
+ 24.98%   77.705      6 テンプレート:Catalog_lookup_link
+ 23.32%   72.553      1 テンプレート:ISSN
+  6.21%   19.314      2 テンプレート:ISBN2
+  5.80%   18.042      3 テンプレート:MathSciNet
+  4.20%   13.058      3 テンプレート:Error-small
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3541187-0!canonical and timestamp 20220401221656 and revision id 2070057. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=リー環のコホモロジー&amp;oldid=2070057">http://localhost:8080/w/index.php?title=リー環のコホモロジー&amp;oldid=2070057</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC%E8%AB%96" title="カテゴリ:コホモロジー論">コホモロジー論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC%E4%BB%A3%E6%95%B0" title="カテゴリ:ホモロジー代数">ホモロジー代数</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%AA%E3%83%BC%E7%92%B0%E8%AB%96" title="カテゴリ:リー環論">リー環論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;returntoquery=curid%3D3541187%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;returntoquery=curid%3D3541187%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;oldid=2070057" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%AA%E3%83%BC%E7%92%B0%E3%81%AE%E3%82%B3%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月17日 (土) 06:52 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.222","walltime":"0.331","ppvisitednodes":{"value":4796,"limit":1000000},"postexpandincludesize":{"value":34181,"limit":2097152},"templateargumentsize":{"value":6626,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":7,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13809,"limit":5000000},"timingprofile":["100.00%  311.054      1 -total"," 53.45%  166.248      3 テンプレート:Citation"," 52.20%  162.365      4 テンプレート:Citation/core"," 39.42%  122.622      8 テンプレート:Citation/identifier"," 30.22%   93.988      7 テンプレート:仮リンク"," 24.98%   77.705      6 テンプレート:Catalog_lookup_link"," 23.32%   72.553      1 テンプレート:ISSN","  6.21%   19.314      2 テンプレート:ISBN2","  5.80%   18.042      3 テンプレート:MathSciNet","  4.20%   13.058      3 テンプレート:Error-small"]},"scribunto":{"limitreport-timeusage":{"value":"0.080","limit":"7"},"limitreport-virtmemusage":{"value":5894144,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401221656","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":922});});</script>
+</body></html>

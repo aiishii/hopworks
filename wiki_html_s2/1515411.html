@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ボード線図 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ボード線図 rootpage-ボード線図 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ボード線図</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>ボード線図</b>（ボードせんず、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Bode plot</span>）は、<a href="." id="link_a_2" title="LTIシステム理論">線形時不変系</a>における<a href="." id="link_a_3" title="伝達関数法">伝達関数</a>の<a href="." id="link_a_4" title="周波数特性">周波数特性</a>を表した図であり、通常は<a href="." id="link_a_5" title="利得 (電気工学)">ゲイン</a>線図と<a href="." id="link_a_6" title="位相">位相</a>線図の組合せで使われる。1930年代に<a class="new" href="/w/index.php?title=W:Hendrik_Wade_Bode&amp;action=edit&amp;redlink=1" title="W:Hendrik Wade Bode (存在しないページ)">ヘンドリック・W・ボード</a>によって考案された。<b>ボード図</b>または<b>ボーデ線図</b>とも。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ボード線図の作図法"><span class="tocnumber">2</span> <span class="toctext">ボード線図の作図法</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#骨格ゲイン線図"><span class="tocnumber">2.1</span> <span class="toctext">骨格ゲイン線図</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#補正ゲイン線図"><span class="tocnumber">2.2</span> <span class="toctext">補正ゲイン線図</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#骨格位相線図"><span class="tocnumber">2.3</span> <span class="toctext">骨格位相線図</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#例"><span class="tocnumber">3</span> <span class="toctext">例</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#ゲイン線図"><span class="tocnumber">3.1</span> <span class="toctext">ゲイン線図</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#位相線図"><span class="tocnumber">3.2</span> <span class="toctext">位相線図</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#正規化"><span class="tocnumber">3.3</span> <span class="toctext">正規化</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#極と零点のある例"><span class="tocnumber">4</span> <span class="toctext">極と零点のある例</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#ゲイン余裕と位相余裕"><span class="tocnumber">5</span> <span class="toctext">ゲイン余裕と位相余裕</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#ボード線図の利用例"><span class="tocnumber">5.1</span> <span class="toctext">ボード線図の利用例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#ボードプロッタ"><span class="tocnumber">6</span> <span class="toctext">ボードプロッタ</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#脚注・出典"><span class="tocnumber">7</span> <span class="toctext">脚注・出典</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>ゲイン線図</b> (Magnitude plot) とは、<a href="/wiki/%E5%AF%BE%E6%95%B0%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB" title="対数スケール">対数周波数軸</a>（<a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B1%E3%83%BC%E3%83%89_(%E5%8D%98%E4%BD%8D)" title="ディケード (単位)">ディケード</a>）で<a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0" title="周波数">周波数</a>毎のゲインの対数値をグラフにプロットした図である。
+</p><p>ゲインは通常<a href="/wiki/%E3%83%87%E3%82%B7%E3%83%99%E3%83%AB" title="デシベル">デシベル</a>で表される。これはゲインの常用対数をとったもの20倍した値である。ゲインをデシベルで表記することで、ゲインの積がボード線図上での縦方向の距離（デシベル）の和で表されるという利点がある。
+この性質により、基本的な要素のボード線図を足し合わせることによって合成し、高次系のボード線図を容易に描くことができる。
+</p><p><b>位相線図</b> (Phase plot) とは、周波数と位相の関係を表したグラフで、ゲイン線図と同様に周波数は対数軸で表す。ゲイン線図と併用することで、周波数についての<a href="/wiki/%E4%BD%8D%E7%9B%B8" title="位相">位相</a>変移の量を評価するのに使われる。
+例えば <i>A</i>sin(ω<i>t</i>) で表される信号を与えたとき、システムがそれを減衰させると同時に位相を変移させる可能性がある。減衰が係数 <i>x</i> でなされ、位相変移が -Φ だけなされる場合、出力される信号は (<i>A</i>/<i>x</i>) sin(ω<i>t</i> － Φ) となる。位相変移 Φ は一般に周波数の関数である。
+</p><p>数学的には明らかに、位相は複素利得の複素対数の虚数部と見ることができるので、ゲインの場合と同様に位相を直接加算することもできる。
+</p><p>図1(a)は以下の一極の<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ハイパスフィルタ">ハイパスフィルタ</a>のボード線図である。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt; \mathrm{T_{High
+</p>
+</div><p>(f) = \frac {j f/  f_1} {1 + j f/f_1} \ &lt;/math&gt;}}
+</p><p>ここで <i>f</i> は周波数（<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%84" title="ヘルツ">Hz</a>）であり、<i>f</i><sub>1</sub> は極の位置（Hz）である。図では <i>f</i><sub>1</sub> = 100 Hz とされている。<a href="/wiki/%E8%A4%87%E7%B4%A0%E6%95%B0" title="複素数">複素数</a>の法則を使うと、この関数の振幅は次のようになる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt; \mid \mathrm{T_{High
+</p>
+</div><p>(f) \mid = \frac { f/f_1 } { \sqrt{ 1 + (f/f_1)^2 }} \ &lt;/math&gt;}}
+</p><p>一方位相は次のようになる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt; \varphi_{T_{High
+</p>
+</div><p> = 90^\circ - \tan^{-1} (f/f_1) \ &lt;/math&gt;}}
+</p><p>タンジェントの逆関数は、ここではラジアンではなく「度」を返すものとする。ゲイン線図において、デシベルを使うと、図に描かれる振幅の値は次の式から得られる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;20\log_{10} \mid \mathrm{T_{High
+</p>
+</div><p>(f) \mid \ =20\log_{10} \left( f/f_1 \right)&lt;/math&gt;
+</p><div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;\ -20 \log_{10} \left( \sqrt{ 1 + (f/f_1)^2 }\right) \ &lt;/math&gt;
+</p>
+</div>
+<p>}}
+図1(b)は以下の一極の<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="ローパスフィルタ">ローパスフィルタ</a>のボード線図である。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt; \mathrm{ T_{Low
+</p>
+</div><p> (f) = \frac {1} {1 + j f/f_1} \ &lt;/math&gt;}}
+</p><p>図1(a)と図1(b)には、直線近似も描かれている。その利用法は後で解説する。
+</p><p>ボード線図のゲイン線図と位相線図は一方だけが変化するということはほとんどない。システムの振幅応答が変化すると位相特性も変化するし、逆も同様である。安定かつ不安定零点を持たないシステム(最小位相系)では、<a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E5%A4%89%E6%8F%9B" title="ヒルベルト変換">ヒルベルト変換</a>によって位相特性と振幅特性の一方からもう一方を得ることができる。
+</p><p>伝達関数が実数の極と零点を持つ<a href="/wiki/%E6%9C%89%E7%90%86%E9%96%A2%E6%95%B0" title="有理関数">有理関数</a>の場合、ボード線図は直線で近似できる。このような漸近的近似を<b>骨格ボード線図</b> (straight line Bode plot)または<b>非補正ボード線図</b> (uncorrected Bode plot) と呼び、単純な規則にしたがって手で描くことができるという意味で便利である。単純な図は描画する前に予測できる。
+</p><p>この近似は、各<a href="/wiki/%E9%81%AE%E6%96%AD%E5%91%A8%E6%B3%A2%E6%95%B0" title="遮断周波数">遮断周波数</a>で値を「補正」することでよりよくなる。そのような図を<b>補正ボード線図</b> (corrected Bode plot) と呼ぶ。
+</p>
+<h2><span id=".E3.83.9C.E3.83.BC.E3.83.89.E7.B7.9A.E5.9B.B3.E3.81.AE.E4.BD.9C.E5.9B.B3.E6.B3.95"></span><span class="mw-headline" id="ボード線図の作図法">ボード線図の作図法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=2" title="節を編集: ボード線図の作図法">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ボード線図の考え方の中心は、次の形式の関数
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>の対数を極と<a href="/wiki/%E9%9B%B6%E7%82%B9" title="零点">零点</a>の対数の総和として考えるという点にある。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>この考え方は特に位相線図を描く方法に明示的に使われている。ゲイン線図の作図法は暗黙のうちにこの考え方を使っているが、極と零点の振幅の対数は常に零点を起点とし、漸近的変化も一種類（直線）しかないため、作図法は単純化できる。
+</p>
+<h3><span id=".E9.AA.A8.E6.A0.BC.E3.82.B2.E3.82.A4.E3.83.B3.E7.B7.9A.E5.9B.B3"></span><span class="mw-headline" id="骨格ゲイン線図">骨格ゲイン線図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=3" title="節を編集: 骨格ゲイン線図">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>振幅のデシベル値は一般に &lt;math&gt; 20 \log_{10}(X)&lt;/math&gt; のバージョンを使う。伝達関数が以下の形式とする。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>{(s + y_n)^{b_n}} &lt;/math&gt;}}
+</p><p>ここで &lt;math&gt;x_n&lt;/math&gt; と &lt;math&gt;y_n&lt;/math&gt; は定数、&lt;math&gt;s = j\omega&lt;/math&gt; で、&lt;math&gt;a_n, b_n &gt; 0&lt;/math&gt; であり、<i>H</i> は伝達関数である。
+</p>
+<ul><li>&lt;math&gt;\omega = x_n&lt;/math&gt; となる s の値について（零点）、線の傾斜は decade（対数周波数軸で10倍になる区間）当たり &lt;math&gt;20 \cdot a_n\ dB&lt;/math&gt; だけ<b>増大</b>する。</li>
+<li>&lt;math&gt;\omega = y_n&lt;/math&gt; となる s の値について（極）、線の傾斜は decade 当たり &lt;math&gt;20 \cdot b_n\ dB &lt;/math&gt; だけ<b>減少</b>する。</li>
+<li>グラフの初期値は作図範囲に依存する。初期の点は、初期角周波数 <i>ω</i> を関数に入れて |<i>H</i>(<i>j</i>ω)| を求めることで見つけられる。</li>
+<li>初期値での関数の傾斜の初期状態は、初期値より小さい値にある零点と極の個数と順序に依存し、上記の最初の2つの規則を使って発見できる。</li></ul>
+<p>既約2次多項式 &lt;math&gt; ax^2 + bx + c \ &lt;/math&gt; はほとんどの場合、&lt;math&gt; (\sqrt{a}x + \sqrt{c})^2 &lt;/math&gt; で近似できる。
+</p><p>なお、零点や極は ω がいずれかの &lt;math&gt;x_n&lt;/math&gt; か &lt;math&gt;y_n&lt;/math&gt; に「等しい」場合に出現する。これは問題の関数の振幅が H(jω) であり、複素関数であるから &lt;math&gt;|H(j\omega)| = \sqrt{H \cdot H^* } &lt;/math&gt; となるためである。従って、零点や極がある位置は &lt;math&gt;(s + x_n) &lt;/math&gt; という項が関与していて、その項の振幅は &lt;math&gt;\sqrt{(x_n + j\omega) \cdot (x_n - j\omega)}= \sqrt{x_n^2+\omega^2}&lt;/math&gt; である。
+</p>
+<h3><span id=".E8.A3.9C.E6.AD.A3.E3.82.B2.E3.82.A4.E3.83.B3.E7.B7.9A.E5.9B.B3"></span><span class="mw-headline" id="補正ゲイン線図">補正ゲイン線図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=4" title="節を編集: 補正ゲイン線図">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>骨格ゲイン線図の補正は、以下のようになる。
+</p>
+<ul><li>全ての零点について、線より<b>上</b>に &lt;math&gt;3 \cdot a_n\ \mathrm{dB}&lt;/math&gt; という点をプロットする。</li>
+<li>全ての極について、線より<b>下</b>に &lt;math&gt;3 \cdot b_n\ \mathrm{dB}&lt;/math&gt; という点をプロットする。</li>
+<li>これらの点を通って元の直線に漸近する曲線を描く。</li></ul>
+<p>なお、この補正方法には複素数値である &lt;math&gt; x_n &lt;/math&gt; や &lt;math&gt; y_n &lt;/math&gt; の処理方法を含んでいない。既約多項式の場合、最良の作図法は極や零点の振幅値を数値的に計算して求めることで、計算した値を図にプロットして曲線を描く。
+</p>
+<h3><span id=".E9.AA.A8.E6.A0.BC.E4.BD.8D.E7.9B.B8.E7.B7.9A.E5.9B.B3"></span><span class="mw-headline" id="骨格位相線図">骨格位相線図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=5" title="節を編集: 骨格位相線図">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>上記と同じ形式の伝達関数を考える。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>{(s + y_n)^{b_n}} &lt;/math&gt;}}
+</p><p>ここでは、極や零点それぞれを独立にプロットし、それらを重ね合わせる。実際の位相曲線は &lt;math&gt;-\mathrm{arctan}(\mathrm{Im}[H(s)] / \mathrm{Re}[H(s)])&lt;/math&gt; で得られる。
+</p><p>それぞれの極と零点について位相を描くには、次のようにする。
+</p>
+<ul><li>A が正の場合、始点は（傾斜0で）0度となる。</li>
+<li>A が負の場合、始点は（傾斜0で）180度となる。</li>
+<li>全ての &lt;math&gt; \omega = x_n &lt;/math&gt; について（安定零点 - &lt;math&gt;Re(z) &lt; 0&lt;/math&gt;）、傾斜を decade あたり &lt;math&gt;45 \cdot a_n&lt;/math&gt; だけ<b>増大</b>させる（decade の始点は &lt;math&gt; \omega = x_n &lt;/math&gt; より前、つまり &lt;math&gt; \frac{x_n}{10} &lt;/math&gt;）。</li>
+<li>全ての &lt;math&gt; \omega = y_n &lt;/math&gt; について（安定極 - &lt;math&gt;Re(p) &lt; 0&lt;/math&gt;）、傾斜を decade あたり &lt;math&gt;45 \cdot b_n&lt;/math&gt; だけ<b>減少</b>させる（decade の始点は &lt;math&gt; \omega = y_n &lt;/math&gt; より前、つまり &lt;math&gt; \frac{y_n}{10} &lt;/math&gt;）。</li>
+<li>不安定な（複素平面の右側の）極と零点 (&lt;math&gt;Re(s) &gt; 0&lt;/math&gt;) は、上記とは逆である。</li>
+<li>（零点の場合）&lt;math&gt;90 \cdot a_n&lt;/math&gt; 度位相が変化したとき、および（極の場合）&lt;math&gt;90 \cdot b_n&lt;/math&gt; 度変化したとき、傾斜を水平に戻す。</li>
+<li>それぞれの極や零点についてプロットした後、それらを加算して最終的な図を得る。すなわち最終的な図は以上の作図でえられる位相線図の重ね合わせである。</li></ul>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=6" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>受動ローパス<a href="/wiki/RC%E5%9B%9E%E8%B7%AF" title="RC回路">RCフィルタ</a>の<a href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0%E6%B3%95" title="伝達関数法">伝達関数</a>を<a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E9%A0%98%E5%9F%9F" title="周波数領域">周波数領域</a>で表すと次のようになる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>この伝達関数から、<a href="/wiki/%E9%81%AE%E6%96%AD%E5%91%A8%E6%B3%A2%E6%95%B0" title="遮断周波数">遮断周波数</a> <i>f</i><sub>c</sub> は以下のように決定される。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div>
+<p>&lt;/math&gt;<br/>
+または（等価的に）<br/>
+&lt;math&gt;
+\omega_\mathrm{c} = {1 \over {RC}}
+&lt;/math&gt; ここで、&lt;math&gt;\omega_\mathrm{c}=2\pi f_\mathrm{c}&lt;/math&gt; は遮断角周波数であり、単位は<a href="/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3%E6%AF%8E%E7%A7%92" title="ラジアン毎秒">ラジアン毎秒</a>である。}}
+</p><p>角周波数で表した伝達関数は次のようになる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>}
+</p><p>&lt;/math&gt;}}
+これは伝達関数を正規化した形式である。このときのボード線図は図1(b)であり、骨格近似の決定方法を以下で述べる。
+</p>
+<h3><span id=".E3.82.B2.E3.82.A4.E3.83.B3.E7.B7.9A.E5.9B.B3"></span><span class="mw-headline" id="ゲイン線図">ゲイン線図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=7" title="節を編集: ゲイン線図">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>上記の（正規化され角周波数形式に変換された）伝達関数の振幅（<a href="/wiki/%E3%83%87%E3%82%B7%E3%83%99%E3%83%AB" title="デシベル">デシベル</a>）&lt;math&gt;A_\mathrm{vdB}&lt;/math&gt; は次のようになる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>H(j\omega)
+</p>
+</div><p>\right|} &lt;/math&gt;
+</p><div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>1+j{\omega \over {{\omega_\mathrm{c}}
+</p>
+</div><p>\right| = -10\log{\left[1 + \frac{\omega^2}{\omega_\mathrm{c}^2}\right]}
+</p><p>&lt;/math&gt;}} }}
+入力周波数 &lt;math&gt;\omega&lt;/math&gt; を対数目盛として作図すると、2つの直線で近似できる。この伝達関数の近似ゲイン線図は次のようになる。
+</p>
+<ul><li>&lt;math&gt;\omega_\mathrm{c}&lt;/math&gt; より低い角周波数については 0dB の水平な線となる。低い周波数では、&lt;math&gt;{\omega \over {\omega_\mathrm{c}}}&lt;/math&gt; の項が小さく無視できるため、上記のデシベル利得方程式は0と見なせる。</li>
+<li>&lt;math&gt;\omega_\mathrm{c}&lt;/math&gt; より高い角周波数については decade あたり -20dB の傾斜の直線になる。高い周波数では &lt;math&gt;{\omega \over {\omega_\mathrm{c}}}&lt;/math&gt; の項が大きくなるので、上記のデジベル利得方程式は &lt;math&gt;-20 \log {\omega \over {\omega_\mathrm{c}}}&lt;/math&gt; に単純化され decade あたり −20 dB の直線になる。</li></ul>
+<p>この2つの直線は<a href="/wiki/%E9%81%AE%E6%96%AD%E5%91%A8%E6%B3%A2%E6%95%B0" title="遮断周波数">遮断周波数</a>でつながる。図によれば、遮断周波数より十分低い周波数では、この回路による減衰は 0dB で、これが通過帯域になる（出力の振幅は入力の振幅に等しい）。遮断周波数より高い周波数では、高い周波数ほど減衰する。
+</p>
+
+
+
+
+<h3><span id=".E4.BD.8D.E7.9B.B8.E7.B7.9A.E5.9B.B3"></span><span class="mw-headline" id="位相線図">位相線図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=8" title="節を編集: 位相線図">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>位相線図は、次の式で与えられる伝達関数の位相角をプロットすることで得られる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p>}
+</p><p>&lt;/math&gt;}}
+</p><p>&lt;math&gt;\omega&lt;/math&gt; は入力角周波数、&lt;math&gt;\omega_\mathrm{c}&lt;/math&gt; は遮断角周波数である。遮断周波数よりずっと低い入力周波数では、&lt;math&gt; {\omega \over {\omega_\mathrm{c}}}&lt;/math&gt; という比は非常に小さくなり、位相角は0に近い。そして比が大きくなっていき、&lt;math&gt;\omega =\omega_\mathrm{c}&lt;/math&gt; のとき位相は -45 度になる。入力角周波数が遮断周波数を超えても比は増大し続け、位相角は -90 度に漸近していく。位相線図の周波数軸も対数軸である。
+</p>
+<h3><span id=".E6.AD.A3.E8.A6.8F.E5.8C.96"></span><span class="mw-headline" id="正規化">正規化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=9" title="節を編集: 正規化">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>水平方向の周波数軸は、ゲイン線図でも位相線図でも周波数の比である &lt;math&gt;{\omega \over {\omega_\mathrm{c}}}&lt;/math&gt; に正規化（無次元化）できる。そのような図を正規化されていると呼び、周波数の単位は使わなくなり、遮断周波数 &lt;math&gt;\omega_\mathrm{c}&lt;/math&gt; を 1 とした比率で表される。
+</p>
+<h2><span id=".E6.A5.B5.E3.81.A8.E9.9B.B6.E7.82.B9.E3.81.AE.E3.81.82.E3.82.8B.E4.BE.8B"></span><span class="mw-headline" id="極と零点のある例">極と零点のある例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=10" title="節を編集: 極と零点のある例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>図2から図5は、ボード線図の作図を図解したものである。<a href="/wiki/%E7%89%B9%E7%95%B0%E7%82%B9" title="特異点">極</a>と<a href="/wiki/%E9%9B%B6%E7%82%B9" title="零点">零点</a>がある例では、重ね合わせの方法を示している。以下ではまず個々の要素について説明していく。
+</p><p>図2は零点とローパス極のゲイン線図であり、骨格図も同時に描いている。骨格図は極（または零点）までは水平であり、そこから 20dB/decade で降下（上昇）していく。図3は同じものの位相線図である。位相線図は極（または零点）の10分の1の地点までは水平で、そこから 45°/decade で降下（上昇）していき、極（零点）から10倍の周波数になると再び水平になる。最大の位相の変移は90°となる。
+</p><p>図4と図5は極と零点があるときの重ね合わせ（単純な加算）を表している。これらにも骨格図が描かれている。より意味のある例にするため、零点が高い周波数にずらされている。図4を見ると、零点を過ぎた周波数での重ね合わせは、極と零点の効果が相殺されて水平な線になっている。図5の位相線図は重ね合わせによって興味深い骨格図が描かれている。特に周波数が高い部分で極と零点の効果が相殺された結果、位相変移が0に戻っていて、位相が変移する周波数の範囲が極と零点のある部分を中心とした領域に限定されている。
+</p>
+<h2><span id=".E3.82.B2.E3.82.A4.E3.83.B3.E4.BD.99.E8.A3.95.E3.81.A8.E4.BD.8D.E7.9B.B8.E4.BD.99.E8.A3.95"></span><span class="mw-headline" id="ゲイン余裕と位相余裕">ゲイン余裕と位相余裕</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=11" title="節を編集: ゲイン余裕と位相余裕">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ボード線図は、負帰還増幅器の安定性を確認するため、増幅器のゲイン余裕と位相余裕を調べるのに使われる。ゲイン余裕と位相余裕は、<a class="mw-redirect" href="/wiki/%E8%B2%A0%E5%B8%B0%E9%82%84" title="負帰還">負帰還増幅回路</a>の利得を表す以下の式から得られる。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>{{{1}}}
+</p>
+</div><p> {1 + \beta A_{OL}} \ &lt;/math&gt;}}
+</p><p>ここで、A<sub>FB</sub> は帰還を含めた増幅回路の利得（閉ループ利得）、β は帰還係数、<i>A</i><sub>OL</sub> は帰還を除いた利得（開ループ利得）である。利得 <i>A</i><sub>OL</sub> は周波数の複素関数であり、振幅成分と位相成分がある<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。β<i>A</i><sub>OL</sub> = −1 になることがあるかどうかで不安定性（無限の利得）があるかどうかを示すことができる（つまり、β<i>A</i><sub>OL</sub> の振幅が単位元で位相が -180° となる。これを<b>バルクハウゼン基準</b>という）。ボード線図は、増幅回路がそのような条件を満足するかどうかを判断する材料となる。
+</p><p>その鍵となるのは2つの周波数である。第一はここでは <i>f</i><sub>180</sub> とされる周波数で、開ループ利得の符号が反転する周波数である。第二はここでは <i>f</i><sub>0dB</sub> とされる周波数で、| β <i>A</i><sub>OL</sub> | = 1（dB で表すと振幅1は0dB）となる周波数である。周波数 <i>f</i><sub>180</sub> は以下の条件で決定される。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<pre>\beta A_{OL} \left( f_{180} \right)
+</pre>
+</div>
+<p>ここで、縦棒は複素数の振幅（絶対値）を表す（例えば、| <i>a</i> + <i>j</i> <i>b</i> | = [ <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup>]<sup>1/2</sup>）。周波数 <i>f</i><sub>0dB</sub> は以下の条件で決定される。
+</p>
+<div style="margin-top:1ex; margin-left:2em; margin-bottom:1ex;">
+<p>&lt;math&gt;
+</p>
+</div>
+<p>不安定性への接近性の尺度として<b>ゲイン余裕</b>がある。位相線図を使うと β<i>A</i><sub>OL</sub> が −180° に達する周波数 <i>f</i><sub>180</sub> がわかる。この周波数をゲイン線図に適用すると β<i>A</i><sub>OL</sub> の振幅がわかる。|β<i>A</i><sub>OL</sub>|<sub>180</sub> = 1 なら、その増幅回路は不安定ということになる。|β<i>A</i><sub>OL</sub>|<sub>180</sub> &lt; 1 なら、不安定性は発生しない。|β<i>A</i><sub>OL</sub>|<sub>180</sub> と |β<i>A</i><sub>OL</sub>| = 1 の振幅の差（デシベル）をゲイン余裕という。振幅が1なら0dBなので、ゲイン余裕は 20 log<sub>10</sub>( |β<i>A</i><sub>OL</sub>|<sub>180</sub>) = 20 log<sub>10</sub>( |<i>A</i><sub>OL</sub>|<sub>180</sub>) − 20 log<sub>10</sub>( 1 / β ) と等価な形式の1つにすぎない。
+</p><p>もうひとつの不安定性への接近性の尺度として<b>位相余裕</b>がある。ゲイン線図を使うと |β<i>A</i><sub>OL</sub>| が単位元(1)に達する周波数 <i>f</i><sub>0dB</sub> がわかる。この周波数を位相線図に適用すると β<i>A</i><sub>OL</sub> の位相がわかる。位相 β<i>A</i><sub>OL</sub>( <i>f</i><sub>0dB</sub>) &gt; −180° なら、どの周波数でも不安定な状態にはならない（<i>f = f</i><sub>180</sub> のときの振幅が1未満になるため）。<i>f</i><sub>0dB</sub> における位相と −180°の位相差を位相余裕という。
+</p><p>単に安定かどうかを問うだけなら、<i>f</i><sub>0dB</sub> &lt; <i>f</i><sub>180</sub> であれば、その増幅回路は安定である。ただし、これが成り立つのは、極と零点の位置がある条件に適合している増幅回路（最小位相系）だけである。そうでない場合も例外的に存在し、その場合は<a href="/wiki/%E3%83%8A%E3%82%A4%E3%82%AD%E3%82%B9%E3%83%88%E7%B7%9A%E5%9B%B3" title="ナイキスト線図">ナイキスト線図</a>などの他の手法を使わなければならない<sup class="reference" id="cite_ref-Lee_2-0"><a href="#cite_note-Lee-2">[2]</a></sup><sup class="reference" id="cite_ref-Levine_3-0"><a href="#cite_note-Levine-3">[3]</a></sup>。
+</p>
+
+
+<h3><span id=".E3.83.9C.E3.83.BC.E3.83.89.E7.B7.9A.E5.9B.B3.E3.81.AE.E5.88.A9.E7.94.A8.E4.BE.8B"></span><span class="mw-headline" id="ボード線図の利用例">ボード線図の利用例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=12" title="節を編集: ボード線図の利用例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>図6と図7は、具体例を示している。3極増幅器について、図6は帰還のない場合の利得（開ループ利得） <i>A</i><sub>OL</sub> と帰還のある利得（閉ループ利得） <i>A</i><sub>FB</sub> をボード線図で示したものである。
+</p><p>この例では、低い周波数では <i>A</i><sub>OL</sub> = 100 dB であり 1 / β = 58 dB である。低い周波数では <i>A</i><sub>FB</sub> ≈ 58 dB である。
+</p><p>β <i>A</i><sub>OL</sub> ではなく、開ループ利得 <i>A</i><sub>OL</sub> をプロットしているので、<i>A</i><sub>OL</sub> = 1 / β となる周波数が <i>f</i><sub>0dB</sub> である。低い周波数では <i>A</i><sub>OL</sub> が大きく、帰還利得は <i>A</i><sub>FB</sub> ≈ 1 / β となる。従って <i>f</i><sub>0dB</sub> は帰還利得と開ループ利得の線が交差する位置になる（<i>f</i><sub>0dB</sub> は位相余裕を決定するのに必要となる）。
+</p><p>2つの利得が <i>f</i><sub>0dB</sub> で交差する付近で、この例ではバルクハウゼン基準もほぼ満足されている。そのため帰還増幅器の利得には大きなピークが現れている（β <i>A</i><sub>OL</sub> = －1 なら、これが無限大となる）。<i>f</i><sub>0dB</sub> より大きい周波数では開ループ利得が十分小さくなるため <i>A</i><sub>FB</sub> ? <i>A</i><sub>OL</sub> となる。
+</p><p>図7は、同じ例の位相を示したものである。帰還増幅器の位相は、開ループ利得の位相が -180°となる周波数 <i>f</i><sub>180</sub> まではほぼ0である。その付近になると帰還増幅器の位相は急激に降下し、開ループ増幅器の位相とほぼ同じになる（<i>A</i><sub>OL</sub> が小さいとき <i>A</i><sub>FB</sub> ? <i>A</i><sub>OL</sub>）。
+</p><p>図6と図7の印の付いている箇所を比較すると、単位利得周波数 <i>f</i><sub>0dB</sub> と位相反転周波数 <i>f</i><sub>180</sub> は非常に近いことがわかる。具体的には <i>f</i><sub>180</sub> ≈ <i>f</i><sub>0dB</sub> ≈ 3.332 kHz であり、位相余裕もゲイン余裕もほぼ0である。この増幅器は境界安定状態である。
+</p>
+
+
+
+<p>図8と図9は、β が異なる設定のときのゲイン余裕と位相余裕を示している。帰還係数は図6および図7の場合よりも小さく設定されており、| β <i>A</i><sub>OL</sub> | = 1 となる周波数が低くなっている。この例では、1 / β = 77 dB であり、低い周波数では <i>A</i><sub>FB</sub> ? 77 dB である。
+</p><p>図8は利得（振幅）図である。図8から、1 / β と <i>A</i><sub>OL</sub> の交差は <i>f</i><sub>0dB</sub> = 1 kHz となることがわかる。<i>A</i><sub>FB</sub> の <i>f</i><sub>0dB</sub> 付近でのピークはほとんど目立たない（<a href="/wiki/%E3%83%90%E3%82%BF%E3%83%BC%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF" title="バターワースフィルタ">バターワース特性</a>）<sup class="reference" id="cite_ref-Sansen_4-0"><a href="#cite_note-Sansen-4">[4]</a></sup>。
+</p><p>図9は位相線図である。図8で得られた <i>f</i><sub>0dB</sub> = 1 kHz を使うと、<i>f</i><sub>0dB</sub> での開ループ位相は -135° であり、-180°との差である位相余裕は 45° となる。
+</p><p>図9によれば、位相が -180° となる周波数は <i>f</i><sub>180</sub> = 3.332 kHz である<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。図8から <i>f</i><sub>180</sub> での開ループ利得は 58dB であり、1 / β = 77 dB であるから、ゲイン余裕は 19dB となる。
+</p><p>一方、増幅器の応答特性には安定性以外にも重要なものがある。多くの場合、<a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E5%BF%9C%E7%AD%94&amp;action=edit&amp;redlink=1" title="ステップ応答 (存在しないページ)">ステップ応答</a>が重要となる。経験上、よいステップ応答には少なくとも 45° の位相余裕が必要とされ、70° 以上のものが望ましい。その場合、部品の特性のばらつきが重大な影響を与える<sup class="reference" id="cite_ref-Sansen2_6-0"><a href="#cite_note-Sansen2-6">[6]</a></sup>。
+</p>
+<h2><span id=".E3.83.9C.E3.83.BC.E3.83.89.E3.83.97.E3.83.AD.E3.83.83.E3.82.BF"></span><span class="mw-headline" id="ボードプロッタ">ボードプロッタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=13" title="節を編集: ボードプロッタ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ボードプロッタは、<a href="/wiki/%E3%82%AA%E3%82%B7%E3%83%AD%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97" title="オシロスコープ">オシロスコープ</a>に似た電子装置で、帰還制御系やフィルタについて<a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0" title="周波数">周波数</a>と電圧利得や位相変移の関係をボード線図として描画することができる。遮断周波数、ゲイン余裕、位相余裕が即座にわかるため、フィルタの解析・評価や<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF" title="フィードバック">帰還</a>制御系の安定性の解析に非常に便利である。
+</p><p><a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%A2%E3%83%8A%E3%83%A9%E3%82%A4%E3%82%B6_(%E9%AB%98%E5%91%A8%E6%B3%A2%E5%9B%9E%E8%B7%AF)" title="ネットワーク・アナライザ (高周波回路)">ネットワーク・アナライザ</a>でも同様の機能を持つものがあるが、ネットワーク・アナライザはもっと高い周波数を扱うのが一般的である。
+</p><p>教育や研究においては、伝達関数からボード線図を描くアプリケーションがあると、よりよくかつ素早く理解できるようになる（外部リンク参照）。
+</p>
+<div style="clear:both;"></div>
+<h2><span id=".E8.84.9A.E6.B3.A8.E3.83.BB.E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="脚注・出典">脚注・出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=14" title="節を編集: 脚注・出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">通常、周波数が増大すると振幅利得は低下し、位相は負になるが、そうはならないこともある。特殊な利得の振る舞いを考慮すると、ゲイン余裕と位相余裕の考え方を適用できなくなる。その場合は、<a class="new" href="/w/index.php?title=W:Nyquist_plot&amp;action=edit&amp;redlink=1" title="W:Nyquist plot (存在しないページ)">ナイキスト線図</a>などを使って安定性を確保する。</span>
+</li>
+<li id="cite_note-Lee-2"><b><a href="#cite_ref-Lee_2-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Thomas H. Lee (2004). “§14.6”. <i>The design of CMOS radio-frequency integrated circuits</i> (Second Edition ed.). Cambridge UK: Cambridge University Press. pp. 451-453. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-521-83539-9" title="特別:文献資料/0-521-83539-9">0-521-83539-9</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/Online_Computer_Library_Center" title="Online Computer Library Center">OCLC</a> <a class="external text" href="https://www.worldcat.org/oclc/8034384077" rel="nofollow">8034384077</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%C2%A714.6&amp;rft.atitle=The+design+of+CMOS+radio-frequency+integrated+circuits&amp;rft.aulast=Thomas+H.+Lee&amp;rft.au=Thomas+H.+Lee&amp;rft.date=2004&amp;rft.pages=pp.%26nbsp%3B451-453&amp;rft.edition=Second+Edition&amp;rft.place=Cambridge+UK&amp;rft.pub=Cambridge+University+Press&amp;rft.isbn=0-521-83539-9&amp;rft_id=info:oclcnum/8034384077&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Levine-3"><b><a href="#cite_ref-Levine_3-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">William S Levine (1996). <a class="external text" href="http://books.google.com/books?id=2WQP5JGaJOgC&amp;pg=RA1-PA163&amp;lpg=RA1-PA163&amp;dq=stability+%22minimum+phase%22&amp;source=web&amp;ots=P3fFTcyfzM&amp;sig=ad5DJ7EvVm6In_zhI0MlF_6vHDA" rel="nofollow">“§10.1”</a>. <i>The control handbook</i>. The electrical engineering handbook series (Second Edition ed.). Boca Raton FL: CRC Press/IEEE Press. p. 163. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0849385709" title="特別:文献資料/0849385709">0849385709</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/Online_Computer_Library_Center" title="Online Computer Library Center">OCLC</a> <a class="external text" href="https://www.worldcat.org/oclc/805684883" rel="nofollow">805684883</a><span style="display:none;">. <a class="external free" href="http://books.google.com/books?id=2WQP5JGaJOgC&amp;pg=RA1-PA163&amp;lpg=RA1-PA163&amp;dq=stability+%22minimum+phase%22&amp;source=web&amp;ots=P3fFTcyfzM&amp;sig=ad5DJ7EvVm6In_zhI0MlF_6vHDA" rel="nofollow">http://books.google.com/books?id=2WQP5JGaJOgC&amp;pg=RA1-PA163&amp;lpg=RA1-PA163&amp;dq=stability+%22minimum+phase%22&amp;source=web&amp;ots=P3fFTcyfzM&amp;sig=ad5DJ7EvVm6In_zhI0MlF_6vHDA</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%C2%A710.1&amp;rft.atitle=The+control+handbook&amp;rft.aulast=William+S+Levine&amp;rft.au=William+S+Levine&amp;rft.date=1996&amp;rft.series=The+electrical+engineering+handbook+series&amp;rft.pages=p.%26nbsp%3B163&amp;rft.edition=Second+Edition&amp;rft.place=Boca+Raton+FL&amp;rft.pub=CRC+Press%2FIEEE+Press&amp;rft.isbn=0849385709&amp;rft_id=info:oclcnum/805684883&amp;rft_id=http%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D2WQP5JGaJOgC%26pg%3DRA1-PA163%26lpg%3DRA1-PA163%26dq%3Dstability%2B%2522minimum%2Bphase%2522%26source%3Dweb%26ots%3DP3fFTcyfzM%26sig%3Dad5DJ7EvVm6In_zhI0MlF_6vHDA&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Sansen-4"><b><a href="#cite_ref-Sansen_4-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Willy M C Sansen (2006). “§0517-§0527”. <i>Analog design essentials</i>. International series in engineering and computer science, 859. Dordrecht, The Netherlands: Springer. pp. 157-163. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-25746-2" title="特別:文献資料/0-387-25746-2">0-387-25746-2</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/Online_Computer_Library_Center" title="Online Computer Library Center">OCLC</a> <a class="external text" href="https://www.worldcat.org/oclc/209908307" rel="nofollow">209908307</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%C2%A70517-%C2%A70527&amp;rft.atitle=Analog+design+essentials&amp;rft.aulast=Willy+M+C+Sansen&amp;rft.au=Willy+M+C+Sansen&amp;rft.date=2006&amp;rft.series=International+series+in+engineering+and+computer+science%2C+859&amp;rft.pages=pp.%26nbsp%3B157-163&amp;rft.place=Dordrecht%2C+The+Netherlands&amp;rft.pub=Springer&amp;rft.isbn=0-387-25746-2&amp;rft_id=info:oclcnum/209908307&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">位相反転周波数は帰還係数を変えても変化しない、開ループ利得の独立した特性である。<i>f</i><sub>180</sub> での利得も帰還係数とは独立している。従って、図6と図7での値を使うことができる。しかし、ここでは図8と図9のみを使って解説している</span>
+</li>
+<li id="cite_note-Sansen2-6"><b><a href="#cite_ref-Sansen2_6-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Willy M C Sansen (2006). “§0526”. <i>Analog design essentials</i>. International series in engineering and computer science, 859. p. 162. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-25746-2" title="特別:文献資料/0-387-25746-2">0-387-25746-2</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/Online_Computer_Library_Center" title="Online Computer Library Center">OCLC</a> <a class="external text" href="https://www.worldcat.org/oclc/209908307" rel="nofollow">209908307</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=%C2%A70526&amp;rft.atitle=Analog+design+essentials&amp;rft.aulast=Willy+M+C+Sansen&amp;rft.au=Willy+M+C+Sansen&amp;rft.date=2006&amp;rft.series=International+series+in+engineering+and+computer+science%2C+859&amp;rft.pages=p.%26nbsp%3B162&amp;rft.isbn=0-387-25746-2&amp;rft_id=info:oclcnum/209908307&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=15" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li><a href="/wiki/%E3%83%8A%E3%82%A4%E3%82%AD%E3%82%B9%E3%83%88%E7%B7%9A%E5%9B%B3" title="ナイキスト線図">ナイキスト線図</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%82%B3%E3%83%AB%E3%82%B9%E7%B7%9A%E5%9B%B3" title="ニコルス線図">ニコルス線図</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="アナログ信号処理">アナログ信号処理</a></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E5%B7%A5%E5%AD%A6" title="制御工学">制御工学</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0" title="伝達関数">伝達関数</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;section=16" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r2399935">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-100{font-size:100%}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}</style><div class="refbegin refbegin-columns references-column-count references-column-count-2" style="column-count: 2;">
+<ul><li><a class="external text" href="http://jegyzet.sth.sze.hu/ftp/!BSc/Szabalyozastechnika/BodePl.pdf" rel="nofollow">What Bode Plots Represent</a>ボード線図の詳細な説明</li>
+<li><a class="external text" href="http://www.facstaff.bucknell.edu/mastascu/eControlHTML/Freq/Freq5.html" rel="nofollow">Bode Plots</a> 動画や例を交えた解説</li>
+<li><a class="external text" href="http://www.swarthmore.edu/NatSci/echeeve1/Ref/LPSA/Bode/BodeHow.html" rel="nofollow">The Asynptotic Bode Diagram</a>ボード線図の描き方</li>
+<li><a class="external text" href="http://lims.mech.northwestern.edu/~lynch/courses/ME391/2003/bodesketching.pdf" rel="nofollow">Approximate Bode Plot Sketching Rules</a> 描画規則の要約 (<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</li>
+<li><a class="external text" href="https://web.archive.org/web/20050522080117/http://www.uwm.edu/People/msw/BodePlot/" rel="nofollow">Bode plot applet</a> - 伝達関数の係数を入力とし、ボード線図（振幅と位相）を描画するアプレット</li>
+<li><a class="external text" href="http://mickpc.pbwiki.com/index.php?wiki=BodePlot" rel="nofollow">Bode Plotting on the HP49</a></li>
+<li><a class="external text" href="http://www.abc.chemistry.bsu.by/vi/fit.htm" rel="nofollow">Equivalent circuit analyser</a></li>
+<li><a class="external text" href="http://www.en-genius.net/includes/files/acqt_013105.pdf" rel="nofollow"><i>Operational amplifier stability</i></a> by Tim Green</li>
+<li><a class="external text" href="http://www.bode.cg.yu" rel="nofollow">Bode Plotter</a> 零点や極をグラフィカルに定義することで、ボード線図を描くアプリケーション</li>
+<li><a href="/wiki/Gnuplot" title="Gnuplot">gnuplot</a> でボード線図を生成するためのコード: <a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Bode_plot_template.pdf&amp;action=edit&amp;redlink=1" title="ファイル:Bode plot template.pdf (存在しないページ)">DIN-A4 printing template (pdf)</a></li>
+<li><a class="external text" href="http://wikis.controltheorypro.com/index.php?title=Bode_Plot" rel="nofollow">Bode Plot</a> ControlTheoryPro.com</li></ul>
+</div>
+<div aria-labelledby="制御理論" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:制御理論 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="制御理論" style="font-size:110%;margin:0 6em">制御理論</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">分野</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%A9%E5%BF%9C%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="適応制御 (存在しないページ)">適応制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adaptive_control&amp;action=edit&amp;redlink=1" title="En:Adaptive control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="制御理論">制御理論</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%88%B6%E5%BE%A1" title="デジタル制御">デジタル制御</a></li>
+<li><a class="new" href="/w/index.php?title=En:Energy-shaping_control&amp;action=edit&amp;redlink=1" title="En:Energy-shaping control (存在しないページ)">en:Energy-shaping control</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E5%88%B6%E5%BE%A1" title="ファジィ制御">ファジィ制御</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%96%E3%83%AA%E3%83%83%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="ハイブリッドコンピュータ">ハイブリッド</a>制御</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%83%BD%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="知能制御 (存在しないページ)">知能制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intelligent_control&amp;action=edit&amp;redlink=1" title="En:Intelligent control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E4%BA%88%E6%B8%AC%E5%88%B6%E5%BE%A1" title="モデル予測制御">モデル予測制御</a></li>
+<li><a class="new" href="/w/index.php?title=%E5%A4%9A%E5%A4%89%E9%87%8F&amp;action=edit&amp;redlink=1" title="多変量 (存在しないページ)">多変量</a>制御</li>
+<li><a href="/wiki/%E7%A5%9E%E7%B5%8C%E7%B3%BB" title="神経系">ニューラル</a>制御</li>
+<li><a href="/wiki/%E9%9D%9E%E7%B7%9A%E5%BD%A2%E5%88%B6%E5%BE%A1" title="非線形制御">非線形制御</a></li>
+<li><a href="/wiki/%E6%9C%80%E9%81%A9%E5%88%B6%E5%BE%A1" title="最適制御">最適制御</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム制御</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%82%B9%E3%83%88%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="ロバスト制御 (存在しないページ)">ロバスト制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robust_control&amp;action=edit&amp;redlink=1" title="En:Robust control (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="確率制御 (存在しないページ)">確率制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stochastic_control&amp;action=edit&amp;redlink=1" title="En:Stochastic control (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">系特性</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">ボード線図</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3" title="ブロック図">ブロック図</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" title="閉ループ伝達関数 (存在しないページ)">閉ループ伝達関数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E5%88%B6%E5%BE%A1%E6%80%A7&amp;action=edit&amp;redlink=1" title="可制御性 (存在しないページ)">可制御性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Controllability&amp;action=edit&amp;redlink=1" title="En:Controllability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E5%A4%89%E6%8F%9B" title="フーリエ変換">フーリエ変換</a></li>
+<li><a href="/wiki/%E5%91%A8%E6%B3%A2%E6%95%B0%E7%89%B9%E6%80%A7" title="周波数特性">周波数特性</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B" title="ラプラス変換">ラプラス変換</a></li>
+<li><a href="/wiki/%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF%E6%A9%9F%E6%A7%8B" title="ネガティブフィードバック機構">ネガティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%AF%E8%A6%B3%E6%B8%AC%E6%80%A7&amp;action=edit&amp;redlink=1" title="可観測性 (存在しないページ)">可観測性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Observability&amp;action=edit&amp;redlink=1" title="En:Observability (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9D%E3%82%B8%E3%83%86%E3%82%A3%E3%83%96%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF" title="ポジティブフィードバック">ポジティブフィードバック</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A0%B9%E8%BB%8C%E8%B7%A1&amp;action=edit&amp;redlink=1" title="根軌跡 (存在しないページ)">根軌跡法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Root_Locus&amp;action=edit&amp;redlink=1" title="En:Root Locus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%9C%E6%A9%9F%E6%A7%8B" title="サーボ機構">サーボ機構</a></li>
+<li><a class="new" href="/w/index.php?title=En:Signal-flow_graph&amp;action=edit&amp;redlink=1" title="En:Signal-flow graph (存在しないページ)">en:Signal-flow graph</a></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E7%A9%BA%E9%96%93_(%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96)" title="状態空間 (制御理論)">状態空間表現</a></li>
+<li><a href="/wiki/%E5%AE%89%E5%AE%9A%E6%80%A7%E7%90%86%E8%AB%96" title="安定性理論">安定性理論</a></li>
+<li><a href="/wiki/%E5%AE%9A%E5%B8%B8%E7%8A%B6%E6%85%8B" title="定常状態">定常状態</a>解析・設計</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%82%AF%E3%82%B9" title="システムダイナミクス">システムダイナミクス</a></li>
+<li><a href="/wiki/%E4%BC%9D%E9%81%94%E9%96%A2%E6%95%B0%E6%B3%95" title="伝達関数法">伝達関数法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">デジタル制御</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E9%9B%A2%E6%95%A3%E6%99%82%E9%96%93%E4%BF%A1%E5%8F%B7" title="離散時間信号">離散時間信号</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="デジタル信号処理">デジタル信号処理</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%8F%E5%AD%90%E5%8C%96_(%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86)&amp;action=edit&amp;redlink=1" title="量子化 (信号処理) (存在しないページ)">量子化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quantization_(signal_processing)&amp;action=edit&amp;redlink=1" title="En:Quantization (signal processing) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="リアルタイムシステム">リアルタイム</a>ソフトウェア</li>
+<li><a href="/wiki/%E6%A8%99%E6%9C%AC_(%E7%B5%B1%E8%A8%88%E5%AD%A6)" title="標本 (統計学)">標本化</a>データ</li>
+<li><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%90%8C%E5%AE%9A" title="システム同定">システム同定</a></li>
+<li><a href="/wiki/Z%E5%A4%89%E6%8F%9B" title="Z変換">Z変換</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">先進技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ニューラルネットワーク">ニューラルネットワーク</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BF%82%E6%95%B0%E5%9B%B3%E6%B3%95&amp;action=edit&amp;redlink=1" title="係数図法 (存在しないページ)">係数図法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coefficient_diagram_method&amp;action=edit&amp;redlink=1" title="En:Coefficient diagram method (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%B6%E5%BE%A1%E5%86%8D%E6%A7%8B%E6%88%90&amp;action=edit&amp;redlink=1" title="制御再構成 (存在しないページ)">制御再構成</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Control_reconfiguration&amp;action=edit&amp;redlink=1" title="En:Control reconfiguration (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E5%B8%83%E5%AE%9A%E6%95%B0%E7%B3%BB&amp;action=edit&amp;redlink=1" title="分布定数系 (存在しないページ)">分布定数系</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distributed_parameter_systems&amp;action=edit&amp;redlink=1" title="En:Distributed parameter systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E6%95%B0%E6%AC%A1%E6%95%B0%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="分数次数制御 (存在しないページ)">分数次数制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fractional-order_control&amp;action=edit&amp;redlink=1" title="En:Fractional-order control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%B8%E3%82%A3%E8%AB%96%E7%90%86" title="ファジィ論理">ファジィ論理</a></li>
+<li><a class="new" href="/w/index.php?title=En:H-infinity_loop-shaping&amp;action=edit&amp;redlink=1" title="En:H-infinity loop-shaping (存在しないページ)">en:H-infinity loop-shaping</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%B3%E3%82%B1%E3%83%AB%E7%89%B9%E7%95%B0%E5%80%A4&amp;action=edit&amp;redlink=1" title="ハンケル特異値 (存在しないページ)">ハンケル特異値</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hankel_singular_value&amp;action=edit&amp;redlink=1" title="En:Hankel singular value (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC" title="カルマンフィルター">カルマンフィルター</a></li>
+<li><a class="new" href="/w/index.php?title=En:Krener%27s_theorem&amp;action=edit&amp;redlink=1" title="En:Krener's theorem (存在しないページ)">en:Krener's theorem</a></li>
+<li><a href="/wiki/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95" title="最小二乗法">最小二乗法</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%A2%E3%83%97%E3%83%8E%E3%83%95%E5%AE%89%E5%AE%9A" title="リアプノフ安定">リアプノフ安定</a></li>
+<li><a class="new" href="/w/index.php?title=En:Minor_loop_feedback&amp;action=edit&amp;redlink=1" title="En:Minor loop feedback (存在しないページ)">en:Minor loop feedback</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9F%A5%E8%A6%9A%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="知覚制御理論 (存在しないページ)">知覚制御理論</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Perceptual_control_theory&amp;action=edit&amp;redlink=1" title="En:Perceptual control theory (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%8A%B6%E6%85%8B%E8%A6%B3%E6%B8%AC%E5%99%A8" title="状態観測器">状態観測器</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%88%B6%E5%BE%A1" title="ベクトル制御">ベクトル制御</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御器</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込み制御器</a></li>
+<li><a class="new" href="/w/index.php?title=%E9%96%89%E3%83%AB%E3%83%BC%E3%83%97%E5%88%B6%E5%BE%A1%E5%99%A8&amp;action=edit&amp;redlink=1" title="閉ループ制御器 (存在しないページ)">閉ループ制御器</a></li>
+<li><a class="new" href="/w/index.php?title=En:Lead-lag_compensator&amp;action=edit&amp;redlink=1" title="En:Lead-lag compensator (存在しないページ)">en:Lead-lag compensator</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%95%B0%E5%80%A4%E5%88%B6%E5%BE%A1" title="コンピュータ数値制御">数値制御</a></li>
+<li><a href="/wiki/PID%E5%88%B6%E5%BE%A1" title="PID制御">PID制御</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">制御応用</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Automation_and_Remote_Control&amp;action=edit&amp;redlink=1" title="En:Automation and Remote Control (存在しないページ)">en:Automation and Remote Control</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a></li>
+<li><a href="/wiki/%E9%9B%BB%E5%8B%95%E6%A9%9F" title="電動機">電動機</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B7%A5%E6%A5%AD%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit&amp;redlink=1" title="工業制御システム (存在しないページ)">工業制御システム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Industrial_Control_Systems&amp;action=edit&amp;redlink=1" title="En:Industrial Control Systems (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AB%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="メカトロニクス">メカトロニクス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%8B%E5%8B%95%E5%88%B6%E5%BE%A1&amp;action=edit&amp;redlink=1" title="運動制御 (存在しないページ)">運動制御</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Motion_control&amp;action=edit&amp;redlink=1" title="En:Motion control (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" title="プロセス制御">プロセス制御</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6" title="ロボット工学">ロボット工学</a></li>
+<li><a href="/wiki/SCADA" title="SCADA">SCADA</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401025432
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.292 seconds
+Real time usage: 0.703 seconds
+Preprocessor visited node count: 4808/1000000
+Post‐expand include size: 77408/2097152 bytes
+Template argument size: 8392/2097152 bytes
+Highest expansion depth: 21/40
+Expensive parser function count: 18/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 26087/5000000 bytes
+Lua time usage: 0.150/7 seconds
+Lua virtual size: 6434816/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  646.772      1 -total
+ 80.81%  522.664      1 テンプレート:Reflist
+ 79.20%  512.271      4 テンプレート:Cite_book
+ 77.97%  504.319      4 テンプレート:Citation/core
+ 70.13%  453.570      8 テンプレート:Citation/identifier
+ 57.95%  374.800      8 テンプレート:Catalog_lookup_link
+ 45.92%  296.969      4 テンプレート:ISBN2
+ 23.52%  152.126      4 テンプレート:OCLC
+ 10.61%   68.603      1 テンプレート:制御理論
+ 10.20%   65.959      1 テンプレート:Navbox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1515411-0!canonical and timestamp 20220401025431 and revision id 916460. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ボード線図&amp;oldid=916460">http://localhost:8080/w/index.php?title=ボード線図&amp;oldid=916460</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BF%A1%E5%8F%B7%E5%87%A6%E7%90%86" title="カテゴリ:信号処理">信号処理</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%9B%BB%E6%B0%97%E5%9B%9E%E8%B7%AF" title="カテゴリ:電気回路">電気回路</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%B6%E5%BE%A1%E7%90%86%E8%AB%96" title="カテゴリ:制御理論">制御理論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%8C%AF%E5%8B%95%E5%B7%A5%E5%AD%A6" title="カテゴリ:振動工学">振動工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B0%E3%83%A9%E3%83%95" title="カテゴリ:グラフ">グラフ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A8%E3%83%9D%E3%83%8B%E3%83%A0" title="カテゴリ:エポニム">エポニム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%82%A3%E3%83%BC%E3%83%89%E3%83%90%E3%83%83%E3%82%AF" title="カテゴリ:フィードバック">フィードバック</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;returntoquery=curid%3D1515411%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;returntoquery=curid%3D1515411%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;oldid=916460" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%9C%E3%83%BC%E3%83%89%E7%B7%9A%E5%9B%B3&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年1月27日 (月) 06:16 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.292","walltime":"0.703","ppvisitednodes":{"value":4808,"limit":1000000},"postexpandincludesize":{"value":77408,"limit":2097152},"templateargumentsize":{"value":8392,"limit":2097152},"expansiondepth":{"value":21,"limit":40},"expensivefunctioncount":{"value":18,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":26087,"limit":5000000},"timingprofile":["100.00%  646.772      1 -total"," 80.81%  522.664      1 テンプレート:Reflist"," 79.20%  512.271      4 テンプレート:Cite_book"," 77.97%  504.319      4 テンプレート:Citation/core"," 70.13%  453.570      8 テンプレート:Citation/identifier"," 57.95%  374.800      8 テンプレート:Catalog_lookup_link"," 45.92%  296.969      4 テンプレート:ISBN2"," 23.52%  152.126      4 テンプレート:OCLC"," 10.61%   68.603      1 テンプレート:制御理論"," 10.20%   65.959      1 テンプレート:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.150","limit":"7"},"limitreport-virtmemusage":{"value":6434816,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401025432","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":998});});</script>
+</body></html>

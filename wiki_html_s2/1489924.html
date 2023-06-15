@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>SCADA - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-SCADA rootpage-SCADA skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">SCADA</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>SCADA</b>（Supervisory Control And Data Acquisition の略。読み方はスキャダ）は、産業制御システムの一種であり、コンピュータによるシステム監視とプロセス制御を行う。対象プロセスは、以下のような生産工程やインフラや設備に関するものである。
+</p>
+<ul><li><a href="." id="link_a_1" title="製造業">製造</a>、<a href="." id="link_a_2" title="大量生産">生産</a>、<a href="." id="link_a_3" title="発電">発電</a>、組み立て、<a href="." id="link_a_4" title="精錬">精錬</a>などを含む工業プロセスであり、連続モード、バッチモード、反復モード、離散モードなどがある。</li>
+<li>水処理、水道、排水、<a href="." id="link_a_5" title="下水処理場">下水処理</a>、石油やガスのパイプライン、送電網、大規模通信システムなどのインフラ。</li>
+<li>ビルディング、空港、船舶、宇宙ステーションなどの設備。<a href="." id="link_a_6" title="空気調和">空調</a>、アクセス、エネルギー消費などを監視し制御する。</li></ul>
+<p>SCADA システムは一般に次のようなサブシステムから構成される。
+</p>
+<ul><li><a href="." id="link_a_7" title="ユーザインタフェース">ユーザインタフェース</a> - 対象プロセスのデータを人間のオペレータに提示し、人間のオペレータがプロセスを監視し制御できるようにする機構。</li>
+<li>監視制御（コンピュータ）システム - プロセス上のデータを収集し、プロセスに対してコマンドを送る。</li>
+<li>遠方監視制御装置 (RTU:Remote Terminal Unit) - プロセス内に設置されたセンサと接続し、センサの信号をデジタルのデータに変換し、そのデジタルデータを監視制御システムに送る装置。</li>
+<li><a href="." id="link_a_8" title="通信">通信</a>基盤 - 監視制御システムと遠方監視制御装置 (RTU) を接続する。</li></ul>
+<p>SCADA と<a href="." id="link_a_9" title="分散制御システム">分散制御システム</a> (DCS) を混同している場合がある。一般に SCADA システムはプロセスを調整するが、<a href="." id="link_a_10" title="リアルタイムシステム">実時間</a>で制御はしない。実時間制御という話は、新たな通信技術によって高信頼な低レイテンシで高速な通信が広域で可能になるにつれて、焦点がぼやけてしまう。SCADA と分散制御システム (DCS) の違いは主に文化的なもので、ほとんど無視できる。通信基盤が発達するにつれて、両者の違いは薄れる傾向にある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#システムの概念"><span class="tocnumber">1</span> <span class="toctext">システムの概念</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ヒューマンマシンインタフェース"><span class="tocnumber">2</span> <span class="toctext">ヒューマンマシンインタフェース</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#ハードウェア"><span class="tocnumber">3</span> <span class="toctext">ハードウェア</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#遠方監視制御装置_(RTU)"><span class="tocnumber">3.1</span> <span class="toctext">遠方監視制御装置 (RTU)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#監視制御ステーション"><span class="tocnumber">3.2</span> <span class="toctext">監視制御ステーション</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#運用方針"><span class="tocnumber">3.2.1</span> <span class="toctext">運用方針</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#通信基盤と通信方法"><span class="tocnumber">3.3</span> <span class="toctext">通信基盤と通信方法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#最近の傾向"><span class="tocnumber">4</span> <span class="toctext">最近の傾向</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#セキュリティ問題"><span class="tocnumber">5</span> <span class="toctext">セキュリティ問題</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#参考文献"><span class="tocnumber">8</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#国産SCADA"><span class="tocnumber">9</span> <span class="toctext">国産SCADA</span></a></li>
+</ul>
+</div>
+<h2><span id=".E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.81.AE.E6.A6.82.E5.BF.B5"></span><span class="mw-headline" id="システムの概念">システムの概念</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=1" title="節を編集: システムの概念">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SCADA という用語は一般に、1つのサイト全体や地理的に分散したシステム群を集中的に監視制御するシステムを指す。制御のほとんどは遠方監視制御装置 (RTU) または<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">プログラマブルロジックコントローラ</a> (PLC) が自動的に行う。ホストの制御機能は監督的な介入や優先的なものに限られることが多い。例えば、PLCが工業プロセスにおける冷却水の流量を制御する場合、フィードバック制御ループ自体はRTUやPLCでほぼ完結している。これに対し、SCADAシステムはそれらループの状態を監視するシステムという位置づけで、具体的には、SCADAシステムによりオペレータが流量の設定値を変更出来たり、警報発生条件（不正な流量や高温）を変更出来たり、現在の状態をオペレータに対して表示し記録する機能を提供する。
+</p><p>ファイル:SCADA schematic overview-s.png
+</p><p>データ収集はRTUやPLCのレベルで行われ、必要に応じてSCADAに送られる。SCADAでは、収集されたデータを監視室のオペレータが見て監督的決定を行えるような形にして提示する。データは普通の<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="データベース管理システム">データベース管理システム</a>上に構築された履歴システムにも送られ、傾向などの分析に使われる。
+</p><p>SCADAシステムでは通常、「タグデータベース」と呼ばれる<a href="/wiki/%E5%88%86%E6%95%A3%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="分散データベース">分散データベース</a>を実装している。これは、「タグ」または「ポイント」と呼ばれるデータ要素を格納するものである。1つのポイントは、1つの入力信号（監視データ）または1つの出力信号（制御コマンド）に対応している。ポイントには「ハード」と「ソフト」がある。ハードポイントはシステム内の実際の入出力に対応し、ソフトポイントは他のポイント群の値を使って計算や論理で得られるものである（多くの実装では、ハードポイントもソフトポイントの一種とされており、単に1つのデータだけを使ってそのまま出力するソフトポイントになっている）。ポイントは通常、値とタイムスタンプの対で格納され、この場合のタイムスタンプは記録または計算した時刻を表している。一連の値とタイムスタンプの対によって、そのポイントの履歴が得られる。タグに付加的な<a href="/wiki/%E3%83%A1%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF" title="メタデータ">メタデータ</a>を格納することも多く、対応する機器やPLCレジスタへの経路、設計時コメント、警報情報などが記述される。
+</p>
+<h2><span id=".E3.83.92.E3.83.A5.E3.83.BC.E3.83.9E.E3.83.B3.E3.83.9E.E3.82.B7.E3.83.B3.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9"></span><span class="mw-headline" id="ヒューマンマシンインタフェース">ヒューマンマシンインタフェース</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=2" title="節を編集: ヒューマンマシンインタフェース">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p><a class="mw-redirect" href="/wiki/%E3%83%92%E3%83%A5%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="ヒューマンマシンインタフェース">ヒューマンマシンインタフェース</a>（HMI）は、人間のオペレータにプロセスのデータを提示する機構であり、また人間のオペレータがプロセスを制御する際にもそれを経由する。
+</p><p>HMI は通常 SCADA システムの<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース</a>やソフトウェアプログラムとリンクしており、傾向を見るためのデータや診断データ、保守手続きの予定などの管理情報、ロジスティック情報、特定のセンサや機械の詳細図、<a href="/wiki/%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%91%E3%83%BC%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="エキスパートシステム">エキスパートシステム</a>による<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="トラブルシューティング">トラブルシューティング</a>などが提供される。
+</p><p>HMI はそれらの情報を操作者にグラフィカルに提示する。すなわち、制御対象のプラントの図解の形で提示される。例えば、ポンプとそれに接続されたパイプが図示され、ポンプの稼働状況やパイプの流量が表示される。オペレータはポンプを停止させることができる。パイプの流量の変化は実時間で示される。図解は機器の写真を使ったり、アニメーション化された記号を使うこともある。
+</p><p>SCADAシステム用HMIパッケージには、オペレータなどが図を修正できる描画プログラムが含まれることが多い。HMIの図は単純なものから、超高層ビルの全エレベータの現在位置を示すとか、鉄道の全列車の現在位置を示すといった複雑なものまで様々である。
+</p><p>多くのSCADA実装で最も重要な点は、警報である。警報は何らかの状態値が異常になったときに発せられる。自動車の燃料タンクが空であることを示すライトも警報の一種である。警報を発する際には、<a href="/wiki/%E9%9B%BB%E5%AD%90%E3%83%A1%E3%83%BC%E3%83%AB" title="電子メール">電子メール</a>が所定の管理者に送られることもある。
+</p>
+<h2><span id=".E3.83.8F.E3.83.BC.E3.83.89.E3.82.A6.E3.82.A7.E3.82.A2"></span><span class="mw-headline" id="ハードウェア">ハードウェア</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=3" title="節を編集: ハードウェア">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SCADA は<a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a> (DCS) と共に構成されることが多い。マスタコンピュータの関与なしで自律的に単純な論理プロセスを実行できる RTU や PLC が使われることが増えている。RTU や PLC 上で動作するプログラムは <a href="/wiki/IEC_61131-3" title="IEC 61131-3">IEC 61131-3</a> で定義されている言語を使っていることが多い。<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>や<a href="/wiki/FORTRAN" title="FORTRAN">FORTRAN</a>などの手続き型言語とは異なり、IEC 61131-3 はリレーによる制御回路の記述に似せてあるため、この分野の人にとっては訓練が少なくて済む利点がある。これによって、SCADAシステムの技術者はRTUやPLC上で実行されるプログラムの設計や実装も可能となっている。1998年ごろには、ほぼ全てのPLC製造企業が HMI/SCADA 統合システムを提供しており、その多くがオープンな通信プロトコルを採用している。サードパーティ製の HMI/SCADA パッケージの多くは、各社の主なPLCと互換性があり、制御対象のシステムの技術者が直接HMIを設定可能になっている。
+</p>
+<h3><span id=".E9.81.A0.E6.96.B9.E7.9B.A3.E8.A6.96.E5.88.B6.E5.BE.A1.E8.A3.85.E7.BD.AE_.28RTU.29"></span><span class="mw-headline" id="遠方監視制御装置_(RTU)">遠方監視制御装置 (RTU)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=4" title="節を編集: 遠方監視制御装置 (RTU)">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>RTUは実際の装置と接続される。RTUはその装置から得た電気信号（<a href="/wiki/%E9%96%8B%E9%96%89%E5%99%A8" title="開閉器">スイッチ</a>や<a href="/wiki/%E3%83%90%E3%83%AB%E3%83%96" title="バルブ">バルブ</a>の開閉状態、圧力・流量・電圧・電流などの測定値など）をデジタルの値に変換する。また、反対にデジタルなコマンドを電気信号に変換して装置に送ることで、その装置を制御する（スイッチやバルブを開閉したり、<a href="/wiki/%E3%83%9D%E3%83%B3%E3%83%97" title="ポンプ">ポンプ</a>の速度を設定するなど）ことができる。
+</p><p>高品質の SCADA RTU は以下のような特性を持つ。
+</p>
+<ul><li>データネットワーク機能</li>
+<li>データ信頼性</li>
+<li>データセキュリティ</li></ul>
+<h3><span id=".E7.9B.A3.E8.A6.96.E5.88.B6.E5.BE.A1.E3.82.B9.E3.83.86.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="監視制御ステーション">監視制御ステーション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=5" title="節を編集: 監視制御ステーション">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>監視制御ステーションとは、各種装置（RTU、PLC など）と通信するソフトウェアおよび<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90" title="サーバ">サーバ</a>と、制御室内の<a href="/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ワークステーション">ワークステーション</a>などで動作するHMIソフトウェアを総称したものである。小型のSCADAシステムでは、1台の<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">パーソナルコンピュータ</a>で動作する。大規模なSCADAシステムでは、複数台のサーバ上で分散ソフトウェアが動作し、災害リカバリ用の別サイトも用意される。システムの保全性を高めるため、各サーバを冗長構成またはホットスタンバイ構成にし、サーバ故障時にも連続的な制御や監視が行えるようにすることが多い。
+</p><p>かつては、<a href="/wiki/UNIX" title="UNIX">UNIX</a>や<a href="/wiki/OpenVMS" title="OpenVMS">OpenVMS</a>が使われることが多く、<a href="/wiki/Linux" title="Linux">Linux</a>などはあまり使われなかったが、最近では主要な<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>がサーバにもHMIワークステーションにも利用可能となっている。
+</p>
+<h4><span id=".E9.81.8B.E7.94.A8.E6.96.B9.E9.87.9D"></span><span class="mw-headline" id="運用方針">運用方針</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=6" title="節を編集: 運用方針">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>実際の運用では、制御システムの障害が多大な損失を生じることがある。場合によっては人命に関わることもある。SCADA用ハードウェアは、温度変化・振動・電圧変動などに耐性があるものが使われるが、特に信頼性を要求される場合はハードウェアや通信路を冗長化し、場合によっては制御センターそのものを複数用意する。故障した箇所は素早く特定され、その機能はバックアップハードウェアで即座に代替される。故障箇所はプロセスを止めることなく交換可能となっていることが多い。このようなシステムの信頼性は、統計的に故障までの時間で表される（<a href="/wiki/%E5%B9%B3%E5%9D%87%E6%95%85%E9%9A%9C%E9%96%93%E9%9A%94" title="平均故障間隔">平均故障間隔</a>）。高信頼システムの平均故障間隔は、数百年のオーダーになることもある。
+</p>
+<h3><span id=".E9.80.9A.E4.BF.A1.E5.9F.BA.E7.9B.A4.E3.81.A8.E9.80.9A.E4.BF.A1.E6.96.B9.E6.B3.95"></span><span class="mw-headline" id="通信基盤と通信方法">通信基盤と通信方法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=7" title="節を編集: 通信基盤と通信方法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SCADA システムの通信には従来から無線や<a href="/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E9%80%9A%E4%BF%A1" title="シリアル通信">シリアル通信</a>が使われてきたが、鉄道や発電所などの大規模なサイトでは <a href="/wiki/Synchronous_Optical_Network" title="Synchronous Optical Network">SONET / SDH</a> 上の IP やイーサネットも使われる。SCADAシステムの遠隔管理/監視機能は<a href="/wiki/%E9%81%A0%E9%9A%94%E6%B8%AC%E5%AE%9A%E6%B3%95" title="遠隔測定法">テレメトリ</a>と呼ばれることがある。
+</p><p>SCADAのデータを既存の企業内ネットワークを使って転送するとか、他のアプリケーションとネットワークを共有させるといった動きもある。しかし初期の低帯域のプロトコルも未だに使われ続けている。SCADAのプロトコルは非常にコンパクトに設計され、マスタ側がRTUに要求しないと情報が送信されないようになっている。古くからあるSCADAプロトコルとしては、<a href="/wiki/Modbus" title="Modbus">Modbus</a>、RP-570、<a href="/wiki/Profibus" title="Profibus">Profibus</a>、Conitel などがある。これらはいずれもベンダー固有の通信プロトコルである。標準プロトコルとしては、<a class="new" href="/w/index.php?title=En:IEC_60870-5&amp;action=edit&amp;redlink=1" title="En:IEC 60870-5 (存在しないページ)">IEC 60870-5-101 または 104</a>、<a class="new" href="/w/index.php?title=En:IEC_61850&amp;action=edit&amp;redlink=1" title="En:IEC 61850 (存在しないページ)">IEC 61850</a>、<a class="new" href="/w/index.php?title=En:DNP3&amp;action=edit&amp;redlink=1" title="En:DNP3 (存在しないページ)">DNP3</a> がある。これらは主要な業者の多くが採用している。これらのプロトコルの多くは、拡張として<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%BB%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB%E3%83%BB%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%88" title="インターネット・プロトコル・スイート">TCP/IP</a>上での運用が可能になっている。セキュリティを考慮して、SCADAシステムは<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>に接続しないことが多い。
+</p><p>標準規格は後から生まれたものであるため、それまでに様々な制御プロトコルが考案され、使われてきた。また、<a class="mw-redirect" href="/wiki/%E3%83%99%E3%83%B3%E3%83%80%E3%83%AD%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3" title="ベンダロックイン">ベンダロックイン</a>を意図して独自プロトコルを作った例もある。
+</p><p>最近では、異なるハードウェアやソフトウェア間の通信手法として <a href="/wiki/OLE_for_Process_Control" title="OLE for Process Control">OLE for Process Control</a> (OPC) が広く採用されつつあり、元々産業ネットワークに接続することを考慮していない機器との通信も可能にしている。
+</p>
+<h2><span id=".E6.9C.80.E8.BF.91.E3.81.AE.E5.82.BE.E5.90.91"></span><span class="mw-headline" id="最近の傾向">最近の傾向</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=8" title="節を編集: 最近の傾向">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>PLC と HMI/SCADA ソフトウェアは統合される傾向にある。1990年代中ごろ、データ収集装置は <a href="/wiki/EIA-485" title="EIA-485">RS-485</a>のような物理キャリア上の独自プロトコルを使って通信するものが多かった。特定ベンダーの製品を使っているユーザーは、何らかの変更を必要としたとき（システム拡張、性能向上など）、選択肢があまりないことに気づかされる。そのような問題を緩和するべく、IEC870-5-101/104 や DNP 3.0 といったオープンな通信プロトコルの採用が広がっていった。<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="オープンアーキテクチャ">オープンアーキテクチャ</a>のSCADAシステムは、複数ベンダーの製品を組み合わせることができ、単一ベンダーに制限されている場合よりも良いソリューションを開発できる可能性がある。
+</p><p>1990年代末には、個々のI/O装置製造業者にもオープン化の流れが広まった。2000年までに多くのI/Oメーカーが Modicon MODBUS over TCP/IP のようなオープンなインタフェースを採用するようになった。
+</p><p>SCADAシステムは、ネットワーク技術の標準化と共に進化してきた。<a href="/wiki/%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88" title="イーサネット">イーサネット</a>とTCP/IPに基づくプロトコルは、古い独自規格を置換しつつある。一部の分野ではイーサネットの採用は限定的だが、市場の大部分はHMI/SCADAにイーサネットによるネットワークを採用した。
+</p><p>OPC-UA、Wonderware の Archestra、Rockwell Automation の FactoryTalk などの次世代プロトコルは、<a href="/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>、<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9" title="Webサービス">Webサービス</a>などの最新Web技術を生かしたものとなっている。
+</p><p>ソフトウェア業界で <a href="/wiki/SaaS" title="SaaS">Software as a Service</a> の考え方が生まれ、<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>上の遠隔プラットフォーム上でSCADAシステムのホスティングをするベンダーが出現している（<a class="external text" href="https://www.osisoft.com/" rel="nofollow">PI system</a>、PumpView、MultiTrode など）。これは、ユーザーがシステムをインストールして設定する必要を無くすもので、インターネット技術として既にある <a href="/wiki/Virtual_Private_Network" title="Virtual Private Network">VPN</a> や <a href="/wiki/Transport_Layer_Security" title="Transport Layer Security">SSL</a> といったセキュリティ機能を利用する。しかし、セキュリティ<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>、信頼性、レイテンシを問題視する向きもある。
+</p><p>SCADAシステムは益々遍在するようになっている。<a href="/wiki/%E3%82%B7%E3%83%B3%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88" title="シンクライアント">シンクライアント</a>、Webポータル、<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">Webベース</a>の製品が主要なベンダーで一般化しつつある。遠隔からプロセスを監視でき、便利にはなったが、セキュリティ上の懸念も増大している。
+</p>
+<h2><span id=".E3.82.BB.E3.82.AD.E3.83.A5.E3.83.AA.E3.83.86.E3.82.A3.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="セキュリティ問題">セキュリティ問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=9" title="節を編集: セキュリティ問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>独自技術からより標準的でオープンな方式に移行することで、SCADAシステムはオフィスのネットワークや<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インターネット">インターネット</a>との接続も増え、攻撃に対して脆弱になりつつある。結果として、サーバーテロ攻撃に対して無防備だと考えられるようになり、SCADAベースのシステムのセキュリティが問題視されるようになった<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+</p><p>特に、以下のような点が懸念されている。
+</p>
+<ul><li>設計上、セキュリティや認証が考慮されていない。また、既存のSCADAネットワークでは運用上もセキュリティが考慮されていないことが多い。</li>
+<li>SCADAシステムは一般に馴染みがない技術なので、特殊なプロトコルやインタフェースを使っているから安全だという間違った信念を持っていることがある。</li>
+<li>SCADAシステムは物理的に安全だという間違った信念を持っていることがある。</li>
+<li>SCADAシステムはインターネットとは接続されていないので安全だという間違った信念を持っていることがある。</li></ul>
+<p>SCADAシステムの多くは重要な設備で使われているため、攻撃を受けた場合、多大な経済的損失や人命の危険を生じる可能性がある。このような懸念から、重要な設備にSCADAよりも安全なアーキテクチャを採用するという動きが生じるかどうかはまだ不明である。最近では、Byres Security, Inc.、Industrial Defender Inc.、<a href="/wiki/%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%BB%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%BA" title="チェック・ポイント・ソフトウェア・テクノロジーズ">チェック・ポイント・ソフトウェア・テクノロジーズ</a>、Innominate、N-Dimension Solutions といった複数のセキュリティベンダーが、TCP/IPベースのSCADAネットワークのための<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB" title="ファイアウォール">ファイアウォール</a>や<a href="/wiki/Virtual_Private_Network" title="Virtual Private Network">VPN</a>を開発することで、こういった問題に対処を開始している。
+</p><p>また、ISA Security Compliance Institute (ISCI) は早ければ2009年にも SCADA セキュリティテストを策定開始する予定である。ベンダーによるセキュリティ認証は既に2007年ごろから行われている。最終的には ISA SP99 WG4 が標準化を行う予定だが、完成するのは2011年以降になる。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="http://www.integraxor.com/screens.html?utm_content=jp&amp;utm_souce=wk" rel="nofollow">SCADAの基本的なアニメーション  (英語）</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Donald Wallace (2003年9月1日). “<a class="external text" href="http://www.controleng.com/article/CA321065.html" rel="nofollow">How to put SCADA on the Internet</a>”.   Control Engineering. <span title="">2008年5月30日</span>閲覧。</cite> (<i>Note: Donald Wallace is COO of M2M Data Corporation, a SCADA vendor.</i>)</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">D. Maynor and R. Graham. “<a class="external text" href="http://www.blackhat.com/presentations/bh-federal-06/BH-Fed-06-Maynor-Graham-up.pdf" rel="nofollow">SCADA Security and Terrorism: We're Not Crying Wolf</a>”. <span title="">2008年7月4日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Robert Lemos (2006年7月26日). “<a class="external text" href="http://www.securityfocus.com/news/11402" rel="nofollow">SCADA system makers pushed toward security</a>”.   SecurityFocus. <span title="">2007年5月9日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=11" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="new" href="/w/index.php?title=%E7%94%A3%E6%A5%AD%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0&amp;action=edit&amp;redlink=1" title="産業制御システム (存在しないページ)">産業制御システム</a></li>
+<li><a href="/wiki/%E9%81%A0%E9%9A%94%E6%B8%AC%E5%AE%9A%E6%B3%95" title="遠隔測定法">遠隔測定法</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=12" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf" rel="nofollow">NIST 800-82: Guide Industrial Control Systems Security, Supervisory Control and Data Acquisition (SCADA) Systems, Distributed Control Systems (DCS), and Other Control System Configurations such as Programmable Logic Controllers (PLC)</a></li></ul>
+<h2><span id=".E5.9B.BD.E7.94.A3SCADA"></span><span class="mw-headline" id="国産SCADA">国産SCADA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SCADA&amp;action=edit&amp;section=13" title="節を編集: 国産SCADA">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.craftpat.com/" rel="nofollow">計測監視制御ソフトウェアCraftPad</a></li>
+<li><a class="external text" href="http://www.tsubakimoto.jp/ecob/dp/dp01.html" rel="nofollow">SCADA/HMI開発用ソフトウェア「看太郎」</a></li>
+<li><a class="external text" href="https://www.tsubakimoto.jp/other-products/mitamon/" rel="nofollow">IoT対応遠隔監視プラットフォーム「MitaMon®」</a></li>
+<li><a class="external text" href="http://www.eng.nssmc.com/news/upload/docs/release_20111101.pdf" rel="nofollow">現場力アップ支援システム「PlantPAD」</a></li></ul>
+<div aria-labelledby="オートメーション_プロトコル" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Automation_protocols&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Automation protocols (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AAutomation_protocols&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AAutomation_protocols&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="オートメーション_プロトコル" style="font-size:110%;margin:0 6em">オートメーション プロトコル</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">プロセスオートメーション</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=AS-Interface&amp;action=edit&amp;redlink=1" title="AS-Interface (存在しないページ)">AS-i</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:AS-Interface&amp;action=edit&amp;redlink=1" title="En:AS-Interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Bristol_Standard_Asynchronous_Protocol&amp;action=edit&amp;redlink=1" title="Bristol Standard Asynchronous Protocol (存在しないページ)">BSAP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bristol_Standard_Asynchronous_Protocol&amp;action=edit&amp;redlink=1" title="En:Bristol Standard Asynchronous Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/CC-Link" title="CC-Link">CC-Link</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Common_Industrial_Protocol&amp;action=edit&amp;redlink=1" title="Common Industrial Protocol (存在しないページ)">CIP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Common_Industrial_Protocol&amp;action=edit&amp;redlink=1" title="En:Common Industrial Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Controller_Area_Network" title="Controller Area Network">CAN bus</a>
+<ul><li><a href="/wiki/CANopen" title="CANopen">CANopen</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DeviceNet&amp;action=edit&amp;redlink=1" title="DeviceNet (存在しないページ)">DeviceNet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DeviceNet&amp;action=edit&amp;redlink=1" title="En:DeviceNet (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ControlNet&amp;action=edit&amp;redlink=1" title="ControlNet (存在しないページ)">ControlNet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ControlNet&amp;action=edit&amp;redlink=1" title="En:ControlNet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DF-1_Protocol&amp;action=edit&amp;redlink=1" title="DF-1 Protocol (存在しないページ)">DF-1</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DF-1_Protocol&amp;action=edit&amp;redlink=1" title="En:DF-1 Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DirectNET_Protocol&amp;action=edit&amp;redlink=1" title="DirectNET Protocol (存在しないページ)">DirectNET</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DirectNET_Protocol&amp;action=edit&amp;redlink=1" title="En:DirectNET Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/EtherCAT" title="EtherCAT">EtherCAT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ethernet_Global_Data_Protocol&amp;action=edit&amp;redlink=1" title="Ethernet Global Data Protocol (存在しないページ)">EGD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ethernet_Global_Data_Protocol&amp;action=edit&amp;redlink=1" title="En:Ethernet Global Data Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ethernet_Powerlink&amp;action=edit&amp;redlink=1" title="Ethernet Powerlink (存在しないページ)">Ethernet Powerlink</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ethernet_Powerlink&amp;action=edit&amp;redlink=1" title="En:Ethernet Powerlink (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/EtherNet/IP" title="EtherNet/IP">EtherNet/IP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="Factory Instrumentation Protocol (存在しないページ)">FIP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="En:Factory Instrumentation Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_Interface_Network_Service&amp;action=edit&amp;redlink=1" title="Factory Interface Network Service (存在しないページ)">FINS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_Interface_Network_Service&amp;action=edit&amp;redlink=1" title="En:Factory Interface Network Service (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FOUNDATION_fieldbus&amp;action=edit&amp;redlink=1" title="FOUNDATION fieldbus (存在しないページ)">FOUNDATION fieldbus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Foundation_Fieldbus&amp;action=edit&amp;redlink=1" title="En:Foundation Fieldbus (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Foundation_Fieldbus_H1&amp;action=edit&amp;redlink=1" title="Foundation Fieldbus H1 (存在しないページ)">H1</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Foundation_Fieldbus_H1&amp;action=edit&amp;redlink=1" title="En:Foundation Fieldbus H1 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Higher_Speed_Ethernet&amp;action=edit&amp;redlink=1" title="Higher Speed Ethernet (存在しないページ)">HSE</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Higher_Speed_Ethernet&amp;action=edit&amp;redlink=1" title="En:Higher Speed Ethernet (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Service_Request_Transport_Protocol&amp;action=edit&amp;redlink=1" title="Service Request Transport Protocol (存在しないページ)">GE SRTP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Service_Request_Transport_Protocol&amp;action=edit&amp;redlink=1" title="En:Service Request Transport Protocol (存在しないページ)">英語版</a>）</span></span>
+<ul><li><small><a href="/wiki/%E3%82%BC%E3%83%8D%E3%83%A9%E3%83%AB%E3%83%BB%E3%82%A8%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF" title="ゼネラル・エレクトリック">GE</a></small></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Highway_Addressable_Remote_Transducer_Protocol&amp;action=edit&amp;redlink=1" title="Highway Addressable Remote Transducer Protocol (存在しないページ)">HART Protocol</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Highway_Addressable_Remote_Transducer_Protocol&amp;action=edit&amp;redlink=1" title="En:Highway Addressable Remote Transducer Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%8D%E3%82%A6%E3%82%A7%E3%83%ABSDS&amp;action=edit&amp;redlink=1" title="ハネウェルSDS (存在しないページ)">Honeywell SDS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SDS_Protocol&amp;action=edit&amp;redlink=1" title="En:SDS Protocol (存在しないページ)">英語版</a>）</span></span>
+<ul><li><small><a href="/wiki/%E3%83%8F%E3%83%8D%E3%82%A6%E3%82%A7%E3%83%AB" title="ハネウェル">ハネウェル</a></small></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HostLink_Protocol&amp;action=edit&amp;redlink=1" title="HostLink Protocol (存在しないページ)">HostLink</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HostLink_Protocol&amp;action=edit&amp;redlink=1" title="En:HostLink Protocol (存在しないページ)">英語版</a>）</span></span>
+<ul><li><small><a href="/wiki/%E3%82%AA%E3%83%A0%E3%83%AD%E3%83%B3" title="オムロン">オムロン</a></small></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=INTERBUS&amp;action=edit&amp;redlink=1" title="INTERBUS (存在しないページ)">INTERBUS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:INTERBUS&amp;action=edit&amp;redlink=1" title="En:INTERBUS (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/IO-Link" title="IO-Link">IO-Link</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AB%E3%83%88%E3%83%AD%E3%83%AA%E3%83%B3%E3%82%AF" title="メカトロリンク">メカトロリンク</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MelsecNet&amp;action=edit&amp;redlink=1" title="MelsecNet (存在しないページ)">MelsecNet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MelsecNet&amp;action=edit&amp;redlink=1" title="En:MelsecNet (存在しないページ)">英語版</a>）</span></span>
+<ul><li><small><a href="/wiki/%E4%B8%89%E8%8F%B1%E9%9B%BB%E6%A9%9F" title="三菱電機">三菱電機</a></small></li>
+<li><small><a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B5%E3%83%BC" title="シーケンサー">シーケンサー</a></small></li></ul></li>
+<li><a href="/wiki/Modbus" title="Modbus">Modbus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Optomux&amp;action=edit&amp;redlink=1" title="Optomux (存在しないページ)">Optomux</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Optomux&amp;action=edit&amp;redlink=1" title="En:Optomux (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=PieP&amp;action=edit&amp;redlink=1" title="PieP (存在しないページ)">PieP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:PieP&amp;action=edit&amp;redlink=1" title="En:PieP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/PROFIBUS" title="PROFIBUS">PROFIBUS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=PROFINET&amp;action=edit&amp;redlink=1" title="PROFINET (存在しないページ)">PROFINET</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Profinet&amp;action=edit&amp;redlink=1" title="En:Profinet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=RAPIEnet&amp;action=edit&amp;redlink=1" title="RAPIEnet (存在しないページ)">RAPIEnet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:RAPIEnet&amp;action=edit&amp;redlink=1" title="En:RAPIEnet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SERCOS_interface&amp;action=edit&amp;redlink=1" title="SERCOS interface (存在しないページ)">SERCOS interface</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SERCOS_interface&amp;action=edit&amp;redlink=1" title="En:SERCOS interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SERCOS_III&amp;action=edit&amp;redlink=1" title="SERCOS III (存在しないページ)">SERCOS III</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SERCOS_III&amp;action=edit&amp;redlink=1" title="En:SERCOS III (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Sinec_H1&amp;action=edit&amp;redlink=1" title="Sinec H1 (存在しないページ)">Sinec H1</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Sinec_H1&amp;action=edit&amp;redlink=1" title="En:Sinec H1 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SynqNet&amp;action=edit&amp;redlink=1" title="SynqNet (存在しないページ)">SynqNet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SynqNet&amp;action=edit&amp;redlink=1" title="En:SynqNet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TTEthernet&amp;action=edit&amp;redlink=1" title="TTEthernet (存在しないページ)">TTEthernet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TTEthernet&amp;action=edit&amp;redlink=1" title="En:TTEthernet (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ファクトリーオートメーション</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=FL-net&amp;action=edit&amp;redlink=1" title="FL-net (存在しないページ)">FL-net</a>
+<ul><li><small><a class="external text" href="https://www.jema-net.or.jp/Japanese/standard/opcn/" rel="nofollow">日本電機工業会</a></small></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MTConnect&amp;action=edit&amp;redlink=1" title="MTConnect (存在しないページ)">MTConnect</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MTConnect&amp;action=edit&amp;redlink=1" title="En:MTConnect (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OLE_for_Process_Control" title="OLE for Process Control">OPC</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OPC_Data_Access&amp;action=edit&amp;redlink=1" title="OPC Data Access (存在しないページ)">OPC DA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OPC_Data_Access&amp;action=edit&amp;redlink=1" title="En:OPC Data Access (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OPC_Historical_Data_Access&amp;action=edit&amp;redlink=1" title="OPC Historical Data Access (存在しないページ)">OPC HDA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OPC_Historical_Data_Access&amp;action=edit&amp;redlink=1" title="En:OPC Historical Data Access (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OPC_Unified_Architecture&amp;action=edit&amp;redlink=1" title="OPC Unified Architecture (存在しないページ)">OPC UA</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OPC_Unified_Architecture&amp;action=edit&amp;redlink=1" title="En:OPC Unified Architecture (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-selflink selflink">SCADA</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ビルオートメーション‎</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1-Wire" title="1-Wire">1-Wire</a></li>
+<li><a href="/wiki/BACnet" title="BACnet">BACnet</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=BatiBUS&amp;action=edit&amp;redlink=1" title="BatiBUS (存在しないページ)">BatiBUS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:BatiBUS&amp;action=edit&amp;redlink=1" title="En:BatiBUS (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C-Bus&amp;action=edit&amp;redlink=1" title="C-Bus (存在しないページ)">C-Bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C-Bus_(protocol)&amp;action=edit&amp;redlink=1" title="En:C-Bus (protocol) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=CEBus&amp;action=edit&amp;redlink=1" title="CEBus (存在しないページ)">CEBus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:CEBus&amp;action=edit&amp;redlink=1" title="En:CEBus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Digital_Addressable_Lighting_Interface&amp;action=edit&amp;redlink=1" title="Digital Addressable Lighting Interface (存在しないページ)">DALI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Digital_Addressable_Lighting_Interface&amp;action=edit&amp;redlink=1" title="En:Digital Addressable Lighting Interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Digital_Signal_Interface&amp;action=edit&amp;redlink=1" title="Digital Signal Interface (存在しないページ)">DSI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Digital_Serial_Interface&amp;action=edit&amp;redlink=1" title="En:Digital Serial Interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DyNet(%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB)&amp;action=edit&amp;redlink=1" title="DyNet(プロトコル) (存在しないページ)">DyNet</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DyNet&amp;action=edit&amp;redlink=1" title="En:DyNet (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/EnOcean" title="EnOcean">EnOcean</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=European_Home_Systems_Protocol&amp;action=edit&amp;redlink=1" title="European Home Systems Protocol (存在しないページ)">EHS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:European_Home_Systems_Protocol&amp;action=edit&amp;redlink=1" title="En:European Home Systems Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=European_Installation_Bus&amp;action=edit&amp;redlink=1" title="European Installation Bus (存在しないページ)">EIB</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Instabus&amp;action=edit&amp;redlink=1" title="En:Instabus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="Factory Instrumentation Protocol (存在しないページ)">FIP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="En:Factory Instrumentation Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/KNX" title="KNX">KNX</a></li>
+<li><a href="/wiki/LONWORKS" title="LONWORKS">LonTalk</a></li>
+<li><a href="/wiki/Modbus" title="Modbus">Modbus</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OBIX&amp;action=edit&amp;redlink=1" title="OBIX (存在しないページ)">oBIX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:oBIX&amp;action=edit&amp;redlink=1" title="En:oBIX (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Very_Simple_Control_Protocol&amp;action=edit&amp;redlink=1" title="Very Simple Control Protocol (存在しないページ)">VSCP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Very_Simple_Control_Protocol&amp;action=edit&amp;redlink=1" title="En:Very Simple Control Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/X10_(%E5%B7%A5%E6%A5%AD%E8%A6%8F%E6%A0%BC)" title="X10 (工業規格)">X10</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XAP_Home_Automation_protocol&amp;action=edit&amp;redlink=1" title="XAP Home Automation protocol (存在しないページ)">xAP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XAP_Home_Automation_protocol&amp;action=edit&amp;redlink=1" title="En:XAP Home Automation protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=XPL_Protocol&amp;action=edit&amp;redlink=1" title="XPL Protocol (存在しないページ)">xPL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:XPL_Protocol&amp;action=edit&amp;redlink=1" title="En:XPL Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Z-Wave" title="Z-Wave">Z-Wave</a></li>
+<li><a href="/wiki/ZigBee" title="ZigBee">ZigBee</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9B%BB%E6%BA%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3&amp;action=edit&amp;redlink=1" title="電源システムオートメーション (存在しないページ)">電源システムオートメーション</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Power-system_automation&amp;action=edit&amp;redlink=1" title="En:Power-system automation (存在しないページ)">英語版</a>）</span></span><br/>(スマートグリッド)</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_60870&amp;action=edit&amp;redlink=1" title="IEC 60870 (存在しないページ)">IEC 60870</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_60870&amp;action=edit&amp;redlink=1" title="En:IEC 60870 (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_60870-5&amp;action=edit&amp;redlink=1" title="IEC 60870-5 (存在しないページ)">IEC 60870-5</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_60870-5&amp;action=edit&amp;redlink=1" title="En:IEC 60870-5 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_60870-6&amp;action=edit&amp;redlink=1" title="IEC 60870-6 (存在しないページ)">IEC 60870-6</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_60870-6&amp;action=edit&amp;redlink=1" title="En:IEC 60870-6 (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DNP3&amp;action=edit&amp;redlink=1" title="DNP3 (存在しないページ)">DNP3</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DNP3&amp;action=edit&amp;redlink=1" title="En:DNP3 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="Factory Instrumentation Protocol (存在しないページ)">FIP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="En:Factory Instrumentation Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_61850&amp;action=edit&amp;redlink=1" title="IEC 61850 (存在しないページ)">IEC 61850</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_61850&amp;action=edit&amp;redlink=1" title="En:IEC 61850 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_62351&amp;action=edit&amp;redlink=1" title="IEC 62351 (存在しないページ)">IEC 62351</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_62351&amp;action=edit&amp;redlink=1" title="En:IEC 62351 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Modbus" title="Modbus">Modbus</a></li>
+<li><a class="mw-redirect" href="/wiki/PROFIBUS" title="PROFIBUS">PROFIBUS</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%87%AA%E5%8B%95%E3%83%A1%E3%83%BC%E3%82%BF%E3%83%BC%E6%B8%AC%E5%AE%9A&amp;action=edit&amp;redlink=1" title="自動メーター測定 (存在しないページ)">自動メーター測定</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Automatic_meter_reading&amp;action=edit&amp;redlink=1" title="En:Automatic meter reading (存在しないページ)">英語版</a>）</span></span><br/>(スマートメーター)</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ANSI_C12.18&amp;action=edit&amp;redlink=1" title="ANSI C12.18 (存在しないページ)">ANSI C12.18</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smart_meter&amp;action=edit&amp;redlink=1" title="En:Smart meter (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_61107&amp;action=edit&amp;redlink=1" title="IEC 61107 (存在しないページ)">IEC 61107</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smart_meter&amp;action=edit&amp;redlink=1" title="En:Smart meter (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEC_62056&amp;action=edit&amp;redlink=1" title="IEC 62056 (存在しないページ)">DLMS/IEC 62056</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEC_62056&amp;action=edit&amp;redlink=1" title="En:IEC 62056 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Meter-Bus&amp;action=edit&amp;redlink=1" title="Meter-Bus (存在しないページ)">M-Bus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Meter-Bus&amp;action=edit&amp;redlink=1" title="En:Meter-Bus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Modbus" title="Modbus">Modbus</a></li>
+<li><a href="/wiki/ZigBee" title="ZigBee">ZigBee</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">自動車電子技術</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Avionics_Full-Duplex_Switched_Ethernet&amp;action=edit&amp;redlink=1" title="Avionics Full-Duplex Switched Ethernet (存在しないページ)">AFDX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Avionics_Full-Duplex_Switched_Ethernet&amp;action=edit&amp;redlink=1" title="En:Avionics Full-Duplex Switched Ethernet (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ARINC_429&amp;action=edit&amp;redlink=1" title="ARINC 429 (存在しないページ)">ARINC 429</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ARINC_429&amp;action=edit&amp;redlink=1" title="En:ARINC 429 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Controller_Area_Network" title="Controller Area Network">CAN bus</a>
+<ul><li><a class="new" href="/w/index.php?title=ARINC_825&amp;action=edit&amp;redlink=1" title="ARINC 825 (存在しないページ)">ARINC 825</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1939&amp;action=edit&amp;redlink=1" title="SAE J1939 (存在しないページ)">SAE J1939</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1939&amp;action=edit&amp;redlink=1" title="En:SAE J1939 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=NMEA_2000&amp;action=edit&amp;redlink=1" title="NMEA 2000 (存在しないページ)">NMEA 2000</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:NMEA_2000&amp;action=edit&amp;redlink=1" title="En:NMEA 2000 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Fleet_Management_System&amp;action=edit&amp;redlink=1" title="Fleet Management System (存在しないページ)">FMS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fleet_Management_System&amp;action=edit&amp;redlink=1" title="En:Fleet Management System (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="Factory Instrumentation Protocol (存在しないページ)">FIP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Factory_Instrumentation_Protocol&amp;action=edit&amp;redlink=1" title="En:Factory Instrumentation Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/FlexRay" title="FlexRay">FlexRay</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=IEBus&amp;action=edit&amp;redlink=1" title="IEBus (存在しないページ)">IEBus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:IEBus&amp;action=edit&amp;redlink=1" title="En:IEBus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/SAE_International" title="SAE International">SAE</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1587&amp;action=edit&amp;redlink=1" title="SAE J1587 (存在しないページ)">J1587</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1587&amp;action=edit&amp;redlink=1" title="En:SAE J1587 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SAE_J1708&amp;action=edit&amp;redlink=1" title="SAE J1708 (存在しないページ)">J1708</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SAE_J1708&amp;action=edit&amp;redlink=1" title="En:SAE J1708 (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/KWP2000" title="KWP2000">KWP2000</a></li>
+<li><a href="/wiki/Unified_Diagnostic_Services" title="Unified Diagnostic Services">UDS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Local_Interconnect_Network&amp;action=edit&amp;redlink=1" title="Local Interconnect Network (存在しないページ)">LIN</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Local_Interconnect_Network&amp;action=edit&amp;redlink=1" title="En:Local Interconnect Network (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Media_Oriented_Systems_Transport" title="Media Oriented Systems Transport">MOST</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vehicle_Area_Network&amp;action=edit&amp;redlink=1" title="Vehicle Area Network (存在しないページ)">VAN</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vehicle_Area_Network&amp;action=edit&amp;redlink=1" title="En:Vehicle Area Network (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=UAVCAN&amp;action=edit&amp;redlink=1" title="UAVCAN (存在しないページ)">UAVCAN</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:UAVCAN&amp;action=edit&amp;redlink=1" title="En:UAVCAN (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">通信プロトコル</a></li>
+<li><a href="/wiki/%E7%94%A3%E6%A5%AD%E7%94%A8%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88" title="産業用イーサネット">産業用イーサネット</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E%E3%83%96%E3%83%AB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="プログラマブルロジックコントローラ">PLC</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1" title="シーケンス制御">シーケンス制御</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%80%E3%83%BC%E3%83%BB%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF" title="ラダー・ロジック">ラダー・ロジック</a></li>
+<li><a href="/wiki/IEC_61131-3" title="IEC 61131-3">IEC 61131-3</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%88%B6%E5%BE%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="分散制御システム">分散制御システム</a></li>
+<li><a href="/wiki/%E8%87%AA%E5%8B%95%E5%8C%96%E6%83%85%E5%A0%B1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="自動化情報システム">自動化情報システム</a></li>
+<li><a href="/wiki/%E8%A3%BD%E9%80%A0%E5%AE%9F%E8%A1%8C%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="製造実行システム">製造実行システム</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%B7%E3%83%B3%E3%83%84%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3" title="マシンツーマシン">M2M</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%82%AB%E3%83%88%E3%83%AD%E3%83%8B%E3%82%AF%E3%82%B9" title="メカトロニクス">メカトロニクス</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%80%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC4.0" title="インダストリー4.0">インダストリー4.0</a>
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88%E3%83%AA%E3%83%BC" title="スマートファクトリー">スマートファクトリー</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%80%E3%82%B9%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="インダストリアルインターネット">インダストリアルインターネット</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%B5%B1%E5%90%88%E7%94%9F%E7%94%A3" title="コンピュータ統合生産">コンピュータ統合生産</a></li>
+<li><a href="/wiki/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E7%94%A3%E6%A5%AD%E9%9D%A9%E5%91%BD" title="第四次産業革命">第四次産業革命</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%82%B5%E3%82%A8%E3%83%86%E3%82%A3%E3%83%BC5.0" title="ソサエティー5.0">ソサエティー5.0</a></li></ul></li>
+<li><a href="/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ホームオートメーション">ホームオートメーション</a></li>
+<li><a href="/wiki/BIM" title="BIM">BIM</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%84%E3%82%A4%E3%83%B3" title="デジタルツイン">デジタルツイン</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%8E%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88" title="モノのインターネット">IoT</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2">
+<ul><li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カテゴリ:オートメーション">カテゴリ:オートメーション</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="カテゴリ:通信プロトコル">カテゴリ:通信プロトコル</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:組み込みシステム">カテゴリ:組み込みシステム</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88%E3%83%AA%E3%83%BC%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カテゴリ:ファクトリーオートメーション">カテゴリ:ファクトリーオートメーション</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%93%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カテゴリ:ビルオートメーション">カテゴリ:ビルオートメーション</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%BB%8A%E9%9B%BB%E5%AD%90%E6%8A%80%E8%A1%93" title="カテゴリ:自動車電子技術">カテゴリ:自動車電子技術</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%83%85%E5%A0%B1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:情報システム">カテゴリ:情報システム</a></li>
+<li>カテゴリ<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%B6%E5%BE%A1%E5%B7%A5%E5%AD%A6" title="カテゴリ:制御工学">カテゴリ:制御工学</a></li></ul></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220401024127
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.270 seconds
+Real time usage: 0.595 seconds
+Preprocessor visited node count: 2645/1000000
+Post‐expand include size: 124046/2097152 bytes
+Template argument size: 4072/2097152 bytes
+Highest expansion depth: 35/40
+Expensive parser function count: 68/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2012/5000000 bytes
+Lua time usage: 0.250/7 seconds
+Lua virtual size: 6463488/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  526.008      1 -total
+ 66.84%  351.572      1 テンプレート:Automation_protocols
+ 65.79%  346.059      1 テンプレート:Navbox
+ 58.69%  308.712     71 テンプレート:仮リンク
+ 29.64%  155.918      1 テンプレート:Reflist
+ 28.74%  151.174      3 テンプレート:Cite_web
+ 15.58%   81.950      3 テンプレート:Ifempty
+  8.58%   45.154      5 テンプレート:ISO_dateJA
+  7.06%   37.152      3 テンプレート:Accessdate
+  6.43%   33.835      3 テンプレート:Accessdate/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1489924-0!canonical and timestamp 20220401024126 and revision id 901939. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=SCADA&amp;oldid=901939">http://localhost:8080/w/index.php?title=SCADA&amp;oldid=901939</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%88%B6%E5%BE%A1%E5%B7%A5%E5%AD%A6" title="カテゴリ:制御工学">制御工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%95%E3%82%A1%E3%82%AF%E3%83%88%E3%83%AA%E3%83%BC%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カテゴリ:ファクトリーオートメーション">ファクトリーオートメーション</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%83%85%E5%A0%B1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="カテゴリ:情報システム">情報システム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=SCADA&amp;returntoquery=curid%3D1489924%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=SCADA&amp;returntoquery=curid%3D1489924%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/SCADA" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:SCADA&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/SCADA">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=SCADA&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=SCADA&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/SCADA" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/SCADA" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=SCADA&amp;oldid=901939" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=SCADA&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月23日 (金) 09:18 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.270","walltime":"0.595","ppvisitednodes":{"value":2645,"limit":1000000},"postexpandincludesize":{"value":124046,"limit":2097152},"templateargumentsize":{"value":4072,"limit":2097152},"expansiondepth":{"value":35,"limit":40},"expensivefunctioncount":{"value":68,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2012,"limit":5000000},"timingprofile":["100.00%  526.008      1 -total"," 66.84%  351.572      1 テンプレート:Automation_protocols"," 65.79%  346.059      1 テンプレート:Navbox"," 58.69%  308.712     71 テンプレート:仮リンク"," 29.64%  155.918      1 テンプレート:Reflist"," 28.74%  151.174      3 テンプレート:Cite_web"," 15.58%   81.950      3 テンプレート:Ifempty","  8.58%   45.154      5 テンプレート:ISO_dateJA","  7.06%   37.152      3 テンプレート:Accessdate","  6.43%   33.835      3 テンプレート:Accessdate/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.250","limit":"7"},"limitreport-virtmemusage":{"value":6463488,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401024127","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1180});});</script>
+</body></html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ニュートン法 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ニュートン法 rootpage-ニュートン法 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ニュートン法</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数値解析">数値解析</a>の分野において、<b>ニュートン法</b>（ニュートンほう、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">Newton's method</span>）または<b>ニュートン・ラフソン法</b>（<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">Newton-Raphson method</span>）は、<a href="." id="link_a_3" title="方程式">方程式</a>系を数値計算によって解くための<a href="." id="link_a_4" title="反復法 (数値計算)">反復法</a>による<a href="." id="link_a_5" title="求根アルゴリズム">求根アルゴリズム</a>の1つである。対象とする方程式系に対する条件は、領域における微分可能性と2次微分に関する符号だけであり、<a href="." id="link_a_6" title="線型性">線型性</a>などは特に要求しない。収束の速さも2次収束なので古くから数値計算で使用されていた。名称は<a href="." id="link_a_7" title="アイザック・ニュートン">アイザック・ニュートン</a>と<a href="." id="link_a_8" title="ジョゼフ・ラフソン">ジョゼフ・ラフソン</a>に由来する。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#導入"><span class="tocnumber">1</span> <span class="toctext">導入</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#理論"><span class="tocnumber">2</span> <span class="toctext">理論</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#局所収束定理"><span class="tocnumber">2.1</span> <span class="toctext">局所収束定理</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#半局所収束定理"><span class="tocnumber">2.2</span> <span class="toctext">半局所収束定理</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#高次元の場合"><span class="tocnumber">3</span> <span class="toctext">高次元の場合</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#注意"><span class="tocnumber">4</span> <span class="toctext">注意</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#改良"><span class="tocnumber">5</span> <span class="toctext">改良</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#平野の変形ニュートン法"><span class="tocnumber">5.1</span> <span class="toctext">平野の変形ニュートン法</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#簡易ニュートン法"><span class="tocnumber">5.2</span> <span class="toctext">簡易ニュートン法</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#クラフチック法"><span class="tocnumber">5.2.1</span> <span class="toctext">クラフチック法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#区間ニュートン法"><span class="tocnumber">5.3</span> <span class="toctext">区間ニュートン法</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#&lt;math&gt;q&lt;/math&gt;-ニュートン法"><span class="tocnumber">5.4</span> <span class="toctext">&lt;math&gt;q&lt;/math&gt;-ニュートン法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#外部リンク"><span class="tocnumber">8</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.B0.8E.E5.85.A5"></span><span class="mw-headline" id="導入">導入</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=1" title="節を編集: 導入">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>この方法の考え方は以下のようである：まず初めに、予想される真の解に近いと思われる値をひとつとる。次に、そこでグラフの接線を考え、その <i>x</i> 切片を計算する。この<i>x</i>切片の値は、予想される真の解により近いものとなるのが一般である。以後、この値に対してそこでグラフの接線を考え、同じ操作を繰り返していく。
+</p><p>上の考え方は次のように定式化される。
+ここでは、考える問題を <i>f</i>: <b>R</b> → <b>R</b>, <i>x</i> ∈ <b>R</b>として
+</p>
+<dl><dd>&lt;math&gt;f(x) = 0\,&lt;/math&gt;</dd></dl>
+<p>となる <i>x</i> を求めることに限定する。このとき、<i>x</i> の付近に適当な値 <i>x</i><sub>0</sub> をとり、次の<a href="/wiki/%E6%BC%B8%E5%8C%96%E5%BC%8F" title="漸化式">漸化式</a>によって、<i>x</i> に<a class="mw-redirect" href="/wiki/%E5%8F%8E%E6%9D%9F" title="収束">収束</a>する数列を得ることができる場合が多い。
+</p>
+<dl><dd>&lt;math&gt;x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \quad \cdots (1) &lt;/math&gt;</dd></dl>
+<p>例として、&lt;math&gt; \sqrt{2} &lt;/math&gt; を計算で求める場合に、
+</p>
+<dl><dd>&lt;math&gt;f(x) = x^2 - 2\,&lt;/math&gt;</dd></dl>
+<p>とおき、<i>f</i>(<i>x</i>) = 0 の解を求めることを考える。
+</p>
+<dl><dd>&lt;math&gt;f'(x) = 2x\,&lt;/math&gt;</dd></dl>
+<p>であるので、(1) の式は
+</p>
+<dl><dd>&lt;math&gt;x_{n+1} = x_n - \frac{x_n^2-2}{2x_n} = \frac{1}{2}\left( x_n + \frac{2}{x_n} \right)&lt;/math&gt;</dd></dl>
+<p>と書き表せる。たとえば <i>x</i><sub>0</sub> = 1 とおくと、この数列は &lt;math&gt; \sqrt{2}&lt;/math&gt; に収束するが、その収束の仕方は
+</p>
+<dl><dd><i>x</i><sub>0</sub> = 1</dd>
+<dd><i>x</i><sub>1</sub> = 1.5</dd>
+<dd><i>x</i><sub>2</sub> = <span style="text-decoration: underline;">1.41</span>6666…</dd>
+<dd><i>x</i><sub>3</sub> = <span style="text-decoration: underline;">1.41421</span>56862745…</dd>
+<dd><i>x</i><sub>4</sub> = <span style="text-decoration: underline;">1.41421356237</span>46899… (下線部は&lt;math&gt;\sqrt{2}&lt;/math&gt;と一致する部分)</dd></dl>
+<p>となる。
+</p><p>また、<i>x</i><sub>0</sub> = −1 とおくと、この数列は &lt;math&gt;-\sqrt{2}&lt;/math&gt;に収束する。
+</p>
+<h2><span id=".E7.90.86.E8.AB.96"></span><span class="mw-headline" id="理論">理論</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=2" title="節を編集: 理論">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.B1.80.E6.89.80.E5.8F.8E.E6.9D.9F.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="局所収束定理">局所収束定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=3" title="節を編集: 局所収束定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>初期値&lt;math&gt;x_0&lt;/math&gt;を解の十分近くに選ぶことを要求した上で、
+</p>
+<dl><dd>&lt;math&gt;f(x) = 0\,&lt;/math&gt;</dd></dl>
+<p>の解を考える（解の存在を仮定する）。
+&lt;math&gt;f(x)&lt;/math&gt;
+の
+&lt;math&gt;x=x_0&lt;/math&gt;
+での<a class="mw-redirect" href="/wiki/%E3%83%86%E3%83%BC%E3%83%A9%E3%83%BC%E5%B1%95%E9%96%8B" title="テーラー展開">テーラー展開</a>をすると
+</p>
+<dl><dd>&lt;math&gt;f(x) =f(x_0)+f^{\prime}(x_0)(x-x_0)+O((x-x_0)^2)&lt;/math&gt;</dd></dl>
+<p>このとき、(右辺)=0の解は、(左辺)=0の根の
+&lt;math&gt;x_0&lt;/math&gt;での多項式次数一次の近似となっている。
+右辺の解は
+</p>
+<dl><dd>&lt;math&gt;x=x_0-\frac{f(x_0)}{f^{\prime}(x_0)}&lt;/math&gt;</dd></dl>
+<p>次に、この近似値が、&lt;math&gt;x_0&lt;/math&gt;より根に近づいている
+ということに関する意味を考える。
+上式を、次のような離散力学系として考える。
+</p>
+<dl><dd>&lt;math&gt;x_{n+1} = g(x_n)&lt;/math&gt;, ただし &lt;math&gt;g(x) = x - \frac{f(x)}{f'(x)}&lt;/math&gt;</dd></dl>
+<p>この力学系において、&lt;math&gt;f(x^*)=0&lt;/math&gt;
+となる&lt;math&gt;x^*&lt;/math&gt;は明らかに<a class="mw-redirect" href="/wiki/%E5%9B%BA%E5%AE%9A%E7%82%B9" title="固定点">固定点</a>である。
+</p><p>したがって&lt;math&gt;|g'(x^*)|&lt;1&lt;/math&gt;、つまり&lt;math&gt;x^*&lt;/math&gt;が沈点(アトラクター、安定固定点)であり、
+与えられた初期条件&lt;math&gt;x_0&lt;/math&gt;が、このアトラクターの吸引領域に属していれば
+&lt;math&gt;x_n&lt;/math&gt;の<a class="new" href="/w/index.php?title=W:en:limit_set&amp;action=edit&amp;redlink=1" title="W:en:limit set (存在しないページ)">&lt;math&gt;\omega&lt;/math&gt;-極限</a>(&lt;math&gt;n \rightarrow \infty&lt;/math&gt;)は
+&lt;math&gt;f(x^*)=0&lt;/math&gt;となる&lt;math&gt;x^*&lt;/math&gt;に収束する。
+</p><p>&lt;math&gt;x^*&lt;/math&gt;が沈点である保証は、常に担保されてはいない。
+例えばx軸の<a href="/wiki/%E6%BC%B8%E8%BF%91%E7%B7%9A" title="漸近線">漸近線</a>や関数&lt;math&gt;f(x)&lt;/math&gt;の<a href="/wiki/%E6%A5%B5%E5%80%A4" title="極値">極値</a><a href="/wiki/%E8%BF%91%E5%82%8D" title="近傍">近傍</a>では固定点が不安定になる事が知られている。
+<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>たとえば&lt;math&gt;f(x^*)&lt;/math&gt;を、適当な近傍の点&lt;math&gt;x_n&lt;/math&gt;で展開すると&lt;math&gt;f'(x^*)\neq0&lt;/math&gt;なら、二次の余剰項&lt;math&gt;R_2=\frac{f<i>(\xi_n)}{2}(x_n-x^*)^2&lt;/math&gt;として</i>
+</p><p>&lt;math&gt;x_{n+1}-x^*=-\frac{f<i>(\xi_n)}{2f'(x_n)}(x_n-x^*)^2&lt;/math&gt;</i>
+</p><p>よって２次で収束する。
+</p>
+<h3><span id=".E5.8D.8A.E5.B1.80.E6.89.80.E5.8F.8E.E6.9D.9F.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="半局所収束定理">半局所収束定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=4" title="節を編集: 半局所収束定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%EF%BC%9D%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%93%E3%83%83%E3%83%81%E3%81%AE%E5%AE%9A%E7%90%86" title="ニュートン＝カントロビッチの定理">ニュートン＝カントロビッチの定理</a>」も参照</div>
+<p>前節では解の存在を仮定した上で初期値&lt;math&gt;x_0&lt;/math&gt;を解の十分近くに選ぶことを要求した。これに対して、解の存在を仮定せず、初期値&lt;math&gt;x_0&lt;/math&gt;がある条件を満たすときに解の存在と反復の収束を示す定理を半局所収束定理（Semi-Local Convergence Theorem）という。1次元の場合での半局所収束定理は<a href="/wiki/%E3%82%AA%E3%83%BC%E3%82%AE%E3%83%A5%E3%82%B9%E3%82%BF%E3%83%B3%EF%BC%9D%E3%83%AB%E3%82%A4%E3%83%BB%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC" title="オーギュスタン＝ルイ・コーシー">コーシー</a>によって1829年に示され、&lt;math&gt;n&lt;/math&gt;次元<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E7%A9%BA%E9%96%93" title="ユークリッド空間">ユークリッド空間</a>での場合はファイン（Fine）によって1916年に示された。その後、<a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ空間</a>での半局所収束定理が<a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%8B%E3%83%BC%E3%83%88%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%B4%E3%82%A3%E3%83%81" title="レオニート・カントロヴィチ">カントロビッチ</a>（Kantorovich）によって1948年に示され、現代では<a class="new" href="/w/index.php?title=En:Kantorovich_theorem&amp;action=edit&amp;redlink=1" title="En:Kantorovich theorem (存在しないページ)">ニュートン-カントロビッチの定理</a>と呼ばれている<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。この定理にはいくつかの変種が知られており、<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>にまとめられている。
+</p>
+<h2><span id=".E9.AB.98.E6.AC.A1.E5.85.83.E3.81.AE.E5.A0.B4.E5.90.88"></span><span class="mw-headline" id="高次元の場合">高次元の場合</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=5" title="節を編集: 高次元の場合">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ニュートン法は、接線を一次近似式、接線の<i>x</i>切片を一次近似式の零点と考えることにより、より高次元の関数の場合に一般化できる。
+対象となる関数を <i>f</i>: <b>R</b><sup><i>m</i></sup> → <b>R</b><sup><i>m</i></sup>, <b>x</b> ∈ <b>R</b><sup><i>m</i></sup> とし、
+</p>
+<dl><dd>&lt;math&gt;f(\mathbf{x}) = \mathbf{0}&lt;/math&gt;</dd></dl>
+<p>なる点 <b>x</b> を求めるには次のようにする。（<i>f</i> が同じ次元の空間の間の関数であることに注意せよ。）
+</p><p>まず、今 <b>x</b><sub>0</sub> ∈ <b>R</b><sup><i>m</i></sup> が既知であるとする。<b>x</b><sub>0</sub>における <i>f</i>(<b>x</b>) の一次<a class="mw-redirect" href="/wiki/%E8%BF%91%E4%BC%BC%E5%BC%8F" title="近似式">近似式</a>
+</p>
+<dl><dd>&lt;math&gt;  f(\mathbf{x}_0) + \partial f(\mathbf{x}_0)(\mathbf{x} - \mathbf{x}_0)&lt;/math&gt;</dd></dl>
+<p>を考える。ただし、∂<i>f</i>(<b>x</b><sub>0</sub>) は、<i>m</i> × <i>m</i> の<a href="/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97" title="ヤコビ行列">ヤコビ行列</a>である。
+</p><p>この一次近似式の零点を求める。ヤコビ行列∂<i>f</i>(<b>x</b><sub>0</sub>) が<a href="/wiki/%E6%AD%A3%E5%89%87%E8%A1%8C%E5%88%97" title="正則行列">正則行列</a>であるとして、
+</p>
+<dl><dd>&lt;math&gt; f(\mathbf{x}_0) + \partial f(\mathbf{x}_0)(\mathbf{x} - \mathbf{x}_0)=\mathbf{0} &lt;/math&gt;</dd></dl>
+<p>を解いて、
+</p>
+<dl><dd>&lt;math&gt; \mathbf{x} = \mathbf{x}_0 - \partial f(\mathbf{x}_0)^{-1} f(\mathbf{x}_0)&lt;/math&gt;</dd></dl>
+<p>となる。
+</p><p>コンピュータで計算を行う場合 ∂<i>f</i>(<b>x</b><sub>0</sub>)<sup>-1</sup><i>f</i>(<b>x</b><sub>0</sub>) を直接求めることは困難なので、
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>\partial f(\mathbf{x}_0) \mathbf{r} = f(\mathbf{x}_0) 
+&lt;/math&gt;
+という方程式を<a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%81%AE%E6%B6%88%E5%8E%BB%E6%B3%95" title="ガウスの消去法">ガウスの消去法</a>などの解法によって<a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E6%96%B9%E7%A8%8B%E5%BC%8F%E7%B3%BB" title="線形方程式系">線形方程式系</a>を解き <b>r</b> を求め、<b>x</b> = <b>x</b><sub>0</sub> - <b>r</b> によって <b>x</b> を求める。
+</p><p>ここで求めた <b>x</b> は<b>x</b><sub>0</sub>よりも <i>f</i>(<b>x</b>) = <b>0</b> の解に近いことが見込まれる。そこで、今求めた <b>x</b> を <b>x</b><sub>1</sub> として、再び同様の計算を繰り返す。計算を繰り返すことによって <b>x</b><sub>n</sub> は <i>f</i>(<b>x</b>) = <b>0</b> の解に近づいていく。
+</p><p>逆行列を求めることを避けるために共役勾配法を用いることがある。
+</p>
+<h2><span id=".E6.B3.A8.E6.84.8F"></span><span class="mw-headline" id="注意">注意</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=6" title="節を編集: 注意">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ニュートン法により近似値を求めようとする場合にはヤコビ行列が陽に分からなければ計算できない。しかし、関数 <i>f</i> によってはヤコビ行列が陽に分からない場合もある。この場合にはヤコビ行列を必要としない<a href="/wiki/%E6%BA%96%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" title="準ニュートン法">準ニュートン法</a>を用いる。
+</p><p>また、<span class="texhtml" lang="en"><i>f</i> (<i>x</i><sup>*</sup>) = 0</span> を満たす真の解 <span class="texhtml" lang="en"><i>x</i><sup>*</sup></span> において導関数が <span class="texhtml" lang="en"><i>f</i> '(<i>x</i><sup>*</sup>) = 0</span> であった場合、収束の速さは1次に退化する<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+</p>
+<h2><span id=".E6.94.B9.E8.89.AF"></span><span class="mw-headline" id="改良">改良</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=7" title="節を編集: 改良">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ニュートン法の考え方を少し改良することにより、(1) の代わりに次の式を用いる方法を得る。
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<pre>x_{k+1}=x_k-\frac{\Bigl[f(x_k)\Bigr]^2}
+</pre>
+<p>{\; f^{\boldsymbol\prime}(x_k) \Bigl[f(x_k)-f \Bigl(
+</p>
+<pre>x_k-\dfrac{f(x_k)}{f^{\boldsymbol\prime}(x_k)} \Bigr) \Bigr]\;}
+</pre>
+<p>&lt;/math&gt;
+この方法は、場合によっては従来の方法より速い<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。 
+</p>
+<h3><span id=".E5.B9.B3.E9.87.8E.E3.81.AE.E5.A4.89.E5.BD.A2.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.88.E3.83.B3.E6.B3.95"></span><span class="mw-headline" id="平野の変形ニュートン法">平野の変形ニュートン法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=8" title="節を編集: 平野の変形ニュートン法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ニュートン法の局所的な２次収束性を保ちつつ、不安定な振る舞いを抑えるように工夫した方法として<b>平野の変形ニュートン法</b>が知られている<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p>
+<h3><span id=".E7.B0.A1.E6.98.93.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.88.E3.83.B3.E6.B3.95"></span><span class="mw-headline" id="簡易ニュートン法">簡易ニュートン法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=9" title="節を編集: 簡易ニュートン法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ニュートン法における導関数の計算を簡略化したものが<b>簡易ニュートン法</b>である:
+</p>
+<dl><dd>&lt;math&gt;x_{n+1} = x_n - \frac{f(x_n)}{f'(x_0)}. &lt;/math&gt;</dd></dl>
+<p>簡易ニュートン法に対する半局所収束定理は<i><a href="/wiki/%E5%8D%A0%E9%83%A8%E5%AE%9F" title="占部実">占部</a>の定理</i>として知られる。<a href="/wiki/%E5%8D%A0%E9%83%A8%E5%AE%9F" title="占部実">占部</a>の定理は元々<a href="/wiki/%E6%95%B0%E5%AD%A6%E7%9A%84%E5%B8%B0%E7%B4%8D%E6%B3%95" title="数学的帰納法">数学的帰納法</a>を使って示されたが、その後、<a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E3%81%AE%E4%B8%8D%E5%8B%95%E7%82%B9%E5%AE%9A%E7%90%86" title="バナッハの不動点定理">バナッハの不動点定理</a>を使った別証明が与えられた<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p>
+<h4><span id=".E3.82.AF.E3.83.A9.E3.83.95.E3.83.81.E3.83.83.E3.82.AF.E6.B3.95"></span><span class="mw-headline" id="クラフチック法">クラフチック法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=10" title="節を編集: クラフチック法">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>簡易ニュートン法に対する半局所収束定理の条件をより容易に評価するために開発された簡易ニュートン法の変種が<b>クラフチック（Krawczyk）法</b>である<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p>
+<h3><span id=".E5.8C.BA.E9.96.93.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.88.E3.83.B3.E6.B3.95"></span><span class="mw-headline" id="区間ニュートン法">区間ニュートン法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=11" title="節を編集: 区間ニュートン法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%8C%BA%E9%96%93%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" title="区間ニュートン法">区間ニュートン法</a>」を参照</div>
+<p>ニュートン法に対する半局所収束定理の条件をより容易に評価するために開発されたニュートン法の変種が<b>区間ニュートン法</b>である<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p>
+<h3><span id=".3Cmath.3Eq.3C.2Fmath.3E-.E3.83.8B.E3.83.A5.E3.83.BC.E3.83.88.E3.83.B3.E6.B3.95"></span><span class="mw-headline" id="&lt;math&gt;q&lt;/math&gt;-ニュートン法">&lt;math&gt;q&lt;/math&gt;-ニュートン法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=12" title="節を編集: &lt;math&gt;q&lt;/math&gt;-ニュートン法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ニュートン法において微分の代わりに微分の<a href="/wiki/Q-%E9%A1%9E%E4%BC%BC" title="Q-類似">q-類似</a>（&lt;math&gt;q&lt;/math&gt;-微分）を使う反復を<b>&lt;math&gt;q&lt;/math&gt;-ニュートン法</b>という<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>:
+</p>
+<dl><dd>&lt;math&gt;x_{n+1} = x_n - \frac{f(x_n)}{D_q(x_n)}. &lt;/math&gt;</dd></dl>
+<p>&lt;math&gt;q&lt;/math&gt;-ニュートン法に対する半局所収束定理が&lt;math&gt;q&lt;/math&gt;-ニュートン-カントロビッチの定理である<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=13" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">
+<cite class="citation" style="font-style:normal"> <a class="external text" href="http://mathworld.wolfram.com/NewtonsMethod.html" rel="nofollow"><i>Newton's Method(Wolfram Math World)</i></a><span style="display:none;">, <a class="external free" href="http://mathworld.wolfram.com/NewtonsMethod.html" rel="nofollow">http://mathworld.wolfram.com/NewtonsMethod.html</a></span> <span class="reference-accessdate"><span title="">2010年6月8日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Newton%27s+Method%28Wolfram+Math+World%29&amp;rft_id=http%3A%2F%2Fmathworld.wolfram.com%2FNewtonsMethod.html&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">数値解析入門（増訂版）、山本哲郎、<a href="/wiki/%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9%E7%A4%BE" title="サイエンス社">サイエンス社</a>、2003年。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">J. Ortega &amp; W. Rheinboldt, Iterative Solution of Nonlinear Equations in Several Variables, Academic Press (1970). </span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREF小澤一文2008" style="font-style:normal">小澤一文 『Cで学ぶ数値計算アルゴリズム』 共立出版、2008年、49頁。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-320-12221-5" title="特別:文献資料/978-4-320-12221-5">978-4-320-12221-5</a>。</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=C%E3%81%A7%E5%AD%A6%E3%81%B6%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;rft.aulast=%E5%B0%8F%E6%BE%A4%E4%B8%80%E6%96%87&amp;rft.au=%E5%B0%8F%E6%BE%A4%E4%B8%80%E6%96%87&amp;rft.date=2008&amp;rft.pages=49%E9%A0%81&amp;rft.pub=%E5%85%B1%E7%AB%8B%E5%87%BA%E7%89%88&amp;rft.isbn=978-4-320-12221-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">長島隆廣「ニュートン近似の改良」数学セミナー, 第19巻, 第5号, 通巻222号, p.112, 1980年5月, 日本評論社.</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">室田一雄「平野の変形Newton法の大域的収束性」数理解析研究所講究録 (1981), 422: 104-118</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">非線形解析入門、<a href="/wiki/%E5%A4%A7%E7%9F%B3%E9%80%B2%E4%B8%80" title="大石進一">大石進一</a>、<a href="/wiki/%E3%82%B3%E3%83%AD%E3%83%8A%E7%A4%BE_(%E5%87%BA%E7%89%88%E7%A4%BE)" title="コロナ社 (出版社)">コロナ社</a>、1997年。</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text">精度保証付き数値計算、<a href="/wiki/%E5%A4%A7%E7%9F%B3%E9%80%B2%E4%B8%80" title="大石進一">大石進一</a>、<a href="/wiki/%E3%82%B3%E3%83%AD%E3%83%8A%E7%A4%BE_(%E5%87%BA%E7%89%88%E7%A4%BE)" title="コロナ社 (出版社)">コロナ社</a>、2000年。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a href="/wiki/%E5%A4%A7%E7%9F%B3%E9%80%B2%E4%B8%80" title="大石進一">大石進一</a> et. al. (2018), 精度保証付き数値計算の基礎, <a href="/wiki/%E3%82%B3%E3%83%AD%E3%83%8A%E7%A4%BE_(%E5%87%BA%E7%89%88%E7%A4%BE)" title="コロナ社 (出版社)">コロナ社</a>.</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a class="external text" href="http://www2.math.uni-wuppertal.de/~xsc/xsc/node12.html" rel="nofollow">Interval Newton Method</a></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">Rajković, P., Stanković, M., &amp; Marinković D, S. (2002). Mean value theorems in g-calculus. Matematički vesnik, 54(3-4), 171-178.</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">Rajković, P. M., Marinković, S. D., &amp; Stanković, M. S. (2005). On q-Newton–Kantorovich method for solving systems of equations. Applied Mathematics and Computation, 168(2), 1432-1448.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E9%99%A4%E7%AE%97_(%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB)" title="除算 (デジタル)">除算 (デジタル)</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" title="ガウス・ニュートン法">ガウス・ニュートン法</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%EF%BC%9D%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%93%E3%83%83%E3%83%81%E3%81%AE%E5%AE%9A%E7%90%86" title="ニュートン＝カントロビッチの定理">ニュートン＝カントロビッチの定理</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;section=15" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li>山本哲朗、「<a class="external text" href="https://doi.org/10.11429/sugaku1947.37.1" rel="nofollow">Newton法とその周辺</a>」『数学』 1985年 37巻 1号 p.1-15, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.11429%2Fsugaku1947.37.1" rel="nofollow">10.11429/sugaku1947.37.1</a>, 日本数学会</li></ul>
+<div aria-labelledby="微分積分学" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Calculus_topics&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Calculus topics (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACalculus_topics&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3ACalculus_topics&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="微分積分学" style="font-size:110%;margin:0 6em">微分積分学</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">Precalculus</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BA%8C%E9%A0%85%E5%AE%9A%E7%90%86" title="二項定理">二項定理</a></li>
+<li><a href="/wiki/%E5%87%B9%E9%96%A2%E6%95%B0" title="凹関数">凹関数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%80%A3%E7%B6%9A%E9%96%A2%E6%95%B0" title="連続関数">連続関数</a></li>
+<li><a href="/wiki/%E9%9A%8E%E4%B9%97" title="階乗">階乗</a></li>
+<li><a href="/wiki/%E6%9C%89%E9%99%90%E5%B7%AE%E5%88%86" title="有限差分">有限差分</a></li>
+<li><a href="/wiki/%E8%87%AA%E7%94%B1%E5%A4%89%E6%95%B0%E3%81%A8%E6%9D%9F%E7%B8%9B%E5%A4%89%E6%95%B0" title="自由変数と束縛変数">自由変数と束縛変数</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E7%A9%8D%E5%88%86%E5%AD%A6%E3%81%AE%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86" title="微分積分学の基本定理">基本定理</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95" title="関数のグラフ">関数のグラフ</a></li>
+<li><a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%9E%8B%E9%96%A2%E6%95%B0" title="線型関数">線型関数</a></li>
+<li><a href="/wiki/%E5%B9%B3%E5%9D%87%E5%80%A4%E3%81%AE%E5%AE%9A%E7%90%86" title="平均値の定理">平均値の定理</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3" title="ラジアン">ラジアン</a></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="ロルの定理">ロルの定理</a></li>
+<li><a href="/wiki/%E5%89%B2%E7%B7%9A" title="割線">割線</a></li>
+<li><a href="/wiki/%E5%82%BE%E3%81%8D_(%E6%95%B0%E5%AD%A6)" title="傾き (数学)">傾き</a></li>
+<li><a href="/wiki/%E6%8E%A5%E7%B7%9A" title="接線">接線</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">極限</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<div>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%8D%E5%AE%9A%E5%BD%A2&amp;action=edit&amp;redlink=1" title="不定形 (存在しないページ)">不定形</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Indeterminate_form&amp;action=edit&amp;redlink=1" title="En:Indeterminate form (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%96%A2%E6%95%B0%E3%81%AE%E6%A5%B5%E9%99%90" title="関数の極限">関数の極限</a>
+<ul><li><a href="/wiki/%E7%89%87%E5%81%B4%E6%A5%B5%E9%99%90" title="片側極限">片側極限</a></li></ul></li>
+<li><a href="/wiki/%E6%95%B0%E5%88%97%E3%81%AE%E6%A5%B5%E9%99%90" title="数列の極限">数列の極限</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%88%97%E3%81%AE%E5%8A%A0%E9%80%9F%E6%B3%95" title="数列の加速法">数列の加速法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%BF%91%E4%BC%BC%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC&amp;action=edit&amp;redlink=1" title="近似のオーダー (存在しないページ)">近似のオーダー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Orders_of_approximation&amp;action=edit&amp;redlink=1" title="En:Orders of approximation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%97%E3%82%B7%E3%83%AD%E3%83%B3-%E3%83%87%E3%83%AB%E3%82%BF%E8%AB%96%E6%B3%95" title="イプシロン-デルタ論法">ε-δ論法</a></li></ul>
+</div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">微分法</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<div>
+<ul><li><a href="/wiki/%E9%80%A3%E9%8E%96%E5%BE%8B" title="連鎖律">連鎖律</a></li>
+<li><a class="mw-redirect" href="/wiki/%E5%B0%8E%E9%96%A2%E6%95%B0" title="導関数">導関数</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86_(%E6%9B%96%E6%98%A7%E3%81%95%E5%9B%9E%E9%81%BF)" title="微分 (曖昧さ回避)">微分</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="微分方程式">微分方程式</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E4%BD%9C%E7%94%A8%E7%B4%A0" title="微分作用素">微分作用素</a></li>
+<li><a class="mw-redirect" href="/wiki/%E9%99%B0%E9%96%A2%E6%95%B0%E5%BE%AE%E5%88%86" title="陰関数微分">陰関数微分</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%80%86%E9%96%A2%E6%95%B0%E3%81%AE%E5%BE%AE%E5%88%86&amp;action=edit&amp;redlink=1" title="逆関数の微分 (存在しないページ)">逆関数の微分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Inverse_functions_and_differentiation&amp;action=edit&amp;redlink=1" title="En:Inverse functions and differentiation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AD%E3%83%94%E3%82%BF%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="ロピタルの定理">ロピタルの定理</a></li>
+<li><a href="/wiki/%E4%B8%80%E8%88%AC%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84%E3%81%AE%E6%B3%95%E5%89%87" title="一般のライプニッツの法則">ライプニッツ則</a></li>
+<li><a href="/wiki/%E5%AF%BE%E6%95%B0%E5%BE%AE%E5%88%86" title="対数微分">対数微分</a></li>
+<li><a href="/wiki/%E5%B9%B3%E5%9D%87%E5%80%A4%E3%81%AE%E5%AE%9A%E7%90%86" title="平均値の定理">平均値の定理</a></li>
+<li><a class="mw-selflink selflink">ニュートン法</a></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E3%81%AE%E8%A8%98%E6%B3%95" title="微分の記法">記法</a>
+<ul><li><a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84%E3%81%AE%E8%A8%98%E6%B3%95" title="ライプニッツの記法">ライプニッツの記法</a></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E3%81%AE%E8%A8%98%E6%B3%95" title="ニュートンの記法">ニュートンの記法</a></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AC%E3%82%AE%E3%82%AA%E3%83%A2%E3%83%B3%E3%82%BF%E3%83%8C%E3%82%B9%E3%81%AE%E8%A7%92%E5%BA%A6%E6%9C%80%E5%A4%A7%E5%8C%96%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" title="レギオモンタヌスの角度最大化問題 (存在しないページ)">レギオモンタヌスの角度最大化問題</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Regiomontanus%27_angle_maximization_problem&amp;action=edit&amp;redlink=1" title="En:Regiomontanus' angle maximization problem (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9B%B8%E5%AF%BE%E5%A4%89%E5%8C%96%E7%8E%87&amp;action=edit&amp;redlink=1" title="相対変化率 (存在しないページ)">相対変化率</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Related_rates&amp;action=edit&amp;redlink=1" title="En:Related rates (存在しないページ)">英語版</a>）</span></span></li>
+<li>基本法則
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BE%AE%E5%88%86%E3%81%AE%E7%B7%9A%E5%9E%8B%E6%80%A7&amp;action=edit&amp;redlink=1" title="微分の線型性 (存在しないページ)">線型性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Linearity_of_differentiation&amp;action=edit&amp;redlink=1" title="En:Linearity of differentiation (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%A9%8D%E3%81%AE%E5%BE%AE%E5%88%86%E6%B3%95%E5%89%87" title="積の微分法則">積</a></li>
+<li><a href="/wiki/%E5%95%86%E3%81%AE%E5%BE%AE%E5%88%86%E6%B3%95%E5%89%87" title="商の微分法則">商</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%86%AA%E3%81%AE%E5%BE%AE%E5%88%86%E6%B3%95%E5%89%87&amp;action=edit&amp;redlink=1" title="冪の微分法則 (存在しないページ)">冪函数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Power_rule&amp;action=edit&amp;redlink=1" title="En:Power rule (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E5%81%9C%E7%95%99%E7%82%B9" title="停留点">停留点</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stationary_point&amp;action=edit&amp;redlink=1" title="En:Stationary point (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A5%B5%E5%80%A4%E3%81%AE%E5%88%A4%E5%AE%9A&amp;action=edit&amp;redlink=1" title="極値の判定 (存在しないページ)">極値の判定</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Derivative_test&amp;action=edit&amp;redlink=1" title="En:Derivative test (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4%E5%AE%9A%E7%90%86" title="最大値最小値定理">最大値の定理</a></li>
+<li><a href="/wiki/%E6%A5%B5%E5%80%A4" title="極値">極値</a></li></ul></li>
+<li><a href="/wiki/%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%AE%9A%E7%90%86" title="テイラーの定理">テイラーの定理</a></li></ul>
+</div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">積分法</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<div>
+<ul><li><a href="/wiki/%E4%B8%8D%E5%AE%9A%E7%A9%8D%E5%88%86" title="不定積分">逆微分</a></li>
+<li><a href="/wiki/%E5%BC%A7%E9%95%B7" title="弧長">弧長</a></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E7%A9%8D%E5%88%86%E5%AE%9A%E6%95%B0" title="積分定数">積分定数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Constant_of_integration&amp;action=edit&amp;redlink=1" title="En:Constant of integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E8%A8%98%E5%8F%B7%E4%B8%8B%E3%81%AE%E5%BE%AE%E5%88%86&amp;action=edit&amp;redlink=1" title="積分記号下の微分 (存在しないページ)">積分記号下の微分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Differentiation_under_the_integral_sign&amp;action=edit&amp;redlink=1" title="En:Differentiation under the integral sign (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86%E7%A9%8D%E5%88%86%E5%AD%A6%E3%81%AE%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86" title="微分積分学の基本定理">微分積分学の基本定理</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AD%A3%E5%89%B2%E3%81%AE%E7%AB%8B%E6%96%B9%E3%81%AE%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="正割の立方の積分 (存在しないページ)">正割の立方の積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integral_of_secant_cubed&amp;action=edit&amp;redlink=1" title="En:Integral of secant cubed (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AD%A3%E5%89%B2%E9%96%A2%E6%95%B0%E3%81%AE%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="正割関数の積分 (存在しないページ)">正割関数の積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Integral_of_the_secant_function&amp;action=edit&amp;redlink=1" title="En:Integral of the secant function (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8D%8A%E8%A7%92%E6%AD%A3%E6%8E%A5%E7%BD%AE%E6%8F%9B%E6%B3%95&amp;action=edit&amp;redlink=1" title="半角正接置換法 (存在しないページ)">半角正接置換法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Tangent_half-angle_substitution&amp;action=edit&amp;redlink=1" title="En:Tangent half-angle substitution (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E9%83%A8%E5%88%86%E5%88%86%E6%95%B0&amp;action=edit&amp;redlink=1" title="積分における部分分数 (存在しないページ)">積分における部分分数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Partial_fractions_in_integration&amp;action=edit&amp;redlink=1" title="En:Partial fractions in integration (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BA%8C%E6%AC%A1%E6%9C%89%E7%90%86%E5%BC%8F%E3%81%AE%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="二次有理式の積分 (存在しないページ)">二次有理式の積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Quadratic_integral&amp;action=edit&amp;redlink=1" title="En:Quadratic integral (存在しないページ)">英語版</a>）</span></span></li></ul></li>
+<li><a href="/wiki/%E5%86%86%E5%91%A8%E7%8E%87%E3%81%8C22/7%E3%82%88%E3%82%8A%E5%B0%8F%E3%81%95%E3%81%84%E3%81%93%E3%81%A8%E3%81%AE%E8%A8%BC%E6%98%8E" title="円周率が22/7より小さいことの証明">円周率が22/7より小さいことの証明</a></li>
+<li>基本法則
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%A9%8D%E5%88%86%E3%81%AE%E7%B7%9A%E5%9E%8B%E6%80%A7&amp;action=edit&amp;redlink=1" title="積分の線型性 (存在しないページ)">線型性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Linearity_of_integration&amp;action=edit&amp;redlink=1" title="En:Linearity of integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%83%A8%E5%88%86%E7%A9%8D%E5%88%86" title="部分積分">部分積分</a></li>
+<li><a href="/wiki/%E7%BD%AE%E6%8F%9B%E7%A9%8D%E5%88%86" title="置換積分">置換積分</a></li></ul></li>
+<li><a href="/wiki/%E5%8F%B0%E5%BD%A2%E5%85%AC%E5%BC%8F" title="台形公式">台形公式</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%BD%AE%E6%8F%9B%E6%B3%95&amp;action=edit&amp;redlink=1" title="三角函数置換法 (存在しないページ)">三角函数置換法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Trigonometric_substitution&amp;action=edit&amp;redlink=1" title="En:Trigonometric substitution (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ベクトル解析</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%9B%9E%E8%BB%A2_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="回転 (ベクトル解析)">回転</a></li>
+<li><a href="/wiki/%E6%96%B9%E5%90%91%E5%BE%AE%E5%88%86" title="方向微分">方向微分</a></li>
+<li><a href="/wiki/%E7%99%BA%E6%95%A3_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="発散 (ベクトル解析)">発散</a></li>
+<li><a href="/wiki/%E7%99%BA%E6%95%A3%E5%AE%9A%E7%90%86" title="発散定理">発散定理</a></li>
+<li><a href="/wiki/%E5%8B%BE%E9%85%8D_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="勾配 (ベクトル解析)">勾配</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8B%BE%E9%85%8D%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="勾配定理 (存在しないページ)">勾配定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Gradient_theorem&amp;action=edit&amp;redlink=1" title="En:Gradient theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86" title="グリーンの定理">グリーンの定理</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ラプラス作用素">ラプラシアン</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%82%AF%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86" title="ストークスの定理">ストークスの定理</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">多変数微分積分学</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E6%9B%B2%E7%8E%87" title="曲率">曲率</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Disc_integration&amp;action=edit&amp;redlink=1" title="Disc integration (存在しないページ)">Disc integration</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Disc_integration&amp;action=edit&amp;redlink=1" title="En:Disc integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%99%BA%E6%95%A3%E5%AE%9A%E7%90%86" title="発散定理">発散定理</a></li>
+<li><a href="/wiki/%E5%A4%96%E5%BE%AE%E5%88%86" title="外微分">外微分</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%AC%E3%83%96%E3%83%AA%E3%82%A8%E3%83%AB%E3%81%AE%E3%83%9B%E3%83%AB%E3%83%B3" title="ガブリエルのホルン">ガブリエルのホルン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B9%BE%E4%BD%95%E8%A7%A3%E6%9E%90&amp;action=edit&amp;redlink=1" title="幾何解析 (存在しないページ)">幾何解析</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Geometric_calculus&amp;action=edit&amp;redlink=1" title="En:Geometric calculus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%98%E3%83%83%E3%82%BB%E8%A1%8C%E5%88%97" title="ヘッセ行列">ヘッセ行列</a></li>
+<li><a href="/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97" title="ヤコビ行列">ヤコビ行列と行列式</a></li>
+<li><a href="/wiki/%E7%B7%9A%E7%A9%8D%E5%88%86" title="線積分">線積分</a></li>
+<li><a class="new" href="/w/index.php?title=En:Matrix_calculus&amp;action=edit&amp;redlink=1" title="En:Matrix calculus (存在しないページ)">Matrix calculus</a></li></ul>
+<ul><li><a href="/wiki/%E5%A4%9A%E9%87%8D%E7%A9%8D%E5%88%86" title="多重積分">多重積分</a></li>
+<li><a href="/wiki/%E5%81%8F%E5%BE%AE%E5%88%86" title="偏微分">偏微分</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%82%A6%E3%83%A0%E3%82%AF%E3%83%BC%E3%83%98%E3%83%B3%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="バウムクーヘン積分 (存在しないページ)">バウムクーヘン積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Shell_integration&amp;action=edit&amp;redlink=1" title="En:Shell integration (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%9D%A2%E7%A9%8D%E5%88%86" title="面積分">面積分</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E8%A7%A3%E6%9E%90" title="テンソル解析">テンソル解析</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BD%93%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="体積分 (存在しないページ)">体積分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Volume_integral&amp;action=edit&amp;redlink=1" title="En:Volume integral (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">級数</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%BC%E3%83%99%E3%83%AB%E3%81%AE%E5%88%A4%E5%AE%9A%E6%B3%95&amp;action=edit&amp;redlink=1" title="アーベルの判定法 (存在しないページ)">アーベルの判定法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Abel%27s_test&amp;action=edit&amp;redlink=1" title="En:Abel's test (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BA%A4%E9%A0%85%E7%B4%9A%E6%95%B0" title="交項級数">交代</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BA%A4%E4%BB%A3%E7%B4%9A%E6%95%B0%E5%88%A4%E5%AE%9A%E6%B3%95&amp;action=edit&amp;redlink=1" title="交代級数判定法 (存在しないページ)">交代級数判定法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Alternating_series_test&amp;action=edit&amp;redlink=1" title="En:Alternating series test (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E7%AE%97%E8%A1%93%E5%B9%BE%E4%BD%95%E6%95%B0%E5%88%97" title="算術幾何数列">算術幾何数列</a></li>
+<li><a href="/wiki/%E4%BA%8C%E9%A0%85%E7%B4%9A%E6%95%B0" title="二項級数">二項</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E5%87%9D%E9%9B%86%E5%88%A4%E5%AE%9A%E6%B3%95" title="コーシーの凝集判定法">コーシーの凝集判定法</a></li>
+<li><a href="/wiki/%E6%AF%94%E8%BC%83%E5%88%A4%E5%AE%9A%E6%B3%95" title="比較判定法">比較判定法</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%AA%E3%82%AF%E3%83%AC%E3%81%AE%E5%88%A4%E5%AE%9A%E6%B3%95" title="ディリクレの判定法">ディリクレの判定法</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%92%8C%E5%85%AC%E5%BC%8F" title="オイラーの和公式">オイラー–マクローリンの公式</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0" title="フーリエ級数">フーリエ</a></li>
+<li><a class="mw-redirect" href="/wiki/%E7%AD%89%E6%AF%94%E7%B4%9A%E6%95%B0" title="等比級数">幾何</a></li>
+<li><a class="mw-redirect" href="/wiki/%E8%B6%85%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="超幾何級数">超幾何</a></li>
+<li><a href="/wiki/Q%E8%B6%85%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="Q超幾何級数">q超幾何</a></li>
+<li><a href="/wiki/%E8%AA%BF%E5%92%8C%E7%B4%9A%E6%95%B0" title="調和級数">調和</a></li>
+<li><a class="mw-redirect" href="/wiki/%E7%84%A1%E9%99%90%E7%B4%9A%E6%95%B0" title="無限級数">無限</a></li>
+<li><a href="/wiki/%E7%A9%8D%E5%88%86%E5%88%A4%E5%AE%9A%E6%B3%95" title="積分判定法">積分判定法</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%A5%B5%E9%99%90%E6%AF%94%E8%BC%83%E5%88%A4%E5%AE%9A%E6%B3%95&amp;action=edit&amp;redlink=1" title="極限比較判定法 (存在しないページ)">極限比較判定法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Limit_comparison_test&amp;action=edit&amp;redlink=1" title="En:Limit comparison test (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%9E%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%B3%E7%B4%9A%E6%95%B0" title="マクローリン級数">マクローリン</a></li>
+<li><a href="/wiki/%E5%86%AA%E7%B4%9A%E6%95%B0" title="冪級数">冪</a></li>
+<li><a href="/wiki/%E3%83%80%E3%83%A9%E3%83%B3%E3%83%99%E3%83%BC%E3%83%AB%E3%81%AE%E5%8F%8E%E6%9D%9F%E5%88%A4%E5%AE%9A%E6%B3%95" title="ダランベールの収束判定法">比判定法</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E5%86%AA%E6%A0%B9%E5%88%A4%E5%AE%9A%E6%B3%95" title="コーシーの冪根判定法">冪根判定法</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC%E7%B4%9A%E6%95%B0" title="テイラー級数">テイラー</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A0%85%E5%88%A4%E5%AE%9A%E6%B3%95&amp;action=edit&amp;redlink=1" title="項判定法 (存在しないページ)">項判定法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Term_test&amp;action=edit&amp;redlink=1" title="En:Term test (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">特殊関数と数学定数</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E6%95%B0" title="ベルヌーイ数">ベルヌーイ数</a></li>
+<li><a href="/wiki/%E3%83%8D%E3%82%A4%E3%83%94%E3%82%A2%E6%95%B0" title="ネイピア数">ネイピア数</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E5%AE%9A%E6%95%B0" title="オイラー定数">オイラー定数</a></li>
+<li><a href="/wiki/%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0" title="指数関数">指数関数</a></li>
+<li><a href="/wiki/%E8%87%AA%E7%84%B6%E5%AF%BE%E6%95%B0" title="自然対数">自然対数</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%83%B3%E3%83%9E%E9%96%A2%E6%95%B0" title="ガンマ関数">ガンマ関数</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E8%BF%91%E4%BC%BC" title="スターリングの近似">スターリングの近似</a></li>
+<li><a class="mw-redirect" href="/wiki/%E6%A5%95%E5%86%86%E9%96%A2%E6%95%B0" title="楕円関数">楕円関数</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BE%AE%E5%88%86%E7%A9%8D%E5%88%86%E5%AD%A6%E3%81%AE%E6%AD%B4%E5%8F%B2&amp;action=edit&amp;redlink=1" title="微分積分学の歴史 (存在しないページ)">歴史</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:History_of_calculus&amp;action=edit&amp;redlink=1" title="En:History of calculus (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%93%AC%E7%AD%89%E5%BC%8F&amp;action=edit&amp;redlink=1" title="擬等式 (存在しないページ)">擬等式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Adequality&amp;action=edit&amp;redlink=1" title="En:Adequality (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AB%E3%83%83%E3%82%AF%E3%83%BB%E3%83%86%E3%82%A4%E3%83%A9%E3%83%BC" title="ブルック・テイラー">ブルック・テイラー</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%AA%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%B3" title="コリン・マクローリン">コリン・マクローリン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BB%A3%E6%95%B0%E3%81%AE%E4%B8%80%E8%88%AC%E6%80%A7&amp;action=edit&amp;redlink=1" title="代数の一般性 (存在しないページ)">代数の一般性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Generality_of_algebra&amp;action=edit&amp;redlink=1" title="En:Generality of algebra (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B4%E3%83%83%E3%83%88%E3%83%95%E3%83%AA%E3%83%BC%E3%83%88%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%AB%E3%83%98%E3%83%AB%E3%83%A0%E3%83%BB%E3%83%A9%E3%82%A4%E3%83%97%E3%83%8B%E3%83%83%E3%83%84" title="ゴットフリート・ヴィルヘルム・ライプニッツ">ゴットフリート・ヴィルヘルム・ライプニッツ</a></li>
+<li><a href="/wiki/%E7%84%A1%E9%99%90%E5%B0%8F" title="無限小">無限小</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%84%A1%E9%99%90%E5%B0%8F%E8%A7%A3%E6%9E%90&amp;action=edit&amp;redlink=1" title="無限小解析 (存在しないページ)">無限小解析</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infinitesimal_calculus&amp;action=edit&amp;redlink=1" title="En:Infinitesimal calculus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%A4%E3%82%B6%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3" title="アイザック・ニュートン">アイザック・ニュートン</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%80%A3%E7%B6%9A%E3%81%AE%E6%B3%95%E5%89%87&amp;action=edit&amp;redlink=1" title="連続の法則 (存在しないページ)">連続の法則</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Law_of_Continuity&amp;action=edit&amp;redlink=1" title="En:Law of Continuity (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%B3%E3%83%8F%E3%83%AB%E3%83%88%E3%83%BB%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC" title="レオンハルト・オイラー">レオンハルト・オイラー</a></li>
+<li>『<span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E6%B5%81%E7%8E%87%E6%B3%95" title="流率法">流率法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Method_of_Fluxions&amp;action=edit&amp;redlink=1" title="En:Method of Fluxions (存在しないページ)">英語版</a>）</span></span>』 (<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%B5%81%E7%8E%87&amp;action=edit&amp;redlink=1" title="流率 (存在しないページ)">流率</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fluxion&amp;action=edit&amp;redlink=1" title="En:Fluxion (存在しないページ)">英語版</a>）</span></span>)</li>
+<li>『<span title="リンク先の項目はまだ不十分なため、加筆や他言語版からの追加翻訳が望まれます。"><a href="/wiki/%E6%96%B9%E6%B3%95_(%E3%82%A2%E3%83%AB%E3%82%AD%E3%83%A1%E3%83%87%E3%82%B9%E3%81%AE%E8%91%97%E6%9B%B8)" title="方法 (アルキメデスの著書)">方法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:The_Method_of_Mechanical_Theorems&amp;action=edit&amp;redlink=1" title="En:The Method of Mechanical Theorems (存在しないページ)">英語版</a>）</span></span>』</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">一覧</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BE%AE%E5%88%86%E6%B3%95%E5%89%87&amp;action=edit&amp;redlink=1" title="微分法則 (存在しないページ)">微分法則</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Differentiation_rules&amp;action=edit&amp;redlink=1" title="En:Differentiation rules (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="指数関数の原始関数の一覧">指数関数の原始関数</a></li>
+<li><a href="/wiki/%E5%8F%8C%E6%9B%B2%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="双曲線関数の原始関数の一覧">双曲線関数の原始関数</a></li>
+<li><a href="/wiki/%E9%80%86%E5%8F%8C%E6%9B%B2%E7%B7%9A%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="逆双曲線関数の原始関数の一覧">逆双曲線関数の原始関数</a></li>
+<li><a href="/wiki/%E9%80%86%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="逆三角関数の原始関数の一覧">逆三角関数の原始関数</a></li>
+<li><a href="/wiki/%E7%84%A1%E7%90%86%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="無理関数の原始関数の一覧">無理関数の原始関数</a></li>
+<li><a href="/wiki/%E5%AF%BE%E6%95%B0%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="対数関数の原始関数の一覧">対数関数の原始関数</a></li>
+<li><a href="/wiki/%E6%9C%89%E7%90%86%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="有理関数の原始関数の一覧">有理関数の原始関数</a></li>
+<li><a href="/wiki/%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0%E3%81%AE%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="三角関数の原始関数の一覧">三角関数の原始関数</a></li>
+<li><a href="/wiki/%E6%A5%B5%E9%99%90%E3%81%AE%E4%B8%80%E8%A6%A7" title="極限の一覧">極限</a></li>
+<li><a href="/wiki/%E6%95%B0%E5%AD%A6%E8%A8%98%E5%8F%B7%E3%81%AE%E8%A1%A8" title="数学記号の表">数学記号</a></li>
+<li><a href="/wiki/%E5%8E%9F%E5%A7%8B%E9%96%A2%E6%95%B0%E3%81%AE%E4%B8%80%E8%A6%A7" title="原始関数の一覧">原始関数</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331080700
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.446 seconds
+Real time usage: 0.892 seconds
+Preprocessor visited node count: 3097/1000000
+Post‐expand include size: 90755/2097152 bytes
+Template argument size: 3780/2097152 bytes
+Highest expansion depth: 25/40
+Expensive parser function count: 36/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7613/5000000 bytes
+Lua time usage: 0.200/7 seconds
+Lua virtual size: 6807552/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  771.207      1 -total
+ 38.31%  295.439      1 テンプレート:Calculus_topics
+ 34.21%  263.798      1 テンプレート:Navbox
+ 29.66%  228.748     36 テンプレート:仮リンク
+ 27.27%  210.286      1 テンプレート:Reflist
+ 26.26%  202.516      2 テンプレート:Cite
+ 15.31%  118.086      1 テンプレート:Citation/core-ja-jp
+ 11.92%   91.962      1 テンプレート:Citation/identifier
+ 11.51%   88.741      1 テンプレート:ISBN2
+  8.73%   67.314      1 テンプレート:Citation/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:10575-0!canonical and timestamp 20220331080659 and revision id 8193. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ニュートン法&amp;oldid=8193">http://localhost:8080/w/index.php?title=ニュートン法&amp;oldid=8193</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%B1%82%E6%A0%B9%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:求根アルゴリズム">求根アルゴリズム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%82%A4%E3%82%B6%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3" title="カテゴリ:アイザック・ニュートン">アイザック・ニュートン</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;returntoquery=curid%3D10575%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;returntoquery=curid%3D10575%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;oldid=8193" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E6%B3%95&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年4月12日 (月) 17:58 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.446","walltime":"0.892","ppvisitednodes":{"value":3097,"limit":1000000},"postexpandincludesize":{"value":90755,"limit":2097152},"templateargumentsize":{"value":3780,"limit":2097152},"expansiondepth":{"value":25,"limit":40},"expensivefunctioncount":{"value":36,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":7613,"limit":5000000},"timingprofile":["100.00%  771.207      1 -total"," 38.31%  295.439      1 テンプレート:Calculus_topics"," 34.21%  263.798      1 テンプレート:Navbox"," 29.66%  228.748     36 テンプレート:仮リンク"," 27.27%  210.286      1 テンプレート:Reflist"," 26.26%  202.516      2 テンプレート:Cite"," 15.31%  118.086      1 テンプレート:Citation/core-ja-jp"," 11.92%   91.962      1 テンプレート:Citation/identifier"," 11.51%   88.741      1 テンプレート:ISBN2","  8.73%   67.314      1 テンプレート:Citation/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.200","limit":"7"},"limitreport-virtmemusage":{"value":6807552,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331080700","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":306});});</script>
+</body></html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>j-不変量 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-J-不変量 rootpage-J-不変量 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading"><i>j</i>-不変量</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p>数学では、<a href="." id="link_a_1" title="複素解析">複素変数</a> τ の函数である<a href="." id="link_a_2" title="フェリックス・クライン">フェリックス・クライン</a>の <b><i>j</i>-不変量</b> (<i>j</i>-invariant)（もしくは<b><i>j</i>-函数</b>）とは、複素数の<a href="." id="link_a_3" title="上半平面">上半平面</a>上に定義された <span class="texhtml" lang="en">SL(2, <b>Z</b>)</span> のウェイト 0 の<a href="." id="link_a_4" title="モジュラー形式">モジュラー函数</a>である。<span class="texhtml mvar" lang="en" style="font-style:italic;">j</span>-不変量として、<a href="." id="link_a_5" title="尖点">尖点</a>で一位の極を持つ以外は正則な関数であり、次を満たすものが一意に定まる。
+</p>
+<dl><dd>&lt;math&gt;j\left(e^{\frac{2}{3}\pi i}\right) = 0, \quad j(i) = 1728&lt;/math&gt;</dd></dl>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">j</span>の有理函数はモジュラーであり、実際にすべてのモジュラー函数を与える。古典的には、<span class="texhtml mvar" lang="en" style="font-style:italic;">j</span>-不変量は <span class="texhtml" lang="en"><b>C</b></span> 上の<a href="." id="link_a_6" title="楕円曲線">楕円曲線</a>のパラメータ化として研究されていたが、驚くべきことに、<a href="." id="link_a_7" title="モンスター群">モンスター群</a>の対称性との関係を持っている（この関係は<a href="." id="link_a_8" title="モンストラス・ムーンシャイン">モンストラス・ムーンシャイン</a>と呼ばれる）。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#基本領域"><span class="tocnumber">2</span> <span class="toctext">基本領域</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#類体論と_j-不変量"><span class="tocnumber">3</span> <span class="toctext">類体論と <i>j</i>-不変量</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#超越的性質"><span class="tocnumber">4</span> <span class="toctext">超越的性質</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#q-展開とムーンシャイン"><span class="tocnumber">5</span> <span class="toctext">q-展開とムーンシャイン</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#ムーンシャイン"><span class="tocnumber">5.1</span> <span class="toctext">ムーンシャイン</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#別の表現"><span class="tocnumber">6</span> <span class="toctext">別の表現</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#テータ函数による表現"><span class="tocnumber">7</span> <span class="toctext">テータ函数による表現</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#代数的定義"><span class="tocnumber">8</span> <span class="toctext">代数的定義</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#逆函数"><span class="tocnumber">9</span> <span class="toctext">逆函数</span></a></li>
+<li class="toclevel-1"><a href="#π公式"><span class="tocnumber">10</span> <span class="toctext">π公式</span></a></li>
+<li class="toclevel-1"><a href="#特殊値"><span class="tocnumber">11</span> <span class="toctext">特殊値</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#参考文献"><span class="tocnumber">12</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A" title="楕円曲線">楕円曲線</a>」、「<a href="/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A#複素数上の楕円曲線" title="楕円曲線">複素数上の楕円曲線</a>」、および「<a href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F" title="モジュラー形式">モジュラー形式</a>」を参照</div>
+<p><i>j</i>-不変量はある無限和（下記の <i>g</i><sub>2</sub>, <i>g</i><sub>3</sub> を参照）で純粋に定義することができるが、これらは楕円曲線の同型類を考えることが動機となる。<b>C</b> 上のすべての楕円曲線 <i>E</i> は複素トーラスであるので、ランク 2 の格子、つまり <b>C</b> の 2 次元格子と同一視できる。格子の互いに平行な反対側の辺を同一視することで、そのようにみなすことができる。複素数を格子に掛けることは格子の回転やスケーリングに対応し、これらは楕円曲線の同型類を保存することがわかり、このことから、格子を 1 と<a href="/wiki/%E4%B8%8A%E5%8D%8A%E5%B9%B3%E9%9D%A2" title="上半平面">上半平面</a> <b>H</b> のある元 τ によって生成されると考えてよい。逆に、
+</p>
+<dl><dd>&lt;math&gt;g_2  = 60\sum_{(m,n) \neq (0,0)} (m + n\tau)^{-4},&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_3 = 140\sum_{(m,n) \neq (0,0)} (m + n\tau)^{-6},&lt;/math&gt;</dd></dl>
+<p>と定義すると、この格子は<a href="/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A8%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%88%E3%83%A9%E3%82%B9%E3%81%AE%E6%A5%95%E5%86%86%E5%87%BD%E6%95%B0" title="ヴァイエルシュトラスの楕円函数">ヴァイエルシュトラスの楕円函数</a>を通して、y<sup>2</sup> = 4x<sup>3</sup> − g<sub>2</sub>x - g<sub>3</sub> で定義された <b>C</b> 上の楕円曲線に対応する。このとき、<i>j</i>-不変量は、
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = 1728\,\frac{g_2^3}{\Delta}&lt;/math&gt;</dd></dl>
+<p>と定義される。ここに<b>モジュラー判別式</b>(modular discriminant) Δ は
+</p>
+<dl><dd>&lt;math&gt;\Delta = g_2^3 - 27g_3^2&lt;/math&gt;</dd></dl>
+<p>である。
+</p><p>Δ はウェイト 12 の<a href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F" title="モジュラー形式">モジュラー形式</a>であることと、<i>g</i><sub>2</sub> はウェイト 4 のモジュラー形式であるのでその3乗はウェイト 12 であることを示すことができる。したがって、 <i>j</i> がこれらの商であることから <i>j</i>  はウェイト 0 のモジュラ函数であり、特に、SL(2, <b>Z</b>) の作用の下に不変な有理型函数 <b>H</b> → <b>C</b> である。以下に説明するように <i>j</i> は全射であり、このことは <b>C</b> 上の楕円曲線の同型類と複素数の間の全単射を与えることを意味する。
+</p>
+<h2><span id=".E5.9F.BA.E6.9C.AC.E9.A0.98.E5.9F.9F"></span><span class="mw-headline" id="基本領域">基本領域</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=2" title="節を編集: 基本領域">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>2つの変換 τ → τ + 1 と τ → τ<sup>−1</sup> は<a class="mw-redirect" href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E7%BE%A4" title="モジュラ群">モジュラ群</a>と呼ばれる<a href="/wiki/%E7%BE%A4_(%E6%95%B0%E5%AD%A6)" title="群 (数学)">群</a>を生成し、この群は<a href="/wiki/%E5%B0%84%E5%BD%B1%E7%B7%9A%E5%9E%8B%E7%BE%A4" title="射影線型群">射影特殊線型群</a> PSL(2, <b>Z</b>) と同一視できる。この群に属する適当な変換
+</p>
+<dl><dd>&lt;math&gt; \tau \mapsto \frac{a\tau + b}{c\tau +d}, \qquad ad-bc =1,&lt;/math&gt;</dd></dl>
+<p>を選択することにより、τ を j の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%9F%BA%E6%9C%AC%E9%A0%98%E5%9F%9F&amp;action=edit&amp;redlink=1" title="基本領域 (存在しないページ)">基本領域</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:fundamental_region&amp;action=edit&amp;redlink=1" title="En:fundamental region (存在しないページ)">英語版</a>）</span></span>(fundamental region)内にあり <i>j</i> に対して同じ値をとる、ある値に帰着させることができる。基本領域は次の条件を満たす τ から構成されている。
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<pre>       |\tau| &amp;\ge 1 \\
+ -\tfrac{1}{2} &amp;&lt; \mathfrak{R}(\tau) \le \tfrac{1}{2} \\
+ -\tfrac{1}{2} &amp;&lt; \mathfrak{R}(\tau) &lt; 0 \Rightarrow |\tau| &gt; 1
+</pre>
+<p>\end{align}.&lt;/math&gt;
+</p><p>函数 <i>j</i> (τ) をこの領域へ制限すると、複素数 <b>C</b> のすべての値をちょうど一度だけ取る。言い換えると、<b>C</b> すべての元 <i>c</i> に対し、<i>c</i> = <i>j</i>(τ) となる基本領域の元 τ が一意に存在する。このように、<i>j</i> は基本領域を全複素平面へ写像するという性質を持っている。
+</p><p>リーマン面として、基本領域の種数は 0 であり、すべての（レベル 1 の）モジュラー函数は <i>j</i> の<a class="mw-redirect" href="/wiki/%E6%9C%89%E7%90%86%E5%87%BD%E6%95%B0" title="有理函数">有理函数</a>であり、逆に、<i>j</i> のすべての有理函数はモジュラー函数である。言い換えると、モジュラー函数全体のなす体は <b>C</b>(<i>j</i>) である。
+</p>
+<h2><span id=".E9.A1.9E.E4.BD.93.E8.AB.96.E3.81.A8_j-.E4.B8.8D.E5.A4.89.E9.87.8F"></span><span class="mw-headline" id="類体論と_j-不変量">類体論と <i>j</i>-不変量</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=3" title="節を編集: 類体論と j-不変量">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>j</i>-不変量は、多くの注目すべき性質を有する。
+</p>
+<ul><li>τ が<a href="/wiki/%E8%99%9A%E6%95%B0%E4%B9%97%E6%B3%95" title="虚数乗法">虚数乗法</a>である、すなわち、虚数部が正である虚<a href="/wiki/%E4%BA%8C%E6%AC%A1%E4%BD%93" title="二次体">二次体</a>の任意の元である（従って、j-不変量が定義される）ならば、<i>j</i>(τ) は<a href="/wiki/%E4%BB%A3%E6%95%B0%E7%9A%84%E6%95%B4%E6%95%B0" title="代数的整数">代数的整数</a>である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。</li></ul>
+<ul><li>体の拡大 <span class="texhtml" lang="en"><b>Q</b>[j (τ), τ]/<b>Q</b>(τ)</span> はアーベル的、すなわち、<a href="/wiki/%E3%82%AC%E3%83%AD%E3%82%A2%E7%BE%A4" title="ガロア群">ガロア群</a>がアーベル的になる。</li></ul>
+<ul><li>Λ を {1, τ} で生成される <b>C</b> の中の格子とすると、乗法の下に Λ を固定する <b>Q</b>(τ) のすべての元が、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%95%B4%E7%92%B0&amp;action=edit&amp;redlink=1" title="整環 (存在しないページ)">整環</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order_(ring_theory)&amp;action=edit&amp;redlink=1" title="En:order (ring theory) (存在しないページ)">英語版</a>）</span></span>(order)と呼ばれる環の単位元(unit)を形成することが容易にわかる。同様に、同じ整環の生成子 {1, τ′} を持つ格子は、<b>Q</b>(τ) 上で <i>j</i> (τ) の<a href="/wiki/%E4%BB%A3%E6%95%B0%E7%9A%84%E6%95%B0#共役数" title="代数的数">代数的共役</a>である <i>j</i> (τ') を定義する。包含関係に従い、<b>Q</b>(τ) の唯一の最大整環は、<b>Q</b>(τ) の代数的整数の環であり、その環を持つ τ の値は、<b>Q</b>(τ) の<a href="/wiki/%E5%88%86%E5%B2%90_(%E6%95%B0%E5%AD%A6)#不分岐" title="分岐 (数学)">不分岐拡大</a>を導く。</li></ul>
+<p>これらの古典的な結果は、<a href="/wiki/%E8%99%9A%E6%95%B0%E4%B9%97%E6%B3%95" title="虚数乗法">虚数乗法</a>論の出発点となっている。
+</p>
+<h2><span id=".E8.B6.85.E8.B6.8A.E7.9A.84.E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="超越的性質">超越的性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=4" title="節を編集: 超越的性質">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>1937年、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%86%E3%82%AA%E3%83%89%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B7%E3%83%A5%E3%83%8A%E3%82%A4%E3%83%80%E3%83%BC&amp;action=edit&amp;redlink=1" title="テオドール・シュナイダー (存在しないページ)">テオドール・シュナイダー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Theodor_Schneider&amp;action=edit&amp;redlink=1" title="En:Theodor Schneider (存在しないページ)">英語版</a>）</span></span>(Theodor Schneider)は、前述の τ が上半平面で二次の無理数であれば <i>j</i>(τ) は代数的数であるということを証明した。加えて、 τ が<a href="/wiki/%E4%BB%A3%E6%95%B0%E7%9A%84%E6%95%B0" title="代数的数">代数的数</a>だが虚二次体の数でないならば、<i>j</i>(τ) は超越数であることをも証明した。
+</p><p><i>j</i>-函数は数多くの超越的性質を持つ。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AB%E3%83%88%E3%83%BB%E3%83%9E%E3%83%BC%E3%83%A9%E3%83%BC&amp;action=edit&amp;redlink=1" title="クルト・マーラー (存在しないページ)">クルト・マーラー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kurt_Mahler&amp;action=edit&amp;redlink=1" title="En:Kurt Mahler (存在しないページ)">英語版</a>）</span></span>(Kurt Mahler)はマーラー予想とも呼ばれる特別な超越性を予想し、1990年代にユーリ・ネステレンコ(Yu. V. Nesternko)とパトリス・フィリポン(Patrice Phillipon)の結果の系として証明された。マーラー予想とは、τ が上半平面にあればexp(2πiτ) と <i>j</i>(τ) は双方が同時に代数的にはならないであろうという予想である。現在はより強い結果が知られていて、例えば、exp(2πiτ) が代数的であれば次の 3つの数は代数的に独立で、超越数になる。
+</p>
+<dl><dd>&lt;math&gt;j(\tau), \frac{j^\prime(\tau)}{\pi}, \frac{j^{\prime\prime}(\tau)}{\pi^2}.&lt;/math&gt;</dd></dl>
+<h2><span id="q-.E5.B1.95.E9.96.8B.E3.81.A8.E3.83.A0.E3.83.BC.E3.83.B3.E3.82.B7.E3.83.A3.E3.82.A4.E3.83.B3"></span><span class="mw-headline" id="q-展開とムーンシャイン">q-展開とムーンシャイン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=5" title="節を編集: q-展開とムーンシャイン">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>j</i> の注目すべき性質のいくつかは、q = exp(2πiτ) での<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E7%B4%9A%E6%95%B0" title="ローラン級数">ローラン級数</a>として書かれる<a class="mw-redirect" href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E5%BD%A2%E5%BC%8F#q-展開" title="モジュラ形式">q-展開</a>（<a href="/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%A8%E7%B4%9A%E6%95%B0" title="フーリエ級数">フーリエ級数</a>展開）に関連している。<i>q</i>-展開は、
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = {1 \over q} + 744 + 196884 q + 21493760 q^2 + 864299970 q^3 + 20245856256 q^4 + \cdots&lt;/math&gt;</dd></dl>
+<p>で始まっている。
+</p><p>なお、 j は尖点で一位の<a href="/wiki/%E6%A5%B5_(%E8%A4%87%E7%B4%A0%E8%A7%A3%E6%9E%90)" title="極 (複素解析)">単純極</a>を持つので、q-展開には q<sup>−1</sup> 以下の項がない。
+</p><p>このフーリエ係数はすべて整数であり、このことがいくつかの<a href="/wiki/%E3%81%BB%E3%81%A8%E3%82%93%E3%81%A9%E6%95%B4%E6%95%B0" title="ほとんど整数">概整数</a>、例えば有名な<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A9%E3%83%9E%E3%83%8C%E3%82%B8%E3%83%A3%E3%83%B3%E5%AE%9A%E6%95%B0&amp;action=edit&amp;redlink=1" title="ラマヌジャン定数 (存在しないページ)">ラマヌジャン定数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ramanujan%27s_constant&amp;action=edit&amp;redlink=1" title="En:Ramanujan's constant (存在しないページ)">英語版</a>）</span></span>(Ramanujan's constant)の理由となる。
+</p>
+<dl><dd>&lt;math&gt;e^{\pi \sqrt{163}} \approx 640320^3 + 744&lt;/math&gt;</dd></dl>
+<p><span class="texhtml" lang="en">q<sup>n</sup></span> の係数の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%BC%B8%E8%BF%91%E5%85%AC%E5%BC%8F&amp;action=edit&amp;redlink=1" title="漸近公式 (存在しないページ)">漸近公式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:asymptotic_formula&amp;action=edit&amp;redlink=1" title="En:asymptotic formula (存在しないページ)">英語版</a>）</span></span>(asymptotic formula)は、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%86%86%E3%81%AE%E6%96%B9%E6%B3%95&amp;action=edit&amp;redlink=1" title="円の方法 (存在しないページ)">ハーディ・リトルウッドの円の方法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Hardy%E2%80%93Littlewood_circle_method&amp;action=edit&amp;redlink=1" title="En:Hardy–Littlewood circle method (存在しないページ)">英語版</a>）</span></span>(Hardy–Littlewood circle method)で示すことができたように、
+</p>
+<dl><dd>&lt;math&gt;\frac{e^{4\pi\sqrt{n}}}{\sqrt{2}n^{3/4}}&lt;/math&gt;,</dd></dl>
+<p>により与えられる。<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<h3><span id=".E3.83.A0.E3.83.BC.E3.83.B3.E3.82.B7.E3.83.A3.E3.82.A4.E3.83.B3"></span><span class="mw-headline" id="ムーンシャイン">ムーンシャイン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=6" title="節を編集: ムーンシャイン">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%A2%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%B9%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3" title="モンストラス・ムーンシャイン">モンストラス・ムーンシャイン</a>」を参照</div>
+<p>さらに注目すべきは、q の正のべき乗の項のフーリエ係数が<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E9%A0%82%E7%82%B9%E4%BB%A3%E6%95%B0&amp;action=edit&amp;redlink=1" title="モンスター頂点代数 (存在しないページ)">ムーンシャイン加群</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Monster_vertex_algebra&amp;action=edit&amp;redlink=1" title="En:Monster vertex algebra (存在しないページ)">英語版</a>）</span></span>(moonshine module)と呼ばれる<a href="/wiki/%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E7%BE%A4" title="モンスター群">モンスター群</a>の無限次元<a href="/wiki/%E6%AC%A1%E6%95%B0%E4%BB%98%E3%81%8D%E7%92%B0" title="次数付き環">次数付き代数</a>表現の次数部の次元であることである。特に、q<sup>n</sup> の係数は、ムーシャイン加群の次数 n の次元となっている。第一の例は<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B0%E3%83%A9%E3%82%A4%E3%82%B9%E4%BB%A3%E6%95%B0&amp;action=edit&amp;redlink=1" title="グライス代数 (存在しないページ)">グライス代数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Griess_algebra&amp;action=edit&amp;redlink=1" title="En:Griess algebra (存在しないページ)">英語版</a>）</span></span>(Griess algebra)であり、この代数は次元 196,884 で、項196884q に対応している。この驚くべき観察が<a href="/wiki/%E3%83%A2%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%B9%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3" title="モンストラス・ムーンシャイン">ムーンシャイン理論</a>の出発点であった。
+</p><p>ムーンシャイン予想の研究は、<a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%BC%E3%83%88%E3%83%B3%E3%83%BB%E3%82%B3%E3%83%B3%E3%82%A6%E3%82%A7%E3%82%A4" title="ジョン・ホートン・コンウェイ">ジョン・ホートン・コンウェイ</a>と<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%A2%E3%83%B3%E3%83%BB%E3%83%8E%E3%83%BC%E3%83%88%E3%83%B3&amp;action=edit&amp;redlink=1" title="シモン・ノートン (存在しないページ)">シモン・ノートン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Simon_P._Norton&amp;action=edit&amp;redlink=1" title="En:Simon P. Norton (存在しないページ)">英語版</a>）</span></span>(Simon P. Norton)により種数 0 のモジュラ函数を見つけることに発展した。<a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BBG%E3%83%BB%E3%83%88%E3%83%B3%E3%83%97%E3%82%BD%E3%83%B3" title="ジョン・G・トンプソン">ジョン・G・トンプソン</a>は、
+</p>
+<dl><dd>&lt;math&gt;q^{-1} + {O}(q)&lt;/math&gt;</dd></dl>
+<p>という形式に正規化される種数 0 のモジュラ函数が、有限個しか存在しないことを証明した。
+</p>
+<h2><span id=".E5.88.A5.E3.81.AE.E8.A1.A8.E7.8F.BE"></span><span class="mw-headline" id="別の表現">別の表現</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=7" title="節を編集: 別の表現">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>λ を<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A9%E3%83%A0%E3%83%80%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="モジュララムダ函数 (存在しないページ)">モジュララムダ函数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:modular_lambda_function&amp;action=edit&amp;redlink=1" title="En:modular lambda function (存在しないページ)">英語版</a>）</span></span>(modular lambda function)とし、x = λ(1−λ) と置くと
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = \frac{256(1-x)^3}{x^2} &lt;/math&gt;</dd></dl>
+<p>を得る。
+</p>
+<dl><dd>&lt;math&gt; \lambda(\tau) = \frac{\theta_2^4(0,\tau)}{\theta_3^4(0,\tau)} = k^2(\tau)&lt;/math&gt;</dd></dl>
+<p>は、<a class="mw-redirect" href="/wiki/%E3%83%86%E3%83%BC%E3%82%BF%E5%87%BD%E6%95%B0" title="テータ函数">ヤコビのテータ函数</a> &lt;math&gt;\theta_{m}&lt;/math&gt; の比率であり、楕円モジュラス &lt;math&gt;k(\tau)&lt;/math&gt; の二乗である。<sup class="reference" id="cite_ref-C108_4-0"><a href="#cite_note-C108-4">[4]</a></sup> λ が次の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%A4%87%E6%AF%94&amp;action=edit&amp;redlink=1" title="複比 (存在しないページ)">非調和比</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:cross-ratio&amp;action=edit&amp;redlink=1" title="En:cross-ratio (存在しないページ)">英語版</a>）</span></span>(cross-ratio)の 6つの値で入れ替わるときは、j の値は不変である<sup class="reference" id="cite_ref-C110_5-0"><a href="#cite_note-C110-5">[5]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\left\lbrace { \lambda, \frac{1}{1-\lambda}, \frac{\lambda-1}{\lambda}, \frac{1}{\lambda}, \frac{\lambda}{\lambda-1}, 1-\lambda } \right\rbrace.&lt;/math&gt;</dd></dl>
+<p>j の分岐点は {0, 1, ∞} であるので、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%99%E3%83%AA%E3%82%A4%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="ベリイ函数 (存在しないページ)">ベリイ函数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Belyi_function&amp;action=edit&amp;redlink=1" title="En:Belyi function (存在しないページ)">英語版</a>）</span></span>(Belyi function)である<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>。
+</p>
+<h2><span id=".E3.83.86.E3.83.BC.E3.82.BF.E5.87.BD.E6.95.B0.E3.81.AB.E3.82.88.E3.82.8B.E8.A1.A8.E7.8F.BE"></span><span class="mw-headline" id="テータ函数による表現">テータ函数による表現</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=8" title="節を編集: テータ函数による表現">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>&lt;math&gt;q=e^{\pi i \tau}&lt;/math&gt; （<a href="/wiki/%E3%83%8E%E3%83%BC%E3%83%A0_(%E6%95%B0%E5%AD%A6)" title="ノーム (数学)">ノーム</a>）と定義し直すと、<a class="mw-redirect" href="/wiki/%E3%83%86%E3%83%BC%E3%82%BF%E5%87%BD%E6%95%B0" title="テータ函数">ヤコビのテータ函数</a>
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>\vartheta(0; \tau) = \vartheta_{00}(0; \tau) = 1 + 2 \sum_{n=1}^\infty \left(e^{\pi i\tau}\right)^{n^2} = \sum_{n=-\infty}^\infty q^{n^2}&lt;/math&gt;
+から<a class="mw-redirect" href="/wiki/%E3%83%86%E3%83%BC%E3%82%BF%E5%87%BD%E6%95%B0#指標付きテータ函数" title="テータ函数">指標付きテータ函数</a>を導くことができる。次のように置くこととする。
+</p>
+<dl><dd>&lt;math&gt;a=\theta_{2}(0; q)=\vartheta_{10}(0; \tau)&lt;/math&gt;</dd>
+<dd>&lt;math&gt;b=\theta_{3}(0; q)=\vartheta_{00}(0; \tau)&lt;/math&gt;</dd>
+<dd>&lt;math&gt;c=\theta_{4}(0; q)=\vartheta_{01}(0; \tau)&lt;/math&gt;</dd></dl>
+<p>ここに &lt;math&gt;\theta_{m}&lt;/math&gt; と &lt;math&gt;\vartheta_{n}&lt;/math&gt; は記法を変えたものとした。すると、<a href="/wiki/%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A8%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%88%E3%83%A9%E3%82%B9%E3%81%AE%E6%A5%95%E5%86%86%E5%87%BD%E6%95%B0#定数_e1,_e2,_e3" title="ヴァイエルシュトラスの楕円函数">ヴァイエルシュトラス定数</a> g<sub>2</sub>, g<sub>3</sub> と<a href="/wiki/%E3%83%87%E3%83%87%E3%82%AD%E3%83%B3%E3%83%88%E3%81%AE%E3%82%A4%E3%83%BC%E3%82%BF%E9%96%A2%E6%95%B0" title="デデキントのイータ関数">デデキントのエータ函数</a> η(τ) に対して、
+</p>
+<dl><dd>&lt;math&gt;g_2(\tau) = \tfrac{2}{3}\pi^4 \left(a^8 + b^8 + c^8\right)&lt;/math&gt;</dd>
+<dd>&lt;math&gt;g_3(\tau) = \tfrac{4}{27}\pi^6 \sqrt{\frac{(a^8+b^8+c^8)^3-54(abc)^8}{2}}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\Delta = g_2^3-27g_3^2 = (2\pi)^{12}\eta(\tau)^{24} = (2\pi)^{12} \left(\tfrac{1}{2}a b c\right)^8&lt;/math&gt;</dd></dl>
+<p>となる。このようにすると、j (τ) を早く計算できる形に書き換えることができる。
+</p>
+<dl><dd><dl><dd>&lt;math&gt;j(\tau) = 1728\frac{g_2^3}{g_2^3-27g_3^2} = 32 {(a^8 + b^8 + c^8)^3 \over (a b c)^8}.&lt;/math&gt;</dd></dl></dd></dl>
+<p>ただし、
+</p>
+<dl><dd>&lt;math&gt;a^4 - b^4 + c^4 = 0&lt;/math&gt;</dd></dl>
+<p>であることに注意する。
+</p>
+<h2><span id=".E4.BB.A3.E6.95.B0.E7.9A.84.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="代数的定義">代数的定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=9" title="節を編集: 代数的定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>今までは、j を複素変数の函数として考えてきたが、楕円曲線の同型類の不変量としては、j を純粋に代数的に定義することもできる。
+</p>
+<dl><dd>&lt;math&gt;y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6&lt;/math&gt;</dd></dl>
+<p>を任意の体の上の平面楕円曲線とすると、
+</p>
+<dl><dd>&lt;math&gt;b_2 = a_1^2 + 4a_2,\quad b_4 = a_1a_3 + 2a_4&lt;/math&gt;</dd>
+<dd>&lt;math&gt;b_6 = a_3^2 + 4a_6,\quad b_8 = a_1^2a_6 - a_1a_3a_4 + a_2a_3^2 + 4a_2a_6 - a_4^2&lt;/math&gt;</dd>
+<dd>&lt;math&gt;c_4 = b_2^2 - 24b_4,\quad c_6 = -b_2^3 + 36b_2b_4 - 216b_6&lt;/math&gt;</dd></dl>
+<p>と定義することができ、
+</p>
+<dl><dd>&lt;math&gt;\Delta = -b_2^2b_8 + 9b_2b_4b_6 - 8b_4^3 - 27b_6^2&lt;/math&gt;</dd></dl>
+<p>と表すと、これは楕円曲線の<a href="/wiki/%E5%88%A4%E5%88%A5%E5%BC%8F" title="判別式">判別式</a>を表している。
+</p><p>ここで、楕円曲線の j-不変量を
+</p>
+<dl><dd>&lt;math&gt;j = {c_4^3 \over \Delta}&lt;/math&gt;</dd></dl>
+<p>と定義する。
+</p><p>楕円曲線が定義されている体の標数が 2 もしくは 3 でない場合に、この定義は
+</p>
+<dl><dd>&lt;math&gt;j= 1728{c_4^3 \over c_4^3-c_6^2}&lt;/math&gt;</dd></dl>
+<p>と書き直すことができる。
+</p>
+<h2><span id=".E9.80.86.E5.87.BD.E6.95.B0"></span><span class="mw-headline" id="逆函数">逆函数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=10" title="節を編集: 逆函数">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>j-不変量の<a href="/wiki/%E9%80%86%E5%86%99%E5%83%8F" title="逆写像">逆函数</a>は、<a class="mw-redirect" href="/wiki/%E8%B6%85%E5%B9%BE%E4%BD%95%E7%B4%9A%E6%95%B0" title="超幾何級数">超幾何函数</a> <sub>2</sub>F<sub>1</sub> で表すこともできる（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%94%E3%82%AB%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%83%83%E3%82%AF%E3%82%B9%E6%96%B9%E7%A8%8B%E5%BC%8F&amp;action=edit&amp;redlink=1" title="ピカール・フックス方程式 (存在しないページ)">ピカール・フックス方程式</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Picard%E2%80%93Fuchs_equation&amp;action=edit&amp;redlink=1" title="En:Picard–Fuchs equation (存在しないページ)">英語版</a>）</span></span>(Picard–Fuchs equation)も参照）。与えられた数値 N に対して 式 j(τ) = N を τ について解くためには、少なくとも 4つの方法が知られている。 
+</p><p><b>方法 1</b>: <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A9%E3%83%A0%E3%83%80%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="モジュララムダ函数 (存在しないページ)">モジュララムダ函数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:modular_lambda_function&amp;action=edit&amp;redlink=1" title="En:modular lambda function (存在しないページ)">英語版</a>）</span></span>(modular lambda function) λ の6次式を解く方法。
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = \frac{256(1-\lambda(1-\lambda))^3}{(\lambda(1-\lambda))^2}.&lt;/math&gt;</dd></dl>
+<p>x = λ(1−λ) とすると 6次式は x の 3次式となる。すると、λ の 6つの値のどれに対しても、
+</p>
+<dl><dd>&lt;math&gt;\tau = i \ \frac{{}_2F_1 \left (\tfrac{1}{2},\tfrac{1}{2},1,1-\lambda \right )}{{}_2F_1 \left (\tfrac{1}{2},\tfrac{1}{2},1,\lambda \right)}&lt;/math&gt;</dd></dl>
+<p>となる。 
+</p><p><b>方法 2</b>: γ の 4次式を解く方法。
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = \frac{27(1+8\gamma)^3}{\gamma(1-\gamma)^3}.&lt;/math&gt;</dd></dl>
+<p>任意の 4つの<a class="mw-redirect" href="/wiki/%E5%87%BD%E6%95%B0%E3%81%AE%E6%A0%B9" title="函数の根">根</a>に対して、
+</p>
+<dl><dd>&lt;math&gt;\tau = \frac{i}{\sqrt{3}} \frac{{}_2F_1 \left (\tfrac{1}{3},\tfrac{2}{3},1,1-\gamma \right)}{{}_2F_1 \left(\tfrac{1}{3},\tfrac{2}{3},1,\gamma \right )}&lt;/math&gt;</dd></dl>
+<p>となる。
+</p><p><b>方法 3</b>: β の 3次式を解く方法。
+</p>
+<dl><dd>&lt;math&gt;j(\tau) = \frac{64(1+3\beta)^3}{\beta(1-\beta)^2}.&lt;/math&gt;</dd></dl>
+<p>すると、任意の 3つの根に対し、
+</p>
+<dl><dd>&lt;math&gt;\tau = \frac{i}{\sqrt{2}} \frac{{}_2F_1 \left (\tfrac{1}{4},\tfrac{3}{4},1,1-\beta \right)}{{}_2F_1 \left(\tfrac{1}{4},\tfrac{3}{4},1,\beta \right )}&lt;/math&gt;</dd></dl>
+<p>となる。
+</p><p><b>方法 4</b>: α の 2次式を解く方法。
+</p>
+<dl><dd>&lt;math&gt;j(\tau)=\frac{1728}{4\alpha(1-\alpha)}.&lt;/math&gt;</dd></dl>
+<p>すると、
+</p>
+<dl><dd>&lt;math&gt;\tau = i \ \frac{{}_2F_1 \left (\tfrac{1}{6},\tfrac{5}{6},1,1-\alpha \right)}{{}_2F_1 \left(\tfrac{1}{6},\tfrac{5}{6},1,\alpha \right )}&lt;/math&gt;</dd></dl>
+<p>となる。
+</p><p>2つの根は τ と 1/τ であるが、j (τ) = j (1/τ) であるために、どの α を選んでも差異はない。後半 3つの方法は、<a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AA%E3%83%8B%E3%83%B4%E3%82%A1%E3%83%BC%E3%82%B5%E3%83%BB%E3%83%A9%E3%83%9E%E3%83%8C%E3%82%B8%E3%83%A3%E3%83%B3" title="シュリニヴァーサ・ラマヌジャン">ラマヌジャン</a>の交代基底についての<a href="/wiki/%E6%A5%95%E5%86%86%E5%87%BD%E6%95%B0" title="楕円函数">楕円函数</a>論で発見された。
+</p><p>逆函数は、これらの根の比率が有界でないにもかかわらず、楕円函数の周期の高精度な計算を通して、うまく適用することが可能である。また、関連する帰結として、2 のべきの大きさをもつ虚数軸上の点で j の値が二次の根となることを通して（逆関数を）表すことができる（このようにして、<a href="/wiki/%E5%AE%9A%E8%A6%8F%E3%81%A8%E3%82%B3%E3%83%B3%E3%83%91%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E4%BD%9C%E5%9B%B3" title="定規とコンパスによる作図">定規とコンパスによる作図</a>が可能となる）。レベルが 2 の<a class="mw-redirect" href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E5%87%BD%E6%95%B0" title="モジュラ函数">モジュラ函数</a>は 3次式であるので、この結果は自明ではない。
+</p>
+<h2><span id=".CF.80.E5.85.AC.E5.BC.8F"></span><span class="mw-headline" id="π公式">π公式</span></h2>
+<p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%81%E3%83%A5%E3%83%80%E3%83%8E%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;redlink=1" title="チュダノフスキーのアルゴリズム (存在しないページ)">チュダノフスキー兄弟</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Chudnovsky_algorithm&amp;action=edit&amp;redlink=1" title="En:Chudnovsky algorithm (存在しないページ)">英語版</a>）</span></span>(Chudnovsky brothers)は、1987年に、
+</p>
+<dl><dd>&lt;math&gt;\frac{1}{\pi} = \frac{12}{640320^{3/2}} \sum_{k=0}^\infty \frac{(6k)! (163 \cdot 3344418k + 13591409)}{(3k)!(k!)^3 (-640320)^{3k}}&lt;/math&gt;</dd></dl>
+<p>を発見し、&lt;math&gt;j\big(\tfrac{1+\sqrt{-163}}{2}\big) = -640320^3&lt;/math&gt; という事実を示すことに使用した。同様な公式は、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%A9%E3%83%9E%E3%83%8C%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%BB%E4%BD%90%E8%97%A4%E7%B4%9A%E6%95%B0&amp;action=edit&amp;redlink=1" title="ラマヌジャン・佐藤級数 (存在しないページ)">ラマヌジャン・佐藤級数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ramanujan-Sato_series&amp;action=edit&amp;redlink=1" title="En:Ramanujan-Sato series (存在しないページ)">英語版</a>）</span></span>(Ramanujan-Sato series)を参照。
+</p>
+<h2><span id=".E7.89.B9.E6.AE.8A.E5.80.A4"></span><span class="mw-headline" id="特殊値">特殊値</span></h2>
+<p>j-不変量は、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%9F%BA%E6%9C%AC%E9%A0%98%E5%9F%9F&amp;action=edit&amp;redlink=1" title="基本領域 (存在しないページ)">基本領域</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:fundamental_domain&amp;action=edit&amp;redlink=1" title="En:fundamental domain (存在しないページ)">英語版</a>）</span></span>(fundamental domain)の「角」
+</p>
+<dl><dd>&lt;math&gt;\tfrac{1}{2}\left(1 + i \sqrt{3}\right)&lt;/math&gt;</dd></dl>
+<p>では 0 となる。
+</p><p>以下に、いくつかの特殊値を示す<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="ノートでは J = 1728 j という定義が出されていますが、どちらが正しいのでしょうか。（2020年7月）">（J = j/1728 を使って表示している）</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E6%AD%A3%E7%A2%BA%E6%80%A7%E3%81%AB%E7%96%91%E5%95%8F%E3%81%8C%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B" title="Wikipedia:正確性に疑問がある記事"><span title="ノートでは J = 1728 j という定義が出されていますが、どちらが正しいのでしょうか。（2020年7月）">疑問点</span></a><span class="metadata"> – <a class="new" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;redlink=1" title="トーク:J-不変量 (存在しないページ)">トーク</a></span></i>]</sup>。
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<pre>                                     J(i) &amp;= J \left( \tfrac{1 + i}{2} \right) = 1 \\
+                  J\left(\sqrt{2}i\right) &amp;= \big(\tfrac{5}{3}\big)^3 \\
+                                    J(2i) &amp;= \big(\tfrac{11}{2}\big)^3 \\
+                 J\left(2\sqrt{2}i\right) &amp;= \tfrac{125}{216} \left(19 + 13\sqrt{2} \right)^3\\
+                                    J(4i) &amp;= \tfrac{1}{64} \left(724 + 513\sqrt{2} \right)^3\\
+        J\left( \tfrac{1 + 2i}{2} \right) &amp;= \tfrac{1}{64} \left(724 - 513\sqrt{2} \right)^3\\
+J\left( \tfrac{1 + 2\sqrt{2}i}{3} \right) &amp;= \tfrac{125}{216} \left(19 - 13\sqrt{2} \right)^3\\
+                                    J(3i) &amp;= \tfrac{1}{27} \left(2 + \sqrt{3}\right)^2 \left(21 + 20\sqrt{3}\right )^3 \\
+                 J\left(2\sqrt{3}i\right) &amp;= \tfrac{125}{16} \left(30 + 17\sqrt{3}\right)^3\\
+J\left( \tfrac{1 + 7\sqrt{3}i}{2} \right) &amp;= -\tfrac{64000}{7} \left(651 + 142\sqrt{21} \right)^3\\
+</pre>
+<p>J\left(\tfrac{1 + 3\sqrt{11}i}{10} \right) &amp;= \tfrac{64}{27} \left(23 - 4\sqrt{33}\right)^2 \left(-77 + 15\sqrt{33} \right)^3\\
+</p>
+<pre>                 J\left(\sqrt{21}i\right) &amp;= \tfrac{1}{32} \left(5 + 3\sqrt{3}\right)^2 \left(3 + \sqrt{7} \right)^2 \left( 65 + 34\sqrt{3} + 26\sqrt{7} + 15\sqrt{21}\right)^3\\
+    J\left( \tfrac{\sqrt{30}i}{1} \right) &amp;= \tfrac{1}{16} \left(10 + 7\sqrt{2} + 4\sqrt{5} + 3\sqrt{10} \right)^4 \left( 55 + 30\sqrt{2} + 12\sqrt{5} + 10\sqrt{10} \right)^3\\
+    J\left( \tfrac{\sqrt{30}i}{2} \right) &amp;= \tfrac{1}{16} \left(10 + 7\sqrt{2} - 4\sqrt{5} - 3\sqrt{10} \right)^4 \left( 55 + 30\sqrt{2} - 12\sqrt{5} - 10\sqrt{10} \right)^3\\
+    J\left( \tfrac{\sqrt{30}i}{5} \right) &amp;= \tfrac{1}{16} \left(10 - 7\sqrt{2} + 4\sqrt{5} - 3\sqrt{10} \right)^4 \left( 55 - 30\sqrt{2} + 12\sqrt{5} - 10\sqrt{10} \right)^3\\
+   J\left( \tfrac{\sqrt{30}i}{10} \right) &amp;= \tfrac{1}{16} \left(10 - 7\sqrt{2} - 4\sqrt{5} + 3\sqrt{10} \right)^4 \left( 55 - 30\sqrt{2} - 12\sqrt{5} + 10\sqrt{10} \right)^3\\
+</pre>
+<p>J\left(\tfrac{1+\sqrt{31}i}{2}\right)&amp;=\left(1-\left(1+\tfrac{\sqrt{19}}{2}\left(\left(\tfrac{13-\sqrt{93}}{13+\sqrt{93}}\right)^{1/2}\left(\tfrac{\sqrt{31}+\sqrt{27}}{\sqrt{31}-\sqrt{27}}\right)^{1/3}+\left(\tfrac{13+\sqrt{93}}{13-\sqrt{93}}\right)^{1/2}\left(\tfrac{\sqrt{31}-\sqrt{27}}{\sqrt{31}+\sqrt{27}}\right)^{1/3}\right)\right)^2\right)^3\\
+J(\sqrt{70}i) &amp;= \left(1 + \tfrac{9}{4}\left(303 + 220\sqrt{2} + 139\sqrt{5} + 96\sqrt{10}\right)^2 \right)^3\\
+J(\sqrt{94}i) &amp;= \left(1 + \tfrac{9}{64}\left(2454 + 1736\sqrt{2} + \left(546 + 384\sqrt{2}\right)\sqrt{9 + 8\sqrt{2}} + \left(527 + 373\sqrt{2} + \left(117 + 83\sqrt{2}\right)\sqrt{9 + 8\sqrt{2}}\right)\sqrt{3 + 4\sqrt{2} + 3\sqrt{9 + 8\sqrt{2}}}\right)^2\right)^3\\
+J(7i) &amp;= \left( 1 + \tfrac{9}{4}\sqrt{21+8\sqrt{7}} \left(30 + 11\sqrt{7} + \left (6+\sqrt{7} \right )\sqrt{21+8\sqrt{7}}\right)^2 \right)^3\\
+J(8i) &amp;= \left( 1 + \tfrac{9}{4} \sqrt[4]{2} \left (1 + \sqrt{2} \right) \left(123 + 104\sqrt[4]{2} + 88\sqrt{2} + 73\sqrt[4]{8}\right)^2 \right)^3\\
+J(10i) &amp;= \left(1 + \tfrac{9}{8}\left(2402 + 1607\sqrt[4]{5} + 1074\sqrt[4]{25} + 719\sqrt[4]{125}\right)^2 \right)^3\\
+J \left( \frac{5 \, i}{2} \right) &amp;= \left(1 + \tfrac{9}{8}\left(2402 - 1607\sqrt[4]{5} + 1074\sqrt[4]{25} - 719\sqrt[4]{125}\right)^2 \right)^3\\
+J(2\sqrt{58}i) &amp;= \left(1+\tfrac{9}{256}\left(1+\sqrt{2}\right)^5\left(5+\sqrt{29}\right)^5\left(793+907\sqrt{2}+237\sqrt{29}+103\sqrt{58}\right)^2\right)^3\\
+J\left( \tfrac{1 + \sqrt{1435}i}{2} \right) &amp;= \left( 1 - 9 \left ( 9892538 + 4424079\sqrt{5} + 1544955\sqrt{41} + 690925\sqrt{205} \right )^2 \right)^3\\
+J\left( \tfrac{1 + \sqrt{1555}i}{2} \right) &amp;= \left( 1 - 9 \left ( 22297077 + 9971556\sqrt{5} + \left ( 3571365 + 1597163\sqrt{5} \right ) \sqrt{\tfrac{31 + 21\sqrt{5}}{2}} \right)^2 \right)^3\\
+\end{align}&lt;/math&gt;
+</p><p>2014年にはいくつかの特殊値が計算された<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p><p><br/>
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>j \left( \frac{5 \, i + 1}{2} \right) &amp;= \left( \frac{2927 - 1323 \, \sqrt{5}}{2} \right)^3,\\
+</p><p>j \left( 5 \, i \right) &amp;= \left( \frac{2927 + 1323 \, \sqrt{5}}{2} \right)^3,\\
+</p><p>j \left( \frac{5 \, i + 2}{4} \right) &amp;= \Bigg( \frac{\left( 1 + \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 - 858585699 \, \sqrt{2} + 540309076 \, \sqrt{5} - 374537880 \, \sqrt{10} \, - \, \sqrt[4]{5} \left( 693172512 - 595746414 \, \sqrt{2} + 407357424 \, \sqrt{5} - 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3,\\
+</p><p>j \left( \frac{10 \, i + 1}{2} \right) &amp;= \Bigg( \frac{\left( 1 + \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 - 858585699 \, \sqrt{2} + 540309076 \, \sqrt{5} - 374537880 \, \sqrt{10} \, + \, \sqrt[4]{5} \left( 693172512 - 595746414 \, \sqrt{2} + 407357424 \, \sqrt{5} - 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3,\\
+</p><p>j \left( \frac{5 \, i}{4} \right) &amp;= \Bigg( \frac{\left( 1 + \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 + 858585699 \, \sqrt{2} + 540309076 \, \sqrt{5} + 374537880 \, \sqrt{10} \, - \, \sqrt[4]{5} \left( 693172512 + 595746414 \, \sqrt{2} + 407357424 \, \sqrt{5} + 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3,\\
+</p><p>j(20 \, i) &amp;= \Bigg( \frac{\left( 1 + \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 + 858585699 \, \sqrt{2} + 540309076 \, \sqrt{5} + 374537880 \, \sqrt{10} \, + \, \sqrt[4]{5} \left( 693172512 + 595746414 \, \sqrt{2} + 407357424 \, \sqrt{5} + 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3.
+\end{align}&lt;/math&gt;
+</p><p>これ以前に示したすべての値は実数である。複素共役のペアは、&lt;math&gt;j(10 i)&lt;/math&gt; と &lt;math&gt;j(5 i/2)&lt;/math&gt; に対し、参考文献のように値に沿って、上記のように対称的になっていると推察される。
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>j \left( \frac{5 \, i \pm 1}{4} \right) &amp;= \left(1 - \tfrac{9}{8}\left((2402 - 1074\sqrt{5}) \, i \pm (1607 - 719\sqrt{5}) \sqrt[4]{5} \right)^2 \right)^3.
+\end{align}&lt;/math&gt;
+</p><p>4つの特殊値は、2つの複素共役のペアにより与えられる<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>j \left( \frac{4 \left( 5 \, i \pm 1 \right)}{13} \right) = \Bigg( \frac{\left( 1 - \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 - 858585699 \, \sqrt{2} - 540309076 \, \sqrt{5} + 374537880 \, \sqrt{10} \, \pm \, \textit{i} \, \sqrt[4]{5} \left( 693172512 - 595746414 \, \sqrt{2} - 407357424 \, \sqrt{5} + 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3,\\
+j \left( \frac{5 \left( 4 \, i \pm 1 \right)}{17} \right) = \Bigg( \frac{\left( 1 - \sqrt{5} \, \right)^{37}}{2^{39}} \Bigg( 1190448488 + 858585699 \, \sqrt{2} - 540309076 \, \sqrt{5} - 374537880 \, \sqrt{10} \, \pm \, \textit{i} \, \sqrt[4]{5} \left( 693172512 + 595746414 \, \sqrt{2} - 407357424 \, \sqrt{5} - 240819696 \, \sqrt{10} \, \right) \Bigg) \Bigg)^3
+\end{align}&lt;/math&gt;
+</p>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;section=13" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Joseph_H._Silverman&amp;action=edit&amp;redlink=1" title="En:Joseph H. Silverman (存在しないページ)">Silverman, Joseph H.</a> (1986). <i>The Arithmetic of Elliptic Curves</i>. <a href="/wiki/Graduate_Texts_in_Mathematics" title="Graduate Texts in Mathematics">Graduate Texts in Mathematics</a>. <b>106</b>. <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>. p. 339. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-96203-4" title="特別:文献資料/0-387-96203-4">0-387-96203-4</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0585.14026" rel="nofollow">0585.14026</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Arithmetic+of+Elliptic+Curves&amp;rft.aulast=Silverman&amp;rft.aufirst=Joseph+H.&amp;rft.au=Silverman%2C%26%2332%3BJoseph+H.&amp;rft.date=1986&amp;rft.series=%5B%5BGraduate+Texts+in+Mathematics%5D%5D&amp;rft.volume=106&amp;rft.pages=p.%26nbsp%3B339&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft.isbn=0-387-96203-4&amp;rft_id=info:zbl/0585.14026&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Hans_Petersson&amp;action=edit&amp;redlink=1" title="En:Hans Petersson (存在しないページ)">Petersson, Hans</a> (1932). <i>Über die Entwicklungskoeffizienten der automorphen Formen</i>. <b>58</b>. 169–215. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2FBF02547776" rel="nofollow">10.1007/BF02547776</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1555346" rel="nofollow">1555346</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%C3%9Cber+die+Entwicklungskoeffizienten+der+automorphen+Formen&amp;rft.aulast=Petersson&amp;rft.aufirst=Hans&amp;rft.au=Petersson%2C%26%2332%3BHans&amp;rft.date=1932&amp;rft.volume=58&amp;rft.issue=1&amp;rft.pages=169%E2%80%93215&amp;rft_id=info:doi/10.1007%2FBF02547776&amp;rft.mr=1555346&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Hans_Rademacher&amp;action=edit&amp;redlink=1" title="En:Hans Rademacher (存在しないページ)">Rademacher, Hans</a> (1938). <i>The Fourier coefficients of the modular invariant j(τ)</i>. <b>60</b>. The Johns Hopkins University Press. 501–512. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F2371313" rel="nofollow">10.2307/2371313</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a> <a class="external text" href="https://www.jstor.org/stable/2371313" rel="nofollow">2371313</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1507331" rel="nofollow">1507331</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Fourier+coefficients+of+the+modular+invariant+j%28%CF%84%29&amp;rft.aulast=Rademacher&amp;rft.aufirst=Hans&amp;rft.au=Rademacher%2C%26%2332%3BHans&amp;rft.date=1938&amp;rft.volume=60&amp;rft.issue=2&amp;rft.pages=501%E2%80%93512&amp;rft.pub=The+Johns+Hopkins+University+Press&amp;rft_id=info:doi/10.2307%2F2371313&amp;rft.jstor=2371313&amp;rft.mr=1507331&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-C108-4"><b><a href="#cite_ref-C108_4-0">^</a></b> <span class="reference-text">Chandrasekharan (1985) p.108</span>
+</li>
+<li id="cite_note-C110-5"><b><a href="#cite_ref-C110_5-0">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFChandrasekharan1985" style="font-style:normal"><a class="new" href="/w/index.php?title=En:K._S._Chandrasekharan&amp;action=edit&amp;redlink=1" title="En:K. S. Chandrasekharan (存在しないページ)">Chandrasekharan, K.</a> (1985), <i>Elliptic Functions</i>, Grundlehren der mathematischen Wissenschaften, <b>281</b>, <a class="mw-redirect" href="/wiki/Springer-Verlag" title="Springer-Verlag">Springer-Verlag</a>, p. 110, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/3-540-15295-4" title="特別:文献資料/3-540-15295-4">3-540-15295-4</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0575.33001" rel="nofollow">0575.33001</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Elliptic+Functions&amp;rft.aulast=Chandrasekharan&amp;rft.aufirst=K.&amp;rft.au=Chandrasekharan%2C%26%2332%3BK.&amp;rft.date=1985&amp;rft.series=Grundlehren+der+mathematischen+Wissenschaften&amp;rft.volume=281&amp;rft.pages=p.%26nbsp%3B110&amp;rft.pub=%5B%5BSpringer-Verlag%5D%5D&amp;rft.isbn=3-540-15295-4&amp;rft_id=info:zbl/0575.33001&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><cite class="citation" id="CITEREFGirondoGonzález-Diez2012" style="font-style:normal">Girondo, Ernesto; González-Diez, Gabino (2012), <i>Introduction to compact Riemann surfaces and dessins d'enfants</i>, London Mathematical Society Student Texts, <b>79</b>, Cambridge: <a class="mw-redirect" href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>, p. 267, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-521-74022-7" title="特別:文献資料/978-0-521-74022-7">978-0-521-74022-7</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:1253.30001" rel="nofollow">1253.30001</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+compact+Riemann+surfaces+and+dessins+d%27enfants&amp;rft.aulast=Girondo&amp;rft.aufirst=Ernesto&amp;rft.au=Girondo%2C%26%2332%3BErnesto&amp;rft.au=Gonz%C3%A1lez-Diez%2C%26%2332%3BGabino&amp;rft.date=2012&amp;rft.series=London+Mathematical+Society+Student+Texts&amp;rft.volume=79&amp;rft.pages=p.%26nbsp%3B267&amp;rft.place=Cambridge&amp;rft.pub=%5B%5BCambridge+University+Press%5D%5D&amp;rft.isbn=978-0-521-74022-7&amp;rft_id=info:zbl/1253.30001&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Adlaj, Semjon. “<a class="external text" href="http://www.ccas.ru/depart/mechanics/TUMUS/Adlaj/ECCDG.pdf" rel="nofollow">Multiplication and division on elliptic curves, torsion points and roots of modular equations</a>”. <span title="17 October 2014">2014年10月17日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">Adlaj, Semjon (2014年). “<a class="external text" href="http://www.ccas.ru/sabramov/seminar/lib/exe/fetch.php?media=adlaj140924.pdf" rel="nofollow">Torsion points on elliptic curves and modular polynomial symmetries</a>”. <span title="">2014年10月15日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<ul><li><cite class="citation" id="CITEREFApostol1976" style="font-style:normal"><a class="mw-redirect" href="/wiki/Tom_M._Apostol" title="Tom M. Apostol">Apostol, Tom M.</a> (1976), <i>Modular functions and Dirichlet Series in Number Theory</i>, Graduate Texts in Mathematics, <b>41</b>, New York: Springer-Verlag, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0422157" rel="nofollow">0422157</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Modular+functions+and+Dirichlet+Series+in+Number+Theory&amp;rft.aulast=Apostol&amp;rft.aufirst=Tom+M.&amp;rft.au=Apostol%2C%26%2332%3BTom+M.&amp;rft.date=1976&amp;rft.series=Graduate+Texts+in+Mathematics&amp;rft.volume=41&amp;rft.place=New+York&amp;rft.pub=Springer-Verlag&amp;rft.mr=0422157&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span>. Provides a very readable introduction and various interesting identities.
+<ul><li><cite class="citation" id="CITEREFApostol1990" style="font-style:normal"><a class="mw-redirect" href="/wiki/Tom_M._Apostol" title="Tom M. Apostol">Apostol, Tom M.</a> (1990), <i>Modular functions and Dirichlet Series in Number Theory</i> (2nd ed.), <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-97127-0" title="特別:文献資料/0-387-97127-0">0-387-97127-0</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1027834" rel="nofollow">1027834</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Modular+functions+and+Dirichlet+Series+in+Number+Theory&amp;rft.aulast=Apostol&amp;rft.aufirst=Tom+M.&amp;rft.au=Apostol%2C%26%2332%3BTom+M.&amp;rft.date=1990&amp;rft.edition=2nd&amp;rft.isbn=0-387-97127-0&amp;rft.mr=1027834&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span></li></ul></li>
+<li><cite class="citation" id="CITEREFBerndtChan1999" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Bruce_C._Berndt&amp;action=edit&amp;redlink=1" title="En:Bruce C. Berndt (存在しないページ)">Berndt, Bruce C.</a>; Chan, Heng Huat (1999), <a class="external text" href="http://www.journals.cms.math.ca/cgi-bin/vault/public/view/berndt7376/body/PDF/berndt7376.pdf" rel="nofollow">“Ramanujan and the modular j-invariant”</a>, <i>Canadian Mathematical Bulletin</i> <b>42</b> (4):  427–440, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.4153%2FCMB-1999-050-1" rel="nofollow">10.4153/CMB-1999-050-1</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1727340" rel="nofollow">1727340</a><span style="display:none;">, <a class="external free" href="http://www.journals.cms.math.ca/cgi-bin/vault/public/view/berndt7376/body/PDF/berndt7376.pdf" rel="nofollow">http://www.journals.cms.math.ca/cgi-bin/vault/public/view/berndt7376/body/PDF/berndt7376.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Ramanujan+and+the+modular+j-invariant&amp;rft.jtitle=Canadian+Mathematical+Bulletin&amp;rft.aulast=Berndt&amp;rft.aufirst=Bruce+C.&amp;rft.au=Berndt%2C%26%2332%3BBruce+C.&amp;rft.au=Chan%2C%26%2332%3BHeng+Huat&amp;rft.date=1999&amp;rft.volume=42&amp;rft.issue=4&amp;rft.pages=427%E2%80%93440&amp;rft_id=info:doi/10.4153%2FCMB-1999-050-1&amp;rft.mr=1727340&amp;rft_id=http%3A%2F%2Fwww.journals.cms.math.ca%2Fcgi-bin%2Fvault%2Fpublic%2Fview%2Fberndt7376%2Fbody%2FPDF%2Fberndt7376.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span>. Provides a variety of interesting algebraic identities, including the inverse as a hypergeometric series.</li>
+<li><cite class="citation" id="CITEREFCox1989" style="font-style:normal"><a class="new" href="/w/index.php?title=En:David_A._Cox&amp;action=edit&amp;redlink=1" title="En:David A. Cox (存在しないページ)">Cox, David A.</a> (1989), <i>Primes of the Form x^2 + ny^2: Fermat, Class Field Theory, and Complex Multiplication</i>, New York: Wiley-Interscience Publication, John Wiley &amp; Sons Inc., <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1028322" rel="nofollow">1028322</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Primes+of+the+Form+x%5E2+%2B+ny%5E2%3A+Fermat%2C+Class+Field+Theory%2C+and+Complex+Multiplication&amp;rft.aulast=Cox&amp;rft.aufirst=David+A.&amp;rft.au=Cox%2C%26%2332%3BDavid+A.&amp;rft.date=1989&amp;rft.place=New+York&amp;rft.pub=Wiley-Interscience+Publication%2C+John+Wiley+%26+Sons+Inc.&amp;rft.mr=1028322&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span> Introduces the j-invariant and discusses the related class field theory.</li>
+<li><cite class="citation" id="CITEREFConwayNorton1979" style="font-style:normal"><a class="mw-redirect" href="/wiki/John_Horton_Conway" title="John Horton Conway">Conway, John Horton</a>; <a class="new" href="/w/index.php?title=En:Simon_P._Norton&amp;action=edit&amp;redlink=1" title="En:Simon P. Norton (存在しないページ)">Norton, Simon</a> (1979), “Monstrous moonshine”, <i>Bulletin of the London Mathematical Society</i> <b>11</b> (3):  308–339, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1112%2Fblms%2F11.3.308" rel="nofollow">10.1112/blms/11.3.308</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0554399" rel="nofollow">0554399</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Monstrous+moonshine&amp;rft.jtitle=Bulletin+of+the+London+Mathematical+Society&amp;rft.aulast=Conway&amp;rft.aufirst=John+Horton&amp;rft.au=Conway%2C%26%2332%3BJohn+Horton&amp;rft.au=Norton%2C%26%2332%3BSimon&amp;rft.date=1979&amp;rft.volume=11&amp;rft.issue=3&amp;rft.pages=308%E2%80%93339&amp;rft_id=info:doi/10.1112%2Fblms%2F11.3.308&amp;rft.mr=0554399&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span>. Includes a list of the 175 genus-zero modular functions.</li>
+<li><cite class="citation" id="CITEREFRankin1977" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Robert_Alexander_Rankin&amp;action=edit&amp;redlink=1" title="En:Robert Alexander Rankin (存在しないページ)">Rankin, Robert A.</a> (1977), <i>Modular forms and functions</i>, Cambridge: Cambridge University Press, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-521-21212-X" title="特別:文献資料/0-521-21212-X">0-521-21212-X</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0498390" rel="nofollow">0498390</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Modular+forms+and+functions&amp;rft.aulast=Rankin&amp;rft.aufirst=Robert+A.&amp;rft.au=Rankin%2C%26%2332%3BRobert+A.&amp;rft.date=1977&amp;rft.place=Cambridge&amp;rft.pub=Cambridge+University+Press&amp;rft.isbn=0-521-21212-X&amp;rft.mr=0498390&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span>. Provides a short review in the context of modular forms.</li>
+<li><cite class="citation" id="CITEREFSchneider1937" style="font-style:normal"><a class="new" href="/w/index.php?title=En:Theodor_Schneider&amp;action=edit&amp;redlink=1" title="En:Theodor Schneider (存在しないページ)">Schneider, Theodor</a> (1937), “Arithmetische Untersuchungen elliptischer Integrale”, <i>Math. Annalen</i> <b>113</b>:  1–13, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1007%2FBF01571618" rel="nofollow">10.1007/BF01571618</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1513075" rel="nofollow">1513075</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Arithmetische+Untersuchungen+elliptischer+Integrale&amp;rft.jtitle=Math.+Annalen&amp;rft.aulast=Schneider&amp;rft.aufirst=Theodor&amp;rft.au=Schneider%2C%26%2332%3BTheodor&amp;rft.date=1937&amp;rft.volume=113&amp;rft.pages=1%26ndash%3B13&amp;rft_id=info:doi/10.1007%2FBF01571618&amp;rft.mr=1513075&amp;rfr_id=info:sid/ja.wikipedia.org:J-%E4%B8%8D%E5%A4%89%E9%87%8F"><span style="display: none;"> </span></span>.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401163801
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.486 seconds
+Real time usage: 0.811 seconds
+Preprocessor visited node count: 13299/1000000
+Post‐expand include size: 95987/2097152 bytes
+Template argument size: 21470/2097152 bytes
+Highest expansion depth: 29/40
+Expensive parser function count: 16/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 45712/5000000 bytes
+Lua time usage: 0.260/7 seconds
+Lua virtual size: 6049792/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  745.752      1 -total
+ 57.17%  426.360     12 テンプレート:Citation/core
+ 43.65%  325.523      1 テンプレート:Reflist
+ 43.08%  321.241     23 テンプレート:Citation/identifier
+ 34.68%  258.663      9 テンプレート:Citation
+ 31.11%  232.023     17 テンプレート:Catalog_lookup_link
+ 24.80%  184.946      3 テンプレート:Cite_book
+ 19.66%  146.645      5 テンプレート:ISBN2
+ 15.68%  116.903      9 テンプレート:MathSciNet
+ 14.74%  109.939     18 テンプレート:仮リンク
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2940841-0!canonical and timestamp 20220401163801 and revision id 1738826. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=J-不変量&amp;oldid=1738826">http://localhost:8080/w/index.php?title=J-不変量&amp;oldid=1738826</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F" title="カテゴリ:モジュラー形式">モジュラー形式</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%A5%95%E5%86%86%E5%87%BD%E6%95%B0%E8%AB%96" title="カテゴリ:楕円函数論">楕円函数論</a></li><li><a class="new" href="/w/index.php?title=%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A0%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E7%90%86%E8%AB%96&amp;action=edit&amp;redlink=1" title="カテゴリ:ムーンシャイン理論 (存在しないページ)">ムーンシャイン理論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;returntoquery=curid%3D2940841%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;returntoquery=curid%3D2940841%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/J-%E4%B8%8D%E5%A4%89%E9%87%8F" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/J-%E4%B8%8D%E5%A4%89%E9%87%8F">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/J-%E4%B8%8D%E5%A4%89%E9%87%8F" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/J-%E4%B8%8D%E5%A4%89%E9%87%8F" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;oldid=1738826" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=J-%E4%B8%8D%E5%A4%89%E9%87%8F&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年7月23日 (木) 13:02 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.486","walltime":"0.811","ppvisitednodes":{"value":13299,"limit":1000000},"postexpandincludesize":{"value":95987,"limit":2097152},"templateargumentsize":{"value":21470,"limit":2097152},"expansiondepth":{"value":29,"limit":40},"expensivefunctioncount":{"value":16,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":45712,"limit":5000000},"timingprofile":["100.00%  745.752      1 -total"," 57.17%  426.360     12 テンプレート:Citation/core"," 43.65%  325.523      1 テンプレート:Reflist"," 43.08%  321.241     23 テンプレート:Citation/identifier"," 34.68%  258.663      9 テンプレート:Citation"," 31.11%  232.023     17 テンプレート:Catalog_lookup_link"," 24.80%  184.946      3 テンプレート:Cite_book"," 19.66%  146.645      5 テンプレート:ISBN2"," 15.68%  116.903      9 テンプレート:MathSciNet"," 14.74%  109.939     18 テンプレート:仮リンク"]},"scribunto":{"limitreport-timeusage":{"value":"0.260","limit":"7"},"limitreport-virtmemusage":{"value":6049792,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401163801","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":957});});</script>
+</body></html>

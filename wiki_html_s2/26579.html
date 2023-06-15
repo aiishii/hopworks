@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>遺伝的アルゴリズム - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-遺伝的アルゴリズム rootpage-遺伝的アルゴリズム skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">遺伝的アルゴリズム</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>遺伝的アルゴリズム</b>（いでんてきアルゴリズム、<a href="." id="link_a_1" title="英語">英語</a>：genetic algorithm、略称：GA）とは、<a href="." id="link_a_2" title="1975年">1975年</a>に<a href="." id="link_a_3" title="ミシガン大学">ミシガン大学</a>の<a href="." id="link_a_4" title="ジョン・H・ホランド">ジョン・H・ホランド</a>（John Henry Holland）によって提案された近似解を探索する<a href="." id="link_a_5" title="メタヒューリスティクスアルゴリズム">メタヒューリスティックアルゴリズム</a>である。<a href="." id="link_a_6" title="人工生命">人工生命</a>同様、偶然の要素でコンピューターの制御を左右する。4つの主要な<a href="." id="link_a_7" title="進化的アルゴリズム">進化的アルゴリズム</a>の一つであり、その中でも最も一般的に使用されている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#アルゴリズムの流れ"><span class="tocnumber">2</span> <span class="toctext">アルゴリズムの流れ</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#遺伝的操作"><span class="tocnumber">3</span> <span class="toctext">遺伝的操作</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#選択"><span class="tocnumber">3.1</span> <span class="toctext">選択</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#ルーレット選択"><span class="tocnumber">3.1.1</span> <span class="toctext">ルーレット選択</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#ランキング選択"><span class="tocnumber">3.1.2</span> <span class="toctext">ランキング選択</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#トーナメント選択"><span class="tocnumber">3.1.3</span> <span class="toctext">トーナメント選択</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#その他"><span class="tocnumber">3.1.4</span> <span class="toctext">その他</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#交叉（組み換え）"><span class="tocnumber">3.2</span> <span class="toctext">交叉（組み換え）</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#一点交叉"><span class="tocnumber">3.2.1</span> <span class="toctext">一点交叉</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#二点交叉"><span class="tocnumber">3.2.2</span> <span class="toctext">二点交叉</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#多点交叉"><span class="tocnumber">3.2.3</span> <span class="toctext">多点交叉</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#一様交叉"><span class="tocnumber">3.2.4</span> <span class="toctext">一様交叉</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#突然変異"><span class="tocnumber">3.3</span> <span class="toctext">突然変異</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#GAの問題点"><span class="tocnumber">4</span> <span class="toctext">GAの問題点</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#初期収束"><span class="tocnumber">4.1</span> <span class="toctext">初期収束</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#ヒッチハイキング"><span class="tocnumber">4.2</span> <span class="toctext">ヒッチハイキング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#GA_の理論"><span class="tocnumber">5</span> <span class="toctext">GA の理論</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="#SGA"><span class="tocnumber">5.1</span> <span class="toctext">SGA</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#スキーマ理論"><span class="tocnumber">5.2</span> <span class="toctext">スキーマ理論</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#スキーマ定理と積み木仮説"><span class="tocnumber">5.3</span> <span class="toctext">スキーマ定理と積み木仮説</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#GA_の拡張"><span class="tocnumber">6</span> <span class="toctext">GA の拡張</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Messy_GA"><span class="tocnumber">6.1</span> <span class="toctext">Messy GA</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#CHC"><span class="tocnumber">6.2</span> <span class="toctext">CHC</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#分布推定アルゴリズム"><span class="tocnumber">6.3</span> <span class="toctext">分布推定アルゴリズム</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#遺伝的プログラミング"><span class="tocnumber">7</span> <span class="toctext">遺伝的プログラミング</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>遺伝的アルゴリズムは<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF" title="データ">データ</a>（解の候補）を遺伝子で表現した「個体」を複数用意し、<a href="/wiki/%E9%81%A9%E5%BF%9C%E5%BA%A6" title="適応度">適応度</a>の高い個体を優先的に<a href="/wiki/%E9%81%B8%E6%8A%9E" title="選択">選択</a>して<a class="mw-redirect" href="/wiki/%E4%BA%A4%E5%8F%89" title="交叉">交叉</a>・<a href="/wiki/%E7%AA%81%E7%84%B6%E5%A4%89%E7%95%B0" title="突然変異">突然変異</a>などの操作を繰り返しながら解を探索する。適応度は<a class="mw-redirect" href="/wiki/%E9%81%A9%E5%BF%9C%E5%BA%A6%E9%96%A2%E6%95%B0" title="適応度関数">適応度関数</a>によって与えられる。
+</p><p>この手法の利点は、<a href="/wiki/%E8%A9%95%E4%BE%A1%E9%96%A2%E6%95%B0" title="評価関数">評価関数</a>の<a class="mw-redirect" href="/wiki/%E5%8F%AF%E5%BE%AE%E5%88%86%E6%80%A7" title="可微分性">可微分性</a>や<a class="new" href="/w/index.php?title=%E5%8D%98%E5%B3%B0%E6%80%A7&amp;action=edit&amp;redlink=1" title="単峰性 (存在しないページ)">単峰性</a>などの知識がない場合であっても適用可能なことである。
+必要とされる条件は<a href="/wiki/%E8%A9%95%E4%BE%A1%E9%96%A2%E6%95%B0" title="評価関数">評価関数</a>の<a href="/wiki/%E5%85%A8%E9%A0%86%E5%BA%8F" title="全順序">全順序</a>性と、<a class="new" href="/w/index.php?title=%E6%8E%A2%E7%B4%A2%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="探索空間 (存在しないページ)">探索空間</a>が<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" title="位相空間">位相</a>（トポロジー）を持っていることである。
+</p><p>また、遺伝子の表現の仕方によっては<a href="/wiki/%E7%B5%84%E5%90%88%E3%81%9B%E6%9C%80%E9%81%A9%E5%8C%96" title="組合せ最適化">組合せ最適化</a>問題や<a href="/wiki/NP%E5%9B%B0%E9%9B%A3" title="NP困難">NP困難</a>な問題などのさまざまな問題に適用可能である。
+</p>
+<h2><span id=".E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0.E3.81.AE.E6.B5.81.E3.82.8C"></span><span class="mw-headline" id="アルゴリズムの流れ">アルゴリズムの流れ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=2" title="節を編集: アルゴリズムの流れ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>遺伝的アルゴリズムは一般に以下の流れで実装される。なお、下記では個体数を <i>N</i>, 最大世代数を <i>G</i> と置く。
+</p>
+<ol><li>あらかじめ <i>N</i> 個の個体が入る集合を二つ用意する。以下、この二つの集合を「現世代」、「次世代」と呼ぶことにする。</li>
+<li>現世代に <i>N</i> 個の個体を<a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0" title="ランダム">ランダム</a>に生成する。</li>
+<li>評価関数により、現世代の各個体の適応度をそれぞれ計算する。</li>
+<li>ある確率で次の3つの動作のどれかを行い、その結果を次世代に保存する。
+<ol><li>個体を二つ選択（選択方法は後述）して<b>交叉</b>（後述）を行う。</li>
+<li>個体を一つ選択して<b>突然変異</b>（後述）を行う。</li>
+<li>個体を一つ選択してそのままコピーする。</li></ol></li>
+<li>次世代の個体数が <i>N</i> 個になるまで上記の動作を繰り返す。</li>
+<li>次世代の個体数が <i>N</i> 個になったら次世代の内容を全て現世代に移す。</li>
+<li>3. 以降の動作を最大世代数 <i>G</i> 回まで繰り返し、最終的に「現世代」の中で最も適応度の高い個体を「解」として出力する。</li></ol>
+<h2><span id=".E9.81.BA.E4.BC.9D.E7.9A.84.E6.93.8D.E4.BD.9C"></span><span class="mw-headline" id="遺伝的操作">遺伝的操作</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=3" title="節を編集: 遺伝的操作">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>遺伝的アルゴリズムでは一般的に次の遺伝的操作が用いられる。
+</p>
+<ul><li>選択（淘汰、再生）</li>
+<li>交叉（組み換え）</li>
+<li>突然変異</li></ul>
+<p>交叉する確率を<b>交叉率</b>、突然変異する確率を<b>突然変異率</b>という。一般には（交叉率）&gt;&gt;（突然変異率）とすることが望ましいとされる。また上記のアルゴリズムの流れからわかるとおり（交叉率）+（突然変異率）+ (再生確率) = 1である必要がある。
+</p>
+<h3><span id=".E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="選択">選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=4" title="節を編集: 選択">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>選択</b>は生物の<a class="mw-redirect" href="/wiki/%E8%87%AA%E7%84%B6%E6%B7%98%E6%B1%B0" title="自然淘汰">自然淘汰</a>をモデル化したもので、適応度にもとづいて個体を増やしたり削除したりする操作である。
+選択のアルゴリズムには次のようなものがある。
+</p>
+<h4><span id=".E3.83.AB.E3.83.BC.E3.83.AC.E3.83.83.E3.83.88.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="ルーレット選択">ルーレット選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=5" title="節を編集: ルーレット選択">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>ルーレット選択は個体 <i>i</i> を選ぶ<a href="/wiki/%E7%A2%BA%E7%8E%87" title="確率">確率</a>を <i>p<sub>i</sub></i> と置いたとき、
+</p>
+<dl><dd>&lt;math&gt;p_i = \frac{f_i}{\sum^{N}_{k=1}f_k}&lt;/math&gt;</dd></dl>
+<p>とする選択方式である。上記の式の <i>f<sub>i</sub></i> は個体 <i>i</i> の適応度を表す。この方式はホランドが最初に提案したときに使われた選択方式であり、最も有名な選択方式であるが適応度が負の数を取らないことが前提になっている。また適応度が高いことが前提になっているため最小値を求める問題では使いづらい。さらに、もし個体間の適応度の格差が激しい場合は適応度の高い個体の選ばれる確率が非常に高くなり、<b>初期収束</b>（後述）の原因にもなる。このため、実際には適応度をスケーリングした値を使用することが多い。
+</p>
+<h4><span id=".E3.83.A9.E3.83.B3.E3.82.AD.E3.83.B3.E3.82.B0.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="ランキング選択">ランキング選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=6" title="節を編集: ランキング選択">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>ランキング選択は各個体を適応度によってランク付けして、「1位なら確率 <i>p<sub>1</sub></i>, 2位なら確率 <i>p<sub>2</sub></i>, 3位なら…」というふうにランクごとにあらかじめ確率を決めておく方式である。
+</p><p>この方法は、ルーレット選択と違い選択確率が適応度の格差に影響されない。しかし、これは逆に適応度にあまり差がない個体間でも選択確率に大きな差が生じる可能性がある。また、個体にランク付けをするため次世代が揃うたびに<a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%88" title="ソート">ソート</a>を行う必要がある。
+</p>
+<h4><span id=".E3.83.88.E3.83.BC.E3.83.8A.E3.83.A1.E3.83.B3.E3.83.88.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="トーナメント選択">トーナメント選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=7" title="節を編集: トーナメント選択">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>トーナメント選択はあらかじめ決めた数（トーナメントサイズという）だけ集団の中からランダムで個体を取り出し、その中で最も適応度の高い個体を選択する方式である。トーナメントサイズを変更する事で選択圧をコントロールできる特徴がある。すなわち、トーナメントサイズを大きくする事で選択圧を高める事ができるが、初期収束による局所（的）最適解に陥りやすくなる。
+</p>
+<h4><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=8" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>上記の選択とは別に<a href="/wiki/%E9%81%A9%E5%BF%9C%E5%BA%A6" title="適応度">適応度</a>が高い個体（エリート）を一定個数、次世代に残すことがある（エリート選択）。これを利用することで、選択によって解が悪い方向に向かわない（適応度の最大値が下がらない）ことを保証できる。しかし、エリートの遺伝子が集団の中に広まりすぎて解の多様性が失われるという恐れもある。
+</p>
+<h3><span id=".E4.BA.A4.E5.8F.89.EF.BC.88.E7.B5.84.E3.81.BF.E6.8F.9B.E3.81.88.EF.BC.89"></span><span class="mw-headline" id="交叉（組み換え）">交叉（組み換え）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=9" title="節を編集: 交叉（組み換え）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>交叉（組み換え）</b>は生物が交配によって子孫を残すことをモデル化したもので、個体の遺伝子の一部を入れ換える操作である。交叉はその性質上、最も重要な遺伝的操作と言うことができる。
+</p><p>交叉のアルゴリズムには次のようなものがある。
+</p><p>例として次の二つの個体を交叉する。
+</p><p>個体A: 0100111010
+個体B: 1010101011
+</p>
+<h4><span id=".E4.B8.80.E7.82.B9.E4.BA.A4.E5.8F.89"></span><span class="mw-headline" id="一点交叉">一点交叉</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=10" title="節を編集: 一点交叉">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+<p>遺伝子が交叉する場所（交叉点）をランダムで一つ選び、その場所より後ろを入れ換える方式である。ホランドが最初に提案したときの交叉方法であるが、効率は低く現在ではあまり使われていない。
+</p><p>個体A: 01001｜<b>11010</b> ⇒ 01001 <b>01011</b>
+</p><p>個体B: 10101｜<b>01011</b> ⇒ 10101 <b>11010</b>
+</p>
+<h4><span id=".E4.BA.8C.E7.82.B9.E4.BA.A4.E5.8F.89"></span><span class="mw-headline" id="二点交叉">二点交叉</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=11" title="節を編集: 二点交叉">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+<p>交叉点をランダムで二つ選び、二つの交叉点に挟まれている部分を入れ換える方式。
+</p><p>個体A: 010 | <b>01110</b> | 10 ⇒ 010 <b>01010</b> 10
+</p><p>個体B: 101 | <b>01010</b> | 11 ⇒ 101 <b>01110</b> 11
+</p>
+<h4><span id=".E5.A4.9A.E7.82.B9.E4.BA.A4.E5.8F.89"></span><span class="mw-headline" id="多点交叉">多点交叉</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=12" title="節を編集: 多点交叉">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>一般に、3点以上の交叉点をもつ方法を多点交叉あるいは n 点交叉という。しかしながら一部の問題を除き、多点交叉は二点交叉と下記で述べる一様交叉のどちらかよりも良い値が出ることはほとんどなく、あまり使われていない。
+</p>
+<h4><span id=".E4.B8.80.E6.A7.98.E4.BA.A4.E5.8F.89"></span><span class="mw-headline" id="一様交叉">一様交叉</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=13" title="節を編集: 一様交叉">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+
+<p>各要素ごと<a href="/wiki/%E7%8B%AC%E7%AB%8B_(%E7%A2%BA%E7%8E%87%E8%AB%96)" title="独立 (確率論)">独立</a>に1/2の確率で入れ換える交叉である。後述する<b>ヒッチハイキング</b>の問題をおさえることが可能である。一般に二点交叉が得意とする問題を苦手とし、二点交叉と逆の性質を示すことが知られている。
+</p><p>個体A: 0 <b>1 0</b> 0 <b>1</b> 1 1 <b>0</b> 1 <b>0</b> ⇒ 0 <b>0 1</b> 0 <b>1</b> 1 1 <b>0</b> 1 <b>1</b>
+</p><p>個体B: 1 <b>0 1</b> 0 <b>1</b> 0 1 <b>0</b> 1 <b>1</b> ⇒ 1 <b>1 0</b> 0 <b>1</b> 0 1 <b>0</b> 1 <b>0</b>
+</p>
+<h3><span id=".E7.AA.81.E7.84.B6.E5.A4.89.E7.95.B0"></span><span class="mw-headline" id="突然変異">突然変異</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=14" title="節を編集: 突然変異">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>突然変異</b>は生物に見られる遺伝子の突然変異をモデル化したもので、個体の遺伝子の一部を変化させる操作である。局所（的）最適解に陥ることを防ぐ効果がある。
+</p><p>例えば、遺伝子型がビット列の場合は、ある<a href="/wiki/%E9%81%BA%E4%BC%9D%E5%AD%90%E5%BA%A7" title="遺伝子座">遺伝子座</a>の0と1を入れ換える。数字の場合は<a class="mw-redirect" href="/wiki/%E4%B9%B1%E6%95%B0" title="乱数">乱数</a>と置き換える。他にも遺伝子座の位置を変更するなどの方法がとられる。
+</p><p>突然変異の確率は0.1%～1%、高くても数%である。確率が低すぎると局所（的）最適解に陥りやすくなり、高すぎるとランダム探索に近づいてしまう（解が収束しにくくなる）。
+</p>
+<h2><span id="GA.E3.81.AE.E5.95.8F.E9.A1.8C.E7.82.B9"></span><span class="mw-headline" id="GAの問題点">GAの問題点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=15" title="節を編集: GAの問題点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GA はさまざまな問題に適用できる手法であるが、問題と使う方式によっては上手く探索しない場合がある。ここではよく起きる GA の問題点をまとめる。
+</p>
+<h3><span id=".E5.88.9D.E6.9C.9F.E5.8F.8E.E6.9D.9F"></span><span class="mw-headline" id="初期収束">初期収束</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=16" title="節を編集: 初期収束">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>初期収束とは、最初の方の世代で「偶然」他の個体より適応度が圧倒的に高い個体が生まれたとき、その個体の遺伝子が集団中に爆発的に増えて探索がかなり早い段階で収束してしまう現象である<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。ルーレット選択の設定が甘い場合や、突然変異の効果が上手く表れないときに起こりやすい。
+</p><p>対策としては、ルーレット選択を使う場合の適切な設定や適用する問題に合わせて効果的になるように突然変異の操作を変更したり、突然変異率を増やしたり、または集団の数を増やすなどの設定を行うことで防ぐことができる。しかしながら明確な解決法というものはなく、各パラメータを何度も繰り返し設定しなおすしかない。
+</p>
+<h3><span id=".E3.83.92.E3.83.83.E3.83.81.E3.83.8F.E3.82.A4.E3.82.AD.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="ヒッチハイキング">ヒッチハイキング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=17" title="節を編集: ヒッチハイキング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>例えば最適解が
+</p><p>～101～
+</p><p>という問題があるとする。このとき
+</p><p>～111～
+</p><p>～000～
+</p><p>という二つの個体が交叉して最適解を得る確率を求める。
+交叉の方式が二点交叉の場合は交差点が
+</p><p>～1|1|1～ ⇒ <b>～101～</b>
+</p><p>～0|0|0～ ⇒ ～010～
+</p><p>で最適解が得られる。このとき遺伝子型の長さを <i>l</i> とおくと、最適解が得られる確率 <i>p</i> は
+</p>
+<dl><dd>&lt;math&gt;p=\frac{2}{l(l-1)}&lt;/math&gt;</dd></dl>
+<p>と求められる。これは <i>l</i> が長くなるにつれ加速度的に確率が低くなる。つまり<i>l</i> が長いとほとんどの確率で上記の二つの個体は最適解と一致しないビットを新しく生成した個体に受け継がせてしまうことになる。このように最適解と一致するビットの近くにいて最適解の生成を妨げる現象を<b>ヒッチハイキング</b>といい、そのビットを<b>ヒッチハイカー</b>という。
+</p><p>このヒッチハイキングは一様交叉によって防ぐことができる。一様交叉は各要素が独立で交叉するので、上記の場合は
+</p><p>～1<b>1</b>1～⇒<b>～101～</b>
+</p><p>～0<b>0</b>0～⇒～010～
+</p><p>か
+</p><p>～<b>1</b>1<b>1</b>～⇒～010～
+</p><p>～<b>0</b>0<b>0</b>～⇒<b>～101～</b>
+</p><p>で最適解を得る。このとき、最適解を生成する確率は
+</p>
+<dl><dd>&lt;math&gt;p=\frac{2}{2^3}=\frac{1}{4}&lt;/math&gt;</dd></dl>
+<p>であり、この確率は <i>l</i> の長さが長くなっても変化しない。
+</p>
+<h2><span id="GA_.E3.81.AE.E7.90.86.E8.AB.96"></span><span class="mw-headline" id="GA_の理論">GA の理論</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=18" title="節を編集: GA の理論">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>遺伝的アルゴリズムは他の<a class="mw-redirect" href="/wiki/%E3%83%A1%E3%82%BF%E3%83%92%E3%83%A5%E3%83%BC%E3%83%AA%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9" title="メタヒューリスティックス">メタヒューリスティックス</a>に比べて、主要な探索手段である交叉が<a class="mw-redirect" href="/wiki/%E5%B1%80%E6%89%80%E6%8E%A2%E7%B4%A2" title="局所探索">局所探索</a>ではないことに大きな特徴がある。この性質のため、GA は提唱されて以来有効性に関して多くの疑問が投げかけられた。しかし、GAの有効性をアルゴリズムを解析して検証するのは難しいため、初期のGAに関する研究では有効性を実験的に検証していた。
+</p><p><a href="/wiki/1980%E5%B9%B4%E4%BB%A3" title="1980年代">1980年代</a>後半から、以上の反省を踏まえて GA の理論的な考察が盛んに行われるようになった。ここではその基本的な部分をいくつか紹介する。
+</p>
+<h3><span class="mw-headline" id="SGA">SGA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=19" title="節を編集: SGA">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SGA とは <b>S</b>imple <b>G</b>enetic <b>A</b>lgorithm（単純 GA）の略である。GAを通常のまま解析するとあまりにも複雑なので、処理を単純にした GA を用いて解析を進めるのが一般的になっている。SGA は具体的には
+</p>
+<ul><li>遺伝子表現は 1 と 0 のみ</li>
+<li>ルーレット選択</li>
+<li>一点交叉</li>
+<li>突然変異は1箇所の遺伝子座の値を反転させる</li></ul>
+<p>という実装の遺伝的アルゴリズムである。
+</p>
+<h3><span id=".E3.82.B9.E3.82.AD.E3.83.BC.E3.83.9E.E7.90.86.E8.AB.96"></span><span class="mw-headline" id="スキーマ理論">スキーマ理論</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=20" title="節を編集: スキーマ理論">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>スキーマ理論</b>とは、遺伝子型の部分集合（スキーマ）の有無が適応度に大きな影響を与えることを前提とした解析理論である。現在の GA の理論の根幹を成している。スキーマとは例えば
+</p>
+<pre>H = * * 0 1 * 1 *
+</pre>
+<p>のような形で表す。ここで * （アスタリスク）は<a href="/wiki/%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89" title="ワイルドカード">ワイルドカード</a>のことであり、この部分には0と1のどちらが入っても良いことを意味している。このとき、
+</p>
+<pre>0 1 <b>0</b> <b>1</b> 1 <b>1</b> 0
+1 1 <b>0</b> <b>1</b> 0 <b>1</b> 0
+</pre>
+<p>のように * 以外の部分が一致している遺伝子型を持つ個体のことを「スキーマ <i>H</i> を含む個体」と表現する。
+</p><p>スキーマ理論特有の用語として<b>定義長</b>と<b>オーダ</b>がある。定義長とはスキーマの一番左のアスタリスク以外の文字と一番右のアスタリスク以外の文字との距離のことである。これは <i>δ(H)</i> という形で表す。上記の例の場合は <i>δ(H)</i> = 3 である。オーダとはスキーマ内のアスタリスク以外の文字の数のことである。これは <i>O(H)</i> という形で表す。上記の例の場合は <i>O(H)</i> = 3 である。
+</p>
+<h3><span id=".E3.82.B9.E3.82.AD.E3.83.BC.E3.83.9E.E5.AE.9A.E7.90.86.E3.81.A8.E7.A9.8D.E3.81.BF.E6.9C.A8.E4.BB.AE.E8.AA.AC"></span><span class="mw-headline" id="スキーマ定理と積み木仮説">スキーマ定理と積み木仮説</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=21" title="節を編集: スキーマ定理と積み木仮説">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>スキーマ定理</b>とは、ある世代 <i>t</i> でスキーマ <i>H</i> を含む個体の数を <i>m(H, t)</i> と表したとき、次の世代のスキーマ <i>H</i> を含む個体の数 <i>m(H, t+1)</i> は SGA において以下のように表すことができるという定理である。
+</p>
+<dl><dd>&lt;math&gt;m(H, t+1) \geq m(H, t) \cdot \frac{f(H)}{\overline{f}} \cdot \left[1 - p_c \cdot \frac{\delta(H)}{l-1} - O(H) \cdot p_m\right]&lt;/math&gt;</dd></dl>
+<p>ここで、<i>f(H)</i> はスキーマ <i>H</i> を含む個体の適合度の平均、&lt;math&gt;\overline{f}&lt;/math&gt;は全個体の適合度の平均、<i>l</i> は遺伝子型の長さ、<i>p<sub>c</sub></i>, <i>p<sub>m</sub></i> は交叉率と突然変異率である。
+</p><p>このとき、<i>p<sub>c</sub></i> &gt;&gt; <i>p<sub>m</sub></i>, <i>δ(H)</i> &gt; <i>O(H)</i> であるので、括弧内の <i>O(H)⋅p<sub>m</sub></i> はほとんど無視できる。そのため、この定理は
+</p>
+<ul><li>定義長 <i>δ(H)</i> が小さく</li>
+<li><i>f(H)</i> が全体の平均より常に大きい</li></ul>
+<p>となるようなスキーマ <i>H</i> の数は指数関数的に増大していくことを表している。
+</p><p>ここから、上記の条件を満たすスキーマを保持することが最適解を導くことになるような問題に対しては、GA は最適解を導き出すことが可能であるという考え方ができる。このようなスキーマを<b>積み木</b>（Building Block）といい、この考え方を<b>積み木仮説</b>という。
+</p>
+<h2><span id="GA_.E3.81.AE.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="GA_の拡張">GA の拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=22" title="節を編集: GA の拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>GA にはさまざまな拡張手法が存在する。ここでは有名なものをいくつか挙げる。
+</p>
+<h3><span class="mw-headline" id="Messy_GA">Messy GA</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=23" title="節を編集: Messy GA">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Messy GA とは積み木仮説、特に定義長 <i>δ(H)</i> が小さくなければならないという弱点を克服するために、Goldberg により提案された遺伝的アルゴリズムの拡張手法である。遺伝子表現は遺伝子座の位置とその値のペアで表現する。これに「カット」と「スライス」という手法で探索を進める。Goldberg はこれを用いて GA では非常に探索しにくい関数の最適解の導出に成功している。しかし、この手法は問題に対するかなり詳しい事前知識が必要なため、実際の応用例はほとんどない。
+</p>
+<h3><span class="mw-headline" id="CHC">CHC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=24" title="節を編集: CHC">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>CHC は<a href="/wiki/1990%E5%B9%B4" title="1990年">1990年</a>、Eshelman によって提案された GA の拡張手法である。この名前は
+</p>
+<ul><li>2世代エリート選択（Cross generational elitist selection）</li>
+<li>異種間交叉（Heterogeneous recombination）</li>
+<li>大変動突然変異（Cataclysmic mutation）</li></ul>
+<p>のそれぞれの頭文字をとったものであり、それぞれ選択、交叉、突然変異を詳細に再検討してより効率的なアルゴリズムにしたものである。
+</p>
+<h3><span id=".E5.88.86.E5.B8.83.E6.8E.A8.E5.AE.9A.E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0"></span><span class="mw-headline" id="分布推定アルゴリズム">分布推定アルゴリズム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=25" title="節を編集: 分布推定アルゴリズム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="new" href="/w/index.php?title=En:Estimation_of_distribution_algorithm&amp;action=edit&amp;redlink=1" title="En:Estimation of distribution algorithm (存在しないページ)">Estimation of Distribution Algorithm</a> (<a href="/wiki/EDA" title="EDA">EDA</a>)。GAは個体の集合に対して、交叉や突然変異を行い、個体の集合が進化するが、EDA では、個体生成の<a href="/wiki/%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83" title="確率分布">確率分布</a>を進化させる。アルゴリズムは、<a href="/wiki/Population-based_incremental_learning" title="Population-based incremental learning">Population-based incremental learning</a> (PBIL)など。
+</p>
+<h2><span id=".E9.81.BA.E4.BC.9D.E7.9A.84.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="遺伝的プログラミング">遺伝的プログラミング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=26" title="節を編集: 遺伝的プログラミング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a href="/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="遺伝的プログラミング">遺伝的プログラミング</a>」も参照</div>
+<p><a href="/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="遺伝的プログラミング">遺伝的プログラミング</a>（genetic programming;GP）は、J.Kozaによって提案された遺伝的アルゴリズムを拡張した物の一つである。遺伝子を<a href="/wiki/%E6%9C%A8%E6%A7%8B%E9%80%A0_(%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0)" title="木構造 (データ構造)">木構造</a>にすることで式やプログラムなどを扱えるようにした。工学分野だけではなく、経済分野などにも広く活用されている。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=27" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.4gamer.net/games/051/G005101/20080911055/" rel="nofollow">［CEDEC 2008＃08］生き物を相手にするようなゲームを作る～遺伝的アルゴリズム</a>”. <i>www.4gamer.net</i>.   Aetas (2008年9月11日). <span title="">2021年4月9日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=28" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>伊庭斉志 『遺伝的アルゴリズムの基礎』、オーム社、1994年、ISBN 4-274-07802-7</li>
+<li>伊庭斉志 『進化論的計算の方法』、東京大学出版会、1999年、ISBN 4-13-061401-0</li>
+<li>北野宏明他 『遺伝的アルゴリズム』、産業図書、1993年、ISBN 4-7828-5136-7</li>
+<li>坂和正敏・田中雅博 『遺伝的アルゴリズム』、朝倉書店、1995年、ISBN 4-254-20990-8</li>
+<li>三宮信夫・喜多 一・玉置 久・岩本貴司 『遺伝アルゴリズムと最適化』、朝倉書店、1998年、ISBN 4-254-20977-0</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=29" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%82%BF%E3%83%92%E3%83%A5%E3%83%BC%E3%83%AA%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF" title="メタヒューリスティック">メタヒューリスティック</a></li>
+<li><a href="/wiki/%E9%80%B2%E5%8C%96%E7%9A%84%E8%A8%88%E7%AE%97" title="進化的計算">進化的計算</a></li>
+<li><a href="/wiki/%E6%9C%80%E9%81%A9%E5%8C%96%E5%95%8F%E9%A1%8C" title="最適化問題">最適化問題</a></li>
+<li><a href="/wiki/%E4%BA%BA%E5%B7%A5%E7%94%9F%E5%91%BD" title="人工生命">人工生命</a></li>
+<li><a href="/wiki/%E4%BA%BA%E5%B7%A5%E5%85%8D%E7%96%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="人工免疫システム">人工免疫システム</a></li>
+<li><a href="/wiki/Neuroevolution" title="Neuroevolution">Neuroevolution</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%B9%E3%83%88%E3%83%AD%E3%83%8E%E3%83%BC%E3%82%AB" title="アストロノーカ">アストロノーカ</a>（遺伝的アルゴリズムを利用したゲーム）</li>
+<li><a href="/wiki/%E6%96%B0%E5%B9%B9%E7%B7%9AN700%E7%B3%BB%E9%9B%BB%E8%BB%8A" title="新幹線N700系電車">新幹線N700系電車</a>（フロントノーズの設計に遺伝的アルゴリズムが使用されている）</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=30" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.sist.ac.jp/~suganuma/kougi/other_lecture/SE/opt/GA/GA.htm" rel="nofollow">菅沼研究室</a>（<a class="external text" href="http://www.sist.ac.jp/dep_g/" rel="nofollow">静岡理工科大学総合情報学部</a>）</li>
+<li><a class="external text" href="http://www.waseda.jp/sem-hflab/eclab/index.html" rel="nofollow">平澤研究室</a>（<a class="external text" href="http://www.waseda.jp/ips/" rel="nofollow">早稲田大学大学院情報生産システム研究科</a>）</li>
+<li><a class="external text" href="http://www.obitko.com/tutorials/genetic-algorithms/japanese/" rel="nofollow">遺伝的アルゴリズム</a></li>
+<li><a class="external free" href="http://www.gp-field-guide.org.uk/" rel="nofollow">http://www.gp-field-guide.org.uk/</a></li>
+<li><a class="external text" href="http://www.it-weise.de/projects/book.pdf" rel="nofollow">Global Optimization Algorithms - Theory and Application</a></li></ul>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331084432
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.131 seconds
+Real time usage: 0.194 seconds
+Preprocessor visited node count: 727/1000000
+Post‐expand include size: 3068/2097152 bytes
+Template argument size: 1196/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 642/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5361664/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  144.340      1 -total
+ 39.50%   57.016      1 テンプレート:See_also
+ 38.70%   55.859      1 テンプレート:Reflist
+ 37.54%   54.191      1 テンプレート:Rellink
+ 36.00%   51.957      1 テンプレート:See/core
+ 35.54%   51.302      1 テンプレート:Cite_web
+ 19.74%   28.498      1 テンプレート:Normdaten
+ 13.34%   19.262      1 テンプレート:Ifempty
+ 12.17%   17.563      1 テンプレート:Citation/showdate
+  8.76%   12.643      1 テンプレート:Citation/showdateCore
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:26579-0!canonical and timestamp 20220331084432 and revision id 20182. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=遺伝的アルゴリズム&amp;oldid=20182">http://localhost:8080/w/index.php?title=遺伝的アルゴリズム&amp;oldid=20182</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:遺伝的アルゴリズム">遺伝的アルゴリズム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A4%87%E9%9B%91%E7%B3%BB" title="カテゴリ:複雑系">複雑系</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD" title="カテゴリ:人工知能">人工知能</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9C%80%E9%81%A9%E5%8C%96%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:最適化アルゴリズム">最適化アルゴリズム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;returntoquery=curid%3D26579%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;returntoquery=curid%3D26579%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;oldid=20182" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年4月24日 (土) 07:15 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.131","walltime":"0.194","ppvisitednodes":{"value":727,"limit":1000000},"postexpandincludesize":{"value":3068,"limit":2097152},"templateargumentsize":{"value":1196,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":642,"limit":5000000},"timingprofile":["100.00%  144.340      1 -total"," 39.50%   57.016      1 テンプレート:See_also"," 38.70%   55.859      1 テンプレート:Reflist"," 37.54%   54.191      1 テンプレート:Rellink"," 36.00%   51.957      1 テンプレート:See/core"," 35.54%   51.302      1 テンプレート:Cite_web"," 19.74%   28.498      1 テンプレート:Normdaten"," 13.34%   19.262      1 テンプレート:Ifempty"," 12.17%   17.563      1 テンプレート:Citation/showdate","  8.76%   12.643      1 テンプレート:Citation/showdateCore"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5361664,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331084432","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":325});});</script>
+</body></html>

@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>C++11 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-C_11 rootpage-C_11 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">C++11</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+
+<p><b>C++11</b>は、<a href="." id="link_a_1" title="プログラミング言語">プログラミング言語</a> <a href="." id="link_a_2" title="C++">C++</a> の<a href="." id="link_a_3" title="国際標準化機構オープン標準">ISO標準</a> <b>ISO/IEC 14882:2011</b> の略称である。規格の策定中は2009年中の標準化を目指していたため、<b>C++0x</b> という仮称で呼ばれていた。
+ISO/IEC 14882:2003 (<a href="." id="link_a_4" title="C++03 (存在しないページ)">C++03</a>) に代わるものとして、2011年8月12日にISOによって承認された<sup class="reference" id="ref_approvalc"><a href="#endnote_approvalc">[4]</a></sup>。後継の<a href="." id="link_a_5" title="C++14">C++14</a>が2014年8月18日に承認されている。
+</p><p>コア言語への機能追加や<a href="." id="link_a_6" title="標準C++ライブラリ">標準C++ライブラリ</a>の拡張を施し、<a href="." id="link_a_7" title="C++ Technical Report 1">C++TR1</a>ライブラリの大部分を（数学的特殊関数ライブラリを除いて）取り込んでいる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#標準策定の方針"><span class="tocnumber">1</span> <span class="toctext">標準策定の方針</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#C++_コア言語への拡張"><span class="tocnumber">2</span> <span class="toctext">C++ コア言語への拡張</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#コア言語の実行時パフォーマンス向上"><span class="tocnumber">3</span> <span class="toctext">コア言語の実行時パフォーマンス向上</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#右辺値参照とムーブコンストラクタ"><span class="tocnumber">3.1</span> <span class="toctext">右辺値参照とムーブコンストラクタ</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#一般化された定数式"><span class="tocnumber">3.2</span> <span class="toctext">一般化された定数式</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Plain_Old_Data_型の定義の修正"><span class="tocnumber">3.3</span> <span class="toctext">Plain Old Data 型の定義の修正</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#コア言語のビルド時パフォーマンス向上"><span class="tocnumber">4</span> <span class="toctext">コア言語のビルド時パフォーマンス向上</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#外部テンプレート"><span class="tocnumber">4.1</span> <span class="toctext">外部テンプレート</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#コア言語の使いやすさの向上"><span class="tocnumber">5</span> <span class="toctext">コア言語の使いやすさの向上</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#初期化子リスト"><span class="tocnumber">5.1</span> <span class="toctext">初期化子リスト</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#統一的な初期化構文"><span class="tocnumber">5.2</span> <span class="toctext">統一的な初期化構文</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#型推論"><span class="tocnumber">5.3</span> <span class="toctext">型推論</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#範囲に基づく_for_ループ"><span class="tocnumber">5.4</span> <span class="toctext">範囲に基づく for ループ</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#ラムダ関数とラムダ式"><span class="tocnumber">5.5</span> <span class="toctext">ラムダ関数とラムダ式</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#戻り値を後ろに置く関数構文"><span class="tocnumber">5.6</span> <span class="toctext">戻り値を後ろに置く関数構文</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#オブジェクト構築の改良"><span class="tocnumber">5.7</span> <span class="toctext">オブジェクト構築の改良</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#明示的な仮想関数オーバーライド"><span class="tocnumber">5.8</span> <span class="toctext">明示的な仮想関数オーバーライド</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#ヌルポインタ"><span class="tocnumber">5.9</span> <span class="toctext">ヌルポインタ</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#強い型付けの列挙型"><span class="tocnumber">5.10</span> <span class="toctext">強い型付けの列挙型</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#山括弧"><span class="tocnumber">5.11</span> <span class="toctext">山括弧</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#明示的な変換関数"><span class="tocnumber">5.12</span> <span class="toctext">明示的な変換関数</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#別名テンプレート"><span class="tocnumber">5.13</span> <span class="toctext">別名テンプレート</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#透過的なガベージコレクション"><span class="tocnumber">5.14</span> <span class="toctext">透過的なガベージコレクション</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#制限の無い共用体"><span class="tocnumber">5.15</span> <span class="toctext">制限の無い共用体</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#コア言語機能の改良"><span class="tocnumber">6</span> <span class="toctext">コア言語機能の改良</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#可変長引数テンプレート"><span class="tocnumber">6.1</span> <span class="toctext">可変長引数テンプレート</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#新たな文字列リテラル"><span class="tocnumber">6.2</span> <span class="toctext">新たな文字列リテラル</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#ユーザー定義リテラル"><span class="tocnumber">6.3</span> <span class="toctext">ユーザー定義リテラル</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#マルチタスク用のメモリモデル"><span class="tocnumber">6.4</span> <span class="toctext">マルチタスク用のメモリモデル</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#スレッドローカル記憶域"><span class="tocnumber">6.5</span> <span class="toctext">スレッドローカル記憶域</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#コンパイラが生成する関数へのdefault/delete指定"><span class="tocnumber">6.6</span> <span class="toctext">コンパイラが生成する関数へのdefault/delete指定</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Cとの互換性向上"><span class="tocnumber">6.7</span> <span class="toctext">Cとの互換性向上</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#long_long_int型"><span class="tocnumber">6.7.1</span> <span class="toctext">long long int型</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-34"><a href="#静的な表明"><span class="tocnumber">6.8</span> <span class="toctext">静的な表明</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#インスタンス化されていないクラスメンバへのsizeof"><span class="tocnumber">6.9</span> <span class="toctext">インスタンス化されていないクラスメンバへのsizeof</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-36"><a href="#C++標準ライブラリの拡張"><span class="tocnumber">7</span> <span class="toctext">C++標準ライブラリの拡張</span></a>
+<ul>
+<li class="toclevel-2 tocsection-37"><a href="#標準ライブラリの改良"><span class="tocnumber">7.1</span> <span class="toctext">標準ライブラリの改良</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#スレッディング"><span class="tocnumber">7.2</span> <span class="toctext">スレッディング</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#タプル型"><span class="tocnumber">7.3</span> <span class="toctext">タプル型</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#ハッシュテーブル"><span class="tocnumber">7.4</span> <span class="toctext">ハッシュテーブル</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#正規表現"><span class="tocnumber">7.5</span> <span class="toctext">正規表現</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="#一般用途のスマートポインタ"><span class="tocnumber">7.6</span> <span class="toctext">一般用途のスマートポインタ</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#拡張可能な乱数の枠組み"><span class="tocnumber">7.7</span> <span class="toctext">拡張可能な乱数の枠組み</span></a>
+<ul>
+<li class="toclevel-3 tocsection-44"><a href="#擬似乱数エンジン"><span class="tocnumber">7.7.1</span> <span class="toctext">擬似乱数エンジン</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#非決定的乱数エンジン"><span class="tocnumber">7.7.2</span> <span class="toctext">非決定的乱数エンジン</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#乱数分布"><span class="tocnumber">7.7.3</span> <span class="toctext">乱数分布</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-47"><a href="#参照ラッパ"><span class="tocnumber">7.8</span> <span class="toctext">参照ラッパ</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="#関数オブジェクトの多相的ラッパ"><span class="tocnumber">7.9</span> <span class="toctext">関数オブジェクトの多相的ラッパ</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#メタプログラミングのための型特性"><span class="tocnumber">7.10</span> <span class="toctext">メタプログラミングのための型特性</span></a></li>
+<li class="toclevel-2 tocsection-50"><a href="#関数の戻り値型を算出する、一様な手法"><span class="tocnumber">7.11</span> <span class="toctext">関数の戻り値型を算出する、一様な手法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-51"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-53"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a>
+<ul>
+<li class="toclevel-2 tocsection-54"><a href="#C++標準化委員会の文書"><span class="tocnumber">10.1</span> <span class="toctext">C++標準化委員会の文書</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="#記事"><span class="tocnumber">10.2</span> <span class="toctext">記事</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-56"><a href="#外部リンク"><span class="tocnumber">11</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A8.99.E6.BA.96.E7.AD.96.E5.AE.9A.E3.81.AE.E6.96.B9.E9.87.9D"></span><span class="mw-headline" id="標準策定の方針">標準策定の方針</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=1" title="節を編集: 標準策定の方針">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++ への修正はコア言語と標準ライブラリの双方に及ぶ。
+</p><p>委員会は、新規格の個別の要素の策定に際して次のような方針をとった。
+</p>
+<ul><li><a class="new" href="/w/index.php?title=C%2B%2B98&amp;action=edit&amp;redlink=1" title="C++98 (存在しないページ)">C++98</a> との、さらに可能であれば <a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C</a> との一貫性および互換性を維持すること。</li>
+<li>新機能の実現方法として、コア言語の拡張よりも標準ライブラリの拡張を優先すること。</li>
+<li>プログラミングの技法を発展させうるような変更を優先すること。</li>
+<li>特定のアプリケーションにのみ有効な機能を導入するよりも、システムやライブラリの設計が容易になるような改良を行うこと。</li>
+<li>従来の型安全でない技法に対して、より安全な代替を提供すること。</li>
+<li>ハードウェアと密接に動作する能力と効率を向上すること。</li>
+<li>現実的問題に対する適切な解決法を用意すること。</li>
+<li>“ゼロ・オーバーヘッド原則” (ある機能を使用するためのサポートは、その機能を使用しない場合は影響を及ぼさない) を実践すること。</li>
+<li>上級者向けの機能を削ることなく、C++の学習や指導が簡単になるようにすること。</li></ul>
+<p>初心者はプログラマ人口の多くを占める。また、多くの初心者は自身が習得した一部の言語機能に拘泥しがちであり、知識を広げようとはしない。従って、初心者への配慮は重要であると考えられた<sup class="reference" id="ref_strousup-brieflookb"><a href="#endnote_strousup-brieflookb">[1]</a></sup>。また、C++の言語仕様の大きさ（アプリケーションやプログラミング・スタイルの多様性も含む）を考えると、どれだけ長い経験を積んだプログラマも新しい<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="プログラミングパラダイム">プログラミングパラダイム</a>の前では未経験者になり得ることから重要な配慮であると言える。
+</p>
+<h2><span id="C.2B.2B_.E3.82.B3.E3.82.A2.E8.A8.80.E8.AA.9E.E3.81.B8.E3.81.AE.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="C++_コア言語への拡張">C++ コア言語への拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=2" title="節を編集: C++ コア言語への拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++ コア言語の特筆すべき改良点には、<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">マルチスレッド</a>のサポートや、<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">ジェネリックプログラミング</a>のサポート、一様な初期化構文やパフォーマンス向上等が挙げられる。
+</p><p>このページでは、コア言語の機能拡張や変更点を、実行時パフォーマンス向上、ビルド時パフォーマンス向上、使いやすさの向上、全く新しい機能の4つに分けて説明する。機能によっては複数の項目に該当するが、最もよく当てはまる項目で述べることとする。
+</p>
+<h2><span id=".E3.82.B3.E3.82.A2.E8.A8.80.E8.AA.9E.E3.81.AE.E5.AE.9F.E8.A1.8C.E6.99.82.E3.83.91.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.B3.E3.82.B9.E5.90.91.E4.B8.8A"></span><span class="mw-headline" id="コア言語の実行時パフォーマンス向上">コア言語の実行時パフォーマンス向上</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=3" title="節を編集: コア言語の実行時パフォーマンス向上">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下の機能は、主に何らかのパフォーマンス向上を狙ったものである。スピードの向上とメモリ効率の改善の両方が含まれる。
+</p>
+<h3><span id=".E5.8F.B3.E8.BE.BA.E5.80.A4.E5.8F.82.E7.85.A7.E3.81.A8.E3.83.A0.E3.83.BC.E3.83.96.E3.82.B3.E3.83.B3.E3.82.B9.E3.83.88.E3.83.A9.E3.82.AF.E3.82.BF"></span><span class="mw-headline" id="右辺値参照とムーブコンストラクタ">右辺値参照とムーブコンストラクタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=4" title="節を編集: 右辺値参照とムーブコンストラクタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03以前は、一時変数 (代入演算子の右側に置かれることから、右辺値と呼ばれる) に変更を加えるのは意味がないものと考えられており、関数に参照として渡す場合には<code>const T&amp;</code>型としてしか渡すことができなかった。しかし、場合によっては変更できるほうが都合のよいこともあった。例えば所有権の移動（ムーブ）である。
+</p><p>C++11 では、右辺値参照と呼ばれる新たな参照型 <code>T&amp;&amp;</code> が追加された。これにより、右辺値を変更可能なまま関数に渡すことができ、右辺値からのムーブを実現できる。
+</p><p>例えば、<code>std::vector</code> は内部的には C スタイル配列のサイズ付きのラッパである。従来は、<code>std::vector</code> の一時変数が生成されたとき、新たな <code>std::vector</code> を生成してそこに全ての右辺値データをコピーしないといけなかった。コピーの後、一時変数は破壊され、内容は削除される。
+</p><p>右辺値参照があれば、<code>std::vector</code> への右辺値参照を取る <code>std::vector</code> の「ムーブコンストラクタ」を用いることで、単に右辺値から配列へのポインタを取り出してコピーし、空のオブジェクトを残す、ということが実現できる。この場合、配列のコピーは起こらず、空の一時変数を破壊してもメモリの破壊は起こらない。仮に<code>std::vector</code> にムーブコンストラクタがない場合、通常通りにコピーコンストラクタが <code>const std::vector&lt;&gt;&amp;</code> として呼ばれる。ムーブコンストラクタがある場合、ムーブコンストラクタが呼ばれ、メモリの割り当てが回避できる。
+</p><p>標準ライブラリにムーブコンストラクタが記述されていれば、既存のコードは変更を加えることなく右辺値参照のメリットを享受することができる。<code>std::vector</code>の一時変数を返す関数は、明示的に<code>std::vector&amp;&amp;</code>に変更する必要はない。なぜなら、一時変数は自動的に右辺値であるとみなされるからである。
+</p><p>安全上の理由から、右辺値参照として宣言された名前つきの変数をそのまま右辺値として関数に渡すことはできない（そのような変数は左辺値となる）。<code>std::move()</code> を明示的に呼び出すことで、この制限を回避できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+bool is_r_value(int&amp;&amp;) { return true; }
+bool is_r_value(const int&amp;) { return false; }
+</p><p>void test(int&amp;&amp; i)
+{
+</p>
+<pre> is_r_value(i); // false
+ is_r_value(std::move(i)); // true
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>右辺値参照の文言の特性と左辺値参照 (通常の参照) の文言の若干の修正により、右辺値参照を使って完全な関数転送を開発者が提供できるようになる。可変長引数テンプレートと組み合わせ、関数テンプレートから、決まった型の引数を取る別の関数へと引数を転送できる。これは、コンストラクタ引数の転送に最も有用であり、引数に基づいて自動的に的確なコンストラクタを呼ぶようなファクトリ関数の生成に使用できる。
+</p>
+<h3><span id=".E4.B8.80.E8.88.AC.E5.8C.96.E3.81.95.E3.82.8C.E3.81.9F.E5.AE.9A.E6.95.B0.E5.BC.8F"></span><span class="mw-headline" id="一般化された定数式">一般化された定数式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=5" title="節を編集: 一般化された定数式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03 には既に定数式が存在している。定数式とは、<code>3 + 4</code> のように、常に同じ結果を返し副作用の無いものである。定数式はコンパイラの最適化の対象となり、多くの場合コンパイル時に演算が行われ、プログラム中にはその結果のみが格納される。また、C++ の仕様中でも、多くの箇所で定数式の使用が必要となる。配列の定義にも要素数として定数式が必要であるし、列挙子の値にも必要である。
+</p><p>しかし、関数呼び出しやオブジェクトコンストラクタが出現すると、定数式ではなくなる。単純な例を挙げると:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+int GetFive() { return 5; }
+</p><p>int some_value[GetFive() + 5]; // 10 要素の整数配列を作りたいが、C++03 では不正。
+&lt;/syntaxhighlight&gt;
+</p><p><code>GetFive() + 5</code> が定数式でないため、これは C++03 では不正となる。実際には <code>GetFive</code> は実行時に一定値を返すが、コンパイラにそれを知らせる方法がないのである。理論上、関数はグローバル変数に影響を与える、実行時に結果が変わる他の関数を呼ぶ、などの理由がある。
+</p><p>C++11 では、キーワード <code>constexpr</code> が導入される。これにより、関数やオブジェクトコンストラクタがコンパイル時定数であることを保証できる。上の例は、以下のように書き直せる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+constexpr int GetFive() { return 5; }
+</p><p>int some_value[GetFive() + 5]; // 10 要素の整数配列を作る。C++11 では正しい。
+&lt;/syntaxhighlight&gt;
+</p><p>これによりコンパイラは、<code>GetFive</code> がコンパイル時定数であることを理解し、検証できる。
+</p><p><code>constexpr</code> を関数に使用する場合、関数内でできることは非常に制限される。まず、関数は非 void 型の戻り値を持たねばならず、内容として <code>return <i>expr</i></code> の形を持たねばならない。そして、引数を置き換えた後、<code>expr</code> は定数式でなくてはならない。ここでいう定数式では、<code>constexpr</code> として定義された他の関数を呼ぶか、他の定数式データ変数を使うかしかできない。さらに、定数式内ではあらゆる形の再帰はできず、 <code>constexpr</code> が付けられた関数は定義されるまで翻訳単位中で呼ぶことはできない。
+</p><p>定数式の値として、変数を定義することも可能である:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+constexpr double forceOfGravity = 9.8;
+constexpr double moonGravity = forceOfGravity / 6;
+&lt;/syntaxhighlight&gt;
+</p><p>定数式データ変数は暗黙的に const である。定数式データ変数には、定数式の結果か定数式コンストラクタの結果のみを格納できる。
+</p><p>ユーザー定義型から定数式データ値を作るには、コンストラクタを <code>constexpr</code> として宣言すればよい。定数式関数と同様、定数式コンストラクタは翻訳単位中で使用する前に定義されていなくてはならない。そして、関数本体は空でなくてはならず、メンバを定数式で初期化しなくてはならない。また、このような型のデストラクタは自動生成のものであるべきである。
+</p><p>constexpr として生成された型のコピーも、<code>constexpr</code> として定義されるべきである。こうすることで、constexpr な関数から返された値もconstexprとなる。コピーコンストラクタや演算子オーバーロードといった、クラスの全てのメンバ関数も、定数式関数の定義と同様 <code>constexpr</code> として宣言できる。これにより、コンパイラはクラスのコピーやその他の処理をコンパイル時に行える。
+</p><p>定数式関数・コンストラクタは、非 constexpr パラメータで呼べる。constexpr な<a href="/wiki/%E3%83%AA%E3%83%86%E3%83%A9%E3%83%AB" title="リテラル">整数リテラル</a>が非 constexpr 変数に代入できるように、constexpr 関数を非 constexpr パラメータで呼び出せるし、その結果を非 constexpr 変数に格納できるのである。constexpr キーワードは、式の全ての内容が constexpr である場合のコンパイル時定数性の可能性をコンパイラに伝えるだけのものである。
+</p>
+<h3><span id="Plain_Old_Data_.E5.9E.8B.E3.81.AE.E5.AE.9A.E7.BE.A9.E3.81.AE.E4.BF.AE.E6.AD.A3"></span><span class="mw-headline" id="Plain_Old_Data_型の定義の修正">Plain Old Data 型の定義の修正</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=6" title="節を編集: Plain Old Data 型の定義の修正">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、構造体が Plain Old Data (POD) 型として扱われるためにはいくつかのルールに従う必要がある。これを満たす型は C と互換性のあるオブジェクトレイアウトを生成する。しかし、C++03 におけるルールは必要以上に厳しく、より多くの型をPOD型にしてもよいのではないかという指摘があった。
+</p><p>C++11 では POD の定義に関して、いくつかのルールが緩和されている。
+</p><p>クラス・構造体は、それが <i>trivial</i> であり、<i>standard-layout</i> であり、すべての非静的データメンバがPOD型であるとき、POD型とみなされる。
+</p><p>trivial なクラス・構造体は、以下のように定義される。
+</p>
+<ol><li>デフォルトコンストラクタを持ち、かつ、非 trivial なデフォルトコンストラクタを持たない。</li>
+<li>非 trivial なコピーコンストラクタを持たない。</li>
+<li>非 trivial なムーブコンストラクタを持たない。</li>
+<li>非 trivial なコピー代入演算子を持たない。</li>
+<li>非 trivial なムーブ代入演算子を持たない。</li>
+<li>trivial なデストラクタを持つ。</li></ol>
+<p>standard-layout なクラス・構造体は、以下のように定義される。
+</p>
+<ol><li>全ての非静的データメンバが standard-layout 型である。</li>
+<li>全ての非静的データメンバに、同じアクセス制御 (public, private, protected) がかかっている。</li>
+<li>仮想関数を持たない。</li>
+<li>仮想基底クラスを持たない。</li>
+<li>全ての基底クラスが standard-layout 型である。</li>
+<li>一つ目に定義された非静的データメンバと同じ型の基底クラスを持たない。</li>
+<li>非静的データメンバを持つ基底クラスを持たない。もしくは、導出クラスが非静的データメンバを持たず、高々一つの基底クラスしか非静的データメンバを持たない。これはつまり、クラス階層において非静的データメンバを持ってよいクラスは一つだけである、ということである。</li></ol>
+<h2><span id=".E3.82.B3.E3.82.A2.E8.A8.80.E8.AA.9E.E3.81.AE.E3.83.93.E3.83.AB.E3.83.89.E6.99.82.E3.83.91.E3.83.95.E3.82.A9.E3.83.BC.E3.83.9E.E3.83.B3.E3.82.B9.E5.90.91.E4.B8.8A"></span><span class="mw-headline" id="コア言語のビルド時パフォーマンス向上">コア言語のビルド時パフォーマンス向上</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=7" title="節を編集: コア言語のビルド時パフォーマンス向上">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.A4.96.E9.83.A8.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="外部テンプレート">外部テンプレート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=8" title="節を編集: 外部テンプレート">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、ある翻訳単位で完全に引数が特定されたテンプレートが見つかったとき、コンパイラは常にそのテンプレートを実体化しなければならない。このことはコンパイルの時間を劇的に増加させる。特に、同じパラメータを用いたテンプレートが複数の翻訳単位で実体化されるときは顕著である。そして、C++03 にはそのようなテンプレートの実体化を止めさせる手段もなかった。C++11 では、これに対して外部テンプレートが導入された（これは外部変数に対するアナロジーである）。
+</p><p>C++03 には、特定の場所での実体化を強制的にコンパイラに命じる構文がある。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template class std::vector&lt;MyClass&gt;;
+&lt;/syntaxhighlight&gt;
+</p><p>C++11 では、以下のような構文が導入された。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+extern template class std::vector&lt;MyClass&gt;;
+&lt;/syntaxhighlight&gt;
+</p><p>これにより、コンパイラはこの翻訳単位ではテンプレートの実体化をしないようになる。
+</p>
+<h2><span id=".E3.82.B3.E3.82.A2.E8.A8.80.E8.AA.9E.E3.81.AE.E4.BD.BF.E3.81.84.E3.82.84.E3.81.99.E3.81.95.E3.81.AE.E5.90.91.E4.B8.8A"></span><span class="mw-headline" id="コア言語の使いやすさの向上">コア言語の使いやすさの向上</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=9" title="節を編集: コア言語の使いやすさの向上">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下の機能は、主に言語を使いやすくするためのものである。例えば型安全性や、類似したコードの繰り返しを削減すること、間違ったコードが書かれにくくすることなどが含まれる。
+</p>
+<h3><span id=".E5.88.9D.E6.9C.9F.E5.8C.96.E5.AD.90.E3.83.AA.E3.82.B9.E3.83.88"></span><span class="mw-headline" id="初期化子リスト">初期化子リスト</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=10" title="節を編集: 初期化子リスト">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、初期化子リスト (initializer list) の考え方を C から引き継いでいる。つまり、構造体のメンバ定義の順に、引数を波括弧<code>{ }</code>の中に記述するというものである。初期化子リストは再帰的に適用されるので、構造体の配列や構造体を含む構造体にも使用できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct Object {
+</p>
+<pre> float first;
+ int second;
+</pre>
+<p>};
+</p><p>Object scalar = {0.43f, 10}; // first = 0.43f, second = 10 であるような、1つの Object インスタンス。
+Object anArray[] = {{13.4f, 3}, {43.28f, 29}, {5.934f, 17}}; // 3つの Object インスタンスから成る配列。
+&lt;/syntaxhighlight&gt;
+</p><p>この初期化子リストは、静的なデータの初期化や構造体を特定の値に初期化したいときなどに有用である。C++ にはコンストラクタもあるが、初期化子リストの方が有用である。しかし、C++03 では初期化子リストは Plain Old Data (POD) 型と認識された構造体・クラスにしか適用できなかった。<code>std::vector</code> などの非 POD クラスには初期化子リストは使えなかった。
+</p><p>C++11 では、初期化子リストの考え方がテンプレートと結び付けられた。これには、<code>std::initializer_list</code> を用いる。これによって、コンストラクタなどの関数は、初期化子リストを引数として取ることができる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+class SequenceClass {
+public:
+</p>
+<pre> SequenceClass(std::initializer_list&lt;int&gt; list);
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>これにより、<code>SequenceClass</code> は、整数の列から構築できるようになる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+SequenceClass someVar = { 1, 4, 5, 6 };
+&lt;/syntaxhighlight&gt;
+</p><p>このコンストラクタは、初期化子リストコンストラクタと呼ばれる特殊なコンストラクタである。このコンストラクタを持つクラスは、統一的な初期化構文の適用の際に特別に扱われる（後述）。
+</p><p><code>std::initializer_list&lt;&gt;</code> クラスは、C++11 標準ライブラリのファーストクラスの型である。しかし、これを構築できるのは、{ } 構文を用いてコンパイラが静的に構築する場合だけである。一度構築されたらその後コピーはできず参照渡しするしかない。初期化リストは定数であり、一度構築されたらそのメンバを変更することはできず、メンバ中のデータも変更できない。
+</p><p><code>std::initializer_list</code> は実際の型であるため、クラスコンストラクタのみならずそれ以外の場所でも使用できる。例えば、一般の関数の引数とすることもできる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+void FunctionName(std::initializer_list&lt;float&gt; list);
+</p><p>FunctionName({ 1.0f, -3.45f, -0.4f });
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E7.B5.B1.E4.B8.80.E7.9A.84.E3.81.AA.E5.88.9D.E6.9C.9F.E5.8C.96.E6.A7.8B.E6.96.87"></span><span class="mw-headline" id="統一的な初期化構文">統一的な初期化構文</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=11" title="節を編集: 統一的な初期化構文">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03 には、型の初期化に関して多くの問題点があった。初期化に複数の方法があり、しかもお互いを取り替えたときに同じ結果になるわけではなかった。例えば、従来のコンストラクタの構文は関数宣言と同じ形をしており、場合によってはコンパイラが正しく判定できないことがあった。また、初期化リストは集約型やPOD型にしか使うことができなかった。
+</p><p>C++11 では、どんなオブジェクトでも初期化できる完全に統一的な記法 (uniform initialization) が導入された。これは初期化リスト構文の拡張である。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct BasicStruct {
+</p>
+<pre> int x;
+ double y;
+</pre>
+<p>};
+</p><p>struct AltStruct {
+</p>
+<pre> AltStruct(int x, double y) : x_(x), y_(y) {}
+ 
+</pre>
+<p>private:
+</p>
+<pre> int x_;
+ double y_;
+</pre>
+<p>};
+</p><p>BasicStruct var1{ 5, 3.2 };
+AltStruct var2{ 2, 4.3 };
+&lt;/syntaxhighlight&gt;
+</p><p><code>var1</code> の初期化は完全に C 形式の初期化子リストと同様に振る舞う。すなわち、各データメンバーは、初期化子リストのそれぞれの値によってコピー初期化される。必要ならば暗黙の型変換が行われ、型変換が不可能ならば、コンパイルに失敗する。
+</p><p><code>var2</code> の初期化は、単純にコンストラクタを呼ぶだけである。
+</p><p>型が明らかな場合、次のように書くこともできる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct IdString {
+</p>
+<pre> std::string name;
+ int identifier;
+</pre>
+<p>};
+</p><p>IdString get_string()
+{
+</p>
+<pre> return { "SomeName", 4 }; // 明示的な型の指定は不要。
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>統一的な初期化構文は、必ずしもコンストラクタ構文の代用となるものではない。コンストラクタ構文が必要な場合もある。クラスが初期化子リストコンストラクタ (<code>TypeName(std::initializer_list&lt;SomeType&gt;)</code>) を持つような場合、（初期化子リストがシーケンスコンストラクタの型に適合するのならば）初期化子リストコンストラクタが優先して適用される。例えば、C++11 の <code>std::vector</code> は、そのテンプレート型の初期化子リストコンストラクタを持つ。つまり、
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; theVec { 4 };
+&lt;/syntaxhighlight&gt;
+</p><p>のように書いた場合、初期化子リストコンストラクタが呼ばれる。固定長の <code>std::vector</code> を生成するための、サイズを指定する引数ひとつを取るコンストラクタ<code>std::vector(size_type n)</code>を呼ぶためには、標準のコンストラクタ構文を使う必要がある。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; theVec ( 4 );
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E5.9E.8B.E6.8E.A8.E8.AB.96"></span><span class="mw-headline" id="型推論">型推論</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=12" title="節を編集: 型推論">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03やCでは、変数の型は使用に際して明示的に指定しなければならない。しかし、テンプレート型やテンプレートメタプログラミングなどにおいては、特に関数の戻り値型が複雑に定義されているような場合、型を簡単に書き下せないことがある。そのような場合には、中間結果を変数に格納することが難しく、メタプログラミングライブラリの内部仕様を知っていなくてはならなくなる場合もある。
+</p><p>C++11 では<a href="/wiki/%E5%9E%8B%E6%8E%A8%E8%AB%96" title="型推論">型推論</a>により、この制約を軽減する方法が二つ提供された。一つ目の方法は、明示的に初期化される変数の定義に <code>auto</code> キーワードを使う方法である。これにより、初期化子によって変数の型が特定される。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+auto someStrangeCallableType = boost::bind(&amp;SomeFunction, _2, _1, someObject);
+auto otherVariable = 5;
+&lt;/syntaxhighlight&gt;
+</p><p><code>someStrangeCallableType</code> の型は、関数テンプレート <code>boost::bind</code> がその引数に応じて返す戻り値の型である。これはコンパイラにとっては容易に判別できるが、ユーザーが調べるのは困難である。
+</p><p><code>otherVariable</code> の型はまだ分かりやすい。これは、整数リテラルの型である <code>int</code> となる。
+</p><p>二つ目の方法は、キーワード <code>decltype</code> である。これによって、オペランドで指定した式の型をコンパイル時に取得することができる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+int someInt;
+decltype(someInt) otherIntegerVariable = 5;
+&lt;/syntaxhighlight&gt;
+</p><p><code>auto</code> で宣言した変数の型はコンパイラにしか分からないので、<code>decltype</code> は <code>auto</code> と組み合わせて使うと特に有用である。
+</p><p><code>auto</code> はコードの冗長性を省くのにも有用である。例えば、以下のように書かれている場合、
+&lt;syntaxhighlight lang="cpp"&gt;
+for (std::vector&lt;int&gt;::const_iterator itr = myvec.begin(); itr != myvec.end(); ++itr)
+&lt;/syntaxhighlight&gt;
+<code>auto</code>を使えばもっと短く書くことができる。なお、<code>vector::cbegin()</code>と<code>vector::cend()</code>は、C++11で追加されたメンバー関数であり、<code>const_iterator</code>を返すことが規定されている。
+&lt;syntaxhighlight lang="cpp"&gt;
+for (auto itr = myvec.cbegin(); itr != myvec.cend(); ++itr)
+&lt;/syntaxhighlight&gt;
+コンテナをネストして使うような場合、違いはもっと大きくなる。一方、そのような場合は <code>typedef</code> を使うこともできる。
+</p>
+<h3><span id=".E7.AF.84.E5.9B.B2.E3.81.AB.E5.9F.BA.E3.81.A5.E3.81.8F_for_.E3.83.AB.E3.83.BC.E3.83.97"></span><span class="mw-headline" id="範囲に基づく_for_ループ">範囲に基づく for ループ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=13" title="節を編集: 範囲に基づく for ループ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、コンテナの要素を列挙するためには多くのコードを書く必要があった。一方<a href="/wiki/C_Sharp" title="C Sharp">C#</a>や<a href="/wiki/Java" title="Java">Java</a>のような言語には、コンテナの最初から最後までをたどるシンプルな「<a href="/wiki/Foreach%E6%96%87" title="Foreach文">foreach文</a>」が備わっている。
+</p><p>C++11にも同様の機能が追加された。以下のような<code>for</code>文の別表現を使ってコンテナの要素を簡単に列挙することができる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+int my_array[5] = {1, 2, 3, 4, 5};
+for (int&amp; x : my_array) {
+</p>
+<pre>   x *= 2;
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この形式の<code>for</code>文は、範囲に基づくfor (range-based for) と呼ばれる。この形式は、Cスタイルの配列や、初期化リスト、イテレータを返す<code>begin()</code>関数と<code>end()</code>関数が定義されたあらゆる型に対して使うことができる。<code>begin()</code>と<code>end()</code>を持つ標準ライブラリのコンテナはすべてこの形式で列挙できる。
+</p><p>ただし、ループの途中でイテレータを無効化することがあるケースでは、range-based forを使用することはできない<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<h3><span id=".E3.83.A9.E3.83.A0.E3.83.80.E9.96.A2.E6.95.B0.E3.81.A8.E3.83.A9.E3.83.A0.E3.83.80.E5.BC.8F"></span><span class="mw-headline" id="ラムダ関数とラムダ式">ラムダ関数とラムダ式</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=14" title="節を編集: ラムダ関数とラムダ式">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++ 標準では、特に <code>std::sort()</code> や <code>std::find()</code> といった C++ 標準ライブラリのアルゴリズム関数と組み合わせた時に、アルゴリズム関数の呼び出しの近くで述語関数を定義したいと思う機会が多い。しかし、このためには関数内部でクラスを定義するしかなかった。この方法は記述量が多く、またコードの流れを妨げがちである。加えて、標準 C++ の規則では、関数の中で定義されたクラスをテンプレートの中で使うことを認めていないので、結局どうしても使うことは不可能であった。
+</p><p>これに対して、C++11では<a href="/wiki/%E3%83%A9%E3%83%A0%E3%83%80%E8%A8%88%E7%AE%97" title="ラムダ計算">ラムダ関数</a>が定義できるようになった。
+</p><p>ラムダ関数は以下のように定義される:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+[](int x, int y) -&gt; int { int z = x + y; return z + x; }
+&lt;/syntaxhighlight&gt;
+</p><p>これは、<code>int</code>型の引数を二つとり、<code>int</code>型の値を返す<a class="mw-redirect" href="/wiki/%E3%83%A9%E3%83%A0%E3%83%80%E5%BC%8F" title="ラムダ式">ラムダ式</a>である。その内容は<code>{ }</code> の中に記述される。
+ラムダ関数の内容が "return <i>式</i>" の形式である場合には、戻り値型を省略することができる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+[](int x, int y) { return x + y; }
+&lt;/syntaxhighlight&gt;
+</p><p>このラムダ関数の戻り値型は <code>decltype(x+y)</code> になる。
+</p><p>ラムダ関数が値を返さない場合、つまり戻り値型が <code>void</code> の場合も戻り値型を省略できる。
+</p><p>ラムダ関数の外で定義された変数であっても、ラムダ関数の中で使用することができる。この種のものは一般に<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B8%E3%83%A3" title="クロージャ">クロージャ</a>と呼ばれる。クロージャは<code>[ ]</code>の中に記述する。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; someList;
+int total = 0;
+std::for_each(someList.begin(), someList.end(), [&amp;total](int x) {
+</p>
+<pre> total += x;
+</pre>
+<p>});
+std::cout &lt;&lt; total;
+&lt;/syntaxhighlight&gt;
+</p><p>これは、リストの全要素の合計を表示する例である。
+変数 <code>total</code> がラムダ関数のクロージャの一部として格納される。これはスタック変数 <code>total</code> への参照なので、代入することで外側の <code>total</code> の値も変更される。
+</p><p><code>&amp;</code> は参照を表すシンボルである。スタック変数に対応するクロージャ変数は、<code>&amp;</code>を付けずに定義することも可能で、その場合はラムダ関数は値をコピーする。これにより、スタック変数を参照するのかコピーするのかどちらの意図があるのかわかるようになる。スタック変数を参照することは危険な場合がある。例えば (C++11 標準の) <code>std::function</code> オブジェクトに格納するなどして、ラムダ関数を生成したスコープの外側で使いたい場合は、ラムダ関数がスタック変数を参照していないことをよく確認する必要がある。
+</p><p>ラムダ関数がその定義のあるスコープの内側で実行されることが保証されている場合は、次のように記述すれば、スタック変数をひとつひとつ指定せずに全ての利用可能なスタック変数を使用できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+std::vector&lt;int&gt; someList;
+int total = 0;
+std::for_each(someList.begin(), someList.end(), [&amp;](int x) {
+</p>
+<pre> total += x;
+</pre>
+<p>});
+&lt;/syntaxhighlight&gt;
+</p><p><code>[ ]</code>の中には次のような指定が可能である。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+[]        // ラムダ関数外のどの変数も使うことができない。
+[x, &amp;y]   // xはコピーされる。yは参照渡しされる。
+[&amp;]       // すべての外部変数は、もし使われれば暗黙的に参照渡しされる。
+[=]       // すべての外部変数は、もし使われれば暗黙的にコピーされる。
+[&amp;, x]    // xは明示的にコピーされる。その他の変数は参照渡しされる。
+[=, &amp;z]   // zは明示的に参照渡しされる。その他の変数はコピーされる。
+&lt;/syntaxhighlight&gt;
+</p><p>また、ラムダ関数がクラスのメンバ関数により定義された場合、そのクラスのフレンドであると見なされる。そのようなラムダ関数は、そのクラス型のオブジェクトへの参照を使って、内部のメンバにアクセスできる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+[](SomeType *typePtr) { typePtr-&gt;SomePrivateMemberFunction(); };
+&lt;/syntaxhighlight&gt;
+</p><p>この例は、このラムダ関数の生成するスコープが <code>SomeType</code> のメンバ関数の中にある場合にのみ動作する。
+</p><p><a href="/wiki/This_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="This (プログラミング)"><code>this</code> ポインタ</a>は、各時点でメンバ関数が作動しているオブジェクトを指しているが、その扱いは特別である。ラムダ関数中に明示的な指定が必要になる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt; 
+[this]() { this-&gt;SomePrivateMemberFunction(); }; 
+&lt;/syntaxhighlight&gt; 
+</p><p><code>[&amp;]</code> または <code>[=]</code> 形式のラムダ関数を用いていれば、<code>this</code>の記述は必要ない。
+</p><p>ラムダ関数の型はコンパイラ依存であり、明示的に記述することはできない。ラムダ関数を引数として取得したい場合は、その型をテンプレート型にするか、<code>std::function</code> などの<a href="/wiki/%E5%9E%8B%E6%B6%88%E5%8E%BB" title="型消去">型消去</a>の仕組みを使う必要がある。<code>auto</code> キーワードを使ってラムダ関数をローカル変数に格納することはできる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+auto myLambdaFunc = [this]() { this-&gt;SomePrivateMemberFunction(); };
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E6.88.BB.E3.82.8A.E5.80.A4.E3.82.92.E5.BE.8C.E3.82.8D.E3.81.AB.E7.BD.AE.E3.81.8F.E9.96.A2.E6.95.B0.E6.A7.8B.E6.96.87"></span><span class="mw-headline" id="戻り値を後ろに置く関数構文">戻り値を後ろに置く関数構文</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=15" title="節を編集: 戻り値を後ろに置く関数構文">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>標準Cの関数宣言の構文は、C言語の機能に対しては最適なものであった。C++ は C から離れて発展してきたが、その基本的な構文を維持しつつ、必要に応じて拡張してきた。しかし、C++ がさらに複雑になってくると、多数の制約、特に関数テンプレートの宣言に関する制約が露呈するようになった。例えば、次のように関数の戻り値の型が文脈によって決まる場合、C++03では明示的にテンプレート型引数で指定するか、<code>boost::result_of</code>や<code>boost::decay</code>のような型推論をエミュレートする補助ライブラリに頼るしかなかった。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename TResult, typename LHS, typename RHS&gt;
+TResult AddFunc(const LHS&amp; lhs, const RHS&amp; rhs) { return lhs + rhs; }
+</p><p>int a = AddFunc(1, 2); // コンパイルエラー。
+int b = AddFunc&lt;int&gt;(1, 2); // C++03 以前でも、引数の型は実引数から推論できるので省略可能だが、戻り値の型は推論できない。
+&lt;/syntaxhighlight&gt;
+</p><p><code>TResult</code> 型は、<code>LHS</code> と <code>RHS</code> の型を加算して作られる型であり、それらの実際の型によって決まる。
+</p><p>C++11では、前述のように <code>decltype</code> という機能が追加されたが、これを直接戻り値の型推論に使うことはできない。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+// 正しくない
+template&lt;typename LHS, typename RHS&gt;
+decltype(lhs+rhs) AddFunc(const LHS&amp; lhs, const RHS&amp; rhs) { return lhs + rhs; }
+&lt;/syntaxhighlight&gt;
+</p><p>パーサーが <code>decltype(lhs+rhs)</code> を解析する時点で、<code>lhs</code> と <code>rhs</code> はまだ定義されておらず、有効な識別子にはなっていない。したがって、この書き方も C++ に適合していない。
+</p><p>この問題に対処するために、C++11 では次のような関数の定義と宣言の構文が導入された。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename LHS, typename RHS&gt;
+auto AddFunc(const LHS&amp; lhs, const RHS&amp; rhs) -&gt; decltype(lhs+rhs) { return lhs + rhs; }
+</p><p>int a = AddFunc(1, 2);
+&lt;/syntaxhighlight&gt;
+</p><p><code>auto</code>でいったん型を前置しておき、後置の<code>decltype</code>で補足している。
+</p><p>この構文は、非テンプレート関数の宣言や定義にも使用できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct SomeStruct {
+</p>
+<pre> auto FuncName(int x, int y) -&gt; int;
+</pre>
+<p>};
+</p><p>auto SomeStruct::FuncName(int x, int y) -&gt; int {
+</p>
+<pre> return x + y;
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この構文で使われる<code>auto</code>キーワードは、自動型推論の場合とは異なった意味をもつ。
+</p>
+<h3><span id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E6.A7.8B.E7.AF.89.E3.81.AE.E6.94.B9.E8.89.AF"></span><span class="mw-headline" id="オブジェクト構築の改良">オブジェクト構築の改良</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=16" title="節を編集: オブジェクト構築の改良">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、コンストラクタは他のコンストラクタを呼び出せず、各コンストラクタでクラスメンバの初期化を全て行わなくてはならない。これはしばしば初期化コードの重複を招く。また、基底クラスのコンストラクタは、派生クラスに直接は公開されない。つまり、基底クラスのコンストラクタと殆ど同等であったとしても、派生クラス側でコンストラクタを定義する必要がある。他にも、constでないデータメンバは、メンバの宣言時に初期化できず、コンストラクタで初期化しなければならない。
+</p><p>C++11では、このような問題点に対する解決策が提供された。
+</p><p>まず、C++11では、コンストラクタが他の同等なコンストラクタを呼び出すこと（<a href="/wiki/%E5%A7%94%E8%AD%B2" title="委譲">委譲</a>）が可能になった。これにより、コンストラクタが他のコンストラクタを最小のコード追加で利用できるようになる。他の言語（Java等）では、既にこれを取り入れているものもある。
+</p><p>構文は以下のようになる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+class SomeType {
+</p>
+<pre> int number;
+ 
+</pre>
+<p>public:
+</p>
+<pre> SomeType(int newNumber) : number(newNumber) {}
+ SomeType() : SomeType(42) {}
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>注意すべき点として、C++03では1つのコンストラクタの動作完了と同時にオブジェクトの構築は完了していると考えることができていたが、C++11では一度のオブジェクトの構築に<i>全ての</i>コンストラクタが動作完了しなければならない、と考えなくてはならない点である。複数のコンストラクタが動作することを認めるので、委譲を行う各コンストラクタは完全に構築が完了したオブジェクトに対して動作することを意味する。派生クラスのコンストラクタは、基底クラスでのコンストラクタ間委譲が全て終了した時点で呼び出されることになるであろう。
+</p><p>次に基底クラスのコンストラクタに関して、C++11では、基底クラスのコンストラクタを継承するようにクラスに対して指定することが可能になる。これにより、コンパイラは派生クラスのコンストラクタ呼び出しを基底クラスのそれへと転送するコードを生成することになる。注意すべき点は、この機能は、全てのコンストラクタ呼び出しを基底クラスに転送するか、全く転送しないか、の二者択一の機能であることである。他の注意点として、多重継承時の制限もある。同じシグネチャを持つ2つのコンストラクタに転送することはできないし、転送先のコンストラクタと同じシグネチャを持つコンストラクタを後で宣言することはできない。
+</p><p>構文は以下のようになる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+class BaseClass {
+public:
+</p>
+<pre> BaseClass(int value);
+ BaseClass(float value);
+</pre>
+<p>};
+</p><p>class DerivedClass : public BaseClass {
+public:
+</p>
+<pre> using BaseClass::BaseClass;
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>最後にメンバの初期化に関して、C++11では、メンバの初期化に以下のような構文が認められる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+class SomeClass {
+</p>
+<pre> int iValue = 5;
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>この例では、コンストラクタが初期化内容を上書きしない限り、<code>iValue</code>は5に初期化される。上書きする例は次のようになる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+class SomeClass {
+</p>
+<pre> int iValue = 5;
+ 
+</pre>
+<p>public:
+</p>
+<pre> SomeClass() {}
+ explicit SomeClass(int iNewValue) : iValue(iNewValue) {}
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>この場合、空のコンストラクタでは<code>iValue</code>はクラス定義に従って初期化されるが、<code>int</code>引数を取るコンストラクタの場合はその引数に従って初期化されることになるであろう。
+</p>
+<h3><span id=".E6.98.8E.E7.A4.BA.E7.9A.84.E3.81.AA.E4.BB.AE.E6.83.B3.E9.96.A2.E6.95.B0.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E3.83.A9.E3.82.A4.E3.83.89"></span><span class="mw-headline" id="明示的な仮想関数オーバーライド">明示的な仮想関数オーバーライド</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=17" title="節を編集: 明示的な仮想関数オーバーライド">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、ユーザーが基底クラスの仮想関数を<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%89" title="オーバーライド">オーバーライド</a>する際、誤って意図に反する新しい仮想関数を作成する可能性がある:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct Base {
+</p>
+<pre> virtual void some_func(float);
+ virtual bool on_error();
+</pre>
+<p>};
+</p><p>struct Derived : Base {
+</p>
+<pre> virtual void some_func(int);
+ virtual bool on_eror();
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>派生クラス<code>Derived</code>を設計したユーザーは、<code>Base::some_func</code>および<code>Base::on_error</code>をオーバーライドするつもりで記述したが、それぞれ引数の型や関数名（<a href="/wiki/%E3%82%B7%E3%82%B0%E3%83%8D%E3%83%81%E3%83%A3" title="シグネチャ">シグネチャ</a>）が異なるため新しい仮想関数が生成される。上記はC++コードとして誤りではないためコンパイルエラーにならず、間違いに気付くことができない<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p><p>C++11では、overrideキーワードの導入により、このような問題が解消された:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct Base {
+</p>
+<pre> virtual void some_func(float);
+ virtual bool on_error();
+</pre>
+<p>};
+</p><p>struct Derived : Base {
+</p>
+<pre> virtual void some_func(int) override; // 不正：基底クラスの仮想関数をオーバーライドしていない。
+ virtual bool on_eror() override; // 不正：同上。
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>overrideキーワードで修飾された仮想関数が、基底クラスのオーバーライド先と一致するかどうかをコンパイラがチェックし、一致しない場合にエラーを報告する。
+</p><p>overrideの他にfinalキーワードがある。finalで修飾された仮想関数のオーバーライドは許可されない。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct Base {
+</p>
+<pre> virtual void f() const final;
+</pre>
+<p>};
+</p><p>struct Derived : Base {
+</p>
+<pre> void f() const; // エラー：Derived::fがfinal Base::fをオーバーライドしようとする。
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E3.83.8C.E3.83.AB.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF"></span><span class="mw-headline" id="ヌルポインタ">ヌルポインタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=18" title="節を編集: ヌルポインタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、定数<code><a href="/wiki/0" title="0">0</a></code>に、整数定数と<a href="/wiki/%E3%83%8C%E3%83%AB%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="ヌルポインタ">ヌルポインタ</a>という2つの役割が与えられている（この振る舞いは、Cの黎明期（<a href="/wiki/1972%E5%B9%B4" title="1972年">1972年</a>）から続いている）。
+</p><p>長い間プログラマは、<code>0</code>の代わりに定数<code>NULL</code>を使って、この潜在的な曖昧性を大体は回避してきた。しかし、C++になされた2つの設計上の選択が、新たな曖昧性をもたらした。Cでは、<code>NULL</code>はプリプロセッサマクロであり、<code>((void*)0)</code>か<code>0</code>と展開されるよう定義されている。C++では、<code>void*</code>型から他のポインタ型への暗黙の変換は認められないので、Cの1つ目の定義と同じくNULLを定義すると、<code>char *c = NULL</code>のような単純な例でもコンパイルエラーになる。これを修正するため、C++では<code>NULL</code>は<code>0</code>へと展開される。<code>0</code>は、あらゆるポインタ型への変換が特別に認められているのである。この結果、オーバーロード機構と酷い相互作用を引き起こす。例えば、以下のような宣言があり
+&lt;syntaxhighlight lang="cpp"&gt;
+void foo(char *);
+void foo(int);
+&lt;/syntaxhighlight&gt;
+<code>foo(NULL)</code>として呼び出す場合、<code>foo(int)</code>の方が呼ばれることになる。この挙動は、多くの場合に意図されたものではない。
+</p><p>新標準では、ヌルポインタを指定するためにのみ予約された新たなキーワード<code>nullptr</code>が導入される。<code>nullptr</code>は整数型との比較や代入はできないが、あらゆるポインタ型との比較・代入ができる。
+</p><p>互換性のため、<code>0</code>の現行の機能も残されるが、この新構文が上手くいけば、C++委員会は<code>0</code>と<code>NULL</code>をヌルポインタとして使用することを非推奨と宣言し、意味の重複を排除するであろう。
+</p>
+<h3><span id=".E5.BC.B7.E3.81.84.E5.9E.8B.E4.BB.98.E3.81.91.E3.81.AE.E5.88.97.E6.8C.99.E5.9E.8B"></span><span class="mw-headline" id="強い型付けの列挙型">強い型付けの列挙型</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=19" title="節を編集: 強い型付けの列挙型">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++03では、列挙型は型安全でなかった。列挙型が異なっていても、実質的には整数として扱われていた。このため、型の違う列挙型の値同士が比較できてしまった。C++03で唯一提供されていた型安全性は、整数や、ある列挙型の値が、暗黙的に他の列挙型には変換されない、ということだけである。また、内部的な整数型はコンパイラの実装に依存しており、列挙型のサイズに依存するコードは可搬ではなかった。さらに、列挙型の値のスコープは、列挙体が定義されたスコープと同じとなる。そのため、二つの列挙型が、同じ名前のメンバをもつことはできなかった。
+</p><p>C++11では、以上のような問題のない、特別なクラス化された列挙型が導入された。<code>enum class</code>（または<code>enum struct</code>）宣言を用いることで、これを表現できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+enum class Enumeration {
+</p>
+<pre> Val1,
+ Val2,
+ Val3 = 100,
+ Val4 /* = 101 */,
+</pre>
+<p>};
+&lt;/syntaxhighlight&gt;
+</p><p>この列挙は型安全である。enum classの値が暗黙的に整数値に変換されることはなく、したがって整数値と比較することもできない（<code>Enumeration::Val4 == 101</code>はコンパイルエラーになる）。
+</p><p>enum classの内部的な型はコンパイラの実装に依存しない。デフォルトでは<code>int</code>であり、次のように明示的に指定することもできる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+enum class Enum2 : unsigned int {Val1, Val2};
+&lt;/syntaxhighlight&gt;
+</p><p>列挙名は列挙型のスコープで定義される。列挙名を使うときには、<code>Enum2::Val1</code>のように明示的にスコープを指定しなければならない。上の例では、<code>Val1</code>は未定義である。
+</p><p>さらに、C++11では従来スタイルの列挙型にも、明示的なスコープや内部的な型の指定ができる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+enum Enum3 : unsigned long {Val1 = 1, Val2};
+&lt;/syntaxhighlight&gt;
+</p><p>この場合、列挙名は列挙型のスコープで定義される（<code>Enum3::Val1</code>）が、後方互換性のため、列挙型が定義されたスコープにも定義される（<code>Val1</code>）。
+</p><p>C++11では列挙型の前方宣言も可能である。以前は列挙型のサイズが内容によって決まっていたため、列挙型は前方宣言できなかった。明示的あるいは暗黙的に列挙のサイズが決定できさえすれば、前方宣言が可能である。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+enum Enum1;                     // C++03とC++11両方で不正。内部的な型が明示されていない。
+enum Enum2 : unsigned int;      // C++11では正しい。内部的な型が明示されている。
+enum class Enum3;               // C++11では正しい。enum class宣言はデフォルトの型がintである。
+enum class Enum4: unsigned int; // C++11では正しい。
+enum Enum2 : unsigned short;    // C++11でも不正。Enum2が既に違う型で宣言されている。
+&lt;/syntaxhighlight&gt;
+</p>
+<h3><span id=".E5.B1.B1.E6.8B.AC.E5.BC.A7"></span><span class="mw-headline" id="山括弧">山括弧</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=20" title="節を編集: 山括弧">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>テンプレートを用いた総称プログラミングを導入するのに、新形式の括弧を導入するのが必要であった。そのためC++には、丸括弧"()"、角括弧"[]"、波括弧"{}"に加えて、山括弧"&lt;&gt;"が導入された。しかし、これにより字句的曖昧さが生じ、（プログラマの意図とは違う、という意味で）間違って解析され、構文エラーになるという事態が発生した:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+typedef std::vector&lt;std::vector&lt;int&gt; &gt; Table;  // OK。
+typedef std::vector&lt;std::vector&lt;bool&gt;&gt; Flags;  // エラー！ "&gt;&gt;"は右シフトと解析される。
+</p><p>void func(List<b>= default_val);  // エラー！ "&gt;="は比較演算子と解析される。
+void func(List&lt;List<b>&gt;= default_val);  // エラー！ "&gt;&gt;="は右シフト代入と解析される。
+</b></b></p><p><b><b>template&lt;bool I&gt; class X {};
+X&lt;(1&gt;2)&gt; x1;  // OK。
+X&lt; 1&gt;2 &gt; x1;  // エラー！ 一つ目の"&gt;"は山閉じ括弧と解析される。
+&lt;/syntaxhighlight&gt;
+</b></b></p><p><b><b>C++11の字句解析では、最も深くネストした開き括弧が山括弧"&lt;"である場合、"&gt;"は、次に"&gt;"や"="が続いていても山閉じ括弧として扱われる。これにより、上記のエラーは最後のものを除いて修正される。最後のものを修正するには、曖昧さを取り除くために丸括弧を足さなくてはならない。
+&lt;syntaxhighlight lang="cpp"&gt;
+X&lt;(1&gt;2)&gt; x1;  // OK。
+&lt;/syntaxhighlight&gt;
+こうすることで、"("から")"の間については、コンパイラは<b>&lt;&gt;</b>の文字を山括弧と扱わなくなる。
+</b></b></p><b><b><h3><span id=".E6.98.8E.E7.A4.BA.E7.9A.84.E3.81.AA.E5.A4.89.E6.8F.9B.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="明示的な変換関数">明示的な変換関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=21" title="節を編集: 明示的な変換関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++規格には、一引数コンストラクタを暗黙的な型変換関数として扱われないようにするための修飾子として、<code>explicit</code>キーワードが導入された。しかし、これは変換関数には何の効果も無い。
+</p><p>例えば、スマートポインタのクラスは、本物のポインタと同じように振る舞うために<code>operator bool()</code>を持っていることがある。この変換を追加することで、<code>if (smart_ptr_variable)</code>としてそれをテストできる（ポインタが非NULLならtrueを、NULLならfalseと判定できるはずである）。しかし、この変換を認めると、不本意な変換も発生してしまう。C++の<code>bool</code>は算術型として定義されているため、整数型やさらには浮動小数点型としてまで変換されてしまい、ユーザーが意図しない数値型としての動作を引き起こしてしまうのである。
+</p><p>C++11では、<code>explicit</code>キーワードを変換関数にも適用できるようになる。コンストラクタへの適用と組み合わせ、さらなる暗黙的型変換を防止できる。
+</p></b></b><b><b><h3><span id=".E5.88.A5.E5.90.8D.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="別名テンプレート">別名テンプレート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=22" title="節を編集: 別名テンプレート">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++03では、typedefを定義する際にできることは、他の型に対して別名を付けることだけであり、存在するすべてのテンプレート引数が指定されたテンプレートの特殊化に対して別名をつけることもこれに含まれる。typedefのテンプレートを作ることはできない。例えば:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template &lt;typename First, typename Second, int Third&gt;
+class SomeType;
+</p><p>template &lt;typename Second&gt;
+typedef SomeType&lt;OtherType, Second, 5&gt; TypedefName; // C++03では不正
+&lt;/syntaxhighlight&gt;
+</p><p>これはコンパイルできない。
+</p><p>C++11では以下の構文でこれが可能になった。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template &lt;typename First, typename Second, int Third&gt;
+class SomeType;
+</p><p>template &lt;typename Second&gt;
+using TypedefName = SomeType&lt;OtherType, Second, 5&gt;;
+&lt;/syntaxhighlight&gt;
+</p><p>C++11では<code>using</code>構文は型の別名付けにも使用できる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+typedef void (*Type)(double); // 従来の形式
+using OtherType = void (*)(double); // 新たに導入された形式
+&lt;/syntaxhighlight&gt;
+</p></b></b><b><b><h3><span id=".E9.80.8F.E9.81.8E.E7.9A.84.E3.81.AA.E3.82.AC.E3.83.99.E3.83.BC.E3.82.B8.E3.82.B3.E3.83.AC.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="透過的なガベージコレクション">透過的なガベージコレクション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=23" title="節を編集: 透過的なガベージコレクション">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++11には、透過的<a href="/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="ガベージコレクション">ガベージコレクション</a>の機能は直接には導入されない。代わりに、C++11標準には、C++でのガベージコレクションの実装を容易にする仕様が導入された。
+</p><p>完全なガベージコレクションのサポートは、もっと後の標準やTechnical Reportに回されることになった。
+</p></b></b><b><b><h3><span id=".E5.88.B6.E9.99.90.E3.81.AE.E7.84.A1.E3.81.84.E5.85.B1.E7.94.A8.E4.BD.93"></span><span class="mw-headline" id="制限の無い共用体">制限の無い共用体</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=24" title="節を編集: 制限の無い共用体">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++標準には<code>union</code>のメンバになれるオブジェクトの型に対する制限がある。例えば、trivialでないコンストラクタが定義されているオブジェクトは共用体の中に含めることが不可能である。共用体に課された制限の多くは無くてもよいと考えられたため、次期標準では参照型を除いて共用体のメンバの型の制限が全廃される。この変更により、共用体は使いやすく強力で有用なものになる。
+</p><p>以下はC++11で許される共用体の簡単な例である:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct point {
+</p></b></b><b><b><pre> point() {}
+ point(int x, int y): x_(x), y_(y) {}
+ int x_, y_;
+</pre></b></b><b><b><p>};
+</p><p>union {
+</p></b></b><b><b><pre> int z;
+ double w;
+ point p;  // pointがtrivialでないコンストラクタを持つためC++03では不正だが、C++11では問題ない。
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p>この変更は現行の規則を緩めるだけなので、既存のコードを破壊することはない。
+</p></b></b><b><b><h2><span id=".E3.82.B3.E3.82.A2.E8.A8.80.E8.AA.9E.E6.A9.9F.E8.83.BD.E3.81.AE.E6.94.B9.E8.89.AF"></span><span class="mw-headline" id="コア言語機能の改良">コア言語機能の改良</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=25" title="節を編集: コア言語機能の改良">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><p>以下の機能は、従来のC++では全く不可能であったり、異常に冗長な記述が必要だったり、可搬性の無いライブラリを使わないといけなかったりしたような機能を提供するものである。
+</p></b></b><b><b><h3><span id=".E5.8F.AF.E5.A4.89.E9.95.B7.E5.BC.95.E6.95.B0.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88"></span><span class="mw-headline" id="可変長引数テンプレート">可変長引数テンプレート</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=26" title="節を編集: 可変長引数テンプレート">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++03のテンプレート（クラステンプレート・関数テンプレート）は、あらかじめ決められた個数の引数しか取れない。C++11では、テンプレート定義の際にあらゆる型の引数を任意個数取れる可変長引数テンプレート (variadic template) をサポートする:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename... Types&gt; class tuple;
+&lt;/syntaxhighlight&gt;
+</p><p>この<i>tuple</i>クラステンプレートは、テンプレート引数としていくらでも型名を取れる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+tuple&lt;std::vector&lt;int&gt;, std::map&lt;std::string, std::vector&lt;int&gt;&gt;&gt; someTuple; // tuple インスタンス。
+tuple&lt;&gt; emptyTuple; // 引数の数が0の場合。
+&lt;/syntaxhighlight&gt;
+</p><p>上記のクラステンプレートは<code>std::tuple</code>として標準化されている。
+</p><p>可変長テンプレート引数の個数に0を認めない場合は、以下のように定義すればよい:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename First, typename... Rest&gt;
+class tuple;
+&lt;/syntaxhighlight&gt;
+</p><p>可変長テンプレート引数を取る関数も定義でき、Cの可変長引数機構に似ているが、型安全な仕組みがもたらされる。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename... Params&gt;
+void printf(const std::string&amp; strFormat, Params... parameters);
+&lt;/syntaxhighlight&gt;
+</p><p>テンプレート定義時には<i>Params</i>の左側に<i>...</i>演算子を配置するが、関数シグネチャ中では<i>Params</i>の右側に使うことを注意する必要がある。テンプレート引数仕様のように、<i>...</i>演算子を型名の左側におく場合、これは"pack"演算子となる。この演算子は、型が0個以上となり得ることを示す。<i>...</i>演算子が型名の右側にある場合は、"unpack"演算子であり、pack演算子でまとめられた型のそれぞれに対して、複製の処理が行われるようになる。上の例では、<code>printf</code>関数の引数には<code>Params</code>にそれぞれの型がまとめられて渡される。
+</p><p>可変長テンプレート引数自体は関数・クラスの実装に使えるものではないため、可変長引数テンプレートの使用は再帰的に行われる。例えば、典型的な例として、C++11における<a href="/wiki/Printf" title="Printf">printf</a>の代替の定義例を以下に挙げてみよう:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+void printf(const char *s)
+{
+</p></b></b><b><b><pre> while (*s) {
+   if (*s == '%' &amp;&amp; *(++s) != '%')
+     throw std::runtime_error("invalid format string: missing arguments");
+   std::cout &lt;&lt; *s++;
+ }
+</pre></b></b><b><b><p>}
+</p><p>template&lt;typename T, typename... Args&gt;
+void printf(const char *s, T value, Args... args)
+{
+</p></b></b><b><b><pre> while (*s) {
+   if (*s == '%' &amp;&amp; *(++s) != '%') {
+     std::cout &lt;&lt; value;
+     printf(*s ? ++s : s, args...); // さらなる引数を見つけるため、*s == '\0' でも呼び出す
+     return;
+   }
+   std::cout &lt;&lt; *s++;
+ }
+ throw std::runtime_error("extra arguments provided to printf");
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>これは再帰呼び出しを使っている。可変長テンプレート引数バージョンの<i>printf</i>は自身を再帰的に呼び出し、<i>args</i>が空の場合はシンプルな方の<i>printf</i>が呼ばれることになる。
+</p><p>可変長テンプレート引数に順次アクセスする簡単な方法は無い。しかし、unpack演算子を用いることで、どこでも仮想的にテンプレート引数を解体できる。
+</p><p>例えば、クラスを以下のように使用できる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template &lt;typename... BaseClasses&gt;
+class ClassName : public BaseClasses... {
+public:
+</p></b></b><b><b><pre>  ClassName (BaseClasses&amp;&amp;... baseClasses) : BaseClasses(static_cast&lt;BaseClasses&amp;&amp;&gt;(baseClasses))... {}
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>unpack演算子により、<code>ClassName</code>の各基底クラス型が複製され、このクラスは渡された各型の導出クラスとなる。また、<code>ClassName</code>の基底型を初期化できるように、コンストラクタは各基底クラスへの参照を取る。
+</p><p>関数テンプレートでは、取った可変長引数を先へと転送できる。右辺値参照と組み合わせることで、完璧な転送が行える。
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename TypeToConstruct&gt;
+struct SharedPtrAllocator {
+</p></b></b><b><b><pre> template&lt;typename ...Args&gt; tr1::shared_ptr&lt;TypeToConstruct&gt; ConstructWithSharedPtr(Args&amp;&amp;... params)
+ {
+   return tr1::shared_ptr&lt;TypeToConstruct&gt;(new TypeToConstruct(static_cast&lt;Args&amp;&amp;&gt;(params)...));
+ }
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この特殊なファクトリ関数は、メモリリークに対する安全性のため、割り当てられたメモリを<code>tr1::shared_ptr</code>に自動的に包むものである。上記のように、引数リストを解体して<code>TypeToConstruct</code>のコンストラクタへと渡している。<code>static_cast&lt;Args&amp;&amp;&gt;(params)</code>構文で、const性などを保ちつつ、引数の適切な型をコンストラクタへと転送できる。unpack演算子により、それぞれのパラメータに上記の伝播文法を適用できる。
+</p><p>また、テンプレートパラメータの数を以下のように決定できる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;typename ...Args&gt; struct SomeStruct {
+</p></b></b><b><b><pre> static const int size = sizeof...(Args);
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p><code>SomeStruct&lt;Type1, Type2&gt;::size</code>は2となり、<code>SomeStruct&lt;&gt;::size</code>は0となるであろう。
+</p></b></b><b><b><h3><span id=".E6.96.B0.E3.81.9F.E3.81.AA.E6.96.87.E5.AD.97.E5.88.97.E3.83.AA.E3.83.86.E3.83.A9.E3.83.AB"></span><span class="mw-headline" id="新たな文字列リテラル">新たな文字列リテラル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=27" title="節を編集: 新たな文字列リテラル">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++03には2種類の文字列リテラルがある。1つ目は、<a class="mw-redirect" href="/wiki/%E3%83%8C%E3%83%AB%E7%B5%82%E7%AB%AF" title="ヌル終端">ヌル終端</a>された<code>const char</code>型配列を生成する、<a class="mw-redirect" href="/wiki/%E3%83%80%E3%83%96%E3%83%AB%E3%82%AF%E3%82%A9%E3%83%BC%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ダブルクォーテーション">ダブルクォーテーション</a>で囲まれた形式のものである。2つ目は、ヌル終端された<code>const wchar_t</code>型配列（<a class="mw-redirect" href="/wiki/%E3%83%AF%E3%82%A4%E3%83%89%E6%96%87%E5%AD%97%E5%88%97" title="ワイド文字列">ワイド文字列</a>）を生成する、<code>L</code>プレフィックスを付けたダブルクォーテーションで囲まれた形式のものである。しかし、どちらも<a href="/wiki/Unicode" title="Unicode">Unicode</a>で<a href="/wiki/%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E5%8C%96%E6%96%B9%E5%BC%8F" title="文字符号化方式">符号化された</a>文字列リテラルを標準サポートするものではない。
+</p><p>C++コンパイラでのUnicodeサポートを強化するため、<code>char</code>型の定義が修正され、少なくとも8ビット符号単位の<a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>符号化形式を格納できて、コンパイラの基本実行文字セットのあらゆる文字を格納するのに十分な大きさを持つ、とされた。以前は後者だけを満たしていれば良いとされていた。
+</p><p>C++11では、<a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>, <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a>, <a href="/wiki/UTF-32" title="UTF-32">UTF-32</a>の3つのUnicode符号化形式がサポートされる。先ほど述べた<code>char</code>の定義の変更に加え、C++11には2つの新たな文字型、<code>char16_t</code>と<code>char32_t</code>が加わる。それぞれ、UTF-16、UTF-32の符号単位を格納するよう設計されている。
+</p><p>以下に、それぞれの符号化形式で文字列リテラルを作る方法を示す:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+u8"I'm a UTF-8 string.";
+u"This is a UTF-16 string.";
+U"This is a UTF-32 string.";
+&lt;/syntaxhighlight&gt;
+</p><p>1つ目の文字列の型は、普通の<code>const char *</code>である。2つ目は、<code>const char16_t*</code>であり、3つ目は<code>const char32_t*</code>となる。
+</p><p>Unicode文字列リテラルを作るときには、Unicodeの符号位置を直接に文字列に埋め込めると便利である。C++11では、以下のような構文が使えるようになる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+u8"This is a Unicode Character: \u2018.";
+u"This is a bigger Unicode Character: \u2018.";
+U"This is a Unicode Character: \u2018.";
+&lt;/syntaxhighlight&gt;
+</p><p>'\u'の後の数字は16進数であり、接頭辞'0x'をつける必要は無い。'\u'は16ビットのUnicode符号位置を示すものであり、32ビットのUnicode符号位置を示す場合は'\U'と16進数を用いる。正当なUnicode符号位置のみが入力できる。例えば、UTF-16の<a href="/wiki/Unicode#サロゲートペア" title="Unicode">サロゲートペア（代用対）</a>のために予約された、0xD800–0xDFFFの範囲の<a href="/wiki/Unicode%E6%96%87%E5%AD%97%E3%81%AE%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0#代用符号位置" title="Unicode文字のマッピング">代用符号位置</a>は使用できない。
+</p><p><a href="/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>ファイルのリテラルを用いる場合や、<a href="/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE" title="正規表現">正規表現</a>のパターン文字列あるいはスクリプト言語のリテラルを用いる場合など、手動でエスケープしなくてよい文字列も有用である。C++11では、raw文字列リテラルが導入される:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+R"(The String Data \ Stuff " )";
+R"delimiter(The String Data \ Stuff " )delimiter";
+&lt;/syntaxhighlight&gt;
+</p><p>1つ目の場合、()括弧記号で挟まれた箇所全てが文字列となる。<code>"</code>や<code>\</code>の文字はエスケープする必要は無い。2つ目の場合、<code>"delimiter(</code>から<code>)delimiter"</code>までが文字列となる。<code>delimiter</code>という文字列は、実際には任意の文字列でよい。これにより、文字<code>)</code>をraw文字列リテラルで使用できるようになる。
+</p><p>raw文字列リテラルは、ワイドリテラルや各種Unicodeリテラルと組み合わせて利用できる。
+</p></b></b><b><b><h3><span id=".E3.83.A6.E3.83.BC.E3.82.B6.E3.83.BC.E5.AE.9A.E7.BE.A9.E3.83.AA.E3.83.86.E3.83.A9.E3.83.AB"></span><span class="mw-headline" id="ユーザー定義リテラル">ユーザー定義リテラル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=28" title="節を編集: ユーザー定義リテラル">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>他の多くの言語と同様、C++03にも数種のリテラル値がある。例えば、"12.5"はコンパイラが<code>double</code>型の浮動小数点値へと変換するリテラル値である。しかし、リテラル値にはいくつもの修飾子がある。"12.5f"というリテラルは、浮動小数点値ではあるが<code>float</code>型の値を生成するように伝える。このような修飾子はC++仕様として規定されており、C++のコード中では新たな修飾子を生成することは不可能であった。
+</p><p>C++11では、ユーザーが新たな種類のリテラル修飾子を定義できるようにし、リテラル修飾子の文字列を基にオブジェクトを生成できるようになる。
+</p><p>リテラルの変換過程が再定義され、二つの段階、rawとcookedへと分けられた。rawリテラルは特定の型の文字の並びであり、cookedリテラルは単一の型である。例えば、C++リテラルの<code>1234</code>は、rawリテラルとしては<code>'1', '2', '3', '4'</code>という文字の並びであり、cookedリテラルとしては整数値1234である。<code>0xA</code>は、rawリテラルとしては<code>'0', 'x', 'A'</code>であり、cookedリテラルとしては整数値10である。
+</p><p>常にcooked形式として処理される文字列リテラルを除き、リテラルはraw形式にもcooked形式にも拡張される。文字列リテラルが例外なのは、文字列には、文字列の型と特別な意味の指定を行う接頭辞があるからである。
+</p><p>ユーザー定義リテラルは全て接尾辞である。接頭辞リテラルを定義することはできない。
+</p><p>raw形式のリテラルを処理するユーザー定義リテラルは、以下のように定義できる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+OutputType operator""_Suffix(const char *literal_string);
+</p><p>OutputType someVariable = 1234_Suffix; // operator""_Suffix("1234") と等価
+&lt;/syntaxhighlight&gt;
+</p><p>1つ目の文で、接尾辞「_Suffix」を定義している。ユーザーが定義する接尾辞はアンダースコアで始める（アンダースコアで始まらないものは将来の標準のために予約されている）。
+</p><p>2つ目の文では、ユーザー定義リテラル関数によって定義されたコードを実行している。この関数には、Cスタイルの文字列としてヌル終端された"1234"が渡される。
+</p><p>rawリテラルを処理するもう1つの方法は、可変長引数テンプレートを使うことである:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;char...&gt; OutputType operator""_Suffix();
+</p><p>OutputType someVariable = 1234_Suffix;
+&lt;/syntaxhighlight&gt;
+</p><p>これにより、<code>operator""_Suffix&lt;'1', '2', '3', '4'&gt;</code>としてリテラル処理関数が実体化される。この形式では、文字列のヌル終端文字は無い。これを行う主目的は、C++11の<code>constexpr</code>を使い、<code>OutputType</code>をconstexprで構築可能かつコピー可能とし、リテラル処理関数を<code>constexpr</code>関数とすることで、コンパイラにリテラルの変換を完全にコンパイル時に行わせることである。
+</p><p>cookedリテラルの場合は、cookedリテラルの型が使われ、代替となるテンプレート形式は無い:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+OutputType operator""_Suffix(int the_value);
+</p><p>OutputType someVariable = 1234_Suffix;
+&lt;/syntaxhighlight&gt;
+</p><p>文字列リテラルの場合、以下のものが使用でき、前述の新たな文字列接頭辞と組み合わせられる:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+OutputType operator""_Suffix(const char * string_values, size_t num_chars);
+OutputType operator""_Suffix(const wchar_t * string_values, size_t num_chars);
+OutputType operator""_Suffix(const char16_t * string_values, size_t num_chars);
+OutputType operator""_Suffix(const char32_t * string_values, size_t num_chars);
+</p><p>OutputType someVariable = "1234"_Suffix;      //const char * バージョンを呼び出す
+OutputType someVariable = u8"1234"_Suffix;    //const char * バージョンを呼び出す
+OutputType someVariable = L"1234"_Suffix;     //const wchar_t * バージョンを呼び出す
+OutputType someVariable = u"1234"_Suffix;     //const char16_t * バージョンを呼び出す
+OutputType someVariable = U"1234"_Suffix;     //const char32_t * バージョンを呼び出す
+&lt;/syntaxhighlight&gt;
+</p><p>文字リテラルも同様に定義できる。
+</p></b></b><b><b><h3><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.BF.E3.82.B9.E3.82.AF.E7.94.A8.E3.81.AE.E3.83.A1.E3.83.A2.E3.83.AA.E3.83.A2.E3.83.87.E3.83.AB"></span><span class="mw-headline" id="マルチタスク用のメモリモデル">マルチタスク用のメモリモデル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=29" title="節を編集: マルチタスク用のメモリモデル">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++標準化委員会は<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">マルチスレッド</a>の標準的サポートの導入を計画している。
+</p><p>これには2つの側面がある。つまり、複数スレッドが1つのプログラム中で共存できるメモリモデルを定義することと、スレッド間相互作用のサポートを定義することである。2つ目に関してはライブラリによって提供される。<a href="#スレッディング">#スレッディング</a>を参照のこと。
+</p><p>複数のスレッドが同じメモリ位置にアクセスする可能性がある環境下でのプログラム記述には、メモリモデルが必要となる。つまり、ルールを遵守するプログラムは正しく実行されるであろうと思われるが、ルールに従わないプログラムは<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E6%9C%80%E9%81%A9%E5%8C%96" title="コンパイラ最適化">コンパイラの最適化</a>に依存する未定義の振る舞いや、<a class="new" href="/w/index.php?title=En:memory_coherence&amp;action=edit&amp;redlink=1" title="En:memory coherence (存在しないページ)">memory coherence</a>の問題を抱えることになる。
+</p></b></b><b><b><h3><span id=".E3.82.B9.E3.83.AC.E3.83.83.E3.83.89.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E8.A8.98.E6.86.B6.E5.9F.9F"></span><span class="mw-headline" id="スレッドローカル記憶域">スレッドローカル記憶域</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=30" title="節を編集: スレッドローカル記憶域">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>マルチスレッド環境においては、各スレッドごとに独立した<a href="/wiki/%E5%A4%89%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="変数 (プログラミング)">変数</a>（<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8" title="スレッドローカルストレージ">スレッドローカルストレージ</a>、TLS）が必要となることがある。C++03では、関数内のローカル変数（自動変数）はこのような変数に該当するが、グローバル変数、また静的変数としては標準化されていない。各種コンパイラはそれぞれ独自拡張を用意してTLSに対応していた。
+</p><p>C++11では、新たな<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%82%BB%E3%83%BC%E3%83%95" title="スレッドセーフ"><i>スレッドローカル</i></a>記憶クラスが、（既存の<i>static</i>、<i>動的</i>、<i>auto</i>に加えて）新たに追加された。スレッドローカル記憶域は、記憶クラス指定子 <code>thread_local</code>によって指定する。
+</p><p>スレッドローカル記憶クラスは、static記憶クラスを持ち得るあらゆるオブジェクト（プログラムの実行期間全体にわたって存在しているようなもの）にも付けられるだろう。つまり、スレッドローカルなオブジェクトは、static記憶クラスの変数と同様のやり方で、コンストラクタで初期化されデストラクタで破壊されるということである。
+</p></b></b><b><b><h3><span id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.A4.E3.83.A9.E3.81.8C.E7.94.9F.E6.88.90.E3.81.99.E3.82.8B.E9.96.A2.E6.95.B0.E3.81.B8.E3.81.AEdefault.2Fdelete.E6.8C.87.E5.AE.9A"></span><span class="mw-headline" id="コンパイラが生成する関数へのdefault/delete指定">コンパイラが生成する関数へのdefault/delete指定</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=31" title="節を編集: コンパイラが生成する関数へのdefault/delete指定">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++03では、オブジェクトにコンストラクタ、コピーコンストラクタ、代入演算子 (<code>operator=</code>)、そしてデストラクタが与えられていない場合、コンパイラが自動的にそれらを提供する。ユーザーは自身のバージョンを定義することで、デフォルトの動作を上書きできる。また、C++は全てのクラスに適用されるグローバルな演算子（<code>operator=</code>や<code>operator new</code>）も提供しており、その動作もユーザーが上書きできる。
+</p><p>しかし、デフォルトで作られる関数の生成を制御する方法が非常に少ないという問題がある。例えば、クラスを実質的にコピー不能にするには、コピーコンストラクタと代入演算子をprivateとして宣言し、定義しないことによって実現できる。これらの関数を使用しようとすると、コンパイラやリンカがエラーを報告するようになるというわけである。しかし、これは理想的な解法とはいえないであろう。
+</p><p>さらに言えば、例えばデフォルトコンストラクタなど、コンパイラに対して明示的に生成するよう伝えておくことも有用である。オブジェクトに「どんなものであれ一つでも」コンストラクタが定義されているのであれば、コンパイラはデフォルトコンストラクタを生成しない。また、特別なコンストラクタとコンパイラが生成するデフォルトとを両方持っておくことも有用な場面がある。
+</p><p>C++11では、これらコンパイラが生成する関数の使用・不使用を明示できるようになる。例えば、以下のクラスはデフォルトコンストラクタの使用を明示している:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct SomeType {
+</p></b></b><b><b><pre> SomeType() = default; // デフォルトコンストラクタが明示される
+ SomeType(OtherType value);
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p>また逆に、明示的に無効にすることも可能である。以下の例はコピー不能な型の例である:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct NonCopyable {
+</p></b></b><b><b><pre> NonCopyable&amp; operator=(const NonCopyable&amp;) = delete;
+ NonCopyable(const NonCopyable&amp;) = delete;
+ NonCopyable() = default;
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p><code>new</code>演算子で割り当てられないようにすることもできる:
+&lt;syntaxhighlight lang="cpp"&gt;
+struct NonNewable {
+</p></b></b><b><b><pre> void *operator new(std::size_t) = delete;
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p>このオブジェクトは、スタック上か、他の型のメンバとしてしか割り付けられない。移植性の無いトリックを使いでもしない限り、直接ヒープには割り当てられないのである（ユーザー割り当てのメモリ上にコンストラクタを呼ぶ方法は配置newしかなく、その使用は上記のように禁じられているので、オブジェクトは適切に構築できない）。
+</p><p><code>= delete</code>という指定は、どんな関数の呼び出しも禁止できる。これは、メンバ関数を特定の型で呼び出すのを禁止するのに使える。例えば:
+&lt;syntaxhighlight lang="cpp"&gt;
+struct NoDouble {
+</p></b></b><b><b><pre> void f(int i);
+ void f(double) = delete;
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p><code>double</code>で<code>f()</code>を呼ぼうとすると、暗黙の<code>int</code>への変換を行うのではなく、コンパイラによってエラーになる。以下のようにすることで、<code>int</code>型以外の型では呼べないようにする総称化ができる:
+&lt;syntaxhighlight lang="cpp"&gt;
+struct NoDouble {
+</p></b></b><b><b><pre> void f(int i);
+ template&lt;class T&gt; void f(T) = delete;
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p></b></b><b><b><h3><span id="C.E3.81.A8.E3.81.AE.E4.BA.92.E6.8F.9B.E6.80.A7.E5.90.91.E4.B8.8A"></span><span class="mw-headline" id="Cとの互換性向上">Cとの互換性向上</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=32" title="節を編集: Cとの互換性向上">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><h4><span id="long_long_int.E5.9E.8B"></span><span class="mw-headline" id="long_long_int型">long long int型</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=33" title="節を編集: long long int型">編集</a><span class="mw-editsection-bracket">]</span></span></h4></b></b><b><b><p>32ビットおよび64ビット両方のシステムにおいて、サイズが最低でも64ビットあるような整数型が利用できると便利である。C99標準では既に<code>long long int</code>および<code>unsigned long long int</code>として標準Cに導入されている。また、C++用コンパイラのほとんどで以前から長期的にサポートされている拡張でもある（実際、コンパイラによってはC99で導入される前からサポートしているものもある）。C++11でも同様に、この型が標準C++に導入される。
+</p><p>これは、一部の64ビットシステム上ではあまり有用ではない。例えば<a class="new" href="/w/index.php?title=LP64&amp;action=edit&amp;redlink=1" title="LP64 (存在しないページ)">LP64</a>モデル上でのデータサイズは以下のようになり、64ビット整数は<code>long int</code>によって実現できる。
+</p></b></b><b><b><ul><li><b>16</b>ビット: <code>short int</code></li>
+<li><b>32</b>ビット: <code>int</code></li>
+<li><b>64</b>ビット: <code>long int</code></li></ul></b></b><b><b><p>それでも、32ビットシステムや、64ビット版<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a>に代表される<a class="new" href="/w/index.php?title=LLP64&amp;action=edit&amp;redlink=1" title="LLP64 (存在しないページ)">LLP64</a>モデル（<code>long int</code>が32ビットである）環境では、64ビット整数として<code>long long int</code>を使うのが根強い。
+</p><p>C++委員会は、C委員会（お互いに連絡を取っており、グループに大きな重なりがあるが、C++委員会とは独立である）の決定と合わない新たな組み込み型の標準化を避けてきた。しかし今や、<code>long long int</code>（略して<code>long long</code>）は事実上の標準であり、さらにはC99で本当の標準化もされているので、この難局も解消されるだろう。C++委員会は<code>long long int</code>および<code>unsigned long long int</code>を組み込み型として認可した。
+</p><p>将来的に、十分な要求があったり、128ビットの<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>を持つようなプロセッサが現れたりすれば、<code>long long int</code>は128ビット型として使われるようになる可能性もある。
+</p></b></b><b><b><h3><span id=".E9.9D.99.E7.9A.84.E3.81.AA.E8.A1.A8.E6.98.8E"></span><span class="mw-headline" id="静的な表明">静的な表明</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=34" title="節を編集: 静的な表明">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++標準には、<a href="/wiki/%E8%A1%A8%E6%98%8E_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="表明 (プログラミング)">表明</a>を確認する2つの方法として、<code>assert</code>マクロと<code>#error</code>プリプロセッサディレクティブがある。しかし、このどちらもテンプレート使用時には不適切である。<code>assert</code>マクロでの確認は実行時であり、<code>#error</code>プリプロセッサディレクティブでの確認はプリプロセス時である。どちらもテンプレート実体化時の確認には使えないため、テンプレート引数に依存する特性の検証には適していない。
+</p><p>そこで、コンパイル時点での表明確認の新たな手法として新たなキーワードである<code>static_assert</code>が導入される。宣言は以下のような形になるであろう:
+&lt;syntaxhighlight lang="cpp"&gt;
+static_assert( <i>constant-expression</i>, <i>error-message</i> );
+&lt;/syntaxhighlight&gt;
+</p><p>以下に、<code>static_assert</code>の使用法の例を挙げる:
+&lt;syntaxhighlight lang="cpp"&gt;
+static_assert(3.14 &lt; GREEKPI &amp;&amp; GREEKPI &lt; 3.15, " GREEKPI is inaccurate!");
+</p><p>template&lt;typename T&gt;
+struct Check {
+</p></b></b><b><b><pre> static_assert(sizeof(int) &lt;= sizeof(T), "T is not big enough!");
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+</p><p><i>constant-expression</i>が<code>false</code>となる場合、コンパイラはエラーメッセージを生成する。1つ目の例は<code>#error</code>プリプロセッサディレクティブの代替の例である。2つ目の例の方は、<code>Check</code>クラステンプレートの各実体化において表明の確認をしている。
+</p><p>静的な表明はテンプレート以外での使用も有益である。例えば、<code>char</code>のビット数 (<code>CHAR_BIT</code>) が8ビット（オクテット）であることや、<code>long long</code>が<code>int</code>より大きいサイズであることに依存するアルゴリズムの実装のように、標準では保証されていない箇所の確認などの用途がある（このような仮定はほとんどのシステム、コンパイラで正しいだろうが、全ての環境で正しいとは言えない）。
+</p></b></b><b><b><h3><span id=".E3.82.A4.E3.83.B3.E3.82.B9.E3.82.BF.E3.83.B3.E3.82.B9.E5.8C.96.E3.81.95.E3.82.8C.E3.81.A6.E3.81.84.E3.81.AA.E3.81.84.E3.82.AF.E3.83.A9.E3.82.B9.E3.83.A1.E3.83.B3.E3.83.90.E3.81.B8.E3.81.AEsizeof"></span><span class="mw-headline" id="インスタンス化されていないクラスメンバへのsizeof">インスタンス化されていないクラスメンバへのsizeof</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=35" title="節を編集: インスタンス化されていないクラスメンバへのsizeof">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++03では、<code>sizeof</code>演算子は型とオブジェクトに対してしか適用できない。そのため、以下のようには使用できない:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct SomeType { OtherType member; };
+</p><p>size_t memberSize = sizeof(SomeType::member); // C++03では動かない。
+&lt;/syntaxhighlight&gt;
+</p><p>この例では、<code>OtherType</code>のサイズを取得したい場面であるが、C++03ではこれは不正となりコンパイルエラーとなる。C++11では認められる。
+</p><p>ちなみに、C++03で同様のことをしたい場合、以下のようにすればよい:
+</p><p>&lt;syntaxhighlight lang="cpp"&gt;
+struct SomeType { OtherType member; };
+</p><p>size_t memberSize = sizeof(static_cast&lt;SomeType*&gt;(0)-&gt;member);
+&lt;/syntaxhighlight&gt;
+</p></b></b><b><b><h2><span id="C.2B.2B.E6.A8.99.E6.BA.96.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AE.E6.8B.A1.E5.BC.B5"></span><span class="mw-headline" id="C++標準ライブラリの拡張">C++標準ライブラリの拡張</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=36" title="節を編集: C++標準ライブラリの拡張">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><p>大量の新機能が、C++11標準ライブラリに追加される。新しいライブラリの多くは現行の標準規格で実装できるが、C++11のコア言語の新機能に（程度の差はあれど）依存しているものもある。
+</p><p>導入される<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>の大部分は、<i><a href="/wiki/C%2B%2B_Technical_Report_1" title="C++ Technical Report 1">C++ Standards Committee's Library Technical Report</a></i>（TR1と呼ばれる）の文書で定義されている。TR1の最終稿は、<a href="/wiki/2005%E5%B9%B4" title="2005年">2005年</a>に出されている。なお、TR1の多くは<a class="mw-redirect" href="/wiki/Boost" title="Boost">Boost</a> C++ライブラリが基になっている。
+</p><p>TR1ライブラリの実装は既に数種類が利用可能であり、<code>std::tr1</code>名前空間を用いて呼び出せる。C++11では<code>std</code>名前空間に移動される。
+</p><p>委員会は、2つ目のTechnical Report (<a class="new" href="/w/index.php?title=C%2B%2B_Technical_Report_2&amp;action=edit&amp;redlink=1" title="C++ Technical Report 2 (存在しないページ)">C++ Technical Report 2</a>) をC++11の標準化後に予定している。C++11に間に合わないライブラリ提案は、TR2や、さらに先のTechnical Reportに置かれることになる。
+</p><p>以下の提案は、C++11に搭載されることが予定されているものである。
+</p></b></b><b><b><h3><span id=".E6.A8.99.E6.BA.96.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA.E3.81.AE.E6.94.B9.E8.89.AF"></span><span class="mw-headline" id="標準ライブラリの改良">標準ライブラリの改良</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=37" title="節を編集: 標準ライブラリの改良">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++11では言語に多数の新機能が提供され、既存の標準ライブラリもその恩恵を受けられる。例えば、大半の標準ライブラリのコンテナは右辺値参照に基づいたムーブコンストラクタを利用して、重いコンテナを高速に移動したり、新たなメモリ位置に中身を移動できる。標準ライブラリは必要に応じてC++11の新機能を使って改良される。それには下記のようなものが含まれるが、必ずしもこれだけに限定されるわけではない。
+</p></b></b><b><b><ul><li>右辺値参照とそれに付随するムーブのサポート</li>
+<li>UTF-16とUTF-32の文字型のサポート</li>
+<li>可変個引数テンプレート (完全な転送を可能にするための右辺値参照と共に)</li>
+<li>コンパイル時の定数式</li>
+<li>decltype</li>
+<li>明示的な変換関数</li>
+<li>関数へのdefault/delete指定</li></ul></b></b><b><b><p>加えて、C++が標準化されてから長い時間が経過し、標準ライブラリを使った大量のコードが書かれてきた。その結果、改良を施すことができる標準ライブラリの部分が明らかになった。その場所の多くは標準ライブラリのアロケータである。C++11には現在のアロケータのモデルを補うためにスコープに基づく新しいモデルが含まれる。
+</p></b></b><b><b><h3><span id=".E3.82.B9.E3.83.AC.E3.83.83.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="スレッディング">スレッディング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=38" title="節を編集: スレッディング">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>スレッドクラスにより、<a href="/wiki/%E9%96%A2%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="関数オブジェクト">関数オブジェクト</a>を元に新たなスレッドの起動が可能になる。各時点において、あるスレッドが実行中のスレッドへのjoin（スレッドの終了を待つこと）も可能である。（可能であれば）ネイティブスレッドオブジェクトにアクセスし、<a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)" title="プラットフォーム (コンピューティング)">プラットフォーム</a>固有の操作を行うことも可能となるだろう。
+</p><p>スレッド間の同期のために<a href="/wiki/%E3%83%9F%E3%83%A5%E3%83%BC%E3%83%86%E3%83%83%E3%82%AF%E3%82%B9" title="ミューテックス">ミューテックス</a>や<a href="/wiki/%E3%83%A2%E3%83%8B%E3%82%BF_(%E5%90%8C%E6%9C%9F)" title="モニタ (同期)">条件変数</a>がライブラリに追加され、<a href="/wiki/RAII" title="RAII">RAII</a>方式のロックやロックアルゴリズムの使用も容易になる。
+</p><p>低レベル処理の高効率性のためには、スレッド間通信をミューテックスのオーバーヘッドなしで行う機能も必要となる。これは、適切な<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%90%E3%83%AA%E3%82%A2" title="メモリバリア">メモリバリア</a>と<a href="/wiki/%E4%B8%8D%E5%8F%AF%E5%88%86%E6%93%8D%E4%BD%9C" title="不可分操作">不可分操作</a>を用いることで達成できる。不可分操作ライブラリにより、各操作を行うのに必要な最小限の同期だけを指定できる。
+</p><p><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%83%97%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="スレッドプール (存在しないページ)">スレッドプール</a>のような高レベルスレッディング用のライブラリも作業中であるが、C++11標準にすべて搭載されてはいない。C++11では主に基礎となるライブラリが定義され、将来のTechnical Reportに含まれることが望まれる。
+</p></b></b><b><b><h3><span id=".E3.82.BF.E3.83.97.E3.83.AB.E5.9E.8B"></span><span class="mw-headline" id="タプル型">タプル型</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=39" title="節を編集: タプル型">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p><a href="/wiki/%E3%82%BF%E3%83%97%E3%83%AB" title="タプル">タプル</a>とは、決められた次元数の、異なる種類の型のオブジェクトから構成されたコレクションである。ペア (std::pair) を拡張して、任意の数のオブジェクトを格納できるようにしたものと考えても良い。あらゆる型のオブジェクトが、タプルの要素になりうる。
+</p><p>この新ユーティリティは、新ヘッダとC++言語拡張を通して実装される。つまり:
+</p></b></b><b><b><ul><li><a href="#可変長引数テンプレート">可変長引数テンプレート</a></li>
+<li>参照への参照</li>
+<li>関数テンプレートのデフォルト引数（C++03ではクラステンプレートにしかデフォルト引数を定義できない）</li></ul></b></b><b><b><p>以下が、<code>&lt;tuple&gt;</code>ヘッダで定義されているタプルである:
+&lt;syntaxhighlight lang="cpp"&gt;
+template &lt;class... Types&gt; class tuple;
+&lt;/syntaxhighlight&gt;
+</p><p>タプル型の定義例と使用例を挙げる:
+&lt;syntaxhighlight lang="cpp"&gt;
+using test_tuple_t = std::tuple&lt;int, double, long&amp;, const char *&gt;;
+long lengthy = 12;
+test_tuple_t proof(18, 6.5, lengthy, "Ciao!");
+lengthy = std::get&lt;0&gt;(proof); // lengthy に値 18 が代入される。
+std::get&lt;3&gt;(proof) = "Beautiful!"; // タプルの第4要素を変更。
+&lt;/syntaxhighlight&gt;
+</p><p>タプル<code>proof</code>を内容の定義なしに生成することも可能であるが、タプル要素の型がデフォルトコンストラクタを持つ場合に限られる。さらに、タプルを別のタプルに代入することも可能である。ただし、代入可能なのは、タプルの型が同じで各要素の型がコピーコンストラクタを持つ場合、もしくは右辺側のタプルの各型が左辺側のタプルのそれぞれの型と変換可能な場合、左辺側のタプルの各要素型が適切なコンストラクタを持つ場合である。
+&lt;syntaxhighlight lang="cpp"&gt;
+std::tuple&lt;int, double, std::string&gt; t1;
+std::tuple&lt;char, short, const char *&gt; t2('X', 2, "Hola!");
+t1 = t2; // OK。
+// 最初の2つの要素は変換可能で、
+// 3つ目の型 std::string は const char * から構築できる。
+&lt;/syntaxhighlight&gt;
+</p><p>比較演算子も使用可能であり（タプルの要素数が同じ場合）、タプルの特性を確認する2つの式が使用可能である（コンパイル時のみ）。
+</p></b></b><b><b><ul><li><code>std::tuple_size&lt;T&gt;::value</code>: タプル<code>T</code>の要素数を返す。</li>
+<li><code>std::tuple_element&lt;I, T&gt;::type</code>: タプル<code>T</code>の<code>I</code>番目のオブジェクトの型を返す。</li></ul></b></b><b><b><h3><span id=".E3.83.8F.E3.83.83.E3.82.B7.E3.83.A5.E3.83.86.E3.83.BC.E3.83.96.E3.83.AB"></span><span class="mw-headline" id="ハッシュテーブル">ハッシュテーブル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=40" title="節を編集: ハッシュテーブル">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>C++標準ライブラリへの<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ハッシュテーブル">ハッシュテーブル</a>（順序付けの無い連想コンテナ）の導入要求は、最も繰り返されてきた要求の1つである。これは、時間的な制約のみのために、現在の標準（<a href="/wiki/1995%E5%B9%B4" title="1995年">1995年</a>、<a href="/wiki/1998%E5%B9%B4" title="1998年">1998年</a>）に導入されなかった。ハッシュテーブルは最悪の場合（大量の衝突が発生）の効率は<a href="/wiki/B%E6%9C%A8" title="B木">平衡木</a>に劣るが、現実のアプリケーションでは多くの場合効率的である。
+</p><p>衝突の管理は、チェイン法によってのみ行われる。これは、委員会には、多くの実装上の問題（特に要素の消去が認められるような場合）があるオープンアドレス法を標準化する機会がないからである。非標準のライブラリの持つ、独自のハッシュテーブル実装と名前が衝突しないように、"hash"の代わりに"unordered"を使用している。
+</p><p>ハッシュテーブルには4種類あり、同じキーを持つ要素を認めるかどうかと、キーに値を関連付けるかどうかで区別される。
+</p></b></b><b><b><table class="wikitable">
+<tbody><tr>
+<th>ハッシュ表の型</th>
+<th>値の関連付け</th>
+<th>重複するキー
+</th></tr>
+<tr>
+<th>unordered_set
+</th>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<th>unordered_multiset
+</th>
+<td></td>
+<td align="center">○
+</td></tr>
+<tr>
+<th>unordered_map
+</th>
+<td align="center">○</td>
+<td>
+</td></tr>
+<tr>
+<th>unordered_multimap
+</th>
+<td align="center">○</td>
+<td align="center">○
+</td></tr></tbody></table></b></b><b><b><p>新クラスは、<a href="/wiki/Standard_Template_Library#コンテナ" title="Standard Template Library">コンテナクラス</a>の要件を全て満たし、要素へのアクセスに必要な全てのメソッドを備える:<code>insert</code>, <code>erase</code>, <code>begin</code>, <code>end</code>.
+</p><p>この新ユーティリティは、C++言語の拡張は必要ない。<code>&lt;functional&gt;</code>ヘッダへの小さな拡張と、<code>&lt;unordered_set&gt;</code>ヘッダ、<code>&lt;unordered_map&gt;</code>ヘッダの導入を行うのみである。他の標準クラスには変更の必要がなく、標準ライブラリの他の拡張にも依存しない。
+</p></b></b><b><b><h3><span id=".E6.AD.A3.E8.A6.8F.E8.A1.A8.E7.8F.BE"></span><span class="mw-headline" id="正規表現">正規表現</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=41" title="節を編集: 正規表現">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p><a href="/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE" title="正規表現">正規表現</a>のために作られた、多くの非標準あるいは準標準のライブラリがある。このようなアルゴリズムを使うのは非常に一般的なので、<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E8%A8%80%E8%AA%9E" title="オブジェクト指向言語">オブジェクト指向言語</a>の能力を用いて、標準ライブラリにもこの機能が導入される。<code>&lt;regex&gt;</code>で提供される正規表現は<a href="/wiki/ECMAScript" title="ECMAScript">ECMAScript</a>との互換性がある。<a href="/wiki/POSIX" title="POSIX">POSIX</a>などの正規表現もサポートする。ただし、<a href="/wiki/Perl" title="Perl">Perl</a>の正規表現はサポートされないため、Perl正規表現を使いたければBoost C++ライブラリのBoost.RegexかBoost.XPressiveを使うことになる。
+</p><p>新ライブラリでは、新ヘッダ<code>&lt;regex&gt;</code>が定義され、2つの新クラスが導入される:
+</p></b></b><b><b><ul><li>正規表現を表すクラステンプレート<code>basic_regex</code></li>
+<li>結果を表すクラステンプレート<code>match_results</code></li></ul></b></b><b><b><p>検索のために<code>regex_search</code>関数が使われ、「検索と置換」とために<code>regex_replace</code>関数が使われ、新たな文字列を返す。アルゴリズム<code>regex_search</code>と<code>regex_replace</code>は正規表現と文字列を取り、結果を<code>match_results</code>に収める。
+</p><p>以下に<code>match_results</code>の使用例を示す:
+&lt;syntaxhighlight lang="cpp"&gt;
+const char *reg_esp = "[ ,.\\t\\n;:]"; // 分割文字のリスト。
+</p><p>regex rgx(reg_esp); // regex型は「char型」を引数にした、basic_regexテンプレートのインスタンス。
+cmatch match; // cmatch型は「const char *型」を引数にした、match_resultsテンプレートのインスタンス。
+const char *target = "Polytechnic University of Turin ";
+</p><p>// reg_espの文字で分割された、targetの全単語を分別。
+if (regex_search(target, match, rgx)) {
+</p></b></b><b><b><pre> // 単語が特定の文字で分割されていた場合は表示。
+ for (int a = 0; a &lt; match.size(); a++) {
+   string str( match[a].first, match[a].second );
+   cout &lt;&lt; str &lt;&lt; "\n";
+ }
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>注意: C++の文字列リテラルでは<a href="/wiki/%E3%83%90%E3%83%83%E3%82%AF%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5" title="バックスラッシュ">バックスラッシュ</a>はエスケープ文字として扱われるため、例ではバックスラッシュを二つ重ねている。C++11の<a href="#新たな文字列リテラル">raw文字列</a>機能により、この問題は回避できる。
+</p><p><code>regex</code>ライブラリ自体は、既存のヘッダの変更や言語拡張を必要としない。
+</p></b></b><b><b><h3><span id=".E4.B8.80.E8.88.AC.E7.94.A8.E9.80.94.E3.81.AE.E3.82.B9.E3.83.9E.E3.83.BC.E3.83.88.E3.83.9D.E3.82.A4.E3.83.B3.E3.82.BF"></span><span class="mw-headline" id="一般用途のスマートポインタ">一般用途のスマートポインタ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=42" title="節を編集: 一般用途のスマートポインタ">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p><a href="/wiki/%E5%8B%95%E7%9A%84%E3%83%A1%E3%83%A2%E3%83%AA%E7%A2%BA%E4%BF%9D" title="動的メモリ確保">動的メモリ確保</a>は、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E%E5%B9%B4%E8%A1%A8" title="プログラミング言語年表">プログラミング言語の歴史</a>においても昔からの論点である。C/C++では動的に確保したメモリに対する明示的な解放が必要だが、<a href="/wiki/Java" title="Java">Java</a>などに代表される多くの現代的<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a>は、<a href="/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="ガベージコレクション">ガベージコレクション</a>による自動メモリ管理の仕組みを備えている。
+</p><p>C++の<a href="/wiki/%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ポインタ (プログラミング)">ポインタ</a>には、多くの興味深い性質がある:
+</p></b></b><b><b><ul><li>コピーできる。</li>
+<li>代入できる。</li>
+<li><code>void *</code>を総称的ポインタとして使える。</li>
+<li>静的キャストで、基底クラスのポインタに変換できる。</li>
+<li>動的キャストで、派生クラスのポインタに変換できる。</li></ul></b></b><b><b><p>一方、C++のポインタには主に以下のような欠点や危険な性質がある:
+</p></b></b><b><b><ul><li>動的に割り当てられたメモリを手動管理する責任がプログラマ側にある。</li>
+<li><a href="/wiki/%E4%B8%BB%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE" title="主記憶装置">メモリ</a>上の、不正なアドレスや未割り当てのアドレスが参照できる。</li></ul></b></b><b><b><p>この問題を解消・軽減するためのイディオムとして、<a href="/wiki/RAII" title="RAII">RAII</a>に基づいた<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="スマートポインタ">スマートポインタ</a>がよく利用される。スマートポインタは、通常のポインタの利点を維持したまま、弱点を大幅に削ったものである。C++03までの<a href="/wiki/%E6%A8%99%E6%BA%96C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="標準C++ライブラリ">標準C++ライブラリ</a>にもスマートポインタの一種として<code>std::auto_ptr</code>が存在したが、制約が多く、決して使いやすいとは言えなかった。C++11では、Boost C++ライブラリをベースとした、いくつかの新しいスマートポインタが標準化された。
+</p><p>クラステンプレート<code>std::shared_ptr</code>は、同じオブジェクトに対する「同等の」参照をカウントする機能（<a href="/wiki/%E5%8F%82%E7%85%A7%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88" title="参照カウント">参照カウント</a>）を持ち、関連するスマートポインタ間でオブジェクトの所有権を共有する。さらに、標準コンテナの要素とすることも可能である。
+</p><p>同じオブジェクトを参照するポインタの数を得るには、<code>shared_ptr</code>のメンバ関数である<code>use_count</code>が使えるだろう。メンバ関数<code>reset</code>は、スマートポインタをリセットする。リセットされたポインタは「空」になり、<code>use_count</code>を呼び出すとゼロを返す。
+</p><p>以下に、<code>shared_ptr</code>の使用例を示す:
+&lt;syntaxhighlight lang="cpp"&gt;
+</p></b></b><b><b><ol><li>include &lt;iostream&gt;</li>
+<li>include &lt;memory&gt;</li></ol></b></b><b><b><p>int main() {
+</p></b></b><b><b><pre> std::shared_ptr&lt;double&gt; p_first(new double(-100));
+ std::cout &lt;&lt; "Ref count = " &lt;&lt; p_first.use_count() &lt;&lt; std::endl;
+ std::cout &lt;&lt; *p_first &lt;&lt; std::endl;
+ {
+   std::shared_ptr&lt;double&gt; p_copy = p_first;
+   std::cout &lt;&lt; "Ref count = " &lt;&lt; p_first.use_count() &lt;&lt; std::endl;
+   std::cout &lt;&lt; "Ref count = " &lt;&lt; p_copy.use_count() &lt;&lt; std::endl;
+   std::cout &lt;&lt; *p_copy &lt;&lt; std::endl;
+   *p_copy = 21.2;
+ } // 'p_copy'は破壊されるが、まだ参照が残っているので、割り当てられたdoubleは破壊されない。
+ std::cout &lt;&lt; "Ref count = " &lt;&lt; p_first.use_count() &lt;&lt; std::endl;
+ std::cout &lt;&lt; *p_first &lt;&lt; std::endl;
+ return 0; // 'p_first'が破壊され、参照がなくなり、同時に割り当てられたdoubleも破壊される。
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>これと関連し、<a href="/wiki/%E5%BC%B1%E3%81%84%E5%8F%82%E7%85%A7" title="弱い参照">弱い参照</a>として<code>std::weak_ptr</code>テンプレートも導入される。これもスマートポインタ・参照と同様に振舞うが、<code>shared_ptr</code>との違いは、参照先の値がポインタによって「所有」されず、弱参照ポインタが存在していても破壊され得る点である。これは、弱参照ポインタには参照先オブジェクトが破壊されてしまうことによる実行時エラーが発生しやすいことを意味している。しかしこれにより、オブジェクトの生存時間に影響しない形で参照を持つことが可能となり、循環参照を防止できる。
+</p><p>このユーティリティは<code>&lt;memory&gt;</code>ヘッダに変更を必要とするが、C++言語拡張は必要としない。
+</p><p>また、<code>std::unique_ptr</code>が前述の<code>auto_ptr</code>の代わりとして導入され、<code>auto_ptr</code>は非推奨とされる。<code>unique_ptr</code>は<code>auto_ptr</code>の全機能を提供するが、左辺値からの暗黙的な移動の際に起こる挙動が異なる。<code>unique_ptr</code>は、C++11の<a href="#右辺値参照とMove_semantics">Move Semantics</a>を用いたコンテナになっている。
+</p></b></b><b><b><h3><span id=".E6.8B.A1.E5.BC.B5.E5.8F.AF.E8.83.BD.E3.81.AA.E4.B9.B1.E6.95.B0.E3.81.AE.E6.9E.A0.E7.B5.84.E3.81.BF"></span><span class="mw-headline" id="拡張可能な乱数の枠組み">拡張可能な乱数の枠組み</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=43" title="節を編集: 拡張可能な乱数の枠組み">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>コンピュータは決定的な振る舞いをするものであるが、<a class="mw-redirect" href="/wiki/%E7%96%91%E4%BC%BC%E4%B9%B1%E6%95%B0" title="疑似乱数">疑似乱数</a>による<a href="/wiki/%E4%B9%B1%E6%95%B0%E5%88%97" title="乱数列">乱数列</a>を生成することにより、（外見だけでも）非決定的な振る舞いが必要となるようなアプリケーションがある。
+</p><p>標準に用意されている方法は、<code><a href="/wiki/Rand" title="Rand">rand</a></code>関数のみである。しかし、十分な定義がされていないため、そのアルゴリズムは完全にライブラリ開発者に任せられている。新たな乱数生成ユーティリティは<code>&lt;random&gt;</code>ヘッダを通して定義される。他のヘッダやC++言語への修正は必要としない。
+</p><p>乱数生成器は、内部状態と、結果を計算し次の状態を生成するための関数をもつ。この2つの特性によって、乱数生成エンジンが定まる。他の特性として、生成結果や乱数の間隔や密度の分布も重要である。
+</p></b></b><b><b><h4><span id=".E6.93.AC.E4.BC.BC.E4.B9.B1.E6.95.B0.E3.82.A8.E3.83.B3.E3.82.B8.E3.83.B3"></span><span class="mw-headline" id="擬似乱数エンジン">擬似乱数エンジン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=44" title="節を編集: 擬似乱数エンジン">編集</a><span class="mw-editsection-bracket">]</span></span></h4></b></b><b><b><p>新ライブラリには、数種の擬似乱数生成エンジンが導入される。これらはテンプレートクラスであり、必要に応じて特殊化できる。擬似乱数エンジンの内部状態は種（一般には変数の集合）によって決定される。
+</p></b></b><b><b><table class="wikitable">
+<tbody><tr>
+<th>テンプレートクラス</th>
+<th>int/float</th>
+<th>質</th>
+<th>速度</th>
+<th>内部状態の大きさ（※）
+</th></tr>
+<tr>
+<th>linear_congruential
+</th>
+<td align="center">int</td>
+<td align="center">低</td>
+<td align="center">中</td>
+<td align="center">1
+</td></tr>
+<tr>
+<th>subtract_with_carry
+</th>
+<td align="center">両方</td>
+<td align="center">中</td>
+<td align="center">遅い</td>
+<td align="center">25
+</td></tr>
+<tr>
+<th>mersenne_twister
+</th>
+<td align="center">int</td>
+<td align="center">良</td>
+<td align="center">速い</td>
+<td align="center">624
+</td></tr></tbody></table></b></b><b><b><p>※使われる型の次元数・バイト数倍される。
+</p><p>エンジンの質はクラステンプレート<code>discard_block</code>を用いて向上でき、クラステンプレート<code>xor_combine</code>と組み合わせることも可能である。利便性のため、<code>&lt;random&gt;</code>ヘッダには数種の標準エンジンが定義されている。例として、<code>mersenne_twister</code>から実体化される<code>mt19937</code>クラスを示す。
+&lt;syntaxhighlight lang="cpp"&gt;
+typedef mersenne_twister&lt;<i>implementation-defined</i>, 32, 624, 397, 31, 0x9908b0df,
+</p></b></b><b><b><pre>                        11, 7, 0x9d2c5680, 15, 0xefc60000, 18&gt;
+       mt19937 ;
+</pre></b></b><b><b><p>&lt;/syntaxhighlight&gt;
+</p></b></b><b><b><h4><span id=".E9.9D.9E.E6.B1.BA.E5.AE.9A.E7.9A.84.E4.B9.B1.E6.95.B0.E3.82.A8.E3.83.B3.E3.82.B8.E3.83.B3"></span><span class="mw-headline" id="非決定的乱数エンジン"><a class="new" href="/w/index.php?title=%E9%9D%9E%E6%B1%BA%E5%AE%9A%E7%9A%84%E4%B9%B1%E6%95%B0&amp;action=edit&amp;redlink=1" title="非決定的乱数 (存在しないページ)">非決定的乱数</a>エンジン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=45" title="節を編集: 非決定的乱数エンジン">編集</a><span class="mw-editsection-bracket">]</span></span></h4></b></b><b><b><p><code>random_device</code>クラスを用いて、<code>unsigned int</code>型の非決定的乱数を生成できる。実装には、システムから独立した入力を持つデバイス（例えば、非同期的な外部<a class="mw-redirect" href="/wiki/%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF" title="カウンタ">カウンタ</a>や、特殊な<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%87%E3%83%A5%E3%83%BC%E3%82%B5%E3%83%BC" title="トランスデューサー">トランスデューサー</a>など）の使用や、伝統的な「結果を調節する」擬似乱数エンジンの使用が必要である。<a class="new" href="/w/index.php?title=Libstdc%2B%2B&amp;action=edit&amp;redlink=1" title="Libstdc++ (存在しないページ)">libstdc++</a>や<a class="new" href="/w/index.php?title=Libc%2B%2B&amp;action=edit&amp;redlink=1" title="Libc++ (存在しないページ)">libc++</a>では、<a href="/wiki//dev/random" title="/dev/random">/dev/urandom</a>を読み出す実装となっている。 
+</p></b></b><b><b><h4><span id=".E4.B9.B1.E6.95.B0.E5.88.86.E5.B8.83"></span><span class="mw-headline" id="乱数分布">乱数分布</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=46" title="節を編集: 乱数分布">編集</a><span class="mw-editsection-bracket">]</span></span></h4></b></b><b><b><p>新ライブラリには、一様分布から<a href="/wiki/%E7%A2%BA%E7%8E%87%E8%AB%96" title="確率論">確率論</a>で定義された分布まで、多種類の分布が定義されている: 
+</p></b></b><b><b><ul><li>離散一様分布<code><a href="/wiki/%E9%9B%A2%E6%95%A3%E4%B8%80%E6%A7%98%E5%88%86%E5%B8%83" title="離散一様分布">uniform_int</a></code></li>
+<li>ベルヌーイ分布<code><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%8C%E3%83%BC%E3%82%A4%E5%88%86%E5%B8%83" title="ベルヌーイ分布">bernoulli_distribution</a></code></li>
+<li>幾何分布<code><a href="/wiki/%E5%B9%BE%E4%BD%95%E5%88%86%E5%B8%83" title="幾何分布">geometric_distribution</a></code></li>
+<li>ポアソン分布<code><a href="/wiki/%E3%83%9D%E3%82%A2%E3%82%BD%E3%83%B3%E5%88%86%E5%B8%83" title="ポアソン分布">poisson_distribution</a></code></li>
+<li>二項分布<code><a href="/wiki/%E4%BA%8C%E9%A0%85%E5%88%86%E5%B8%83" title="二項分布">binomial_distribution</a></code></li>
+<li>連続一様分布<code><a href="/wiki/%E9%80%A3%E7%B6%9A%E4%B8%80%E6%A7%98%E5%88%86%E5%B8%83" title="連続一様分布">uniform_real</a></code></li>
+<li>指数分布<code><a href="/wiki/%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83" title="指数分布">exponential_distribution</a></code></li>
+<li>正規分布<code><a href="/wiki/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83" title="正規分布">normal_distribution</a></code></li>
+<li>ガンマ分布<code><a href="/wiki/%E3%82%AC%E3%83%B3%E3%83%9E%E5%88%86%E5%B8%83" title="ガンマ分布">gamma_distribution</a></code></li></ul></b></b><b><b><p>明らかであるが、標準の分布を実体化しても構わないし、ユーザ自身の互換性のある分布を用いても構わない。
+</p><p>以下は、新ライブラリを用いた簡単な例である:
+&lt;syntaxhighlight lang="cpp"&gt;
+uniform_int_distribution&lt;int&gt; distribution( 0, 99 );
+mt19937 engine;
+auto generator( bind( distribution, engine ) );
+int random = generator();  // 0から99の値を代入
+&lt;/syntaxhighlight&gt;
+</p></b></b><b><b><h3><span id=".E5.8F.82.E7.85.A7.E3.83.A9.E3.83.83.E3.83.91"></span><span class="mw-headline" id="参照ラッパ">参照ラッパ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=47" title="節を編集: 参照ラッパ">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>参照<a href="/wiki/Adapter_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Adapter パターン">ラッパ</a>はテンプレートクラス<code>std::reference_wrapper</code>のインスタンスとして得られる。参照ラッパは、C++言語の通常のリファレンス ('&amp;') にも似ている。オブジェクトから参照ラッパを得るには、テンプレート関数<code>std::ref</code>を使う（constな参照の場合は<code>std::cref</code>が使用される）。
+</p><p>参照ラッパはテンプレート関数と使用する場合に有用であり、特に引数としてコピーではなく参照を取る必要がある場合に便利である:
+&lt;syntaxhighlight lang="cpp"&gt;
+</p></b></b><b><b><ol><li>include &lt;iostream&gt;</li>
+<li>include &lt;functional&gt;</li></ol></b></b><b><b><p>// 引数 r として int への参照を受け取り、それを増加させる関数。
+void inc(int&amp; r) {
+</p></b></b><b><b><pre> r++;
+</pre></b></b><b><b><p>}
+</p><p>// 関数を呼び出す高階関数テンプレート。
+template&lt;class F, class P&gt;
+void invoke(F f, P t) { f(t); }
+</p><p>int main() {
+</p></b></b><b><b><pre> int i = 0;
+ invoke(inc, i);
+ // invoke&lt;void(int&amp; r), int&gt; が実体化される。
+ // よって i の値は変更されない。
+ std::cout &lt;&lt; i &lt;&lt; std::endl; // 0 が出力される。
+</pre></b></b><b><b><pre> invoke(inc, std::ref(i));
+ // invoke&lt;void(int&amp; r), std::reference_wrapper&lt;int&gt;&gt; が実体化される。
+ // よって i の値が変更される。
+ std::cout &lt;&lt; i &lt;&lt; std::endl; // 1 が出力される。
+</pre></b></b><b><b><pre> return 0;
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この新ユーティリティは現在の<code>&lt;utility&gt;</code>に追加される。C++言語の拡張は必要としない。
+</p><p>なお、上記の高階関数テンプレートは、のちに<a href="/wiki/C%2B%2B17" title="C++17">C++17</a>にて可変長引数テンプレート<code>std::invoke</code>として標準化されている<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p></b></b><b><b><h3><span id=".E9.96.A2.E6.95.B0.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E5.A4.9A.E7.9B.B8.E7.9A.84.E3.83.A9.E3.83.83.E3.83.91"></span><span class="mw-headline" id="関数オブジェクトの多相的ラッパ">関数オブジェクトの多相的ラッパ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=48" title="節を編集: 関数オブジェクトの多相的ラッパ">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p><a href="/wiki/%E9%96%A2%E6%95%B0%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="関数オブジェクト">関数オブジェクト</a>の<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">多相的</a><a href="/wiki/Adapter_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Adapter パターン">ラッパ</a>（「<b>多態的関数オブジェクトラッパ</b>」とも呼ばれる）は、意味的にも構文的にも<a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="関数ポインタ">関数ポインタ</a>に似ている。しかし、引数がラッパの引数型と変換可能である関数を参照できる点など、束縛が緩和されている。
+</p><p>次の例で、特性を理解できるだろう:
+&lt;syntaxhighlight lang="cpp"&gt;
+</p></b></b><b><b><ol><li>include &lt;functional&gt;</li></ol></b></b><b><b><p>namespace {
+</p></b></b><b><b><pre> bool adjacent(long x, long y) {
+   return (x + 1 == y) || (x - 1 == y);
+ }
+</pre></b></b><b><b><p>}
+</p><p>...
+</p><p>// クラステンプレート std::function を用いてラッパを生成する。
+std::function&lt;int (int, int)&gt; funcA;
+</p><p>// 関数ポインタのように、std::function は NULL または nullptr との比較が可能。
+std::cout &lt;&lt; "Is function empty? " &lt;&lt; std::boolalpha &lt;&lt; (funcA == nullptr) &lt;&lt; std::endl;
+</p><p>// std::function が何も参照していない場合、
+// 関数呼び出し演算子を実行すると std::bad_function_call 例外がスローされる。
+try {
+</p></b></b><b><b><pre> const int a = funcA(1, 2);
+</pre></b></b><b><b><p>} catch (const std::exception&amp; ex) {
+</p></b></b><b><b><pre> std::cout &lt;&lt; "Exception reason = " &lt;&lt; ex.what() &lt;&lt; std::endl;
+</pre></b></b><b><b><p>}
+</p><p>std::plus&lt;int&gt; add;
+// std::plus は template&lt;class T&gt; T plus(T, T); として宣言されている。
+// そのため、add の型は int add(int x, int y) となる。
+</p><p>funcA = add; // 引数型が一致しているため、代入可能。
+std::cout &lt;&lt; "Is function empty? " &lt;&lt; std::boolalpha &lt;&lt; (funcA == nullptr) &lt;&lt; std::endl;
+std::cout &lt;&lt; "ResultA = " &lt;&lt; funcA(1, 2) &lt;&lt; std::endl;
+</p><p>std::function&lt;bool (short, short)&gt; funcB;
+// std::function は explicit operator bool() をサポートする。
+if (!funcB) { // 何も代入されていないので、常に成立。
+</p></b></b><b><b><pre> funcB = &amp;adjacent; // 引数の型・戻り値の型が変換可能なので、代入できる。
+ std::cout &lt;&lt; "ResultB = " &lt;&lt; funcB(0, -1) &lt;&lt; std::endl;
+</pre></b></b><b><b><pre> struct test {
+   bool operator()(short x, short y) const {
+     return (x * y) % 2 == 0;
+   }
+ } fobj;
+ funcB = fobj;
+ std::cout &lt;&lt; "ResultB = " &lt;&lt; funcB(3, 7) &lt;&lt; std::endl;
+</pre></b></b><b><b><p>}
+</p><p>funcA = funcB; // ラッパ同士の引数の型・戻り値の型がそれぞれ変換可能なので、正当。
+&lt;/syntaxhighlight&gt;
+</p><p>クラステンプレート<code>std::function</code>は<code>&lt;functional&gt;</code>ヘッダで宣言される。C++言語への変更は必要としない。
+</p></b></b><b><b><h3><span id=".E3.83.A1.E3.82.BF.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E5.9E.8B.E7.89.B9.E6.80.A7"></span><span class="mw-headline" id="メタプログラミングのための型特性">メタプログラミングのための型特性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=49" title="節を編集: メタプログラミングのための型特性">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p><a href="/wiki/%E3%83%A1%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="メタプログラミング">メタプログラミング</a>とは、他のプログラム（もしくは自分自身）を生成、修正するプログラムを生成することである。これらの動作は、コンパイル時、もしくは実行時に発生する。C++標準化委員会は、テンプレートを通したコンパイル時メタプログラミング（<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%A1%E3%82%BF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="テンプレートメタプログラミング">テンプレートメタプログラミング</a>）を可能にするライブラリの導入を決定した。
+</p><p>以下は、現在の標準でのメタプログラミングの例である: 指数計算に、テンプレート実体化の再帰を用いている。
+&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;int B, int N&gt;
+struct Pow {
+</p></b></b><b><b><pre> // 再帰呼び出しと再結合
+ static const int value = B * Pow&lt;B, N - 1&gt;::value;
+</pre></b></b><b><b><p>};
+</p><p>template&lt;int B&gt;
+struct Pow&lt;B, 0&gt; {  // 終了条件、<i>N == 0</i>
+</p></b></b><b><b><pre> static const int value = 1;
+</pre></b></b><b><b><p>};
+int quartic_of_three = Pow&lt;3, 4&gt;::value;
+&lt;/syntaxhighlight&gt;
+</p><p>多くのアルゴリズムは、型の違うデータに適用可能である。C++の<a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a>は<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">ジェネリックプログラミング</a>をサポートし、より小さく有用なコードを作れる。それでも、アルゴリズムは使用されている型の情報を必要とすることも多い。この種の情報は、<b>型特性</b>を使用してテンプレートクラスの実体化時に展開できる。
+</p><p><b>型特性</b>は、オブジェクトの分類やクラス（または構造体）の性質を示すものである。新ヘッダの<code>&lt;type_traits&gt;</code>で宣言される。
+</p><p>次の例は、関数テンプレート<code>elaborate</code>の例である。この関数は、渡されたデータ型に基づき、二つのアルゴリズム (<code>algorithm.do_it</code>) から一方を実体化する:
+&lt;syntaxhighlight lang="cpp"&gt;
+// 一つ目の動作
+template&lt;bool B&gt;
+struct algorithm {
+</p></b></b><b><b><pre> template&lt;class T1, class T2&gt;
+ int do_it(T1&amp;, T2&amp;) { /*...*/ }
+</pre></b></b><b><b><p>};
+// 二つ目の動作
+template&lt;&gt;
+struct algorithm&lt;true&gt; {
+</p></b></b><b><b><pre> template&lt;class T1, class T2&gt;
+ int do_it()(T1 *, T2 *) { /*...*/ }
+</pre></b></b><b><b><p>};
+</p><p>// elaborateの実体化の際に、自動的に正しい動作をする方が実体化される。
+template&lt;class T1, class T2&gt;
+int elaborate(T1 A, T2 B) {
+</p></b></b><b><b><pre> // T1が整数で、T2が浮動小数の時に二つ目の動作を行う。
+ // 他の場合は一つ目の動作を行う。
+ return algorithm&lt;is_integral&lt;T1&gt;::value &amp;&amp; is_floating_point&lt;T2&gt;::value&gt;::do_it(A, B);
+</pre></b></b><b><b><p>}
+&lt;/syntaxhighlight&gt;
+</p><p>ヘッダ<code>&lt;type_transform&gt;</code>で定義された<b>型特性</b>を用いると、型変換の処理を生成することも出来る（<code>static_cast</code>と<code>const_cast</code>はテンプレート中では不十分）。
+</p><p>この種のプログラミングで、美しく簡潔なコードを書ける。しかし、このテクニックの弱点はデバッグである。コンパイル時のデバッグは不適切であるし、プログラム実行時には非常に難しい。
+</p></b></b><b><b><h3><span id=".E9.96.A2.E6.95.B0.E3.81.AE.E6.88.BB.E3.82.8A.E5.80.A4.E5.9E.8B.E3.82.92.E7.AE.97.E5.87.BA.E3.81.99.E3.82.8B.E3.80.81.E4.B8.80.E6.A7.98.E3.81.AA.E6.89.8B.E6.B3.95"></span><span class="mw-headline" id="関数の戻り値型を算出する、一様な手法">関数の戻り値型を算出する、一様な手法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=50" title="節を編集: 関数の戻り値型を算出する、一様な手法">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><p>テンプレート関数オブジェクトの戻り値の型を（コンパイル時に）決定するのに、直感的な方法がない。特に引数の型に基づいて決まる場合は顕著である。
+</p><p>例として以下のコードを挙げる:
+&lt;syntaxhighlight lang="cpp"&gt;
+struct clear {
+</p></b></b><b><b><pre> int    operator ()(int   ); //引数の型と戻り値の型が同じ
+ double operator ()(double);
+</pre></b></b><b><b><p>};
+</p><p>template&lt;class Obj&gt;
+class calculus {
+</p></b></b><b><b><pre> Obj member;
+ 
+</pre></b></b><b><b><p>public:
+</p></b></b><b><b><pre> template&lt;class Arg&gt;
+ Arg operator ()(Arg&amp; a) const
+ {
+   return member(a);
+ }
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+<code>calculus</code>クラステンプレートを<code>clear</code>クラスで実体化する場合（<code>calculus&lt;clear&gt;</code>として実体化する場合）、<code>calculus</code>関数オブジェクトは<code>clear</code>関数オブジェクトと同じ戻り値型を持つ。
+</p><p>ここで、<code>calculus</code>クラステンプレートを<code>confused</code>クラスで実体化する場合（<code>calculus&lt;confused&gt;</code>として実体化する場合）を考えよう:
+&lt;syntaxhighlight lang="cpp"&gt;
+struct confused {
+</p></b></b><b><b><pre> double operator ()(int   ); //引数の型と戻り値の型が違う
+ int    operator ()(double);
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+<code>calculus</code>の戻り値型は<code>confused</code>クラスと同じではない（<code>calculus&lt;confused&gt;.operator()</code>の実体化に伴い、<code>int</code>から <code>double</code>への変換や逆変換が起こる）。
+</p><p>次期標準に提案されている新ライブラリで、<code>result_of</code>クラステンプレートが導入され、各宣言ごとに関数オブジェクトの戻り値型の決定と使用が可能になる。これを用いて、関数オブジェクトの戻り値型を取得するようにすることで<code>calculus</code>を修正した:
+&lt;syntaxhighlight lang="cpp"&gt;
+template&lt;class Obj&gt;
+class calculus_ver2 {
+</p></b></b><b><b><pre> Obj member;
+ 
+</pre></b></b><b><b><p>public:
+</p></b></b><b><b><pre> template&lt;class Arg&gt;
+ typename result_of&lt;Obj(Arg)&gt;::type operator()(Arg&amp; a) const
+ { 
+   return member(a);
+ }
+</pre></b></b><b><b><p>};
+&lt;/syntaxhighlight&gt;
+このようにすることで、関数オブジェクト<code>calculus_ver2&lt;confused&gt;</code>の実体化の際に、型変換は発生しない。
+</p><p>関数オブジェクト呼び出し時の戻り値型の決定は、式の戻り値型を決定するという一般的な問題の一部である。将来的には、問題の起き得る箇所に<code>decltype</code>のような機能を使うことで解決されるだろう。
+</p></b></b><b><b><h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=51" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table></b></b><b><b><div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a class="external text" href="https://cpprefjp.github.io/lang/cpp11/range_based_for.html" rel="nofollow">範囲for文 - cpprefjp C++日本語リファレンス</a></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">ただし引数のみが違う場合に関しては、関数オーバーロードによる基底クラスのメンバーの隠蔽となり、通例コンパイラによって警告が出される。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="https://ja.cppreference.com/w/cpp/utility/functional/invoke" rel="nofollow">std::invoke - cppreference.com</a></span>
+</li>
+</ol></div></div></b></b><b><b><h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=52" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><ul><li><a href="/wiki/%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89_(C%2B%2B)" title="キーワード (C++)">キーワード (C++)</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%82%BB%E3%83%97%E3%83%88_(C%2B%2B)" title="コンセプト (C++)">コンセプト (C++)</a></li></ul></b></b><b><b><h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=53" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><h3><span id="C.2B.2B.E6.A8.99.E6.BA.96.E5.8C.96.E5.A7.94.E5.93.A1.E4.BC.9A.E3.81.AE.E6.96.87.E6.9B.B8"></span><span class="mw-headline" id="C++標準化委員会の文書">C++標準化委員会の文書</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=54" title="節を編集: C++標準化委員会の文書">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><ul><li>ISO/IEC DTR 19768 (October 23, 2007) <b>Doc No: N2432</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2432.html" rel="nofollow">State of C++ Evolution (post-Kona 2007 Meeting)</a></i></li>
+<li>ISO/IEC DTR 19768 (August 7, 2007) <b>Doc No: N2389</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2389.html" rel="nofollow">State of C++ Evolution (pre-Kona 2007 Meetings)</a></i></li>
+<li>ISO/IEC DTR 19768 (July 29, 2007) <b>Doc No: N2336</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2336.html" rel="nofollow">State of C++ Evolution (Toronto 2007 Meetings)</a></i></li>
+<li>ISO/IEC DTR 19768 (June 25, 2007) <b>Doc No: N2291</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2291.html" rel="nofollow">State of C++ Evolution (Toronto 2007 Meetings)</a></i></li>
+<li>ISO/IEC DTR 19768 (May 3, 2007) <b>Doc No: N2228</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2228.html" rel="nofollow">State of C++ Evolution (Oxford 2007 Meetings)</a></i></li>
+<li>ISO/IEC DTR 19768 (January 12, 2007) <b>Doc No: N2142</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2142.html" rel="nofollow">State of C++ Evolution (between Portland and Oxford 2007 Meetings)</a></i></li>
+<li>ISO/IEC DTR 19768 (October 22, 2007) <b>Doc No: N2461</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2461.pdf" rel="nofollow">Working Draft, Standard for programming Language C++</a></i></li>
+<li>ISO/IEC DTR 19768 (June 24, 2005) <b>Doc No: N1836</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1836.pdf" rel="nofollow">Draft Technical Report on C++ Library Extensions</a></i></li>
+<li>Lawrence Crowl (May 2, 2005) <b>Doc No: N1815</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1815.html" rel="nofollow">ISO C++ Strategic Plan for Multithreading</a></i></li>
+<li>Detlef Vollmann (June 24, 2005) <b>Doc No: N1834</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n1834.html" rel="nofollow">A Pleading for Reasonable Parallel Processing Support in C++</a></i></li>
+<li>Lawrence Crowl (May 2, 2007) <b>Doc No: N2280</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2005/n2280.html" rel="nofollow">Thread-Local Storage</a></i></li>
+<li>Jan Kristoffersen (October 21, 2002) <b>Doc No: N1401</b> <i>Atomic operations with multi-threaded environments</i></li>
+<li>Hans Boehm, Nick Maclaren (April 21, 2002) <b>Doc No: N2016</b> <i>Should volatile Acquire Atomicity and Thread Visibility Semantics?</i></li>
+<li>Lois Goldthwaite (October 5, 2007) <b>Doc No: N2437</b> <i><a class="external text" href="http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2007/n2437.pdf" rel="nofollow">Explicit Conversion Operators</a></i></li>
+<li>Francis Glassborow, Lois Goldthwaite (November 5, 2004) <b>Doc No: N1717</b> <i>explicit class and default definitions</i></li>
+<li>Bjarne Stroustrup, Gabriel Dos Reis (December 11, 2005) <b>Doc No: N1919</b> <i>Initializer lists</i></li>
+<li>Herb Sutter, Francis Glassborow (April 6, 2006) <b>Doc No: N1986</b> <i>Delegating Constructors (revision 3)</i></li>
+<li>Michel Michaud, Michael Wong (October 6, 2004) <b>Doc No: N1898</b> <i>Forwarding and inherited constructors</i></li>
+<li>Bronek Kozicki (September 9, 2004) <b>Doc No: N1676</b> <i>Non-member overloaded copy assignment operator</i></li>
+<li>R. Klarer, J. Maddock, B. Dawes, H. Hinnant (October 20, 2004) <b>Doc No: N1720</b> <i>Proposal to Add Static Assertions to the Core Language (Revision 3)</i></li>
+<li>V Samko; J Willcock, J Jarvi, D Gregor, A Lumsdaine (February 26, 2006) <b>Doc No: N1968</b> <i>Lambda expressions and closures for C++</i></li>
+<li>J. Jarvi, B. Stroustrup, D. Gregor, J. Siek, G. Dos Reis (September 12, 2004) <b>Doc No: N1705</b> <i>Decltype (and auto)</i></li>
+<li>B. Stroustrup, G. Dos Reis, Mat Marcus, Walter E. Brown, Herb Sutter (April 7, 2003) <b>Doc No: N1449</b> <i>Proposal to add template aliases to C++</i></li>
+<li>Douglas Gregor, Jaakko Jarvi, Gary Powell (September 10, 2004) <b>Doc No: N1704</b> <i>Variadic Templates: Exploring the Design Space</i></li>
+<li>Gabriel Dos Reis, Bjarne Stroustrup (October 20, 2005) <b>Doc No: N1886</b> <i>Specifying C++ concepts</i></li>
+<li>Daveed Vandevoorde (January 14, 2005) <b>Doc No: N1757</b> <i>Right Angle Brackets (Revision 2)</i></li>
+<li>Walter E. Brown (October 18, 2005) <b>Doc No: N1891</b> <i>Progress toward Opaque Typedefs for C++0X</i></li>
+<li>J. Stephen Adamczyk (April 29, 2005) <b>Doc No: N1811</b> <i>Adding the long long type to C++ (Revision 3)</i></li>
+<li>Chris Uzdavinis, Alisdair Meredith (August 29, 2005) <b>Doc No: N1827</b> <i>An Explicit Override Syntax for C++</i></li>
+<li>Herb Sutter, David E. Miller (October 21, 2004) <b>Doc No: N1719</b> <i>Strongly Typed Enums (revision 1)</i></li>
+<li>Matthew Austern (April 9, 2003) <b>Doc No: N1456</b> <i>A Proposal to Add Hash Tables to the Standard Library (revision 4)</i></li>
+<li>Doug Gregor (November 8, 2002) <b>Doc No: N1403</b> <i>Proposal for adding tuple types into the standard library</i></li>
+<li>John Maddock (March 3, 2003) <b>Doc No: N1429</b> <i>A Proposal to add Regular Expression to the Standard Library</i></li>
+<li>P. Dimov, B. Dawes, G. Colvin (March 27, 2003) <b>Doc No: N1450</b> <i>A Proposal to Add General Purpose Smart Pointers to the Library Technical Report (Revision 1)</i></li>
+<li>Doug Gregor (October 22, 2002) <b>Doc No: N1402</b> <i>A Proposal to add a Polymorphic Function Object Wrapper to the Standard Library</i></li>
+<li>D. Gregor, P. Dimov (April 9, 2003) <b>Doc No: N1453</b> <i>A proposal to add a reference wrapper to the standard library (revision 1)</i></li>
+<li>John Maddock (March 3, 2003) <b>Doc No: N1424</b> <i>A Proposal to add Type Traits to the Standard Library</i></li>
+<li>Daveed Vandevoorde (April 18, 2003) <b>Doc No: N1471</b> <i>Reflective Metaprogramming in C++</i></li>
+<li>Jens Maurer (April 10, 2003) <b>Doc No: N1452</b> <i>A Proposal to Add an Extensible Random Number Facility to the Standard Library (Revision 2)</i></li>
+<li>Walter E. Brown (October 28, 2003) <b>Doc No: N1542</b> <i>A Proposal to Add Mathematical Special Functions to the C++ Standard Library (version 3)</i></li>
+<li>Douglas Gregor, P. Dimov (April 9, 2003) <b>Doc No: N1454</b> <i>A uniform method for computing function object return types (revision 1)</i></li></ul></b></b><b><b><h3><span id=".E8.A8.98.E4.BA.8B"></span><span class="mw-headline" id="記事">記事</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=55" title="節を編集: 記事">編集</a><span class="mw-editsection-bracket">]</span></span></h3></b></b><b><b><ul><li><span class="citation wikicite" id="endnote_strousup-brieflooka"><a href="#ref_strousup-brieflooka"><b><sup>a</sup></b></a></span> <span class="citation wikicite" id="endnote_strousup-brieflookb"><a href="#ref_strousup-brieflookb"><b><sup>b</sup></b></a></span>  The C++ Source Bjarne Stroustrup (January 2, 2006) <i>A Brief Look at C++0x</i></li>
+<li><span class="citation wikicite" id="endnote_strousup-designof^"><a href="#ref_strousup-designof^"><b><sup>^</sup></b></a></span>  C/C++ Users Journal Bjarne Stroustrup (May, 2005) <i>The Design of C++0x: Reinforcing C++’s proven strengths, while moving into the future</i></li>
+<li>Web Log di Raffaele Rialdi (September 16, 2005) <i>Il futuro di C++ raccontato da Herb Sutter</i></li>
+<li>Informit.com (August 5, 2006) <i>The Explicit Conversion Operators Proposal</i></li>
+<li>Informit.com (July 25, 2006) <i>Introducing the Lambda Library</i></li>
+<li>Dr. Dobb's Portal Pete Becker (April 11, 2006) <i>Regular Expressions TR1's regex implementation</i></li>
+<li>Informit.com (July 25, 2006) <i>The Type Traits Library</i></li>
+<li>Dr. Dobb's Portal Pete Becker (May 11, 2005) <i>C++ Function Objects in TR1</i></li>
+<li><span class="citation wikicite" id="endnote_approvalc"><a href="#ref_approvalc"><b><sup>c</sup></b></a></span> Sutter's Mill(August 12, 2011), <a class="external text" href="http://herbsutter.com/2011/08/12/we-have-an-international-standard-c0x-is-unanimously-approved/" rel="nofollow">We have an international standard: C++0x is unanimously approved</a></li>
+<li><span class="citation wikicite" id="endnote_news-publishedd"><a href="#ref_news-publishedd"><b><sup>d</sup></b></a></span> <a class="external text" href="http://www.iso.org/iso/pressrelease.htm?refid=Ref1472" rel="nofollow">ISO - News - C++ language gets high marks on performance with new ISO/IEC standard</a></li></ul></b></b><b><b><h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C%2B%2B11&amp;action=edit&amp;section=56" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2></b></b><b><b><ul><li><a class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/" rel="nofollow">The C++ Standards Committee</a></li>
+<li><a class="external text" href="http://www.research.att.com/~bs/" rel="nofollow">Bjarne Stroustrup's homepage</a></li>
+<li><span class="citation wikicite" id="endnote_strousup-cpp0xfaq^"><a href="#ref_strousup-cpp0xfaq^"><b><sup>^</sup></b></a></span>  <a class="external text" href="http://www.research.att.com/~bs/C++0xFAQ.html" rel="nofollow">C++0x FAQ (Bjarne Stroustrup's homepage 内)</a></li>
+<li><a class="external text" href="http://www.informit.com/guides/content.asp?g=cplusplus&amp;seqNum=216&amp;rl=1" rel="nofollow">C++0X: The New Face of Standard C++</a></li>
+<li><a class="external text" href="http://herbsutter.spaces.live.com/" rel="nofollow">Herb Sutter's blog coverage of C++0X</a></li></ul></b></b><b><b><ul><li><a class="external text" href="http://www.csclub.uwaterloo.ca/media/C++0x%20-%20An%20Overview.html" rel="nofollow">A talk on C++0x given by Bjarne Stroustrup at the University of Waterloo</a></li>
+<li><a class="external text" href="http://www.pvv.org/~oma/cpp0x_aquadi_nov_2007.pdf" rel="nofollow">A quick and dirty introduction to C++0x (as of November 2007)</a></li></ul></b></b><b><b><div aria-labelledby="C++" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:C%2B%2B&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:C++ (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AC%2B%2B&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="C++" style="font-size:110%;margin:0 6em">C++</div></th></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li>C++98</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B03&amp;action=edit&amp;redlink=1" title="C++03 (存在しないページ)">C++03</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B03&amp;action=edit&amp;redlink=1" title="En:C++03 (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Technical_Report_1" title="C++ Technical Report 1">C++TR1</a></li>
+<li><a class="mw-selflink selflink">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a href="/wiki/C%2B%2B20" title="C++20">C++20</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B23&amp;action=edit&amp;redlink=1" title="C++23 (存在しないページ)">C++23</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B23&amp;action=edit&amp;redlink=1" title="En:C++23 (存在しないページ)">英語版</a>）</span></span></li></ul></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">C++の機能</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C%2B%2B%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1" title="C++のクラス (存在しないページ)">クラス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:C%2B%2B_classes&amp;action=edit&amp;redlink=1" title="En:C++ classes (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%BE%8B%E5%A4%96%E5%87%A6%E7%90%86" title="例外処理">例外処理</a></li>
+<li><a href="/wiki/%E5%A4%9A%E9%87%8D%E5%AE%9A%E7%BE%A9" title="多重定義">多重定義</a></li>
+<li><a href="/wiki/New%E6%BC%94%E7%AE%97%E5%AD%90" title="New演算子">new演算子</a></li>
+<li><a href="/wiki/C%E3%81%A8C%2B%2B%E3%81%AE%E6%BC%94%E7%AE%97%E5%AD%90" title="CとC++の演算子">演算子</a></li>
+<li><a href="/wiki/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="テンプレート (プログラミング)">テンプレート</a></li>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">標準C++ライブラリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Iostream&amp;action=edit&amp;redlink=1" title="Iostream (存在しないページ)">iostream</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Input/output_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:Input/output (C++) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はリダイレクトなため、新規作成や他言語版からの翻訳が望まれます。"><a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="スマートポインタ">スマートポインタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smart_pointer&amp;action=edit&amp;redlink=1" title="En:Smart pointer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Standard_Template_Library" title="Standard Template Library">STL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="String (C++) (存在しないページ)">string</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:String_(C%2B%2B)&amp;action=edit&amp;redlink=1" title="En:String (C++) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コンパイラ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="Borland C++ (存在しないページ)">Borland C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Borland_C%2B%2B&amp;action=edit&amp;redlink=1" title="En:Borland C++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/C%2B%2B_Builder" title="C++ Builder">C++ Builder</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">gcc</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a></li>
+<li><a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Visual C++</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="Watcom C/C++ compiler (存在しないページ)">Watcom C/C++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Watcom_C/C%2B%2B_compiler&amp;action=edit&amp;redlink=1" title="En:Watcom C/C++ compiler (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">統合開発環境</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)" title="Eclipse (統合開発環境)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連言語</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Embedded_C%2B%2B" title="Embedded C++">Embedded C++</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li>カテゴリ <b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">カテゴリ</a></b></li></ul></td></tr></tbody></table></div></b></b><b><b><p><a class="new" href="/w/index.php?title=Sv:C%2B%2B&amp;action=edit&amp;redlink=1" title="Sv:C++ (存在しないページ)">sv:C++#Historia</a>
+</p></b></b>
+<!-- 
+NewPP limit report
+Cached time: 20220331235740
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.253 seconds
+Real time usage: 0.367 seconds
+Preprocessor visited node count: 1096/1000000
+Post‐expand include size: 27358/2097152 bytes
+Template argument size: 1021/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 10/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1226/5000000 bytes
+Lua time usage: 0.060/7 seconds
+Lua virtual size: 6066176/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  223.415      1 -total
+ 51.58%  115.234      1 テンプレート:C++
+ 50.20%  112.145      1 テンプレート:Navbox
+ 40.88%   91.336      8 テンプレート:仮リンク
+ 34.56%   77.223      1 テンプレート:更新
+ 27.71%   61.908      1 テンプレート:Mbox
+  5.49%   12.273      1 テンプレート:DMC
+  4.24%    9.470      1 テンプレート:Icon
+  3.69%    8.240      1 テンプレート:DMC/core
+  3.13%    6.993      1 テンプレート:Pathnav
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1176383-0!canonical and timestamp 20220331235739 and revision id 723897. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=C%2B%2B11&amp;oldid=723897">http://localhost:8080/w/index.php?title=C%2B%2B11&amp;oldid=723897</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%83%85%E5%A0%B1%E3%81%AE%E6%9B%B4%E6%96%B0%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E9%A0%85%E7%9B%AE/2019%E5%B9%B4" title="カテゴリ:情報の更新が必要とされている項目/2019年">情報の更新が必要とされている項目/2019年</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:C%2B%2B" title="カテゴリ:C++">C++</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=C%2B%2B11&amp;returntoquery=curid%3D1176383%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=C%2B%2B11&amp;returntoquery=curid%3D1176383%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/C%2B%2B11" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:C%2B%2B11&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/C%2B%2B11">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=C%2B%2B11&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=C%2B%2B11&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/C%2B%2B11" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/C%2B%2B11" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=C%2B%2B11&amp;oldid=723897" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=C%2B%2B11&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月22日 (火) 00:14 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.253","walltime":"0.367","ppvisitednodes":{"value":1096,"limit":1000000},"postexpandincludesize":{"value":27358,"limit":2097152},"templateargumentsize":{"value":1021,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":10,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1226,"limit":5000000},"timingprofile":["100.00%  223.415      1 -total"," 51.58%  115.234      1 テンプレート:C++"," 50.20%  112.145      1 テンプレート:Navbox"," 40.88%   91.336      8 テンプレート:仮リンク"," 34.56%   77.223      1 テンプレート:更新"," 27.71%   61.908      1 テンプレート:Mbox","  5.49%   12.273      1 テンプレート:DMC","  4.24%    9.470      1 テンプレート:Icon","  3.69%    8.240      1 テンプレート:DMC/core","  3.13%    6.993      1 テンプレート:Pathnav"]},"scribunto":{"limitreport-timeusage":{"value":"0.060","limit":"7"},"limitreport-virtmemusage":{"value":6066176,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331235740","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":656});});</script>
+</body></html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>不連続線型写像 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-不連続線型写像 rootpage-不連続線型写像 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">不連続線型写像</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数学">数学</a>において、<a href="." id="link_a_2" title="線型写像">線型写像</a>は<a href="." id="link_a_3" title="線型空間">線型空間</a>の「単に」代数構造を保つ<a href="." id="link_a_4" title="写像">写像</a>の重要なクラスを成し、またより一般の写像を近似するのにも用いられる（<a href="." id="link_a_5" title="一次近似">一次近似</a>）。空間に<a href="." id="link_a_6" title="位相空間">位相</a>も入れて（つまり、<a href="." id="link_a_7" title="位相線型空間">位相線型空間</a>を）考えるならば、全ての線型写像は果たして<a href="." id="link_a_8" title="連続写像">連続</a>であるか、という問いを考えることに意味が生まれる。そして、無限<a href="." id="link_a_9" title="次元 (線型代数学)">次元</a>位相線型空間（例えば無限次元<a href="." id="link_a_10" title="ノルム空間">ノルム空間</a>）上で定義される線型写像を考えるとき、この問いの答えは一般には否であって、<b>不連続線型写像</b>（ふれんぞくせんけいしゃぞう、<a href="." id="link_a_11" title="英語">英</a>: <span lang="en"><i>discontinuous linear function</i></span>）が存在するのである。定義域が<a href="." id="link_a_12" title="完備空間">完備</a>ならば、不連続線型写像の存在が証明できるが、それには<a href="." id="link_a_13" title="選択公理">選択公理</a>を必要とするため、証明から明示的な例を得ることはできない。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#有限次元線型写像の線型性"><span class="tocnumber">1</span> <span class="toctext">有限次元線型写像の線型性</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#具体例"><span class="tocnumber">2</span> <span class="toctext">具体例</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#非構成的な例"><span class="tocnumber">3</span> <span class="toctext">非構成的な例</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#一般の存在定理"><span class="tocnumber">4</span> <span class="toctext">一般の存在定理</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#選択公理に関して"><span class="tocnumber">5</span> <span class="toctext">選択公理に関して</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#不連続な閉作用素"><span class="tocnumber">6</span> <span class="toctext">不連続な閉作用素</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#双対空間への影響"><span class="tocnumber">7</span> <span class="toctext">双対空間への影響</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#ノルム空間以外での不連続性"><span class="tocnumber">8</span> <span class="toctext">ノルム空間以外での不連続性</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#参考文献"><span class="tocnumber">10</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.9C.89.E9.99.90.E6.AC.A1.E5.85.83.E7.B7.9A.E5.9E.8B.E5.86.99.E5.83.8F.E3.81.AE.E7.B7.9A.E5.9E.8B.E6.80.A7"></span><span class="mw-headline" id="有限次元線型写像の線型性">有限次元線型写像の線型性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=1" title="節を編集: 有限次元線型写像の線型性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>X</i>, <i>Y</i> がノルム空間で <i>f</i> が <i>X</i> から <i>Y</i> への線型写像とする。<i>X</i> が<a class="mw-redirect" href="/wiki/%E6%9C%89%E9%99%90%E6%AC%A1%E5%85%83" title="有限次元">有限次元</a>のとき、<i>X</i> の単位ベクトルからなる基底 (<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, …, <i>e</i><sub><i>n</i></sub>) を取ることができて、このとき
+</p>
+<dl><dd>&lt;math&gt;f(x)=\sum^n_{i=1}x_if(e_i)&lt;/math&gt;</dd></dl>
+<p>と表すことができるから、<a href="/wiki/%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F" title="三角不等式">三角不等式</a>により 
+</p>
+<dl><dd>&lt;math&gt;\|f(x)\|= \left\|\sum^n_{i=1}x_if(e_i)\right\| \le \sum^n_{i=1} |x_i|\|f(e_i)\|&lt;/math&gt;</dd></dl>
+<p>を得る。ここで 
+</p>
+<dl><dd>&lt;math&gt;M=\sup_i \{\|f(e_i)\|\}&lt;/math&gt;</dd></dl>
+<p>とおき、適当な <i>C</i> &gt; 0 を取って
+</p>
+<dl><dd>&lt;math&gt;\sum^n_{i=1}|x_i|\le C \|x\|&lt;/math&gt;</dd></dl>
+<p>とできるという事実（これは有限次元空間上のどの二つのノルムも互いに同値であるという事実から従う）を用いると
+</p>
+<dl><dd>&lt;math&gt;\|f(x)\|\le \left(\sum^n_{i=1}|x_i|\right)M\le CM\|x\|&lt;/math&gt;</dd></dl>
+<p>となるから、つまり <i>f</i> は<a class="mw-redirect" href="/wiki/%E6%9C%89%E7%95%8C%E7%B7%9A%E5%9E%8B%E4%BD%9C%E7%94%A8%E7%B4%A0" title="有界線型作用素">有界線型作用素</a>、従って連続である。
+</p><p><i>X</i> が無限次元のときには、この証明は<a href="/wiki/%E4%B8%8A%E9%99%90" title="上限">上限</a> <i>M</i> の存在を保証できずに破綻する。また、<i>Y</i> が零ベクトル空間 {0} ならば <i>X</i> から <i>Y</i> への線型写像は零値写像しかなく、これは自明に連続となる。これら以外の全ての場合において、つまり <i>X</i> が無限次元かつ <i>Y</i> が零ベクトル空間でないとき、<i>X</i> から <i>Y</i> への不連続線型写像を考えることができる。
+</p>
+<h2><span id=".E5.85.B7.E4.BD.93.E4.BE.8B"></span><span class="mw-headline" id="具体例">具体例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=2" title="節を編集: 具体例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>完備でない空間においては不連続線型写像の例を構成するのは容易である。線型独立なベクトルからなる<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E5%88%97" title="コーシー列">コーシー列</a>で極限を持たないものを任意に取れば、線型作用素は際限なく増加することができる。これはつまり、空間に「穴」があるから線型作用素が連続でないという意味である。
+</p><p>例えば、<i>X</i> として区間 <span class="texhtml" lang="en">[0, 1]</span> 上の<a class="mw-redirect" href="/wiki/%E6%BB%91%E3%82%89%E3%81%8B%E3%81%AA%E5%87%BD%E6%95%B0" title="滑らかな函数">滑らかな</a>実数値函数全体の成す空間に<a href="/wiki/%E4%B8%80%E6%A7%98%E3%83%8E%E3%83%AB%E3%83%A0" title="一様ノルム">一様ノルム</a>
+</p>
+<dl><dd>&lt;math&gt;\|f\|=\sup_{x\in [0, 1]}|f(x)|&lt;/math&gt;</dd></dl>
+<p>を入れたものを考えると、「一点において<a href="/wiki/%E5%BE%AE%E5%88%86" title="微分">微分</a>する」写像
+</p>
+<dl><dd>&lt;math&gt;T(f)=f'(0)&lt;/math&gt;</dd></dl>
+<p>は <i>X</i> 上で定義される実数値函数で、線型になるが、連続でない。実際、函数列 
+</p>
+<dl><dd>&lt;math&gt;f_n(x)=\frac{\sin (n^2 x)}{n}&lt;/math&gt;</dd></dl>
+<p>を考えると、この列は一様に零写像に収斂するが、<i>n</i> → ∞ の極限で
+</p>
+<dl><dd>&lt;math&gt;T(f_n)=\frac{n^2\cos(n^2 \cdot 0)}{n}=n\to \infty&lt;/math&gt;</dd></dl>
+<p>となり、これは件の写像が連続ならば満たさねばならない <i>T</i>(<i>f</i><sub><i>n</i></sub>) → <i>T</i>(0) = 0 に反する。ここで、<i>T</i> が実数値であり、それ故実際には <i>X</i> 上の<a href="/wiki/%E7%B7%9A%E5%9E%8B%E6%B1%8E%E5%87%BD%E6%95%B0" title="線型汎函数">線型汎函数</a>（つまり代数的<a class="mw-redirect" href="/wiki/%E5%8F%8C%E5%AF%BE%E7%A9%BA%E9%96%93" title="双対空間">双対空間</a> <i>X</i><sup>∗</sup> の元）であることに注意。各函数にその導函数を割り当てる線型写像 <i>X</i> → <i>X</i> も同様に不連続である。これは連続でないけれども、<a href="/wiki/%E9%96%89%E4%BD%9C%E7%94%A8%E7%B4%A0" title="閉作用素">閉作用素</a>にはなることに注意。
+</p><p>この例において定義域が完備でないという事実が重要である。完備空間上の不連続作用素を得るにはもう少し準備が必要である。
+</p>
+<h2><span id=".E9.9D.9E.E6.A7.8B.E6.88.90.E7.9A.84.E3.81.AA.E4.BE.8B"></span><span class="mw-headline" id="非構成的な例">非構成的な例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=3" title="節を編集: 非構成的な例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E5%87%BD%E6%95%B0%E6%96%B9%E7%A8%8B%E5%BC%8F" title="コーシーの函数方程式">コーシーの函数方程式</a>」を参照</div>
+<p><a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数</a>全体 <b>R</b> を<a href="/wiki/%E6%9C%89%E7%90%86%E6%95%B0" title="有理数">有理数</a>体 <b>Q</b> 上のベクトル空間と見たときの代数基底は<b>ハメル基底</b>として知られる（文献によってはもっと広く、ベクトル空間の任意の代数基底の意味で「<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%A1%E3%83%AB%E5%9F%BA%E5%BA%95" title="ハメル基底">ハメル基底</a>」の語を用いるものもあるが）。<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%80%9A%E7%B4%84%E5%8F%AF%E8%83%BD%E6%80%A7&amp;action=edit&amp;redlink=1" title="通約可能性 (存在しないページ)">通約不能</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Commensurability_(mathematics)&amp;action=edit&amp;redlink=1" title="En:Commensurability (mathematics) (存在しないページ)">英語版</a>）</span></span>な任意の二数は線型独立であることに注意する。例えば 1 と π などはそうで、これらを含むハメル基底を構成することができる。さらに <b>R</b> から <b>R</b> への写像 <i>f</i> で <i>f</i>(π) = 0 かつそれ以外の基底ベクトルの上には恒等的に作用するようなものを定め、これを <b>R</b> 全体にまで線型に拡張する。ここで、π に収斂する任意の有理数列 {<i>r</i><sub><i>n</i></sub>}<sub><i>n</i></sub> を取れば、lim<sub><i>n</i></sub> <i>f</i>(<i>r</i><sub><i>n</i></sub>) = π だが <i>f</i>(π) = 0 となる。即ち、作り方から、<i>f</i> は <b>Q</b>-線型（<b>R</b>-線型ではない）となるが、連続でない。<i>f</i> は<a class="mw-redirect" href="/wiki/%E5%8F%AF%E6%B8%AC%E5%87%BD%E6%95%B0" title="可測函数">可測</a>ですらないことに注意（<a href="/wiki/%E5%8A%A0%E6%B3%95%E7%9A%84%E5%86%99%E5%83%8F" title="加法的写像">加法的</a>な実函数が線型となることと可測であることとは同値、ゆえに任意の非線型実函数に対して<a href="/wiki/%E3%83%B4%E3%82%A3%E3%82%BF%E3%83%AA%E9%9B%86%E5%90%88" title="ヴィタリ集合">ヴィタリ集合</a>が存在する）。この <i>f</i> の構成法は選択公理に依っている（ハメル基底の存在を示すのにツォルンの補題が要る）。
+</p><p>この例は任意の無限次元ノルム空間上の（終域が自明でない）不連続線型写像の存在についての一般定理に拡張することができる。
+</p>
+<h2><span id=".E4.B8.80.E8.88.AC.E3.81.AE.E5.AD.98.E5.9C.A8.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="一般の存在定理">一般の存在定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=4" title="節を編集: 一般の存在定理">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>より一般に、空間が完備である場合も含めて、不連続線型写像の存在を証明することができる。<i>K</i> は実数体 <b>R</b> または複素数体 <b>C</b> であるものとして、<i>X</i>, <i>Y</i> を体 <i>K</i> 上の<a class="mw-redirect" href="/wiki/%E3%83%8E%E3%83%AB%E3%83%A0%E7%A9%BA%E9%96%93" title="ノルム空間">ノルム空間</a>で、<i>X</i> は無限次元、<i>Y</i> は零ベクトル空間でないと仮定する。ここで、<i>X</i> から <i>K</i> への不連続線型写像 <i>f</i> が求まれば、<i>Y</i> の勝手な非零元 <i>y</i><sub>0</sub> に対して <i>g</i>(<i>x</i>) = <i>f</i>(<i>x</i>)<i>y</i><sub>0</sub> と置くことで、<i>X</i> から <i>Y</i> への不連続線型写像 <i>g</i> の存在が言える。
+</p><p>そこで、無限次元空間 <i>X</i> に対して連続でない線型汎函数の存在を、非有界な <i>f</i> を様々構成することによって示す。そういうわけで、<i>X</i> の<a href="/wiki/%E7%B7%9A%E5%9E%8B%E7%8B%AC%E7%AB%8B" title="線型独立">線型独立</a>なベクトルからなる<a href="/wiki/%E5%88%97_(%E6%95%B0%E5%AD%A6)" title="列 (数学)">列</a> (<i>e</i><sub><i>n</i></sub>)<sub><i>n</i></sub> (<i>n</i> ≥ 1) を考え、各 <i>n</i> = 1, 2, … に対して
+</p>
+<dl><dd>&lt;math&gt;T(e_n)=n\|e_n\|&lt;/math&gt;</dd></dl>
+<p>と定める。この線型独立なベクトルからなる列を延長して <i>X</i> の<a href="/wiki/%E5%9F%BA%E5%BA%95_(%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="基底 (線型代数学)">基底</a>を得、上記の元以外の基底ベクトルにおける <i>T</i> の値を零と定めて、<i>T</i> を <i>X</i> 上の線型写像に一意的に拡張することができる。得られた線型写像は明らかに有界でないから、これは連続でない。
+</p><p>ここで、任意の線型独立系を基底に延長することができるという事実を用いたから、そこに暗黙の裡に選択公理が使われていることに注意すべきである（前掲の<a href="#具体例">具体例</a>では選択公理を必要としない）。
+</p>
+<h2><span id=".E9.81.B8.E6.8A.9E.E5.85.AC.E7.90.86.E3.81.AB.E9.96.A2.E3.81.97.E3.81.A6"></span><span class="mw-headline" id="選択公理に関して">選択公理に関して</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=5" title="節を編集: 選択公理に関して">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>既に注意した通り、一般の不連続線型写像の存在定理には<a href="/wiki/%E9%81%B8%E6%8A%9E%E5%85%AC%E7%90%86" title="選択公理">選択公理</a> (AC) が用いられる。実は完備な定義域（例えば<a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ空間</a>）を持つ不連続線型写像の構成的な例というものは存在しないのである。解析学において、職業数学者がふつう実用にする限りは、選択公理は（<a href="/wiki/ZFC" title="ZFC">ZFC</a>集合論の公理の一つとして）常に仮定されている。従って、解析学者は任意の無限次元位相線型空間に不連続線型写像を認めることができる。
+</p><p>一方、1970年に<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%83%BC%E3%83%88%E3%83%BB%E3%82%BD%E3%83%AD%E3%83%B4%E3%82%A7%E3%82%A4&amp;action=edit&amp;redlink=1" title="ロバート・ソロヴェイ (存在しないページ)">ロバート・ソロヴェイ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robert_M._Solovay&amp;action=edit&amp;redlink=1" title="En:Robert M. Solovay (存在しないページ)">英語版</a>）</span></span>は、実数からなる任意の集合が可測となるような<a href="/wiki/%E9%9B%86%E5%90%88%E8%AB%96" title="集合論">集合論</a>の<a class="new" href="/w/index.php?title=%E3%83%A2%E3%83%87%E3%83%AB_(%E3%83%A2%E3%83%87%E3%83%AB%E7%90%86%E8%AB%96)&amp;action=edit&amp;redlink=1" title="モデル (モデル理論) (存在しないページ)">モデル</a>を示した<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。従って、このモデルにおいて不連続線型実函数は存在しないことになる。このモデルは明らかに選択公理を満足しない。
+</p><p>ソロヴェイの結果は、任意の無限次元線型空間が不連続線型写像を許すこと仮定することは必要条件でないことを示すものであり、より<a class="mw-redirect" href="/wiki/%E6%95%B0%E5%AD%A6%E7%9A%84%E6%A7%8B%E6%88%90%E4%B8%BB%E7%BE%A9" title="数学的構成主義">構成主義者</a>の観点に沿った解析学というものが展開し得る。例えば、アンリ・ジョルジュ・ガルニールは、所謂「夢の空間」（"dream spaces", その上で定義されるノルム空間に値を取る任意の線型写像が連続となる位相線型空間）の探索において、ZF+<a class="new" href="/w/index.php?title=%E5%BE%93%E5%B1%9E%E9%81%B8%E6%8A%9E%E5%85%AC%E7%90%86&amp;action=edit&amp;redlink=1" title="従属選択公理 (存在しないページ)">DC</a>+<a href="/wiki/%E3%83%99%E3%83%BC%E3%83%AB%E3%81%AE%E6%80%A7%E8%B3%AA" title="ベールの性質">BP</a>（従属選択公理は弱い形の選択公理であり、ベールの性質は強い選択公理の否定である）が<a class="new" href="/w/index.php?title=%E3%82%AC%E3%83%AB%E3%83%8B%E3%83%BC%E3%83%AB-%E3%83%A9%E3%82%A4%E3%83%88%E3%81%AE%E9%96%89%E3%82%B0%E3%83%A9%E3%83%95%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="ガルニール-ライトの閉グラフ定理 (存在しないページ)">ガルニール-ライトの閉グラフ定理</a>を証明する公理系として採用している。この閉グラフ定理は、（他にもいろいろあるが）<a class="mw-redirect" href="/wiki/F%E7%A9%BA%E9%96%93" title="F空間"><i>F</i>-空間</a>から位相線型空間への任意の線型写像が連続となることを述べるものである。もっと強烈な構成主義では、（適当な枠組み<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>において解釈すると）<b>任意の写像</b>が連続となることを主張する<a class="new" href="/w/index.php?title=Ce%C4%ADtin%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="Ceĭtinの定理 (存在しないページ)">Ceĭtinの定理</a>がある。こういった立場を取る職業数学者は極めて少数派である。
+</p><p>選択公理を持たない集合論では不連続線型写像が存在しなくても矛盾は起こらないのだから、結論としては選択公理の必要性を取り除くことは可能でないということになる。系として、至る所導函数が定義できないような不連続作用素が構成可能である。
+</p>
+<h2><span id=".E4.B8.8D.E9.80.A3.E7.B6.9A.E3.81.AA.E9.96.89.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="不連続な閉作用素">不連続な閉作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=6" title="節を編集: 不連続な閉作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>自然に生じる線型不連続作用素が<a href="/wiki/%E9%96%89%E4%BD%9C%E7%94%A8%E7%B4%A0" title="閉作用素">閉作用素</a>となることは多く、そのような作用素のクラスは連続作用素のクラスと様々な特徴を共有している。連続性についての問いと同様、与えられた空間上の任意の線型作用素が閉であるかと考えることは意味を成す。<a href="/wiki/%E9%96%89%E3%82%B0%E3%83%A9%E3%83%95%E5%AE%9A%E7%90%86" title="閉グラフ定理">閉グラフ定理</a>は完備な定義域上の至る所定義された閉作用素が連続であることを保証するから、不連続閉作用素を考える文脈では至る所定義されるのではない作用素を許さねばならない。至る所定義されたものでない作用素の中でも、<a href="/wiki/%E7%A8%A0%E5%AF%86%E3%81%AB%E5%AE%9A%E7%BE%A9%E3%81%95%E3%82%8C%E3%81%9F%E4%BD%9C%E7%94%A8%E7%B4%A0" title="稠密に定義された作用素">密に定義された作用素</a>を考えて一般性を失わない。
+</p><p>さて、<i>T</i> は定義域 Dom(<i>T</i>) を持つ（偏）写像 <i>X</i> → <i>Y</i> とし、至る所定義されたものでない作用素 <i>T</i> のグラフ Γ(<i>T</i>) は閉包 <span class="texhtml" lang="en"><span style="text-decoration:overline">Γ(<i>T</i>)</span></span> と異なってもよいものとする。グラフの閉包がそれ自身別の作用素 <span class="texhtml" lang="en"><span style="text-decoration:overline"><i>T</i></span></span> のグラフとなっているとき、<i>T</i> は<b>可閉</b> (closable) であると言い、作用素 <span class="texhtml" lang="en"><span style="text-decoration:overline"><i>T</i></span></span> は <i>T</i> の閉包であると言う。
+</p><p>そうすると、正しい問いは「密定義作用素は必ず可閉であるか否か」であるということになる。答えは「必要条件ではない」である。つまり、任意の無限次元ノルム空間が、非可閉線型作用素の存在を許す。証明には選択公理を要するので、一般には非構成的である（今の場合でも、<i>X</i> が完備でないものとすれば、構成的な例は存在する）。
+</p><p>実は、閉包が <i>X</i> × <i>Y</i> 全体になるようなグラフを持つ線型作用素の例を与えることができる。そのような作用素は可閉でない。<i>X</i> を閉区間 <span class="texhtml" lang="en">[0, 1]</span> から <b>R</b> への<a href="/wiki/%E5%A4%9A%E9%A0%85%E5%BC%8F%E5%87%BD%E6%95%B0" title="多項式函数">多項式函数</a>全体の成す空間とし、<i>Y</i> を区間 <span class="texhtml" lang="en">[2, 3]</span> から <b>R</b> への多項式函数全体の成す空間とする。これらはそれぞれ <i>C</i>([0,1]) および <i>C</i>([2,3]) の部分空間であり、従ってノルム空間となる。作用素 <i>T</i> は、多項式函数 <i>x</i> ↦ <i>p</i>(<i>x</i>) を <span class="texhtml" lang="en">[0, 1]</span> 上で定義されるものから、同じ式で <span class="texhtml" lang="en">[2, 3]</span> 上定義されたものへ写すものとする。<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3-%E3%83%B4%E3%82%A1%E3%82%A4%E3%82%A8%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%88%E3%83%A9%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86" title="ストーン-ヴァイエルシュトラスの定理">ストーン-ヴァイエルシュトラスの定理</a>の帰結として、この作用素 <i>T</i> のグラフは <i>X</i> × <i>Y</i> で稠密であり、極大不連続線型写像の一種を与える（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%87%B3%E3%82%8B%E6%89%80%E4%B8%8D%E9%80%A3%E7%B6%9A%E3%81%AA%E5%87%BD%E6%95%B0&amp;action=edit&amp;redlink=1" title="至る所不連続な函数 (存在しないページ)">至る所不連続な函数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:nowhere_continuous_function&amp;action=edit&amp;redlink=1" title="En:nowhere continuous function (存在しないページ)">英語版</a>）</span></span>を参照）。ここで <i>X</i> は完備でなく、このような構成可能写像が存在する場合を考えなければならないことに注意。
+</p>
+<h2><span id=".E5.8F.8C.E5.AF.BE.E7.A9.BA.E9.96.93.E3.81.B8.E3.81.AE.E5.BD.B1.E9.9F.BF"></span><span class="mw-headline" id="双対空間への影響">双対空間への影響</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=7" title="節を編集: 双対空間への影響">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>位相線型空間の<a class="mw-redirect" href="/wiki/%E5%8F%8C%E5%AF%BE%E7%A9%BA%E9%96%93" title="双対空間">双対空間</a>とは、その空間から基礎体への連続線型写像全体の成す集合である。従って、無限次元ノルム空間に対してある種の線型写像が連続にならないということは、代数的な双対空間とその真の部分集合を成す連続的双対空間とを区別する必要があることを含意する。これは無限次元空間の解析学を行うのには有限次元空間の場合と比べて余計に注意が必要であることを如実に表すものになっている。
+</p>
+<h2><span id=".E3.83.8E.E3.83.AB.E3.83.A0.E7.A9.BA.E9.96.93.E4.BB.A5.E5.A4.96.E3.81.A7.E3.81.AE.E4.B8.8D.E9.80.A3.E7.B6.9A.E6.80.A7"></span><span class="mw-headline" id="ノルム空間以外での不連続性">ノルム空間以外での不連続性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=8" title="節を編集: ノルム空間以外での不連続性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ノルム空間上の不連続線型写像の存在性についての論法は、任意の距離化可能位相線型空間、特に任意のフレシェ空間に対して一般化することができるが、任意の汎函数が連続となる無限次元局所凸位相線型空間というものが存在する。他方、任意の局所凸空間に適用できる<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%B3-%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E3%81%AE%E5%AE%9A%E7%90%86" title="ハーン-バナッハの定理">ハーン-バナッハの定理</a>は、多くの連続線型汎函数が存在して、双対空間が十分に大きいことを保証する。実は、任意の凸集合に対し、その<a class="mw-redirect" href="/wiki/%E3%83%9F%E3%83%B3%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E6%B1%8E%E5%87%BD%E6%95%B0" title="ミンコフスキー汎函数">ミンコフスキー汎函数</a>は連続線型汎函数に対応する。
+結論として、凸集合が少ない空間は汎函数も少なく、最悪の場合には零汎函数以外に汎函数を全く持たないこともあり得る。0 &lt; <i>p</i> &lt; 1 に対する<a class="mw-redirect" href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E7%A9%BA%E9%96%93" title="ルベーグ空間"> <i>L</i><sup><i>p</i></sup>-空間</a> <i>L</i><sup><i>p</i></sup>(<b>R</b>, <i>dx</i>) の場合がそうで、この空間は非凸である。ここでは実数直線上の<a href="/wiki/%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0%E6%B8%AC%E5%BA%A6" title="ルベーグ測度">ルベーグ測度</a> <i>dx</i> を考えていることに注意せよ、そうでない場合に 0 &lt; <i>p</i> &lt; 1 なる <i>L</i><sup><i>p</i></sup>-空間が非自明な双対空間を持つことがある。
+</p><p>もう一つの同様の例として、単位区間上の実数値<a class="mw-redirect" href="/wiki/%E5%8F%AF%E6%B8%AC%E5%87%BD%E6%95%B0" title="可測函数">可測函数</a>全体の成す空間に<a href="/wiki/%E6%BA%96%E3%83%8E%E3%83%AB%E3%83%A0" title="準ノルム">準ノルム</a>
+</p>
+<dl><dd>&lt;math&gt;\|f\| = \int_I \frac{|f(x)|}{1+|f(x)|}dx&lt;/math&gt;</dd></dl>
+<p>を与えたものは、自明な双対空間を持つ非局所凸空間である。
+</p><p>もっと一般の空間を想定することもできる。例えば、完備可分距離<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%BE%A4" title="位相群">位相群</a>の間の準同型写像の存在性は非構成的に示すことができる。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=9" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Solovay, Robert M. (1970). “A model of set-theory in which every set of reals is Lebesgue measurable”. <i>Annals of Mathematics. Second Series</i> <b>92</b> (1):  1–56. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1970696" rel="nofollow">10.2307/1970696</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+model+of+set-theory+in+which+every+set+of+reals+is+Lebesgue+measurable&amp;rft.jtitle=Annals+of+Mathematics.+Second+Series&amp;rft.aulast=Solovay%2C+Robert+M.&amp;rft.au=Solovay%2C+Robert+M.&amp;rft.date=1970&amp;rft.volume=92&amp;rft.issue=1&amp;rft.pages=1%E2%80%9356&amp;rft_id=info:doi/10.2307%2F1970696&amp;rfr_id=info:sid/ja.wikipedia.org:%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">構成主義の立場で、例えば構成的でない写像のことはそもそも考えない。<a class="external autonumber" href="http://books.google.co.jp/books?id=2XmY22oRvdUC&amp;pg=PA8&amp;lpg=PA8&amp;dq=Ceitin+continuous" rel="nofollow">[1]</a></span>
+</li>
+</ol></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;section=10" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Constantin Costara, Dumitru Popa, <i>Exercises in Functional Analysis</i>, Springer, 2003. ISBN 1-4020-1560-7.</li>
+<li>Schechter, Eric, <i>Handbook of Analysis and its Foundations</i>, Academic Press, 1997. ISBN 0-12-622760-8.</li></ul>
+<div aria-labelledby="関数解析学" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Functional_Analysis&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Functional Analysis (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AFunctional_Analysis&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AFunctional_Analysis&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="関数解析学" style="font-size:110%;margin:0 6em">関数解析学</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">集合 / 部分集合のタイプ</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%9D%87%E8%A1%A1%E9%9B%86%E5%90%88" title="均衡集合">均衡</a></li>
+<li><a href="/wiki/%E6%98%9F%E7%8A%B6%E9%A0%98%E5%9F%9F" title="星状領域">星状</a></li>
+<li><a href="/wiki/%E7%B5%B6%E5%AF%BE%E5%87%B8%E9%9B%86%E5%90%88" title="絶対凸集合">絶対凸</a></li>
+<li><a href="/wiki/%E5%87%B8%E9%9B%86%E5%90%88" title="凸集合">凸</a></li>
+<li><a href="/wiki/%E4%BD%B5%E5%91%91%E9%9B%86%E5%90%88" title="併呑集合">併呑</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%9C%89%E7%95%8C%E9%9B%86%E5%90%88_(%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93)&amp;action=edit&amp;redlink=1" title="有界集合 (線型位相空間) (存在しないページ)">有界</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Bounded_set_(topological_vector_space)&amp;action=edit&amp;redlink=1" title="En:Bounded set (topological vector space) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Radial_set&amp;action=edit&amp;redlink=1" title="Radial set (存在しないページ)">放射状</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Radial_set&amp;action=edit&amp;redlink=1" title="En:Radial set (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%AF%BE%E7%A7%B0%E9%9B%86%E5%90%88&amp;action=edit&amp;redlink=1" title="対称集合 (存在しないページ)">対称</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Symmetric_set&amp;action=edit&amp;redlink=1" title="En:Symmetric set (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E9%8C%90_(%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="錐 (線型代数学)">線型錐<span style="font-size:smaller;">（部分集合）</span></a></li>
+<li><a href="/wiki/%E5%87%B8%E9%8C%90" title="凸錐">凸錐<span style="font-size:smaller;">（部分集合）</span></a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">線型位相空間のタイプ</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ</a></li>
+<li><a href="/wiki/%E6%A8%BD%E5%9E%8B%E7%A9%BA%E9%96%93" title="樽型空間">樽型</a></li>
+<li><a class="mw-redirect" href="/wiki/%E7%95%8C%E7%9B%B8%E7%A9%BA%E9%96%93" title="界相空間">界相</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Brauner%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="Brauner空間 (存在しないページ)">Brauner</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Brauner_space&amp;action=edit&amp;redlink=1" title="En:Brauner space (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/F-%E7%A9%BA%E9%96%93" title="F-空間">F-空間</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E7%A9%BA%E9%96%93" title="ユークリッド空間">有限次元</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AC%E3%82%B7%E3%82%A7%E7%A9%BA%E9%96%93" title="フレシェ空間">フレシェ</a> (<a class="new" href="/w/index.php?title=En:Differentiation_in_Frechet_spaces&amp;action=edit&amp;redlink=1" title="En:Differentiation in Frechet spaces (存在しないページ)">tame</a>)</li>
+<li><a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E7%A9%BA%E9%96%93" title="ヒルベルト空間">ヒルベルト</a></li>
+<li><a href="/wiki/LF%E7%A9%BA%E9%96%93" title="LF空間">LF空間</a></li>
+<li><a href="/wiki/%E5%B1%80%E6%89%80%E5%87%B8%E4%BD%8D%E7%9B%B8%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="局所凸位相ベクトル空間">局所凸</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9E%E3%83%83%E3%82%AD%E3%83%BC%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="マッキー空間 (存在しないページ)">マッキー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mackey_space&amp;action=edit&amp;redlink=1" title="En:Mackey space (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%B3%E3%83%86%E3%83%AB%E7%A9%BA%E9%96%93" title="モンテル空間">モンテル</a></li>
+<li><a href="/wiki/%E6%A0%B8%E5%9E%8B%E7%A9%BA%E9%96%93" title="核型空間">核型</a></li>
+<li><a href="/wiki/%E3%83%8E%E3%83%AB%E3%83%A0%E7%B7%9A%E5%9E%8B%E7%A9%BA%E9%96%93" title="ノルム線型空間">ノルム付き</a>（<a href="/wiki/%E3%83%8E%E3%83%AB%E3%83%A0" title="ノルム">ノルム</a>）</li>
+<li><a href="/wiki/%E6%BA%96%E3%83%8E%E3%83%AB%E3%83%A0" title="準ノルム">準ノルム付き</a></li>
+<li><a href="/wiki/%E5%9B%9E%E5%B8%B0%E7%9A%84%E7%A9%BA%E9%96%93" title="回帰的空間">回帰的</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%82%B9%E7%A9%BA%E9%96%93" title="リース空間">リース</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%9F%E3%82%B9%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="スミス空間 (存在しないページ)">スミス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Smith_space&amp;action=edit&amp;redlink=1" title="En:Smith space (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Stereotype_space&amp;action=edit&amp;redlink=1" title="Stereotype space (存在しないページ)">Stereotype</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Stereotype_space&amp;action=edit&amp;redlink=1" title="En:Stereotype space (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E4%BB%98%E3%81%8D%E7%A9%BA%E9%96%93" title="ウェブ付き空間">ウェブ付き</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%BD%8D%E7%9B%B8%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D&amp;action=edit&amp;redlink=1" title="位相テンソル積 (存在しないページ)">位相テンソル積</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Topological_tensor_product&amp;action=edit&amp;redlink=1" title="En:Topological tensor product (存在しないページ)">英語版</a>）</span></span>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E7%A9%BA%E9%96%93%E3%81%AE%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D&amp;action=edit&amp;redlink=1" title="ヒルベルト空間のテンソル積 (存在しないページ)">ヒルベルト空間の</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Tensor_product_of_Hilbert_spaces&amp;action=edit&amp;redlink=1" title="En:Tensor product of Hilbert spaces (存在しないページ)">英語版</a>）</span></span>）</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">位相</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%8F%8C%E5%AF%BE%E4%BD%8D%E7%9B%B8" title="双対位相">双対</a></li>
+<li><a href="/wiki/%E5%8F%8C%E5%AF%BE%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="双対ベクトル空間">双対空間</a></li>
+<li><a href="/wiki/%E4%BD%9C%E7%94%A8%E7%B4%A0%E4%BD%8D%E7%9B%B8" title="作用素位相">作用素</a></li>
+<li><a href="/wiki/%E5%BC%B7%E4%BD%8D%E7%9B%B8" title="強位相">強</a>（<a href="/wiki/%E5%BC%B7%E4%BD%8D%E7%9B%B8_(%E6%A5%B5%E4%BD%8D%E7%9B%B8)" title="強位相 (極位相)">極</a></li>
+<li><a href="/wiki/%E5%BC%B7%E4%BD%9C%E7%94%A8%E7%B4%A0%E4%BD%8D%E7%9B%B8" title="強作用素位相">作用素</a>）</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ultrastrong_topology&amp;action=edit&amp;redlink=1" title="Ultrastrong topology (存在しないページ)">Ultrastrong</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ultrastrong_topology&amp;action=edit&amp;redlink=1" title="En:Ultrastrong topology (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%BC%B1%E4%BD%8D%E7%9B%B8" title="弱位相">弱</a>（<a href="/wiki/%E5%BC%B1%E4%BD%9C%E7%94%A8%E7%B4%A0%E4%BD%8D%E7%9B%B8" title="弱作用素位相">作用素</a>）</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ultraweak_topology&amp;action=edit&amp;redlink=1" title="Ultraweak topology (存在しないページ)">Ultraweak</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ultraweak_topology&amp;action=edit&amp;redlink=1" title="En:Ultraweak topology (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BA%83%E7%BE%A9%E4%B8%80%E6%A7%98%E5%8F%8E%E6%9D%9F%E3%81%AE%E4%BD%8D%E7%9B%B8&amp;action=edit&amp;redlink=1" title="広義一様収束の位相 (存在しないページ)">一様収束</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Topology_of_uniform_convergence&amp;action=edit&amp;redlink=1" title="En:Topology of uniform convergence (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">線型作用素</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%9A%8F%E4%BC%B4%E4%BD%9C%E7%94%A8%E7%B4%A0" title="随伴作用素">随伴</a></li>
+<li><a href="/wiki/%E5%8F%8C%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="双線型写像">双線型</a>（<a href="/wiki/%E5%8F%8C%E7%B7%9A%E5%9E%8B%E5%BD%A2%E5%BC%8F" title="双線型形式">形式</a>）</li>
+<li><a href="/wiki/%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" title="有界作用素">有界</a> / <a href="/wiki/%E9%9D%9E%E6%9C%89%E7%95%8C%E4%BD%9C%E7%94%A8%E7%B4%A0" title="非有界作用素">非有界</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%96%89%E7%B7%9A%E5%9E%8B%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;redlink=1" title="閉線型作用素 (存在しないページ)">閉</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Closed_linear_operator&amp;action=edit&amp;redlink=1" title="En:Closed linear operator (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%BD%A2%E4%BD%9C%E7%94%A8%E7%B4%A0" title="連続線形作用素">連続</a> / <a class="mw-selflink selflink">不連続</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88%E4%BD%9C%E7%94%A8%E7%B4%A0" title="コンパクト作用素">コンパクト</a></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AC%E3%83%89%E3%83%9B%E3%83%AB%E3%83%A0%E4%BD%9C%E7%94%A8%E7%B4%A0" title="フレドホルム作用素">フレドホルム</a></li>
+<li><a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%EF%BC%9D%E3%82%B7%E3%83%A5%E3%83%9F%E3%83%83%E3%83%88%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ヒルベルト＝シュミット作用素">ヒルベルト＝シュミット</a></li>
+<li><a href="/wiki/%E7%B7%9A%E5%9E%8B%E6%B1%8E%E5%87%BD%E6%95%B0" title="線型汎函数">汎関数</a>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AD%A3%E5%80%A4%E7%B7%9A%E5%9E%8B%E6%B1%8E%E9%96%A2%E6%95%B0&amp;action=edit&amp;redlink=1" title="正値線型汎関数 (存在しないページ)">正</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Positive_linear_functional&amp;action=edit&amp;redlink=1" title="En:Positive linear functional (存在しないページ)">英語版</a>）</span></span>）</li>
+<li><a href="/wiki/%E6%AD%A3%E8%A6%8F%E4%BD%9C%E7%94%A8%E7%B4%A0" title="正規作用素">正規</a></li>
+<li><a href="/wiki/%E6%A0%B8%E4%BD%9C%E7%94%A8%E7%B4%A0" title="核作用素">核</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E4%BD%9C%E7%94%A8%E7%B4%A0" title="エルミート作用素">自己共役</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%BC%B7%E7%89%B9%E7%95%B0%E4%BD%9C%E7%94%A8%E7%B4%A0&amp;action=edit&amp;redlink=1" title="強特異作用素 (存在しないページ)">Strictly singular</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Strictly_singular_operator&amp;action=edit&amp;redlink=1" title="En:Strictly singular operator (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%A9%E3%82%B9" title="トレースクラス">トレースクラス</a></li>
+<li><a href="/wiki/%E8%BB%A2%E7%BD%AE%E5%86%99%E5%83%8F" title="転置写像">転置</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E4%BD%9C%E7%94%A8%E7%B4%A0" title="ユニタリ作用素">ユニタリ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">集合の操作</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BB%A3%E6%95%B0%E7%9A%84%E5%86%85%E9%83%A8" title="代数的内部">代数的内部（核）</a></li>
+<li><a href="/wiki/%E5%86%85%E9%83%A8_(%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93%E8%AB%96)" title="内部 (位相空間論)">内部</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9F%E3%83%B3%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC%E5%92%8C&amp;action=edit&amp;redlink=1" title="ミンコフスキー和 (存在しないページ)">ミンコフスキー和</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Minkowski_addition&amp;action=edit&amp;redlink=1" title="En:Minkowski addition (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%A5%B5%E9%9B%86%E5%90%88" title="極集合">極</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">バナッハ環</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C*-%E7%92%B0" title="C*-環">C*-環</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB_(%E9%96%A2%E6%95%B0%E8%A7%A3%E6%9E%90%E5%AD%A6)" title="スペクトル (関数解析学)">スペクトル</a>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=C*-%E7%92%B0%E3%81%AE%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB&amp;action=edit&amp;redlink=1" title="C*-環のスペクトル (存在しないページ)">C*-環</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Spectrum_of_a_C*-algebra&amp;action=edit&amp;redlink=1" title="En:Spectrum of a C*-algebra (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%8D%8A%E5%BE%84" title="スペクトル半径">半径</a>)</li>
+<li><a href="/wiki/%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E7%90%86%E8%AB%96" title="スペクトル理論">スペクトル理論</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">定理</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Eberlein%E2%80%93%C5%A0mulian_theorem&amp;action=edit&amp;redlink=1" title="Eberlein–Šmulian theorem (存在しないページ)">Eberlein–Šmulian</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Eberlein%E2%80%93%C5%A0mulian_theorem&amp;action=edit&amp;redlink=1" title="En:Eberlein–Šmulian theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E9%96%8B%E5%86%99%E5%83%8F%E5%AE%9A%E7%90%86_(%E9%96%A2%E6%95%B0%E8%A7%A3%E6%9E%90)" title="開写像定理 (関数解析)">開写像</a></li>
+<li><a href="/wiki/%E8%A7%92%E8%B0%B7%E3%81%AE%E4%B8%8D%E5%8B%95%E7%82%B9%E5%AE%9A%E7%90%86#無限次元への一般化" title="角谷の不動点定理">角谷の不動点</a></li>
+<li><a href="/wiki/%E3%82%B2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%EF%BC%9D%E3%83%9E%E3%82%BA%E3%83%BC%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="ゲルファント＝マズールの定理">ゲルファント＝マズール</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%EF%BC%9D%E3%82%B7%E3%83%A5%E3%83%AF%E3%83%AB%E3%83%84%E3%81%AE%E4%B8%8D%E7%AD%89%E5%BC%8F" title="コーシー＝シュワルツの不等式">コーシー＝シュワルツの不等式</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Goldstine_theorem&amp;action=edit&amp;redlink=1" title="Goldstine theorem (存在しないページ)">Goldstine</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Goldstine_theorem&amp;action=edit&amp;redlink=1" title="En:Goldstine theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B7%E3%83%A3%E3%82%A6%E3%83%80%E3%83%BC%E3%81%AE%E4%B8%8D%E5%8B%95%E7%82%B9%E5%AE%9A%E7%90%86" title="シャウダーの不動点定理">シャウダーの不動点</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B4%E3%82%A1%E3%83%AB%E3%81%AE%E7%AD%89%E5%BC%8F" title="パーセヴァルの等式">パーセヴァルの等式</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%B3%E2%80%93%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E3%81%AE%E5%AE%9A%E7%90%86" title="ハーン–バナッハの定理">ハーン–バナッハ</a>（<a href="/wiki/%E5%88%86%E9%9B%A2%E8%B6%85%E5%B9%B3%E9%9D%A2%E5%AE%9A%E7%90%86" title="分離超平面定理">分離超平面</a>）</li>
+<li><a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%EF%BC%9D%E3%82%A2%E3%83%A9%E3%82%AA%E3%82%B0%E3%83%AB%E3%81%AE%E5%AE%9A%E7%90%86" title="バナッハ＝アラオグルの定理">バナッハ＝アラオグル</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Banach%E2%80%93Saks_theorem&amp;action=edit&amp;redlink=1" title="Banach–Saks theorem (存在しないページ)">Banach–Saks</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Banach%E2%80%93Saks_theorem&amp;action=edit&amp;redlink=1" title="En:Banach–Saks theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Banach%E2%80%93Mazur_theorem&amp;action=edit&amp;redlink=1" title="Banach–Mazur theorem (存在しないページ)">Banach–Mazur</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Banach%E2%80%93Mazur_theorem&amp;action=edit&amp;redlink=1" title="En:Banach–Mazur theorem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AD%E3%82%A4%E3%83%87%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E5%AE%9A%E7%90%86" title="フロイデンタールのスペクトル定理">フロイデンタールのスペクトル</a></li>
+<li><a href="/wiki/%E9%96%89%E5%80%A4%E5%9F%9F%E3%81%AE%E5%AE%9A%E7%90%86" title="閉値域の定理">閉値域</a></li>
+<li><a href="/wiki/%E9%96%89%E3%82%B0%E3%83%A9%E3%83%95%E5%AE%9A%E7%90%86" title="閉グラフ定理">閉グラフ</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%83%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%8D%E7%AD%89%E5%BC%8F" title="ベッセルの不等式">ベッセルの不等式</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%9E%E3%83%83%E3%82%AD%E3%83%BC%EF%BC%9D%E3%82%A2%E3%83%AC%E3%83%B3%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="マッキー＝アレンスの定理 (存在しないページ)">マッキー＝アレンス</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%BA%E3%83%BC%E3%83%AB%E3%81%AE%E8%A3%9C%E9%A1%8C" title="マズールの補題">マズールの補題</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%AE%E6%8B%A1%E5%BC%B5%E5%AE%9A%E7%90%86" title="リースの拡張定理">リースの拡張</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Invariant_subspace_problem&amp;action=edit&amp;redlink=1" title="Invariant subspace problem (存在しないページ)">Lomonosov's invariant subspace</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Invariant_subspace_problem&amp;action=edit&amp;redlink=1" title="En:Invariant subspace problem (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%EF%BC%9D%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%93%E3%83%83%E3%83%81%E3%81%AE%E5%AE%9A%E7%90%86" title="ニュートン＝カントロビッチの定理">ニュートン＝カントロビッチ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">解析</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9C%E3%83%9B%E3%83%8A%E3%83%BC%E7%A9%BA%E9%96%93" title="ボホナー空間">ボホナー空間</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%83%AC%E3%82%B7%E3%82%A7%E7%A9%BA%E9%96%93%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%BE%AE%E5%88%86&amp;action=edit&amp;redlink=1" title="フレシェ空間における微分 (存在しないページ)">フレシェ空間における微分</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Differentiation_in_Frechet_spaces&amp;action=edit&amp;redlink=1" title="En:Differentiation in Frechet spaces (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%BE%AE%E5%88%86" title="微分">微分</a>（<a href="/wiki/%E3%83%95%E3%83%AC%E3%82%B7%E3%82%A7%E5%BE%AE%E5%88%86" title="フレシェ微分">フレシェ</a></li>
+<li><a href="/wiki/%E3%82%AC%E3%83%88%E3%83%BC%E5%BE%AE%E5%88%86" title="ガトー微分">ガトー</a></li>
+<li><a href="/wiki/%E6%B1%8E%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86" title="汎函数微分">汎函数</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Infinite-dimensional_holomorphy&amp;action=edit&amp;redlink=1" title="Infinite-dimensional holomorphy (存在しないページ)">holomorphic</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Infinite-dimensional_holomorphy&amp;action=edit&amp;redlink=1" title="En:Infinite-dimensional holomorphy (存在しないページ)">英語版</a>）</span></span>）</li>
+<li><a href="/wiki/%E7%A9%8D%E5%88%86%E6%B3%95" title="積分法">積分</a>（<a href="/wiki/%E3%83%9C%E3%83%9B%E3%83%8A%E3%83%BC%E7%A9%8D%E5%88%86" title="ボホナー積分">ボホナー</a></li>
+<li><a class="new" href="/w/index.php?title=Dunford_integral&amp;action=edit&amp;redlink=1" title="Dunford integral (存在しないページ)">Dunford</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%86%E3%82%A3%E3%82%B9%E7%A9%8D%E5%88%86" title="ペティス積分">ゲルファント＝ペティス</a></li>
+<li><a href="/wiki/%E6%96%B9%E6%AD%A3%E7%A9%8D%E5%88%86" title="方正積分">方正</a></li>
+<li><a href="/wiki/%E3%83%9A%E3%83%86%E3%82%A3%E3%82%B9%E7%A9%8D%E5%88%86" title="ペティス積分">弱</a>)</li>
+<li><a href="/wiki/%E6%B1%8E%E5%87%BD%E6%95%B0%E8%A8%88%E7%AE%97" title="汎函数計算">汎函数計算</a>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Borel_functional_calculus&amp;action=edit&amp;redlink=1" title="Borel functional calculus (存在しないページ)">Borel</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Borel_functional_calculus&amp;action=edit&amp;redlink=1" title="En:Borel functional calculus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Continuous_functional_calculus&amp;action=edit&amp;redlink=1" title="Continuous functional calculus (存在しないページ)">continuous</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Continuous_functional_calculus&amp;action=edit&amp;redlink=1" title="En:Continuous functional calculus (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Holomorphic_functional_calculus&amp;action=edit&amp;redlink=1" title="Holomorphic functional calculus (存在しないページ)">holomorphic</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Holomorphic_functional_calculus&amp;action=edit&amp;redlink=1" title="En:Holomorphic functional calculus (存在しないページ)">英語版</a>）</span></span>）</li>
+<li><a href="/wiki/%E9%80%86%E5%87%BD%E6%95%B0%E5%AE%9A%E7%90%86" title="逆函数定理">逆函数定理</a>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Nash%E2%80%93Moser_theorem&amp;action=edit&amp;redlink=1" title="Nash–Moser theorem (存在しないページ)">Nash–Moser theorem</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nash%E2%80%93Moser_theorem&amp;action=edit&amp;redlink=1" title="En:Nash–Moser theorem (存在しないページ)">英語版</a>）</span></span>）</li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E6%B8%AC%E5%BA%A6" title="ベクトル測度">ベクトル測度</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">応用</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E3%81%AE%E6%95%B0%E5%AD%A6%E7%9A%84%E5%AE%9A%E5%BC%8F%E5%8C%96" title="量子力学の数学的定式化">量子力学の数学的定式化</a></li>
+<li><a href="/wiki/%E6%9C%89%E9%99%90%E8%A6%81%E7%B4%A0%E6%B3%95" title="有限要素法">有限要素法</a></li>
+<li><a href="/wiki/%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="偏微分方程式">偏微分方程式</a>の解に対する<a href="/wiki/%E7%B2%BE%E5%BA%A6%E4%BF%9D%E8%A8%BC%E4%BB%98%E3%81%8D%E6%95%B0%E5%80%A4%E8%A8%88%E7%AE%97" title="精度保証付き数値計算">精度保証付き数値計算</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">日本人研究者</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%8A%A0%E8%97%A4%E6%95%8F%E5%A4%AB" title="加藤敏夫">加藤敏夫</a></li>
+<li><a href="/wiki/%E5%90%89%E7%94%B0%E8%80%95%E4%BD%9C" title="吉田耕作">吉田耕作</a></li>
+<li><a href="/wiki/%E8%97%A4%E7%94%B0%E5%AE%8F" title="藤田宏">藤田宏</a></li>
+<li><a href="/wiki/%E5%A2%97%E7%94%B0%E4%B9%85%E5%BC%A5" title="増田久弥">増田久弥</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">海外の研究者</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%BB%E3%83%95%E3%83%AA%E3%82%B8%E3%82%A7%E3%82%B7%E3%83%A5" title="リース・フリジェシュ">リース・フリジェシュ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%86%E3%83%95%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%90%E3%83%8A%E3%83%95" title="ステファン・バナフ">ステファン・バナフ</a></li>
+<li><a href="/wiki/%E3%83%80%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E3%83%BB%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88" title="ダフィット・ヒルベルト">ダフィット・ヒルベルト</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%82%BA%E3%83%A9%E3%82%A4%E3%83%AB%E3%83%BB%E3%82%B2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88" title="イズライル・ゲルファント">イズライル・ゲルファント</a></li>
+<li><a href="/wiki/%E3%83%94%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%BB%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9" title="ピーター・ラックス">ピーター・ラックス</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401133203
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.266 seconds
+Real time usage: 0.578 seconds
+Preprocessor visited node count: 1622/1000000
+Post‐expand include size: 77743/2097152 bytes
+Template argument size: 2161/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 31/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1804/5000000 bytes
+Lua time usage: 0.150/7 seconds
+Lua virtual size: 6254592/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  480.329      1 -total
+ 59.71%  286.808      1 テンプレート:Functional_Analysis
+ 58.73%  282.100      1 テンプレート:Navbox
+ 48.90%  234.863     30 テンプレート:仮リンク
+ 14.26%   68.513      1 テンプレート:Main
+ 13.51%   64.873      1 テンプレート:Rellink
+ 12.87%   61.811      1 テンプレート:See/core
+ 10.68%   51.278      1 テンプレート:Cite_journal
+  8.44%   40.542      1 テンプレート:Citation/core
+  7.99%   38.386      1 テンプレート:Ill2
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2642424-0!canonical and timestamp 20220401133203 and revision id 1565203. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=不連続線型写像&amp;oldid=1565203">http://localhost:8080/w/index.php?title=不連続線型写像&amp;oldid=1565203</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%96%A2%E6%95%B0%E8%A7%A3%E6%9E%90%E5%AD%A6" title="カテゴリ:関数解析学">関数解析学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%86%99%E5%83%8F" title="カテゴリ:写像">写像</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;returntoquery=curid%3D2642424%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;returntoquery=curid%3D2642424%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;oldid=1565203" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E4%B8%8D%E9%80%A3%E7%B6%9A%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年7月4日 (土) 10:55 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.266","walltime":"0.578","ppvisitednodes":{"value":1622,"limit":1000000},"postexpandincludesize":{"value":77743,"limit":2097152},"templateargumentsize":{"value":2161,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":31,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1804,"limit":5000000},"timingprofile":["100.00%  480.329      1 -total"," 59.71%  286.808      1 テンプレート:Functional_Analysis"," 58.73%  282.100      1 テンプレート:Navbox"," 48.90%  234.863     30 テンプレート:仮リンク"," 14.26%   68.513      1 テンプレート:Main"," 13.51%   64.873      1 テンプレート:Rellink"," 12.87%   61.811      1 テンプレート:See/core"," 10.68%   51.278      1 テンプレート:Cite_journal","  8.44%   40.542      1 テンプレート:Citation/core","  7.99%   38.386      1 テンプレート:Ill2"]},"scribunto":{"limitreport-timeusage":{"value":"0.150","limit":"7"},"limitreport-virtmemusage":{"value":6254592,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401133203","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":786});});</script>
+</body></html>

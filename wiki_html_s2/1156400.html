@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>マイクロアーキテクチャ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-マイクロアーキテクチャ rootpage-マイクロアーキテクチャ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">マイクロアーキテクチャ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>マイクロアーキテクチャ</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">microarchitecture</span>、短縮形で <span lang="en">μarch</span> とも）とは、用語の生まれた当初としては<a href="." id="link_a_2" title="マイクロプログラム方式">マイクロプログラム方式</a>における<a href="." id="link_a_3" title="コンピュータ・アーキテクチャ">コンピュータ・アーキテクチャ</a>という意味であった。内容は実質的には変わらないが、マイクロプログラム方式をとらない<a href="." id="link_a_4" title="プロセッサ">プロセッサ</a>も増えた現在では、<b><a href="." id="link_a_5" title="命令セット">命令セット</a>アーキテクチャ</b>より下位の、実装におけるアーキテクチャ、を指してそう呼んでいる。
+</p><p>具体的には<a href="." id="link_a_6" title="CPU">CPU</a>、<a href="." id="link_a_7" title="デジタルシグナルプロセッサ">DSP</a>などの<a href="." id="link_a_8" title="ハードウェア">ハードウェア</a>の動作を完全に記述できるような<a href="." id="link_a_9" title="電子回路">電子回路</a>の設計や実装を指す。学術的用語には「コンピュータ構成」もあるが、プロセッサ業界ではマイクロアーキテクチャという用語がよく使われる。
+</p><p>マイクロアーキテクチャと命令コードの設計（<a href="." id="link_a_10" title="命令セットアーキテクチャ">命令セットアーキテクチャ</a>、ISA）は、共にコンピュータ設計の一部である。なお<a href="." id="link_a_11" title="インテル">インテル</a>の場合は、主に命令セットを「アーキテクチャ」、各マイクロプロセッサの設計（実装）を「マイクロアーキテクチャ」と呼ぶ場合が多い（例：<a href="." id="link_a_12" title="IA-32">IA-32</a>インテル アーキテクチャ、<a href="." id="link_a_13" title="Coreマイクロアーキテクチャ">Coreマイクロアーキテクチャ</a>）。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#歴史"><span class="tocnumber">1</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#命令セットアーキテクチャとの関係"><span class="tocnumber">2</span> <span class="toctext">命令セットアーキテクチャとの関係</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#現代のマイクロアーキテクチャ"><span class="tocnumber">3</span> <span class="toctext">現代のマイクロアーキテクチャ</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#マイクロアーキテクチャの設計概念"><span class="tocnumber">4</span> <span class="toctext">マイクロアーキテクチャの設計概念　</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#命令セットの選択"><span class="tocnumber">4.1</span> <span class="toctext">命令セットの選択</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#パイプライン処理（パイプライン化）"><span class="tocnumber">4.2</span> <span class="toctext">パイプライン処理（パイプライン化）</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#キャッシュ"><span class="tocnumber">4.3</span> <span class="toctext">キャッシュ</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#分岐予測"><span class="tocnumber">4.4</span> <span class="toctext">分岐予測</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#スーパースカラー"><span class="tocnumber">4.5</span> <span class="toctext">スーパースカラー</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#アウトオブオーダー"><span class="tocnumber">4.6</span> <span class="toctext">アウトオブオーダー</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#投機実行"><span class="tocnumber">4.7</span> <span class="toctext">投機実行</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#マルチプロセッシングとマルチスレッディング"><span class="tocnumber">4.8</span> <span class="toctext">マルチプロセッシングとマルチスレッディング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#読書案内"><span class="tocnumber">7</span> <span class="toctext">読書案内</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=1" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/1950%E5%B9%B4%E4%BB%A3" title="1950年代">1950年代</a>から<a href="/wiki/1970%E5%B9%B4%E4%BB%A3" title="1970年代">1970年代</a>にかけて作られた多くのコンピューターはコンピューターの命令列をデコードし実行するための<a class="new" href="/w/index.php?title=%E5%88%B6%E5%BE%A1%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="制御ロジック (存在しないページ)">制御ロジック</a>を<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%96%B9%E5%BC%8F" title="マイクロプログラム方式">マイクロプログラム方式</a>によって実現していた。マイクロプログラムのワード内のビットは、実際に計算を行うユニットを制御する電気信号であった。この時代、マイクロアーキテクチャという用語はマイクロプログラムのワードによって制御されるユニットについて記述するために用いられた。
+</p>
+<h2><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.E3.81.A8.E3.81.AE.E9.96.A2.E4.BF.82"></span><span class="mw-headline" id="命令セットアーキテクチャとの関係">命令セットアーキテクチャとの関係</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=2" title="節を編集: 命令セットアーキテクチャとの関係">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>マイクロアーキテクチャとコンピュータの<a class="mw-redirect" href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="命令セットアーキテクチャ">命令セットアーキテクチャ</a>ははっきり区別される。命令セットアーキテクチャは<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>（<a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a>）プログラマから見たコンピュータシステムの抽象的なイメージであり、<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a>、<a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%BC%E3%83%89" title="アドレッシングモード">メモリアドレス指定のモード</a>や、<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>、アドレスやデータのフォーマットなどを含むものである。コンピュータ構成<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>とはISAよりももっと低いレベルで具体的にシステムを記述したものである。
+</p><p>コンピュータの構成は、システムを形作る要素と、アーキテクチャの仕様を実現するためにそれらがどのように接続され、相互作用するかを示す<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。
+</p><p>異なるマシンが同じ命令セットアーキテクチャをもつ場合もあり、すなわち同じプログラムを実行可能であるが、異なるマイクロアーキテクチャを持つ場合がある。こうした異なるマイクロアーキテクチャは（半導体製造技術の進歩とともに）新しい世代のプロセッサが以前の世代に較べ高い性能レベルを発揮するといったことを可能にしている。理論的には、ひとつのマイクロアーキテクチャは（特にそれが<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%BC%E3%83%89" title="マイクロコード">マイクロコード</a>を含んでいれば）、異なった2つの<a class="mw-redirect" href="/wiki/%E5%88%B6%E5%BE%A1%E8%A8%98%E6%86%B6" title="制御記憶">制御記憶</a>をプログラムすることで2つの異なる命令セットを実現するために用いることができる。
+</p><p>マシンのマイクロアーキテクチャは通常、マシンのレジスタ、バス、機能ブロックの接続を示す<a href="/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E5%9B%B3" title="ブロック図">ブロック図</a>で表現される。図にはいくつもの<a href="/wiki/%E5%AE%9F%E8%A1%8C%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="実行ユニット">実行ユニット</a>（たとえば<a class="mw-redirect" href="/wiki/%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9" title="浮動小数点">浮動小数点</a>、<a href="/wiki/%E6%95%B4%E6%95%B0" title="整数">整数</a>、<a href="/wiki/%E5%88%86%E5%B2%90%E4%BA%88%E6%B8%AC" title="分岐予測">分岐予測</a>、単一命令による複数データ演算（<a href="/wiki/SIMD" title="SIMD">SIMD</a>など）や、パイプラインの構造（たとえば簡単なものでは命令フェッチ、デコード、割り当て、実行などのステージを含むかもしれない）、<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュメモリ</a>の設計（レベル1、レベル2インターフェイス）、周辺機器のサポートなどが含まれる。
+</p><p>実際の物理的な回路のレイアウトや、ハードウェアの構造、パッケージ、そのほか物理的な詳細はマイクロアーキテクチャの<b>実装</b>と呼ばれる。2つのマシンは同じマイクロアーキテクチャを持つ可能性があり、すなわち同じブロック図で表現されるが、異なったハードウェア実装である可能性がある<sup class="reference" id="cite_ref-hennessy_5-0"><a href="#cite_note-hennessy-5">[5]</a></sup>。
+</p>
+<h2><span id=".E7.8F.BE.E4.BB.A3.E3.81.AE.E3.83.9E.E3.82.A4.E3.82.AF.E3.83.AD.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3"></span><span class="mw-headline" id="現代のマイクロアーキテクチャ">現代のマイクロアーキテクチャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=3" title="節を編集: 現代のマイクロアーキテクチャ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3%E5%87%A6%E7%90%86" title="パイプライン処理">パイプライン処理</a>は、現代的なマイクロアーキテクチャで最も使われているデータ処理方法である。この手法はほとんどの近代的なマイクロプロセッサ、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a>、<a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="デジタルシグナルプロセッサ">DSP</a>に用いられている。パイプライン設計は複数の重複した実行処理ができ、あたかも工場の組み立てラインのようにふるまう。マイクロアーキテクチャ設計におけるパイプライン処理にはいくつかの基本的なステージがある<sup class="reference" id="cite_ref-hennessy_5-1"><a href="#cite_note-hennessy-5">[5]</a></sup>。ステージにはフェッチ、デコード、実行、そして書き出しなどがあり、それ以外の、たとえばメモリアクセスなどのステージを含むアーキテクチャもある。パイプラインの設計は、マイクロアークテクチャ設計で行う中心的な仕事の一つである。
+</p><p>実行ユニットもマイクロアークテクチャには欠かせないものである。実行処理ユニットには<a class="mw-redirect" href="/wiki/%E6%BC%94%E7%AE%97%E8%AB%96%E7%90%86%E8%A3%85%E7%BD%AE" title="演算論理装置">演算論理装置</a> (ALU)、<a href="/wiki/FPU" title="FPU">浮動小数点ユニット</a> (FPU)、ロード/ストアユニット、分岐予想ユニット、複数命令を処理する<a href="/wiki/SIMD" title="SIMD">SIMD</a>からなる。これらのユニットがプロセッサの制御や演算を行う。実行ユニット数の選択、それらの処理時間（<a href="/wiki/%E3%83%AC%E3%82%A4%E3%83%86%E3%83%B3%E3%82%B7" title="レイテンシ">レイテンシ</a>）と処理能力（<a href="/wiki/%E3%82%B9%E3%83%AB%E3%83%BC%E3%83%97%E3%83%83%E3%83%88" title="スループット">スループット</a>）は、マイクロアーキテクチャ設計の作業のうちで中心的なものである。サイズ、レイテンシとスループットとシステムのメモリへの接続も、マイクロアーキテクチャ的な設計上の決定事項である。
+</p><p>システムレベルの設計事項のうち、たとえば<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="メモリコントローラ">メモリコントローラ</a>などの<a class="new" href="/w/index.php?title=%E5%91%A8%E8%BE%BA%E5%9B%9E%E8%B7%AF&amp;action=edit&amp;redlink=1" title="周辺回路 (存在しないページ)">周辺回路</a>を含むかどうか、といったこともマイクロアーキテクチャ設計プロセスの一部と考えられている。これにはパフォーマンスや接続方法についての選択も含まれる。
+</p><p>アーキテクチャ設計とは異なり、特定のパフォーマンスレベルを目指す際、マイクロアーキテクチャ設計では、制約条件により綿密に注意が払われる。マイクロアークテクチャの設計上の決定事項は直結的にシステムに影響するため、以下のような問題に注意を払わなければならない。
+</p>
+<ul><li>チップの面積とコスト</li>
+<li>消費電力</li>
+<li>ロジックの複雑さ</li>
+<li>接続の容易性</li>
+<li>製造の容易さ</li>
+<li>デバッグの簡単さ</li>
+<li>試験をする方法、能力</li></ul>
+<h2><span id=".E3.83.9E.E3.82.A4.E3.82.AF.E3.83.AD.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3.E3.81.AE.E8.A8.AD.E8.A8.88.E6.A6.82.E5.BF.B5"></span><span class="mw-headline" id="マイクロアーキテクチャの設計概念">マイクロアーキテクチャの設計概念　</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=4" title="節を編集: マイクロアーキテクチャの設計概念　">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>一般的に全てのCPUは、シングルチップでもマルチチップのマイクロプロセッサでも、プログラムを走らせるとき次のような段階的な演算をする。
+</p>
+<ol><li><a href="/wiki/%E5%91%BD%E4%BB%A4_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="命令 (コンピュータ)">命令</a>の読み込みとデコード</li>
+<li>命令と必要なデータとの関連付け</li>
+<li>命令の実行</li>
+<li>出力結果の書き出し</li></ol>
+<p>一見簡単に見える一つながり処理の連続を複雑なものにしているのは、<a href="/wiki/%E4%B8%BB%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE" title="主記憶装置">メインメモリ</a>と<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF" title="ハードディスク">ハードディスク</a>など<a href="/wiki/%E4%B8%8D%E6%8F%AE%E7%99%BA%E6%80%A7%E3%83%A1%E3%83%A2%E3%83%AA" title="不揮発性メモリ">不揮発性記憶装置</a>（プログラムの命令とデータが保存される）などで形成される階層的な記憶装置が、常にプロセッサ本体より低速であるという事実である。ステップ2はしばしばコンピュータの<a href="/wiki/%E3%83%90%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="バス (コンピュータ)">バス</a>からデータが到着する際に（CPUの世界では）長大な遅延を発生させる。こうした遅延を可能な限り回避できるような設計のために、膨大な量の研究結果が費やされている。長い間、一つの中心的な目標は、複数の命令を並列に実行させ、実効的なプログラムの実行速度を向上させることであった。こうした努力により複雑な論理回路や回路構造が導入された。当初はそのような手法は、必要な回路の規模から高価なメインフレームやスーパーコンピュータにのみ適用可能であった。半導体生産技術が進歩するにつれ、こうした手法が1つの半導体のチップにより多く搭載できるようになった。
+</p>
+<dl><dd><a href="/wiki/CPU" title="CPU">CPU</a>の記事に、CPUの処理の基本についてより詳細な議論がある。</dd>
+<dd><a class="new" href="/w/index.php?title=En:History_of_general_purpose_CPUs&amp;action=edit&amp;redlink=1" title="En:History of general purpose CPUs (存在しないページ)">en:History of general purpose CPUs</a> の記事に、CPU発展の歴史についてより詳細な議論がある。</dd></dl>
+<p><b>以下は、現代的なCPUに一般的なマイクロアーキテクチャ技術についての調査である。</b>
+</p>
+<h3><span id=".E5.91.BD.E4.BB.A4.E3.82.BB.E3.83.83.E3.83.88.E3.81.AE.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="命令セットの選択">命令セットの選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=5" title="節を編集: 命令セットの選択">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88" title="命令セット">命令セット</a>」を参照</div>
+<p>どの<a class="mw-redirect" href="/wiki/%E5%91%BD%E4%BB%A4%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="命令セットアーキテクチャ">命令セットアーキテクチャ</a>を用いるかという選択は、高性能の装置を実現する上での複雑さに大きく影響する。長い年月をかけて、コンピュータのアーキテクトたちは命令セットを簡潔なものにするよう努力してきた。これによって設計者たちが命令セットの自体の複雑さに注力せず、性能を向上させる機能に労力と時間を費やすことができ、高い性能の実現が可能となった。一方で、1970年代の<a href="/wiki/Intel_8086" title="Intel 8086">8086</a>に始まる<a href="/wiki/X86" title="X86">x86</a>の命令セットが、32ビット（<a href="/wiki/IA-32" title="IA-32">IA-32</a>）、64ビット（<a href="/wiki/X64" title="X64">x64</a>）と拡張を重ねつつ2020年代にも有力な命令セットとして存続しているように、過去との互換性を重視する例も存在する。
+</p><p>命令セットの設計は<a href="/wiki/CISC" title="CISC">CISC</a>から<a href="/wiki/RISC" title="RISC">RISC</a>、<a href="/wiki/VLIW" title="VLIW">VLIW</a>、<a href="/wiki/EPIC%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="EPICアーキテクチャ">EPIC</a>へと進歩してきた。また<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ並列性</a>をうまく扱うためのアーキテクチャとして<a href="/wiki/SIMD" title="SIMD">SIMD</a>と<a class="mw-redirect" href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="ベクトルプロセッサ">ベクトルプロセッサ</a>がある。
+</p>
+<h3><span id=".E3.83.91.E3.82.A4.E3.83.97.E3.83.A9.E3.82.A4.E3.83.B3.E5.87.A6.E7.90.86.EF.BC.88.E3.83.91.E3.82.A4.E3.83.97.E3.83.A9.E3.82.A4.E3.83.B3.E5.8C.96.EF.BC.89"></span><span class="mw-headline" id="パイプライン処理（パイプライン化）">パイプライン処理（パイプライン化）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=6" title="節を編集: パイプライン処理（パイプライン化）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" title="命令パイプライン">命令パイプライン</a>」を参照</div>
+<p>パフォーマンスを向上させるための最も重要な、そしてもっとも強力な手法の一つは命令パイプラインを用いることである。初期のプロセッサの設計では、プロセッサは上記のステップのすべてを次の命令に移る前に実行していた。これでは回路の大部分が上記の各ステップで待機状態になってしまう。たとえば実行やそのほかの段階では命令でコードの回路は待機状態になる。
+</p><p>パイプラインは、一定数の命令がプロセッサ内で同時に動作できるようにすることで性能を向上させる。また同じ簡単な例では、プロセッサは最後の命令が結果が出るのを待っている間に新しい命令をデコード開始する（ステップ1）これにより、最大で4つの命令を同時に「動作状態」におくことができ、見かけ上のプロセッサの速度が4倍になる。どの命令も完了するのに同じ時間がかかるのだが依然4段階のステップがある）、CPUは結果として命令を大幅に早く片付けることができ、より高いクロック速度で動作することができる。
+</p><p>RISCでは各ステージをきれいに分割し、同じ長さの時間、すなわち1サイクルかかるようにすることで、パイプラインをより小さく、より簡単に構築できるようにする。プロセッサは結果として<a class="mw-redirect" href="/wiki/%E6%B5%81%E3%82%8C%E4%BD%9C%E6%A5%AD" title="流れ作業">製造ライン</a>のように、命令が片方から来て反対側から出て行くように動作する。複雑さを抑えた伝統的なRISCパイプラインにより、パイプライン化されたコアと命令キャッシュを、CISCであればコアのみしか入らないようなダイに両方搭載できるようになった。これがRISCが高速な理由であった。<a href="/wiki/SPARC" title="SPARC">SPARC</a>や<a href="/wiki/MIPS" title="MIPS">MIPS</a>のような初期の設計では、同クロック・同じ値段の <a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB" title="インテル">インテル</a> や <a href="/wiki/%E3%83%A2%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="モトローラ">モトローラ</a> のCISCチップに対してしばしば10倍以上高速に動作した。
+</p><p>パイプラインはRISCの設計に限定したものではまったくない。1986までに<a href="/wiki/VAX" title="VAX">VAX</a>の最上位機種 (8800) はかなりパイプライン化された設計で、MIPSとSPARCの最初の商業的な設計にわずかに早かった。今日ではほとんどのCPUがいまや（<a href="/wiki/%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="組み込みシステム">組み込み</a>用の物ですら）パイプライン化されており、パイプライン化されていないマイクロコードのCPUは面積に制約がある組み込み用プロセッサでしか見られない。VAX 8800から現代の <a href="/wiki/Pentium_4" title="Pentium 4">Pentium 4</a> と <a href="/wiki/Athlon" title="Athlon">Athlon</a> にいたる大規模なCISCマシンはマイクロコードとパイプラインの両方を使って実装されている。パイプラインとキャッシュの進歩が、マイクロアーキテクチャの進歩のうちもっとも重要なもので、プロセッサのパフォーマンスを製造技術の進歩とともに、高いペースでの性能向上の割合を保つことを可能にした。
+</p>
+<h3><span id=".E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5"></span><span class="mw-headline" id="キャッシュ">キャッシュ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=7" title="節を編集: キャッシュ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュメモリ</a>」を参照</div>
+<p>チップ製造技術の向上によってダイにより多くの回路を詰め込むことができるようになり、設計者がその使い道を探すようになったのはそれほど昔のことではなかった。もっともありふれた方法はダイに<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%A1%E3%83%A2%E3%83%AA" title="キャッシュメモリ">キャッシュ</a>をどんどん追加していくことだった。キャッシュは単純に高速なメモリであり、メインメモリと通信するのにかかる「長い」サイクルに対して数サイクルでアクセスすることができる。CPUはキャッシュの読み書きを自動化するキャッシュコントローラを搭載し、データがキャッシュ内に存在すればすぐに読み出すことができ、なければキャッシュコントローラが読み込む間プロセッサはストールする。
+</p><p>1980年代の中盤から後半に、RISCの設計でキャッシュを追加していくことが始まった。たいていは全体で4<a href="/wiki/%E3%82%AD%E3%83%AD%E3%83%90%E3%82%A4%E3%83%88" title="キロバイト">KB</a>のみであった。この数字は時代を経て増え続け、今や典型的なCPUは約512KBのキャッシュを搭載し、よりパワフルなCPUは、1～2MBあるいは4～8MBさえ搭載し、複数のレベルの<a class="new" href="/w/index.php?title=%E3%83%A1%E3%83%A2%E3%83%AA%E9%9A%8E%E5%B1%A4&amp;action=edit&amp;redlink=1" title="メモリ階層 (存在しないページ)">メモリ階層</a>が構成されている。一般的にいえば、大容量のキャッシュは高速化につながる。
+</p><p>キャッシュとパイプラインはお互いにとって完璧な組み合わせであった。それまでは、チップ外のメモリのレイテンシより高速に動作するパイプラインを作ってもあまり意味はなかった。オンチップのキャッシュメモリを使用することは、パイプラインがキャッシュのレイテンシ、すなわちより短い時間で動作できることを意味した。これによりプロセッサの動作周波数を、チップ外のメモリの速度の向上よりもかなり早いペースで向上させることができた。
+</p>
+<h3><span id=".E5.88.86.E5.B2.90.E4.BA.88.E6.B8.AC"></span><span class="mw-headline" id="分岐予測">分岐予測</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=8" title="節を編集: 分岐予測">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%88%86%E5%B2%90%E4%BA%88%E6%B8%AC" title="分岐予測">分岐予測</a>」を参照</div>
+<p><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令レベルの並列化</a>により高い性能を実現する上で障壁となるのが、<a href="/wiki/%E5%88%86%E5%B2%90%E5%91%BD%E4%BB%A4" title="分岐命令">分岐</a>によるパイプラインのストールとフラッシュである。通常、条件分岐が発生するかどうかは、レジスタの演算結果に依存するためパイプラインの後段にならないと分からない。プロセッサの命令デコーダが条件分岐命令に出会った時点から、問題となるレジスタの値が読み出せるようになるまでの時間、パイプラインは数サイクル停止する可能性がある。平均的には、命令の五分の一は分岐であり、つまり高い頻度でストールが発生する。実際に分岐が行われると事態はより深刻で、パイプラインにあった以降すべての命令を廃棄する必要がある。
+</p><p><a href="/wiki/%E5%88%86%E5%B2%90%E4%BA%88%E6%B8%AC" title="分岐予測">分岐予測</a>や<a class="mw-redirect" href="/wiki/%E6%8A%95%E6%A9%9F%E5%AE%9F%E8%A1%8C" title="投機実行">投機実行</a>などの手法が分岐によるペナルティを軽減させるために用いられる。分岐予測はハードウェアがある特定の分岐が起こるかどうかを推測する。推測により、プリフェッチ命令はレジスタの読み出しを待たなくてもよくなる。投機実行はこれを大きく発展させたもので、予測された経路のコードを、分岐が発生するかどうかがわかる前に実行してしまうものである。
+</p>
+<h3><span id=".E3.82.B9.E3.83.BC.E3.83.91.E3.83.BC.E3.82.B9.E3.82.AB.E3.83.A9.E3.83.BC"></span><span class="mw-headline" id="スーパースカラー">スーパースカラー</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=9" title="節を編集: スーパースカラー">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a>」を参照</div>
+<p>これまで述べてきたような方法を実装すると複雑さやゲート数が増大するのだが、半導体製造技術の向上により、すぐに多くのゲートが搭載できるようになってしまう。
+</p><p>上記に述べた方法では、プロセッサは一度に1つの命令の一部を実行する。もし複数の命令が同時に実行できれば、コンピュータのプログラムはより高速に動作するはずである。これが<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a>の実現するもので、そのためにALUなどの機能ユニットを複数個搭載する。機能ユニットを複数搭載することは、シングルイシューのプロセッサのダイサイズが安定して生産できるダイサイズについていかなくなって初めて意味がある。1980年代の後半までには、スーパースケーラの設計が市場に登場し始めた。
+</p><p>現代的な設計では、ロードユニットを二つ、ストアユニットを1つ（多くの命令はストアする結果がないため）、2つ以上の整数演算ユニットと浮動小数点ユニット、何らかの<a href="/wiki/SIMD" title="SIMD">SIMD</a>ユニットがよく見られる。命令発行のロジックはメモリから膨大な命令列を読み込み、その時点でアイドルになっている実行ユニットに引き渡すため複雑さが増大する。処理の結果は最後に集められ、並べ替えられる。
+</p>
+<h3><span id=".E3.82.A2.E3.82.A6.E3.83.88.E3.82.AA.E3.83.96.E3.82.AA.E3.83.BC.E3.83.80.E3.83.BC"></span><span class="mw-headline" id="アウトオブオーダー">アウトオブオーダー</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=10" title="節を編集: アウトオブオーダー">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウト・オブ・オーダー実行">アウト・オブ・オーダー実行</a>」を参照</div>
+<p>キャッシュの導入により、ストールの頻度やメモリ階層からのフェッチ待ちの時間を減少させることができるが、ストールを完全に排除できる訳ではない。初期の設計では、キャッシュミスがキャッシュコントローラにプロセッサを停止させ待機させるようになっていた。もちろん、その時点でプログラム内にキャッシュのデータが利用可能な別の命令が存在する可能性がある。<a class="mw-redirect" href="/wiki/%E3%82%A2%E3%82%A6%E3%83%88%E3%82%AA%E3%83%96%E3%82%AA%E3%83%BC%E3%83%80%E3%83%BC%E5%AE%9F%E8%A1%8C" title="アウトオブオーダー実行">アウトオブオーダー実行</a>は、実行可能な命令が、以前の命令がキャッシュ待ちになっている間に（先に）処理できるようにし、すべてがプログラムされた順序で発生したかのように結果を並び替えることを可能にする。
+</p>
+<h3><span id=".E6.8A.95.E6.A9.9F.E5.AE.9F.E8.A1.8C"></span><span class="mw-headline" id="投機実行">投機実行</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=11" title="節を編集: 投機実行">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%8A%95%E6%A9%9F%E7%9A%84%E5%AE%9F%E8%A1%8C" title="投機的実行">投機的実行</a>」を参照</div>
+<p>命令パイプラインの問題点の一つは、実行が継続できる前に進む方向が完全に決まっていなければならないような類の命令である。具体的には、条件分岐は、どちらの分岐に進むべきかを決定する前に、先行する命令の結果を知る必要がある。たとえば、「xが5より大きければこの処理、そうでなければこの処理」といった命令は、後続の命令をフェッチしてよいかを判断する前に、x の結果を待たなければならない。
+</p><p>簡単な4段パイプラインでは、遅延が最大3サイクルで、依然デコードを実行できる。しかし、クロック速度が向上すると、それにともなってパイプラインの段数が増え、現代のプロセッサでは20ステージ以上に達している。この場合、そうした命令が現れるたびにサイクルの大半CPUが停止してしまう。
+</p><p>解決方法、あるいはその一つは、<a class="mw-redirect" href="/wiki/%E6%8A%95%E6%A9%9F%E5%AE%9F%E8%A1%8C" title="投機実行">投機実行</a>、別名<a href="/wiki/%E5%88%86%E5%B2%90%E4%BA%88%E6%B8%AC" title="分岐予測">分岐予測</a>である。分岐のどちらに進むは、実際には片方に偏っており、単純に処理を進めて 「xはおそらく5より小さいので、こちらの処理を開始」のようにして問題ない。予測の結果が正しければ、かなりの時間が節約できる。近代的な設計はさらに複雑な予測機構を持っており、過去の分岐の結果を監視して未来の分岐方向をかなりの精度で予測する。
+</p>
+<h3><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AD.E3.82.BB.E3.83.83.E3.82.B7.E3.83.B3.E3.82.B0.E3.81.A8.E3.83.9E.E3.83.AB.E3.83.81.E3.82.B9.E3.83.AC.E3.83.83.E3.83.87.E3.82.A3.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="マルチプロセッシングとマルチスレッディング">マルチプロセッシングとマルチスレッディング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=12" title="節を編集: マルチプロセッシングとマルチスレッディング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a>」および「<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">ハードウェアマルチスレッディング</a>」を参照</div>
+<p>コンピュータのアーキテクトたちは、CPUの動作周波数と<a class="mw-redirect" href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%A1%E3%83%A2%E3%83%AA" title="ダイナミックランダムアクセスメモリ">DRAM</a>のアクセス時間との乖離に悩まされてきた。1つのプログラム内の命令レベルの並列化を利用した手法はいずれも、メインメモリからデータをフェッチする場合には長いストールを発生させる可能性がある。さらに、高度な命令レベル並列化のための膨大な数のトランジスタと高い動作周波数により発生する熱は、もはや安価に冷却できるレベルではなくなった。こうした理由により、新しい世代のコンピュータは、1つのプログラムや<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a>の範囲を超えたより高い次元の並列化手法を用い始めた。
+</p><p>このトレンドは「スループットコンピューティング」としても知られる。この考え方は、もともとは<a href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0" title="メインフレーム">メインフレーム</a>の市場で<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E5%87%A6%E7%90%86" title="オンライントランザクション処理">オンライントランザクション処理</a>が1トランザクションの速度ではなく、膨大な数のトランザクションを処理できる能力を強調したことに由来する。ネットワークの<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ルーティング">ルーティング</a>や<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">Webサーバ</a>などのこの10年で急速に増加したトランザクション的なアプリケーションに対して、コンピュータ業界は再び容量とスループットの問題を強調してきている。
+</p><p>並列性を実現する方法の一つは<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a>、つまり複数のCPUを搭載したシステムを用いることである。かつてはハイエンドのメインフレームや<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a>のためのものであったが、小規模の2-8個のマイクロプロセッサを搭載したサーバはスモールビジネスの市場で一般的になっていた。大企業では、大規模（16-256個）のものが一般的である。さらに複数のCPUを搭載した<a href="/wiki/%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="パーソナルコンピュータ">パーソナルコンピュータ</a>が1990年代に登場した。
+</p><p>半導体技術の進歩によってもたらされる、さらなるトランジスタサイズの減少はさらに進み、複数のCPUが同じシリコンチップ上に実装された<a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a>CPUが登場している。はじめは組み込み市場をターゲットとし、シンプルで小さなCPUのみ1つのシリコン上に実装可能であった。2005年までに、半導体技術の進歩によりハイエンドのデスクトップCPUを二つ搭載した <a href="/wiki/CMP" title="CMP">CMP</a><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>チップを大量生産することが可能となった。<a class="mw-redirect" href="/wiki/%E3%82%B5%E3%83%B3%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サンマイクロシステムズ">サンマイクロシステムズ</a>の <a href="/wiki/UltraSPARC_T1" title="UltraSPARC T1">UltraSPARC T1</a> のように、単純な（スカラー、インオーダーの）設計を踏襲し、1つのシリコンにより多くのプロセッサを詰め込む事を選択したものもある。
+</p><p>また、最近よく用いられるようになった技術として<a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a>がある。マルチスレッディングでは、プロセッサが低速なシステムのメモリからデータをフェッチする際、データの到着のためにストールする代わりに、プロセッサは実行可能な別のプログラムあるいはスレッドに切り替えを行う。これは特定のプログラムやスレッドの動作を高速化するものではないが、CPUの<a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AA%E3%83%B3%E3%82%B0" title="アイドリング">アイドル</a>時間を減少させることで全体的なシステムのスループットを向上させる。
+</p><p>概念的には、マルチスレッディングはオペレーティングシステムレベルの<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81" title="コンテキストスイッチ">コンテキストスイッチ</a>と等価である。違いは、マルチスレッド化されたCPUが通常のコンテキストスイッチが必要とする数百から数千のCPUサイクルを1サイクルで行ってしまうという点である。これはCPUの状態ハードウェア（<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="レジスタファイル">レジスタファイル</a>や<a class="mw-redirect" href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BF" title="プログラムカウンタ">プログラムカウンタ</a>など）をアクティブなスレッドごとに持つことにより実現される。
+</p><p>さらなる改善方法として、<a href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="同時マルチスレッディング">同時マルチスレッディング</a>がある。この技術は、スーパースケーラCPUに異なるプログラム（スレッド）の命令を同じCPUサイクルで複数実行させるものである。
+</p>
+<dl><dd><a class="new" href="/w/index.php?title=En:History_of_general_purpose_CPUs&amp;action=edit&amp;redlink=1" title="En:History of general purpose CPUs (存在しないページ)">History of general purpose CPUs</a>の記事に、CPUの設計に影響を与えている研究分野のトピックが述べられている。</dd></dl>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=13" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/CPU%E5%B9%B4%E8%A1%A8" title="CPU年表">CPU年表</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9" title="マイクロコントローラ">マイクロコントローラ</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="デジタルシグナルプロセッサ">デジタルシグナルプロセッサ</a></li>
+<li><a href="/wiki/CPU%E8%A8%AD%E8%A8%88" title="CPU設計">CPU設計</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%98%E8%BF%B0%E8%A8%80%E8%AA%9E" title="ハードウェア記述言語">ハードウェア記述言語</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" title="ハードウェアアーキテクチャ (存在しないページ)">ハードウェアアーキテクチャ</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ハーバードアーキテクチャ">ハーバードアーキテクチャ</a></li>
+<li><a href="/wiki/%E3%83%8E%E3%82%A4%E3%83%9E%E3%83%B3%E5%9E%8B" title="ノイマン型">フォンノイマンアーキテクチャ</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E3%83%91%E3%82%B9&amp;action=edit&amp;redlink=1" title="データパス (存在しないページ)">データパス</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%83%AD%E3%83%BC" title="データフロー">データフロー</a>アーキテクチャ</li>
+<li><a class="mw-redirect" href="/wiki/VLSI" title="VLSI">VLSI</a></li>
+<li><a href="/wiki/VHDL" title="VHDL">VHDL</a></li>
+<li><a href="/wiki/Verilog" title="Verilog">Verilog</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="ストリームプロセッシング">ストリームプロセッシング</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=14" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英語</a>: <span lang="en">computer organization</span></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Phillip A. Laplante (2001). <i>Dictionary of Computer Science, Engineering, and Technology</i>. CRC Press. pp. 94–95. ISBN 0849326915</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Dictionary+of+Computer+Science%2C+Engineering%2C+and+Technology&amp;rft.aulast=Phillip+A.+Laplante&amp;rft.au=Phillip+A.+Laplante&amp;rft.date=2001&amp;rft.pages=pp.%26nbsp%3B94%26ndash%3B95&amp;rft.pub=CRC+Press&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">William F. Gilreath and Phillip A. Laplante (2003). <i>Computer Architecture: A Minimalist Perspective</i>. Springer. pp. 5. ISBN 1402074166</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Architecture%3A+A+Minimalist+Perspective&amp;rft.aulast=William+F.+Gilreath+and+Phillip+A.+Laplante&amp;rft.au=William+F.+Gilreath+and+Phillip+A.+Laplante&amp;rft.date=2003&amp;rft.pages=pp.%26nbsp%3B5&amp;rft.pub=Springer&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Sivarama P. Dandamudi (2003). <i>Fundamentals of Computer Organization and Design</i>. Springer. pp. 5. ISBN 038795211X</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Computer+Organization+and+Design&amp;rft.aulast=Sivarama+P.+Dandamudi&amp;rft.au=Sivarama+P.+Dandamudi&amp;rft.date=2003&amp;rft.pages=pp.%26nbsp%3B5&amp;rft.pub=Springer&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-hennessy-5">^ <a href="#cite_ref-hennessy_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-hennessy_5-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation book" style="font-style:normal">John L. Hennessy and David A. Patterson (2003). <i>Computer Architecture: A Quantitative Approach</i> (Third Edition ed.). Morgan Kaufmann Publishers, Inc. ISBN 1558605967</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Architecture%3A+A+Quantitative+Approach&amp;rft.aulast=John+L.+Hennessy+and+David+A.+Patterson&amp;rft.au=John+L.+Hennessy+and+David+A.+Patterson&amp;rft.date=2003&amp;rft.edition=Third+Edition&amp;rft.pub=Morgan+Kaufmann+Publishers%2C+Inc&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英</a>: <span lang="en">chip-level multiprocessing</span></span>
+</li>
+</ol></div>
+<h2><span id=".E8.AA.AD.E6.9B.B8.E6.A1.88.E5.86.85"></span><span class="mw-headline" id="読書案内">読書案内</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;section=15" title="節を編集: 読書案内">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" style="font-style:normal">D. Patterson and J. Hennessy (2004-08-02). <i>Computer Organization and Design: The Hardware/Software Interface</i>. Morgan Kaufmann Publishers, Inc.. ISBN 1558606041</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization+and+Design%3A+The+Hardware%2FSoftware+Interface&amp;rft.aulast=D.+Patterson+and+J.+Hennessy&amp;rft.au=D.+Patterson+and+J.+Hennessy&amp;rft.date=2004-08-02&amp;rft.pub=Morgan+Kaufmann+Publishers%2C+Inc.&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">V. C. Hamacher, Z. G. Vrasenic, and S. G. Zaky (2001-08-02). <i>Computer Organization</i>. McGraw-Hill. ISBN 0072320869</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization&amp;rft.aulast=V.+C.+Hamacher%2C+Z.+G.+Vrasenic%2C+and+S.+G.+Zaky&amp;rft.au=V.+C.+Hamacher%2C+Z.+G.+Vrasenic%2C+and+S.+G.+Zaky&amp;rft.date=2001-08-02&amp;rft.pub=McGraw-Hill&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">William Stallings (2002-07-15). <i>Computer Organization and Architecture</i>. Prentice Hall. ISBN 0130351199</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization+and+Architecture&amp;rft.aulast=William+Stallings&amp;rft.au=William+Stallings&amp;rft.date=2002-07-15&amp;rft.pub=Prentice+Hall&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">J. P. Hayes (2002-09-03). <i>Computer Architecture and Organization</i>. McGraw-Hill. ISBN 0072861983</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Architecture+and+Organization&amp;rft.aulast=J.+P.+Hayes&amp;rft.au=J.+P.+Hayes&amp;rft.date=2002-09-03&amp;rft.pub=McGraw-Hill&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Gary Michael Schneider (1985). <i>The Principles of Computer Organization</i>. Wiley. pp. 6–7. ISBN 0471885525</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Principles+of+Computer+Organization&amp;rft.aulast=Gary+Michael+Schneider&amp;rft.au=Gary+Michael+Schneider&amp;rft.date=1985&amp;rft.pages=pp.%26nbsp%3B6%26ndash%3B7&amp;rft.pub=Wiley&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">M. Morris Mano (1992-10-19). <i>Computer System Architecture</i>. Prentice Hall. pp. 3. ISBN 0131755633</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+System+Architecture&amp;rft.aulast=M.+Morris+Mano&amp;rft.au=M.+Morris+Mano&amp;rft.date=1992-10-19&amp;rft.pages=pp.%26nbsp%3B3&amp;rft.pub=Prentice+Hall&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Mostafa Abd-El-Barr and Hesham El-Rewini (2004-12-03). <i>Fundamentals of Computer Organization and Architecture</i>. Wiley-Interscience. pp. 1. ISBN 0471467413</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Computer+Organization+and+Architecture&amp;rft.aulast=Mostafa+Abd-El-Barr+and+Hesham+El-Rewini&amp;rft.au=Mostafa+Abd-El-Barr+and+Hesham+El-Rewini&amp;rft.date=2004-12-03&amp;rft.pages=pp.%26nbsp%3B1&amp;rft.pub=Wiley-Interscience&amp;rfr_id=info:sid/ja.wikipedia.org:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3"><span style="display: none;"> </span></span></li>
+<li><a class="external text" href="http://www.computer.org" rel="nofollow">IEEE Computer Society</a></li>
+<li><a class="external text" href="http://www.extremetech.com/article2/0,1697,17414,00.asp" rel="nofollow">PC Processor Microarchitecture</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331234738
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.223 seconds
+Real time usage: 0.264 seconds
+Preprocessor visited node count: 8567/1000000
+Post‐expand include size: 45100/2097152 bytes
+Template argument size: 10642/2097152 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4866/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5242880/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  210.006      1 -total
+ 48.90%  102.685     11 テンプレート:Cite_book
+ 42.35%   88.939     11 テンプレート:Citation/core
+ 34.25%   71.937      8 テンプレート:Main
+ 32.00%   67.194      8 テンプレート:Rellink
+ 27.71%   58.184      9 テンプレート:See/core
+  7.45%   15.649      3 テンプレート:LangWithName
+  5.52%   11.592      1 テンプレート:Lang-en
+  4.42%    9.287      2 テンプレート:Lang-en-short
+  4.26%    8.947     11 テンプレート:Citation/showdateEN
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1156400-0!canonical and timestamp 20220331234738 and revision id 712090. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=マイクロアーキテクチャ&amp;oldid=712090">http://localhost:8080/w/index.php?title=マイクロアーキテクチャ&amp;oldid=712090</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:マイクロアーキテクチャ">マイクロアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:CPU" title="カテゴリ:CPU">CPU</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:マイクロプロセッサ">マイクロプロセッサ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:コンピュータアーキテクチャ">コンピュータアーキテクチャ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D1156400%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;returntoquery=curid%3D1156400%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;oldid=712090" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年11月22日 (日) 10:17 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.223","walltime":"0.264","ppvisitednodes":{"value":8567,"limit":1000000},"postexpandincludesize":{"value":45100,"limit":2097152},"templateargumentsize":{"value":10642,"limit":2097152},"expansiondepth":{"value":16,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4866,"limit":5000000},"timingprofile":["100.00%  210.006      1 -total"," 48.90%  102.685     11 テンプレート:Cite_book"," 42.35%   88.939     11 テンプレート:Citation/core"," 34.25%   71.937      8 テンプレート:Main"," 32.00%   67.194      8 テンプレート:Rellink"," 27.71%   58.184      9 テンプレート:See/core","  7.45%   15.649      3 テンプレート:LangWithName","  5.52%   11.592      1 テンプレート:Lang-en","  4.42%    9.287      2 テンプレート:Lang-en-short","  4.26%    8.947     11 テンプレート:Citation/showdateEN"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5242880,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331234738","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":375});});</script>
+</body></html>

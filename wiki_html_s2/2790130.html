@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Piledriver (マイクロアーキテクチャ) - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Piledriver_マイクロアーキテクチャ rootpage-Piledriver_マイクロアーキテクチャ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Piledriver (マイクロアーキテクチャ)</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<table class="infobox" style="width:22em;"><caption class="" itemprop="name" style="">Piledriver</caption><tbody><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">生産時期</th><td class="" itemprop="" style="">
+2012年から</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">設計者</th><td class="" itemprop="" style="">
+<a href="." id="link_i_1" title="アドバンスト・マイクロ・デバイセズ">AMD</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">生産者</th><td class="" itemprop="" style="">
+<a href="." id="link_i_2" title="GLOBALFOUNDRIES">GLOBALFOUNDRIES</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">プロセスルール</th><td class="" itemprop="" style="">
+32 nm</td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">命令セット</th><td class="" itemprop="" style="">
+<a href="." id="link_i_3" title="X64">AMD64</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">パッケージ</th><td class="" itemprop="" style="">
+<a href="." id="link_i_4" title="AMD Fusion">AMD APU</a><br/><a href="." id="link_i_5" title="AMD FX">AMD FX</a><br/><a href="." id="link_i_6" title="Opteron">Opteron</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">前世代プロセッサ</th><td class="" itemprop="" style="">
+<a href="." id="link_i_7" title="Bulldozer (マイクロアーキテクチャ)">Bulldozer (マイクロアーキテクチャ)</a></td></tr><tr class="" itemprop="" style=""><th scope="row" style="text-align:left; white-space:nowrap;">次世代プロセッサ</th><td class="" itemprop="" style="">
+<a href="." id="link_i_8" title="Steamroller (マイクロアーキテクチャ)">Steamroller (マイクロアーキテクチャ)</a></td></tr><tr class="noprint"><td colspan="2" style="text-align:right; font-size:85%;">テンプレートを表示</td></tr></tbody></table>
+<p><b>Piledriver</b>（パイルドライバー）は、<a href="." id="link_a_1" title="アドバンスト・マイクロ・デバイセズ">AMD</a> (AMD) の <a href="." id="link_a_7" title="Bulldozer (マイクロアーキテクチャ)">Bulldozer (マイクロアーキテクチャ)</a> を改良した2世代目の Bulldozer 系マイクロアーキテクチャである。パフォーマンスおよびメインストリームの AMD APU は、本マイクロアーキテクチャから Bulldozer 系マイクロアーキテクチャを採用した。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#特徴"><span class="tocnumber">1</span> <span class="toctext">特徴</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#展開"><span class="tocnumber">2</span> <span class="toctext">展開</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#デスクトップ"><span class="tocnumber">2.1</span> <span class="toctext">デスクトップ</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#モバイル"><span class="tocnumber">2.2</span> <span class="toctext">モバイル</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#サーバー"><span class="tocnumber">2.3</span> <span class="toctext">サーバー</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#脚注"><span class="tocnumber">3</span> <span class="toctext">脚注</span></a></li>
+</ul>
+</div>
+<h2><span id=".E7.89.B9.E5.BE.B4"></span><span class="mw-headline" id="特徴">特徴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=1" title="節を編集: 特徴">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>オリジナルの Bulldozer と同様に 32 nm SOI プロセスで設計されてはいるが、複数の改善が加えられた。
+</p>
+<ul><li>IPC と動作周波数の向上</li>
+<li>分岐予測とハードウェア プリフェッチの改善</li>
+<li>浮動小数点演算と整数演算装置のスケジューラーの改善</li>
+<li>FMA3 命令と F16C 命令を追加</li>
+<li>L1 キャッシュの TLB を大容量化および L2 キャッシュの効率性を改善</li>
+<li>リーク電流の低減と電力および温度管理の改善</li></ul>
+<h2><span id=".E5.B1.95.E9.96.8B"></span><span class="mw-headline" id="展開">展開</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=2" title="節を編集: 展開">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.87.E3.82.B9.E3.82.AF.E3.83.88.E3.83.83.E3.83.97"></span><span class="mw-headline" id="デスクトップ">デスクトップ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=3" title="節を編集: デスクトップ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">A シリーズについては「<a class="mw-redirect" href="/wiki/AMD_Fusion" title="AMD Fusion">AMD Fusion</a>」を、FX シリーズについては「<a href="/wiki/AMD_FX" title="AMD FX">AMD FX</a>」を参照</div>
+<p>デスクトップ向けでは、A シリーズのメインストリーム帯の開発コード名 "Trinity" と、2013年に発表された "Richland" で採用された。パフォーマンス帯の <a href="/wiki/AMD_FX" title="AMD FX">AMD FX</a> では "Vishera" で本マイクロアーキテクチャが採用された。
+</p>
+<table class="wikitable" style="text-align:center;">
+<tbody><tr>
+<th rowspan="3">モデル
+</th>
+<th colspan="5">CPU
+</th>
+<th colspan="3">GPU
+</th>
+<th rowspan="3">TDP
+<p>(W)
+</p>
+</th>
+<th rowspan="3">DDR3
+<p>メモリー
+</p>
+</th>
+<th rowspan="3">Turbo
+<p>Core
+</p>
+</th>
+<th rowspan="3">対応
+<p>ソケット
+</p>
+</th></tr>
+<tr>
+<th rowspan="2">モジュール数<br/>（コア数）
+</th>
+<th colspan="2">動作周波数(GHz)
+</th>
+<th colspan="2">キャッシュ
+</th>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">コンフィグ
+</th>
+<th rowspan="2">周波数
+<p>(MHz)
+</p>
+</th></tr>
+<tr>
+<th>Base
+</th>
+<th>ターボ
+</th>
+<th>L2
+</th>
+<th>L3
+<p>(MB)
+</p>
+</th></tr>
+<tr>
+<td>FX-8350
+</td>
+<td rowspan="3">4 (8)
+</td>
+<td>4.0
+</td>
+<td>4.2
+</td>
+<td rowspan="3">2 MB x 4
+</td>
+<td rowspan="6">8
+</td>
+<td class="table-na" colspan="3" rowspan="8" style="background:#ececec;color:#2c2c2c;vertical-align:middle;font-size:smaller;text-align:center;">N/A
+</td>
+<td rowspan="2">125
+</td>
+<td rowspan="14">1866
+</td>
+<td bgcolor="#90ff90" rowspan="14">対応 (v3.0)
+</td>
+<td rowspan="8"><a href="/wiki/Socket_AM3%2B" title="Socket AM3+">AM3+</a>
+</td></tr>
+<tr>
+<td>FX-8320
+</td>
+<td>3.5
+</td>
+<td>4.0
+</td></tr>
+<tr>
+<td>FX-8300
+</td>
+<td>3.3
+</td>
+<td rowspan="2">4.2
+</td>
+<td>95
+</td></tr>
+<tr>
+<td>FX-6350
+</td>
+<td rowspan="2">3 (6)
+</td>
+<td>3.9
+</td>
+<td rowspan="2">2 MB x 3
+</td>
+<td>125
+</td></tr>
+<tr>
+<td>FX-6300
+</td>
+<td>3.5
+</td>
+<td>4.1
+</td>
+<td>95
+</td></tr>
+<tr>
+<td>FX-4350
+</td>
+<td rowspan="7">2 (4)
+</td>
+<td>4.2
+</td>
+<td>4.3
+</td>
+<td rowspan="7">2 MB x 2
+</td>
+<td>125
+</td></tr>
+<tr>
+<td>FX-4320
+</td>
+<td>4.0
+</td>
+<td>4.2
+</td>
+<td rowspan="2">4
+</td>
+<td rowspan="2">95
+</td></tr>
+<tr>
+<td>FX-4300
+</td>
+<td rowspan="2">3.8
+</td>
+<td>4.0
+</td></tr>
+<tr>
+<td>A10-5800K
+</td>
+<td>4.2
+</td>
+<td class="table-na" rowspan="6" style="background:#ececec;color:#2c2c2c;vertical-align:middle;font-size:smaller;text-align:center;">N/A
+</td>
+<td rowspan="2">HD 7660D
+</td>
+<td rowspan="2">384:24:8
+</td>
+<td>800
+</td>
+<td>100
+</td>
+<td rowspan="6"><a href="/wiki/Socket_FM2" title="Socket FM2">FM2</a>
+</td></tr>
+<tr>
+<td>A10-5700
+</td>
+<td>3.4
+</td>
+<td>4.0
+</td>
+<td rowspan="4">760
+</td>
+<td>65
+</td></tr>
+<tr>
+<td>A8-5600K
+</td>
+<td>3.6
+</td>
+<td>3.9
+</td>
+<td rowspan="2">HD 7560D
+</td>
+<td rowspan="2">256:16:8
+</td>
+<td>100
+</td></tr>
+<tr>
+<td>A8-5500
+</td>
+<td>3.3
+</td>
+<td>3.7
+</td>
+<td rowspan="3">65
+</td></tr>
+<tr>
+<td>A6-5400K
+</td>
+<td rowspan="2">1 (2)
+</td>
+<td>3.6
+</td>
+<td>3.8
+</td>
+<td rowspan="2">1 MB x 1
+</td>
+<td>HD 7540D
+</td>
+<td>192:12:4
+</td></tr>
+<tr>
+<td>A4-5300
+</td>
+<td>3.4
+</td>
+<td>3.6
+</td>
+<td>HD 7480D
+</td>
+<td>128:8:4
+</td>
+<td>723
+</td></tr></tbody></table>
+<h3><span id=".E3.83.A2.E3.83.90.E3.82.A4.E3.83.AB"></span><span class="mw-headline" id="モバイル">モバイル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=4" title="節を編集: モバイル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>モバイル向けでは、A シリーズのパフォーマンス帯およびメインストリーム帯の開発コード名 "Trinity" で採用された。
+</p>
+<table class="wikitable" style="text-align:center;">
+<tbody><tr>
+<th rowspan="3">モデル
+</th>
+<th colspan="4">CPU
+</th>
+<th colspan="4">GPU
+</th>
+<th rowspan="3">TDP
+<p>(W)
+</p>
+</th>
+<th rowspan="3">DDR3
+<p>メモリー
+</p>
+</th>
+<th rowspan="3">Turbo
+<p>Core
+</p>
+</th>
+<th rowspan="3">対応
+<p>ソケット
+</p>
+</th></tr>
+<tr>
+<th rowspan="2">モジュール数<br/>（コア数）
+</th>
+<th colspan="2">動作周波数(GHz)
+</th>
+<th rowspan="2">L2
+<p>キャッシュ
+</p>
+</th>
+<th rowspan="2">モデル
+</th>
+<th rowspan="2">コンフィグ
+</th>
+<th colspan="2">周波数(MHz)
+</th></tr>
+<tr>
+<th>Base
+</th>
+<th>ターボ
+</th>
+<th>Base
+</th>
+<th>Turbo
+</th></tr>
+<tr>
+<td>A10-4600M
+</td>
+<td rowspan="2">2 (4)
+</td>
+<td>2.3
+</td>
+<td>3.2
+</td>
+<td rowspan="2">2 MB x 4
+</td>
+<td>HD 7660G
+</td>
+<td>384:24:8
+</td>
+<td rowspan="3">496
+</td>
+<td rowspan="3">685
+</td>
+<td rowspan="4">35
+</td>
+<td rowspan="2">1866
+</td>
+<td bgcolor="#90ff90" rowspan="8">対応 (v3.0)
+</td>
+<td rowspan="4"><a class="new" href="/w/index.php?title=Socket_FS1&amp;action=edit&amp;redlink=1" title="Socket FS1 (存在しないページ)">FS1r2</a>
+</td></tr>
+<tr>
+<td>A8-4500M
+</td>
+<td>1.9
+</td>
+<td>2.8
+</td>
+<td>HD 7640G
+</td>
+<td>256:16:8
+</td></tr>
+<tr>
+<td>A6-4400M
+</td>
+<td rowspan="2">1 (2)
+</td>
+<td>2.7
+</td>
+<td>3.2
+</td>
+<td rowspan="2">1 MB x 2
+</td>
+<td>HD 7520G
+</td>
+<td>192:12:4
+</td>
+<td rowspan="2">1600
+</td></tr>
+<tr>
+<td>A4-4300M
+</td>
+<td>2.5
+</td>
+<td>3.0
+</td>
+<td>HD 7420G
+</td>
+<td>128:8:4
+</td>
+<td>480
+</td>
+<td>655
+</td></tr>
+<tr>
+<td>A10-4655M
+</td>
+<td rowspan="2">2 (4)
+</td>
+<td>2.0
+</td>
+<td>2.8
+</td>
+<td rowspan="2">2 MB x 2
+</td>
+<td>HD 7620G
+</td>
+<td rowspan="2">384:24:8
+</td>
+<td>360
+</td>
+<td>496
+</td>
+<td>25
+</td>
+<td rowspan="4">1333
+</td>
+<td rowspan="4"><a class="new" href="/w/index.php?title=Socket_FP2&amp;action=edit&amp;redlink=1" title="Socket FP2 (存在しないページ)">FP2</a>
+</td></tr>
+<tr>
+<td>A8-4555M
+</td>
+<td>1.6
+</td>
+<td>2.4
+</td>
+<td>HD 7600G
+</td>
+<td>320
+</td>
+<td rowspan="3">424
+</td>
+<td>19
+</td></tr>
+<tr>
+<td>A6-4455M
+</td>
+<td rowspan="2">1 (2)
+</td>
+<td>2.1
+</td>
+<td>2.6
+</td>
+<td rowspan="2">1 MB x 1
+</td>
+<td>HD 7500G
+</td>
+<td>256:16:8
+</td>
+<td rowspan="2">327
+</td>
+<td rowspan="2">17
+</td></tr>
+<tr>
+<td>A4-4355M
+</td>
+<td>1.9
+</td>
+<td>2.4
+</td>
+<td>HD 7400G
+</td>
+<td>192:12:4
+</td></tr></tbody></table>
+<h3><span id=".E3.82.B5.E3.83.BC.E3.83.90.E3.83.BC"></span><span class="mw-headline" id="サーバー">サーバー</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=5" title="節を編集: サーバー">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2P（ソケット）から 4P のエンタープライズおよびメインストリーム向けの "Abu Dhabi"、1P から 2P の "Seoul"、 1P の Web ホスティングまたは Web サービス向けの "Delhi" で採用された。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;section=6" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<div class="boilerplate metadata" id="stub">
+<table cellpadding="3" cellspacing="2" style="width:80%; border:solid #999 1px;background:#F8F8F8; margin:0.5em auto; clear:both">
+<tbody><tr>
+<td style="width:10%; text-align:right">加筆訂正願います執筆の途中です
+</td>
+<td style="color:black">この「<b>Piledriver (マイクロアーキテクチャ)</b>」は、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="コンピュータ">コンピュータ</a>関連の項目ですが、<b><a href="/wiki/Wikipedia:%E3%82%B9%E3%82%BF%E3%83%96" title="Wikipedia:スタブ">内容が不十分</a></b>です。<a class="external text" href="http://localhost:8080/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit" rel="nofollow">この記事を加筆、訂正</a>などして下さる<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B5%E3%83%96%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のサブスタブ項目">協力者を求めています</a><small>（<a href="/wiki/Portal:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="Portal:コンピュータ">Portal:コンピュータ</a>）</small>。
+</td></tr></tbody></table></div>
+<div aria-labelledby="AMDのマイクロプロセッサ" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:AMD_processors&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:AMD processors (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AAMD_processors&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AAMD_processors&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="AMDのマイクロプロセッサ" style="font-size:110%;margin:0 6em">AMDの<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="マイクロプロセッサ">マイクロプロセッサ</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">生産終了</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;width:12em">x86以前</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width:auto"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMD_Am9080" title="AMD Am9080">Am9080</a></li>
+<li><a href="/wiki/AMD_Am2900" title="AMD Am2900">Am2900</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;width:12em">x86-16 (<a href="/wiki/16%E3%83%93%E3%83%83%E3%83%88" title="16ビット">16ビット</a>)</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width:auto"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Am80286" title="Am80286">Am80286</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;width:12em">x86-32/IA-32 (<a href="/wiki/32%E3%83%93%E3%83%83%E3%83%88" title="32ビット">32ビット</a>)</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width:auto"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Am386" title="Am386">Am386</a></li>
+<li><a href="/wiki/Am486" title="Am486">Am486</a></li>
+<li><a href="/wiki/Am5x86" title="Am5x86">Am5x86</a></li>
+<li><a href="/wiki/AMD_K5" title="AMD K5">K5</a></li>
+<li><a href="/wiki/AMD_K6" title="AMD K6">K6</a></li>
+<li><a href="/wiki/AMD_K6-2" title="AMD K6-2">K6-2</a></li>
+<li><a href="/wiki/AMD_K6-III" title="AMD K6-III">K6-III</a></li>
+<li><a href="/wiki/Duron" title="Duron">Duron</a></li>
+<li><a href="/wiki/Athlon" title="Athlon">(K7) Athlon</a></li>
+<li><a href="/wiki/Sempron" title="Sempron">(K7) Sempron</a></li>
+<li><a href="/wiki/Geode" title="Geode">Geode</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;width:12em">x86-64/AMD64 (<a href="/wiki/64%E3%83%93%E3%83%83%E3%83%88" title="64ビット">64ビット</a>)</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width:auto"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Sempron" title="Sempron">(K8/K10) Sempron</a></li>
+<li><a href="/wiki/Athlon_64" title="Athlon 64">Athlon 64</a></li>
+<li><a href="/wiki/Athlon_64_FX" title="Athlon 64 FX">Athlon 64 FX</a></li>
+<li><a href="/wiki/Athlon_64_X2" title="Athlon 64 X2">Athlon X2</a></li>
+<li><a href="/wiki/Athlon_64_X2" title="Athlon 64 X2">Athlon 64 X2</a></li>
+<li><a href="/wiki/Athlon_X4" title="Athlon X4">Athlon X4</a></li>
+<li><a href="/wiki/AMD_Phenom" title="AMD Phenom">Phenom</a></li>
+<li><a href="/wiki/AMD_Phenom_II" title="AMD Phenom II">Phenom II</a></li>
+<li><a href="/wiki/Sempron" title="Sempron">Mobile Sempron</a></li>
+<li><a href="/wiki/Turion_64" title="Turion 64">Turion 64</a></li>
+<li><a href="/wiki/Turion_64_X2" title="Turion 64 X2">Turion 64 X2</a></li>
+<li><a href="/wiki/Turion_X2_Ultra" title="Turion X2 Ultra">Turion X2 Ultra</a></li>
+<li><a href="/wiki/Turion_II" title="Turion II">Turion II ・ Athlon II Dual-Core Processors for Notebook PCs</a></li>
+<li><a href="/wiki/Athlon_II" title="Athlon II">Athlon II</a></li>
+<li><a href="/wiki/Athlon_Neo" title="Athlon Neo">Athlon Neo</a> (Turion Neo)</li>
+<li><a href="/wiki/Turion_II_Neo" title="Turion II Neo">Turion II Neo</a></li>
+<li><a href="/wiki/AMD_FX" title="AMD FX">FX</a></li>
+<li><a href="/wiki/Opteron" title="Opteron">Opteron</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;width:12em">RISC</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;width:auto"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMD_Am29000" title="AMD Am29000">Am29000</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Alchemy_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" title="Alchemy (マイクロアーキテクチャ) (存在しないページ)">Alchemy</a>（<a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英語</a>: <span lang="en"><a class="new" href="/w/index.php?title=En:Alchemy_(microarchitecture)&amp;action=edit&amp;redlink=1" title="En:Alchemy (microarchitecture) (存在しないページ)">Alchemy</a></span>）</span></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">現行</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;width:8em">ARMv8</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Opteron" title="Opteron">Opteron</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;width:8em">x86-64</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMD_Accelerated_Processing_Unit" title="AMD Accelerated Processing Unit">APU</a></li>
+<li><a href="/wiki/Ryzen" title="Ryzen">Ryzen</a></li>
+<li><a href="/wiki/EPYC" title="EPYC">EPYC</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">マイクロアーキテクチャ</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMD_K5" title="AMD K5">K5</a></li>
+<li><a href="/wiki/AMD_K6" title="AMD K6">K6</a></li>
+<li><a href="/wiki/Athlon" title="Athlon">K7</a></li>
+<li><a href="/wiki/Athlon_64" title="Athlon 64">K8</a></li>
+<li><a href="/wiki/AMD_K10" title="AMD K10">K10</a></li>
+<li><a href="/wiki/Bulldozer_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Bulldozer (マイクロアーキテクチャ)">Bulldozer</a>/<a href="/wiki/Bobcat_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Bobcat (マイクロアーキテクチャ)">Bobcat</a></li>
+<li><a class="mw-selflink selflink">Piledriver</a>/<a href="/wiki/Jaguar_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Jaguar (マイクロアーキテクチャ)">Jaguar</a></li>
+<li><a href="/wiki/Steamroller_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Steamroller (マイクロアーキテクチャ)">Steamroller</a>/<a href="/wiki/Puma_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Puma (マイクロアーキテクチャ)">Puma</a></li>
+<li><a href="/wiki/Excavator_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Excavator (マイクロアーキテクチャ)">Excavator</a></li>
+<li><a href="/wiki/Zen_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="Zen (マイクロアーキテクチャ)">Zen</a>
+<ul><li><a href="/wiki/Zen_2" title="Zen 2">Zen 2</a></li>
+<li><a href="/wiki/Zen_3" title="Zen 3">Zen 3</a></li></ul></li>
+<li><a href="/wiki/K12_(AMD)" title="K12 (AMD)">K12</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AMD_Radeon" title="AMD Radeon">Radeon</a></li>
+<li><a href="/wiki/CPU%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88" title="CPUソケット">CPUソケット</a></li>
+<li><a href="/wiki/AMD%E3%83%81%E3%83%83%E3%83%97%E3%82%BB%E3%83%83%E3%83%88" title="AMDチップセット">チップセット</a></li>
+<li><a href="/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC" title="モデルナンバー">モデルナンバー</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401150313
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.154 seconds
+Real time usage: 0.309 seconds
+Preprocessor visited node count: 1097/1000000
+Post‐expand include size: 49086/2097152 bytes
+Template argument size: 1594/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 2/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2/5000000 bytes
+Lua time usage: 0.050/7 seconds
+Lua virtual size: 6742016/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  232.834      1 -total
+ 64.53%  150.245      1 テンプレート:出典の明記
+ 57.51%  133.912      1 テンプレート:Ambox
+ 28.29%   65.868      2 テンプレート:Navbox
+ 22.54%   52.477      1 テンプレート:AMD_processors
+ 17.85%   41.558      1 テンプレート:Find_sources_mainspace
+  5.82%   13.542      1 テンプレート:DMC
+  5.79%   13.470      1 テンプレート:Infobox_CPU
+  5.17%   12.032      1 テンプレート:日本語版にない記事リンク
+  4.19%    9.755      1 テンプレート:Infobox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2790130-0!canonical and timestamp 20220401150313 and revision id 1649384. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Piledriver_(マイクロアーキテクチャ)&amp;oldid=1649384">http://localhost:8080/w/index.php?title=Piledriver_(マイクロアーキテクチャ)&amp;oldid=1649384</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2018%E5%B9%B41%E6%9C%88" title="カテゴリ:出典を必要とする記事/2018年1月">出典を必要とする記事/2018年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B5%E3%83%96%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のサブスタブ項目">コンピュータ関連のサブスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:AMD%E3%81%AE%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5" title="カテゴリ:AMDのマイクロプロセッサ">AMDのマイクロプロセッサ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Piledriver+%28%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%29&amp;returntoquery=curid%3D2790130%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Piledriver+%28%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%29&amp;returntoquery=curid%3D2790130%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;oldid=1649384" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Piledriver_(%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3)&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年4月14日 (水) 06:00 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.154","walltime":"0.309","ppvisitednodes":{"value":1097,"limit":1000000},"postexpandincludesize":{"value":49086,"limit":2097152},"templateargumentsize":{"value":1594,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2,"limit":5000000},"timingprofile":["100.00%  232.834      1 -total"," 64.53%  150.245      1 テンプレート:出典の明記"," 57.51%  133.912      1 テンプレート:Ambox"," 28.29%   65.868      2 テンプレート:Navbox"," 22.54%   52.477      1 テンプレート:AMD_processors"," 17.85%   41.558      1 テンプレート:Find_sources_mainspace","  5.82%   13.542      1 テンプレート:DMC","  5.79%   13.470      1 テンプレート:Infobox_CPU","  5.17%   12.032      1 テンプレート:日本語版にない記事リンク","  4.19%    9.755      1 テンプレート:Infobox"]},"scribunto":{"limitreport-timeusage":{"value":"0.050","limit":"7"},"limitreport-virtmemusage":{"value":6742016,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401150313","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":525});});</script>
+</body></html>

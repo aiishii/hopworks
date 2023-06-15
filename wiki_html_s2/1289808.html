@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>PaX - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-PaX rootpage-PaX skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">PaX</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>PaX</b> は、メモリに関する最小特権保護を実装した<a href="." id="link_a_1" title="Linuxカーネル">Linuxカーネル</a>向け<a href="." id="link_a_2" title="コンピュータセキュリティパッチ">コンピュータセキュリティパッチ</a>である。最小特権の手法により、<a href="." id="link_a_3" title="プログラム (コンピュータ)">プログラム</a>は正しい動作以外は何もできなくなる。PaX は2000年にリリースされた。
+</p><p>PaX はデータ用メモリ<a href="." id="link_a_4" title="ページング方式">ページ</a>を実行不可とし、コード用メモリページを書き込み不可にすると共に無作為な配置を行う。これによりセキュリティを危険にさらす様々な動作が不可能になる（<a href="." id="link_a_5" title="バッファオーバーラン">バッファオーバーラン</a>の一種など）。データページの実行不可設定により、データをコードとして実行できなくなる。コードページの書き込み不可設定により、不正なライブラリ実行が難しくなる。ただし、変数やポインタの書き換えは防げない。
+</p><p>PaX は <b>The PaX Team</b> が保守しているが、個々の開発者は匿名である。
+</p>
+
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#意義"><span class="tocnumber">1</span> <span class="toctext">意義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#限界"><span class="tocnumber">1.1</span> <span class="toctext">限界</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#PaX_が提供する機能"><span class="tocnumber">2</span> <span class="toctext">PaX が提供する機能</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#実行空間保護"><span class="tocnumber">2.1</span> <span class="toctext">実行空間保護</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#実行不可ページの厳格化"><span class="tocnumber">2.1.1</span> <span class="toctext">実行不可ページの厳格化</span></a>
+<ul>
+<li class="toclevel-4 tocsection-6"><a href="#PAGEEXEC"><span class="tocnumber">2.1.1.1</span> <span class="toctext">PAGEEXEC</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#SEGMEXEC"><span class="tocnumber">2.1.1.2</span> <span class="toctext">SEGMEXEC</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-8"><a href="#mprotect()_の制限"><span class="tocnumber">2.1.2</span> <span class="toctext">mprotect() の制限</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#トランポリン・エミュレーション"><span class="tocnumber">2.1.3</span> <span class="toctext">トランポリン・エミュレーション</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#アドレス空間配置のランダム化"><span class="tocnumber">2.2</span> <span class="toctext">アドレス空間配置のランダム化</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#スタックベースのランダム化"><span class="tocnumber">2.2.1</span> <span class="toctext">スタックベースのランダム化</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#mmap()_ベースのランダム化"><span class="tocnumber">2.2.2</span> <span class="toctext">mmap() ベースのランダム化</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#ET_EXEC_ベースのランダム化"><span class="tocnumber">2.2.3</span> <span class="toctext">ET_EXEC ベースのランダム化</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#実行ファイルマーキング"><span class="tocnumber">2.3</span> <span class="toctext">実行ファイルマーキング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#歴史"><span class="tocnumber">3</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#関連項目"><span class="tocnumber">4</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#参考文献"><span class="tocnumber">5</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#外部リンク"><span class="tocnumber">6</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.84.8F.E7.BE.A9"></span><span class="mw-headline" id="意義">意義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=1" title="節を編集: 意義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>コンピュータのセキュリティ問題の大半は、実行時に何かを書き換えられるような抜け穴（<a href="/wiki/%E3%83%90%E3%82%B0" title="バグ">バグ</a>であることが多い）がプログラムにあることが原因である。<a href="/wiki/Ubuntu" title="Ubuntu">Ubuntu</a>の初期の44通の Security Notice を分類すると<a class="external autonumber" href="https://wiki.ubuntu.com/USNAnalysis" rel="nofollow">[1]</a>、41%は<a href="/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%83%B3" title="バッファオーバーラン">バッファオーバーラン</a>を原因とする脆弱性、11.4%は整数オーバフロー、15.9%は不正データの処理上の問題であった。これらのバグを悪用すると、外部からコードを注入して実行させたり、既存コードを不正な順序で実行させることができる。なお、この分析は非常に簡単なものであって、詳細に脆弱性を分析すれば結果は変わってくるだろう。
+</p><p><a href="/wiki/%E3%83%AF%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ワーム (コンピュータ)">ワーム</a>や<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9" title="コンピュータウイルス">コンピュータウイルス</a>などの攻撃の多くは、メモリの内容を書き換えて<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2" title="マルウェア">マルウェア</a>コードを実行できるようにすることで行われる。あるいは、データを実行するよう誘導するなどの手法がある。そのようなマルウェアの実行をブロックできれば、そのような侵入によって損害を被る可能性は激減する。<a href="/wiki/Sasser" title="Sasser">Sasser</a>のようなワームもそれによって対処可能である。
+</p><p>PaX は、そのような様々な攻撃を防ぐため、非常に汎用的な方法で防御するよう設計された。メモリのアクセス権（リード、ライト、実行の組合せ）を制御することで不正コードの実行を防ぎ、同時に正当なコードの実行には影響を与えないよう設計されている。若干のオーバーヘッドはあるが、PaX は<a href="/wiki/DoS%E6%94%BB%E6%92%83" title="DoS攻撃">DoS攻撃</a>や外部からのコード注入制御の可能性を減らし、攻撃者に<a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC" title="スーパーユーザー">スーパーユーザー</a>特権を与えるのを防ぎ、ハードディスク上の重要な情報へのアクセスを防ぎ、単に影響を受けたプログラムや<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>がクラッシュするだけで済む。
+</p><p>DoS攻撃は、実行されるだけで迷惑であり、<a href="/wiki/%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90" title="計算資源">リソース</a>や時間の浪費となる（企業のウェブサイトが攻撃された場合、ビジネス機会が失われる）。しかし、PaX があればデータを書き換えられたり、情報を外部にコピーされたりすることがなくなる。ただし環境によっては DoS 攻撃の類は攻撃されること自体が許容されない。<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%B0%B4%E6%BA%96%E5%90%88%E6%84%8F" title="サービス水準合意">サービス水準合意</a>などの契約条件では、侵入者によるサービス低下が単なるコスト問題以上の契約違反として扱われる。それでも多くの場合、セキュリティを強化して重要な情報を保護することには意味がある。
+</p><p>多くの<a href="/wiki/%E3%83%90%E3%82%B0" title="バグ">バグ</a>はメモリ破壊の原因となる。そのようなバグを利用して、プログラムが意図していない動作をさせることが可能となる。PaX はそのようなバグの検出や修正が可能なわけではなく、そのようなバグを利用した悪意ある攻撃を防ぐことにある。そのようなバグの一部は深刻度が減じられ、不正な動作をする代わりにプログラムを終了させる。
+</p><p>PaX はバッファオーバーフローを直接防ぐことはできないが、それを利用して不正なアクセスを行おうとするのを効果的に防ぐ。Stack Smashing Protector や StackGuard はバッファオーバフローそのものを検出し、そのような動作をしようとしたプログラムを終了させる。このような手法を <a class="new" href="/w/index.php?title=Stack_Smashing_Protection&amp;action=edit&amp;redlink=1" title="Stack Smashing Protection (存在しないページ)">Stack Smashing Protection</a> と呼び、実際にオーバフロー状態となる前に防ぐ。一方 PaX はより汎用的な手法であり、オーバフローが発生してから実際のダメージが発生するのを防ぐ。どちらの手法でも結果的には同じ効果が得られるが、完全に重複する手法というわけではない。従って、両方の手法を同時に使うことで、システムをより安全にすることが（原理的には）可能である。一部の<a href="/wiki/Linux%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="Linuxディストリビューション">Linuxディストリビューション</a>では、PaX と Stack Smashing Protection の両方を採用している。
+</p><p>2004年中ごろ、PaXは<a href="/wiki/Linux%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="Linuxカーネル">Linuxカーネル</a>のメインのソースツリーには含まれていなかった。これは、PaXチームがPaXを不完全であると考えていたためである。<a href="/wiki/X86" title="X86">x86</a>を含む多くの<a href="/wiki/CPU" title="CPU">CPU</a>アーキテクチャでは完全に機能しているが、いくつかのアーキテクチャでは部分的にしか実装されていないか、全く実装されていない。PaXが実装されているアーキテクチャとしては、<a href="/wiki/IA-32" title="IA-32">IA-32</a> (x86)、<a href="/wiki/X64" title="X64">AMD64</a>、<a href="/wiki/IA-64" title="IA-64">IA-64</a>、<a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>、<a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a>、<a href="/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ">MIPS</a>、<a href="/wiki/PowerPC" title="PowerPC">PowerPC</a>、<a href="/wiki/SPARC" title="SPARC">SPARC</a> がある。
+</p>
+<h3><span id=".E9.99.90.E7.95.8C"></span><span class="mw-headline" id="限界">限界</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=2" title="節を編集: 限界">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PaXは実行ファイルや<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="カーネル">カーネル</a>に潜在する基本的な設計ミスに対処することはできない。それは例えば、原理的に検出不可能な方法で攻撃可能とするような問題である。例えば、<a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E" title="スクリプト言語">スクリプト言語</a>の<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a>はファイルやネットワークにアクセスできるため、悪意あるスクリプトを使って特権ユーザーのアカウントを通して重要データを盗むことも可能である。PaXは<a href="/wiki/%E6%9B%B8%E5%BC%8F%E6%96%87%E5%AD%97%E5%88%97%E6%94%BB%E6%92%83" title="書式文字列攻撃">書式文字列攻撃</a>の一部も防げない。書式文字列攻撃では、既存のコードを使って任意のデータ位置の読み書きが可能であり、攻撃者は内部のアドレスを事前に知っておく必要がなく、攻撃用コードを注入する必要もない。
+</p><p>PaXの公式サイトにある文書<a class="external autonumber" href="http://pax.grsecurity.net/docs/pax.txt" rel="nofollow">[2]</a>では、PaXが防ごうとしている攻撃を三種類としている。その文書によれば、PaX はそれらを効果的に防ぐことができるが、それ以外の攻撃は防ぐことはできない。実行コード領域の保護が可能で、そのベースを任意のアドレスにでき、完全なアドレス空間ランダム化が可能であることが前提である。防ぐことができる攻撃は大まかに言えば、次の通りである。
+</p>
+<ol><li>何らかのコードを導入し実行する攻撃。いわゆる<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89" title="シェルコード">シェルコード</a>であることが多い。</li>
+<li>プログラマが意図していない不正な順序で既存のコードを実行させる攻撃。<a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">return-to-libc攻撃</a>と呼ばれる。</li>
+<li>既存のコードを正しい順序で実行させるが、適当なデータを与えることで望みの動作をさせる攻撃。1.1.4-a 以前の <a href="/wiki/Zlib" title="Zlib">zlib</a> にこの問題があることが知られている。</li></ol>
+<p>PaX はこれらの攻撃の元となるバグを検出・対処できるわけではなく、単に攻撃によるダメージを防ぐものであるため、あらゆる攻撃を防ぐことができるわけではない。実際、<a href="/wiki/%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86" title="ライスの定理">ライスの定理</a>により、あらゆる攻撃を防ぐことは不可能とされている。
+</p><p>3つ目の攻撃は、攻撃対象のアドレスを知る必要がない場合、PaXを使っても全く防ぐことができない。また、2つ目と3つ目の攻撃は、攻撃対象のアドレス空間配置を知る必要がある場合、それを攻撃対象のアドレス空間を読み取ることで知ることができるなら、PaX を使っても防ぐことができない。これは、攻撃対象が <a href="/wiki/Procfs" title="Procfs">/proc/(pid)/maps</a> にあるような情報を漏らすようなバグを持っていると可能になる。ユーザーランドでプロセスのアドレス空間配置などの情報を見えないようにするパッチもあるが、それは PaX には含まれていない。
+</p><p>事前にアドレス空間配置に関する知識が必要なら、2つ目と3つ目の攻撃は推測や力ずくの探索を行わなければ、ほとんど不可能である。ASLRの文書<a class="external autonumber" href="http://pax.grsecurity.net/docs/aslr.txt" rel="nofollow">[3]</a>には、そのような攻撃が成功する「小さな可能性」をさらに詳しく解説している。
+</p><p>1つ目の攻撃は、攻撃者が攻撃対象のタスクを生成でき、それに書き込むことができ、<a href="/wiki/Mmap" title="Mmap">mmap()</a>でファイルをマッピングできる場合に可能となる。すると、二次攻撃が可能でなければ攻撃は成功しないため、そこまで分析する必要がある。PaX には含まれないが、この種の攻撃の可能性を減じるには、<a href="/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%88%B6%E5%BE%A1" title="アクセス制御">アクセス制御</a>を正しく設定しておく必要がある。
+</p><p>PaXを使ったとしても<a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%89%E3%83%9F%E3%83%8B%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%BF" title="システムアドミニストレータ">システムアドミニストレータ</a>による管理は必要である。PaXはメモリ破壊バグを利用した攻撃を防ぐ。PaXが防ぐことができる攻撃の多くは、バッファオーバーフローを起こすバグに関連している。これは、メモリ管理関連の問題を利用した攻撃の典型的な部分を占める。ただし、PaXは全てのそのような攻撃を防ぐわけではない。
+</p>
+<h2><span id="PaX_.E3.81.8C.E6.8F.90.E4.BE.9B.E3.81.99.E3.82.8B.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="PaX_が提供する機能">PaX が提供する機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=3" title="節を編集: PaX が提供する機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>PaX が提供するのは<a href="/wiki/NX%E3%83%93%E3%83%83%E3%83%88" title="NXビット">NXビット</a>（あるいはそれに相当する各<a href="/wiki/CPU" title="CPU">CPU</a>/<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">MMU</a>アーキテクチャにある機能）の機能を使った（あるいはそれをOSで<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%88" title="エミュレート">エミュレート</a>した）<a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E4%BF%9D%E8%AD%B7%E6%A9%9F%E8%83%BD" title="メモリ保護機能">メモリ保護機能</a>である。また、return-to-libc攻撃や、メモリ空間配置に関する知識に依存した攻撃を防ぐため、アドレス空間配置のランダム化を行う。
+</p>
+<h3><span id=".E5.AE.9F.E8.A1.8C.E7.A9.BA.E9.96.93.E4.BF.9D.E8.AD.B7"></span><span class="mw-headline" id="実行空間保護">実行空間保護</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=4" title="節を編集: 実行空間保護">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p>PaX の主要機能は<b>実行空間保護</b>である。一部プロセッサにあるNXビットの機能を用いて任意のコードの実行を防ぐ。それによって、コード注入やシェルコードといった攻撃を防ぐ。NXビットを持たない<a href="/wiki/IA-32" title="IA-32">IA-32</a>系<a href="/wiki/CPU" title="CPU">CPU</a>では、PaX はその機能を様々な手段でエミュレートできる。
+</p><p><a href="/wiki/Linux" title="Linux">Linux</a>を含む多くの<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">OS</a>では、ハードウェアのNXビットの機能を利用して、メモリのアクセス権を適切に設定する。<b>図1</b>は、1つのロードされたライブラリのあるプログラムのメモリセグメント群を簡単に図示したものである。緑のセグメントはデータで、青のセグメントはコードである。一般に、<a href="/wiki/X64" title="X64">AMD64</a>なども含めたプロセッサでのアドレス空間は、デフォルトでは図1のように明確にデータ部とコード部が定義されている。しかし、Linux ではデフォルトではアプリケーションが自身のメモリ保護設定を変更することを防ぐことができず、コード部を書き込み可能にしたり、データ部をコードとして実行することが可能となっている。PaX はそのような変更を防ぐとともに、典型的な操作に最適な最も制限のきつい保護設定を保証する。
+</p><p>実行空間保護が起動しているとき、<a class="new" href="/w/index.php?title=Mprotect&amp;action=edit&amp;redlink=1" title="Mprotect (存在しないページ)">mprotect</a>() 制限も含まれ、PaX は本来コード部でなかった領域を実行可能にするような操作を不可能にする。これにより、書き込み可能だったことのある領域に存在するコードは実行不能となり、悪意があるかどうかとは関係なく、コードを後から注入することが不可能となる。
+</p><p>すると、<a href="/wiki/Java" title="Java">Java</a>の<a class="mw-redirect" href="/wiki/%E3%82%B8%E3%83%A3%E3%82%B9%E3%83%88%E3%82%A4%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E6%96%B9%E5%BC%8F" title="ジャストインタイムコンパイル方式">ジャストインタイムコンパイル方式</a>のように、実行時にコードを生成して実行する必要のあるアプリケーションは動作できなくなる。しかし多くの場合、そのような機能を必要としているプログラムは、それに依存しないように書き換えることが可能である。根本的に実行時のコード生成が必要なものについては、システムアドミニストレータがその実行ファイルに印を付け、その実行ファイルについては制限が課せられないようにすることができる。
+</p><p>PaX チームは <a href="/wiki/Mmap" title="Mmap">mmap</a>() <a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%AB" title="システムコール">システムコール</a>をどう扱うかを決定する必要に迫られた。mmap は<a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有メモリ</a>のマッピングや共有ライブラリのロードに使われる。そのため、使われている状況によっては書き込み可能な<a href="/wiki/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E6%96%B9%E5%BC%8F" title="ページング方式">ページ</a>や実行可能なページを生成できるようにしなければならない。PaX の現在の実装では、デフォルトで書き込み可能な無名メモリページのマッピングが可能となっている。ファイルのマッピングは mmap() コールが書き込みのパーミッションを指定している場合のみ書き込み可能にできる。mmap() は書き込みと実行が同時に可能なマッピングを生成しない。これは引数で明示的に指示されている場合でもエラーとなる。
+</p>
+<h4><span id=".E5.AE.9F.E8.A1.8C.E4.B8.8D.E5.8F.AF.E3.83.9A.E3.83.BC.E3.82.B8.E3.81.AE.E5.8E.B3.E6.A0.BC.E5.8C.96"></span><span class="mw-headline" id="実行不可ページの厳格化">実行不可ページの厳格化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=5" title="節を編集: 実行不可ページの厳格化">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>デフォルトでは、Linux はNXビットを使って実行不可ページを正しく設定することはしていない。しかも、アーキテクチャによってはNXビットと同等の機能を持たないものもある。PaX は実行不可なページをなるべく実際に実行不可とする<a href="/wiki/%E6%83%85%E5%A0%B1%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="情報セキュリティポリシー">セキュリティポリシー</a>に従って、設定を行う。
+</p><p>さらに、CPU がNXビット相当の機能を提供していないとしても、PaX は同等機能をいくつかの手法で提供（エミュレート）する。エミュレートによって性能は低下するが、セキュリティは向上する。しかも、一部の手法のオーバーヘッドは無視できるほど小さい。
+</p>
+<h5><span class="mw-headline" id="PAGEEXEC">PAGEEXEC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=6" title="節を編集: PAGEEXEC">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>PAGEEXEC は NXビットを使うか、エミュレートする。NXビットがサポートされていないプロセッサの場合、各ページにエミュレートされたNXビットが付与される。その具体的方法はCPUのアーキテクチャに依存する。NXビットのあるプロセッサでは、PAGEEXEC は単にそれを使い性能をなるべく低下させないようにしている。
+</p><p>IA-32 では、NXビットのエミュレーションは実行不可ページのパーミッションレベルを変更することで行われる。この場合、あるページを実行しようとして、同時にそれが<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AB%E3%83%83%E3%82%AF%E3%82%A2%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="トランスレーション・ルックアサイド・バッファ">TLB</a>にキャッシュされていなければ、プロテクション例外が発生する。IA-32 では<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88" title="メモリ管理ユニット">メモリ管理ユニット</a>がこれをOSに通知する。実行コード用TLBとデータ用TLBは分離されているのが一般的であり、書き込み可能なページを初めて実行しようとしたとき、必ずLinuxカーネルとPaXがそれを検出できる。この例外を検出すると、プロセスを終了させるか、実行を継続できるようTLBを設定するかをカーネルが選択する。
+</p><p>PAGEEXEC は仮想空間を2つに分けることがないという利点がある。しかし、エミュレーションは後述の SEGMEXEC より遅く、場合によっては深刻な性能低下を招く。
+</p><p>2004年5月に登場した新たなIA-32用 PAGEEXEC は、実行可能ページの最高の仮想アドレスを覚えておき、それより大きなアドレスのページはユーザーページとする。これにより、スタックなどの高位のアドレスにある領域は性能低下なしに処理され、低位のアドレスにある領域は従来通りに処理される。これは、<a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a> や <a href="/wiki/OpenBSD" title="OpenBSD">OpenBSD</a> の W^X (Write XOR Execute) 実装に似ている。
+</p>
+<h5><span class="mw-headline" id="SEGMEXEC">SEGMEXEC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=7" title="節を編集: SEGMEXEC">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>SEGMEXEC は、IA-32 向けのNXビットエミュレーションであり、アドレス空間を2つに分割し、コードを両方の空間にマッピング（ミラーリング）する。命令フェッチの際、分割を跨いでアドレス変換が行われる。コードがそこにマッピングされていなければ、プログラムは終了させられる。
+</p><p>SEGMEXEC は仮想空間の大きさを半分にしてしまう。通常、個々のプロセスの仮想空間は 3GiB ある。SEGMEXEC を使うと、それが 1.5GiB ずつに分割され、一方がミラーリングに使われる。そのような問題はあるが、エミュレーション時の性能低下は少ない。2つの仮想空間にマッピングされる物理メモリは同じ実体であるため、メモリ使用量が増加することはない。
+</p>
+<h4><span id="mprotect.28.29_.E3.81.AE.E5.88.B6.E9.99.90"></span><span class="mw-headline" id="mprotect()_の制限">mprotect() の制限</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=8" title="節を編集: mprotect() の制限">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>PaX は、あるメモリページが書き込み可能でかつ実行可能とならないことを保証する。mprotect() という関数は、メモリ領域のパーミッションを変更する機能を持つ。<a href="/wiki/Single_UNIX_Specification" title="Single UNIX Specification">Single UNIX Specification</a> では、mprotect() について以下のように記述されている。
+</p>
+<dl><dd>「prot で指定されたアクセス型の組合せをサポートできない実装である場合、mprotect() コールは失敗するだろう」</dd></dl>
+<p>PaX では、mprotect() で PROT_WRITE と PROT_EXEC を同時に指定できないよう制限している。そのような mprotect() コールには EACCESS というエラーが返される。これにより、単純なコード注入攻撃を防ぐ。また、PROT_EXEC が既に ON になっていないページについて PROT_EXEC を ON にする mprotect() コールも失敗する。これは、予めコードを書き込んだデータ用ページを後から実行可能にするような攻撃を防ぐ。
+</p><p>mprotect() の制限を ON にしていると、プログラムは PaX が最初に設定したメモリ確保のポリシーを逸脱するような動作が不可能となる。これをしないで実行不可ページを厳密に実行不可にしても、あまり意味がない。
+</p>
+<h4><span id=".E3.83.88.E3.83.A9.E3.83.B3.E3.83.9D.E3.83.AA.E3.83.B3.E3.83.BB.E3.82.A8.E3.83.9F.E3.83.A5.E3.83.AC.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="トランポリン・エミュレーション">トランポリン・エミュレーション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=9" title="節を編集: トランポリン・エミュレーション">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>トランポリンとは、<a href="/wiki/GNU%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="GNUコンパイラコレクション">GNUコンパイラコレクション</a>で実装されているもので、<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="コールスタック">コールスタック</a>上に実行時に小さなコードを生成するものである。つまり、トランポリンはスタック上のメモリを実行可とする必要があり、PaX ではそのようなプログラムは終了させられてしまう。
+</p><p>トランポリンは<a href="/wiki/%E8%87%AA%E5%B7%B1%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%B3%E3%83%BC%E3%83%89" title="自己書き換えコード">自己書き換えコード</a>の一種であるため、PaX にひっかかり、プログラムの終了を招く。PaX はこれを防ぐため、トランポリン生成を識別し、その実行を許可するようになっている。しかし、これはセキュリティを弱める可能性があるとされている。
+</p>
+<h3><span id=".E3.82.A2.E3.83.89.E3.83.AC.E3.82.B9.E7.A9.BA.E9.96.93.E9.85.8D.E7.BD.AE.E3.81.AE.E3.83.A9.E3.83.B3.E3.83.80.E3.83.A0.E5.8C.96"></span><span class="mw-headline" id="アドレス空間配置のランダム化">アドレス空間配置のランダム化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=10" title="節を編集: アドレス空間配置のランダム化">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b><a href="/wiki/%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E7%A9%BA%E9%96%93%E9%85%8D%E7%BD%AE%E3%81%AE%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E5%8C%96" title="アドレス空間配置のランダム化">アドレス空間配置のランダム化</a></b>（ASLR）は、アドレス空間配置に関する知識を利用した攻撃に対処する技法である。それは、既存のコードをプログラマが意図しない順序で実行させる攻撃である。
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;">ファイル:Vmem aslr.png <div class="thumbcaption"><b>図2</b> <i>各メモリ領域間の空隙の幅は無作為に選択される。例えばスタックとメモリ空間最後尾との間の空隙の幅はランダムに決定される。</i></div></div></div>
+<p>PaX におけるASLRは<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="コールスタック">スタック領域</a>と<a href="/wiki/%E3%83%92%E3%83%BC%E3%83%97%E9%A0%98%E5%9F%9F" title="ヒープ領域">ヒープ領域</a>のベースアドレスを<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>毎に無作為に変化させる。また、オプションで mmap() や実行コード部のベースアドレスもランダム化する。これにより攻撃側が攻撃すべき位置を推測するのが難しくなる。
+</p><p><b>図2</b>は、アドレス空間配置のランダム化を施したアドレス空間を図示したものである。点線と矢印で示された部分が仮想空間上の各領域間のランダムな空隙を示している。<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="カーネル">カーネル</a>がプロセスを初期化するとき、これら矢印の長さが無作為に変化させられる（各領域の並び順は基本的に変わらない）。
+</p><p>プログラムの実行中、ヒープ領域は<a href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="メモリアドレス">メモリアドレス</a>の大きい方に成長していく。逆にスタックはアドレスの小さい方に成長していく。これらの領域を各プログラムがどれだけ必要とするかはOSには不明である。いわゆる<a href="/wiki/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3" title="プラグイン">プラグイン</a>などの動的ライブラリを実行中にロードする場合、通常はヒープの前に置かれる。OSまたはプログラムはそれらライブラリを配置するのに適切なオフセットを選択しなければならない。PaX はアドレスの<a href="/wiki/%E6%9C%80%E4%B8%8A%E4%BD%8D%E3%83%93%E3%83%83%E3%83%88" title="最上位ビット">MSB</a>側の部分をランダム化しない。これによって大まかな配置が守られ、各領域が重ならないようにする。
+</p><p>ランダム化の効果は CPU に依存する。32ビットのCPUでは、一般に仮想アドレスは32ビットであり、4GiB の空間にアクセス可能である。Linux は先頭 1GiB をカーネル用に使っているため、ユーザープロセスが使えるのは 3GiB である。SEGMEXEC はこれを半分に分割するので、ランダム化は 1.5GiB の範囲で行われる。ページサイズは 4KiB であり、ランダム化はページサイズ単位に行われる。MSB側の4ビットはランダム化されないので、ヒープ領域は仮想空間の先頭に、スタック領域は最後尾に配置される。このため、ヒープやスタックのランダム化される範囲は16ビット程度で表される範囲になる。
+</p><p>64ビットCPUでは、仮想空間はより大きくなる。従って、ランダム化はさらに大胆に行われることになり、攻撃される可能性がそれだけ少なくなると言える。
+</p>
+<h4><span id=".E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E3.83.A9.E3.83.B3.E3.83.80.E3.83.A0.E5.8C.96"></span><span class="mw-headline" id="スタックベースのランダム化">スタックベースのランダム化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=11" title="節を編集: スタックベースのランダム化">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>PaX は、<a href="/wiki/%E3%82%B3%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF" title="コールスタック">スタック</a>のベースアドレス（のオフセット）を16バイト単位にランダム化し、同時にセグメントの配置をページ単位の空隙の大きさをランダム化する。全体としてのランダム化の程度は仮想空間サイズに依存する。例えば、32ビットの場合、スタックベースは256MiBの範囲のどこかに設定され、可能な位置は1600万通り、エントロピーは24ビットとなる。
+</p>
+
+<p>スタックベースのランダム化は、<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89" title="シェルコード">シェルコード</a>と<a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">return-to-libc攻撃</a>のペイロードに影響を与える。シェルコード攻撃はスタック上のリターンポインタをペイロード内を指すよう変更しようとする。一方、return-to-libc攻撃はスタック上のフレームポインタを書き換えようとする。どちらにしても、成功する可能性は大幅に減る。スタックの位置は予測不可能となり、ペイロードによる書き換えは単にプログラムをクラッシュさせる結果となる。
+</p><p>シェルコードの場合、ペイロードの前に<a href="/wiki/NOP" title="NOP">NOP</a>命令（何もしない命令）をたくさん並べておくことがある。こうすることで、ジャンプ先が予測と多少違っても攻撃が成功するようになる。しかし、16バイトぶんのNOP命令を並べても、成功確率は1/16Mから2/16Mになるだけである。また、128バイトのNOP命令を並べても、成功確率は9/16Mにしかならない。成功確率はNOP命令数に比例する。
+</p><p>return-to-libc攻撃はコードを書き込むわけではなく、ある固定幅のスタックフレームを書き換える。このため、スタックフレームは正確に16バイト境界に配置されていなければならない。一般にスタックフレームは16バイトよりも大きいので、スタックフレームを繰り返し書き込むことで成功確率を上げようとする。
+</p>
+<h4><span id="mmap.28.29_.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E3.83.A9.E3.83.B3.E3.83.80.E3.83.A0.E5.8C.96"></span><span class="mw-headline" id="mmap()_ベースのランダム化">mmap() ベースのランダム化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=12" title="節を編集: mmap() ベースのランダム化">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/POSIX" title="POSIX">POSIX</a>では、<a href="/wiki/Mmap" title="Mmap">mmap</a>() システムコールはプロセスが指定したオフセットか<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="カーネル">カーネル</a>が選択したオフセットにメモリを配置する。無名メモリを使えば、中身のないメモリがマッピングされ、ファイルを指定すればその中身がマッピングされる。ダイナミックリンク<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>は mmap() を使ってロードされ、コード部とライブラリのデータ部がそれぞれマッピングされる。データ部に書き込みがあれば、<a href="/wiki/%E3%82%B3%E3%83%94%E3%83%BC%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%88" title="コピーオンライト">コピーオンライト</a>の要領で無名メモリへのコピーが行われる。
+</p><p>mmap() では、仮想空間上のマッピングすべきオフセットを指定することもある。オフセットが指定されないと、OSが自動的に選択する。Linux のオフセット計算方法は予測可能であり、事前に定義された「mmap()ベース」を始点として計算される。このため、プロセスを起動したときに必ずロードされる<a href="/wiki/%E6%A8%99%E6%BA%96C%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="標準Cライブラリ">標準Cライブラリ</a>（あるいは libc）は常に同じアドレスにロードされる。
+</p><p>mmap()ベースのランダム化を行う場合、PaX はmmap()ベースをランダムにシフトさせ、全てのライブラリおよび他のmmap()コールでのマッピング位置を変えてしまう。このため、ダイナミックリンクされるコード（共有オブジェクト）は毎回ランダムに異なる位置にマッピングされる。攻撃者は特定のライブラリが特定のアドレスにロードされていることを当てにしていることが多い。従って、この機能によって<a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">return-to-libc攻撃</a>が困難となる。ただし、<a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89" title="シェルコード">シェルコード</a>を使った攻撃では GOT（global offset table）を参照することで任意の関数のアドレスを参照可能である。
+</p><p>PaX はライブラリのロード順序は変化させない。従って、1つのライブラリのアドレスがわかれば、他の全てのライブラリの位置もわかってしまう。しかし、もっと重大な問題として、いったんライブラリの位置がわかってしまうと、他のランダム化をしていても意味がないという問題がある（シェルコードはライブラリ内の関数のアドレスさえ分かれば攻撃可能）。
+</p><p>ET_DYN 型の実行ファイル（PIC化されたライブラリ）をロードするとき、そのベースアドレスもランダム化される（mmap() を使うので通常の共有オブジェクトと同じである）。
+</p><p>スタックを実行不可にする機能と mmap() のランダム化を組み合わせると、<a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">return-to-libc攻撃</a>の成功確率は激減する。32ビットシステムでは、本来の確率の16分の1になる。さらにスタックベースのランダム化を加えると、もっと攻撃が困難になる。
+</p>
+<h4><span id="ET_EXEC_.E3.83.99.E3.83.BC.E3.82.B9.E3.81.AE.E3.83.A9.E3.83.B3.E3.83.80.E3.83.A0.E5.8C.96"></span><span class="mw-headline" id="ET_EXEC_ベースのランダム化">ET_EXEC ベースのランダム化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=13" title="節を編集: ET EXEC ベースのランダム化">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>PaX は通常の配置アドレスが固定のコードもランダム配置可能であるが、若干問題がある。第一に、性能低下を招くことがある。第二にPaXがプロセスを予期しない理由で終了させてしまうという問題が発生することがある。従って、ET_DYN（ダイナミックリンクライブラリのファイル型）でコンパイルすることが推奨されている（その場合、完全なPICコードになるため）。
+</p><p>また、本来固定であるはずの ET_EXEC ベースのランダム化を行うと、PaX のVMミラーリングに起因するセキュリティ問題を引き起こす。対処していない古い PaX を使うときは、SEGMEXEC によるNXビット・エミュレーションをOFFにし、RANDEXEC による実行アドレスベースのランダム化をOFFにすることで対処する必要がある。
+</p>
+<h3><span id=".E5.AE.9F.E8.A1.8C.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.83.9E.E3.83.BC.E3.82.AD.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="実行ファイルマーキング">実行ファイルマーキング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=14" title="節を編集: 実行ファイルマーキング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>PaX は、<a href="/wiki/Executable_and_Linkable_Format" title="Executable and Linkable Format">ELF</a>形式の実行ファイルに印を付ける <b>chpax</b> や <b>paxctl</b> というツールを備えている。これらはELFヘッダ部に印を付けるので、<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ファイルシステム">ファイルシステム</a>に依存することなく、実行ファイル自身に印を付けることができる。つまり、パッケージ化やコピー、<a href="/wiki/%E6%9A%97%E5%8F%B7" title="暗号">暗号</a>化などにおいても印が保持される。
+</p><p>PaX は実行ファイルについて、PAGEEXEC、SEGMEXEC、mmap()のランダム化、スタックのランダム化、ヒープのランダム化、ET_EXEC のランダム化、mprotect()の制限、トランポリン・エミュレーションという機能のON/OFFをマーキング可能である。
+</p><p>chpax では strip などでマーキングが消されることがあるので、paxctl で PT_PAX_FLAGS を設定するのが最も安全である。paxctl は PaX 用フラグを組み込んだ新たなELFプログラムヘッダ形式を使っている。各フラグはON/OFF/未設定の状態がある。未設定の場合どうするかは、カーネル内のPaXコードが設定に基づいて判断する。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=15" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>2000年10月 - PAGEEXEC の基本部が PaX として初めてリリースされる。</li>
+<li>2000年11月 - MPROTECT の最初のリリース</li>
+<li>2001年6月 - ASLR（mmap のランダム化）が実装された。リリースはされていない。</li>
+<li>2001年7月 - ASLR リリース</li>
+<li>2001年8月 - ASLR にスタックと PIE のランダム化を付加したものがリリース</li>
+<li>2002年7月 - VMAミラーリングとRANDEXECリリース</li>
+<li>2002年10月 - SEGMEXECリリース、ASLR にカーネルスタックのランダム化を付加したものがリリース</li>
+<li>2003年2月 - EI_PAX ELF マーキング導入</li>
+<li>2003年4月 - KERNEXEC リリース</li>
+<li>2003年7月 - ASLR に brk ランダム化を付加したものがリリース</li>
+<li>2004年2月 - PT_PAX_FLAGS_ELF マーキング導入</li>
+<li>2004年5月 - PAGEEXEC をコードセグメントに限定することで性能強化</li>
+<li>2005年3月 - VMAミラーリングの脆弱性が報告され、新たな PaX と <a href="/wiki/Grsecurity" title="Grsecurity">grsecurity</a> がリリースされた。それ以前の SEGMEXEC と RANDEXEC を使ったバージョンは脆弱性があるとされた。</li>
+<li>2005年4月 - 脆弱性問題から、PaX を新たな開発者に引き継ぐことが予定されていたが、立候補者が現れず、従来の開発者らが保守を続けている。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=16" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">Security-Enhanced Linux</a></li>
+<li><a href="/wiki/NX%E3%83%93%E3%83%83%E3%83%88" title="NXビット">NXビット</a></li>
+<li><a href="/wiki/%E4%BE%B5%E5%85%A5%E6%A4%9C%E7%9F%A5%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入検知システム">侵入検知システム</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BE%B5%E5%85%A5%E9%98%B2%E6%AD%A2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入防止システム">侵入防止システム</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%AB%E3%83%BC%E3%83%AB%E3%82%BB%E3%83%83%E3%83%88%E3%83%99%E3%83%BC%E3%82%B9%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB&amp;action=edit&amp;redlink=1" title="ルールセットベースアクセスコントロール (存在しないページ)">RSBAC</a></li>
+<li><a href="/wiki/Grsecurity" title="Grsecurity">grsecurity</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=17" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://pax.grsecurity.net/docs/" rel="nofollow">PaX 文書</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=PaX&amp;action=edit&amp;section=18" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://pax.grsecurity.net/" rel="nofollow">PaX 公式サイト</a> （2007年以降の活動は低調）</li>
+<li><a class="external text" href="http://grsecurity.net/PaX-presentation_files/frame.htm" rel="nofollow">Presentation on PaX</a> undated</li>
+<li><a class="external text" href="http://gcc.gnu.org/onlinedocs/gccint/Trampolines.html" rel="nofollow">Trampolines for Nested Functions</a></li>
+<li><a class="external text" href="http://cvs.openbsd.org/papers/auug04/index.html" rel="nofollow">Exploit Mitigation Techniques</a> 2004年</li>
+<li><a class="external text" href="http://www.ubuntulinux.org/wiki/USNAnalysis" rel="nofollow">Ubuntu Linux USN Analysis</a></li>
+<li><a class="external text" href="http://fist.immunitysec.com/pipermail/dailydave/2005-March/001619.html" rel="nofollow">PaX privilege elevation security bug</a> 2005年3月9日</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401010115
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.042 seconds
+Real time usage: 0.042 seconds
+Preprocessor visited node count: 160/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1289808-0!canonical and timestamp 20220401010115 and revision id 791562. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=PaX&amp;oldid=791562">http://localhost:8080/w/index.php?title=PaX&amp;oldid=791562</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%BD%E3%83%95%E3%83%88" title="カテゴリ:セキュリティソフト">セキュリティソフト</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Linux" title="カテゴリ:Linux">Linux</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=PaX&amp;returntoquery=curid%3D1289808%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=PaX&amp;returntoquery=curid%3D1289808%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/PaX" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:PaX&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/PaX">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=PaX&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=PaX&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/PaX" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/PaX" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=PaX&amp;oldid=791562" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=PaX&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2019年2月17日 (日) 14:43 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.042","walltime":"0.042","ppvisitednodes":{"value":160,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20220401010115","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1440});});</script>
+</body></html>

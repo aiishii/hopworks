@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>板取り問題 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-板取り問題 rootpage-板取り問題 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">板取り問題</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="オペレーションズ・リサーチ">オペレーションズ・リサーチ</a>における<b>板取り問題</b>（いたどりもんだい、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en">cutting stock problem</span>）、または<b>カッティングストック問題</b>とは、定形の母材（ストック（stock）とも。例えばロール紙や板金）から廃材の量が最小になるように特定の大きさの製品群を切り出す問題である。産業上の応用から生じた<a href="." id="link_a_3" title="数学">数学</a>的な<a href="." id="link_a_4" title="最適化問題">最適化問題</a>の1つであり、また<a href="." id="link_a_5" title="計算複雑性理論">計算複雑性理論</a>においては<a href="." id="link_a_6" title="ナップサック問題">ナップサック問題</a>に還元される<a href="." id="link_a_7" title="NP困難">NP困難</a>問題の1つである。<a href="." id="link_a_8" title="整数計画問題">整数計画問題</a>として定式化することができる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#1次元の例"><span class="tocnumber">1</span> <span class="toctext">1次元の例</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#下限の確認"><span class="tocnumber">1.1</span> <span class="toctext">下限の確認</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#解"><span class="tocnumber">1.2</span> <span class="toctext">解</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#分類"><span class="tocnumber">2</span> <span class="toctext">分類</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#紙、フィルム、金属加工品の製造において"><span class="tocnumber">3</span> <span class="toctext">紙、フィルム、金属加工品の製造において</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#ガラス製造において"><span class="tocnumber">4</span> <span class="toctext">ガラス製造において</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#割当問題"><span class="tocnumber">5</span> <span class="toctext">割当問題</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#歴史"><span class="tocnumber">6</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#数学的定式化と解探索"><span class="tocnumber">7</span> <span class="toctext">数学的定式化と解探索</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id="1.E6.AC.A1.E5.85.83.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="1次元の例">1次元の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=1" title="節を編集: 1次元の例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ペーパーロール製造機が、幅5600mmのマスターロールを無限に生産できるとする。ここから下表に示したような13種類の製品ロールを切り出さなければならない。
+</p><p>重要なのは、同一のマスターロールから様々な方法で製品ロールを切り出せること（この切り出し方のそれぞれを「パターン」と呼ぶことにする）である。パターンの総数は一般に膨大な数に上り、列挙することは容易ではない。
+</p><p>この状況で、廃棄部分が最小限となるような製品ロールの最適な切り出し方を求めるのが板取り問題である。
+</p>
+<dl><dd><dl><dd><table class="wikitable">
+<tbody><tr>
+<th width="80pt">幅
+</th>
+<th width="80pt">本数
+</th></tr>
+<tr>
+<td align="center">1380</td>
+<td align="center">22
+</td></tr>
+<tr>
+<td align="center">1520</td>
+<td align="center">25
+</td></tr>
+<tr>
+<td align="center">1560</td>
+<td align="center">12
+</td></tr>
+<tr>
+<td align="center">1710</td>
+<td align="center">14
+</td></tr>
+<tr>
+<td align="center">1820</td>
+<td align="center">18
+</td></tr>
+<tr>
+<td align="center">1880</td>
+<td align="center">18
+</td></tr>
+<tr>
+<td align="center">1930</td>
+<td align="center">20
+</td></tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">10
+</td></tr>
+<tr>
+<td align="center">2050</td>
+<td align="center">12
+</td></tr>
+<tr>
+<td align="center">2100</td>
+<td align="center">14
+</td></tr>
+<tr>
+<td align="center">2140</td>
+<td align="center">16
+</td></tr>
+<tr>
+<td align="center">2150</td>
+<td align="center">18
+</td></tr>
+<tr>
+<td align="center">2200</td>
+<td align="center">20
+</td></tr></tbody></table></dd></dl></dd></dl>
+<h3><span id=".E4.B8.8B.E9.99.90.E3.81.AE.E7.A2.BA.E8.AA.8D"></span><span class="mw-headline" id="下限の確認">下限の確認</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=2" title="節を編集: 下限の確認">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>必要なマスターロールの本数の単純な下限は、全ての製品ロールの幅の総和をマスターロール1本の幅で割ることで求められる。この場合、総長は 1380 x 22 + 1520 x 25 + ... + 2200 x 20 = 407160 mm で、マスターロールは 5600 mm なので、割り算をすると72.7本、よって73本は最低でも必要ということになる。
+</p>
+<h3><span id=".E8.A7.A3"></span><span class="mw-headline" id="解">解</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=3" title="節を編集: 解">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>この簡単な例には、最適解が308通り存在する。どれもマスターロールを73本必要とし、廃棄率は0.401%となる。廃棄率最適（0.401%）という条件の下で、用いる切り出し方（パターン）の数を最小に抑えるような方法をコンピュータで探索すると、その最小値は10であり、それを与えるパターンの組み合わせ方は19通りあることがわかっている。19通りのうちの1つを下表に示す。
+</p>
+<dl><dd><table border="0" cellpadding="4" class="wikitable">
+<tbody><tr>
+<th>反復数
+</th>
+<th align="center">パターン
+</th></tr>
+<tr>
+<td align="center">2</td>
+<td>1820 + 1820 + 1820
+</td></tr>
+<tr>
+<td align="center">3</td>
+<td>1380 + 2150 + 1930
+</td></tr>
+<tr>
+<td align="center">12</td>
+<td>1380 + 2150 + 2050
+</td></tr>
+<tr>
+<td align="center">7</td>
+<td>1380 + 2100 + 2100
+</td></tr>
+<tr>
+<td align="center">12</td>
+<td>2200 + 1820 + 1560
+</td></tr>
+<tr>
+<td align="center">8</td>
+<td>2200 + 1520 + 1880
+</td></tr>
+<tr>
+<td align="center">1</td>
+<td>1520 + 1930 + 2150
+</td></tr>
+<tr>
+<td align="center">16</td>
+<td>1520 + 1930 + 2140
+</td></tr>
+<tr>
+<td align="center">10</td>
+<td>1710 + 2000 + 1880
+</td></tr>
+<tr>
+<td align="center" style="border-bottom:3px solid grey">2</td>
+<td>1710 + 1710 + 2150
+</td></tr>
+<tr>
+<td align="center"><b>73</b>
+</td></tr></tbody></table></dd></dl>
+<h2><span id=".E5.88.86.E9.A1.9E"></span><span class="mw-headline" id="分類">分類</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=4" title="節を編集: 分類">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>板取り問題はいくつかの方法で分類できる<sup class="reference" id="cite_ref-Wäscher2007_1-0"><a href="#cite_note-Wäscher2007-1">[1]</a></sup>。1つの方法は切断対象の次元による分類である。上に挙げた例は1次元の問題だった。1次元の問題は他にもパイプ、ケーブル、鋼棒を切断するといった場合に適用できる。2次元の問題は家具類や布製品、ガラス製品に当てはまる。母材もしくは製品が 特殊な形状をしている場合（皮革、生地、板金等の加工ではしばしば見られる）は、<b>ネスティング問題</b>（Nesting problem）と呼ばれる。
+</p><p>3次元の切断への適用例はあまり知られていないが、この問題と密接に関連した3次元<a href="/wiki/%E3%83%91%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E5%95%8F%E9%A1%8C" title="パッキング問題">パッキング問題</a>には、船荷の積み込み等、幅広い産業上の応用がある（例えば<a class="mw-redirect" href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E8%BC%B8%E9%80%81" title="コンテナ輸送">コンテナ輸送</a>を参照。これに関連した<a href="/wiki/%E7%90%83%E5%85%85%E5%A1%AB" title="球充填">球充填</a>の問題は17世紀以来研究されている（<a href="/wiki/%E3%82%B1%E3%83%97%E3%83%A9%E3%83%BC%E4%BA%88%E6%83%B3" title="ケプラー予想">ケプラー予想</a>））。
+</p>
+<h2><span id=".E7.B4.99.E3.80.81.E3.83.95.E3.82.A3.E3.83.AB.E3.83.A0.E3.80.81.E9.87.91.E5.B1.9E.E5.8A.A0.E5.B7.A5.E5.93.81.E3.81.AE.E8.A3.BD.E9.80.A0.E3.81.AB.E3.81.8A.E3.81.84.E3.81.A6"></span><span class="mw-headline" id="紙、フィルム、金属加工品の製造において">紙、フィルム、金属加工品の製造において</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=5" title="節を編集: 紙、フィルム、金属加工品の製造において">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>板取り問題の製造業への応用は、比較的大きな母材からより小さな製品ユニットが切り出される場合に顕著である（参考：<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%AA%E3%83%83%E3%82%BF%E3%83%BC&amp;action=edit&amp;redlink=1" title="ロールスリッター (存在しないページ)">ロールスリッター</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Roll_slitting&amp;action=edit&amp;redlink=1" title="En:Roll slitting (存在しないページ)">英語版</a>）</span></span>）。これには紙やプラスチックフィルムの他、鉄や真鍮の板金も該当する。機械や製造過程での制約、顧客からの要求、品質の問題等から、多くの変種問題・追加的制約が生じる。以下はその例である。:
+</p>
+<ul><li>2ステージ制約：（切断）加工が2段階を経る場合。例えば、オフィス用文房具(例：ヨーロッパでの<a href="/wiki/ISO_216#A_series" title="ISO 216">A4</a>サイズ、アメリカでの<a href="/wiki/%E3%83%AC%E3%82%BF%E3%83%BC%E3%82%B5%E3%82%A4%E3%82%BA" title="レターサイズ">レターサイズ</a>) はそのように製造される。第2段階では使用できる機械がより限定されたものになるため、問題が複雑になる。製造の両段階においてエネルギーと資材を効率的に利用することは重要だが、第1段階での効率化が第2段階での非効率を生むかもしれない（トレードオフが起こる）。スナック菓子の包装に使われる<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%87%91%E5%B1%9E%E8%92%B8%E7%9D%80%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0&amp;action=edit&amp;redlink=1" title="金属蒸着フィルム (存在しないページ)">金属蒸着フィルム</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Metallised_film&amp;action=edit&amp;redlink=1" title="En:Metallised film (存在しないページ)">英語版</a>）</span></span>や、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A3%B2%E6%96%99%E5%8C%85%E8%A3%85%E7%B4%99&amp;action=edit&amp;redlink=1" title="飲料包装紙 (存在しないページ)">飲料包装紙</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Liquid_packaging_board&amp;action=edit&amp;redlink=1" title="En:Liquid packaging board (存在しないページ)">英語版</a>）</span></span>に使われる紙へのプラスチックの押出し加工においてもこうした制約が生じる。</li>
+<li>巻付機に起因する、スリット加工（マスターロールを切断し、各ロールを巻き取る過程）上の物理的・論理的な制約：非常によく見られるのは、限られた種類のスリッターナイフしか使用することができず、1度の切り出しで切り出せる製品ロールの本数に上限が課される状況である。巻付機が標準化されていないために、これ以外にも非常に多くの制約が生じることがある。</li>
+<li>顧客からの要求の例として、母材の端部分からの切り出しが基準不適合となる場合が考えられる。シートの辺縁部分は厚みの変動が大きくなりやすく、製品によってはこのことが重大な問題となる。</li>
+<li>品質の問題の例として、母材に除去が必要な不良箇所が生じる場合が考えられる。高品質が要求される高価な素材、例えば<a href="/wiki/%E5%8D%B0%E7%94%BB%E7%B4%99" title="印画紙">印画紙</a>や<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%99%E3%83%83%E3%82%AF" title="タイベック">タイベック</a>であれば、廃棄部分が最小となるように注意深く最適化しなければならない。</li>
+<li>複数マシン問題（multi-machine problem）では、大きさの異なる母材を製造する2台以上の機械が利用できるものとする。一般的に、2種類以上の大きさの母材を使用できれば廃棄量を相当に改善することができるが、実際上は追加的な製品の切り出し方法を考慮に入れる必要が生じてくる。</li>
+<li>半連続問題（semi-continuous problem）では、製品が全く同一の大きさでなくとも、ある変動範囲に収まっていればよいとする。この状況はシート類の注文において典型的に見られ、<b>1½次元問題</b>（1½ dimensional problem）としても知られている。この変種問題は<a href="/wiki/%E6%AE%B5%E3%83%9C%E3%83%BC%E3%83%AB" title="段ボール">段ボール</a>（corrugated cardboard）の製造上生じることがあり、幾分混乱を招く呼称であるが <b>corrugator scheduling problem</b> と呼ばれることもある。</li>
+<li>ロール紙の製造において、マスターロールの幅が要求される製品ロールより短い場合に、スカイビング（<b>skiving</b>：削ぎ落とし）（または <i>web-welding</i>）と呼ばれる2段階目の加工を採り入れている工場もある。最初の大きなロールから切り出した2本のロールを端と端を少し重ねて繋ぎ合わせる工程である。マスターロールの幅がより短ければ、全体としての廃棄量を減らすことができる<sup class="reference" id="cite_ref-Johnson1997_2-0"><a href="#cite_note-Johnson1997-2">[2]</a></sup>。</li></ul>
+<h2><span id=".E3.82.AC.E3.83.A9.E3.82.B9.E8.A3.BD.E9.80.A0.E3.81.AB.E3.81.8A.E3.81.84.E3.81.A6"></span><span class="mw-headline" id="ガラス製造において">ガラス製造において</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=6" title="節を編集: ガラス製造において">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%82%AE%E3%83%AD%E3%83%81%E3%83%B3%E3%82%AB%E3%83%83%E3%83%88%E5%95%8F%E9%A1%8C" title="ギロチンカット問題">ギロチンカット問題</a>は、定形のガラス板から、端から端までの裁断のみによって（ギロチンカット制約）、指定された大きさのいくつかの長方形を切り出す問題である。
+</p>
+<h2><span id=".E5.89.B2.E5.BD.93.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="割当問題">割当問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=7" title="節を編集: 割当問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>これに関連した1次元の決定問題、つまり、与えられた製品要求を満足するような最適な母材の大きさを定める問題は、<b>割当問題</b>（assortment problem）として知られている<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=8" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>板取り問題は<a href="/wiki/%E3%83%AC%E3%82%AA%E3%83%8B%E3%83%BC%E3%83%88%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AD%E3%83%B4%E3%82%A3%E3%83%81" title="レオニート・カントロヴィチ">レオニート・ヴィタリエヴィチ・カントロヴィチ</a>によって1939年に初めて定式化された<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。1951年、まだコンピュータが広く実用化されていなかった頃、カントロヴィチと<a href="/wiki/%E3%83%B4%E3%82%A3%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%A2%E3%83%96%E3%83%A9%E3%83%A2%E3%83%B4%E3%82%A3%E3%83%83%E3%83%81%E3%83%BB%E3%82%B6%E3%83%AB%E3%82%AC%E3%83%A9%E3%83%BC" title="ヴィクター・アブラモヴィッチ・ザルガラー">ヴィクター・アブラモヴィッチ・ザルガラー</a>は、切断段階における資材の効率的な利用の問題を線形計画法を用いて解くことを提案した<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。この手法は後に<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%97%E7%94%9F%E6%88%90%E6%B3%95&amp;action=edit&amp;redlink=1" title="列生成法 (存在しないページ)">列生成法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Column_generation&amp;action=edit&amp;redlink=1" title="En:Column generation (存在しないページ)">英語版</a>）</span></span></b>と呼ばれることになる。
+</p>
+<h2><span id=".E6.95.B0.E5.AD.A6.E7.9A.84.E5.AE.9A.E5.BC.8F.E5.8C.96.E3.81.A8.E8.A7.A3.E6.8E.A2.E7.B4.A2"></span><span class="mw-headline" id="数学的定式化と解探索">数学的定式化と解探索</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=9" title="節を編集: 数学的定式化と解探索">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>板取り問題を数学的に定式化するには（これが唯一の方法ではないが）、まず製品種類の数 <i>m</i> と、各製品が要求されている単位数 &lt;math&gt;q_j&lt;/math&gt;（ &lt;math&gt;j = 1,\ldots,m&lt;/math&gt;）の整理から始める。次に、母材1単位から製品を切り出す方法（これを「パターン」と呼ぶことが多い）を全て挙げてリストを構成する。パターンの総数を &lt;math&gt;n&lt;/math&gt; とする。各パターン &lt;math&gt;i&lt;/math&gt; に、それが何度用いられるかを表す変数 &lt;math&gt;x_i&lt;/math&gt; （0含む自然数）を対応させる（ &lt;math&gt;i = 1,\ldots,n&lt;/math&gt; ）。このとき線形計画問題は次のように定式化できる：
+</p>
+<dl><dd>&lt;math&gt;\min\sum_{i=1}^n c_i x_i&lt;/math&gt;</dd>
+<dd>&lt;math&gt;\text{s.t.}\sum_{i=1}^n a_{ij} x_i \ge q_j, \quad \quad \forall j=1,\dots,m&lt;/math&gt;</dd>
+<dd>&lt;math&gt;x_i \ge 0&lt;/math&gt;, 整数</dd></dl>
+<p>ここで &lt;math&gt;a_{ij}&lt;/math&gt; は製品 &lt;math&gt;j&lt;/math&gt; がパターン &lt;math&gt;i&lt;/math&gt; の中に現れる回数、 &lt;math&gt;c_i&lt;/math&gt; はパターン &lt;math&gt;i&lt;/math&gt; のコスト（普通は廃材の量とする）。 量的制約を正確に定式化することで、微妙に異なった様々な数学的特性が現れる。上記の定式化は、<b>最小限</b>の制約条件しか課していない（どの製品も受注分は最低限製造するが、それ以上に製造されても良い）。&lt;math&gt;c_i=1&lt;/math&gt; であれば、使用する母材の数量を最小化することになる。製造する製品の制約式を不等号でなく等号に変えたものは<a href="/wiki/%E3%83%93%E3%83%B3%E3%83%91%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E5%95%8F%E9%A1%8C" title="ビンパッキング問題">ビンパッキング問題</a>となる。最も一般的な定式化では、この制約不等式に下限と上限を設ける（このとき、廃棄量を最小化する解は母材の使用量を最小化していないかもしれない）：
+</p>
+<dl><dd>&lt;math&gt;q_j \le \sum_{i=1}^n a_{ij} x_i \le Q_j, \quad \quad \forall j=1,\dots,m&lt;/math&gt;</dd></dl>
+<p>この定式化は1次元問題のみに限らない。多くの変種が考えられるが、例えば廃棄量の最小化ではなく製造量の価値の最大化（製品ごとに異なる価値を与えてよいとする）を最適化の目的としてもよい。
+</p><p>一般に、可能なパターンの数は製品種類の数 <i>m</i> の関数として爆発的に増大する。製品の種類が増大するにつれて、可能な切断パターンの数の数え上げは事実上不可能になる。
+</p><p>他のアプローチとして、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%81%85%E5%BB%B6%E5%88%97%E7%94%9F%E6%88%90%E6%B3%95&amp;action=edit&amp;redlink=1" title="遅延列生成法 (存在しないページ)">遅延列生成法</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:delayed_column-generation&amp;action=edit&amp;redlink=1" title="En:delayed column-generation (存在しないページ)">英語版</a>）</span></span>（delayed column-generation）を使うものがある。この手法では、問題を解くのにまず少数のパターンから始めて、必要になるたびにパターンを追加していく。1次元の場合、線形計画の双対変数を使った補助的な最適化問題（この場合ナップサック問題）を解くことで追加するパターンを決定する。ナップサック問題には、<a href="/wiki/%E5%88%86%E6%9E%9D%E9%99%90%E5%AE%9A%E6%B3%95" title="分枝限定法">分枝限定法</a>や<a href="/wiki/%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95" title="動的計画法">動的計画法</a>といったよく知られた解法がある。遅延列生成法は元の列生成法より一層効率的であり、特に問題のサイズが大きくなっていくとき威力を発揮する。板取り問題への応用としての列生成法アプローチは、 Gilmore と Gomory の1960年代の一連の論文によって切り拓かれた<sup class="reference" id="cite_ref-Gilmore61_6-0"><a href="#cite_note-Gilmore61-6">[6]</a></sup><sup class="reference" id="cite_ref-Gilmore63_7-0"><a href="#cite_note-Gilmore63-7">[7]</a></sup>。 Gilmore と Gomory は、列生成法では、前もって可能な全てのパターンを列挙することなしに、解（分数となる場合も含む）へ収束することが保証されることを証明した。
+</p><p>オリジナルの Gilmore と Gomory の手法の難点は端数を上手く扱えないことであり、「解」が分数になり得る（あるパターンを3.67回使用する、のように）。最も近い整数に丸めるのでは上手く行かないことが多い。丸めによって非最適な解や、いくつかの製品を過剰・過少に製造するような解が出てきてしまうからである (さらに、制約条件の上限・下限を満たせなくなるかもしれない)。この困難は現代的なアルゴリズムでは克服されてきており、非常に大きなサイズの問題例（実際的な問題より大きいことが多い）の（廃棄量最小化の意味での）最適化ができるようになってきている<sup class="reference" id="cite_ref-Goulimis1990_8-0"><a href="#cite_note-Goulimis1990-8">[8]</a></sup><sup class="reference" id="cite_ref-Carvalho1998_9-0"><a href="#cite_note-Carvalho1998-9">[9]</a></sup>。
+</p><p>板取り問題は、廃棄率が同一となるような複数の最適解が存在することで非常に困難になることが多い。これは、廃棄率を変えることなく、製品の切り出し位置が互いに移り変わり得ることから生じる。これに関連して、着目点に応じた諸問題が立てられている。：
+</p>
+<ul><li>最小パターン数問題（minimum pattern count problem）：廃棄量が最小となるような解の中で、用いるパターン数を最小に抑えるものを探す。たとえ最適廃棄量がわかっていたとしても、非常に難しい問題である<sup class="reference" id="cite_ref-Umetani2003_10-0"><a href="#cite_note-Umetani2003-10">[10]</a></sup><sup class="reference" id="cite_ref-Diegel1996_11-0"><a href="#cite_note-Diegel1996-11">[11]</a></sup><sup class="reference" id="cite_ref-McDiarmid1999_12-0"><a href="#cite_note-McDiarmid1999-12">[12]</a></sup>。1次元で制約条件が等号の場合、製品種類が <i>n</i> 通りであれば、パターン数が <i>n</i> + 1 以下となる最適解が存在すると<a href="/wiki/%E6%95%B0%E5%AD%A6%E4%B8%8A%E3%81%AE%E6%9C%AA%E8%A7%A3%E6%B1%BA%E5%95%8F%E9%A1%8C" title="数学上の未解決問題">予想</a>されている。</li>
+<li>最小スタック問題（minimum stack problem）：各時点で注文数に達していない製品種が多くなり過ぎないような、パターンの使用順序を求める問題。この問題は2007年まで手つかずだったが、動的計画法に基づく効率的なアルゴリズムが発表された<sup class="reference" id="cite_ref-Banda2007_13-0"><a href="#cite_note-Banda2007-13">[13]</a></sup>。</li>
+<li>最小ナイフ交換数問題（minimum number of knife changes problem）（1次元の場合）：スリッターナイフの交換回数を最小にするようなパターンの使用順序を求める問題。これは一般化された<a href="/wiki/%E5%B7%A1%E5%9B%9E%E3%82%BB%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%9E%E3%83%B3%E5%95%8F%E9%A1%8C" title="巡回セールスマン問題">巡回セールスマン問題</a>の特別な場合である。</li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-Wäscher2007-1"><b><a href="#cite_ref-Wäscher2007_1-0">^</a></b> <span class="reference-text">Wäscher, G.; Haußner, H.; Schumann, H. <i>An Improved Typology of Cutting and Packing Problems</i>. European Journal of Operational Research Volume 183, Issue 3, 1109-1130</span>
+</li>
+<li id="cite_note-Johnson1997-2"><b><a href="#cite_ref-Johnson1997_2-0">^</a></b> <span class="reference-text">M.P. Johnson, C. Rennick &amp; E. Zak (1997), <i>Skiving addition to the cutting stock problem in the paper industry</i>, SIAM Review, 472-483</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Raffensperger, J. F. (2010). “The generalized assortment and best cutting stock length problems”. <i>International Transactions in Operational Research</i> <b>17</b>:  35. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1111%2Fj.1475-3995.2009.00724.x" rel="nofollow">10.1111/j.1475-3995.2009.00724.x</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=The+generalized+assortment+and+best+cutting+stock+length+problems&amp;rft.jtitle=International+Transactions+in+Operational+Research&amp;rft.aulast=Raffensperger&amp;rft.aufirst=J.+F.&amp;rft.au=Raffensperger%2C%26%2332%3BJ.+F.&amp;rft.date=2010&amp;rft.volume=17&amp;rft.pages=35&amp;rft_id=info:doi/10.1111%2Fj.1475-3995.2009.00724.x&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">L. V. Kantorovich <i>Mathematical methods of organizing and planning production</i>. Leningrad State University. 1939</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Kantorovich L. V. and Zalgaller V. A. . (1951). <i>Calculation of Rational Cutting of Stock</i>. Lenizdat, Leningrad</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Calculation+of+Rational+Cutting+of+Stock&amp;rft.aulast=Kantorovich+L.+V.+and+Zalgaller+V.+A.+.&amp;rft.au=Kantorovich+L.+V.+and+Zalgaller+V.+A.+.&amp;rft.date=1951&amp;rft.pub=Lenizdat%2C+Leningrad&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Gilmore61-6"><b><a href="#cite_ref-Gilmore61_6-0">^</a></b> <span class="reference-text">Gilmore P. C., R. E. Gomory (1961). <i>A linear programming approach to the cutting-stock problem</i>.  Operations Research 9: 849-859</span>
+</li>
+<li id="cite_note-Gilmore63-7"><b><a href="#cite_ref-Gilmore63_7-0">^</a></b> <span class="reference-text">Gilmore P. C., R. E. Gomory (1963). <i>A linear programming approach to the cutting-stock problem - Part II</i>.  Operations Research 11: 863-888</span>
+</li>
+<li id="cite_note-Goulimis1990-8"><b><a href="#cite_ref-Goulimis1990_8-0">^</a></b> <span class="reference-text">Goulimis C (1990). <i>Optimal solutions for the cutting stock problem</i>.  European Journal of Operational Research 44: 197-208</span>
+</li>
+<li id="cite_note-Carvalho1998-9"><b><a href="#cite_ref-Carvalho1998_9-0">^</a></b> <span class="reference-text">de Carvalho V (1998). <i>Exact solution of cutting stock problems using <a class="new" href="/w/index.php?title=Column_generation&amp;action=edit&amp;redlink=1" title="Column generation (存在しないページ)">column generation</a> and branch-and-bound</i>. International Transactions in Operational Research 5: 35–44</span>
+</li>
+<li id="cite_note-Umetani2003-10"><b><a href="#cite_ref-Umetani2003_10-0">^</a></b> <span class="reference-text">S. Umetani, M. Yagiura, and T. Ibaraki (2003). <i>One dimensional cutting stock problem to minimize the number of different patterns</i>. European Journal of Operational Research 146, 388–402</span>
+</li>
+<li id="cite_note-Diegel1996-11"><b><a href="#cite_ref-Diegel1996_11-0">^</a></b> <span class="reference-text">A. Diegel, E. Montocchio, E. Walters, S. van Schalkwyk and S. Naidoo (1996). <i>Setup minimizing conditions in the trim loss problem</i>. European Journal of Operational Research 95:631-640</span>
+</li>
+<li id="cite_note-McDiarmid1999-12"><b><a href="#cite_ref-McDiarmid1999_12-0">^</a></b> <span class="reference-text">C. McDiarmid (1999). <i>Pattern Minimisation in Cutting Stock Problems</i>. Discrete Applied Mathematics, 121-130</span>
+</li>
+<li id="cite_note-Banda2007-13"><b><a href="#cite_ref-Banda2007_13-0">^</a></b> <span class="reference-text">Maria Garcia de la Banda, P. J. Stuckey. <i>Dynamic Programming to Minimize the Maximum Number of Open Stacks</i>. INFORMS Journal on Computing, Vol. 19, No. 4, Fall 2007, 607-617.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=V%C3%A1clav_Chv%C3%A1tal&amp;action=edit&amp;redlink=1" title="Václav Chvátal (存在しないページ)">Chvátal, V.</a> (1983). <i>Linear Programming</i>. W.H. Freeman. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-7167-1587-0" title="特別:文献資料/978-0-7167-1587-0">978-0-7167-1587-0</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Linear+Programming&amp;rft.aulast=%5B%5BV%C3%A1clav+Chv%C3%A1tal%7CChv%C3%A1tal%2C+V.%5D%5D&amp;rft.au=%5B%5BV%C3%A1clav+Chv%C3%A1tal%7CChv%C3%A1tal%2C+V.%5D%5D&amp;rft.date=1983&amp;rft.pub=W.H.+Freeman&amp;rft.isbn=978-0-7167-1587-0&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C"><span style="display: none;"> </span></span></li>
+<li>Hatem Ben Amor, J.M. Valério de Carvalho, <i>Cutting Stock Problems</i> in Column Generation, edited by Guy Desaulniers, Jacques Desrosiers, and Marius M. Solomon, Springer, 2005, XVI, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-25485-4" title="特別:文献資料/0-387-25485-4">0-387-25485-4</a></li>
+<li>M. Delorme, M. Iori, S. Martello, <i>Bin packing and cutting stock problems: Mathematical models and exact algorithms</i>, European Journal of Operational Research 2016, 255, 1–20, doi:10.1016/j.ejor.2016.04.030</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220402020913
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.168 seconds
+Real time usage: 0.214 seconds
+Preprocessor visited node count: 2866/1000000
+Post‐expand include size: 19300/2097152 bytes
+Template argument size: 3930/2097152 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 5/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 10806/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5754880/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  193.197      1 -total
+ 49.00%   94.668      3 テンプレート:Citation/core
+ 33.33%   64.396      2 テンプレート:Cite_book
+ 32.82%   63.400      1 テンプレート:Reflist
+ 31.66%   61.162      2 テンプレート:Citation/identifier
+ 30.98%   59.844      2 テンプレート:ISBN2
+ 24.68%   47.676      5 テンプレート:仮リンク
+ 23.77%   45.924      1 テンプレート:Cite_journal
+ 19.44%   37.560      2 テンプレート:Catalog_lookup_link
+  6.58%   12.710      1 テンプレート:ISBN
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:3879072-0!canonical and timestamp 20220402020913 and revision id 2276142. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=板取り問題&amp;oldid=2276142">http://localhost:8080/w/index.php?title=板取り問題&amp;oldid=2276142</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BA%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81" title="カテゴリ:オペレーションズリサーチ">オペレーションズリサーチ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%84%E5%90%88%E3%81%9B%E6%9C%80%E9%81%A9%E5%8C%96" title="カテゴリ:組合せ最適化">組合せ最適化</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%91%E6%80%A7%E7%90%86%E8%AB%96" title="カテゴリ:計算複雑性理論">計算複雑性理論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%A9%9F%E6%A2%B0%E5%B7%A5%E5%AD%A6" title="カテゴリ:機械工学">機械工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;returntoquery=curid%3D3879072%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;returntoquery=curid%3D3879072%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;oldid=2276142" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E6%9D%BF%E5%8F%96%E3%82%8A%E5%95%8F%E9%A1%8C&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月25日 (月) 14:41 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.168","walltime":"0.214","ppvisitednodes":{"value":2866,"limit":1000000},"postexpandincludesize":{"value":19300,"limit":2097152},"templateargumentsize":{"value":3930,"limit":2097152},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":5,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10806,"limit":5000000},"timingprofile":["100.00%  193.197      1 -total"," 49.00%   94.668      3 テンプレート:Citation/core"," 33.33%   64.396      2 テンプレート:Cite_book"," 32.82%   63.400      1 テンプレート:Reflist"," 31.66%   61.162      2 テンプレート:Citation/identifier"," 30.98%   59.844      2 テンプレート:ISBN2"," 24.68%   47.676      5 テンプレート:仮リンク"," 23.77%   45.924      1 テンプレート:Cite_journal"," 19.44%   37.560      2 テンプレート:Catalog_lookup_link","  6.58%   12.710      1 テンプレート:ISBN"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5754880,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220402020913","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":491});});</script>
+</body></html>

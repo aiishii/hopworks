@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>円柱座標変換 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-円柱座標変換 rootpage-円柱座標変換 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">円柱座標変換</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>円柱座標変換</b>（えんちゅうざひょうへんかん）とは、3次元<a href="." id="link_a_1" title="ユークリッド空間">ユークリッド空間 </a>（<a href="." id="link_a_2" title="数ベクトル空間">数ベクトル空間</a>)の、<a href="." id="link_a_3" title="非線形">非線形</a>な<a href="." id="link_a_4" title="座標変換">座標変換</a>の一つである。円柱座標変換の逆写像<sup class="reference" id="cite_ref-entyuzahyou_1-0"><a href="#cite_note-entyuzahyou-1">[注釈 1]</a></sup>のことを、円柱座標系という。円柱座標系は、<a href="." id="link_a_5" title="極座標系">極座標系</a>の一種である<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[注釈 2]</a></sup>。
+</p><p>円柱座標変換は、<a href="." id="link_a_6" title="電子レンズ">電子レンズ</a>など、<a href="." id="link_a_7" title="軸対称 (存在しないページ)">軸対称</a>な系の計算によく用いられる<sup class="reference" id="cite_ref-zikutai_3-0"><a href="#cite_note-zikutai-3">[注釈 3]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#定義_2"><span class="tocnumber">1.1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#r-θ-ζ空間、x-y-z空間の正体"><span class="tocnumber">1.2</span> <span class="toctext">r-θ-ζ空間、x-y-z空間の正体</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#定義域"><span class="tocnumber">1.3</span> <span class="toctext">定義域</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#円柱座標系との関係"><span class="tocnumber">1.4</span> <span class="toctext">円柱座標系との関係</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#微分"><span class="tocnumber">2</span> <span class="toctext">微分</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#微分_2"><span class="tocnumber">2.1</span> <span class="toctext">微分</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#法線"><span class="tocnumber">2.2</span> <span class="toctext">法線</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#円柱と円柱座標"><span class="tocnumber">3</span> <span class="toctext">円柱と円柱座標</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#円柱と円柱座標_2"><span class="tocnumber">3.1</span> <span class="toctext">円柱と円柱座標</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#円柱表面"><span class="tocnumber">3.2</span> <span class="toctext">円柱表面</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#ベクトル場"><span class="tocnumber">4</span> <span class="toctext">ベクトル場</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#積分"><span class="tocnumber">5</span> <span class="toctext">積分</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#体積分"><span class="tocnumber">5.1</span> <span class="toctext">体積分</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#面積分"><span class="tocnumber">5.2</span> <span class="toctext">面積分</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#ガウスの発散定理"><span class="tocnumber">5.3</span> <span class="toctext">ガウスの発散定理</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#証明の準備"><span class="tocnumber">5.3.1</span> <span class="toctext">証明の準備</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#x,y成分についての証明"><span class="tocnumber">5.3.2</span> <span class="toctext">x,y成分についての証明</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#z成分について"><span class="tocnumber">5.3.3</span> <span class="toctext">z成分について</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#スカラー関数に作用する微分作用素"><span class="tocnumber">6</span> <span class="toctext">スカラー関数に作用する微分作用素</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#x-y-z空間における偏微分"><span class="tocnumber">6.1</span> <span class="toctext">x-y-z空間における偏微分</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#勾配作用素"><span class="tocnumber">6.2</span> <span class="toctext">勾配作用素</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#ラプラシアン"><span class="tocnumber">6.3</span> <span class="toctext">ラプラシアン</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#ベクトル場に作用する微分作用素"><span class="tocnumber">7</span> <span class="toctext">ベクトル場に作用する微分作用素</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#発散"><span class="tocnumber">7.1</span> <span class="toctext">発散</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#回転"><span class="tocnumber">7.2</span> <span class="toctext">回転</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#曲線・運動"><span class="tocnumber">8</span> <span class="toctext">曲線・運動</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#運動"><span class="tocnumber">8.1</span> <span class="toctext">運動</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#速度ベクトル"><span class="tocnumber">8.2</span> <span class="toctext">速度ベクトル</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#加速度ベクトル"><span class="tocnumber">8.3</span> <span class="toctext">加速度ベクトル</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-31"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.AE.9A.E7.BE.A9_2"></span><span class="mw-headline" id="定義_2">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=2" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>円柱座標変換Φとは、
+</p>
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)=\Phi (r,\theta ,\zeta )=\left( \begin{matrix}
+</p>
+<pre>  r\cos \theta   \\
+  r\sin \theta   \\
+  \zeta   \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(1-1-1)
+</p><p>で表される、<i>r</i> -θ-ζ空間から<i>x</i> -<i>y</i> -<i>z</i> 空間への多変数ベクトル値関数のことである。式（1-1-1）で定義されたΦに相似変換、場合によっては正則な<a class="mw-redirect" href="/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%A4%89%E6%8F%9B" title="アフィン変換">アフィン変換</a>を施したものも、円柱座標変換ということがあるので、特に混乱が生じる場合には（1-1-1）で定義されたΦを標準的な円柱座標変換ということにする。
+</p>
+<h3><span id="r-.CE.B8-.CE.B6.E7.A9.BA.E9.96.93.E3.80.81x-y-z.E7.A9.BA.E9.96.93.E3.81.AE.E6.AD.A3.E4.BD.93"></span><span class="mw-headline" id="r-θ-ζ空間、x-y-z空間の正体">r-θ-ζ空間、x-y-z空間の正体</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=3" title="節を編集: r-θ-ζ空間、x-y-z空間の正体">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>数学的には、<i>r</i> -θ-ζ空間、<i>x</i> -<i>y</i> -<i>z</i> 空間は、共に3次元実<a href="/wiki/%E6%95%B0%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="数ベクトル空間">数ベクトル空間</a>（&lt;math&gt;\mathbb{R}^{3}&lt;/math&gt;）である<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[注釈 4]</a></sup>。<i>r</i> -θ-ζ空間においては、第一軸方向を<i>r</i> 方向（<i>r</i> 軸）、第二軸方向をθ方向（θ軸）、第三軸方向をζ方向（ζ軸）とする。<i>x</i> -<i>y</i> -<i>z</i> 空間においても同様に、第一軸方向を<i>x</i> 方向（<i>x</i> 軸）、第二軸方向を<i>y</i> 方向（<i>y</i> 軸）、第三軸を<i>z</i> 方向（<i>z</i>軸）とする。この三軸によって定まる座標系を、「<i>x</i> -<i>y</i> -<i>z</i> 空間の標準座標系」（<i>O-xyz</i> 系）という<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[注釈 5]</a></sup>。
+</p>
+<h3><span id=".E5.AE.9A.E7.BE.A9.E5.9F.9F"></span><span class="mw-headline" id="定義域">定義域</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=4" title="節を編集: 定義域">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>式(1-1-1)の円柱座標変換<i>Φ</i> は<i>r</i> -<i>θ</i>-<i>ζ</i>空間のすべての点において、矛盾なく定義がされている。例えば、
+</p>
+<dl><dd>&lt;math&gt;\Phi (-3,2\pi ,7)=\left( \begin{matrix}</dd></dl>
+<p>-3 \\
+0  \\
+7
+\end{matrix} \right)&lt;/math&gt;　　(1-3-1)
+のように、どのような (<i>r</i>, <i>θ</i>, <i>ζ</i>) に対しても、ただ一つの行き先を定めることができる<sup class="reference" id="cite_ref-syazou2_6-0"><a href="#cite_note-syazou2-6">[注釈 6]</a></sup>。
+</p><p>しかし、本記事では特段の断りがない限り、<i>Φ</i> の定義域は式(1-3-2) に定める領域 <i>V</i> に制限されているものとする。<i>V</i> は、<i>r</i> -<i>θ</i>-<i>ζ</i> の部分集合であり、<a href="/wiki/%E9%96%89%E9%9B%86%E5%90%88" title="閉集合">閉集合</a>である（<a href="/wiki/%E9%96%8B%E9%9B%86%E5%90%88" title="開集合">開集合</a>ではない）。
+</p><p>&lt;math&gt;V=\left\{ \left. \begin{pmatrix}
+r \\
+\theta \\
+\zeta
+\end{pmatrix} \left| \ \begin{array}{l}
+0\le r \\
+0\le \theta \le 2\pi \\
+-\infty &lt;\zeta &lt;\infty
+\end{array} \right. \right\} \right.&lt;/math&gt;　　(1-3-2)
+</p><p>つまり、<i>Φ</i> に代入されるものは、
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{array}{l}</dd></dl>
+<p>0\le r \\
+0\le \theta \le 2\pi \\
+-\infty &lt; \zeta &lt;\infty
+\end{array} \right.&lt;/math&gt;　　(1-3-3)
+のすべての条件を満たす点全てに限って考えることにする。
+</p><p><i>Φ</i> の定義域を式(1-3-2) の <i>V</i> に制限してもよい理由は、<a class="mw-redirect" href="/wiki/%E5%85%A8%E5%B0%84%E6%80%A7" title="全射性">全射性</a>が保たれていることによる<sup class="reference" id="cite_ref-tansya_7-0"><a href="#cite_note-tansya-7">[注釈 7]</a></sup><sup class="reference" id="cite_ref-zensya_8-0"><a href="#cite_note-zensya-8">[注釈 8]</a></sup>。
+</p>
+<h3><span id=".E5.86.86.E6.9F.B1.E5.BA.A7.E6.A8.99.E7.B3.BB.E3.81.A8.E3.81.AE.E9.96.A2.E4.BF.82"></span><span class="mw-headline" id="円柱座標系との関係">円柱座標系との関係</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=5" title="節を編集: 円柱座標系との関係">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a class="mw-redirect" href="/wiki/%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E7%B3%BB" title="円柱座標系">円柱座標系</a>」も参照</div>
+<p><i>x</i> -<i>y</i> -<i>z</i> 空間に、標準座標系（<i>O-xyz</i> 系；「<i>r</i> -θ-ζ空間、<i>x</i> -<i>y</i> -<i>z</i> 空間の正体」の項参照）が定められているとする。このとき、円柱座標系<i>P</i> とは、
+</p>
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+<pre>  r  \\
+  \theta  \\
+  \zeta  \\
+</pre>
+<p>\end{matrix} \right)=
+P (x,y ,z)=&lt;/math&gt;&lt;math&gt;\left( \begin{matrix}
+</p>
+<pre>  \sqrt{{{x}^{2}}+{{y}^{2}}}  \\
+  \theta (x,y,z)  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(1-4-1)
+</p><p>で表される、<i>x</i> -<i>y</i> -<i>z</i> から<i>r</i> -θ-ζ空間への多変数ベクトル値関数のことである。但し、θ(<i>x</i> , <i>y</i> , <i>z</i>) は、以下の定義式(1-4-2)で与えられるスカラー値関数である。θ(<i>x</i> , <i>y</i> , <i>z</i>) の定義域は<i>x</i> -<i>y</i> -<i>z</i> 空間の原点以外である。その他の成分は、<i>x</i> -<i>y</i> -<i>z</i> 空間全域で定義されている。従って、円柱座標系<i>P</i> の定義域は、<i>x</i> -<i>y</i> -<i>z</i> 空間の原点以外である。
+</p>
+<dl><dd>&lt;math&gt;\theta (x,y,z)=\left\{ \begin{matrix}</dd></dl>
+<pre>  {{\tan }^{-1}}(y/x) &amp; (x&gt;0,y&gt;0)  \\
+  \frac{\pi}{2} &amp; (x=0,y&gt;0)  \\
+  \pi+{{\tan }^{-1}}(y/x) &amp; (x&lt;0)  \\
+  \frac{3\pi}{2} &amp; (x=0,y&lt;0)  \\
+  2\pi+{{\tan }^{-1}}(y/x) &amp; (x=0,y&lt;0)  \\
+</pre>
+<p>\end{matrix} \right.&lt;/math&gt;　　(1-4-2)
+</p><p>円柱座標系は、以下の手順で、幾何学的に理解することもできる。
+</p>
+<ul><li>任意の点Pからxy平面に下した垂線の足をQとする。</li>
+<li>線分OQの長さをrとする。</li>
+<li>線分QPの長さをζとする。</li>
+<li>x軸と線分OQのなす角度をθとする。</li></ul>
+<p>また、円柱座標系と円柱座標変換は、相互に逆変換となっている。
+</p>
+<h2><span id=".E5.BE.AE.E5.88.86"></span><span class="mw-headline" id="微分">微分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=6" title="節を編集: 微分">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E5.BE.AE.E5.88.86_2"></span><span class="mw-headline" id="微分_2">微分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=7" title="節を編集: 微分">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>円柱座標変換の<a class="mw-redirect" href="/wiki/%E5%81%8F%E5%B0%8E%E9%96%A2%E6%95%B0" title="偏導関数">偏導関数</a>は、
+</p>
+<dl><dd>&lt;math&gt;\frac{\partial \Phi }{\partial r}(r,\theta,\zeta)=\left( \begin{matrix}</dd></dl>
+<pre>  \cos\theta  \\
+  \sin\theta  \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-1-1)
+</p>
+<dl><dd>&lt;math&gt;\frac{\partial \Phi }{\partial \theta }(r,\theta ,\zeta )=\left( \begin{matrix}</dd></dl>
+<pre>  -r\sin (\theta )  \\
+  r\cos (\theta )  \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-1-2)
+</p>
+<dl><dd>&lt;math&gt;\frac{\partial \Phi }{\partial \zeta}(r,\theta,\zeta)=\left( \begin{matrix}</dd></dl>
+<pre>  0  \\
+  0  \\
+  1  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-1-3)
+</p><p>である。これらの定義域は、<i>r</i> -θ-ζ空間全域である。
+</p><p>従って、円柱座標変換の点 (<i>r</i> , θ, ζ) における<a href="/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E8%A1%8C%E5%88%97" title="ヤコビ行列">ヤコビ行列</a><i>J</i> Φ(<i>r</i> , θ, ζ) および<a class="mw-redirect" href="/wiki/%E3%83%A4%E3%82%B3%E3%83%93%E3%82%A2%E3%83%B3" title="ヤコビアン">ヤコビアン</a> det(<i>J</i> Φ(<i>r</i> , θ, ζ)) は以下のようになる。ヤコビ行列、ヤコビアン共に定義域は<i>r</i> -θ-ζ空間全域である。
+</p>
+<dl><dd>&lt;math&gt;{{J}{\Phi }}(r,\theta ,\zeta )=\left( \begin{matrix}</dd></dl>
+<pre>  \cos \theta  &amp; -r\sin \theta  &amp; 0  \\
+  \sin \theta  &amp; r\cos \theta  &amp; 0  \\
+  0 &amp; 0 &amp; 1  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-1-4)
+</p>
+<dl><dd>&lt;math&gt;\det ({{J}{\Phi }}(r,\theta ,\zeta ))=\left|\begin{matrix}</dd></dl>
+<pre>  \cos \theta  &amp; -r\sin \theta  &amp; 0  \\
+  \sin \theta  &amp; r\cos \theta  &amp; 0  \\
+  0 &amp; 0 &amp; 1  \\
+</pre>
+<p>\end{matrix} \right|=r&lt;/math&gt;　　(2-1-5)
+</p><p>従って、円座標のときと同じく、特異点（ヤコビアンが 0 となる点）は、<i>r</i> = 0 となる点全て、つまり (0, θ, ζ) の形であらわされる点全てである。これらの点は全て<i>x</i> -<i>y</i> -<i>z</i> 空間上では<i>z</i> 軸に移る。
+</p>
+<h3><span id=".E6.B3.95.E7.B7.9A"></span><span class="mw-headline" id="法線">法線</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=8" title="節を編集: 法線">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>標準的な円柱座標変換Φに対し、<b>N</b><sub>r</sub> , <b>N</b><sub>θ</sub> , <b>N</b><sub>ζ</sub> を以下のように定義し、それぞれ<i>r</i> 法線、θ法線、ζ法線と呼ぶ。これらの定義域は、<i>r</i> -θ-ζ空間全域である<sup class="reference" id="cite_ref-syazounisou_9-0"><a href="#cite_note-syazounisou-9">[注釈 9]</a></sup>。
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{r}}(r,\theta ,\zeta )=\frac{\left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right)}{\left\| \left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right) \right\|}=\left( \begin{matrix}</dd></dl>
+<pre> \cos\theta   \\
+ \sin\theta   \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-2-1)
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{\theta }}(r,\theta ,\zeta )=\frac{\left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right)}{\left\| \left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right) \right\|}=\left( \begin{matrix}</dd></dl>
+<pre> -\sin\theta   \\
+ \cos\theta   \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-2-2)
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{z}}(r,\theta,\zeta)=\frac{\left( \frac{\partial \Phi }{\partial r}(r,\theta,\zeta) \right)\times \left( \frac{\partial \Phi }{\partial \theta }(r,\theta,\zeta) \right)}{\left\| \left( \frac{\partial \Phi }{\partial r}(r,\theta,\zeta) \right)\times \left( \frac{\partial \Phi }{\partial \theta }(r,\theta,\zeta) \right) \right\|}=\left( \begin{matrix}</dd></dl>
+<pre>  0  \\
+  0  \\
+  1  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(2-2-3)<br/>
+</p><p>ここで、“×”は<a class="mw-redirect" href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%8D" title="ベクトル積">ベクトル積</a>を意味する<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[注釈 10]</a></sup>。これらの幾何学的な意味は、後述するが、幾何学的な意味でも、これらは法線になっている。
+</p>
+<h2><span id=".E5.86.86.E6.9F.B1.E3.81.A8.E5.86.86.E6.9F.B1.E5.BA.A7.E6.A8.99"></span><span class="mw-headline" id="円柱と円柱座標">円柱と円柱座標</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=9" title="節を編集: 円柱と円柱座標">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>この節では、後述の説明のために記号を定義する。
+</p>
+<h3><span id=".E5.86.86.E6.9F.B1.E3.81.A8.E5.86.86.E6.9F.B1.E5.BA.A7.E6.A8.99_2"></span><span class="mw-headline" id="円柱と円柱座標_2">円柱と円柱座標</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=10" title="節を編集: 円柱と円柱座標">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>M</i> を、&lt;math&gt;x-y-z&lt;/math&gt;空間で半径<i>r</i><sub>0</sub> 、高さ<i>z</i><sub>0</sub>の<b>ふたと底のある、中身のつまった円柱</b>（以降「ソリッド円柱」と呼ぶ）とする。式で書くと
+</p>
+<dl><dd>&lt;math&gt;M=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  {{x}^{2}}+{{y}^{2}}\le {{r}_{0}}  \\
+  0\le z\le {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-1-1)
+</p><p>である。さらに、「ソリッド円柱」に該当するもの全ては、この<i>M</i> に<a class="mw-redirect" href="/wiki/%E7%9B%B8%E4%BC%BC%E5%A4%89%E6%8F%9B" title="相似変換">相似変換</a>を加えれば集合として実現できるので、以下は、<i>M</i> のみについて考える。
+</p><p>次に、この<i>M</i> を、円柱座標変換Φと<i>r</i> -θ-ζ空間内の直方体（六面体）<i>L</i> を用いてパラメータ付け（パラメトライズ）することを考える。<i>r</i> -θ-ζ空間内の直方体<i>L</i> を
+</p>
+<dl><dd>&lt;math&gt;L=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  r  \\
+  \theta   \\
+  \zeta   \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  0\le r\le {{r}_{0}}  \\
+  0\le \theta \le 2\pi   \\
+  0\le \zeta \le {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-1-2)
+</p><p>と定義する。<i>L</i> の3辺の長さはそれぞれ、<i>r</i><sub>0</sub> , θ<sub>0</sub> , 2πである。<i>M</i> は、<i>L</i> のΦによる<a href="/wiki/%E5%83%8F_(%E6%95%B0%E5%AD%A6)" title="像 (数学)">像</a>集合である。すなわち
+</p>
+<dl><dd>&lt;math&gt;M=\Phi(L)&lt;/math&gt;　　(3-1-3)</dd></dl>
+<p>である。上式の等号は、集合として等しいことを意味する。
+</p>
+<h3><span id=".E5.86.86.E6.9F.B1.E8.A1.A8.E9.9D.A2"></span><span class="mw-headline" id="円柱表面">円柱表面</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=11" title="節を編集: 円柱表面">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>式(3-1-1)のソリッド円柱<i>M</i> の表面を&lt;math&gt;\partial M&lt;/math&gt;と書き、円柱表面、円筒面、<i>M</i> の表面、あるいは<i>M</i> の境界面と呼ぶ。表面∂<i>M</i> は、以下のΔ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> に分割することができる。
+</p>
+<dl><dd>&lt;math&gt;{{\Delta }_{1}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  {{x}^{2}}+{{y}^{2}}\le {{r}_{0}}  \\
+  z=0  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-1)
+</p>
+<dl><dd>&lt;math&gt;{{\Delta }_{2}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  {{x}^{2}}+{{y}^{2}}={{r}_{0}}  \\
+  0\le z\le {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-2)
+</p>
+<dl><dd>&lt;math&gt;{{\Delta }_{3}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  {{x}^{2}}+{{y}^{2}}\le {{r}_{0}}  \\
+  z={{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-3)
+</p><p>Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> をそれぞれ、下面、側面、上面という<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[注釈 11]</a></sup><sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[注釈 12]</a></sup>。
+</p><p>逆に言うと、Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> を貼り合わせたものが∂<i>M</i> である。集合演算を用いると、
+</p>
+<dl><dd>&lt;math&gt;\partial M= {\Delta}_{1}\cup{\Delta}_{2}\cup{\Delta}_{3}&lt;/math&gt;　　(3-2-4)</dd></dl>
+<p>のようになる。
+</p><p>次に、Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> を、円柱座標変換を利用してパラメトライズすることを考える。<i>D</i><sub>1</sub> , <i>D</i><sub>2</sub> , <i>D</i><sub>3</sub> を以下のように定める。
+</p>
+<dl><dd>&lt;math&gt;{{D}_{1}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  r  \\
+  \theta   \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  0\le r\le {{r}_{0}}  \\
+  0\le \theta \le 2\pi   \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-5)
+</p>
+<dl><dd>&lt;math&gt;{{D}_{2}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  \theta \\
+  \zeta   \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  0\le \theta \le 2\pi   \\
+  0\le \zeta \le {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-6)
+</p>
+<dl><dd>&lt;math&gt;{{D}_{3}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<pre>  r  \\
+  \theta   \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  0\le r\le {{r}_{0}}  \\
+  0\le \theta \le 2\pi   \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(3-2-7)<br/>
+</p><p><i>D</i><sub>1</sub> , <i>D</i><sub>2</sub> , <i>D</i><sub>3</sub> は、それぞれ<i>r</i> -θ平面、θ-ζ平面、<i>r</i> -θ平面の部分集合となっている。また、<i>D</i><sub>1</sub> と<i>D</i><sub>3</sub> は集合として全く等しいものである。
+</p><p>また、<i>x</i> -<i>y</i> -<i>z</i> 空間に値を取るベクトル値関数<b>I</b><sub>1</sub> , <b>I</b><sub>2</sub> , <b>I</b><sub>3</sub> を以下のように定義する。<b>I</b><sub>1</sub> , <b>I</b><sub>2</sub> , <b>I</b><sub>3</sub> の定義域は、本来的にはそれぞれ<i>r</i> -θ平面、θ-ζ平面、<i>r</i> -θ平面であるが、ここでは、それぞれの定義域を<i>D</i><sub>1</sub> , <i>D</i><sub>2</sub> , <i>D</i><sub>3</sub> に制限して考えることにする。これら<b>I</b><sub>1</sub> , <b>I</b><sub>2</sub> , <b>I</b><sub>3</sub> を、それぞれΔ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> のパラメータと呼ぶ。
+</p>
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)={{\mathbf{I}}_{1}}(r,\theta )=\Phi (r,\theta ,0)=\left( \begin{matrix}
+</p>
+<pre>  r\cos\theta   \\
+  r\sin\theta   \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-8)
+</p>
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)={{\mathbf{I}}_{2}}(\theta ,\zeta )=\Phi ({{r}_{0}},\theta ,\zeta )=\left( \begin{matrix}
+</p>
+<pre>  {{r}_{0}}\cos\theta   \\
+  {{r}_{0}}\sin\theta   \\
+  \zeta   \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-9)
+</p>
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)={{\mathbf{I}}_{3}}(r,\theta )=\Phi (r,\theta ,{{z}_{0}})=\left( \begin{matrix}
+</p>
+<pre>  r\cos (-\theta )  \\
+  r\sin (-\theta )  \\
+  {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-10)
+</p><p>Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> は、それぞれ<i>D</i><sub>1</sub> , <i>D</i><sub>2</sub> , <i>D</i><sub>3</sub> の<b>I</b><sub>1</sub> , <b>I</b><sub>2</sub> , <b>I</b><sub>3</sub> による像集合となっている：
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{array}{*{35}{l}}</dd></dl>
+<p>{{\Delta }_{1}}={{\mathbf{I}}_{1}}({{D}_{1}})\\
+{{\Delta }_{2}}={{\mathbf{I}}_{2}}({{D}_{2}}) \\
+{{\Delta }_{3}}={{\mathbf{I}}_{3}}({{D}_{3}}) \\
+\end{array} \right.&lt;/math&gt;　　(3-2-11)
+</p><p>ここで、“＝”は集合としての等号である。例えば、Δ<sub>1</sub> = <b>I</b><sub>1</sub>(<i>D</i><sub>1</sub>) とは、Δ<sub>1</sub> と<b>I</b><sub>1</sub> (<i>D</i><sub>1</sub>) が集合として等しいことを意味している<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[注釈 13]</a></sup>。
+</p><p>Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> それぞれの法線ベクトルを、<b>N</b><sub>Δ1</sub> , <b>N</b><sub>Δ2</sub> , <b>N</b><sub>Δ3</sub>と書く：
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{{{\Delta }_{1}}}}(r,\theta )</dd></dl>
+<p>= \frac{\left( \frac{\partial \Phi }{\partial r}(r,\theta ,0) \right)\times \left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,0) \right)}{\left\| \left( \frac{\partial \Phi }{\partial r}(r,\theta ,0) \right)\times \left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,0) \right) \right\|}
+= {{\mathbf{N}}_{\zeta }}(r,\theta ,{{\zeta }_{0}})
+= \left( \begin{matrix}
+</p>
+<pre>  0  \\
+  0  \\
+  1  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-12)
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{{{\Delta }_{2}}}}(\theta ,\zeta )</dd></dl>
+<p>= \frac{\left( \frac{\partial \Phi }{\partial \zeta }({r}_{0},\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right)}{\left\| \left( \frac{\partial \Phi }{\partial \zeta }({r}_{0},\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right) \right\|}
+= {{\mathbf{N}}_{r}}(r,\theta ,\zeta )
+= \left( \begin{matrix}
+</p>
+<pre>  -\sin\theta   \\
+  \cos\theta   \\
+  0  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-13)
+</p>
+<dl><dd>&lt;math&gt;{{\mathbf{N}}_{{{\Delta }_{3}}}}(r,\theta )</dd></dl>
+<p>= \frac{\left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta_{0}) \right)\times \left( -\left( \frac{\partial \Phi }{\partial \theta } \right)(r,\theta ,\zeta_{0}) \right)}{\left\| \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta_{0}) \right)\times \left( -\left( \frac{\partial \Phi }{\partial \theta } \right)(r,\theta ,\zeta_{0}) \right) \right\|}
+= -{{\mathbf{N}}_{\zeta }}(r,\theta ,\zeta_{0})
+= \left( \begin{matrix}
+</p>
+<pre>  0  \\
+  0  \\
+  -1  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　(3-2-14)
+</p><p><b>N</b><sub>Δ1</sub> , <b>N</b><sub>Δ2</sub> , <b>N</b><sub>Δ3</sub> の定義域は、それぞれ<i>D</i><sub>1</sub> , <i>D</i><sub>2</sub> , <i>D</i><sub>3</sub> である。ここで、<b>N</b><sub>θ</sub>に平行なものがないことに注意されたい。
+</p>
+<h2><span id=".E3.83.99.E3.82.AF.E3.83.88.E3.83.AB.E5.A0.B4"></span><span class="mw-headline" id="ベクトル場">ベクトル場</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=12" title="節を編集: ベクトル場">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたベクトル場<b>X</b> を<i>x</i> -<i>y</i> -<i>z</i> 座標系について表示すると
+</p>
+<dl><dd>&lt;math&gt;\mathbf{X}(x,y,z)=\left(</dd></dl>
+<pre> \begin{array}{c}
+</pre>
+<p>{X}_{x}(x,y,z)\\
+{X}_{y}(x,y,z)\\
+{X}_{z}(x,y,z)\\
+</p>
+<pre> \end{array}
+</pre>
+<p>\right)&lt;/math&gt;　　(4-1-1)
+</p><p>となる。これを円柱座標表示に変換することを考える。まず、スカラー値関数<i>X<sub>r</sub></i> (<i>r</i> , θ, ζ) , <i>X</i><sub>θ</sub> (<i>r</i> , θ, ζ) , <i>X</i><sub>ζ</sub> (<i>r</i> , θ, ζ) を、
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{matrix}</dd></dl>
+<pre>  {{X}_{r}}=\mathbf{X}\cdot {{\mathbf{N}}_{r}}  \\
+  {{X}_{\theta }}=\mathbf{X}\cdot {{\mathbf{N}}_{\theta }}  \\
+  {{X}_{\zeta}}=\mathbf{X}\cdot {{\mathbf{N}}_{z}}  \\
+</pre>
+<p>\end{matrix} \right.&lt;/math&gt;　(4-1-2)
+</p><p>と定義する。正確に書くと
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{matrix}</dd></dl>
+<pre>  X_r     (r,\theta,\zeta) = \mathbf{X}\left(\Phi(r,\theta,\zeta)\right) \cdot {\mathbf{N}_r}     (r,\theta,\zeta) \\
+  X_\theta(r,\theta,\zeta) = \mathbf{X}\left(\Phi(r,\theta,\zeta)\right) \cdot {\mathbf{N}_\theta}(r,\theta,\zeta) \\
+  X_\zeta (r,\theta,\zeta) = \mathbf{X}\left(\Phi(r,\theta,\zeta)\right) \cdot {\mathbf{N}_\zeta} (r,\theta,\zeta) 
+</pre>
+<p>\end{matrix} \right.&lt;/math&gt;　(4-1-3)
+</p><p>である。ここで、・は内積を意味する。定義式(4-1-3)から明らかなように、これらの定義域は<i>r</i> -θ-ζ空間全域（<i>r</i> = 0 となる点を含む）である。
+</p><p>ここで以下が成立する。”&lt;math&gt;\circ&lt;/math&gt;”は、<a class="mw-redirect" href="/wiki/%E5%90%88%E6%88%90%E9%96%A2%E6%95%B0" title="合成関数">合成関数</a>の意味である。
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{array}{*{35}{l}}</dd></dl>
+<p>{{X}_{r}}=({X}_{x}\circ\Phi)\cos\theta + ({X}_{y}\circ\Phi)\sin \theta  \\ 
+{{X}_{\theta }}=-({X}_{x}\circ\Phi)\sin\theta + ({X}_{y}\circ\Phi)\cos \theta  \\ 
+{{X}_{\zeta}}={{X}_{z}\circ\Phi} \\ 
+\end{array} \right.&lt;/math&gt;　　　(4-1-4)
+</p><p>またはこれを逆に解くと
+</p>
+<dl><dd>&lt;math&gt;\left\{\begin{array}{*{35}{l}}</dd></dl>
+<pre>{{X}_{x}}\circ \Phi ={{X}_{r}}\cos\theta -{{X}_{\theta }}\sin \theta   \\
+{{X}_{y}}\circ \Phi ={{X}_{r}}\sin\theta +{{X}_{\theta }}\cos \theta   \\
+</pre>
+<p>{{X}_{z}}\circ \Phi ={{X}_{\zeta }}  \\
+\end{array} \right.&lt;/math&gt;　　　(4-1-5)
+</p><p>が分かる。
+</p><p>また、次の等式が<i>r</i> = 0 となる点を含むすべての (<i>r</i> , θ, ζ) に対して成立する。
+</p>
+<dl><dd>&lt;math&gt;\mathbf{X}(\Phi (r,\theta ,z))=({{X}_{r}} {{\mathbf{N}}_{r}})(r,\theta ,z)+({{X}_{\theta }} {{\mathbf{N}}_{\theta }})(r,\theta ,z)+({{X}_{z}}{{\mathbf{N}}_{z}})(r,\theta ,z)&lt;/math&gt;　　　(4-1-6)</dd></dl>
+<p>式(4-1-6)を、ベクトル場の円柱座標表示という。より正確な言い方をすると、「<i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたベクトル場<b>X</b> の円柱座標表示」という。
+</p>
+<h2><span id=".E7.A9.8D.E5.88.86"></span><span class="mw-headline" id="積分">積分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=13" title="節を編集: 積分">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E4.BD.93.E7.A9.8D.E5.88.86"></span><span class="mw-headline" id="体積分">体積分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=14" title="節を編集: 体積分">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ここでは<i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたスカラー値関数<i>f</i> の、式(3-1-1)の円柱<i>M</i> 内部での積分
+</p>
+<dl><dd>&lt;math&gt;{\int}_{M}f\ dxdydz&lt;/math&gt;　　(5-1-1)</dd></dl>
+<p>の計算方法を説明する。円柱<i>M</i> について
+</p>
+<dl><dd>&lt;math&gt;M=\left\{ \left. \left( \begin{matrix}</dd></dl>
+<p>x  \\
+y  \\
+z  \\
+\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  {{x}^{2}}+{{y}^{2}}\le {{r}_{0}}  \\
+  0\le z\le {{z}_{0}}  \\
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;&lt;math&gt;=\left\{ \left. \left( \begin{matrix}
+</p>
+<pre>  x  \\
+  y  \\
+  z  \\
+</pre>
+<p>\end{matrix} \right)\ \left| \begin{matrix}
+</p>
+<pre>  -r_0 \le x \le r_0 \\
+  -\sqrt{r_0^2-x^2} \le y \le \sqrt{r_0^2-x^2}\\
+  0 \le z \le z_0 
+</pre>
+<p>\end{matrix} \right. \right\} \right.&lt;/math&gt;　　(5-1-2)
+</p><p>が成立することに注意すると、<i>f</i> の積分は以下のように<a class="mw-redirect" href="/wiki/%E7%B4%AF%E6%AC%A1%E7%A9%8D%E5%88%86" title="累次積分">累次積分</a>に帰着されることが分かる。
+</p>
+<dl><dd>&lt;math&gt;\int_{M}{f\ dxdydz}</dd></dl>
+<p>= \int_{z=-{{z}_{0}}}^{z={{z}_{0}}}{\int_{x=-{{r}_{0}^{}}}^{x=r}{\int_{y=-\sqrt{{{r}_{0}^{2}}-{{x}^{2}}}}^{y=\ \sqrt{{{r}_{0}^{2}}-{{x}^{2}}}}{\ f(x,y,z)\ dxdydz}}}&lt;/math&gt;　　(5-1-3)
+</p><p>また、式(3-1-2)の直方体<i>L</i> に対し<i>M</i> = Φ(<i>L</i> )（式(3-1-3)）であることと、ヤコビアン（式(2-1-5)）に注意して、積分の<a href="/wiki/%E5%A4%9A%E9%87%8D%E7%A9%8D%E5%88%86#変数変換" title="多重積分">変数変換公式</a>を用いると、
+</p>
+<dl><dd>&lt;math&gt;\begin{align}\int_{M}^{{}}{f\ dxdydz}</dd></dl>
+<p>&amp;= \int_{L} {(f\circ\Phi)\cdot (\det J\Phi )\ drd\theta d\zeta } \\
+&amp;= {\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }\int_{\zeta =-{{z}_{0}}}^{\zeta ={{z}_{0}}}{\ r\cdot \left( f\circ \Phi  \right)(r,\theta ,\zeta )\ drd\theta d\zeta }}}
+\end{align}&lt;/math&gt;　　(5-1-4)
+</p><p>が分かる。
+</p><p>以上、まとめると、
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\int_{M} {f\ dxdydz}
+&amp;= \int_{z=-z_0}^{z=z_0} {\int_{x=-r_0}^{x=r}{\int_{y=-\sqrt{r_0^2-x^2}}^{y=\ \sqrt{r_0^2-x^2}}{\ f(x,y,z)\ dxdydz}}} \\
+&amp;= \int_{r=0}^{r=r_0}{\int_{\theta =0}^{\theta =2\pi}{\int_{\zeta =-z_0}^{\zeta =z_0}{\ r\cdot \left( f\circ \Phi  \right)(r,\theta ,\zeta )\ dr d\theta d\zeta }}}
+\end{align}&lt;/math&gt;　(5-1-5)
+</p><p>がわかる。
+</p>
+<h3><span id=".E9.9D.A2.E7.A9.8D.E5.88.86"></span><span class="mw-headline" id="面積分">面積分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=15" title="節を編集: 面積分">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ここでは、ベクトル場の円柱表面∂<i>M</i> 上での<a href="/wiki/%E9%9D%A2%E7%A9%8D%E5%88%86" title="面積分">面積分</a>の計算方法を説明する。
+</p><p><i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたベクトル場<b>X</b> に対して、円柱面∂<i>M</i> 上の面積分を
+</p>
+<dl><dd>&lt;math&gt;\int_{\partial \mathbf{M}}{\mathbf{X}} = \int_{{{\Delta }_{1}}}{\mathbf{X}}+\int_{{{\Delta }_{2}}}{\mathbf{X}}+\int_{{{\Delta }_{3}}}{\mathbf{X}}&lt;/math&gt;　　　(5-2-1)</dd></dl>
+<p>で定める。但し、右辺の各項は
+</p>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{1}}}{\mathbf{X}}=\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{\left( \mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right) \right)}}\ d\theta dr&lt;/math&gt;　　　(5-2-2)</dd></dl>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{2}}}{\mathbf{X}}=\int_{\zeta =0}^{\zeta ={{\zeta }_{0}}}{\int_{\theta =0}^{\theta =2\pi }{\left( \mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{2}}}{\partial \theta }\times \frac{\partial {{\mathbf{I}}_{2}}}{\partial \zeta } \right) \right)}}\ d\theta d\zeta&lt;/math&gt;　　　(5-2-3)</dd></dl>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{3}}}{\mathbf{X}}=\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{\left( \mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{3}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{3}}}{\partial \theta } \right) \right)}}\ d\theta dr&lt;/math&gt;　　　(5-2-4)</dd></dl>
+<p>である。ここで、
+</p>
+<dl><dd>&lt;math&gt;\mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times</dd></dl>
+<p>\frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right)
+= \mathbf{X}\cdot \frac{\left( \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right)}{\left\| \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right\|}\left\| \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right\|
+= \left( \mathbf{X}\cdot {{\mathbf{N}}_{\zeta }} \right)\left\| \frac{\partial {{\mathbf{I}}_{1}}}{\partial r}\times \frac{\partial {{\mathbf{I}}_{1}}}{\partial \theta } \right\|
+= r\cdot {{X}_{\zeta }}&lt;/math&gt;　(5-2-5)
+</p><p>同様に、
+</p>
+<dl><dd>&lt;math&gt;\mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{2}}}{\partial \theta }\times \frac{\partial {{\mathbf{I}}_{2}}}{\partial \zeta } \right) = {{r}_{0}}\cdot {{X}_{r}}&lt;/math&gt;　　　(5-2-6)</dd></dl>
+<dl><dd>&lt;math&gt;\mathbf{X}\cdot \left( \frac{\partial {{\mathbf{I}}_{3}}}{\partial \theta }\times \frac{\partial {{\mathbf{I}}_{3}}}{\partial \zeta } \right) = -r\cdot {{X}_{\zeta }}&lt;/math&gt;　　　(5-2-7)</dd></dl>
+<p>なので、
+</p>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{1}}}{\mathbf{X}}=\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{r\cdot {{X}_{\zeta }}(r,\theta ,{{\zeta }_{0}})}}\ d\theta dr&lt;/math&gt;　　　(5-2-8)</dd></dl>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{2}}}{\mathbf{X}}=\int_{\theta =0}^{\theta =2\pi }{{{r}_{0}}\cdot {{X}_{r}}({{r}_{0}},\theta ,\zeta )}\ d\theta d\zeta&lt;/math&gt;　　　(5-2-9)</dd></dl>
+<dl><dd>&lt;math&gt;\int_{{{\Delta }_{3}}}{\mathbf{X}}=\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{-r\cdot{{X}_{\zeta }}(r,\theta ,0)}}\ d\theta dr&lt;/math&gt;　　　(5-2-10)</dd></dl>
+<p>である。従って、
+</p><p>&lt;math&gt;\int_{\partial \mathbf{M}}{\mathbf{X}}=\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }r{\left( {{X}_{\zeta }}(r,\theta ,{{\zeta }_{0}})-{{X}_{\zeta }}(r,\theta ,0) \right)d\theta dr}}\ \ +\int_{\zeta =0}^{\zeta ={{\zeta }_{0}}}{\int_{\theta =0}^{\theta =2\pi }{{{r}_{0}}{{X}_{r}}({{r}_{0}},\theta ,\zeta )}}\ d\theta d\zeta&lt;/math&gt;　　　(5-2-11)
+</p><p>が分かる。
+</p>
+<h3><span id=".E3.82.AC.E3.82.A6.E3.82.B9.E3.81.AE.E7.99.BA.E6.95.A3.E5.AE.9A.E7.90.86"></span><span class="mw-headline" id="ガウスの発散定理">ガウスの発散定理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=16" title="節を編集: ガウスの発散定理">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたベクトル場<b>X</b> に対して、
+</p>
+<dl><dd>&lt;math&gt;\int_{\partial M}{\mathbf{X}}=\int_{M}{\operatorname{div}\textbf{X}\ dxdydz}&lt;/math&gt;　　　(5-3-1)</dd></dl>
+<p>が成立する。この事実を、<b>円柱面におけるガウスの<a href="/wiki/%E7%99%BA%E6%95%A3%E5%AE%9A%E7%90%86" title="発散定理">発散定理</a></b>という。ここで、
+</p>
+<dl><dd>&lt;math&gt;\operatorname{div}\mathbf{X} = \left( \frac{\partial {{X}_{x}}}{\partial x} \right)+\left( \frac{\partial {{X}_{y}}}{\partial y} \right)+\left( \frac{\partial {{X}_{z}}}{\partial z} \right)&lt;/math&gt;　　　(5-3-2)</dd></dl>
+<p>はベクトル場<b>X</b> の<a href="/wiki/%E7%99%BA%E6%95%A3_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="発散 (ベクトル解析)">発散</a>である。以下、証明を行う。
+</p>
+<h4><span id=".E8.A8.BC.E6.98.8E.E3.81.AE.E6.BA.96.E5.82.99"></span><span class="mw-headline" id="証明の準備">証明の準備</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=17" title="節を編集: 証明の準備">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>(5-1-5)、(5-2-2)、(5-2-3)、(5-2-4)より、
+</p>
+<dl><dd>&lt;math&gt;\int_{\zeta =0}^{\zeta ={{\zeta }_{0}}}{\int_{\theta =0}^{\theta =2\pi }{{{r}_{0}}{{X}_{r}}({{r}_{0}},\theta ,\zeta )}}\ d\theta d\zeta</dd></dl>
+<p>= \int_{M}{\left( \left( \frac{\partial {{X}_{x}}}{\partial x} \right)+\left( \frac{\partial {{X}_{y}}}{\partial y} \right)\  \right)dxdydz}&lt;/math&gt;　　　(5-3-3)
+</p>
+<dl><dd>&lt;math&gt;\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{r\left( {{X}_{\varsigma }}(r,\theta ,{{\zeta }_{0}})-{{X}_{\zeta }}(r,\theta ,0) \right)}}\ \ d\theta dr</dd></dl>
+<p>= \int_{M}{\left( \frac{\partial {{X}_{z}}}{\partial z} \right)dxdydz}&lt;/math&gt;　　　(5-3-4)
+</p><p>を示せばよいことがわかる。
+</p>
+<h4><span id="x.2Cy.E6.88.90.E5.88.86.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6.E3.81.AE.E8.A8.BC.E6.98.8E"></span><span class="mw-headline" id="x,y成分についての証明">x,y成分についての証明</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=18" title="節を編集: x,y成分についての証明">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>まず、式(5-3-3)を示す。
+</p><p><i>x</i> -<i>y</i> 平面上の曲線<i>c</i> (<i>t</i> ) を、
+</p>
+<dl><dd>&lt;math&gt;c(t)=\left( \begin{matrix}</dd></dl>
+<pre>  {{r}_{0}}\cos t  \\
+  {{r}_{0}}\sin t  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　　(5-3-5)
+とする。また、変数<i>z</i> を固定して考えることで、<i>x</i> -<i>y</i> 平面上の二次元ベクトル場
+</p>
+<dl><dd>&lt;math&gt;\mathbf{A}\left( x,y \right)=\left( \begin{matrix}</dd></dl>
+<pre>  a\left( x,y \right)  \\
+  b\left( x,y \right)  \\
+</pre>
+<p>\end{matrix} \right)=\left( \begin{matrix}
+</p>
+<pre>  -{{X}_{y}}(x,y,z)  \\
+  {{X}_{x}}(x,y,z)  \\
+</pre>
+<p>\end{matrix} \right)&lt;/math&gt;　　　(5-3-6)
+を考える。また、平面曲線と、二次元ベクトル場に対しては、(5-3-6)に対する<a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%E3%81%AE%E5%AE%9A%E7%90%86" title="グリーンの定理">グリーンの定理</a>：
+</p>
+<dl><dd>&lt;math&gt;\int_{c}^{{}}{A}=\int_{x=-{{r}_{0}}}^{x={{r}_{0}}}{\int_{-\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}^{\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}{\left( \frac{\partial b}{\partial x}-\frac{\partial a}{\partial y} \right)dxdy}}&lt;/math&gt;　　　(5-3-7)</dd></dl>
+<p>が成立することは、既知とする。
+</p><p>このとき
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\int_{\theta =0}^{\theta =2\pi}{r_0 X_r(r_0,\theta ,\zeta )}\ d\theta
+&amp;= \int_{\theta =0}^{\theta =2\pi}{\left((X_x \circ \Phi )r_0\cos\theta + (X_y\circ \Phi)r_0\sin\theta \right)}\ d\theta \\
+&amp;= \int_{\theta =0}^{\theta =2\pi}{\left(X_x(r_0 \cos\theta, r_0 \sin\theta, \zeta)r_0 \cos\theta +X_y(r_0\cos\theta, r_0\sin\theta, \zeta)r_0\sin\theta  \right)}\ d\theta \\
+&amp;= \int_{t=0}^{t=2\pi}{\left( \begin{matrix}
+</p>
+<pre>  -X_y(r_0 \cos t,r_0 \sin t,\zeta )  \\
+  X_x(r_0 \cos t,r_0 \sin t,\zeta )  \\
+</pre>
+<p>\end{matrix} \right)}\ \cdot \left( \begin{matrix}
+</p>
+<pre>  -r_0 \sin t  \\
+  r_0 \cos t  \\
+</pre>
+<p>\end{matrix} \right)dt \\
+&amp;= \int_{t=0}^{t=2\pi }{\left( \begin{matrix}
+</p>
+<pre>  a\circ c(t)  \\
+  b\circ c(t)  \\
+</pre>
+<p>\end{matrix} \right)}\ \cdot \left( \frac{dc}{dt} \right)dt \\
+&amp;= \int_{x=-{{r}_{0}}}^{x={{r}_{0}}}{\int_{y=-\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}^{y=\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}{\left( \frac{\partial b}{\partial x}-\frac{\partial a}{\partial y} \right)dydx}} \\
+&amp;= \int_{x=-{{r}_{0}}}^{x={{r}_{0}}}{\int_{y=-\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}^{y=\sqrt{{{r}_{0}}^{2}-{{x}^{2}}}}{\left( \frac{\partial {{X}_{x}}(x,y,z)}{\partial x}+\frac{\partial {{X}_{y}}(x,y,z)}{\partial y} \right)dydx}}
+\end{align}&lt;/math&gt;　　　(5-3-8)
+</p><p>が成り立つ。従って、
+</p>
+<dl><dd>&lt;math&gt;\int_{\zeta =0}^{\zeta ={{\zeta }_{0}}}{\int_{\theta =0}^{\theta =2\pi }{{{X}_{r}}({{r}_{0}},\theta ,\zeta )}}\ d\theta d\zeta</dd></dl>
+<p>= \int_{z=0}^{z={{\zeta }_{0}}}{\int_{\theta =0}^{\theta =2\pi }{{{X}_{r}}({{r}_{0}},\theta ,z)}}\ d\theta dz&lt;/math&gt;
+</p>
+<dl><dd>&lt;math&gt;\int_{z=0}^{z={{\zeta }_{0}}}{\int_{x=-r}^{x=r}{\int_{y=-\sqrt{{{r}^{2}}-{{x}^{2}}}}^{y=\sqrt{{{r}^{2}}-{{x}^{2}}}}{\left( \frac{\partial {{X}_{x}}(x,y,z)}{\partial x}+\frac{\partial {{X}_{y}}(x,y,z)}{\partial y} \right)dydx}}}dz&lt;/math&gt;　　　(5-3-9)</dd></dl>
+<h4><span id="z.E6.88.90.E5.88.86.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6"></span><span class="mw-headline" id="z成分について">z成分について</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=19" title="節を編集: z成分について">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>次に、
+</p>
+<dl><dd>&lt;math&gt;\int_{r=0}^{r={{r}_{0}}}{\int_{\theta =0}^{\theta =2\pi }{r\left( {{X}_{\varsigma }}(r,\theta ,{{\zeta }_{0}})-{{X}_{\zeta }}(r,\theta ,0) \right)}}\ \ d\theta dr</dd></dl>
+<p>= \int_{M}{\left( \frac{\partial {{X}_{z}}}{\partial z} \right)dxdydz}&lt;/math&gt;　　　(5-3-10)
+</p><p>を示す。
+</p>
+<dl><dd>&lt;math&gt;\int_{z=0}^{z={{\zeta }_{0}}}{\frac{\partial {{X}_{\zeta }}(r,\theta ,\zeta )\ }{\partial \zeta }d\zeta }</dd></dl>
+<p>={{X}_{\zeta }}(r,\theta ,{{\zeta }_{0}})-{{X}_{\zeta }}\ (r,\theta ,0)&lt;/math&gt;　　　(5-3-11)
+</p><p>なので、
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\int_{r=0}^{r=r_0}{\int_{\theta =0}^{\theta =2\pi}{r\left(X_\varsigma(r,\theta ,\zeta_0)-X_\zeta(r,\theta ,0) \right)\ \ d\theta}dr}
+&amp;= \int_{r=0}^{r=r_0}{r\left(\int_{\theta =0}^{\theta =2\pi}{\left(X_\varsigma(r,\theta,\zeta_0)-X_\zeta(r,\theta,0) \right)d\theta}\right)\ \ dr}\\
+&amp;= \int_{r=0}^{r=r_0}{r\left(\int_{\theta =0}^{\theta =2\pi}{\int_{\zeta =0}^{\zeta =\zeta_0}{\frac{\partial X_\zeta(r,\theta,\zeta)}{\partial \zeta}d\zeta}d\theta}\right)\ dr} \\
+&amp; =\int_{r=0}^{r=r_0}{\int_{\theta =0}^{\theta =2\pi}{\int_{\zeta =0}^{\zeta =\zeta_0}{\left(\frac{\partial X_\zeta(r,\theta,\zeta)}{\partial \zeta} \right)r d\zeta}d\theta}dr} \\
+&amp;= \int_{r=0}^{r=r_0}{\int_{\theta =0}^{\theta =2\pi}{\int_{\zeta =0}^{\zeta =\zeta_0}{\left( \left( \frac{\partial X_z}{\partial z} \right){}^\circ \Phi (r,\theta ,\zeta ) \right)r d\zeta}d\theta}dr} \\
+&amp;= \int_{r=0}^{r=r_0}{\int_{\theta =0}^{\theta =2\pi}{\int_{\zeta =0}^{\zeta =\zeta_0}{\left( \left( \frac{\partial X_z}{\partial z} \right){}^\circ \Phi (r,\theta ,\zeta ) \right)\left( \det (J\Phi (r,\theta ,\zeta )) \right)d\zeta} d\theta}dr} \\
+&amp;= \int_{z=0}^{z=\zeta_0}{\int_{x=-r}^{x=r}{\int_{y=-\sqrt{r^2-x^2}}^{y=\sqrt{r^2-x^2}}{\left( \frac{\partial X_z(x,y,z)}{\partial z} \right)dy}dx}dz}
+\end{align}&lt;/math&gt;　　　(5-3-12)
+</p>
+<div align="right">■</div>
+<h2><span id=".E3.82.B9.E3.82.AB.E3.83.A9.E3.83.BC.E9.96.A2.E6.95.B0.E3.81.AB.E4.BD.9C.E7.94.A8.E3.81.99.E3.82.8B.E5.BE.AE.E5.88.86.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="スカラー関数に作用する微分作用素">スカラー関数に作用する微分作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=20" title="節を編集: スカラー関数に作用する微分作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="x-y-z.E7.A9.BA.E9.96.93.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E5.81.8F.E5.BE.AE.E5.88.86"></span><span class="mw-headline" id="x-y-z空間における偏微分">x-y-z空間における偏微分</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=21" title="節を編集: x-y-z空間における偏微分">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>f</i> を、<i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたスカラー値関数とする。このとき、<i>r</i> ≠ 0 をみたす任意の (<i>r</i> , θ, ζ) に対して以下の(6-1-1)～(6-1-3)の等式が成立する：
+</p>
+<dl><dd>&lt;math&gt;\left( \frac{\partial f}{\partial x} \right)(\Phi (r,\theta ,\zeta ))</dd></dl>
+<p>= \cos \theta \left( \left( \frac{\partial (f\circ \Phi )}{\partial r} \right)(r,\theta ,z) \right)
+- \frac{\sin \theta}{r}\left( \left( \frac{\partial (f\circ \Phi )}{\partial \theta } \right)(r,\theta ,z) \right)&lt;/math&gt;　(6-1-1)
+</p>
+<dl><dd>&lt;math&gt;\left( \frac{\partial f}{\partial y} \right)(\Phi (r,\theta ,\zeta ))</dd></dl>
+<p>= \sin\theta \left( \left( \frac{\partial (f\circ \Phi )}{\partial r} \right)(r,\theta ,z) \right)
++ \frac{\cos\theta}{r}\left( \left( \frac{\partial (f\circ \Phi )}{\partial \theta } \right)(r,\theta ,z) \right)&lt;/math&gt;　(6-1-2)
+</p>
+<dl><dd>&lt;math&gt;\left( \frac{\partial f}{\partial z} \right)(\Phi (r,\theta ,z))</dd></dl>
+<p>= \left( \frac{\partial (f\circ \Phi )}{\partial \zeta } \right)(r,\theta ,z)&lt;/math&gt;　(6-1-3)
+</p><p>上記の3式は、しばしは略記的に以下のように表記される：
+</p>
+<dl><dd>&lt;math&gt;\left\{ \begin{array}{*{35}{l}}</dd></dl>
+<pre>  \left( \frac{\partial f}{\partial x} \right)=\cos\theta \left( \frac{\partial f}{\partial r} \right)-\frac{\sin\theta}{r}\left( \frac{\partial f}{\partial \theta } \right)  \\
+  \left( \frac{\partial f}{\partial y} \right)=\sin\theta \left( \frac{\partial f}{\partial r} \right)+\frac{\cos\theta}{r}\left( \frac{\partial f}{\partial \theta } \right)  \\
+  \left( \frac{\partial f}{\partial z} \right)=\left( \frac{\partial f}{\partial \zeta } \right)  \\
+</pre>
+<p>\end{array} \right.&lt;/math&gt;　(6-1-4)
+</p>
+<h3><span id=".E5.8B.BE.E9.85.8D.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="勾配作用素">勾配作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=22" title="節を編集: 勾配作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+
+<p><a href="/wiki/%E5%8B%BE%E9%85%8D_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="勾配 (ベクトル解析)">勾配</a> grad ：
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>(\operatorname{grad}f)(x,y,z) &amp;= \left( \begin{matrix}
+</p>
+<pre>  (\partial f/\partial x)(x,y,z)  \\
+  (\partial f/\partial y)(x,y,z)  \\
+  (\partial f/\partial z)(x,y,z)  \\
+</pre>
+<p>\end{matrix} \right) \\
+&amp;= \left( \left( \frac{\partial f}{\partial x} \right)(x,y,z) \right)\left( \begin{matrix}
+</p>
+<pre>  1  \\
+  0  \\
+  0  \\
+</pre>
+<p>\end{matrix} \right) + \left( \left( \frac{\partial f}{\partial y} \right)(x,y,z) \right)\left( \begin{matrix}
+</p>
+<pre>  0  \\
+  1  \\
+  0  \\
+</pre>
+<p>\end{matrix} \right) + \left( \left( \frac{\partial f}{\partial z} \right)(x,y,z) \right)\left( \begin{matrix}
+</p>
+<pre>  0  \\
+  0  \\
+  1  \\
+</pre>
+<p>\end{matrix} \right)\end{align}&lt;/math&gt;         (6-2-1)
+を円柱座標変換すると
+</p><p>．．．
+</p><p>以下、証明を行う。(grad <i>f</i> )(Φ(<i>r</i> , θ, ζ)) と、<b>N</b><sub>r</sub> (<i>r</i> , θ, ζ) の内積を取ると、
+</p>
+<dl><dd>&lt;math&gt;\begin{align}</dd></dl>
+<p>\left[ \left(\operatorname{grad}f \right)(\Phi (r,\theta ,\zeta )) \right]\cdot \left( {{\mathbf{N}}_{r}}(r,\theta ,\zeta ) \right)
+=&amp; \left( \left( \frac{\partial f}{\partial x} \right)(\Phi (r,\theta ,\zeta )),\left( \frac{\partial f}{\partial y} \right)(\Phi (r,\theta ,\zeta )),\left( \frac{\partial f}{\partial z} \right)(\Phi (r,\theta ,\zeta )) \right)\left( \begin{matrix}
+</p>
+<pre>  \cos\theta   \\
+  \sin\theta   \\
+  0  \\
+</pre>
+<p>\end{matrix} \right) \\
+=&amp; \cos\theta \left( \left( \frac{\partial f}{\partial x} \right)(\Phi (r,\theta ,\zeta )) \right)+\sin\theta \left( \left( \frac{\partial f}{\partial y} \right)(\Phi (r,\theta ,\zeta )) \right) \\
+=&amp; \cos\theta \left[ \cos\theta \left( \left( \frac{\partial (f\circ \Phi )}{\partial r} \right)(r,\theta ,z) \right)-\frac{\sin\theta}{r}\left( \left( \frac{\partial (f\circ \Phi )}{\partial \theta } \right)(r,\theta ,z) \right) \right]\\
+&amp;+ \sin\theta \left[ \sin\theta \left( \left( \frac{\partial (f\circ \Phi )}{\partial r} \right)(r,\theta ,z) \right)+\frac{\cos\theta}{r}\left( \left( \frac{\partial (f\circ \Phi )}{\partial \theta } \right)(r,\theta ,z) \right) \right]\\
+=&amp; \left( \frac{\partial (f\circ \Phi )}{\partial r} \right)(r,\theta ,z)
+\end{align}&lt;/math&gt;　(6-2-2)
+</p><p>であり、同様に、<b>N</b><sub>θ</sub>(<i>r</i> , θ, ζ) , <b>N</b><sub>ζ</sub>(<i>r</i> , θ, ζ) についても、
+</p>
+<dl><dd>&lt;math&gt;\left[ \left(\operatorname{grad}f \right)(\Phi (r,\theta ,\zeta )) \right]\cdot \left( {{\mathbf{N}}_{\theta }}(r,\theta ,\zeta ) \right)=\frac{1}{r}\left( \frac{\partial (f\circ \Phi )}{\partial \theta } \right)(r,\theta ,z)&lt;/math&gt;        (6-2-3)</dd>
+<dd>&lt;math&gt;\left[ \left(\operatorname{grad}f \right)(\Phi (r,\theta ,\zeta )) \right]\cdot \left( {{\mathbf{N}}_{\zeta }}(r,\theta ,\zeta ) \right)=\left( \frac{\partial (f\circ \Phi )}{\partial \zeta } \right)(r,\theta ,\zeta )&lt;/math&gt;        (6-2-3)</dd></dl>
+<p>が成り立つ。従って「ベクトル場の円柱座標表示」と同様にして、上の等式が示せる。
+</p>
+<h3><span id=".E3.83.A9.E3.83.97.E3.83.A9.E3.82.B7.E3.82.A2.E3.83.B3"></span><span class="mw-headline" id="ラプラシアン">ラプラシアン</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=23" title="節を編集: ラプラシアン">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a class="mw-redirect" href="/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B7%E3%82%A2%E3%83%B3" title="ラプラシアン">ラプラシアン</a>についても、<i>r</i> ≠ 0 をみたす任意の(<i>r</i> , θ, ζ) に対して以下の等式が成立する。
+</p>
+<dl><dd>&lt;math&gt;\left( \Delta f \right)\left( \Phi (r,\theta ,\zeta ) \right)=</dd></dl>
+<p>\frac{1}{r}\frac{\partial }{\partial r}\left( r\left( \frac{\partial (f\circ \Phi )}{\partial r} \right) \right)(r,\theta,\zeta)
++\frac{1}{{{r}^{2}}}\left( \frac{{{\partial }^{2}}(f\circ \Phi )}{\partial {{\theta }^{2}}} \right)(r,\theta,\zeta)
++\left( \frac{{{\partial }^{2}}(f\circ \Phi )}{\partial {{\xi }^{2}}} \right)(r,\theta,\zeta)&lt;/math&gt;         (6-2-3)
+</p>
+<h2><span id=".E3.83.99.E3.82.AF.E3.83.88.E3.83.AB.E5.A0.B4.E3.81.AB.E4.BD.9C.E7.94.A8.E3.81.99.E3.82.8B.E5.BE.AE.E5.88.86.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="ベクトル場に作用する微分作用素">ベクトル場に作用する微分作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=24" title="節を編集: ベクトル場に作用する微分作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E7.99.BA.E6.95.A3"></span><span class="mw-headline" id="発散">発散</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=25" title="節を編集: 発散">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>X</i> を、<i>x</i> -<i>y</i> -<i>z</i> 空間で定義されたベクトル場とするとき、<a href="/wiki/%E7%99%BA%E6%95%A3_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="発散 (ベクトル解析)">発散</a> div の円柱座標系表示として以下の等式が成立する。
+</p>
+<dl><dd>&lt;math&gt;(\operatorname{div}X)(\Phi (r,\theta ,\zeta ))</dd></dl>
+<p>= \frac{1}{r}\left( \frac{\partial (r\cdot {{X}_{r}})}{\partial r} \right)(r,\theta ,\zeta )+\frac{1}{r}\left( \frac{\partial {{X}_{\theta }}}{\partial \theta } \right)(r,\theta ,\zeta )+\left( \frac{\partial {{X}_{z}}}{\partial z} \right)(r,\theta ,\zeta )&lt;/math&gt;
+</p>
+<h3><span id=".E5.9B.9E.E8.BB.A2"></span><span class="mw-headline" id="回転">回転</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=26" title="節を編集: 回転">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/%E5%9B%9E%E8%BB%A2_(%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90)" title="回転 (ベクトル解析)">回転</a> rot の円柱座標系表示については、次の等式が成立する。
+</p>
+<dl><dd>&lt;math&gt;(\operatorname{rot}X)(\Phi (r,\theta ,\zeta ))</dd></dl>
+<p>= \left({{(\operatorname{rot}X)}_{r}     }(r,\theta ,z) \right){{\mathbf{N}}_{r}     }(r,\theta ,\zeta )
++ \left({{(\operatorname{rot}X)}_{\theta}}(r,\theta ,z) \right){{\mathbf{N}}_{\theta}}(r,\theta ,\zeta ) 
++ \left({{(\operatorname{rot}X)}_{\theta}}(r,\theta ,z) \right){{\mathbf{N}}_{\zeta }}(r,\theta ,\zeta ) 
+&lt;/math&gt;
+ただし
+</p>
+<dl><dd>&lt;math&gt;{{(\operatorname{rot}X)}_{r}}(r,\theta ,z)=\frac{1}{r}\left( \frac{\partial {{X}_{\zeta }}}{\partial r} \right)(r,\theta ,z)-\left( \frac{\partial {{X}_{\theta }}}{\partial \zeta } \right)(r,\theta ,z)&lt;/math&gt;</dd>
+<dd>&lt;math&gt;{{(\operatorname{rot}X)}_{\theta }}(r,\theta ,z)=\left( \frac{\partial {{X}_{r}}}{\partial \zeta } \right)(r,\theta ,z)-\left( \frac{\partial {{X}_{\zeta }}}{\partial r} \right)(r,\theta ,z)&lt;/math&gt;</dd>
+<dd>&lt;math&gt;{{(\operatorname{rot}X)}_{\zeta }}(r,\theta ,z)=\frac{1}{r}\left( \frac{\partial (r{{X}_{r}})}{\partial r} \right)(r,\theta ,z)-\frac{1}{r}\left( \frac{\partial {{X}_{r}}}{\partial \theta } \right)(r,\theta ,z)&lt;/math&gt;</dd></dl>
+<p>である。
+</p>
+<h2><span id=".E6.9B.B2.E7.B7.9A.E3.83.BB.E9.81.8B.E5.8B.95"></span><span class="mw-headline" id="曲線・運動">曲線・運動</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=27" title="節を編集: 曲線・運動">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E9.81.8B.E5.8B.95"></span><span class="mw-headline" id="運動">運動</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=28" title="節を編集: 運動">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>x</i> -<i>y</i> -<i>z</i> 空間における運動を表す曲線
+</p>
+<dl><dd>&lt;math&gt;c(t)=\left(</dd></dl>
+<pre> \begin{array}{l}
+</pre>
+<p>x(t)\\
+y(t)\\
+z(t)\\
+</p>
+<pre> \end{array}
+</pre>
+<p>\right)&lt;/math&gt;       (8-1-1)
+</p><p>が、<i>r</i> -θ-ζ空間に値を取る曲線
+</p>
+<dl><dd>&lt;math&gt;\gamma(t)=\left(</dd></dl>
+<p>\begin{array}{l}
+r(t)\\
+\theta(t)\\
+z(t)\\
+\end{array}
+\right)&lt;/math&gt;       (8-1-2)
+</p><p>と、円柱座標変換&amp;Phi:を用いて、
+</p>
+<dl><dd>&lt;math&gt;c(t)=\Phi(\gamma(t))&lt;/math&gt;       (8-1-3)</dd></dl>
+<p>と表せるとき、γ(<i>t</i> ) を「曲線<i>c</i> (<i>t</i> ) の円柱座標表示」、あるいは「運動<i>c</i> (<i>t</i> ) の円柱座標表示」と呼ぶ。
+</p><p>式(8-1-3)は、
+</p>
+<dl><dd>&lt;math&gt;\left\{</dd></dl>
+<p>\begin{array}{l}
+x=r\cos\theta\\
+y=r\sin\theta\\
+z=z\\
+\end{array}
+\right.&lt;/math&gt;       (8-1-4)
+</p><p>の両辺を時刻<i>t</i> に関する関数と考えること、つまり、
+</p>
+<dl><dd>&lt;math&gt;\left\{</dd></dl>
+<p>\begin{array}{l}
+x(r(t),\theta(t),z(t))=r(t)\cos\theta(t)\\
+y(r(t),\theta(t),z(t))=r(t)\sin\theta(t)\\
+z(r(t),\theta(t),z(t))=z(t) \\
+\end{array}
+\right.&lt;/math&gt;       (8-1-5)
+</p><p>と考えることと同じである。
+</p>
+<h3><span id=".E9.80.9F.E5.BA.A6.E3.83.99.E3.82.AF.E3.83.88.E3.83.AB"></span><span class="mw-headline" id="速度ベクトル">速度ベクトル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=29" title="節を編集: 速度ベクトル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>x</i> -<i>y</i> -<i>z</i> 空間における運動を表す曲線<i>c</i> (<i>t</i> ) の速度ベクトル<b>v</b>(<i>t</i> )：
+</p>
+<dl><dd>&lt;math&gt;v(t)=\left(\frac{dc}{dt}\right)(t)&lt;/math&gt;       (8-2-1)</dd></dl>
+<p>について以下が成立する。
+</p>
+<dl><dd>&lt;math&gt;\left(</dd></dl>
+<p>\begin{array}{l}
+</p>
+<pre>{v}_{x}(t)\\
+{v}_{y}(t)\\
+{v}_{z}(t)\\
+</pre>
+<p>\end{array}
+\right)=
+\left(
+\begin{array}{l}
+(dx/dt)(t)\\
+(dy/dt)(t)\\
+(dz/dt)(t)\\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+\cos\theta(t)-r(t)\cdot((d\theta /dt)(t))\cdot\sin\theta(t)\\
+\sin\theta(t)-r(t)\cdot((d\theta /dt)(t))\cdot\cos\theta(t)\\
+(dz/dt)(t)\\
+\end{array}
+\right)&lt;/math&gt;      (8-2-2)
+</p><p>但し<i>v<sub>x</sub></i> , <i>v<sub>y</sub></i> , <i>v<sub>z</sub></i> は、それぞれ<b>v</b>(<i>t</i> ) の<i>x</i> 成分、<i>y</i> 成分、<i>z</i> 成分を意味する。
+</p><p>また、
+</p>
+<dl><dd>&lt;math&gt;\left\{</dd></dl>
+<p>\begin{array}{l}
+{v}_{r}(t)=v(t)\cdot{\textbf{N}}_{r}(c(t))\\
+{v}_{\theta}(t)=v(t)\cdot{\textbf{N}}_{\theta}(c(t))\\
+{v}_{z}(t)=v(t)\cdot{\textbf{N}}_{z}(c(t))\\
+\end{array}
+\right.&lt;/math&gt;      (8-2-3)
+</p><p>のように定義すると、
+</p>
+<dl><dd>&lt;math&gt;\mathbf{v}(t)={{v}_{r}}(t){{\mathbf{N}}_{r}}(c(t))+{{v}_{\theta }}(t){{\mathbf{N}}_{\theta }}(c(t))+{{c}_{z}}(t){{\mathbf{N}}_{z}}(t)&lt;/math&gt;      (8-2-4)</dd></dl>
+<p>である。また、以下が成立する。
+</p>
+<dl><dd>&lt;math&gt;\left\{</dd></dl>
+<p>\begin{array}{l}
+{v}_{r}(t)=(dr/dt)(t)\\
+{v}_{\theta}(t)=r(t)\cdot((d\theta /dt)(t))\\
+{v}_{z}(t)=(dz/dt)(t)\\
+\end{array}
+\right.&lt;/math&gt;     (8-2-4)
+</p>
+<h3><span id=".E5.8A.A0.E9.80.9F.E5.BA.A6.E3.83.99.E3.82.AF.E3.83.88.E3.83.AB"></span><span class="mw-headline" id="加速度ベクトル">加速度ベクトル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=30" title="節を編集: 加速度ベクトル">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>同様に曲線<i>c</i> (<i>t</i> ) の加速度ベクトル<b>a</b>(<i>t</i> ) ：
+</p>
+<dl><dd>&lt;math&gt;\textbf{a}(t)=</dd></dl>
+<p>\left(
+\begin{array}{l}
+\frac{d\textbf{v}}{dt}
+\end{array}
+\right)(t)&lt;/math&gt;    (8-3-1)
+</p><p>については以下が成立する。
+</p>
+<dl><dd>&lt;math&gt;\mathbf{a}(t)={{a}_{r}}(t){{\mathbf{N}}_{r}}(c(t))+{{a}_{\theta }}(t){{\mathbf{N}}_{\theta }}(c(t))+{{a}_{z}}(t){{\mathbf{N}}_{z}}(c(t))&lt;/math&gt;    (8-3-2)</dd></dl>
+<p>但し<i>a<sub>x</sub></i> , <i>a<sub>y</sub></i> , <i>a<sub>z</sub></i> は、それぞれ <b>a</b>(<i>t</i> ) の<i>x</i> 成分、<i>y</i> 成分、<i>z</i> 成分を意味する。また、
+</p>
+<dl><dd>&lt;math&gt;\left\{</dd></dl>
+<p>\begin{array}{l}
+{a}_{r}(t)=a(t)\cdot{\textbf{N}}_{r}(c(t))\\
+{a}_{\theta}(t)=a(t)\cdot{\textbf{N}}_{\theta}(c(t))\\
+{a}_{z}(t)=a(t)\cdot{\textbf{N}}_{z}(c(t))\\
+\end{array}
+\right.&lt;/math&gt;    (8-3-2)
+である。
+</p><p>さらに、以下が成立する。
+</p><p>&lt;math&gt;\left\{ \begin{array}{l}
+{{a}_{r}}(t)=[(({{d}^{2}}r/d{{t}^{2}})(t))-{{((d\theta /dt)(t))}^{2}}]  \\
+{{a}_{\theta }}(t)=[2((dr/dt)(t))(((d\theta /dt)(t)))+(r(t))(({{d}^{2}}\theta /d{{t}^{2}})(t))]  \\
+{{a}_{z}}(t)=({{d}^{2}}z/d{{t}^{2}})(t)  \\
+\end{array}\right.&lt;/math&gt;    (8-3-4)
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=31" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-entyuzahyou-1"><b><a href="#cite_ref-entyuzahyou_1-0">^</a></b> <span class="reference-text">厳密には、円柱座標系は大域的には逆写像を持たない。ただ、特異点上を除き、その近傍においては、局所的な逆写像を持つ（円柱座標系と円柱座標変換、<a class="mw-redirect" href="/wiki/%E9%80%86%E5%86%99%E5%83%8F%E5%AE%9A%E7%90%86" title="逆写像定理">逆写像定理</a>の項目を参照のこと）。</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">極座標系は、<a class="new" href="/w/index.php?title=%E7%9B%B4%E4%BA%A4%E6%9B%B2%E7%B7%9A%E5%BA%A7%E6%A8%99%E7%B3%BB&amp;action=edit&amp;redlink=1" title="直交曲線座標系 (存在しないページ)">直交曲線座標系</a>の一種であるから、円柱座標系は直交曲線座標系であり、直交曲線座標系は直交座標系の一種なので、円柱座標系は直交座標系の一種である。</span>
+</li>
+<li id="cite_note-zikutai-3"><b><a href="#cite_ref-zikutai_3-0">^</a></b> <span class="reference-text">軸対称でない系に対しても適用可能である。また、本稿でも、特に注意をしない場合には軸対称でない系を除外していない。しかし、軸対称でない系に対してはあまり威力のない手法である。</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">3次元実数ベクトル空間&lt;math&gt;\mathbb{R}^{3}&lt;/math&gt;とは、集合としては
+
+<dl><dd>&lt;math&gt;{{\mathbb{R}}^{3}}=\left\{ \left. \left( \begin{matrix}</dd></dl>
+   {{x}_{1}}  \\
+   {{x}_{2}}  \\
+   {{x}_{3}}  \\
+\end{matrix} \right)\ \left| \begin{matrix}
+   {{x}_{1}},{{x}_{2}},{{x}_{3}}\in \mathbb{R}  \\
+\end{matrix} \right. \right\} \right.&lt;/math&gt;　　　　　　　　(1-2-1)
+
+である。つまり、3つの実数&lt;math&gt;{x}_{1}\ ,\ {x}_{2}\ ,\ {x}_{3}&lt;/math&gt;を用いて
+
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+   {{x}_{1}}  \\
+   {{x}_{2}}  \\
+   {{x}_{3}}  \\
+\end{matrix} \right)&lt;/math&gt;　　(1-2-2)
+
+の形で表せるもの全てを集めてきたものである。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">3次元実数ベクトル空間&lt;math&gt;\mathbb{R}^{3}&lt;/math&gt;における第一軸、第二軸、第三軸とは、それぞれ以下の<b>n</b><sub>1</sub> , <b>n</b><sub>2</sub> , <b>n</b><sub>3</sub> で定まる方向である。
+
+<dl><dd>&lt;math&gt;{{\mathbf{n}}_{1}}=\left( \begin{matrix}</dd></dl>
+   1  \\
+   0  \\
+   0  \\
+\end{matrix} \right)&lt;/math&gt;, &lt;math&gt;{{\mathbf{n}}_{2}}=\left( \begin{matrix}
+   0  \\
+   1  \\
+   0  \\
+\end{matrix} \right)&lt;/math&gt;, &lt;math&gt;{{\mathbf{n}}_{3}}=\left( \begin{matrix}
+   0  \\
+   0  \\
+   1  \\
+\end{matrix} \right)&lt;/math&gt;　　　　(1-2-3)
+
+本記事における<b>n</b><sub>1</sub> , <b>n</b><sub>2</sub> , <b>n</b><sub>3</sub> は、<a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0" title="線形代数">線形代数</a>学の教科書ではふつう<b>e</b><sub>1</sub> , <b>e</b><sub>2</sub> , <b>e</b><sub>3</sub> と書かれている。ただ、<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A7%A3%E6%9E%90" title="ベクトル解析">ベクトル解析</a>の教科書では、<b>e</b><sub>1</sub> , <b>e</b><sub>2</sub> , <b>e</b><sub>3</sub> という記号は、『「本項目における<b>n</b><sub>1</sub> , <b>n</b><sub>2</sub> , <b>n</b><sub>3</sub> の意味」なのか、後述（「円柱座標変換系の法線ベクトル」の項目）の「<b>N</b><sub>r</sub> , <b>N</b><sub>θ</sub> , <b>N</b><sub>ζ</sub> 」なのかが本によってまちまちであり、その区別も曖昧であるため、厳密に区別するべくこのような記号体系とした。尚、<i>i</i> , <i>j</i> , <i>k</i> という記号も、ベクトル解析の教科書や物理学の教科書でよく使われるが、これも教科書間で意味が異なって使われることがあるので採用しないことにした。</span>
+</li>
+<li id="cite_note-syazou2-6"><b><a href="#cite_ref-syazou2_6-0">^</a></b> <span class="reference-text"><a href="/wiki/%E5%86%99%E5%83%8F" title="写像">写像</a>として<a href="/wiki/Well-defined" title="Well-defined">Well-defined</a>である。</span>
+</li>
+<li id="cite_note-tansya-7"><b><a href="#cite_ref-tansya_7-0">^</a></b> <span class="reference-text">われわれの流儀では、単射性は確保されていない。<i>Φ</i> の定義域をさらに制限して、
+<dl><dd>&lt;math&gt;\left\{ \begin{align}</dd></dl>
+0&lt;r \\
+0\le \theta \le 2\pi \\
+-\infty &lt;\zeta &lt;\infty \\
+\end{align} \right.&lt;/math&gt;
+とすれば単射性が確保できるが、今度は全射性がなくなる。逆写像を求める場合には単射性を重視したほうがよいが、積分を考える時には、定義域が閉集合であることと全射性を重視したほうがよく、一概にどちらの定義域を採用したほうがよいとは言えない。</span>
+</li>
+<li id="cite_note-zensya-8"><b><a href="#cite_ref-zensya_8-0">^</a></b> <span class="reference-text">ここでは、全射性とは<i>x</i>-<i>y</i>-<i>z</i> 空間の全ての点を、上記の定義域内の点 (<i>r</i> , <i>θ</i>, <i>ζ</i>) を適切に選ぶことで
+<dl><dd>&lt;math&gt;\left( \begin{matrix}</dd></dl>
+x \\
+y \\
+z \\
+\end{matrix} \right) =\Phi (r,\theta ,\zeta )&lt;/math&gt;
+の形で表せることを意味する。</span>
+</li>
+<li id="cite_note-syazounisou-9"><b><a href="#cite_ref-syazounisou_9-0">^</a></b> <span class="reference-text">一方、値域は<i>x</i> -<i>y</i> -<i>z</i> 空間の<a class="mw-redirect" href="/wiki/%E6%8E%A5%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB" title="接バンドル">接バンドル</a>といわれる空間である。このような数学的構造を「写像に沿うベクトル場」という（一般にベクトル場といわれるものとは別の存在）。ただし、<b>N</b><sub>r</sub> , <b>N</b><sub>θ</sub> , <b>N</b><sub>ζ</sub> は、<i>r</i> -θ-ζ空間で定義され、&lt;math&gt;\mathbb{R}^{3}&lt;/math&gt;に値をとるベクトル値関数とみなすことができるので、本記事ではそのように考えることにする。</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">参考までに、
+
+<dl><dd>&lt;math&gt;\left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right)=r\left( \begin{matrix}</dd></dl>
+  \cos\theta   \\
+  \sin\theta   \\
+   0  \\
+\end{matrix} \right)&lt;/math&gt;　　(2-2-4)
+<dl><dd>&lt;math&gt;\left( \frac{\partial \Phi }{\partial \zeta }(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right)=r\left( \begin{matrix}</dd></dl>
+  -\sin\theta   \\
+  \cos\theta   \\
+   0  \\
+\end{matrix} \right)&lt;/math&gt;　　(2-2-5)
+<dl><dd>&lt;math&gt;\left( \frac{\partial \Phi }{\partial r}(r,\theta ,\zeta ) \right)\times \left( \frac{\partial \Phi }{\partial \theta }(r,\theta ,\zeta ) \right)=\left( \begin{matrix}</dd></dl>
+   0  \\
+   0  \\
+   1  \\
+\end{matrix} \right)&lt;/math&gt;　　(2-2-6)
+
+である。</span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">Δ<sub>1</sub> , Δ<sub>2</sub> , Δ<sub>3</sub> も、<i>x</i> -<i>y</i> -<i>z</i> 空間の<a href="/wiki/%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88" title="部分集合">部分集合</a>である。</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">∂<i>M</i> は、<i>M</i> の位相的境界と同じものとなっている。</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><b>I</b><sub>3</sub> のθの前の負号が不自然と考える人もいるかもしれないが、ここでは、単に法線の向きがすべて“外向き”になるようパラメータ付けすると、ガウスの発散定理を考えるうえで都合が良いからという理由に留める。</span>
+</li>
+</ol></div><table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20220401022807
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.160 seconds
+Real time usage: 0.198 seconds
+Preprocessor visited node count: 2265/1000000
+Post‐expand include size: 20108/2097152 bytes
+Template argument size: 3497/2097152 bytes
+Highest expansion depth: 28/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8843/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5910528/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  137.930      1 -total
+ 64.96%   89.605      1 テンプレート:複数の問題
+ 64.27%   88.652      2 テンプレート:Ambox
+ 19.07%   26.298      1 テンプレート:Find_sources_mainspace
+ 14.65%   20.211     27 テンプレート:DatedAI2
+  8.79%   12.127      2 テンプレート:DMC
+  7.99%   11.025      1 テンプレート:See_also
+  6.30%    8.684      2 テンプレート:DMC/core
+  6.15%    8.486      1 テンプレート:Rellink
+  4.80%    6.625      1 テンプレート:See/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1464150-0!canonical and timestamp 20220401022807 and revision id 887896. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=円柱座標変換&amp;oldid=887896">http://localhost:8080/w/index.php?title=円柱座標変換&amp;oldid=887896</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2012%E5%B9%B412%E6%9C%88" title="カテゴリ:出典を必要とする記事/2012年12月">出典を必要とする記事/2012年12月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%AD%A3%E7%A2%BA%E6%80%A7" title="カテゴリ:正確性">正確性</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9B%B8%E3%81%8D%E3%81%8B%E3%81%91%E3%81%AE%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E9%A0%85%E7%9B%AE" title="カテゴリ:書きかけの節のある項目">書きかけの節のある項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:数学関連のスタブ項目">数学関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%BA%A7%E6%A8%99" title="カテゴリ:座標">座標</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D1464150%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D1464150%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;oldid=887896" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%86%86%E6%9F%B1%E5%BA%A7%E6%A8%99%E5%A4%89%E6%8F%9B&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2019年9月30日 (月) 12:09 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.160","walltime":"0.198","ppvisitednodes":{"value":2265,"limit":1000000},"postexpandincludesize":{"value":20108,"limit":2097152},"templateargumentsize":{"value":3497,"limit":2097152},"expansiondepth":{"value":28,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8843,"limit":5000000},"timingprofile":["100.00%  137.930      1 -total"," 64.96%   89.605      1 テンプレート:複数の問題"," 64.27%   88.652      2 テンプレート:Ambox"," 19.07%   26.298      1 テンプレート:Find_sources_mainspace"," 14.65%   20.211     27 テンプレート:DatedAI2","  8.79%   12.127      2 テンプレート:DMC","  7.99%   11.025      1 テンプレート:See_also","  6.30%    8.684      2 テンプレート:DMC/core","  6.15%    8.486      1 テンプレート:Rellink","  4.80%    6.625      1 テンプレート:See/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5910528,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401022807","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":345});});</script>
+</body></html>

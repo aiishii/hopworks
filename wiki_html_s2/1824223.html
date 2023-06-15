@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>EIGRP - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-EIGRP rootpage-EIGRP skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">EIGRP</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>EIGRP</b>（<b>Enhanced Interior Gateway Routing Protocol</b>）は、<a href="." id="link_a_1" title="シスコシステムズ">シスコシステムズ</a>の独自<a href="." id="link_a_2" title="ルーティングプロトコル">ルーティングプロトコル</a>で、<a href="." id="link_a_3" title="Interior Gateway Routing Protocol">IGRP</a>に緩やかに基づいている。
+</p><p><a href="." id="link_a_4" title="自律システム (インターネット)">自律システム</a> (AS) 内の<a href="." id="link_a_5" title="ルーティング">ルーティング</a>を行う<a href="." id="link_a_6" title="Interior Gateway Protocol">Interior Gateway Protocol</a>（IGP）の<a href="." id="link_a_7" title="通信プロトコル">通信プロトコル</a>である。
+</p><p>EIGRPは<a href="." id="link_a_8" title="距離ベクトル型ルーティングプロトコル (存在しないページ)">距離ベクトル型ルーティングプロトコル</a>の拡張版であり、ネットワークトポロジーやルーターの帯域幅や処理能力を変更した後の<a href="." id="link_a_5" title="ルーティング">ルーティング</a>の不安定さを最小にするよう最適化している。EIGRPをサポートするルーターは、32ビットのEIGRPメトリック（統計）情報を24ビットのIGRPメトリック情報に変換することで、隣接するIGRPルーター用の情報を自動的に再構築する。ルーティング最適化の多くは<a href="." id="link_a_9" title="スタンフォード研究所">SRI</a>の開発した <a href="." id="link_a_10" title="Diffusing Update Algorithm (存在しないページ)">Diffusing Update Algorithm</a> (DUAL) に基づいており、ループフリー運用と高速コンバージェンス（収束）機構を提供している。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#基本動作"><span class="tocnumber">1</span> <span class="toctext">基本動作</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#複数のメトリック情報"><span class="tocnumber">2</span> <span class="toctext">複数のメトリック情報</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#サクセサ"><span class="tocnumber">3</span> <span class="toctext">サクセサ</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#フィージブルサクセサ"><span class="tocnumber">4</span> <span class="toctext">フィージブルサクセサ</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#アクティブ状態とパッシブ状態"><span class="tocnumber">5</span> <span class="toctext">アクティブ状態とパッシブ状態</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#報告距離と到達可能距離"><span class="tocnumber">6</span> <span class="toctext">報告距離と到達可能距離</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#フィージビリティコンディション"><span class="tocnumber">7</span> <span class="toctext">フィージビリティコンディション</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#距離ベクトル型としての分類"><span class="tocnumber">8</span> <span class="toctext">距離ベクトル型としての分類</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#その他の詳細"><span class="tocnumber">9</span> <span class="toctext">その他の詳細</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#脚注"><span class="tocnumber">10</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">11</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#外部リンク"><span class="tocnumber">12</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.9F.BA.E6.9C.AC.E5.8B.95.E4.BD.9C"></span><span class="mw-headline" id="基本動作">基本動作</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=1" title="節を編集: 基本動作">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>EIGRPが収集するデータは以下の3つのテーブルに格納される。
+</p>
+<dl><dt>隣接テーブル</dt>
+<dd>隣接するルータに関するデータを格納する。隣接するルーターとは、インタフェースが直接連結されていて、直接アクセス可能なルーターである。</dd>
+<dt>トポロジテーブル</dt>
+<dd>名前から誤解されがちだが、ネットワークトポロジーの概要を格納するテーブルではない。むしろ、隣接するルーターから集めた<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ルーティングテーブル">ルーティングテーブル</a>に関する情報だけを格納している。EIGRPネットワークにおける送信先ネットワークの一覧と、それぞれのメトリック情報のテーブルである。そして、それぞれの送信先について、サクセサとフィージブルサクセサが（もしあれば）記述してある。ルーティングが安定している送信先は「パッシブ」、ルーティングに変更があり更新中の送信先は「アクティブ」とされている。</dd>
+<dt>ルーティングテーブル</dt>
+<dd>全ての送信先についての実際のルート（経路）を格納している。トポロジテーブルからサクセサ（およびもしあればフィージブルサクセサ）を持つ送信先ネットワークのエントリを取りだして格納している（不等コスト<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%AD%E3%83%BC%E3%83%89%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9" title="サーバロードバランス">負荷分散</a>を行うには variance コマンドを使う）。サクセサおよびフィージブルサクセサは、その送信先の次のホップのルーターとして機能する。</dd></dl>
+<p>他の距離ベクトル型プロトコルとは異なり、EIGRPではトポロジテーブルを保守するための定期的なルート更新を行わない。ルーティング情報は新たな隣接ルーターが接続されたときに交換し、その後は変更部分だけを送信する。
+</p>
+<h2><span id=".E8.A4.87.E6.95.B0.E3.81.AE.E3.83.A1.E3.83.88.E3.83.AA.E3.83.83.E3.82.AF.E6.83.85.E5.A0.B1"></span><span class="mw-headline" id="複数のメトリック情報">複数のメトリック情報</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=2" title="節を編集: 複数のメトリック情報">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>EIGRPでは、各経路ごとに異なる5種類のメトリック情報を持っている。
+</p>
+<ul><li>遅延合計（Total Delay、10μ秒単位）</li>
+<li>最小帯域幅（Minimum Bandwidth、kbit/s単位）</li>
+<li>信頼性（Reliability、1から255の数値で、255が最も信頼できる）</li>
+<li>負荷（Load、1から255の値で、255が最も負荷が高い）</li>
+<li>最小<a href="/wiki/Maximum_Transmission_Unit" title="Maximum Transmission Unit">MTU</a>（実際には計算で使っていない）</li></ul>
+<p>デフォルトでは遅延合計と最小帯域幅だけが使われるが、管理者がそれぞれのメトリック情報の収集を必要に応じて設定できる。
+</p><p>経路を比較するとき、以下のような式にこれらメトリック情報を入れて計算し、複合メトリック値を求める。
+</p>
+<dl><dd>&lt;math&gt;\bigg [ \bigg ( K_1 \cdot \text{Bandwidth} + \frac{K_2 \cdot \text{Bandwidth}}{256-\text{Load}} + K_3 \cdot \text{Delay}</dd></dl>
+<pre>                     \bigg )
+        \cdot \frac {K_5}{K_4 + \text{Reliability}} \bigg ] \cdot 256&lt;/math&gt;
+</pre>
+<p>式に出現する定数（&lt;math&gt;K_1&lt;/math&gt; から &lt;math&gt;K_5&lt;/math&gt;）はユーザー設定可能で、これによって動作が変化する。なお、&lt;math&gt;K_5&lt;/math&gt; が0の場合（デフォルト設定）には &lt;math&gt;\tfrac {K_5}{K_4 + \text{Reliability}}&lt;/math&gt; という項を1とみなして計算上考慮しないことになっている。
+</p><p>&lt;math&gt;K_1&lt;/math&gt; と &lt;math&gt;K_3&lt;/math&gt; はデフォルトでは1で、他の定数はデフォルトで0である。したがってデフォルト設定では上記の式が (Bandwidth + Delay) * 256 となっている。
+</p><p>EIGRPによるルーティングを行うネットワークでは、明らかに全てのルーターでこれらの定数を同じ設定にする必要がある。さもないと恒久的な<a class="new" href="/w/index.php?title=%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97&amp;action=edit&amp;redlink=1" title="ルーティングループ (存在しないページ)">ルーティングループ</a>が生じる可能性が出てくる。シスコのEIGRPルーターは、これらの定数値が一致しない場合はエラーを報告し、他のルーターと隣接関係を形成しない。
+</p><p>EIGRPは帯域幅と遅延のメトリック情報を以下の計算でスケーリングする。
+</p>
+<dl><dd>EIGRPの帯域幅 = 10<sup>7</sup> / インタフェースの帯域幅</dd>
+<dd>EIGRPの遅延 = インタフェースの遅延 / 10</dd></dl>
+<p>シスコのルーターでは、インタフェースの帯域幅は設定可能な静的パラメータであり、kbit/s単位である。10<sup>7</sup> kbit/s（つまり10Gbit/s）という値をインタフェースの帯域幅で割った値を上述の複合メトリック値の計算式で使用する。同様にインタフェースの遅延も設定可能な静的パラメータであり、μ秒単位である。これを10で割った値は10μ秒単位の値となり、それを上述の計算式で使用する。
+</p><p><a href="/wiki/Interior_Gateway_Routing_Protocol" title="Interior Gateway Routing Protocol">IGRP</a>でも基本的に同じ計算式で複合メトリック値を計算するが、IGRPの計算式では256という係数が使われていない。この係数はEIGRPとIGRPの後方互換性を保つ目的で導入された。複合メトリック値はIGRPでは24ビットの値だが、EIGRPでは32ビットの値になっている。したがって、24ビットの値を256倍することで8ビット左へシフトしたのと同じことになり、値が32ビットに拡張される。このため、EIGRPとIGRPの間で情報を交換する際には自動的に256倍したり256で割って変換している。
+</p><p>EIGRPはそれぞれの経路のホップ数も保持しているが、メトリック計算にはホップ数は使われない。ホップ数は事前設定された最大値（デフォルトでは100で、1から255の範囲で設定可能）と比較する用途でのみ使用する。ホップ数が最大値を超えている経路はルーターによって到達不能と判断される。
+</p>
+<h2><span id=".E3.82.B5.E3.82.AF.E3.82.BB.E3.82.B5"></span><span class="mw-headline" id="サクセサ">サクセサ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=3" title="節を編集: サクセサ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ある送信先のサクセサ (successor) とは、以下の2つの条件を満たす次のホップのルーターである。
+</p>
+<ul><li>その送信先への最小距離を提供する。</li>
+<li>何らかのルーティングループの一部でないことが保証されている。</li></ul>
+<p>最初の条件は、同じ送信先をアドバタイズしている全隣接ルーターのメトリック情報について、それぞれのリンクコストを加えた上で比較し、トータルの距離が最小の隣接ルーターを選べばよい。次の条件は、その送信先をアドバタイズしている全隣接ルーターについて、後述するフィージビリティコンディションを調べればよい。トポロジーによっては、1つの送信先にサクセサが複数存在することもある。
+</p><p>各送信先のサクセサはトポロジテーブルに記録され、さらにルーティングテーブルでその送信先の次のホップを示すのに使われる。
+</p>
+<h2><span id=".E3.83.95.E3.82.A3.E3.83.BC.E3.82.B8.E3.83.96.E3.83.AB.E3.82.B5.E3.82.AF.E3.82.BB.E3.82.B5"></span><span class="mw-headline" id="フィージブルサクセサ">フィージブルサクセサ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=4" title="節を編集: フィージブルサクセサ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ある送信先のフィージブルサクセサ (feasible successor) とは、以下の条件を満たす次のホップのルーターである。
+</p>
+<ul><li>何らかのルーティングループの一部でないことが保証されている。</li></ul>
+<p>サクセサと同じく、フィージビリティコンディション（後述）を調べればよい。
+</p><p>したがって、サクセサであれば必ずフィージブルサクセサでもある。しかし、EIGRPを解説した文書では「フィージブルサクセサ」はループフリーの経路を持っているがサクセサではない（距離が最小でない）ルーターだけを指すとされていることが多い。そういう意味では、到達可能な1つの送信先には常に1つのサクセサがあるが、フィージブルサクセサは存在しない場合があることになる。
+</p><p>フィージブルサクセサはサクセサと同じ送信先への経路を提供できるが、距離が長い。ルーターはいつでも警告なしにパケットをサクセサまたはフィージブルサクセサ経由で「パッシブ」な送信先に送信でき、そのパケットが適切に転送されることを期待できる。フィージブルサクセサもトポロジテーブルに記録される。
+</p><p>フィージブルサクセサは、サクセサまたはサクセサとのリンクに障害が発生した場合のバックアップ経路を提供する。不等コスト負荷分散（経路コストと反比例するようにネットワークトラフィックを分散させること）を行う場合、フィージブルサクセサは負荷分散された送信先のルーティングテーブルで次のホップとして使われる。
+</p><p>デフォルトでは、1つの送信先のサクセサおよびフィージブルサクセサをルーティングテーブルに格納できる個数は4個に制限されている。この制限は1から6までの範囲で設定変更できる。最新の <a href="/wiki/Cisco_IOS" title="Cisco IOS">Cisco IOS</a>（12.4以降）では1から16まで設定可能になっている。
+</p>
+<h2><span id=".E3.82.A2.E3.82.AF.E3.83.86.E3.82.A3.E3.83.96.E7.8A.B6.E6.85.8B.E3.81.A8.E3.83.91.E3.83.83.E3.82.B7.E3.83.96.E7.8A.B6.E6.85.8B"></span><span class="mw-headline" id="アクティブ状態とパッシブ状態">アクティブ状態とパッシブ状態</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=5" title="節を編集: アクティブ状態とパッシブ状態">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>トポロジテーブルでは、送信先それぞれにパッシブまたはアクティブという印がついている。パッシブ状態では、その送信先についてのサクセサが特定されている。サクセサがフィージビリティコンディションを満たさなくなり、かつフィージブルサクセサがない場合（すなわちバックアップ経路がない場合）、その送信先はアクティブ状態とされる。隣接ルーターへのあらゆるクエリに応答が返ってきた場合、アクティブ状態からパッシブ状態に戻る。なお、ある送信先のサクセサがフィージビリティコンディションを満たさなくなっても、フィージブルサクセサがある場合はフィージブルサクセサのうちトータルの距離が最小のものを新たなサクセサに選ぶので、パッシブ状態のままとなる。
+</p>
+<h2><span id=".E5.A0.B1.E5.91.8A.E8.B7.9D.E9.9B.A2.E3.81.A8.E5.88.B0.E9.81.94.E5.8F.AF.E8.83.BD.E8.B7.9D.E9.9B.A2"></span><span class="mw-headline" id="報告距離と到達可能距離">報告距離と到達可能距離</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=6" title="節を編集: 報告距離と到達可能距離">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>アドバタイズ距離 (AD) とは、送信先ネットワークへの経路に沿った複合メトリックであり、上流隣接ルーターによってアドバタイズされる<sup class="reference" id="cite_ref-EIGRPdoc_1-0"><a href="#cite_note-EIGRPdoc-1">[1]</a></sup>。報告距離とも呼ばれ、サクセサである隣接ルーターを経由したときの送信先との最小距離と等しい。
+</p><p>到達可能距離 (FD) とは、あるルーターから特定の送信先への既知の最小の距離である。これはアドバタイズ距離 (AD) にそのADを送信した隣接ルーターまでのコストを加えた値である<sup class="reference" id="cite_ref-EIGRPdoc_1-1"><a href="#cite_note-EIGRPdoc-1">[1]</a></sup>。なお、このメトリック情報は「その経路が最近アクティブからパッシブ状態になった時点」以降の最小距離である。すなわち経路がパッシブ状態であればFDは距離が減少する場合のみ更新され、さもなくば更新されない。一方、経路をアクティブ状態にする必要が生じた場合、経路がアクティブ状態からパッシブ状態になったときにFDが更新される。このときFDは増加することもある。アクティブ状態からパッシブ状態への変化を契機として、その経路の新たな履歴が開始される。
+</p><p>例えば、新たに発見された送信先 X への経路がアクティブからパッシブになり、距離が10だったとする。ルーターはADとFDを10とする。その後距離が10から8に減少したとする。パッシブ状態のままなので（距離の減少はフィージビリティコンディションには影響しないため）、ルーターはADとFDを8とする。さらにその後、距離が12に増加したが、サクセサとフィージブルサクセサはそのままだとする。その場合、ADは12に更新されるが、FDは8のままとなる。つまり、ADとFDが一致しなくなる。その後サクセサが障害状態になり、他のフィージブルサクセサが存在しないとする。するとその経路はアクティブ状態となり、ルーターは隣接ルーターに送信先 X の新たな経路を問い合わせる。新たに見つかった経路の距離が100だったとすると、ルーターは経路をパッシブ状態にした上でADとFDを100とする。
+</p>
+<h2><span id=".E3.83.95.E3.82.A3.E3.83.BC.E3.82.B8.E3.83.93.E3.83.AA.E3.83.86.E3.82.A3.E3.82.B3.E3.83.B3.E3.83.87.E3.82.A3.E3.82.B7.E3.83.A7.E3.83.B3"></span><span class="mw-headline" id="フィージビリティコンディション">フィージビリティコンディション</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=7" title="節を編集: フィージビリティコンディション">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>フィージビリティコンディションとは、EIGRPネットワークにおけるループフリー（ループがない状態）の十分条件である。サクセサとフィージブルサクセサは送信先までのループフリーな経路を持つことを保証されており、そのためにフィージビリティコンディションを使う。その大まかな条件は非常に単純である。すなわち、「ある送信先について、隣接ルーターが距離をアドバタイズしていて、その距離が到達可能距離以下であれば、その隣接ルーターはその送信先のループフリーな経路上にある」というものである。言い換えれば、「ある送信先について、ある隣接ルーターがその送信先に既知のルーターよりも近いと知らせてきた場合、その隣接ルーターはその送信先のループフリーな経路上にある」ということになる。
+</p><p>正確に言えば、ある送信先について AD &lt; FD となる隣接ルーターはその送信先へのループフリーな経路上にある。
+</p><p>この条件は Source Node Condition とも呼ばれ、<a class="mw-redirect" href="/wiki/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E7%A0%94%E7%A9%B6%E6%89%80" title="スタンフォード研究所">SRI</a>の J. J. Garcia-Luna-Aceves が提案している条件の1つである。Source Node Condition は <a class="new" href="/w/index.php?title=Diffusing_Update_Algorithm&amp;action=edit&amp;redlink=1" title="Diffusing Update Algorithm (存在しないページ)">Diffusing Update Algorithm</a> (DUAL) に関する論文にある<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。
+</p><p>この条件が十分条件であって必要条件ではないという点は重要である。すなわち、この条件を満たす隣接ルーターはループフリーな経路上にあるが、この条件を満たさなくてもループフリーな経路上にある隣接ルーターは存在しうる。しかしそのようなルーターは最短経路上にはないので、それを使わなくともネットワークの機能には大きな影響はない。そのような隣接ルーターがその送信先についてアクティブ状態となった場合、パッシブ状態に戻ったときに再評価されることになる。
+</p>
+<h2><span id=".E8.B7.9D.E9.9B.A2.E3.83.99.E3.82.AF.E3.83.88.E3.83.AB.E5.9E.8B.E3.81.A8.E3.81.97.E3.81.A6.E3.81.AE.E5.88.86.E9.A1.9E"></span><span class="mw-headline" id="距離ベクトル型としての分類">距離ベクトル型としての分類</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=8" title="節を編集: 距離ベクトル型としての分類">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>従来、EIGRPはシスコのマーケティング資料では平衡型ハイブリッドルーティングプロトコルだと説明されていた。ハイブリッドとは、リンクステート型と距離ベクトル型のプロトコルの長所を組み合わせたものと説明されていた。しかし、このような説明は本質的には正しくない。定義によれば、
+</p>
+<ul><li><a class="new" href="/w/index.php?title=%E8%B7%9D%E9%9B%A2%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E5%9E%8B%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB&amp;action=edit&amp;redlink=1" title="距離ベクトル型ルーティングプロトコル (存在しないページ)">距離ベクトル型ルーティングプロトコル</a>は、分散型の<a class="mw-redirect" href="/wiki/%E3%83%99%E3%83%AB%E3%83%9E%E3%83%B3-%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E6%B3%95" title="ベルマン-フォード法">ベルマン-フォード法</a>に基づいて最短経路を求める。ノード間で既知の全送信先についての距離ベクトルを交換しあう。それ以上のトポロジー情報は交換しない。これによって、各ノードはネットワーク内の全送信先を知り、各隣接ノード経由でのそれぞれの送信先への距離を知ることができる。しかし、ノードは実際のネットワークトポロジーを知らないし、それを必要としない。</li>
+<li><a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E5%9E%8B%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB&amp;action=edit&amp;redlink=1" title="リンクステート型ルーティングプロトコル (存在しないページ)">リンクステート型ルーティングプロトコル</a>は、<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96" title="グラフ理論">グラフ理論</a>の最短経路を求めるアルゴリズム（<a href="/wiki/%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E6%B3%95" title="ダイクストラ法">ダイクストラ法</a>がよく使われる）に基づいている。ノード間でノードの接続関係の情報を交換する（基本的には、ノードの隣接関係情報をネットワーク全体に通知する）。したがって、各ノードは正確なネットワークトポロジーを知っており、ネットワークをグラフとして表現できる。このグラフを使い、各送信先への最短経路を求める。</li></ul>
+<p>EIGRPルーターは帯域幅、遅延、負荷、信頼性、経路の<a href="/wiki/Maximum_Transmission_Unit" title="Maximum Transmission Unit">MTU</a>といった情報を相互にやり取りしている。それぞれのルーターは送信先への距離を計算するためにそれらのパラメータを使用する。メッセージにはそれ以上のトポロジー的情報は存在しない。このような動作原理はまさしく距離ベクトル型プロトコルである。したがって、EIGRPは基本的には距離ベクトル型プロトコルに分類できる。
+</p><p>EIGRPが素朴な距離ベクトル型プロトコルにはない技法をいくつか使っていることは事実である。例えば、以下のようなものがある。
+</p>
+<ul><li>ルーター間の隣接関係を発見し保守する目的で hello パケットを明示的に使用する。</li>
+<li>ルーティング更新情報の送信に信頼性のあるプロトコルを使用する。</li>
+<li>ループフリーな経路を選択するためにフィージビリティコンディションを使う。</li>
+<li>ネットワークの経路に障害や変更が発生したとき、新たな最短経路を計算するための拡散計算を使用する。</li></ul>
+<p>これらの技法はEIGRPの基本的動作原理に影響を与えるものではなく、しかも他の距離ベクトル型プロトコルでも似たような技法を使っているものがある（例えば<a href="/wiki/AODV" title="AODV">AODV</a>と<a class="new" href="/w/index.php?title=DSDV&amp;action=edit&amp;redlink=1" title="DSDV (存在しないページ)">DSDV</a>）。EIGRPは拡張された距離ベクトル型ルーティングプロトコルだが、ハイブリッドプロトコルではない。
+</p><p>真のハイブリッドのルーティングプロトコルとしてはマルチエリアの <a href="/wiki/Open_Shortest_Path_First" title="Open Shortest Path First">Open Shortest Path First</a> (OSPF) プロトコルがある。OSPFはエリア内ではリンクステート型であり、エリア内の正確なトポロジーを使っている。エリア間のルーティングには距離ベクトル型の手法を使っている。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E8.A9.B3.E7.B4.B0"></span><span class="mw-headline" id="その他の詳細">その他の詳細</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=9" title="節を編集: その他の詳細">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>EIGRPは <a href="/wiki/Classless_Inter-Domain_Routing" title="Classless Inter-Domain Routing">Classless Inter-Domain Routing</a> (CIDR) を扱え、可変長<a href="/wiki/%E3%82%B5%E3%83%96%E3%83%8D%E3%83%83%E3%83%88%E3%83%9E%E3%82%B9%E3%82%AF" title="サブネットマスク">サブネットマスク</a>を使える。この点がIGRPからの大きな改善点である。逆に問題点はシスコの機器以外ではサポートされていないため、EIGRPを採用した組織で一種の<a class="mw-redirect" href="/wiki/%E3%83%99%E3%83%B3%E3%83%80%E3%83%AD%E3%83%83%E3%82%AF%E3%82%A4%E3%83%B3" title="ベンダロックイン">ベンダロックイン</a>に繋がる点である。またEIGRPは、ルーターが正確なネットワークトポロジーを知っていないとできない用途に使うことができない（例えば、<a href="/wiki/Multi-Protocol_Label_Switching" title="Multi-Protocol Label Switching">MPLS</a>のトラフィック・エンジニアリング）。
+</p><p>EIGRPはPDM (Protocol-Dependent Module) を使って、<a href="/wiki/Internet_Protocol" title="Internet Protocol">IP</a>、<a href="/wiki/IPv6" title="IPv6">IPv6</a>、<a href="/wiki/IPX/SPX" title="IPX/SPX">IPX</a>、<a href="/wiki/AppleTalk" title="AppleTalk">AppleTalk</a>に対応した<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ルーティング">ルーティング</a>プロセスを別個に実行できる。しかし、これを使ってプロトコル間の変換はできない。
+</p><p><a href="/wiki/Cisco_IOS" title="Cisco IOS">Cisco IOS</a> ルーター上でかつてのクラスのあるIPアドレス方式を使うEIGRPの設定の例を以下に示す。
+</p>
+<pre>Router&gt; <b>enable</b>
+Router# <b>config terminal</b>
+Router(config)# <b>router eigrp ?</b>
+  &lt;1-65535&gt;  Autonomous system number
+Router(config)# <b>router eigrp 1</b>
+Router(config-router)# <b>network 192.168.0.0</b>
+Router(config-router)# <b>end</b>
+</pre>
+<p>下記は、<a href="/wiki/Classless_Inter-Domain_Routing" title="Classless Inter-Domain Routing">クラスのないIPアドレス</a>を使っている場合の設定例である。この例にある<a href="/wiki/%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89_(%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86)" title="ワイルドカード (情報処理)">ワイルドカード</a> 0.0.15.255 は、最大4094台のホストを持つ<a href="/wiki/%E3%82%B5%E3%83%96%E3%83%8D%E3%83%83%E3%83%88" title="サブネット">サブネット</a>を示している。これは、サブネットマスク 255.255.240.0 の<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97#NOT" title="ビット演算">ビット単位の補数</a>である。<b>no auto-summary</b> コマンドはクラスのあるネットワークとの境界での自動的な<a class="mw-redirect" href="/wiki/%E7%B5%8C%E8%B7%AF%E9%9B%86%E7%B4%84" title="経路集約">経路集約</a>を防ぐもので、これを設定しないとループが発生する。
+</p>
+<pre>Router&gt; <b>enable</b>
+Router# <b>config terminal</b>
+Router(config)# <b>router eigrp 1</b>
+Router(config-router)# <b>network 10.201.96.0 ?</b>
+  A.B.C.D  EIGRP wild card bits
+  &lt;cr&gt;
+Router(config-router)# <b>network 10.201.96.0 0.0.15.255</b>
+Router(config-router)# <b>no auto-summary</b>
+Router(config-router)# <b>end</b>
+</pre>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=10" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-EIGRPdoc-1">^ <a href="#cite_ref-EIGRPdoc_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-EIGRPdoc_1-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a class="external text" href="http://www.cisco.com/en/US/tech/tk365/technologies_white_paper09186a0080094cb7.shtml#feasibleandreported" rel="nofollow">Feasible Distance, Reported Distance, and Feasible Successor</a> Enhanced Interior Gateway Routing Protocol、CISCO</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">J. J. Garcia-Luna-Aceves, <a class="external text" href="http://www.soe.ucsc.edu/research/ccrg/publications/jj.dual.ton93.pdf" rel="nofollow">Loop-Free Routing Using Diffusing Computations</a>、IEEE/ACM Transactions of Networking, 1993年2月</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation" id="CITEREFCisco_Systems2005" style="font-style:normal"><a href="/wiki/%E3%82%B7%E3%82%B9%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="シスコシステムズ">Cisco Systems</a> (2005-04-19), <a class="external text" href="http://www.cisco.com/JP/support/public/ht/white_paper/100/1006445/eigrp-toc-j.shtml" rel="nofollow"><i>Enhanced IGRP</i></a>, Document ID 16406<span style="display:none;">, <a class="external free" href="http://www.cisco.com/JP/support/public/ht/white_paper/100/1006445/eigrp-toc-j.shtml" rel="nofollow">http://www.cisco.com/JP/support/public/ht/white_paper/100/1006445/eigrp-toc-j.shtml</a></span> <span class="reference-accessdate"><span title="">2009年7月8日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Enhanced+IGRP&amp;rft.aulast=Cisco+Systems&amp;rft.au=Cisco+Systems&amp;rft.date=2005-04-19&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2FJP%2Fsupport%2Fpublic%2Fht%2Fwhite_paper%2F100%2F1006445%2Feigrp-toc-j.shtml&amp;rfr_id=info:sid/ja.wikipedia.org:EIGRP"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFCisco_Systems" style="font-style:normal"><a href="/wiki/%E3%82%B7%E3%82%B9%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="シスコシステムズ">Cisco Systems</a>, <a class="external text" href="http://www.cisco.com/en/US/docs/internetworking/technology/handbook/Enhanced_IGRP.html" rel="nofollow"><i>Internetworking Technology Handbook: Enhanced Interior Gateway Routing Protocol (EIGRP)</i></a><span style="display:none;">, <a class="external free" href="http://www.cisco.com/en/US/docs/internetworking/technology/handbook/Enhanced_IGRP.html" rel="nofollow">http://www.cisco.com/en/US/docs/internetworking/technology/handbook/Enhanced_IGRP.html</a></span> <span class="reference-accessdate"><span title="">2008年4月27日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Internetworking+Technology+Handbook%3A+Enhanced+Interior+Gateway+Routing+Protocol+%28EIGRP%29&amp;rft.aulast=Cisco+Systems&amp;rft.au=Cisco+Systems&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2Fen%2FUS%2Fdocs%2Finternetworking%2Ftechnology%2Fhandbook%2FEnhanced_IGRP.html&amp;rfr_id=info:sid/ja.wikipedia.org:EIGRP"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFCisco_Systems2005" style="font-style:normal"><a href="/wiki/%E3%82%B7%E3%82%B9%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="シスコシステムズ">Cisco Systems</a> (2005-08-10), <a class="external text" href="http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080093f07.shtml" rel="nofollow"><i>Introduction to EIGRP</i></a>, Document ID 13669<span style="display:none;">, <a class="external free" href="http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080093f07.shtml" rel="nofollow">http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080093f07.shtml</a></span> <span class="reference-accessdate"><span title="">2008年4月27日</span>閲覧。</span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+EIGRP&amp;rft.aulast=Cisco+Systems&amp;rft.au=Cisco+Systems&amp;rft.date=2005-08-10&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2Fen%2FUS%2Ftech%2Ftk365%2Ftechnologies_tech_note09186a0080093f07.shtml&amp;rfr_id=info:sid/ja.wikipedia.org:EIGRP"><span style="display: none;"> </span></span>.</li>
+<li><cite class="citation" id="CITEREFLammle2007" style="font-style:normal">Lammle, Todd (2007), <i>CCNA Cisco Certified Network Associate Study Guide</i> (Sixth ed.), <a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%8A%E3%83%9D%E3%83%AA%E3%82%B9" title="インディアナポリス">Indianapolis, Indiana</a>: Wiley Publishing, <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-0-470-11008-9" title="特別:文献資料/978-0-470-11008-9">978-0-470-11008-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNA+Cisco+Certified+Network+Associate+Study+Guide&amp;rft.aulast=Lammle&amp;rft.aufirst=Todd&amp;rft.au=Lammle%2C%26%2332%3BTodd&amp;rft.date=2007&amp;rft.edition=Sixth&amp;rft.place=%5B%5B%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%8A%E3%83%9D%E3%83%AA%E3%82%B9%7CIndianapolis%2C+Indiana%5D%5D&amp;rft.pub=Wiley+Publishing&amp;rft.isbn=978-0-470-11008-9&amp;rfr_id=info:sid/ja.wikipedia.org:EIGRP"><span style="display: none;"> </span></span>.</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=EIGRP&amp;action=edit&amp;section=12" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.cse.ucsc.edu/research/ccrg/publications/interop94.pdf" rel="nofollow">EIGRP—A Fast Routing Protocol Based on Distance Vectors</a></li>
+<li><a class="external text" href="http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a008009405c.shtml" rel="nofollow">IGRP Metric</a></li>
+<li><a class="external text" href="http://www.soe.ucsc.edu/research/ccrg/publications/jj.dual.ton93.pdf" rel="nofollow">Loop-free Routing Using Diffusing Computations</a></li>
+<li><a class="external text" href="http://www.cs.utexas.edu/users/EWD/ewd06xx/EWD687a.PDF" rel="nofollow">Termination Detection for Diffusing Computations</a></li>
+<li><a class="external text" href="http://www.setup32.com/network-administration/networking/know-eigrp.php" rel="nofollow">What you need to know about EIGRP</a></li>
+<li><a class="external text" href="http://www.osischool.com/protocol/eigrp/discovery/index.php" rel="nofollow">EIGRP demos</a></li></ul>
+<div aria-labelledby="ルーティングプロトコル" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:ルーティングプロトコル (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="ルーティングプロトコル" style="font-size:110%;margin:0 6em">ルーティングプロトコル</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">一般</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Babel&amp;action=edit&amp;redlink=1" title="Babel (存在しないページ)">Babel</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Babel_(protocol)&amp;action=edit&amp;redlink=1" title="En:Babel (protocol) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/B.A.T.M.A.N." title="B.A.T.M.A.N.">B.A.T.M.A.N.</a></li>
+<li><a href="/wiki/Border_Gateway_Protocol" title="Border Gateway Protocol">BGP</a></li>
+<li><a href="/wiki/IS-IS" title="IS-IS">IS-IS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Optimized_Link_State_Routing_Protocol&amp;action=edit&amp;redlink=1" title="Optimized Link State Routing Protocol (存在しないページ)">Optimized_Link_State_Routing_Protocol</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Optimized_Link_State_Routing_Protocol&amp;action=edit&amp;redlink=1" title="En:Optimized Link State Routing Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Open_Shortest_Path_First" title="Open Shortest Path First">OSPF</a></li>
+<li><a href="/wiki/Routing_Information_Protocol" title="Routing Information Protocol">RIP</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ベンダー主導型</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>(Cisco) <a href="/wiki/Interior_Gateway_Routing_Protocol" title="Interior Gateway Routing Protocol">IGRP</a> / <a class="mw-selflink selflink">EIGRP</a></li>
+<li>(Nortel) <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Split_multi-link_trunking&amp;action=edit&amp;redlink=1" title="Split multi-link trunking (存在しないページ)">Split multi-link trunking</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Split_multi-link_trunking&amp;action=edit&amp;redlink=1" title="En:Split multi-link trunking (存在しないページ)">英語版</a>）</span></span> / <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=R-SMLT&amp;action=edit&amp;redlink=1" title="R-SMLT (存在しないページ)">R-SMLT</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:R-SMLT&amp;action=edit&amp;redlink=1" title="En:R-SMLT (存在しないページ)">英語版</a>）</span></span> / <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Distributed_Split_Multi-Link_Trunking&amp;action=edit&amp;redlink=1" title="Distributed Split Multi-Link Trunking (存在しないページ)">Distributed Split Multi-Link Trunking</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distributed_Split_Multi-Link_Trunking&amp;action=edit&amp;redlink=1" title="En:Distributed Split Multi-Link Trunking (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">特殊目的</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Collection_Tree_Protocol&amp;action=edit&amp;redlink=1" title="Collection Tree Protocol (存在しないページ)">Collection Tree Protocol</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Collection_Tree_Protocol&amp;action=edit&amp;redlink=1" title="En:Collection Tree Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Constrained_Shortest_Path_First&amp;action=edit&amp;redlink=1" title="Constrained Shortest Path First (存在しないページ)">Constrained Shortest Path First</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Constrained_Shortest_Path_First&amp;action=edit&amp;redlink=1" title="En:Constrained Shortest Path First (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Distance_Vector_Multicast_Routing_Protocol&amp;action=edit&amp;redlink=1" title="Distance Vector Multicast Routing Protocol (存在しないページ)">Distance_Vector_Multicast_Routing_Protocol</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Distance_Vector_Multicast_Routing_Protocol&amp;action=edit&amp;redlink=1" title="En:Distance Vector Multicast Routing Protocol (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">過去</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Border_Gateway_Multicast_Protocol&amp;action=edit&amp;redlink=1" title="Border Gateway Multicast Protocol (存在しないページ)">Border_Gateway_Multicast_Protocol</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Border_Gateway_Multicast_Protocol&amp;action=edit&amp;redlink=1" title="En:Border Gateway Multicast Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Exterior_Gateway_Protocol" title="Exterior Gateway Protocol">EGP</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p><p><a class="new" href="/w/index.php?title=He:Interior_Gateway_Routing_Protocol&amp;action=edit&amp;redlink=1" title="He:Interior Gateway Routing Protocol (存在しないページ)">he:Interior Gateway Routing Protocol#EIGRP</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220401054645
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.270 seconds
+Real time usage: 0.406 seconds
+Preprocessor visited node count: 4135/1000000
+Post‐expand include size: 44181/2097152 bytes
+Template argument size: 7134/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 9/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3296/5000000 bytes
+Lua time usage: 0.090/7 seconds
+Lua virtual size: 6279168/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  350.707      1 -total
+ 64.40%  225.851      4 テンプレート:Citation
+ 62.35%  218.672      4 テンプレート:Citation/core
+ 43.20%  151.498      1 テンプレート:Citation/identifier
+ 42.28%  148.285      1 テンプレート:ISBN2
+ 33.36%  116.994      1 テンプレート:Catalog_lookup_link
+ 23.19%   81.334      1 テンプレート:ルーティングプロトコル
+ 22.32%   78.293      1 テンプレート:Navbox
+ 17.98%   63.062      9 テンプレート:仮リンク
+ 10.18%   35.699      1 テンプレート:Normdaten
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1824223-0!canonical and timestamp 20220401054644 and revision id 1101303. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=EIGRP&amp;oldid=1101303">http://localhost:8080/w/index.php?title=EIGRP&amp;oldid=1101303</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="カテゴリ:ルーティングプロトコル">ルーティングプロトコル</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%AE%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="カテゴリ:インターネットのプロトコル">インターネットのプロトコル</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=EIGRP&amp;returntoquery=curid%3D1824223%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=EIGRP&amp;returntoquery=curid%3D1824223%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/EIGRP" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:EIGRP&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/EIGRP">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=EIGRP&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=EIGRP&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/EIGRP" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/EIGRP" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=EIGRP&amp;oldid=1101303" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=EIGRP&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月16日 (火) 02:59 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.270","walltime":"0.406","ppvisitednodes":{"value":4135,"limit":1000000},"postexpandincludesize":{"value":44181,"limit":2097152},"templateargumentsize":{"value":7134,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":9,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3296,"limit":5000000},"timingprofile":["100.00%  350.707      1 -total"," 64.40%  225.851      4 テンプレート:Citation"," 62.35%  218.672      4 テンプレート:Citation/core"," 43.20%  151.498      1 テンプレート:Citation/identifier"," 42.28%  148.285      1 テンプレート:ISBN2"," 33.36%  116.994      1 テンプレート:Catalog_lookup_link"," 23.19%   81.334      1 テンプレート:ルーティングプロトコル"," 22.32%   78.293      1 テンプレート:Navbox"," 17.98%   63.062      9 テンプレート:仮リンク"," 10.18%   35.699      1 テンプレート:Normdaten"]},"scribunto":{"limitreport-timeusage":{"value":"0.090","limit":"7"},"limitreport-virtmemusage":{"value":6279168,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401054645","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":587});});</script>
+</body></html>

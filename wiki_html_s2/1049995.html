@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>正規言語の反復補題 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-正規言語の反復補題 rootpage-正規言語の反復補題 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">正規言語の反復補題</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>正規言語の反復補題</b>（<a href="." id="link_a_1" title="英語">英</a>: <b>Pumping lemma for regular languages</b>）とは、全ての<a href="." id="link_a_2" title="正規言語">正規言語</a>が持つ属性を与える<a href="." id="link_a_3" title="補題">補題</a>である。<a href="." id="link_a_4" title="反復補題">反復補題</a>一般の具体例の一つである。その主たる用法は、ある言語が<a href="." id="link_a_2" title="正規言語">正規言語</a>でないことを証明することである。
+</p><p>この反復補題は1961年に Y. Bar-Hillel、M. Perles、E. Shamir によって最初に示された<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#形式的定義"><span class="tocnumber">1</span> <span class="toctext">形式的定義</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#解説"><span class="tocnumber">2</span> <span class="toctext">解説</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#利用"><span class="tocnumber">3</span> <span class="toctext">利用</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#証明"><span class="tocnumber">4</span> <span class="toctext">証明</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#反復補題の不十分性"><span class="tocnumber">5</span> <span class="toctext">反復補題の不十分性</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#一般化された「正規言語の反復補題」"><span class="tocnumber">6</span> <span class="toctext">一般化された「正規言語の反復補題」</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.BD.A2.E5.BC.8F.E7.9A.84.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="形式的定義">形式的定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=1" title="節を編集: 形式的定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>&lt;math&gt;L&lt;/math&gt; を正規言語とすると、&lt;math&gt;L&lt;/math&gt; のみに依存する次のような反復長 &lt;math&gt;p\geq 1&lt;/math&gt; が存在する。&lt;math&gt;L&lt;/math&gt; に属する長さ &lt;math&gt;p&lt;/math&gt; 以上の任意の文字列 &lt;math&gt;w&lt;/math&gt; は &lt;math&gt;w=xyz&lt;/math&gt; と書ける（つまり、 &lt;math&gt;w&lt;/math&gt; は3つの部分文字列に分けられる）。ここで、 &lt;math&gt;x&lt;/math&gt;、&lt;math&gt;y&lt;/math&gt;、&lt;math&gt;z&lt;/math&gt; は次の条件を満たす。
+</p>
+<ol><li>&lt;math&gt;|y|\geq 1&lt;/math&gt;</li>
+<li>&lt;math&gt;|xy|\leq p&lt;/math&gt;</li>
+<li>全ての &lt;math&gt;i\geq 0&lt;/math&gt; について、&lt;math&gt;xy^iz \in L&lt;/math&gt;</li></ol>
+<p><i>y</i> は反復される部分文字列（0回を含む任意の回数繰り返され、結果として生成される文字列も <i>L</i> に属する）。|<i>y</i>| は文字列 <i>y</i> の長さを意味し、(1)の条件は <i>y</i> が少なくとも長さを持つ空でない文字列であることを意味している。(2)の条件は繰り返しが先頭から <i>p</i> 文字以内から開始されることを意味する。<i>x</i> および <i>z</i> については特に制限はない。
+</p><p>反復補題の形式的表現を以下に示す。
+</p><p>&lt;math&gt;
+\begin{array}{l}                                                                                                                                       
+(\forall  L\subseteq \Sigma^*)  \\                                                                                                                     
+\quad      (\mbox{regular}(L) \Rightarrow \\                                                                                                           
+\quad      ((\exists p\geq 1) ( (\forall w\in L) ((|w|\geq p) \Rightarrow \\                                                                           
+\quad ((\exists x,y,z \in \Sigma^*) (w=xyz \land (|y|\geq 1 \land |xy|\leq p \land                                                                
+(\forall i\geq 0)(xy^iz\in L))))))))                                                                                                                   
+\end{array} 
+&lt;/math&gt;
+</p>
+<h2><span id=".E8.A7.A3.E8.AA.AC"></span><span class="mw-headline" id="解説">解説</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=2" title="節を編集: 解説">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>正規言語の反復補題（以下、単に反復補題と略記）は、全ての正規言語が持つと保証されている属性を表している。より正確に言えば、正規言語に属する文字列の持つ属性を表している。ここで扱う正規言語の文字列は長さ <i>p</i> 以上（<i>p</i> は定数。形式的定義での <i>p</i> と同じ）で、これを反復長（pumping length）と呼ぶ。反復長は個々の正規言語によって異なる。<i>s</i> が長さ <i>p</i> 以上のある文字列で、正規言語 <i>L</i> に含まれるものとする。反復補題によれば、何らかの方法で <i>s</i> を3つに分割して &lt;math&gt;s = xyz&lt;/math&gt; としたとき、その（空ではない）中央部分 <i>y</i>を（0回を含む）任意回数繰り返した文字列も <i>L</i> に含まれる。このように文字列の一部の複製を追加していくことを「反復; pumping」と呼び、そのため反復補題と呼ばれている。さらに、反復補題は <i>xy</i> の長さが最大でも <i>p</i> となるような <i>s</i> の分割があることを保証している。
+</p><p>反復補題は、ある言語が正規言語ではないことを証明するのに使われる（補題と呼ばれるのはそのためである）。その場合、反復補題に示される属性をその言語に属する文字列が持たないことを示せばよい。
+</p><p>正規言語が有限の場合、つまりその正規言語に含まれる文字列の長さに上限がある場合、&lt;math&gt;p&lt;/math&gt;をその正規言語に含まれる最大の文字列長より大きいと仮定すると、反復補題の形式的表現の論理式は常に真となる。つまり反復補題が意味するところは、正規言語は有限か、無限であれば、任意の文字列の中間に表れる文字列に対する反復（任意回数の繰り返し）を、その正規言語が許容するということであり、いずれの場合でもないものは、正規言語ではないということである。
+</p>
+<h2><span id=".E5.88.A9.E7.94.A8"></span><span class="mw-headline" id="利用">利用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=3" title="節を編集: 利用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>反復補題を使ってある言語が正規言語でないことを示すには、<a href="/wiki/%E8%83%8C%E7%90%86%E6%B3%95" title="背理法">背理法</a>を用いる。ある言語 <i>L</i> を正規言語と仮定し、<i>L</i> に属する全文字列が正規言語の反復補題に従うものとする。そして、具体例によって反復補題の属性を持たない文字列があることを示し、仮定が間違っていることを導き出して、<i>L</i> が正規言語ではないことを示す。すなわち、文字列 <i>w</i> ∈ <i>L</i> と整数 <i>i</i> の組合せで反復補題に反するものを探す。
+</p><p>この反復補題を使えば、例えばアルファベット Σ = {<i>a</i>, <i>b</i>} を使った言語 <i>L</i> = {<i>a<sup>n</sup>b<sup>n</sup></i> : <i>n</i> ≥ 0} が正規言語でないことを証明できる。この場合、補題に出てくる <i>w</i>, <i>x</i>, <i>y</i>, <i>z</i>, <i>p</i>, <i>i</i> をその言語に当てはめる。まず、<i>w</i> = <i>a<sup>p</sup>b<sup>p</sup></i> とする。この <i>w</i> を <i>w</i> = <i>xyz</i>、|<i>xy</i>| ≤  <i>p</i>、|<i>y</i>| ≥ 1 となるよう分解し、<i>i</i> ≥ 0 のとき <i>xy<sup>i</sup>z</i> が <i>L</i> に属するかどうかを確認する。
+</p><p>どのように当てはめるかということについては、3通りの方法が考えられる。
+</p><p><i>y</i>が<i>a<sup>i</sup>b<sup>j</sup> (0 ≤ i ≤ n, 0 ≤ j ≤ n )</i>であるとすると、<i>y</i>を繰り返すと<i>a</i>と<i>b</i>が交互に出現することになり、<i>a<sup>n</sup>b<sup>n</sup></i>という<i>L</i>の定義に反することになる。
+</p><p>次に、|<i>xy</i>|=<i>p</i> かつ |<i>z</i>|=<i>p</i> としたとき、<i>xy</i> は <i>w</i> の前半、すなわち <i>p</i> 個の <i>a</i> に対応する。|<i>y</i>| ≥ 1 なので、<i>y</i> は1個以上の <i>a</i> で構成される。すると、<i>xy<sup>2</sup>z</i> は <i>a</i> の個数と <i>b</i> の個数が違うことになり、<i>L</i> の定義に反する（<i>i</i> ≠ 1 について常に矛盾が生じる）。この場合、矛盾が導かれたので、反復補題が成り立たないことがわかる。
+</p><p>もうひとつのパターンは、|<i>xy</i>|=<i>p</i>=|<i>w</i>| かつ |<i>z</i>|=0 の場合、つまり<i>x</i>=<i>a<sup>n</sup></i>、<i>y</i>=<i>b<sup>n</sup></i>, <i>z</i>=&lt;math&gt;\epsilon&lt;/math&gt;の場合であるが、これも同様に、<i>xy<sup>2</sup>z</i> は <i>a</i> の個数と <i>b</i> の個数が違うことになり、<i>L</i> の定義に反する。従って、<i>L</i>に属する文字列をどのように分割しても、反復補題から矛盾が導かれ、<i>L</i> が正規言語であるという仮定に誤りがあることになる。従って、<i>L</i> が正規言語でないことが証明される。
+</p><p>括弧が正しく対応している言語（'(' と ')' が同じ個数出現し、最初が '(' で最後が ')' となる言語）も同様の考え方で正規言語でないことが証明できる。ある <i>p</i> について、左括弧が先頭から <i>p</i> 個以上続く文字列では、<i>y</i> には左括弧しか含まれない。従って <i>y</i> を反復すると、左括弧だけが多い文字列となって、定義に反することになる。
+</p>
+<h2><span id=".E8.A8.BC.E6.98.8E"></span><span class="mw-headline" id="証明">証明</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=4" title="節を編集: 証明">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>この証明法は、全ての正規言語にその言語を受理する<a href="/wiki/%E6%9C%89%E9%99%90%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3" title="有限オートマトン">有限状態機械</a> (FSA) が存在するという事実を利用している。正規言語が有限であれば、十分に大きい&lt;math&gt;p&lt;/math&gt;に対して &lt;math&gt;|w|\geq p&lt;/math&gt; が常に偽になるため、反復補題が真であることは自明である（ &lt;math&gt;|w|\geq p&lt;/math&gt; が偽であれば、 &lt;math&gt;(|w|\geq p) \Rightarrow ((\exists x,y,z \in \Sigma^*) (w=xyz \land (|y|\geq 1 \land |xy|\leq p \land (\forall i\geq 0)(xy^iz\in L))))&lt;/math&gt; という論理式全体は、 &lt;math&gt;\Rightarrow&lt;/math&gt; の右側の式の真偽値によらず真になる。そのため、十分に大きい&lt;math&gt;p&lt;/math&gt;に対して、この条件式は真となるため、正規言語が有限であれば、 &lt;math&gt;\exists p\geq 1&lt;/math&gt; という条件を常に満たすことになる）。
+</p><p>正規言語が無限の場合、その言語を受理する最小 FSA が存在しなければならない。FSA の状態数は有限であるから、その個数を反復長 <i>p</i> とする。文字列長が <i>p</i> 以上の場合、反復される状態が少なくとも1つ存在する（この状態を <i>S</i> とする）。状態 <i>S</i> から <i>S</i> への遷移は何らかの文字列に対応する。この文字列を反復補題における <i>y</i> とすれば、<i>y</i> を含まない文字列（繰り返し部分に相当する遷移をしない場合）も、<i>y</i> を繰り返す文字列もFSAで受理されるため、反復補題が成り立つことがわかる。
+</p><p>例を見てみればより理解しやすいだろう。以下の<a href="/wiki/%E7%8A%B6%E6%85%8B%E9%81%B7%E7%A7%BB%E5%9B%B3" title="状態遷移図">状態遷移図</a>は、ある FSA を示している。
+</p><p>ファイル:An automat accepting the language a(bc)*d.png
+</p><p>この FSA は文字列 <b>abcbcd</b> を受理する。この文字列は状態数より多くの文字からなるので、状態を繰り返していることがわかる。この例では q1 と q2 が繰り返される状態である。文字列 <b>abcbcd</b> の部分文字列 <b>bcbc</b> は、状態 q1 から始まって状態 q1 に戻る遷移で形成されるので、この文字列部分はFSAによる繰り返しが可能であり、<b>abcbcbcbcd</b> のような文字列も受理される。また、その遷移のループを通らない文字列 <b>ad</b> も同様に受理される。反復補題に当てはめると、文字列 <b>abcbcd</b> は、<i>x</i> に <b>a</b>、<i>y</i> に <b>bc</b>、<i>z</i> に <b>bcd</b> が対応する。もちろん、他の当てはめ方もある（<i>y</i> に <b>bcbc</b> を対応させる）が、|<i>xy</i>| ≤ <i>p</i> を満たしていない。
+</p>
+<h2><span id=".E5.8F.8D.E5.BE.A9.E8.A3.9C.E9.A1.8C.E3.81.AE.E4.B8.8D.E5.8D.81.E5.88.86.E6.80.A7"></span><span class="mw-headline" id="反復補題の不十分性">反復補題の不十分性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=5" title="節を編集: 反復補題の不十分性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>反復補題は、ある言語が正規言語であるための十分条件ではないことに注意されたい。つまり、正規言語以外でもこの反復補題が成り立つことがある。言語 <i>L</i> について反復補題が成り立たない場合、<i>L</i> が正規言語でないことがわかる。しかし、反復補題が成り立ったとしても、<i>L</i> が必ず正規言語であるとは言えない。例えば、言語 <i>{uu<sup>R</sup>v : u,v &lt;math&gt;\in&lt;/math&gt; {0,1}<sup>+</sup>}</i>（アルファベット <i>{0,1}</i> で構成される<a href="/wiki/%E5%9B%9E%E6%96%87" title="回文">回文</a>形式の空でない文字列に別の文字列が付属したもの）は正規言語ではないが、<i>p</i> = 4（<i>w=uu<sup>R</sup>v</i> の長さが 4 以上の場合）で反復可能である。<i>u</i> の長さが 1 であれば、|<i>v</i>| ≥ 2 であり、<i>v</i> の先頭の文字を <i>y</i> とすればよい。さもなくば、<i>u</i> の先頭文字を <i>y</i> とする（<i>k</i> ≥ 2 のときの <i>y<sup>k</sup></i> は空でない回文 <i>yy</i> で始まる文字列を構成し、残りを <i>v</i> と見なせば、この言語に属することになる）。正規言語のより実用的な判定方法については<a class="mw-redirect" href="/wiki/%E3%83%9E%E3%82%A4%E3%83%92%E3%83%AB-%E3%83%8D%E3%83%AD%E3%83%BC%E3%83%87%E3%81%AE%E5%AE%9A%E7%90%86" title="マイヒル-ネローデの定理">マイヒル-ネローデの定理</a>を参照されたい。ある言語が正規言語であることを証明する典型的な方法は、その言語を受理する<a href="/wiki/%E6%9C%89%E9%99%90%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3" title="有限オートマトン">有限オートマトン</a>か<a href="/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE" title="正規表現">正規表現</a>を構築することである。
+</p>
+<h2><span id=".E4.B8.80.E8.88.AC.E5.8C.96.E3.81.95.E3.82.8C.E3.81.9F.E3.80.8C.E6.AD.A3.E8.A6.8F.E8.A8.80.E8.AA.9E.E3.81.AE.E5.8F.8D.E5.BE.A9.E8.A3.9C.E9.A1.8C.E3.80.8D"></span><span class="mw-headline" id="一般化された「正規言語の反復補題」">一般化された「正規言語の反復補題」</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=6" title="節を編集: 一般化された「正規言語の反復補題」">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>言語 <i>L</i> が正規言語であるとき、ある数（反復長）<i>p</i> &gt; 0 について |<i>w</i>| ≥ <i>p</i> であるような <i>L</i> の任意の文字列 <i>uwv</i> を以下のように表現できる。
+</p>
+<dl><dd><i>uwv</i> = <i>uxyzv</i></dd></dl>
+<p>ここで文字列 <i>x</i>、<i>y</i>、<i>z</i> について |<i>xy</i>| ≤ <i>p</i> と |<i>y</i>| &gt; 0 と次が成り立つ。
+</p>
+<dl><dd>全ての <i>i</i> ≥ 0 の整数 <i>i</i> について <i>uxy<sup>i</sup>zv</i> が <i>L</i> に属する。</dd></dl>
+<p>このバージョンでは言語に要求する仕様がより厳密に表されているため、より多くの非正規言語を正規言語でないと証明できる。
+</p>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;section=7" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">Y. Bar-Hillel, M. Perles, E. Shamir, "On formal properties of simple phrase structure grammars", <i>Zeitschrift für Phonetik, Sprachweissenshaft und Kommunikationsforschung</i> <b>14</b> (1961) pp. 143-172. </span>
+</li>
+</ol></div>
+<ul><li><cite class="citation book" style="font-style:normal">Michael Sipser (1997年). <i>Introduction to the Theory of Computation</i>. PWS Publishing. ISBN 0-534-94728-X</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+the+Theory+of+Computation&amp;rft.aulast=Michael+Sipser&amp;rft.au=Michael+Sipser&amp;rft.date=1997%E5%B9%B4&amp;rft.pub=PWS+Publishing&amp;rfr_id=info:sid/ja.wikipedia.org:%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C"><span style="display: none;"> </span></span> Section 1.4: Nonregular Languages, pp.77–83.</li>
+<li>John E. Hopcroft and Jeffrey D. Ullman, <i>Introduction to Automata Theory, Languages and Computation</i>, Addison-Wesley Publishing, Reading Massachusetts, 1979. ISBN 0-201-02988-X. <i>(See chapter 3.)</i></li></ul>
+<p><a class="new" href="/w/index.php?title=De:Pumping-Lemma&amp;action=edit&amp;redlink=1" title="De:Pumping-Lemma (存在しないページ)">de:Pumping-Lemma#Reguläre Sprachen</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331224540
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.041 seconds
+Real time usage: 0.041 seconds
+Preprocessor visited node count: 745/1000000
+Post‐expand include size: 3137/2097152 bytes
+Template argument size: 604/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 457/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.583      1 テンプレート:Cite_book
+100.00%   20.583      1 -total
+ 75.34%   15.507      1 テンプレート:Citation/core
+ 11.28%    2.322      1 テンプレート:Citation/showdateEN
+  5.70%    1.174      1 テンプレート:Link
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1049995-0!canonical and timestamp 20220331224540 and revision id 649720. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=正規言語の反復補題&amp;oldid=649720">http://localhost:8080/w/index.php?title=正規言語の反復補題&amp;oldid=649720</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9C%89%E9%99%90%E3%82%AA%E3%83%BC%E3%83%88%E3%83%9E%E3%83%88%E3%83%B3" title="カテゴリ:有限オートマトン">有限オートマトン</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E" title="カテゴリ:形式言語">形式言語</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A3%9C%E9%A1%8C" title="カテゴリ:補題">補題</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;returntoquery=curid%3D1049995%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;returntoquery=curid%3D1049995%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;oldid=649720" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E6%AD%A3%E8%A6%8F%E8%A8%80%E8%AA%9E%E3%81%AE%E5%8F%8D%E5%BE%A9%E8%A3%9C%E9%A1%8C&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2019年10月1日 (火) 03:04 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.041","walltime":"0.041","ppvisitednodes":{"value":745,"limit":1000000},"postexpandincludesize":{"value":3137,"limit":2097152},"templateargumentsize":{"value":604,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":457,"limit":5000000},"timingprofile":["100.00%   20.583      1 テンプレート:Cite_book","100.00%   20.583      1 -total"," 75.34%   15.507      1 テンプレート:Citation/core"," 11.28%    2.322      1 テンプレート:Citation/showdateEN","  5.70%    1.174      1 テンプレート:Link"]},"cachereport":{"timestamp":"20220331224540","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":662});});</script>
+</body></html>

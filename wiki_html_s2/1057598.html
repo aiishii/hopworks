@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>FreeBSD jail - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-FreeBSD_jail rootpage-FreeBSD_jail skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">FreeBSD jail</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>FreeBSD jail</b>はOSレベル<a href="." id="link_a_1" title="仮想化">仮想化</a>機構実装の一つである。jailを使うと、管理者が<a href="." id="link_a_2" title="FreeBSD">FreeBSD</a>ベースの計算機システムをjailと呼ばれる独立した小さなシステムに分割できるようになる。
+</p><p>FreeBSD jailは、<a href="." id="link_a_3" title="ホスティングサーバ">レンタルサーバ</a>業者が業者の提供するサービスと顧客のサービスとを分離するのによく使われる。
+このように分離することで安全性を確保し、管理の手間を軽減できる。
+サーバ<a href="." id="link_a_4" title="デーモン (ソフトウェア)">デーモン</a>の設定レベルで分離するのと違い、jailからは自分に割り当てられた<a href="." id="link_a_5" title="ファイルシステム">ファイルシステム</a>およびプロセス空間しか扱えないようになっている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#jailの利点"><span class="tocnumber">1</span> <span class="toctext">jailの利点</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#jailの作り方"><span class="tocnumber">2</span> <span class="toctext">jailの作り方</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#同様の技術"><span class="tocnumber">3</span> <span class="toctext">同様の技術</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#外部リンク"><span class="tocnumber">4</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id="jail.E3.81.AE.E5.88.A9.E7.82.B9"></span><span class="mw-headline" id="jailの利点">jailの利点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FreeBSD_jail&amp;action=edit&amp;section=1" title="節を編集: jailの利点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> jailには主に次の3つの利点がある。
+</p>
+<ol><li><a href="/wiki/%E4%BB%AE%E6%83%B3%E5%8C%96" title="仮想化">仮想化</a>: 各jailはホストマシン上で動く<a href="/wiki/%E4%BB%AE%E6%83%B3%E6%A9%9F%E6%A2%B0" title="仮想機械">仮想機械</a>であり、独自の<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ファイルシステム">ファイルシステム</a>や<a class="new" href="/w/index.php?title=%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="プロセス空間 (存在しないページ)">プロセス空間</a>、<a class="mw-redirect" href="/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88" title="ユーザーアカウント">ユーザーアカウント</a>を持つ。jailの中のプロセスからは実際のシステムなのかjailの中なのかはほぼ区別できない。</li>
+<li><a href="/wiki/%E5%AE%89%E5%85%A8%E6%80%A7" title="安全性">安全性</a>: 各jailは他のjailにアクセスできないようになっており、<a href="/wiki/%E5%AE%89%E5%85%A8%E6%80%A7" title="安全性">安全性</a>が高まっている。</li>
+<li><a href="/wiki/%E6%A8%A9%E9%99%90%E5%A7%94%E8%AD%B2" title="権限委譲">権限委譲</a>の簡素化: 管理者権限の<a href="/wiki/%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97" title="スコープ">スコープ</a>がjail内に制限されているため、システムの管理者は本来管理者権限が必要な仕事を、計算機全体を操作する権限を渡すことなく行わせることが出来る。</li></ol>
+<p>jailのやり方は従来の<a class="mw-redirect" href="/wiki/Unix" title="Unix">Unix</a>でプロセスのスコープを制限するのに使われる<a href="/wiki/Chroot" title="Chroot">chroot</a> jailに似ている。FreeBSD jailはこれを強化したもので、各プロセスは他のjailで動いているプロセスに干渉したり、<a href="/wiki/Raw_socket" title="Raw socket">raw socket</a>や<a class="new" href="/w/index.php?title=Divert_socket&amp;action=edit&amp;redlink=1" title="Divert socket (存在しないページ)">divert socket</a>、<a class="new" href="/w/index.php?title=Routing_socket&amp;action=edit&amp;redlink=1" title="Routing socket (存在しないページ)">routing socket</a>を操作したりできないよう、特別な<a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB" title="カーネル">カーネル</a>構造体を用いて管理してある。
+</p><p><tt>jail(8)</tt>ユーザーランドコマンドと<tt>jail(2)</tt><a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%B3%E3%83%BC%E3%83%AB" title="システムコール">システムコール</a>はFreeBSD 4.0で登場した。jailの取り扱いを簡単にする新しいユーザーランドコマンド (たとえば、jailの一覧を出す<tt>jls(8)</tt>)やシステムコール (たとえば、jailに新しいプロセスを追加する<tt>jail_attach(2)</tt>)はFreeBSD 5.1から追加された。
+</p>
+<h2><span id="jail.E3.81.AE.E4.BD.9C.E3.82.8A.E6.96.B9"></span><span class="mw-headline" id="jailの作り方">jailの作り方</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FreeBSD_jail&amp;action=edit&amp;section=2" title="節を編集: jailの作り方">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> jailの利用は次のように簡単に行える。
+</p>
+<ol><li><tt>/usr/jail</tt>のようにjailの中でrootディレクトリ (つまり、/) となるディレクトリを作る。</li>
+<li>jailの中で動かすプログラムやファイルを投入する (典型的には、<tt>/usr/jail/bin</tt>にシェルを置いたり、procfsを<tt>/usr/jail/procfs</tt>にマウントしたりする)。<tt>jail(8)</tt>の<a class="new" href="/w/index.php?title=%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB&amp;action=edit&amp;redlink=1" title="オンラインマニュアル (存在しないページ)">オンラインマニュアル</a>には、<tt><a class="new" href="/w/index.php?title=Make_world&amp;action=edit&amp;redlink=1" title="Make world (存在しないページ)">make world</a> DESTDIR=/usr/jail</tt>と<tt><a class="new" href="/w/index.php?title=Make_distribution&amp;action=edit&amp;redlink=1" title="Make distribution (存在しないページ)">make distribution</a> DESTDIR=/usr/jail</tt>でこの作業を行うことが出来ると書いてあるが、必ずしもこの方法をとる必要はない。</li>
+<li><tt>/usr/jail/dev</tt>にdevfsをマウントする。(<a class="mw-redirect" href="/wiki/%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%89" title="デバイスノード">デバイスノード</a>無しでも動作するが、非常に制限が強い)</li>
+<li>最後に、jailコマンドでjail内の<tt><a class="mw-redirect" href="/wiki/Sh" title="Sh">sh</a></tt>を使って<tt>/etc/rc</tt> <a href="/wiki/Init" title="Init">init</a><a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88" title="シェルスクリプト">スクリプト</a>を"仮想的に"起動する (例 <tt>jail /usr/jail hostname 10.0.0.22 /bin/sh /etc/rc</tt>)。</li></ol>
+<p>こうすることで、jailのコンテキストでいくつかの<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>が実行される。そして、中で起動したプロセスはjailの中のプロセスの操作しかできず、jailのルートファイルシステムとして指定されたファイルシステム (ここでは、<tt>/usr/jail</tt>) の外にあるファイルをアクセスできなくなる。
+</p><p>jailを使い始めるときは<tt>jail(8)</tt>のオンラインマニュアルが参考になる。
+</p>
+<h2><span id=".E5.90.8C.E6.A7.98.E3.81.AE.E6.8A.80.E8.A1.93"></span><span class="mw-headline" id="同様の技術">同様の技術</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FreeBSD_jail&amp;action=edit&amp;section=3" title="節を編集: 同様の技術">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>OSレベルの仮想化技術にはこのほかに<a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a>/<a class="mw-redirect" href="/wiki/Virtuozzo" title="Virtuozzo">Virtuozzo</a>, <a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a>, <a class="new" href="/w/index.php?title=Solaris_Containers&amp;action=edit&amp;redlink=1" title="Solaris Containers (存在しないページ)">Solaris Containers</a>, <a class="new" href="/w/index.php?title=FreeVPS&amp;action=edit&amp;redlink=1" title="FreeVPS (存在しないページ)">FreeVPS</a>, <a href="/wiki/LXC" title="LXC">LXC</a>がある。
+</p>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=FreeBSD_jail&amp;action=edit&amp;section=4" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://phk.freebsd.dk/pubs/sane2000-jail.pdf" rel="nofollow">Jails: Confining the omnipotent root</a></li>
+<li><a class="external text" href="http://www.freebsd.org/cgi/man.cgi?query=jail&amp;format=html" rel="nofollow">jail(8) man page</a></li>
+<li><a class="external text" href="http://www.onlamp.com/pub/a/bsd/2003/09/04/jails.html" rel="nofollow">FreeBSD jails</a> at ONLamp</li>
+<li><a class="external text" href="http://erdgeist.org/arts/software/ezjail/" rel="nofollow">A jail administration framework</a> ezjail</li>
+<li><a class="external text" href="http://www.freebsddiary.org/jail-6.php" rel="nofollow">Jail on FreeBSD 6</a></li>
+<li><a class="external text" href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/jails.html" rel="nofollow">FreeBSD Handbook: Jails</a></li></ul>
+<div aria-labelledby="仮想化" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E4%BB%AE%E6%83%B3%E5%8C%96&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:仮想化 (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%BB%AE%E6%83%B3%E5%8C%96&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%BB%AE%E6%83%B3%E5%8C%96&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="仮想化" style="font-size:110%;margin:0 6em">仮想化</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">全体</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Popek%E3%81%A8Goldberg%E3%81%AE%E4%BB%AE%E6%83%B3%E5%8C%96%E8%A6%81%E4%BB%B6" title="PopekとGoldbergの仮想化要件">PopekとGoldbergの仮想化要件</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%90%E3%82%A4%E3%82%B6" title="ハイパーバイザ">ハイパーバイザ</a></li>
+<li><a href="/wiki/%E6%BA%96%E4%BB%AE%E6%83%B3%E5%8C%96" title="準仮想化">準仮想化</a></li>
+<li><a href="/wiki/PowerVM" title="PowerVM">PowerVM</a></li>
+<li><a href="/wiki/X86%E4%BB%AE%E6%83%B3%E5%8C%96" title="X86仮想化">x86仮想化</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プラットフォームの<br/>仮想化<br/>（仮想マシン）</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ハードウェアレベル</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/PR/SM" title="PR/SM">PR/SM</a></li>
+<li><a href="/wiki/LPAR" title="LPAR">LPAR</a></li>
+<li><a class="mw-redirect" href="/wiki/%E8%AB%96%E7%90%86%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3" title="論理ドメイン">LDOM</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B386%E3%83%A2%E3%83%BC%E3%83%89" title="仮想86モード">仮想86モード</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AB_%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%A9%E3%82%A4%E3%82%BC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="インテル バーチャライゼーション・テクノロジー">インテルVT</a></li>
+<li><a href="/wiki/X86%E4%BB%AE%E6%83%B3%E5%8C%96#AMD-V" title="X86仮想化">AMD-V</a></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%82%B5%E3%83%BC%E3%83%90" title="ブレードサーバ">ブレードサーバ</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E4%BB%AE%E6%83%B3%E5%8C%96" title="ハードウェア仮想化">ハードウェア仮想化</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=I/O%E4%BB%AE%E6%83%B3%E5%8C%96&amp;action=edit&amp;redlink=1" title="I/O仮想化 (存在しないページ)">I/O仮想化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:I/O_virtualization&amp;action=edit&amp;redlink=1" title="En:I/O virtualization (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ソフトウェアレベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bhyve" title="Bhyve">bhyve</a></li>
+<li><a href="/wiki/Z/VM" title="Z/VM">z/VM</a></li>
+<li><a href="/wiki/VMware" title="VMware">VMware</a></li>
+<li><a href="/wiki/VMware_Fusion" title="VMware Fusion">VMware Fusion</a></li>
+<li><a href="/wiki/Hyper-V" title="Hyper-V">Hyper-V</a></li>
+<li><a href="/wiki/Workload_Partition" title="Workload Partition">WPAR</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Sun_xVM&amp;action=edit&amp;redlink=1" title="Sun xVM (存在しないページ)">Sun xVM</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Sun_xVM&amp;action=edit&amp;redlink=1" title="En:Sun xVM (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Bochs" title="Bochs">Bochs</a></li>
+<li><a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="/wiki/PearPC" title="PearPC">PearPC</a></li>
+<li><a href="/wiki/QEMU" title="QEMU">QEMU</a></li>
+<li><a href="/wiki/Xen_(%E4%BB%AE%E6%83%B3%E5%8C%96%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Xen (仮想化ソフトウェア)">Xen</a></li>
+<li><a href="/wiki/VirtualBox" title="VirtualBox">VirtualBox</a></li>
+<li><a class="mw-selflink selflink">jail</a></li>
+<li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a>（<a href="/wiki/Docker" title="Docker">Docker</a>）</li>
+<li><a href="/wiki/Parallels_Desktop_for_Mac" title="Parallels Desktop for Mac">Parallels Desktop</a></li>
+<li><a href="/wiki/Parallels_Virtuozzo_Containers" title="Parallels Virtuozzo Containers">Parallels Virtuozzo Containers</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li>
+<li><a href="/wiki/Libvirt" title="Libvirt">libvirt</a></li>
+<li><a href="/wiki/User_Mode_Linux" title="User Mode Linux">User Mode Linux</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OS%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%BB%AE%E6%83%B3%E5%8C%96&amp;action=edit&amp;redlink=1" title="OSレベルの仮想化 (存在しないページ)">OSレベルの仮想化</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Operating_system-level_virtualization&amp;action=edit&amp;redlink=1" title="En:Operating system-level virtualization (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%BB%AE%E6%83%B3%E5%8C%96" title="アプリケーション仮想化">アプリケーション仮想化</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E4%BB%AE%E6%83%B3%E5%8C%96" title="デスクトップ仮想化">デスクトップ仮想化</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">言語レベル</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%82%A4%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89" title="バイトコード">バイトコード</a></li>
+<li><a href="/wiki/Java%E4%BB%AE%E6%83%B3%E3%83%9E%E3%82%B7%E3%83%B3" title="Java仮想マシン">Java仮想マシン</a></li>
+<li><a href="/wiki/%E5%85%B1%E9%80%9A%E8%A8%80%E8%AA%9E%E3%83%A9%E3%83%B3%E3%82%BF%E3%82%A4%E3%83%A0" title="共通言語ランタイム">CLR</a></li>
+<li><a href="/wiki/LLVM" title="LLVM">LLVM</a></li>
+<li><a href="/wiki/Lua" title="Lua">Lua</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">リソースの仮想化</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">CPU</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="タイムシェアリングシステム">タイムシェアリング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">メインメモリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6" title="仮想記憶">仮想メモリ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ディスク装置</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/RAID" title="RAID">RAID</a></li>
+<li><a href="/wiki/%E8%AB%96%E7%90%86%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3" title="論理ボリュームマネージャ">LVM</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="仮想ファイルシステム">仮想ファイルシステム</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E4%BB%AE%E6%83%B3%E5%8C%96%E3%82%BD%E3%83%95%E3%83%88" title="ディスクドライブ仮想化ソフト">ディスク仮想化ソフト</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">ネットワーク</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Virtual_Local_Area_Network" title="Virtual Local Area Network">VLAN</a></li>
+<li><a href="/wiki/Virtual_Private_Network" title="Virtual Private Network">VPN</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%8F%E3%83%96" title="仮想ハブ">仮想ハブ</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9" title="仮想ネットワークインターフェイス">仮想ネットワークIF</a></li>
+<li><a href="/wiki/%E4%BB%AE%E6%83%B3LAN%E3%82%AB%E3%83%BC%E3%83%89" title="仮想LANカード">仮想LANカード</a></li>
+<li><a href="/wiki/HiperSocket" title="HiperSocket">HiperSocket</a></li>
+<li><a href="/wiki/%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%E3%83%9C%E3%83%B3%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="チャネルボンディング">チャネルボンディング</a></li>
+<li><a href="/wiki/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E5%A4%89%E6%8F%9B" title="ネットワークアドレス変換">NAT</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E4%BB%AE%E6%83%B3%E3%82%A2%E3%83%97%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%82%B9" title="仮想アプライアンス">仮想アプライアンス</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="エミュレータ (コンピュータ)">エミュレータ</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%96%B9%E5%BC%8F" title="マイクロプログラム方式">マイクロプログラム方式</a></li>
+<li><a href="/wiki/%E4%BA%92%E6%8F%9B%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC" title="互換レイヤー">互換レイヤー</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91" title="オブジェクト指向">オブジェクト指向</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E5%8C%96" title="カプセル化">カプセル化</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">クラスタリング</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウドコンピューティング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3" title="バーチャルリアリティ">バーチャルリアリティ</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div aria-labelledby="FreeBSDプロジェクト" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:FreeBSD&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:FreeBSD (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AFreeBSD&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AFreeBSD&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="FreeBSDプロジェクト" style="font-size:110%;margin:0 6em">FreeBSDプロジェクト</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">FreeBSD</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FreeBSD_Core_Team&amp;action=edit&amp;redlink=1" title="FreeBSD Core Team (存在しないページ)">FreeBSD Core Team</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FreeBSD_Core_Team&amp;action=edit&amp;redlink=1" title="En:FreeBSD Core Team (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/FreeBSD_Documentation_License" title="FreeBSD Documentation License">FreeBSD Documentation License</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FreeBSD_Foundation&amp;action=edit&amp;redlink=1" title="FreeBSD Foundation (存在しないページ)">FreeBSD Foundation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FreeBSD_Foundation&amp;action=edit&amp;redlink=1" title="En:FreeBSD Foundation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FreeBSD_Ports&amp;action=edit&amp;redlink=1" title="FreeBSD Ports (存在しないページ)">FreeBSD Ports</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:FreeBSD_Ports&amp;action=edit&amp;redlink=1" title="En:FreeBSD Ports (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FreeBSD%E3%81%AE%E6%AD%B4%E5%8F%B2&amp;action=edit&amp;redlink=1" title="FreeBSDの歴史 (存在しないページ)">歴史</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:History_of_FreeBSD&amp;action=edit&amp;redlink=1" title="En:History of FreeBSD (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">サブシステム</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Busdma&amp;action=edit&amp;redlink=1" title="Busdma (存在しないページ)">busdma</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:busdma&amp;action=edit&amp;redlink=1" title="En:busdma (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/GEOM" title="GEOM">GEOM</a></li>
+<li><a href="/wiki/Ipfirewall" title="Ipfirewall">ipfw</a></li>
+<li><a class="mw-selflink selflink">FreeBSD jail</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Netgraph&amp;action=edit&amp;redlink=1" title="Netgraph (存在しないページ)">Netgraph</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Netgraph&amp;action=edit&amp;redlink=1" title="En:Netgraph (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenPAM&amp;action=edit&amp;redlink=1" title="OpenPAM (存在しないページ)">OpenPAM</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenPAM&amp;action=edit&amp;redlink=1" title="En:OpenPAM (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenBSM&amp;action=edit&amp;redlink=1" title="OpenBSM (存在しないページ)">OpenBSM</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenBSM&amp;action=edit&amp;redlink=1" title="En:OpenBSM (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PF_(%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB)" title="PF (ファイアウォール)">pf</a></li>
+<li><a href="/wiki/Soft_updates" title="Soft updates">Soft updates</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ULE_scheduler&amp;action=edit&amp;redlink=1" title="ULE scheduler (存在しないページ)">ULE scheduler</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ULE_scheduler&amp;action=edit&amp;redlink=1" title="En:ULE scheduler (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Bhyve" title="Bhyve">bhyve</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Highly_Available_STorage&amp;action=edit&amp;redlink=1" title="Highly Available STorage (存在しないページ)">Highly Available STorage</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Highly_Available_STorage&amp;action=edit&amp;redlink=1" title="En:Highly Available STorage (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Portsnap&amp;action=edit&amp;redlink=1" title="Portsnap (存在しないページ)">portsnap</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:portsnap&amp;action=edit&amp;redlink=1" title="En:portsnap (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Kqueue&amp;action=edit&amp;redlink=1" title="Kqueue (存在しないページ)">kqueue</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:kqueue&amp;action=edit&amp;redlink=1" title="En:kqueue (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Geom_raid5&amp;action=edit&amp;redlink=1" title="Geom raid5 (存在しないページ)">geom raid5</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:geom_raid5&amp;action=edit&amp;redlink=1" title="En:geom raid5 (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Geli&amp;action=edit&amp;redlink=1" title="Geli (存在しないページ)">geli</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Geli_(software)&amp;action=edit&amp;redlink=1" title="En:Geli (software) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Moused&amp;action=edit&amp;redlink=1" title="Moused (存在しないページ)">moused</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:moused&amp;action=edit&amp;redlink=1" title="En:moused (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Vinum_volume_manager&amp;action=edit&amp;redlink=1" title="Vinum volume manager (存在しないページ)">Vinum volume manager</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Vinum_volume_manager&amp;action=edit&amp;redlink=1" title="En:Vinum volume manager (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">人物</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%80%E3%83%B3%E3%83%BB%E3%83%8F%E3%83%90%E3%83%BC%E3%83%89" title="ジョーダン・ハバード">ジョーダン・ハバード</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9D%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%98%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%97&amp;action=edit&amp;redlink=1" title="ポール・ヘニング・カンプ (存在しないページ)">ポール・ヘニング・カンプ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Poul-Henning_Kamp&amp;action=edit&amp;redlink=1" title="En:Poul-Henning Kamp (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%83%BBJ%E3%83%BB%E3%82%AB%E3%83%AC%E3%83%AB%E3%82%BA&amp;action=edit&amp;redlink=1" title="マイケル・J・カレルズ (存在しないページ)">マイケル・カレルズ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Michael_J._Karels&amp;action=edit&amp;redlink=1" title="En:Michael J. Karels (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%99%E3%83%B3%E3%83%BB%E3%83%AD%E3%83%BC%E3%83%AA%E3%83%BC&amp;action=edit&amp;redlink=1" title="ベン・ローリー (存在しないページ)">ベン・ローリー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ben_Laurie&amp;action=edit&amp;redlink=1" title="En:Ben Laurie (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B5%E3%83%9F%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%BBJ%E3%83%BB%E3%83%AC%E3%83%95%E3%83%A9%E3%83%BC&amp;action=edit&amp;redlink=1" title="サミュエル・J・レフラー (存在しないページ)">サム・レフラー</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Samuel_J_Leffler&amp;action=edit&amp;redlink=1" title="En:Samuel J Leffler (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%BB%E3%82%AB%E3%83%BC%E3%82%AF%E3%83%BB%E3%83%9E%E3%82%AD%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF" title="マーシャル・カーク・マキュージック">マーシャル・カーク・マキュージック</a></li>
+<li><a href="/wiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%9F%E3%83%87%E3%82%A3%E3%82%B9%E3%83%BB%E3%82%B9%E3%83%94%E3%83%8D%E3%83%AA%E3%82%B9" title="ディオミディス・スピネリス">ディオミディス・スピネリス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%90%E3%83%BC%E3%83%88%E3%83%BB%E3%83%AF%E3%83%88%E3%82%BD%E3%83%B3_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E7%A7%91%E5%AD%A6%E8%80%85)&amp;action=edit&amp;redlink=1" title="ロバート・ワトソン (コンピュータ科学者) (存在しないページ)">ロバート・ワトソン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Robert_Watson_(computer_scientist)&amp;action=edit&amp;redlink=1" title="En:Robert Watson (computer scientist) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%89%E3%83%AB%E3%83%BC%E3%83%BB%E3%83%A9%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%B3&amp;action=edit&amp;redlink=1" title="ドルー・ラヴィーン (存在しないページ)">ドルー・ラヴィーン</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dru_Lavigne&amp;action=edit&amp;redlink=1" title="En:Dru Lavigne (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=FreeBSD%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E8%A3%BD%E5%93%81%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="FreeBSDベースの製品一覧 (存在しないページ)">派生</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:List_of_products_based_on_FreeBSD&amp;action=edit&amp;redlink=1" title="En:List of products based on FreeBSD (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">オープンソース</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/XNU" title="XNU">XNU</a>
+<ul><li><a href="/wiki/Darwin_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Darwin (オペレーティングシステム)">Darwin</a></li></ul></li>
+<li><a href="/wiki/DesktopBSD" title="DesktopBSD">DesktopBSD</a></li>
+<li><a href="/wiki/DragonFly_BSD" title="DragonFly BSD">DragonFly BSD</a></li>
+<li><a href="/wiki/FreeSBIE" title="FreeSBIE">FreeSBIE</a></li>
+<li><a href="/wiki/GhostBSD" title="GhostBSD">GhostBSD</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%BA%92%E9%BA%9F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%B5%B1&amp;action=edit&amp;redlink=1" title="麒麟操作系統 (存在しないページ)">麒麟操作系統</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kylin_(operating_system)&amp;action=edit&amp;redlink=1" title="En:Kylin (operating system) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=MidnightBSD&amp;action=edit&amp;redlink=1" title="MidnightBSD (存在しないページ)">MidnightBSD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:MidnightBSD&amp;action=edit&amp;redlink=1" title="En:MidnightBSD (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=M0n0wall&amp;action=edit&amp;redlink=1" title="M0n0wall (存在しないページ)">m0n0wall</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:m0n0wall&amp;action=edit&amp;redlink=1" title="En:m0n0wall (存在しないページ)">英語版</a>）</span></span>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OPNsense&amp;action=edit&amp;redlink=1" title="OPNsense (存在しないページ)">OPNsense</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OPNsense&amp;action=edit&amp;redlink=1" title="En:OPNsense (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PfSense" title="PfSense">pfSense</a></li></ul></li>
+<li><a href="/wiki/TrueNAS" title="TrueNAS">TrueNAS</a></li>
+<li><a href="/wiki/TrueOS" title="TrueOS">TrueOS</a></li>
+<li><a href="/wiki/GNU%E3%81%AE%E6%B4%BE%E7%94%9F" title="GNUの派生">GNU/kFreeBSD</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Gentoo/FreeBSD&amp;action=edit&amp;redlink=1" title="Gentoo/FreeBSD (存在しないページ)">Gentoo/FreeBSD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Gentoo/Alt&amp;action=edit&amp;redlink=1" title="En:Gentoo/Alt (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プロプライエタリ</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Darwin_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Darwin (オペレーティングシステム)">Darwin</a></li>
+<li><a class="new" href="/w/index.php?title=Junos&amp;action=edit&amp;redlink=1" title="Junos (存在しないページ)">Junos</a></li>
+<li><a href="/wiki/MacOS" title="MacOS">macOS</a>, <a href="/wiki/IOS_(Apple)" title="IOS (Apple)">iOS</a>, <a href="/wiki/TvOS" title="TvOS">tvOS</a>, <a href="/wiki/WatchOS" title="WatchOS">watchOS</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Nintendo_Switch%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2&amp;action=edit&amp;redlink=1" title="Nintendo Switchのシステムソフトウェア (存在しないページ)">Nintendo Switch OS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Nintendo_Switch_system_software&amp;action=edit&amp;redlink=1" title="En:Nintendo Switch system software (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OpenServer" title="OpenServer">OpenServer 10</a></li>
+<li><a href="/wiki/PlayStation_3%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="PlayStation 3のシステムソフトウェア">PlayStation 3 OS</a></li>
+<li><a href="/wiki/PlayStation_4%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="PlayStation 4のシステムソフトウェア">PlayStation 4 OS</a></li>
+<li><a href="/wiki/PlayStation_Vita%E3%81%AE%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="PlayStation Vitaのシステムソフトウェア">PlayStation Vita OS</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:FreeBSD" title="カテゴリ:FreeBSD">カテゴリ</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331225016
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.161 seconds
+Real time usage: 0.330 seconds
+Preprocessor visited node count: 535/1000000
+Post‐expand include size: 93716/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 32/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.160/7 seconds
+Lua virtual size: 5906432/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+111.27%  287.033      3 テンプレート:Navbox
+100.00%  257.955      1 -total
+ 71.70%  184.966     32 テンプレート:仮リンク
+ 67.90%  175.160      1 テンプレート:FreeBSD
+ 32.06%   82.690      1 テンプレート:仮想化
+ 14.94%   38.529      2 テンプレート:Navbox_subgroup
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1057598-0!canonical and timestamp 20220331225016 and revision id 654008. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=FreeBSD_jail&amp;oldid=654008">http://localhost:8080/w/index.php?title=FreeBSD_jail&amp;oldid=654008</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:FreeBSD" title="カテゴリ:FreeBSD">FreeBSD</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BB%AE%E6%83%B3%E5%8C%96" title="カテゴリ:仮想化">仮想化</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=FreeBSD+jail&amp;returntoquery=curid%3D1057598%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=FreeBSD+jail&amp;returntoquery=curid%3D1057598%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/FreeBSD_jail" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:FreeBSD_jail&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/FreeBSD_jail">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=FreeBSD_jail&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=FreeBSD_jail&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/FreeBSD_jail" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/FreeBSD_jail" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=FreeBSD_jail&amp;oldid=654008" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=FreeBSD_jail&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2017年5月17日 (水) 15:10 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.161","walltime":"0.330","ppvisitednodes":{"value":535,"limit":1000000},"postexpandincludesize":{"value":93716,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":32,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["111.27%  287.033      3 テンプレート:Navbox","100.00%  257.955      1 -total"," 71.70%  184.966     32 テンプレート:仮リンク"," 67.90%  175.160      1 テンプレート:FreeBSD"," 32.06%   82.690      1 テンプレート:仮想化"," 14.94%   38.529      2 テンプレート:Navbox_subgroup"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"7"},"limitreport-virtmemusage":{"value":5906432,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331225016","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":529});});</script>
+</body></html>

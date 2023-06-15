@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>二五進法 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-二五進法 rootpage-二五進法 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">二五進法</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>二・五進法</b>（にごしんほう、米:<i>Bi-quinary coded decimal</i>）は、<a href="." id="link_a_1" title="2">2</a>と<a href="." id="link_a_2" title="5">5</a>を<a href="." id="link_a_3" title="底">底</a>（てい）とし、底およびその<a href="." id="link_a_4" title="冪">冪</a>を基準にして<a href="." id="link_a_5" title="十進法">十進法</a>の一桁を表す方法である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#数列"><span class="tocnumber">1</span> <span class="toctext">数列</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#コンピュータ"><span class="tocnumber">2</span> <span class="toctext">コンピュータ</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#パック十進数との変換"><span class="tocnumber">3</span> <span class="toctext">パック十進数との変換</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#その他"><span class="tocnumber">4</span> <span class="toctext">その他</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#注"><span class="tocnumber">5</span> <span class="toctext">注</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#関連項目"><span class="tocnumber">6</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.95.B0.E5.88.97"></span><span class="mw-headline" id="数列">数列</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=1" title="節を編集: 数列">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>二・五進法は、桁上がりが通常の<a href="/wiki/%E4%BD%8D%E5%8F%96%E3%82%8A%E8%A8%98%E6%95%B0%E6%B3%95" title="位取り記数法">N進法</a>とは異なり、桁上がりが<a href="/wiki/5" title="5">五</a>と<a href="/wiki/10" title="10">十</a>の二段階になる。
+</p><p>以下に、二・五進法と、五が絡むN進法である<a href="/wiki/%E5%85%AD%E9%80%B2%E6%B3%95" title="六進法">六進法</a>（5＋1 = 10）と<a href="/wiki/%E5%8D%81%E9%80%B2%E6%B3%95" title="十進法">十進法</a>（5＋5 = 10）との数列の差異を表記する。
+</p>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>零から二十まで
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td><b>0</b></td>
+<td><b>0</b></td>
+<td><b>0</b>
+</td></tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1
+</td></tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>2
+</td></tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>3
+</td></tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>4
+</td></tr>
+<tr>
+<td><b>10</b></td>
+<td>5</td>
+<td>5
+</td></tr>
+<tr>
+<td>11</td>
+<td><b>10</b></td>
+<td>6
+</td></tr>
+<tr>
+<td>12</td>
+<td>11</td>
+<td>7
+</td></tr>
+<tr>
+<td>13</td>
+<td>12</td>
+<td>8
+</td></tr>
+<tr>
+<td>14</td>
+<td>13</td>
+<td>9
+</td></tr>
+<tr>
+<td><b>1:00</b></td>
+<td>14</td>
+<td><b>10</b>
+</td></tr>
+<tr>
+<td>1:01</td>
+<td>15</td>
+<td>11
+</td></tr>
+<tr>
+<td>1:02</td>
+<td>20</td>
+<td>12
+</td></tr>
+<tr>
+<td>1:03</td>
+<td>21</td>
+<td>13
+</td></tr>
+<tr>
+<td>1:04</td>
+<td>22</td>
+<td>14
+</td></tr>
+<tr>
+<td>1:10</td>
+<td>23</td>
+<td>15
+</td></tr>
+<tr>
+<td>1:11</td>
+<td>24</td>
+<td>16
+</td></tr>
+<tr>
+<td>1:12</td>
+<td>25</td>
+<td>17
+</td></tr>
+<tr>
+<td>1:13</td>
+<td>30</td>
+<td>18
+</td></tr>
+<tr>
+<td>1:14</td>
+<td>31</td>
+<td>19
+</td></tr>
+<tr>
+<td>2:00</td>
+<td>32</td>
+<td>20
+</td></tr></tbody></table>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>二十一から四十まで
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td>2:01</td>
+<td>33</td>
+<td>21
+</td></tr>
+<tr>
+<td>2:02</td>
+<td>34</td>
+<td>22
+</td></tr>
+<tr>
+<td>2:03</td>
+<td>35</td>
+<td>23
+</td></tr>
+<tr>
+<td>2:04</td>
+<td>40</td>
+<td>24
+</td></tr>
+<tr>
+<td>2:10</td>
+<td>41</td>
+<td>25
+</td></tr>
+<tr>
+<td>2:11</td>
+<td>42</td>
+<td>26
+</td></tr>
+<tr>
+<td>2:12</td>
+<td>43</td>
+<td>27
+</td></tr>
+<tr>
+<td>2:13</td>
+<td>44</td>
+<td>28
+</td></tr>
+<tr>
+<td>2:14</td>
+<td>45</td>
+<td>29
+</td></tr>
+<tr>
+<td>3:00</td>
+<td>50</td>
+<td>30
+</td></tr>
+<tr>
+<td>3:01</td>
+<td>51</td>
+<td>31
+</td></tr>
+<tr>
+<td>3:02</td>
+<td>52</td>
+<td>32
+</td></tr>
+<tr>
+<td>3:03</td>
+<td>53</td>
+<td>33
+</td></tr>
+<tr>
+<td>3:04</td>
+<td>54</td>
+<td>34
+</td></tr>
+<tr>
+<td>3:10</td>
+<td>55</td>
+<td>35
+</td></tr>
+<tr>
+<td>3:11</td>
+<td><b>100</b></td>
+<td>36
+</td></tr>
+<tr>
+<td>3:12</td>
+<td>101</td>
+<td>37
+</td></tr>
+<tr>
+<td>3:13</td>
+<td>102</td>
+<td>38
+</td></tr>
+<tr>
+<td>3:14</td>
+<td>103</td>
+<td>39
+</td></tr>
+<tr>
+<td>4:00</td>
+<td>104</td>
+<td>40
+</td></tr></tbody></table>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>五十前後と百前後
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td>4:10</td>
+<td>113</td>
+<td>45
+</td></tr>
+<tr>
+<td>4:11</td>
+<td>114</td>
+<td>46
+</td></tr>
+<tr>
+<td>4:12</td>
+<td>115</td>
+<td>47
+</td></tr>
+<tr>
+<td>4:13</td>
+<td>120</td>
+<td>48
+</td></tr>
+<tr>
+<td>4:14</td>
+<td>121</td>
+<td>49
+</td></tr>
+<tr>
+<td><b>10:00</b></td>
+<td>122</td>
+<td>50
+</td></tr>
+<tr>
+<td>10:01</td>
+<td>123</td>
+<td>51
+</td></tr>
+<tr>
+<td>10:02</td>
+<td>124</td>
+<td>52
+</td></tr>
+<tr>
+<td>10:03</td>
+<td>125</td>
+<td>53
+</td></tr>
+<tr>
+<td>10:04</td>
+<td>130</td>
+<td>54
+</td></tr>
+<tr>
+<td>14:11</td>
+<td>240</td>
+<td>96
+</td></tr>
+<tr>
+<td>14:12</td>
+<td>241</td>
+<td>97
+</td></tr>
+<tr>
+<td>14:13</td>
+<td>242</td>
+<td>98
+</td></tr>
+<tr>
+<td>14:14</td>
+<td>243</td>
+<td>99
+</td></tr>
+<tr>
+<td><b>1:00:00</b></td>
+<td>244</td>
+<td><b>100</b>
+</td></tr>
+<tr>
+<td>1:00:01</td>
+<td>245</td>
+<td>101
+</td></tr>
+<tr>
+<td>1:00:02</td>
+<td>250</td>
+<td>102
+</td></tr></tbody></table>
+<div style="clear:both;"></div>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>二百十六前後
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td>2:00:14</td>
+<td>545</td>
+<td>209
+</td></tr>
+<tr>
+<td>2:01:00</td>
+<td>550</td>
+<td>210
+</td></tr>
+<tr>
+<td>2:01:01</td>
+<td>551</td>
+<td>211
+</td></tr>
+<tr>
+<td>2:01:02</td>
+<td>552</td>
+<td>212
+</td></tr>
+<tr>
+<td>2:01:03</td>
+<td>553</td>
+<td>213
+</td></tr>
+<tr>
+<td>2:01:04</td>
+<td>554</td>
+<td>214
+</td></tr>
+<tr>
+<td>2:01:10</td>
+<td>555</td>
+<td>215
+</td></tr>
+<tr>
+<td>2:01:11</td>
+<td><b>1000</b></td>
+<td>216
+</td></tr>
+<tr>
+<td>2:01:12</td>
+<td>1001</td>
+<td>217
+</td></tr>
+<tr>
+<td>2:01:13</td>
+<td>1002</td>
+<td>218
+</td></tr>
+<tr>
+<td>2:01:14</td>
+<td>1003</td>
+<td>219
+</td></tr>
+<tr>
+<td>2:02:00</td>
+<td>1004</td>
+<td>220
+</td></tr></tbody></table>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>五百前後
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td>4:14:04</td>
+<td>2142</td>
+<td>494
+</td></tr>
+<tr>
+<td>4:14:10</td>
+<td>2143</td>
+<td>495
+</td></tr>
+<tr>
+<td>4:14:11</td>
+<td>2144</td>
+<td>496
+</td></tr>
+<tr>
+<td>4:14:12</td>
+<td>2145</td>
+<td>497
+</td></tr>
+<tr>
+<td>4:14:13</td>
+<td>2150</td>
+<td>498
+</td></tr>
+<tr>
+<td>4:14:14</td>
+<td>2151</td>
+<td>499
+</td></tr>
+<tr>
+<td><b>10:00:00</b></td>
+<td>2152</td>
+<td>500
+</td></tr>
+<tr>
+<td>10:00:01</td>
+<td>2153</td>
+<td>501
+</td></tr>
+<tr>
+<td>10:00:02</td>
+<td>2154</td>
+<td>502
+</td></tr>
+<tr>
+<td>10:00:03</td>
+<td>2155</td>
+<td>503
+</td></tr>
+<tr>
+<td>10:00:04</td>
+<td>2200</td>
+<td>504
+</td></tr>
+<tr>
+<td>10:00:10</td>
+<td>2201</td>
+<td>505
+</td></tr></tbody></table>
+<table class="wikitable" style="float:left;margin:1em;text-align:right">
+<caption>6<sup>5</sup>前後
+</caption>
+<tbody><tr>
+<th>二・五進法</th>
+<th>六進法</th>
+<th>十進法
+</th></tr>
+<tr>
+<td>12:12:11:14</td>
+<td>55545</td>
+<td>7769
+</td></tr>
+<tr>
+<td>12:12:12:00</td>
+<td>55550</td>
+<td>7770
+</td></tr>
+<tr>
+<td>12:12:12:01</td>
+<td>55551</td>
+<td>7771
+</td></tr>
+<tr>
+<td>12:12:12:02</td>
+<td>55552</td>
+<td>7772
+</td></tr>
+<tr>
+<td>12:12:12:03</td>
+<td>55553</td>
+<td>7773
+</td></tr>
+<tr>
+<td>12:12:12:04</td>
+<td>55554</td>
+<td>7774
+</td></tr>
+<tr>
+<td>12:12:12:10</td>
+<td>55555</td>
+<td>7775
+</td></tr>
+<tr>
+<td>12:12:12:11</td>
+<td><b>100000</b></td>
+<td>7776
+</td></tr>
+<tr>
+<td>12:12:12:12</td>
+<td>100001</td>
+<td>7777
+</td></tr>
+<tr>
+<td>12:12:12:13</td>
+<td>100002</td>
+<td>7778
+</td></tr>
+<tr>
+<td>12:12:12:14</td>
+<td>100003</td>
+<td>7779
+</td></tr>
+<tr>
+<td>12:12:13:00</td>
+<td>100004</td>
+<td>7780
+</td></tr></tbody></table>
+<div style="clear:both;"></div>
+<p>表記例として、実際のローマ数字（二・五進法）と、ローマ数字を六進法と十進法に当て嵌めた場合の差異を表記する。減算則は適用しない。
+</p>
+<ul><li>1:12:12(二・五進法) = 453(六進法) = 177(十進法)
+<ul><li>二・五進法：CLXXVII</li>
+<li>六進法：XXXXVVVVVIII　（6<sup>2</sup> = X、6 = V）</li>
+<li>十進法：CXXXXXXXIIIIIII （A<sup>2</sup> = C、A = X となり、50<sub>(10)</sub>はXが5個、5もIが5個のまま）</li></ul></li>
+<li>1:14:03:11(二・五進法) = 12544(六進法) = 1936(十進法)
+<ul><li>二・五進法：MCMXXXVI</li>
+<li>六進法：MCCXXXXXVVVVIIII （6<sup>4</sup> = M、6<sup>3</sup> = C）</li>
+<li>十進法：MCCCCCCCCCXXXIIIIII （A<sup>3</sup> = M となり、500<sub>(10)</sub>はCが5個のまま）</li></ul></li></ul>
+<h2><span id=".E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.82.BF"></span><span class="mw-headline" id="コンピュータ">コンピュータ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=2" title="節を編集: コンピュータ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>初期の<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="コンピュータ">コンピュータ</a>において、<a class="mw-redirect" href="/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E5%9B%9E%E8%B7%AF" title="ディジタル回路">ディジタル回路</a>で直接十進法で数を扱う方法の一つとして使われた。基本となる考え方としては<a href="/wiki/%E3%81%9D%E3%82%8D%E3%81%B0%E3%82%93" title="そろばん">そろばん</a>と同じである。
+</p><p>具体的な実装方法は多岐にわたるが、ここでは一例として<a href="/wiki/%E6%9C%80%E4%B8%8A%E4%BD%8D%E3%83%93%E3%83%83%E3%83%88" title="最上位ビット">最上位ビット</a>を5、そして<a href="/wiki/%E6%9C%80%E4%B8%8B%E4%BD%8D%E3%83%93%E3%83%83%E3%83%88" title="最下位ビット">最下位ビット</a>に向って4、2、1という重みを与えた4<a href="/wiki/%E3%83%93%E3%83%83%E3%83%88" title="ビット">ビット</a>で0から9までのビット列を、二進数と比較しながら示す。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>十進数</th>
+<th>二・五進法</th>
+<th>二進数
+</th></tr>
+<tr>
+<td>0</td>
+<td>0 000</td>
+<td>0000
+</td></tr>
+<tr>
+<td>1</td>
+<td>0 001</td>
+<td>0001
+</td></tr>
+<tr>
+<td>2</td>
+<td>0 010</td>
+<td>0010
+</td></tr>
+<tr>
+<td>3</td>
+<td>0 011</td>
+<td>0011
+</td></tr>
+<tr>
+<td>4</td>
+<td>0 100</td>
+<td>0100
+</td></tr>
+<tr>
+<td>5</td>
+<td>1 000</td>
+<td>0101
+</td></tr>
+<tr>
+<td>6</td>
+<td>1 001</td>
+<td>0110
+</td></tr>
+<tr>
+<td>7</td>
+<td>1 010</td>
+<td>0111
+</td></tr>
+<tr>
+<td>8</td>
+<td>1 011</td>
+<td>1000
+</td></tr>
+<tr>
+<td>9</td>
+<td>1 100</td>
+<td>1001
+</td></tr></tbody></table>
+<p>2桁以上については、通常の十進表現と同様に、これを複数桁並べ十の冪の重みを与える。
+</p><p>別のやり方として、<a href="/wiki/%E3%83%AA%E3%83%AC%E3%83%BC" title="リレー">リレー</a>式計算機 <a href="/wiki/FACOM" title="FACOM">FACOM</a> 128 では次のような7ビットによる表現が実際に用いられた<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。下位5ビットは十進法の0から4に一対一で対応し、上位2ビットで5の重みを表現する。冗長な符号構成だが、2倍・5倍・10倍が簡単に求められるので<a href="/wiki/3%E5%A2%97%E3%81%97%E7%AC%A6%E5%8F%B7" title="3増し符号">3増し符号</a>よりも高速に乗算できた。また、2/7 の<a class="new" href="/w/index.php?title=%E5%AE%9A%E6%AF%94%E7%8E%87%E7%AC%A6%E5%8F%B7&amp;action=edit&amp;redlink=1" title="定比率符号 (存在しないページ)">定比率符号</a>（常に7ビットのうち2ビットが1、他は0）なので誤り検出ができ、計算機の信頼性向上に繋がった<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>十進数</th>
+<th>二・五進法</th>
+<th>二進数
+</th></tr>
+<tr>
+<td>0</td>
+<td>01 00001</td>
+<td>0000
+</td></tr>
+<tr>
+<td>1</td>
+<td>01 00010</td>
+<td>0001
+</td></tr>
+<tr>
+<td>2</td>
+<td>01 00100</td>
+<td>0010
+</td></tr>
+<tr>
+<td>3</td>
+<td>01 01000</td>
+<td>0011
+</td></tr>
+<tr>
+<td>4</td>
+<td>01 10000</td>
+<td>0100
+</td></tr>
+<tr>
+<td>5</td>
+<td>10 00001</td>
+<td>0101
+</td></tr>
+<tr>
+<td>6</td>
+<td>10 00010</td>
+<td>0110
+</td></tr>
+<tr>
+<td>7</td>
+<td>10 00100</td>
+<td>0111
+</td></tr>
+<tr>
+<td>8</td>
+<td>10 01000</td>
+<td>1000
+</td></tr>
+<tr>
+<td>9</td>
+<td>10 10000</td>
+<td>1001
+</td></tr></tbody></table>
+<p>ここで示した方法はあくまで一例であり、特に下位3ビットで0～4を表す方法は他にもいろいろありうる。
+</p>
+<h2><span id=".E3.83.91.E3.83.83.E3.82.AF.E5.8D.81.E9.80.B2.E6.95.B0.E3.81.A8.E3.81.AE.E5.A4.89.E6.8F.9B"></span><span class="mw-headline" id="パック十進数との変換">パック十進数との変換</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=3" title="節を編集: パック十進数との変換">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>4bit長の二進数(<a href="/wiki/%E3%83%8B%E3%83%96%E3%83%AB" title="ニブル">ニブル</a>)に対し、5以上であれば3を足す処理は、<a href="/wiki/%E3%83%91%E3%83%83%E3%82%AF10%E9%80%B2%E6%95%B0" title="パック10進数">パック10進数</a>を二五進数に変換する処理に等しい。</li></ul>
+<ul><li>4bit長の二五進数が連続してレイアウトされたレジスタを考える。このレジスタを左シフトして得られるビットパターンは、二五進数による元の値を二倍してパック10進数で表したものと等しい。</li></ul>
+<blockquote>
+<p><code>0001_0100_0011_1010</code>　(二五進数で1437)
+</p><p><span class="Unicode">↙</span><span class="Unicode">↙</span><span class="Unicode">↙</span> (左シフト) <span class="Unicode">↙</span><span class="Unicode">↙</span><span class="Unicode">↙</span>
+</p><p><code>0010_1000_0111_0100</code>　(パック10進数で2874)
+</p>
+</blockquote>
+<ul><li>上記の操作の反復により二進数を十進数へと高速に変換するアルゴリズムは、「<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Double_dabble&amp;action=edit&amp;redlink=1" title="Double dabble (存在しないページ)">Double_dabble</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Double_dabble&amp;action=edit&amp;redlink=1" title="En:Double dabble (存在しないページ)">英語版</a>）</span></span>」と呼ばれており、除算を伴わない高速な基数変換アルゴリズムとして知られている。</li></ul>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=4" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%82%A2%E3%83%90%E3%82%AB%E3%82%B9" title="アバカス">アバカス</a>、特に日本の近代以降の四つ珠の<a href="/wiki/%E3%81%9D%E3%82%8D%E3%81%B0%E3%82%93" title="そろばん">そろばん</a>は一種の二・五進法である。日本最初の、また独自に開発された手回し式計算機である<a href="/wiki/%E7%9F%A2%E9%A0%AD%E8%89%AF%E4%B8%80" title="矢頭良一">矢頭良一</a>の<a href="/wiki/%E6%A9%9F%E6%A2%B0%E5%BC%8F%E8%A8%88%E7%AE%97%E6%A9%9F#矢頭良一の自働算盤" title="機械式計算機">自働算盤</a>は、他の同様の計算機は多くが「出入り歯車式」であるが、矢頭のものは独特の横移動式で、その操作の際に5個の歯をまとめて操作できるようにすることで利用の便を図った、ある種の二・五進法的な入力操作方式であった<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>（そろばんを参考にしたものとも思われている。なお、これは入力についてだけで、機械的には全くの十進方式であり、同機の計算機械としての仕組みにはそろばんは全く無関係である）。
+</p><p>貨幣制度では、発行される硬貨・紙幣の額面は、二・五進法が主流である。例えば<a class="mw-redirect" href="/wiki/%E6%97%A5%E6%9C%AC%E5%86%86" title="日本円">日本円</a>では、あまり流通していない<a href="/wiki/%E4%BA%8C%E5%8D%83%E5%86%86%E7%B4%99%E5%B9%A3" title="二千円紙幣">二千円紙幣</a>を別にすれば、硬貨と紙幣は「1」と「5」のつく単位なので、
+</p>
+<ul><li>1系金種（<a href="/wiki/%E4%B8%80%E5%86%86%E7%A1%AC%E8%B2%A8" title="一円硬貨">一円硬貨</a>・<a href="/wiki/%E5%8D%81%E5%86%86%E7%A1%AC%E8%B2%A8" title="十円硬貨">十円硬貨</a>・<a href="/wiki/%E7%99%BE%E5%86%86%E7%A1%AC%E8%B2%A8" title="百円硬貨">百円硬貨</a>・<a href="/wiki/%E5%8D%83%E5%86%86%E7%B4%99%E5%B9%A3" title="千円紙幣">千円紙幣</a>・<a href="/wiki/%E4%B8%80%E4%B8%87%E5%86%86%E7%B4%99%E5%B9%A3" title="一万円紙幣">一万円紙幣</a>）は、すぐ上の金種の5分の1、すぐ下の金種の2倍の金額</li>
+<li>5系金種（<a href="/wiki/%E4%BA%94%E5%86%86%E7%A1%AC%E8%B2%A8" title="五円硬貨">五円硬貨</a>・<a href="/wiki/%E4%BA%94%E5%8D%81%E5%86%86%E7%A1%AC%E8%B2%A8" title="五十円硬貨">五十円硬貨</a>・<a href="/wiki/%E4%BA%94%E7%99%BE%E5%86%86%E7%A1%AC%E8%B2%A8" title="五百円硬貨">五百円硬貨</a>・<a href="/wiki/%E4%BA%94%E5%8D%83%E5%86%86%E7%B4%99%E5%B9%A3" title="五千円紙幣">五千円紙幣</a>）は、すぐ上の金種の半分、すぐ下の金種の5倍の金額</li></ul>
+<p>となっている（海外ではアメリカの<a class="mw-redirect" href="/wiki/25%E3%82%BB%E3%83%B3%E3%83%88%E7%A1%AC%E8%B2%A8" title="25セント硬貨">25セント硬貨</a>など1系・5系でない硬貨・紙幣が広く一般的に流通している例もある）。
+</p>
+<h2><span id=".E6.B3.A8"></span><span class="mw-headline" id="注">注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=5" title="節を編集: 注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">松原宏、山口詔規「リレー式自動計算機について」『計測』第7巻第5号、日本計測学会、1957年5月、 235-244頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.11499%2Fsicejl1951.7.235" rel="nofollow">10.11499/sicejl1951.7.235</a>。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">池田敏雄「リレー式電気計算機についてI」『科学』第25巻第6号、岩波書店、1955年6月、 263-278頁、 <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.11501%2F3217892" rel="nofollow">10.11501/3217892</a>。</cite></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">リレーによる演算回路は、リレーの接触不良により誤った解を出力することが多かったので、符号の冗長性を利用した自己検査機能を持たせ、誤った解が出力されることを防いだ。</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">山田昭彦. “<span class="PDFlink"><a class="external text" href="https://web.archive.org/web/20131203124116/sts.kahaku.go.jp/diversity/document/system/pdf/019.pdf" rel="nofollow">矢頭良一の機械式卓上計算機「自働算盤」に関する調査報告</a></span> <span style="font-size:smaller">(<a href="/wiki/Portable_Document_Format" title="Portable Document Format">PDF</a>)</span>”.   <a class="mw-redirect" href="/wiki/%E7%94%A3%E6%A5%AD%E6%8A%80%E8%A1%93%E5%8F%B2%E8%B3%87%E6%96%99%E6%83%85%E5%A0%B1%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC" title="産業技術史資料情報センター">産業技術史資料情報センター</a>. 2013年12月3日時点の<a class="external text" href="http://sts.kahaku.go.jp/diversity/document/system/pdf/019.pdf" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2013年12月11日</span>閲覧。</cite></span>
+</li>
+</ol></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;section=6" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E4%BA%94%E9%80%B2%E6%B3%95" title="五進法">五進法</a></li>
+<li><a href="/wiki/%E5%85%AD%E9%80%B2%E6%B3%95" title="六進法">六進法</a></li>
+<li><a href="/wiki/%E5%8D%81%E9%80%B2%E6%B3%95" title="十進法">十進法</a></li>
+<li><a href="/wiki/%E5%85%AD%E5%8D%81%E9%80%B2%E6%B3%95" title="六十進法">六十進法</a>（桁上がりが複数段階）</li></ul>
+<div class="boilerplate metadata" id="stub">
+<table cellpadding="3" cellspacing="2" style="width:80%; border:solid #999 1px;background:#F8F8F8; margin:0.5em auto; clear:both">
+<tbody><tr>
+<td style="width:10%; text-align:right">加筆訂正願います執筆の途中です
+</td>
+<td style="color:black">この「<b>二五進法</b>」は、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="コンピュータ">コンピュータ</a>関連の項目ですが、<b><a href="/wiki/Wikipedia:%E3%82%B9%E3%82%BF%E3%83%96" title="Wikipedia:スタブ">内容が不十分</a></b>です。<a class="external text" href="http://localhost:8080/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit" rel="nofollow">この記事を加筆、訂正</a>などして下さる<a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B5%E3%83%96%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のサブスタブ項目">協力者を求めています</a><small>（<a href="/wiki/Portal:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="Portal:コンピュータ">Portal:コンピュータ</a>）</small>。
+</td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401114715
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.244 seconds
+Real time usage: 0.323 seconds
+Preprocessor visited node count: 2603/1000000
+Post‐expand include size: 19225/2097152 bytes
+Template argument size: 4545/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 3/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2452/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5898240/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  266.238      1 -total
+ 47.73%  127.082      1 テンプレート:出典の明記
+ 41.90%  111.546      1 テンプレート:Ambox
+ 23.44%   62.419      2 テンプレート:Cite_journal
+ 19.22%   51.178      2 テンプレート:Cite_journal/和書
+ 15.58%   41.491      1 テンプレート:Find_sources_mainspace
+ 10.12%   26.944      1 テンプレート:Cite_web
+  8.51%   22.651      3 テンプレート:Citation/showdate
+  6.68%   17.784      1 テンプレート:仮リンク
+  6.04%   16.074      3 テンプレート:Citation/showdateCore
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2461200-0!canonical and timestamp 20220401114714 and revision id 1463532. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=二五進法&amp;oldid=1463532">http://localhost:8080/w/index.php?title=二五進法&amp;oldid=1463532</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B410%E6%9C%88" title="カテゴリ:出典を必要とする記事/2019年10月">出典を必要とする記事/2019年10月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF" title="カテゴリ:コンピュータのデータ">コンピュータのデータ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E7%AE%97%E8%A1%93" title="カテゴリ:コンピュータの算術">コンピュータの算術</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E3%81%AE%E8%A1%A8%E7%8F%BE" title="カテゴリ:数の表現">数の表現</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B5%E3%83%96%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のサブスタブ項目">コンピュータ関連のサブスタブ項目</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;returntoquery=curid%3D2461200%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;returntoquery=curid%3D2461200%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;oldid=1463532" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E4%BA%8C%E4%BA%94%E9%80%B2%E6%B3%95&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年4月14日 (火) 02:05 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.244","walltime":"0.323","ppvisitednodes":{"value":2603,"limit":1000000},"postexpandincludesize":{"value":19225,"limit":2097152},"templateargumentsize":{"value":4545,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":3,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2452,"limit":5000000},"timingprofile":["100.00%  266.238      1 -total"," 47.73%  127.082      1 テンプレート:出典の明記"," 41.90%  111.546      1 テンプレート:Ambox"," 23.44%   62.419      2 テンプレート:Cite_journal"," 19.22%   51.178      2 テンプレート:Cite_journal/和書"," 15.58%   41.491      1 テンプレート:Find_sources_mainspace"," 10.12%   26.944      1 テンプレート:Cite_web","  8.51%   22.651      3 テンプレート:Citation/showdate","  6.68%   17.784      1 テンプレート:仮リンク","  6.04%   16.074      3 テンプレート:Citation/showdateCore"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5898240,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401114715","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":908});});</script>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>自然変換 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-自然変換 rootpage-自然変換 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">自然変換</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数学">数学</a>の一分野である<a href="." id="link_a_2" title="圏論">圏論</a>において、<b>自然変換</b>（しぜんへんかん、<a href="." id="link_a_3" title="英語">英</a>: <span lang="en"><b>natural transformation</b></span>）は、ある<a href="." id="link_a_4" title="函手">函手</a>をその圏に関する内部構造（即ち<a href="." id="link_a_5" title="射 (圏論)">射</a>の合成）を保ちながら別の函手に変形する方法を与えるものである。したがって直観的には、自然変換というのは「函手間の射」のことであると考えうる。このことは実際に、<a href="." id="link_a_6" title="函手圏">函手圏</a>と呼ばれるものを定義することにより厳密に定式化することができる。<a href="." id="link_a_2" title="圏論">圏論</a>において自然変換の概念は、圏と函手に次いで最も基本的な概念であり、それ故に圏論を用いる議論の大部分に現れる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#例"><span class="tocnumber">2</span> <span class="toctext">例</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#逆転群"><span class="tocnumber">2.1</span> <span class="toctext">逆転群</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#有限次元ベクトル空間の二重双対"><span class="tocnumber">2.2</span> <span class="toctext">有限次元ベクトル空間の二重双対</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#反例：有限次元ベクトル空間の双対"><span class="tocnumber">2.3</span> <span class="toctext">反例：有限次元ベクトル空間の双対</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#テンソル・ホム随伴"><span class="tocnumber">2.4</span> <span class="toctext">テンソル・ホム随伴</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#自然でない同型"><span class="tocnumber">3</span> <span class="toctext">自然でない同型</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#自然変換の演算"><span class="tocnumber">4</span> <span class="toctext">自然変換の演算</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#函手圏"><span class="tocnumber">5</span> <span class="toctext">函手圏</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#米田の補題"><span class="tocnumber">6</span> <span class="toctext">米田の補題</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#歴史に関する注意"><span class="tocnumber">7</span> <span class="toctext">歴史に関する注意</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#脚注"><span class="tocnumber">8</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>F</i> および <i>G</i> を圏 <i>C</i> から <i>D</i> への<a class="mw-redirect" href="/wiki/%E5%87%BD%E6%89%8B" title="函手">函手</a>とするとき、<i>F</i> から <i>G</i> への <b>自然変換</b> η は <i>C</i> に属する各対象 <i>X</i> に η の <i>X</i> における<b>成分</b> (component) と呼ばれる <i>D</i> の射 η<sub><i>X</i></sub>: <i>F</i>(<i>X</i>) → <i>G</i>(<i>X</i>) を割り当てるものである。ただし η<sub><i>X</i></sub> は、<i>C</i> の任意の射 <i>f</i>: <i>X</i> → <i>Y</i> に対して
+</p>
+<dl><dd>&lt;math&gt;\eta_Y \circ F(f) = G(f) \circ \eta_X&lt;/math&gt;</dd></dl>
+<p>を満たすものとする<sup class="reference" id="cite_ref-FOOTNOTEMac_Lane199816_1-0"><a href="#cite_note-FOOTNOTEMac_Lane199816-1">[1]</a></sup>。この等式は<a href="/wiki/%E5%8F%AF%E6%8F%9B%E5%9B%B3%E5%BC%8F" title="可換図式">可換図式</a>として
+</p>
+<div class="center"><div class="floatnone">自然変換の成分</div></div>
+<p>と書けば見易い。<i>F</i> と <i>G</i> が共に<a class="mw-redirect" href="/wiki/%E5%8F%8D%E5%A4%89%E5%87%BD%E6%89%8B" title="反変函手">反変</a>のときは、図式内の水平方向の矢印を逆にすればよい。η が <i>F</i> から <i>G</i> への自然変換であることを、η: <i>F</i> → <i>G</i> や η: <i>F</i> ⇒ <i>G</i> などで表す。また、「射の族 η<sub><i>X</i></sub>: <i>F</i>(<i>X</i>) → <i>G</i>(<i>X</i>) は <i>X</i> で自然である」などとも言い表す。
+</p><p><i>C</i> の各対象 <i>X</i> について射 η<sub><i>X</i></sub> が <i>D</i> の<a class="mw-redirect" href="/wiki/%E5%90%8C%E5%9E%8B%E5%B0%84" title="同型射">同型射</a>となるとき、η は<b>自然同型</b>（あるいは<b>自然同値</b>もしくは<b>函手の同型</b>）であるという。また、二つの函手 <i>F</i>, <i>G</i> に対し、<i>F</i> から <i>G</i> への自然同型が存在するとき、<i>F</i> と <i>G</i> とは<b>自然同型</b> (<b>naturally isomorphic</b>) あるいは単に<b>同型</b>であるという。
+</p><p>図式の可換性を落として、単に射 η<sub><i>X</i></sub>: <i>F</i>(<i>X</i>) → <i>G</i>(<i>X</i>) の族を考えれば、<i>F</i> から <i>G</i> への <b>劣自然変換</b> (<b>infranatural transformation</b>) η の概念が定まる。これを用いれば、自然変換とは任意の射 <i>f</i>: <i>X</i> → <i>Y</i> に対して η<sub><i>Y</i></sub> ∘ <i>F</i>(<i>f</i>)  = <i>G</i>(<i>f</i>) ∘ η<sub><i>X</i></sub> を満たすような劣自然変換ということになる。劣自然変換 η の<b>自然化圏</b> (<b>naturalizer</b>) nat(η) とは、<i>C</i> の対象を全て含み、その上に η を制限したものが自然変換となるような <i>C</i> の最大の<a href="/wiki/%E9%83%A8%E5%88%86%E5%9C%8F" title="部分圏">部分圏</a>をいう。
+</p>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=2" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E9.80.86.E8.BB.A2.E7.BE.A4"></span><span class="mw-headline" id="逆転群">逆転群</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=3" title="節を編集: 逆転群">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="new" href="/w/index.php?title=%E9%80%86%E8%BB%A2%E7%BE%A4&amp;action=edit&amp;redlink=1" title="逆転群 (存在しないページ)">逆転群</a>」を参照</div>
+<p>現代数学において
+</p>
+<dl><dd>「任意の群はその<a class="new" href="/w/index.php?title=%E9%80%86%E8%BB%A2%E7%BE%A4&amp;action=edit&amp;redlink=1" title="逆転群 (存在しないページ)">逆転群</a>に自然同型である」</dd></dl>
+<p>といったような言及がよく見られる。いま、この言及のきちんとした意味を、証明と共に与えよう。
+</p><p>まず、すべての<a href="/wiki/%E7%BE%A4_(%E6%95%B0%E5%AD%A6)" title="群 (数学)">群</a>が<a href="/wiki/%E7%BE%A4%E6%BA%96%E5%90%8C%E5%9E%8B" title="群準同型">群準同型</a>を射として成す圏 <b>Grp</b> を考える。また、(<i>G</i>, *) が群であるとき、その逆転群（反群） (<i>G</i><sup>op</sup>, *<sup>op</sup>) は次のようにして定められる。台集合としての <i>G</i><sup>op</sup> は <i>G</i> と同じものとし、演算 *<sup>op</sup> は <i>a</i> *<sup>op</sup> <i>b</i> = <i>b</i> * <i>a</i> を満たすものとして定める。つまり、<i>G</i><sup>op</sup> における乗法は <i>G</i> の乗法を「逆さま」にしたものである。群から逆転群を作る操作 "<sup>op</sup>"は、各群準同型 <i>f</i>: <i>G</i> → <i>H</i> に対して <i>f</i><sup>op</sup> = <i>f</i> と定めれば、<b>Grp</b> から <b>Grp</b> への（共変）函手になる（逆転函手）。ここで、<i>f</i><sup>op</sup> が実際に <i>G</i><sup>op</sup> から <i>H</i><sup>op</sup> の群準同型であること、つまり
+</p>
+<dl><dd><i>f</i><sup>op</sup>(<i>a</i> *<sup>op</sup> <i>b</i>) = <i>f</i>(<i>b</i> * <i>a</i>) = <i>f</i>(<i>b</i>) * <i>f</i>(<i>a</i>) = <i>f</i><sup>op</sup>(<i>a</i>) *<sup>op</sup> <i>f</i><sup>op</sup>(<i>b</i>)</dd></dl>
+<p>を満たすことに注意せよ。
+</p><p>さて上記の言及の内容は、即ち
+</p>
+<dl><dd>「恒等函手 Id<sub><b>Grp</b></sub>: <b>Grp</b> → <b>Grp</b> は逆転函手 <sup>op</sup>: <b>Grp</b> → <b>Grp</b> に自然同型である」</dd></dl>
+<p>ということである。これを示すのには、各群 <i>G</i> に先述の可換図式を満たす同型  η<sub><i>G</i></sub>: <i>G</i> → <i>G</i><sup>op</sup> を与えねばならない。η<sub><i>G</i></sub>(<i>a</i>) := <i>a</i><sup>−1</sup> と置けば、公式 (<i>ab</i>)<sup>−1</sup> = <i>b</i><sup>−1</sup> <i>a</i><sup>−1</sup> および (<i>a</i><sup>−1</sup>)<sup>−1</sup> = <i>a</i> から η<sub><i>G</i></sub> は群 <i>G</i> からその逆転群への群準同型である。自然性の証明は、群準同型 <i>f</i>: <i>G</i> → <i>H</i> に対して η<sub><i>H</i></sub> ∘ <i>f</i> = <i>f</i><sup>op</sup> ∘ η<sub><i>G</i></sub> となることが言えればよい。これはつまり <i>G</i> の各元 <i>a</i> について (<i>f</i>(<i>a</i>))<sup>−1</sup> = <i>f</i><sup>op</sup>(<i>a</i><sup>−1</sup>) が成り立つということであり、これは <i>f</i><sup>op</sup> = <i>f</i> であったことと任意の群準同型が (<i>f</i>(<i>a</i>))<sup>−1</sup> = <i>f</i>(<i>a</i><sup>−1</sup>) なる性質を持つことから正しい。
+</p>
+<h3><span id=".E6.9C.89.E9.99.90.E6.AC.A1.E5.85.83.E3.83.99.E3.82.AF.E3.83.88.E3.83.AB.E7.A9.BA.E9.96.93.E3.81.AE.E4.BA.8C.E9.87.8D.E5.8F.8C.E5.AF.BE"></span><span class="mw-headline" id="有限次元ベクトル空間の二重双対">有限次元ベクトル空間の二重双対</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=4" title="節を編集: 有限次元ベクトル空間の二重双対">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>K</i> を<a href="/wiki/%E5%8F%AF%E6%8F%9B%E4%BD%93" title="可換体">体</a>とするとき、<i>K</i> 上の任意の<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="ベクトル空間">ベクトル空間</a> <i>V</i> に対して、ベクトル空間からその<a class="new" href="/w/index.php?title=%E4%BA%8C%E9%87%8D%E5%8F%8C%E5%AF%BE%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="二重双対空間 (存在しないページ)">二重双対空間</a>への「自然」な<a href="/wiki/%E5%8D%98%E5%B0%84" title="単射">単射</a><a href="/wiki/%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="線型写像">線型写像</a> <i>V</i> → <i>V</i><sup>**</sup> が取れる。ここで、これらの写像が「自然」であるという意味は、二重双対をとる操作が函手を定め（二重双対函手）、かつこれらの写像が恒等函手から二重双対函手への自然変換の成分となるということである。
+</p>
+<h3><span id=".E5.8F.8D.E4.BE.8B.EF.BC.9A.E6.9C.89.E9.99.90.E6.AC.A1.E5.85.83.E3.83.99.E3.82.AF.E3.83.88.E3.83.AB.E7.A9.BA.E9.96.93.E3.81.AE.E5.8F.8C.E5.AF.BE"></span><span class="mw-headline" id="反例：有限次元ベクトル空間の双対">反例：有限次元ベクトル空間の双対</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=5" title="節を編集: 反例：有限次元ベクトル空間の双対">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>有限次元ベクトル空間は必ずその双対空間と同型となるが、このときの同型を与える同型射の選び方には任意性がある（例えば、基底を一つ選びその基底を対応する<a href="/wiki/%E5%8F%8C%E5%AF%BE%E5%9F%BA%E5%BA%95" title="双対基底">双対基底</a>に写す操作は同型になる）。一般には、有限次元ベクトル空間とその双対空間の間に自然な同型は存在しない<sup class="reference" id="cite_ref-FOOTNOTEMac_LaneBirkhoff1999§VI.4_2-0"><a href="#cite_note-FOOTNOTEMac_LaneBirkhoff1999§VI.4-2">[2]</a></sup><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#出典の示し方" title="Wikipedia:出典を明記する"><span title="この文献のどこを出典としているのか、該当するページ番号の特定が求められています。（2016年2月）">要ページ番号</span></a></i>]</sup>。しかし、以下に述べるように（付加構造を持ち、射として考える写像を制限した）類似の圏では自然同型を持ちうる。
+</p><p>次元というのが与えられた体上の有限次元ベクトル空間の唯一の不変量であることから、有限次元ベクトル空間の双対空間は、やはりもとの空間と同じ次元の有限次元ベクトル空間であり、これら二つの空間は同型である。しかしながら、（基底などの）追加の情報がなければ与えられた空間からその双対空間への同型を与えることはできず、したがってそのような同型を選び出すことが必要で、これは「自然でない」。すべての有限次元ベクトル空間とすべての線型写像の成す圏において、各空間に対して同型を選ぶ（というか、基底を決めて対応する同型をつくる）ことにより、ベクトル空間のあつまりからそれらの双対空間のあつまりへの劣自然同型を定めることはできる。しかしこれは自然同型を定めるものにはならない。それは直観的には選ぶという操作が必要だからであり、厳密にはそのような同型を「どのように」選んでも「すべての」線型写像と可換になるということが期待できないからである。詳細な議論は (<a href="#CITEREFMac_LaneBirkhoff1999">Mac Lane &amp; Birkhoff 1999</a>, §VI.4) を見よ。
+</p><p>（対象としての）有限次元ベクトル空間と双対をとる函手から自然同型を定めることは可能である。しかしそれには、まず付加構造を入れて、それから考える写像を「線型写像すべて」から「付加構造まで考慮した線型写像すべて」に制限することが求められる。陽に述べれば、各ベクトル空間 <i>V</i> にその双対空間への同型写像 η<sub><i>V</i></sub>: <i>V</i> → <i>V</i><sup>*</sup> の情報が与えられている必要がある。言い換えれば、ベクトル空間 <i>V</i> と非退化<a href="/wiki/%E4%BA%8C%E6%AC%A1%E5%BD%A2%E5%BC%8F" title="二次形式">二次形式</a> <i>b</i><sub><i>V</i></sub>: <i>V</i> × <i>V</i> → <i>K</i> の組を対象として考えるのである。これにより劣自然同型 η が定まる。それから考える写像を、付加構造として与えられた同型と可換な線型写像に制限する（射を η の自然化へ制限する）。非退化二次形式で言えば、二次形式を不変にする（<i>b</i><sub><i>V</i></sub>(<i>T</i>(<i>v</i>), <i>T</i>(<i>w</i>)) = <i>b</i>(<i>v</i>, <i>w</i>)）ものに限る。こうして得られた圏（非退化二次形式を備えた有限次元ベクトル空間すべてを対象とし、与えられた非退化二次形式を不変にする線型写像すべてを射とする圏）は、作り方から、恒等函手から双対函手への自然同型を持つ（各空間はその双対への同型写像をもち、この圏の射がそれらと可換となることは仮定そのものである）。その意味ではこの構成（各対象に変換を付け加えて、それらと可換なものに射を制限する）は完全に一般で、しかもベクトル空間の何らかの特定の性質に依存するものでない。
+</p><p>この圏（非退化二次形式を備えた有限次元ベクトル空間と二次形式まで込めて線型な変換の圏）において、ベクトル空間の間の射の双対は<a href="/wiki/%E8%BB%A2%E7%BD%AE%E5%86%99%E5%83%8F" title="転置写像">転置写像</a>と同一視することができる。しばしば幾何学的興味を理由に、非退化二次形式がさらに追加の性質を持つことを仮定して、この圏を部分圏に特殊化することも多い。追加の性質としては、対称性（<a href="/wiki/%E7%9B%B4%E4%BA%A4%E8%A1%8C%E5%88%97" title="直交行列">直交行列</a>も参照）、対称かつ正定値（<a class="mw-redirect" href="/wiki/%E5%86%85%E7%A9%8D%E7%A9%BA%E9%96%93" title="内積空間">内積空間</a>参照）、対称かつ半線型（<a class="new" href="/w/index.php?title=%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="エルミート空間 (存在しないページ)">エルミート空間</a>）、歪対称かつ完全等方的（<a class="new" href="/w/index.php?title=%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AC%E3%82%AF%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="シンプレクティック空間 (存在しないページ)">シンプレクティック空間</a>）などがある。これらすべての圏において、非退化二次形式を通じてベクトル空間とその双対が自然に同一視される。
+</p>
+<h3><span id=".E3.83.86.E3.83.B3.E3.82.BD.E3.83.AB.E3.83.BB.E3.83.9B.E3.83.A0.E9.9A.8F.E4.BC.B4"></span><span class="mw-headline" id="テンソル・ホム随伴">テンソル・ホム随伴</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=6" title="節を編集: テンソル・ホム随伴">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">「<a class="mw-redirect" href="/wiki/%E9%9A%8F%E4%BC%B4%E5%87%BD%E6%89%8B" title="随伴函手">随伴函手</a>」を参照</div>
+<p><a href="/wiki/%E3%82%A2%E3%83%BC%E3%83%99%E3%83%AB%E7%BE%A4%E3%81%AE%E5%9C%8F" title="アーベル群の圏">アーベル群と群準同型の圏 <b>Ab</b></a> を考える。任意のアーベル群 <i>X</i>, <i>Y</i>, <i>Z</i> に対して、群の同型
+</p>
+<dl><dd>Hom(<i>X</i> ⊗ <i>Y</i>, <i>Z</i>) → Hom(<i>X</i>, Hom(<i>Y</i>, <i>Z</i>))</dd></dl>
+<p>が得られる。このような同型は、それが各辺の定める <b>Ab</b> × <b>Ab</b><sup>op</sup> × <b>Ab</b><sup>op</sup> → <b>Ab</b> なる二つの函手の間の自然変換を定めるという意味で「自然」である。
+</p><p>この自然性は正式には<a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E3%83%BB%E3%83%9B%E3%83%A0%E9%9A%8F%E4%BC%B4&amp;action=edit&amp;redlink=1" title="テンソル・ホム随伴 (存在しないページ)">テンソル・ホム随伴</a>と呼ばれ、<a class="mw-redirect" href="/wiki/%E9%9A%8F%E4%BC%B4%E5%87%BD%E6%89%8B" title="随伴函手">随伴函手</a>対の原型的な例になっている。自然変換が随伴函手と同時に生じることはよくあり、実際に随伴函手はある種の自然同型を定める。加えて、任意の随伴函手対からは<b>単位</b>および<b>余単位</b>と呼ばれる二つの自然変換（一般には同型でない）が生じる。
+</p>
+<h2><span id=".E8.87.AA.E7.84.B6.E3.81.A7.E3.81.AA.E3.81.84.E5.90.8C.E5.9E.8B"></span><span class="mw-headline" id="自然でない同型">自然でない同型</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=7" title="節を編集: 自然でない同型">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>自然変換という概念は圏論的なもので、（感覚的には）圏の全体にわたって一貫した対応を与えるような函手間の特定の写像といったものを表している。（圏全体でなく）個々の対象間の特定の射（殊に同型）が、略式的に「自然同型」と呼ばれることもある。これは暗にそれが事実上圏全体で定義され、函手間の自然変換を定めるものになっていることを意味する言い方である。こういった直観を定式化することは、圏論の勃興において動機を与える要因であった。対して、圏全体で定まる自然変換に拡張することができないような、特定の対象間の特定の写像のことは「<a class="new" href="/w/index.php?title=%E8%87%AA%E7%84%B6%E3%81%A7%E3%81%AA%E3%81%84%E5%90%8C%E5%9E%8B&amp;action=edit&amp;redlink=1" title="自然でない同型 (存在しないページ)">自然でない同型</a>」(<b>unnatural isomorphism</b>) と呼ぶことができる。対象 <i>X</i> と函手 <i>G</i> （簡単のため恒等函手とする）および同型射 η: <i>X</i> → <i>G</i>(<i>X</i>) が与えられたとき、自然でないことの証明は、自己同型射 <i>A</i>: <i>X</i> → <i>X</i> で同型 η と可換でない（つまり η ∘ <i>A</i> ≠ <i>A</i> ∘ η となる）ものを与えるこができれば最も容易に示せる。より強く、<i>X</i> と <i>G</i>(<i>X</i>) とが自然同型でないことを（特定の同型に言及することなく）示そうと考えるならば、「任意の」同型 η に対して、それと可換でない <i>A</i> が存在することを示す必要がある。場合によっては単一の自己同型 <i>A</i> が候補となる全ての同型 η に対して期待したものになっていることもあるが、そうでない場合には各同型 η ごとに異なる自己同型 <i>A</i><sub>η</sub> をどのように構成するかを示さねばならない。圏のこのような射は重要で、例えばこのような射が恒等射しかなければ、任意の劣自然変換が自然変換になる。
+</p><p>このことは、群論や加群の理論において「ある対象の与えられた直和分解が「自然でない」若しくは「一意でない」場合に、直和分解を保存しない自己同型が存在する」といったことがあるのと似ている（より圏論的ではあるが）。
+</p><p>文献によっては、"=" を（普通は写像が）本当に等しいことを表すためにとっておいて、自然同型に "≅" を、自然でない同型に "≈" を用いることがある。
+</p>
+<h2><span id=".E8.87.AA.E7.84.B6.E5.A4.89.E6.8F.9B.E3.81.AE.E6.BC.94.E7.AE.97"></span><span class="mw-headline" id="自然変換の演算">自然変換の演算</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=8" title="節を編集: 自然変換の演算">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>η: <i>F</i> → <i>G</i> および ε: <i>G</i> → <i>H</i> を函手 <i>F</i>,<i>G</i>,<i>H</i>: <i>C</i> → <i>D</i> の間の自然変換とすると、これらを合成して自然変換 εη: <i>F</i> → <i>H</i> が得られる。これは成分ごとに考えればよい（(εη)<sub><i>X</i></sub> := ε<sub><i>X</i></sub>η<sub><i>X</i></sub>）。この自然変換の「垂直合成」は<a href="/wiki/%E7%B5%90%E5%90%88%E6%B3%95%E5%89%87" title="結合法則">結合的</a>かつ<a href="/wiki/%E5%8D%98%E4%BD%8D%E5%85%83" title="単位元">単位元</a>を持つ。故に <i>C</i> → <i>D</i> なるすべての函手の集まりをそれ自体圏と見ることができる（後述の<a href="#函手圏">函手圏</a>節を参照）。
+</p><p>自然変換には「水平合成」も考えられる。η: <i>F</i> → <i>G</i> を函手 <i>F</i>,<i>G</i>: <i>C</i> → <i>D</i> 間の自然変換、ε: <i>J</i> → <i>K</i> を函手 <i>J</i>,<i>K</i>: <i>D</i> → <i>E</i> 間の自然変換とするとき、函手の合成から自然変換の合成 ηε: <i>JF</i> → <i>KG</i> が作れる。この演算もやはり結合的かつ単位元をもつ。またこの単位元は垂直合成における単位元と一致する。即ち、この垂直合成と水平合成という二つの演算は共通する単位元を通じて互いに関連を持つ。
+</p><p>η: <i>F</i> → <i>G</i> を函手 <i>F</i>,<i>G</i>: <i>C</i> → <i>D</i> 間の自然変換、<i>H</i>: <i>D</i> → <i>E</i> を別の函手とすると、自然変換 <i>H</i>η: <i>HF</i> → <i>HG</i> が
+</p>
+<dl><dd>&lt;math&gt; (H \eta)_X = H \eta_X&lt;/math&gt;</dd></dl>
+<p>と定めることにより得られる。対称的に、<i>K</i>: <i>B</i> → <i>C</i> を函手として、自然変換 η<i>K</i>: <i>FK</i> → <i>GK</i> が
+</p>
+<dl><dd>&lt;math&gt; (\eta K)_X = \eta_{K(X)}&lt;/math&gt;</dd></dl>
+<p>によって定まる。
+</p>
+<h2><span id=".E5.87.BD.E6.89.8B.E5.9C.8F"></span><span class="mw-headline" id="函手圏">函手圏</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=9" title="節を編集: 函手圏">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E5%87%BD%E6%89%8B%E5%9C%8F" title="函手圏">函手圏</a>」を参照</div>
+<p><i>C</i> を任意の圏、<i>I</i> を<a class="mw-redirect" href="/wiki/%E5%B0%8F%E3%81%95%E3%81%84%E5%9C%8F" title="小さい圏">小さい圏</a>とすると、<i>I</i> から <i>C</i> への全ての函手を対象とし、それらの函手間の全ての自然変換を射としてもつ<a class="mw-redirect" href="/wiki/%E5%87%BD%E6%89%8B%E5%9C%8F" title="函手圏">函手圏</a> <i>C<sup>I</sup></i> が構成できる。これが圏を成すのは、任意の函手 <i>F</i> に対して恒等自然変換 1<sub><i>F</i></sub> : <i>F</i> → <i>F</i> （これは各対象 <i>X</i> に <i>F</i>(<i>X</i>) 上の恒等射を対応させる）) が存在することと、二つの自然変換の合成（上述の「垂直合成」）がまた自然変換となることによる。
+</p><p>函手圏 <i>C<sup>I</sup></i> における<a class="mw-redirect" href="/wiki/%E5%90%8C%E5%9E%8B" title="同型">同型</a>とは、自然同型のことに他ならない。つまり、自然変換 η: <i>F</i> → <i>G</i> が自然同型であることと、ηε = 1<sub><i>G</i></sub> かつ εη = 1<sub><i>F</i></sub> なる自然変換 ε: <i>G</i> → <i>F</i> が存在することとは同値である。
+</p><p><i>I</i> が<a class="mw-redirect" href="/wiki/%E6%9C%89%E5%90%91%E3%82%B0%E3%83%A9%E3%83%95" title="有向グラフ">有向グラフ</a>から生じるときの函手圏 <i>C<sup>I</sup></i> は特に有用である。例えば <i>I</i> が有向グラフ • → • の与える圏のとき、<i>C<sup>I</sup></i> は <i>C</i> のすべての射を対象とし、<i>C<sup>I</sup></i> における二つの対象 φ : <i>U</i> → <i>V</i> と ψ: <i>X</i> → <i>Y</i> の間の射は <i>C</i> における射 <i>f</i>: <i>U</i> → <i>X</i> および <i>g</i>: <i>V</i> → <i>Y</i> の対で「矩形可換」つまり ψ<i>f</i> = <i>g</i>φ を満たすもので与えられる。
+</p><p>より一般に <a class="new" href="/w/index.php?title=2-%E5%9C%8F&amp;action=edit&amp;redlink=1" title="2-圏 (存在しないページ)">2-圏</a> <b>Cat</b> が
+</p>
+<ul><li>0-胞（対象）: 小さい圏、</li>
+<li>1-胞（射）: 二つの対象 <i>C</i>, <i>D</i> に対して <i>C</i> から <i>D</i> への函手</li>
+<li>2-胞: 二つの 1-胞（函手）<i>F</i>: <i>C</i> → <i>D</i>, <i>G</i>: <i>C</i> → <i>D</i> に対して <i>F</i> から <i>G</i> への自然変換</li></ul>
+<p>なるものとして構成できる。
+</p><p>水平および垂直合成は先に述べた自然変換の間の合成である。函手圏 <i>C</i><sup><i>I</i></sup> は、従って（小さい圏かどうかはさておけば）単にこの圏におけるホム圏である。
+</p>
+<h2><span id=".E7.B1.B3.E7.94.B0.E3.81.AE.E8.A3.9C.E9.A1.8C"></span><span class="mw-headline" id="米田の補題">米田の補題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=10" title="節を編集: 米田の補題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E7%B1%B3%E7%94%B0%E3%81%AE%E8%A3%9C%E9%A1%8C" title="米田の補題">米田の補題</a>」を参照</div>
+<p><i>X</i> を<a class="mw-redirect" href="/wiki/%E5%B1%80%E6%89%80%E7%9A%84%E3%81%AB%E5%B0%8F%E3%81%95%E3%81%84%E5%9C%8F" title="局所的に小さい圏">局所的に小さい圏</a> <i>C</i> の対象とすると、対応 <i>Y</i> ↦ Hom<sub><i>C</i></sub>(<i>X</i>, <i>Y</i>) から共変函手 <i>F</i><sub><i>X</i></sub>: <i>C</i> → <b>Set</b> が定まる。この函手は <b><a class="mw-redirect" href="/wiki/%E8%A1%A8%E7%8F%BE%E5%8F%AF%E8%83%BD%E5%87%BD%E6%89%8B" title="表現可能函手">表現可能函手</a></b>と呼ばれる（より一般に、適当に選んだ <i>X</i> に対してこの函手と自然同型な任意の函手を表現可能函手と呼ぶ）。表現可能函手から任意の函手 <i>F</i>: <i>C</i> → <b>Set</b> への自然変換は完全にわかっており、容易に記述できる（<a href="/wiki/%E7%B1%B3%E7%94%B0%E3%81%AE%E8%A3%9C%E9%A1%8C" title="米田の補題">米田の補題</a>）。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2.E3.81.AB.E9.96.A2.E3.81.99.E3.82.8B.E6.B3.A8.E6.84.8F"></span><span class="mw-headline" id="歴史に関する注意">歴史に関する注意</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=11" title="節を編集: 歴史に関する注意">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>圏論の始祖の一人である<a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B9%E3%83%BB%E3%83%9E%E3%83%83%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%B3" title="ソーンダース・マックレーン">マクレーン</a>は「圏は函手の研究のために考案されたものではない、それは自然変換を研究するためのものだ」("I didn't invent categories to study functors; I invented them to study natural transformations.") という注意を与えている<sup class="reference" id="cite_ref-FOOTNOTEMac_Lane1998§I.4_3-0"><a href="#cite_note-FOOTNOTEMac_Lane1998§I.4-3">[3]</a></sup><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E5%87%BA%E5%85%B8%E3%82%92%E6%98%8E%E8%A8%98%E3%81%99%E3%82%8B#出典の示し方" title="Wikipedia:出典を明記する"><span title="この文献のどこを出典としているのか、該当するページ番号の特定が求められています。（2016年2月）">要ページ番号</span></a></i>]</sup>。確かに <a href="/wiki/%E7%BE%A4_(%E6%95%B0%E5%AD%A6)" title="群 (数学)">群</a>の研究が<a href="/wiki/%E7%BE%A4%E6%BA%96%E5%90%8C%E5%9E%8B" title="群準同型">群準同型</a>を調べることを抜きにしては万全でないのと同じく、圏の研究に<a class="mw-redirect" href="/wiki/%E5%87%BD%E6%89%8B" title="函手">函手</a>の研究は不可欠なのであるが、マクレーンの言は函手の研究それ自体に自然変換の研究が無くてはならないものであることから出たものなのである。
+</p><p>マクレーンの注意は<a href="/wiki/%E3%83%9B%E3%83%A2%E3%83%AD%E3%82%B8%E3%83%BC_(%E6%95%B0%E5%AD%A6)" title="ホモロジー (数学)">ホモロジー</a>の公理論の文脈でなされたものであった。いくつかの異なる方法で構成されるホモロジーが互いに一致することが示せる（例えば、<a class="mw-redirect" href="/wiki/%E5%8D%98%E4%BD%93%E7%9A%84%E8%A4%87%E4%BD%93" title="単体的複体">単体的複体</a>の場合に、直接に定義されるホモロジー群は、特異ホモロジー群と同型になる）のであるが、ホモロジー群が対象間の射とどのように両立するか、どのようにして二つの同値なホモロジー論が同一のホモロジー群のみならずそれらの群の間に同一の射をも持つかといったようなことは、自然変換の言葉を用いずに表すのは容易なことでない。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=12" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-FOOTNOTEMac_Lane199816-1"><b><a href="#cite_ref-FOOTNOTEMac_Lane199816_1-0">^</a></b> <span class="reference-text"><a href="#CITEREFMac_Lane1998">Mac Lane 1998</a>, p. <span class="plainlinks"><a class="external text" href="https://books.google.co.jp/books?id=MXboNPdTv7QC&amp;pg=PA16&amp;dq=%22%22" rel="nofollow">16</a></span>.</span>
+</li>
+<li id="cite_note-FOOTNOTEMac_LaneBirkhoff1999§VI.4-2"><b><a href="#cite_ref-FOOTNOTEMac_LaneBirkhoff1999§VI.4_2-0">^</a></b> <span class="reference-text"><a href="#CITEREFMac_LaneBirkhoff1999">Mac Lane &amp; Birkhoff 1999</a>, §VI.4.</span>
+</li>
+<li id="cite_note-FOOTNOTEMac_Lane1998§I.4-3"><b><a href="#cite_ref-FOOTNOTEMac_Lane1998§I.4_3-0">^</a></b> <span class="reference-text"><a href="#CITEREFMac_Lane1998">Mac Lane 1998</a>, §I.4.</span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=13" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r2399935">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-100{font-size:100%}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}</style><div class="refbegin" style="">
+<ul><li><cite class="citation book" id="CITEREFMac_Lane1998" style="font-style:normal"><a class="mw-redirect" href="/wiki/Saunders_Mac_Lane" title="Saunders Mac Lane">Mac Lane, Saunders</a> (1998). <a class="external text" href="https://books.google.com/books?id=MXboNPdTv7QC" rel="nofollow"><i>Categories for the Working Mathematician</i></a>. <a href="/wiki/Graduate_Texts_in_Mathematics" title="Graduate Texts in Mathematics">Graduate Texts in Mathematics</a>. <b>5</b> (2nd ed.). Springer-Verlag. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-387-98403-8" title="特別:文献資料/0-387-98403-8">0-387-98403-8</a>. <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=1712872" rel="nofollow">1712872</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="mw-redirect" href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a> <a class="external text" href="https://zbmath.org/?format=complete&amp;q=an:0906.18001" rel="nofollow">0906.18001</a><span style="display:none;">. <a class="external free" href="https://books.google.com/books?id=MXboNPdTv7QC" rel="nofollow">https://books.google.com/books?id=MXboNPdTv7QC</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Categories+for+the+Working+Mathematician&amp;rft.aulast=Mac+Lane&amp;rft.aufirst=Saunders&amp;rft.au=Mac+Lane%2C%26%2332%3BSaunders&amp;rft.date=1998&amp;rft.series=%5B%5BGraduate+Texts+in+Mathematics%5D%5D&amp;rft.volume=5&amp;rft.edition=2nd&amp;rft.pub=Springer-Verlag&amp;rft.isbn=0-387-98403-8&amp;rft.mr=1712872&amp;rft_id=info:zbl/0906.18001&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DMXboNPdTv7QC&amp;rfr_id=info:sid/ja.wikipedia.org:%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span></li>
+<li><cite class="citation" id="CITEREFMac_LaneBirkhoff1999" style="font-style:normal"><a class="mw-redirect" href="/wiki/Saunders_Mac_Lane" title="Saunders Mac Lane">Mac Lane, Saunders</a>; <a class="new" href="/w/index.php?title=Garrett_Birkhoff&amp;action=edit&amp;redlink=1" title="Garrett Birkhoff (存在しないページ)">Birkhoff, Garrett</a> (1999), <a class="external text" href="https://books.google.com/books?id=L6FENd8GHIUC" rel="nofollow"><i>Algebra</i></a> (3rd ed.), AMS Chelsea Publishing, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-8218-1646-2" title="特別:文献資料/0-8218-1646-2">0-8218-1646-2</a><span style="display:none;">, <a class="external free" href="https://books.google.com/books?id=L6FENd8GHIUC" rel="nofollow">https://books.google.com/books?id=L6FENd8GHIUC</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algebra&amp;rft.aulast=Mac+Lane&amp;rft.aufirst=Saunders&amp;rft.au=Mac+Lane%2C%26%2332%3BSaunders&amp;rft.au=Birkhoff%2C%26%2332%3BGarrett&amp;rft.date=1999&amp;rft.edition=3rd&amp;rft.pub=AMS+Chelsea+Publishing&amp;rft.isbn=0-8218-1646-2&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DL6FENd8GHIUC&amp;rfr_id=info:sid/ja.wikipedia.org:%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B"><span style="display: none;"> </span></span>.</li></ul>
+</div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="new" href="/w/index.php?title=%E8%B6%85%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" title="超自然変換 (存在しないページ)">超自然変換</a> (Extranatural transformation)</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220401124106
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.340 seconds
+Real time usage: 0.516 seconds
+Preprocessor visited node count: 3610/1000000
+Post‐expand include size: 38722/2097152 bytes
+Template argument size: 7254/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 10597/5000000 bytes
+Lua time usage: 0.110/7 seconds
+Lua virtual size: 7376896/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  475.737      1 -total
+ 37.28%  177.366      2 テンプレート:Citation/core
+ 30.85%  146.778      1 テンプレート:Cite_book
+ 25.54%  121.499      4 テンプレート:Citation/identifier
+ 19.46%   92.598      2 テンプレート:ISBN2
+ 17.04%   81.069      3 テンプレート:Sfn
+ 16.73%   79.614      1 テンプレート:Unreferenced_section
+ 16.14%   76.764      1 テンプレート:出典の明記
+ 15.96%   75.905      4 テンプレート:Catalog_lookup_link
+ 13.06%   62.146      1 テンプレート:Ambox
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2554767-0!canonical and timestamp 20220401124106 and revision id 1516487. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=自然変換&amp;oldid=1516487">http://localhost:8080/w/index.php?title=自然変換&amp;oldid=1516487</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%8C%E8%A6%81%E6%9C%9B%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:出典のページ番号が要望されている記事">出典のページ番号が要望されている記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E7%AF%80%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2008%E5%B9%B4" title="カテゴリ:出典を必要とする節のある記事/2008年">出典を必要とする節のある記事/2008年</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%9C%8F%E8%AB%96" title="カテゴリ:圏論">圏論</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%96%A2%E6%89%8B" title="カテゴリ:関手">関手</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D2554767%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;returntoquery=curid%3D2554767%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;oldid=1516487" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E8%87%AA%E7%84%B6%E5%A4%89%E6%8F%9B&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2020年8月30日 (日) 11:35 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.340","walltime":"0.516","ppvisitednodes":{"value":3610,"limit":1000000},"postexpandincludesize":{"value":38722,"limit":2097152},"templateargumentsize":{"value":7254,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":10597,"limit":5000000},"timingprofile":["100.00%  475.737      1 -total"," 37.28%  177.366      2 テンプレート:Citation/core"," 30.85%  146.778      1 テンプレート:Cite_book"," 25.54%  121.499      4 テンプレート:Citation/identifier"," 19.46%   92.598      2 テンプレート:ISBN2"," 17.04%   81.069      3 テンプレート:Sfn"," 16.73%   79.614      1 テンプレート:Unreferenced_section"," 16.14%   76.764      1 テンプレート:出典の明記"," 15.96%   75.905      4 テンプレート:Catalog_lookup_link"," 13.06%   62.146      1 テンプレート:Ambox"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"7"},"limitreport-virtmemusage":{"value":7376896,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220401124106","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":988});});</script>
+</body></html>

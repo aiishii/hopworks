@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>因子 (代数幾何学) - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-因子_代数幾何学 rootpage-因子_代数幾何学 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">因子 (代数幾何学)</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>因子</b>（いんし; divisor）とは、<a href="." id="link_a_1" title="代数幾何学">代数幾何学</a>や<a href="." id="link_a_2" title="複素幾何学">複素幾何学</a>において、<a href="." id="link_a_3" title="代数多様体">代数多様体</a>（または<a href="." id="link_a_4" title="複素解析空間">複素解析空間</a>）の余次元1の部分多様体の形式的有限和のことをいう。因子は、代数多様体や解析空間上の有理関数あるいは有理型関数の極や零点の分布を表すために用いられる（<a href="#概説">概説</a>参照）。線形同値な因子の空間である線形系を考えることは、<a href="." id="link_a_5" title="射影空間">射影空間</a>への有理写像を考えることと1対1に対応しているので、代数多様体（または複素解析空間）の代数幾何的な性質・情報を取り出すときに欠かせない概念である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概説"><span class="tocnumber">1</span> <span class="toctext">概説</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ヴェイユ因子"><span class="tocnumber">2</span> <span class="toctext">ヴェイユ因子</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#カルティエ因子"><span class="tocnumber">3</span> <span class="toctext">カルティエ因子</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#直線束と因子"><span class="tocnumber">4</span> <span class="toctext">直線束と因子</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#線形系と有理写像"><span class="tocnumber">5</span> <span class="toctext">線形系と有理写像</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#代数曲線の因子"><span class="tocnumber">6</span> <span class="toctext">代数曲線の因子</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#豊富な因子"><span class="tocnumber">7</span> <span class="toctext">豊富な因子</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#複素解析空間上の因子"><span class="tocnumber">8</span> <span class="toctext">複素解析空間上の因子</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#脚注"><span class="tocnumber">9</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#関連項目"><span class="tocnumber">10</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#参考文献"><span class="tocnumber">11</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.AA.AC"></span><span class="mw-headline" id="概説">概説</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=1" title="節を編集: 概説">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>因子が代数幾何（あるいは複素幾何）で演じる役割については、<a href="/wiki/%E4%BB%A3%E6%95%B0%E6%9B%B2%E7%B7%9A" title="代数曲線">代数曲線</a>（あるいは、コンパクトな<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E9%9D%A2" title="リーマン面">リーマン面</a>）の場合を見ればおおよそ理解する事が出来る。<i>C</i> を代数関数 <i>f</i>(<i>z</i><sub>1</sub> , <i>z</i><sub>2</sub>) = 0 から定まるコンパクトリーマン面（あるいは、<i>f</i>(<i>z</i><sub>1</sub> , <i>z</i><sub>2</sub>) = 0 で定まる平面曲線の<a class="new" href="/w/index.php?title=%E7%89%B9%E7%95%B0%E7%82%B9%E8%A7%A3%E6%B6%88&amp;action=edit&amp;redlink=1" title="特異点解消 (存在しないページ)">特異点解消</a>）とするとき、<i>C</i> 上の有理型関数全体（あるいは、代数関数全体）<i>M</i>(<i>C</i>) は、1変数有理関数体 <i>K</i> = <b>C</b>(<i>z</i><sub>1</sub>) の <i>f</i> による拡大 <i>K</i>[<i>z</i><sub>2</sub>] / (f) と同型である事がわかる。特に、<i>C</i> 上の有理型関数全体 <i>M</i>(<i>C</i>) は <b>C</b> 上のベクトル空間として無限次元である。<i>M</i>(<i>C</i>) は体論的に明確な形で既述される体であるとはいえ、コンパクトリーマン面の幾何的な性質を調べるには不十分である。
+</p><p>例えば、ひとつの重要な問題としては、任意にコンパクトリーマン面 <i>C</i> を与えたときに、<i>M</i>(<i>C</i>) に複素定数でない元が含まれるか、すなわち <i>C</i> 上に自明でない有理型関数が存在するか、という問題がある（コンパクトリーマン面の代数性、<a class="mw-redirect" href="/wiki/GAGA_(%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="GAGA (代数学)">GAGA</a>参照）。この問題は、より強く、<i>C</i> 上のある 1点 <i>P</i> に極を許し、その他の点では正則な有理型関数が存在できるか、という問題と同値である。<i>C</i> 上 <i>P</i> のみに極を持つ有理型関数の全体を <i>R</i>(<i>P</i>) とすると、これは <i>M</i>(<i>C</i>) の部分環になるが、結論から言うとこれも <b>C</b> 上有限次元にはならない。ところが、<i>P</i>に高々 <i>n</i> 位の極をもち、他の点では正則な有理型関数全体を <i>L</i>(<i>nP</i>) で表すと &lt;math&gt;R(P)=\bigcup _{n=0}^{\infty} L(nP)&lt;/math&gt; であるが、<i>L</i>(<i>nP</i>) は <i>C</i> 上有限次元のベクトル空間になる。0 でない有理型関数 <i>f</i> に対して、点 <i>P</i> での位数 <i>v</i><sub><i>P</i></sub>(<i>f</i>) を、<i>f</i> が点 <i>P</i> で <i>n</i> 位の零点を持つとき <i>n</i> 、<i>n</i> 位の極を持つとき -<i>n</i>  と定める（ <i>f</i> = 0 の時は、全ての <i>P</i> に対して <i>v</i><sub><i>P</i></sub>(<i>f</i>) = +∞ と約束する）。<i>D</i> を<i>C</i> 上の有限個の点の整数係数の型式和 <i>n</i><sub>1</sub><i>P</i><sub>1</sub> + ... + <i>n</i><sub><i>m</i></sub><i>P</i><sub><i>m</i></sub> に対しても、同語反復的に <i>v</i><sub>P</sub>(<i>D</i>) を <i>P</i> = <i>P<sub>i</sub></i> のとき <i>n<sub>i</sub></i> 、<i>P</i> がどの <i>P<sub>i</sub></i> とも一致しないときは 0 と定める。そして、
+</p>
+<dl><dd>&lt;math&gt;L(D)=\{f\in M(C) \mid v_P(f)\geqslant - v_P(D)\}&lt;/math&gt;</dd></dl>
+<p>とおくと、これは <i>L</i>(<i>nP</i>) の一般化になっており、このベクトル空間はいつでも <b>C</b> 上有限次元になる。ここに現れた <i>D</i> が <i>C</i> 上の<b>因子</b>である。
+</p><p><a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%AD%E3%83%83%E3%83%9B%E3%81%AE%E5%AE%9A%E7%90%86" title="リーマン・ロッホの定理">リーマン・ロッホの定理</a>によれば、ある種の場合 <i>L</i>(<i>D</i>) の次元は明示的に計算可能である。<i>C</i> の<a href="/wiki/%E7%A8%AE%E6%95%B0" title="種数">種数</a> が 0 の時には、空間 <i>L</i>(<i>nP</i>) の次元は <i>n</i> が非負のとき <i>n</i> + 1 次元になる事が分かり、特に <i>n</i> =1 のときを見ると <i>C</i> には1位の極をひとつだけもった有理型関数（すなわちリーマン球面 &lt;math&gt;\mathbb P^1_{\mathbf C}&lt;/math&gt; への正則写像）が存在する事になるので、<i>C</i> は常に &lt;math&gt;\mathbb P^1_{\mathbf C}&lt;/math&gt; と同型になる事がわかる。種数が 1 の時には、 <i>L</i>(<i>nP</i>) の次元が <i>n</i> が正の時 <i>n</i> になることがわかる。従って、種数が 1 のコンパクトリーマン面上にはある 1 点に極を持つ定数でない有理型関数はその極の位数が 2 の時に初めて現れる（これを <i>f</i> とおく）ことがわかり、これとは1次独立なもの <i>g</i> が位数が 3 の時にもひとつ存在することもわかる。すなわち、<i>L</i>(3<i>P</i>) は 1 , <i>f</i> , <i>g</i> の 3つで <b>C</b> 上張られるベクトル空間である。対応
+</p>
+<dl><dd>&lt;math&gt;Q\mapsto [ 1 : f(Q) : g(Q) ] &lt;/math&gt;</dd></dl>
+<p>は正則写像 <i>C</i> → &lt;math&gt;\mathbb P^2_{\mathbf C}&lt;/math&gt; を定める。さらに、<i>L</i>(6<i>P</i>) をみれば 、これら2つの有理型関数はある2変数の3次式 <i>F</i>(<i>z</i><sub>1</sub> , <i>z</i><sub>2</sub>) に対して <i>F</i>(<i>f</i> , <i>g</i>)=0 となる、つまり、上記正則写像の像が3次曲線 <i>F</i> = 0 に含まれている事もわかる。このようにして、種数 1 のコンパクトリーマン面は、平面上の3次曲線に対応していることがわかり、ここで現れた位数が 2 の極を持つ有理型関数 <i>f</i> は<a class="mw-redirect" href="/wiki/%E6%A5%95%E5%86%86%E9%96%A2%E6%95%B0#ワイエルシュトラスの楕円関数" title="楕円関数">ワイエルシュトラスのペー関数</a>に他ならない。
+</p><p>このように、与えられた多様体に対して、その上の因子 <i>D</i> と、それから定まる有理型関数の空間 <i>L</i>(<i>D</i>) （特にその次元）は多くの幾何学的情報を含んでいるのであり、特に、射影多様体の射影空間への正則写像（一般には有理写像）を考える事と <i>L</i>(<i>D</i>) を考える事は同値である。コンパクトな（固有な）代数多様体上では空間 <i>L</i>(<i>D</i>) が有限次元のベクトル空間になる事から、正則写像を調べる問題を有限次元のベクトル空間のマニピュレーションに帰着できるのである。
+</p>
+<h2><span id=".E3.83.B4.E3.82.A7.E3.82.A4.E3.83.A6.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="ヴェイユ因子">ヴェイユ因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=2" title="節を編集: ヴェイユ因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>X</i> を既約かつ被約で分離的な<a class="mw-redirect" href="/wiki/%E6%AD%A3%E8%A6%8F%E7%92%B0" title="正規環">正規</a>ネーター<a href="/wiki/%E6%A6%82%E5%9E%8B" title="概型">スキーム</a>とする（分離的な<a href="/wiki/%E4%BB%A3%E6%95%B0%E5%A4%9A%E6%A7%98%E4%BD%93" title="代数多様体">代数多様体</a>は既約かつ被約なネーター的スキームであるから、正規で分離的代数多様体を考えていると思って差し支えない）。<i>Z</i> を dim <i>Z</i> = dim <i>X</i> - 1 、つまり余次元が 1 の既約で被約な閉部分スキーム（既約な閉部分代数多様体）とする。このような閉部分スキームを<b>素因子</b> (prime divisor)  とよぶ。X 上の<b>ヴェイユ因子</b> (Weil divisor) とは、 有限個の素因子 <i>Z<sub>i</sub></i> の有限型式和
+</p>
+<dl><dd>&lt;math&gt;D= \sum _{i=1}^m a_i Z_i &lt;/math&gt;</dd></dl>
+<p>の事を言う。単にヴェイユ因子といった場合は通常、係数 <i>a<sub>i</sub></i> は整数である。このとき <i>D</i> の<b>次数</b> (degree) を&lt;math&gt;\deg(D)=\sum_i a_i&lt;/math&gt; により定める。係数 <i>a<sub>i</sub></i> が有理数のときは、<b>Q</b>-ヴェイユ因子、 実数の時には <b>R</b>-ヴェイユ因子と呼ぶ。ヴェイユ因子、<b>Q</b>-ヴェイユ因子、<b>R</b>-ヴェイユ因子を単に因子、<b>Q</b>-因子、<b>R</b>-因子と呼ぶ事も多い。ヴェイユ因子、<b>Q</b>-ヴェイユ因子、あるいは<b>R</b>-ヴェイユ因子 <i>D</i> のすべての係数 <i>a<sub>i</sub></i> が非負のとき、<i>D</i> は<b>有効</b> (effective) であるといい、<i>D</i> ≥ 0 と書く。ヴェイユ因子（または、<b>Q</b>-ヴェイユ因子、<b>R</b>-ヴェイユ因子）の全体は 自由<b>Z</b>-加群（<b>Q</b>-ベクトル空間、<b>R</b>-ベクトル空間）の構造を持つ。これを Div (<i>X</i>)（または Div<sub><b>Q</b></sub> (<i>X</i>) , Div<sub><b>R</b></sub> (<i>X</i>) ）で表す。また次数0のヴェイユ因子全体はこの群の部分群をなす。これを Div<sup>0</sup> (<i>X</i>) で表す。
+</p><p><i>X</i> 上の素因子 <i>Z</i> をひとつ取ったとき、<i>Z</i> と交わりが空でないアフィン開部分スキーム <i>U</i> = Spec (<i>A</i>) を取ると、<i>Z</i> は環 <i>A</i> の<a href="/wiki/%E3%83%8D%E3%83%BC%E3%82%BF%E3%83%BC%E7%92%B0" title="ネーター環">高さ</a>が1の<a href="/wiki/%E7%B4%A0%E3%82%A4%E3%83%87%E3%82%A2%E3%83%AB" title="素イデアル">素イデアル</a> <i>P</i> に対応する （つまり、<i>Z</i> の高さ 1 の生成点 <i>P</i> をとり、<i>U</i> = Spec (<i>A</i>) として <i>P</i> を含むアフィン開部分スキームを取った）。この素イデアル <i>P</i> での <i>A</i> の<a class="new" href="/w/index.php?title=%E5%B1%80%E6%89%80%E5%8C%96&amp;action=edit&amp;redlink=1" title="局所化 (存在しないページ)">局所化</a> <i>A<sub>P</sub></i> は1次元正規ネーター<a href="/wiki/%E5%B1%80%E6%89%80%E7%92%B0" title="局所環">局所環</a>であるので、関数体 <i>k</i>(<i>X</i>) の<a href="/wiki/%E9%9B%A2%E6%95%A3%E4%BB%98%E5%80%A4%E7%92%B0" title="離散付値環">離散付値環</a>になる。対応する離散付値を <i>v<sub>Z</sub></i> で表す。<i>A<sub>P</sub></i> の極大イデアルも <i>P</i> で表すとき、有理関数 <i>f</i> に対して <i>v<sub>Z</sub></i>(<i>f</i>) は、<i>f</i> ∈ <i>P</i><sup><i>d</i></sup> であるが <i>f</i> ∉ <i>P</i><sup><i>d</i>+1</sup> となる <i>d</i> に等しい。すなわち、<i>f</i> が <i>Z</i> に沿ってどのぐらいの重複度を持っているか（正の時には零、負の時には極）、もっと砕けた言い方をすれば「<i>f</i> が <i>P</i> で何回割り切れるか」に対応する値である。<i>f</i> を <i>A</i> の元 <i>g</i> , <i>h</i> を用いて <i>f</i> = <i>g</i> / <i>h</i> と表したとき、<i>v<sub>Z</sub></i>(<i>f</i>) &gt; 0 ならば <i>g</i> ∈ <i>P</i> でなくてはならないし、<i>v<sub>Z</sub></i>(<i>f</i>) &gt; 0 ならば <i>h</i> ∈ <i>P</i> でなくてはならない。<i>A</i> の元 <i>g</i> に対して <i>g</i> ∈ <i>P</i> となる <i>P</i> は有限である（付随素因子の有限性、<a href="/wiki/%E6%BA%96%E7%B4%A0%E5%88%86%E8%A7%A3" title="準素分解">準素分解</a>参照）。同様に <i>h</i> ∈ <i>P</i> となる<i>P</i>も有限。したがって、<i>f</i> に対して <i>v<sub>Z</sub></i>(<i>f</i>)　≠ 0 となる <i>Z</i> で <i>Z</i> ∩ <i>U</i> ≠ ∅ となるものは有限である。<i>X</i> はネーター的と仮定したから、<i>X</i> は有限個のアフィンスキームで覆われるので、結局 <i>v<sub>Z</sub></i>(<i>f</i>) ≠ 0 となる素因子 <i>Z</i> は有限である。そこで、<i>f</i> に対して
+</p>
+<dl><dd>&lt;math&gt;(f) = \!\!\sum _{v_Z(f)\neq 0} \!\! v_Z(f)\cdot Z&lt;/math&gt;</dd></dl>
+<p>は有限和になるので因子になる。これを <i>f</i> で定まる<b>主因子</b> (principal divisor) と呼ぶ。主因子は常に次数0をもつ。(<i>fg</i>)=(<i>f</i>)+(<i>g</i>), -(<i>f</i>)=(1/<i>f</i>) より主因子の全体は群（特に Div<sup>0</sup> (<i>X</i>) の部分群）をなす。2つの因子 <i>D</i> , <i>E</i> が<b>線形同値</b> (linearly equivalent) であるとは、<i>D</i> - <i>E</i> が主因子となることと定義し、<i>D</i> 〜 <i>E</i> で表す。因子 <i>D</i> 自身の係数がすべて非負でなくても、<i>D</i> がある有効因子と線形同値になるとき、簡単のため言葉の濫用によって「<i>D</i> は有効である」と言うことがある（下記<a href="#線形型と有理写像">#線形型と有理写像</a>参照）。
+</p><p>ヴェイユ因子の線形同値類からなる群を<a href="/wiki/%E3%83%94%E3%82%AB%E3%83%BC%E3%83%AB%E7%BE%A4" title="ピカール群">ピカール群</a> Pic (<i>X</i>) という。主因子の全体は Div<sup>0</sup> (<i>X</i>) の部分群であるから、Div<sup>0</sup> (<i>X</i>) の線形同値類からなる群も定義され、この群を Pic<sup>0</sup> (<i>X</i>) であらわす。Pic<sup>0</sup> (<i>X</i>) をピカール群という場合もある。
+</p>
+<h2><span id=".E3.82.AB.E3.83.AB.E3.83.86.E3.82.A3.E3.82.A8.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="カルティエ因子">カルティエ因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=3" title="節を編集: カルティエ因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ヴェイユ因子は、代数多様体の付値論的な観点から見て自然な因子の取り扱いであり、その直感的な意味もとらえやすいが、正規スキームの上でしか上手く働かないこと、また、<a class="mw-redirect" href="/wiki/%E4%BB%A3%E6%95%B0%E5%A4%9A%E6%A7%98%E4%BD%93%E3%81%AE%E5%B0%84" title="代数多様体の射">スキーム（代数多様体）の射</a>に関する引き戻しが一般に定義できないなど不満足な点もある。これら欠点を補うのがカルティエ因子の概念である。
+</p><p><i>X</i> を既約で被約な分離的スキームとする。<i>X</i> が既約かつ被約であることによりその関数体 <i>k</i>(<i>X</i>) が定義される<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。<i>X</i> のアフィン有限開被覆 <i>X</i> = ∪ <i>U<sub>i</sub></i> および 関数体の元 <i>g<sub>i</sub></i> が与えられたとき、組 &lt;math&gt;\mathcal D = \{(U_i, g_i)\}_i&lt;/math&gt; が<b>カルティエ因子</b> (Cartier divisor) であるとは <i>g<sub>i</sub></i> / <i>g<sub>j</sub></i> が <i>U<sub>i</sub></i> ∩ <i>U<sub>j</sub></i> 上零点も極も持たない、すなわち、<i>U<sub>i</sub></i> ∩ <i>U<sub>j</sub></i> = Spec <i>A<sub>ij</sub></i> と書いたとき<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>、<i>g<sub>i</sub></i> / <i>g<sub>j</sub></i> が <i>A<sub>ij</sub></i> の可逆元になることである。2つのカルティエ因子 {(<i>U<sub>i</sub></i> , <i>g<sub>i</sub></i>)} , {(<i>V<sub>i</sub></i> , <i>h<sub>i</sub></i>)} は <i>U<sub>i</sub></i> ∩ <i>V<sub>j</sub></i> 上 <i>g<sub>i</sub></i> / <i>h<sub>j</sub></i> が極も零点も持たないとき、これを同一視する<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。カルティエ因子 &lt;math&gt;\mathcal D = \{(U_i, g_i)\}_i&lt;/math&gt; において、<i>g<sub>i</sub></i> が正則であるとき、すなわち、<i>g<sub>i</sub></i> ∈ <i>A<sub>i</sub></i> （ただし、<i>U<sub>i</sub></i> = Spec <i>A<sub>i</sub></i>）となるとき、<b>有効</b> (effective) であるという。ある有理関数 <i>g</i> に対して {(<i>U<sub>i</sub></i> , <i>g</i>)} で定まるカルティエ因子を<b>主因子</b> (principal divisor) といい、(<i>g</i>) で表す。カルティエ因子 &lt;math&gt;\mathcal D=\{(U_i, g_i)\},\; \mathcal E=\{(V_j, h_j)\}&lt;/math&gt; に対してその和や差 &lt;math&gt;\mathcal D\pm\mathcal E&lt;/math&gt; を &lt;math&gt;\{(U_i\cap V_j, g_i\cdot h_j^{\pm 1})\}&lt;/math&gt; で定義すれば、<i>X</i> 上のカルティエ因子全体 CDiv (<i>X</i>) は主因子 (1) を零元とするアーベル群になる。 2つのカルティエ因子 &lt;math&gt;\mathcal D,\; \mathcal E&lt;/math&gt; はその差 &lt;math&gt;\mathcal D-\mathcal E&lt;/math&gt; が主因子になるとき<b>線形同値</b> (linearly equivalent) であるといい、&lt;math&gt;\mathcal D\sim \mathcal E&lt;/math&gt; で表す。有効なカルティエ因子 &lt;math&gt;\mathcal D = \{(U_i, g_i)\}_i&lt;/math&gt; に対して、&lt;math&gt;V\cap U_i=V(g_i)&lt;/math&gt;（<i>g<sub>i</sub></i>を含む素イデアル全体のなす閉集合）で定まる <i>X</i> の閉部分集合 <i>V</i> を &lt;math&gt;\mathcal D&lt;/math&gt; の<b>台</b> (support) といい、&lt;math&gt;\mbox{supp }\mathcal D&lt;/math&gt; で表す。任意のカルティエ因子 &lt;math&gt;\mathcal D&lt;/math&gt; は2つの有効なカルティエ因子 &lt;math&gt;\mathcal D_1, \mathcal D_2&lt;/math&gt; の差 &lt;math&gt;\mathcal D = \mathcal D_1 - \mathcal D_2&lt;/math&gt;として一通りにかけるので、その台を &lt;math&gt;\mbox{supp }\mathcal D = \mbox{supp }\mathcal D_1 \cup  \mbox{supp }\mathcal D_2&lt;/math&gt; で定める。
+</p><p><i>f</i> : <i>Y</i> → <i>X</i> をスキームの射とし、&lt;math&gt;\mathcal D&lt;/math&gt; を <i>X</i> 上のカルティエ因子で、その台が <i>f</i> の像の閉包に含まれないものとするとき、<i>Y</i> 上の開被覆 {<i>f</i><sup> -1</sup>(<i>U<sub>i</sub></i>)} の細分になるアフィン有限被覆 {<i>V<sub>j</sub></i> } を取るとき、<i>V<sub>j</sub> ⊂ </i>f<i><sup>-1</sup>(</i>U<sub>i</sub><i>) なら &lt;math&gt;h_j = f^*(g_i)_{|V_j}&lt;/math&gt; と置けば、&lt;math&gt;f^*\mathcal D=\{(V_j, h_j)\}&lt;/math&gt; で </i>f<i> による &lt;math&gt;\mathcal D&lt;/math&gt; の<b>引き戻し</b> (pull-back) が定義される。</i>
+</p><p>さらに、<i>X</i> が既約で被約な正規分離的ネータースキームであるとする。<i>X</i> 上のカルティエ因子 &lt;math&gt;\mathcal D = \{(U_i, g_i)\}_i&lt;/math&gt; に対して主因子 (<i>g<sub>i</sub></i>) を考えると、カルティエ因子の定義から、<i>U<sub>i</sub></i> ∩ <i>U<sub>j</sub></i> 上で (<i>g<sub>i</sub></i>) = (<i>g<sub>j</sub></i>) が成り立つ。素因子 <i>Z</i> に対して <i>Z</i> ∩ <i>U<sub>i</sub></i> ≠ ∅ となる <i>i</i> を選んで &lt;math&gt;v_Z(\mathcal D)=v_Z(g_i)&lt;/math&gt; と定めるとこれは <i>i</i> の選び方によらないので、&lt;math&gt;\mathcal D&lt;/math&gt; に対応するヴェイユ因子
+</p>
+<dl><dd>&lt;math&gt;D=\sum v_Z(\mathcal D)\cdot Z&lt;/math&gt;</dd></dl>
+<p>が矛盾無く定義される。従って、既約かつ被約な分離的正規ネータースキーム上では、カルティエ因子は、ヴェイユ因子であって、任意の点の近傍で (有理関数) = 0 の形の単項な局所方程式を持つようなものと言い換えることができる。この対応で、カルティエ因子の和・差は対応するヴェイユ因子の和・差に対応する。
+</p><p>さらに、<i>X</i>が<b>局所分解的</b> (locally factorial)、すなわち、各点での局所環（座標環の任意の点に対応する素イデアルでの局所化）が<a class="mw-redirect" href="/wiki/%E7%B4%A0%E5%85%83%E5%88%86%E8%A7%A3%E6%95%B4%E5%9F%9F" title="素元分解整域">素元分解整域</a>になるようなスキームであるとする。素元分解整域上、高さが 1 の素イデアルは単項イデアルであるので、任意の素因子 <i>Z<sub>i</sub></i> は各点の周りで、既約元 <i>p<sub>i</sub></i> を使って (<i>p<sub>i</sub></i>) の形に表される。従って、一般のヴェイユ因子 <i>D</i> = ∑ <i>a<sub>i</sub></i> . <i>Z<sub>i</sub></i> に対しては、アフィン開集合 <i>U</i> 上
+</p>
+<dl><dd>&lt;math&gt;g_U= \prod p_i^{a_i}&lt;/math&gt;</dd></dl>
+<p>と定めれば <i>U</i> 上で <i>D</i> = (<i>g<sub>U</sub></i>) となる。よって、<i>X</i> が局所分解的な場合はヴェイユ因子はカルティエ因子になる、すなわち、ヴェイユ因子とカルティエ因子の概念は同じものである。たとえば、<i>X</i>　が<a class="mw-redirect" href="/wiki/%E9%9D%9E%E7%89%B9%E7%95%B0" title="非特異">非特異</a>であるとき、定義により、各点の局所環は<a href="/wiki/%E6%AD%A3%E5%89%87%E5%B1%80%E6%89%80%E7%92%B0" title="正則局所環">正則局所環</a>であるが、正則局所環は素元分解整域であるから、非特異な被約で既約な分離的ネータースキーム上ではヴェイユ因子とカルティエ因子は等価である。
+</p><p>しかし、一般にはヴェイユ因子はカルティエ因子になるとは限らない。ヴェイユ因子（または <b>Q</b>-ヴェイユ因子） <i>D</i> に対して、十分大きな自然数 <i>n</i> を取ると <i>nD</i> がカルティエ因子になるとき、<i>D</i> は <b>Q</b>-カルティエ因子 (<b>Q</b>-Cartier divisor) であるという。任意のヴェイユ因子が <b>Q</b>-カルティエ因子になる代数多様体 <i>X</i> は <b>Q</b>-<b>分解的</b> (<b>Q</b>-factorial) と呼ばれる。
+</p>
+<h2><span id=".E7.9B.B4.E7.B7.9A.E6.9D.9F.E3.81.A8.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="直線束と因子">直線束と因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=4" title="節を編集: 直線束と因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>既約で被約な分離的スキーム <i>X</i> 上のカルティエ因子 &lt;math&gt;D = \{(U_i, g_i)\}_i&lt;/math&gt; に対して、層 &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; を
+</p>
+<dl><dd>&lt;math&gt;\mathcal O_X(D)(V)=\{f\in k(X)\mid f\cdot g_i \in \mathcal O_X(U)\}&lt;/math&gt; 、ただし <i>V</i> ⊂ <i>U<sub>i</sub></i></dd></dl>
+<p>で定まる定数層 <i>k</i>(<i>X</i>) の部分層とすると、<i>h<sub>ij</sub></i> = <i>g<sub>j</sub></i> / <i>g<sub>i</sub></i> は零も極も持たないので、&lt;math&gt;\mathcal O_X(D)&lt;/math&gt; は {<i>h<sub>ij</sub></i>}  を変換関数とする<b><a href="/wiki/%E5%8F%AF%E9%80%86%E5%B1%A4" title="可逆層">可逆層</a></b>（invertible sheaf; あるいは、スキーム <i>X</i> が体上定義されているときは<b><a href="/wiki/%E7%9B%B4%E7%B7%9A%E6%9D%9F" title="直線束">直線束</a></b> (line bundle) と言っても同じ）になる。線形同値なカルティエ因子が定める変換関数は同じものになるから、線形同値なカルティエ因子は同型な可逆層を定める。
+</p><p>逆に、可逆層 &lt;math&gt;\mathcal L&lt;/math&gt; が与えられたとき、層 &lt;math&gt;\mathcal L\otimes k(X)&lt;/math&gt; の切断 <i>s</i> を &lt;math&gt;\mathcal L&lt;/math&gt; の<b>有理切断</b> (rational section) という（スキーム <i>X</i> が体上定義されているときは、有理切断は&lt;math&gt;\mathcal L&lt;/math&gt; に対応する直線束 π : <i>L</i> → <i>X</i> に対して、有理写像 <i>s</i> : <i>X</i> → <i>L</i> で π ◦ <i>s</i> = id<sub>X</sub> をみたすものにほかならない）。&lt;math&gt;\mathcal L&lt;/math&gt; の自明化 &lt;math&gt;\mathcal L_{|U_i}\cong \mathcal O_{U_i}&lt;/math&gt; で 0 でない有理切断 <i>s</i> が <i>U<sub>i</sub></i> 上に定める有理関数を <i>s<sub>i</sub></i> とすると、組 {(<i>U<sub>i</sub></i> , <i>s<sub>i</sub></i>)} はカルティエ因子を定める。この因子を (<i>s</i>) と書くことにする。別の 0 でない有理切断 <i>t</i> が与えられれば、有理関数 <i>g</i> が存在して <i>t</i> = <i>g.s</i> と書けるので (<i>t</i>) = (<i>s</i>) + (<i>g</i>)、つまり、(<i>t</i>) と (<i>s</i>) は線形同値なカルティエ因子である。
+</p><p>カルティエ因子 &lt;math&gt;D = \{(U_i, g_i)\}_i&lt;/math&gt; から定まる可逆層 &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; に対しては自明化は 
+</p>
+<dl><dd>&lt;math&gt;k(X)\supset \mathcal O_X(D)_{|U_i}=\frac 1{g_i}\mathcal O_{U_i}&lt;/math&gt;</dd></dl>
+<p>で定まっているので、埋め込み &lt;math&gt;\mathcal O_X(D)\subset k(X)&lt;/math&gt; によって <i>k</i>(<i>X</i>) の単位元 1 から定まる有理切断 <i>s</i> に付随する因子 (<i>s</i>) はもとのカルティエ因子 <i>D</i> と一致する。従って 2つのカルティエ因子 <i>D</i>, <i>E</i> に対して、対応する可逆層 &lt;math&gt;\mathcal O_X(D),\; \mathcal O_X(E)&lt;/math&gt; が同型であれば、<i>D</i> と <i>E</i> は線形同値である。
+</p><p><i>X</i> の可逆層（あるいは、直線束）の全体 Pic (<i>X</i>) はテンソル積を加法、&lt;math&gt;\mathcal O_X&lt;/math&gt;を単位元、双対を逆元とする演算によってアーベル群になる。これを <i>X</i> の<b><a href="/wiki/%E3%83%94%E3%82%AB%E3%83%BC%E3%83%AB%E7%BE%A4" title="ピカール群">ピカール群</a></b> (Picard group) と呼ぶ。カルティエ因子 <i>D</i>, <i>E</i> に対して&lt;math&gt;\mathcal O_X(D+E)\cong \mathcal O_X(D)\otimes \mathcal O_X(E)&lt;/math&gt;、&lt;math&gt;\mathcal O_X(-D)\cong \mathcal O_X(D)^{\vee}&lt;/math&gt;が成り立つので、アーベル群の同型
+</p>
+<dl><dd>CDiv (<i>X</i>) / ∼ ≅ Pic (<i>X</i>)</dd></dl>
+<p>がある。
+</p><p>さらに <i>X</i> が正規かつネーター的と仮定すると、カルティエ因子（に対応するヴェイユ因子）<i>D</i> に対して、それから定まる可逆層 &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; の定義は
+</p>
+<dl><dd>&lt;math&gt;\mathcal O_X(D)(V)=\{f\in k(X)\mid v_Z(f)\geqslant -v_Z(D)\}&lt;/math&gt; 、ただし、<i>Z</i> は <i>V</i> との交わりが空でない素因子全体を渡る</dd></dl>
+<p>と書き換えられる。したがって、カルティエとは限らないヴェイユ因子 <i>D</i> に対してもこの定義式によって層 &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; が定義される。<i>D</i> がカルティエでないときは、この &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; は可逆層にならないが、<i>X</i> の滑らかな点全体のなす開集合 <i>U</i> = <i>X</i> に制限すると可逆層になる。<i>X</i> が正規であるので、<i>X</i> \ <i>U</i> の <i>X</i> での余次元は 2 以上であることから、&lt;math&gt;\mathcal O_X(D)&lt;/math&gt; は階数が 1 の<b>反射的層</b> (reflexive sheaf) である<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。このことから、<i>k</i>(<i>X</i>) の階数1の反射的部分層を与えることとヴェイユ因子を与えることは同値であり、階数1の反射的部分層の同型類はヴェイユ因子の線形同値類と1対1に対応していることがわかる<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。
+</p>
+<h2><span id=".E7.B7.9A.E5.BD.A2.E7.B3.BB.E3.81.A8.E6.9C.89.E7.90.86.E5.86.99.E5.83.8F"></span><span class="mw-headline" id="線形系と有理写像">線形系と有理写像</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=5" title="節を編集: 線形系と有理写像">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>X</i> を体 <i>k</i> 上定義された正規代数多様体とし、<i>D</i> をその上のヴェイユ因子とする。<i>D</i> に付随する<b>完備線形系</b> (complete linear system) | <i>D</i> | とは <i>D</i> と線形同値な有効因子全体のなす空間のことである。<i>L</i>(<i>D</i>) を層 &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; の<a href="/wiki/%E5%B1%A4_(%E6%95%B0%E5%AD%A6)#大域切断" title="層 (数学)">大域切断</a>のなす <i>k</i>-ベクトル空間 &lt;math&gt;\Gamma (X,\mathcal O_X(D))&lt;/math&gt; とすると、
+</p>
+<dl><dd>&lt;math&gt;L(D)=\{f\in k(X)\mid v_Z(D)+v_Z(f)\ge 0\}&lt;/math&gt;</dd></dl>
+<p>であるから、<i>E</i> ∈ | <i>D</i> | は <i>L</i>(<i>D</i>) に属する有理関数 <i>f</i> を用いて 
+</p>
+<dl><dd><i>E</i> = <i>D</i> + (<i>f</i>)</dd></dl>
+<p>と書ける。主因子 (<i>f</i>) は <i>f</i> の定数倍の差に拠らないから、| <i>D</i> | は <i>L</i>(<i>D</i>) に付随する射影空間 &lt;math&gt;\mathbb P L(D)&lt;/math&gt; と同一視される。<i>L</i>(<i>D</i>) の部分線形空間 <i>V</i> をとると、それに対応して部分射影空間 Λ ⊂ | <i>D</i> | が定まる。このようにして定まる Λ を<b>線形系</b> (linear system) という。
+</p><p>いま、線形系 Λ に属する因子 <i>D</i> に対して &lt;math&gt;L(D)=\Gamma (X,\mathcal O_X(D))&lt;/math&gt; が有限次元であると仮定する。たとえば、この仮定は <i>X</i> が体 <i>k</i> 上<b>固有</b> (proper) であればつねに満足される。このとき、Λ ⊂ | <i>D</i> | はともに有限次元の射影空間となる。<i>X</i> の点 <i>p</i> に対して<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>、&lt;math&gt;\Lambda _p=\{E\in \Lambda \mid p\in E\}&lt;/math&gt; を対応させる対応を考えると、一般の位置にある <i>p</i> に対しては Λ<sub><i>p</i></sub> は Λ の超平面になるので、有理写像
+</p>
+<dl><dd>&lt;math&gt;\varphi _{\Lambda} : X - \to \Lambda ^{\vee}&lt;/math&gt;</dd></dl>
+<p>が定まる<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。
+</p><p><i>X</i> の点 <i>p</i> が有理写像 &lt;math&gt;\varphi _{\Lambda}&lt;/math&gt; の不確定点（写像が定義できない点）であることは、Λ に属する任意の有効因子が点 <i>p</i> を通ることと同値である。そこで、Λ の<b>基点</b>（base point、 あるいは<b>固定点</b>; fixed point ともいう）のなす部分集合 Bs Λ を
+</p>
+<dl><dd>&lt;math&gt;\mbox{Bs} \Lambda = \{p\in X\mid \forall E\in \Lambda\quad p\in E\}=\bigcap _{E\in \Lambda} E&lt;/math&gt;</dd></dl>
+<p>で定めると、これは <i>X</i> の閉集合になる。Bs Λ は余次元1の既約成分（素因子）を含んでいるかもしれない。線形系 Λ に対してその<b>固定部分</b> (fixed part) <i>F</i> を、任意の <i>E</i> ∈ Λ に対して <i>E</i> - <i>F</i> が有効因子になるような <i>F</i> のうち（各素因子の係数が）最大のものとする。このとき、線形系 M = Λ - <i>F</i> = { <i>E</i> - <i>F</i> | <i>E</i> ∈ Λ } の基点の集合は素因子を含まない。この M を線形系 Λ の<b>可動部分</b> (movable part, mobile part) とよぶ。固定部分を持たない線形系を可動な線形系と呼ぶ。
+</p><p>正規代数多様体 <i>X</i> から射影空間への有理写像 &lt;math&gt;F:X - \to \mathbb P^n_k&lt;/math&gt; を取ると、&lt;math&gt;\mathbb P^n_k&lt;/math&gt; の超平面 <i>H</i> はカルティエ因子であり、引き戻し &lt;math&gt;F^*H&lt;/math&gt; が <i>F</i> の定義域 <i>U</i> ⊂ <i>X</i> 上で定義される。<i>X</i> が正規である事から <i>X</i> \ <i>U</i> の余次元は2以上であるので、これは <i>X</i> 上のヴェイユ因子を定める。超平面が双対射影空間 &lt;math&gt;H\in \mathbb (\mathbb P^n_k)^{\vee}&lt;/math&gt;をわたるときの &lt;math&gt;\Lambda = \{F^*H\mid H\in \mathbb (\mathbb P^n_k)^{\vee}\}&lt;/math&gt; は線形系をなす。<i>F</i> の像が &lt;math&gt;\mathbb P^n_k&lt;/math&gt; の部分射影空間に含まれないとすると、dim Λ = <i>n</i> となり、Λ は固定部分を持たない、すなわち、可動な線形系であり、&lt;math&gt;\varphi _{\Lambda}=F&lt;/math&gt; となる。このようにして、可動な線形系は、射影空間への有理写像であって、像が非退化（どんな超平面にも含まれない）なものと1対1に対応している。線形系 Λ の基点集合 Bs Λ が空集合であるとき、<b>自由</b>（free あるいは、基点をもたない base point free）であるという。自由な線形系は、射影空間への非退化な像を持つ射と1対1に対応する。自由な線形系に属する因子は、射影空間の超平面因子の引き戻しで書けるので、カルティエ因子である。
+</p><p>部分空間 <i>V</i> ⊂ <i>L</i>(<i>D</i>) に対応する線形系 Λ が自由である事は、自然な層の準同型
+</p>
+<dl><dd>&lt;math&gt; V\otimes \mathcal O_X \to \mathcal O_X(D)&lt;/math&gt;</dd></dl>
+<p>が全射になることと言い換えられる。これを &lt;math&gt;\mathcal O_X(D)&lt;/math&gt; は <i>V</i> で<b>生成される</b> (generated by <i>V</i>) と言う。
+</p><p>より一般に、スキーム <i>S</i> 上有限型な被約で既約なスキーム &lt;math&gt;f:X\to S&lt;/math&gt; 上のカルティエ因子 <i>D</i> に対して &lt;math&gt;f_*\mathcal O_X(D)&lt;/math&gt; が<a href="/wiki/%E9%80%A3%E6%8E%A5%E5%B1%A4" title="連接層">連接層</a>になると仮定する。たとえば、<i>f</i> が固有射のときはいつでもこの仮定は成り立つ。いま、部分連接層 &lt;math&gt;\mathcal V\subset f_*\mathcal O_X(D)&lt;/math&gt; に対して自然な準同型
+</p>
+<dl><dd>&lt;math&gt;f^*\mathcal V\to \mathcal O_X(D)&lt;/math&gt;</dd></dl>
+<p>が全射になるとき、&lt;math&gt;\mathcal O_X(D)&lt;/math&gt; は <i>S</i> 上 &lt;math&gt;\mathcal V&lt;/math&gt; で生成されるという。このときも、体 <i>k</i> 上で考えていた場合と同じく、<i>S</i> スキームの射
+</p>
+<dl><dd>&lt;math&gt;\varphi _{\mathcal V}: X\to \mathbb P(\mathcal V)&lt;/math&gt;</dd></dl>
+<p>であって、&lt;math&gt;\mathcal O_X(D)=\varphi _{\mathcal V}^*\mathcal O_{\mathbb P(\mathcal V)}(1)&lt;/math&gt;となるものが定まる。
+</p>
+<h2><span id=".E4.BB.A3.E6.95.B0.E6.9B.B2.E7.B7.9A.E3.81.AE.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="代数曲線の因子">代数曲線の因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=6" title="節を編集: 代数曲線の因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>C</i> が非特異な代数曲線の場合、因子は
+</p>
+<dl><dd>&lt;math&gt;D=\sum_{P\in C} n_P P, n_P\in \mathbb{Z}&lt;/math&gt;</dd></dl>
+<p>の形の形式的和である。ただし <i>n</i> <sub><i>P</i></sub> は有限個の点 <i>P</i> を除いて0であるとする。
+</p><p><i>L</i>(<i>D</i>) の次元を <i>l</i>(<i>D</i>) とかく。<i>D</i> ≤ <i>E</i> ならば <i>L</i>(<i>D</i>) は <i>L</i>(<i>E</i>) の部分空間で、
+</p>
+<dl><dd>&lt;math&gt;l(E)-l(D)\leq \deg (E-D)&lt;/math&gt;</dd></dl>
+<p>が成り立つ。また <i>D</i> と <i>E</i> が線型同値ならば <i>l</i>(<i>D</i>) = <i>l</i>(<i>E</i>) が成り立つ<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。
+</p><p>deg(<i>D</i>)&lt;0 ならば <i>L</i>(<i>D</i>) に属する有理関数は 0 しかない。また <i>L</i>(0) は定数関数全体と一致する。
+deg(<i>D</i>) ≥ 0 ならば 
+</p>
+<dl><dd>&lt;math&gt;l(D)\leq \deg (D)+1&lt;/math&gt;</dd></dl>
+<p>が成り立つ。また、 <i>D</i> によらない整数 <i>g</i> が存在し、つねに
+</p>
+<dl><dd>&lt;math&gt;l(D)\geq \deg (D)+1-g&lt;/math&gt;</dd></dl>
+<p>が成り立つ。このような性質を満たす最小の整数 <i>g</i> は <i>C</i> の種数と一致する<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>。
+</p><p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B1%80%E6%89%80%E5%8A%A9%E5%A4%89%E6%95%B0&amp;action=edit&amp;redlink=1" title="局所助変数 (存在しないページ)">局所助変数</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:local_parameter&amp;action=edit&amp;redlink=1" title="En:local parameter (存在しないページ)">英語版</a>）</span></span> <i>t</i> に対し、有理型<a href="/wiki/%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F" title="微分形式">1形式</a> <i>ω</i> = <i>f dt</i> ≠ 0 の因子 (<i>ω</i>) を (<i>ω</i>) = (<i>f</i>) で定義する。この因子は局所助変数の取り方によらずに定まる。大域的な有理型1形式の因子を<b><a class="mw-redirect" href="/wiki/%E6%A8%99%E6%BA%96%E5%9B%A0%E5%AD%90" title="標準因子">標準因子</a></b> (canonical divisor) と呼ぶ。任意の有理型1形式の因子は線型同値なので、標準因子は線型同値を除いて一意に定まる（よって、<i>標準</i>因子と呼ぶ）<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。
+</p><p>標準因子 <i>K</i> をとると、任意の因子 <i>D</i> に対し
+</p>
+<dl><dd>&lt;math&gt;l(D)-l(K-D)=\deg (D)+1-g&lt;/math&gt;</dd></dl>
+<p>が成り立つ（<a class="mw-redirect" href="/wiki/%E4%BB%A3%E6%95%B0%E6%9B%B2%E7%B7%9A%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E2%80%93%E3%83%AD%E3%83%83%E3%83%9B%E3%81%AE%E5%AE%9A%E7%90%86" title="代数曲線に対するリーマン–ロッホの定理">代数曲線に対するリーマン–ロッホの定理</a>）<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+</p>
+<h2><span id=".E8.B1.8A.E5.AF.8C.E3.81.AA.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="豊富な因子">豊富な因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=7" title="節を編集: 豊富な因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a class="mw-redirect" href="/wiki/%E8%B1%8A%E5%AF%8C%E3%81%AA%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB" title="豊富なラインバンドル">豊富なラインバンドル</a>」を参照</div>
+<p><i>X</i> を体 <i>k</i> 上固有な代数多様体とする。<i>X</i> 上の（カルティエ）因子 <i>D</i> は、射影空間への埋め込み &lt;math&gt;F:X\to \mathbb P^N_k&lt;/math&gt; および射影空間の超平面 <i>H</i> を使って &lt;math&gt; D=F^*H&lt;/math&gt; と書かれるとき、<b>非常に豊富</b> (very ample) であるという。
+</p><p>カルティエ因子 <i>D</i> は
+</p>
+<ol><li><i>X</i> の任意の2点 <i>p</i> , <i>q</i> に対して、<i>E</i> ∈ | <i>D</i> | であって、<i>p</i> ∈ <i>E</i> かつ <i>q</i> ∉ <i>E</i> となるものが存在する (<b>点の分離</b>)</li>
+<li><i>X</i> の任意の点 <i>p</i> およびその点での 0 でない接ベクトル <i>v</i>（ザリスキ接空間の元）に対して、<i>E</i> ∈ | <i>D</i> | であって <i>p</i> ∈ <i>E</i> であるが <i>E</i> は <i>v</i> と接しない（<i>E</i> のザリスキ接空間が <i>v</i> を含まない）ものが存在する (<b>接ベクトルの分離</b>)</li></ol>
+<p>の2条件を満たすとき、非常に豊富である<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。
+</p><p>ヴェイユ因子（あるいは、<b>Q</b>-ヴェイユ因子）<i>D</i> はその正整数倍 <i>nD</i> が非常に豊富になるとき、<b>豊富</b> (ample) であるという。非常に豊富なカルティエ因子は、多様体 <i>X</i> の射影空間への埋め込みを考えることと同値で、非常に幾何学的な概念であり、ある因子が非常に豊富であるかどうかを判定する事は一般には難しい。しかし、豊富性はコホモロジー的あるいは、数値的な特徴づけを持つためより扱いやすく、本質的な概念である。例えば、
+</p>
+<dl><dd>固有な代数多様体 <i>X</i> 上の可逆層 &lt;math&gt;\mathcal L&lt;/math&gt; が豊富である（豊富なカルティエ因子に対応する可逆層である）ことの必要十分条件は、<i>X</i> 上の任意の連接層 &lt;math&gt;\mathcal F&lt;/math&gt; に対して十分大きな自然数 <i>n</i> が存在して、<i>i</i> &gt; 0 に対してコホモロジーの消滅 &lt;math&gt;H^i(X,\mathcal F\otimes \mathcal L^{\otimes n})=0&lt;/math&gt; が成り立ことである（<b>セールのコホモロジー的豊富性判定</b>）。</dd></dl>
+<p>更に、<b>クライマンの数値的豊富性判定</b>は豊富性の問題を因子と曲線（の極限でかける実数係数有効1サイクル）の<a href="/wiki/%E4%BA%A4%E7%82%B9%E6%95%B0" title="交点数">交点数</a>が正である事として特徴づける。このような数値的な特徴づけは、上記の非常に豊富な因子の特徴づけ （
+点の分離と接ベクトルの分離）に比べて扱いやすい。また、コンパクト<a href="/wiki/%E3%82%B1%E3%83%BC%E3%83%A9%E3%83%BC%E5%A4%9A%E6%A7%98%E4%BD%93" title="ケーラー多様体">ケーラー多様体</a>の上の直線束に対しては、その上にいたるところ正な曲率を持つ<a class="mw-redirect" href="/wiki/%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E8%A8%88%E9%87%8F" title="エルミート計量">エルミート計量</a>が入るならば、この直線束は豊富である（<b><a class="mw-redirect" href="/wiki/%E5%B0%8F%E5%B9%B3%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E5%AE%9A%E7%90%86" title="小平埋め込み定理">小平埋め込み定理</a></b>）。因子の豊富性はこのように、因子の何らかの <b>正値性</b>（positivity）と関連付けてとらえる事が出来る（詳細は<a class="new" href="/w/index.php?title=%E7%9B%B4%E7%B7%9A%E6%9D%9F%E3%81%AE%E6%95%B0%E5%80%A4%E7%9A%84%E6%80%A7%E8%B3%AA&amp;action=edit&amp;redlink=1" title="直線束の数値的性質 (存在しないページ)">直線束の数値的性質</a>などを参照）。
+</p><p>因子が非常に豊富である、あるいは豊富であるという概念は、任意のスキーム <i>S</i> 上固有なスキーム <i>X</i> 上の可逆層 &lt;math&gt;\mathcal L&lt;/math&gt;に対して定義できる。すなわち、<i>S</i> 上の射影空間束への埋め込み &lt;math&gt;F:X\to \mathbb P(\mathcal V)&lt;/math&gt; によって &lt;math&gt;\mathcal L=F^*\mathcal O_{\mathbb P(\mathcal V)}(1)&lt;/math&gt; と書かれるとき、&lt;math&gt;\mathcal L&lt;/math&gt; は <i>S</i> 上非常に豊富であるといい、可逆層の正整数の自己テンソル積 &lt;math&gt;\mathcal L^{\otimes n}&lt;/math&gt; が <i>S</i> 上非常に豊富になるとき、&lt;math&gt;\mathcal L&lt;/math&gt; は <i>S</i> 上豊富であるという。セールのコホモロジー的豊富性判定は、コホモロジー群を構造射 <i>f</i> : <i>X</i> → <i>S</i> による高次順像 &lt;math&gt;R^if_*(\mathcal F\otimes \mathcal L^{\otimes n})=0&lt;/math&gt; で置き換えればそのまま成り立つ。
+</p>
+<h2><span id=".E8.A4.87.E7.B4.A0.E8.A7.A3.E6.9E.90.E7.A9.BA.E9.96.93.E4.B8.8A.E3.81.AE.E5.9B.A0.E5.AD.90"></span><span class="mw-headline" id="複素解析空間上の因子">複素解析空間上の因子</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=8" title="節を編集: 複素解析空間上の因子">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>正規な複素解析空間 <i>X</i> においても、その素因子 <i>Z</i> および素因子に沿った有理型関数の位数 <i>v</i><sub><i>Z</i></sub>( - ) が定まり、ヴェイユ因子の概念が定義できる<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。また、カルティエ因子も有理関数を有理型関数に置き換える事によって定義できる。しかし、<a href="#直線束と因子">#直線束と因子</a>で述べた、直線束とカルティエ因子の線形同値類の1対1の対応は一般にはなく、単射準同型
+</p>
+<dl><dd>&lt;math&gt;\mbox{CDiv }(X)/\sim \; \hookrightarrow \mbox{Pic }(X)&lt;/math&gt;</dd></dl>
+<p>があるのみである。
+</p><p>例えば、<i>X</i> を非常に一般の複素トーラスとする。このとき、複素トーラスの周期の理論により、<i>X</i> 上には因子が全く存在しない。しかし、数値的に自明な <i>X</i> の上の直線束全体は <i>X</i> の双対トーラスと同一視できる。つまり、<i>X</i> にはたくさん直線束があるが、それに対応する因子は全く存在しない事になる。これは、非常に一般の複素トーラスの<b>代数次元</b> (algebraic dimension) が 0 である事を意味する<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=9" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">既約性の仮定はここでしか使わない。既約でない場合も、関数体の代わりに構造層の全商環の層をもちいることで、任意のスキームでカルティエ因子は定義できる</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">分離性を仮定しているので、2つのアフィン開集合の交わりはまたアフィン開集合になる。零点も極も持たないということは、&lt;math&gt;\mathcal O^{\times}&lt;/math&gt;の切断になると表せるので、分離性の仮定は全く本質的ではない。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">つまり、カルティエ因子は <i>k</i>(<i>X</i>) を定数層と見たとき、層 &lt;math&gt;k(X)^{\times}/\mathcal O_X^{\times}&lt;/math&gt; の大域切断である。</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">既約で被約なネータースキーム上の連接層 &lt;math&gt;\mathcal F&lt;/math&gt; が反射的層であるとは、&lt;math&gt;\mathcal F&lt;/math&gt; がその二重双対 &lt;math&gt;\mathcal F^{\vee\vee}&lt;/math&gt;と同型になることをいう。<i>X</i> が正規のときは、これは &lt;math&gt;\mathcal F&lt;/math&gt; が捩れのない連接層であり、<i>X</i> の開集合 <i>U</i> で、補集合 <i>X</i> \ <i>U</i> の余次元が2以上のものとその上の局所自由な連接層 &lt;math&gt;\mathcal F_U&lt;/math&gt; が存在して、包含写像 <i>i</i> : <i>U</i> → <i>X</i> に対して &lt;math&gt;\mathcal F=i_*\mathcal F_U&lt;/math&gt; と書けることと同値である。階数が1の反射的層を<b>因子的層</b> (divisorial sheaf) とも呼ぶ。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">演算構造に関しては一般に &lt;math&gt;\mathcal O_X(D+E)\cong \mathcal O_X(D)\otimes \mathcal O_X(E)&lt;/math&gt; は<span style="text-decoration:underline;">成り立たない</span>。&lt;math&gt;\mathcal O_X(D+E)\cong (\mathcal O_X(D)\otimes \mathcal O_X(E))^{\vee\vee}&lt;/math&gt; は成り立っている。</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">点 <i>p</i> としては <i>k</i> の代数的閉包に値を取る、いわゆる<b>幾何学的点</b>を考える。簡単のために <i>k</i> が代数的閉体であると考えても良い。</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">Λ に対応するベクトル空間 <i>V</i> ⊂ <i>L</i>(<i>D</i>) をとり、<i>f</i><sub>0</sub> , ... , <i>f<sub>m</sub></i> をその基底とすると、Λ の元 <i>E</i> は <i>D</i> + (<i>a</i><sub>0</sub> <i>f</i><sub>0</sub> + ... + <i>a<sub>m</sub> f<sub>m</sub></i>) と書ける。点 <i>p</i> を <i>D</i> および <i>f<sub>i</sub></i> の極および零の外から取ると、<i>p</i> ∈ <i>E</i> は
+
+<dl><dd><i>a</i><sub>0</sub> <i>f</i><sub>0</sub>(<i>p</i>) + ... + <i>a<sub>m</sub> f<sub>m</sub></i>(<i>p</i>) = 0</dd></dl>
+と表される。<i>p</i> が <i>f<sub>i</sub></i> の零点でない事から、この関係式はベクトル (<i>a</i><sub>0</sub> , ... , <i>a<sub>m</sub></i>) のなす空間の超平面 <i>H<sub>p</sub></i> を定める。上記 Λ<sub><i>p</i></sub> は 
+
+<dl><dd>&lt;math&gt;\Lambda _p=\{E=D+(a_0f_0+\cdots + a_mf_m) \mid (a_0,\ldots, a_m)\in H_p\}&lt;/math&gt;</dd></dl>
+で与えられる Λ の超平面である。点 <i>p</i> を動かしたとき、超平面 Λ<sub><i>p</i></sub> は <i>f<sub>i</sub></i> （の値の変化）によって基礎体 <i>k</i> 上「代数的に」動く。これが実際に<a href="/wiki/%E4%BB%A3%E6%95%B0%E5%A4%9A%E6%A7%98%E4%BD%93" title="代数多様体">代数多様体</a>で定義されている有理写像になっている事を確かめるのは簡単である。</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text">(<a href="#CITEREFFulton1974">Fulton 1974</a>, Section 8.2) </span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text">(<a href="#CITEREFFulton1974">Fulton 1974</a>, Section 8.3) </span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">(<a href="#CITEREFFulton1974">Fulton 1974</a>, Section 8.5) </span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">(<a href="#CITEREFFulton1974">Fulton 1974</a>, Section 8.6) </span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">条件 1. によって、| <i>D</i> | は自由であり、それによって定まる射 &lt;math&gt;\varphi _{|D|}&lt;/math&gt;は単射である。条件 2. によって、この単射はより強く埋め込みになる。</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">有理関数の位数 <i>v</i><sub><i>Z</i></sub>( - ) は代数多様体のように、素イデアルに対応する関数体の付値として「大域的に」定義できるわけではない。局所的に定義される位数が矛盾なく <i>Z</i> に沿った位数を定める事を証明しなければならない。</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text">次元が1のコンパクト複素多様体（すなわち、コンパクトリーマン面）では、<a href="/wiki/%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%AD%E3%83%83%E3%83%9B%E3%81%AE%E5%AE%9A%E7%90%86" title="リーマン・ロッホの定理">リーマン・ロッホの定理</a>によって自明でない有理型関数が存在する事から、代数次元は常に 1 であるから、射影代数多様体の構造を持つ事がわかる。通常「<a href="/wiki/%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6%E3%81%A8%E8%A7%A3%E6%9E%90%E5%B9%BE%E4%BD%95%E5%AD%A6" title="代数幾何学と解析幾何学">GAGA</a>」と呼ばれている <a href="#CITEREFSerre1956">Serre (1956)</a> を参照のこと</span>
+</li>
+</ol></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=10" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E4%BB%A3%E6%95%B0%E5%A4%9A%E6%A7%98%E4%BD%93" title="代数多様体">代数多様体</a>・<a href="/wiki/%E6%A6%82%E5%9E%8B" title="概型">概型</a></li>
+<li><a class="new" href="/w/index.php?title=%E7%9B%B4%E7%B7%9A%E6%9D%9F%E3%81%AE%E6%95%B0%E5%80%A4%E7%9A%84%E6%80%A7%E8%B3%AA&amp;action=edit&amp;redlink=1" title="直線束の数値的性質 (存在しないページ)">直線束の数値的性質</a></li>
+<li><a href="/wiki/%E6%BA%96%E7%B4%A0%E5%88%86%E8%A7%A3" title="準素分解">準素分解</a></li>
+<li><a href="/wiki/%E5%B0%84%E5%BD%B1%E5%A4%9A%E6%A7%98%E4%BD%93" title="射影多様体">射影代数多様体</a></li>
+<li><a class="mw-redirect" href="/wiki/GAGA_(%E4%BB%A3%E6%95%B0%E5%AD%A6)" title="GAGA (代数学)">GAGA (代数学)</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;section=11" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>飯高茂、代数幾何学 I, II, III、岩波講座・基礎数学、<a href="/wiki/%E5%B2%A9%E6%B3%A2%E6%9B%B8%E5%BA%97" title="岩波書店">岩波書店</a> (1976/7)</li>
+<li><a href="/wiki/%E5%B7%9D%E5%8F%88%E9%9B%84%E4%BA%8C%E9%83%8E" title="川又雄二郎">川又雄二郎</a>、代数多様体論、共立講座 21世紀の数学 19、<a href="/wiki/%E5%85%B1%E7%AB%8B%E5%87%BA%E7%89%88" title="共立出版">共立出版</a> (1997) ISBN 4320015711</li>
+<li><cite class="citation" id="CITEREFFulton1974" style="font-style:normal">Fulton, William (1974) (pdf), <a class="external text" href="http://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf" rel="nofollow"><i>Algebraic Curves</i></a>, Mathematics Lecture Note Series, W.A. Benjamin, <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-8053-3080-1" title="特別:文献資料/0-8053-3080-1">0-8053-3080-1</a><span style="display:none;">, <a class="external free" href="http://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf" rel="nofollow">http://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algebraic+Curves&amp;rft.aulast=Fulton&amp;rft.aufirst=William&amp;rft.au=Fulton%2C%26%2332%3BWilliam&amp;rft.date=1974&amp;rft.series=Mathematics+Lecture+Note+Series&amp;rft.pub=W.A.+Benjamin&amp;rft.isbn=0-8053-3080-1&amp;rft_id=http%3A%2F%2Fwww.math.lsa.umich.edu%2F%7Ewfulton%2FCurveBook.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)"><span style="display: none;"> </span></span></li>
+<li>Hartshorne, R., Algebraic Geometry, Springer-Verlag (1977) ISBN 0387902449 [ 邦訳：高橋宣能、松下大介 訳、代数幾何学 1,2,3、<a href="/wiki/%E3%82%B7%E3%83%A5%E3%83%97%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%BC%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3" title="シュプリンガー・ジャパン">シュプリンガーフェアラーク東京</a> (2004) ISBN 443171135X ISBN 4431711368 ISBN 4431711376 ]</li>
+<li>Hartshorne, R., <i>Stable Reflexive Sheaves</i>, Math. Ann. 254, (1980) 121 - 176.</li>
+<li>Reid, M., <i>Canonical 3-folds</i>, Journées de géometrie algébrique d'Angers, Ed. A. Beauville, Sijthoff and Noordhoff, Alphen, (1980), 273-310.</li>
+<li><cite class="citation" id="CITEREFSerre1956" style="font-style:normal"><a class="mw-redirect" href="/wiki/Jean-Pierre_Serre" title="Jean-Pierre Serre">Serre, Jean-Pierre</a> (1956), <a class="external text" href="http://www.numdam.org/numdam-bin/item?id=AIF_1956__6__1_0" rel="nofollow">“Géométrie algébrique et géométrie analytique”</a>, <i><a class="new" href="/w/index.php?title=Annales_de_l%27Institut_Fourier&amp;action=edit&amp;redlink=1" title="Annales de l'Institut Fourier (存在しないページ)">Université de Grenoble. Annales de l'Institut Fourier</a></i> <b>6</b>:  1–42, <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.5802%2Faif.59" rel="nofollow">10.5802/aif.59</a>, <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISSN" title="ISSN">ISSN</a> <a class="external text" href="https://www.worldcat.org/search?fq=x0:jrnl&amp;q=n2:0373-0956" rel="nofollow">0373-0956</a>, <a href="/wiki/MathSciNet" title="MathSciNet">MR</a><link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a class="external text" href="https://mathscinet.ams.org/mathscinet-getitem?mr=0082175" rel="nofollow">0082175</a><span style="display:none;">, <a class="external free" href="http://www.numdam.org/numdam-bin/item?id=AIF_1956__6__1_0" rel="nofollow">http://www.numdam.org/numdam-bin/item?id=AIF_1956__6__1_0</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=G%C3%A9om%C3%A9trie+alg%C3%A9brique+et+g%C3%A9om%C3%A9trie+analytique&amp;rft.jtitle=%5B%5BAnnales+de+l%27Institut+Fourier%7CUniversit%C3%A9+de+Grenoble.+Annales+de+l%27Institut+Fourier%5D%5D&amp;rft.aulast=Serre&amp;rft.aufirst=Jean-Pierre&amp;rft.au=Serre%2C%26%2332%3BJean-Pierre&amp;rft.date=1956&amp;rft.volume=6&amp;rft.pages=1%E2%80%9342&amp;rft_id=info:doi/10.5802%2Faif.59&amp;rft.issn=0373-0956&amp;rft.mr=0082175&amp;rft_id=http%3A%2F%2Fwww.numdam.org%2Fnumdam-bin%2Fitem%3Fid%3DAIF_1956__6__1_0&amp;rfr_id=info:sid/ja.wikipedia.org:%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)"><span style="display: none;"> </span></span></li></ul>
+<p><a class="new" href="/w/index.php?title=En:Linear_system_of_divisors&amp;action=edit&amp;redlink=1" title="En:Linear system of divisors (存在しないページ)">en:Linear_system_of_divisors</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331232913
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.271 seconds
+Real time usage: 0.474 seconds
+Preprocessor visited node count: 2442/1000000
+Post‐expand include size: 16230/2097152 bytes
+Template argument size: 4477/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13533/5000000 bytes
+Lua time usage: 0.080/7 seconds
+Lua virtual size: 5771264/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  345.226      1 -total
+ 57.20%  197.465      2 テンプレート:Citation
+ 55.39%  191.231      2 テンプレート:Citation/core
+ 46.41%  160.231      4 テンプレート:Citation/identifier
+ 29.60%  102.194      1 テンプレート:ISBN2
+ 28.81%   99.468      3 テンプレート:Catalog_lookup_link
+ 24.22%   83.620      1 テンプレート:仮リンク
+  8.93%   30.817      4 テンプレート:Harv
+  8.77%   30.290      1 テンプレート:ISSN
+  5.38%   18.568      2 テンプレート:Error-small
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:1121105-0!canonical and timestamp 20220331232912 and revision id 691901. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=因子_(代数幾何学)&amp;oldid=691901">http://localhost:8080/w/index.php?title=因子_(代数幾何学)&amp;oldid=691901</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6" title="カテゴリ:代数幾何学">代数幾何学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E5%9B%A0%E5%AD%90+%28%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6%29&amp;returntoquery=curid%3D1121105%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E5%9B%A0%E5%AD%90+%28%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6%29&amp;returntoquery=curid%3D1121105%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;oldid=691901" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E5%9B%A0%E5%AD%90_(%E4%BB%A3%E6%95%B0%E5%B9%BE%E4%BD%95%E5%AD%A6)&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2018年5月27日 (日) 08:51 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.271","walltime":"0.474","ppvisitednodes":{"value":2442,"limit":1000000},"postexpandincludesize":{"value":16230,"limit":2097152},"templateargumentsize":{"value":4477,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13533,"limit":5000000},"timingprofile":["100.00%  345.226      1 -total"," 57.20%  197.465      2 テンプレート:Citation"," 55.39%  191.231      2 テンプレート:Citation/core"," 46.41%  160.231      4 テンプレート:Citation/identifier"," 29.60%  102.194      1 テンプレート:ISBN2"," 28.81%   99.468      3 テンプレート:Catalog_lookup_link"," 24.22%   83.620      1 テンプレート:仮リンク","  8.93%   30.817      4 テンプレート:Harv","  8.77%   30.290      1 テンプレート:ISSN","  5.38%   18.568      2 テンプレート:Error-small"]},"scribunto":{"limitreport-timeusage":{"value":"0.080","limit":"7"},"limitreport-virtmemusage":{"value":5771264,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331232913","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":789});});</script>
+</body></html>

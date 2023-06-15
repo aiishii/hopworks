@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>ファインマン–カッツの公式 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-ファインマン–カッツの公式 rootpage-ファインマン–カッツの公式 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">ファインマン–カッツの公式</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>ファインマン–カッツの公式</b>（ファインマン–カッツのこうしき、<span lang="en">Feynman–Kac formula</span>）とは、放物型<a href="." id="link_a_1" title="偏微分方程式">偏微分方程式</a>の<a href="." id="link_a_2" title="コーシー問題">コーシー問題</a>の解&lt;math&gt;\;u(\mathbf{x},t)\;&lt;/math&gt;を、<a href="." id="link_a_3" title="ウィーナー過程">ウィーナー過程</a>&lt;math&gt;\;W_t\;&lt;/math&gt;を用いて表現した公式のことである。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#定理(ファインマン-カッツの公式)"><span class="tocnumber">2</span> <span class="toctext">定理(ファインマン-カッツの公式)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#確率過程から見たポテンシャル"><span class="tocnumber">3</span> <span class="toctext">確率過程から見たポテンシャル</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#証明の基本方針"><span class="tocnumber">4</span> <span class="toctext">証明の基本方針</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#証明"><span class="tocnumber">5</span> <span class="toctext">証明</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#脚注"><span class="tocnumber">7</span> <span class="toctext">脚注</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a class="mw-redirect" href="/wiki/%E3%83%AA%E3%83%81%E3%83%A3%E3%83%BC%E3%83%89%E3%83%BB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3" title="リチャード・ファインマン">ファインマン</a>が<a href="/wiki/%E7%B5%8C%E8%B7%AF%E7%A9%8D%E5%88%86" title="経路積分">経路積分</a>による量子化を発見したのが、この公式の研究の発端である
+<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>。<a class="new" href="/w/index.php?title=%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%AB%E3%83%83%E3%83%84&amp;action=edit&amp;redlink=1" title="マーク・カッツ (存在しないページ)">カッツ</a>は、<a class="mw-redirect" href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F" title="シュレディンガー方程式">シュレディンガー方程式</a>ではなく<a href="/wiki/%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F" title="拡散方程式">拡散方程式</a><sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>を考察することで、<a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a>として数学的に厳密な定式化を行った<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。ファインマン-カッツの公式は<a href="/wiki/%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F" title="拡散方程式">拡散方程式</a>に対する公式であることに注意すべきである。実時間での<a class="mw-redirect" href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F" title="シュレディンガー方程式">シュレディンガー方程式</a>に対する解までこみでファインマン-カッツの公式と呼ぶこともあるが、<a href="/wiki/%E6%8B%A1%E6%95%A3%E6%96%B9%E7%A8%8B%E5%BC%8F" title="拡散方程式">拡散方程式</a>に対してのみこう呼ぶのが厳密には正しい。実時間の<a class="mw-redirect" href="/wiki/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E6%96%B9%E7%A8%8B%E5%BC%8F" title="シュレディンガー方程式">シュレディンガー方程式</a>に対しては、<a href="/wiki/%E6%B8%AC%E5%BA%A6%E8%AB%96" title="測度論">測度論</a>を基礎にして解の公式を構成することはできない<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup><sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。実時間での<a href="/wiki/%E7%B5%8C%E8%B7%AF%E7%A9%8D%E5%88%86" title="経路積分">経路積分</a>を、虚時間の理論でファインマン・カッツの公式を適用したあとで時間パラメータに関しての解析接続によって導こうという方法論は、一般的に適用可能な数学的厳密性を持ったアプローチなのか否かはおそらくわかっていない。現在のところ、時間を無限に分割し、分点ごとに積分し、その後で極限値をとることで<a href="/wiki/%E7%B5%8C%E8%B7%AF%E7%A9%8D%E5%88%86" title="経路積分">経路積分</a>は定義されていると考えるのが一般的に適用可能なアプローチである。事実、経路積分を数学的に明確に定義しようとしている書物<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>ではこのように極限で定義されたものとして扱っている。
+</p><p>状態空間が無限の場合(&lt;math&gt;\;\mathbf{x}\in\mathbb{R}^d\;&lt;/math&gt;)は基本的な<a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="ブラウン運動">ブラウン運動</a><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>を用いるだけなので形式的表現は簡単である。ただし、<a class="mw-redirect" href="/wiki/%E9%81%B7%E7%A7%BB%E7%A2%BA%E7%8E%87" title="遷移確率">遷移確率</a>(<span lang="en">transition probability</span>)を用いて解の具体的な関数形を導出する際、計算が簡単に済むか否かはポテンシャルの関数形に依存する<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup><sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup><sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。
+定義域が半無限や有限の場合は境界条件が現れるため<a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="ブラウン運動">ブラウン運動</a>ではなく<a class="new" href="/w/index.php?title=%E5%8F%8D%E5%B0%84%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95&amp;action=edit&amp;redlink=1" title="反射ブラウン運動 (存在しないページ)">反射ブラウン運動</a>、<a class="new" href="/w/index.php?title=%E5%BC%BE%E6%80%A7%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95&amp;action=edit&amp;redlink=1" title="弾性ブラウン運動 (存在しないページ)">弾性ブラウン運動</a>などを用いる必要がある<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。特に第3種の境界条件の場合は、<a class="new" href="/w/index.php?title=%E5%BC%BE%E6%80%A7%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95&amp;action=edit&amp;redlink=1" title="弾性ブラウン運動 (存在しないページ)">弾性ブラウン運動</a>で表現する必要があり、<a class="new" href="/w/index.php?title=%E5%B1%80%E6%89%80%E6%99%82%E9%96%93&amp;action=edit&amp;redlink=1" title="局所時間 (存在しないページ)">局所時間</a>(<span lang="en">local time</span>)<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>が公式に現れるので、形式的な表現は別として具体的に計算するのは面倒である。
+</p><p><br/>
+</p>
+<h2><span id=".E5.AE.9A.E7.90.86.28.E3.83.95.E3.82.A1.E3.82.A4.E3.83.B3.E3.83.9E.E3.83.B3-.E3.82.AB.E3.83.83.E3.83.84.E3.81.AE.E5.85.AC.E5.BC.8F.29"></span><span class="mw-headline" id="定理(ファインマン-カッツの公式)">定理(ファインマン-カッツの公式)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=2" title="節を編集: 定理(ファインマン-カッツの公式)">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>&lt;math&gt;\;v(t,x)\;&lt;/math&gt;は、状態空間&lt;math&gt;\;[0,T]\times\mathbb{R}^d\;&lt;/math&gt;で
+連続実数値、
+かつ&lt;math&gt;\;C^{1,2}\;&lt;/math&gt;級関数<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>と仮定する。
+さらに、任意の&lt;math&gt;\;x\in \mathbb{R}^d\;&lt;/math&gt;に対して、
+ある定数&lt;math&gt;\;K &gt; 0\;&lt;/math&gt;が存在し、定数&lt;math&gt;\;0 &lt; a &lt; 1/(2Td)\;&lt;/math&gt;に対して
+条件
+</p>
+<dl><dd>&lt;math&gt;\;\max_{0 \le t \le T}|v(t,x)| + \max_{0 \le t \le T}|g(t,x)|</dd></dl>
+<p>\le K e^{a || x ||^2},\;&lt;/math&gt;
+を満足すると仮定する<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。
+このとき、<a class="mw-redirect" href="/wiki/%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95" title="コルモゴロフ">コルモゴロフ</a>の後退方程式のコーシー問題
+</p>
+<dl><dd>&lt;math&gt;\begin{align}\;-\frac{\partial v}{\partial t} + k(t,x) v</dd></dl>
+<p>= \frac{1}{2}\nabla^2 v + g(t,x),\quad t\in[0,T],
+\quad x\in\mathbb{R}^d,\quad v(T,x) = f(x),
+\end{align}\;&lt;/math&gt;
+の解&lt;math&gt;\;v(t,x)\;&lt;/math&gt;は、
+</p>
+<dl><dd>&lt;math&gt;\;v(t,x)</dd></dl>
+<p>=E^x\left[f(W_{T-t}) \exp\left(-\int^{T-t}_0 k(W_s) ds\right)
++\int^{T-t}_0 g(t+\theta, W_\theta)\exp\left(-\int^\theta_0 k(W_s) ds\right)
+d\theta\right],\quad t\in[0,T],\quad x\in\mathbb{R}^d,\;&lt;/math&gt;
+で与えられる。&lt;math&gt;\;v(t,x)\;&lt;/math&gt;は一意である
+<sup class="reference" id="cite_ref-ks_16-0"><a href="#cite_note-ks-16">[16]</a></sup>。
+ただし、&lt;math&gt;\;E^x\;&lt;/math&gt;は、初期時刻&lt;math&gt;\;t=0\;&lt;/math&gt;において
+&lt;math&gt;\;\mathbf{x}\;&lt;/math&gt;から出発する<a href="/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%E9%81%8B%E5%8B%95" title="ブラウン運動">ブラウン運動</a>に関する<a href="/wiki/%E6%9C%9F%E5%BE%85%E5%80%A4" title="期待値">期待値</a>を表す
+<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。
+</p>
+<h2><span id=".E7.A2.BA.E7.8E.87.E9.81.8E.E7.A8.8B.E3.81.8B.E3.82.89.E8.A6.8B.E3.81.9F.E3.83.9D.E3.83.86.E3.83.B3.E3.82.B7.E3.83.A3.E3.83.AB"></span><span class="mw-headline" id="確率過程から見たポテンシャル">確率過程から見たポテンシャル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=3" title="節を編集: 確率過程から見たポテンシャル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a>の観点から解釈しなおすと、<a href="/wiki/%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB" title="ポテンシャル">ポテンシャル</a>は時刻&lt;math&gt;\;t\;&lt;/math&gt;において
+&lt;math&gt;\;k(\mathbf{x},t)dt\;&lt;/math&gt;のレートで、運動する粒子を確率的に消去する作用(<span lang="en">killing</span>)に
+相当すると解釈できる。ポテンシャルが局所的に負になる場合は、負の最小値の分だけかさあげしてやれば
+同様に解釈できる。
+</p>
+<h2><span id=".E8.A8.BC.E6.98.8E.E3.81.AE.E5.9F.BA.E6.9C.AC.E6.96.B9.E9.87.9D"></span><span class="mw-headline" id="証明の基本方針">証明の基本方針</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=4" title="節を編集: 証明の基本方針">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>証明は、<a class="mw-redirect" href="/wiki/%E4%BC%8A%E8%97%A4%E3%81%AE%E5%85%AC%E5%BC%8F" title="伊藤の公式">伊藤の公式</a>(<span lang="en">Ito formula</span>)(または<a href="/wiki/%E4%BC%8A%E8%97%A4%E3%81%AE%E8%A3%9C%E9%A1%8C" title="伊藤の補題">伊藤の補題</a>(<span lang="en">Ito's lemma</span>))と、
+<a class="new" href="/w/index.php?title=%E7%A2%BA%E7%8E%87%E7%A9%8D%E5%88%86&amp;action=edit&amp;redlink=1" title="確率積分 (存在しないページ)">確率積分</a>の<b>局所</b><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%AB" title="マルチンゲール">マルチンゲール</a>性を適用して得られる。
+基本的な<a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a>が&lt;math&gt;\;|B_t|\;&lt;/math&gt;のように2回微分不可能な場合は<a class="mw-redirect" href="/wiki/%E4%BC%8A%E8%97%A4%E3%81%AE%E5%85%AC%E5%BC%8F" title="伊藤の公式">伊藤の公式</a>は適用できない。
+しかし、関数&lt;math&gt;\;|x|\;&lt;/math&gt;は<a href="/wiki/%E5%87%B8%E9%96%A2%E6%95%B0" title="凸関数">凸関数</a>(<span lang="en">convex function</span>)であるので
+<a class="new" href="/w/index.php?title=%E4%B8%80%E8%88%AC%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F%E3%81%95%E3%82%8C%E3%81%9F%E4%BC%8A%E8%97%A4%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;redlink=1" title="一般化されたされた伊藤の公式 (存在しないページ)">一般化されたされた伊藤の公式</a>(<span lang="en">generalized Ito formula</span>)を適用することで類似の公式が得られる。
+</p>
+<h2><span id=".E8.A8.BC.E6.98.8E"></span><span class="mw-headline" id="証明">証明</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=5" title="節を編集: 証明">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>&lt;math&gt;\;t\;&lt;/math&gt;を固定して、
+&lt;math&gt;\;v(t+\theta, W_\theta) \exp\left(-\int^\theta_0 k(W_s) ds\right)\;&lt;/math&gt;
+に対して<a href="/wiki/%E4%BC%8A%E8%97%A4%E3%81%AE%E8%A3%9C%E9%A1%8C" title="伊藤の補題">伊藤の補題</a>を適用して、
+</p>
+<dl><dd>&lt;math&gt;\; d \left[v(t+\theta, W_\theta)</dd></dl>
+<p>\exp\left(-\int^\theta_0 k(W_s) ds\right)\right] = 
+\exp\left(-\int^\theta_0 k(W_s) ds\right)
+\left[-g(t+\theta, W_\theta)d\theta
++ \sum^d_{j=1} \frac{\partial}{\partial x_j} v(t+\theta, W_\theta)dW^{(j)}_\theta\right],\;&lt;/math&gt;
+を得る。ここで、右辺第2項は<b>局所マルチンゲール</b><sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>であることに注意して、<a class="new" href="/w/index.php?title=%E5%81%9C%E6%AD%A2%E6%99%82%E5%88%BB&amp;action=edit&amp;redlink=1" title="停止時刻 (存在しないページ)">停止時刻</a>&lt;math&gt;\;S_n := \inf(t \ge 0 | ||W_t|| \le n\sqrt{d\,}, n \ge 1)\;&lt;/math&gt;を導入すると、
+&lt;math&gt;\;0 &lt; r &lt; T-t\;&lt;/math&gt;に対して、
+</p>
+<dl><dd>&lt;math&gt;\;v(t,x) = E^x \left[\int^{r\land S_n}_0 g(t+\theta,W_\theta) \exp\left(-\int^\theta_0 k(W_s) ds\right) d\theta\right] +</dd></dl>
+<p>E^x \left[v(t+S_n,W_{S_n})\exp\left(-\int^{S_n}_0 ds k(W_s)\right)
+{\mathbf 1}_{ \{ S_n \le r \} } \right]
++ E^x \left[v(t+r,W_r)\exp\left(-\int^r_0 ds k(W_s)\right)
+{\mathbf 1}_{ \{ S_n &gt; r \} } \right],\;
+&lt;/math&gt;
+が言える。ただし、
+</p>
+<dl><dd>&lt;math&gt;\;</dd></dl>
+<p>x\land y := \max(x,y),
+&lt;/math&gt;
+、
+</p>
+<dl><dd>&lt;math&gt;</dd></dl>
+<p>{\mathbf 1}_{S} :=\begin{cases} 1 &amp; \mbox{if S is true.}\\
+0 &amp; \mbox{otherwise},
+\end{cases}\;
+&lt;/math&gt;
+である。ここで、右辺第1項は
+</p>
+<dl><dd>&lt;math&gt;\;E^x\left[\int^{T-t}_0g(t+\theta,W_\theta)</dd></dl>
+<p>\exp\left(-\int^{\theta}_0 k(W_s) ds\right) d\theta\right],\quad
+n\rightarrow\infty,\quad r\uparrow T-t,\;&lt;/math&gt;
+へ収束する。一方、右辺第2項については
+</p>
+<dl><dd>&lt;math&gt;\;E^x\left[|v(t+S_n, W_{S_n})| 1_{\{S_n \le T-t\}}\right]</dd></dl>
+<p>\le 2K e^{adn^2}
+\sum^d_{j=1}\left(P^x \left[W_T^{(j)} \ge n\right]
++ P^x \left[-W^{(j)}_T \ge n\right]\right), \;&lt;/math&gt;
+が言える。ところが
+</p>
+<dl><dd>&lt;math&gt;\;e^{adn^2}P^x\left[\pm W^{(j)}_T \ge n\right]</dd></dl>
+<p>\le e^{adn^2}\sqrt{\frac{T}{2\pi}\,}\frac{1}{n\mp x^{(j)}}
+e^{-(n\mp x^{(j)})^2/(2T)}\rightarrow 0,\quad n\rightarrow\infty,\;&lt;/math&gt;
+ただし、&lt;math&gt;\;0 \le a \le 1/(2Td)\;&lt;/math&gt;である。
+右辺第3項については、
+</p>
+<dl><dd>&lt;math&gt;\;E^x\left[v(T,W_{T-t})\exp\left(-\int^{T-t}_0 k(W_s)ds \right)\right],\quad</dd></dl>
+<p>n\rightarrow\infty,\quad r\uparrow T-t,\;&lt;/math&gt;
+へ収束する。したがって、ファインマン-カッツの公式が証明された<sup class="reference" id="cite_ref-ks_16-1"><a href="#cite_note-ks-16">[16]</a></sup>。<b>QED</b>
+</p>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=6" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>I.Karatzas and S.E.Shreve, Brownian motion and Stochastic Calculus(second edition), Springer verlag, 1991, ISBN 0-387-97655-8 (New York).</li>
+<li>L.C.G.Rogers and D.Williams, Diffusions, Markov processes and Martingales vol.1 and vol.2(second edition), Cambridge University Press,</li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;section=7" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">R.P.Feynman, Rev.Mod.Phys. <b>20</b>(1948)367.</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">物理学では、フォッカー・プランク方程式(<span lang="en">Fokker-Planck equation</span>)と呼ぶこともある。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text">M.Kac, Transactions of the American Mathematical Society <b>65</b>(1949)1-13.</span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">実時間での<a href="/wiki/%E7%B5%8C%E8%B7%AF%E7%A9%8D%E5%88%86" title="経路積分">経路積分</a>の場合、いかなる<a class="mw-redirect" href="/wiki/%E6%B8%AC%E5%BA%A6" title="測度">測度</a>も定義できないことが証明されている。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">中村徹著「超準解析と物理学」、日本評論社、1998、ISBN 4-535-78248-2。同書での引用文献を参照。</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">例えば、藤原大輔著「ファインマン経路積分の数学的方法」シュプリンガー・ジャパン、1999年、ISBN 978-4-431-70748-6 .</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">普通の<a class="new" href="/w/index.php?title=%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%8A%E3%83%BC%E6%B8%AC%E5%BA%A6&amp;action=edit&amp;redlink=1" title="ウィーナー測度 (存在しないページ)">ウィーナー測度</a>&lt;math&gt;\;P^x(B_t\in d^d\boldsymbol{\xi}) = \left(\frac{1}{2 \pi t}\right)^{d/2}\exp\left(-\frac{(\boldsymbol{\xi}-\mathbf{x})^2}{2 t}\right)d^d\boldsymbol{\xi}\;&lt;/math&gt;で考えるということ。</span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text">ポテンシャルがある場合は、純粋に<a href="/wiki/%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="確率過程">確率過程</a>の理論のみで計算することは難しい。現実的には経路積分と同じテクニックで計算することになる。</span>
+</li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a href="/wiki/%E8%AA%BF%E5%92%8C%E6%8C%AF%E5%8B%95%E5%AD%90" title="調和振動子">調和振動子</a>であれば簡単に計算できる。&lt;math&gt;\;\frac{1}{r^2}\;(r:=\sqrt{\sum^d_{n=1}x_n^2})\;&lt;/math&gt;型の<a href="/wiki/%E3%83%9D%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%AB" title="ポテンシャル">ポテンシャル</a>が加わっていても計算は近似なしにできるが、計算はややテクニックを要する。</span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text">D.Peaks and A.Inomata, J.Math.Phys.<b>10</b>(1969)1422.</span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text">具体的な計算テクニックについては、H.Kleinert, Path Integrals in Quantum Mechanics, Statistics, Polymer Physics and Financial Markets(fifth edition), World Scienctific,  ISBN 978-981-4273-56-5 や C.Grosche and F.Steiner, Handbook of Feynman Path Integrals, Springer Verlag, 1998, ISBN 3-540-57135-3 などを参照。</span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text">例えば、1次元の半数直線&lt;math&gt;\;x\in\mathbb{R}_+ \;&lt;/math&gt;の場合で、原点において
+第2種の境界条件(ノイマンの境界条件)が与えられている時は単純で、&lt;math&gt;\;B_t\;&lt;/math&gt;の代わりに&lt;math&gt;\;|B_t|\;&lt;/math&gt;を用いればよい。有限区間の場合は、有限区間での反射ブラウン運動を定義する必要がある。解は無限和の表現になる。</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text">滞在時間(sojourn time)と呼ばれることもあるが、
+最近の文献ではこの表現はあまり見かけない。</span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text">パラメータ&lt;math&gt;\;t\;&lt;/math&gt;について
+1階微分可能、&lt;math&gt;\;x\;&lt;/math&gt;について2階微分可能。</span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text">&lt;math&gt;\;g\;&lt;/math&gt;が&lt;math&gt;\;t\in[0,T]\times\mathbb{R}^d\;&lt;/math&gt;
+に対して&lt;math&gt;\;g \ge 0\;&lt;/math&gt;を満足する場合は、条件を
+&lt;math&gt;\;\max_{0 \le t \le T}|v(t,x)| \le K e^{a || x ||^2}\;&lt;/math&gt;に
+置きかえることができる。</span>
+</li>
+<li id="cite_note-ks-16">^ <a href="#cite_ref-ks_16-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ks_16-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text">I.Karatzas and S.E.Shreve, Brownian Motion
+and Stochastic Calculus(second edition),
+Springer Verlag, 1991, ISBN 0-387-97655-8 (New York), pp.268-269.</span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text">&lt;math&gt;\;B_t\;&lt;/math&gt;を&lt;math&gt;\;B_t + x\;&lt;/math&gt;へ置き換えて、<a class="mw-redirect" href="/wiki/%E6%B8%AC%E5%BA%A6" title="測度">測度</a>
+&lt;math&gt;\;P^0\;&lt;/math&gt;で考えても同じである。</span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text">マルティンゲールではないことに注意。</span>
+</li>
+</ol></div>
+<!-- 
+NewPP limit report
+Cached time: 20220401073138
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.054 seconds
+Real time usage: 0.087 seconds
+Preprocessor visited node count: 337/1000000
+Post‐expand include size: 475/2097152 bytes
+Template argument size: 178/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6731/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   53.186      1 -total
+ 51.66%   27.474      9 テンプレート:Lang
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:2003089-0!canonical and timestamp 20220401073137 and revision id 1205140. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=ファインマン–カッツの公式&amp;oldid=1205140">http://localhost:8080/w/index.php?title=ファインマン–カッツの公式&amp;oldid=1205140</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%A2%BA%E7%8E%87%E9%81%8E%E7%A8%8B" title="カテゴリ:確率過程">確率過程</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%AA%E3%83%81%E3%83%A3%E3%83%BC%E3%83%89%E3%83%BBP%E3%83%BB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3" title="カテゴリ:リチャード・P・ファインマン">リチャード・P・ファインマン</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;returntoquery=curid%3D2003089%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;returntoquery=curid%3D2003089%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;oldid=1205140" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%B3%E2%80%93%E3%82%AB%E3%83%83%E3%83%84%E3%81%AE%E5%85%AC%E5%BC%8F&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年3月20日 (土) 02:15 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.054","walltime":"0.087","ppvisitednodes":{"value":337,"limit":1000000},"postexpandincludesize":{"value":475,"limit":2097152},"templateargumentsize":{"value":178,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6731,"limit":5000000},"timingprofile":["100.00%   53.186      1 -total"," 51.66%   27.474      9 テンプレート:Lang"]},"cachereport":{"timestamp":"20220401073138","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":242});});</script>
+</body></html>

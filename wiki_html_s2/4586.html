@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>DNSサーバ - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-DNSサーバ rootpage-DNSサーバ skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">DNSサーバ</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>DNSサーバ</b>（ディーエヌエスサーバ）は、<a href="." id="link_a_1" title="コンピュータネットワーク">コンピュータ・ネットワーク</a>において、<a href="." id="link_a_2" title="Domain Name System">Domain Name System</a>（DNS）の「名前解決」機能が実装された<a href="." id="link_a_3" title="サーバ">サーバ</a>である。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#コンテンツサーバとキャッシュサーバ"><span class="tocnumber">2</span> <span class="toctext">コンテンツサーバとキャッシュサーバ</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#DNSコンテンツサーバ"><span class="tocnumber">3</span> <span class="toctext">DNSコンテンツサーバ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#プライマリサーバとセカンダリサーバ"><span class="tocnumber">3.1</span> <span class="toctext">プライマリサーバとセカンダリサーバ</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#セキュリティ"><span class="tocnumber">3.2</span> <span class="toctext">セキュリティ</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#KSKロールオーバー問題"><span class="tocnumber">3.2.1</span> <span class="toctext">KSKロールオーバー問題</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#DNSキャッシュサーバ"><span class="tocnumber">4</span> <span class="toctext">DNSキャッシュサーバ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#再帰的問い合わせと非再帰的問い合わせ"><span class="tocnumber">4.1</span> <span class="toctext">再帰的問い合わせと非再帰的問い合わせ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#実装"><span class="tocnumber">5</span> <span class="toctext">実装</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#端末で指定する「DNSサーバ」"><span class="tocnumber">6</span> <span class="toctext">端末で指定する「DNSサーバ」</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#脚注"><span class="tocnumber">7</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#外部リンク"><span class="tocnumber">8</span> <span class="toctext">外部リンク</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#関連項目"><span class="tocnumber">9</span> <span class="toctext">関連項目</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#パブリックDNSサーバ"><span class="tocnumber">9.1</span> <span class="toctext">パブリックDNSサーバ</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DNSサーバには、後述するように2種類があり、それぞれ全く異なる働きをするので、「DNSサーバはこのようなことを行う」と説明することはできない。そのためここでは、Domain Name Systemの役割をまず説明する。
+</p><p>インターネットでの通信に際し、URLの中やメールアドレスの中などでの相手先は、<a href="/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="IPアドレス">IPアドレス</a>が直接指定されることはまず無く、<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D" title="ドメイン名">ドメイン名</a>などといった「名前」が使われている。そういった名前から、IPアドレスなど<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>を得る「解決」を行うシステムがDomain Name Systemである。
+</p><p>あるコンピューターが他のコンピュータと<a class="mw-redirect" href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="インターネットプロトコル">インターネットプロトコル</a>（IP）を介して通信する際には、通信の相手となるコンピュータに付与されたIPアドレスを知る必要がある。一方、URLなどには（IPアドレスを、直接指定することもできるが）、もっぱら<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D" title="ドメイン名">ドメイン名</a>を使って対象を記述する。ドメイン名から、IPアドレスなどといった必要な情報を得る（名前を解決する）ために、ネットワーク上で情報を提供する仕組みがDomain Name Systemであり、それを担う各サーバがDNSサーバである。
+</p><p>DNSサーバは<a class="mw-redirect" href="/wiki/%E5%88%86%E6%95%A3%E5%9E%8B%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="分散型データベース">分散型データベース</a>の1ノードとして機能している。DNSサーバには以下の2種類がある。
+</p>
+<ul><li><a href="#DNSコンテンツサーバ">#DNSコンテンツサーバ</a> - 自らの「ゾーン」（ドメイン名空間）について、情報を管理し問い合わせに回答する。独自のドメイン名をドメインレジストラで登録する際、「そのドメイン名を管理するDNSサーバ」として指定するのがDNSコンテンツサーバである。
+<ul><li>社内専用など、一般に公開しないゾーンを管理するコンテンツサーバというようなものもある。当然ながら、レジストラへの登録の必要はない。</li>
+<li>コンテンツサーバについては、「権威DNSサーバ」という用語もある。コンテンツサーバという語は上記のような役割のサーバ全般の総称であるのに対し、権威DNSサーバは例えば「wikipedia.orgドメインの（wikipedia.orgドメインが管理・委譲している情報を持っている（それに関して権威がある））権威DNSサーバ」といったように、個々のドメインとの関係を意味する。</li></ul></li>
+<li><a href="#DNSキャッシュサーバ">#DNSキャッシュサーバ</a> - 依頼された問い合わせに応じて、コンテンツサーバへ必要な問い合わせを行い、結果を依頼元に返す。結果を再利用できるよう、一定期間自らキャッシュする。
+<ul><li>フルリゾルバ・フルサービスリゾルバ・キャッシュDNSサーバとも呼ばれる。</li></ul></li></ul>
+<p>DNSサーバが持つ「<b>ゾーン情報</b>」（ゾーンファイル）を他のDNSサーバから取得し、同期する仕組みを「<b><a href="/wiki/DNS%E3%82%BE%E3%83%BC%E3%83%B3%E8%BB%A2%E9%80%81" title="DNSゾーン転送">DNSゾーン転送</a></b>」と言う。
+</p>
+<h2><span id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.82.B5.E3.83.BC.E3.83.90.E3.81.A8.E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5.E3.82.B5.E3.83.BC.E3.83.90"></span><span class="mw-headline" id="コンテンツサーバとキャッシュサーバ">コンテンツサーバとキャッシュサーバ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=2" title="節を編集: コンテンツサーバとキャッシュサーバ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DNSサーバは、ドメインの持ち主が情報を提供するための「<b>DNSコンテンツサーバ</b>」と、ネットワークの利用者（ドメイン名システム（DNS）の利用者）が名前解決に利用するための「<b>DNSキャッシュサーバ</b>」の２種類に大別できる。
+</p><p><b>両者は全く違うもの</b>なので<b>混同してはならない</b>し、<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2019年11月）">そもそも<b>DNSサーバ</b>と総称すること自体に問題がある。</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2019年11月）">要出典</span></a></i>]</sup>コンテンツサーバはドメインの持ち主が管理することもできるが、多くの場合、プロバイダやレンタルサーバ業者などが提供しているものを利用する<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>。キャッシュサーバは、接続プロバイダなどがほとんどの場合に用意しており、「インターネットを利用するための機器の設定」にその設定が含まれていたり、あるいはDHCPでIPアドレス等と一緒に自動的に設定してしまうことが専らであるが、ユーザのLAN内に（あるいは端末自身の中のサーバとして）用意して、そちらを使うこともできる（分散システム的な観点からは、そのほうが望ましい）。DNSの仕組み上キャッシュすることが前提の設計になっているため、キャッシュを持っていて「キャッシュサーバ」と専ら呼ばれるのであるが、中継するのみでキャッシュしない、いわゆるプロキシ的な動作をするものもある。
+</p>
+<h2><span id="DNS.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E3.82.B5.E3.83.BC.E3.83.90"></span><span class="mw-headline" id="DNSコンテンツサーバ">DNSコンテンツサーバ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=3" title="節を編集: DNSコンテンツサーバ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DNSコンテンツサーバの役割は、<a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a>において、ドメインの管理情報、すなわち、自ゾーンの管理するサーバのIPアドレスなどの各種リソースレコード(RR)と、ドメインの委任に関する情報を保持し、問い合わせ要求があったときに応答することである。
+</p><p>DNSサーバが保持する「ゾーン情報」（ゾーンファイル）内の<b>リソースレコード</b>（資源レコード）の種類の例を以下に示す。
+</p>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/DNS%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E3%82%BF%E3%82%A4%E3%83%97%E3%81%AE%E4%B8%80%E8%A6%A7" title="DNSレコードタイプの一覧">DNSレコードタイプの一覧</a>」を参照</div>
+<dl><dt>リソースレコードの例</dt></dl>
+<ul><li>Aレコード</li></ul>
+<dl><dd>名前に対する<a href="/wiki/IPv4" title="IPv4">IPv4</a>アドレス</dd></dl>
+<ul><li>AAAAレコード</li></ul>
+<dl><dd>名前に対する<a href="/wiki/IPv6" title="IPv6">IPv6</a>アドレス</dd></dl>
+<ul><li>PTRレコード</li></ul>
+<dl><dd>逆引き（IPアドレスに対する名前）たとえば 198.51.100.234 というIPアドレスを逆引きするには 234.100.51.198.in-addr.arpa という名前のPTRレコードを問い合わせればよい</dd></dl>
+<ul><li>NSレコード</li></ul>
+<dl><dd>そのゾーンの権威あるDNSコンテンツサーバの名前</dd></dl>
+<ul><li>MXレコード</li></ul>
+<dl><dd><div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/MX%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89" title="MXレコード">MXレコード</a>」を参照</div>そのゾーンのメールサーバの名前</dd></dl>
+<ul><li>SOAレコード</li></ul>
+<dl><dd>ゾーンそのものの情報</dd></dl>
+<ul><li>CNAMEレコード</li></ul>
+<dl><dd>　その名前に対する別名</dd></dl>
+<ul><li>TXTレコード</li></ul>
+<dl><dd>テキスト情報</dd></dl>
+<ul><li>DNSKEYレコード/RRSIGレコード</li></ul>
+<dl><dd><a href="/wiki/DNS_Security_Extensions" title="DNS Security Extensions">DNSSEC</a>のための公開錠/署名</dd></dl>
+<p>など。
+</p>
+<dl><dt>wikipedia.orgのDNSコンテンツサーバの例</dt>
+<dd>このDNSコンテンツサーバは、ja.wikipedia.orgやwww.wikipedia.orgなどwikipedia.orgゾーンの各種リソースレコードを保持している。ただし、orgゾーンに保持されているIPアドレスは知らない（間違った設定によってorgのNSレコードをキャッシュで答えてしまうサーバも実際には多く存在する）。このDNSコンテンツサーバは、ja.wikipedia.orgのIPアドレスを教えるよう要求を受けると、自らが保持しているコンテンツから、ja.wikipedia.orgのIPアドレスを探し、その情報を含めた返答を返す。</dd></dl>
+<p>なお、<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%90%8D" title="ドメイン名">ドメイン名</a>から<a href="/wiki/IP%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="IPアドレス">IPアドレス</a>を検索する事を<a href="/wiki/%E6%AD%A3%E5%BC%95%E3%81%8D" title="正引き">正引き</a>と呼び、反対にIPアドレスからドメイン名を検索することを<a href="/wiki/%E9%80%86%E5%BC%95%E3%81%8D" title="逆引き">逆引き</a>と呼ぶ。
+</p>
+<h3><span id=".E3.83.97.E3.83.A9.E3.82.A4.E3.83.9E.E3.83.AA.E3.82.B5.E3.83.BC.E3.83.90.E3.81.A8.E3.82.BB.E3.82.AB.E3.83.B3.E3.83.80.E3.83.AA.E3.82.B5.E3.83.BC.E3.83.90"></span><span class="mw-headline" id="プライマリサーバとセカンダリサーバ">プライマリサーバとセカンダリサーバ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=4" title="節を編集: プライマリサーバとセカンダリサーバ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>コンテンツサーバの役割での「プライマリサーバ」と「セカンダリサーバ」は、マスタとスレーブの関係にある。類似の用語である、オペレーティングシステムのネットワーク構成で指定する「DNSサーバ設定」の「優先」「代替」とは全く無関係であり、混同しないよう注意したい（<a href="#OSで指定する「DNSサーバ」">#OSで指定する「DNSサーバ」</a>）。
+</p>
+<dl><dt>プライマリサーバ</dt>
+<dd>ゾーン情報を自ら管理し、自らのゾーン情報に関する問い合わせに回答したり、セカンダリサーバへ配信したりする。<a href="/wiki/Windows_Server" title="Windows Server">Windows Server</a>同梱のDNSサービスにある動作モード「<a href="/wiki/Active_Directory" title="Active Directory">Active Directory</a>統合ゾーン」は、プライマリサーバとしての役割に機能拡張<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>がされたものである。</dd>
+<dt>セカンダリサーバ</dt>
+<dd>担当するゾーンに関する問い合わせに回答するが、自らはゾーン情報を管理せずプライマリサーバから受け取ったゾーン情報を保持している。</dd></dl>
+<h3><span id=".E3.82.BB.E3.82.AD.E3.83.A5.E3.83.AA.E3.83.86.E3.82.A3"></span><span class="mw-headline" id="セキュリティ">セキュリティ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=5" title="節を編集: セキュリティ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>DNSサーバが応答不能になれば、管理しているゾーン内のコンピューターが提供しているサービスを利用できなくなり、誤った情報を回答するとクライアントコンピューターは意図していないノードにアクセスしてしまう<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>ことになる。
+</p><p>健全な利用環境を確保するために、DNSサーバのリソースレコードの改ざんや<a href="/wiki/DoS%E6%94%BB%E6%92%83" title="DoS攻撃">DoS攻撃</a>を防ぐよう、DNSサーバソフトウエアおよびOSの設定やセキュリティ更新プログラムの適用、コンテンツサーバの多重化（セカンダリサーバを公開し、プライマリサーバは非公開とするなど）、<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB" title="ファイアウォール">ファイアウォール</a>や<a class="mw-redirect" href="/wiki/%E4%BE%B5%E5%85%A5%E9%98%B2%E6%AD%A2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="侵入防止システム">侵入防止システム</a>の導入などにより対策を講じる必要がある。
+</p><p>電子署名を用いてDNSの応答が正しいことを検証する「<a href="/wiki/DNS_Security_Extensions" title="DNS Security Extensions">DNSSEC</a>」機能が提供されている。
+</p>
+<h4><span id="KSK.E3.83.AD.E3.83.BC.E3.83.AB.E3.82.AA.E3.83.BC.E3.83.90.E3.83.BC.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="KSKロールオーバー問題">KSKロールオーバー問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=6" title="節を編集: KSKロールオーバー問題">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>DNSSECにおいて、電子署名の正当性検証に使われる最上位の暗号鍵である「ルートゾーンKSK」を更新する際に、EDNSによるIPフラグメンテーションが発生するほどのサイズの応答データが発生するが、通信設定が対応できていないDNSで通信ができず、DNSSECによる正当性検証ができなくなり、インターネットの利用に問題が発生する。
+</p><p>これは、「ルートゾーンKSK」が2016年まで更新されてこなかったために問題になっていなかったが、2016年10月から2018年3月にかけて、 順次変更を行うことになったために顕在化した問題である。特に2017/09/19、2017/12/20、2018/01/11から始まる更新では、IPフラグメンテーションが発生しない1280bytesを超える1414～1424Bytesの応答データが発生するために、問題が発生する。
+</p><p>基本的には、DNSの運用責任者がソフトウェアのアップデートや設定変更で対応すべきものであるが、一般消費者向けのルータに内蔵されているDNS Proxyでも問題が発生する可能性があり、インターネットの利用に問題が発生する場合がある。
+</p>
+<h2><span id="DNS.E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5.E3.82.B5.E3.83.BC.E3.83.90"></span><span class="mw-headline" id="DNSキャッシュサーバ">DNSキャッシュサーバ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=7" title="節を編集: DNSキャッシュサーバ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>DNSキャッシュサーバの役割は、DNSクライアント（ウェブブラウザなど、ドメイン名を利用する何らかのアプリケーション等）からの再帰的問い合わせによって名前解決の依頼を受け、非再帰的問い合わせを行い名前を解決することである。たとえば、Webブラウザで、www.wikipedia.orgなどを入力した際、そのコンピュータがまず名前解決しに行くのがDNSキャッシュサーバである。
+</p><p>DNSキャッシュサーバ自身については、直接なんらかの方法でそのIPアドレスを設定する。近年のLinux環境などでの典型としては、ネットワークインタフェースの立ち上げ時に、<a href="/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</a>によって受け取ったかネットワーク設定スクリプトに書き込まれているものが、設定ファイル（典型的には <tt>/etc/resolv.conf</tt> ）に書き込まれる。あるいは古典的には <tt>/etc/resolv.conf</tt> は静的な設定ファイルであった。
+</p>
+<h3><span id=".E5.86.8D.E5.B8.B0.E7.9A.84.E5.95.8F.E3.81.84.E5.90.88.E3.82.8F.E3.81.9B.E3.81.A8.E9.9D.9E.E5.86.8D.E5.B8.B0.E7.9A.84.E5.95.8F.E3.81.84.E5.90.88.E3.82.8F.E3.81.9B"></span><span class="mw-headline" id="再帰的問い合わせと非再帰的問い合わせ">再帰的問い合わせと非再帰的問い合わせ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=8" title="節を編集: 再帰的問い合わせと非再帰的問い合わせ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>名前解決における問い合わせには、再帰的問い合わせと非再帰的問い合わせ（反復問い合わせ）の2種類がある。典型的で単純な例で説明すると、ユーザプログラムからlibcの <code>gethostbyname</code> (3) を通して、<tt>/etc/resolv.conf</tt> で設定されたDNSキャッシュサーバへの問い合わせが再帰的問い合わせで、キャッシュサーバが行う、DNSコンテンツサーバ群への繰返しの問い合わせが非再帰的問い合わせである。
+</p>
+<dl><dt>再帰的問い合わせ</dt>
+<dd>名前解決がされたのであれば、その完全な結果を、できなかった場合は「存在しない」とするやはり完全な結果を求める問い合わせである。ユーザのパーソナルコンピュータなどといった端末から、DNSキャッシュサーバに対して送られる。</dd></dl>
+<dl><dt>非再帰的問い合わせ</dt>
+<dd>反復問い合わせとも。この問い合わせを受けたDNSコンテンツサーバは、自分自身が持っている情報であればそれを、委任している情報であればそのこと（委任情報）を返す。DNSキャッシュサーバはその内容に応じて次々と問い合わせを反復する（一般的には<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90" title="ルートサーバ">ルートサーバ</a>から順にドメインツリーをたどる）。</dd></dl>
+<h2><span id=".E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="実装">実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=9" title="節を編集: 実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>代表的なDNSサーバソフトウエアは次のものがある。
+DNSサーバの中には、DNSコンテンツサーバとDNSキャッシュサーバが別々になっているものもあれば、両方機能を搭載するものもある。
+</p>
+<ul><li><a href="/wiki/BIND" title="BIND">BIND</a></li>
+<li><a href="/wiki/Djbdns" title="Djbdns">djbdns</a> - コンテンツサーバであるtinydnsとキャッシュサーバであるdnscacheからなる</li>
+<li><a href="/wiki/Dnsmasq" title="Dnsmasq">Dnsmasq</a></li>
+<li><a class="new" href="/w/index.php?title=Microsoft_DNS_Server&amp;action=edit&amp;redlink=1" title="Microsoft DNS Server (存在しないページ)">Microsoft DNS Server</a></li>
+<li><a href="/wiki/NSD_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="NSD (ソフトウェア)">NSD</a></li>
+<li><a href="/wiki/Unbound" title="Unbound">Unbound</a></li>
+<li><a class="new" href="/w/index.php?title=Knot_DNS&amp;action=edit&amp;redlink=1" title="Knot DNS (存在しないページ)">Knot DNS</a></li>
+<li><a href="/wiki/PowerDNS" title="PowerDNS">PowerDNS</a></li>
+<li><a class="new" href="/w/index.php?title=Yadifa&amp;action=edit&amp;redlink=1" title="Yadifa (存在しないページ)">Yadifa</a></li>
+<li>XACK DNS - 国産のDNS製品</li></ul>
+<h2><span id=".E7.AB.AF.E6.9C.AB.E3.81.A7.E6.8C.87.E5.AE.9A.E3.81.99.E3.82.8B.E3.80.8CDNS.E3.82.B5.E3.83.BC.E3.83.90.E3.80.8D"></span><span class="mw-headline" id="端末で指定する「DNSサーバ」">端末で指定する「DNSサーバ」</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=10" title="節を編集: 端末で指定する「DNSサーバ」">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>PCに搭載される<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>や<a href="/wiki/MacOS" title="MacOS">macOS</a>、携帯端末に搭載される<a href="/wiki/IOS_(Apple)" title="IOS (Apple)">iOS</a>や<a href="/wiki/Android_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="Android (オペレーティングシステム)">Android</a>をはじめとする、ネットワーク通信可能なオペレーティングシステムには、ネットワーク関連の設定に「DNSサーバ」のIPアドレスを指定する項目がある<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>。一般に gethostbyname(3) といったようなライブラリ関数による処理の中で<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>、これらの設定に従い、DNSキャッシュサーバへの問い合わせ等が行われる。
+</p><p>これらの情報は、DHCPによる管理下にあるネットワークでは、<a class="mw-redirect" href="/wiki/DHCP" title="DHCP">DHCPサーバ</a>から（割当IPアドレス情報とあわせて）受け取ることが可能である場合もある<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>。管理ポリシーによっては、それに従うよう要求されている場合もある。
+</p><p>大抵、複数のDNSサーバを指定可能になっている。DNSサーバへ問い合わせる際に優先順位の高い順に行い、応答がない場合（該当DNSサーバが停止、通信経路で障害発生など）に次位（代替）以降のDNSサーバへ問い合わせを行うようになっている。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=11" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">MXレコードなどはIPアドレス以外に解決される。他にも近年はメイルの返信元の真正性確認などに使われるTXTフィールドなどがある。設計上は任意の拡張が容易なように作られている（たとえば、IPv6のために追加されたAAAAレコードなど）。</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">特に、可用性を上げるためのセカンダリサーバは、上流のネットワークなどができるだけ別系統であることが望ましく、2系統のネットワークを持たない場合などには外部に出すのが現実的なことが多い。</span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external free" href="http://technet.microsoft.com/ja-jp/library/cc731204.aspx" rel="nofollow">http://technet.microsoft.com/ja-jp/library/cc731204.aspx</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text">フィッシングサイトなど悪意のあるウェブサーバへ誘導されてしまったり、メールの転送先を変更され窃取されたりすることになる。</span>
+</li>
+<li id="cite_note-5"><b><a href="#cite_ref-5">^</a></b> <span class="reference-text">Windowsでは、<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%91%E3%83%8D%E3%83%AB" title="コントロールパネル">コントロールパネル</a>のネットワーク設定、macOSでは「システム環境設定」の「ネットワーク」、Unix系では<tt>/etc/resolve.conf</tt>など</span>
+</li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text">「オペレーティングシステムが名前解決を必要とした際」ではない。</span>
+</li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text">DHCPサーバから得た情報で設定する場合の指定項目は「DNSサーバのアドレスを自動的に取得する」などと表現されている。</span>
+</li>
+</ol></div>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=12" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://www.ipa.go.jp/security/vuln/documents/2008/200809_DNS.html" rel="nofollow">情報処理推進機構：DNSキャッシュポイズニングの脆弱性に関する注意喚起</a></li>
+<li><a class="external text" href="https://dnsops.jp/" rel="nofollow">日本DNSオペレーターズグループ</a></li>
+<li><a class="external text" href="http://www.dns.jp/" rel="nofollow">JP DNS Web Page</a></li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=13" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%8D%E3%83%BC%E3%83%A0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ダイナミックドメインネームシステム">ダイナミックドメインネームシステム</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%BE%E3%83%AB%E3%83%90" title="リゾルバ">リゾルバ</a></li>
+<li><a href="/wiki/DNS%E3%83%AB%E3%83%BC%E3%83%88%E3%82%BE%E3%83%BC%E3%83%B3" title="DNSルートゾーン">DNSルートゾーン</a></li>
+<li><a href="/wiki/DNS_over_HTTPS" title="DNS over HTTPS">DNS over HTTPS</a></li>
+<li><a class="mw-redirect" href="/wiki/DNS64" title="DNS64">DNS64</a></li></ul>
+<h3><span id=".E3.83.91.E3.83.96.E3.83.AA.E3.83.83.E3.82.AFDNS.E3.82.B5.E3.83.BC.E3.83.90"></span><span class="mw-headline" id="パブリックDNSサーバ">パブリックDNSサーバ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;section=14" title="節を編集: パブリックDNSサーバ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Quad9" title="Quad9">Quad9</a></li>
+<li><a href="/wiki/1.1.1.1" title="1.1.1.1">1.1.1.1</a></li>
+<li><a href="/wiki/OpenDNS" title="OpenDNS">OpenDNS</a></li>
+<li><a href="/wiki/Google_Public_DNS" title="Google Public DNS">Google Public DNS</a></li>
+<li><a href="/wiki/%E3%83%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9" title="ヤンデックス">Yandex.DNS</a></li></ul>
+
+<p><a class="new" href="/w/index.php?title=De:Domain_Name_System&amp;action=edit&amp;redlink=1" title="De:Domain Name System (存在しないページ)">de:Domain Name System#Nameserver</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331070633
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.070 seconds
+Real time usage: 0.086 seconds
+Preprocessor visited node count: 802/1000000
+Post‐expand include size: 7996/2097152 bytes
+Template argument size: 3138/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2888/5000000 bytes
+Lua time usage: 0.010/7 seconds
+Lua virtual size: 4816896/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   56.090      1 -total
+ 53.22%   29.852      2 テンプレート:Main
+ 49.19%   27.588      2 テンプレート:Rellink
+ 45.71%   25.638      2 テンプレート:See/core
+ 33.36%   18.711      1 テンプレート:要出典範囲
+ 30.05%   16.854      1 テンプレート:要出典
+ 27.04%   15.166      1 テンプレート:Fix
+  9.22%    5.170      1 テンプレート:DMC/core
+  7.21%    4.046      1 テンプレート:Computer-stub
+  4.84%    2.716      2 テンプレート:要出典/dateHandler
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:4586-0!canonical and timestamp 20220331070632 and revision id 3569. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=DNSサーバ&amp;oldid=3569">http://localhost:8080/w/index.php?title=DNSサーバ&amp;oldid=3569</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B411%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2019年11月">出典を必要とする記述のある記事/2019年11月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Domain_Name_System" title="カテゴリ:Domain Name System">Domain Name System</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B5%E3%83%BC%E3%83%90" title="カテゴリ:サーバ">サーバ</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;returntoquery=curid%3D4586%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;returntoquery=curid%3D4586%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/DNS%E3%82%B5%E3%83%BC%E3%83%90" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/DNS%E3%82%B5%E3%83%BC%E3%83%90">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/DNS%E3%82%B5%E3%83%BC%E3%83%90" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/DNS%E3%82%B5%E3%83%BC%E3%83%90" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;oldid=3569" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=DNS%E3%82%B5%E3%83%BC%E3%83%90&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月9日 (水) 01:30 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.070","walltime":"0.086","ppvisitednodes":{"value":802,"limit":1000000},"postexpandincludesize":{"value":7996,"limit":2097152},"templateargumentsize":{"value":3138,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2888,"limit":5000000},"timingprofile":["100.00%   56.090      1 -total"," 53.22%   29.852      2 テンプレート:Main"," 49.19%   27.588      2 テンプレート:Rellink"," 45.71%   25.638      2 テンプレート:See/core"," 33.36%   18.711      1 テンプレート:要出典範囲"," 30.05%   16.854      1 テンプレート:要出典"," 27.04%   15.166      1 テンプレート:Fix","  9.22%    5.170      1 テンプレート:DMC/core","  7.21%    4.046      1 テンプレート:Computer-stub","  4.84%    2.716      2 テンプレート:要出典/dateHandler"]},"scribunto":{"limitreport-timeusage":{"value":"0.010","limit":"7"},"limitreport-virtmemusage":{"value":4816896,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331070633","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":177});});</script>
+</body></html>
