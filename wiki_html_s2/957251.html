@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Wired Equivalent Privacy - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Wired_Equivalent_Privacy rootpage-Wired_Equivalent_Privacy skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Wired Equivalent Privacy</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>Wired Equivalent Privacy</b>（直訳すると<b>有線同等機密</b>、通称<b>WEP</b>）は、<a href="." id="link_a_1" title="IEEE 802.11">IEEE 802.11</a>無線<a href="." id="link_a_2" title="コンピュータネットワーク">ネットワーク</a>のセキュリティのための<a href="." id="link_a_3" title="アルゴリズム">アルゴリズム</a>。<a href="." id="link_a_4" title="1997年">1997年</a>に登場したとき<sup class="reference" id="cite_ref-802.11-1997_1-0"><a href="#cite_note-802.11-1997-1">[1]</a></sup>、WEPは従来からある有線<a href="." id="link_a_5" title="Local Area Network">LAN</a>並みの<a href="." id="link_a_6" title="機密">機密</a>性を提供するものと期待されていたが、後に容易に解読できることが判明したため廃れた。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#脆弱性"><span class="tocnumber">1</span> <span class="toctext">脆弱性</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#詳細"><span class="tocnumber">2</span> <span class="toctext">詳細</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#認証"><span class="tocnumber">3</span> <span class="toctext">認証</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#弱点"><span class="tocnumber">4</span> <span class="toctext">弱点</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#対策"><span class="tocnumber">5</span> <span class="toctext">対策</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#802.11i（WPAとWPA2）"><span class="tocnumber">5.1</span> <span class="toctext">802.11i（WPAとWPA2）</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#標準規格以外で実装された対策"><span class="tocnumber">5.2</span> <span class="toctext">標準規格以外で実装された対策</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#WEP2"><span class="tocnumber">5.2.1</span> <span class="toctext">WEP2</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#WEPplus"><span class="tocnumber">5.2.2</span> <span class="toctext">WEPplus</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Dynamic_WEP"><span class="tocnumber">5.2.3</span> <span class="toctext">Dynamic WEP</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#脚注・出典"><span class="tocnumber">6</span> <span class="toctext">脚注・出典</span></a></li>
+</ul>
+</div>
+<h2><span id=".E8.84.86.E5.BC.B1.E6.80.A7"></span><span class="mw-headline" id="脆弱性">脆弱性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=1" title="節を編集: 脆弱性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2001年以降、<a href="/wiki/%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD" title="暗号解読">暗号解読</a>者らによって深刻な弱点がいくつか明らかとなり、最終的には容易に入手可能なソフトウェアを使って数分でWEPコネクションを解読可能な状態となっている<sup class="reference" id="cite_ref-Intercepting_Mobile_Comm_Nik_Ian_Dav_2-0"><a href="#cite_note-Intercepting_Mobile_Comm_Nik_Ian_Dav-2">[2]</a></sup>。数か月以内に<a href="/wiki/IEEE" title="IEEE">IEEE</a>は新たなタスクフォース<a class="mw-redirect" href="/wiki/IEEE_802.11i" title="IEEE 802.11i">802.11i</a>を立ち上げ、この問題の対策を検討し始めた。
+</p><p>2003年には、802.11iによってまとめられつつあった改正案のサブセットである <a href="/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</a> (WPA) でWEPを置き換えることを <a href="/wiki/Wi-Fi_Alliance" title="Wi-Fi Alliance">Wi-Fi Alliance</a> が発表した。2004年には802.11iのまとめた規格 (<a class="mw-redirect" href="/wiki/WPA2" title="WPA2">WPA2</a>) が承認され、IEEEは正式に WEP-40 と WEP-104 が「本来のセキュリティ目標を達成できなかったため、置換される」ことを宣言した<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>。
+</p><p>脆弱性が明らかになっているにも関わらず、WEPはその後しばらく広く使われていた<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup>。特に、<a href="/wiki/%E3%83%8B%E3%83%B3%E3%83%86%E3%83%B3%E3%83%89%E3%83%BCDS" title="ニンテンドーDS">ニンテンドーDS</a>や<a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PSP</a>などの携帯型ゲーム機ではWEPにしか対応していない機器が多く、これらの機器は普及が進んでいたため、WEPのアクセスポイントが蔓延ることとなった。
+</p><p>WEPは安価で旧式なパーソナル用途向け無線LANルーターでも使用可能な暗号化手段で、通りすがりの他人に安易に無線ネットワークを使用されることは防げるものの、悪意を持って意図的に盗聴しようという試みに対しては無防備であるため、どんな形であれ使うべきではない<sup class="reference" id="cite_ref-Final_Nail_5-0"><a href="#cite_note-Final_Nail-5">[5]</a></sup>。
+</p><p>なお、WEPを <i>Wireless Encryption Protocol</i> の略としている例が散見される<sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2013年7月）">要出典</span></a></i>]</sup>が誤りである。
+</p>
+<h2><span id=".E8.A9.B3.E7.B4.B0"></span><span class="mw-headline" id="詳細">詳細</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=2" title="節を編集: 詳細">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>WEPは1999年9月に承認された元々の <a href="/wiki/IEEE_802.11" title="IEEE 802.11">IEEE 802.11</a> 規格の一部である<sup class="reference" id="cite_ref-802.11-1999_6-0"><a href="#cite_note-802.11-1999-6">[6]</a></sup>。WEPでは<a href="/wiki/%E6%A9%9F%E5%AF%86" title="機密">機密</a>保持のために<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E6%9A%97%E5%8F%B7" title="ストリーム暗号">ストリーム暗号</a><a href="/wiki/RC4" title="RC4">RC4</a>を使い<sup class="reference" id="cite_ref-inform_7-0"><a href="#cite_note-inform-7">[7]</a></sup>、<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%AE%8C%E5%85%A8%E6%80%A7" title="データ完全性">データ完全性</a>保証のために<a href="/wiki/%E5%B7%A1%E5%9B%9E%E5%86%97%E9%95%B7%E6%A4%9C%E6%9F%BB" title="巡回冗長検査">CRC-32</a>チェックサムを使う<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>。2004年に新たな機構に置換されたが、今も規格文書に記載されている<sup class="reference" id="cite_ref-802.11i_9-0"><a href="#cite_note-802.11i-9">[9]</a></sup>。
+</p>
+
+<p>標準的な64ビットのWEPは40ビットの鍵 (WEP-40) を使い、24ビットの<a href="/wiki/%E5%88%9D%E6%9C%9F%E5%8C%96%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="初期化ベクトル">初期化ベクトル</a>と連結してRC4の鍵ストリームを生成する。WEPの当初のドラフト版が作成されたころ、<a href="/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%90%88%E8%A1%86%E5%9B%BD%E9%80%A3%E9%82%A6%E6%94%BF%E5%BA%9C" title="アメリカ合衆国連邦政府">アメリカ合衆国連邦政府</a>は輸出向けの暗号技術を制限していたため、鍵の長さが制限されていた。鍵としては、10桁の<a href="/wiki/%E5%8D%81%E5%85%AD%E9%80%B2%E6%B3%95" title="十六進法">16進</a>文字列（0-9 と A-F）あるいは5文字の英数字（0-9、a-z、A-Z）として指定される（16進文字列の場合、1桁あたり4ビット × 10桁 + 24ビット初期化ベクトル = 64ビットWEP鍵。英数字の場合、1文字あたり8ビット × 5文字 + 24ビット初期化ベクトル = 64ビットWEP鍵）。
+</p><p>制限が解除されると大手メーカーは拡張された128ビットのWEPプロトコルを実装するため、鍵長を104ビットにした (WEP-104) 。128ビットWEPの鍵は、26桁の16進文字列をユーザーが入力する形で設定するのがほとんどである。これに24ビットの初期化ベクトルを生成して付け加え、最終的な128ビットのWEP鍵とする。鍵を英数字で指定する場合には13文字となる（16進文字列の場合、1桁あたり4ビット × 26桁 + 24ビット初期化ベクトル = 128ビットWEP鍵。英数字の場合、1文字あたり8ビット × 13文字 + 24ビット初期化ベクトル = 128ビットWEP鍵）。
+</p><p>いくつかのベンダーは152ビットおよび256ビットWEPを実装した。これは、128ビットの場合と同様に初期化ベクトルは24ビットで、残る128ビットあるいは232ビットを鍵として指定できる。この128ビットあるいは232ビットぶんの鍵も32桁あるいは58桁の16進文字列として指定する。鍵を英数字で指定する場合には16文字あるいは29文字となる（16進文字列の場合、1桁あたり4ビット × 32桁 + 24ビット初期化ベクトル = 152ビットWEP鍵、あるいは1桁あたり4ビット × 58桁 + 24ビット初期化ベクトル = 152ビットWEP鍵。英数字の場合、1文字あたり8ビット × 16文字 + 24ビット初期化ベクトル = 256ビットWEP鍵、あるいは1文字あたり8ビット × 29文字 + 24ビット初期化ベクトル = 256ビットWEP鍵）。
+</p><p>WEPのセキュリティ上の問題は鍵の長さだけではない<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>。鍵が長ければ、<a href="/wiki/%E6%9A%97%E5%8F%B7%E8%A7%A3%E8%AA%AD" title="暗号解読">暗号解読</a>にはより多くのパケットを盗聴する必要があるが、必要なトラフィックを生じさせる積極的な攻撃方法が存在する。WEPの他の弱点としては、初期化ベクトル衝突の可能性やパケット改変の可能性があり<sup class="reference" id="cite_ref-inform_7-1"><a href="#cite_note-inform-7">[7]</a></sup>、それらは鍵を長くしても対策にはならない。
+</p>
+<h2><span id=".E8.AA.8D.E8.A8.BC"></span><span class="mw-headline" id="認証">認証</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=3" title="節を編集: 認証">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>WEPでは、オープンシステム認証と共通鍵認証という2種類の<a href="/wiki/%E8%AA%8D%E8%A8%BC" title="認証">認証</a>方式が使われている。
+</p><p>なお以下ではインフラストラクチャーモード（WLANクライアントとアクセスポイント間の通信）の認証について解説するが、基本的にはアドホックモードでも同じである。
+</p><p>オープンシステム認証では、WLANクライアントは認証の際に自身の証明書をアクセスポイントに提供する必要がない。したがってどんなクライアントでも、そのWEP鍵がどういうものであれ、アクセスポイントに対して自身の認証ができ、ネットワークに繋がるよう試みることができる。つまり、事実上いわゆる認証と呼べるようなものはなされていない。その後、暗号化されたデータフレームが使われ、その時点でクライアントが正しい鍵を持っている必要がある。
+</p><p>共通鍵認証では、認証にもWEP鍵を使う。次のような4段階のチャレンジ/レスポンス型認証のハンドシェイクが行われる。
+</p>
+<ol><li>クライアントはアクセスポイントに認証要求を送る。</li>
+<li>アクセスポイントは<a href="/wiki/%E5%B9%B3%E6%96%87" title="平文">平文</a>でチャレンジ（誰何）フレームを送る。</li>
+<li>クライアントはそのチャレンジフレームの中身を予め設定されたWEP鍵を使って暗号化し、それを認証要求に含めてアクセスポイントに送る。</li>
+<li>アクセスポイントはそれを解読し、前に送ったチャレンジフレームの平文と比較する。同一かどうかによって、アクセスポイントは肯定または否定の応答を返す。</li></ol>
+<p>その後、事前共有されたWEP鍵を使い<a href="/wiki/RC4" title="RC4">RC4</a>を使ってデータフレームを暗号化する。
+</p><p>一見すると、認証と呼べるようなことを全く行わないオープンシステム認証よりも共通鍵認証の方が安全なように思える。しかし、実際は全く逆である。共通鍵認証におけるチャレンジフレームを捕らえることで、ハンドシェイクで使われた鍵ストリームを把握することが可能である<sup class="reference" id="cite_ref-Intercepting_Mobile_Comm_Nik_Ian_Dav_2-1"><a href="#cite_note-Intercepting_Mobile_Comm_Nik_Ian_Dav-2">[2]</a></sup>。そのため、WEPではオープンシステム認証を使った方が賢明である。ただし、いずれにしてもWEPの認証機構は弱い。
+</p>
+<h2><span id=".E5.BC.B1.E7.82.B9"></span><span class="mw-headline" id="弱点">弱点</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=4" title="節を編集: 弱点">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>RC4は<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E6%9A%97%E5%8F%B7" title="ストリーム暗号">ストリーム暗号</a>であり、同じ鍵を二度使うことは避けなければならない。そのために<a href="/wiki/%E5%88%9D%E6%9C%9F%E5%8C%96%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB" title="初期化ベクトル">初期化ベクトル</a>が使われるが、24ビットという長さはトラフィックの多いネットワークでは十分長いとは言えない。WEPでの初期化ベクトルの使い方により、<a href="/wiki/%E9%96%A2%E9%80%A3%E9%8D%B5%E6%94%BB%E6%92%83" title="関連鍵攻撃">関連鍵攻撃</a>の可能性が生じた。24ビットの初期化ベクトルでは、<a href="/wiki/%E3%83%91%E3%82%B1%E3%83%83%E3%83%88" title="パケット">パケット</a>を5,000個やりとりすると、50%の確率で同じ初期化ベクトルが再び使われる可能性がある。
+</p><p>2001年8月、Scott Fluhrer、Itsik Mantin と<a href="/wiki/%E3%82%A2%E3%83%87%E3%82%A3%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%9F%E3%82%A2" title="アディ・シャミア">アディ・シャミア</a>は、WEPでのRC4と初期化ベクトルの使い方の問題点を利用した暗号解読法を発表し、無線ネットワークを盗聴することでRC4の<a href="/wiki/%E9%8D%B5_(%E6%9A%97%E5%8F%B7)" title="鍵 (暗号)">鍵</a>を復元できる受動的攻撃法がありうることを示した。そのネットワークのトラフィックの大小、すなわち調べられるパケットの数にも依存するが、場合によっては1分ほどで鍵を復元できる。トラフィックがないネットワークの場合、攻撃者がパケットを送信し、その応答パケットを得ることで鍵を探すのに使える。この攻撃法は実際すぐに実装され、自動暗号解読ツールがリリースされた。この攻撃は普通のパーソナルコンピュータで実施でき、ソフトウェアも無料のものが出回っている。
+</p><p>Cam-Winget et al. (2003) ではWEPの持つ様々な弱点を調査している。彼らは「実験によると、適切な機器を用意すれば1<a href="/wiki/%E3%83%9E%E3%82%A4%E3%83%AB" title="マイル">マイル</a>以上の距離から対象のWEPを使ったネットワークを盗聴できる」と記している。また、次の2つの問題点を指摘した。
+</p>
+<ul><li>WEPの使用はオプションとされているため、WEPを使わずに（暗号化せずに）運用されている無線LANが多い。</li>
+<li>WEPでは<a class="new" href="/w/index.php?title=%E9%8D%B5%E7%AE%A1%E7%90%86&amp;action=edit&amp;redlink=1" title="鍵管理 (存在しないページ)">鍵管理</a>プロトコルを持たないため、複数の利用者が単一の<a href="/wiki/%E5%85%B1%E9%80%9A%E9%8D%B5%E6%9A%97%E5%8F%B7" title="共通鍵暗号">共通鍵</a>を使っている。</li></ul>
+<p>2005年、<a href="/wiki/%E9%80%A3%E9%82%A6%E6%8D%9C%E6%9F%BB%E5%B1%80" title="連邦捜査局">FBI</a>が一般に入手可能な機器を使って3分でWEPを使用したネットワークを解読するデモンストレーションを行った<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup>。Andreas Klein は、RC4ストリーム暗号について別の解析を行った。Kleinは Fluhrer、Mantin およびシャミアが示した以外にもWEPの解読に利用できるRC4鍵ストリームとWEPの鍵の相関関係があることを示した。
+</p><p>2006年、Bittau、Handley、Lackey は802.11プロトコル自体を利用してWEPの解読を加速させる方法を示した。1つのパケットを盗聴したら、攻撃者は任意のデータを送信することで処理を早めることができる。盗聴で得たパケットは（1バイトにつき128個程度のパケットを送ることで）1バイトずつ解読でき、それによってローカルなIPアドレスを発見できる。攻撃者は復元したIPヘッダを使い、802.11のフラグメンテーション機能を利用して盗聴したパケットを再現できる。そしてその802.11ネットワークがインターネットに接続されている場合、アクセスポイントはそのパケットを解読（復号）してインターネット上の攻撃者の仲間にそれを転送するのに利用される。すると、無線LAN側の攻撃者とインターネット側の仲間の間の通信によってパケットを1つ盗聴しただけで容易にWEPを破ることができる。
+</p><p>2007年、Erik Tews、Andrei Pychkine、Ralf-Philipp Weinmann は Klein の2005年の攻撃法を拡張し、WEPに対して最適化した攻撃法を示した<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>。この攻撃法では、4万個のパケットを捕らえるだけで104ビットの鍵を50%の確率で復元できる。利用できるパケット数が6万個なら成功率は80%、8万5千個なら95%となる。<a href="/wiki/Address_Resolution_Protocol" title="Address Resolution Protocol">ARP</a>再注入などの能動的攻撃法を使えば、条件が揃えば4万個のパケットを1分以内に集められる。実際の計算に必要なリソースは、Pentium-M 1.7GHz でメモリ3MBと計算時間3秒ほどであり、もっと低速なCPUでも最適化可能である。40ビット鍵であれば成功率はもっと高くなる。
+</p><p>2008年、<a class="new" href="/w/index.php?title=En:Payment_Card_Industry&amp;action=edit&amp;redlink=1" title="En:Payment Card Industry (存在しないページ)">Payment Card Industry</a> (PCI) のセキュリティ標準化委員会は<a href="/wiki/PCI_DSS" title="PCI DSS">PCI DSS</a>の更新を行い、その中で2010年6月30日以降クレジットカード処理にWEPをどんな形であれ使用しないという規定を設けた。また、2009年3月31日以降、新たに設置するシステムにはWEPを使わないこととした。WEPの脆弱性は、アメリカの百貨店 <a class="new" href="/w/index.php?title=En:T.J._Maxx&amp;action=edit&amp;redlink=1" title="En:T.J. Maxx (存在しないページ)">T.J. Maxx</a> の親会社のネットワーク侵入事件で利用されている<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup>。
+</p>
+<h2><span id=".E5.AF.BE.E7.AD.96"></span><span class="mw-headline" id="対策">対策</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=5" title="節を編集: 対策">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>暗号の<a href="/wiki/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AA%E3%83%B3%E3%82%B0" title="トンネリング">トンネリング</a>（例えば、<a href="/wiki/IPsec" title="IPsec">IPsec</a>、<a href="/wiki/Secure_Shell" title="Secure Shell">Secure Shell</a>など）を使えば、安全でないネットワーク上でも安全にデータ転送が可能である。しかし、無線ネットワーク自体のセキュリティを回復すべく、WEPの代替となる規格が開発された。
+</p>
+<h3><span id="802.11i.EF.BC.88WPA.E3.81.A8WPA2.EF.BC.89"></span><span class="mw-headline" id="802.11i（WPAとWPA2）">802.11i（WPAとWPA2）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=6" title="節を編集: 802.11i（WPAとWPA2）">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>WEPのセキュリティ問題の推奨される対策として、<a href="/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">WPA2</a>またはその前段階の<a href="/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">WPA</a>への転換がある。どちらもWEPに比較すればずっと安全である<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>。WPAまたはWPA2をサポートするため、一部の古い<a href="/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88_(%E7%84%A1%E7%B7%9ALAN)" title="アクセスポイント (無線LAN)">アクセスポイント</a>は置換の必要が生じ、また一部は<a href="/wiki/%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2" title="ファームウェア">ファームウェア</a>の更新で対応可能だった。WPAはWPA2を実装した機器が出回るまでのソフトウェアで実装可能な一時的な対策だった<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup>。WPAで採用されている<a href="/wiki/Temporal_Key_Integrity_Protocol" title="Temporal Key Integrity Protocol">TKIP</a>は設計上の寿命に到達しており、破られる危険性が高くなっているため、次回の802.11規格の全面改訂の際には削除される予定である<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>。
+</p>
+<h3><span id=".E6.A8.99.E6.BA.96.E8.A6.8F.E6.A0.BC.E4.BB.A5.E5.A4.96.E3.81.A7.E5.AE.9F.E8.A3.85.E3.81.95.E3.82.8C.E3.81.9F.E5.AF.BE.E7.AD.96"></span><span class="mw-headline" id="標準規格以外で実装された対策">標準規格以外で実装された対策</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=7" title="節を編集: 標準規格以外で実装された対策">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="WEP2">WEP2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=8" title="節を編集: WEP2">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>802.11i の初期のドラフト版にあった間に合わせ的なWEP強化策である。WPAやWPA2に対応できない機器でも実装可能な場合があった。初期化ベクトルと鍵の両方を128ビットに拡張したものである<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>。初期化ベクトルの重複を防ぎ、<a class="mw-redirect" href="/wiki/%E7%B7%8F%E5%BD%93%E3%82%8A%E6%94%BB%E6%92%83" title="総当り攻撃">総当り</a>鍵攻撃を防止できることが期待されていた。
+</p><p>WEPが根本的に不完全だということが判明すると（つまり、初期化ベクトルと鍵のサイズだけの問題ではない）、WEP2の名前は消えた。ただし鍵長を拡大するという対策はWPAの<a href="/wiki/Temporal_Key_Integrity_Protocol" title="Temporal Key Integrity Protocol">TKIP</a>にも採用されている。
+</p>
+<h4><span class="mw-headline" id="WEPplus">WEPplus</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=9" title="節を編集: WEPplus">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>WEP+ とも。<a class="new" href="/w/index.php?title=En:Agere_Systems&amp;action=edit&amp;redlink=1" title="En:Agere Systems (存在しないページ)">Agere Systems</a>（<a href="/wiki/%E3%83%AB%E3%83%BC%E3%82%BB%E3%83%B3%E3%83%88%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ルーセント・テクノロジー">ルーセント・テクノロジー</a>のかつての子会社）が独自にWEPを強化したもので、「弱い初期化ベクトル」を排除することでWEPのセキュリティを強化している<sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup>。WEPplusは無線通信を行う双方がそれを採用していないとセキュリティを強化できない。無線LANの性質上、そのことを確実に保証することは難しく、利用可能な環境は限られる。また、<a href="/wiki/%E5%8F%8D%E5%B0%84%E6%94%BB%E6%92%83" title="反射攻撃">反射攻撃</a>を必ずしも防止できない。
+</p>
+<h4><span class="mw-headline" id="Dynamic_WEP">Dynamic WEP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=10" title="節を編集: Dynamic WEP">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Dynamic WEP では、WEPの鍵を動的に変化させる。<a href="/wiki/%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%B3%E3%83%A0" title="スリーコム">スリーコム</a>などいくつかのベンダーがそれぞれ独自に機能追加したものである。
+</p><p>動的に変化させるというアイデアは 802.11i の<a href="/wiki/Temporal_Key_Integrity_Protocol" title="Temporal Key Integrity Protocol">TKIP</a>に取り入れられているが、アルゴリズム自体はWEPとは異なる。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8.E3.83.BB.E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="脚注・出典">脚注・出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit&amp;section=11" title="節を編集: 脚注・出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-802.11-1997-1"><b><a href="#cite_ref-802.11-1997_1-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"> <a class="external text" href="http://ieeexplore.ieee.org/search/freesrchabstract.jsp?arnumber=654749&amp;isnumber=14251&amp;punumber=5258&amp;k2dockey=654749@ieeestds&amp;query=%28802.11+1997%29%3Cin%3Emetadata&amp;pos=0" rel="nofollow"><i>IEEE Std 802.11-1997 Information Technology- telecommunications And Information exchange Between Systems-Local And Metropolitan Area Networks-specific Requirements-part 11: Wireless Lan Medium Access Control (MAC) And Physical Layer (PHY) Specifications</i></a>. (1997)<span style="display:none;">. <a class="external free" href="http://ieeexplore.ieee.org/search/freesrchabstract.jsp?arnumber=654749&amp;isnumber=14251&amp;punumber=5258&amp;k2dockey=654749@ieeestds&amp;query=%28802.11+1997%29%3Cin%3Emetadata&amp;pos=0" rel="nofollow">http://ieeexplore.ieee.org/search/freesrchabstract.jsp?arnumber=654749&amp;isnumber=14251&amp;punumber=5258&amp;k2dockey=654749@ieeestds&amp;query=%28802.11+1997%29%3Cin%3Emetadata&amp;pos=0</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+Std+802.11-1997+Information+Technology-+telecommunications+And+Information+exchange+Between+Systems-Local+And+Metropolitan+Area+Networks-specific+Requirements-part+11%3A+Wireless+Lan+Medium+Access+Control+%28MAC%29+And+Physical+Layer+%28PHY%29+Specifications&amp;rft.date=1997&amp;rft_id=http%3A%2F%2Fieeexplore.ieee.org%2Fsearch%2Ffreesrchabstract.jsp%3Farnumber%3D654749%26isnumber%3D14251%26punumber%3D5258%26k2dockey%3D654749%40ieeestds%26query%3D%2528802.11%2B1997%2529%253Cin%253Emetadata%26pos%3D0&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Intercepting_Mobile_Comm_Nik_Ian_Dav-2">^ <a href="#cite_ref-Intercepting_Mobile_Comm_Nik_Ian_Dav_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Intercepting_Mobile_Comm_Nik_Ian_Dav_2-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Nikita Borisov, Ian Goldberg, David Wagner. <a class="external text" href="http://www.isaac.cs.berkeley.edu/isaac/mobicom.pdf" rel="nofollow"><i>Intercepting Mobile Communications: The Insecurity of 802.11</i></a><span style="display:none;">. <a class="external free" href="http://www.isaac.cs.berkeley.edu/isaac/mobicom.pdf" rel="nofollow">http://www.isaac.cs.berkeley.edu/isaac/mobicom.pdf</a></span> <span class="reference-accessdate"><span title="">2006年9月12日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Intercepting+Mobile+Communications%3A+The+Insecurity+of+802.11&amp;rft.aulast=Nikita+Borisov%2C+Ian+Goldberg%2C+David+Wagner&amp;rft.au=Nikita+Borisov%2C+Ian+Goldberg%2C+David+Wagner&amp;rft_id=http%3A%2F%2Fwww.isaac.cs.berkeley.edu%2Fisaac%2Fmobicom.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://lirent.net/wifi/what-is-a-wep-key.html" rel="nofollow">What is a WEP key?</a>”.   lirent.net. <span title="">2008年3月11日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation pressrelease" style="font-style:normal"><a class="external text" href="http://www.rsa.com/press_release.aspx?id=8451" rel="nofollow">“Wireless Adoption Leaps Ahead, Advanced Encryption Gains Ground in the Post-WEP Era”</a> (プレスリリース), <a href="/wiki/RSA%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="RSAセキュリティ">RSA Security</a>, (2007年6月14日)<span style="display:none;">, <a class="external free" href="http://www.rsa.com/press_release.aspx?id=8451" rel="nofollow">http://www.rsa.com/press_release.aspx?id=8451</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+Adoption+Leaps+Ahead%2C+Advanced+Encryption+Gains+Ground+in+the+Post-WEP+Era&amp;rft.atitle=&amp;rft.date=2007%E5%B9%B46%E6%9C%8814%E6%97%A5&amp;rft.pub=%5B%5BRSA%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%7CRSA+Security%5D%5D&amp;rft_id=http%3A%2F%2Fwww.rsa.com%2Fpress_release.aspx%3Fid%3D8451&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-Final_Nail-5"><b><a href="#cite_ref-Final_Nail_5-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Andrea Bittau, Mark Handley, Joshua Lackey. <a class="external text" href="http://www.cs.ucl.ac.uk/staff/M.Handley/papers/fragmentation.pdf" rel="nofollow"><i>The Final Nail in WEP's Coffin</i></a><span style="display:none;">. <a class="external free" href="http://www.cs.ucl.ac.uk/staff/M.Handley/papers/fragmentation.pdf" rel="nofollow">http://www.cs.ucl.ac.uk/staff/M.Handley/papers/fragmentation.pdf</a></span> <span class="reference-accessdate"><span title="">2008年3月16日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Final+Nail+in+WEP%27s+Coffin&amp;rft.aulast=Andrea+Bittau%2C+Mark+Handley%2C+Joshua+Lackey&amp;rft.au=Andrea+Bittau%2C+Mark+Handley%2C+Joshua+Lackey&amp;rft_id=http%3A%2F%2Fwww.cs.ucl.ac.uk%2Fstaff%2FM.Handley%2Fpapers%2Ffragmentation.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-802.11-1999-6"><b><a href="#cite_ref-802.11-1999_6-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"> <i>IEEE 802.11-1999: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications</i>. (1999)</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+802.11-1999%3A+Wireless+LAN+Medium+Access+Control+%28MAC%29+and+Physical+Layer+%28PHY%29+Specifications&amp;rft.date=1999&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-inform-7">^ <a href="#cite_ref-inform_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-inform_7-1"><sup><i><b>b</b></i></sup></a> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.informit.com/guides/content.aspx?g=security&amp;seqNum=85" rel="nofollow">WPA Part 2: Weak 初期化ベクトル's</a>”.   informit.com. <span title="">2008年3月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.cs.umd.edu/~waa/attack/v3dcmnt.htm" rel="nofollow">An Inductive Chosen Plaintext Attack against WEP/WEP2</a>”.   cs.umd.edu. <span title="">2008年3月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-802.11i-9"><b><a href="#cite_ref-802.11i_9-0">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal"> <a class="external text" href="http://standards.ieee.org/getieee802/download/802.11i-2004.pdf" rel="nofollow"><i>IEEE 802.11i-2004: Medium Access Control (MAC) Security Enhancements</i></a>. (2004)<span style="display:none;">. <a class="external free" href="http://standards.ieee.org/getieee802/download/802.11i-2004.pdf" rel="nofollow">http://standards.ieee.org/getieee802/download/802.11i-2004.pdf</a></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+802.11i-2004%3A+Medium+Access+Control+%28MAC%29+Security+Enhancements&amp;rft.date=2004&amp;rft_id=http%3A%2F%2Fstandards.ieee.org%2Fgetieee802%2Fdownload%2F802.11i-2004.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Fluhrer, Mantin and Shamir. <a class="external text" href="http://www.drizzle.com/~aboba/IEEE/rc4_ksaproc.pdf" rel="nofollow"><i>Weaknesses_in_the_Key_Scheduling_Algorithm_of_RC4</i></a><span style="display:none;">. <a class="external free" href="http://www.drizzle.com/~aboba/IEEE/rc4_ksaproc.pdf" rel="nofollow">http://www.drizzle.com/~aboba/IEEE/rc4_ksaproc.pdf</a></span> <span class="reference-accessdate"><span title="">2008年3月16日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Weaknesses_in_the_Key_Scheduling_Algorithm_of_RC4&amp;rft.aulast=Fluhrer%2C+Mantin+and+Shamir&amp;rft.au=Fluhrer%2C+Mantin+and+Shamir&amp;rft_id=http%3A%2F%2Fwww.drizzle.com%2F%7Eaboba%2FIEEE%2Frc4_ksaproc.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a class="external text" href="http://www.smallnetbuilder.com/index.php?option=com_content&amp;task=view&amp;id=24251&amp;Itemid=100" rel="nofollow">The Feds can own your WLAN too</a></span>
+</li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><a class="external text" href="http://eprint.iacr.org/2007/120.pdf" rel="nofollow">Breaking 104 bit WEP in less than 60 seconds</a> by Erik Tews, Ralf-Philipp Weinmann, and Andrei Pychkine</span>
+</li>
+<li id="cite_note-13"><b><a href="#cite_ref-13">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.networksystemsdesignline.com/showArticle.jhtml?printableArticle=true&amp;articleId=199500680" rel="nofollow">T.J. Maxx data theft likely due to wireless 'wardriving'</a>”.   Network Systems DesignLine. <span title="">2010年7月23日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-14"><b><a href="#cite_ref-14">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.networkmagazineindia.com/200112/focus3.htm" rel="nofollow">802.11b Update: Stepping Up Your WLAN Security</a>”.   networkmagazineindia.com. <span title="">2008年3月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-15"><b><a href="#cite_ref-15">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal"> <a class="external text" href="http://www.proxim.com/learn/library/whitepapers/wireless_security.pdf" rel="nofollow"><i>WIRELESS NETWORK SECURITY</i></a>. Proxim Wireless<span style="display:none;">. <a class="external free" href="http://www.proxim.com/learn/library/whitepapers/wireless_security.pdf" rel="nofollow">http://www.proxim.com/learn/library/whitepapers/wireless_security.pdf</a></span> <span class="reference-accessdate"><span title="">2008年3月16日</span>閲覧。</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=WIRELESS+NETWORK+SECURITY&amp;rft.pub=Proxim+Wireless&amp;rft_id=http%3A%2F%2Fwww.proxim.com%2Flearn%2Flibrary%2Fwhitepapers%2Fwireless_security.pdf&amp;rfr_id=info:sid/ja.wikipedia.org:Wired_Equivalent_Privacy"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-16"><b><a href="#cite_ref-16">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://mentor.ieee.org/802.11/file/08/11-08-1127-12-000m-tgmb-issues-list.xls" rel="nofollow">802.11mb Issues List v12</a> (excel)”. p. CID 98 (20-Jan-2009). <span title="">2010年7月23日</span>閲覧。 “The use of TKIP is deprecated. The TKIP algorithm is unsuitable for the purposes of this standard”</cite></span>
+</li>
+<li id="cite_note-17"><b><a href="#cite_ref-17">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://www.starkrealities.com/wireless003.html" rel="nofollow">WEP2, Credibility Zero</a>”.   starkrealities.com. <span title="">2008年3月16日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-18"><b><a href="#cite_ref-18">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://archive.is/H02G" rel="nofollow">Agere Systems is First to Solve Wireless LAN Wired Equivalent Privacy Security Issue; New Software Prevents Creation of Weak WEP Keys</a>”.   Business Wire. 2012年7月8日時点の<a class="external text" href="http://findarticles.com/p/articles/mi_m0EIN/is_2001_Nov_12/ai_79954213" rel="nofollow">オリジナル</a>よりアーカイブ。<span title="">2008年3月16日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331214820
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.179 seconds
+Real time usage: 0.211 seconds
+Preprocessor visited node count: 9390/1000000
+Post‐expand include size: 58806/2097152 bytes
+Template argument size: 19950/2097152 bytes
+Highest expansion depth: 31/40
+Expensive parser function count: 1/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 16262/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 5541888/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  177.970      1 -total
+ 90.14%  160.415      1 テンプレート:Reflist
+ 46.40%   82.571      8 テンプレート:Citation/core
+ 35.94%   63.960      4 テンプレート:Cite_paper
+ 19.61%   34.900      7 テンプレート:Cite_web
+ 15.23%   27.109      3 テンプレート:Cite_book
+ 13.87%   24.679      4 テンプレート:ISO639言語名
+ 12.84%   22.844      9 テンプレート:Ifempty
+ 11.89%   21.156     12 テンプレート:Accessdate
+  9.69%   17.245     12 テンプレート:Accessdate/core
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:957251-0!canonical and timestamp 20220331214820 and revision id 593983. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Wired_Equivalent_Privacy&amp;oldid=593983">http://localhost:8080/w/index.php?title=Wired_Equivalent_Privacy&amp;oldid=593983</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2013%E5%B9%B47%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2013年7月">出典を必要とする記述のある記事/2013年7月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%9A%97%E5%8F%B7%E5%8C%96%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="カテゴリ:暗号化プロトコル">暗号化プロトコル</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3" title="カテゴリ:コンピュータ・ネットワーク・セキュリティ">コンピュータ・ネットワーク・セキュリティ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="カテゴリ:モバイルネットワーク">モバイルネットワーク</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:IEEE_802.11" title="カテゴリ:IEEE 802.11">IEEE 802.11</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Wired+Equivalent+Privacy&amp;returntoquery=curid%3D957251%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Wired+Equivalent+Privacy&amp;returntoquery=curid%3D957251%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Wired_Equivalent_Privacy" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Wired_Equivalent_Privacy&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Wired_Equivalent_Privacy">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Wired_Equivalent_Privacy" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Wired_Equivalent_Privacy" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;oldid=593983" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Wired_Equivalent_Privacy&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年5月22日 (土) 03:57 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.179","walltime":"0.211","ppvisitednodes":{"value":9390,"limit":1000000},"postexpandincludesize":{"value":58806,"limit":2097152},"templateargumentsize":{"value":19950,"limit":2097152},"expansiondepth":{"value":31,"limit":40},"expensivefunctioncount":{"value":1,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":16262,"limit":5000000},"timingprofile":["100.00%  177.970      1 -total"," 90.14%  160.415      1 テンプレート:Reflist"," 46.40%   82.571      8 テンプレート:Citation/core"," 35.94%   63.960      4 テンプレート:Cite_paper"," 19.61%   34.900      7 テンプレート:Cite_web"," 15.23%   27.109      3 テンプレート:Cite_book"," 13.87%   24.679      4 テンプレート:ISO639言語名"," 12.84%   22.844      9 テンプレート:Ifempty"," 11.89%   21.156     12 テンプレート:Accessdate","  9.69%   17.245     12 テンプレート:Accessdate/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":5541888,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331214820","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":433});});</script>
+</body></html>

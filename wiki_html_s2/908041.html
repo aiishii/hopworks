@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>抽象化 (計算機科学) - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-抽象化_計算機科学 rootpage-抽象化_計算機科学 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">抽象化 (計算機科学)</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><b>抽象化</b>（ちゅうしょうか、<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Abstraction</span>）は、<a href="." id="link_a_2" title="計算機科学">計算機科学</a>において詳細を捨象し、一度に注目すべき概念を減らすことおよびその仕組みである。
+</p><p>この概念は<a href="." id="link_a_3" title="数学">数学</a>における「抽象化」からの<a href="." id="link_a_4" title="類推">アナロジー</a>である。数学での抽象化技法の起源は数学的<a href="." id="link_a_5" title="定義">定義</a>である。例えば、コンピュータでも数学でも、<a href="." id="link_a_6" title="数">数</a>は<a href="." id="link_a_7" title="プログラミング言語">プログラミング言語</a>上の概念であり、数学上の概念でもある。数の計算概念は数学の概念に基づいているため、実装の詳細は<a href="." id="link_a_8" title="ハードウェア">ハードウェア</a>と<a href="." id="link_a_9" title="ソフトウェア">ソフトウェア</a>に依存したとしても、それが制約とはならない。
+</p><p>大まかに言えば、抽象化は制御抽象化と<a href="." id="link_a_10" title="データ">データ</a>抽象化に分けられる。<b>制御抽象化</b>は動作の抽象化であり、<b>データ抽象化</b>はデータ構造の抽象化である。例えば、<a href="." id="link_a_11" title="構造化プログラミング">構造化プログラミング</a>での<b>制御抽象化</b>とは、<a href="." id="link_a_12" title="関数 (プログラミング)">サブプログラム</a>や定式化された<a href="." id="link_a_13" title="制御構造">制御フロー</a>の使用を意味する。<b>データ抽象化</b>とは、本来ビット列であるデータを意味のある方法で扱うことを意味する。例えば、<a href="." id="link_a_14" title="データ型">データ型</a>の背景にある動機は抽象化である。<a href="." id="link_a_15" title="オブジェクト指向プログラミング">オブジェクト指向プログラミング</a>はデータとコードを同時に抽象化する試みと見ることもできる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#原理"><span class="tocnumber">1</span> <span class="toctext">原理</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#言語機能"><span class="tocnumber">2</span> <span class="toctext">言語機能</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#プログラミング言語"><span class="tocnumber">2.1</span> <span class="toctext">プログラミング言語</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#仕様記述言語"><span class="tocnumber">2.2</span> <span class="toctext">仕様記述言語</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#制御抽象化"><span class="tocnumber">3</span> <span class="toctext">制御抽象化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#構造化プログラミング"><span class="tocnumber">3.1</span> <span class="toctext">構造化プログラミング</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#データ抽象化"><span class="tocnumber">4</span> <span class="toctext">データ抽象化</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#オブジェクト指向プログラミングでの抽象化"><span class="tocnumber">5</span> <span class="toctext">オブジェクト指向プログラミングでの抽象化</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#オブジェクト指向設計"><span class="tocnumber">5.1</span> <span class="toctext">オブジェクト指向設計</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#考察"><span class="tocnumber">6</span> <span class="toctext">考察</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#抽象化レベル"><span class="tocnumber">7</span> <span class="toctext">抽象化レベル</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#データベースシステム"><span class="tocnumber">7.1</span> <span class="toctext">データベースシステム</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#階層型アーキテクチャ"><span class="tocnumber">7.2</span> <span class="toctext">階層型アーキテクチャ</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#参考文献"><span class="tocnumber">9</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.8E.9F.E7.90.86"></span><span class="mw-headline" id="原理">原理</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=1" title="節を編集: 原理">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="コンピューティング">コンピューティング</a>の大部分は実世界とは独立している。ハードウェアは<a class="mw-redirect" href="/wiki/%E8%A8%88%E7%AE%97%E6%A8%A1%E5%9E%8B" title="計算模型">計算モデル</a>を実装したものであり、他のモデルとの入れ替えが可能である。ソフトウェアは<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ソフトウェアアーキテクチャ">ソフトウェアアーキテクチャ</a>で構築され、人間が一時に一部の問題に集中することで巨大なシステムを生み出すことを可能にしている。このようなアーキテクチャは特定の抽象化を選択して利用している。<a class="new" href="/w/index.php?title=En:Greenspun%27s_Tenth_Rule&amp;action=edit&amp;redlink=1" title="En:Greenspun's Tenth Rule (存在しないページ)">グリーンスパンの10番目の規則</a>は、そのようなアーキテクチャがいかに必然的で複雑であるかを示す格言である。
+</p><p>コンピューティングでの主な抽象化は言語の抽象化である。新たな<a href="/wiki/%E4%BA%BA%E5%B7%A5%E8%A8%80%E8%AA%9E" title="人工言語">人工言語</a>はシステムの特定の観点を表現するために開発される。<a href="/wiki/%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="モデリング言語">モデリング言語</a>は計画立案を補助する。<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E8%A8%80%E8%AA%9E" title="コンピュータ言語">コンピュータ言語</a>はコンピュータで処理できる。このような抽象化プロセスの例として、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a>の世代的開発が挙げられる。各世代は次の世代の基盤となった。言語の抽象化は現在も続いており、例えば<a href="/wiki/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E8%A8%80%E8%AA%9E" title="スクリプト言語">スクリプト言語</a>や<a href="/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%9B%BA%E6%9C%89%E8%A8%80%E8%AA%9E" title="ドメイン固有言語">ドメイン固有言語</a>でこの進化が著しい。
+</p><p>プログラミング言語では、一部機能によって<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E" title="プログラマ">プログラマ</a>が新たな抽象化を生み出せるようにしている。例えば、<a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="関数 (プログラミング)">サブルーチン</a>、<a href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB" title="モジュール">モジュール</a>、<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88" title="ソフトウェアコンポーネント">ソフトウェアコンポーネント</a>などがそれである。プログラミング言語自体の機能ではないが、設計技法上の抽象化として<a href="/wiki/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="デザインパターン (ソフトウェア)">デザインパターン</a>や<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ソフトウェアアーキテクチャ">ソフトウェアアーキテクチャ</a>がある。
+</p><p>抽象化によっては、次々に構築される概念を完全に隠蔽することでプログラマが把握しなければならない概念の幅を制限しようとする。<a href="/wiki/%E3%82%B8%E3%83%A7%E3%82%A8%E3%83%AB%E3%83%BB%E3%82%B9%E3%83%9D%E3%83%AB%E3%82%B9%E3%82%AD" title="ジョエル・スポルスキ">Joel Spolsky</a>は、あらゆる抽象化は<a class="new" href="/w/index.php?title=%E6%BC%8F%E3%82%8C%E3%81%AE%E3%81%82%E3%82%8B%E6%8A%BD%E8%B1%A1%E5%8C%96&amp;action=edit&amp;redlink=1" title="漏れのある抽象化 (存在しないページ)">破綻しやすい</a>と主張して批判した。つまり、抽象化によって下部構造が完全に隠蔽できたためしがないというのである。一部の抽象化は他との相互のやりとりのために設計されている。例えばプログラミング言語には外部関数<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>を持つものもあり、低レベルな言語を呼び出すことができる。
+</p>
+<h2><span id=".E8.A8.80.E8.AA.9E.E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="言語機能">言語機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=2" title="節を編集: 言語機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="プログラミング言語">プログラミング言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=3" title="節を編集: プログラミング言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a>」を参照</div>
+<p>プログラミング言語は、その言語の応用分野によってそれぞれ異なる抽象化を行う。例えば、次のような抽象化がある:
+</p>
+<ul><li><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向プログラミング</a>言語（<a href="/wiki/C%2B%2B" title="C++">C++</a>、<a href="/wiki/Java" title="Java">Java</a>など）での<b>抽象化</b>の概念は、必要に応じて <code>virtual</code> や <code>abstract</code> といったキーワードを使って宣言することである。このような宣言をした後、プログラマはその宣言に沿って<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="オブジェクト (プログラミング)">オブジェクト</a>を<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9" title="インスタンス">インスタンス</a>化するために<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クラス (コンピュータ)">クラス</a>を実装しなければならない。</li>
+<li><a class="mw-redirect" href="/wiki/%E9%96%A2%E6%95%B0%E5%9E%8B%E8%A8%80%E8%AA%9E" title="関数型言語">関数型言語</a>では、関数に関連した抽象化が一般的である。例えば<a href="/wiki/%E3%83%A9%E3%83%A0%E3%83%80%E8%A8%88%E7%AE%97" title="ラムダ計算">ラムダ計算</a>、<a href="/wiki/%E9%AB%98%E9%9A%8E%E9%96%A2%E6%95%B0" title="高階関数">高階関数</a>などである。</li>
+<li><a href="/wiki/Linda" title="Linda">Linda</a>という言語では「<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90" title="サーバ">サーバ</a>」や「共有データ空間」といった概念を抽象化し、分散プログラミングを実現する。</li></ul>
+<h3><span id=".E4.BB.95.E6.A7.98.E8.A8.98.E8.BF.B0.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="仕様記述言語">仕様記述言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=4" title="節を編集: 仕様記述言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E4%BB%95%E6%A7%98%E8%A8%98%E8%BF%B0%E8%A8%80%E8%AA%9E" title="仕様記述言語">仕様記述言語</a>」を参照</div>
+<p>仕様記述言語は一般に何らかの抽象化に基づいている。仕様は<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88" title="プロジェクト">プロジェクト</a>の初期に定義されるもので、最も抽象的なレベルであり、それが最終的に実装される。例えば仕様記述言語である<a href="/wiki/%E7%B5%B1%E4%B8%80%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="統一モデリング言語">UML</a>は「抽象」クラスを定義でき、プロジェクトの仕様設計段階ではそれらは「抽象」のままである。
+</p>
+<h2><span id=".E5.88.B6.E5.BE.A1.E6.8A.BD.E8.B1.A1.E5.8C.96"></span><span class="mw-headline" id="制御抽象化">制御抽象化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=5" title="節を編集: 制御抽象化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E5%88%B6%E5%BE%A1%E6%A7%8B%E9%80%A0" title="制御構造">制御構造</a>」を参照</div>
+<p>制御抽象化はプログラミング言語を使う主たる目的の1つである。コンピュータが理解する操作は極めて低レベルであり、メモリのある場所から別の場所へ何ビットかを移動させ、2つのビット列を加算するといったことでしかない。プログラミング言語を使うことでこれをもっと高いレベルに変換する。例えば、次のようなプログラム内の文（式）があるとする。
+</p>
+<dl><dd><code>a := (1 + 2) * 5</code></dd></dl>
+<p>人間にとっては、これは非常に単純で明らかな計算である（1 足す 2 は 3、これに 5 をかけて 15）。しかし、これを評価するには低レベルの実行ステップに落とし込まねばならないし、計算結果である 15 を<a href="/wiki/%E5%A4%89%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="変数 (プログラミング)">変数</a> "a" に代入するという作業も複雑である。数値は二進数表現に変換され（これも大方の予想よりも複雑な作業である）、（<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a>や<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF" title="インタプリタ">インタプリタ</a>が）計算をステップに分解して<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>の命令列に直す（機械語あるいは<a href="/wiki/%E3%82%A2%E3%82%BB%E3%83%B3%E3%83%96%E3%83%AA%E8%A8%80%E8%AA%9E" title="アセンブリ言語">アセンブリ言語</a>は一般のプログラマにとっては直観的に理解可能なものではなく、その内容は通常の加算や乗算といった人間の考える算術とは趣きが異なる）。そして、計算結果の "15" を "a" という<a href="/wiki/%E3%83%A9%E3%83%99%E3%83%AB_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ラベル (プログラミング)">ラベル</a>の付いた変数に格納するが、実際には物理メモリか<a href="/wiki/%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6" title="仮想記憶">仮想メモリ</a>上のあるアドレスのメモリ位置がそれに対応しており……などなどである。
+</p><p>制御抽象化なしでは、プログラマは機械語レベルで<a href="/wiki/%E3%83%AC%E3%82%B8%E3%82%B9%E3%82%BF_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="レジスタ (コンピュータ)">レジスタ</a>やメモリアドレスを指定してプログラムを書かねばならない。その場合2つの深刻な結果を招く。第1に似たような機能を毎回コーディングしなおさなくてはならなくなる。第2にプログラマは特定のハードウェアや命令セット向けにプログラムを書くしかなくなる。
+</p>
+<h3><span id=".E6.A7.8B.E9.80.A0.E5.8C.96.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="構造化プログラミング">構造化プログラミング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=6" title="節を編集: 構造化プログラミング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%A7%8B%E9%80%A0%E5%8C%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="構造化プログラミング">構造化プログラミング</a>」を参照</div>
+<p>構造化プログラミングでは、複雑なプログラム作業を小さい部分に分割し、コンポーネント間に明確なインタフェースと制御フローを導入し、副作用的に複雑さを低減させる。
+</p><p>単純なプログラムでは、<a href="/wiki/%E3%83%AB%E3%83%BC%E3%83%97_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ループ (プログラミング)">ループ</a>からの脱出点を明示的に1つにするようコーディングするとか、関数や手続きからの脱出点を1つにするといった工夫である。
+</p><p>大きなシステムでは、複雑なタスクを多数のモジュールに分割することになるだろう。例えば、港湾事務所での船員への給与支払い業務システムを考えてみよう。
+</p>
+<ul><li>最も高いレベルには、典型的な<a href="/wiki/%E3%82%A8%E3%83%B3%E3%83%89%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC" title="エンドユーザー">エンドユーザー</a>操作のメニューがある。</li>
+<li>その下に、船員の新規採用や退職、小切手の印刷といった作業のための独立した<a href="/wiki/%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB" title="実行ファイル">実行ファイル</a>や<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>がある。</li>
+<li>各独立コンポーネントは多数の<a href="/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89" title="ソースコード">ソースファイル</a>から構成され、それぞれのファイルには問題の一部に対応するプログラムコードが含まれ、他のプログラムとある決まったインタフェースを持つよう設計される。新規採用プログラムには、データを画面表示するプログラムやデータベースとのインタフェースが含まれるだろう（それらは独立した<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC" title="サードパーティー">サードパーティー</a>ライブラリや静的にリンクされたライブラリルーチン群かもしれない）。</li>
+<li>また、港湾と船の間でデータを交換する処理が必要とされる場合も考えられ、その場合はさらに様々なコンポーネントを必要とする。</li></ul>
+<p>このような階層によってコンポーネント毎に実装の詳細を隔離する効果が生まれる。そして、その考え方を重視し、拡張して生まれたのがオブジェクト指向プログラミングである。
+</p>
+<h2><span id=".E3.83.87.E3.83.BC.E3.82.BF.E6.8A.BD.E8.B1.A1.E5.8C.96"></span><span class="mw-headline" id="データ抽象化">データ抽象化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=7" title="節を編集: データ抽象化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E6%8A%BD%E8%B1%A1%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="抽象データ型">抽象データ型</a>」を参照</div>
+<p><b>データ抽象化</b>とは、<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="データ型">データ型</a>の「抽象的」属性と「具体的」実装詳細の明確な分離を強制することである。抽象化された属性はデータ型（あるいはそのインタフェース）を利用するクライアントコードとして明確化され、具体的実装は完全にプライベートな状態でかつ必要に応じて変更できる形で存在する。概念的には、そのような変更は抽象的振る舞いには変化をもたらさないので、クライアントコードには全く影響を与えない。
+</p><p>例えば、「参照テーブル」という<a href="/wiki/%E6%8A%BD%E8%B1%A1%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="抽象データ型">抽象データ型</a>を定義したとする。参照テーブルには「キー」とユニークに対応する「値」があり、キーを指定することで値を操作できる。このような参照テーブルの実装方法は<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="ハッシュテーブル">ハッシュテーブル</a>や<a class="mw-redirect" href="/wiki/2%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8" title="2分探索木">2分探索木</a>や<a href="/wiki/%E9%80%A3%E7%B5%90%E3%83%AA%E3%82%B9%E3%83%88" title="連結リスト">線形リスト</a>などいくつかある。クライアントコードからすれば、データ型の抽象化された属性はどの場合でも同じである。
+</p><p>もちろん、以上の話は最初にインタフェースを正しく詳細化することにかかっており、そうでないと実装の変更がクライアントコードに影響を及ぼしてしまう。別の見方をすれば、インタフェースをデータ型とクライアントコードの間で合意された振る舞いの「契約」を形成すると考えることもできる。契約にない部分は予告なく変更される可能性がある、というわけである。
+</p><p>データ抽象化を実装した言語としては<a href="/wiki/Ada" title="Ada">Ada</a>や<a href="/wiki/Modula-2" title="Modula-2">Modula-2</a>がある。<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向プログラミング</a>言語も一般にデータ抽象化を提供すると言われているが、<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a>の概念によって実装側の情報がインタフェース側に持ち出される傾向がある。したがって、継承関係の変更はクライアントコードに影響を与えることがあり、<a class="new" href="/w/index.php?title=%E8%84%86%E5%BC%B1%E3%81%AA%E5%9F%BA%E5%BA%95%E3%82%AF%E3%83%A9%E3%82%B9&amp;action=edit&amp;redlink=1" title="脆弱な基底クラス (存在しないページ)">脆弱な基底クラス</a>問題につながる。
+</p>
+<h2><span id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E6.8C.87.E5.90.91.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E3.81.A7.E3.81.AE.E6.8A.BD.E8.B1.A1.E5.8C.96"></span><span class="mw-headline" id="オブジェクト指向プログラミングでの抽象化">オブジェクト指向プログラミングでの抽象化</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=8" title="節を編集: オブジェクト指向プログラミングでの抽象化">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向プログラミング</a>」を参照</div>
+<p><a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向プログラミング</a>の理論では、<b>抽象化</b>とは抽象的「アクター」であるオブジェクトを定義する機能であり、アクターは作業を行い、状態を変化させ、状態を報告し、システム内の他のオブジェクトと「通信」する。<a href="/wiki/%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E5%8C%96" title="カプセル化">カプセル化</a>は、状態の詳細を隠蔽することを意味する用語だが、従来のプログラミング言語でのデータ型の概念の拡張である。カプセル化はデータに強く結びついた「振る舞い」をそのデータと関連付け、他のデータ型との相互作用を標準化し、<b>抽象化</b>の起点となる。抽象化をさらに進めて、異なる型のオブジェクト間で同じ操作を定義することを<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>と呼ぶ。また、逆方向に抽象化を進め、データ型やクラスの内部を抽象化してそれらの複雑な関係を単純化し構造化することを<a href="/wiki/%E5%A7%94%E8%AD%B2" title="委譲">委譲</a>または<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a>と呼ぶ。
+</p><p>オブジェクト指向言語は様々あるが、似たような抽象化手法を提供している。<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>はほぼ全てのオブジェクト指向言語でサポートされており、類似あるいは同じ役割を持つデータ型の置換なども含まれる。それほど一般的ではないが、構成・イメージ・パッケージによってコンパイル時/リンク時/ロード時にオブジェクト間の関係を決定することがあり、この場合実行時に関係を決定する必要性がほとんどなくなる。
+</p><p><a class="mw-redirect" href="/wiki/CLOS" title="CLOS">CLOS</a>や<a href="/wiki/Self" title="Self">Self</a>などの言語では、クラスとインスタンスをあまり区別せず、ポリモーフィズムの実現に<a href="/wiki/%E5%A7%94%E8%AD%B2" title="委譲">委譲</a>をよく使う。また、個々のオブジェクトや関数はより柔軟に抽象化され、<a href="/wiki/LISP" title="LISP">LISP</a>の機能により適するようになっている。
+</p><p>C++では、<a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AA%E3%83%83%E3%82%AF%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="ジェネリックプログラミング">テンプレート</a>、<a href="/wiki/%E5%A4%9A%E9%87%8D%E5%AE%9A%E7%BE%A9#演算子オーバーロード" title="多重定義">演算子オーバーロード</a>、その他のコンパイル時の<a href="/wiki/%E6%9D%9F%E7%B8%9B_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6)" title="束縛 (情報工学)">静的バインディング</a>などが特徴であり、これらがC++固有の柔軟性に関する問題を生んでいる。
+</p><p>同じ抽象化にも様々な戦略があるが、基本的に抽象名詞をコード内でサポートする必要性に違いはない。いずれのプログラミング言語も動詞を関数として、名詞をデータ構造として、そして両者を合わせてプロセスとして抽象化する機能に基づいている。
+</p><p>例えば、以下のサンプルコードは<a href="/wiki/Java" title="Java">Java</a>による動物の抽象的表現である。ここでは、飢えと食事という観点で抽象化している。<code>Animal</code>クラスは動物の状態と機能を表現するよう定義されている。
+</p><p>&lt;syntaxhighlight lang="java"&gt;
+class Animal extends LivingThing {
+</p>
+<pre>   Location loc;
+   double energyReserves;
+</pre>
+<pre>   boolean isHungry() {
+       if (energyReserves &lt; 2.5) { return true; }
+       else { return false; }
+   }
+   void eat(Food f) {
+       // Consume food
+       energyReserves += f.getCalories();
+   }
+   void moveTo(Location l) {
+       // Move to new location
+       loc = l;
+   }
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>この定義で、<code>Animal</code>型のオブジェクトを生成し、以下のようにメソッドを呼び出すことができる:
+</p><p>&lt;syntaxhighlight lang="java"&gt;
+thePig = new Animal();
+theCow = new Animal();
+if (thePig.isHungry()) { thePig.eat(tableScraps); }
+if (theCow.isHungry()) { theCow.eat(grass); }
+theCow.moveTo(theBarn);
+&lt;/syntaxhighlight&gt;
+</p><p>この例では、<code>Animal</code>クラスが動物を抽象化したもので、<code>LivingThing</code> は <code>Animal</code> よりさらに高い抽象度の抽象化（この場合汎化）である。
+</p><p>もっと違った抽象化も考えられる。例えば中間的な抽象化として、毎日ミルクを生み出してくれる動物と、最後に肉となってくれるだけの動物とに分類することができる。DailyAnimal （雌牛や山羊）はミルクを生み出すのに適した餌を与えられ、Animal （豚や雄牛）は肉の質を高める餌を与えられる。
+</p><p>このような抽象化をすれば、アプリケーションを書く人は餌の種類を指定する必要がなくなり、給餌スケジュールに集中することができるようになる。この2つのクラスは<a href="/wiki/%E7%B6%99%E6%89%BF_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="継承 (プログラミング)">継承</a>関係であっても、全く独立していてもよく、それによって<a href="/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%82%A3%E3%82%BA%E3%83%A0" title="ポリモーフィズム">ポリモーフィズム</a>の度合いも変わってくる。このような機能は言語によって大きく違うが、大体においてある言語でできることは他の言語でも可能である。演算子オーバーロードや抽象データ型を多用することで、継承や他のポリモーフィズムを実現する手法と同様の効果が得られる。クラスを使った記法は単にコードを書くものの利便性のために存在するに過ぎない。
+</p>
+<h3><span id=".E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E6.8C.87.E5.90.91.E8.A8.AD.E8.A8.88"></span><span class="mw-headline" id="オブジェクト指向設計">オブジェクト指向設計</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=9" title="節を編集: オブジェクト指向設計">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91" title="オブジェクト指向">オブジェクト指向</a>」を参照</div>
+<p>何を抽象化して、何をコードを書く者の制御下に置くかの判断は、オブジェクト指向設計と<a class="new" href="/w/index.php?title=%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E5%88%86%E6%9E%90&amp;action=edit&amp;redlink=1" title="ドメイン分析 (存在しないページ)">ドメイン分析</a>の主要テーマである。実世界での適切な関係を見極めることは、<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91" title="オブジェクト指向">オブジェクト指向</a>分析のテーマでもある。
+</p><p>一般に、適切な抽象化を決定するには、範囲/ドメイン分析/連携すべきシステムの決定/様々な制約の分析など、様々な判断を必要とする。そして、オブジェクト指向分析をプロジェクトの外的条件（時間と費用）を考慮して行う。上の単純な例では、ドメインとは庭であり、豚や牛やそれらの食習慣は制約である。詳細な解析により、コード作成者は利用可能なものなら何でも餌として与える柔軟性を持つ必要があると判断する。そのため、クラス自体に餌の型をコード化する必要がないと判断され、結果として豚であっても雌牛であっても同じ Animal クラスとなる。DairyAnimal を別のクラスとする判断を下した場合には詳細は変化するが、ドメインや制約は変わらない。従って全てはプログラマの制御下にある。オブジェクト指向プログラミングでの抽象化と、ドメインや制約の抽象化は区別されている。
+</p>
+<h2><span id=".E8.80.83.E5.AF.9F"></span><span class="mw-headline" id="考察">考察</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=10" title="節を編集: 考察">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E6%84%8F%E5%91%B3%E8%AB%96" title="プログラム意味論">プログラム意味論</a>、<a href="/wiki/%E5%BD%A2%E5%BC%8F%E6%89%8B%E6%B3%95" title="形式手法">形式手法</a>、<a href="/wiki/%E6%8A%BD%E8%B1%A1%E8%A7%A3%E9%87%88" title="抽象解釈">抽象解釈</a>などを論じるとき、<b>抽象化</b>とは観測されたプログラムの動作の定義をより大雑把にかつ安全に検討する作業を意味する。例えば、実行途中の全段階を追うことなく結果だけを検討する場合などである。抽象化とは具体的実行モデルと反対の概念として定義される。
+</p><p>抽象化は、属性が具体的モデルと同じとなるよう属性に関して「正確」または「忠実」でなければならない。例えば、加減算と乗算だけを使った式が <i>n</i> で<a class="mw-redirect" href="/wiki/%E5%90%88%E5%90%8C%E5%BC%8F" title="合同式">割り切れる</a>かを知りたければ、<i>n</i> で割り切れる値を全て計算すればよい（この抽象化は<a href="/wiki/%E4%B9%9D%E5%8E%BB%E6%B3%95" title="九去法">九去法</a>と類似の形式である）。
+</p><p>抽象化は必ずしも「正確」である必要はないが、「<a href="/wiki/%E5%81%A5%E5%85%A8%E6%80%A7" title="健全性">健全</a>」であることを要求されることもある。つまり、決定不能な結果を生むとしても、抽象化から正当な結果が得られるべきだという意味である。例えば、クラスの生徒たちを年齢の最大と最小で抽象化した場合、ある人物がそのクラスに属するかどうかを判定するためにその年齢を最大値・最小値と比較することが考えられ、年齢がその範囲外だった場合は、その人物がクラスに属さないと確信を持って言うことができる。範囲内だった場合、「わからない」としか答えようがない。
+</p><p>コンピュータプログラムの特性は本質的に決定不能であるため、抽象化はコンピュータプログラムを扱う場合に有効である（<a href="/wiki/%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%AE%E5%AE%9A%E7%90%86" title="ライスの定理">ライスの定理</a>参照）。同様にプログラムの動作によって情報を引き出す自動化手法は、停止性（場合によっては失敗したり、いつまでたっても結果が出ないことがある）、健全性（誤った情報を提供することがある）、正確性（問題に対して答えられない場合がある）のいずれかを諦めざるをえない場合がある。
+</p><p>抽象化は<a href="/wiki/%E6%8A%BD%E8%B1%A1%E8%A7%A3%E9%87%88" title="抽象解釈">抽象解釈</a>の中核的概念である。<a href="/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E6%A4%9C%E6%9F%BB" title="モデル検査">モデル検査</a>は一般に対象システムを抽象化したものに対して行われる。
+</p>
+<h2><span id=".E6.8A.BD.E8.B1.A1.E5.8C.96.E3.83.AC.E3.83.99.E3.83.AB"></span><span class="mw-headline" id="抽象化レベル">抽象化レベル</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=11" title="節を編集: 抽象化レベル">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>計算機科学における「抽象化レベル」または「抽象化層」の概念では、各レベルは同じ情報やプロセスの異なったモデルとなっているが、特定領域に適用可能なオブジェクトや構成のユニークな集合に関する表現体系を使う。レベルの高いほうはより抽象的であり、レベルが下るに従ってより細かく詳細になっていく。例えば、<a href="/wiki/%E9%9B%BB%E5%AD%90%E5%9B%9E%E8%B7%AF" title="電子回路">電子回路</a>による<a class="mw-redirect" href="/wiki/%E8%AB%96%E7%90%86%E3%82%B2%E3%83%BC%E3%83%88" title="論理ゲート">論理ゲート</a>、論理ゲート上の<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA" title="バイナリ">バイナリ</a>、バイナリ上の<a href="/wiki/%E6%A9%9F%E6%A2%B0%E8%AA%9E" title="機械語">機械語</a>、機械語上の<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="プログラミング言語">プログラミング言語</a>、プログラミング言語上の<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="アプリケーションソフトウェア">アプリケーションソフトウェア</a>や<a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">オペレーティングシステム</a>といった階層である。各レベルには実体があるが、ある程度自己完結的な言語とすることで、下位レベルに完全に依存しないようにできる。
+</p>
+<h3><span id=".E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="データベースシステム">データベースシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=12" title="節を編集: データベースシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="データベース管理システム">データベース管理システム</a>」を参照</div>
+<p><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="データベース">データベース</a>システムのユーザーの多くは、コンピュータのデータ構造には詳しくない場合が多いので、データベース開発者は以下のような階層化によって複雑さを隠蔽することが多い。
+</p>
+<dl><dt><b>物理レベル</b></dt>
+<dd>最も低レベルの抽象化であり、データが実際にどのように格納されるかを記述する。物理レベルでは低レベルで複雑なデータ構造の詳細が記述される。</dd>
+<dt><b>論理レベル</b></dt>
+<dd>次の抽象化レベルではデータベースに格納されているデータが「何」であるかを記述し、それらのデータ間にどのような関係があるかを記述する。従って、論理レベルでは物理レベルよりも単純化された構造でデータベース全体が記述される。論理レベルの単純な構造の実装には物理レベルの複雑な構造が必要となるが、論理レベルのユーザーにはそのような複雑さは無関係である。データベース管理者はデータベースに格納すべき情報を選別する責任があり、論理レベルの抽象化を利用する。</dd>
+<dt><b>ビューレベル</b></dt>
+<dd>最も高いレベルの抽象化はデータベースの一部だけを記述する。論理レベルの構造はある程度単純化されているとしても、巨大なデータベースに格納されるデータの多様性のためにある程度の複雑さが残存している。データベース利用者の多くはデータベース内の全情報を必ずしも必要としない。むしろ一部のデータだけにアクセスすることが多い。ビューレベルの抽象化により、利用者とシステム間のやりとりが単純化される。システムは1つのデータベースについて複数のビューを提供する。</dd></dl>
+<h3><span id=".E9.9A.8E.E5.B1.A4.E5.9E.8B.E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3"></span><span class="mw-headline" id="階層型アーキテクチャ">階層型アーキテクチャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=13" title="節を編集: 階層型アーキテクチャ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>異なったレベルの抽象化による<a href="/wiki/%E8%A8%AD%E8%A8%88" title="設計">設計</a>は次のことを提供する。
+</p>
+<ul><li>設計を劇的に単純化する</li>
+<li>様々な役割の人物がその役割にあった抽象化レベルで効率的に働くことを可能にする</li></ul>
+<p>これは<a href="/wiki/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%B7%A5%E5%AD%A6" title="システム工学">システム設計</a>や<a href="/wiki/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" title="ビジネスプロセスモデリング">ビジネスプロセス設計</a>に使われる。一部の<a href="/wiki/%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="モデリング言語">モデリング言語</a>は複数の抽象化レベルを含む設計を生成する。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="アルゴリズム">アルゴリズム</a> 制御抽象化</li>
+<li><a href="/wiki/%E6%8A%BD%E8%B1%A1%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B" title="抽象データ型">抽象データ型</a> データ抽象化</li>
+<li><a href="/wiki/%E3%83%A9%E3%83%A0%E3%83%80%E8%A8%88%E7%AE%97" title="ラムダ計算">ラムダ計算</a></li>
+<li><a href="/wiki/%E9%AB%98%E9%9A%8E%E9%96%A2%E6%95%B0" title="高階関数">高階関数</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0" title="データモデリング">データモデリング</a></li>
+<li><a href="/wiki/%E8%A9%B3%E7%B4%B0%E5%8C%96" title="詳細化">詳細化</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%97%E3%82%BB%E3%83%AB%E5%8C%96" title="カプセル化">カプセル化</a></li>
+<li><a href="/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC" title="抽象化レイヤー">抽象化レイヤー</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC_%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB_%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB" title="マスター ファイル テーブル">マスターファイルテーブル</a></li>
+<li><a href="/wiki/%E7%B4%A2%E5%BC%95_(%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9)" title="索引 (データベース)">索引（データベース）</a></li>
+<li><a href="/wiki/%E6%A4%9C%E7%B4%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9" title="検索エンジンインデックス">検索エンジンインデックス</a></li>
+<li><a href="/wiki/%E4%BB%A3%E6%95%B0%E5%AD%A6" title="代数学">代数学</a></li></ul>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;section=15" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Abelson, Harold, Gerald Jay Sussman with Julie Sussman. (1996) ISBN 0-262-01153-0 <i><a href="/wiki/%E8%A8%88%E7%AE%97%E6%A9%9F%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E6%A7%8B%E9%80%A0%E3%81%A8%E8%A7%A3%E9%87%88" title="計算機プログラムの構造と解釈">Structure and Interpretation of Computer Programs</a> (Second edition)</i>. The MIT Press (See <a class="external autonumber" href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html" rel="nofollow">[1]</a>)</li>
+<li>Joel Spolsky. <i><a class="external text" href="http://www.joelonsoftware.com/articles/LeakyAbstractions.html" rel="nofollow">The Law of Leaky Abstractions</a></i>. 2002-11-11.</li></ul>
+<p><span class="citation foldoc">この記事は2008年11月1日まで<a href="/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GFDL</a>バージョン1.3以降の再ライセンス規約に基づいていた<a href="/wiki/FOLDOC" title="FOLDOC">Free On-line Dictionary of Computing</a>にある項目の資料が元になっている。</span>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331211652
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.060 seconds
+Real time usage: 0.080 seconds
+Preprocessor visited node count: 683/1000000
+Post‐expand include size: 5061/2097152 bytes
+Template argument size: 1762/2097152 bytes
+Highest expansion depth: 9/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 5070848/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   46.927      1 -total
+ 83.20%   39.044      8 テンプレート:Main
+ 77.53%   36.381      8 テンプレート:Rellink
+ 68.41%   32.101      8 テンプレート:See/core
+ 11.06%    5.190      1 テンプレート:Lang-en-short
+  6.94%    3.256      1 テンプレート:LangWithName
+  4.64%    2.175      1 テンプレート:FOLDOC
+  3.52%    1.653      1 テンプレート:Lang
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:908041-0!canonical and timestamp 20220331211652 and revision id 564835. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=抽象化_(計算機科学)&amp;oldid=564835">http://localhost:8080/w/index.php?title=抽象化_(計算機科学)&amp;oldid=564835</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:FOLDOC%E3%82%92%E6%83%85%E5%A0%B1%E6%BA%90%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:FOLDOCを情報源とする記事">FOLDOCを情報源とする記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%87%E3%83%BC%E3%82%BF%E7%AE%A1%E7%90%86" title="カテゴリ:データ管理">データ管理</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%91%E3%83%A9%E3%83%80%E3%82%A4%E3%83%A0" title="カテゴリ:プログラミングパラダイム">プログラミングパラダイム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF" title="カテゴリ:コンピュータのデータ">コンピュータのデータ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%8A%BD%E8%B1%A1" title="カテゴリ:抽象">抽象</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E6%8A%BD%E8%B1%A1%E5%8C%96+%28%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6%29&amp;returntoquery=curid%3D908041%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E6%8A%BD%E8%B1%A1%E5%8C%96+%28%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6%29&amp;returntoquery=curid%3D908041%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;oldid=564835" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E6%8A%BD%E8%B1%A1%E5%8C%96_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月12日 (木) 16:44 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.060","walltime":"0.080","ppvisitednodes":{"value":683,"limit":1000000},"postexpandincludesize":{"value":5061,"limit":2097152},"templateargumentsize":{"value":1762,"limit":2097152},"expansiondepth":{"value":9,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   46.927      1 -total"," 83.20%   39.044      8 テンプレート:Main"," 77.53%   36.381      8 テンプレート:Rellink"," 68.41%   32.101      8 テンプレート:See/core"," 11.06%    5.190      1 テンプレート:Lang-en-short","  6.94%    3.256      1 テンプレート:LangWithName","  4.64%    2.175      1 テンプレート:FOLDOC","  3.52%    1.653      1 テンプレート:Lang"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":5070848,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331211652","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1201});});</script>
+</body></html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<title>タスク入力画面</title>
+
+<style type="text/css">
+/* #frame1 {
+	width: 90%; height: 50vh;
+} */
+#frame1 {
+	width: 50vw; 
+	height: 90vh;
+	float: right; clear: right; 
+}
+.box_sbj {
+    border: solid 2px #9ee7ea;
+	background-color: #9ee7ea;
+    padding: 3px;
+	width: 100px;
+    /* width: 60%; */
+    /* border-radius: 3px; 角を丸くする */
+	text-align: center;
+}
+.box_obj {
+    border: solid 2px lightpink;
+	background-color: lightpink;
+    padding: 3px;
+    width: 100px;
+    /* border-radius: 10px; 角を丸くする */
+	text-align: center;
+}
+.anchor, .anchor-text, .anchor100-line, .anchor80-line, .anchor60, .anchor40 {
+	position: absolute;
+	background-color: #9ee7ea;
+	box-sizing: border-box;
+	padding: 3px;
+	font-size: 24px;
+	line-height: 1;
+	text-align: center;
+}
+.instruction { 
+    border: 0px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; 
+}
+.rubyposition_under{
+	display: inline-block;
+}
+.rubyposition_under ruby{
+	display: flex;
+	flex-direction: column;
+	text-align: start;  /* この指定は text-align-last を IE に対応させるために必要 */
+	text-align-last: start;
+}
+/* * {
+	margin: 0;
+}
+input, textarea {
+	display: block;
+} */
+.task_area {
+	float: left;
+	width: 45vw;
+	/* height: 90%; */
+	height: 90vh;
+	/* height: 450px; */
+	overflow: scroll;
+	/* overflow-y: auto; */
+}
+.colum:nth-of-type(1) {
+	float: right; clear: right; 
+	width: 45vw;
+	/* height: 50vw; */
+} 
+</style>
+<script type="text/javascript">
+	var link_num = 0;
+	var paraValue = new Array();
+	var linkNames = new Array();
+	function incheck(obj){
+		console.log("incheck obj id ="+obj.id);
+		var link_id=obj.id.replace('input_', 'link_');
+		console.log(link_id)
+		var x = document.getElementsByTagName("iframe")[0].contentWindow;
+		var elms = x.document.querySelectorAll("[id='"+ link_id +"']");
+		for(var i = 0; i < elms.length; i++) elms[i].style.backgroundColor = '#ffffff';
+
+	};
+	function bgchange(obj){
+		console.log("bgchange obj id ="+obj.id);
+		var link_id=obj.id.replace('input_', 'link_');
+		var x = document.getElementsByTagName("iframe")[0].contentWindow;
+		var elms = x.document.querySelectorAll("[id='"+ link_id +"']");
+		for(var i = 0; i < elms.length; i++) elms[i].style.backgroundColor = '#ffcccc';
+	};
+    function init() {
+        var paraPair  = new Array();
+        var paraName;
+        
+        var para_str = location.search.split("?")[1];
+        var para = para_str.split("&");
+        var para_num = para.length;
+		link_num = para_num - 3;
+		console.log(link_num)
+
+		start_idx = 0
+        for (var i = 0; i < para_num; i++) {
+            paraPair = para[i].split("=");
+            paraName = decodeURIComponent(paraPair[0]).replace(/\+/ig," "); 
+            paraValue[paraName] = decodeURIComponent(paraPair[1]).replace(/\+/ig," ");
+            if (i == 3) {
+				start_idx = Number(paraName.slice(1))
+			}
+			if (i >= 3) {
+				linkNames.push(paraName)
+			}
+        }
+		var test_id = paraValue["id"]
+		var title = paraValue["title"]
+		document.getElementById('no').textContent = test_id
+		document.getElementById('title').textContent = title
+		document.getElementById('wid').textContent = paraValue["wid"]
+        // var url1 = 'https://tasks4makingmultihopqadataset.on.drv.tw/wiki_html/' + paraValue["wid"] + '.html'
+		// var url1 = '../wiki_html_w_ib/' + paraValue["wid"] + '.html'
+		//var url1 = '../wiki_html_no_infobox2/' + paraValue["wid"] + '.html'
+		var url1 = '../wiki_html_s2/' + paraValue["wid"] + '.html'
+
+        document.getElementById('frame1').setAttribute('src', url1);
+		// id属性で要素を取得
+		var input_element = document.getElementById('link_input_area');
+		
+		for (var i = 0; i < link_num; i++) {
+			// 新しいHTML要素を作成
+			// var input_idx = i + start_idx
+			var input_idx = linkNames[i].replace('link_', '');
+			var new_p = document.createElement('p');
+			var id_text = document.createElement('text');
+			id_text.textContent = input_idx + ': '
+			
+			var div_sbj = document.createElement('text');
+			div_sbj.setAttribute("id", "start_"+input_idx);
+			div_sbj.setAttribute("class", "box_sbj");
+			div_sbj.innerText = title
+			
+			var div_obj = document.createElement('text');
+			div_obj.setAttribute("class", "box_obj");
+			div_obj.innerText = paraValue[linkNames[i]]
+			div_obj.setAttribute("id", 'value_'+ input_idx);
+			// <textarea rows="10" cols="60">ここに記入してください</textarea>
+			var input_txt_box = document.createElement('textarea');
+			// style="text-align: right"
+			input_txt_box.setAttribute("style", 'text-align: left');
+			input_txt_box.setAttribute("id", 'input_' + input_idx);	
+			input_txt_box.setAttribute("name", 'res_' + input_idx);	
+			input_txt_box.setAttribute("maxlength", "50");
+			input_txt_box.setAttribute("cols", "20");
+			input_txt_box.setAttribute("rows", "1");
+			input_txt_box.onblur = function(){incheck(this);} 
+			input_txt_box.onfocus = function(){bgchange(this);} 
+			// var input_txt_box = document.createElement('input');
+			// input_txt_box.setAttribute("id", 'input_' + input_idx);	
+			// input_txt_box.setAttribute("name", 'res_' + input_idx);	
+			// input_txt_box.setAttribute("type", 'text');	
+			// input_txt_box.setAttribute("maxlength", "50");
+			// input_txt_box.setAttribute("size", "20");	
+			// input_txt_box.onblur = function(){incheck(this);} 
+			// input_txt_box.onfocus = function(){bgchange(this);} 
+			var ruby_span =  document.createElement('span')
+			ruby_span.setAttribute("class", "rubyposition_under");
+			var ruby = document.createElement('ruby')
+			var rt_area = document.createElement('rt')
+			var input_check_box = document.createElement('input');
+			input_check_box.setAttribute("id", 'checkbox_' + input_idx);	
+			input_check_box.setAttribute("name", 'norelation_' + input_idx);	
+			input_check_box.setAttribute("type", 'checkbox');	
+			input_check_box.setAttribute("value", "no_relation");
+			var input_check_box_label = document.createElement('text');
+			input_check_box_label.textContent = "直接の関係なし"
+			new_p.appendChild(id_text)
+			new_p.appendChild(div_sbj)
+			new_p.appendChild(document.createTextNode("\u00a0\u00a0の\u00a0\u00a0"))
+			ruby.appendChild(input_txt_box)
+			rt_area.appendChild(input_check_box)
+			rt_area.appendChild(input_check_box_label)
+			ruby.appendChild(rt_area)
+			ruby_span.appendChild(ruby)
+			new_p.appendChild(ruby_span)
+			// new_p.appendChild(input_txt_box)
+			new_p.appendChild(document.createTextNode("\u00a0\u00a0は\u00a0\u00a0"))
+			new_p.appendChild(div_obj);
+			new_p.appendChild(document.createTextNode("\u00a0\u00a0です。"))
+			input_element.appendChild(new_p);
+			// var br = document.createElement( "br" ); // 改行要素を作って
+			// input_element.appendChild( br );
+		}
+    }
+	function copyTextToClipboard(textVal){
+		var copyFrom = document.createElement("textarea");  
+		copyFrom.textContent = textVal;  
+		var bodyElm = document.getElementsByTagName("body")[0];  
+		bodyElm.appendChild(copyFrom);  copyFrom.select();  
+		var retVal = document.execCommand('copy');  
+		bodyElm.removeChild(copyFrom);  
+		return retVal; 
+	}
+	function copy() {
+		var result = '';
+		// コピー対象をJavaScript上で変数として定義する
+		var test_id = document.getElementById("no").textContent;
+		var title = document.getElementById("title").textContent;
+		var wid = document.getElementById("wid").textContent;
+		result = 'id:'+test_id+'\n';
+		result += 'title:'+title+'\n';
+		result += 'wid:'+wid+'\n';
+
+		for (var i = 0; i < link_num; i++) {
+			var input_idx = linkNames[i].replace('link_', '');
+			var value_str = document.getElementById('value_'+ input_idx).textContent;
+			var input_str = document.getElementById('input_' + input_idx).value;
+			var check_box_value = document.getElementById('checkbox_' + input_idx).checked;
+			result += '【'+input_idx+'】'+value_str+':'+input_str+':'+check_box_value+'\n';
+		}
+
+		copyTextToClipboard(result);
+		// コピーをお知らせする
+		alert("クリップボードにコピーできましたので作業ページにペーストしてください。\n" + result);
+	}
+	
+</script>
+
+<!--  -->
+<body onLoad="init()">
+<p>
+	<big><label class="newTaskFormQuestion">Wikipediaページタイトルとリンク部分の関係を記入するタスク</label></big></p>
+<p>
+	<span>右の欄に表示されているページを参照して、タイトル部分を主語、リンク部分を目的語とする関係を記入してください。<br />
+	<br />
+
+	<p>
+		<strong>no.<span id="no"></span></strong>
+		<input id="wid" type="hidden"/>
+		<input id="title" type="hidden"/>
+	</p>
+	
+	<!-- <iframe id="frame1" src="https://tasks4makingmultihopqadataset.on.drv.tw/wiki_html/2630393_simple.html"></iframe> -->
+	<iframe id="frame1"></iframe>
+	<div class="task_area">
+	
+<p>
+	<!-- <span id="title"></span> -->
+	<span class="box_sbj">主語</span>と<span class="box_obj">目的語</span>の関係を記入してください。直接関係がない場合は「直接の関係なし」にチェックしてください。</p>
+
+
+<div id="link_input_area">
+</div>
+<button onclick="copy()">コピーする</button>
+</div>
+
+</body></html>

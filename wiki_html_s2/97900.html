@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Message Passing Interface - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Message_Passing_Interface rootpage-Message_Passing_Interface skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Message Passing Interface</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>Message Passing Interface</b>（メッセージ パッシング インターフェース、<b>MPI</b>）とは、<a href="." id="link_a_1" title="並列コンピューティング">並列コンピューティング</a>を利用するための標準化された規格である。実装自体を指すこともある。
+</p><p>複数のCPUが情報をバイト列からなるメッセージとして送受信することで協調動作を行えるようにする。自由に使用できる実装としては<a href="." id="link_a_2" title="MPICH">MPICH</a>が有名である。他にも商用ベンダなどによる独自の実装が存在する。
+</p><p>ライブラリレベルでの並列化であるため、言語を問わず利用でき、プログラマが細密なチューニングを行えるというメリットがある一方、利用にあたっては明示的に手続きを記述する必要があり、ロックの対処などもプログラマ側が大きな責任をもたなければならない。
+</p><p>業界団体や研究者らのメンバからなる MPI Forum によって規格が明確に定義されているため、ある環境で作成したプログラムが他の環境でも動作することが期待できる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#歴史"><span class="tocnumber">1</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#概要"><span class="tocnumber">2</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#実装"><span class="tocnumber">3</span> <span class="toctext">実装</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#プログラムの例"><span class="tocnumber">4</span> <span class="toctext">プログラムの例</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#脚注"><span class="tocnumber">5</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#関連"><span class="tocnumber">6</span> <span class="toctext">関連</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#外部リンク"><span class="tocnumber">7</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=1" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MPIへの取り組みは1991年夏にオーストリアの山荘での、小規模な研究者のグループのディスカッションから始まった。その議論は、翌1992年4月29-30日のバージニア州ウィリアムズバーグで、分散メモリ環境のためのメッセージパッシング規格の標準化についてのワークショップに引き継がれた。このワークショップでは標準的なメッセージパッシングインタフェースに必須となるであろう基本的な機能について議論され、標準化に向けてワーキンググループが設立された。<a href="/wiki/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%83%89%E3%83%B3%E3%82%AC%E3%83%A9" title="ジャック・ドンガラ">ジャック・ドンガラ</a>、Rolf Hempel、Tony Hey、David W. Walkerは1992年11月にドラフトを提案し、これがMPI1となった。1992年11月にはMPIワーキンググループの会議がミネアポリスで行われ、そこで標準化プロセスをより公式な仕組みに乗せることが決められた。MPIワーキンググループは1993年の最初の9ヶ月間は6週ごとにミーティングを行った。MPIのドラフトの標準規格は1993年11月の<a href="/wiki/Supercomputing_Conference" title="Supercomputing Conference">スーパーコンピューティング・カンファレンス</a>で発表された。パブリックコメントの期間を経て、その内容がMPIに反映され、1994年6月にMPI version 1.0がリリースされた。これらのミーティングとE-mailでの議論がMPIフォーラムそのものであり、このフォーラムへの参加の権利はハイパフォーマンスコンピューティング関係者の人たち全員に開かれている。
+</p><p>この頃MPIに対しては欧米の組織を中心に40の組織から約80人の人々が関与していた。大手の並列計算のメーカーの多くが参加していたほか、大学や政府の研究機関や、その他の企業からも研究者が参加していた。
+</p><p>MPIの標準ではコアライブラリの構文と意味論を定義することによって、FortranやCで移植可能なメッセージパッシングを行うプログラムを幅広い分野で作れるようになっている。
+</p><p>MPIは基本的なルーチン群の仕様を明確に定義して並列計算機のメーカーに対して公開しているので、彼らはそれに基づいて効率的に実装を進めることができる。その結果、各メーカーは自社製品のマシンに低レベルのMPI標準に準拠したルーチン群の実装を搭載し、さらにその上に高次の分散メモリ通信環境のルーチンを乗せることができる。MPIは単純かつ基本的で移植可能なプログラムを書くことも可能である一方で、ハイパフォーマンスなメッセージパッシングを先進的な計算機の上で行うようなプログラミングも可能である。
+</p><p>メッセージパッシングの本当の意味での標準を目指そうという考え方に従って、MPIではどれかの製品の機能を標準に採用するというやり方ではなく、いくつかのシステムから最も有用な機能をMPI取り込むというやり方が取られている。各機能はIBM由来、インテル由来、nCUBE由来、PVM由来、Express由来、P4由来、PARMACS由来のものがある。メッセージパッシングという手法が人気があるのは広い移植性と、分散メモリや共有メモリでのマルチプロセッサによる処理、ワークステーションをネットワークで接続したものやそれらすべてのような複合的な環境に対して適用可能なためである。この手法は、様々の構成や、ネットワークの速度、メモリアーキテクチャーに依存せず適用できる。
+</p><p>MPIは、<a class="mw-redirect" href="/wiki/ARPA" title="ARPA">ARPA</a>と<a href="/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%9B%BD%E7%AB%8B%E7%A7%91%E5%AD%A6%E8%B2%A1%E5%9B%A3" title="アメリカ国立科学財団">アメリカ国立科学財団</a>のグラントASC-9310330、NSF Science and Technology Center Cooperative agreement number CCR-8809615、ヨーロッパではEsprit Project P6643から活動資金を供給されているほか、<a href="/wiki/%E3%83%86%E3%83%8D%E3%82%B7%E3%83%BC%E5%A4%A7%E5%AD%A6" title="テネシー大学">テネシー大学</a>はMPIフォーラムを資金的に支えている。
+</p>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=2" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>MPIはプログラミング言語とは独立の通信プロトコルで、並列計算機上で動くプログラムに使用される。通信はPoint-to-Pointとグループ通信（Collective communication）の両方がサポートされている。MPIは「メッセージパッシングアプリケーションのためのプログラミングインタフェースで、プロトコルとセマンティクスを定義することで、全ての実装においてその機能がどう振る舞うべきかを仕様として定めている」MPIのゴールはハイパフォーマンス、スケーラビリティ、移植性である。MPIは現在でもハイパフォーマンスコンピューティングにおいてはよく用いられる手法である。
+</p><p>MPIは有名な標準の承認を得た規格ではない。しかしMPIは分散メモリ上で動作する並列計算プログラムのプロセス間通信のモデルとしてはデファクトスタンダードとなっている。実際に、コンピュータークラスターのような構成の分散メモリ型スーパーコンピューター用のプログラムではMPIはよく採用される。MPI-1のモデルは共有メモリを一切必要とせず、MPI-2は限定的に分散共有メモリの概念を導入している。にもかかわらず、MPIのプログラムは共有メモリ型の計算機で使用されることもよくある。これは共有メモリ型のプログラミングのモデルに対して、MPI型のモデルの設計の方が<a href="/wiki/NUMA" title="NUMA">NUMA</a>アーキテクチャーのシステムではメモリアクセスの局所性（<a href="/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7" title="参照の局所性">参照の局所性</a>）などの点で適しているためである。
+</p><p>MPIは<a href="/wiki/OSI%E5%8F%82%E7%85%A7%E3%83%A2%E3%83%87%E3%83%AB" title="OSI参照モデル">OSI参照モデル</a>の役割にあてはめると、役割としては5層（セッション層）以上に対応すると考えられるが、実際の実装ではソケットとTCP（トランスポート層）を使用しているため、より広い範囲（4 - 7層）をカバーしている。
+</p><p>多くのMPIの実装では、C、C++、Fortranから直接呼ぶことのできるいくつかのルーチンを中心として構成されている。そしてC#やJava、Pythonなどの他の言語はCなどで作ったライブラリを介せばMPIを利用できる。MPIがMPI制定以前のメッセージパッシングライブラリよりも優れているのは、移植性とスピードである。MPIはほぼ全ての分散メモリ環境で実装されているので、それらの環境間ではどこへでも移植可能で、各ハードウェアに対して実装されるときに最適化されているので高速に動作する。
+</p><p>MPIは言語独立の仕様（Language Independent Specifications; LIS）を採用しているため、どのような言語からでも呼び出せる。最初のMPIの標準はANSI CとFortran-77とのバインディングの仕様とLISであった。ドラフトの仕様は1994年のスーパーコンピューティングのカンファレンスで公開され、その後すぐに承認された。2008年のMPI-1.3は128関数から構成され、それがMPI-１のシリーズでは最後とされている。
+</p><p>MPIは現在ではいくつかのバージョンがあり、1.3（通称MPI-1）は静的な環境下におけるメッセージパッシングのために使用され、MPI-2.2（通称MPI-2）は並列I/Oや動的プロセス管理、遠隔メモリ操作等の新機能を含んでおり、MPI-3.0（通称MPI-3）はグループ通信のノンブロッキング拡張やリモートメモリアクセスの片方向通信の拡張などを含む。
+</p>
+<h2><span id=".E5.AE.9F.E8.A3.85"></span><span class="mw-headline" id="実装">実装</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=3" title="節を編集: 実装">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>初期のMPI 1.xの実装としてはMPICHがあった。MPICHは<a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%B3%E3%83%8C%E5%9B%BD%E7%AB%8B%E7%A0%94%E7%A9%B6%E6%89%80" title="アルゴンヌ国立研究所">アルゴンヌ国立研究所</a>（ANL）と<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%9F%E3%82%B7%E3%82%B7%E3%83%83%E3%83%94%E5%B7%9E%E7%AB%8B%E5%A4%A7%E5%AD%A6&amp;action=edit&amp;redlink=1" title="ミシシッピ州立大学 (存在しないページ)">ミシシッピ州立大学</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Mississippi_State_University&amp;action=edit&amp;redlink=1" title="En:Mississippi State University (存在しないページ)">英語版</a>）</span></span>を中心とするプロジェクトであった。IBMも初期から実装を提供しており、1990年代初期のスーパーコンピューターのメーカーも商用にMPICHの実装や、自社の実装したものを提供していた。オハイオ スーパーコンピューターセンターのLAM/MPIも初期に公開されていた実装の一つである。ANLは10年以上にわたってMPICHの開発を継続しており、その後MPICH 2に発展し、実装としてはMPI-2.1が提供されるに至っている。LAM/MPIといくつかのプロジェクトは<a href="/wiki/Open_MPI" title="Open MPI">Open MPI</a>に統合された。
+</p>
+<ul><li><a href="/wiki/Open_MPI" title="Open MPI">Open MPI</a>
+<ul><li>いくつかのMPI実装の技術を統合したもので、主には以下のようなよく知られた3プロジェクトの技術が中心となっている。</li></ul></li></ul>
+<ol><li>FT-MPI from the <a href="/wiki/%E3%83%86%E3%83%8D%E3%82%B7%E3%83%BC%E5%A4%A7%E5%AD%A6" title="テネシー大学">テネシー大学</a></li>
+<li>LA-MPI from <a href="/wiki/%E3%83%AD%E3%82%B9%E3%82%A2%E3%83%A9%E3%83%A2%E3%82%B9%E5%9B%BD%E7%AB%8B%E7%A0%94%E7%A9%B6%E6%89%80" title="ロスアラモス国立研究所">ロスアラモス国立研究所</a></li>
+<li><a class="new" href="/w/index.php?title=LAM/MPI&amp;action=edit&amp;redlink=1" title="LAM/MPI (存在しないページ)">LAM/MPI</a> from <a class="mw-redirect" href="/wiki/%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%8A%E5%A4%A7%E5%AD%A6%E3%83%96%E3%83%AB%E3%83%BC%E3%83%9F%E3%83%B3%E3%83%88%E3%83%B3%E6%A0%A1" title="インディアナ大学ブルーミントン校">インディアナ大学ブルーミントン校</a></li></ol>
+<ul><li><a class="external text" href="http://software.intel.com/en-us/intel-mpi-library/" rel="nofollow">Intel MPI Library</a>
+<ul><li>MPICH2をベースとした実装。</li></ul></li>
+<li><a class="external text" href="http://www.lam-mpi.org/" rel="nofollow">LAM/MPI</a></li>
+<li><a href="/wiki/MPICH" title="MPICH">MPICH</a></li>
+<li><a class="external text" href="http://mvapich.cse.ohio-state.edu/" rel="nofollow">MVAPICH</a></li>
+<li><a class="external text" href="http://www.microsoft.com/japan/technet/WindowsServer/library/4cb68e33-024b-4677-af36-28a1ebe9368f.mspx" rel="nofollow">MS MPI</a></li></ul>
+<p>通常、MPI 実装は以下のようなラッパーコンパイラを提供する：
+</p>
+<ul><li><a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C</a>: <code>mpicc</code></li>
+<li><a href="/wiki/C%2B%2B" title="C++">C++</a>: <code>mpic++</code>, <code>mpicxx</code></li>
+<li><a class="mw-redirect" href="/wiki/Fortran" title="Fortran">Fortran</a>: <code>mpif77</code>, <code>mpif90</code>, <code>mpifort</code></li></ul>
+<p><code>mpicc -show</code> (<a href="/wiki/MPICH" title="MPICH">MPICH</a> や Intel MPI) または <code>mpicc -showme</code> (<a href="/wiki/Open_MPI" title="Open MPI">Open MPI</a>) を実行すると、実際に実行するコマンドを確認することができる。
+</p><p>プログラムの実行には <code>mpiexec</code> または <code>mpirun</code> を用いる。ノード間通信は <a href="/wiki/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%82%B7%E3%82%A7%E3%83%AB" title="リモートシェル">rsh</a> や <a href="/wiki/Secure_Shell" title="Secure Shell">ssh</a>、あるいは<a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%96%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ジョブ管理システム">ジョブ管理システム</a>との連携により行う。
+</p>
+<h2><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.A0.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="プログラムの例">プログラムの例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=4" title="節を編集: プログラムの例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下は "Hello World" プログラムをC言語でMPI対応版として書いたものである。 この例では "hello" メッセージを各プロセッサに送信し、受信したデータを少し改変して結果をメインプロセスに返し、それを画面に表示する。
+</p><p>&lt;syntaxhighlight lang="c"&gt;
+/* "Hello World" MPI テストプログラム */
+</p>
+<ol><li>include &lt;mpi.h&gt;</li>
+<li>include &lt;stdio.h&gt;</li>
+<li>include &lt;string.h&gt;</li></ol>
+<ol><li>define BUFSIZE 128</li></ol>
+<p>int main(int argc, char *argv[]) {
+</p>
+<pre> /* MPI 環境を初期化する。これ以降、全プロセスが使える */
+ MPI_Init(&amp;argc, &amp;argv);
+ /* 全プロセス数を取得する */
+ int numprocs;
+ MPI_Comm_size(MPI_COMM_WORLD, &amp;numprocs);
+ /* プロセスのランク（番号）を取得する */
+ int myid;
+ MPI_Comm_rank(MPI_COMM_WORLD, &amp;myid);
+</pre>
+<pre> MPI_Status stat;
+ const int TAG = 0;
+ char idstr[32];
+ char buff[BUFSIZE];
+ /* この時点で全プログラムは同等に走っており、SPMDモデルの中でこれらを区別する場合には
+    ランクで見分ける。ただしランク0のプログラムは特別な処理をしていることもある。...
+  */
+ if (myid == 0) {
+   printf("%d: We have %d processes\n", myid, numprocs);
+   for (int i = 1; i &lt; numprocs; i++) {
+     sprintf(buff, "Hello %d! ", i);
+     MPI_Send(buff, BUFSIZE, MPI_CHAR, i, TAG, MPI_COMM_WORLD);
+   }
+   for (int i = 1; i &lt; numprocs; i++) {
+     MPI_Recv(buff, BUFSIZE, MPI_CHAR, i, TAG, MPI_COMM_WORLD, &amp;stat);
+     printf("%d: %s\n", myid, buff);
+   }
+ } else {
+   /* rank 0から受信: */
+   MPI_Recv(buff, BUFSIZE, MPI_CHAR, 0, TAG, MPI_COMM_WORLD, &amp;stat);
+   sprintf(idstr, "Process %d ", myid);
+   strncat(buff, idstr, BUFSIZE - 1);
+   strncat(buff, "reporting for duty", BUFSIZE - 1);
+   /* rank 0に送信: */
+   MPI_Send(buff, BUFSIZE, MPI_CHAR, 0, TAG, MPI_COMM_WORLD);
+ }
+</pre>
+<pre> /*  MPI FinalizeでMPIのプログラムは終了する。ここは弱い同期ポイント */
+ MPI_Finalize();
+ return 0;
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p><p>4 MPI プロセスでプログラムを実行する（<code>mpiexec -n 4 ./a.out</code>）と以下のような結果が得られる：
+</p>
+<pre>0: We have 4 processes
+0: Hello 1! Process 1 reporting for duty
+0: Hello 2! Process 2 reporting for duty
+0: Hello 3! Process 3 reporting for duty
+</pre>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=5" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<h2><span id=".E9.96.A2.E9.80.A3"></span><span class="mw-headline" id="関連">関連</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=6" title="節を編集: 関連">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Open_MPI" title="Open MPI">Open MPI</a>
+</p>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Message_Passing_Interface&amp;action=edit&amp;section=7" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.mpi-forum.org/" rel="nofollow">Message Passing Interface Forum</a></li>
+<li><a class="external text" href="http://www-unix.mcs.anl.gov/mpi/" rel="nofollow">The Message Passing Interface (MPI) standard</a></li>
+<li><a class="external text" href="http://www.nag-j.co.jp/nag_lib.htm#nd" rel="nofollow">NAG parallel Library</a></li>
+<li><a class="external text" href="http://www.open-mpi.org/" rel="nofollow">OpenMPI</a></li>
+<li><a class="external text" href="https://www.hpci-office.jp/pages/seminar_texts" rel="nofollow">HPCプログラミングセミナーで使用する資料の公開ページです。(HPCI=High Performance Computing Initiative、日本)</a></li>
+<li><a class="external text" href="https://www.cc.u-tokyo.ac.jp/events/lectures/141/" rel="nofollow">「MPI基礎：並列プログラミング入門」(東京大学情報基盤センター講習会資料)</a></li>
+<li><a class="external text" href="https://www.cc.u-tokyo.ac.jp/events/lectures/142/" rel="nofollow">「MPI上級編」(東京大学情報基盤センター講習会資料)</a></li></ul>
+
+
+<div aria-labelledby="並列計算" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:並列コンピューティング (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="並列計算" style="font-size:110%;margin:0 6em">並列計算</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">総論</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウドコンピューティング</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%83%AA%E3%83%83%E3%83%89%E3%83%BB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="グリッド・コンピューティング">グリッド・コンピューティング</a></li>
+<li><a href="/wiki/%E9%AB%98%E6%80%A7%E8%83%BD%E8%A8%88%E7%AE%97" title="高性能計算">高性能計算</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BB%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%BC" title="コンピュータ・クラスター">コンピュータ・クラスター</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="分散コンピューティング">分散コンピューティング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並列レベル</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BF%E3%82%B9%E3%82%AF%E4%B8%A6%E5%88%97%E6%80%A7" title="タスク並列性">タスク</a></li>
+<li><a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E4%B8%A6%E5%88%97%E6%80%A7" title="データ並列性">データ</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E8%A8%88%E7%AE%97#ビットレベルの並列性" title="並列計算">ビット</a></li>
+<li><a href="/wiki/%E5%91%BD%E4%BB%A4%E3%83%AC%E3%83%99%E3%83%AB%E3%81%AE%E4%B8%A6%E5%88%97%E6%80%A7" title="命令レベルの並列性">命令</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">スレッド</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0&amp;action=edit&amp;redlink=1" title="スーパースレッディング (存在しないページ)">スーパースレッディング</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Super-threading&amp;action=edit&amp;redlink=1" title="En:Super-threading (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="ハイパースレッディング・テクノロジー">ハイパースレッディング</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">理論</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%A2%E3%83%A0%E3%83%80%E3%83%BC%E3%83%AB%E3%81%AE%E6%B3%95%E5%89%87" title="アムダールの法則">アムダールの法則</a></li>
+<li><a href="/wiki/%E3%82%B0%E3%82%B9%E3%82%BF%E3%83%95%E3%82%BD%E3%83%B3%E3%81%AE%E6%B3%95%E5%89%87" title="グスタフソンの法則">グスタフソンの法則</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%B3%E3%82%B9%E3%83%88%E5%8A%B9%E7%8E%87%E6%80%A7&amp;action=edit&amp;redlink=1" title="コスト効率性 (存在しないページ)">コスト効率性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cost_efficiency&amp;action=edit&amp;redlink=1" title="En:Cost efficiency (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="Karp-Flatt metric (存在しないページ)">Karp-Flatt metric</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Karp-Flatt_metric&amp;action=edit&amp;redlink=1" title="En:Karp-Flatt metric (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Parallel_slowdown&amp;action=edit&amp;redlink=1" title="Parallel slowdown (存在しないページ)">Parallel slowdown</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Parallel_slowdown&amp;action=edit&amp;redlink=1" title="En:Parallel slowdown (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Speedup&amp;action=edit&amp;redlink=1" title="Speedup (存在しないページ)">Speedup</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Speedup&amp;action=edit&amp;redlink=1" title="En:Speedup (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">要素</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%90%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ファイバー (コンピュータ)">ファイバー</a></li>
+<li><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%A9%9F%E6%A2%B0" title="並列ランダムアクセス機械">PRAM</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Instruction_window&amp;action=edit&amp;redlink=1" title="Instruction window (存在しないページ)">Instruction window</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Instruction_window&amp;action=edit&amp;redlink=1" title="En:Instruction window (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">調整</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7" title="キャッシュコヒーレンシ">キャッシュコヒーレンシ</a></li>
+<li><a href="/wiki/%E5%90%8C%E6%9C%9F_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="同期 (計算機科学)">同期</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%AA%E3%82%A2_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="バリア (計算機科学)">バリア</a></li>
+<li><a href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="ハードウェアマルチスレッディング">マルチスレッディング</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="マルチプロセッシング">マルチプロセッシング</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B9" title="メモリコヒーレンス">メモリコヒーレンス</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cache_invalidation&amp;action=edit&amp;redlink=1" title="Cache invalidation (存在しないページ)">Cache invalidation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cache_invalidation&amp;action=edit&amp;redlink=1" title="En:Cache invalidation (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Application_checkpointing&amp;action=edit&amp;redlink=1" title="Application checkpointing (存在しないページ)">Application checkpointing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Application_checkpointing&amp;action=edit&amp;redlink=1" title="En:Application checkpointing (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プログラミング</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド (コンピュータ)</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E5%8C%96" title="並列化">並列プログラミングモデル</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Implicit_parallelism&amp;action=edit&amp;redlink=1" title="Implicit parallelism (存在しないページ)">Implicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Implicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Implicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Explicit_parallelism&amp;action=edit&amp;redlink=1" title="Explicit parallelism (存在しないページ)">Explicit parallelism</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Explicit_parallelism&amp;action=edit&amp;redlink=1" title="En:Explicit parallelism (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E6%80%A7" title="並行性">並行性</a></li></ul></li>
+<li><a href="/wiki/%E3%83%95%E3%83%AA%E3%83%B3%E3%81%AE%E5%88%86%E9%A1%9E" title="フリンの分類">フリンの分類</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=SPMD&amp;action=edit&amp;redlink=1" title="SPMD (存在しないページ)">SPMD</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:SPMD&amp;action=edit&amp;redlink=1" title="En:SPMD (存在しないページ)">英語版</a>）</span></span></li></ul></li></ul></li>
+<li><a href="/wiki/Lock-free%E3%81%A8Wait-free%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Lock-freeとWait-freeアルゴリズム">Lock-freeとWait-freeアルゴリズム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">ハードウェア</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="スーパーコンピュータ">スーパーコンピュータ</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC" title="スーパースカラー">スーパースカラー</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E8%A8%88%E7%AE%97%E6%A9%9F" title="ベクトル計算機">ベクトル計算機</a></li>
+<li>マルチプロセッシング
+<ul><li><a href="/wiki/%E5%AF%BE%E7%A7%B0%E5%9E%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0" title="対称型マルチプロセッシング">対称型</a></li>
+<li><a class="new" href="/w/index.php?title=En:Asymmetric_multiprocessing&amp;action=edit&amp;redlink=1" title="En:Asymmetric multiprocessing (存在しないページ)">非対称型</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B3%E3%82%A2" title="マルチコア">マルチコア</a></li></ul></li>
+<li>メモリ
+<ul><li><a href="/wiki/NUMA" title="NUMA">NUMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Cache_only_memory_architecture&amp;action=edit&amp;redlink=1" title="En:Cache only memory architecture (存在しないページ)">en:COMA</a></li>
+<li><a class="new" href="/w/index.php?title=En:Distributed_memory&amp;action=edit&amp;redlink=1" title="En:Distributed memory (存在しないページ)">en:分散型</a></li>
+<li><a href="/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ">共有型</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="分散共有メモリ">分散共有型</a></li></ul></li>
+<li><a href="/wiki/%E5%90%8C%E6%99%82%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0" title="同時マルチスレッディング">SMT</a></li>
+<li><a href="/wiki/%E8%B6%85%E4%B8%A6%E5%88%97%E3%83%9E%E3%82%B7%E3%83%B3" title="超並列マシン">MPP</a></li>
+<li><a href="/wiki/Beowulf" title="Beowulf">Beowulf</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">API</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Ateji_PX&amp;action=edit&amp;redlink=1" title="Ateji PX (存在しないページ)">Ateji PX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Ateji_PX&amp;action=edit&amp;redlink=1" title="En:Ateji PX (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Boost_C%2B%2B%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA#マルチスレッド" title="Boost C++ライブラリ">Boostスレッド</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Charm%2B%2B&amp;action=edit&amp;redlink=1" title="Charm++ (存在しないページ)">Charm++</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Charm%2B%2B&amp;action=edit&amp;redlink=1" title="En:Charm++ (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cilk&amp;action=edit&amp;redlink=1" title="Cilk (存在しないページ)">Cilk</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cilk&amp;action=edit&amp;redlink=1" title="En:Cilk (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Coarray_Fortran&amp;action=edit&amp;redlink=1" title="Coarray Fortran (存在しないページ)">Coarray Fortran</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Coarray_Fortran&amp;action=edit&amp;redlink=1" title="En:Coarray Fortran (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dryad&amp;action=edit&amp;redlink=1" title="Dryad (存在しないページ)">Dryad</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dryad_(programming)&amp;action=edit&amp;redlink=1" title="En:Dryad (programming) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Global_Arrays&amp;action=edit&amp;redlink=1" title="Global Arrays (存在しないページ)">Global Arrays</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Global_Arrays&amp;action=edit&amp;redlink=1" title="En:Global Arrays (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="Intel Cilk Plus (存在しないページ)">Intel Cilk Plus</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Intel_Cilk_Plus&amp;action=edit&amp;redlink=1" title="En:Intel Cilk Plus (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Intel_Threading_Building_Blocks" title="Intel Threading Building Blocks">Intel Threading Building Blocks</a></li>
+<li><a class="mw-selflink selflink">MPI</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=OpenHMPP&amp;action=edit&amp;redlink=1" title="OpenHMPP (存在しないページ)">OpenHMPP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:OpenHMPP&amp;action=edit&amp;redlink=1" title="En:OpenHMPP (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89" title="POSIXスレッド">POSIXスレッド</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">問題</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=En:Embarrassingly_parallel&amp;action=edit&amp;redlink=1" title="En:Embarrassingly parallel (存在しないページ)">en:Embarrassingly parallel</a></li>
+<li><a class="new" href="/w/index.php?title=En:Grand_Challenge_problem&amp;action=edit&amp;redlink=1" title="En:Grand Challenge problem (存在しないページ)">en:Grand Challenge</a></li>
+<li><a class="new" href="/w/index.php?title=En:Software_lockout&amp;action=edit&amp;redlink=1" title="En:Software lockout (存在しないページ)">en:Software lockout</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<ul><li><a href="/wiki/%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="並行計算">並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E8%A1%8C%E8%A8%88%E7%AE%97" title="カテゴリ:並行計算">カテゴリ:並行計算</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">カテゴリ:並列コンピューティング</a></li></ul></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331110755
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.172 seconds
+Real time usage: 0.330 seconds
+Preprocessor visited node count: 832/1000000
+Post‐expand include size: 59640/2097152 bytes
+Template argument size: 1481/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 21/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 160/5000000 bytes
+Lua time usage: 0.120/7 seconds
+Lua virtual size: 7532544/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  273.271      1 -total
+ 52.44%  143.304      1 テンプレート:並列コンピューティング
+ 52.02%  142.156     20 テンプレート:仮リンク
+ 51.52%  140.785      1 テンプレート:Navbox
+ 36.73%  100.368      1 テンプレート:出典の明記
+ 32.21%   88.013      1 テンプレート:Ambox
+ 13.62%   37.216      1 テンプレート:Find_sources_mainspace
+  3.74%   10.211      1 テンプレート:DMC
+  2.60%    7.099      1 テンプレート:DMC/core
+  2.14%    5.861      1 テンプレート:Software-stub
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:97900-0!canonical and timestamp 20220331110754 and revision id 70219. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Message_Passing_Interface&amp;oldid=70219">http://localhost:8080/w/index.php?title=Message_Passing_Interface&amp;oldid=70219</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2019%E5%B9%B45%E6%9C%88" title="カテゴリ:出典を必要とする記事/2019年5月">出典を必要とする記事/2019年5月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96" title="カテゴリ:ソフトウェア関連のスタブ">ソフトウェア関連のスタブ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%96%E9%A0%85%E7%9B%AE" title="カテゴリ:コンピュータ関連のスタブ項目">コンピュータ関連のスタブ項目</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%B8%A6%E5%88%97%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="カテゴリ:並列コンピューティング">並列コンピューティング</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Message+Passing+Interface&amp;returntoquery=curid%3D97900%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Message+Passing+Interface&amp;returntoquery=curid%3D97900%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Message_Passing_Interface" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Message_Passing_Interface&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Message_Passing_Interface">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Message_Passing_Interface&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Message_Passing_Interface&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Message_Passing_Interface" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Message_Passing_Interface" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Message_Passing_Interface&amp;oldid=70219" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Message_Passing_Interface&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年8月15日 (日) 03:51 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.172","walltime":"0.330","ppvisitednodes":{"value":832,"limit":1000000},"postexpandincludesize":{"value":59640,"limit":2097152},"templateargumentsize":{"value":1481,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":21,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":160,"limit":5000000},"timingprofile":["100.00%  273.271      1 -total"," 52.44%  143.304      1 テンプレート:並列コンピューティング"," 52.02%  142.156     20 テンプレート:仮リンク"," 51.52%  140.785      1 テンプレート:Navbox"," 36.73%  100.368      1 テンプレート:出典の明記"," 32.21%   88.013      1 テンプレート:Ambox"," 13.62%   37.216      1 テンプレート:Find_sources_mainspace","  3.74%   10.211      1 テンプレート:DMC","  2.60%    7.099      1 テンプレート:DMC/core","  2.14%    5.861      1 テンプレート:Software-stub"]},"scribunto":{"limitreport-timeusage":{"value":"0.120","limit":"7"},"limitreport-virtmemusage":{"value":7532544,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331110755","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":713});});</script>
+</body></html>

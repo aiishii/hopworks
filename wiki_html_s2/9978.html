@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Java Servlet - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Java_Servlet rootpage-Java_Servlet skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Java Servlet</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>Java Servlet</b>（ジャバ サーブレット）とは、<a href="." id="link_a_1" title="サーバ">サーバ</a>上で<a href="." id="link_a_2" title="ウェブページ">ウェブページ</a>などを動的に生成したりデータ処理を行うために、<a href="." id="link_a_3" title="Java">Java</a>で作成された<a href="." id="link_a_4" title="プログラム (コンピュータ)">プログラム</a>及びその仕様である。単にサーブレットと呼ばれることが多い。<a href="." id="link_a_5" title="Jakarta EE">Jakarta EE</a>の一機能という位置づけになっている。この機能を用いてショッピングサイトやオンラインバンキングなどをはじめとする多種多様な動的なWebサイトが構築されている。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#サーバサイドJava"><span class="tocnumber">2</span> <span class="toctext">サーバサイドJava</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#役割"><span class="tocnumber">3</span> <span class="toctext">役割</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#歴史"><span class="tocnumber">4</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#例"><span class="tocnumber">5</span> <span class="toctext">例</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Web.xml定義"><span class="tocnumber">6</span> <span class="toctext">Web.xml定義</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#脚注"><span class="tocnumber">7</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p>Java Servletはサーバサイド技術として登場した。
+</p><p>同様の技術（すなわち対抗技術）としては<a href="/wiki/Perl" title="Perl">Perl</a>などを用いた<a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a>、<a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a>プログラムのプロセスを<a href="/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache HTTP Server</a>上で動かすことができるmod_phpなどのモジュール、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>が提供する<a href="/wiki/Active_Server_Pages" title="Active Server Pages">ASP</a>などがある。CGIが<a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="クライアント (コンピュータ)">クライアント</a>のリクエストのたびに新しい<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9" title="プロセス">プロセス</a>を起動するのに対して、サーブレットは<a class="mw-redirect" href="/wiki/%E3%83%A1%E3%83%A2%E3%83%AA" title="メモリ">メモリ</a>に常駐して、リクエストのたびにプロセスより軽量な<a href="/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="スレッド (コンピュータ)">スレッド</a>を起動するので、効率がよい。また、サーブレットはJavaで書かれているのでさまざまなプラットフォームで使うことができる。
+</p><p>Servlet 2.3からは、フィルター機能が追加され、Servletの実行前後に処理を差し込むことが可能となった。
+</p><p>サーブレットの技術の延長として<a href="/wiki/JavaServer_Pages" title="JavaServer Pages">JSP</a>があるが、JSPはサーブレットを自動生成して動作している。厳密に言えばサーブレットとJSPは違う技術だが、これらは組み合わせて使うのが一般的なため、JSPもサーブレットの一部として扱われることが多い。
+</p><p>サーブレットの実行環境（実行するためのソフトウェア）はWebコンテナ、またはサーブレットコンテナと呼ばれる。これらの言葉はあまり区別されずに使われることも多いが、純粋にサーブレットの処理を行うものをサーブレットコンテナと呼び、サーブレットコンテナを含みJSPや<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">HTTPサーバ</a>としての機能も含むものを<a href="/wiki/Web%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A" title="Webコンテナ">Webコンテナ</a>と呼ぶ傾向がある。
+</p><p><a href="/wiki/Web%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A" title="Webコンテナ">Webコンテナ</a>としては、<a href="/wiki/Apache_Tomcat" title="Apache Tomcat">Apache Tomcat</a>, <a href="/wiki/Jetty" title="Jetty">Jetty</a>, <a class="mw-redirect" href="/wiki/BEA_WebLogic_Server" title="BEA WebLogic Server">BEA WebLogic Server</a>, IBM <a href="/wiki/WebSphere_Application_Server" title="WebSphere Application Server">WebSphere Application Server</a>, <a class="new" href="/w/index.php?title=En:Resin_Server&amp;action=edit&amp;redlink=1" title="En:Resin Server (存在しないページ)">Resin</a>, <a href="/wiki/JBoss" title="JBoss">JBoss</a>などがある。
+</p>
+<h2><span id=".E3.82.B5.E3.83.BC.E3.83.90.E3.82.B5.E3.82.A4.E3.83.89Java"></span><span class="mw-headline" id="サーバサイドJava">サーバサイドJava</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=2" title="節を編集: サーバサイドJava">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>当初、Javaは<a class="mw-redirect" href="/wiki/Applet" title="Applet">Applet</a>などのクライアント側でJavaプログラムを稼動させるクライアントサイドの技術として注目を集めていた。しかし、サーブレットの登場以降、サーバ側でJavaプログラムを稼動させる形態が急速に普及した。こうしたサーバ側でJavaプログラムを稼動させる形態をサーバサイドJavaと呼ぶ。
+</p>
+<h2><span id=".E5.BD.B9.E5.89.B2"></span><span class="mw-headline" id="役割">役割</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=3" title="節を編集: 役割">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>JSPの登場により、Java Servletはデータの入出力処理 (Controller) を担当することが推奨される。これは<a href="/wiki/Model_View_Controller" title="Model View Controller">Model View Controller</a> (MVC) による役割付けである。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=4" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<caption>Servletの歴史
+</caption>
+<tbody><tr>
+<th>バージョン</th>
+<th>リリース</th>
+<th>プラットフォーム</th>
+<th>内容
+</th></tr>
+<tr>
+<td>1.0
+</td>
+<td>1997/01
+</td>
+<td>--
+</td>
+<td>--
+</td></tr>
+<tr>
+<td>2.0
+</td>
+<td>
+</td>
+<td>JDK 1.1
+</td>
+<td>Java Servlet Development Kit 2.0の一部としてリリース
+</td></tr>
+<tr>
+<td>2.1
+</td>
+<td>1998/11
+</td>
+<td>--
+</td>
+<td>公式な初版、RequestDispatcher, ServletContextを追加
+</td></tr>
+<tr>
+<td>2.2
+</td>
+<td>1999/08
+</td>
+<td>J2EE 1.2, J2SE 1.2
+</td>
+<td>J2EEの一部となる
+</td></tr>
+<tr>
+<td>2.3
+</td>
+<td>2001/08
+</td>
+<td>J2EE 1.3, J2SE 1.2
+</td>
+<td>Filter機能追加
+</td></tr>
+<tr>
+<td>2.4
+</td>
+<td>2003/11
+</td>
+<td>J2EE 1.4, J2SE 1.3
+</td>
+<td>web.xml にXML Schema を利用
+</td></tr>
+<tr>
+<td>2.5
+</td>
+<td>2005/09
+</td>
+<td>JavaEE 5, JavaSE 5
+</td>
+<td>JavaSE 5が必須となる, annotationをサポート
+</td></tr>
+<tr>
+<td>3.0
+</td>
+<td>2009/12
+</td>
+<td>JavaEE 6, JavaSE 6
+</td>
+<td>開発容易性の実現, 動的設定, login/logoutメソッドサポート, 非同期Servlet, アノテーションSecurity, Fileアップロード
+</td></tr>
+<tr>
+<td>3.1
+</td>
+<td>2013/05
+</td>
+<td>JavaEE 7
+</td>
+<td><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0" title="クラウドコンピューティング">クラウド</a>対応, ノンブロッキング処理用I/O APIの追加, <a href="/wiki/WebSocket" title="WebSocket">WebSocket</a>等へのプロトコルアップグレードの対応, セキュリティ機能の強化<sup class="reference" id="cite_ref-oracle20120806_1-0"><a href="#cite_note-oracle20120806-1">[1]</a></sup>
+</td></tr>
+<tr>
+<td>4.0
+</td>
+<td>2017/09
+</td>
+<td>JavaEE 8
+</td>
+<td><a href="/wiki/HTTP/2" title="HTTP/2">HTTP/2</a>サポート
+</td></tr></tbody></table>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=5" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>以下は、<code>service()</code><a href="/wiki/%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)" title="メソッド (計算機科学)">メソッド</a>が何回呼ばれたかを出力する単純なサーブレットである。
+</p><p>サーブレットは<code>Servlet</code><a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9_(%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93)" title="インタフェース (情報技術)">インタフェース</a>を実装する必要がある。サーブレットの実装は通常、<a href="/wiki/%E9%80%9A%E4%BF%A1%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="通信プロトコル">プロトコル</a>に依存しない<a href="/wiki/%E6%8A%BD%E8%B1%A1%E5%9E%8B" title="抽象型">抽象クラス</a>である<code>GenericServlet</code>か、<a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a>用のサブクラスである<code>HttpServlet</code>クラスを継承することで行う。この例では<code>HttpServlet</code>クラスを継承している。
+</p><p><code>service()</code>メソッドはサーブレットの<a href="/wiki/%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" title="リクエスト">リクエスト</a>ごとの処理を記述するメソッドである。<code>HttpServlet</code>クラスを継承する場合、ここからさらに<code>doGet()</code>, <code>doPost()</code>, <code>doPut()</code>, <code>doDelete()</code>といった<a href="/wiki/Hypertext_Transfer_Protocol#メソッド" title="Hypertext Transfer Protocol">HTTPメソッド</a>ごとのメソッドに分岐させることができる。ただし、以下の例ではその機能を使わず、直接<code>service()</code>メソッドを<a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%89" title="オーバーライド">オーバーライド</a>している。
+</p><p>&lt;syntaxhighlight lang="java"&gt;
+import java.io.IOException;
+</p><p>import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+</p><p>public class ServletLifeCycleExample extends HttpServlet {
+</p>
+<pre>   private int count;
+
+   @Override
+   public void init(ServletConfig config) throws ServletException {
+       super.init(config);
+       getServletContext().log("init() called");
+       count = 0;
+   }
+
+   @Override
+   protected void service(HttpServletRequest request, HttpServletResponse response)
+           throws ServletException, IOException {
+       getServletContext().log("service() called");
+       count++;
+       response.getWriter().write("Incrementing the count: count = " + count);
+   }
+
+   @Override
+   public void destroy() {
+       getServletContext().log("destroy() called");
+   }
+</pre>
+<p>}
+&lt;/syntaxhighlight&gt;
+</p>
+<h2><span id="Web.xml.E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="Web.xml定義">Web.xml定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=6" title="節を編集: Web.xml定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<caption>Web.xml定義
+</caption>
+<tbody><tr>
+<th>バージョン</th>
+<th>定義内容
+</th></tr>
+<tr>
+<td>2.3
+</td>
+<td>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<p>&lt;!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "<a class="external free" href="http://java.sun.com/dtd/web-app_2_3.dtd" rel="nofollow">http://java.sun.com/dtd/web-app_2_3.dtd</a>"&gt;
+</p><p>&lt;web-app&gt;
+</p><p>&lt;/web-app&gt;
+</p>
+</td></tr>
+<tr>
+<td>2.4
+</td>
+<td>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<p>&lt;web-app xmlns="<a class="external free" href="http://java.sun.com/xml/ns/j2ee" rel="nofollow">http://java.sun.com/xml/ns/j2ee</a>" xmlns:xsi="<a class="external free" href="http://www.w3.org/2001/XMLSchema-instance" rel="nofollow">http://www.w3.org/2001/XMLSchema-instance</a>" xsi:schemaLocation="<a class="external free" href="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" rel="nofollow">http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd</a>" version="2.4"&gt;
+</p><p>&lt;/web-app&gt;
+</p>
+</td></tr>
+<tr>
+<td>2.5
+</td>
+<td>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<p>&lt;web-app xmlns="<a class="external free" href="http://java.sun.com/xml/ns/javaee" rel="nofollow">http://java.sun.com/xml/ns/javaee</a>" xmlns:xsi="<a class="external free" href="http://www.w3.org/2001/XMLSchema-instance" rel="nofollow">http://www.w3.org/2001/XMLSchema-instance</a>" xsi:schemaLocation="<a class="external free" href="http://java.sun.com/xml/ns/javaee" rel="nofollow">http://java.sun.com/xml/ns/javaee</a> <a class="external free" href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" rel="nofollow">http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd</a>" version="2.5"&gt;
+</p><p>&lt;/web-app&gt;
+</p>
+</td></tr>
+<tr>
+<td>3.0
+</td>
+<td>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<p>&lt;web-app xmlns="<a class="external free" href="http://java.sun.com/xml/ns/javaee" rel="nofollow">http://java.sun.com/xml/ns/javaee</a>" xmlns:xsi="<a class="external free" href="http://www.w3.org/2001/XMLSchema-instance" rel="nofollow">http://www.w3.org/2001/XMLSchema-instance</a>" 
+xmlns:web="<a class="external free" href="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" rel="nofollow">http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd</a>"
+xsi:schemaLocation="<a class="external free" href="http://java.sun.com/xml/ns/javaee" rel="nofollow">http://java.sun.com/xml/ns/javaee</a> <a class="external free" href="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" rel="nofollow">http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd</a>" id="WebApp_ID" version="3.0"&gt;
+</p><p>&lt;/web-app&gt;
+</p>
+</td></tr>
+<tr>
+<td>3.1
+</td>
+<td>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<p>&lt;web-app xmlns="<a class="external free" href="http://xmlns.jcp.org/xml/ns/javaee" rel="nofollow">http://xmlns.jcp.org/xml/ns/javaee</a>" xmlns:xsi="<a class="external free" href="http://www.w3.org/2001/XMLSchema-instance" rel="nofollow">http://www.w3.org/2001/XMLSchema-instance</a>"
+xsi:schemaLocation="<a class="external free" href="http://xmlns.jcp.org/xml/ns/javaee" rel="nofollow">http://xmlns.jcp.org/xml/ns/javaee</a> <a class="external free" href="http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" rel="nofollow">http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd</a>" version="3.1"&gt;
+</p><p>&lt;/web-app&gt;
+</p>
+</td></tr></tbody></table>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=7" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-oracle20120806-1"><b><a href="#cite_ref-oracle20120806_1-0">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="https://blogs.oracle.com/wlc/entry/javaee_c116" rel="nofollow">Java Servlet 3.1の新機能――クラウド対応のJava EE 7でどう変わるのか？【Java EEエキスパート・シリーズ】</a>”.   <a href="/wiki/%E3%82%AA%E3%83%A9%E3%82%AF%E3%83%AB_(%E4%BC%81%E6%A5%AD)" title="オラクル (企業)">オラクル</a> (2012年8月6日). <span title="">2014年2月23日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=8" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li><a href="/wiki/Jakarta_EE" title="Jakarta EE">Jakarta EE</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%90" title="アプリケーションサーバ">アプリケーションサーバ</a></li>
+<li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">ウェブアプリケーション</a></li>
+<li><a href="/wiki/JavaServer_Pages" title="JavaServer Pages">JavaServer Pages</a></li>
+<li><a href="/wiki/JavaBeans" title="JavaBeans">JavaBeans</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AC%E3%83%83%E3%83%88" title="アプレット">アプレット</a></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Java_Servlet&amp;action=edit&amp;section=9" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://jcp.org/aboutJava/communityprocess/final/jsr053/" rel="nofollow">Java Servlet 2.3</a> JSR-053 <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://jcp.org/aboutJava/communityprocess/final/jsr154/" rel="nofollow">Java Servlet 2.4</a> JSR-154 Final Release <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://jcp.org/aboutJava/communityprocess/mrel/jsr154/" rel="nofollow">Java Servlet 2.5</a> JSR-154 Maintenance Release <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://jcp.org/en/jsr/detail?id=315" rel="nofollow">Java Servlet 3.0</a> JSR-315 <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://jcp.org/en/jsr/detail?id=340" rel="nofollow">Java Servlet 3.1</a> JSR-340 <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a class="external text" href="https://jcp.org/en/jsr/detail?id=369" rel="nofollow">Java Servlet 4.0</a> JSR-363 <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li></ul>
+<div aria-labelledby="Java" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="3" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Java&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Java (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AJava&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AJava&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Java" style="font-size:110%;margin:0 6em">Java</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">プラットフォーム</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Java" title="Java">Java言語</a></li>
+<li><a href="/wiki/Java%E4%BB%AE%E6%83%B3%E3%83%9E%E3%82%B7%E3%83%B3" title="Java仮想マシン">JVM</a></li>
+<li><a href="/wiki/Java_Platform,_Micro_Edition" title="Java Platform, Micro Edition">Java ME</a> (Micro)</li>
+<li><a href="/wiki/Java_Platform,_Standard_Edition" title="Java Platform, Standard Edition">Java SE</a> (Standard)</li>
+<li><a href="/wiki/Jakarta_EE" title="Jakarta EE">Jakarta EE</a></li>
+<li><a class="mw-redirect" href="/wiki/Java%E3%82%AB%E3%83%BC%E3%83%89" title="Javaカード">Javaカード</a></li>
+<li><a href="/wiki/Android_(%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)#開発環境" title="Android (オペレーティングシステム)">Android SDK</a></li></ul>
+</div></td><td class="navbox-image" rowspan="7" style="width:1px;padding:0px 0px 0px 2px"><div>ファイル:Duke (Java mascot) waving.svg</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">オラクルのテクノロジー</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Squawk_%E4%BB%AE%E6%83%B3%E3%83%9E%E3%82%B7%E3%83%B3&amp;action=edit&amp;redlink=1" title="Squawk 仮想マシン (存在しないページ)">Squawk</a></li>
+<li><a class="mw-redirect" href="/wiki/Java%E9%96%8B%E7%99%BA%E3%82%AD%E3%83%83%E3%83%88" title="Java開発キット">Java開発キット</a></li>
+<li><a href="/wiki/OpenJDK" title="OpenJDK">OpenJDK</a></li>
+<li><a href="/wiki/Java%E4%BB%AE%E6%83%B3%E3%83%9E%E3%82%B7%E3%83%B3" title="Java仮想マシン">Java仮想マシン</a></li>
+<li><a href="/wiki/JavaFX" title="JavaFX">JavaFX</a></li>
+<li><a class="new" href="/w/index.php?title=Maxine_Virtual_Machine&amp;action=edit&amp;redlink=1" title="Maxine Virtual Machine (存在しないページ)">Maxine VM</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">プラットフォーム技術</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Java%E3%82%A2%E3%83%97%E3%83%AC%E3%83%83%E3%83%88" title="Javaアプレット">アプレット</a></li>
+<li><a class="mw-selflink selflink">サーブレット</a></li>
+<li><a class="new" href="/w/index.php?title=MIDlet&amp;action=edit&amp;redlink=1" title="MIDlet (存在しないページ)">MIDlet</a></li>
+<li><a href="/wiki/JavaServer_Pages" title="JavaServer Pages">JSP</a></li>
+<li><a href="/wiki/JavaServer_Faces" title="JavaServer Faces">JSF</a></li>
+<li><a href="/wiki/Java_Web_Start" title="Java Web Start">Web Start (JNLP)</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">主なサードパーティ技術</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="new" href="/w/index.php?title=Blackdown_Java&amp;action=edit&amp;redlink=1" title="Blackdown Java (存在しないページ)">Blackdown</a></li>
+<li><a href="/wiki/Eclipse_(%E7%B5%B1%E5%90%88%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83)" title="Eclipse (統合開発環境)">Eclipse</a></li>
+<li><a href="/wiki/GNU_Classpath" title="GNU Classpath">GNU Classpath</a></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="/wiki/Apache_Harmony" title="Apache Harmony">Harmony</a></li>
+<li><a href="/wiki/Hibernate" title="Hibernate">Hibernate</a></li>
+<li><a href="/wiki/IcedTea" title="IcedTea">IcedTea</a></li>
+<li><a class="new" href="/w/index.php?title=Jazelle&amp;action=edit&amp;redlink=1" title="Jazelle (存在しないページ)">Jazelle</a></li>
+<li><a href="/wiki/Spring_Framework" title="Spring Framework">Spring</a></li>
+<li><a href="/wiki/Apache_Struts" title="Apache Struts">Struts</a></li>
+<li><a class="new" href="/w/index.php?title=TopLink&amp;action=edit&amp;redlink=1" title="TopLink (存在しないページ)">TopLink</a></li>
+<li><a class="mw-redirect" href="/wiki/WildFly" title="WildFly">WildFly</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">歴史</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Java%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E5%B1%A5%E6%AD%B4" title="Javaバージョン履歴">Javaバージョン履歴</a></li>
+<li><a href="/wiki/Java_Community_Process" title="Java Community Process">Java Community Process</a></li>
+<li><a class="mw-redirect" href="/wiki/%E3%82%B5%E3%83%B3%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サンマイクロシステムズ">サンマイクロシステムズ</a></li>
+<li><a class="new" href="/w/index.php?title=%E8%87%AA%E7%94%B1%E3%81%AAJava%E3%81%AE%E5%AE%9F%E8%A3%85&amp;action=edit&amp;redlink=1" title="自由なJavaの実装 (存在しないページ)">自由なJavaの実装</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="new" href="/w/index.php?title=JVM%E8%A8%80%E8%AA%9E%E4%B8%80%E8%A6%A7&amp;action=edit&amp;redlink=1" title="JVM言語一覧 (存在しないページ)">主要なJVM言語</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/BeanShell" title="BeanShell">BeanShell</a></li>
+<li><a href="/wiki/Clojure" title="Clojure">Clojure</a></li>
+<li><a href="/wiki/Groovy" title="Groovy">Groovy</a></li>
+<li><a href="/wiki/JRuby" title="JRuby">JRuby</a></li>
+<li><a href="/wiki/Jython" title="Jython">Jython</a></li>
+<li><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></li>
+<li><a href="/wiki/Processing" title="Processing">Processing</a></li>
+<li><a href="/wiki/Rhino" title="Rhino">Rhino</a></li>
+<li><a href="/wiki/Scala" title="Scala">Scala</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">コミュニティ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">カンファレンス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/JavaOne" title="JavaOne">JavaOne</a></li>
+<li><a class="new" href="/w/index.php?title=Devoxx&amp;action=edit&amp;redlink=1" title="Devoxx (存在しないページ)">Devoxx</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">組織</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/Apache_Software_Foundation" title="Apache Software Foundation">Apache Software Foundation</a></li>
+<li><a href="/wiki/Java_Community_Process" title="Java Community Process">Java Community Process</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%A9%E3%82%AF%E3%83%AB_(%E4%BC%81%E6%A5%AD)" title="オラクル (企業)">オラクル</a></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%BA" title="サン・マイクロシステムズ">サン・マイクロシステムズ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">人物</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B8%E3%82%A7%E3%83%BC%E3%83%A0%E3%82%BA%E3%83%BB%E3%82%B4%E3%82%B9%E3%83%AA%E3%83%B3" title="ジェームズ・ゴスリン">ジェームズ・ゴスリン</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%BC%E3%82%B5%E3%83%BC%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%95&amp;action=edit&amp;redlink=1" title="アーサー・ヴァン・ホフ (存在しないページ)">アーサー・ヴァン・ホフ</a></li>
+<li><a class="new" href="/w/index.php?title=%E3%82%A6%E3%83%AB%E3%82%B9%E3%83%BB%E3%83%98%E3%83%AB%E3%83%84%E3%83%AC&amp;action=edit&amp;redlink=1" title="ウルス・ヘルツレ (存在しないページ)">ウルス・ヘルツレ</a></li>
+<li><a href="/wiki/%E3%83%91%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8E%E3%83%BC%E3%83%88%E3%83%B3" title="パトリック・ノートン">パトリック・ノートン</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><td class="navbox-abovebelow" colspan="3">
+<ul><li>カテゴリ <a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Java" title="カテゴリ:Java">カテゴリ</a></li>
+<li>コモンズ <a class="extiw" href="https://commons.wikimedia.org/wiki/Category:Java_(programming_language)" title="commons:Category:Java (programming language)">コモンズ</a></li>
+<li>ポータル <a href="/wiki/Portal:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="Portal:コンピュータ">Portal:コンピュータ</a></li></ul></td></tr></tbody></table></div>
+<div aria-labelledby="Webインタフェース" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Web_interfaces&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Web interfaces (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AWeb_interfaces&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AWeb_interfaces&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Webインタフェース" style="font-size:110%;margin:0 6em">Webインタフェース</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">サーバサイド</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">プロトコル</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a></li>
+<li><a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a></li>
+<li><a href="/wiki/FastCGI" title="FastCGI">FCGI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Simple_Common_Gateway_Interface&amp;action=edit&amp;redlink=1" title="Simple Common Gateway Interface (存在しないページ)">SCGI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Simple_Common_Gateway_Interface&amp;action=edit&amp;redlink=1" title="En:Simple Common Gateway Interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Apache_JServ_Protocol&amp;action=edit&amp;redlink=1" title="Apache JServ Protocol (存在しないページ)">AJP</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Apache_JServ_Protocol&amp;action=edit&amp;redlink=1" title="En:Apache JServ Protocol (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/WebSocket" title="WebSocket">WebSocket</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">APIs</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Netscape_Server_Application_Programming_Interface&amp;action=edit&amp;redlink=1" title="Netscape Server Application Programming Interface (存在しないページ)">C NSAPI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Netscape_Server_Application_Programming_Interface&amp;action=edit&amp;redlink=1" title="En:Netscape Server Application Programming Interface (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Apache_HTTP_Server#特徴" title="Apache HTTP Server">C ASAPI</a></li>
+<li><a href="/wiki/ISAPI" title="ISAPI">C ISAPI</a></li>
+<li><a class="mw-selflink selflink">Java Servlet</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HTTP_handler&amp;action=edit&amp;redlink=1" title="HTTP handler (存在しないページ)">CIL System.Web.IHttpHandler</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HTTP_handler&amp;action=edit&amp;redlink=1" title="En:HTTP handler (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Web_Server_Gateway_Interface" title="Web Server Gateway Interface">Python WSGI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Rack&amp;action=edit&amp;redlink=1" title="Rack (存在しないページ)">Ruby Rack</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Rack_(web_server_interface)&amp;action=edit&amp;redlink=1" title="En:Rack (web server interface) (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=JSGI&amp;action=edit&amp;redlink=1" title="JSGI (存在しないページ)">JavaScript JSGI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:JSGI&amp;action=edit&amp;redlink=1" title="En:JSGI (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/PSGI" title="PSGI">Perl PSGI</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Kepler&amp;action=edit&amp;redlink=1" title="Kepler (存在しないページ)">Lua WSAPI</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Kepler_(software)&amp;action=edit&amp;redlink=1" title="En:Kepler (software) (存在しないページ)">英語版</a>）</span></span></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">トピックス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9" title="Webサービス">Webサービス</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%90" title="アプリケーションサーバ">アプリケーションサーバ</a></li>
+<li><a href="/wiki/%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9_(WWW)" title="リソース (WWW)">リソース (WWW)</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Open_API&amp;action=edit&amp;redlink=1" title="Open API (存在しないページ)">Open API</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Open_API&amp;action=edit&amp;redlink=1" title="En:Open API (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B5%E3%82%A4%E3%83%89%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88" title="サーバサイドスクリプト">サーバサイドスクリプト</a></li>
+<li><a href="/wiki/Webhook" title="Webhook">Webhook</a></li></ul>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">クライアントサイド</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;"><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_API&amp;action=edit&amp;redlink=1" title="Web API (存在しないページ)">Web API</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_API&amp;action=edit&amp;redlink=1" title="En:Web API (存在しないページ)">英語版</a>）</span></span></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">W3C</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Canvas%E8%A6%81%E7%B4%A0" title="Canvas要素">Canvas</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Cross-origin_resource_sharing&amp;action=edit&amp;redlink=1" title="Cross-origin resource sharing (存在しないページ)">CORS</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Cross-origin_resource_sharing&amp;action=edit&amp;redlink=1" title="En:Cross-origin resource sharing (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=HTML5%E3%83%95%E3%82%A1%E3%82%A4%E3%83%ABAPI&amp;action=edit&amp;redlink=1" title="HTML5ファイルAPI (存在しないページ)">File API</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:HTML5_File_API&amp;action=edit&amp;redlink=1" title="En:HTML5 File API (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=W3C_Geolocation_API&amp;action=edit&amp;redlink=1" title="W3C Geolocation API (存在しないページ)">Geolocation</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:W3C_Geolocation_API&amp;action=edit&amp;redlink=1" title="En:W3C Geolocation API (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Indexed_Database_API" title="Indexed Database API">IndexedDB</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Microdata&amp;action=edit&amp;redlink=1" title="Microdata (存在しないページ)">Microdata</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Microdata_(HTML)&amp;action=edit&amp;redlink=1" title="En:Microdata (HTML) (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a></li>
+<li><a href="/wiki/WebSocket" title="WebSocket">WebSocket</a></li>
+<li><a href="/wiki/WebVTT" title="WebVTT">WebVTT</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_Messaging&amp;action=edit&amp;redlink=1" title="Web Messaging (存在しないページ)">Web Messaging</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_Messaging&amp;action=edit&amp;redlink=1" title="En:Web Messaging (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_storage&amp;action=edit&amp;redlink=1" title="Web storage (存在しないページ)">Web storage</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_storage&amp;action=edit&amp;redlink=1" title="En:Web storage (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_worker&amp;action=edit&amp;redlink=1" title="Web worker (存在しないページ)">Web worker</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_worker&amp;action=edit&amp;redlink=1" title="En:Web worker (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></li>
+<li><a href="/wiki/HTML5%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA" title="HTML5オーディオ">オーディオ</a></li>
+<li><a href="/wiki/Video%E8%A6%81%E7%B4%A0" title="Video要素">ビデオ</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">クロノス</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/WebCL" title="WebCL">WebCL</a></li>
+<li><a href="/wiki/WebGL" title="WebGL">WebGL</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<p><a href="/wiki/Gears_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Gears (ソフトウェア)">Gears</a> - <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_SQL_Database&amp;action=edit&amp;redlink=1" title="Web SQL Database (存在しないページ)">Web SQL Database</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_SQL_Database&amp;action=edit&amp;redlink=1" title="En:Web SQL Database (存在しないページ)">英語版</a>）</span></span>
+</p>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">Browser APIs</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<p><a href="/wiki/ActiveX" title="ActiveX">ActiveX</a> - <a href="/wiki/Browser_Helper_Object" title="Browser Helper Object">Browser Helper Object</a> - <a href="/wiki/Google_Native_Client" title="Google Native Client">Google Native Client</a> - <a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a>
+</p>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%;padding:0 0.75em;">トピックス</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<p><a href="/wiki/Ajax" title="Ajax">Ajax</a> - <a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AFHTML" title="ダイナミックHTML">DHTML</a> - <a href="/wiki/%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%83%83%E3%83%97_(Web%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="マッシュアップ (Webプログラミング)">Mashup</a> - <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_IDL&amp;action=edit&amp;redlink=1" title="Web IDL (存在しないページ)">Web IDL</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_IDL&amp;action=edit&amp;redlink=1" title="En:Web IDL (存在しないページ)">英語版</a>）</span></span>
+</p>
+</div></td></tr></tbody></table>
+</td></tr><tr><th class="navbox-group" scope="row" style="width:1%">関連項目</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<p><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Dynamic_web_page&amp;action=edit&amp;redlink=1" title="Dynamic web page (存在しないページ)">Dynamic web page</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Dynamic_web_page&amp;action=edit&amp;redlink=1" title="En:Dynamic web page (存在しないページ)">英語版</a>）</span></span> - <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Open_Web_Platform&amp;action=edit&amp;redlink=1" title="Open Web Platform (存在しないページ)">Open Web Platform</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Open_Web_Platform&amp;action=edit&amp;redlink=1" title="En:Open Web Platform (存在しないページ)">英語版</a>）</span></span> - <a href="/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="リッチインターネットアプリケーション">RIA</a> - <span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Web_API_security&amp;action=edit&amp;redlink=1" title="Web API security (存在しないページ)">Web API security</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Web_API_security&amp;action=edit&amp;redlink=1" title="En:Web API security (存在しないページ)">英語版</a>）</span></span> - <a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">ウェブアプリケーション</a>
+</p>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2">
+<ul><li><a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="ウェブユーザインタフェース">ウェブユーザインタフェース</a></li></ul></td></tr></tbody></table></div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331080528
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.218 seconds
+Real time usage: 0.331 seconds
+Preprocessor visited node count: 1426/1000000
+Post‐expand include size: 108262/2097152 bytes
+Template argument size: 1798/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 22/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 714/5000000 bytes
+Lua time usage: 0.110/7 seconds
+Lua virtual size: 8990720/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  277.562      1 -total
+ 35.43%   98.341      2 テンプレート:Navbox
+ 34.83%   96.671      1 テンプレート:出典の明記
+ 32.23%   89.458      4 テンプレート:Navbox_subgroup
+ 31.04%   86.150      1 テンプレート:Ambox
+ 28.09%   77.979      1 テンプレート:Web_interfaces
+ 23.10%   64.116     21 テンプレート:仮リンク
+ 13.03%   36.153      1 テンプレート:Find_sources_mainspace
+ 10.56%   29.303      1 テンプレート:Reflist
+  9.75%   27.065      1 テンプレート:Cite_web
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:9978-0!canonical and timestamp 20220331080528 and revision id 7757. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Java_Servlet&amp;oldid=7757">http://localhost:8080/w/index.php?title=Java_Servlet&amp;oldid=7757</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2021%E5%B9%B46%E6%9C%88" title="カテゴリ:出典を必要とする記事/2021年6月">出典を必要とする記事/2021年6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E9%96%8B%E7%99%BA" title="カテゴリ:ウェブ開発">ウェブ開発</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Java_specification_requests" title="カテゴリ:Java specification requests">Java specification requests</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Java_enterprise_platform" title="カテゴリ:Java enterprise platform">Java enterprise platform</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Java%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0" title="カテゴリ:Javaプラットフォーム">Javaプラットフォーム</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Java+Servlet&amp;returntoquery=curid%3D9978%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Java+Servlet&amp;returntoquery=curid%3D9978%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Java_Servlet" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Java_Servlet&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Java_Servlet">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Java_Servlet&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Java_Servlet&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Java_Servlet" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Java_Servlet" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Java_Servlet&amp;oldid=7757" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Java_Servlet&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月11日 (金) 16:36 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.218","walltime":"0.331","ppvisitednodes":{"value":1426,"limit":1000000},"postexpandincludesize":{"value":108262,"limit":2097152},"templateargumentsize":{"value":1798,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":22,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":714,"limit":5000000},"timingprofile":["100.00%  277.562      1 -total"," 35.43%   98.341      2 テンプレート:Navbox"," 34.83%   96.671      1 テンプレート:出典の明記"," 32.23%   89.458      4 テンプレート:Navbox_subgroup"," 31.04%   86.150      1 テンプレート:Ambox"," 28.09%   77.979      1 テンプレート:Web_interfaces"," 23.10%   64.116     21 テンプレート:仮リンク"," 13.03%   36.153      1 テンプレート:Find_sources_mainspace"," 10.56%   29.303      1 テンプレート:Reflist","  9.75%   27.065      1 テンプレート:Cite_web"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"7"},"limitreport-virtmemusage":{"value":8990720,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331080528","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":193});});</script>
+</body></html>

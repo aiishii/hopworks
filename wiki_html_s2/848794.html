@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Webアプリケーションフレームワーク - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Webアプリケーションフレームワーク rootpage-Webアプリケーションフレームワーク skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">Webアプリケーションフレームワーク</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><b>Web アプリケーションフレームワーク</b>（ウェブアプリケーションフレームワーク、<i><a href="." id="link_a_1" title="英語">英</a>: <span lang="en">Web Application Framework</span></i>）は、動的な <a href="." id="link_a_2" title="ウェブサイト">ウェブサイト</a>、<a href="." id="link_a_3" title="Webアプリケーション">Webアプリケーション</a>、<a href="." id="link_a_4" title="Webサービス">Webサービス</a>の<a href="." id="link_a_5" title="Webプログラミング">開発</a>をサポートするために設計された<a href="." id="link_a_6" title="アプリケーションフレームワーク">アプリケーションフレームワーク</a>である。
+フレームワークの目的は、Web開発で用いられる共通した作業に伴う労力を軽減することである。たとえば、多数のフレームワークが<a href="." id="link_a_7" title="データベース">データベース</a>へのアクセスのためのライブラリや、<a href="." id="link_a_8" title="テンプレートエンジン">テンプレートエンジン</a>（→<a href="." id="link_a_9" title="Webテンプレート">Webテンプレート</a>）、<a href="." id="link_a_10" title="セッション">セッション</a>管理を提供し、<a href="." id="link_a_11" title="コードの再利用">コードの再利用</a>を促進させるものもある。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Webアプリケーションフレームワークの発展の歴史"><span class="tocnumber">1</span> <span class="toctext">Webアプリケーションフレームワークの発展の歴史</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Common_Gateway_Interface_(CGI)"><span class="tocnumber">1.1</span> <span class="toctext">Common Gateway Interface (CGI)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#密結合"><span class="tocnumber">1.2</span> <span class="toctext">密結合</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Web言語"><span class="tocnumber">1.3</span> <span class="toctext">Web言語</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Webライブラリ"><span class="tocnumber">1.4</span> <span class="toctext">Webライブラリ</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#フルスタック"><span class="tocnumber">1.5</span> <span class="toctext">フルスタック</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#ポートレット"><span class="tocnumber">1.6</span> <span class="toctext">ポートレット</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#アーキテクチャ"><span class="tocnumber">2</span> <span class="toctext">アーキテクチャ</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Model_view_controller"><span class="tocnumber">2.1</span> <span class="toctext">Model view controller</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#プッシュ型とプル型の比較"><span class="tocnumber">2.1.1</span> <span class="toctext">プッシュ型とプル型の比較</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#コンテンツ管理システム"><span class="tocnumber">2.2</span> <span class="toctext">コンテンツ管理システム</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#機能"><span class="tocnumber">3</span> <span class="toctext">機能</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#セキュリティ"><span class="tocnumber">3.1</span> <span class="toctext">セキュリティ</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#データベースへのアクセスおよびマッピング"><span class="tocnumber">3.2</span> <span class="toctext">データベースへのアクセスおよびマッピング</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#URLマッピング"><span class="tocnumber">3.3</span> <span class="toctext">URLマッピング</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Webテンプレートシステム"><span class="tocnumber">3.4</span> <span class="toctext">Webテンプレートシステム</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#キャッシュ"><span class="tocnumber">3.5</span> <span class="toctext">キャッシュ</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Ajax"><span class="tocnumber">3.6</span> <span class="toctext">Ajax</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#自動構成"><span class="tocnumber">3.7</span> <span class="toctext">自動構成</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Webサービス"><span class="tocnumber">3.8</span> <span class="toctext">Webサービス</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#技術"><span class="tocnumber">4</span> <span class="toctext">技術</span></a>
+<ul>
+<li class="toclevel-2 tocsection-22"><a href="#プログラミング言語"><span class="tocnumber">4.1</span> <span class="toctext">プログラミング言語</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Java"><span class="tocnumber">4.1.1</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#JavaScript"><span class="tocnumber">4.1.2</span> <span class="toctext">JavaScript</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#C#およびVB.NET"><span class="tocnumber">4.1.3</span> <span class="toctext">C#およびVB.NET</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#PHP"><span class="tocnumber">4.1.4</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Perl,_Python,_Ruby"><span class="tocnumber">4.1.5</span> <span class="toctext">Perl, Python, Ruby</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#オペレーティングシステム"><span class="tocnumber">4.2</span> <span class="toctext">オペレーティングシステム</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#脚注"><span class="tocnumber">5</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#注釈"><span class="tocnumber">5.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#出典"><span class="tocnumber">5.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#参考文献"><span class="tocnumber">6</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#関連項目"><span class="tocnumber">7</span> <span class="toctext">関連項目</span></a></li>
+</ul>
+</div>
+<h2><span id="Web.E3.82.A2.E3.83.97.E3.83.AA.E3.82.B1.E3.83.BC.E3.82.B7.E3.83.A7.E3.83.B3.E3.83.95.E3.83.AC.E3.83.BC.E3.83.A0.E3.83.AF.E3.83.BC.E3.82.AF.E3.81.AE.E7.99.BA.E5.B1.95.E3.81.AE.E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="Webアプリケーションフレームワークの発展の歴史">Webアプリケーションフレームワークの発展の歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=1" title="節を編集: Webアプリケーションフレームワークの発展の歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Common_Gateway_Interface_.28CGI.29"></span><span class="mw-headline" id="Common_Gateway_Interface_(CGI)">Common Gateway Interface (CGI)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=2" title="節を編集: Common Gateway Interface (CGI)">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a>の設計は元々ダイナミックなものではなく、初期の<a href="/wiki/%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88" title="ハイパーテキスト">ハイパーテキスト</a>は <a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">Webサーバ</a>上で公開された<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%89%E3%82%B3%E3%83%BC%E3%83%89" title="ハードコード">ハードコード</a>の<a href="/wiki/HyperText_Markup_Language" title="HyperText Markup Language">HTML</a>でできていた。
+</p><p>公開されたページについての変更はページの作者が行う必要があった。
+ユーザーからの入力を反映したコンテンツを提供するため、Webサーバが外部のアプリケーションとやり取りするための<a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">Common Gateway Interface</a> (CGI) 標準が導入された。
+<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+CGIでは各リクエストが別々のプロセスを開始しなければならないため、サーバの負荷に悪い影響を与えることがある。
+</p>
+<h3><span id=".E5.AF.86.E7.B5.90.E5.90.88"></span><span class="mw-headline" id="密結合">密結合</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=3" title="節を編集: 密結合">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>高いトラフィックに対応したWebアプリケーションを実現するため、<a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E" title="プログラマ">プログラマ</a>はWebサーバとの密な結合を望んだ。<a href="/wiki/Apache_HTTP_Server" title="Apache HTTP Server">Apache HTTP Server</a>は、例えば、Webサーバが任意のコードを実行したり（<a href="/wiki/Mod_python" title="Mod python">mod_python</a>など）、特定のリクエストを動的なコンテンツを扱えるWebサーバに転送するような（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Mod_jk&amp;action=edit&amp;redlink=1" title="Mod jk (存在しないページ)">mod_jk</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:mod_jk&amp;action=edit&amp;redlink=1" title="En:mod jk (存在しないページ)">英語版</a>）</span></span>など）モジュールをサポートしている。<a href="/wiki/Java" title="Java">Java</a>などの言語で書かれた動的なコンテンツをWebサーバで扱うことができるよう設計されたものもある（<a href="/wiki/Apache_Tomcat" title="Apache Tomcat">Apache Tomcat</a>など） 。
+</p>
+<h3><span id="Web.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="Web言語">Web言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=4" title="節を編集: Web言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>同じころWeb用途に特化して<a href="/wiki/PHP_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E)" title="PHP (プログラミング言語)">PHP</a>や<a href="/wiki/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a>などの新しい言語が開発された。
+</p>
+<h3><span id="Web.E3.83.A9.E3.82.A4.E3.83.96.E3.83.A9.E3.83.AA"></span><span class="mw-headline" id="Webライブラリ">Webライブラリ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=5" title="節を編集: Webライブラリ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Webページの動的な生成に用いられる大半のプログラミング言語が、共通した作業を行うための<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a>を持っているが、<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">Webアプリケーション</a>は <a href="/wiki/HyperText_Markup_Language" title="HyperText Markup Language">HTML</a>の生成（たとえば <a href="/wiki/JavaServer_Faces" title="JavaServer Faces">JavaServer Faces</a>）などWebアプリケーションで有用なライブラリを必要とすることが多い。
+</p>
+<h3><span id=".E3.83.95.E3.83.AB.E3.82.B9.E3.82.BF.E3.83.83.E3.82.AF"></span><span class="mw-headline" id="フルスタック">フルスタック</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=6" title="節を編集: フルスタック">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>成熟した「フルスタック」フレームワークが登場した。
+これは、複数のWeb開発に有用なライブラリを一つに結合した
+Web開発者向けの <a class="new" href="/w/index.php?title=%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF&amp;action=edit&amp;redlink=1" title="ソフトウェアスタック (存在しないページ)">ソフトウェアスタック</a>として集約したものである。
+例として、<a href="/wiki/Jakarta_EE" title="Jakarta EE">Jakarta EE</a>、<a class="new" href="/w/index.php?title=OpenACS&amp;action=edit&amp;redlink=1" title="OpenACS (存在しないページ)">OpenACS</a>、<a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>などがある。
+</p>
+<h3><span id=".E3.83.9D.E3.83.BC.E3.83.88.E3.83.AC.E3.83.83.E3.83.88"></span><span class="mw-headline" id="ポートレット">ポートレット</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=7" title="節を編集: ポートレット">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>従来のフレームワークは基本的に横型に分割されているため、ユーザ機能を追加 / 変更 / 削除する場合は、アプリケーションを入れ替える必要があった。ポータルフレームワークはユーザ機能を縦型に分割し、ユーザ機能毎にホット・デプロイ / アンデプロイできる。デプロイされた<a href="/wiki/%E3%83%9D%E3%83%BC%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" title="ポートレット">ポートレット</a>をドラッグ・アンド・ドロップ操作でWebページに配置することができるのが特徴である。
+</p><p>なお、ポートレット毎にエンティティインターフェース（モデル）、表示（ビュー）、業務ロジックが含まれているため、ポートレット毎に異なるスタック技術を利用することもできる。例えば<a href="/wiki/JavaServer_Faces" title="JavaServer Faces">JSF</a>で作成したポートレットと<a href="/wiki/Spring_Framework" title="Spring Framework">Spring Framework</a>で作成したポートレットを１つのWebページに配置することができる。また、異なった言語でポートレットを記述することもできる。例えばJava、Ruby、PHPで記述したポートレットを一つのWebページに配置できる。
+</p><p>ユーザ機能を随時に追加／置き換え／削除することができるため、ポートレットフレームワークはアジャイル開発のように継続的に開発を行う場合に適している。例えばScrumの各ユーザストリーをプラグインにすることができる。
+</p><p>ポートレットフレームワークを利用したWebシステムの例として、<a href="/wiki/Liferay" title="Liferay">liferay</a>、<a href="/wiki/Alfresco" title="Alfresco">Alfresco</a>などがある。その中で<a href="/wiki/Liferay" title="Liferay">liferay</a>は開発者向けのツールが揃っている。
+</p>
+<h2><span id=".E3.82.A2.E3.83.BC.E3.82.AD.E3.83.86.E3.82.AF.E3.83.81.E3.83.A3"></span><span class="mw-headline" id="アーキテクチャ">アーキテクチャ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=8" title="節を編集: アーキテクチャ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Model_view_controller">Model view controller</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=9" title="節を編集: Model view controller">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>多数のフレームワークが、<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB" title="データモデル">データモデル</a>、<a href="/wiki/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%AD%E3%82%B8%E3%83%83%E3%82%AF" title="ビジネスロジック">ビジネスロジック</a>、<a class="mw-redirect" href="/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9" title="ユーザーインターフェイス">ユーザーインターフェイス</a>を分割するために<a href="/wiki/Model_View_Controller" title="Model View Controller">MVCモデル</a>に従っている。
+</p>
+<h4><span id=".E3.83.97.E3.83.83.E3.82.B7.E3.83.A5.E5.9E.8B.E3.81.A8.E3.83.97.E3.83.AB.E5.9E.8B.E3.81.AE.E6.AF.94.E8.BC.83"></span><span class="mw-headline" id="プッシュ型とプル型の比較">プッシュ型とプル型の比較</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=10" title="節を編集: プッシュ型とプル型の比較">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>ほとんどのMVCフレームワークは、<a href="/wiki/Push%E6%8A%80%E8%A1%93" title="Push技術">プッシュ型</a>のアーキテクチャにしたがっている。このようなフレームワークは、処理を要求するアクションを実行し、次に結果を出力するためにデータを表示のレイヤにプッシュする。
+<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+<a class="mw-redirect" href="/wiki/Struts" title="Struts">Struts</a>、<a href="/wiki/Django" title="Django">Django</a>、<a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>、<a href="/wiki/Spring_Framework" title="Spring Framework">Spring Framework</a>の一部であるSpring MVCなどがこのアーキテクチャの良い例である。
+</p><p>これに対するものとしてプル型のアーキテクチャがあり、「コンポーネント型」とも呼ばれている。こうしたフレームワークは表示レイヤから処理を開始し、必要に応じて複数のコントローラからの処理の結果を「プル」する。
+このアーキテクチャでは、複数のコントローラーが一つのビューに関連付けられる。
+<a href="/wiki/Apache_Tapestry" title="Apache Tapestry">Tapestry</a>、<a href="/wiki/Apache_Velocity" title="Apache Velocity">Velocity</a> などがプル型アーキテクチャの一例である。
+</p>
+<h3><span id=".E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.84.E7.AE.A1.E7.90.86.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="コンテンツ管理システム">コンテンツ管理システム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=11" title="節を編集: コンテンツ管理システム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>自己記述的なコンテンツ管理システムが、高位のレイヤーのWebアプリケーションフレームワークに進出し始めている。
+例えば、<a href="/wiki/Drupal" title="Drupal">Drupal</a>の構造は Webアプリケーションフレームワークに関連した機能を提供する<i>モジュール</i>により機能を拡張できる最小限の<i>コア</i>を提供している。
+<a href="/wiki/WordPress" title="WordPress">WordPress</a>、<a href="/wiki/Joomla!" title="Joomla!">Joomla</a>と<a href="/wiki/Plone" title="Plone">Plone</a>も同様な機能を持っている。
+<a href="/wiki/Liferay" title="Liferay">Liferay</a>（オープンソース）のような高度な汎用コンテンツ管理システムでは、更にコンテンツのバージョン管理、公開開始日／終了日、公開する前の承認ワークフロー、プレビュー機能、マルチメディアコンテンツの対応など従来では<a href="/wiki/WebSphere" title="WebSphere">WebSphere</a>や<a href="/wiki/Microsoft_SharePoint" title="Microsoft SharePoint">Microsoft SharePoint</a>などでしか提供されていない機能にも対応している。
+伝統的にこれらは <a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="コンテンツ管理システム">コンテンツ管理システム</a>とも呼ばれる。 
+しかし、コンテンツの管理がこれらのシステムの上で最重要の機能であるかについては議論の余地がある。<a href="/wiki/Liferay" title="Liferay">Liferay</a>のようなフレームワークは関数API、機能のフレームワークやコーディング標準、伝統的に<i>Webアプリケーションフレームワーク</i>に関連する機能も提供している。
+</p>
+<h2><span id=".E6.A9.9F.E8.83.BD"></span><span class="mw-headline" id="機能">機能</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=12" title="節を編集: 機能">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.BB.E3.82.AD.E3.83.A5.E3.83.AA.E3.83.86.E3.82.A3"></span><span class="mw-headline" id="セキュリティ">セキュリティ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=13" title="節を編集: セキュリティ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Webアプリケーションフレームワークにはアクセス制御機能（<a href="/wiki/%E8%AA%8D%E8%A8%BC" title="認証">ユーザ認証</a>と<a href="/wiki/%E8%AA%8D%E5%8F%AF_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)" title="認可 (セキュリティ)">アクセス認可</a>）を備えたものもある。
+<a href="/wiki/Django" title="Django">Django</a>はその一例で、ロールに基づいてページに対するアクセスを管理する機能と、ユーザーの作成やロールの割り当てのためのWebベースのインターフェイスを提供する。
+</p>
+<h3><span id=".E3.83.87.E3.83.BC.E3.82.BF.E3.83.99.E3.83.BC.E3.82.B9.E3.81.B8.E3.81.AE.E3.82.A2.E3.82.AF.E3.82.BB.E3.82.B9.E3.81.8A.E3.82.88.E3.81.B3.E3.83.9E.E3.83.83.E3.83.94.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="データベースへのアクセスおよびマッピング">データベースへのアクセスおよびマッピング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=14" title="節を編集: データベースへのアクセスおよびマッピング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>多数のWebアプリケーションフレームワークはバックエンドのデータベースに対する統一された<a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9" title="アプリケーションプログラミングインタフェース">API</a>を提供し、コードの変更なく多数のデータベースとやりとりすることを可能にし、プログラマーがより高位の概念を扱うことができるようにしている。
+また高いパフォーマンスを得るため、<a class="new" href="/w/index.php?title=En:AOLserver&amp;action=edit&amp;redlink=1" title="En:AOLserver (存在しないページ)">AOLserver</a>が行うようにデータベースのコネクションがプールされていなければならない。
+</p><p>さらに、<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト指向</a>フレームワークは<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="オブジェクト指向プログラミング">オブジェクト</a>と<a href="/wiki/%E9%96%A2%E4%BF%82%E3%83%A2%E3%83%87%E3%83%AB" title="関係モデル">関係モデル</a>との対応づけを行う<a href="/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E9%96%A2%E4%BF%82%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0" title="オブジェクト関係マッピング">オブジェクト関係マッピング</a>の機能を提供するマッピングツールを備えている。
+</p><p>Webアプリケーションフレームワークが提供するその他の機能として<a href="/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="トランザクション">トランザクション</a>のサポートや<a href="/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E7%A7%BB%E8%A1%8C" title="データ移行">データベースの移行ツール</a>などが含まれる。
+</p>
+<h3><span id="URL.E3.83.9E.E3.83.83.E3.83.94.E3.83.B3.E3.82.B0"></span><span class="mw-headline" id="URLマッピング">URLマッピング</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=15" title="節を編集: URLマッピング">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>パラメータの付加されたURLをわかりやすいURLに自動的に変換することにより、システムは使いやすく、またさらなる利点としてサーチエンジンがインデックスを作りやすくなる。
+たとえば、?cat=1&amp;pageid=3で終わるようなアドレスを/category/science/topic/physicsや/science/physicsへの変換するような例である。
+カテゴリーのIDが変更されてもURLは変わらない（従ってサーチエンジンに対して有利である）。URLの変換により、アプリケーションが<a href="/wiki/Representational_State_Transfer" title="Representational State Transfer">REST</a>的な設計方法の一部の要素によりうまく適合できるようにすることができる。
+</p>
+<h3><span id="Web.E3.83.86.E3.83.B3.E3.83.97.E3.83.AC.E3.83.BC.E3.83.88.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="Webテンプレートシステム">Webテンプレートシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=16" title="節を編集: Webテンプレートシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/Web%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88" title="Webテンプレート">Webテンプレート</a>」を参照</div>
+<p>動的なWebページは通常静的な部分 (HTML) とHTMLを生成するコードである動的な部分からなる。HTMLを生成するコードはテンプレート上の変数あるいはコードから生成を行う。生成されるテキストをデータベースから取得することで、サイト内のページの数を劇的に少なくすることができる。
+</p><p>例として 500軒の家を扱う不動産会社を考える。静的なWebサイトでは、不動産会社は500ページ作成する必要があるが、動的なWebサイトでは、不動産会社はただ動的なページを500レコードを持つデータベースに接続するだけでよい。
+</p><p><a href="/wiki/Web%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88" title="Webテンプレート">テンプレート</a>では、プログラミング言語由来の変数を、コードを使わずに挿入することができるため、Webサイト内のページを更新するためにプログラミングの知識が必要なくなる。
+HTMLと変数を区別するための記述方法が定義されており、たとえばJSPでは &lt;c:out&gt; タグが変数を出力するために使用され、Smartyでは{$variable} が用いられる。
+</p><p>多数のテンプレートエンジンはIFやFOREACHといった若干の論理タグをサポートしている。
+これらはビジネスロジック層ないしMVCパターンにおけるM（モデル）との明確な分離を行うため、プレゼンテーション層に必要な決定を行うためだけに用いられる。
+</p>
+<h3><span id=".E3.82.AD.E3.83.A3.E3.83.83.E3.82.B7.E3.83.A5"></span><span class="mw-headline" id="キャッシュ">キャッシュ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=17" title="節を編集: キャッシュ">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Webのキャッシングとは、<a href="/wiki/%E5%B8%AF%E5%9F%9F%E5%B9%85" title="帯域幅">帯域</a>使用率、<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">Webサーバ</a>の負荷、ユーザーに感じられる“<a href="/wiki/%E3%83%A9%E3%82%B0" title="ラグ">ラグ</a>”を削減するための <a href="/wiki/World_Wide_Web" title="World Wide Web">Web</a><a href="/wiki/%E9%9B%BB%E5%AD%90%E6%96%87%E6%9B%B8" title="電子文書">文書</a>の<a href="/wiki/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0)" title="キャッシュ (コンピュータシステム)">キャッシング</a>である。Webキャッシュシステムは、ドキュメントのコピーを保存し、以降のリクエストは一定の条件が満たされればキャッシュから供給すれば問題なくなる。アプリケーションフレームワークには文書をキャッシュし、Webテンプレートシステムをバイパスする機構を提供するものもある。
+</p>
+<h3><span class="mw-headline" id="Ajax">Ajax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=18" title="節を編集: Ajax">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Ajax" title="Ajax">Ajax</a>とはインタラクティブな<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">ウェブアプリケーション</a>を作成するための<a href="/wiki/Web%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="Webプログラミング">Web開発</a>手法である。Ajaxの目的はユーザーが変更を要求するごとにWebページ全体がリロードされないようにするため、背後でサーバとのデータのやり取りを少なくし、Webページをより高速に反応するようにすることである。Webページのインタラクティブ性や、速度、<a href="/wiki/%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="ユーザビリティ">ユーザビリティ</a>を向上させることが意図されている。
+</p><p>Ajaxプログラミングは複雑であるため、Ajaxサポートを専門に行うAjax フレームワークが多数存在している。
+他の大きなフレームワークの一部として組み込むことができるものも存在する。
+たとえば、<a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype JavaScript Framework</a>は<a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>に含まれている。
+</p>
+<h3><span id=".E8.87.AA.E5.8B.95.E6.A7.8B.E6.88.90"></span><span class="mw-headline" id="自動構成">自動構成</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=19" title="節を編集: 自動構成">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>フレームワークには<a href="/wiki/%E5%9E%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="型システム">型システム</a>を利用した<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B%E3%81%AE%E3%83%86%E3%82%B9%E3%83%88&amp;action=edit&amp;redlink=1" title="データ型のテスト (存在しないページ)">データ型のテスト</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Introspection_(computer_science)&amp;action=edit&amp;redlink=1" title="En:Introspection (computer science) (存在しないページ)">英語版</a>）</span></span>や以下の方法を用いてによってWebアプリケーションの構成作業をできる限り少なくするものがある。
+たとえば、多数のJavaフレームワークは<a href="/wiki/Hibernate" title="Hibernate">Hibernate</a>を永続化層として使用しており、必要な情報を永続化させるためのデータベーススキーマをランタイムに生成することができる。
+これによりアプリケーションの設計者は明示的にデータベーススキーマを設計せずにビジネスオブジェクトを設計することができる。
+<a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>のようなフレームワークは逆の動作、すなわちモデルオブジェクトのプロパティをデータベーススキーマに基づきランタイムに定義することが可能である。
+</p>
+<h3><span id="Web.E3.82.B5.E3.83.BC.E3.83.93.E3.82.B9"></span><span class="mw-headline" id="Webサービス">Webサービス</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=20" title="節を編集: Webサービス">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="rellink" style="margin-bottom: 0.5em; padding-left: 2em; font-style: italic;">詳細は「<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9" title="Webサービス">Webサービス</a>」を参照</div>
+<p><a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9" title="Webサービス">Webサービス</a>の作成と提供を行うツールを提供するツールを備えたフレームワークもある。
+これらのユーティリティは、その他のWebアプリケーションと同様の機能を提供する。
+</p>
+<h2><span id=".E6.8A.80.E8.A1.93"></span><span class="mw-headline" id="技術">技術</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=21" title="節を編集: 技術">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9F.E3.83.B3.E3.82.B0.E8.A8.80.E8.AA.9E"></span><span class="mw-headline" id="プログラミング言語">プログラミング言語</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=22" title="節を編集: プログラミング言語">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>多数のプログラミング言語に対して関連したWebアプリケーションフレームワークが存在する。
+しかし、フレームワークに対するより高いレベルのサポートやフレームワークの開発に導く機能を提供したり十分な数の開発者がいる言語もあれば、そうでないものもある。
+</p>
+<h4><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=23" title="節を編集: Java">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>膨大な数のJavaフレームワークが開発中、ないしは実際に使用されている。
+これらのフレームワークの多くは<a href="/wiki/Jakarta_EE" title="Jakarta EE">Jakarta EE</a>プラットフォームの上に構築されているか、ないしは要素を借りてきている。
+</p>
+<h4><span class="mw-headline" id="JavaScript">JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=24" title="節を編集: JavaScript">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a class="new" href="/w/index.php?title=Javascript_framework&amp;action=edit&amp;redlink=1" title="Javascript framework (存在しないページ)">Javascript framework</a>、<a href="/wiki/JavaScript%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="JavaScriptライブラリ">JavaScriptライブラリ</a>、<a class="new" href="/w/index.php?title=AJAX_framework&amp;action=edit&amp;redlink=1" title="AJAX framework (存在しないページ)">AJAX framework</a>などと呼ばれる。
+全世界に普及した成功例として代表的なものに <a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype JavaScript Framework</a>や<a href="/wiki/JQuery" title="JQuery">jQuery</a>がある。
+これ以外にもさまざまなものが開発されている。以下はその一例である。HTML,CSS,JavaScriptの進化が著しく、JavaScriptでは種々のフレームワークが乱立している状態であるが、<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2016年10月）">徐々に収束に向かい始めており、<a href="/wiki/MEAN_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB)" title="MEAN (ソフトウェアバンドル)">MEAN</a>という手法が有名になりつつある。</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2016年10月）">要出典</span></a></i>]</sup>
+</p>
+<ul><li><a href="/wiki/AngularJS" title="AngularJS">AngularJS</a>(1.x,2.0α Ver)</li>
+<li><a class="new" href="/w/index.php?title=Aurelia.js&amp;action=edit&amp;redlink=1" title="Aurelia.js (存在しないページ)">Aurelia.js</a></li>
+<li><a href="/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a class="new" href="/w/index.php?title=Ember.js&amp;action=edit&amp;redlink=1" title="Ember.js (存在しないページ)">Ember.js</a></li>
+<li><a class="mw-redirect" href="/wiki/Knockout.js" title="Knockout.js">Knockout.js</a></li>
+<li><a href="/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="/wiki/Polymer" title="Polymer">Polymer</a></li>
+<li><a class="new" href="/w/index.php?title=Ractive.js&amp;action=edit&amp;redlink=1" title="Ractive.js (存在しないページ)">Ractive.js</a></li>
+<li><a class="mw-redirect" href="/wiki/React.js" title="React.js">React.js</a></li>
+<li><a class="new" href="/w/index.php?title=Riot.js&amp;action=edit&amp;redlink=1" title="Riot.js (存在しないページ)">Riot.js</a></li>
+<li><a href="/wiki/Vue.js" title="Vue.js">Vue.js</a></li></ul>
+<h4><span id="C.23.E3.81.8A.E3.82.88.E3.81.B3VB.NET"></span><span class="mw-headline" id="C#およびVB.NET">C#およびVB.NET</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=25" title="節を編集: C#およびVB.NET">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>C#および VB.NET は、<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>の言語非依存の<a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>プラットフォーム上で最も人気のある言語である。
+初期には最も人気のあるWebアプリケーションフレームワークは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=DotNetNuke&amp;action=edit&amp;redlink=1" title="DotNetNuke (存在しないページ)">DotNetNuke</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:DotNetNuke&amp;action=edit&amp;redlink=1" title="En:DotNetNuke (存在しないページ)">英語版</a>）</span></span> Webアプリケーションフレームワークであった。
+<a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>自体はWebアプリケーションを構築するために設計された技術であるため、誤ってWebアプリケーションフレームワークとしてのみ参照されることがある。
+これは、ASP.NETの一面に過ぎない。Webアプリケーションフレームワークとしての基本機能に加えて、<a href="/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a>を採用する好みの言語を選ぶことができる。
+ASP.NETは統合されたAJAXフレームワークである<a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET</a>における<a href="/wiki/Ajax" title="Ajax">Ajax</a>実装である<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=ASP.NET_AJAX&amp;action=edit&amp;redlink=1" title="ASP.NET AJAX (存在しないページ)">ASP.NET AJAX</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:ASP.NET_AJAX&amp;action=edit&amp;redlink=1" title="En:ASP.NET AJAX (存在しないページ)">英語版</a>）</span></span>を備えている。
+</p>
+<h4><span class="mw-headline" id="PHP">PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=26" title="節を編集: PHP">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>PHPの動的なWebページに向けた設計により、<a href="/wiki/CakePHP" title="CakePHP">CakePHP</a>、<a href="/wiki/Symfony" title="Symfony">Symfony</a>、<a href="/wiki/Zend_Framework" title="Zend Framework">Zend Framework</a>、<a href="/wiki/FuelPHP" title="FuelPHP">FuelPHP</a>、<a href="/wiki/CodeIgniter" title="CodeIgniter">CodeIgniter</a>、<a href="/wiki/Yii" title="Yii">Yii</a>、<a href="/wiki/PRADO_(%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF)" title="PRADO (フレームワーク)">PRADO</a>、<a href="/wiki/Laravel" title="Laravel">Laravel</a>、<a href="/wiki/EZ_Publish" title="EZ Publish">eZ Publish</a>などのフレームワークが支持を得ている。
+これらのフレームワークは、コア言語の上にフレームワーク層を適用することにより、アプリケーションの構造とモデル化を支援する。
+これらは、ボトムアップからのプログラミングについての問題に対向するものである。
+</p><p>上記のフレームワークとは逆に、<a href="/wiki/Magento" title="Magento">Magento</a>、<a class="mw-redirect" href="/wiki/MODx" title="MODx">MODx</a>、<a href="/wiki/Drupal" title="Drupal">Drupal</a>、<a href="/wiki/Joomla!" title="Joomla!">Joomla!</a>、<a href="/wiki/TYPO3" title="TYPO3">TYPO3</a>といったソフトウェアプロジェクトは、Web<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="コンテンツ管理システム">コンテンツ管理システム</a>からより上位のWebアプリケーションフレームワークへと変貌し始めている。
+これらの構造は、Webアプリケーションフレームワークに関連した機能を提供する<i>モジュール</i>により機能を拡張できる最小限の<i>コア</i>を提供している。
+</p><p><a href="/wiki/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9" title="オープンソース">オープンソース</a>のプロジェクトとしてコミュニティが多数のモジュールを寄贈しており（たとえば<a href="/wiki/Drupal" title="Drupal">Drupal</a>は1,000以上、Typo3には2,500以上のモジュールがある）、CMSのコア＋モジュールを用いて、広い範囲の機能を持ったWebサイトを、実際にはPHPレベルのコーディングを行わずに組み立てる方法が形作られている。
+</p>
+<h4><span id="Perl.2C_Python.2C_Ruby"></span><span class="mw-headline" id="Perl,_Python,_Ruby">Perl, Python, Ruby</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=27" title="節を編集: Perl, Python, Ruby">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>動的な言語によるフレームワークが多数存在する。
+</p><p>Perlには<a href="/wiki/Catalyst_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Catalyst (ソフトウェア)">Catalyst</a>、<a class="mw-redirect" href="/wiki/Ark" title="Ark">Ark</a>、<a href="/wiki/Mojolicious" title="Mojolicious">Mojolicious</a>などのフレームワークがある。
+</p><p>Pythonには、たとえば<a href="/wiki/Django" title="Django">Django</a>、<a href="/wiki/TurboGears" title="TurboGears">TurboGears</a>、<a href="/wiki/Pylons" title="Pylons">Pylons</a>、<a class="new" href="/w/index.php?title=En:Quixote_(web_framework)&amp;action=edit&amp;redlink=1" title="En:Quixote (web framework) (存在しないページ)">Quixote</a>、<a class="new" href="/w/index.php?title=En:Karrigell&amp;action=edit&amp;redlink=1" title="En:Karrigell (存在しないページ)">Karrigell</a>、<a href="/wiki/Web2py" title="Web2py">web2py</a><sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[※ 1]</a></sup>などのフレームワークが存在する。ほぼ完全なリストとしてPython WikiのWebFrameworks<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[※ 2]</a></sup>がある。
+</p><p>Rubyには<a class="mw-redirect" href="/wiki/Merb" title="Merb">Merb</a>、<a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a>といったフレームワークがある。
+</p>
+<h3><span id=".E3.82.AA.E3.83.9A.E3.83.AC.E3.83.BC.E3.83.86.E3.82.A3.E3.83.B3.E3.82.B0.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0"></span><span class="mw-headline" id="オペレーティングシステム">オペレーティングシステム</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=28" title="節を編集: オペレーティングシステム">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ごくわずかの例外はあるが、Webアプリケーションフレームワークは多数のプラットフォームで動作する、プラットフォーム非依存の言語の上に作られている。
+</p><p>特定の構成を推奨するフレームワークもあるが、大半のものは <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>、<a href="/wiki/MacOS" title="MacOS">macOS</a>、<a href="/wiki/Linux" title="Linux">Linux</a>などの<a href="/wiki/Unix%E7%B3%BB" title="Unix系">Unix系</a>のプラットフォーム上で動作する。
+特筆すべき例外として、<a href="/wiki/.NET_Framework" title=".NET Framework">.NET</a>のために書かれた<a class="new" href="/w/index.php?title=En:DotNetNuke&amp;action=edit&amp;redlink=1" title="En:DotNetNuke (存在しないページ)">DotNetNuke</a>は<a href="/wiki/Mono_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Mono (ソフトウェア)">Mono</a>ランタイムをサポートしていない。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=29" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=30" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a class="external text" href="http://mdp.cti.depaul.edu/welcome/default/index" rel="nofollow">Welcome</a></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a class="external text" href="https://wiki.python.org/moin/WebFrameworks" rel="nofollow">WebFrameworks - Python Wiki</a></span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=31" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite class="citation web" style="font-style:normal">“<a class="external text" href="http://hoohoo.ncsa.uiuc.edu/cgi/intro.html" rel="nofollow">CGI: Common Gateway Interface</a>”. <span title="">2007年7月29日</span>閲覧。</cite></span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">
+<cite class="citation web" style="font-style:normal">Thomson, Kris (2003年10月29日). “<a class="external text" href="http://www.theserverside.com/patterns/thread.tss?thread_id=22143" rel="nofollow">Clarification on MVC Pull and MVC Push</a>”. <span title="">2007年7月29日</span>閲覧。</cite></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=32" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Tony Shan and Winnie Hua (2006). <a class="external text" href="http://doi.ieeecomputersociety.org/10.1109/ICEBE.2006.98" rel="nofollow"><i>Taxonomy of Java Web Application Frameworks</i></a>. Proceedings of the 2006 IEEE International Conference on e-Business Engineering (ICEBE 2006), October 2006, p378-385.</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;section=33" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="カテゴリ:ウェブアプリケーションフレームワーク">Category:ウェブアプリケーションフレームワーク</a></li>
+<li><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="ソフトウェアフレームワーク">ソフトウェアフレームワーク</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="アプリケーションフレームワーク">アプリケーションフレームワーク</a></li>
+<li><a href="/wiki/Don%27t_repeat_yourself" title="Don't repeat yourself">Don't repeat yourself</a> (DRY原則)</li></ul>
+<div aria-labelledby="Webアプリケーションフレームワーク" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:Webアプリケーションフレームワーク (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3AWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="Webアプリケーションフレームワーク" style="font-size:110%;margin:0 6em"><a class="mw-selflink selflink">Webアプリケーションフレームワーク</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">ASP.NET</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ASP.NET_MVC_Framework" title="ASP.NET MVC Framework">ASP.NET MVC</a></li>
+<li><a href="/wiki/ASP.NET" title="ASP.NET">ASP.NET Web Forms</a></li>
+<li><a href="/wiki/Umbraco" title="Umbraco">Umbraco</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Groovy</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Grails" title="Grails">Grails</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Java</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apache_Struts" title="Apache Struts">Apache Struts</a></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="/wiki/ICEfaces" title="ICEfaces">ICEfaces</a></li>
+<li><a href="/wiki/JavaServer_Faces" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="/wiki/Play_Framework" title="Play Framework">Play</a></li>
+<li><a href="/wiki/Spring_Framework#Model-View-Controller_フレームワーク" title="Spring Framework">Spring</a></li>
+<li><a href="/wiki/Apache_Tapestry" title="Apache Tapestry">Tapestry</a></li>
+<li><a href="/wiki/WebWork" title="WebWork">WebWork</a></li>
+<li><a href="/wiki/Apache_Wicket" title="Apache Wicket">Wicket</a></li>
+<li><a href="/wiki/ZK_(%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF)" title="ZK (フレームワーク)">ZK</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">JavaScript</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Angular" title="Angular">Angular</a>/<a href="/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><a href="/wiki/Express.js" title="Express.js">Express.js</a></li>
+<li><a href="/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="/wiki/JQuery" title="JQuery">jQuery</a></li>
+<li><a class="mw-redirect" href="/wiki/Knockout.js" title="Knockout.js">Knockout.js</a></li>
+<li><a href="/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="/wiki/React" title="React">React</a></li>
+<li>Rico</li>
+<li><a href="/wiki/Sencha_Touch" title="Sencha Touch">Sencha Touch</a></li>
+<li><a href="/wiki/Vue.js" title="Vue.js">Vue.js</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Perl</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Catalyst_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" title="Catalyst (ソフトウェア)">Catalyst</a></li>
+<li><a href="/wiki/Mojolicious" title="Mojolicious">Mojolicious</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">PHP</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CakePHP" title="CakePHP">CakePHP</a></li>
+<li><a href="/wiki/CodeIgniter" title="CodeIgniter">CodeIgniter</a></li>
+<li><a href="/wiki/Drupal" title="Drupal">Drupal</a></li>
+<li><a href="/wiki/EZ_Publish" title="EZ Publish">eZ Publish</a></li>
+<li><a href="/wiki/FuelPHP" title="FuelPHP">FuelPHP</a></li>
+<li><a href="/wiki/Grav_(CMS)" title="Grav (CMS)">Grav</a></li>
+<li><a href="/wiki/Laravel" title="Laravel">Laravel</a></li>
+<li><a href="/wiki/PRADO_(%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF)" title="PRADO (フレームワーク)">PRADO</a></li>
+<li><a href="/wiki/Symfony" title="Symfony">Symfony</a></li>
+<li><a href="/wiki/TYPO3" title="TYPO3">TYPO3</a></li>
+<li><a href="/wiki/Yii" title="Yii">Yii</a></li>
+<li><a href="/wiki/Zend_Framework" title="Zend Framework">Zend</a></li>
+<li><a href="/wiki/Silex" title="Silex">Silex</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Python</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Django" title="Django">Django</a></li>
+<li><a href="/wiki/TurboGears" title="TurboGears">TurboGears</a></li>
+<li><a href="/wiki/Plone" title="Plone">Plone</a></li>
+<li><a href="/wiki/Pylons" title="Pylons">Pylons</a></li>
+<li><a href="/wiki/Flask" title="Flask">Flask</a></li>
+<li><a href="/wiki/Web2py" title="Web2py">web2py</a></li>
+<li><a href="/wiki/Zope" title="Zope">Zope</a></li>
+<li><a href="/wiki/Tornado_(Web%E3%82%B5%E3%83%BC%E3%83%90)" title="Tornado (Webサーバ)"> Tornado</a></li>
+<li><a class="new" href="/w/index.php?title=Masonite&amp;action=edit&amp;redlink=1" title="Masonite (存在しないページ)">Masonite</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/Ruby_(%E4%BB%A3%E8%A1%A8%E7%9A%84%E3%81%AA%E3%83%88%E3%83%94%E3%83%83%E3%82%AF)" title="Ruby (代表的なトピック)">Ruby</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a></li>
+<li><a href="/wiki/Sinatra" title="Sinatra">Sinatra</a></li>
+<li><a href="/wiki/Padrino" title="Padrino">Padrino</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Scala</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Lift" title="Lift">Lift</a></li>
+<li><a href="/wiki/Play_Framework" title="Play Framework">Play</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331203745
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.285 seconds
+Real time usage: 0.416 seconds
+Preprocessor visited node count: 2126/1000000
+Post‐expand include size: 42335/2097152 bytes
+Template argument size: 5047/2097152 bytes
+Highest expansion depth: 24/40
+Expensive parser function count: 6/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1831/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 6995968/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  319.997      1 -total
+ 38.99%  124.776      1 テンプレート:出典の明記
+ 34.83%  111.458      1 テンプレート:Ambox
+ 18.27%   58.457      2 テンプレート:Reflist
+ 16.16%   51.716      2 テンプレート:Cite_web
+ 15.66%   50.122      1 テンプレート:Find_sources_mainspace
+ 11.52%   36.861      4 テンプレート:仮リンク
+  6.97%   22.297      1 テンプレート:要出典範囲
+  6.21%   19.870      1 テンプレート:要出典
+  5.83%   18.654      2 テンプレート:Main
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:848794-0!canonical and timestamp 20220331203745 and revision id 527717. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=Webアプリケーションフレームワーク&amp;oldid=527717">http://localhost:8080/w/index.php?title=Webアプリケーションフレームワーク&amp;oldid=527717</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B/2021%E5%B9%B46%E6%9C%88" title="カテゴリ:出典を必要とする記事/2021年6月">出典を必要とする記事/2021年6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2016%E5%B9%B410%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2016年10月">出典を必要とする記述のある記事/2016年10月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%BD%E3%83%95%E3%83%88" title="カテゴリ:ネットワークソフト">ネットワークソフト</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="カテゴリ:ソフトウェアアーキテクチャ">ソフトウェアアーキテクチャ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="カテゴリ:ウェブアプリケーション">ウェブアプリケーション</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="カテゴリ:ウェブアプリケーションフレームワーク">ウェブアプリケーションフレームワーク</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E6%A7%8B%E6%88%90" title="カテゴリ:ウェブサイトの構成">ウェブサイトの構成</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;returntoquery=curid%3D848794%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;returntoquery=curid%3D848794%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;oldid=527717" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年6月15日 (火) 08:55 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.285","walltime":"0.416","ppvisitednodes":{"value":2126,"limit":1000000},"postexpandincludesize":{"value":42335,"limit":2097152},"templateargumentsize":{"value":5047,"limit":2097152},"expansiondepth":{"value":24,"limit":40},"expensivefunctioncount":{"value":6,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1831,"limit":5000000},"timingprofile":["100.00%  319.997      1 -total"," 38.99%  124.776      1 テンプレート:出典の明記"," 34.83%  111.458      1 テンプレート:Ambox"," 18.27%   58.457      2 テンプレート:Reflist"," 16.16%   51.716      2 テンプレート:Cite_web"," 15.66%   50.122      1 テンプレート:Find_sources_mainspace"," 11.52%   36.861      4 テンプレート:仮リンク","  6.97%   22.297      1 テンプレート:要出典範囲","  6.21%   19.870      1 テンプレート:要出典","  5.83%   18.654      2 テンプレート:Main"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":6995968,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331203745","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":533});});</script>
+</body></html>

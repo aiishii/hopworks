@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>順序集合 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-順序集合 rootpage-順序集合 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">順序集合</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output">
+<p><a href="." id="link_a_1" title="数学">数学</a>において<b>順序集合</b>（じゅんじょしゅうごう、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en"><i>ordered set</i></span>）とは「順序」の概念が定義された集合のことで、「順序」とは大小、高低、長短等の序列に関わる概念を抽象化した<a href="." id="link_a_3" title="二項関係">二項関係</a>である。ただしここでいう順序とは、その集合の任意の2つの元に対して必ずしも定まっているとは限らず、両者が「比較不能」であることもありうる。
+</p><p>比較不能の場合を許容する順序集合として典型的なのは後述する<b>半順序集合</b>（はんじゅんじょしゅうごう、<a href="." id="link_a_2" title="英語">英</a>: <span lang="en"><b>partially ordered set</b>, <b>poset</b></span>）である。特に、半順序集合で全ての2元が比較可能であるものを<b>全順序集合</b> (<span lang="en">totally ordered set</span>) という。
+</p><p>全順序の最も簡単な例は、<a href="." id="link_a_4" title="実数">実数</a>における大小関係である。
+</p><p>一方、全順序ではない半順序集合の例としては、<a href="." id="link_a_5" title="正の整数">正の整数</a>全体の集合に整除関係で順序を入れたものや、（2つ以上元を含む）集合の<a href="." id="link_a_6" title="冪集合">冪集合</a>において、包含関係を順序と見なしたものがある。例えば2元集合 <span class="texhtml" lang="en"><span style="white-space: normal;"><i>S</i> = {<i>a</i>, <i>b</i>}</span></span> において <span class="texhtml" lang="en">{<i>a</i>}</span> と <span class="texhtml" lang="en">{<i>b</i>}</span> はいずれも他方を包含していないので <span class="texhtml mvar" lang="en" style="font-style:italic;">S</span> の冪集合は全順序ではない。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#前順序・半順序・全順序"><span class="tocnumber">1.1</span> <span class="toctext">前順序・半順序・全順序</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#順序集合の例"><span class="tocnumber">1.2</span> <span class="toctext">順序集合の例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#逆順序、狭義の順序、双対順序"><span class="tocnumber">2</span> <span class="toctext">逆順序、狭義の順序、双対順序</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#逆順序"><span class="tocnumber">2.1</span> <span class="toctext">逆順序</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#狭義の順序"><span class="tocnumber">2.2</span> <span class="toctext">狭義の順序</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#双対順序集合"><span class="tocnumber">2.3</span> <span class="toctext">双対順序集合</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#ハッセ図"><span class="tocnumber">3</span> <span class="toctext">ハッセ図</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#上界、最大、極大、上限、上方集合"><span class="tocnumber">4</span> <span class="toctext">上界、最大、極大、上限、上方集合</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#定義_2"><span class="tocnumber">4.1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#具体例"><span class="tocnumber">4.2</span> <span class="toctext">具体例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#写像と順序"><span class="tocnumber">5</span> <span class="toctext">写像と順序</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#定義_3"><span class="tocnumber">5.1</span> <span class="toctext">定義</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#性質"><span class="tocnumber">5.2</span> <span class="toctext">性質</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#具体例_2"><span class="tocnumber">5.3</span> <span class="toctext">具体例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#区間"><span class="tocnumber">6</span> <span class="toctext">区間</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#順序構造と位相構造"><span class="tocnumber">7</span> <span class="toctext">順序構造と位相構造</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#全順序集合の位相"><span class="tocnumber">7.1</span> <span class="toctext">全順序集合の位相</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#順序位相"><span class="tocnumber">7.1.1</span> <span class="toctext">順序位相</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#上極限位相、下極限位相"><span class="tocnumber">7.1.2</span> <span class="toctext">上極限位相、下極限位相</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#overlapping_interval_topology"><span class="tocnumber">7.1.3</span> <span class="toctext">overlapping interval topology</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#半順序集合の位相"><span class="tocnumber">7.2</span> <span class="toctext">半順序集合の位相</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#半順序空間"><span class="tocnumber">7.2.1</span> <span class="toctext">半順序空間</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#上方位相、下方位相"><span class="tocnumber">7.2.2</span> <span class="toctext">上方位相、下方位相</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#アレクサンドロフ空間"><span class="tocnumber">7.2.3</span> <span class="toctext">アレクサンドロフ空間</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#実数体における例"><span class="tocnumber">7.2.3.1</span> <span class="toctext">実数体における例</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#スコット位相"><span class="tocnumber">7.2.4</span> <span class="toctext">スコット位相</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#ストーン双対性"><span class="tocnumber">7.3</span> <span class="toctext">ストーン双対性</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#直積集合上の順序"><span class="tocnumber">8</span> <span class="toctext">直積集合上の順序</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#圏としての順序集合"><span class="tocnumber">9</span> <span class="toctext">圏としての順序集合</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#その他"><span class="tocnumber">10</span> <span class="toctext">その他</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#関連項目"><span class="tocnumber">11</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#脚注"><span class="tocnumber">12</span> <span class="toctext">脚注</span></a>
+<ul>
+<li class="toclevel-2 tocsection-34"><a href="#注釈"><span class="tocnumber">12.1</span> <span class="toctext">注釈</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#出典"><span class="tocnumber">12.2</span> <span class="toctext">出典</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-36"><a href="#参考文献"><span class="tocnumber">13</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#外部リンク"><span class="tocnumber">14</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>前順序、半順序、全順序を順に定義するために、まず以下の性質を考える。ここで <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> は集合であり、「<span class="texhtml" lang="en">≤</span>」を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上で定義された<a href="/wiki/%E4%BA%8C%E9%A0%85%E9%96%A2%E4%BF%82" title="二項関係">二項関係</a>とする。
+</p>
+<ul><li><a href="/wiki/%E5%8F%8D%E5%B0%84%E9%96%A2%E4%BF%82" title="反射関係"><b>反射律</b></a>：<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> に対し、<span class="texhtml" lang="en"><i>a</i> ≤ <i>a</i></span> が成り立つ。</li>
+<li><a href="/wiki/%E6%8E%A8%E7%A7%BB%E9%96%A2%E4%BF%82" title="推移関係"><b>推移律</b></a>：<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span>, <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span>, <span class="texhtml mvar" lang="en" style="font-style:italic;">c</span> に対し、<span class="texhtml" lang="en"><i>a</i> ≤ <i>b</i></span> かつ <span class="texhtml" lang="en"><i>b</i> ≤ <i>c</i></span> ならば <span class="texhtml" lang="en"><i>a</i> ≤ <i>c</i></span> が成り立つ。</li>
+<li><b>反対称律</b>：<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の任意の元 <span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i>, <i>b</i></span></span> に対し、<span class="texhtml" lang="en"><i>a</i> ≤ <i>b</i></span> かつ <span class="texhtml" lang="en"><i>b</i> ≤ <i>a</i></span> ならば <span class="texhtml" lang="en"><i>a</i> = <i>b</i></span> が成り立つ。</li>
+<li><b>全順序律</b>：<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の任意の元 <span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i>, <i>b</i></span></span> に対し、<span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i> ≤ <i>b</i></span></span> または <span class="texhtml" lang="en"><span style="white-space: normal;"><i>b</i> ≤ <i>a</i></span></span> が成り立つ。</li></ul>
+<p>「<span class="texhtml" lang="en">≤</span>」が全順序律を満たさない場合、「<span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i> ≤ <i>b</i></span></span>」でも「<span class="texhtml" lang="en"><span style="white-space: normal;"><i>b</i> ≤ <i>a</i></span></span>」でもないときがある。このとき <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> は<b>比較不能</b> (incomparable) であるという。
+</p>
+<h3><span id=".E5.89.8D.E9.A0.86.E5.BA.8F.E3.83.BB.E5.8D.8A.E9.A0.86.E5.BA.8F.E3.83.BB.E5.85.A8.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="前順序・半順序・全順序"><span id="前順序"></span><span id="半順序"></span><span id="全順序"></span><span id="前順序集合"></span><span id="半順序集合"></span><span id="全順序集合"></span>前順序・半順序・全順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=2" title="節を編集: 前順序・半順序・全順序">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を集合とし、<span class="texhtml" lang="en">≤</span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上で定義された<a href="/wiki/%E4%BA%8C%E9%A0%85%E9%96%A2%E4%BF%82" title="二項関係">二項関係</a>とする。
+</p>
+<ul><li><span class="texhtml" lang="en">≤</span> が反射律と推移律を満たすとき、<span class="texhtml" lang="en">≤</span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の<b>前順序</b>という。</li>
+<li><span class="texhtml" lang="en">≤</span> が前順序でありさらに反対称律を満たすとき、<span class="texhtml" lang="en">≤</span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の<b>半順序</b>という。</li>
+<li><span class="texhtml" lang="en">≤</span> が半順序でありさらに全順序律を満たすとき、<span class="texhtml" lang="en">≤</span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の<b><a href="/wiki/%E5%85%A8%E9%A0%86%E5%BA%8F" title="全順序">全順序</a></b>という。</li></ul>
+<p><span class="texhtml" lang="en">≤</span> が前順序であるとき <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> を<b>前順序集合</b>という。同様に <span class="texhtml" lang="en">≤</span> が半順序なら <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> は<b>半順序集合</b>、全順序なら  <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> は<b>全順序集合</b>という。また集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> は <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> の<b><a href="/wiki/%E6%95%B0%E5%AD%A6%E7%9A%84%E6%A7%8B%E9%80%A0#定義" title="数学的構造">台集合</a></b> (<span lang="en">underlying set</span>) あるいは<b>台</b> <span lang="en">(support)</span> と呼ばれる。紛れがなければ <span class="texhtml" lang="en">≤</span> を省略し、<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を（いずれかの意味で）順序集合という。
+</p><p>順序集合 <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> に対し、<span class="texhtml" lang="en">≤</span> を台 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の<b>順序関係</b>ともいう。なお多くの数学の分野では半順序集合を主に扱うので、単に<b>順序</b>あるいは<b>順序集合</b>といった場合はそれぞれ半順序、半順序集合を意味する場合が多いが、分野によっては、主な対象が半順序集合でなく前順序集合や全順序集合である場合があり、そのような分野では前順序集合や全順序集合の意味で「順序集合」という言葉が用いられることがあるので注意が必要である。
+</p><p>上では順序を記号 <span class="texhtml" lang="en">≤</span> で表したが、必ずしもこの記号で表現する必要はない。実数の大小を表す記号 <span class="texhtml" lang="en">≤</span> と区別するため、順序の記号として &lt;math&gt;\prec&lt;/math&gt; や &lt;math&gt;\ll&lt;/math&gt; を使うこともある。
+</p><p>全順序を<b>線型順序</b>ともいい、全順序集合を<b>鎖</b>と呼ぶこともある。また半順序集合の部分集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> で <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の任意の異なる2元が比較不能であるものを<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%8D%E9%8E%96&amp;action=edit&amp;redlink=1" title="反鎖 (存在しないページ)">反鎖</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Anti-chain&amp;action=edit&amp;redlink=1" title="En:Anti-chain (存在しないページ)">英語版</a>）</span></span></b>という。<style data-mw-deduplicate="TemplateStyles:r2616658">@media screen{.mw-parser-output .fix-domain{border-bottom:dashed 1px}}</style><span class="fix-domain" title="この記述には信頼できる情報源の提示が求められています。（2016-01）">半順序集合のことを部分順序集合と呼ぶこともある</span><sup class="noprint Template-Fact">[<i><a href="/wiki/Wikipedia:%E3%80%8C%E8%A6%81%E5%87%BA%E5%85%B8%E3%80%8D%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%81%9F%E6%96%B9%E3%81%B8" title="Wikipedia:「要出典」をクリックされた方へ"><span title="この記述には信頼できる情報源の提示が求められています。（2016-01）">要出典</span></a></i>]</sup>が部分順序集合は順序集合の部分集合に自然な順序を入れたものも指す。
+</p><p>半順序集合の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> が他の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> によって<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E8%A2%AB%E8%A6%86%E9%96%A2%E4%BF%82&amp;action=edit&amp;redlink=1" title="被覆関係 (存在しないページ)"><b>被覆される</b></a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Covering_relation&amp;action=edit&amp;redlink=1" title="En:Covering relation (存在しないページ)">英語版</a>）</span></span> (<span class="texhtml" lang="en"><i>a</i> &lt;: <i>b</i></span>) とは、<span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> よりも<b>真に小さく</b>、かつそれらの間に別の元が入ることはないことをいう。つまり &lt;math&gt;a &lt;: b&lt;/math&gt; とは次の3つがすべて成り立つことである：&lt;math&gt;a \le b,\quad a \neq b,\quad \neg[\exists\ c\ \text{s.t.}\ a&lt;c&lt;b].&lt;/math&gt;
+</p>
+<h3><span id=".E9.A0.86.E5.BA.8F.E9.9B.86.E5.90.88.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="順序集合の例">順序集合の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=3" title="節を編集: 順序集合の例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/%E5%AE%9F%E6%95%B0" title="実数">実数</a>全体の集合 <span class="texhtml" lang="en"><span style="font-weight: bold;">R</span></span> およびその部分集合（例えば、<a href="/wiki/%E8%87%AA%E7%84%B6%E6%95%B0" title="自然数">自然数</a>全体の集合 <span class="texhtml" lang="en"><span style="font-weight: bold;">N</span></span>, <a href="/wiki/%E6%95%B4%E6%95%B0" title="整数">整数</a>全体の集合 <span class="texhtml" lang="en"><span style="font-weight: bold;">Z</span></span>, <a href="/wiki/%E6%9C%89%E7%90%86%E6%95%B0" title="有理数">有理数</a>全体の集合 <span class="texhtml" lang="en"><span style="font-weight: bold;">Q</span></span>）は、通常の大小関係により全順序集合となる。しかし、<a href="/wiki/%E8%A4%87%E7%B4%A0%E6%95%B0" title="複素数">複素数</a>全体の集合 <span class="texhtml" lang="en"><span style="font-weight: bold;">C</span></span> には複素数の乗法と"両立"する全順序は存在しない（<a href="/wiki/%E9%A0%86%E5%BA%8F%E4%BD%93" title="順序体">順序体</a>でない）。単に全順序を入れるだけであれば、<a href="/wiki/%E7%9B%B4%E7%A9%8D%E9%9B%86%E5%90%88" title="直積集合">直積集合</a> <span class="texhtml" lang="en"><b>R</b> × <b>R</b></span> に<a href="/wiki/%E8%BE%9E%E6%9B%B8%E5%BC%8F%E9%A0%86%E5%BA%8F" title="辞書式順序">辞書式順序</a>を定めることができる。</li>
+<li><a href="/wiki/%E8%87%AA%E7%84%B6%E6%95%B0" title="自然数">自然数</a>全体の成す集合は<a class="new" href="/w/index.php?title=%E6%95%B4%E9%99%A4%E9%96%A2%E4%BF%82&amp;action=edit&amp;redlink=1" title="整除関係 (存在しないページ)">整除関係</a>を順序として半順序集合である。</li>
+<li>集合の<a href="/wiki/%E5%86%AA%E9%9B%86%E5%90%88" title="冪集合">冪集合</a>に対して、包含関係による順序を入れると半順序集合となる。これはもとの集合の元の個数が2個以上であれば全順序でない。例えば <span class="texhtml" lang="en">{1, 2, 3}</span> の冪集合</li></ul>
+<dl><dd><dl><dd>&lt;math&gt;\bigl\{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\bigr\}&lt;/math&gt;</dd></dl></dd>
+<dd>について、例えば <span class="texhtml" lang="en">{1, 2}</span> と <span class="texhtml" lang="en">{2, 3}</span> を考えれば、これらは比較不能であり（<span class="texhtml" lang="en">{1, 2} ≤ {2, 3} </span>でも <span class="texhtml" lang="en"><span style="white-space: normal;">{2, 3} ≤ {1, 2} </span></span>でもない）、全順序ではない。</dd></dl>
+<ul><li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="ベクトル空間">線形空間</a>の部分空間全体は包含関係で順序付けられた半順序集合である。</li>
+<li>半順序集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> に対し、<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の元の（自然数で添え字付けられた）列全体の成す集合は、列 <span class="texhtml" lang="en"><i>a</i> = (<i>a<sub>n</sub></i>)<sub><i>n</i>∈<b>N</b></sub></span>, <span class="texhtml" lang="en"><i>b</i> = (<i>b<sub>n</sub></i>)<sub><i>n</i>∈<b>N</b></sub></span> に対し、<div style="margin:1ex auto 1ex 2em">&lt;math&gt;a\le b \iff a_n \le b_n \;(\forall n \in \mathbb{N})&lt;/math&gt;</div> と定めると半順序集合となる。</li>
+<li>集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> と半順序集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> に対し、<span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> から <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> への写像全体の成す<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%86%99%E5%83%8F%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="写像空間 (存在しないページ)">写像空間</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:function_space&amp;action=edit&amp;redlink=1" title="En:function space (存在しないページ)">英語版</a>）</span></span>は、2つの写像 <span class="texhtml" lang="en"><span style="white-space: normal;"><i>f</i>, <i>g</i></span></span> に対して、<span class="texhtml" lang="en"><i>f</i> ≤ <i>g</i></span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">X</span> の任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> に対して <span class="texhtml" lang="en"><i>f</i>(<i>x</i>) ≤ <i>g</i>(<i>x</i>)</span> となることとして定義すると、半順序集合になる。</li>
+<li><a class="new" href="/w/index.php?title=%E9%9D%9E%E5%BE%AA%E7%92%B0%E6%9C%89%E5%90%91%E3%82%B0%E3%83%A9%E3%83%95&amp;action=edit&amp;redlink=1" title="非循環有向グラフ (存在しないページ)">非循環有向グラフ</a>の頂点集合は、<a class="new" href="/w/index.php?title=%E5%88%B0%E9%81%94%E4%B8%8D%E5%8F%AF%E8%83%BD%E6%80%A7&amp;action=edit&amp;redlink=1" title="到達不可能性 (存在しないページ)">到達不可能性</a>によって順序付けられる。</li>
+<li>半順序集合における順序関係の向きが <span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i> &lt; <i>b</i> &gt; <i>c</i> &lt; <i>d</i> …</span></span> というように交互に入れ替わる列を<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%95%E3%82%A7%E3%83%B3%E3%82%B9_(%E6%95%B0%E5%AD%A6)&amp;action=edit&amp;redlink=1" title="フェンス (数学) (存在しないページ)">フェンス</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Fence_(mathematics)&amp;action=edit&amp;redlink=1" title="En:Fence (mathematics) (存在しないページ)">英語版</a>）</span></span>と呼ぶ。</li></ul>
+<h2><span id=".E9.80.86.E9.A0.86.E5.BA.8F.E3.80.81.E7.8B.AD.E7.BE.A9.E3.81.AE.E9.A0.86.E5.BA.8F.E3.80.81.E5.8F.8C.E5.AF.BE.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="逆順序、狭義の順序、双対順序">逆順序、狭義の順序、双対順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=4" title="節を編集: 逆順序、狭義の順序、双対順序">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>上で述べた順序関係「<span class="texhtml" lang="en">≤</span>」は直観的には左辺が右辺「よりも小さい、もしくは等しい」ことを意味しているが、逆に左辺が右辺「よりも大きい、もしくは等しい」順序関係や等しいことを許容しない順序関係を考えることもできる。
+</p>
+<h3><span id=".E9.80.86.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="逆順序">逆順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=5" title="節を編集: 逆順序">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>「大きい、もしくは等しい」ことを意味する順序関係は「<span class="texhtml" lang="en">≤</span>」の<b>逆順序</b>と呼ばれ、
+</p>
+<dl><dd>&lt;math&gt;a \ge b \iff b \le a&lt;/math&gt;</dd></dl>
+<p>により定義される。
+</p>
+<h3><span id=".E7.8B.AD.E7.BE.A9.E3.81.AE.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="狭義の順序">狭義の順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=6" title="節を編集: 狭義の順序">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>一方、等しいことを許容しない順序は<b>狭義の（半）順序</b>と呼ばれ、以下のように定義される：
+</p>
+<dl><dd>&lt;math&gt;a &lt; b \iff (a \le b \land a \ne b)&lt;/math&gt; …(1)</dd></dl>
+<p>狭義の逆順序「<span class="texhtml" lang="en">&gt;</span>」も同様に定義される。
+</p><p>狭義の順序「<span class="texhtml" lang="en">&lt;</span>」の対義語として、等しいことも許容する順序「<span class="texhtml" lang="en">≤</span>」のことを<b>広義の（半）順序</b>（もしくは<b>弱い</b>意味 <span lang="en">(<i>weak</i>)</span> の（半）順序、<b>反射的</b> <span lang="en">(<i>reflexive</i>)</span> な(半)順序）という。
+</p><p>(1) 式で定義された「<span class="texhtml" lang="en">&lt;</span>」を「<span class="texhtml" lang="en">≤</span>」の<b>反射的簡約</b> <span lang="en">(reflexive reduction)</span> という。
+</p><p>「<span class="texhtml" lang="en">≤</span>」が半順序であるとき、その反射的簡約「<span class="texhtml" lang="en">&lt;</span>」は任意の <span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i>, <i>b</i>, <i>c</i> ∈ <i>P</i></span></span> に対して以下を満たす：
+</p>
+<ul><li>非反射性：<span class="texhtml" lang="en">¬(<i>a</i> &lt; <i>a</i>)</span>;</li>
+<li>非対称性：<span class="texhtml" lang="en"><i>a</i> &lt; <i>b</i></span> ならば <span class="texhtml" lang="en">¬(<i>b</i> &lt; <i>a</i>)</span>; （非反射性と推移性から従う）</li>
+<li>推移性：<span class="texhtml" lang="en"><i>a</i> &lt; <i>b</i></span> かつ <span class="texhtml" lang="en"><i>b</i> &lt; <i>c</i></span> ならば <span class="texhtml" lang="en"><i>a</i> &lt; <i>c</i></span></li></ul>
+<p>以上では広義の順序を定義してから狭義の順序を定義したが、逆に上の三性質（非対称性は非反射性と推移性より得られるので条件としては不要）を満たすものを狭義の順序として定義し、広義の順序を
+</p>
+<dl><dd>&lt;math&gt;a \le b \iff a &lt; b \lor a = b&lt;/math&gt; …(2)</dd></dl>
+<p>により定義することもできる。この場合、(2) 式で定義された「<span class="texhtml" lang="en">≤</span>」を「<span class="texhtml" lang="en">&lt;</span>」の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%8D%E5%B0%84%E9%96%89%E5%8C%85&amp;action=edit&amp;redlink=1" title="反射閉包 (存在しないページ)">反射閉包</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Binary_relation&amp;action=edit&amp;redlink=1" title="En:Binary relation (存在しないページ)">英語版</a>）</span></span>という。「<span class="texhtml" lang="en">&lt;</span>」が前述の3条件を満たせば反射閉包「<span class="texhtml" lang="en">≤</span>」が半順序であることを簡単に示すことができる。
+</p>
+<h3><span id=".E5.8F.8C.E5.AF.BE.E9.A0.86.E5.BA.8F.E9.9B.86.E5.90.88"></span><span class="mw-headline" id="双対順序集合">双対順序集合</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=7" title="節を編集: 双対順序集合">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml" lang="en">(<i>P</i>, ≤)</span> を順序集合とするとき、<i>P</i> 上の二項関係「&lt;math&gt;\preccurlyeq&lt;/math&gt;」を
+</p>
+<dl><dd>&lt;math&gt;a \preccurlyeq b \iff b \le a&lt;/math&gt;</dd></dl>
+<p>と定義する（すなわち「&lt;math&gt;\preccurlyeq&lt;/math&gt;」は「<span class="texhtml" lang="en">≤</span>」の逆順序を順序と見なしたものである）。すると、「&lt;math&gt;\preccurlyeq&lt;/math&gt;」も <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の順序になっていることが容易に分かる。&lt;math&gt;(P,\preccurlyeq)&lt;/math&gt; を <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> の<b>双対順序集合</b>という。
+</p><p>双対順序集合はその定義 &lt;math&gt;(P,\preccurlyeq)&lt;/math&gt; よりもとの順序集合 <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> とは"大小が逆転"している。したがって <span class="texhtml" lang="en">(<i>P</i>, ≤)</span> における上限、極大元、最大元（定義は後述）は &lt;math&gt;(P,\preccurlyeq)&lt;/math&gt; ではそれぞれ下限、極小元、最小元に対応している。
+</p>
+<h2><span id=".E3.83.8F.E3.83.83.E3.82.BB.E5.9B.B3"></span><span class="mw-headline" id="ハッセ図">ハッセ図</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=8" title="節を編集: ハッセ図">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を有限集合とし、「<span class="texhtml" lang="en">&lt;</span>」を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> 上の狭義の半順序とするとき、以下のようにして <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を自然に<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96" title="グラフ理論">単純有向グラフ</a>と見なせる：
+</p>
+<dl><dd>頂点：<span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の元</dd>
+<dd><span class="texhtml" lang="en"><i>a</i> ∈ <i>P</i></span> から <span class="texhtml" lang="en"><i>b</i> ∈ <i>P</i></span> への辺がある <span class="texhtml" lang="en">⇔ <i>a</i> &lt; <i>b</i></span> であり、しかも <span class="texhtml" lang="en"><i>a</i> &lt; <i>c</i> &lt; <i>b</i></span> を満たす <span class="texhtml" lang="en"><i>c</i> ∈ <i>P</i></span> が存在しない</dd>
+<dd>（すなわち <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">a</span> を被覆している）</dd></dl>
+<p>この有向グラフを図示したものを<b><a href="/wiki/%E3%83%8F%E3%83%83%E3%82%BB%E5%9B%B3" title="ハッセ図">ハッセ図</a></b>という。
+</p><p>ハッセ図を用いると、順序関係に関する基本的な概念が図示できる。例えばこの図で <span class="texhtml" lang="en">{<i>x</i>}</span> と <span class="texhtml" lang="en">{<i>x</i>, <i>y</i>, <i>z</i>}</span> は比較可能だが、<span class="texhtml" lang="en">{<i>x</i>}</span> と <span class="texhtml" lang="en">{<i>y</i>}</span> は比較不能である。また<a href="/wiki/%E5%8D%98%E9%9B%86%E5%90%88" title="単集合">単集合</a>の族 <span class="texhtml" lang="en">{{<i>x</i>}, {<i>y</i>}, {<i>z</i>}}</span> は反鎖である。さらに <span class="texhtml" lang="en">{<i>x</i>}</span> は <span class="texhtml" lang="en">{<i>x</i>, <i>z</i>}</span> によって被覆されるが、<span class="texhtml" lang="en">{<i>x</i>, <i>y</i>, <i>z</i>}</span> には被覆されない。
+</p><p>なお、有限半順序集合から前述の方法で作ったグラフは閉路を持たない。逆に <span class="texhtml" lang="en">(<i>V</i>, <i>E</i>)</span> を閉路を持たない有限な単純有向グラフとすると、<span class="texhtml mvar" lang="en" style="font-style:italic;">V</span> 上に以下の順序を入れることで <span class="texhtml mvar" lang="en" style="font-style:italic;">V</span> を半順序集合と見なせる：
+</p>
+<dl><dd><span class="texhtml" lang="en"><i>a</i> &lt; <i>b</i> ⇔ <i>a</i></span> から <span class="texhtml mvar" lang="en" style="font-style:italic;">b</span> への道がある</dd></dl>
+<p>したがって有限半順序集合は閉路を持たない有限な単純有向グラフと自然に同一視できる。
+</p>
+<h2><span id=".E4.B8.8A.E7.95.8C.E3.80.81.E6.9C.80.E5.A4.A7.E3.80.81.E6.A5.B5.E5.A4.A7.E3.80.81.E4.B8.8A.E9.99.90.E3.80.81.E4.B8.8A.E6.96.B9.E9.9B.86.E5.90.88"></span><span class="mw-headline" id="上界、最大、極大、上限、上方集合"><span id="上界"></span><span id="下界"></span><span id="上限"></span><span id="下限"></span><span id="最大"></span><span id="最小"></span><span id="極大"></span><span id="極小"></span>上界、最大、極大、上限、上方集合</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=9" title="節を編集: 上界、最大、極大、上限、上方集合">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を<a href="#半順序集合">半順序集合</a>とし、<span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> をその<a href="/wiki/%E9%83%A8%E5%88%86%E9%9B%86%E5%90%88" title="部分集合">部分集合</a>とし、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の<a href="/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)" title="元 (数学)">元</a>とする。このとき上界、上限、最大、極大の概念、およびこれらの<a href="/wiki/%E5%8F%8C%E5%AF%BE" title="双対">双対</a>概念である下界（かかい）、下限、最小、極小は以下のように定義される：
+</p>
+<h3><span id=".E5.AE.9A.E7.BE.A9_2"></span><span class="mw-headline" id="定義_2">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=10" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>上界</b> (<span lang="en">upper bound</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> に対して <span class="texhtml" lang="en"><i>y</i> ≤ <i>x</i></span> となること。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>上限</b> (<span lang="en">supremum</span>) あるいは<b>最小上界</b> (<span lang="en">least upper bound</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の上界全体の集合の最小元となること。これは存在すれば一意的に決まり、<span class="texhtml" lang="en">sup <i>A</i></span> あるいは <span class="texhtml" lang="en">lub <i>A</i></span> と表される。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>最大元</b> (<span lang="en">maximum element</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元であり、かつ <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の上界であること。これは存在すれば一意的に決まり、<span class="texhtml" lang="en">max <i>A</i></span> で表される。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>極大元</b> (<span lang="en">maximal element</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元であり、かつ <span class="texhtml" lang="en"><i>y</i> &gt; <i>x</i></span> を満たす <span class="texhtml" lang="en"><i>y</i> ∈ <i>A</i></span> が存在しないこと。</li></ul>
+<ul><li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>下界</b> (<span lang="en">lower bound</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> に対して <span class="texhtml" lang="en"><i>y</i> ≥ <i>x</i></span> となること。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>下限</b> (<span lang="en">infimum</span>) あるいは<b>最大下界</b> (<span lang="en">greatest lower bound</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の下界全体の集合の最大元となること。これは存在すれば一意的に決まり、<span class="texhtml" lang="en">inf <i>A</i></span> あるいは <span class="texhtml" lang="en">glb <i>A</i></span> と表される。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>最小元</b> (<span lang="en">minimum element</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元であり、かつ <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の下界であること。これは存在すれば一意的に決まり、<span class="texhtml" lang="en">min <i>A</i></span> で表される。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の<b>極小元</b> (<span lang="en">minimal element</span>) であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元であり、かつ <span class="texhtml" lang="en"><i>y</i> &lt; <i>x</i></span> を満たす <span class="texhtml" lang="en"><i>y</i> ∈ <i>A</i></span> が存在しないこと。</li></ul>
+<p>上界および上限の定義において、 <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が必ずしも <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元であるとは限らない、ことには注意が必要である。
+</p><p>極大元の概念と最大元の概念は以下の点で異なる。まず <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の極大元であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元は「<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> 以下である」か、もしくは「<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> とは大小が比較不能である」かのいずれかである事を意味する。一方 <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の最大元であるとは <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の元は常に <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> 以下である事を意味する（このとき <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> の任意の元と比較が可能である）。したがって最大元は必ず極大元であるが、極大元は必ずしも最大元であるとは限らない。
+</p><p>さらに <span class="texhtml mvar" lang="en" style="font-style:italic;">A</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%8A%E6%96%B9%E9%9B%86%E5%90%88&amp;action=edit&amp;redlink=1" title="上方集合 (存在しないページ)">上方集合</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:upper_set&amp;action=edit&amp;redlink=1" title="En:upper set (存在しないページ)">英語版</a>）</span></span></b>（resp. <b>下方集合</b>）であるとは、任意の <span class="texhtml" lang="en"><i>a</i> ∈ <i>A</i> </span> と <span class="texhtml" lang="en"><i>x</i> &gt; <i>a</i> </span> (resp. <span class="texhtml" lang="en"><i>x</i> &lt; <i>a</i></span>) を満たす任意の <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の元に対し<span class="texhtml" lang="en"><i>x</i> ∈ <i>A</i></span> となることをいう。
+</p>
+<h3><span id=".E5.85.B7.E4.BD.93.E4.BE.8B"></span><span class="mw-headline" id="具体例">具体例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=11" title="節を編集: 具体例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table>
+<tbody><tr>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<p><a class="mw-redirect" href="/wiki/%E6%AD%A3%E6%95%B4%E6%95%B0" title="正整数">正整数</a>全体の成す集合を整除関係で順序付けるとき、<span class="texhtml" lang="en">1</span> は任意の正整数を割り切るという意味において <span class="texhtml" lang="en">1</span> は最小元である。しかしこの半順序集合には最大元は存在しない（任意の正整数の倍数としての <span class="texhtml" lang="en">0</span> を追加して考えたとするならば、それが最大元になる）。この半順序集合には極大元も存在しない。実際、任意の元 <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> はそれとは異なる。例えば <span class="texhtml" lang="en">2<i>g</i></span> を割り切るから <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> は極大ではありえない。この半順序集合から最小元である <span class="texhtml" lang="en">1</span> を除いて、順序はそのまま整除関係によって入れるならば、最小元は無くなるが、極小元として任意の<a href="/wiki/%E7%B4%A0%E6%95%B0" title="素数">素数</a>をとることができる。この半順序に関して <span class="texhtml" lang="en">60</span> は部分集合 <span class="texhtml" lang="en">{2, 3, 5, 10}</span> の上界（上限ではない）を与えるが、<span class="texhtml" lang="en">1</span> は除かれているので下界は持たない。他方、<a href="/wiki/2%E3%81%AE%E5%86%AA" title="2の冪"><span class="texhtml" lang="en">2</span> の冪</a>全体の成す部分集合に対して <span class="texhtml" lang="en">2</span> はその下界（これは下限でもある）を与えるが、上界は存在しない。
+</p>
+<h2><span id=".E5.86.99.E5.83.8F.E3.81.A8.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="写像と順序">写像と順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=12" title="節を編集: 写像と順序">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>順序に関する写像の概念に以下のものがある：
+</p>
+<h3><span id=".E5.AE.9A.E7.BE.A9_3"></span><span class="mw-headline" id="定義_3">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=13" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><span class="texhtml" lang="en"><span style="white-space: normal;"><i>S</i>, <i>T</i></span></span> を順序集合とし、<span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> を写像とする。このとき
+</p>
+<ul><li><span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> が<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E3%82%92%E4%BF%9D%E3%81%A4%E5%86%99%E5%83%8F&amp;action=edit&amp;redlink=1" title="順序を保つ写像 (存在しないページ)"><b>順序を保つ</b></a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order-preserving&amp;action=edit&amp;redlink=1" title="En:order-preserving (存在しないページ)">英語版</a>）</span></span>(order-preserving)（<b>同調</b> (<i>isotone</i>) とも）とは、</li></ul>
+<dl><dd><dl><dd>任意の <span class="texhtml" lang="en"><span style="white-space: normal;"><i>x</i>, <i>y</i> ∈ <i>S</i></span></span> に対して <span class="texhtml" lang="en"><i>x</i> ≤ <i>y</i> ⇒ <i>f</i>(<i>x</i>) ≤ <i>f</i> (<i>y</i>)</span></dd></dl></dd></dl>
+<ul><li><span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> が<b>順序を逆にする</b>（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Order-reversing&amp;action=edit&amp;redlink=1" title="Order-reversing (存在しないページ)">order-reversing</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order-reversing&amp;action=edit&amp;redlink=1" title="En:order-reversing (存在しないページ)">英語版</a>）</span></span>）とは、</li></ul>
+<dl><dd><dl><dd>任意の <span class="texhtml" lang="en"><span style="white-space: normal;"><i>x</i>, <i>y</i> ∈ <i>S</i></span></span> に対して <span class="texhtml" lang="en"><i>x</i> ≤ <i>y</i> ⇒ <i>f</i> (<i>x</i>) ≥ <i>f</i> (<i>y</i>)</span></dd></dl></dd></dl>
+<ul><li>上の2つを合わせて<a href="/wiki/%E5%8D%98%E8%AA%BF%E5%86%99%E5%83%8F" title="単調写像">単調</a> (<i>monotone</i>) 写像という。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が<b>順序を反映する</b> (<i>order-reflecting</i>) とは、</li></ul>
+<dl><dd><dl><dd>任意の <span class="texhtml" lang="en"><span style="white-space: normal;"><i>x</i>, <i>y</i> ∈ <i>S</i></span></span> に対して <span class="texhtml" lang="en"><i>f</i> (<i>x</i>) ≤ <i>f</i> (<i>y</i>) ⇒ <i>x</i> ≤ <i>y</i></span></dd></dl></dd></dl>
+<ul><li><span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF&amp;action=edit&amp;redlink=1" title="順序埋め込み (存在しないページ)">順序埋め込み</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order-embedding&amp;action=edit&amp;redlink=1" title="En:order-embedding (存在しないページ)">英語版</a>）</span></span></b>であるとは、</li></ul>
+<dl><dd><dl><dd>任意の <span class="texhtml" lang="en"><span style="white-space: normal;"><i>x</i>, <i>y</i> ∈ <i>S</i></span></span> に対して <span class="texhtml" lang="en"><i>x</i> ≤ <i>y</i> ⇔ <i>f</i> (<i>x</i>) ≤ <i>f</i> (<i>y</i>)</span></dd></dl></dd></dl>
+<ul><li><span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E5%90%8C%E5%9E%8B&amp;action=edit&amp;redlink=1" title="順序同型 (存在しないページ)">順序同型写像</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order_isomorphism&amp;action=edit&amp;redlink=1" title="En:order isomorphism (存在しないページ)">英語版</a>）</span></span></b>であるとは、<span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が順序埋め込みな全単射であることをいう。</li></ul>
+<p><span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> が順序埋め込みであるとき、<span class="texhtml mvar" lang="en" style="font-style:italic;">S</span> は <span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> によって <span class="texhtml mvar" lang="en" style="font-style:italic;">T</span> に（順序集合として）<b>埋め込まれる</b>という。
+また順序同型 <span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> が存在するとき、<span class="texhtml mvar" lang="en" style="font-style:italic;">S</span> と <span class="texhtml mvar" lang="en" style="font-style:italic;">T</span> は<b>順序同型</b>あるいは単に<b>同型</b>であるという。
+</p>
+<h3><span id=".E6.80.A7.E8.B3.AA"></span><span class="mw-headline" id="性質">性質</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=14" title="節を編集: 性質">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>上で述べた概念は以下の性質を満たす：
+</p>
+<ul><li>順序を反映する写像は単射である。実際 <span class="texhtml" lang="en"><i>f</i>(<i>x</i>) = <i>f</i>(<i>y</i>) ⇒<i>f</i>(<i>x</i>) ≤ <i>f</i>(<i>y</i>)</span> かつ <span class="texhtml" lang="en"><i>f</i>(<i>x</i>) ≥ <i>f</i>(<i>y</i>) ⇒ <i>x</i> ≤ <i>y</i></span> かつ <span class="texhtml" lang="en"><i>x</i> ≥ <i>y</i> ⇒ <i>x</i> = <i>y</i></span> である。</li>
+<li><span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が順序埋め込みである必要十分条件は <span class="texhtml mvar" lang="en" style="font-style:italic;">f</span> が順序を保存し、しかも順序を反映することである。また全単射 <span class="texhtml" lang="en"><i>f</i>: <i>S</i> → <i>T</i></span> とその逆関数 <span class="texhtml" lang="en"><i>f</i><sup>−1</sup>: <i>T</i> → <i>S</i></span> が順序同型なら <span class="texhtml mvar" lang="en" style="font-style:italic;">f</span>, <span class="texhtml" lang="en"><i>f</i><sup>−1</sup></span> は順序同型である。</li>
+<li>順序を保つ写像と順序を保つ写像の合成は順序を保つ。順序を反映する写像と順序を反映する写像の合成も順序を反映する。</li></ul>
+<h3><span id=".E5.85.B7.E4.BD.93.E4.BE.8B_2"></span><span class="mw-headline" id="具体例_2">具体例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=15" title="節を編集: 具体例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table>
+<tbody><tr>
+<td>
+</td>
+<td>
+</td></tr></tbody></table>
+<p>自然数全体が整除関係に関して成す半順序集合から、その<a href="/wiki/%E5%86%AA%E9%9B%86%E5%90%88" title="冪集合">冪集合</a>が包含関係に関して成す半順序集合への写像 <span class="texhtml" lang="en"><i>f</i>: <b>N</b> → <i>P</i>(<b>N</b>)</span> を各自然数にその<a href="/wiki/%E7%B4%A0%E5%9B%A0%E6%95%B0" title="素因数">素因数</a>全体の成す集合を対応させることにより定まる。これは順序を保つ集合である（すなわち、<span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> が <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> を割るならば <span class="texhtml mvar" lang="en" style="font-style:italic;">x</span> の各素因数は <span class="texhtml mvar" lang="en" style="font-style:italic;">y</span> の素因数にもなる）が単射ではない（例えば <span class="texhtml" lang="en">12</span> も <span class="texhtml" lang="en">6</span> もこの写像で <span class="texhtml" lang="en">{2, 3}</span> に写る）し、順序を反映もしない（例えば <span class="texhtml" lang="en">12</span> は <span class="texhtml" lang="en">6</span> を割らない）。少し設定を変えて、各自然数にその<a class="mw-redirect" href="/wiki/%E7%B4%A0%E5%86%AA" title="素冪">素冪因子</a>の集合を対応させる写像 <span class="texhtml" lang="en"><i>g</i>: <b>N</b> → <i>P</i>(<b>N</b>)</span> を考えれば、これは順序を保ち、かつ順序を反映するから、従って順序埋め込みになる。一方、これは順序同型ではない（実際、たとえば<a href="/wiki/%E5%8D%98%E9%9B%86%E5%90%88" title="単集合">単集合</a> <span class="texhtml" lang="en">{4}</span> に移る数は無い）が<a href="/wiki/%E7%B5%82%E5%9F%9F" title="終域">終域</a>を <span class="texhtml mvar" lang="en" style="font-style:italic;">g</span> の<a href="/wiki/%E5%80%A4%E5%9F%9F" title="値域">値域</a> <span class="texhtml" lang="en"><i>g</i>(<b>N</b>)</span> に変更すれば順序同型にすることができる。このような冪集合の中への順序同型の構成は、より広汎な<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%86%E9%85%8D%E6%9D%9F&amp;action=edit&amp;redlink=1" title="分配束 (存在しないページ)">分配束</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:distributive_lattice&amp;action=edit&amp;redlink=1" title="En:distributive lattice (存在しないページ)">英語版</a>）</span></span>と呼ばれる半順序集合のクラスに対して一般化することができる（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%90%E3%83%BC%E3%82%B3%E3%83%95%E3%81%AE%E8%A1%A8%E7%8F%BE%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" title="バーコフの表現定理 (存在しないページ)">バーコフの表現定理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Birkhoff%27s_representation_theorem&amp;action=edit&amp;redlink=1" title="En:Birkhoff's representation theorem (存在しないページ)">英語版</a>）</span></span>の項を参照）。
+</p>
+<h2><span id=".E5.8C.BA.E9.96.93"></span><span class="mw-headline" id="区間">区間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=16" title="節を編集: 区間">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> を順序集合とし、<span class="texhtml" lang="en"><span style="white-space: normal;"><i>a</i>, <i>b</i></span></span> を <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の元とするとき、<b><a class="mw-redirect" href="/wiki/%E9%96%89%E5%8C%BA%E9%96%93" title="閉区間">閉区間</a></b> <span class="texhtml" lang="en">[<i>a</i>, <i>b</i>]</span> と<b><a class="mw-redirect" href="/wiki/%E9%96%8B%E5%8C%BA%E9%96%93" title="開区間">開区間</a></b> <span class="texhtml" lang="en">(<i>a</i>, <i>b</i>)</span> を以下のように定義する：
+</p>
+<dl><dd>&lt;math&gt;[a,b]:=\{x\in P\mid a\le x\le b\}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;(a,b):=\{x\in P\mid a &lt; x &lt; b\}&lt;/math&gt;</dd></dl>
+<p>さらに <span class="texhtml" lang="en">[<i>a</i>, <i>b</i>)</span> および <span class="texhtml" lang="en">(<i>a</i>, <i>b</i>]</span> を以下のように定義し、<b><a class="mw-redirect" href="/wiki/%E5%8D%8A%E9%96%8B%E5%8C%BA%E9%96%93" title="半開区間">半開区間</a></b>と呼ぶ：
+</p>
+<dl><dd>&lt;math&gt;[a,b):=\{x\in P\mid a\le x&lt; b\}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;(a,b]:=\{x\in P\mid a &lt; x \le b\}&lt;/math&gt;</dd></dl>
+<p>文献によっては <span class="texhtml" lang="en">(<i>a</i>, <i>b</i>)</span>, <span class="texhtml" lang="en">[<i>a</i>, <i>b</i>)</span>, <span class="texhtml" lang="en">(<i>a</i>, <i>b</i>]</span> のことを <span class="texhtml" lang="en">]<i>a</i>, <i>b</i>[</span>, <span class="texhtml" lang="en">[<i>a</i>, <i>b</i>[</span>, <span class="texhtml" lang="en">]<i>a</i>, <i>b</i>]</span> と表す場合もある。
+</p><p>半順序集合が<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%B1%80%E6%89%80%E6%9C%89%E9%99%90%E5%8D%8A%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;redlink=1" title="局所有限半順序集合 (存在しないページ)">局所有限</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Locally_finite_poset&amp;action=edit&amp;redlink=1" title="En:Locally finite poset (存在しないページ)">英語版</a>）</span></span>であるとは、全ての区間が有限集合であることをいう。例えば、<a href="/wiki/%E6%95%B4%E6%95%B0" title="整数">整数</a>全体の成す集合は通常の大小関係による半順序に関して局所有限である（端点の無い無限区間のようなものは今考えていない）。
+</p><p>順序集合における区間の概念と、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8C%BA%E9%96%93%E9%A0%86%E5%BA%8F&amp;action=edit&amp;redlink=1" title="区間順序 (存在しないページ)">区間順序</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:interval_order&amp;action=edit&amp;redlink=1" title="En:interval order (存在しないページ)">英語版</a>）</span></span>として知られる特定の半順序の類いとを混同してはならない。
+</p>
+<h2><span id=".E9.A0.86.E5.BA.8F.E6.A7.8B.E9.80.A0.E3.81.A8.E4.BD.8D.E7.9B.B8.E6.A7.8B.E9.80.A0"></span><span class="mw-headline" id="順序構造と位相構造">順序構造と位相構造</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=17" title="節を編集: 順序構造と位相構造">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<h3><span id=".E5.85.A8.E9.A0.86.E5.BA.8F.E9.9B.86.E5.90.88.E3.81.AE.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="全順序集合の位相">全順序集合の位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=18" title="節を編集: 全順序集合の位相">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".E9.A0.86.E5.BA.8F.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="順序位相">順序位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=19" title="節を編集: 順序位相">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>全順序集合 <i>A</i> に対し、無限半開区間
+</p>
+<dl><dd>&lt;math&gt;(-\infty,b)=\{x \in A \mid x&lt; b\}&lt;/math&gt;</dd>
+<dd>&lt;math&gt;(a,\infty)=\{x \in A \mid a&lt; x\}&lt;/math&gt;</dd></dl>
+<p>全体の集合を<a class="mw-redirect" href="/wiki/%E6%BA%96%E9%96%8B%E5%9F%BA" title="準開基">準開基</a>とする位相を<b>順序位相</b> (<a class="new" href="/w/index.php?title=En:order_topology&amp;action=edit&amp;redlink=1" title="En:order topology (存在しないページ)">order topology</a>) という<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[注 1]</a></sup>。例えば、実数全体の集合 &lt;math&gt;\mathbb{R}&lt;/math&gt; を通常の大小関係 ≤ による全順序集合と見ると、その順序位相は通常の<a href="/wiki/%E8%B7%9D%E9%9B%A2%E7%A9%BA%E9%96%93" title="距離空間">距離</a>により定められる位相と同等になる。
+</p><p>全順序集合 <i>A</i> の部分集合 <i>B</i> には、<i>B</i> を全順序集合と見なした時の順序位相と <i>A</i> の順序位相から誘導される位相との2つの位相が入る。しかしこの<b>2つの位相は一致するとは限らない</b>。（<i>B</i> の順序位相における開集合は誘導位相でも開集合であるが逆は一般には成り立たない）。
+</p><p>例えば <i>A</i> を実数全体の集合とし、<i>A</i> の部分集合
+</p>
+<dl><dd>&lt;math&gt;B=\{x\mid 0&lt;x&lt;1\}\cup \{2\}&lt;/math&gt;</dd></dl>
+<p>を考えると、<i>A</i> から<i>B</i> に誘導される位相では一元集合 <span class="texhtml" lang="en">{2}</span> は明らかに開集合であるが、<i>B</i> は順序集合としてみたときはそうではない。実際 <i>B</i> は（2を1に移す写像により）&lt;math&gt;C=\{x\mid 0&lt;x\le 1\}&lt;/math&gt; と順序同型だが、<i>C</i> の順序位相で <span class="texhtml" lang="en">{1}</span> は開集合ではないので <i>B</i> の順序位相で<span class="texhtml" lang="en">{2}</span> は開集合ではない。
+</p>
+<h4><span id=".E4.B8.8A.E6.A5.B5.E9.99.90.E4.BD.8D.E7.9B.B8.E3.80.81.E4.B8.8B.E6.A5.B5.E9.99.90.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="上極限位相、下極限位相">上極限位相、下極限位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=20" title="節を編集: 上極限位相、下極限位相">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>単に「実数体上の位相」といった場合、前述の順序位相を指すがその他の位相を考えることも（主に反例として用いるために）できる。
+</p><p>実数体 &lt;math&gt;\mathbb{R}&lt;/math&gt; 上の<b>上極限位相</b>とは
+</p>
+<dl><dd>&lt;math&gt;(a,b] = \{x\in\mathbb{R}~:~a&lt;x \le b \}&lt;/math&gt;</dd></dl>
+<p>全体の集合を<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93#位相の比較、生成" title="位相空間">開基</a>とする位相のことであり、同様に &lt;math&gt;\mathbb{R}&lt;/math&gt; 上の<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%8B%E6%A5%B5%E9%99%90%E4%BD%8D%E7%9B%B8&amp;action=edit&amp;redlink=1" title="下極限位相 (存在しないページ)">下極限位相</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:lower_limit_topology&amp;action=edit&amp;redlink=1" title="En:lower limit topology (存在しないページ)">英語版</a>）</span></span></b>とは逆向きの半開区間
+</p>
+<dl><dd>&lt;math&gt;[a,b) = \{x\in\mathbb{R}~:~a \le x &lt; b \}&lt;/math&gt;</dd></dl>
+<p>全体の集合を<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93#位相の比較、生成" title="位相空間">開基</a>とする位相のことである<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[注 2]</a></sup>。
+</p><p>実数体に下限位相を入れた空間はしばし &lt;math&gt;\mathbb{R}_{\ell}&lt;/math&gt; と書かれ、<b>ゾルゲンフライ直線</b>と呼ばれる。またゾルゲンフライ直線2つの直積 &lt;math&gt;\mathbb{R}_{\ell}\times\mathbb{R}_{\ell}&lt;/math&gt; は<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%BE%E3%83%AB%E3%82%B2%E3%83%B3%E3%83%95%E3%83%A9%E3%82%A4%E5%B9%B3%E9%9D%A2&amp;action=edit&amp;redlink=1" title="ゾルゲンフライ平面 (存在しないページ)">ゾルゲンフライ平面</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Sorgenfrey_plane&amp;action=edit&amp;redlink=1" title="En:Sorgenfrey plane (存在しないページ)">英語版</a>）</span></span></b>と呼ばれる。
+</p>
+<h4><span class="mw-headline" id="overlapping_interval_topology">overlapping interval topology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=21" title="節を編集: overlapping interval topology">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>区間 [-1,1] 上の <b><a class="new" href="/w/index.php?title=En:overlapping_interval_topology&amp;action=edit&amp;redlink=1" title="En:overlapping interval topology (存在しないページ)">overlapping interval topology</a></b> とは
+</p>
+<dl><dd>&lt;math&gt;[-1,a)&lt;/math&gt; for &lt;math&gt;0&lt;a&lt;/math&gt;</dd>
+<dd>&lt;math&gt;(b,1]&lt;/math&gt; for &lt;math&gt;b&lt;0&lt;/math&gt;</dd></dl>
+<p>を準開基とする位相である。
+</p>
+<h3><span id=".E5.8D.8A.E9.A0.86.E5.BA.8F.E9.9B.86.E5.90.88.E3.81.AE.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="半順序集合の位相">半順序集合の位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=22" title="節を編集: 半順序集合の位相">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".E5.8D.8A.E9.A0.86.E5.BA.8F.E7.A9.BA.E9.96.93"></span><span class="mw-headline" id="半順序空間">半順序空間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=23" title="節を編集: 半順序空間">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>位相構造を持つ半順序集合<i>P</i> で以下の性質を満たすものを<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8D%8A%E9%A0%86%E5%BA%8F%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="半順序空間 (存在しないページ)">半順序空間</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:partially_ordered_space&amp;action=edit&amp;redlink=1" title="En:partially ordered space (存在しないページ)">英語版</a>）</span></span></b>という：
+</p>
+<dl><dd><span class="texhtml" lang="en"><i>a</i> &lt; <i>b</i></span> を満たす任意の<span class="texhtml" lang="en"><i>a</i>, <i>b</i> ∈ <i>P</i></span> に対し、<i>a</i> の開近傍<i>U</i>で上方集合であるものと <i>b</i> の開近傍<i>V</i> で下方集合であるものが存在することである。</dd></dl>
+<p>（<i>P</i> の位相構造でこの性質を満たすものは1つとは限らないが、それらを全て半順序空間という。）
+なお、半順序空間と名前の似た<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Poset_topology&amp;action=edit&amp;redlink=1" title="Poset topology (存在しないページ)">poset topology</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:poset_topology&amp;action=edit&amp;redlink=1" title="En:poset topology (存在しないページ)">英語版</a>）</span></span>は別概念であるので注意が必要である。
+</p><p>定義より明らかに半順序空間は常に<a href="/wiki/%E3%83%8F%E3%82%A6%E3%82%B9%E3%83%89%E3%83%AB%E3%83%95%E7%A9%BA%E9%96%93" title="ハウスドルフ空間">ハウスドルフ性</a>を満たす。
+</p><p>半順序空間では以下が成立する：
+</p>
+<dl><dd><span class="texhtml" lang="en"><i>a<sub>i</sub></i> → <i>a</i>, <i>b<sub>i</sub></i> → <i>b</i></span> かつ任意の <i>i</i> に対して <span class="texhtml" lang="en"><i>a<sub>i</sub></i> ≤ <i>b<sub>i</sub></i></span> ならば <span class="texhtml" lang="en"><i>a</i> ≤ <i>b</i></span> である<sup class="reference" id="cite_ref-ward-1954_3-0"><a href="#cite_note-ward-1954-3">[1]</a></sup></dd></dl>
+<p>位相構造を持つ半順序集合<i>P</i> が半順序空間である必要十分条件は以下を満たすことである：
+</p>
+<dl><dd>半順序集合<i>P</i> 上の位相構造として、{(<i>a</i>, <i>b</i>) ∈ <i>P</i> × <i>P</i> | <i>a</i> ≤ <i>b</i> } が<a class="mw-redirect" href="/wiki/%E7%9B%B4%E7%A9%8D%E4%BD%8D%E7%9B%B8" title="直積位相">直積位相</a>に関する<a href="/wiki/%E9%96%89%E9%9B%86%E5%90%88" title="閉集合">閉部分集合</a>になる。</dd></dl>
+<p>2つ半順序空間の間の順序を保つ連続写像のことを<b>dimap</b>という。
+</p>
+<h4><span id=".E4.B8.8A.E6.96.B9.E4.BD.8D.E7.9B.B8.E3.80.81.E4.B8.8B.E6.96.B9.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="上方位相、下方位相">上方位相、下方位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=24" title="節を編集: 上方位相、下方位相">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>順序集合 <i>P</i> 上の以下の2つの位相は同一である事が簡単に示せる。以下のいずれか一方（したがって両方）の条件を満たす位相を<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E4%B8%8A%E6%96%B9%E4%BD%8D%E7%9B%B8&amp;action=edit&amp;redlink=1" title="上方位相 (存在しないページ)">上方位相</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:upper_topology&amp;action=edit&amp;redlink=1" title="En:upper topology (存在しないページ)">英語版</a>）</span></span></b>という。
+</p>
+<ol><li>{<i>x</i> ∈ <i>P</i> | x ≥ a} for <span class="texhtml" lang="en"><i>a</i> ∈ <i>P</i></span> を全て閉集合とする最弱の位相</li>
+<li>任意の<span class="texhtml" lang="en"><i>a</i> ∈ <i>P</i></span> に対し、一点集合<span class="texhtml" lang="en">{<i>a</i>}</span> の閉包が{<i>x</i> ∈ <i>P</i> | x ≥ a} と一致する最弱の位相</li></ol>
+<p><b>下方位相</b>も同様にして定義できる。
+</p>
+<h4><span id=".E3.82.A2.E3.83.AC.E3.82.AF.E3.82.B5.E3.83.B3.E3.83.89.E3.83.AD.E3.83.95.E7.A9.BA.E9.96.93"></span><span class="mw-headline" id="アレクサンドロフ空間">アレクサンドロフ空間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=25" title="節を編集: アレクサンドロフ空間">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>位相空間 <i>P</i> が<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%B3%E3%83%89%E3%83%AD%E3%83%95%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="アレクサンドロフ空間 (存在しないページ)">アレクサンドロフ空間</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Alexandroff_space&amp;action=edit&amp;redlink=1" title="En:Alexandroff space (存在しないページ)">英語版</a>）</span></span></b>であるとは、<i>P</i> 上の（有限または無限個の）任意の開集合の共通部分が必ず開集合になることである。
+</p><p>アレクサンドロフ空間は前順序集合と自然に1対1対応していることが知られている。
+実際任意の前順序集合 <i>P</i> に対し、
+</p>
+<dl><dd><i>U</i> が <i>P</i> の開集合 ⇔ <i>U</i> が <i>P</i> の上方集合</dd></dl>
+<p>により <i>P</i> に位相を入れたものはアレクサンドロフ空間になる。（この位相を <i>P</i> の<b>アレクサンドロフ位相</b>という。）
+</p><p>逆に任意のアレクサンドロフ空間 <i>P</i> に対し <i>P</i> 上の「<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=Specialization_preorder&amp;action=edit&amp;redlink=1" title="Specialization preorder (存在しないページ)">specialization preorder</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:specialization_preorder&amp;action=edit&amp;redlink=1" title="En:specialization preorder (存在しないページ)">英語版</a>）</span></span>」を前順序とすることで <i>P</i> を前順序集合と見なすことができる。
+</p><p>ここで位相空間 <i>P</i> の<b>specialization preorder</b>とは
+</p>
+<dl><dd>&lt;math&gt;x \le y \iff \overline{\{x\}} \subset \overline{\{y\}}&lt;/math&gt;</dd></dl>
+<p>で定義される前順序のことである。上式で&lt;math&gt;\overline{\{x\}}&lt;/math&gt;は一元集合<span class="texhtml" lang="en">{<i>x</i>}</span> の<a href="/wiki/%E9%96%89%E5%8C%85_(%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93%E8%AB%96)" title="閉包 (位相空間論)">閉包</a>である。（なお、<i>P</i> が<a href="/wiki/%E3%82%B3%E3%83%AB%E3%83%A2%E3%82%B4%E3%83%AD%E3%83%95%E7%A9%BA%E9%96%93" title="コルモゴロフ空間">T<sub>0</sub>空間</a>であればspecialization preorder は半順序であることが知られている。）
+</p><p>以上の対応関係により、集合<i>P</i> におけるアレクサンドロフ空間としての構造と<i>P</i> 上の前順序は1対1対応する。
+</p><p>specialization preorderはアレクサンドロフ空間でなくとも定義可能であるが、アレクサンドロフ空間でない位相空間上ではspecialization preorderに対して上方集合でない開集合も存在する。（なおこの場合でも開集合は常に上方集合である）。したがって前述したような、上方集合を開集合とする位相を考えても元の位相は復元できない。
+</p>
+<h5><span id=".E5.AE.9F.E6.95.B0.E4.BD.93.E3.81.AB.E3.81.8A.E3.81.91.E3.82.8B.E4.BE.8B"></span><span class="mw-headline" id="実数体における例">実数体における例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=26" title="節を編集: 実数体における例">編集</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>実数体（に通常の順序をいれたもの）を前順序集合と見なすことで実数体にアレクサンドロフ位相を入れることができる。アレクサンドロフ位相における実数体上の開集合（すなわち上方集合）は以下のもののいずれかになる：
+</p>
+<ul><li>&lt;math&gt;(a,\infty)&lt;/math&gt; for some <i>a</i></li>
+<li>&lt;math&gt;[a, \infty)&lt;/math&gt; for some <i>a</i></li>
+<li>空集合&lt;math&gt;\emptyset&lt;/math&gt;、全体集合&lt;math&gt;\mathbb{R}&lt;/math&gt;</li></ul>
+<h4><span id=".E3.82.B9.E3.82.B3.E3.83.83.E3.83.88.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="スコット位相">スコット位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=27" title="節を編集: スコット位相">編集</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>上で述べたようにアレクサンドロフ位相は &lt;math&gt;[a, \infty)&lt;/math&gt; のような「下に閉じた」集合すらも開集合と見なしてしまう。アレクサンドロフ位相からこのような不自然さを取り除いたのがスコット位相である。順序集合 <i>P</i> 上の<b>スコット位相</b> (<a class="new" href="/w/index.php?title=En:Scott_topology&amp;action=edit&amp;redlink=1" title="En:Scott topology (存在しないページ)">Scott topology</a>) とは、以下の2条件を満たす <i>P</i> の部分集合 <i>O</i> 全体の集合を開集合族とする位相である：
+</p>
+<ol><li><i>O</i> ⊂ <i>P</i> は上方集合である</li>
+<li><i>P</i> の<a href="/wiki/%E6%9C%89%E5%90%91%E9%9B%86%E5%90%88" title="有向集合">有向部分集合</a> <i>A</i> で（<i>A</i> を自然に<a href="/wiki/%E6%9C%89%E5%90%91%E7%82%B9%E6%97%8F" title="有向点族">有向点族</a>と見なしたときの）<i>A</i> の極限が<i>O</i> に入っていれば、<i>A</i> の点で<i>O</i> に含まれるものが存在する</li></ol>
+<p>後者の条件は内点概念の点列による特徴づけ（<i>O</i> の内点<i>x</i> に収束する点列は<i>O</i> と共通部分を持つ）に類似しているおり、この条件が「下に閉じた」集合を排除する。
+</p><p>よって実数体にスコット位相を入れた際、実数体上の開集合は以下のもののいずれかになる：
+</p>
+<ul><li>&lt;math&gt;(a,\infty)&lt;/math&gt; for some <i>a</i></li>
+<li>空集合 &lt;math&gt;\emptyset&lt;/math&gt;、全体集合 &lt;math&gt;\mathbb{R}&lt;/math&gt;</li></ul>
+<p>スコット位相を入れた順序集合を<b>スコット空間</b>といい、スコット空間からスコット空間への連続写像を<b><a href="/wiki/%E3%82%B9%E3%82%B3%E3%83%83%E3%83%88%E9%80%A3%E7%B6%9A" title="スコット連続">スコット連続</a></b> (<a class="new" href="/w/index.php?title=En:Scott_continuity&amp;action=edit&amp;redlink=1" title="En:Scott continuity (存在しないページ)">Scott continuity</a>) という。順序集合 <i>P</i> から順序集合<i>Q</i> への写像 <i>f</i> がスコット連続である必要十分条件は以下の性質が成り立つことであることが知られている：
+</p>
+<ul><li><i>P</i> の任意の有向部分集合<i>A</i> に対し、<i>A</i> が<i>P</i> 内の上限を持てば<i>f</i> (<i>A</i> )も<i>Q</i> 内の上限を持ち、sup <i>f</i> (<i>A</i>) = <i>f</i> (sup <i>A</i> ) が成立する。</li></ul>
+<p>スコット連続な関数は順序を保つ。実際、<i>x</i> ≥ <i>y</i> ⇒ sup{<i>x</i> , <i>y</i> } = <i>x</i> であるので、上述した条件より<span class="texhtml" lang="en">sup{<i>f</i> (<i>x</i> ), <i>f</i> (<i>y</i> )</span>}が存在し、しかも sup{<i>f</i> (<i>x</i> ), <i>f</i> (<i>y</i> )} = <i>f</i> (sup{<i>x</i> , <i>y</i> }) = <i>f</i> (<i>x</i> ) となる。これは<span class="texhtml" lang="en"><i>f</i> (<i>x</i> ) ≥ <i>f</i> (<i>y</i> )</span> を意味する。
+</p><p>なお、スコット位相と下方位相のいずれよりも強い位相構造の中で最弱のものを<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%E4%BD%8D%E7%9B%B8&amp;action=edit&amp;redlink=1" title="ローソン位相 (存在しないページ)">ローソン位相</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:Lawson_topology&amp;action=edit&amp;redlink=1" title="En:Lawson topology (存在しないページ)">英語版</a>）</span></span></b>という。
+</p>
+<h3><span id=".E3.82.B9.E3.83.88.E3.83.BC.E3.83.B3.E5.8F.8C.E5.AF.BE.E6.80.A7"></span><span class="mw-headline" id="ストーン双対性">ストーン双対性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=28" title="節を編集: ストーン双対性">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>位相空間の開集合全体の集合は包含関係により順序集合と見なせる。位相空間が「sober性」という弱い性質を満たす時はこの順序構造のみで位相空間の構造が特徴づけられることが知られている（<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E5%8F%8C%E5%AF%BE%E6%80%A7" title="ストーン双対性">ストーンの双対性定理</a>）。したがってsober性を満たす空間に話を限定すれば、点集合論に頼らなくても順序構造のみで位相空間論を展開できる（<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%B3%E5%8F%8C%E5%AF%BE%E6%80%A7" title="ストーン双対性">ポイントレス位相空間論</a>）。
+</p>
+<h2><span id=".E7.9B.B4.E7.A9.8D.E9.9B.86.E5.90.88.E4.B8.8A.E3.81.AE.E9.A0.86.E5.BA.8F"></span><span class="mw-headline" id="直積集合上の順序">直積集合上の順序</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=29" title="節を編集: 直積集合上の順序">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>2つの半順序集合（の台集合）の<a href="/wiki/%E7%9B%B4%E7%A9%8D%E9%9B%86%E5%90%88" title="直積集合">直積集合</a>上の半順序としては次の三種類がある。
+</p>
+<ul><li><a href="/wiki/%E8%BE%9E%E6%9B%B8%E5%BC%8F%E9%A0%86%E5%BA%8F" title="辞書式順序">辞書式順序</a>：&lt;math&gt;(a, b) \le (c, d) \iff a &lt; c \lor (a = c \land b \le d)&lt;/math&gt;</li>
+<li><a class="mw-redirect" href="/wiki/%E7%A9%8D%E9%A0%86%E5%BA%8F" title="積順序">積順序</a>：&lt;math&gt;(a, b) \le (c, d) \iff a \le c \land b \le d&lt;/math&gt;</li>
+<li>&lt;math&gt;(a, b) \le (c, d) \iff (a &lt; c \land b &lt; d) \lor (a = c \land b = d)&lt;/math&gt;</li></ul>
+<p>最後の順序は対応する狭義全順序の<a class="new" href="/w/index.php?title=%E9%96%A2%E4%BF%82%E3%81%AE%E7%9B%B4%E7%A9%8D&amp;action=edit&amp;redlink=1" title="関係の直積 (存在しないページ)">直積</a>の反射閉包である。これらの三種類の半順序は、いずれも3個以上の半順序集合の直積に対しても同様に定義される。
+</p><p><a href="/wiki/%E5%8F%AF%E6%8F%9B%E4%BD%93" title="可換体">体</a>上の<a class="new" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E7%B7%9A%E5%9E%8B%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" title="順序線型空間 (存在しないページ)">順序線型空間</a>に対してこれらの構成を適用すれば、結果として得られる順序集合はいずれも再び順序線型空間となる。
+</p>
+<ul class="gallery mw-gallery-traditional">
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Strict product order on pairs of natural numbers.svg</div>
+<div class="gallerytext">
+<p><span class="texhtml" lang="en"><b>N</b> × <b>N</b></span> 上の直積狭義順序の反射閉包
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">N-Quadrat, gedreht.svg</div>
+<div class="gallerytext">
+<p><span class="texhtml" lang="en"><b>N</b> × <b>N</b></span> 上の積順序
+</p>
+</div>
+</div></li>
+<li class="gallerybox" style="width: 155px"><div style="width: 155px">
+<div class="thumb" style="height: 150px;">Lexicographic order on pairs of natural numbers.svg</div>
+<div class="gallerytext">
+<p><span class="texhtml" lang="en"><b>N</b> × <b>N</b></span> 上の辞書式順序
+</p>
+</div>
+</div></li>
+</ul>
+<h2><span id=".E5.9C.8F.E3.81.A8.E3.81.97.E3.81.A6.E3.81.AE.E9.A0.86.E5.BA.8F.E9.9B.86.E5.90.88"></span><span class="mw-headline" id="圏としての順序集合">圏としての順序集合</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=30" title="節を編集: 圏としての順序集合">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>任意の半順序集合（および前順序集合）は、任意の射集合が高々一つの元からなる<a href="/wiki/%E5%9C%8F_(%E6%95%B0%E5%AD%A6)" title="圏 (数学)">圏</a>と見なすことができる。具体的には、射の集合を <span class="texhtml" lang="en"><i>x</i> ≤ <i>y</i></span> ならば <span class="texhtml" lang="en">hom(<i>x</i>, <i>y</i>) = {(<i>x</i>, <i>y</i>)}</span>（それ以外の場合は空集合）とし、<span class="texhtml" lang="en">(<i>y</i>, <i>z</i>)∘(<i>x</i>, <i>y</i>) = (<i>x</i>, <i>z</i>)</span> と定義する。2つの半順序集合が<a href="/wiki/%E5%9C%8F%E5%90%8C%E5%80%A4" title="圏同値">圏として同値</a>となるのは、それらが順序集合として同型であるときであり、かつその時に限る。半順序集合に最小元が存在すればそれは<a class="mw-redirect" href="/wiki/%E5%A7%8B%E5%AF%BE%E8%B1%A1" title="始対象">始対象</a>であり、最大元が存在すればそれは<a class="mw-redirect" href="/wiki/%E7%B5%82%E5%AF%BE%E8%B1%A1" title="終対象">終対象</a>となる。また、任意の前順序集合はある半順序集合に圏同値であり、半順序集合の任意の部分圏は<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%90%8C%E5%9E%8B%E5%B0%84%E9%96%89%E5%9C%8F&amp;action=edit&amp;redlink=1" title="同型射閉圏 (存在しないページ)">同型射について閉じて</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:isomorphism-closed&amp;action=edit&amp;redlink=1" title="En:isomorphism-closed (存在しないページ)">英語版</a>）</span></span>いる。
+</p><p>半順序集合からの函手、すなわち半順序圏で添字付けられた<a href="/wiki/%E5%9B%B3%E5%BC%8F_(%E5%9C%8F%E8%AB%96)" title="図式 (圏論)">図式</a>は、<a href="/wiki/%E5%8F%AF%E6%8F%9B%E5%9B%B3%E5%BC%8F" title="可換図式">可換図式</a>である。
+</p>
+<h2><span id=".E3.81.9D.E3.81.AE.E4.BB.96"></span><span class="mw-headline" id="その他">その他</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=31" title="節を編集: その他">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>（<b>半順序関係の総数</b>）<span class="texhtml mvar" lang="en" style="font-style:italic;">n</span> 個の元からなる集合上の半順序の総数（狭義半順序の総数も同じ）は <span class="texhtml" lang="en"><span style="white-space: normal;">1, 1, 3, 19, 219, 4231, …</span></span> （<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A001035" rel="nofollow">A001035</a>）。<a href="/wiki/%E9%81%95%E3%81%84%E3%82%92%E9%99%A4%E3%81%84%E3%81%A6" title="違いを除いて">同型を除いた</a>総数は <span class="texhtml" lang="en"><span style="white-space: normal;">1, 1, 2, 5, 16, 63, 318, …</span></span> （<a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A000112" rel="nofollow">A000112</a>）。</li>
+<li>（<b>線型順序拡大</b>）半順序集合 <span class="texhtml mvar" lang="en" style="font-style:italic;">P</span> の全順序集合への埋め込みを<b><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E9%A0%86%E5%BA%8F%E6%8B%A1%E5%A4%A7&amp;action=edit&amp;redlink=1" title="線型順序拡大 (存在しないページ)">線型順序拡大</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:linear_extension&amp;action=edit&amp;redlink=1" title="En:linear extension (存在しないページ)">英語版</a>）</span></span></b> (linear extension) という。任意の半順序は全順序に拡張することができる（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E6%8B%A1%E5%A4%A7%E5%8E%9F%E7%90%86&amp;action=edit&amp;redlink=1" title="順序拡大原理 (存在しないページ)">順序拡大原理</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:order-extension_principle&amp;action=edit&amp;redlink=1" title="En:order-extension principle (存在しないページ)">英語版</a>）</span></span><sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[2]</a></sup>）。<a href="/wiki/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6" title="計算機科学">計算機科学</a>において（<a class="mw-redirect" href="/wiki/%E6%9C%89%E5%90%91%E9%9D%9E%E5%BE%AA%E7%92%B0%E3%82%B0%E3%83%A9%E3%83%95" title="有向非循環グラフ">有向非循環グラフ</a>の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%88%B0%E9%81%94%E5%8F%AF%E8%83%BD%E6%80%A7&amp;action=edit&amp;redlink=1" title="到達可能性 (存在しないページ)">到達可能性</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:reachability&amp;action=edit&amp;redlink=1" title="En:reachability (存在しないページ)">英語版</a>）</span></span>順序として表現される）半順序の線型拡張を求めるアルゴリズムは<a class="mw-redirect" href="/wiki/%E4%BD%8D%E7%9B%B8%E3%82%BD%E3%83%BC%E3%83%88" title="位相ソート">位相ソート</a> <span lang="en">(topological sorting)</span> と呼ばれる。</li></ul>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=32" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="div-col columns column-count column-count-3" style="-moz-column-count:3; -webkit-column-count:3; column-count:3; -moz-column-width: 18em; -webkit-column-width: 18em; column-width: 18em;">
+<ul><li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E5%8F%8D%E3%83%9E%E3%83%88%E3%83%AD%E3%82%A4%E3%83%89&amp;action=edit&amp;redlink=1" title="反マトロイド (存在しないページ)">反マトロイド</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:antimatroid&amp;action=edit&amp;redlink=1" title="En:antimatroid (存在しないページ)">英語版</a>）</span></span>: 半順序集合よりも一般の順序付けの族を許すような、集合上の順序付けの一般化</li>
+<li><a href="/wiki/%E5%9B%A0%E6%9E%9C%E9%9B%86%E5%90%88" title="因果集合">因果集合</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AF%94%E8%BC%83%E5%8F%AF%E8%83%BD%E3%82%B0%E3%83%A9%E3%83%95&amp;action=edit&amp;redlink=1" title="比較可能グラフ (存在しないページ)">比較可能グラフ</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:comparability_graph&amp;action=edit&amp;redlink=1" title="En:comparability graph (存在しないページ)">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E6%9C%89%E5%90%91%E9%9B%86%E5%90%88" title="有向集合">有向集合</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%AC%A1%E6%95%B0%E4%BB%98%E3%81%8D%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;redlink=1" title="次数付き順序集合 (存在しないページ)">次数付き順序集合</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:graded_poset&amp;action=edit&amp;redlink=1" title="En:graded poset (存在しないページ)">英語版</a>）</span></span></li>
+<li><a class="mw-redirect" href="/wiki/%E5%8D%8A%E6%9D%9F" title="半束">半束</a></li>
+<li><a href="/wiki/%E6%9D%9F_(%E6%9D%9F%E8%AB%96)" title="束 (束論)">束 (束論)</a></li>
+<li><a href="/wiki/%E9%A0%86%E5%BA%8F%E7%BE%A4" title="順序群">順序群</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E6%BA%96%E9%A0%86%E5%BA%8F&amp;action=edit&amp;redlink=1" title="準順序 (存在しないページ)">準順序</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:semiorder&amp;action=edit&amp;redlink=1" title="En:semiorder (存在しないページ)">英語版</a>）</span></span> (semiorder)</li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%9B%B4%E4%B8%A6%E5%88%97%E5%8D%8A%E9%A0%86%E5%BA%8F&amp;action=edit&amp;redlink=1" title="直並列半順序 (存在しないページ)">直並列半順序</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:series-parallel_partial_order&amp;action=edit&amp;redlink=1" title="En:series-parallel partial order (存在しないページ)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a class="new" href="/w/index.php?title=%E7%8B%AD%E7%BE%A9%E5%BC%B1%E9%A0%86%E5%BA%8F&amp;action=edit&amp;redlink=1" title="狭義弱順序 (存在しないページ)">狭義弱順序</a><span class="noprint" style="font-size: 0.77em; font-weight: normal;">（<a class="new" href="/w/index.php?title=En:strict_weak_ordering&amp;action=edit&amp;redlink=1" title="En:strict weak ordering (存在しないページ)">英語版</a>）</span></span>: "<i>a</i> &lt; <i>b</i> または <i>b</i> &lt; <i>a</i> の何れかが成り立つ" という関係が推移的となるような狭義半順序 "&lt;"</li>
+<li><a href="/wiki/%E5%AE%8C%E5%82%99%E5%8D%8A%E9%A0%86%E5%BA%8F" title="完備半順序">完備半順序</a> (cpo)</li>
+<li><a href="/wiki/%E3%83%84%E3%82%A9%E3%83%AB%E3%83%B3%E3%81%AE%E8%A3%9C%E9%A1%8C" title="ツォルンの補題">ツォルンの補題</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%AF%E3%83%88%E8%A6%81%E7%B4%A0" title="コンパクト要素">コンパクト要素</a></li></ul>
+</div>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=33" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<h3><span id=".E6.B3.A8.E9.87.88"></span><span class="mw-headline" id="注釈">注釈</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=34" title="節を編集: 注釈">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text">原理的には半順序集合であっても同様の概念を定義できるが、本稿の英語版をはじめ、<link href="mw-data:TemplateStyles:r2616658" rel="mw-deduplicated-inline-style"/><span class="fix-domain" title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2019-06）">筆者</span><sup class="noprint Inline-Template nowrap">[<i><a href="/wiki/Wikipedia:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%95%E3%81%AA%E3%81%84" title="Wikipedia:言葉を濁さない"><span title="この記述は言葉を濁しているか情報の出所を曖昧にしています。（2019-06）">誰?</span></a></i>]</sup>が調べた範囲<sup class="noprint Inline-Template nowrap">[<i><a class="mw-redirect" href="/wiki/WP:CITEHOW" title="WP:CITEHOW"><span title="文献を特定する詳細な情報が求められています。（2019-06）">要文献特定詳細情報</span></a></i>]</sup>では全順序集合に対してのみ order topology を定義しているため、ここでは全順序のみに話を限定した。</span>
+</li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text">実数体でなくとも上極限位相と下極限位相を考えることができるが、これも実数体以外に対してこれらの位相を定義した文献が見つけられなかったので、ここでは実数体のみを対象にした。</span>
+</li>
+</ol></div></div>
+<h3><span id=".E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="出典">出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=35" title="節を編集: 出典">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-ward-1954-3"><b><a href="#cite_ref-ward-1954_3-0">^</a></b> <span class="reference-text"><cite class="citation journal" style="font-style:normal">Ward, L. E. Jr (1954). “Partially Ordered Topological Spaces”. <i>Proceedings of the American Mathematical Society</i> <b>5</b> (1):  144-161. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1090%2FS0002-9939-1954-0063016-5" rel="nofollow">10.1090/S0002-9939-1954-0063016-5</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Partially+Ordered+Topological+Spaces&amp;rft.jtitle=Proceedings+of+the+American+Mathematical+Society&amp;rft.aulast=Ward&amp;rft.aufirst=L.+E.+Jr&amp;rft.au=Ward%2C%26%2332%3BL.+E.+Jr&amp;rft.date=1954&amp;rft.volume=5&amp;rft.issue=1&amp;rft.pages=144-161&amp;rft_id=info:doi/10.1090%2FS0002-9939-1954-0063016-5&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88"><span style="display: none;"> </span></span></span>
+</li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><cite class="citation book" style="font-style:normal">Jech, Thomas (2008) [originally published in 1973]. <i>The Axiom of Choice</i>. <a class="mw-redirect" href="/wiki/Dover_Publications" title="Dover Publications">Dover Publications</a>. <style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-486-46624-8" title="特別:文献資料/0-486-46624-8">0-486-46624-8</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Axiom+of+Choice&amp;rft.aulast=Jech&amp;rft.aufirst=Thomas&amp;rft.au=Jech%2C%26%2332%3BThomas&amp;rft.date=2008&amp;rft.pub=%5B%5BDover+Publications%5D%5D&amp;rft.isbn=0-486-46624-8&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88"><span style="display: none;"> </span></span></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=36" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li><cite class="citation book" id="CITEREF松坂和夫1968" style="font-style:normal"><a href="/wiki/%E6%9D%BE%E5%9D%82%E5%92%8C%E5%A4%AB" title="松坂和夫">松坂和夫</a>『集合・位相入門』<a href="/wiki/%E5%B2%A9%E6%B3%A2%E6%9B%B8%E5%BA%97" title="岩波書店">岩波書店</a>、1968年6月10日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4-00-005424-4" title="特別:文献資料/4-00-005424-4">4-00-005424-4</a>。</cite></li>
+<li><cite class="citation book" id="CITEREF斎藤正彦2002" style="font-style:normal"><a href="/wiki/%E6%96%8E%E8%97%A4%E6%AD%A3%E5%BD%A6" title="斎藤正彦">斎藤正彦</a>『数学の基礎　集合・数・位相』<a href="/wiki/%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%87%BA%E7%89%88%E4%BC%9A" title="東京大学出版会">東京大学出版会</a>〈基礎数学14〉、2002年8月1日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/978-4-13-062909-6" title="特別:文献資料/978-4-13-062909-6">978-4-13-062909-6</a>。</cite></li>
+<li><cite class="citation journal" style="font-style:normal">Deshpande, Jayant V. (1968). “On Continuity of a Partial Order”. <i>Proceedings of the American Mathematical Society</i> <b>19</b> (2):  383-386. <a href="/wiki/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%AD%98%E5%88%A5%E5%AD%90" title="デジタルオブジェクト識別子">doi</a>:<a class="external text" href="https://doi.org/10.1090%2FS0002-9939-1968-0236071-7" rel="nofollow">10.1090/S0002-9939-1968-0236071-7</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=On+Continuity+of+a+Partial+Order&amp;rft.jtitle=Proceedings+of+the+American+Mathematical+Society&amp;rft.aulast=Deshpande&amp;rft.aufirst=Jayant+V.&amp;rft.au=Deshpande%2C%26%2332%3BJayant+V.&amp;rft.date=1968&amp;rft.volume=19&amp;rft.issue=2&amp;rft.pages=383-386&amp;rft_id=info:doi/10.1090%2FS0002-9939-1968-0236071-7&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal">Schröder, Bernd S. W. (2003). <i>Ordered Sets:  An Introduction</i>. Birkhäuser, Boston</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Ordered+Sets%3A++An+Introduction&amp;rft.aulast=Schr%C3%B6der&amp;rft.aufirst=Bernd+S.+W.&amp;rft.au=Schr%C3%B6der%2C%26%2332%3BBernd+S.+W.&amp;rft.date=2003&amp;rft.pub=Birkh%C3%A4user%2C+Boston&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88"><span style="display: none;"> </span></span></li>
+<li><cite class="citation book" style="font-style:normal"><a class="new" href="/w/index.php?title=Richard_P._Stanley&amp;action=edit&amp;redlink=1" title="Richard P. Stanley (存在しないページ)">Stanley, Richard P.</a>. <i>Enumerative Combinatorics 1</i>. Cambridge Studies in Advanced Mathematics. <b>49</b>. Cambridge University Press. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0-521-66351-2" title="特別:文献資料/0-521-66351-2">0-521-66351-2</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Enumerative+Combinatorics+1&amp;rft.aulast=Stanley&amp;rft.aufirst=Richard+P.&amp;rft.au=Stanley%2C%26%2332%3BRichard+P.&amp;rft.series=Cambridge+Studies+in+Advanced+Mathematics&amp;rft.volume=49&amp;rft.pub=Cambridge+University+Press&amp;rft.isbn=0-521-66351-2&amp;rfr_id=info:sid/ja.wikipedia.org:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88"><span style="display: none;"> </span></span></li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;section=37" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<ul><li><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A001035" rel="nofollow">A001035</a>: Number of posets with <i>n</i> labeled elements in the <a class="mw-redirect" href="/wiki/On-Line_Encyclopedia_of_Integer_Sequences" title="On-Line Encyclopedia of Integer Sequences">OEIS</a></li>
+<li><a href="/wiki/%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E6%95%B4%E6%95%B0%E5%88%97%E5%A4%A7%E8%BE%9E%E5%85%B8" title="オンライン整数列大辞典">オンライン整数列大辞典</a>の数列 <a class="external text" href="https://oeis.org/A000112" rel="nofollow">A000112</a>: Number of posets with <i>n</i> unlabeled elements in the OEIS</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20220331075914
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.744 seconds
+Real time usage: 1.103 seconds
+Preprocessor visited node count: 16389/1000000
+Post‐expand include size: 118633/2097152 bytes
+Template argument size: 25281/2097152 bytes
+Highest expansion depth: 34/40
+Expensive parser function count: 36/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 13726/5000000 bytes
+Lua time usage: 0.240/7 seconds
+Lua virtual size: 6889472/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  915.134      1 -total
+ 22.77%  208.391     33 テンプレート:仮リンク
+ 22.72%  207.902      5 テンプレート:Cite_book
+ 18.59%  170.108      5 テンプレート:Citation/core
+ 17.99%  164.626      2 テンプレート:Reflist
+ 13.58%  124.314      4 テンプレート:ISBN2
+ 10.67%   97.668      4 テンプレート:Citation/identifier
+ 10.11%   92.540      3 テンプレート:Ambox
+ 10.05%   91.969      2 テンプレート:Cite_book/和書
+  9.69%   88.661      1 テンプレート:複数の問題
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:7985-0!canonical and timestamp 20220331075913 and revision id 6232. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=順序集合&amp;oldid=6232">http://localhost:8080/w/index.php?title=順序集合&amp;oldid=6232</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E8%A8%80%E8%91%89%E3%82%92%E6%BF%81%E3%81%97%E3%81%9F%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B_(%E8%AA%B0)/2019%E5%B9%B4" title="カテゴリ:言葉を濁した記述のある記事 (誰)/2019年">言葉を濁した記述のある記事 (誰)/2019年</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%8B%AC%E8%87%AA%E7%A0%94%E7%A9%B6%E3%81%AE%E9%99%A4%E5%8E%BB%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E8%A8%98%E4%BA%8B/2019%E5%B9%B46%E6%9C%88" title="カテゴリ:独自研究の除去が必要な記事/2019年6月">独自研究の除去が必要な記事/2019年6月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%87%BA%E5%85%B8%E3%82%92%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%99%E3%82%8B%E8%A8%98%E8%BF%B0%E3%81%AE%E3%81%82%E3%82%8B%E8%A8%98%E4%BA%8B/2016%E5%B9%B41%E6%9C%88" title="カテゴリ:出典を必要とする記述のある記事/2016年1月">出典を必要とする記述のある記事/2016年1月</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%AE%E4%BB%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%90%AB%E3%82%80%E8%A8%98%E4%BA%8B" title="カテゴリ:日本語版記事がリダイレクトの仮リンクを含む記事">日本語版記事がリダイレクトの仮リンクを含む記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%86%85%E5%AE%B9%E3%81%8C%E9%81%8E%E5%89%B0%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:内容が過剰となっている記事">内容が過剰となっている記事</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:Div_col%E3%81%A73%E5%88%97%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:Div colで3列を指定しているページ">Div colで3列を指定しているページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%A0%86%E5%BA%8F%E6%A7%8B%E9%80%A0" title="カテゴリ:順序構造">順序構造</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;returntoquery=curid%3D7985%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;returntoquery=curid%3D7985%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;oldid=6232" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年7月26日 (月) 23:49 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.744","walltime":"1.103","ppvisitednodes":{"value":16389,"limit":1000000},"postexpandincludesize":{"value":118633,"limit":2097152},"templateargumentsize":{"value":25281,"limit":2097152},"expansiondepth":{"value":34,"limit":40},"expensivefunctioncount":{"value":36,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":13726,"limit":5000000},"timingprofile":["100.00%  915.134      1 -total"," 22.77%  208.391     33 テンプレート:仮リンク"," 22.72%  207.902      5 テンプレート:Cite_book"," 18.59%  170.108      5 テンプレート:Citation/core"," 17.99%  164.626      2 テンプレート:Reflist"," 13.58%  124.314      4 テンプレート:ISBN2"," 10.67%   97.668      4 テンプレート:Citation/identifier"," 10.11%   92.540      3 テンプレート:Ambox"," 10.05%   91.969      2 テンプレート:Cite_book/和書","  9.69%   88.661      1 テンプレート:複数の問題"]},"scribunto":{"limitreport-timeusage":{"value":"0.240","limit":"7"},"limitreport-virtmemusage":{"value":6889472,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331075914","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":120});});</script>
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>線型位相空間 - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-線型位相空間 rootpage-線型位相空間 skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">線型位相空間</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><a href="." id="link_a_1" title="数学">数学</a>における<b>線型位相空間</b>（せんけいいそうくうかん、<a href="." id="link_a_2" title="英語">英語</a>: <span lang="en">linear topological space</span>）とは、<a href="." id="link_a_3" title="ベクトル空間">ベクトル空間</a>の構造（線型演算）とその構造に両立する<a href="." id="link_a_4" title="位相空間">位相構造</a>を持ったもののことである。係数体は実数体 <b>R</b> や複素数体 <b>C</b> などの<a href="." id="link_a_5" title="位相環">位相体</a>であり、<a href="." id="link_a_6" title="ベクトル">ベクトル</a>の加法や<a href="." id="link_a_7" title="スカラー">スカラー</a>倍などの演算が<a href="." id="link_a_8" title="連続写像">連続写像</a>になっていることが要請される。線型位相空間においては、通常のベクトル空間におけるような代数的な操作に加えて、興味のあるベクトルを他のベクトルで<a href="." id="link_a_9" title="近似">近似</a>することが可能になり、<a href="." id="link_a_10" title="関数解析学">関数解析学</a>における基本的な枠組みが与えられる。
+</p><p>ベクトル空間の代数的な構造はその<a href="." id="link_a_11" title="次元">次元</a>のみによって完全に分類されるが、特に無限次元のベクトル空間に対してその上に考えられる位相には様々なものがある。有限次元の実・複素ベクトル空間上の、意義のある位相はそれぞれの空間に対して一意的に決まってしまうことから、この多様性は無限次元に特徴的なものといえる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#定義"><span class="tocnumber">1</span> <span class="toctext">定義</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#名称"><span class="tocnumber">1.1</span> <span class="toctext">名称</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#線型位相空間の例"><span class="tocnumber">1.2</span> <span class="toctext">線型位相空間の例</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#連続線型写像"><span class="tocnumber">1.3</span> <span class="toctext">連続線型写像</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#不連続な線型写像"><span class="tocnumber">1.4</span> <span class="toctext">不連続な線型写像</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#双対空間"><span class="tocnumber">2</span> <span class="toctext">双対空間</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#弱位相"><span class="tocnumber">2.1</span> <span class="toctext">弱位相</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#直交空間"><span class="tocnumber">2.2</span> <span class="toctext">直交空間</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#局所凸位相"><span class="tocnumber">2.3</span> <span class="toctext">局所凸位相</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#発展的な話題"><span class="tocnumber">3</span> <span class="toctext">発展的な話題</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#コンパクト作用素・核型作用素"><span class="tocnumber">3.1</span> <span class="toctext">コンパクト作用素・核型作用素</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#テンソル積"><span class="tocnumber">3.2</span> <span class="toctext">テンソル積</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#歴史"><span class="tocnumber">4</span> <span class="toctext">歴史</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#関連項目"><span class="tocnumber">5</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+</ul>
+</div>
+<h2><span id=".E5.AE.9A.E7.BE.A9"></span><span class="mw-headline" id="定義">定義</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=1" title="節を編集: 定義">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%92%B0#位相体" title="位相環">位相体</a> <i>K</i> 上の<a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="ベクトル空間">線型空間</a> <i>E</i> で、線型空間としてのベクトル和とスカラー積が<a href="/wiki/%E9%80%A3%E7%B6%9A%E5%86%99%E5%83%8F" title="連続写像">連続写像</a>になっているものは<b>線型位相空間</b>とよばれる。すなわち、<i>E</i> は<a href="/wiki/%E5%8A%A0%E6%B3%95" title="加法">加法</a>
+</p>
+<dl><dd>&lt;math&gt; E \times E \to E;\ (u, v) \mapsto u + v&lt;/math&gt;</dd></dl>
+<p>に関して<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%BE%A4" title="位相群">位相アーベル群</a>になっており、さらに定数倍写像
+</p>
+<dl><dd>&lt;math&gt;K \times E \to E;\ (r, v) \mapsto rv&lt;/math&gt;</dd></dl>
+<p>が2変数の写像として連続になっている。係数体 <i>K</i> を明示して位相 <i>K</i>-線型空間などと呼ぶこともある。とくに係数の位相体が実数体である線型位相空間を<b>実線型位相空間</b>、複素数体である線型位相空間を<b>複素線型位相空間</b>という。
+</p>
+<h3><span id=".E5.90.8D.E7.A7.B0"></span><span class="mw-headline" id="名称">名称</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=2" title="節を編集: 名称">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>線型位相空間には下にあげるように様々な呼び方がある。日本語としては『岩波数学事典』(<a href="#CITEREF日本数学会編1985">日本数学会編 1985</a>)で用いられている<i>線型位相空間</i>が多く見られ、英語圏では<i>位相ベクトル空間</i>(<i>topological vector space</i>)が用いられている。
+</p>
+<ul><li>線型位相空間または線形位相空間（linear topological space）</li>
+<li>ベクトル位相空間（vector topological space）</li>
+<li>位相線型空間または位相線形空間（topological linear space）</li>
+<li>位相ベクトル空間（topological vector space）</li></ul>
+<h3><span id=".E7.B7.9A.E5.9E.8B.E4.BD.8D.E7.9B.B8.E7.A9.BA.E9.96.93.E3.81.AE.E4.BE.8B"></span><span class="mw-headline" id="線型位相空間の例">線型位相空間の例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=3" title="節を編集: 線型位相空間の例">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>係数体 <b>K</b> 自身は <b>K</b> 上 1 次元の線型位相空間を与えている。実・複素線型位相空間のより非自明な例としてルベーグ <i>p</i>-乗可積分関数の空間 <i>L</i><sup><i>p</i></sup>(<b>R</b>) (1 ≤ p ≤ ∞) などの<a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ空間</a>、とくに<a href="/wiki/%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88%E7%A9%BA%E9%96%93" title="ヒルベルト空間">ヒルベルト空間</a>である自乗可積分な関数の空間 <i>L</i><sup>2</sup>(<b>R</b>)や自乗総和可能数列空間 <i>l</i><sup>2</sup>(<b>N</b>)、あるいはノルム空間でない例として<a class="mw-redirect" href="/wiki/%E6%80%A5%E6%B8%9B%E5%B0%91%E9%96%A2%E6%95%B0" title="急減少関数">急減少関数</a>の空間 <i>S</i>(<b>R</b>) や<a href="/wiki/%E3%82%BD%E3%83%9C%E3%83%AC%E3%83%95%E7%A9%BA%E9%96%93" title="ソボレフ空間">ソボレフ空間</a>などがあげられる。
+</p>
+<h3><span id=".E9.80.A3.E7.B6.9A.E7.B7.9A.E5.9E.8B.E5.86.99.E5.83.8F"></span><span class="mw-headline" id="連続線型写像">連続線型写像</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=4" title="節を編集: 連続線型写像">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>線型位相空間の間の<a href="/wiki/%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="線型写像">線型写像</a>のうちで、さらに位相空間の間の写像として<a href="/wiki/%E9%80%A3%E7%B6%9A%E5%86%99%E5%83%8F" title="連続写像">連続写像</a>になっているものが線型位相空間の対称性を反映していると考えられるが、これらは<b>連続線型写像</b>（れんぞくせんけいしゃぞう、<span lang="en">continuous linear function</span>）あるいは<b>有界</b>（<b>線型</b>）<b>作用素</b>（ゆうかいせんけいさようそ、<span lang="en">bounded [linear] operator</span>）とよばれる。<a href="/wiki/%E9%96%A2%E6%95%B0%E7%A9%BA%E9%96%93" title="関数空間">関数空間</a>上に<a class="mw-redirect" href="/wiki/%E7%A9%8D%E5%88%86%E6%A0%B8" title="積分核">積分核</a>によって表される作用素
+</p>
+<dl><dd>&lt;math&gt; f(x) \mapsto T_K f (y),  T_K f (y) = \int K(y, x) f(x) dx &lt;/math&gt;</dd></dl>
+<p>はしばしば有界作用素と見なすことができる。
+</p><p>特定の線型位相空間上の有界作用素のなす代数系は一様収束・各点収束など様々な位相をもち、そのうちいくつかは<a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%92%B0" title="位相環">位相環</a>の構造を与えている。
+</p>
+<h3><span id=".E4.B8.8D.E9.80.A3.E7.B6.9A.E3.81.AA.E7.B7.9A.E5.9E.8B.E5.86.99.E5.83.8F"></span><span class="mw-headline" id="不連続な線型写像">不連続な線型写像</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=5" title="節を編集: 不連続な線型写像">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>連続線型写像が基本的な写像のクラスを与える一方で、<b>非有界作用素</b>とよばれる、<a href="/wiki/%E7%A8%A0%E5%AF%86" title="稠密">稠密</a>な部分線型空間上で定義された、連続とは限らない線型写像の考察もしばしば問題になる。とくに扱いやすい非有界作用素のクラスに<a href="/wiki/%E9%96%89%E4%BD%9C%E7%94%A8%E7%B4%A0" title="閉作用素">閉作用素</a>がある。非有界作用素の例として、<i>L</i><sup>2</sup><b>R</b> 上、微分可能な関数からなる部分空間で定義された微分写像が挙げられる。
+</p>
+<h2><span id=".E5.8F.8C.E5.AF.BE.E7.A9.BA.E9.96.93"></span><span class="mw-headline" id="双対空間">双対空間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=6" title="節を編集: 双対空間">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>線型位相空間 <i>E</i> から係数体 <i>K</i> 自身への連続線型写像は<b>連続線型汎関数</b>あるいは単に<b>汎関数</b>（はんかんすう、<span lang="en">functional</span>）とよばれる。<i>E</i> の上の連続線型汎関数の空間 <i>E</i><sup>*</sup> は <i>E</i> の（連続的）<a class="mw-redirect" href="/wiki/%E5%8F%8C%E5%AF%BE%E7%A9%BA%E9%96%93" title="双対空間">双対空間</a>とよばれる。これは <i>E</i> を（位相を考えない）抽象ベクトル空間としてみたときの、代数的な双対空間 <span lang="en">(algebraic dual)</span> Hom<sub><i>K</i></sub>(<i>E</i>, <i>K</i>) の部分線型空間になっている。また、滑らかな汎関数が考えられるときには滑らかな双対空間 <span lang="en">(smooth dual)</span> を部分空間として含む。
+</p><p><i>E</i> が<a class="mw-redirect" href="/wiki/%E3%83%8E%E3%83%AB%E3%83%A0%E7%A9%BA%E9%96%93" title="ノルム空間">ノルム空間</a>のとき、双対空間 <i>E</i><sup>*</sup> 上に <i>E</i> の<a class="mw-redirect" href="/wiki/%E5%8D%98%E4%BD%8D%E7%90%83" title="単位球">単位球</a>上での汎関数の振る舞いをもとにしたノルムを導入することができ <i>E</i><sup>*</sup> の上の<a class="new" href="/w/index.php?title=%E3%83%8E%E3%83%AB%E3%83%A0%E4%BD%8D%E7%9B%B8&amp;action=edit&amp;redlink=1" title="ノルム位相 (存在しないページ)">ノルム位相</a>を考えることができる（<i>E</i><sup>*</sup> はこのノルムに関して完備になる）。このとき、<i>E</i> は <i>E</i><sup>*</sup> の双対空間 <i>E</i><sup>**</sup> に自然に埋め込まれていると見なすことができるが、<i>E</i> が無限次元の場合には <i>E</i> と <i>E</i><sup>**</sup> はしばしば異なったものになる（双対をとった方が大きい）。<i>E</i> と <i>E</i><sup>**</sup> が一致している場合には <i>E</i> は回帰的（反射的, <span lang="en">reflexive</span>）であるといわれる。回帰的な空間の例としてヒルベルト空間が挙げられる。
+</p><p>線型位相空間の間の連続線型写像 <i>f</i>: <i>E</i> → <i>F</i> に対してその<b>共役写像</b>が <i>f</i> による引き戻し
+</p>
+<dl><dd>&lt;math&gt; F^* \to E^*;\ \phi \mapsto \phi \circ f&lt;/math&gt;</dd></dl>
+<p>として定められる。これは双対空間上の妥当な位相に関して連続になる。
+</p>
+<h3><span id=".E5.BC.B1.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="弱位相">弱位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=7" title="節を編集: 弱位相">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>E</i> を線型位相空間、<i>E</i><sup>*</sup> をその双対空間とするとき、<i>E</i> 上に考えられる位相で、任意の <i>E</i><sup>*</sup> の元がそれに関して連続になるようなもののうち最も粗いものは線型位相空間 <i>E</i> の弱位相とよばれる。<i>E</i> 上で始めに考えていた位相は弱位相との区別のために強位相ともよばれる。弱位相の定義から、強位相は弱位相よりも細かい位相になる。
+</p><p>たとえば、ヒルベルト空間 <i>l</i><sup>2</sup> <b>N</b> の<a href="/wiki/%E6%AD%A3%E8%A6%8F%E7%9B%B4%E4%BA%A4%E7%B3%BB" title="正規直交系">正規直交系</a>は 0 に弱収束している。この例に見られるように、無限次元の空間ではしばしば強位相と弱位相は異なったものになる。より一般に、二つの線型空間のあいだのペアリング（<i>E</i> × <i>F</i> 上の<a href="/wiki/%E5%8F%8C%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F" title="双線型写像">双線型写像</a>） σ が定義されているとき、<i>E</i> 上で線型写像の族 (σ(-, <i>f</i>))<sub><i>f</i>∈<i>F</i></sub> が連続になる限りで最も粗い位相が考えられるが、これは <i>E</i> 上の σ から定まる弱位相とよばれる。σ から定まる弱位相に関して連続な汎関数は <i>F</i> の元によって定められる汎関数に限られている。
+</p><p>とくに、<i>E</i><sup>*</sup> と <i>E</i> の間の自然なペアリング <i>E</i><sup>*</sup> × <i>E</i> → <i>K</i> から定まる <i>E</i><sup>*</sup> 上の弱位相は弱 *-位相ともよばれる。
+</p>
+<h3><span id=".E7.9B.B4.E4.BA.A4.E7.A9.BA.E9.96.93"></span><span class="mw-headline" id="直交空間">直交空間</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=8" title="節を編集: 直交空間">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>E</i> の部分空間 <i>F</i> に対し、<i>E</i><sup>*</sup> における <i>F</i> の<b>直交空間</b>が
+</p>
+<dl><dd>&lt;math&gt; \{ \phi \in E^* \mid \phi|_F = 0 \} &lt;/math&gt;</dd></dl>
+<p>によって定められる。
+</p>
+<h3><span id=".E5.B1.80.E6.89.80.E5.87.B8.E4.BD.8D.E7.9B.B8"></span><span class="mw-headline" id="局所凸位相">局所凸位相</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=9" title="節を編集: 局所凸位相">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>実または複素線型位相空間 <i>E</i> の部分集合 <i>S</i> で、任意の2点 <i>x</i>, <i>y</i> ∈ <i>S</i> に対しその間の線分
+</p>
+<dl><dd>&lt;math&gt; \{ tx + (1 - t)y : t \in [0, 1] \} &lt;/math&gt;</dd></dl>
+<p>を含むようなものは<b><a href="/wiki/%E5%87%B8%E9%9B%86%E5%90%88" title="凸集合">凸集合</a></b>とよばれる。0 を含むような凸集合 <i>S</i> については、
+</p>
+<dl><dt>均衡な凸集合</dt></dl>
+<dl><dt><dl><dd>任意の |λ| ≤ 1 なる数 λ について λ<i>S</i> が <i>S</i> に含まれるならば <i>S</i> は<b>均衡</b> <span lang="en">(balanced)</span> であるという。</dd></dl></dt></dl>
+<dl><dt>併呑な凸集合</dt></dl>
+<dl><dt><dl><dd><i>S</i> の拡大 <i>r</i>.<i>S</i> (<i>r</i> ∈ <b>R</b>) たちが <i>E</i> をおおっているならば <i>S</i> は <i>E</i> を<b>併呑</b> <span lang="en">(absorbent)</span> するという。</dd></dl></dt></dl>
+<p>という条件を考えることができる。様々な具体的な関数空間に対し、0 近傍系としてこれらの条件を満たすような集合たちからなるものをとることができる。
+</p><p>均衡かつ併呑な凸閉集合を樽という。樽は必ず 0 を含む。
+<i>E</i> 上の正実数値写像で、劣加法性 <i>p</i>(<i>x</i> + <i>y</i>) ≤ <i>p</i>(<i>x</i>) + <i>p</i>(<i>y</i>) をもち、スケーリングと両立している <i>p</i>(λ<i>x</i>) = |λ|<i>p</i>(<i>x</i>) ものは半ノルムとよばれる。下<a href="/wiki/%E5%8D%8A%E9%80%A3%E7%B6%9A" title="半連続">半連続</a>半ノルム <i>p</i> が与えられたとき、<i>p</i>(<i>x</i>) ≤ 1 によって指定される集合は樽となる。逆に、樽 <i>S</i> が与えられたとき、
+</p>
+<dl><dd><i>p</i>(<i>x</i>) =inf{<i>r</i> ≥ 0 | <i>x</i> ∈ <i>r.S</i>}</dd></dl>
+<p>によって定められる <i>E</i> から <b>R</b> への写像（ミンコフスキー汎関数）は下半連続半ノルムになる。
+</p><p>0 の近傍の基本系が樽の部分集合族から取れる線型位相空間を<b>局所凸空間</b>という。更に，全ての樽が 0 の近傍となる空間を<b>樽型空間</b>という。局所凸空間の位相は半ノルムの族 (<i>p</i><sub><i>i</i></sub>)<sub><i>i</i></sub> によって指定されることになる。このような空間に対して<a class="mw-redirect" href="/wiki/%E3%83%8F%E3%83%BC%E3%83%B3%E3%83%BB%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E3%81%AE%E5%AE%9A%E7%90%86" title="ハーン・バナッハの定理">ハーン・バナッハの定理</a>がなりたち、連続な汎関数が十分に多くあることが示される。
+</p>
+<h2><span id=".E7.99.BA.E5.B1.95.E7.9A.84.E3.81.AA.E8.A9.B1.E9.A1.8C"></span><span class="mw-headline" id="発展的な話題">発展的な話題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=10" title="節を編集: 発展的な話題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".E3.82.B3.E3.83.B3.E3.83.91.E3.82.AF.E3.83.88.E4.BD.9C.E7.94.A8.E7.B4.A0.E3.83.BB.E6.A0.B8.E5.9E.8B.E4.BD.9C.E7.94.A8.E7.B4.A0"></span><span class="mw-headline" id="コンパクト作用素・核型作用素">コンパクト作用素・核型作用素</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=11" title="節を編集: コンパクト作用素・核型作用素">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>線型位相空間の間の線型連続写像で、弱収束しているベクトルの列を強収束している列に移すようなものはコンパクト作用素とよばれる。 また、線型位相空間からバナッハ空間へのコンパクト作用素のに対して<a href="/wiki/%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9" title="トレース">トレース</a>の有界性にあたる概念が定式化できるが、この有界性が満たされているものは核型作用素とよばれる。
+</p><p>「恒等写像が核型作用素になっている」ような空間は核型空間とよばれる。核型空間の例として急減少関数の空間 <i>S</i>(<b>R</b>) や急減少数列の空間が挙げられる。
+</p>
+<h3><span id=".E3.83.86.E3.83.B3.E3.82.BD.E3.83.AB.E7.A9.8D"></span><span class="mw-headline" id="テンソル積">テンソル積</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=12" title="節を編集: テンソル積">編集</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>二つの線型位相空間の代数的な<a href="/wiki/%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D" title="テンソル積">テンソル積</a>上に考えられる妥当な位相は一意とは限らず、<a class="new" href="/w/index.php?title=%E5%B0%84%E5%BD%B1%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D&amp;action=edit&amp;redlink=1" title="射影テンソル積 (存在しないページ)">射影テンソル積</a>や<a class="new" href="/w/index.php?title=%E5%8D%98%E5%B0%84%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D&amp;action=edit&amp;redlink=1" title="単射テンソル積 (存在しないページ)">単射テンソル積</a>など自然に定義される様々な位相が考えられる。片方の線型位相空間が核型である場合にはこれらの位相は一致し、テンソル積上の妥当な位相が一意的に定まることになる。
+</p>
+<h2><span id=".E6.AD.B4.E5.8F.B2"></span><span class="mw-headline" id="歴史">歴史</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=13" title="節を編集: 歴史">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E3%83%80%E3%83%95%E3%82%A3%E3%83%83%E3%83%88%E3%83%BB%E3%83%92%E3%83%AB%E3%83%99%E3%83%AB%E3%83%88" title="ダフィット・ヒルベルト">ダフィット・ヒルベルト</a>による二乗和可能な数列の空間の導入、バナッハら東欧の数学者たちによるノルム空間の研究、<a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%AA%E3%83%BB%E3%83%AB%E3%83%99%E3%83%BC%E3%82%B0" title="アンリ・ルベーグ">アンリ・ルベーグ</a>による積分論の再構成、<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%BB%E3%82%B7%E3%83%A5%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%84" title="ローラン・シュヴァルツ">ローラン・シュヴァルツ</a>による超関数の数学的な定式化、<a href="/wiki/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%BB%E3%83%87%E3%83%A5%E3%83%89%E3%83%8D" title="ジャン・デュドネ">ジャン・デュドネ</a>らによる局所凸空間やその双対空間の研究、<a href="/wiki/%E3%82%A2%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BB%E3%82%B0%E3%83%AD%E3%82%BF%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E3%82%AF" title="アレクサンドル・グロタンディーク">アレクサンドル・グロタンディーク</a>による核型空間と位相的テンソル積に関する研究などが挙げられる。
+</p>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=14" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" title="位相空間">位相空間</a></li>
+<li><a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%92%B0" title="位相環">位相環</a></li>
+<li><a href="/wiki/%E4%BD%8D%E7%9B%B8%E7%BE%A4" title="位相群">位相群</a></li>
+<li><a href="/wiki/%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E7%A9%BA%E9%96%93" title="ベクトル空間">ベクトル空間</a>（線型空間）</li>
+<li><a href="/wiki/%E3%83%90%E3%83%8A%E3%83%83%E3%83%8F%E7%A9%BA%E9%96%93" title="バナッハ空間">バナッハ空間</a></li></ul>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=15" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="noprint" style="float:right; font-size:90%;"><tbody><tr><td>[<a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E8%84%9A%E6%B3%A8/%E8%AA%AD%E8%80%85%E5%90%91%E3%81%91" title="ヘルプ:脚注/読者向け"><span title="この欄の操作法">脚注の使い方</span></a>]</td></tr></tbody></table>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;section=16" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+
+<style data-mw-deduplicate="TemplateStyles:r2399935">.mw-parser-output .refbegin{margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li{margin-left:0;padding-left:3.2em;text-indent:-3.2em}.mw-parser-output .refbegin-hanging-indents ul,.mw-parser-output .refbegin-hanging-indents ul li{list-style:none}@media(max-width:720px){.mw-parser-output .refbegin-hanging-indents>ul>li{padding-left:1.6em;text-indent:-1.6em}}.mw-parser-output .refbegin-100{font-size:100%}.mw-parser-output .refbegin-columns{margin-top:0.3em}.mw-parser-output .refbegin-columns ul{margin-top:0}.mw-parser-output .refbegin-columns li{page-break-inside:avoid;break-inside:avoid-column}</style><div class="refbegin refbegin-columns references-column-count references-column-count-1" style="column-count: 1;">
+<ul><li><cite class="citation book" id="CITEREF日本数学会編1985" style="font-style:normal">赤池弘次、ほか『岩波数学辞典』日本数学会編、岩波書店、東京、1985年、第3版。<style data-mw-deduplicate="TemplateStyles:r2293413">/*
+スタイルシート[[:モジュール:Citation/CS1/styles.css]] (rev 2293413) の処理でエラーが発生しました：• 29行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 38行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 45行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+• 66行目14文字目のプロパティ⧼code⧽background⧼/code⧽に、不正またはサポートされていない値が指定されています。
+*/
+.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4000800167" title="特別:文献資料/4000800167">4000800167</a>。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/CiNii" title="CiNii">NCID</a> <a class="external text" href="https://ci.nii.ac.jp/ncid/BN00086340/" rel="nofollow">BN00086340</a>。</cite></li>
+<li><cite class="citation book" id="CITEREFブルバキ1986" style="font-style:normal">ブルバキ, ニコラ『位相線型空間 1』小針 宏, 清水達雄訳、東京図書〈ブルバキ数学原論 20〉、東京、1986年10月15日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4489002033" title="特別:文献資料/4489002033">4489002033</a>。</cite>
+<ul><li><cite class="citation book" id="CITEREFブルバキ_201986" style="font-style:normal">ブルバキ 20, ニコラ『位相線型空間 2』小針 宏, 清水達雄訳、東京図書〈ブルバキ数学原論 21〉、東京、1986年10月15日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/4489002041" title="特別:文献資料/4489002041">4489002041</a>。</cite></li>
+<li><cite class="citation book" id="CITEREFブルバキ1986" style="font-style:normal">ブルバキ, ニコラ『位相線型空間 要約』小針 宏, 清水達雄訳、東京図書〈ブルバキ数学原論 22〉、東京、1986年10月15日。<link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/448900205X" title="特別:文献資料/448900205X">448900205X</a>。</cite></li></ul></li>
+<li><cite class="citation book" id="CITEREFLax2002" style="font-style:normal">Lax, Peter (2002). <i>Functional Analysis</i>. New York: Wiley-Interscience. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/ISBN" title="ISBN">ISBN</a> <a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%87%E7%8C%AE%E8%B3%87%E6%96%99/0471556041" title="特別:文献資料/0471556041">0471556041</a>. <link href="mw-data:TemplateStyles:r2293413" rel="mw-deduplicated-inline-style"/><a href="/wiki/CiNii" title="CiNii">NCID</a> <a class="external text" href="https://ci.nii.ac.jp/ncid/BA56608154/" rel="nofollow">BA56608154</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Functional+Analysis&amp;rft.aulast=Lax&amp;rft.aufirst=Peter&amp;rft.au=Lax%2C%26%2332%3BPeter&amp;rft.date=2002&amp;rft.place=New+York&amp;rft.pub=Wiley-Interscience&amp;rft.isbn=0471556041&amp;rft.naid=BA56608154&amp;rfr_id=info:sid/ja.wikipedia.org:%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93"><span style="display: none;"> </span></span></li>
+<li class="mw-empty-elt"></li></ul>
+</div>
+<p><strong class="error"><span class="scribunto-error" id="mw-scribunto-error-0"></span></strong>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20220331204751
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.278 seconds
+Real time usage: 0.412 seconds
+Preprocessor visited node count: 4620/1000000
+Post‐expand include size: 23261/2097152 bytes
+Template argument size: 6489/2097152 bytes
+Highest expansion depth: 23/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 15659/5000000 bytes
+Lua time usage: 0.090/7 seconds
+Lua virtual size: 6762496/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  382.680      1 -total
+ 54.85%  209.905      5 テンプレート:Cite_book
+ 39.68%  151.865      4 テンプレート:Cite_book/和書
+ 28.68%  109.741      5 テンプレート:ISBN2
+ 21.12%   80.814      7 テンプレート:Catalog_lookup_link
+ 19.23%   73.594      1 テンプレート:Lang-en
+ 18.83%   72.059      5 テンプレート:ISO639言語名
+ 18.34%   70.187      1 テンプレート:LangWithName
+ 12.45%   47.652      1 テンプレート:Citation/core
+  8.42%   32.224      1 テンプレート:参照方法
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:864204-0!canonical and timestamp 20220331204750 and revision id 537319. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=線型位相空間&amp;oldid=537319">http://localhost:8080/w/index.php?title=線型位相空間&amp;oldid=537319</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:スクリプトエラーがあるページ">スクリプトエラーがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%8F%82%E7%85%A7%E6%96%B9%E6%B3%95" title="カテゴリ:参照方法">参照方法</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E4%BD%8D%E7%9B%B8%E7%B7%9A%E5%9E%8B%E7%A9%BA%E9%96%93" title="カテゴリ:位相線型空間">位相線型空間</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E9%96%A2%E6%95%B0%E8%A7%A3%E6%9E%90%E5%AD%A6" title="カテゴリ:関数解析学">関数解析学</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;returntoquery=curid%3D864204%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;returntoquery=curid%3D864204%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;oldid=537319" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E7%B7%9A%E5%9E%8B%E4%BD%8D%E7%9B%B8%E7%A9%BA%E9%96%93&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2019年8月14日 (水) 11:32 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.278","walltime":"0.412","ppvisitednodes":{"value":4620,"limit":1000000},"postexpandincludesize":{"value":23261,"limit":2097152},"templateargumentsize":{"value":6489,"limit":2097152},"expansiondepth":{"value":23,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":15659,"limit":5000000},"timingprofile":["100.00%  382.680      1 -total"," 54.85%  209.905      5 テンプレート:Cite_book"," 39.68%  151.865      4 テンプレート:Cite_book/和書"," 28.68%  109.741      5 テンプレート:ISBN2"," 21.12%   80.814      7 テンプレート:Catalog_lookup_link"," 19.23%   73.594      1 テンプレート:Lang-en"," 18.83%   72.059      5 テンプレート:ISO639言語名"," 18.34%   70.187      1 テンプレート:LangWithName"," 12.45%   47.652      1 テンプレート:Citation/core","  8.42%   32.224      1 テンプレート:参照方法"]},"scribunto":{"limitreport-timeusage":{"value":"0.090","limit":"7"},"limitreport-virtmemusage":{"value":6762496,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331204751","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1346});});</script>
+</body></html>

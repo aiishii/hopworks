@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="client-nojs" dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>乱択アルゴリズム - Wikipedia</title><style type="text/css">h1.firstHeading{line-height:1.2} .infobox {     border: 1px solid #aaa; background: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: .2em; float: right; clear: right; } .infobox tr { vertical-align: top; } .infobox caption { margin-left: inherit; } .infobox.bordered { border-collapse: collapse; } .infobox.bordered td, .infobox.bordered th { border: 1px solid #aaa; } .infobox.sisterproject { width: 20em; font-size: 70%; } div[role="navigation"]{display:none;} a[class="mw-jump-link"]{display:none;} #content{ font-size: 80%; } </style>
+<script>function init(){for(var a,e,b=[],f=location.search.split("?")[1].split("&"),h=f.length,c=0;c<h;c++)a=f[c].split("="),e=decodeURIComponent(a[0]),b[e]=decodeURIComponent(a[1]);a=[];if("false"===b.infobox){b=document.querySelectorAll("[class^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("[id^='infobox']");0<b.length&&(a=a.concat(b));b=document.querySelectorAll("table");0<b.length&&(a=a.concat(b));for(var d in a)for(var g in a[d])console.log(a[d][g]),a[d][g].style.display="none"}};</script></head>
+<body onLoad="init()" class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-乱択アルゴリズム rootpage-乱択アルゴリズム skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div id="siteNotice"></div>
+<div class="mw-indicators">
+</div>
+<h1 class="firstHeading" id="firstHeading">乱択アルゴリズム</h1>
+<div class="vector-body" id="bodyContent">
+
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+
+
+<div class="mw-body-content mw-content-ltr" dir="ltr" id="mw-content-text" lang="ja"><div class="mw-parser-output"><p><ruby style="ruby-position:inline; display:inline"><rb style="display:inline; white-space:normal; font-variant-east-asian:normal"><b>乱択アルゴリズム</b></rb><span class="rp">（</span><rt style="display:inline; white-space:normal; font-size:inherit; font-variant-east-asian:normal">らんたくアルゴリズム</rt><span class="rp">）</span></ruby>、<b>ランダム・アルゴリズム</b>（<a href="." id="link_a_1" title="英語">英</a>: <span lang="en">randomized algorithm</span>）または<ruby style="ruby-position:inline; display:inline"><rb style="display:inline; white-space:normal; font-variant-east-asian:normal"><b>確率的アルゴリズム</b></rb><span class="rp">（</span><rt style="display:inline; white-space:normal; font-size:inherit; font-variant-east-asian:normal">かくりつてきアルゴリズム</rt>、<rt style="font-size:0px">（</rt></ruby><a href="." id="link_a_1" title="英語">英</a>: <span lang="en">probabilistic algorithm</span>）は、その論理の一部に無作為性を導入した<a href="." id="link_a_2" title="アルゴリズム">アルゴリズム</a>である。通常のアルゴリズムでは自然数を順番にあてはめるような決定的な部分で、乱数による非決定的な選択を入れることで、「平均的に」よい性能を実現することを目的としている。形式的には、乱択アルゴリズムの性能はランダムビット列で決定される確率変数となる。その<a href="." id="link_a_3" title="期待値">期待値</a>を<b>期待実行時間</b><sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>と呼ぶ。最悪の場合に関して「無視できる」ほどに低い確率であることが、一般に、この類のアルゴリズムが効果的である要件となる。
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="ja"><h2 id="mw-toc-heading">目次</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#乱択アルゴリズムが使われる背景"><span class="tocnumber">1</span> <span class="toctext">乱択アルゴリズムが使われる背景</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#複雑性"><span class="tocnumber">2</span> <span class="toctext">複雑性</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#乱数列の選択"><span class="tocnumber">3</span> <span class="toctext">乱数列の選択</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#応用"><span class="tocnumber">4</span> <span class="toctext">応用</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#脱乱択（derandomization）"><span class="tocnumber">5</span> <span class="toctext">脱乱択（derandomization）</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#脚注"><span class="tocnumber">6</span> <span class="toctext">脚注</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#参考文献"><span class="tocnumber">7</span> <span class="toctext">参考文献</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#外部リンク"><span class="tocnumber">8</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<h2><span id=".E4.B9.B1.E6.8A.9E.E3.82.A2.E3.83.AB.E3.82.B4.E3.83.AA.E3.82.BA.E3.83.A0.E3.81.8C.E4.BD.BF.E3.82.8F.E3.82.8C.E3.82.8B.E8.83.8C.E6.99.AF"></span><span class="mw-headline" id="乱択アルゴリズムが使われる背景">乱択アルゴリズムが使われる背景</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=1" title="節を編集: 乱択アルゴリズムが使われる背景">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><var>n</var> 個の要素からなる<a href="/wiki/%E9%85%8D%E5%88%97" title="配列">配列</a>から「a」という要素を探す問題を考える。この配列の各要素は半分が「a」で残りが「b」である。単純な手法は、<a href="/wiki/%E9%85%8D%E5%88%97" title="配列">配列</a>の各要素を順次見ていく方法だが、配列の先頭の方に「b」がかたまっている場合に長時間かかってしまう（n/2回の操作）。逆の順番で見て行っても、ひとつおきに見ていったとしても同じような問題が発生する。実際、要素を調べる順序が固定されている全ての<a href="/wiki/%E6%88%A6%E7%95%A5" title="戦略">戦略</a>（決定性アルゴリズム）では、あらゆる組合せの入力に対して常に高速なアルゴリズムであるとは保証できない。一方、配列要素を「無作為な」順序で調べる場合、入力がどうであっても高い確率で「a」を素早く見つけ出すことができる。
+</p><p>上の例では、乱択アルゴリズムは常に正しい答えを返す。実行時間が長くなる可能性も確率は低いが存在する。しかし、エラーを返す可能性を認めてでも、常に素早く答えを得たいということもある。前者のような乱択アルゴリズムを<a href="/wiki/%E3%83%A9%E3%82%B9%E3%83%99%E3%82%AC%E3%82%B9%E6%B3%95" title="ラスベガス法">ラスベガス法</a>と呼び、後者のような乱択アルゴリズムを<a href="/wiki/%E3%83%A2%E3%83%B3%E3%83%86%E3%82%AB%E3%83%AB%E3%83%AD%E6%B3%95" title="モンテカルロ法">モンテカルロ法</a>と呼ぶ。ラスベガス法で所定の時間内に完了しない場合に間違った答えを返すようにすれば、モンテカルロ法に変換される。
+</p><p>また、確率解析学はありうべき全ての入力の集合に何らかの前提を設ける。この前提が効率的なアルゴリズムの設計に使われる。あるアルゴリズムへの入力の性質が不明な場合、確率解析的手法は使えない。乱択アルゴリズムでは、プログラム内の擬似乱数生成機能が使われることが多い。あるアルゴリズムが乱択であると言えるのは、その出力が入力だけでなく擬似乱数にも依存する場合である。
+</p>
+<h2><span id=".E8.A4.87.E9.9B.91.E6.80.A7"></span><span class="mw-headline" id="複雑性">複雑性</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=2" title="節を編集: 複雑性">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%91%E6%80%A7%E7%90%86%E8%AB%96" title="計算複雑性理論">計算複雑性理論</a>では、乱択アルゴリズムは<a class="mw-redirect" href="/wiki/%E7%A2%BA%E7%8E%87%E7%9A%84%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%B7%E3%83%B3" title="確率的チューリングマシン">確率的</a><a href="/wiki/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%9E%E3%82%B7%E3%83%B3" title="チューリングマシン">チューリングマシン</a>としてモデル化される。ラスベガス法とモンテカルロ法を含むいくつかの「<a href="/wiki/%E8%A4%87%E9%9B%91%E6%80%A7%E3%82%AF%E3%83%A9%E3%82%B9" title="複雑性クラス">複雑性クラス</a>」が研究されている。
+</p>
+<dl><dt><b>RP</b></dt>
+<dd>最も基本的な確率的複雑性クラス。<a href="/wiki/%E6%B1%BA%E5%AE%9A%E5%95%8F%E9%A1%8C" title="決定問題">決定問題</a><i>L</i>がRPに属するとは、ある(最悪計算量の意味での)<a href="/wiki/%E5%A4%9A%E9%A0%85%E5%BC%8F%E6%99%82%E9%96%93" title="多項式時間">多項式時間</a>乱択アルゴリズム<i>A</i>が存在して、<i>A(x)</i>が「はい」を出力した場合に&lt;math&gt;x\in{}L&lt;/math&gt;である確率は1/2以上で、「いいえ」を出力した場合に&lt;math&gt;x\notin{}L&lt;/math&gt;である確率は1であるときに言う。(なお上述の「1/2」を0と1の間にある任意の定数に置き換えても定義は変わらない)。</dd>
+<dt><b>Co-RP</b></dt>
+<dd>RPの補問題のクラス。すなわち、<i>L</i><sup>c</sup>がRPに属するとき、決定問題<i>L</i>はCo-RPに属するという。</dd>
+<dt><b>BPP</b></dt>
+<dd>決定問題<i>L</i>がBPPに属するとは、ある(最悪計算量の意味での)多項式時間乱択アルゴリズム<i>A</i>が存在して、<i>A(x)</i>が「はい」を出力した場合に&lt;math&gt;x\in{}L&lt;/math&gt;である確率も、「いいえ」を出力した場合に&lt;math&gt;x\notin{}L&lt;/math&gt;である確率も2/3以上であるときに言う。(なお上述の「2/3」を1/2と1の間にある任意の定数に置き換えても定義は変わらない)。</dd>
+<dt><b>ZPP</b></dt>
+<dd>決定問題<i>L</i>がZPPに属するとは、(最悪時間は多項式とは限らないが)平均は多項式時間のある乱択アルゴリズム<i>A</i>が存在し、<i>A(x)</i>が「はい」を出力した場合に&lt;math&gt;x\in{}L&lt;/math&gt;である確率も、「いいえ」を出力した場合に&lt;math&gt;x\notin{}L&lt;/math&gt;である確率も1であるときに言う。</dd></dl>
+<p><a href="/wiki/NP%E5%9B%B0%E9%9B%A3" title="NP困難"><b>NP</b>困難</a>問題などのようにこれらのクラスよりも難しい問題では、乱択アルゴリズムでさえも十分ではなく、<a href="/wiki/%E8%BF%91%E4%BC%BC%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="近似アルゴリズム">近似アルゴリズム</a>が必要となる。
+</p><p>歴史的に見れば、1976年に<a class="mw-redirect" href="/wiki/%E3%83%9F%E3%83%A9%E3%83%BC-%E3%83%A9%E3%83%93%E3%83%B3%E7%B4%A0%E6%95%B0%E5%88%A4%E5%AE%9A%E6%B3%95" title="ミラー-ラビン素数判定法">ミラー-ラビン素数判定法</a>によって<a href="/wiki/%E7%B4%A0%E6%95%B0%E5%88%A4%E5%AE%9A" title="素数判定">素数判定</a>が乱択アルゴリズムで効率的に解けることが発見され、乱択アルゴリズムの研究が盛んになった。当時、素数判定の実用的な<a href="/wiki/%E6%B1%BA%E5%AE%9A%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="決定的アルゴリズム">決定的アルゴリズム</a>は知られていなかった。
+</p><p>ミラー-ラビン素数判定法は、2つの正の整数 <i>k</i> と <i>n</i> について「<i>k</i> は <i>n</i> が合成数であることの証拠である」というような二項関係に基づいている。これをもう少し具体化すると、
+</p>
+<ul><li><i>n</i> が合成数である証拠があるなら、<i>n</i> は合成数（<a href="/wiki/%E7%B4%A0%E6%95%B0" title="素数">素数</a>でない）である</li>
+<li><i>n</i> が合成数なら、<i>n</i> 未満の自然数の少なくとも4分の3は <i>n</i> の合成性の証拠である</li>
+<li><i>n</i> と <i>k</i> が与えられたとき、<i>k</i> が <i>n</i> の合成性の証拠かどうかを素早く判定するアルゴリズムがある</li></ul>
+<p>以上から、素数判定問題が Co-<b>RP</b> クラスであることを暗示していることがわかる。ある合成数 <i>n</i> より小さい100個の<a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0" title="ランダム">ランダム</a>に選ばれた数があるとき、合成数である証拠となる数を見つけられない確率は (1/4)<sup>100</sup> であり、多くの実用的な目的にはこれが十分によい<a href="/wiki/%E7%B4%A0%E6%95%B0%E5%88%A4%E5%AE%9A" title="素数判定">素数判定</a>となる。<i>n</i> が大きい場合、これ以外の実用的な素数判定法は存在しないだろう。間違う確率は、乱数を使った判定を行う回数を増やせば増やすほど減っていく。
+</p><p>従って、実際には間違う確率を非常に小さくできるため、間違った場合のことは無視できる。実際、素数判定の多項式時間の決定的アルゴリズムが発見されたが（<a href="/wiki/AKS%E7%B4%A0%E6%95%B0%E5%88%A4%E5%AE%9A%E6%B3%95" title="AKS素数判定法">AKS素数判定法</a>）、<a href="/wiki/%E6%9A%97%E5%8F%B7" title="暗号">暗号</a><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="ソフトウェア">ソフトウェア</a>では未だに乱択アルゴリズムが使われていることも多く、将来的にも全て決定的アルゴリズムに置換されることにはならないだろう。
+</p>
+<h2><span id=".E4.B9.B1.E6.95.B0.E5.88.97.E3.81.AE.E9.81.B8.E6.8A.9E"></span><span class="mw-headline" id="乱数列の選択">乱数列の選択</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=3" title="節を編集: 乱数列の選択">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>乱数列の生成には、<a href="/wiki/%E6%93%AC%E4%BC%BC%E4%B9%B1%E6%95%B0" title="擬似乱数">擬似乱数</a>を使用することもあれば、真の乱数を利用することもある。「良い」乱数列である必要性に関しては、他の多くの乱数の応用の場合と同様だろう。再現性のためには、真の乱数であればどのような乱数列が使用されたかを全て保存しなければならない（擬似乱数であれば、シードだけ保存しておけば再現できる）。真の乱数には、それの生成に要する時間的コストといった問題もある（情報理論と物理法則にもとづく、絶対的な限界がある）。
+</p>
+<h2><span id=".E5.BF.9C.E7.94.A8"></span><span class="mw-headline" id="応用">応用</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=4" title="節を編集: 応用">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>実用的なアルゴリズムとしては最も有名な<a href="/wiki/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E3%82%BD%E3%83%BC%E3%83%88" title="クイックソート">クイックソート</a>でも、ランダム性が有効である。このアルゴリズムの決定的なバージョンで <i>n</i> 個の数をソートするのに要する時間は最悪で <i><a href="/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%82%A6%E3%81%AE%E8%A8%98%E5%8F%B7" title="ランダウの記号">O</a>(n<sup>2</sup>)</i> となる（既にソートされている入力を使った場合）。しかし、事前にランダムに要素を入れ替えてからクイックソートを行うと、どんな入力であっても高い確率で <i>O(n log n)</i> の時間で完了する。ソート対象が大きければ大きいほど、この違いは重要となる。
+</p><p>より複雑な例として、<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95%E7%90%86%E8%AB%96" title="グラフ理論">グラフ理論</a>での乱択アルゴリズムの利用として、以下のような<a href="/wiki/%E6%9C%80%E5%A4%A7%E3%83%95%E3%83%AD%E3%83%BC%E6%9C%80%E5%B0%8F%E3%82%AB%E3%83%83%E3%83%88%E5%AE%9A%E7%90%86" title="最大フロー最小カット定理">最小カット</a>を求める乱択アルゴリズムがある。
+</p>
+<pre>   <b>procedure</b> find_min_cut(無向グラフ <var>G</var>) <b>is</b>
+       <b>while</b> グラフ <var>G</var> 中に2つ以上のノードが存在する <b>do</b>
+           <var>G</var> から無作為にエッジ (u,v) を選ぶ
+           そのエッジが多重辺であれば縮約する
+           すべてのループを削除する
+       <b>end</b> <b>while</b>
+       残っているエッジを出力する
+   <b>end</b> <b>procedure</b>
+</pre><p>
+ここで、エッジ (u,v) を縮約するとは、新たなノード w を追加し、(u,x<sub>i</sub>) や (v,x<sub>i</sub>) といったエッジ（枝）を（w,x<sub>i</sub>）と置換し、グラフ G から u と v を削除することを意味する。</p>
+<p><i>n = |V[G]|</i> とすると、このアルゴリズムが最小カットを出力する確率は最低でも <i>n<sup>-2</sup></i> であり、<i>n<sup>2</sup>log(n)</i> 回試行してその中で最小の出力を選べば、非常に高い確率で最小カットが得られる。
+</p>
+<h2><span id=".E8.84.B1.E4.B9.B1.E6.8A.9E.EF.BC.88derandomization.EF.BC.89"></span><span class="mw-headline" id="脱乱択（derandomization）">脱乱択（derandomization）</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=5" title="節を編集: 脱乱択（derandomization）">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>一般に、乱択アルゴリズムは同じ問題の<a href="/wiki/%E6%B1%BA%E5%AE%9A%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="決定的アルゴリズム">決定的アルゴリズム</a>に比較してより洗練されていて、<a href="/wiki/%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90" title="計算資源">計算資源</a>の消費も少ない。
+</p><p>逆に乱択アルゴリズムからランダム性を除去し、強力な決定的アルゴリズムを構築する研究が活発に行われている。
+実際、多項式時間アルゴリズムの場合、乱数はあっても無くても差がないのではないかと予想されている。(<a class="new" href="/w/index.php?title=P%3DBPP%E4%BA%88%E6%83%B3&amp;action=edit&amp;redlink=1" title="P=BPP予想 (存在しないページ)">P=BPP予想</a>)。
+</p>
+<h2><span id=".E8.84.9A.E6.B3.A8"></span><span class="mw-headline" id="脚注">脚注</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=6" title="節を編集: 脚注">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><a href="/wiki/%E8%8B%B1%E8%AA%9E" title="英語">英</a>: <span lang="en">expected runtime</span></span>
+</li>
+</ol></div></div>
+<h2><span id=".E5.8F.82.E8.80.83.E6.96.87.E7.8C.AE"></span><span class="mw-headline" id="参考文献">参考文献</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=7" title="節を編集: 参考文献">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>R. Motwani and P. Raghavan. Randomized Algorithms. Cambridge University Press, New York (NY), 1995.</li>
+<li>M. Mitzenmacher and E. Upfal. Probability and Computing : Randomized Algorithms and Probabilistic Analysis. Cambridge University Press, New York (NY), 2005.</li>
+<li>Thomas H. Cormen, Charles E. Leiserson, <a href="/wiki/%E3%83%AD%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BB%E3%83%AA%E3%83%99%E3%82%B9%E3%83%88" title="ロナルド・リベスト">Ronald L. Rivest</a>, and Clifford Stein. <i>Introduction to Algorithms</i>, Second Edition. MIT Press and McGraw-Hill, 1990. ISBN 0-262-03293-7. Chapter 5: Probabilistic Analysis and Randomized Algorithms, pp.91–122.</li>
+<li><cite class="citation book" style="font-style:normal">Christos Papadimitriou (1993年). <i>Computational Complexity</i> (1st edition ed.). Addison Wesley. ISBN 0-201-53082-1</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computational+Complexity&amp;rft.aulast=Christos+Papadimitriou&amp;rft.au=Christos+Papadimitriou&amp;rft.date=1993%E5%B9%B4&amp;rft.edition=1st+edition&amp;rft.pub=Addison+Wesley&amp;rfr_id=info:sid/ja.wikipedia.org:%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0"><span style="display: none;"> </span></span> Chapter 11: Randomized computation, pp.241–278.</li>
+<li>R. Tempo, G. Calafiore and F. Dabbene. Randomized Algorithms for Analysis and Control of Uncertain Systems. Springer-Verlag, London, 2005, ISBN 1-85233-524-6.</li>
+<li>R. Motwani and P. Raghavan. Randomized Algorithms. A survey on Randomized Algorithms. <a class="external autonumber" href="http://portal.acm.org/citation.cfm?id=234313.234327" rel="nofollow">[1]</a></li></ul>
+<ul><li>玉木久夫：「乱択アルゴリズム」、共立出版、ISBN 978-4-320-12170-6（2008年8月）。</li>
+<li>結城浩：「数学ガール/乱択アルゴリズム」、SBクリエイティブ、 ISBN 978-4797361001（2011年2月）。</li></ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;section=8" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://web.cvent.com/event/02659cce-b9d1-4935-9d0a-5b671ea52fca/summary" rel="nofollow">RASC: Randomized Algorithms for Scientific Computing</a></li></ul>
+<div aria-labelledby="アルゴリズム" class="navbox" style="border-collapse:collapse;padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="background:transparent;color:inherit;min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div style="float:left;width:6em;text-align:left"><div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;"><ul style="display:inline"><li><span style="font-size:125%;;;border:none;" title="このテンプレートを表示します">表</span></li><li><a class="new" href="/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%BB%E3%83%88%E3%83%BC%E3%82%AF:%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;redlink=1" title="テンプレート・トーク:アルゴリズム (存在しないページ)"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートのノートを表示します">話</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a></li><li><a class="external text" href="http://localhost:8080/w/index.php?title=%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%3A%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=history" rel="nofollow"><span style="font-size:125%;color:#002bb8;;;border:none;" title="このテンプレートの過去の版を表示します">歴</span></a></li></ul></div></div><div id="アルゴリズム" style="font-size:110%;margin:0 6em">アルゴリズム</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">ソート</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">比較ソート</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%90%E3%83%96%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88" title="バブルソート">バブルソート</a></li>
+<li><a href="/wiki/%E9%81%B8%E6%8A%9E%E3%82%BD%E3%83%BC%E3%83%88" title="選択ソート">選択ソート</a></li>
+<li><a href="/wiki/%E6%8C%BF%E5%85%A5%E3%82%BD%E3%83%BC%E3%83%88" title="挿入ソート">挿入ソート</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88" title="シェルソート">シェルソート</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E3%82%BD%E3%83%BC%E3%83%88" title="クイックソート">クイックソート</a></li>
+<li><a href="/wiki/%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%BD%E3%83%BC%E3%83%88" title="マージソート">マージソート</a></li>
+<li><a href="/wiki/%E3%83%92%E3%83%BC%E3%83%97%E3%82%BD%E3%83%BC%E3%83%88" title="ヒープソート">ヒープソート</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%BC%E3%83%88" title="シェーカーソート">シェーカーソート</a></li>
+<li><a href="/wiki/%E3%82%B3%E3%83%A0%E3%82%BD%E3%83%BC%E3%83%88" title="コムソート">コムソート</a></li>
+<li><a href="/wiki/%E3%83%8E%E3%83%BC%E3%83%A0%E3%82%BD%E3%83%BC%E3%83%88" title="ノームソート">ノームソート</a></li>
+<li><a href="/wiki/%E5%9B%B3%E6%9B%B8%E9%A4%A8%E3%82%BD%E3%83%BC%E3%83%88" title="図書館ソート">図書館ソート</a></li>
+<li><a href="/wiki/%E3%82%A4%E3%83%B3%E3%83%88%E3%83%AD%E3%82%BD%E3%83%BC%E3%83%88" title="イントロソート">イントロソート</a></li>
+<li><a href="/wiki/%E5%A5%87%E5%81%B6%E8%BB%A2%E7%BD%AE%E3%82%BD%E3%83%BC%E3%83%88" title="奇偶転置ソート">奇偶転置ソート</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">線形時間ソート</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%B3%A9%E3%81%AE%E5%B7%A3%E3%82%BD%E3%83%BC%E3%83%88" title="鳩の巣ソート">鳩の巣ソート</a></li>
+<li><a href="/wiki/%E5%9F%BA%E6%95%B0%E3%82%BD%E3%83%BC%E3%83%88" title="基数ソート">基数ソート</a></li>
+<li><a href="/wiki/%E3%83%90%E3%82%B1%E3%83%83%E3%83%88%E3%82%BD%E3%83%BC%E3%83%88" title="バケットソート">バケットソート</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">並行ソート</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%BD%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ソーティングネットワーク">ソーティングネットワーク</a></li>
+<li><a href="/wiki/%E3%83%90%E3%83%83%E3%83%81%E3%83%A3%E3%83%BC%E5%A5%87%E5%81%B6%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%BD%E3%83%BC%E3%83%88" title="バッチャー奇偶マージソート">バッチャー奇偶マージソート</a></li>
+<li><a href="/wiki/%E3%82%B7%E3%82%A7%E3%82%A2%E3%82%BD%E3%83%BC%E3%83%88" title="シェアソート">シェアソート</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">非効率的</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%9C%E3%82%B4%E3%82%BD%E3%83%BC%E3%83%88" title="ボゴソート">ボゴソート</a></li>
+<li><a href="/wiki/%E3%82%B9%E3%83%88%E3%82%A5%E3%83%BC%E3%82%B8%E3%82%BD%E3%83%BC%E3%83%88" title="ストゥージソート">ストゥージソート</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">グラフ</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%88%E3%83%9D%E3%83%AD%E3%82%B8%E3%82%AB%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88" title="トポロジカルソート">トポロジカルソート</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">探索</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+</div><table class="nowraplinks navbox-subgroup" style="min-width:100%;border-spacing:0px;border-collapse:separate"><tbody><tr><th class="navbox-group" scope="row" style="width:1%">リスト</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-redirect" href="/wiki/%E7%B7%9A%E5%BD%A2%E6%8E%A2%E7%B4%A2" title="線形探索">線形探索</a></li>
+<li><a href="/wiki/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2" title="二分探索">二分探索</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">木・<a href="/wiki/%E3%82%B0%E3%83%A9%E3%83%95_(%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0)" title="グラフ (データ構造)">グラフ</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%B9%85%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2" title="幅優先探索">幅優先探索</a>
+<ul><li><a href="/wiki/%E6%9C%80%E8%89%AF%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2" title="最良優先探索">最良優先探索</a></li>
+<li><a href="/wiki/%E5%9D%87%E4%B8%80%E3%82%B3%E3%82%B9%E3%83%88%E6%8E%A2%E7%B4%A2" title="均一コスト探索">均一コスト探索</a></li>
+<li><a href="/wiki/A*" title="A*">A*</a></li></ul></li>
+<li><a href="/wiki/%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2" title="深さ優先探索">深さ優先探索</a>
+<ul><li><a href="/wiki/%E5%8F%8D%E5%BE%A9%E6%B7%B1%E5%8C%96%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2" title="反復深化深さ優先探索">反復深化深さ優先探索</a></li>
+<li><a href="/wiki/%E6%B7%B1%E3%81%95%E5%88%B6%E9%99%90%E6%8E%A2%E7%B4%A2" title="深さ制限探索">深さ制限探索</a></li></ul></li>
+<li><a href="/wiki/%E5%8F%8C%E6%96%B9%E5%90%91%E6%8E%A2%E7%B4%A2" title="双方向探索">双方向探索</a></li>
+<li><a href="/wiki/%E5%88%86%E6%9E%9D%E9%99%90%E5%AE%9A%E6%B3%95" title="分枝限定法">分枝限定法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">文字列</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%AF%E3%83%8C%E3%83%BC%E3%82%B9%E2%80%93%E3%83%A2%E3%83%AA%E3%82%B9%E2%80%93%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E6%B3%95" title="クヌース–モリス–プラット法">クヌース–モリス–プラット法</a></li>
+<li><a href="/wiki/%E3%83%9C%E3%82%A4%E3%83%A4%E3%83%BC-%E3%83%A0%E3%83%BC%E3%82%A2%E6%96%87%E5%AD%97%E5%88%97%E6%A4%9C%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ボイヤー-ムーア文字列検索アルゴリズム">ボイヤー-ムーア法</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%82%A4%E3%83%9B%E2%80%93%E3%82%B3%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E6%B3%95" title="エイホ–コラシック法">エイホ–コラシック法</a></li>
+<li><a href="/wiki/%E3%83%A9%E3%83%93%E3%83%B3-%E3%82%AB%E3%83%BC%E3%83%97%E6%96%87%E5%AD%97%E5%88%97%E6%A4%9C%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ラビン-カープ文字列検索アルゴリズム">ラビン-カープ法</a></li>
+<li><a href="/wiki/Bitap%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="Bitapアルゴリズム">Bitap法</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">最短経路問題</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%80%E3%82%A4%E3%82%AF%E3%82%B9%E3%83%88%E3%83%A9%E6%B3%95" title="ダイクストラ法">ダイクストラ法</a></li>
+<li><a href="/wiki/%E3%83%99%E3%83%AB%E3%83%9E%E3%83%B3%E2%80%93%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E6%B3%95" title="ベルマン–フォード法">ベルマン–フォード法</a></li>
+<li><a href="/wiki/%E3%83%AF%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E2%80%93%E3%83%95%E3%83%AD%E3%82%A4%E3%83%89%E6%B3%95" title="ワーシャル–フロイド法">ワーシャル–フロイド法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">最小全域木</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%97%E3%83%AA%E3%83%A0%E6%B3%95" title="プリム法">プリム法</a></li>
+<li><a href="/wiki/%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%AB%E3%83%AB%E6%B3%95" title="クラスカル法">クラスカル法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">最大フロー問題<br/>最小カット問題</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89%E3%83%BB%E3%83%95%E3%82%A1%E3%83%AB%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="フォード・ファルカーソンのアルゴリズム">フォード・ファルカーソン法</a></li>
+<li><a href="/wiki/%E3%82%A8%E3%83%89%E3%83%A2%E3%83%B3%E3%82%BA%E3%83%BB%E3%82%AB%E3%83%BC%E3%83%97%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="エドモンズ・カープのアルゴリズム">エドモンズ・カープ法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">線型計画問題</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E6%B3%95" title="シンプレックス法">シンプレックス法</a></li>
+<li><a href="/wiki/%E3%82%AB%E3%83%BC%E3%83%9E%E3%83%BC%E3%82%AB%E3%83%BC%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カーマーカーのアルゴリズム">カーマーカー法</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">順序統計量</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E9%81%B8%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="選択アルゴリズム">選択アルゴリズム</a></li>
+<li><a href="/wiki/%E4%B8%AD%E5%A4%AE%E5%80%A4%E3%81%AE%E4%B8%AD%E5%A4%AE%E5%80%A4" title="中央値の中央値">中央値の中央値</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">種類</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E8%BF%91%E4%BC%BC%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="近似アルゴリズム">近似アルゴリズム</a></li>
+<li><a class="mw-selflink selflink">乱択アルゴリズム</a></li>
+<li><a href="/wiki/%E4%B8%A6%E5%88%97%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="並列アルゴリズム">並列アルゴリズム</a></li>
+<li><a href="/wiki/%E5%88%86%E6%95%A3%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="分散アルゴリズム">分散アルゴリズム</a></li>
+<li><a href="/wiki/%E5%8F%AF%E7%A9%8D%E5%88%86%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="可積分アルゴリズム">可積分アルゴリズム</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">その他</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%E5%88%86%E5%89%B2%E7%B5%B1%E6%B2%BB%E6%B3%95" title="分割統治法">分割統治法</a></li>
+<li><a href="/wiki/%E5%8B%95%E7%9A%84%E8%A8%88%E7%94%BB%E6%B3%95" title="動的計画法">動的計画法</a></li>
+<li><a href="/wiki/%E8%B2%AA%E6%AC%B2%E6%B3%95" title="貪欲法">貪欲法</a></li>
+<li><a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E4%BD%9C%E6%9B%B2%E6%B3%95" title="アルゴリズム作曲法">アルゴリズム作曲法</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2">
+<b><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:アルゴリズム">カテゴリ</a></b></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Cached time: 20220331214130
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.137 seconds
+Real time usage: 0.237 seconds
+Preprocessor visited node count: 1114/1000000
+Post‐expand include size: 37396/2097152 bytes
+Template argument size: 1169/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 311/5000000 bytes
+Lua time usage: 0.030/7 seconds
+Lua virtual size: 5103616/52428800 bytes
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  177.177      1 -total
+ 55.11%   97.640      3 テンプレート:Navbox
+ 42.87%   75.956      1 テンプレート:アルゴリズム
+ 32.78%   58.083      1 テンプレート:Cite_book
+ 25.84%   45.785      1 テンプレート:Citation/core
+  3.18%    5.633      3 テンプレート:Lang-en-short
+  2.79%    4.940      1 テンプレート:Citation/showdateEN
+  2.25%    3.986      3 テンプレート:LangWithName
+  2.21%    3.910      2 テンプレート:読み仮名
+  2.02%    3.573      1 テンプレート:Reflist
+-->
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:946021-0!canonical and timestamp 20220331214130 and revision id 587713. Serialized with JSON.
+ -->
+</div>
+<div class="printfooter">「<a dir="ltr" href="http://localhost:8080/w/index.php?title=乱択アルゴリズム&amp;oldid=587713">http://localhost:8080/w/index.php?title=乱択アルゴリズム&amp;oldid=587713</a>」から取得</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E5%A3%8A%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%8C%E3%81%82%E3%82%8B%E3%83%9A%E3%83%BC%E3%82%B8" title="カテゴリ:壊れたファイルへのリンクがあるページ">壊れたファイルへのリンクがあるページ</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%BB%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="カテゴリ:ランダム・アルゴリズム">ランダム・アルゴリズム</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E8%A7%A3%E6%9E%90" title="カテゴリ:アルゴリズム解析">アルゴリズム解析</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E7%B5%B1%E8%A8%88%E7%9A%84%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%8D%E3%82%B9" title="カテゴリ:統計的ランダムネス">統計的ランダムネス</a></li><li><a href="/wiki/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA:%E6%95%B0%E5%AD%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A8%98%E4%BA%8B" title="カテゴリ:数学に関する記事">数学に関する記事</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>案内メニュー</h2>
+<div id="mw-head">
+<nav aria-labelledby="p-personal-label" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" id="p-personal" role="navigation">
+<h3 class="vector-menu-heading" id="p-personal-label"> <span>個人用ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="pt-anonuserpage">ログインしていません</li><li class="mw-list-item" id="pt-anontalk"><a accesskey="n" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]">トーク</a></li><li class="mw-list-item" id="pt-anoncontribs"><a accesskey="y" href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]">投稿記録</a></li><li class="mw-list-item" id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;returntoquery=curid%3D946021%26redirect%3Dno" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li class="mw-list-item" id="pt-login"><a accesskey="o" href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;returntoquery=curid%3D946021%26redirect%3Dno" title="ログインすることを推奨します。ただし、必須ではありません。 [o]">ログイン</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<nav aria-labelledby="p-namespaces-label" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" id="p-namespaces" role="navigation">
+<h3 class="vector-menu-heading" id="p-namespaces-label"> <span>名前空間</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-nstab-main"><a accesskey="c" href="/wiki/%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="本文を閲覧 [c]">ページ</a></li><li class="new mw-list-item" id="ca-talk"><a accesskey="t" href="/w/index.php?title=%E3%83%88%E3%83%BC%E3%82%AF:%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]">ノート</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-variants-label" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-variants" role="navigation">
+<input aria-haspopup="true" aria-labelledby="p-variants-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-variants" id="p-variants-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-variants-label"> <span>変種</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<nav aria-labelledby="p-views-label" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" id="p-views" role="navigation">
+<h3 class="vector-menu-heading" id="p-views-label"> <span>表示</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="selected mw-list-item" id="ca-view"><a href="/wiki/%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">閲覧</a></li><li class="mw-list-item" id="ca-edit"><a accesskey="e" href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=edit" title="このページを編集 [e]">編集</a></li><li class="mw-list-item" id="ca-history"><a accesskey="h" href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=history" title="このページの過去の版 [h]">履歴表示</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-cactions-label" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" id="p-cactions" role="navigation" title="その他の操作">
+<input aria-haspopup="true" aria-labelledby="p-cactions-label" class="vector-menu-checkbox" data-event-name="ui.dropdown-p-cactions" id="p-cactions-checkbox" role="button" type="checkbox"/>
+<h3 class="vector-menu-heading" id="p-cactions-label"> <span>その他</span>
+<span class="vector-menu-checkbox-expanded">拡張</span>
+<span class="vector-menu-checkbox-collapsed">折り畳む</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"></ul>
+</div>
+</nav>
+<div class="vector-search-box" id="p-search" role="search">
+<div>
+<h3>
+<label for="searchInput">検索</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" autocapitalize="sentences" id="searchInput" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索 [f]" type="search"/>
+<input name="title" type="hidden" value="特別:検索"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="この文字列が含まれるページを探す" type="submit" value="検索"/>
+<input class="searchButton" id="searchButton" name="go" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" type="submit" value="表示"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する"></a>
+</div>
+<nav aria-labelledby="p-navigation-label" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" id="p-navigation" role="navigation">
+<h3 class="vector-menu-heading" id="p-navigation-label"> <span>案内</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-mainpage-description"><a accesskey="z" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]">メインページ</a></li><li class="mw-list-item" id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li class="mw-list-item" id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li class="mw-list-item" id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li class="mw-list-item" id="n-recentchanges"><a accesskey="r" href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]">最近の更新</a></li><li class="mw-list-item" id="n-randompage"><a accesskey="x" href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]">おまかせ表示</a></li><li class="mw-list-item" id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li class="mw-list-item" id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" rel="nofollow" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-help-label" class="mw-portlet mw-portlet-help vector-menu vector-menu-portal portal" id="p-help" role="navigation">
+<h3 class="vector-menu-heading" id="p-help-label"> <span>ヘルプ</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="n-help"><a href="/wiki/%E3%83%98%E3%83%AB%E3%83%97:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li class="mw-list-item" id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li class="mw-list-item" id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li class="mw-list-item" id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li class="mw-list-item" id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" rel="nofollow">sitesupport</a></li><li class="mw-list-item" id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li></ul>
+</div>
+</nav>
+<nav aria-labelledby="p-tb-label" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 class="vector-menu-heading" id="p-tb-label"> <span>ツール</span>
+</h3>
+<div class="vector-menu-content">
+<ul class="vector-menu-content-list"><li class="mw-list-item" id="t-whatlinkshere"><a accesskey="j" href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ここにリンクしている全ウィキページの一覧 [j]">リンク元</a></li><li class="mw-list-item" id="t-recentchangeslinked"><a accesskey="k" href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]">関連ページの更新状況</a></li><li class="mw-list-item" id="t-specialpages"><a accesskey="q" href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]">特別ページ</a></li><li class="mw-list-item" id="t-print"><a accesskey="p" href="javascript:print();" rel="alternate" title="このページの印刷用ページ [p]">印刷用バージョン</a></li><li class="mw-list-item" id="t-permalink"><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;oldid=587713" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li class="mw-list-item" id="t-info"><a href="/w/index.php?title=%E4%B9%B1%E6%8A%9E%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0&amp;action=info" title="このページについての詳細情報">ページ情報</a></li></ul>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> 最終更新 2021年2月1日 (月) 06:20 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a href="/wiki/Wikipedia:%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" title="Wikipedia:プライバシー・ポリシー">プライバシー・ポリシー</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/w/resources/assets/poweredby_mediawiki_88x31.png" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.137","walltime":"0.237","ppvisitednodes":{"value":1114,"limit":1000000},"postexpandincludesize":{"value":37396,"limit":2097152},"templateargumentsize":{"value":1169,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":311,"limit":5000000},"timingprofile":["100.00%  177.177      1 -total"," 55.11%   97.640      3 テンプレート:Navbox"," 42.87%   75.956      1 テンプレート:アルゴリズム"," 32.78%   58.083      1 テンプレート:Cite_book"," 25.84%   45.785      1 テンプレート:Citation/core","  3.18%    5.633      3 テンプレート:Lang-en-short","  2.79%    4.940      1 テンプレート:Citation/showdateEN","  2.25%    3.986      3 テンプレート:LangWithName","  2.21%    3.910      2 テンプレート:読み仮名","  2.02%    3.573      1 テンプレート:Reflist"]},"scribunto":{"limitreport-timeusage":{"value":"0.030","limit":"7"},"limitreport-virtmemusage":{"value":5103616,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20220331214130","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":804});});</script>
+</body></html>
